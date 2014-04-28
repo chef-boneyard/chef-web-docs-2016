@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-05 22:37-0700\n"
+"POT-Creation-Date: 2014-04-28 14:53-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,112 +17,112 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/api_chef_server.rst:8
-# dba016e610244a42bc423d35ffadb373
+# 6b912a57f3c74d94855bfa478bf9065d
 msgid "Chef Server API"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server.rst:4
-# b4d93f8f3ac2441e9b29f663087cd0f4
+# ef346d1f91434e26ae6f830213d710d5
 msgid "The |api chef server| is a REST API that provides access to objects on the |chef server|, including nodes, environments, roles, cookbooks (and cookbook versions), and to manage an |chef api client| list and the associated RSA public key-pairs."
 msgstr ""
 
 #: ../source/api_chef_server.rst:13
-# e435790836374caea869956a96449a88
+# be3f85c74c654077bd2c3270270864c1
 msgid "Requirements"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:4
-# 805f99caef464d0191ac80f92c48f7e0
+# 095b09a6163d47eb8fe00f5b74547633
 msgid "The |api chef server| has the following requirements:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:6
-# 22a4c8dd75ef401199eedf27efa5287c
+# a3a5cd2ac75142698f842c7bf7578e39
 msgid "Access to a |chef server| running version 0.10.x or above"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:7
-# 81a64747168e463ca2cb63e1b5c23347
+# 3830a19f5b714f0da3579e5ae70d3833
 msgid "The ``Accept`` header must be set to \"application/json\""
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:8
-# c756468195da4a978ef11b31b072a16c
+# a0f6dc96c74441dcbcd3eb52b04bcd5c
 msgid "The ``X-Chef-Version`` header must be set to the version of the |api chef server| that is being used"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:9
-# dfcff0a166d744fe9385870138367d46
+# fdac78d0107448f1b436f4fbe1907a54
 msgid "A request must be signed using ``Mixlib::Authentication``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:10
-# 7759a62a399e4d5cb994f37cd9116fe2
+# 81986218fa944bb4a0d53c5ca19547e3
 msgid "A request must be well-formatted. The easiest way to ensure a well-formatted request is to use the ``Chef::REST`` library"
 msgstr ""
 
 #: ../source/api_chef_server.rst:17
-# d5fb35b815dc46e5bab3dd882a935e97
+# b58766d1cc4b45e98000c8da27be2969
 msgid "Authentication Headers"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:4
-# 986989da05aa47a18240c744608468eb
+# 308eb56ce75a43c6bf6d74a6e8748604
 msgid "Authentication to the |chef server| occurs when a specific set of HTTP headers are signed using a private key that is associated with the machine from which the request is made. The request is authorized if the |chef server| can verify the signature using the public key. Only authorized actions are allowed."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:6
-# b72bb7d950ea43159ea33652f64542d4
+# 575af6492c6d49b7960779c63efacc8d
 msgid "Most authentication requests made to the |chef server| are abstracted from the user. Such as when using |knife| or the |chef server| user interface. In some cases, such as when using the |subcommand knife exec| subcommand, the authentication requests need to be made more explicitly, but still in a way that does not require authentication headers. In a few cases, such as when using arbitrary |ruby| code or |curl|, it may be necessary to include the full authentication header as part of the request to the |chef server|."
 msgstr ""
 
 #: ../source/api_chef_server.rst:21
-# bbc9a0e1d604471b9ab26a1c425a33f7
+# be75d6fbe46a414780c6a15d2464704c
 msgid "Header Format"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:5
-# 736d4b1d671e4d1aa35663113afa13be
+# 3c8c888a5c764244adf5201d8eca5acb
 msgid "All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters.  Each canonical header should be encoded in the following format:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:15
-# ddb1dbff0b38484cb8c2ef6b800cc486
+# 3a35b4318b934262bc9b72246e1d12e9
 msgid "where:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:17
-# c7e1be6d59304093b667a9422b328436
+# 996819a7916c45d8a6580b21c9f2f383
 msgid "``HTTP_METHOD`` is the method used in the API request (``GET``, ``POST``, and so on)"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:18
-# e3a10f3c7e2146d1aa1622c7dbeca5b4
+# 98211d41b73647f69ec82a7e549cd8a6
 msgid "``HASHED_PATH`` is the path of the request (``/name_of_endpoint`` for the open source |chef server| and ``/organizations/organization_name/name_of_endpoint`` for |chef server oec|). The ``HASHED_PATH`` must be hashed using |sha1| and encoded using |base64|, must not have repeated forward slashes (``/``), must not end in a forward slash (unless the path is ``/``), and must not include a query string."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:19
-# 98ece4f960b24936a823d72bf99f352b
+# d09dd6737f1944f6b901b7fc37840970
 msgid "The private key must be an RSA key in the SSL .pem file format. This signature is then broken into character strings (of not more than 60 characters per line) and placed in the header."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:21
-# 3da576f0206e4c0382d788a1178efe57
+# f04e143462a44d04b38434d649a85413
 msgid "The |chef server| decrypts this header and ensures its content matches the content of the non-encrypted headers that were in the request. The timestamp of the message is checked to ensure the request was received within a reasonable amount of time. One approach generating the signed headers is to use `mixlib-authentication <https://github.com/opscode/mixlib-authentication>`_, which is a class-based header signing authentication object similar to the one used by the |chef client|."
 msgstr ""
 
 #: ../source/api_chef_server.rst:25
-# e20dcdf89a93468b91a2b5717aa595ce
+# bac973ba6bab434fa04413917e071cc9
 msgid "Required Headers"
 msgstr ""
 
 #: ../source/api_chef_server.rst:26
-# 0f2a6fc5d873434990017e0a8ca0d5af
+# a868f9e3b28841839b35c14af1a45681
 msgid "The following authentication headers are required:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:32
-# 05721613ff5e437ab9a6494bf6511788
+# bea12cf67ed9410e9c41eb6beaa6977a
 msgid "Feature"
 msgstr ""
 
@@ -184,189 +184,189 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:31
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:46
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:52
-# ff51033bf9514ddf9f3d2716c3769cb1
-# 54c4b08972234f208c18198c2ca9e2c1
-# 2c556268f38a4802880d85b792af9589
-# 2771eb7029634086a51df281df587753
-# 472768d7adc949a6a5e3adcd62384399
-# 47413da72f31419a80abfa9021c18ff4
-# 7401d758f74141eca7e3daa89b6183a1
-# ef9ca009eca640a5bb12415ff0fab0b0
-# 07545bd56d2c4f52b0517f30b73a9556
-# b9623e6d3b57499c94638b8048ad61b3
-# 31a1a734cee84b989972e5841bab33a4
-# bf327590b4884a0bb5e214a705c7c492
-# ce698dc134154d7a8ebea54e618ecbff
-# 21e0f9babfff4c0da48a3258f3b813ee
-# 90db12cdc55147bca74fca17b44b910e
-# a8ed2cbc4f6d41edbdbd7a62817e2d05
-# a01a1375d8ed42af8b85c18d773acc5a
-# dfe53e11a66e45adbf6a52ae3e0669ff
-# 1ad010a43a264c0eb87911700ec689ba
-# 9cc1c558601b41a89cc32260bb28cfad
-# 0e0d71b6dfd243d38481fe91623b2e93
-# f49d4a81cb0d40e585107bb9ed8c3981
-# 7ae4cb9106af40b09da26c97c0eaf8fa
-# 7b60c0651bba44258ac3d94571dfb9ff
-# 9def7993ca3542728c5dd9c6493cb528
-# 05dbde8f0aaa466685a6feab9014d942
-# 399c5580e309410daf624a963443e8ba
-# e926da195f564a378af92b2bbb18abef
-# d0c0c05a739b49c6a3aad1e22d13e1e8
-# 72b227c1040a44ed95e2f9c12f8a27ed
-# 2f87ef1e8de5492e8ce6f18bb6216c67
-# 75f2d52858a144cb907b4f16809ea14a
-# 10c5d5150a7649548e13f273e4ce8e35
-# 73cf02e0a4d842ba8d7345e764d84584
-# f082f5a27d734ef08747b4d9e3aec720
-# dc123cdcafed4634b01dcdadb1374dd2
-# 2431180f0d784b6aac6bd47f2ceac0f0
-# 03d0e5ab26834abe92c267e945178d68
-# f244ffa10d134b1fb93245234dc580c9
-# 6a8a8a4ce1f741848ea9166451e331ed
-# b3e2f58a8d47454f978325315d352a10
-# 5bc3b8bd920042bdbb75d5e4cb52ca69
-# 9b9076f06523427da1146276f7f14bc3
-# 2b06284fd7c34e34aa467b86881bc88e
-# b6c8489bd6cf4c748e2bd4c9366828bc
-# 9d1724d7a2404a35bfd7d2a5da5ee001
-# b37eba4876f54a06805550eb3478c1f1
-# f1db29ac8fa64ec88499f6aa80ccfa70
-# 297235ac6c5f45d39e7b39bcf660eb4f
-# de172553247f4c08a021e534675bf4b2
-# b233765ab6904dadb4a335ddd758c037
-# d5367618a6f0492cb6976f003d66cc36
-# fbb408c503e94d3483eb5f177027e315
-# e010a87f5d5e40459be4127471066c3c
-# 06b256f0e0c94f01897cbc56b8e5853e
-# 99373d2343e640af971d7279c6a36743
-# 78037795d5784302a2e0263036d7e644
-# a47474da3b554642be78fb04ea923244
+# 924aa0ba5fae4bdab52ebdcb735dee3c
+# 44bc8ddf2e9c4da6bc805a02125c3fad
+# 7a576b533036474e8f683685f74a7fc5
+# b5fc97aae92344e29f12fa0293870a34
+# 060a15781eba456ea19a770a234c39cf
+# fb21990391494bd5b8b3c7519edf2cda
+# 68be1a84f1d84bc1afbfc1fef156b6e7
+# dd9d12fd83d449f7ac7f20275c8f62a9
+# 4514576084b249bda952a1a2b6fe4cfc
+# cc49998359384a12be0db50530886b83
+# 4b5e2cf8ac1349589827e1d901dd7613
+# 8d557e75c6644d6f8e6fbdf82b240a45
+# da8eb30e7965460cb88421465fce01b5
+# 99ba9f6aad0448bc956799c20989d1b1
+# 42cdb9cc8c364e218ddb3d29d54269c0
+# b4e982efa8844783b52c4cec0361ac6b
+# d3b234b1714840c8a1a67da15ca842ac
+# e6933a4c3cb344d1b1ddf52f8cf54136
+# e29fcd20a6004e018eb929f79643c461
+# c1f12c3790974b98a6ccf11b52815038
+# dc73de2735e0498ebc094d391df7fee3
+# 3f692ff730244f488936520ebbf7c0d8
+# 0dcade4cb8f940f2aebfe509e7153d77
+# 998072e938214d64a1c27be2922e3487
+# e4dc3c7d5b7c4824acd9da76fc2c4db7
+# 7efeecfa01b247cb98f57febf3083d62
+# 6d6886d616bb4afa87a672d3aedd32b2
+# 1b432730417b481ea59504eb9b3e808c
+# fb77cfb663d440418a324aa5113b0d8e
+# 7fd0b838577d4e7da5d9972108a991f3
+# 2f56d02fa014430b806269c4722d1c81
+# 5a72bdc9a0fc4086884d5f72c1ea6f79
+# f7ce6032b03449988ea0fbc8fce5c579
+# c72bd15a5c224e8d951e561d4846c8dd
+# f056426097a64045a28814b72418eef4
+# 238c6d85388b4fb1a71c474b22bb771f
+# fc4ca8075fa44dcaa67c8bc7784733d5
+# e22003569526459f96d998156c3890e3
+# 29bedb3f45d94137ab5a5c8d15d0d5af
+# 24f29ea636054748afb2d6200982021c
+# 5005ad728e1a4faeab5be99e87b26f86
+# 6dba6c9cfe6a4919bd03a498bd2b3e70
+# 3d937f5f880e40e68540f9acf721667c
+# 510478bd9b46484390c26d8fa7bb26d6
+# a08254ccf05646e3995d0f534283dc5f
+# 2298f32cbbcc4dfd89ed13093f4c0f59
+# 64f1e64c906b40d9bd8159adce20e262
+# 68698c06800e41b1adecfc4bfff75e7e
+# f85239ee6037420e80f650d4683ae8e9
+# 3b132c41fe2f483e9aea076674483e2e
+# 6f7f74b7145148609458c1c3bbba7dba
+# 8a8198bce7cf4d02a2e9546f63deb174
+# 1228149019b14c4abcf214a58c6adac2
+# d5ca94db8d7e43bfb2c70a8dc650a18c
+# c9bd4efb2fa54c7ba69ab8018e6bec11
+# 54867ffec4d5437d9df5a1c768d2c544
+# 2efd9a43380940f79236fccb008e298b
+# 4b105d5ac8ba49f6b5046360e4336bc1
 msgid "Description"
 msgstr ""
 
 #: ../source/api_chef_server.rst:34
-# 227103f90aa7456f810492fbe9b343d9
+# 10a0ebc8725547e3bfb88acd7b23e17c
 msgid "``Accept``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst:4
-# 22ed2441efd746f7adc0edcc4581d436
+# 0a338e899e0740ceb8c86b8b168d3519
 msgid "The format in which response data will be provided, such as ``json``, ``xml``, ``html``, and so on. This header is not required, but is often included to ensure that response data is returned in the desired format."
 msgstr ""
 
 #: ../source/api_chef_server.rst:36
-# db9b5e82e675436e95e155dcc78501df
+# 89cb30517ab14a84a7aa58f63bd66654
 msgid "``Host``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst:5
-# b9ac04376c0a41c5bff3127a8e6b0419
+# f0662112e2834fcda656af37582d5dab
 msgid "The host name (and port number) to which a request is sent. (Port number ``80`` does not need to be specified.) For example: ``api.opscode.com`` (which is the same as ``api.opscode.com:80``) or ``api.opscode.com:443``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:38
-# ff1ce8d0fa284e06b795fe850fd2c116
+# 8a4ff22a7d9a40b995e0ea3723d8d05e
 msgid "``X-Chef-Version``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst:5
-# b6e75411d29b4745b36aed0a36631ec4
+# 9a42c59d1c6847d7a2e7542eecd02de4
 msgid "The version of the |chef client| executable from which a request is made. This header ensures that responses are in the correct format. For example: ``11.0.4.x`` or ``0.10.x``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:40
-# 45a771a81dfe4cb3be5eccfb9cc28f1a
+# b3729526c4824d94817feaa83af79d66
 msgid "``X-Ops-Authorization-N``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst:5
-# 96607e5cb877444492ffaa10966a8fc3
+# e8b33a38c755484ab01e8c82b9da6d0f
 msgid "One (or more) 60 character segments that comprise the canonical header. A canonical header is signed with the private key used by the client machine from which the request is sent, and is also encoded using |base64|. If more than one segment is required, each should be named sequentially, e.g. ``X-Ops-Authorization-1``, ``X-Ops-Authorization-2``, ``X-Ops-Authorization-N``, where ``N`` represents the integer used by the last header that is part of the request."
 msgstr ""
 
 #: ../source/api_chef_server.rst:42
-# cd6673e6928a46bdaf8c268e58e12290
+# d3ced0090127466592bc0d62d7dea434
 msgid "``X-Ops-Content-Hash``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst:5
-# c00b5712f2ab4a14b6d0adaaace36b00
+# 44f7aceba0264301ba7021ce09157fb9
 msgid "The body of the request. The body should be hashed using |sha1| and encoded using |base64|. All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters."
 msgstr ""
 
 #: ../source/api_chef_server.rst:44
-# 4340f4f8c6294a61827ee1a3582cf785
+# 570bd33766a548839e5797314ca249ea
 msgid "``X-Ops-Sign``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst:5
-# 2cce77924b8545cbab310f927d6ba061
+# 9770a629efcc40a59e2c80fd8c6cd125
 msgid "Set this header to the following value: ``version=1.0``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:46
-# 3a7855473f8143aba8f358e720c70c7b
+# 94a3f259993f4c3da32e3cca2e2d1a40
 msgid "``X-Ops-Timestamp``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst:5
-# 518f3bafa2b9436d9c733ff07fd10e39
+# a34b5f759a4444aeb2340871e3068f41
 msgid "The timestamp, in |iso 8601| format and with |utc| indicated by a trailing ``Z`` and separated by the character ``T``. For example: ``2013-03-10T14:14:44Z``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:48
-# 1c1e7a4301fa46f89b39d47e9f022a2f
+# b8ea620bef5d40c989f4e954bf0aaa6e
 msgid "``X-Ops-UserId``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst:5
-# e95ec7f5093f475cb49f7814af27227e
+# 00b82edd3f3146d292631e326236c8e7
 msgid "The name of the |chef api client| whose private key will be used to create the authorization header."
 msgstr ""
 
 #: ../source/api_chef_server.rst:52
-# 6c36da93b2664412b86e722f005d1e57
+# b75414ab342f48a3ab61da6af56aa024
 msgid "Example"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst:5
-# d6f5ca79dac540c387a92933ff7fad83
+# 4b4f9e145a204f2eab49b2d7f5c294a2
 msgid "The following example shows an authentication request:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:56
-# b6f49680d1fe499c8bb1dbc4dcd1e3d5
+# 635cfa76ea11402e94886a6aa7706225
 msgid "Endpoints"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst:4
-# 8d2d93db26384b4ea93a305a1a38761a
+# 99b4abda0c32454daabda9fd1319e27f
 msgid "For |chef server oec| and hosted |chef server oec|, each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint. For example, the full endpoint for getting a list of roles on |chef server oec|:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst:10
-# 3fb2002c2dc740dc8f3d475c13a4af6f
+# 88ce3b396608426488f12d4c70a95014
 msgid "and for the same request, but to the open source |chef server|:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:61
-# f9eff3b5c1714db2b93b6469b8ba6489
+# c7261eb4a8b044dfbdc6d0e092bd33e6
 msgid "/clients"
 msgstr ""
 
 #: ../source/api_chef_server.rst:62
-# 1580c88042394fb08c3c5fc30aeb0350
+# f971e9eff096430cbdd140785e0327b3
 msgid "|api chef server clients|"
 msgstr ""
 
 #: ../source/api_chef_server.rst:64
-# 6c6c597aed9b48539a3ba3d8edfcd8f8
+# 74b6a24c22694285b2b407b0e9c6bb31
 msgid "|note api chef server manage clients with knife|"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients.rst:4
-# 651bed6838744a6dbfe0dbfdc08764ad
+# bdf2c7704cab4e968c85565ee43c2d19
 msgid "The ``/clients`` endpoint has the following methods: ``GET`` and ``POST``."
 msgstr ""
 
@@ -395,36 +395,36 @@ msgstr ""
 #: ../source/api_chef_server.rst:382
 #: ../source/api_chef_server.rst:393
 #: ../source/api_chef_server.rst:417
-# 8bcd1f4d82e940ebab97a9afcc7defb4
-# 47c2a2a283154e4281a7c3ae14c566dc
-# cd62683574ac4046a3b3ef1e67140b9e
-# 50fa27d0daef4261bb092bcf19835fc0
-# 1238f6d49ac44772894ace9bb010156e
-# 8a0e3b398b644081a601d61f1fddd3d7
-# 8a0d2b57d1dc46f8ba733604a1568931
-# 1ae6d309e92a44eba54640b70de5ad34
-# 4e50d0738dc247e192fb4b80d47b6b12
-# eadfa1a19a304063889f3e865acf06ff
-# 947898bab5c043b699e71e70dc62e345
-# 3e14bb2febcf49eaa87e289b86ebfb98
-# 4e7eecc0c6db4160892dea542e7b5a81
-# 7ef3499282d142a79c3de059075e2986
-# 67755d250427482a909f6fa75c0d345b
-# 3b62772de07b4d62a47eee053f327ea9
-# 83b1c6011a754d189c713a262374f49a
-# b88b13ebb67440e893edb6e23d5a106f
-# e8d20061f3854d2d8d16a976a49a59e2
-# 9a52177910484d2ca15e984f2f2f73cd
-# 377dd268a0914d1d805c7f6881532e2b
-# ed9f3cde93e04a87b7b10219668f7d62
-# cd7ee20a12624549b61e904df7279c22
-# 4e92b5d218a0496fac89acf6679fb76a
-# 8a384d1e82d0495ba4c00ee79c334cfa
+# 4f64225643794236b4d7bbe7cc45ed65
+# 51a0cf019a7d4f54beaa4c0effc8bd49
+# 0b43addb6b01485992b8129261854adf
+# 4e5608ec72ea4da6b4e260775aff5b13
+# ba852432de8e4537b8ff06911bc6d2c1
+# f61ce2125e0a40b7a97aba65746c4da1
+# cb5defee1ac24c9491c2815e0096823c
+# 10b5784017714694ba12f15ba7076282
+# 5c5bd61f5938461897350e7e0acc4599
+# c82c7dc49ef7410280ef3cb112720abb
+# 93f85a8be0104c899c2d0445d8654061
+# 44fcc339b1764a15870f473149291f10
+# dd2e8fe510b749949503a43cd28d883f
+# 714a6cd3167f4ceab390e7e415bb4c43
+# 440fe9f988004ecb830638c2fd8e247f
+# bce4acc7998e4639a8ef20e0b7db1c7c
+# 15dc63325c7e41ebbbaa383751dd9472
+# 04277fd3ef3a483c8150b84c7247259b
+# 9d908d6aee054eba97d98992d1e75ef7
+# 8c56e5b2870c4bce900364fe01830f37
+# d0286f1448124bcdb7dc89065fed4737
+# dd37e61e5ffc4facb76322955ce930e0
+# 321d39ba6e414d8b8986faa33b64d54d
+# 715524480ee74e89b76f7795d7765820
+# f5e9eae3384144cd9c7f7af6ab4b5a55
 msgid "GET"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients_get.rst:4
-# 8f6c8979e03743ac92d82d2247a7b9cf
+# e0c2ecb2b7a74cee9cfa9b45fde5c486
 msgid "The ``GET`` method is used to return the |chef api client| list on the |chef server|, including nodes that have been registered with the |chef server|, the |chef validator| clients, and the |chef server webui| clients."
 msgstr ""
 
@@ -472,50 +472,50 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:6
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:6
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:12
-# c07ee907fc624f41a42a62720a96563f
-# db40d29bdacc42fbad609fa23e59c9a8
-# 3982c0bee2b54ea7840a0906fd05de17
-# c8c26ba2c476467b93c3021c31a03717
-# c893a759161b4e4a84518002452e7192
-# 01f22e39458445249f67c76c1d5c5d31
-# ef3f27f90ddd4f9db0e49c606be0cec0
-# 4318d61534bf45d19d41925320601bbe
-# 259bd1c2219d44918bcbdb37ca8053cf
-# a4d1b42ede1d4b679f039ee2daf42e85
-# 3efeaaf510bc401ebfee6ccf0ebcc5aa
-# 4578c0ab10284014b5f0f3045a02b72d
-# 5a4a663d616447689c6c19950aa39260
-# b63e084b6bbf4a11bd65d417ab2300ae
-# adfc21a6a67146168c97a5022fb211a7
-# eaa6367b66c0428da9b187ee3f1af3d1
-# 4946ac365e8e4e138d75461917639478
-# e871633b65ab4996ad2249811b4d50f6
-# 72e3d59299374818bd1afe1f1651b556
-# 7d8f7082cf574ea18e1d99f421eae6fa
-# 9c9083d4fdd846efb7b86e862b420a80
-# 9c13eac41cd244759a1af505a433d120
-# 65ca5c99361540228e9e702fee626585
-# 608224c59e5c472482c46817e90bb9cd
-# b9de4ddb86e1449eb7d348d722442b62
-# 39ea8f5fe3aa497eac7340883c801400
-# 97f788a016d943a9884718c6e9323039
-# 5ec6f2eb1fcc4dcc8b93a6bb2549659e
-# d1eeae44bfcc4f5fb3b54d33a70cefa3
-# 57a843e5928a48979117ac6380129bd0
-# b3270cfbc41d4d20a03779111a021a05
-# cd1da8b780f443eb9ac3d519f408a8c9
-# fcc6dcec4b9a46419853a7a18f367b2a
-# 67d0e3087a1c4c6da975104927505952
-# 985df4c9e77e4c9b9e26ecc42f744880
-# bae7dda02978469c8a217cb02e08a1f3
-# a7ff71d3a2fd469e9b3be0d897c60f29
-# 60be321f2cb8403da8ca9c0c5bc9824a
-# fd4857f2f6b24e479b70776b27731ab6
-# 06f809b2a8fa45c499dff780f33cf0f0
-# 0bd5101c132f4152a96a51afaa4dd120
-# a454f6575e0c4b09b1f3768f906d1d71
-# 42749ebf44f943f794e2011360f8c035
-# 365a3997febc4a9fbe62921959c4549c
+# 3b87337e220948d99bedb875dbf61e33
+# 9edf0747dc54482896864c18253200cd
+# 4cb0c39157134003aee22b141b1e5226
+# 70e18f64031b458686c9c937f9c69cbe
+# cbdc1ae3ac3b4c4992ae7224aa5aa9ed
+# 63b638c4be5e4cd684bb1c14cf39ed4c
+# 516ae85ef04048d3bfc5fcdcbedc8592
+# 687c8e0e0e6c488a8c62bae4c59289aa
+# 75b8e65a4b2a4327afa5c616a5a9f9a2
+# 2e34a69e7e6e46608c676b051d384ff3
+# 1fe4829367d8492a86d2fac11c51a6e4
+# eadcc00602cd4e4d9772dfdfe74cdd06
+# 37eb16a6cf504178a8d2396652db2e2b
+# a289457daa714f20ad9f3873b75059fd
+# 9213385754124da8b14976093a265d03
+# ccbd3629df364599882cd985339fbcfd
+# 501929f88079487e8bbf3f30f13fab62
+# 9472bd45df8347a7b86c775e5294564c
+# 99584f880f724f4485acd5136cb2fb8c
+# 6887fea0494a41c6b13b5f19808062a3
+# a89835651d5b4839b84aa467971261c6
+# 58eb55d659f04e9ba64710629c27c668
+# 2a2818db26dd423e92ca86f516a10348
+# 3b69970681244fc5a0ad04c821d817c7
+# ea30be8ce8cf45478233119fe7e93079
+# 272f564e2436465aa93f617bd1e1201d
+# 0940c4b5216a44e097e6ddcd6425b5d6
+# d47bee23e1944a1489b9e4fc73e4192e
+# dfbcd9f0998f4ababecc06f50c89a3e0
+# ddb4ff92c55045859f88e7d9f411a06e
+# 3698e383129d4776b018747b430e8362
+# 8ebe625e1d524625a8861f92b3df5c7f
+# fbb2ec2f59444eba81dafbfb6d6d7e31
+# 3c2d49eb3403442a95a3e0c97ced9b6c
+# 33c376b6087146af822f782ac37cafbc
+# ea6ff1eea8854508b6f9b023cc1ac1d9
+# ea8b2950d81f4c3aaa4143ddf5ed61e3
+# 53174c6615da4ca69849086e8093413b
+# a158c564434342b181528f0d4702f4b8
+# 307722eb55a94bf89c017a26d4034ae1
+# eda030b3212645a8990a9965b3895eb9
+# 9502ad254f3e44679fa429549865077e
+# 18eaa640ce3040979fed0db3cd5bd7a7
+# 0b6a137285a249459a236effb5a78d9a
 msgid "This method has no parameters."
 msgstr ""
 
@@ -570,57 +570,57 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:8
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:8
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:14
-# 8b094f3cc35f41b8a1db2e11a6f630bd
-# f08ac4e928ef4076b1848c22ded656f5
-# e4cd664b61f64734963851d8b6ca60fe
-# 828b7b5219044b7885dd4b15a84c0eb0
-# 03b0fe41bf96411fb7bf86049425e3ba
-# 3b095ead9ba848658636cb397ff55ea0
-# 3e72bd1f028848c88050bcf4c831c6dc
-# 457530ec5b164c8fbb57f91ebbca5768
-# 8cb5f71dd9174011acb544b229a0fcbe
-# 031fec2811db444aad1dfc300cd1dd73
-# e38681327b1744c496771b5f6481402e
-# 8d7650867f2a4744a0092b7462b73497
-# b91a02fae6684284bd32b482adb18fbf
-# b2a4c518f238432d8059dcd66d371575
-# 24f01be8919c4462bc5c6e00e4a8055f
-# 4cce494e362444ab9f349cff68ff4460
-# 71dd033b454a4ff895a357ddc02b8439
-# b62dc24c7dae4fb788d2351c06e21bbf
-# 9165f390c444492282e448cc3ee05251
-# c167f5b89d764278a39e2fe35d6921a8
-# a89782eb5d0a42499633fa4e2ba4f4d1
-# 4e9b3ce16d1141d791bc6d25c4255a20
-# 7ec78ee622a94e6a80d473f811497ad5
-# 1be83587955b4e15a374aa80d32ca914
-# 66a07edd3caa4faf998a6046c43925fc
-# 88976e9f0e4e4986b86d354f9a82e360
-# 728dcbec821d41ea9541f68f859a72be
-# 3cec857fa1bd46c48f145fa20623a03d
-# 9a69bddaed884fa7886acd873f3a9bb8
-# 3dbd88861dbc478fa8f2b7e854364124
-# f279f0a2e6e9406f9fa15c5651f2328e
-# b7c7855d4fec483ebb3e4d5b656cd593
-# f4b3adc664134911a89cc13250116f5f
-# bd0eee9587c24ac0994ed4c0289f95fe
-# f0f59fe8152e40f88368c18ff9ea9d65
-# c384866a84b84513bc11f7a738a488d4
-# 8dda5e003c594ca2bc3612e77ddae00e
-# 19e98848101c4038939c6eeb38eac1ae
-# 9874e5e3acfc479988dd5f11c8f52371
-# a6f98c032aa8489783236506a3bd4fda
-# c0bd4a0d6a9e48f7875c82fa3eae59db
-# ddcb48b9776f42f78ef0919d48f10ebe
-# 7001204570e04f1696e977e87a02c185
-# 6fe662a554f84bf5ac349222377a5498
-# 4dd29ab05d604209bbd8adf033ee2bef
-# 91665b087bf045398498df48efa49a21
-# a687d15a253d40f3aca03556d20d55ac
-# de263503d78d49a7a2d07d3d01d4ece9
-# 0e5ab4f8c01c48968a92cc025311f2bc
-# 5a1606b22b1f47209f635e605301f614
-# 7f000de7d33044aba24a65095eaf1b3c
+# b99fbb7759754bbe9300f7025b2be751
+# b2c3971b2ce340dabfadf19e7ef28cfc
+# 0dbef52d761c469b9897928e4171cbda
+# 7857c69e246b49ec9fa7194501b4fd4d
+# 9ad9bdcd632d430ea22d7b666cb15bdc
+# 3fb46355cdd64379aef4e64c999dba07
+# dc6a9e1d46c744b3b444789f44e9b864
+# 4e286bdce8754cdba2a1a35feb72ce92
+# dae2674545ce454e8516808f300237e6
+# b1a8e31a9f484a019609a7f80f6a6ec7
+# 37b36accee154c129c383866c74c1b19
+# 30a3407a89e24d7d86eb597957f03c92
+# c7519e3ec55546f8a966614a7420bc6d
+# 8601d7c14c2446bc862f9e1dff1d3dcd
+# 234b68aff8084b62a8575e2d7610d905
+# 6434c89d6e9c464487d686dc827da4c3
+# 24d20c7c7500494d8fff615cd33a366e
+# c284a3ea17c2480899262b1ff6271e97
+# 6c86913e38aa4659b60fdd7ea0c2c6fb
+# 798176c876064912a8336d04492122b4
+# 2b3dca8aef634b71b6791b0453578e68
+# 644401fc2aa04792a9664d6b3b206dec
+# 3429e84086ef4b08ae5e45c61a5e82ef
+# eb3559a758364b139455bf63cd5c23fe
+# d3980406427a4f7f8c48cc514965ec5d
+# 91ee6b3853c6418caa02404a3b60ae9b
+# 705c0e4fe63d407d840e5d4673901449
+# 795dce7a11294b32a0d7f115f99efea2
+# 0717986a213047c1b82057b25c8ad338
+# 4cde6fa01e9f4ea496ece7533dc41128
+# 0c1d4ef9a40d487ca48ee5283c3953d0
+# 905bae2f55f24583b8bff361bef3f3eb
+# 5e20599d4caf4ccdafa46c6fbfe67f01
+# 87ff648f0d1f42bba23310ef5d930dad
+# f726d2948d06499db5aa051d707c416d
+# a7b55eb3ab6b48838759a4dfb1ceee45
+# af15c08299b4429abdd805b2764ee461
+# d0d3377376294098b568ea3f60ee34d6
+# 65040afb577c40279e8bce612095df49
+# 3dd57d1c5a6f40b09319126b162cbc5c
+# 8a75656897a241e5b66e7a01c8669854
+# 0fc4d924cb7645299a22ff1c0d89fc7f
+# 90d8b5009d964ffdaf8780d62074d40a
+# 1602188f781d49db981c19e8d1742818
+# 0e11521b2a8d43d9ab92dd079c8287e3
+# 42688a6b0d184ccfbd44de1776c3b184
+# 1eb27bd385d64564bbb06ee0f544df42
+# 8650441378054fbb88da9fe58b0c8999
+# 4df9b87ca8264e86a3a7cff02d162586
+# ef7a33c4d2ac4d0295d241c3dd45ad84
+# 4d23e05309554b489f3b57c25099dff8
 msgid "**Request**"
 msgstr ""
 
@@ -675,57 +675,57 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:14
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:22
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:26
-# 827c9237053c4312ada434e58cb6306c
-# 4fdd7a6286874d3c86df856f5f271a49
-# 801673d8d6ef432188f3b4b9d6585cc4
-# 46051ff5b37241e89c4262831f2a8ef3
-# acbbda2f4c4f48e2a1147590b60d2b5f
-# edcc8692dca74de7a8339b05736466e1
-# fc2138563194483ea3844a7c8d79aab6
-# 4bf1421bae9641c683f5335de8b2dc16
-# f5e6ab227c3545f3bbfa15ce2d38edd1
-# 678171aa802c46e8be68e28669887054
-# 57be5ad2eebc484fabccb99067fc2037
-# 2e5c6b9e17524308bf63d6b8f569abb4
-# 75ae1df255234e87ae93d5992b4ab32e
-# 5fac739061754a6a9cac6c5ab205e27b
-# 41c699f4a369436ba99f7fc16d6385e0
-# 7a25648ce0cf480d996216e135af9c43
-# 58cc3a9150674b37962a449c62aabfbf
-# 73fa20cf998d44a781543e884ea536fe
-# 275229c5622c445e95496170cce810a3
-# b10999242961443097a5acc30677a5ba
-# 6d60038255e64fecb03facb24746e347
-# a210d4cb1fb94e799f10832ed5b65946
-# 4e9c987f0b534649be86aad3837974fe
-# 8fb7894681e145dd87f5a55a32a92883
-# 843a13b5697a4c16b61246bc57cea819
-# b863291cafc94a3d8894ce74993503e5
-# 757ea4e4d68c4564bf97b693fc343a4d
-# 17a54eb411a340c0bad58dfac2358582
-# a423772abd764ded9d2e898209f16a57
-# b97b00ff4ed84aedaf48770b209020f4
-# 0601da6c4b834343bd9bb77395e8ce21
-# d9820cd93c82411aa3a341e4d93f1503
-# 8a7f4d8a1e8749c9b77ebcc3bb51551d
-# 3965d1521bcb4f928c459354944501b5
-# 54884a88a5834ac19df205f86e5f4bf2
-# 8e1e370f33644e24b10892f4a7b7cb52
-# 0760e5c9e71f4fa495abe3b8434bce35
-# 29f23d4661834d0c9ee81f942c02b614
-# 7783b38d7fd8475db0e19fd06751353e
-# 2444ed55738a47ca8a9d2dbe51742a34
-# edae315a2b49413ca5d58c836ca0acb5
-# 38084e9de7c44c3a92f3cc8d75b0eb04
-# cccbb89e326f4ea0b1ee0663ddde89f4
-# e5be54b59af5400e902461436450401f
-# cd4fde971f954e338fc9ddef4e533f71
-# 552044116f444045aadebab651b325e8
-# 6cbfc2290e8d49fe8e29ccf68a0af638
-# a803f704c8e34eeab3884419697a687a
-# a08612f8cddc408295df78c188856165
-# 06e8d21b4ee0406399aad188d662d679
-# 721c8b3f62434adda2b5685af10e3199
+# a47b5eccf52e47ae9e01246ce360dc89
+# 2cc6d87c8ae04bdaaef30972a5471fb8
+# c1b1cf41217643c7bc36df220e6ba9a0
+# 74f58921cd074de4936bb12f2f265efd
+# 516f5900e71b4b1a87ef48fb25b6c157
+# e231b15e68a648d2874c71f52bb0d552
+# 27b11e7ef2bb4c838e4dae55dc6f8afe
+# 6f67f0743fdd4a99b8284c20cb9d6a30
+# 2652ce8eb3ee446f8e55ac3c4215eb25
+# 16aa12c487ed4838a09990d1ab82e385
+# b95a3827c564400db7eb82eced8b9873
+# a92fa4a1d6714a62a2a2bc5cc3a999f4
+# d0dedce326a24638887053f1702ac15e
+# 9887173b92e444709d4fdfcee020f0d1
+# a28d4d14c0324cefb58d165980c49773
+# d61e02fef9b542caaa76d3f2c91c418e
+# a66eac12521246c293928dad04008183
+# 5ddb10974d024665b068f658007e5572
+# 45444e67b33a4a6690a06c36b2bc9777
+# 132e42e1c79d44ac890a9ed917cabb51
+# 47b83ea6fbe8446a99132b472b56df23
+# 38bcf8ee5c274a0a9793ed7a36141199
+# fc6eea8c8c8f4419b6ba0732a2b3d506
+# 64cd014ad6ca4d6aa266d8b90cfe6990
+# 18ebdd37ce17483eb62e03d9c3181526
+# 3c77184df88c434094116ee877e8e00f
+# 6e83c186c64c4606b07025be83251caf
+# 21a676fdfbbe48329cdde10f692a042d
+# d9fa0e17fcaa4e52aba008be43d26adc
+# d5b0e845cfac409aa9bc4d1f47189293
+# fe0f831e18014f27b187023d4b232124
+# 345305ce01e843b69228c1176063acc7
+# 8f204b9877fd45b6a01a11e14fb09456
+# ddf87261f01b43b29ff29d557ad7e6c3
+# 43fc74a4083343ceb9ce621f270a3e13
+# f6f0a0506f894579b5e15ddc0e5f8c3e
+# 9d421a0b34064a5c882c13da2b1d3d54
+# ed54d9c019104a6eab826b293955fcb5
+# 6f1322a6a55341ea885d82408bb19f17
+# 5892bb2fdfa04386a50dc05cf262c3a2
+# 8f37db8248e5498883c89f60496d8bea
+# 1aa6d476167940928ae1d65b9bcb1284
+# 2cbbb3dbe7de492db1585da3b7ccd970
+# 5a0f67b1847a431fae33daa33766c61e
+# df4f24a5a4704117a5857dbb601919b4
+# b8833918ec944a548ad59c595bbb7347
+# 4e0c5b3262b642208d72ef0fde69031f
+# 48f4e8065dad484e9b1e969b9efa99dd
+# 64fca61fc9884afb8eff7dc78dd9d3bf
+# a37bf650c665447abf3cd23f23c90746
+# a5fc7bb1d29343be80f3267538ff67e3
 msgid "**Response**"
 msgstr ""
 
@@ -767,49 +767,49 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:16
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:24
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:28
-# 42cbca352dc147b3a2a563118f03a284
-# 0615387b4cc04f3c873af316f7ace53c
-# 0114cb57535346d384c53ad90c5999d7
-# c591adcacd5247159d016822dbe7f6c8
-# 016c1b0c763045749636db41147161a5
-# 1c1a36f67244434ea98a857ab823643b
-# 8fe816c3fffe4ce3a91642d85f573938
-# 36d3112da9334411848ad9fc71e9af01
-# c3bd8022ca2b4a6b85b594adcf0a4c79
-# 1427b9aa7aa84df1b9cf69418a7a2f1c
-# 8f7012fbeec34c02a99b5303da6b95ae
-# dfc78a9d5eab47d5b60b356d8d2b995e
-# 0bbdf594becc4dcb9ebed5ad7b115335
-# 7e35a9e4a1ed40dba4eecae5d7c5137f
-# 672190f89ea24c6fa592425608049f92
-# 75f79980dee845c98983247e31c705fb
-# 505c61291bb342a1910de8e036332cd3
-# 3b50324db45e465381b935fbf1ab4e5c
-# 3021f8793c4348e0bf6a48ad198da6a6
-# 36e208ee20684dbea7518d1ec4eb3338
-# ec65fb1f134440d38191ff54c1ce16ed
-# 9575371293b341c89af9ea0698add3ac
-# f8a625fc14754fdaa84c20cd3943f14c
-# 6b7b56dfd6a84a378267817c52d4a1d8
-# e730b3cd8b1346f9bb3329affdf71bf8
-# 370881ebc3544530937b8c360aea3ada
-# 2aaa4544da9e460f8ccb980d23ba8146
-# 5001034ab6714e1ab118a48b9f01abf5
-# 3c817312b3c04940bc96a44bfa1fd44d
-# 60500f2ee5cb46d1905eafcb9bc3961b
-# b5c7b5f50d6f450ca43c9b085d449cc5
-# 2e964947d83d44299dad819aadd77d44
-# 085d87c19e2e4973b757805ef79fe7dc
-# ff697b6377a04d208e6df147b317068e
-# 3b7dc2988e0d4c1d885692cb93552ec0
-# ef537a8f83aa45d0b823cd128da8870f
-# be252fdb02344f01852ac3eaffea767d
-# 0c50667d41794445b76777bbf8837e72
+# ee643e2de10949ed98836be57eb2150f
+# db594d0ef17240bb95b13b56734bc228
+# 58bfd0cdc484488e893fbbbc208e6e14
+# debd5ea0e7f8427791ac0fff9050d45e
+# 5428304cbb11409ea9d2a5ba68a319bd
+# 482f62ed72aa46d5aff0230f3313bdb9
+# 56de1804738b4179a4eafb1a17b41c75
+# 6ab2891eb1014b7988caf5f4242923c8
+# ba40caf73e624066b0df609b0a081e75
+# 953f66377b364dd2ba684ba839fe4a87
+# b6a19c077ad0443eaead4170a7504307
+# df09d5bdf180442b935032317ae9726f
+# e78558b97b0c46e49fabbeae9a2e54cb
+# 189d3ad314c749dd9d5093fb5e72cca0
+# 000dead66d384328adbbed3ffeee7db0
+# edc150f3eea343689bb7ef31a2e4dfbd
+# 4ed0a32fd201462da86e743c7ee817d4
+# 9d3354fa7f274a9b8d672f20a783c594
+# 53c54ef1ffa948d7abf1b32524d6c398
+# 9794e6c0e0bd40108764be79db63658d
+# 1ef7352df3904e918cc26843b402fa8e
+# 07198e387d614b3ea8b90f4dddc65af8
+# 7a2764b9b92640c088df55c030f31bf9
+# 5d3ee76ff8a84a4197cb471ff0d737cc
+# 3dbf25d8e87b467bb19a5d716c1f4218
+# ca22d54c8c074bb5bf18029d22c5c53f
+# 20bfebfc13984da5ba57554f7ada4eb0
+# f7aefaaace5b465cb09364257c521bd7
+# cb96905186a249de8b832d535832523e
+# 311fd2c0e9b54a66bb4afa6834b0c932
+# 6f218e9cef2743c392f71fc537a76eb6
+# b6c0deba5cb74506bfd1c322e56a3841
+# 42a22dfe917745f3b398dab39ca4f707
+# 0434070b151d4d3f9ba580a2444d1da6
+# f9d2a2ef7ad24c96846d7b13942f8ea3
+# 1a5492aa11fd428eb5614d62fc4e49ed
+# eb544b90d866425b90ff801a325c4578
+# 1a4bd9c92ed64f598b47aecd476210f5
 msgid "The response will return something like the following:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients_get.rst:25
-# e31eb9e7a7784fcdb9ddc089c47b283c
+# 742c5ddb097b47cfafec51a3aff87a04
 msgid "or:"
 msgstr ""
 
@@ -864,57 +864,57 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:24
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:39
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:45
-# a1515031b5fc4415ae9c971eb6631372
-# 33e4f684ee4449858e7f6b1e2ba2ed8b
-# 623d06d40a0a4ac1bc158d44bedaa6e5
-# 97ec268617ba4a9396b3df7111777162
-# fc28e149d0064c07820d35007bcc927f
-# d51a46070a834a28b4f73a015281fff2
-# 97c728ac1559497698b48e39f990468e
-# d3edb39cabb64f8c88986968b298ecae
-# 6ea72c74494f490dbc24780ce7558c56
-# d3b17b4296014e6f95f2abb4fe4e0c2c
-# d20baef8109a47debab7c0b98fc2aea5
-# fe9435bc515f4522bd343bd8fadf8bf2
-# dd58b8ef312f42b0bdea3d62ae19b7ac
-# fd66affdb4c24f548535b8e8b0758c5e
-# 6360e6810e7a4726b36d9e0beb83b4e4
-# b3a41f3efadd4f00a94653d1cff551ca
-# b69b8bab275c4245ab2fc1c851545e60
-# 350e86d4032f4d409f8e3fba54e8752b
-# b0c7617a8cda4690a609667070e3d93e
-# 5b631c0d05f6417d9d5e81eef758ac29
-# 1a669de8750941b0ab3544a683a7b0af
-# 3439724261134ed4856a2a5fe0713859
-# ed9a7b8856794d4989e74e143d0f90ff
-# ecb47fd2417a49b9b37f5d6032911574
-# 9b658f28ee25451fb04a17b826e0b686
-# 83c4edc62c854305b969febc79753433
-# 2348ae08b4ec46a1b7e466a3b7f8cdb1
-# e6426fca5da24e7ca302ae886ee1224f
-# 9e54ac0fab1f4257a10fc31f87479f6a
-# f2bf559e978744f395f2d5ef43558cb3
-# 57a024a28e064d948bc9d342b98c844b
-# 5179ad86ce5344a8bd11e7487434524f
-# 16d3c6f2b4834ce4995ad87a3836c0f5
-# 3fc73f106e4f4b4b8accd269fb3d33d8
-# b93902fe2e1145e2b95a95d489a22f81
-# 016ab5c926ce4495aa93d333dd5222dd
-# 641a76a6f8ae4f2597b0601f79016443
-# 68d7e5c0c6b848abaf218b24ccba4cdc
-# 35621bd938ab4d9081d1641ee462ba91
-# de6389f8768945299ca12f3c973fdfc9
-# f08c3bbfd3ff4af8a99bdb0c49b6753a
-# a5b64bdc9c9c45cf9eabee32231bdf5a
-# 8086e5dc81784996bda6a2d2a9f39f23
-# 6725386552e041b6bf531fcc00390b25
-# cef6753c4af64e578d7d621f275b0713
-# 181d86131aa147b0ab870444839212ad
-# b1b5898b93f641d49d07b6fca9be1e9a
-# e50053493fa4471e854a5155bd029850
-# fa803366efbd4eafb82443da42c0d3c5
-# ec272823d2554875827c80563519ed53
-# dd18ad68158a41c49dc3bfb660876b5e
+# 5efa309c606f4f1496048f1ede1fa84f
+# 83a7ca7f740743ddb79fd03dc6b6798d
+# 618c403d9a964a8786fbe2111962bd81
+# bb3ed7cf7c0a46b8a4326f8f0fa98079
+# 8681b20791dc404c92571b4e87867dea
+# eb2682fe12414e62874896ac2ae5eaa8
+# 8cd044d9e769475c95ee81bf91cf7762
+# 2b04f1a2e5be43c6bdf31f5f8c1da52d
+# 788e20a890484ccd8fc032cde1b3f587
+# a1f14be7446b4750b1abbf9c9a8fb69e
+# b28eacf3f5f7497fbe6b813bb9c5d33e
+# 78b6d3989dcf4347bfe530c4c1f5ff7e
+# bc2a51418655494b9a5206cb83d5649b
+# 2aeb79c186184b069cab6c4474fe39b7
+# 86d7c2eaf7d94c9face0c12f6559115a
+# d368415889a24ed6bdfbd9c79ad3993a
+# 1c0877aff9e941d3bdc64755feab58b9
+# 30c76331bfef4d2d866cde182128a0a8
+# a0fcecabc2894f71a8a853c2566ad480
+# 49b8d8b4d2a94940979e3813b6e365ab
+# 39c98e9d45bc49b1b364d4b0f9163b16
+# e87eb43850474ed49386e810284db910
+# 58b9456237304ae5be0336221541a8ee
+# 174e2f6eb87b4c4f84e3f7561c916226
+# 18ed4c4c5d194f958d6268d7b7340651
+# 41322db4201e43f8811d154f849cfbe7
+# 915bb521bc3a4925bf8011f1b2cf7083
+# 8b7ca6f163c0418f9f8ed8f75d6b6f33
+# fed059314cc74cd58d06a43c51a5fb3f
+# 774dc169f652488085e2476fed58ce2c
+# a92172516a07446d964d17a59b79a85b
+# 07e6593522ea4e34ac8f77d33b87a67f
+# cfe74435d7f445d49177460c4e27fc40
+# db676fc6e1d4456ea2f6651d91649b39
+# 1d04b7e3eda64b9fa5090d3fdae80369
+# 1a03ae4eaa754c7ead212db6d96cd105
+# 07461a05d53e4e66befbcd988618bd06
+# 5bd68504be4b43818ae46c3f57b4d0c5
+# db91d848454a421fb9ba77339b441a53
+# a8a83ead854b4cb0a68e91b01f1c1d08
+# b25b7a068e8544b2b579dc752b3d8d57
+# 448559ed8b724cdd90301142d1a99551
+# c0e29b9ee5ef4895887877f13138955a
+# 571f5378569a4cdc956aaa1dcbac2b8c
+# af4681d60144499e8ba105195e5af5ee
+# b3182d060b724b9eb1f723a3ca25e3c9
+# eab238517a444e83a15f508e63a431b1
+# f2d9ca0b13c144e9bdcde7ecd8f4e5a9
+# cf106a7a861042ae9de72b6abe53cef3
+# a644cf43446f472bbe12ef9a01d8a8a2
+# c5743a9445384b51b2ba05f843670106
 msgid "**Response Codes**"
 msgstr ""
 
@@ -969,57 +969,57 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:30
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:45
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:51
-# 6b537d4359f14eb6b48eb43a1b56d4e6
-# 739e37459edf4c04897d2c458d97029b
-# e5e697dbefa94da6be6691614fb497fe
-# 7b3e4bf29b4b4b27bab0712947b2243d
-# 3314b957ed924c5d96de8c3cce226f41
-# e7405048ba7b47aa8828574fe4488d13
-# 21f880715309414abcec8f54c20b7cc6
-# 9df55fc1a43049318a24f6899af39beb
-# 840bb12305d14c9f8ba32338eae47632
-# 8a39866b3dcb4cc7baaf33eeb0e4371e
-# 07d8440f9f6d43dabfe2afb09e5e4b41
-# f11a088a90564e2ca8e4b517d2b8260f
-# d7504d1a146f47a981fb3aeecf0fd269
-# bfbd595ba4ad4350b348a06986d697d0
-# 90c31a1d67d94b078450f189405b1073
-# 7820bce77613458e91c4389f5513ccaf
-# 40958dfe1af74fb2acca8179673b4088
-# 5c2548e9de2644438bfe4de07791de29
-# cdb3911fad2d461395f3f4527530c674
-# 4f21d9201a0d4e3d83acff8d00139e54
-# 9835661db8b14778aa39f05aa7a34102
-# 59f8d60296034302a96a23a8db2d24c4
-# 90874ea7920046c383623bac23c0ce54
-# e7b10b490bdb45418c4ec38a89f99e89
-# b07bee84e98341fd86ff9eb4c07ef46c
-# db07f647bbbc4246808b15a30cb8c3c0
-# 0de158fec5e84318b8a26f49e98c5b04
-# de72a1bffa9a40bf9f1d5baa7d3e2afc
-# d3a4127c50fc424abc5cb0ae469d6f77
-# 437e471e32344978ba41131ae07bca0c
-# 97cefe8a02084babab57f0dcf6b7d2c4
-# 14fe50f744fe4175962e10fcebaaf5e4
-# a23c1ca94f814363aa1f3b6561e43406
-# fec50b2994b14c808a84a57241107744
-# 4cc4527dd3544da882f8d196c3202e4f
-# c734d27a5fbe4d6faba7d4bf1cf7e739
-# 5f8c2d104a384cb2b814e13afdc9af24
-# 9ec44ccdb9f6493a864694fbd4dbe758
-# f017483b858d4e329f6d4811eb998615
-# ef681b97805e4b42a1bea881b00e8209
-# 046fbb1feab743528ae2c0c54f76a22a
-# 925b4b10206e494eb058ef81d6bfeb4c
-# 328730d067a04cbf8f9b9b48816070b4
-# 65a5479e463540cda5153cb479ac9466
-# 5c48379ec7db421482417a5d6a4f7263
-# bf10a7f77f9c432697807dc0059e671b
-# 716b9ac5f87b46278913c0ce63b16aab
-# 5ebecf2a927b4968939accc6283b8c07
-# bb988c9494804fbea4d318c0d2965557
-# b8fb99d89f5247a69b223963a448604d
-# fdbc4164aae14399914150d5c5f49f70
+# 4f26276e3eb14fe887fe516d0e33fa0a
+# 490f0384df23472a9b631038ba7fb6d2
+# 7ea45374f34d41b6ab3a15f06bfcdfb3
+# 652304c0df024e2eb4cc1600d8e16d43
+# 905070c90e9c467fb17813b7f823899b
+# e1ac142300f342f88b7bb461eaeb38b7
+# d4248c6b78ae4734b816f87122b1d039
+# eb8d6838d9854a7789e7baa2aa98e0aa
+# f7c03840202d4bbcb77659245e85533a
+# 63b46c97208540c2adeec855dc28c3a4
+# 02d14ef6894b47b98810e867b5fa3517
+# e3ebfc804c7b45a9ac53a43681fc65ae
+# ab0df8c0373e41f8a680ce03433841f6
+# c4111f016ed14dadb2d2677006f0ccf1
+# cdccdec269da43d4888828ad139ec916
+# 1cc5b7fd6e474ff593b48b940a4434aa
+# ce8cc1b0ca0147b7adccc39a9bc21760
+# 29a14c01fbcd45cc98b225a271ce24c6
+# 5e657f331cfa462eb491431d1bdaabe4
+# 9a0a077cbff0400aa6f59567ca93b846
+# f20d548d281c42baa421f6f9b04b07eb
+# f08abb04dfb04e42a0ea5fbdfcea4188
+# 80479e4b66854cfc9d21747f54c98f2d
+# 28bb3d845285460c89e1ff68512fe3e8
+# d5547ca294b64dfbae43fa2d184200e1
+# cdbcb326c22e4c349c6d5b451169c5ef
+# 05a31812867942298ad3570619899894
+# c825d67529fa4dd29311c34e7b30c218
+# 7a27806019fb46b08ba196c09e2eb3a3
+# 2f2c0f23fae1468ca6679a23408ecfa6
+# 43bc9183eb69467c9b0832e4c0df1026
+# f3a680e59a0645539ddc4b6f0d230780
+# a599c1b368234a2bb8e71ccea464fdea
+# f27c1006417049f9930744b14b16f7d2
+# c013ca75ed7749689b64470743c84bd9
+# d9e3fd4d82ae4a5995488757805d1d26
+# dbbdf4fb47bf46d18f0af6278bb231dc
+# 8428233a12234e54afee71267bf2936b
+# 3b2b5fafb63c4183bf9c6010290a80b5
+# 71ad664ce7d74dd7a72dff175b8c28ea
+# c2dce1d28b0e40d081b488ccf56a8c59
+# 6c58d6f376a5463bbad241fb313301f8
+# 767b0b26ceb34b4dae6725288270dbe1
+# 220dce0c44cb485a8d421e5f2c5993f2
+# 31cb1ede6cbf48df9ea1703c00c68b85
+# 09b54df725de406082e8c80463479ded
+# e1c781e8d84c41bab95135c38c5408b9
+# 5fcc8ecb34e54c8692f97203912973e8
+# 1ae714855dee4d0cb91cea395ae623da
+# b35c3e4f213c473e888ed1f1ec45f7fb
+# d046864308404d62807eb44fe5afe43d
 msgid "Response Code"
 msgstr ""
 
@@ -1068,51 +1068,51 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst:32
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:32
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:53
-# 2b299a7262d842168679e1cea2260db5
-# 947411cca0fa4ee1b26309358a6cd0c4
-# a30ef0340eb44efab2d43d5312befa32
-# cdcd0ec045484914a1ed500e456ae5fa
-# 1bb246d0c5124291bc4d44335b544f9f
-# 14f6140942224d8b9cc8ecefc0433537
-# f289280fc2b7471d8ecf0e3c6dcd9703
-# fdf341d924914b9ab0cbb3cf15fb2a48
-# e17d1167a54642da8ef81ca9f950bb23
-# 78408df53926444cbc0b37c9c379a113
-# e58ebadd2ee84ba7a508632a88e6008e
-# a3b25e9cd5fc4e0db8fe52aee9ed7fb6
-# 3d789a35370242b2a1bac4e965d1b2ca
-# f6650c300ac14ec2837c20906215c60e
-# bb8c24cf888e4b4b812971d1316159ac
-# b65dcc77067c41338d7f395813fae7d6
-# b91590e2d8fb4453bd6bd094013707f5
-# 777ceb3e3a41422f9027a297e269f5d9
-# 15c59faaef1d4edca6f7793e7f24e98b
-# fd1750b7d12a4a49bb07a983e0125743
-# e2910956843f4cd3825ff98b6f836d44
-# d598ef1a27784f8eabe44206f329a804
-# f0965d1fe5cc4658be11a6d0d28496ed
-# 49a5cc2b62184074ba448952e05f2ff9
-# 294162e97ba94c2ba5299f662fa9cb90
-# ccd5dcca9db746c4b1f3c2e437c2761e
-# 9a007bfcd2bb4597b543ed2d924f785e
-# ba8083e507624c50a6faff9a19eb35bf
-# 02afa2ffe8cd4e438af59ba5f434e196
-# fcfdb40ec17c4f4ba485f66ec6446682
-# dc6a20364c0448b39daeafc976f4acdb
-# e31855491abb4684bc11eb99af519eb9
-# a6cae953bd4c4c6fa2380e76ecd8ab60
-# e3261f36e84e4386a434bf51382bf95a
-# d14e8969432f406cb36b7d3ecaef22a8
-# 6bcef8ebf44341309ce54d930ad106ac
-# 51585cbc1c0a4e9a9d1f0ff36abfeb1c
-# bcf88cfcfb074d96ae1d4a2edf7ea996
-# cdf6afc98bcd4948ba2b50eb8961e2d2
-# 7510bba57cef46e1ac1b27f76474677d
-# 38ea73b300ed4d918f27479c7837df1d
-# 8fd7c3fa88534519b0daf247adbd1d31
-# 24a37638aa8a4d0b8eae4da977949207
-# 191209ea6b8347f5ab15c6fdc2fe2ec4
-# 43dc62ef82474f5a9ae80f3441f7b465
+# dba21dd06d3246b6965abeacd1296bc5
+# 59c23012ebab4fd5a9bbe918aae52688
+# 2bc4758cd3e34e718ffc4f8257879817
+# 0c5c480ab2044b8b849ec3bd27ed4c35
+# f510e404eca34e9983c36518b6a5d979
+# cbd642da2e5a485482e230f36405496f
+# 5cf2781400e8440594f7cae1b1c87129
+# 4cfc111c22fb4240a625d2ce6746cdae
+# 42f0861eb69540dd8d340ea2ad47d9dc
+# 0b4d5808441e4b72896efa63ad531c15
+# 3e05be46af08453c9644c6750470eba2
+# 6e8e1076e50d4121a3041084b6c4cdb2
+# 893f7ee66f9344c5b1152ae23674901a
+# 68246cc3bef84c0888d2e7e7edcd719d
+# 0989a15d722d4555914483f73d416411
+# 9cd95e5ee8e041aab5d71a2a2ac62cea
+# 0ac525fbbddd4241962c378c1258f201
+# 408de366a6674c42b815a90f3f0e6222
+# f7b9034aed224313902c499e11f4565a
+# 2f3391e2a6d14cd1802dc3b84a80d625
+# 7d78b434ac334275ba71944c86f2ea16
+# 9838d417a47742cfb5048e108e45ee64
+# 7a18337f8c7f4150945374a01c64bad7
+# 347645b4f87d404a86445081afc80170
+# 0539f5112fd64d8286e8ed504836aa10
+# ac3bab471eee4bfcbf16112fac39febe
+# e5a81b8702ba4abc8fa872025d419607
+# 20c3ef93b2314f28b5a300ab0e816f97
+# ff7c0e6891e346e8ad2280680080f14a
+# 87c0dc690a214c08ba78e4df3f6f6ce3
+# d146acd1304746e8985b6b1d34bede8e
+# 46802352714e43348da65f794a715524
+# 96d3946c28464f5696e5c65af90ef393
+# 6cef9d97eae740c7962268942a057e1b
+# b1ad8671adaf4dc6925eff3d623a1553
+# 978f223c8c0a475c875e29a635e1ba1f
+# 4facdbc2f5394ec9a5345c95a916d0f4
+# 34b0106ff4bb4b1ab7b68a9e58a5d115
+# f6c6a4bded06424fb26c63b36631273b
+# 7d994e52403d450fa574949ec0a0ff32
+# 6ce54c635ae2470ab4f6d9495cb5774c
+# 6b4cee4d201a45c4b742c0f8545d885e
+# 85a499bb649d4bc6878c112becdc52fd
+# 7af72a52ef2549a9a4e05aa9db38e351
+# 70df8dd055ea430a8e569e7d6e6853d5
 msgid "``200``"
 msgstr ""
 
@@ -1160,50 +1160,50 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst:33
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:33
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:54
-# 9e2ed8f043094e33bfe9cf3d55cb760f
-# 155f9e5ab3214fc88bc7be0740e44348
-# 5a02cf49e7ce49e3a8daf088ca6701e9
-# c08d242d90e449379c1399ae2b915e3d
-# f52fe29e028d4b1183072d26b332fab2
-# 9b0bcb84480a4602bf03f318fb599b0a
-# 0f495ded0a284433909b6be0af78a613
-# 2eb91f26e0254ad7a69e822a020eabde
-# a29d2ddd8f0446c5aad542ec5d5ccc08
-# 24d9cc1a30d24c7fb0a56e590e564fd6
-# a539c483f9ef4236855d83203a7d0dc9
-# 62e5d664a377402aa517fd669fd72546
-# 048b4abce3ca477faed73c921be80ca2
-# e6647551e66048f3a8d8b0da5c6b79ad
-# fe877c62107c485b9c7434e364c08a33
-# 839b9f59294247daabfed5c574fe9d3d
-# fc82682dc810400a9853d8820a5d4c8a
-# 249ee412ff314163b409e3048d29bc72
-# 6024e7ec8b624939a6d0a0d628a849db
-# b63421cb102b441d840d341de001f979
-# 6585ffd6e80942998bce1ad3e2e90288
-# 5dce6cde83f94cf991b26e9d958a923e
-# cde2556304a647899b67149e7c3b64ec
-# 71d03cd4ad50450797cb020cf5daabc1
-# b21f3828bef04ff2a97d93f34456d2c0
-# 857e9203e99d4d76a9f56724d845bb33
-# ade64175a5ec46c59ea6b08389071768
-# d3509825159a4a5cbb282bb9cd1efe3c
-# 22234d36f5e34e73b403c21d1c94653f
-# 01eeae56b33f4755971859b0d62606e2
-# eb548d93f8dd4fc2a7883647b4e3ea5a
-# 756e4b500f2a482b9dc697f8415dd4e0
-# 64eb0fbf22394aac888c10d21f87f801
-# ec436bfe71e3452ebf228a068d41ebc8
-# b2756298a31949838154dca1bc617c1b
-# e274998d5a1a4fde9f72a50e218ebf07
-# a019ea9204ed4c8fb3979ee3a87b333d
-# 9d002231bbdd4f969d71221ceb4b9f13
-# 1b41d4b39b864b3cbc62d612242b6312
-# 2adb496768f74636a985a6db50565b0b
-# 882288356b284a4abd5ed78a7c06a57a
-# d8d2c9628ddd438da9a6b3a6f27ff726
-# 87d8f384092245deb15852c5f8af9fae
-# d8f43df8e3294265b562b647824b8e07
+# 1291fb4e1e7c4651889c28540be24d3e
+# dda5f3b213e0434ebbcac9375e198852
+# e3d85717d60041839cfb41b78bcda3f5
+# 9c325d19b28d42da9ab2e97e10f7b2fe
+# 9ecd2579aede423185cd8eb7f6e1bf10
+# 29e005c33dc5432c93725e1c02ff716b
+# 1d1a99afca244927a9b5a6672ca53c85
+# 2cecdf48acd143999c2df69b1e047fa1
+# 2ddf7dc21b204243845a289c4d28c55a
+# 4fee5a2f2fc2438b9a7050a39b9b92d5
+# 545631b04aa4486da33284aeacbbb82c
+# e8b868adcc814d7381933ff0f12aea8b
+# ea13fe9bb5f54bf097d0d2c2af254632
+# 87eab460f9b4448e9559a4f515244361
+# 5cf50e83507b43ec86cf6ab1444fda31
+# e33ada7856be42c5a685155e0a6a3e60
+# 4a343db6323141a086d5fa89405fcc2a
+# 798630c6901a43d685c7ea5efcea7b3c
+# fabcdf0c3a23407bb5a50507a974994a
+# 044a5f01d13641dfaee1f5f27451ef0e
+# b127bd07683f41d7b986c88e6408809e
+# ecbe63af0dbc4256a596719a5f5339bb
+# 6ea137a1533c4c3787b408728894f68a
+# 3af478021e47445b90ffbd7a263e4c67
+# 3e5ce99e736b4866a26e633c8db2852e
+# 7dfdf531018c4c6db6990e8ccb80fa07
+# bb5e83c7f448485da3a1f8d05878f627
+# 842a56e496d94a03a0f1c490eab81998
+# 0b9a03731fab4c0faec1251005915f4e
+# ea89ae4206854a00a2d376da0d0f8131
+# dbc274cc9e2e40df8d1e8a80604c4400
+# 0319c1c7a134430a8db2375414c87477
+# 5dcd5562887a4105a7c0244cab8e6b93
+# 8cf59340bd5a45d19cbfbfb400acf928
+# 865445f24c24451d8fed5b4c1441618f
+# 046c380edab2428ea5157ca9472edf37
+# 89426eaca6814f85948ff63344b50221
+# 58c3ebc021b943fc948404f991603268
+# 86c8f362610847ffa0622f1e80cc69bb
+# 6261a1c8fb9c461e9ec0f737e03e15fa
+# 4385bbb5e5524a7abc3761b164389e85
+# fa75df26557e4a20a6ce8ac933802fff
+# e00e3d07e1bd46a7afd019759153f510
+# cbec5435d70c4cbfa7d1ebe6e8b17d18
 msgid "|response code 200 ok|"
 msgstr ""
 
@@ -1256,55 +1256,55 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:34
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:51
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:57
-# 8244a329edc74a08b885eacfab497482
-# 8a0dddd0025a4ca89434af0697320eee
-# a1125c6f204945cfbb94933d9e7cbb17
-# a8c11847c8204497924d9062ffeaa393
-# dd509520a7f14c4d9ee06cb5a21336eb
-# fc41158e851f4513b72d45b817105148
-# 56be088f9511430989596ea85ae8e5d7
-# def5003493b147efb61585bda36d2712
-# 092067bf477e4c169f2caa7a5e79c0e6
-# dc7e4732da4f4a79bf6de6a06190bd3c
-# 516e852ab3e248d6a09951063826de46
-# 15cca51fc63148ddb8768578c11fc47a
-# d87fa14f8afb48d5a330749a52773d50
-# 17906c9d684a4434aca30ef6888b3c9f
-# 51205f924c374a09a72d22d6275deae6
-# c23283f8b3aa43839d89a98bd9582812
-# 9c39397a57ac4f20950ce7960d0317c6
-# 444f6750596a4b7cb570cb308af37d07
-# 19760cd7464c43eaba503318f5f7b9bb
-# e72bee3c7233494ebce75cd376632e71
-# 7aa2a8e3e47b4b18ad5c04bab22264a6
-# 5474f9bddd1d4ba0a83b071849d24d61
-# 9ad73744755842bdb66ff9c4aea52668
-# d8ec4fe02f744849bd01e3bc8fcedb20
-# 9f49b97577c546cd83db64b480afdeba
-# ef4266f662f64f1c9ecff9719ab12a93
-# a3c2d9f3bbb143fa8a972157b0d35b8c
-# 430beafe74504a479e55ef540fc5426b
-# c53dd3fc3c2d44fdb872903371a0357c
-# f71fe89fdd3342d2a7646d0bede9cd5e
-# ea0b5a3065be4fa086d1c93e27b0d9d6
-# 57cc8908b3df46f69754d3d6375c8959
-# 76ed870c84ee4766bab4df4e705142d9
-# 84e8548742074e8c8ca9b61311ef29f4
-# 560fc1a3b2c747979265eb48c862abc7
-# 315a2b22799443bb9cbf06634dd0ac19
-# 1a81ab7c00bd4dea99a722870aa461c3
-# 073cd2c3d3e14e528cb99c390d0f19cd
-# 911de7faf8be42ea816cbaf117d1b39f
-# 8ffc3a1cbb94491db58e1a8a76b841cc
-# f6a3fc579f6d4cf7b02bd35c610f2685
-# 43a9a5a751a444b09fc363ab65be33d5
-# ae70740eba4e4ddfbb028824a18bbfc1
-# 418dddd0ea4a400db09921de4fb1d53e
-# 5f4e60c9fe924f3da30993221bdf85db
-# 6fe765be56294cc5a6b2688f8bb1e7da
-# bee24acfc5554ecdaf362478b1f96c60
-# 6cd096c2671347269e9acfb54c26fcd6
-# 7bf505938ffc4040b1db21d6457713e0
+# 3ea14ab03f5a4714915aa7e86a242a30
+# 7dbfa97161c5467c91eb238fb1f12c7c
+# 1230e81061d14c61a6dcacd136e79c53
+# f9ce7bfd4a7040c18988d1c673dbd293
+# 245c9233269c4e7cb0852a2f32f27f35
+# 436eefcf028e44a6b34ea60bcf5bbb0c
+# 64423d2dab734f4daedefd91d9341ecd
+# 84a2e6737a694f06b3811bf849ab08bd
+# b171bf391d9f4673b4f6e8908068b515
+# 9a360943ea5949479dab76841d4dfefb
+# 8fa52eaaf92a4448acc321b32fed8f6d
+# 77d2e3bab0f34554933ecfe56d538284
+# 07177e0d062a46faa8a58feb48f31cb6
+# 959e7c30a0a14714b7450e960fbb6c1d
+# 2ddc9cccbc9142338a3a4f62c264633b
+# 51b37501a5f24a3f963c151676878385
+# bbebcad7bdf6476dabcf44da084e5406
+# 8cd452f2f4e44b6dad15de8902c6090a
+# 6077810512794527ac18ab3f27941c97
+# 155fde6f6d454294a07bc75b9ff0aa3c
+# 246ef7e3046f4c3dbfec784e23948f55
+# b48423465b574e3b81c34f40990db144
+# 277d6f3c42da4dbd9635a955c25c9b83
+# afeeef27e46b455ebfdfda1496ccf009
+# d757bdd078464a4abe73a64199aa688c
+# c1fd652c6ff149dfb89213c50b23fb0a
+# 9d82b2e3dc5c4e6c8abe6bd0a91a7065
+# 5e1a84fbacab472b8a32d47bfdaee3ad
+# d56e741909d64ed4bed852278b23a474
+# 9f659a590d154bc899b7ddff86061ae5
+# 8b2039ac04314952b75fd91267fe35b7
+# 39fa836f63e44942a01889d94cfb5dab
+# ad4bde227a3648f28c57824fab7c0c37
+# 873ffc8bfebf47ff8c6e9b3fc431d07b
+# d5ac1b4283d54341b1b36818f2ed0bcc
+# 304b9e9f24bb4beda6355c3a8ffe0012
+# cfb250191c654d4c96d02ade931d950d
+# c49114bc4ecc4101a6c20a02d4ea2269
+# e501fd4503fd41b3922c451acbcde43a
+# dfc3da4f357341e4a94218a396cea761
+# 66b3abd38b974426af964f536e8e7f80
+# 16b62b6bf6514ed68243e6df7b5f3b65
+# c46ad4c5d9bb42019a45e77b71d0da7e
+# 078a7be6bc5a4a2c8ef1fa979341f485
+# f500e78485bd47b386bb50c84c5480ce
+# e2395981367d4fea8bcbcedc243d707a
+# 10a73cef495b4e4b9bc8493b631e10ce
+# b41e99db83714ea492e322e9f69f5c15
+# 737466e55c544e8391fd565a15ab7073
 msgid "``401``"
 msgstr ""
 
@@ -1357,55 +1357,55 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:35
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:52
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:58
-# 10aab17b1d874fab8acbcb876ca90449
-# a87ece90994e49818837a1b919595b31
-# 63b31b01f0e943ee9329ae8a97d90cb3
-# 722c36be92b74658a907dd71bb00a05a
-# 48e73e26c3334c64a7ed34dec65bd7ba
-# 2582e5102e5348d1b2cb923144ac8edc
-# e033f78362f74028bd5d61008df40725
-# e20810c5c1324cacb5ab7584040996d8
-# 860cbcde539d4cf5a66e39757904b753
-# 84edb6993f5f45a9a11d7175825d62bd
-# 5ef07174f80a477f9ae61b531087caf3
-# 94cd30ca9e624f84b4be30258db81f98
-# 89e7cdd0251646e4bd5d9cb6f28cfafa
-# 38c31f07e8c84dffad3defc818af178f
-# af3fc31f578343b294fbe5be4c8054be
-# e549bc7a9a204dbbbded8e0d7fa6d951
-# e2b16940c1ab4790ae8d4e58c6fbce74
-# 139575d1ab104519b8eb43307105f806
-# e2256f37c5504f0faae0f7836b597f7b
-# 5c4daf88a3b84d06b96e1a7ad2439e53
-# 40f6aa83709e431a9abc892fe9ea6369
-# 0ab665c802774c7dbc385785890c8d6a
-# 3e5366bff17c4c77b0ac9f10d3dace34
-# 5bc94e351e854ec59470732e7834a8b8
-# 90b436769670479a816fc80bafeb80c1
-# 66d86bbf8fcc4f52bb5cdfc9661e6bf9
-# 44c8633f2dc24422a8b33681753d6f98
-# e716d328b2f54ca1b635d92efcf39b28
-# 846ce1c657fa43b78ef710fc3a34f125
-# 73bd9ad583814589ae308721dbe9f6e2
-# df5a956be1354a35aeefa9bfbfb0ae31
-# 11547d7a6cb740dfb2827790424e27a1
-# 8e8ef74c7b794a4cb74662c88ccce21b
-# c52d462c48784d4087680ada10ed6b26
-# f0f09eb5754347f582ee8865e7bfaa98
-# 2eaf13b6a13141aab7281d5574af3e67
-# 4db0b3f6b88b4e2ab1dfe255e52b8da2
-# df8b1ac8af8d44ee8836888296ce0d21
-# 33b09bb0fdcb4a0d9f7bb6a1f99603c0
-# 9095f3e13b1449a181719aed337b8263
-# 1ba490cacf0c49cbabbcccace4fd508f
-# ac67a891a5704e8084fbd77bbf69ccae
-# 3a0734751a8348c3b082cc3fa94222c3
-# 8c33b06e169a4964928ef3a617556b41
-# 69509c05251e4be68e340dbe7a419490
-# 4170a40b876d495b9add58a9caf04623
-# 75c9af3a70314946b1b69ad1b4e24b66
-# 0ac82e053bee4cec80fcd74e52c5453c
-# 435a00889cac4394b7a863e6f803750f
+# 213bd59d00254ca99bb09f92a7329495
+# 8b2ae82e5bdc4c33a8014531d6dc92f8
+# 2e6f1b8ce18947dfa0f20dd25dcade4d
+# 0ce7061915ac415cb1f2d8d0d1a4e5c7
+# d611b2c0d8f84d9a8e3b9a491739e803
+# 16b1ac3872bf4c408db05913afde608c
+# e9192e8280eb483287d4bc57febe4619
+# e6e1015daaa649a9901f1ea19c154086
+# 5330c82134f94b86b3228a36270d56bf
+# 90b5ed2d461846398a547388677344ff
+# 3c1e9eb51cb649ec83ad223760fa2a14
+# 63f84ab754ec4848aa8278cb9103c0f5
+# c6d9eda5c1a845d8b8a7b5b3169b7cd5
+# 2b994bca9bbd4318915873f5f8608e3f
+# b6a55aacd070459d954455c77619742e
+# 74254a38d185413cb253b9dd545f17ee
+# 1aae1c56ac624002b3c799cb75b00584
+# 33deffaf168e44c2adc0a95dacc1a2b4
+# 0bd85d0fae1f448fbe71776e3386bdac
+# 84ee38a407344ef3b531187b53817f2e
+# 3e1de7f671314bb0979b4bc4b2776cdf
+# a311372220a14c8e84d5b09a566c5db3
+# 0cd3c2eeeb94485dac85b3a1a448e932
+# c7164cb2c8dc47678d1277c2ea4c1560
+# e52e7cbfdffa469eb0c82761ba70a950
+# f08af72512614b2aa5811c669ac033ee
+# 6a310188fd314df3a5413633beb96d68
+# d1e782beeb6a487e82e39bc34d3cf5ae
+# 57e83cdb071948fd953ec5266ef0cc73
+# 49c472e17edd41c6b8885a372e26798b
+# a1fe88769417412a9bf2a377e22f4c32
+# 00b7dc9cabc24bb0bd0fe7e1968f016e
+# 7c80a25194964729a5bc027e67779941
+# bfad430748294d51b8626e8ae5ba20fa
+# 5bd3fd857c9d4850994bfe52066ee963
+# a1076cadf4914b7a8a050dcfb975901f
+# 5316a990e38a4eadae51fd08a3ce43fe
+# 7db9f296ea6e410387c4f477cf501165
+# 2f117d48400a4667960240e203d4ab86
+# f96812fa8a3d46d5b8dd17e19a3fbda4
+# e48b69fdb7524fa3abb87c653eea60ac
+# a206dcc94f9b4d5aa118e2b4d6f9afd8
+# 433026b2ca1e468aa8c87bcf9d3c88a9
+# 919fcfc2760c4fd68d7a6aa467912e45
+# 377726276bf14c9cbeb24d18eceb5d3a
+# 0a6666b497ff40c7b8970209cd786342
+# 69803c7874284ec6a8ef5719786e9d59
+# c46ff795a9124572b9498b7301955083
+# eca6cd39135c44a5be615706eb588525
 msgid "|response code 401 unauthorized|"
 msgstr ""
 
@@ -1458,55 +1458,55 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:36
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:53
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:59
-# 94a322986836460a9641461e59f84a24
-# 63481f52a29f45ab9172b04079ddbf87
-# 21ab0fd7aa3a415f85748dc88b25c942
-# d37209d90bf7446fb4399c2f0c323b14
-# b100d4d1773f484d80aca97b7603ea93
-# 14b2c9ec2ca54c8592de2fd1be3eb572
-# 53990940874d4878a4eb7703b9989252
-# f58446f7caed4b76839f54aa05d4aca1
-# d273f19cc3ff4de08b01529f27d1ee68
-# e966825b1a00456581cdd7f308e9d8bf
-# 4603c79977fd46cd8d05863d4c8f5c1f
-# 0482ba8418d04dd1803f375699439d41
-# 0d64bd209671472fb082ce2062d562f6
-# b328442c3680407b949a0c33b928dbe0
-# a9e5b9bb9cdd47099e0cc690fc9a53e2
-# b69faf73dfc34674a2c9d3a8a4015755
-# 18f444771caf4a88a0ed6848ae3962ca
-# 562f9bddb4714c51b8a5c238bb99b761
-# 4b17186d76414b808cb601f3415f5a2c
-# 5d14ae5b4ddb4bb6856f47457e16631f
-# bedc5c4306c3477bb27736b060217288
-# 51d6969a19424733ae3baacdeab9426f
-# 94cfbd8cf32e4ef2950007485d66373c
-# bd538a711bc444b5883738203b3f2022
-# c3ae5852bbe049b98cb38f4511feb146
-# 7dcf452b924248e3b4b3f8265879d994
-# d1bf8c8a34d74196a828e850f25a6e4e
-# 21f8272b77e24def9eaa59cbe3f5846f
-# 918e8e762d8040aea7c18b8c6bc0ac0e
-# daa038fd32bc4325bb9cc43d1db65cb5
-# 0083b3d846c6483d8e8f557464a98bbe
-# a529354fa2f545bb9cbb1b1c7f4af1b3
-# 22e222b19d1d4b54bc6821134769d8cf
-# b5dd951a13e84964a06050ef8d5a1488
-# fe16fc0bd51346c2a003aa7cc44d0b76
-# 36d1be9a24844e9f82eb2ce21fd7c161
-# 538f5369bb17411a89e083d74c14ec2c
-# bd30ddf947e54eca931dbfc0de629ea7
-# 5ab17f7a01fd4fbe97faa2b719398c3c
-# 24a7399b708e4a40af02f413cd2b63bf
-# f43374602dd540a489879399385a2dc2
-# 60f36b19fd7a4f5dbfad898c3b1bad7e
-# 686f668ad360488997e5aeeadf85b5f2
-# 857d6706503449cfb5931fce258d6694
-# 5e9cd6ff81c24ac2bf3406f3f5c3d531
-# 75beef9ea9ed4e2581aeddc0d809e106
-# d7b2bd5e713f4a379f088472a06d0375
-# 387a4820278e4b68a62dbbc5da507a05
-# 6edb889052f74f18ae7321c1b64de81c
+# 1c253e66950e4697a1fadd0bfb92f5d9
+# c14e447c542a4d319f7b8cecbd3bf4da
+# c1525ff3788d49348df47035341555ae
+# 116fe7878acc49e4936b58d9639fd4bf
+# 680d31eeca90486298cf579f48283913
+# c1dcd34ae36a4e87aa170881e3a56f24
+# 4365b3fb5a814bc095e3b0344f7e9aa6
+# 764b7322e3d34c699c13832d2f1cf66a
+# 4f83d613e8ef4cc4a370baae5595e076
+# dd58301c1e6a40b88669096cbfeb01a7
+# 106c950679f842cab8498444b177c4f2
+# 515b1f72b7294b04b33729b9d3417f48
+# c963e76aa3df4f06994c87d1981100f7
+# 421396aa52f845e8a82635df302938c3
+# f6f10f415c9748c692d3322547b25eac
+# d12a91bbb7e14d7589d694784a811a09
+# f5611887924e4212892ddcef6e1843d9
+# ddf9f6d2b2eb4c9f82510126e2303fd4
+# f9b41f6a2c1848e8bea40549939dc2b1
+# f900402fece947e7a0ded1cc7296f95a
+# 12e020140ab44afb997cc63f8f14136c
+# 5fb885616ea34a2196914919b331db22
+# fd94ba0ecf22421f8b97d331056b1330
+# f9ad183ca1234a109a529380cb82260e
+# 9e64d95fbfd045e0b2cd5e75745457ad
+# 312e1aaa851940bbb9e24b2797626aeb
+# 8cc47ba7d80e4daebcd0305feac8f1fb
+# 0665c888083f4c1e989717c291f92303
+# b88e2fcda61e45ffbca892224775b29d
+# e27324962a764b5a861bb4e36f8722bb
+# ccc6be6dab8d40359f0d07f331b2d944
+# beeb9ca1eeee408da3f8f07461ecb21a
+# a61ff2f33cfb4c708f8165118b7e3f15
+# be6073f5641f43f6a74156433f6ae89c
+# 51b0be854b80437cb07e500048e89d3c
+# 8160056fbcf64b7488d96f200ad1d417
+# d95915eb411141159b9c08fa81adb934
+# 5b4fc4b1a9f243a1909f530628673af9
+# ce74a06caf4c47578bae766257884e5b
+# a8213a9ac7974eff83e834c8d4f5833b
+# 5eb47ff980ac4c3bba12c2db0b3967f5
+# ffe3da21319d4e27b3577c51e3a1d9cd
+# 10ad3d4a4ec54eb69b9b12f3d00742fe
+# 521e2374be354468b8b81bf66d817e2b
+# 142a9c8cdf9d48f6b3c74ffc00b777f8
+# c24b7a1e6348434dabca603f190c0aac
+# ddf6cc883adf4198922c110f23bf8d5b
+# 44e4ce32c72145f5ba3e558563fbabc4
+# 5884f225b53f4918ad1dd52cbd71782b
 msgid "``403``"
 msgstr ""
 
@@ -1559,55 +1559,55 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:37
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:54
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:60
-# 3b4e1d59100b4594a609c2c2cdc2c6b9
-# d7f9c5f469de4ba28dee70ff62ac6819
-# 051afc64b3a34403a9e1b88c10256f46
-# 1b83cdbc52614ee7a9af37d87a9f168d
-# 716391a707f74d92bb791f09a8e074cb
-# 5708148c340246af8ad0996dfda0c9c0
-# 994d01d6edcf41b4821eb0762ed07d2a
-# 2ad7177d435742db8406c79d6712f17a
-# 99161ec9d0874c4abbff626b05cfd5c3
-# 8a1e4f0440124e009241a9834b5ea7f8
-# 5b6503dc15c445e38cff825905754884
-# 3ebd88b1560841fda1e53141db7309d9
-# 6b5642642ed541acad2c196cf6c749c7
-# 728622b0cfa241a9bafe4f997ab672e9
-# 4e420d335da94ce49dad40172652c38c
-# 21ef791a5dff4dd7b512a016e53aa799
-# c2dc2db5328447cd8c3aa1ccf12480f2
-# 7fd7c91876334c2fb3104876a43a0979
-# 477e3a57462d4e1dbfa812b0bfbd038d
-# 6d9b9c114bbe4c659508f6db093386f9
-# 7d754f8be6724393a471b1bd992c93ad
-# a29bb2e058a24949adc3b2ae1c9bb7c4
-# 725b827d4dd4431d9f3b172cf3b41b91
-# 7dec4504a528409486372a6cb99a0a27
-# 26e35995352c4868b39fc6113fe092b1
-# 09b638f08fc948679c4be2874958f72d
-# 07590b290adf49b7a308e5b3af213cb7
-# d9725ba61a7c4592bfd76dd617ca576b
-# f5736814303749c98ab0f99c502f5997
-# e75f00b147494e77bbd05fe04a1f9f85
-# afd428c3ee974297b0ef55a2059992ad
-# e844e4cc108040cda3bff91f468af15e
-# 6300cde6016e4f4a9460882f96716629
-# 78ed4da5cbe54de89911625eed97218e
-# 4fc599b349574eeeaf39e80ea75e7ca0
-# b69712a93a3c4ac9b89665d416c6d5da
-# abd80de3ce21498099c8eb8785768902
-# 0f5a43a208174504957752a5b71eb6ba
-# 6c17e818ce784c3a8ba0d4353977fc39
-# d55ff45b924e4aa5aaf693791363789e
-# fd6aac1378bb4b518753c93b1b85f410
-# e9d916ad18d04a478916afd75213a0e1
-# 5ece5fc607e6469c8cef8bc5bc485ab9
-# 258decaf015f4ee7bd8a2133f6e8712e
-# 69107d0d5bf64e39aee18d81b90fc122
-# 2fe2cdd9456148bf8724d702655199ea
-# 07f960b43b7044c1b113eebfce622515
-# e8fb20266b8840c798f2125bb030c5b2
-# fde506c02691419e82b8b5a802829aae
+# f44ae8f253dc499b9c9aa288455b3613
+# f89132ba3f9842638c6298f19d86e479
+# 9c9e465c0a5741d89e388da410884ea1
+# d14255f5a26e4accba44ae6ce7145a56
+# 87e2ca989b42432a86254dd9f6cb5498
+# 8dd4d946d03341e2b3565cecf6bcfeab
+# 90a261da0fff44a18d7cf1dd2ab502d3
+# ca8466e8b22e4491816ca829e2632c5b
+# 1fc847e8e814477d90dbd36a4725b95c
+# d92349ee0db94d77b9ac6884b677b59e
+# a775bb135b5549e8ae5bca6d51fca23b
+# cb5a2097aa7a4c9ba267ae77474f6cb9
+# 9225d0407f554bf5ab902f8b5b470336
+# 82be72fa49644eab8ee8c7217072bb3d
+# d378b3b23ce34b11afe6199d5946b508
+# 6ff185dc741c4f3db837693b6518475f
+# 7bbdf03d4536402eb9abc29306d8e9b8
+# 7c97c41cefa5440c9f5455809ac12928
+# d907b99243ca44a48636c96e9a0b39f6
+# b9af078dbc6440959345558e62767c9d
+# 4b28a5401e394177bd73d56d8a761335
+# a77c2b7346da43f7a58d69e817be94be
+# cdd7fd0c48434394b4a52145f2acc078
+# fdbc77bb8cae41a8b15a4ae4743d86ef
+# 6953fc12064541f3bfc12394c595bc09
+# c617cbc453804f19901a1dd13e234586
+# d05ce6e8baae4f00be78cb64723a1739
+# 335835bc24a64424a73ec1ed607c4c91
+# 69ad9c9f3beb4c62923f6ae4d4f9cd33
+# 0dc2affcee4b43a2a6057665e5dca8e3
+# 114bd46a91a449eeac05980eba8ab18d
+# a953d93ce77b4f93881781275ad0c752
+# 346154601d1e4a60bcd575c3c7324369
+# 969b060cf76c47a6a05f85b4d2157e40
+# 3624f845428846768d321f43103e9f42
+# ec66c53ab2984d66811ddedc4effbb79
+# 57c1711636a94641aa8875f375c8e426
+# db0fb7f49d6343e5a6701f4167f44970
+# 4f516691901f4f31afaa4c6848b2dffe
+# 91906264562b49848ffa2029ef11e616
+# 36429ee6bcc84af0939afcd46d30b6e2
+# 8f6fde27523342f8a7d4e5a382458423
+# d79f15f984434a6485514c44bca6867d
+# b53a5493ed21412587f5fcb31a911179
+# fe5df3ae0166412ea33feb9f77dd2d04
+# 36418c0f78cd45508f5a0255ad1c1fe8
+# a027cf0872b149678303feae4876a3e8
+# 3b7e1f43f33744ef95b2b3d80052e0d1
+# 419f95a8e6014c62afc0c09abc7e5d44
 msgid "|response code 403 forbidden|"
 msgstr ""
 
@@ -1621,21 +1621,21 @@ msgstr ""
 #: ../source/api_chef_server.rst:362
 #: ../source/api_chef_server.rst:397
 #: ../source/api_chef_server.rst:421
-# d8a2839b7fd345d6b5f93bd01d75a527
-# 1a6f3d6efb814c8dba72470e9ab3ddfe
-# edb0745ec1e6449aa770976039419e42
-# 9c9e047e46344b0298819706a9e16ce6
-# f04f52bda6764378b9ae4809528a8abc
-# 48cddba26c18415b8b65d62e6cceafff
-# bf0b46ec9bb34ce1b6445ad12093d797
-# 17309bc7b4e44fbeabbef43e82965c2c
-# b62e907ef98241e9b483c78ba4e9fcb6
-# 131cfd0a24514ae99bf6da072b9cc386
+# 33deaee151f3494baf33b6de83b5e4e9
+# 1192f14cbb544736aa176cad6e1e6dd9
+# a4532128cb2541c4a2c57051a3a51327
+# 6d516be08a554d7cb415b6ab8a388e2b
+# ca2b7519e4274518814850cf26c0d548
+# 7e08ca72e7e049b3ab1b7f37851554ae
+# 6e41b177133a4f1e92cbabd981ea0a2b
+# 16a12123eed445c8a6a2008bda9142ca
+# dc990d2ee9f043459860e609458c7d36
+# ef316d7c4c9a4458959b09b5f22f1e5c
 msgid "POST"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients_post.rst:4
-# 80d7fbaa514e43a29feb11c6950b104d
+# 86947a009823452999933d65bd9c7299
 msgid "The ``POST`` method is used to create a new |chef api client|."
 msgstr ""
 
@@ -1655,32 +1655,32 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:43
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:14
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:20
-# 29470fe26b144ed0bfbee247072ea209
-# 671fc87e50704a7abf869784313306cc
-# ffce05ee2e67453782c561a327443451
-# 00a9c55698af4baa91ef08957ee694d9
-# 88d44651149340938f654a74865722b3
-# c4dc8fbf72824298a9af99291f262174
-# 11f8c91e803c4d928ad817ddd69115b0
-# bbfeb7fbf2fe47a1ab9a2b852bbf188a
-# 63618dea556f46b589ecbf01ca0db102
-# f2972727327149008b0ea48fbbbd8f73
-# 742cf36312ba40a79299f9b719570bc8
-# cac19a0183cd473e9716fea726e2c08f
-# 57ef8e7f0c214d87a1a9c49905c608f7
-# 568e0c65c0564891bb14c55069a18fa2
-# 4ecafb6e59164b0981cef0a7e9458ff8
-# f3630b7b69b94b06a5443a7230244422
+# 8e3ea67e201e484587752dc580cb1045
+# bb5ba95da0884b1baef27ea0f271c7b8
+# 7ba718127e414ca0b51c8ea700a233e0
+# b012b89e3e7b495686926799d197dfd6
+# 258fa51782464892bf23ee691b940f0b
+# 5f93db060c824b89b7b80dd26c1a3d1a
+# 77b5053809ae4e75aced76cb1db71205
+# 557b9439c0724f73b56220c3abf6e832
+# 6356ef62806c4005ae6dcc024be336ec
+# b6ef07a097b14a0bae3f341d605991e3
+# d4090288ba0947e4a1a0f5ba71797051
+# ec414a756f584495a6f276f1165ba11c
+# bdce025a553b42139b49cc790f45e4ee
+# c55e0f8539f54ac496135fe56607187a
+# b80ed572cc5c496cbbd33c615a56a040
+# f7e1f2da44e240988e7424a4199da0b3
 msgid "with a request body that looks something like:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients_post.rst:23
-# 852001a8cdcd48b49abb30fd133ead9b
+# 3bf5fb93e8fb43beb4d3aeef7de488e3
 msgid "where ``name_of_API_client`` is the name of the |chef api client| to be created and ``admin`` indicates whether the |chef api client| will be run as an admin |chef api client|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients_post.rst:41
-# f67f1655c72c41c8b3617b33113fc17d
+# 3f99282084d14364a582a7a81231c0ba
 msgid "Store the private key in a safe place. It will be required later (along with the client name) to access the |chef server| when using the |api chef server|."
 msgstr ""
 
@@ -1692,14 +1692,14 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_post.rst:47
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:47
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:55
-# 2aec85c00a4d465b9f5162bcf3c9e0df
-# 0bedaa29f0b04ee592a119ed34602c0c
-# 15565862e3624322b4520b18edbe6f17
-# 155fb44e95734057a3ee879420986a4d
-# ef944a1acc114072bec2a32235017d80
-# c04e34550be245809f7dba636c3d6e58
-# 8b906297758740848d3ae705f165e39d
-# 1a86ecc320ef4fc1b0fd9a232b28f6a3
+# e2757b0e92f54a0faf5c22257f85c0b1
+# 248e0163d27c4ca3ae4053b633917c83
+# ee9cfc0bbf8d49de9384d6ca3d2fd57b
+# e9e742fcb89a4f74b69d11f403972eac
+# c4c0cbc21fe04e4290a91747596e2791
+# 40c8880a2bdf4feab74f82db44fa94a2
+# 3900d138730b4b8fa3bc5fcb89f11a90
+# 30947281ba5d47f593c799dee1156591
 msgid "``201``"
 msgstr ""
 
@@ -1708,11 +1708,11 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_post.rst:44
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_post.rst:49
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:48
-# 5ae0d95e3d964f11b2b75490574f6d9e
-# 4c7d6ef35f144643b96c7c08c24a8190
-# aaf8d0e20b6143cd9821adf2f8dda629
-# 0d27a1171cdd4f01bb30c6a5558410ab
-# 834351fd6edd4b5d8b28adf737c295de
+# a54d8fa3559344edb9eed024695e6975
+# ae6c86cc839d4c93829a61345cf5c420
+# 430dc7d91fdd4b35acf1b066f5805db4
+# d676ede0058249cb839e52fc4f9430ae
+# bf2d8e03538541a6afc9fbb11df9dc9f
 msgid "|response code 201 created|"
 msgstr ""
 
@@ -1726,16 +1726,16 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes_post.rst:60
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id_put.rst:49
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:49
-# 928821bb41ed4d22b4a16e822c786242
-# 2277031a20f14defa563d1b0369911c1
-# 23abc72e218d45d6b8da1165131f5cfb
-# 154882589ac0437c9efcd327b8d7fca9
-# 2f2015c142274aeebdf649b790012eab
-# 39c68b61bff9456da76cafb5fc081bf6
-# e30c8016c8c244e6b100d8587ebcecf8
-# 3e25534688664f84b4a32a8cf365ab2a
-# dc5614cd671045feaa9b80932748b47f
-# 1a5ab29653f247fa833bef183dd9c9f8
+# bf731a1576a047a38073ac67fbc79a22
+# 589575426d9b4363ab5bfb5b0f76300a
+# 4d6fdf2d7e5f4d0ba016279f7ea3ee0a
+# 1fdf3d2f7e78429d8e197ca2efe1a9be
+# 2c8d5258bd324f16a9e2e8ffee6c805f
+# cf845906064a4f8293d54c082fa72cfb
+# 24fa27197cef4c8fb21b7d59e5046eb0
+# 8535cc67fdc74c17aba744d663f97b8e
+# 4d9e38e78c864871b825fcc464207926
+# c345fee2e6a946569d3ba593708467af
 msgid "``400``"
 msgstr ""
 
@@ -1748,15 +1748,15 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_post.rst:50
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id_put.rst:50
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:50
-# 5870eaed7dc5441b87ff339ddef08964
-# be0f72576911496fa26e4ca05ae1a117
-# cedc3ddfa6fa48ed9532707229bd2357
-# 2b254fd0e52f435188bf9ea660dc1ce4
-# 36c4d816a1d94902930af1c10cf82844
-# a88940a4d3c34330b87f72985d7b292b
-# 27cb06a29c114697bcbfdb435fe2f9d7
-# 501141f347134a96a008d0517cc5bfd6
-# 594d147dacba4c67aca3ab210a96b3de
+# 41048cfe105240c1a0b35fe84964762b
+# efff4df412344afc8d0821480ccb2cfc
+# f7d561aa162d4f2b8b10deb4180c46aa
+# a615c6a9ff32478bb3a514992b586693
+# dfd5fd2eb8784807a41a87b364f1b5b4
+# 93e2cee88faf4efe9063ec455bb90d1f
+# 1928e30b9cd54151839cfe3ab48e4b9f
+# a9a7c2c964544040bd8828a392c606dd
+# 48689e44573e4bfcb3a059044ea9146c
 msgid "|response code 400 bad request|"
 msgstr ""
 
@@ -1769,15 +1769,15 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_post.rst:55
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:55
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:63
-# f35b588fc53d4bb08064695d6b8bb19c
-# b584a5c2667846a389baa1d0fa966f85
-# 6958a623da844bf9ad72daec9e37cf3f
-# da650b16157345a580bfb78404a5cde5
-# 05234b54dc154174ad0fbece5561d054
-# 2c45ebe55e7649b7b56ada10b97fe3a7
-# e8aa520b07e249c190102d41f91fdb71
-# 23cefc38b4d74c6eb5dd4a4b2d4d49d5
-# b8c328b9739c4eae9c131e7a0ad7e0b9
+# 4754164d2b8e4a739759779a5edbb48d
+# 81b95ef1a7ae4e64923387b9927ba66b
+# f73f995e215a461fb38671377f3041b5
+# c59d63cd473b4a85b34a8f1ca8fcd35f
+# 16e509f8e6f046b6a7ab94ff381f5857
+# 04d4661da1d64c98889c7fe23b8292ea
+# 6a7f55494f354175b77f949140e69179
+# 9fe4191d50d047d9bc067b23b47f66ba
+# 60fd84b9ae18465580a6c6117267921f
 msgid "``409``"
 msgstr ""
 
@@ -1787,12 +1787,12 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_post.rst:57
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_post.rst:56
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:56
-# a856cc67c2874be794af1a55398eadb9
-# 23b61b4d02d543b48b29a8b4e42a7f6c
-# d5a7f2f853264544b2f7f0ff73a0f97c
-# 3f5c9866833d47debd5063d8e7c32a95
-# b6c8338b07814264a39715dd173fd915
-# ec9c86dea7df4a8aadf8e8ccfed9c0e9
+# 1c0fce54255a490db3d1209ec48ab853
+# 4638c740e5a14320aff9f01968fb6bf3
+# 3a114f3a98d64c15be834c498b09254c
+# 00312922f30141d18ffa30220f76a7ed
+# 318e8c5668dc46d8aeb20f5b68f8cf3a
+# d76662354cd042eda1b78a5300f8838e
 msgid "|response code 409 conflict|"
 msgstr ""
 
@@ -1814,24 +1814,24 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:79
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:57
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:65
-# b8515a42b59e4855aa6b2c3770418513
-# a80dbca337ec45d2bd2ebb1a6149f0f6
-# 127e4ba9565345889004212b17201ec9
-# fc024da1e06949d89f108f844e26eea6
-# ec46385f6d744ce29a3595998bf1cec4
-# 808e8605f1c4470d9e6c877f2ec9d4bc
-# f6da86bde5984e22b02eb97327316298
-# b3273f5537fc47eb99069871905575ef
-# ec5483d1670e48fb835470af0717eab5
-# b024f3c238b0481fa20bb55ca3ce4e57
-# 83b70e0853644439bfe524c7313c8429
-# 03e9fa6af0ab432e9b6d16399e9ae916
-# 95c7832977bb4c22a4e8fb8804c4e8a8
-# b80703f9ced7483c998308aeb07f6e2b
-# 2ba52c4a1bb9409493e9ba9902b2ce89
-# f3c1200abd134a289e15d2ff8c76afa0
-# 014daee5edf64061a30fc7e4e970f3a7
-# f2c4497354fd438588ca301e20c43bf4
+# 85938cf78946472785725e8d4bebce45
+# c1383d4926b54f87a52dd6e9fee27588
+# ee0dc19ab535446f9e178dd15e6a7e30
+# e629c7dc3d01415d89eaedc40059aa96
+# 90974aae593f49dda81dabc8aab9ed0f
+# 5b3656fc0fea4d0ba04fef144c96ab51
+# c30a164b7b234ea2ad80c28545bf60bc
+# 36c38dd7f37747c3bc4496cc4927b391
+# 5d78598473604b2ab2212a4b9454a399
+# 4b56eb777150443d8c7accd088f3ecbf
+# 10387ac01c0a412f90d6d1ab3a95d030
+# e48c670592c14f0eadad5986c4b8f56e
+# fb8212e48b834870bc040f3addeb8fa7
+# 60fd8a26fb984b58abe5a65678522452
+# 3cc65b884b674213a05f1a9987bd2105
+# 2eb1afa257934e328f81386a0c937835
+# 61c67f517362497096fd93ba6e2497ff
+# c6dd0a1280f04037b23a76b6fa739ff9
 msgid "``413``"
 msgstr ""
 
@@ -1853,34 +1853,34 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:80
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:58
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:66
-# 0e9508827ef0468399056a8470b3fa76
-# a26865f9c5e54331889f672c34309a36
-# 2835772d9d74495b8e031ad0fe53eb1e
-# 42d9adf7e26f4cc481e84ddfa313995e
-# 3a4a455115174c7690db5702263a556e
-# 637a8b9718fc404694bec59996075626
-# 0c7d1df2e86142069faebfd6c2853740
-# b6f44864ad7548f1ac8fae0252c58341
-# 7ef5e5e28c024f85add7bf04056b1b80
-# e5b7783a4fa145beafa1a472c929f762
-# f4453de1adf1479ca6c88c68ac5f4b91
-# f0b6dca8eb9f42e2805d8c4eac894dea
-# a796f323ac554007b1693593a9f8395a
-# 16c6f7bb32484513a19a69de701bfd19
-# 558aeda60b4e4bb6975b19a474da8fd4
-# 80872247284e4584b28fbc16b7278254
-# 176a0dfe285f43688856ac6a91d18a99
-# d2898d8e1b794da0a2b2a3699b75014d
+# 10155435078d4eef8c0b9ee1eda845d8
+# 525d9ec069844f7f9b72a78824f3a79e
+# fa31c879466342e5968874860fa0300f
+# 66f2de379c8a4db0a4e108ec07b822a2
+# 5134b0c7d0624aeaae3438f3fba7fc17
+# ef02f364e93a45ce97c3b235fbe248f6
+# c0aa03b010534ba29b267771e98f54da
+# 3e2a70d494e24f08989c3ee62fcddbfe
+# ae3b7ed2b25346e9998a580cefb9c144
+# 916646b9ddc7420d915ec3db51666f9b
+# 846d69263377466b9269d7eed8d13983
+# c85fc13f350a491f8193a2e115c7b542
+# 45ff2cf511ce46dcba616e59ac56dba1
+# 0b3e3a30345e47ec8ed11ef40433f1cb
+# 6f9ca114955346649c1189e78a148135
+# 7545c5164bc24cf394f06d2882125d37
+# f92ccc2d74054714b6e5548e2093eb19
+# cc6eedaada7d4f1280a0220c255c8a6c
 msgid "|response code 413 entity_too_large|"
 msgstr ""
 
 #: ../source/api_chef_server.rst:78
-# d666a8d6853745148141bfc294562e03
+# e0ee5e139b23420fadb975c08aef8a15
 msgid "/clients/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name.rst:4
-# 07009ab0260841278e904c91f619a4c1
+# e452f20a0b0640aca40010332d35a542
 msgid "The ``/clients/NAME`` endpoint is used to manage a specific |chef api client|. This endpoint has the following methods: ``DELETE``, ``GET``, and ``PUT``."
 msgstr ""
 
@@ -1891,18 +1891,18 @@ msgstr ""
 #: ../source/api_chef_server.rst:286
 #: ../source/api_chef_server.rst:327
 #: ../source/api_chef_server.rst:413
-# 04a5ddf4b2a34fa9bef5141dae0da557
-# d1cd32ab58644ebaaddcf6baba5f352d
-# 0a98842336c54969be3377f9e4332d49
-# 54affc0b576645de9b13964d2bcf12cd
-# dcb75405d9ec432a8b6f9f0b9f3ea49d
-# 4a274a00a18e4e59a0a63257d6798f7e
-# f3fde13f26cc42998b8221ec6d3e43b5
+# 7adb9fa6faac44b5ab7cb1e736a17fc6
+# e08c1f4c6a3949cfaa16c39f6db3e012
+# 4aa73f6f270245c28d7a675ae069ad41
+# d81f7b079e3b40eaa474e7781cce32d6
+# 26f6c682701542d380d749b893011e8a
+# 575d90d4b351460ebc6a4790c919219f
+# 0d3a441c98184ccbaf9eea360ec83c91
 msgid "DELETE"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_delete.rst:4
-# f58e312495ca46e8be8d09444e7a4fd5
+# 0c5f7a5d5df84a6cbf0a5d91224391e3
 msgid "The ``DELETE`` method is used to remove a specific |chef api client|."
 msgstr ""
 
@@ -1910,19 +1910,19 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_delete.rst:14
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_search_get.rst:14
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:12
-# cd173b3e369547ef89b142a581ba2377
-# 4cf6e4afb5b442699e6c20807b98ba12
-# a223cebc644c4634aa753d267269530a
-# d92cba0fb3df46a39806567c6cd8d9d4
+# 69ea00ef82a54c3e9b29ab13ef2562bd
+# 9743209c1cff4a4bad476234f43b4b2c
+# efa12b12f8924cfbad084ef7aa351cdd
+# 688e7c4825aa464a97ccd1239a61b75d
 msgid "This method has no request body."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_delete.rst:18
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_put.rst:98
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_post.rst:27
-# 4954ac8491134b428361983113dd5df9
-# 4a0fecebc72e414c9fbe87df41760a4b
-# 7492b4051fe64110b884f629a86b17b8
+# 7bf57a90c35b4700a4157c9fc205f6e1
+# c47afdd182a44975bedf8e26a6d11df4
+# c0b6b7b4e09145e4983713e711f296eb
 msgid "This method has no response body."
 msgstr ""
 
@@ -1959,39 +1959,39 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:65
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst:38
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:61
-# df1f218323e548adb0624bb41d421e30
-# 69c9afd9eadc4b77ab8aafcdf4321d15
-# 294714eda7ba47939ec164e3e64167bc
-# 0e5328d74c0d4bb0a7e98231088c186b
-# 60f64a6d41284ade9d7b7a3ca37ac41e
-# 82b54cc3fe4d4652b96f2c9c160e7da8
-# ce78d951bd52465e8364865c010e56e3
-# 1269e0b220e74da8bec5ba1fbb727d71
-# 464430738d13412f9b1208eedd2ef2a1
-# 65138f92e8a8463788be9e753910263d
-# 7216e1c83a9947b884a89fcbe8da75c5
-# 04001ab4cbb749b3be89d788e5856b88
-# 1d812993758c47128b7325e964f14b3e
-# 81666210560e40e2840910b33a28ed31
-# 4eb3f1c7ba9648759831fb6e4a81326f
-# 58de3a73a2584164959a7d601600dbd5
-# ac453893a5504a9fa4957f839926d99a
-# b2556bae02dd4d3dafad3da7da8a9b15
-# a43d948ec5974824adcfe99dfcff29d5
-# 3b64245bc8684ca0bfb1a40e6b56b153
-# 0f117d6f0a224773b93820c6f5005a25
-# 55bf98dc5f8947d094fc32a102ed1798
-# f848d44fe75244f5b0392547ce7bafe8
-# 5a4e6f6fe64847c3a6a6d5f664f24bb1
-# 351b3b525ba44743afb980236cddcd32
-# c61a4290d4b846c0b02999143c355731
-# f99ef52a8a2341748c701b2b27030d57
-# 0242c2594cf34805ba3266aabebfa810
-# d03c9d6edce04b5faf5caafdd500add0
-# dc36fbd81f5343429b24d55f360e7f99
-# 09930cde7dfe4735a0f1a6d7538a1123
-# fe2eccfe7880465588593767ae156ac2
-# 2a22ae5c629646c7bbceb7e0f4882feb
+# 8d9cca0ce12a4f7f9358635c467ebae4
+# e999241f633548da935087f6e45e94ed
+# 5ef18cc93d984229a8db1cfd2386f078
+# 7af9b4248d2f4f41b771bdce17d72dc8
+# 3292774529e949fb8ab0f6c3f16006ca
+# 6097c22f95b545eca93904199c942b31
+# 7b4757bac3d24e528ae1df3e5728146f
+# 0ec8c4b557a840128d8168d1906625a8
+# 1262277435ab4ef68342fdbc0652031b
+# 8b50c2fe7ba64524892e9e77266c3eed
+# bf0e03b970bf4c2c94926bedba9d1130
+# 433e24a02e1e41d49dc1f733effef1cf
+# 1eee092125314e86b718ee1d17fbe481
+# 215c4178ccf549aea74b845704977891
+# d185990176d144d5b6eb62ef54d7ddc5
+# fdc13df0a8dc4035af0f9fa6930acb6d
+# 1a6a98487a6e49e2a59dd0cf9ea43f2c
+# 9e3d3c95f7f84beeb72ec9416340e5c5
+# ddcea8b5abba4c2aa8c676558d97a018
+# 7e22d51fbba14edba9b1eeb28878896c
+# c6b4296405704b378e0142a380e482a8
+# 3a3b9736636943feafd678b458e2c48c
+# dad845b28ae04e63b10e8fd3d1e34677
+# 2226f6b7fb1547b2a591ead53e9036e1
+# dce407d86c9a4a4aa27146d397992741
+# 19be8b0dac064b46b3d7937fa3953151
+# 80cf2c1ca65741de8a551add9a865a45
+# 5197e535572146a282b8e067460ab8dd
+# dc1fc7036db14be2955684e38fa00a97
+# 9706ea1045f743ffb47bca45d0100f97
+# c2f921faca8f4b528e803bbe7b826668
+# 620a26681f4c41d896cc83d21ff6c3dd
+# 39de28e0f57f47b8bb2279e057fc9686
 msgid "``404``"
 msgstr ""
 
@@ -2028,44 +2028,44 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:66
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst:39
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:62
-# c547ddb2bcab4fd2b9ac9a0598fb5b7f
-# 73964f4c86db4155adb6926ab4bd5112
-# 738ea8afc86c45afbc4bc5d49cdbf995
-# cd64b6cdf5d04fc89231e354f66e7321
-# 07a672fc08ba48ba965c53962bb62e9b
-# 28c49ff31c8b45259cd188943bf464e8
-# aa151a42d7e04f2ebf030a32a1c5f739
-# 0c7641006fb548b784b14f24ec4b2e53
-# b269c99bb06d41c6af11e1cfb17ec19e
-# 9344d233d5f74603b6d82724f8c9049e
-# 3e7cf97aeff14bdd8ea3d97ebf8cb6c3
-# 2d55bb685d864d79864847bc73037ca9
-# c97df5c83d034d8d9d1f1f10eaaa5445
-# ea3b0408987d41b7a82cbee4e771c89f
-# 99c63e4e45464c0a9646a68a3746be12
-# 342054c7b6e24767b80b797cb0bb1f8f
-# d902631ee1834a45a0a0fdad1ef341fc
-# 8646079698544b0080f42cae7746e01f
-# 87afebd8c90a436196665e8054ddd848
-# 72ba385a289a41ee9e20c228e70a842a
-# 08c4dc9c401d480e90ee1267844842a0
-# 5852d793b6f348c381bdaf4c3e0624e6
-# dca702e5d9cb4234a55017d06274f128
-# fa3306ccc0f6487490f54f78ea68909f
-# 468dba506c2743d9977c31ad4da8813f
-# 6d6f2412fc694dd0a5c37886b5876185
-# 79392804f5534d528c8869b2f5c03e35
-# ea6e95aa0ced42579328e0c2dd564041
-# 5b67ca2addc54d51a8d4b6f66b9d1e08
-# 589718a608484dcf93e17a819c0511af
-# d81ca0b1fa3b47af823c040513ef9c3b
-# 4163c6ea10064697a912c929eaa3f8f4
-# 4cf2a05b9b9943fc9d4b46936fddbc11
+# 5c69e7451dde4176a3daf29079ccf9d4
+# 1191f612d9474db9a719934b8e48fc32
+# c6640ed533ca45acb1cfe2bc1f492509
+# 908dd33e84c34b5080ef92f3ff4d5024
+# 0a338299ee3f40949dbe41fba9ba68db
+# 253a2fc7c18a46b983e4c91d6f035cc7
+# e390c4aaaad64c2cad572d615060e17a
+# 10e7418a7ab84c118072d335cdb7b80f
+# 08b5c25c837740da83dbe09589585603
+# 7be29d6de56f4508aed944c2971b1673
+# a390ae0e075846e8b6bd7499308c048c
+# 0420359dbc504a1ca40b6144c9aa77be
+# fecfc26e6d2b483291010ed324448994
+# 82288821ac2e48d0b5c1dfb9b79a030e
+# 0953a53514f44d438f55de5e673ee150
+# 7fe675ad7228440baae89874c94746bd
+# 410d55f6c07f40f1ba70f64f4be94e2a
+# d7e10abd8a5942faa6dd6ca80778bd86
+# 6014fe641eac45489575fdf131a54f83
+# 09b312b3ab6a436892c34494362f044f
+# 6b2aace3fe994d2ca7578f1c54c885c0
+# 6865370d0f7445a79ca5bb2322a862ff
+# 80f882cfc341456bbec9fdc2d7d1e352
+# 546870c181b040baaf99323aeb9bca09
+# 57192c8f109b48b09b08821baa73dbe2
+# 863ee14e1d8743b5a09841cb60f0f16f
+# bbd4a902bd49431080a7d9e42fa060f8
+# 4494a3df1eda49b3b5a395a60c7cc7c6
+# 98c7c060e052416a98fa5939bf1a2601
+# 4297160839b34fa79c70f2a5fd84322f
+# 3995fa4f0c414bd6bfba012644fd0705
+# 76a97f77fb2f438e82c0954b799d3b3e
+# 3cafde8962684f30943b5010a1098c0f
 msgid "|response code 404 not found|"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_get.rst:4
-# 6689bd4f9f744a8e94c36f32db8090cf
+# 6e49dce9f72144a6aff2a60185378259
 msgid "The ``GET`` method is used to return a specific |chef api client|."
 msgstr ""
 
@@ -2077,109 +2077,109 @@ msgstr ""
 #: ../source/api_chef_server.rst:335
 #: ../source/api_chef_server.rst:371
 #: ../source/api_chef_server.rst:425
-# 578975ea34ce4ce981c8f12df958ae3c
-# d8f40f0d08e5484da0b9fb88250a6baa
-# 7b416c0dbb044bb2aba0f63cbf8de0e1
-# 624d75af3c4d48a7833567e203a80dbd
-# 20cc481c3b9547ddaf48796157c5d729
-# b1ed0f3e80a34234915881115f3b7ed4
-# df99172b89c740adb26e55fad12c70a0
-# 7556c481600743f5a1c2b4a0858ba110
+# 4ebbae1b25e94993b3aff6021e40998b
+# 8900586f7ae243d08a4563071b98000f
+# 3a65d7661104454bbb06f40d1bd2a251
+# 25028b32e0844f6089d8fb8a29ef3f21
+# 09017e7f76b14f00bdebec3df5d590d6
+# 9b71205b332547fba7aea9d1350de477
+# 28fa6465fcd940cd83bcc71d275763aa
+# 23d73637982048809c29e59e9a5380d4
 msgid "PUT"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst:4
-# b548b9627c8f4bd4ae40053d755c5601
+# 0e23fc08d7f4409480ea94367d6d9f68
 msgid "The ``PUT`` method is used to update a specific |chef api client|. If values are not specified for the ``PUT`` method, the |chef server| will use the existing values rather than assign default values."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst:6
-# f1d38d1ee99b46ddb3208674b468cae2
+# 632548c90755431e8d0f559669a6da01
 msgid "``PUT`` supports renames. If ``PUT /user/foo`` is requested with ``{ \"name: \"bar\"\"}``, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst:26
-# 8873257df7e44c4c97cf1b45e81e87b2
+# 739faf2cbffe4ac9b3ed63765141e95c
 msgid "where ``private_key`` (when ``true``) will generate a new RSA private key for the |chef api client|. If ``admin`` is set to ``true`` the |chef api client| will be promoted to an admin |chef api client|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst:56
-# 682aa15f7f6740fab1d7c6713111f504
+# fe8c9ec9d6e9478993b288c039528cd8
 msgid "|response code 201 created| (This response code is only returned when the client is renamed.)"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst:64
-# 06fc6eca85dc4d298cffa7b0fa322629
+# 3419911f010d47de9a15cfb946c46913
 msgid "|response code 409 unauthorized| (This response code is only returned when a client is renamed, but a client already exists with that name.)"
 msgstr ""
 
 #: ../source/api_chef_server.rst:95
-# 723c2b3d17a84ed98d4f3941b74cb6f4
+# ac5f9997dc2b47a0a537fe2baaa1df3e
 msgid "/cookbooks"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:4
-# 51f626332c8d4f4caea5fef7ce22f2cf
+# feb9f4173f5e40898eee7c0eea61c60a
 msgid "A cookbook is the fundamental unit of configuration and policy distribution. Each cookbook defines a scenario, such as everything needed to install and configure |mysql|, and then it contains all of the components that are required to support that scenario, including:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:6
-# 235aee17ee124976b33dc2f5f9234311
+# 243ad44ff6244d9aa21f1818701ebfee
 msgid "Attribute values that are set on nodes"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:7
-# 68ffa634a6ff4484859c262ccdcde5c5
+# e84d1e0959134e2dac852e757e216401
 msgid "Definitions that allow the creation of reusable collections of resources"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:8
-# cbc9880b8b7c4af697b512a20374e2ec
+# 810c389afdce4c1c8df45df4c69ce5c4
 msgid "File distributions"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:9
-# d2a4c77c55c742c69e686ff1aae2fd47
+# 621500f34f7f4a508cfc672cab10268c
 msgid "Libraries that extend the |chef client| and/or provide helpers to |ruby| code"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:10
-# 475a45b20bcd4db1b8d33d65b4b45a45
+# 227563fa3652472ab72b71dd311e7797
 msgid "Recipes that specify which resources to manage and the order in which those resources will be applied"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:11
-# 2016b01aaf394e689510d557dbb08586
+# 303c9a66bc4a403daf87175aeff27ba8
 msgid "Custom resources and providers"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:12
-# 6d3ae180145c41b589d2844d5acf020f
+# b1c17f5c2e79455e961f3368acb40810
 msgid "Templates"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:13
-# 0e089618cdc0410c9eeef96d05b79239
+# 0b268c2e8738461da424f7589ea5fd1a
 msgid "Versions"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks.rst:14
-# 0780c14a1f854b0596093df1307af38a
+# 97dda48d51d149ca9a8e986f70ba63aa
 msgid "Metadata about recipes (including dependencies), version constraints, supported platforms, and so on"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks.rst:5
-# 3942e7d442394909ae7c139f7e6a5707
+# d4250be2f0f046b2b8bc0aed889231d8
 msgid "When a cookbook is uploaded, only files that are new or updated will be included. This approach minimizes the amount of storage and time that is required during the modify-upload-test cycle. To keep track of which files have already been uploaded, the |chef client| uses a checksum and assigns a checksum to each file. These checksums are used in the cookbook version manifest, alongside the same records that store the file description (name, specificity, and so on), as well as the checksum and the URL from which the file's contents can be retrieved."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks.rst:7
-# 8bbb06a9ae044cedb733bcffa8357479
+# 2908387400994795a409c1ae8800d892
 msgid "The ``/cookbooks`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_get.rst:5
-# f9a2c5d34f514ed8bbb39c563acda2bf
+# 6a65505a45704ac9bf0418d872a1a2e1
 msgid "The ``GET`` method is used to return a hash of all cookbooks and cookbook versions."
 msgstr ""
 
@@ -2189,12 +2189,12 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst:6
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:6
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:20
-# e9a1a279bec4479ba094f6d09f34d45c
-# 39028eb3a2ad4bbf8b0177657d47c88d
-# 628e2edfaf504a499659677673a2eb35
-# 1dfa97ba093e47e6962f3a0315a7ac55
-# 9448b9b6be254fd888c85dd52b7c4cb3
-# ab3887756386440e8671ae250ae50e5d
+# 19c6e1d9cbd8411d925a08803bb79fc0
+# 26dcdb2699c348a6b600a4acbdc23b7a
+# 69d2b8a58fef4df089afa10bbc1f5b27
+# 0f5f1c812e5e45c0a58305cfe693bc83
+# 6682fff868b8484db4e9d73205b7a16b
+# 2ba2e914ca404470a2e5b1f801d5f4a7
 msgid "This method has the following parameters:"
 msgstr ""
 
@@ -2204,12 +2204,12 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst:12
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:12
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:26
-# 9dead01ca6a94613aeedd4c84383e90a
-# 463b975ae4244f08bf384b7ac1150fe0
-# 5f225127a49c4209bd03719ed462272e
-# f812d29685984ad5886b5d9989d3ea14
-# 56f508184a164ee981e1b50219755068
-# 3c0bfbb36e2a476aa2b7c21fce6a30f6
+# 05c6c2434ae04ff395541d606bdd0db4
+# eee74a82c5d14a3891e5229fed943d22
+# 08ef3f1907ed46bb9db5aad46dd0736a
+# a281efd12a834b39a4be14cd2e5f92d0
+# bbbe26436eac46a99a253e5b7eb65b5c
+# 53d22f43a50e443faf25e456d15f7125
 msgid "Parameter"
 msgstr ""
 
@@ -2217,10 +2217,10 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name_get.rst:14
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst:14
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst:14
-# c68f7e64c74142109d51576ee67090f8
-# 2afc0a71b93f406db85ca7600f021b02
-# 261a86afdd984130aee97d684cdbf1bb
-# 049b509349af4fc4b70a4aa04023da91
+# 223bb80939f14d08ab3b4a6a342ea3b7
+# d4a2a3b5a67e4eddb42362c554920331
+# 267ab977891844feb2affa4568182a07
+# f4ade8d971ab47aba81436627b91c71a
 msgid "``num_versions=n``"
 msgstr ""
 
@@ -2228,858 +2228,858 @@ msgstr ""
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name_get.rst:15
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst:15
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst:15
-# 154051b980404f7d89d609e0ef04f89d
-# a56886117bd14f03bcbbb3c8bfd379e9
-# 8e45426b598d41efb995c9707e693e78
-# 6c224377bdac487e805e1064b10ff3c6
+# 41f0a21b33794f3d981eb328a60bb859
+# e2d4ca0f7a3c46fda74b9b94aec08c98
+# 14da156643a341cb901b662bf1e905f8
+# 4d9d385bf277437c8f6d6de93e8e99b3
 msgid "|num_versions|"
 msgstr ""
 
 #: ../source/api_chef_server.rst:106
-# dac0b1afa866497fae5204d766a06a79
+# 7c519b3088a249f7975014114508af6d
 msgid "/cookbooks/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name.rst:4
-# 57fb40f76120483ea8b66ec0ce754640
+# acc84d78bc9843a5b1ef51be65707129
 msgid "The ``/cookbooks/NAME`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name_get.rst:4
-# d12b7b404ed24ffab409c1b25ee91eca
+# 8673c602db944c959e61ec347456f5bc
 msgid "The ``GET`` method is used to return a hash that contains a key-value pair that corresponds to the specified cookbook, with a URL for the cookbook and for each version of the cookbook."
 msgstr ""
 
 #: ../source/api_chef_server.rst:115
-# a57ddb41b61449018663eb5bcab1c40e
+# ad1e70b3632743419f03e8716c4eb8c0
 msgid "/cookbooks/NAME/version"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_version.rst:4
-# 24b7e78b92c24dbb9eb9608ae40291ab
+# 5c5beac7e1cf4d959b2a698f0172bbf0
 msgid "A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as ensuring that the correct version of third-party component is being used appropriately or providing an update to a cookbook that fixes a bug or adds a new improvement. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is handled just a cookbook with regard to how the repository sees a cookbook version, how cookbook versions are stored on the |chef server|, how cookbook versions are pushed out to nodes, and how cookbook versions are used during a |chef client| run."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version.rst:4
-# 20e043fdbc314c30ae7bed7cc6fd0c3d
+# e46b392469dd47ddb1fee97b9141801f
 msgid "The ``/cookbooks/NAME/VERSION`` endpoint has the following methods: ``DELETE``, ``GET``, and ``PUT``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_delete.rst:4
-# a8ef4ead837e495985bd503f1c684c64
+# 989ceb925295413b9aec3247de528a89
 msgid "The ``DELETE`` method is used to delete a cookbook version."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_delete.rst:16
-# 51bcd4d1698245079d315e18050c96e3
+# 04b6bd1a40e443c4abb4875227a319a6
 msgid "This method has no response body. Unused ``checksum`` values will be garbage collected."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_get.rst:4
-# b1491912d5514fa39b49da01210725fd
+# 796b8b06a43f4c7f906dacf36c7b0f66
 msgid "The ``GET`` method is used to return a description of a cookbook, including its metadata and links to component files."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_get.rst:14
-# d6b0bfaea56e408f9e90f53c86b06bae
+# 32af9b2f6c404d199eb00d58a7d6e7ff
 msgid "where ``VERSION`` can be ``_latest`` in order to float to head."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_put.rst:4
-# 227d1bef53eb4c0583fa2b6c791e3594
+# 4c665dcd234845758d1578854eff9359
 msgid "The ``PUT`` method is used to create or update a cookbook version."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_put.rst:94
-# a84df82afd9340f8b0333d1ee2105c92
+# 383af1447fa44b4da794bd4d2cee16e3
 msgid "where the ``checksum`` values must have already been uploaded to the |chef server| using the sandbox endpoint. Once a file with a particular checksum has been uploaded by the user, redundant uploads are not necessary. Unused ``checksum`` values will be garbage collected."
 msgstr ""
 
 #: ../source/api_chef_server.rst:134
-# 5e260ce89b5248eebc1192e493bae80a
+# 1f27c8a637b94fc4bef055c9b37afaa4
 msgid "/data"
 msgstr ""
 
 #: ../../includes_data_bag/includes_data_bag.rst:5
-# 28cccd43f4854a41a16b98e5de9f5cd1
+# 3f1b2e87441d440cb8e747805d9e4b3d
 msgid "A data bag is a global variable that is stored as |json| data and is accessible from a |chef server|. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags.rst:4
-# 6ae8039ec66b467b9fc7cc3779f5357f
+# 9f3008ae416043e69b4dbd2c25b2fc33
 msgid "The ``/data`` endpoint has the following methods: ``GET`` and ``POST``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_get.rst:4
-# e23aa2c915e5472f995c76dd1cd6d8e6
+# a12dee9c2e0248a7b7fa9b6bcfb14a55
 msgid "The ``GET`` method is used to return a list of all data bags on the |chef server|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_get.rst:25
-# 0ac9c55bc89e469387124b416247c09e
+# bc12532575af4057a4249b9648ca5f29
 msgid "shown as a list of key-value pairs, where (in the example above) ``users`` and ``applications`` are the names of data bags and \"http://localhost:4000/data/foo\" is the path to the data bag."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_post.rst:4
-# 2724e047c0764ec1b4222f422e7f925b
+# 4d2dba59a93748459bf42bf2202c309e
 msgid "The ``POST`` method is used to create a new data bag on the |chef server|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_post.rst:14
-# 6abd96c332344696913e7a4481b0c078
+# 2aeaca3acaf44eeea9786058021b6a81
 msgid "with a request body that contains the key-value pair for the data bag and looks something like:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_post.rst:22
-# 25045ac10c0549cfb2f7babcd4e35263
+# db4b55244726417ba95570fa7ad94545
 msgid "where (in the example above) ``name`` is the key and \"users\" is the value."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_post.rst:53
-# b6da05e770de4e4db3e625616f0d580c
+# 17222f2e7a974d42930e4234c4d191d0
 msgid "|response code 409 unauthorized|"
 msgstr ""
 
 #: ../source/api_chef_server.rst:149
-# c95dbf1dd2ac41348e028916a52f4fee
+# ebe534186e2c490c8a97121acc1b1da3
 msgid "/data/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name.rst:4
-# f1d744a2a3124158a57e761dbfe2645f
+# 32dd54a126974a4ebb30d9b9dd4aa49d
 msgid "The ``/data/NAME`` endpoint is used to view and update data for a specific data bag. This endpoint has the following methods: ``GET`` and ``POST``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_get.rst:4
-# 3d704344d18c4a15bf809dd40e5b8d10
+# 9591891042d0474d99ed20b5e9568bbc
 msgid "The ``GET`` method is used to return a hash of all entries in the specified data bag."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_post.rst:4
-# 7a15d2dcc106429ab9060caed44da47a
+# e89910eb56924005a2d62632f38b7f8a
 msgid "The ``POST`` method is used to create a new data bag item."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_post.rst:23
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_put.rst:23
-# d4fd8e0ef9cd4631a297d015777421a1
-# 405dc4b7a68e416cb497fc38d8a5299d
+# 0dd7ac0e42c9410d87b2aa39ea59bcca
+# 2532b7298e6347cb8c92b143dfd07168
 msgid "where ``id`` is required."
 msgstr ""
 
 #: ../source/api_chef_server.rst:162
-# 516da73526d34f8d8035604a11bd2ac2
+# db64779630a144899139bb1da488f968
 msgid "/data/NAME/ITEM"
 msgstr ""
 
 #: ../../includes_data_bag/includes_data_bag_item.rst:4
-# 0cbeb41fe0cd41edab75fa344c5f316a
+# 80f4dc125cd640c7bbf935dc06fa710a
 msgid "A data bag is a container of related data bag items, where each individual data bag item is a |json| file. The only structural requirement of a data bag item is that it must have an ``id``:"
 msgstr ""
 
 #: ../../includes_data_bag/includes_data_bag_item.rst:13
-# d28ac53863cb4d7e9dbb5c0fc46c70a6
+# 78f98c2d98af48278e48adb93794856a
 msgid "where ``key`` and ``value`` are the key:value pair for each additional attribute within the data bag item. |knife| can load a data bag item by specifying the name of the data bag to which the item belongs and then the filename of the data bag item."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item.rst:4
-# 58623b5cb41040a69b5fabb389fe2703
+# e78537a29b2c4527affcb6fba8598b6d
 msgid "The ``/data/NAME/ITEM`` endpoint allows the key-value pairs within a data bag item to be viewed and managed. This endpoint has the following methods: ``DELETE``, ``GET``, and ``PUT``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_delete.rst:4
-# f1ac070d9bd94f50ab761e6383b18385
+# 044995bbcaa9463da16c3ac6fc18b8d7
 msgid "The ``DELETE`` method is used to delete a key-value pair in a data bag item."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_delete.rst:27
-# daaa33ef9faf4dc998c82e05b234d3b6
+# 8e31f7e610bc4e82baf9555d616e9c62
 msgid "where the key-value pairs represent the last state of the data bag item."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_get.rst:4
-# f431b5857573476cb711de36bc784b5b
+# 4580520f69b243a29335e8caf9185519
 msgid "The ``GET`` method is used to view all of the key-value pairs in a data bag item."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_put.rst:4
-# 1baec0f23cea40789b922af2feb43e8d
+# d17b94ef469a40d19ca2ac817439eb16
 msgid "The ``PUT`` method is used to update a key-value pair in a data bag item."
 msgstr ""
 
 #: ../source/api_chef_server.rst:181
-# 1dae4cfe23894702bd287312b0ac97e7
+# 03135e5fb1134654992a1cd832e5f632
 msgid "/environments"
 msgstr ""
 
 #: ../../includes_environment/includes_environment.rst:4
-# 6a86c522e36a4472a1398e19dcb6bf4c
+# 3bef7ba7a9234b9ab84c1de77095aef7
 msgid "An environment is a way to map an organization's real-life workflow to what can be configured and managed when using |chef server|. Every organization begins with a single environment called the ``_default`` environment, which cannot be modified (or deleted). Additional environments can be created to reflect each organization's patterns and workflow. For example, creating ``production``, ``staging``, ``testing``, and ``development`` environments. Generally, an environment is also associated with one (or more) cookbook versions."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments.rst:4
-# 7d0017909971475a93d607d57fbc45e1
+# 3e18ac520e044bb69f6d931a368e6977
 msgid "The ``/environments`` endpoint has the following methods: ``GET`` and ``POST``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_get.rst:4
-# 987cde5b845441e084c4c6ecc091aa1f
+# 3e4ded2a6a794e1aa869bfce2cc6255c
 msgid "The ``GET`` method is used to return a data structure that contains a link to each available environment."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_post.rst:4
-# 191e7cce24034ffe8b92fb97107cc85c
+# f66a6dccd5cd45ac86d892e138ff2547
 msgid "The ``POST`` method is used to create a new environment."
 msgstr ""
 
 #: ../source/api_chef_server.rst:196
-# 052c8283679d4096ad8fd101a3ac1043
+# 62b94bba6cec4e2487c74a3e0252e78b
 msgid "/environments/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name.rst:4
-# 2220d139be3b4cff947fc106ce79fb79
+# da818099acee47ae9abc15915472947b
 msgid "The ``/environments/NAME`` endpoint has the following methods: ``DELETE``, ``GET``, and ``PUT``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_delete.rst:4
-# adc182cfba08450f865daeab529dd7f3
+# 6b11d74002a94643845b63ab9b3e081d
 msgid "The ``DELETE`` method is used to delete an environment."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_delete.rst:16
-# 4e6be2c0d7984381ab13501cba707dae
+# 8f3a82cf674c4844a5d3dcd6c063c7f0
 msgid "The response will return the |json| for the environment that was deleted, something like the following:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_get.rst:4
-# 5302ac03a8c044c58545a90db499dd8d
+# 874c754758b94b6682b7d681a7c5c27b
 msgid "The ``GET`` method is used to return the details for an environment as |json|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst:4
-# 195561a027794990ad49d66dca28dd72
+# 9fd0e1526a0a4dd385653bb3533b2028
 msgid "The ``PUT`` method is used to update the details of an environment on the |chef server|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst:14
-# fcff3467f8fc45068bc648182ffcb684
+# 1a372ce27ea246c79e065db06bd060a3
 msgid "with a request body that contains the updated |json| for the environment and looks something like:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst:29
-# 4a409b84d21e4fb0b7c198c3a35ef120
+# 463f6aceb22c47f0a223dd7624626ed5
 msgid "The response will return the updated environment."
 msgstr ""
 
 #: ../source/api_chef_server.rst:213
-# dc2391228e3d4ba3bbc20fa8ea311e7c
+# d8dccefe9d244eff81b9acab55253645
 msgid "/environments/n/cookbooks/n"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name.rst:4
-# 6f7dfbe2c32046658a4356f85aed5e02
+# b6c0dca312d44aba8833b0e8f90eb720
 msgid "The ``/environments/NAME/cookbooks/NAME`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst:4
-# 4ec9e2ace6fa4979a5f77720971c1080
+# b828d1acee064c70a455c3c0a573f3a5
 msgid "The ``GET`` method is used to return a hash of key-value pairs for the requested cookbook."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst:23
-# d96203df53274ba08eb1599aaace646c
+# 684430804d9e4c01a2fce02edc6f6984
 msgid "where the first instance of ``NAME`` is the name of the environment, and the second instance is the name of the cookbook."
 msgstr ""
 
 #: ../source/api_chef_server.rst:222
-# 9f434a7e855e4ddaa3458aedc1ef55f8
+# 48709f0129284b76bf618fb5adce63eb
 msgid "/environments/n/cookbook_versions"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version.rst:4
-# 7c0cc58912e344358861c91a28ea7d1d
+# b06ef1f3875942e981f57c7775d470cc
 msgid "The ``/environments/NAME/cookbook_versions`` endpoint has the following methods: ``POST``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst:4
-# c998996641464353acd69c89e792a909
+# b48aedea851a431583475b9377355343
 msgid "The ``POST`` method is used to return a hash of the cookbooks and cookbook versions (including all dependencies) that are required by the ``run_list`` array. Version constraints may be specified using the ``@`` symbol after the cookbook name as a delimiter. Version constraints may also be present when the ``cookbook_versions`` attributes is specified for an environment or when dependencies are specified by a cookbook."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst:30
-# 3a823005520c48dda31623bcc642de4e
+# 175455adb9ce4e4d8587f459c4bd2396
 msgid "where ``@x.x.x`` represents a constraint for a cookbook version."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst:34
-# 80831c8d00d843839323e5e14d39de3c
+# 8f3d18c03e2544ef84a62873417c2656
 msgid "The response will return a list of cookbooks that are required by the ``run_list`` array contained in the request. The cookbooks that are returned are often the latest versions of each cookbook. Depending on any constraints present in the request or on dependencies a cookbook may have for specific cookbook versions, a request may not always return the latest cookbook version for each cookbook."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst:36
-# d8f69a8d68de4873a35cd8d72f27c762
+# 3eb35acc7bee4a36a111a07c6becb9d8
 msgid "A response looks something like the following:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst:308
-# ee0e323c11f14f1f997f2eecb0b833d6
+# 2f8be80cf5a541d88ba2a04103ccd97f
 msgid "``412``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst:309
-# 0235262fc04e4a4bb0508ac238bfe688
+# 9f71997438f9451b8677d1d017b74d33
 msgid "|response code 412 cookbook version|"
 msgstr ""
 
 #: ../source/api_chef_server.rst:231
-# 1581a7e0d1ac4c69af3db6ef77343f13
+# c31626ea50c44d55aa856cfc0dccb0b4
 msgid "/environments/NAME/cookbooks"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks.rst:4
-# c08725508fab4882b5ba3837c98cd7d8
+# 4171c84e7a0e44b2a95f33a09b9d4a0b
 msgid "The ``/environments/NAME/cookbooks`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst:4
-# bfa170c96d0e43af9d583d12d32b60da
+# c7be10fd56b24b5f8d4f1ad0df5d66c4
 msgid "The ``GET`` method is used to get a list of cookbooks and cookbook versions that are available to the specified environment."
 msgstr ""
 
 #: ../source/api_chef_server.rst:240
-# 10af171b24fb488ab17d37ec3a217695
+# 43db86095fe84e0491ce2baa4f5bb24a
 msgid "/environments/NAME/nodes"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_nodes.rst:4
-# 4a38b6ed38be44f2941de050b43b2ad0
+# 122521ccd454419dba175a5b7a827b92
 msgid "The ``/environments/NAME/nodes`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_nodes_get.rst:4
-# 6443a948018e4cd2808c0aecb316bcd2
+# 6fa2a6b4868245b39b95d37fc72a018b
 msgid "The ``GET`` method is used to return a list of nodes in a given environment."
 msgstr ""
 
 #: ../source/api_chef_server.rst:249
-# f88b7c4688aa4b5d9db39a79be0c287e
+# 9c6f0955bdd34963975df19eaa928a36
 msgid "/environments/NAME/recipes"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes.rst:4
-# 05dfcd95aac44effa2c9a8442e699bc1
+# 79b07b467620451e931c4ce532ba62d0
 msgid "The ``/environments/NAME/recipes`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes_get.rst:4
-# de8d7b6d034a46f896ffc2cdbfe2c1ed
+# e3200324275946a78e5d07d200d8b133
 msgid "The ``GET`` method is used to return a list of recipes available to a given environment."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes_get.rst:14
-# 3008e8d5f7f5486893c4042a0768a339
+# d58b864977a44e60b9779d453a691512
 msgid "where the first instance of ``NAME`` is the name of the environment, and the second instance is the name of the recipe."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes_get.rst:37
-# e4464abd4dae4a2abfb24109357f14f1
+# 600971cd7a6648ad8e6f9e6f33bfde4f
 msgid "The list of recipes will be the default recipes for a given cookbook. If an environment has multiple versions of a cookbook that matches its constraints, only the recipes from the latest version of that cookbook will be reported."
 msgstr ""
 
 #: ../source/api_chef_server.rst:258
-# b0ef155ad4b34600bfd0ec8c4004c7e4
+# c44a5dd534584573a3e312f0194431d1
 msgid "/environments/NAME/roles/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles.rst:4
-# 5c5c8b5e74604201beac19f2a81de479
+# 6e1f943e3f034d74ba5395e145194057
 msgid "The ``/environments/NAME/roles/NAME`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles_get.rst:4
-# eae37ab868ee42beaf74cb0ff789c649
+# cc0ee588e8104c7ba7a5f53d8d35be23
 msgid "The ``GET`` method is used to return the ``run_list`` attribute of the role (when the name of the environment is ``_default``) or to return ``env_run_lists[environment_name]`` (for non-default environments)."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles_get.rst:6
-# 711a85f60baf4321ab35a3018a92b6d9
+# a5caf5d0d5804600987a9124fdbabf14
 msgid "The behavior of this endpoint is identical to ``GET /roles/NAME/environments/NAME``; it is recommended (but not required) that ``GET /roles/NAME/environments/NAME`` be used instead of this endpoint."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles_get.rst:16
-# 008744553bb748349bf435240b2f1902
+# d612ca3ca2df466ca0a45ffbf0dcf4c6
 msgid "where the first instance of ``NAME`` is the name of the environment, and the second instance is the name of the role."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles_get.rst:35
-# 031fc9911a7e48469df1c3a388377605
+# 9bd0606dd8b5483a9d42129815d5487d
 msgid "The |chef client| will pick up the ``_default`` run-list if ``env_run_list[environment_name]`` is null or nonexistent."
 msgstr ""
 
 #: ../source/api_chef_server.rst:267
-# 2403f21d72c64fbe8cf51e96bc85118c
+# 42b007e4a38f47a8bf8fd47c3b7c7948
 msgid "/nodes"
 msgstr ""
 
 #: ../../includes_node/includes_node.rst:5
-# 3f448c96c9be44a592b3a2eebfe2a5d4
+# ecc4677cc49347a68d6640abdc530b94
 msgid "A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes.rst:4
-# 8c7b713fad834de09d7450a02bc3b629
+# a75ac505d54f419e84cb5a4eabf1a95d
 msgid "The ``/nodes`` endpoint has the following methods: ``GET`` and ``POST``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_get.rst:4
-# 0f87df636a45480198ce095adbfb4750
+# 5337f4b732f54dd1a0e3d7e6ffb441b2
 msgid "The ``GET`` method is used to return a hash of URIs for nodes on the |chef server|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_post.rst:4
-# a522c48869bb408cb035ba144cb0a559
+# d978645dcfa24ef5a4b40a1c68e2b39b
 msgid "The ``POST`` method is used to create a new node."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_post.rst:30
-# b8e30f81de1d49089e0ebcdb8294a878
+# d61449fa12cd4952821b402ed645e34c
 msgid "where ``name`` is the name of the node. Other attributes are optional. The order of the ``run_list`` attribute matters."
 msgstr ""
 
 #: ../source/api_chef_server.rst:282
-# 6131235063914e8b978d059373a34415
+# ed411194a44e4ffb881474019637df0a
 msgid "/nodes/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name.rst:4
-# 75c258405b2f4b3c9bc046aeee4383d1
+# e932e5b3acb2407f81cc15c326f74e1b
 msgid "The ``/nodes/NAME`` endpoint has the following methods: ``DELETE``, ``GET``, and ``PUT``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_delete.rst:4
-# 29c5b94765554d7f86e62776f054f961
+# a30404d6fff14505af7702e5abe1d08f
 msgid "The ``DELETE`` method is used to delete a node."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_delete.rst:16
-# d3111eaf3b0f485da76a0db82efce9a9
+# 0e6bcb2aa22e464887dd11a56e5e5634
 msgid "The response will return the last known state of the node, similar to:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_get.rst:4
-# bf6cb4b353a1465baa0c9b88b5c1b321
+# 3e637a50a21d46a3ac5a3f3e574e7a0d
 msgid "The ``GET`` method is used to return the details of a node as |json|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst:4
-# b17cb61c75774e8386a18f5d4e8577e5
+# 14f5d51c945148bd9275e2d3449d01e7
 msgid "The ``PUT`` method is used to update a node."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst:35
-# fd4d69abe6ee4375a8586d3ef4e6e5ac
+# 07143e4b778148509dd3a44744107a8a
 msgid "The response will return the updated node."
 msgstr ""
 
 #: ../source/api_chef_server.rst:299
-# 0a1034c863b14a129706b8391649d4eb
+# 78eca74a7f8d423abd5121edf9872a21
 msgid "/principals/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name.rst:4
-# 7c3cfad34d044a28a6be1ab6f406c587
+# 96a188b3838442ab9fcefeb55010667a
 msgid "The ``/principals/NAME`` endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name_get.rst:4
-# b006ae4e87e84412aec0795ef7f5c677
+# 20ed10d0e4e74bfa86f014ae99fbbf98
 msgid "The ``GET`` method is used to get a list of public keys for clients and users in order to ensure that enough information is present for authorized requests."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name_get.rst:16
-# 9fe721676db344b49800f969e2ade13c
+# b6328b1cab4740858f0f2dc4f378b444
 msgid "The response will return something like the following for a user:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name_get.rst:31
-# 2590de0f35f444c0a4b04ee7eb617c51
+# ac372a662d014c3991974282f096f212
 msgid "or something like the following for a client:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:308
-# 8e55496369b34ec0b2a8b70dd6924dfa
+# eb8e9241580d40949e00c636de868c13
 msgid "/roles"
 msgstr ""
 
 #: ../../includes_role/includes_role.rst:5
-# ee0fd79412424ef2b971c2129b983ebe
+# 16201b3e10e4463887ce69bd9deb8919
 msgid "A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function. Each role consists of zero (or more) attributes and a run list. Each node can have zero (or more) roles assigned to it. When a role is run against a node, the configuration details of that node are compared against the attributes of the role, and then the contents of that role's run list are applied to the node's configuration details. When a |chef client| runs, it merges its own attributes and run lists with those contained within each assigned role."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles.rst:4
-# af64451999794e2c879544ac40007757
+# 91f69f2c51454ca4b963c9522dc26332
 msgid "The ``/roles`` endpoint has the following methods: ``GET`` and ``POST``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_get.rst:4
-# 54ae3fa8d9624764933f644dded37fa4
+# 0021041289f14b17a8ed16b4b9032588
 msgid "The ``GET`` method is used to get a list of roles along with their associated URIs."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_post.rst:4
-# c81a04275be147028e6a14b45bcd3013
+# 6b5160d1c40d4403bbfe92a13295b139
 msgid "The ``POST`` method is used to create a new role on the |chef server|."
 msgstr ""
 
 #: ../source/api_chef_server.rst:323
-# 9027e6e7b7e64dcb8142584347d238f3
+# b0973e96a983435283204c6a1d9584ba
 msgid "/roles/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name.rst:4
-# 5fd5fe8e977f4acfae65b05587a9831c
+# de0a0500b1ae4517bdcc84cd89a5a333
 msgid "The ``/roles/NAME`` endpoint has the following methods: ``GET``, ``DELETE``, and ``PUT``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_delete.rst:4
-# 1bba8bd3c43d4ccca1930940053510cb
+# 0d43c7533f2d4e5b89326748990fe718
 msgid "The ``DELETE`` method is used to delete a role on the |chef server|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_get.rst:4
-# a3dbfdab818d4b50be46b9d4d551ac3b
+# 30465c96876e4e77b74a09b3dea5c786
 msgid "The ``GET`` method is used to return the details for a role as |json|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_put.rst:4
-# 1107a394e5c34bda8db0f9ae3e1c2d2c
+# dcf03bf090604066a9ba7ba3817b4ff7
 msgid "The ``PUT`` method is used to update a role on the |chef server|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_put.rst:32
-# d5772e2d27414d8ebc9548cbe75ca351
+# 3bf969d35fbd48e6b0a87605df814493
 msgid "The response will return the |json| for the updated role."
 msgstr ""
 
 #: ../source/api_chef_server.rst:340
-# b82a461eeeb74ef792fbbc7662dd6165
+# 0bb862de2504469a8efb50987e94b41c
 msgid "/roles/NAME/environments"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environments.rst:4
-# 49131bd7ec5046449293c91155bdf759
+# 95f3b0341c744e0ca81bd7edf9253280
 msgid "The ``/roles/NAME/environments`` endpoint has the following method: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environments_get.rst:4
-# 7aafb5d142b0450db1810c62f5605f00
+# a7b3d963a1bb44788f5f1253f0c5032b
 msgid "The ``GET`` method returns a list of the environments that have environment-specific run-lists in the given role as |json| data."
 msgstr ""
 
 #: ../source/api_chef_server.rst:349
-# 349fdeaae0e04a5ba8e873c2bc2052ae
+# 0f6cf09c04104c8c884a79dac87acb45
 msgid "/roles/NAME/environments/NAME"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environment_name.rst:4
-# e0c4ffa1e65349048f70b67e5537e821
+# ebed4f589f7d45d0a418259d8e08baea
 msgid "The ``/roles/NAME/environments/NAME`` endpoint has the following method: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environment_name_get.rst:4
-# 7c974683c2ca4235b432333621e2561f
+# a88380ca3e6143058a83ad44b5b0deda
 msgid "The ``GET`` method returns the environment-specific run-list (``env_run_lists[environment_name]``) for a role."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environment_name_get.rst:14
-# e4fa5e9506f342b4af5430120533b3e9
+# 66dc9b0610134c4e810ee547595ccec1
 msgid "where the first ``NAME`` is the name of the role and the second is the name of the environment."
 msgstr ""
 
 #: ../source/api_chef_server.rst:358
-# 5574acab53ee4c288ff82f98e05b864d
+# 2a96e186ecee4e8cb54c3bd550966f7b
 msgid "/sandboxes"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes.rst:4
-# b743a20a2e9945cc87d8a9c1988c13ce
+# 84639cf49f2c47128bdfed07a77ae1e3
 msgid "A sandbox is used to commit files so they only need to be updated one time, as opposed to every time a cookbook is uploaded. The ``/sandboxes`` endpoint has the following methods: ``POST``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes_post.rst:4
-# e30a275475204fd6b27d1f8f117e95d0
+# 1ec39838ba4e4bffa9c33e2e743f501d
 msgid "The ``POST`` method is used to create a new sandbox. This method accepts a list of checksums as input and returns the URLs against which to ``PUT`` files that need to be uploaded."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes_post.rst:59
-# a0b1d81c1a434d6e820033eae445edbf
+# 1ba5381ed8d147ef9b8c88da87d8336e
 msgid "|response code 200 ok| A hash that maps each checksum to a hash that contains a boolean ``needs_upload`` field and a URL if ``needs_upload`` is set to ``true``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes_post.rst:61
-# 6931899f831949709099095ec102c7c7
+# 266ba911a4d94ddeb98792b9101419e9
 msgid "|response code 400 bad request sandbox| The payload does not contain a well-formed ``checksums`` parameter that is a hash containing a key for each checksum."
 msgstr ""
 
 #: ../source/api_chef_server.rst:367
-# 0c97d10f41ee48e39a688eac19461a3a
+# a305aadafc9049d0979ccb32aaa2c308
 msgid "/sandboxes/ID"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id.rst:4
-# 66cf39911f9745519b90e35838cd223a
+# 0f59554ae984444b8f6b7987fb20db72
 msgid "Each sandbox has a unique identifier. The ``/sandboxes/ID`` endpoint has the following methods: ``PUT``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id_put.rst:4
-# 1817fb692b774df2b4fe17b9c860bb2c
+# 48135c00a87742b79bc99f2f2b357e41
 msgid "The ``PUT`` method is used to commit files that are in a sandbox to their final location so that changes to cookbooks will not require re-uploading the same data."
 msgstr ""
 
 #: ../source/api_chef_server.rst:376
-# 58124fc3c4394b5b985fca2e4bed1d1f
+# ba9ff892f6f743908851329057f4dfe2
 msgid "/search"
 msgstr ""
 
 #: ../../includes_search/includes_search.rst:4
-# ad5433b461ab47a5b5488308b3f5a51e
+# e65966c7f7664d019b2bbe905f08da95
 msgid "Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. A defined query syntax is used to support search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the ``search`` subcommand in |knife|, or by using the ``/search`` or ``/search/INDEX`` endpoints in the |api chef server|. The search engine is based on |apache solr| and is run from the |chef server|."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_search.rst:4
-# 8801d45538234044a890d136050bc7a8
+# 03e4cc3a5f284009b2b6b22c8ea82931
 msgid "The ``/search`` endpoint allows nodes, roles, data bags, environments to be searched. This endpoint has the following methods: ``GET``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_search.rst:6
-# 13ea3a9f185643aab0e2e743589e77c8
+# 65dce6261169447a97f39fb3dc6f1ef5
 msgid "At the end of every |chef client| run, the node object is saved to the |chef server|. From the |chef server|, each node object is then added to the SOLR search index. This process is asynchronous. By default, node objects are committed to the search index every 60 seconds or per 1000 node objects, whichever occurs first."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_search_get.rst:4
-# fc451e846a3e4e10956e47aa1c9b354b
+# d6338b62dcdc4e239f51e702f7fe0547
 msgid "The ``GET`` method is used to return a data structure that contains links to each available search index. By default, the ``role``, ``node``, ``client``, and ``data bag`` indexes will always be available (where the ``data bag`` index is the name of the data bag on the |chef server|). Search indexes may lag behind the most current data at any given time. If a situation occurs where data needs to be written and then immediately searched, an artificial delay (of at least 10 seconds) is recommended."
 msgstr ""
 
 #: ../source/api_chef_server.rst:387
-# 22f8515e0af5452bb5b599dc4bdc1a48
+# 6f00394602f644269b7a31113f2d454b
 msgid "/search/INDEX"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index.rst:4
-# de15119e788e45d797c2881d940e63d6
+# bba58bb78f1e4a3b90f82c3d81509bef
 msgid "Use the ``/search/INDEX`` endpoint to access the search indexes on the |chef server|. The ``/search/INDEX`` endpoint has the following methods: ``GET`` and ``POST``."
 msgstr ""
 
 #: ../../includes_search/includes_search_query_syntax.rst:5
-# 3a18e75be92f4426bcc34ad80a1545f4
+# 8071872ee092432eb91c109c38b766c0
 msgid "|search query syntax| A search query has the following syntax::"
 msgstr ""
 
 #: ../../includes_search/includes_search_query_syntax.rst:9
-# 3af252ca6fbe4daa8e8f8ffccf78c5a3
+# 8ab114578ff142e58169a17a095bd5f9
 msgid "where ``key`` is a field name that is found in the |json| description of an indexable object on the |chef server| (a role, node, client, environment, or data bag) and ``search_pattern`` defines what will be searched for, using one of the following search patterns: exact, wildcard, range, or fuzzy matching. Both ``key`` and ``search_pattern`` are case-sensitive; ``key`` has limited support for multiple character wildcard matching using an asterisk (\"*\") (and as long as it is not the first character)."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:4
-# 772e6d28b14848a293668f9d02bc31ef
+# b275738f58054e16b8c0689991556996
 msgid "The ``GET`` method is used to return all of the data that matches the query in the ``GET`` request."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:14
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:28
-# 0f3aed50c0b6401c8218244761c41409
-# be4a191294d943588b0f0296f09c1ab2
+# 470a74659302469999808b14ea765dc7
+# 9c6497bb618e467a9bcf4da198c92df8
 msgid "``q``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:15
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:29
-# 80bf4b1084974f128160d1435337644e
-# 430f31e39d1440179b8f21a9186cfc7b
+# 8209843f1745472ab15c4b872b530f34
+# a7c439560fed476aad6c10d994b0ef41
 msgid "|SEARCH_QUERY|"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:16
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:30
-# 52520eef6dae4240aa4e9c11c9ccc2cf
-# e0273399a457474688f4f99a6b357a52
+# 845761b79c344bfeabb8f76d6cfae2a7
+# a135bf02997b4072b278f14391074575
 msgid "``rows``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:17
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:31
-# 6e63c8e16d1e4ee8bea7cab7a8c6d060
-# bcc100ec00904a09ae2ad005cc0250d6
+# 88c27627c1134d2a8644f5464dd3a428
+# 4025d0a3d33c4b67a1f7038883a00986
 msgid "|rows|"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:18
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:32
-# 0a3729e5a8a3404692736356d49d9ef9
-# 68ae1e544a7847db8dc6c593aa467f2c
+# 3fa9bfc2286a4ca2a197c4ace1d8ec30
+# 6130fcecbd164d19b6e08900e166bea5
 msgid "``sort``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:19
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:33
-# 5ba313d8cf96455cbf6004a86d5f8db9
-# 2ab07859354b45de95a9c733b65b2047
+# f5caed1cf4394d32988d2b3d439d8eef
+# 70cc5a4a737d4edaa91e218a4ee660db
 msgid "|sort|"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:20
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:34
-# e22f1f861b68403f80166936e0b72f84
-# 2fb9262c5f324c8fa0b4d4ac16d8076f
+# 390ac78db8104a95a44ee75cdb19e32e
+# e06c902b8d764cc58171110d62339a6c
 msgid "``start``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:21
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:35
-# 77f7cb19e23147c2af1c5806aee9af36
-# 93d26037942544f6ba3bb16a8bf90df7
+# 60afd17e72864ee0a9eca49975120722
+# cfd5d01a09a043c19b2e21cb2e923121
 msgid "|start|"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst:31
-# c27a109f24334ac18dd3d1a4c24ce45d
+# 9889a652ba1b471485103cc4d2c85795
 msgid "The response contains the total number of rows that match the request and will return something like the following:"
 msgstr ""
 
 #: ../../includes_search/includes_search_partial.rst:4
-# cff5d42c27444609b86d7ded444128fe
+# fbb36a99e5d34d0fad5cfb010b328f02
 msgid "A partial search query allows a search query to be made against specific attribute keys that are stored on the |chef server|. A partial search query can search the same set of objects on the |chef server| as a full search query, including specifying an object index and providing a query that can be matched to the relevant index. While a full search query will return an array of objects that match (each object containing a full set of attributes for the node), a partial search query will return only the values for the attributes that match. One primary benefit of using a partial search query is that it requires less memory and network bandwidth while the |chef client| processes the search results."
 msgstr ""
 
 #: ../../includes_search/includes_search_partial.rst:6
-# 79c9f217f4d648dea51f7dfbab770dae
+# 2c09a83dd09d44b586fab9521fefdabe
 msgid "To use the ``partial_search`` method in a recipe, that recipe must contain a dependency on the ``partial_search`` cookbook."
 msgstr ""
 
 #: ../../includes_search/includes_search_partial.rst:8
-# 3876ae9da8154a769c9f5bd24be3d646
+# a4c7f6bbd1484cc2b5cc3bdde92582e8
 msgid "To create a partial search query, use the ``partial_search`` method, and then specify the key paths for the attributes to be returned. Each key path should be specified as an array of strings and is mapped to an arbitrary short name. For example:"
 msgstr ""
 
 #: ../../includes_search/includes_search_partial.rst:23
-# 1c2f4eb37adb44e49628611db2893045
+# fd0c21eeb2d146748007856159d2fca0
 msgid "In the previous example, two attributes will be extracted (on the |chef server|) from any node that matches the search query. The result will be a simple hash with keys ``name``, ``ip``, and ``kernel_version``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:5
-# ad3d186baa99485580c172ede9b2c5e9
+# e369df29b6274af48fa310ee0028cb1c
 msgid "The ``POST`` method is used to return partial search results. For example, if a node has the following:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst:14
-# 02b1df1f9f9c430399598090020825b5
+# b90b2cf78f30455e823f9eb5138702ec
 msgid "a partial search query can be used to return something like:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:403
-# c32e6e555a8d49789c818e32a4532436
+# 67723eedde9b460083696175f20a8d71
 msgid "_status"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:4
-# e58db0267fad4e309f5b603da413c92a
+# ebbec119daaa429f8ca17d294c0c0d22
 msgid "The ``/_status`` endpoint can be used to check the status of communications between the front and back end servers. This endpoint is located at ``/_status`` on the front end servers."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:40
-# e3eee2bad1c344e4a9968d2c46f7c0fb
+# 808dbc34a2e842af807ce46df4969168
 msgid "All communications are OK."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:41
-# b115ac8e7ef8475aa78539c93aceaad8
+# 010a4b5d7dad49969049b1ae05d12305
 msgid "``500``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:42
-# 12e21efddb3c443c8106dc5ca0b374fc
+# 693e7dc860f74a8fa87d8f7004fbb197
 msgid "One (or more) services are down. For example:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:407
-# 9d448ee3bf4848b4a54cdcdb668224b0
+# 91907c974dae41fabfc3720c9af00b64
 msgid "/users"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_user.rst:4
-# 4fbd4368e4714f26ae0597730dc57aa1
+# bff28081228f47c0b7d971c4700759a6
 msgid "A user is an individual account that is created to allow access to the |chef server|. For example:"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_user.rst:6
-# f650b0d0645f43389eea84fda529b120
+# 53584ab564c64ee595c290ca10eaa8cd
 msgid "A hosted |chef server oec| account"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_user.rst:7
-# 1fbf61376978450483dcbf48746f7b72
+# 63ab864a674547e5a409289794e5cd01
 msgid "The user who operates the workstation from which a |chef server| will be managed"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user.rst:4
-# c268249b30d941ba8555aa5d725ff699
+# 32199ee2cb2f4786b45db38c76003d6f
 msgid "The ``/users`` endpoint has the following methods: ``DELETE``, ``GET``, ``POST``, and ``PUT``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst:4
-# 2ca1eeed29ec4679966cad7fb8369644
+# 937af748503d4de5ab5549f69e8fab0b
 msgid "The ``DELETE`` method is used to delete a user."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst:16
-# a0d84e25b6e443edb62d428a097fcb19
+# 8750ac6bc16e45959fe4c810158c0181
 msgid "The response will return something similar to:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst:4
-# bd9f96fcb0654dfabb9d0e63f8f800f2
+# 5278ab8c3e3b48339a0f7c9a17e1916f
 msgid "The ``GET`` method is used to return the details for a user."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst:4
-# 199463e15c564af9816e87e8fdcf2d52
+# 2f82f03a74b7496e9df11156a07cc453
 msgid "The ``POST`` method is used to create a new user. If a public key is not specified, both public and private keys will be generated and returned. If a public key is specified, only the public key will be returned."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:4
-# ed9837a6e35441298f328567110ea2f8
+# 2dd774a092b64401ae869edaf58d0abe
 msgid "The ``PUT`` method is used to update a specific user. If values are not specified for the ``PUT`` method, the |chef server| will use the existing values rather than assign default values."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:6
-# 3e5c07fabdd74747ba18dab4070b7d4a
+# 560b988c36bd499c9c35ac6ccff97334
 msgid "``PUT`` accepts a boolean: ``{ \"private_key\": \"true\" }``. If this is specified, a new private key is generated."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:8
-# a75a90c8b0d84b50b835af2288db1660
+# 96894226826c4c6da5717360a0965fe4
 msgid "If values are missing, they will not be overwritten. If ``public_key`` is null, the public key will not be overwritten."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:10
-# 6ebc0d7044444a71b4e8d8bacccdb929
+# e6021ba9072e4da8a7070693362c7e23
 msgid "``PUT`` supports renames. If ``PUT /users/foo`` is requested with ``{ \"name: \"bar\"\"}``, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:43
-# 013cbfbf827f4afd9287602a61debc36
+# 74b2aae11e0544aa84da416734ff49d4
 msgid "If a new private key was generated, both the private and public keys are returned."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:56
-# 26cf3c5a90834f7cbd084ee50c331978
+# e50b507789d34c6f9d798794375dd923
 msgid "|response code 201 created| (This response code is only returned when the user is renamed.)"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst:64
-# aba02e4eeac341049b654b3669ac2721
+# 3430353e18944acaa25405e404e2e217
 msgid "|response code 409 unauthorized| (This response code is only returned when a user is renamed, but a user already exists with that name.)"
 msgstr ""
 

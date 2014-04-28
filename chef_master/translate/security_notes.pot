@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-28 14:53-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/security_notes.rst:8
+# 3a7a7c1f28714f21926d0d78e9a90929
+msgid "Security Notes"
+msgstr ""
+
+#: ../source/security_notes.rst:10
+# f5162f96dcc1488e9ad858024a06b93a
+msgid "The following sections address critical security issues related to |chef|. It is strongly recommended that any actions described below be done as soon as possible. Thank you."
+msgstr ""
+
+#: ../source/security_notes.rst:13
+# 2a0ce0c52ef44265b0912a3e831aa1c6
+msgid "OpenSSL and Heartbleed"
+msgstr ""
+
+#: ../source/security_notes.rst:14
+# 9a66686c13cb43b8b8dee4939a975999
+msgid "|company_name| released patched versions of |chef server oec|, |chef server osc|, |chef private|, and the |chef client| to address the `OpenSSL security vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160>`_, also known as Heartbleed."
+msgstr ""
+
+#: ../source/security_notes.rst:17
+# 0478b15eb3a3401188193f010c72a955
+msgid "Background"
+msgstr ""
+
+#: ../source/security_notes.rst:18
+# b9bcc038ff41437dbc629548a1216b2c
+msgid "Heartbleed can affect your |chef| infrastructure in the following ways:"
+msgstr ""
+
+#: ../source/security_notes.rst:20
+# 13f146e42bfb421a92fc56f92db670ea
+msgid "**Chef Server Key Generation**"
+msgstr ""
+
+#: ../source/security_notes.rst:22
+# 29efa703a70e48de863e6fb8a2712aca
+msgid "By default, the |chef server| generates the private keys for all of the nodes in your infrastructure while the |chef client| installed on each node first registers itself with the |chef server|. This private key is not persisted to the |chef server|, but it is transmitted across the network over a secure connection. In this case, that secure connection was provided via HTTPS using the |open ssl| library. Just like any other sensitive information in your infrastructure, it is possible that this data was compromised by the Heartbleed bug. Since the private key is only transferred once, the chances of this information leaking is much lower than other objects, but that chance is still non-zero."
+msgstr ""
+
+#: ../source/security_notes.rst:24
+# d5594edb88464faa8eec0fb30b5ef991
+msgid "**chef-client Connections to the Chef Server**"
+msgstr ""
+
+#: ../source/security_notes.rst:26
+# c2463d4b1f624305962d876fed33e528
+msgid "Another scenario in which the Heartbleed bug could potentially expose the client private key is when the |chef client| is connected to compromised server. A compromised server could be the |chef server| or any number of services to which the |chef client| connects, for instance when using the |resource remote_file| resource. In this case, a compromised server would be able to send a Heartbleed request back to the client and get access to 64KB of memory from the client. This memory can potentially contain the private key used by the |chef client|."
+msgstr ""
+
+#: ../source/security_notes.rst:28
+# 43cd959a25204f7a9c797f76b59158d6
+msgid "**Key Regeneration**"
+msgstr ""
+
+#: ../source/security_notes.rst:30
+# 65189c62fb994df890d88cab28d63877
+msgid "Depending on your comfort level with the defense around your |chef server|, you may want to regenerate your client private keys. We’ve published the `client-rekey cookbook <http://community.opscode.com/cookbooks/client-rekey/>`_ that automates the regeneration of the private keys for the |chef client|. You can find it on the community site. Alternatively, you can perform this action via the web user interface (for both |chef server osc| and |chef server oec|) for each individual client."
+msgstr ""
+
+#: ../source/security_notes.rst:33
+# cf79ce85f05d4f14b389ad200cdcdfda
+msgid "Actions"
+msgstr ""
+
+#: ../source/security_notes.rst:34
+# 64ee190aebc04501bb3648f29d9d2811
+msgid "The following steps should be taken:"
+msgstr ""
+
+#: ../source/security_notes.rst:36
+# ef8e4de00d22444a945700ef010116ae
+msgid "Upgrade to the latest version of the |chef server|; click `here <http://www.getchef.com/blog/2014/04/09/chef-server-11-0-12-release/>`__ for |chef server osc|, `here <http://www.getchef.com/blog/2014/04/09/enterprise-chef-11-1-3-release/>`__ for |chef server oec|, and `here <http://www.getchef.com/blog/2014/04/09/enterprise-chef-1-4-9-release/>`__ for |chef private|."
+msgstr ""
+
+#: ../source/security_notes.rst:38
+# 751aff0a164d4b34b2106f8ca6165010
+msgid "Add-ons for |chef server oec|---|reporting|, |push jobs|, and |chef manage|---are also vulnerable; however, they use the same HTTP proxy as |chef server oec|, so after the |chef server oec| server itself is patched, the add-ons will no longer be vulnerable."
+msgstr ""
+
+#: ../source/security_notes.rst:40
+# 3863459805f94202b58a68dd36c600e6
+msgid "Regenerate the |ssl| certificates for the |chef server|; for more information about how to regenerate these keys, click `here <http://docs.opscode.com/open_source/server_security.html#regenerate-ssl-certificates>`__ for |chef server osc| and `here <http://docs.opscode.com/enterprise/server_security.html#regenerate-ssl-certificates>`__ for |chef server oec|; for |chef private|, `replace the contents <http://docs.opscode.com/server/private_chef_1x_admin_ssl.html/>`__ at ``/var/opt/opscode/nginx/ca/FQDN.cert`` and ``/var/opt/opscode/nginx/ca/FQDN.pem`` with certificates that have been regenerated using the same certifying authority that was used to generate the original |ssl| certificates."
+msgstr ""
+
+#: ../source/security_notes.rst:42
+# 05d7300e0c5b41a2a9a7d3f1302d889a
+msgid "Update the |chef client|."
+msgstr ""
+
+#: ../source/security_notes.rst:44
+# 16d9fb4d4918463aba657676effa52d0
+msgid "For version 11, download the release from `here <https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chef-client-11.12.0-1.windows.msi/>`__ or run the following:"
+msgstr ""
+
+#: ../source/security_notes.rst:50
+# 250725ca9663448397a271ac00bf0c5a
+msgid "For version 10, download the release from `here <https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chef-client-10.32.2-1.windows.msi/>`__ or run the following:"
+msgstr ""
+
+#: ../source/security_notes.rst:56
+# debc78d9d3474d52a9f27274040d483e
+msgid "After the |chef server| and every |chef client| is patched, it's still possible that arbitrary data was compromised during the patching process. Depending on your organization's comfort level with the defense around your |chef| installation, you may want to change user passwords and/or take additional steps to protect other sensitive data."
+msgstr ""
+
+#: ../source/security_notes.rst:58
+# c7539e786b0d4884b423ca2e92c28420
+msgid "The credentials for the |chef client| do not need to be regenerated because the |chef server| `signs each request during the authentication and authorization process <http://docs.opscode.com/chef_private_keys.html#chef-client>`__. This prevents a node from accessing any data it shouldn't."
+msgstr ""
+
+#: ../source/security_notes.rst:62
+# 95fa173156ec41178be79ce1b5e07445
+msgid "More Information"
+msgstr ""
+
+#: ../source/security_notes.rst:63
+# 5c4cc2c75ce845728e4ff80909d20371
+msgid "Please also review the following blog posts:"
+msgstr ""
+
+#: ../source/security_notes.rst:65
+# ea7a7a78ae814688a8609853775a03a8
+msgid "http://www.getchef.com/blog/2014/04/09/enterprise-chef-11-1-3-release/"
+msgstr ""
+
+#: ../source/security_notes.rst:66
+# f004d2640d0546ef9e3e3182358a3110
+msgid "http://www.getchef.com/blog/2014/04/09/chef-server-heartbleed-cve-2014-0160-releases/"
+msgstr ""
+
+#: ../source/security_notes.rst:67
+# 9b79d8f0305a4e4b8aef9004bf98a90d
+msgid "http://www.getchef.com/blog/2014/04/08/release-chef-client-11-12-0-10-32-2/"
+msgstr ""
+
+#: ../source/security_notes.rst:68
+# 772f9b1dab9c4f9b982acd3c5ddd9f0a
+msgid "http://www.getchef.com/blog/2014/04/10/update-on-heartbleed-and-chef-keys/"
+msgstr ""
+
