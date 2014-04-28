@@ -4,7 +4,7 @@ Release Notes: |chef server oec| 11.1.x
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
 
-.. warning:: |chef server oec| 11.1.3 provides updates that address the Heartbleed |openssl| vulnernability. See http://www.getchef.com/blog/2014/04/09/enterprise-chef-11-1-3-release/ and http://docs.opscode.com/security_notes.html#openssl-and-heartbleed for more information.
+.. warning:: |chef server oec| 11.1.3 provides updates that address the Heartbleed |open ssl| vulnernability. See http://www.getchef.com/blog/2014/04/09/enterprise-chef-11-1-3-release/ and http://docs.opscode.com/security_notes.html#openssl-and-heartbleed for more information.
 
 What's New
 =====================================================
