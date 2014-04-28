@@ -72,9 +72,9 @@ The following sections describe functionality common to all |knife| subcommands:
    * - :doc:`knife_ssh`
      - .. include:: ../../includes_knife/includes_knife_ssh.rst
    * - :doc:`knife_ssl_check`
-     - .. include:: ../../release_chef_11-12/includes_knife_ssl_check.rst
+     - .. include:: ../../includes_knife/includes_knife_ssl_check.rst
    * - :doc:`knife_ssl_fetch`
-     - .. include:: ../../release_chef_11-12/includes_knife_ssl_fetch.rst
+     - .. include:: ../../includes_knife/includes_knife_ssl_fetch.rst
    * - :doc:`knife_status`
      - .. include:: ../../includes_knife/includes_knife_status.rst
    * - :doc:`knife_tag`
