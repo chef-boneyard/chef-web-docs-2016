@@ -38,7 +38,7 @@ To upgrade the |chef manage| server:
 
    .. code-block:: bash
 
-      $ private-chef-ctl reconfigure
+      $ opscode-manage-ctl reconfigure
 
    This step is required for each of the front end servers in the |chef server oec| deployment. For example, in a configuration with two back end servers and three front end servers, this command would need to be run on all three front end machines.
 
