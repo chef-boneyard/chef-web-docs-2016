@@ -29,3 +29,13 @@ Install the Client
 Install the Workstation
 =====================================================
 .. include:: ../../includes_install/includes_install_reporting_workstation.rst
+
+Upgrade the Server
+=====================================================
+The |reporting| add-on can be upgraded as part of a standalone or high availability configuration:
+
+#. Reconfigure |reporting| services on each server:
+
+   .. code-block:: bash
+
+      $ opscode-reporting-ctl reconfigure
