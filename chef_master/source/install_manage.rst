@@ -26,7 +26,7 @@ The |chef manage| add-on can be upgraded as part of a standalone or high availab
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system.
 
-#. Install the package on the same front end machines that are running |chef server oec|. For example on |ubuntu|:
+#. Install the package on the same machines that are currently running |chef server oec|. For example on |ubuntu|:
 
    .. code-block:: bash
 
