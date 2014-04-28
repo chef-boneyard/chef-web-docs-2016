@@ -74,9 +74,11 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Enterprise Chef from Open Source Chef </migrate_to_enterprise>` | :doc:`Upgrade for Standalone </upgrade_server_standalone>` | :doc:`Upgrade for High Availability </upgrade_server_ha>`
 
-**Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
+**Configuration Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
 
 **Add-ons:** :doc:`Chef Manage </manage>` | :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>`
+
+**Install Add-ons:** :doc:`Chef Manage </install_manage>` | :doc:`Reporting </install_reporting>` | :doc:`Push Jobs </install_push_jobs>`
 
 **Manage Server:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | :doc:`Organizations, Groups, and Users </server_orgs>` | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>`
 
