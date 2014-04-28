@@ -29,4 +29,3 @@ Install the Client
 Install the Workstation
 =====================================================
 .. include:: ../../includes_install/includes_install_reporting_workstation.rst
-
