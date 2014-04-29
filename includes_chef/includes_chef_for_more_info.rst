@@ -11,4 +11,4 @@ For more information about |company_name|, cookbooks, and the community:
 
 * |url opscode|
 * |url opscode_community|
-* |url opscode_cookbooks|
+* |url opscode_community_cookbooks|
