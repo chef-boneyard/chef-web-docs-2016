@@ -3,11 +3,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``from file`` argument is used to create a data bag on the |chef server| from a file. The path to the data bag file must specify one of the following:
+The ``from file`` argument is used to:
 
-* the name of a data bag
-* a relative or absolute path to a file
+* Add a data bag item to a data bag
+* Update the contents of an existing data bag item 
 
-If the name of a data bag is specified, |knife| will search for the data bag in ``./data_bags/bag_name/file``. Once opened, the |json| file should be a hash that contains at least an ID key which represents the name of the data bag item.
+The data bag itself must already exist on the |chef server| and must be specified as part of the command. The contents of the data bag item are specified using a |json| file. This |json| file may be located at a relative or absolute path; its location must be specified as part of the command. The |json| file that defines the contents of the data bag item must at least contain the name of the data bag item---``"id": "name"``.
 
 .. warning:: A |chef client| must be version 11.6 (or higher) when using the ``knife data bag from file`` argument with the |chef oec| or |chef osc| version 11 servers.
