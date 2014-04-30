@@ -142,6 +142,7 @@ Cookbooks
 .. toctree::
    :hidden:
 
+   actions
    api_chef_server
    api_cookbooks_site
    api_omnitruck
