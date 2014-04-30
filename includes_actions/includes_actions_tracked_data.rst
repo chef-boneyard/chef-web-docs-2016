@@ -10,7 +10,7 @@
 * The name of the entity that made the request, e.g. "grantmc"
 * The type of entity, e.g. "user"
 * The interface from which the request was initiated, e.g. |knife|, |chef manage|, and so on, including the version for that interface
-* The requested action; this typically maps to a specific method in the |api chef server|
+* The requested action; this typically maps to a specific method in the |api chef server|, such as ``create``, ``read``, ``update``, and ``delete``
 * The |chef server| object and type, e.g. "cookbook" and "apache" (for a cookbook named "apache")
 * The version (and version number) for the |chef server| object, e.g. "version" and "1.2.3"
 * The date and time at which the event happened 
