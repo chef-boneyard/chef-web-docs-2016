@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view a list of cookbooks at |url opscode_cookbooks| server, enter:
+To view a list of cookbooks at |url opscode_community_cookbooks| server, enter:
 
 .. code-block:: bash
 
