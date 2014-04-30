@@ -11,7 +11,7 @@ The syntax for a handler can vary, depending on what the the situations the hand
      class HandlerName < Chef::Handler
        def report
          # Ruby code goes here
-       def
+       end
      end
    end
 
@@ -31,15 +31,17 @@ For example, the following shows a custom handler that sends an email that conta
    module OrgName
      class SendEmail < Chef::Handler
        def report
-         message  = "From: sender_name <sender@example.com>\n"
-         message << "To: recipient_address <recipient@example.com>\n"
-         message << "Subject: chef-client Run Failed\n"
-         message << "Date: #{Time.now.rfc2822}\n\n"
-         message << "Chef run failed on #{node.name}\n"
-         message << "#{run_status.formatted_exception}\n"
-         message << Array(backtrace).join("\n")
-         Net::SMTP.start('your.smtp.server', 25) do |smtp|
-           smtp.send_message message, 'sender@example', 'recipient@example'
+         if run_status.failed? then
+           message  = "From: sender_name <sender@example.com>\n"
+           message << "To: recipient_address <recipient@example.com>\n"
+           message << "Subject: chef-client Run Failed\n"
+           message << "Date: #{Time.now.rfc2822}\n\n"
+           message << "Chef run failed on #{node.name}\n"
+           message << "#{run_status.formatted_exception}\n"
+           message << Array(backtrace).join("\n")
+           Net::SMTP.start('your.smtp.server', 25) do |smtp|
+             smtp.send_message message, 'sender@example', 'recipient@example'
+           end
          end
        end
      end
@@ -49,7 +51,7 @@ and then is used in a recipe like:
 
 .. code-block:: ruby
 
-   send_email "blah"
+   send_email "blah" do
      # recipe code
    end
 
