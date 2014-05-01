@@ -15,3 +15,5 @@ This configuration file has the following settings:
      - Default value: ``true``.
    * - ``notification_email``
      - Default value: ``info@example.com``.
+   * - ``topology``
+     - Default value: ``standalone``.

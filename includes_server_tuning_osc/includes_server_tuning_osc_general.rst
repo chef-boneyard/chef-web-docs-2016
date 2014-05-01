@@ -17,5 +17,7 @@ The following settings are typically added to the |chef server rb| file:
      - Default value: ``true``.
    * - ``notification_email``
      - Default value: ``info@example.com``.
+   * - ``topology``
+     - Default value: ``standalone``.
 
  
