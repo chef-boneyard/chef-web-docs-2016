@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |resource remote_directory| resource can be used to create directory structures on a target node based on a directory structure that is defined in a cookbook. When the required directory structure does not exist, the |resource remote_directory| resource will create that structure explicitly. 
+The |resource remote_directory| resource can be used to create directory structures, as long as each directory within that structure is created explicitly. This is because the ``recursive`` attribute only applies ``group``, ``mode``, and ``owner`` attribute values to the leaf directory. 
 
 A directory structure::
 
@@ -17,21 +17,23 @@ The following example shows a way create a file in the ``/baz`` directory:
    remote_directory "/foo/bar/baz" do
      owner "root"
      group "root"
-     mode 0755
+     mode 00755
      action :create
    end
 
-With this example, the ``group``, ``mode``, and ``owner`` attribute values will be applied to ``/baz``. If the directory structure were::
+But with this example, the ``group``, ``mode``, and ``owner`` attribute values will only be applied to ``/baz``. Which is fine, if that's what you want. But most of the time, when the entire ``/foo/bar/baz`` directory structure is not there, you must be explicit about each directory. For example:
 
-  /foo
+.. code-block:: ruby
 
-the |resource remote_directory| resource would first create the required directory structure::
+   %w[ /foo /foo/bar /foo/bar/baz ].each do |path|
+     remote_directory path do
+       owner "root"
+       group "root"
+       mode 00755
+     end
+   end
 
-  /foo
-    /bar
-      /baz
-
-and apply the ``group``, ``mode``, and ``owner`` attribute values to the entire directory structure.
+This approach will create the correct hierarchy---``/foo``, then ``/bar`` in ``/foo``, and then ``/baz`` in ``/bar``---and also with the correct attribute values for ``group``, ``mode``, and ``owner``.
 
 
 
