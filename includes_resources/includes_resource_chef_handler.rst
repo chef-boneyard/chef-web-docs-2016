@@ -1,9 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-
-
-The |lwrp chef handler| resource is used to enable handlers during a |chef client| run. The resource allows arguments to be passed to the |chef client|, which then applies the conditions defined by the custom handler to the node attribute data collected during the |chef client| run, and then processes the handler based on that data.
+Use the |lwrp chef handler| resource to enable handlers during a |chef client| run. The resource allows arguments to be passed to the |chef client|, which then applies the conditions defined by the custom handler to the node attribute data collected during the |chef client| run, and then processes the handler based on that data.
 
 The |lwrp chef handler| resource is typically defined early in a node's run-list (often being the first item). This ensures that all of the handlers will be available for the entire |chef client| run.
 
