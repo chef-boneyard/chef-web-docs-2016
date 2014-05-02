@@ -18,9 +18,19 @@ The following items are new for |chef server osc| 11.1 and/or are changes from p
 * **chef-server-ctl upgrade** A new subcommand is available for upgrading the |chef server osc| server.
 
 
-Configuration Setting for IPv6
+Support for IPv6
 -----------------------------------------------------
-The following setting is used to configure IPv6 for |chef server osc|:
+The |chef server osc| server supports IPv6. Set the ``ip_version`` setting in the ``chef-server.rb`` file to ``ipv6`` to enable IPv6 mode. Once enabled, the |chef server osc| server will accept IPv6 connections internally and externally and will listen for both IPv4 and IPv6 connections for certain services. (The |chef server osc| server will continue to accept IPv4 connections as well.)
+
+If a URL is set to a literal IPv6 address (and not a hostname), the IPv6 address must be bracketed (``[ ]``) or the |chef server osc| server will not be able to recognize it as an IPv6 address. For example:
+
+.. code-block:: ruby
+
+   bookshelf['url'] "https://[2001:db8:85a3:8d3:1319:8a2e:370:7348]"
+
+Nginx and IPv6
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following setting is used to configure Nginx support for IPv6 in |chef server osc|:
 
 .. list-table::
    :widths: 200 300
@@ -29,7 +39,7 @@ The following setting is used to configure IPv6 for |chef server osc|:
    * - Setting
      - Description
    * - ``nginx['enable_ipv6']``
-     - Use to enable IPv6. Default value: ``false``.
+     - Use to enable IPv6. Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``true`` in the ``chef-server.rb`` file. If the ``ip_version`` is subsequently set to ``false``, the |chef server osc| will use IPv4; however, Nginx will continue to use IPv6 connections.
 
 Amazon S3 Settings
 -----------------------------------------------------
@@ -53,6 +63,8 @@ The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
 
 ``upgrade``
    Use to upgrade the |chef server osc| server in place. This subcommand will apply the necessary SQL changes without having to back up data and install the server from scratch. (Data should still be backed up before performing the upgrade, just to ensure that it is available, should it be needed.)
+   
+   .. note:: This subcommand may only be used when the |chef server osc| server is a standalone topology.
 
 
 
