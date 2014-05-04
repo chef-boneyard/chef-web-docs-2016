@@ -44,7 +44,7 @@ For example, the following plugin looks up data on virtual machines hosted in |a
 
 .. code-block:: ruby
 
-   Ohai.plugin do
+   Ohai.plugin(:Cloud) do
      provides "cloud"
    
      depends "ec2"
@@ -60,23 +60,24 @@ For example, the following plugin looks up data on virtual machines hosted in |a
        cloud[:public_ips] = Array.new
        cloud[:private_ips] = Array.new
      end
-
+   
      ...
-
+   
      def on_gce?
        gce != nil
      end
+   
      def get_gce_values
        cloud[:public_ipv4] = []
        cloud[:local_ipv4] = []
-     
-       public_ips = gce['network']["networkInterface"].collect do |interface|
-         if interface.has_key?('accessConfiguration')
-           interface['accessConfiguration'].collect{|ac| ac['externalIp']}
+   
+       public_ips = gce['instance']["networkInterfaces"].collect do |interface|
+         if interface.has_key?('accessConfigs')
+           interface['accessConfigs'].collect{|ac| ac['externalIp']}
          end
        end.flatten.compact
    
-       private_ips = gce['network']["networkInterface"].collect do |interface|
+       private_ips = gce['instance']["networkInterfaces"].collect do |interface|
          interface['ip']
        end.compact
        
@@ -85,7 +86,7 @@ For example, the following plugin looks up data on virtual machines hosted in |a
        cloud[:public_ipv4] +=  public_ips
        cloud[:public_hostname] = nil
        cloud[:local_ipv4] += private_ips
-       cloud[:local_hostname] = gce['hostname']
+       cloud[:local_hostname] = gce['instance']['hostname']
        cloud[:provider] = "gce"
      end
    
