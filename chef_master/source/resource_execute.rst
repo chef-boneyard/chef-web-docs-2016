@@ -14,7 +14,7 @@ Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_execute_syntax.rst
 
-.. note:: .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_execute_resource.rst
+.. note:: .. include:: ../../includes_resources_common/includes_resources_common_guards_execute_resource.rst
 
 Actions
 =====================================================
@@ -23,6 +23,18 @@ Actions
 Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_execute_attributes.rst
+
+Guards
+-----------------------------------------------------
+.. include:: ../../includes_resources_common/includes_resources_common_guards.rst
+
+**Attributes**
+
+.. include:: ../../includes_resources_common/includes_resources_common_guards_attributes.rst
+
+**Arguments**
+
+.. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
 
 Providers
 =====================================================

@@ -12,7 +12,7 @@ Syntax
 
 Registry Key Path Separators
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_windows_registry_key_path_separators.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst
 
 Actions
 =====================================================

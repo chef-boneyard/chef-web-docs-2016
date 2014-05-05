@@ -304,7 +304,7 @@ The following sections describe |windows|-specific functionality that applies ge
 
 Relative Paths
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_relative_paths.rst
+.. include:: ../../includes_resources_common/includes_resources_common_relative_paths.rst
 
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -312,17 +312,17 @@ Examples
 
 Windows File Security
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_common_windows_security.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_security.rst
 
 .. note:: Windows File Security applies to the |resource cookbook_file|, |resource directory|, |resource file|, |resource remote_directory|, |resource remote_file|, and |resource template| resources.
 
 Access Control Lists (ACLs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_common_windows_security_acl.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst
 
 Inheritance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_common_windows_security_inherits.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst
 
 Attributes for File-based Resources
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -355,7 +355,7 @@ This resource has the following attributes:
 
 Atomic File Updates
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_common_atomic_update.rst
+.. include:: ../../includes_resources_common/includes_resources_common_atomic_update.rst
 
 .. note:: Atomic File Updates applies to the |resource template| resource.
 
@@ -466,7 +466,7 @@ Syntax
 
 Registry Key Path Separators
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_common_windows_registry_key_path_separators.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

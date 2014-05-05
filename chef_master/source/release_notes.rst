@@ -58,7 +58,19 @@ Attributes
 
 ``guard_interpreter`` Attribute
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_guard_interpreter.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst
+
+Inheritance
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes_inherit.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_example_default.rst
 
 |resource powershell_script| Attributes
 -----------------------------------------------------
