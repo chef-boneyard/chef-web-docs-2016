@@ -44,11 +44,11 @@ Required Updates
 
 Atomic File Updates
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_atomic_update.rst
+.. include:: ../../includes_resources_common/includes_resources_common_atomic_update.rst
 
 Lazy Attribute Evaluation
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_lazy_evaluation.rst
+.. include:: ../../includes_resources_common/includes_resources_common_lazy_evaluation.rst
 
 |resource file|-based Resources
 -----------------------------------------------------
