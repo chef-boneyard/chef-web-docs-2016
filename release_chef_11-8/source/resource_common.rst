@@ -6,7 +6,7 @@ All resources (and lightweight resources) share a set of common actions, attribu
 
 Actions
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_actions.rst
+.. include:: ../../includes_resources_common/includes_resources_common_actions.rst
 
 Examples
 -----------------------------------------------------
@@ -18,7 +18,7 @@ The following examples show how to use common actions in a recipe.
 
 Attributes
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_attributes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -42,17 +42,17 @@ The following examples show how to use common attributes in a recipe.
 
 Guards
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guards.rst
 
-.. note:: .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_execute_resource.rst
+.. note:: .. include:: ../../includes_resources_common/includes_resources_common_guards_execute_resource.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guards_attributes.rst
 
 Arguments
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
 
 not_if Examples
 -----------------------------------------------------
@@ -90,19 +90,19 @@ only_if Examples
 
 Lazy Attribute Evaluation
 =====================================================
-.. include:: ../../includes_resources/includes_resource_common_lazy_evaluation.rst
+.. include:: ../../includes_resources_common/includes_resources_common_lazy_evaluation.rst
 
 Notifications
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications.rst
 
 Notifications Timers
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_timers.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
 Notifies Syntax
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_notifies.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -154,7 +154,7 @@ The following examples show how to use the ``notifies`` notification in a recipe
 
 Subscribes Syntax
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_subscribes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -174,7 +174,7 @@ The following examples show how to use the ``subscribes`` notification in a reci
 
 Relative Paths
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_relative_paths.rst
+.. include:: ../../includes_resources_common/includes_resources_common_relative_paths.rst
 
 Examples
 -----------------------------------------------------
@@ -183,26 +183,26 @@ Examples
 
 Run from Resource Collection 
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst
+.. include:: ../../includes_resources_common/includes_resources_common_compile.rst
 
 Before other Resources
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst
+.. include:: ../../includes_resources_common/includes_resources_common_compile_begin.rst
 
 After Collection is Built
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_end.rst
+.. include:: ../../includes_resources_common/includes_resources_common_compile_end.rst
 
 
 Windows File Security
 =====================================================
-.. include:: ../../includes_resources/includes_resource_common_windows_security.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_security.rst
 
 Access Control Lists (ACLs)
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_windows_security_acl.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst
 
 Inheritance
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_windows_security_inherits.rst
+.. include:: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst
 
