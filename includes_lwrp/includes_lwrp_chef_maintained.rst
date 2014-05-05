@@ -57,7 +57,7 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
    * - `postfix <https://github.com/opscode-cookbooks/postfix>`_
      - Use to install and configure postfix for client or outbound relayhost.
    * - `powershell <https://github.com/opscode-cookbooks/powershell>`_
-     - The |cookbook powershell| cookbook is used to install |windows powershell|.
+     - Use to run |windows powershell|. See the `powershell_script resource <http://docs.opscode.com/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|. 
    * - `rabbit mq <https://github.com/opscode-cookbooks/rabbitmq>`_
      - The |cookbook rabbitmq| cookbook is used to install and configure |rabbitmq|.
    * - `squid <https://github.com/opscode-cookbooks/squid>`_
