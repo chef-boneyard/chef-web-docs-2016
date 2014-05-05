@@ -12,7 +12,7 @@ The attributes and actions in this section apply to all resources.
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_actions.rst
+.. include:: ../../includes_resources_common/includes_resources_common_actions.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -24,7 +24,7 @@ The following examples show how to use common actions in a recipe.
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_attributes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -48,15 +48,15 @@ The following examples show how to use common attributes in a recipe.
 
 Conditional Execution
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guards.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guards_attributes.rst
 
 Arguments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
 
 not_if Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -104,15 +104,15 @@ File Locations
 
 Notifications
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications.rst
 
 Notifications Timers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_timers.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
 Notifies Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_notifies.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -164,7 +164,7 @@ The following examples show how to use the ``notifies`` notification in a recipe
 
 Subscribes Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_subscribes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -184,7 +184,7 @@ The following examples show how to use the ``subscribes`` notification in a reci
 
 Relative Paths
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_relative_paths.rst
+.. include:: ../../includes_resources_common/includes_resources_common_relative_paths.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
