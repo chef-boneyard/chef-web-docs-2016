@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following guards can be used to define a condition to be evaluated during the execution phase of the |chef client| run:
+The following attributes can be used to define a guard that is evaluated during the execution phase of the |chef client| run:
 
 .. list-table::
    :widths: 60 420
