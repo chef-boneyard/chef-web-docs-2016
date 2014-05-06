@@ -152,7 +152,7 @@
    * - ``sslclientkey``
      - |ssl_client_key_yum|
    * - ``sslverify``
-     - |ssl_verify_yum|
+     - |ssl_certificate verify|
    * - ``syslog_device``
      - |syslog_device|
    * - ``syslog_facility``
