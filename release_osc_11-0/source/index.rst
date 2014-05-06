@@ -151,7 +151,7 @@ The following command-line tools can be run on the |chef server|:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/ctl_chef_server.html">ctl-chef-server</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/osc_11-0/ctl_chef_server.html">ctl-chef-server</a> </br>
 
 APIs
 -----------------------------------------------------
