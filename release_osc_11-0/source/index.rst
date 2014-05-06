@@ -137,7 +137,7 @@ The |chef server osc| can be installed with the `knife bootstrap <http://docs.op
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/install_server.html">Install the Open Source Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/install_server_scenario_vm.html">Scenario: Install the Open Source Chef Server on a Virtual Machine</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/upgrade_server_open_source.html">Upgrade to Open Source Chef Server 11</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/osc_11-0/upgrade_server_open_source.html">Upgrade to Open Source Chef Server 11.0</a> </br>
 
 Settings and Tools
 -----------------------------------------------------
