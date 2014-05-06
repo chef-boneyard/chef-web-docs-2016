@@ -4,6 +4,8 @@ All about |chef server osc| 11.1 ...
 
 .. include:: ../../includes_chef/includes_chef_index_osc.rst
 
+View the :doc:`release notes </release_notes>` for |chef server osc| 11.1.
+
 Getting Started
 =====================================================
 If you are new to |chef server osc|, familiarize yourself with its main components: `the server, workstations, and nodes <http://docs.opscode.com/open_source/osc_overview.html>`_.
