@@ -32,3 +32,6 @@ This command has the following options:
 
 ``test --all``
    Use to execute |chef pedant|, an integration test suite for the |chef server| installation. By default, only a subset of the available test are run. Add the ``--all`` flag to run the full test suite.
+   
+.. ``upgrade --all``
+..      Use to upgrade the |chef server| in place. This subcommand will apply the necessary SQL changes without having to back up data and install the server from scratch. (Data should still be backed up before performing the upgrade, just to ensure that it is available, should it be needed.)
