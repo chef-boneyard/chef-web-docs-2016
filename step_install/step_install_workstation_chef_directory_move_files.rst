@@ -17,7 +17,7 @@ To move files to the |chef repo hidden| directory:
 
       cp /path/to/ORGANIZATION-validator.pem ~/chef-repo/.chef
 
-   and
+   and:
 
    .. code-block:: bash
 
