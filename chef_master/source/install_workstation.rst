@@ -61,8 +61,6 @@ Starter Kit
 -----------------------------------------------------
 If you have access to |chef server oec| (hosted or on premises), you can download the starter kit. The starter kit will create the necessary configuration files---the .chef directory, |knife rb|, the ORGANIZATION-validator.pem, and USER.pem files) with the correct information that is required to interact with the |chef server|. Simply download the starter kit and then move it to the desired location on your workstation.
 
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_get_starter_kit.rst
-
 Manually
 -----------------------------------------------------
 Use the following steps to manually set up the |chef repo|:
