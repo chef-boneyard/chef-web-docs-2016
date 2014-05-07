@@ -21,8 +21,6 @@ For back-end servers in an |chef server oec| installation:
      - |service nginx|
    * - 9683
      - |service nginx|
-   * - 9672
-     - |service nrpe|
    * - 5984
      - |service couchdb|
    * - 8983
@@ -31,7 +29,9 @@ For back-end servers in an |chef server oec| installation:
      - |service postgresql|
    * - 5672
      - |service rabbitmq|
-   * - 6379
-     - |service redis|
-   * - 7788
+   * - 16379
+     - |service redis_lb|
+   * - 4321
+     - |service bookshelf|
+   * - 7788-7799
      - |drbd|

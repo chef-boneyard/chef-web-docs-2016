@@ -13,6 +13,4 @@ For front-end servers in an |chef server oec| installation:
      - |service nginx|
    * - 443
      - |service nginx|
-   * - 9672
-     - |service nrpe|
 
