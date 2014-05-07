@@ -38,5 +38,11 @@ Community Plugins: chef-client
      - Adds the ability to orchestrate complete clusters of machines using an expressive toolset that helps construct scalable and resilient architectures.
    * - `jclouds-chef <https://github.com/jclouds/jclouds-chef>`_
      - Adds |java| and |clojure| components to the |api chef server| REST API.
+   * - `kitchenplan <https://github.com/kitchenplan/kitchenplan>`_
+     - A utility for automating the installation and configuration of a workstation on |mac os x|.
+   * - `stove <https://github.com/sethvargo/stove>`_
+     - A utility for releasing and managing cookbooks.
+
+
 
 
