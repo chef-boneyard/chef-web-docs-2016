@@ -7,5 +7,5 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ knife ssh SEARCH_QUERY SSH_COMMAND (options)
+   $ knife ssl fetch URI_FOR_HTTPS_SERVER
 
