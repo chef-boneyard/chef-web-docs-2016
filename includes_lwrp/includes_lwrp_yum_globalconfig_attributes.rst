@@ -86,7 +86,7 @@
    * - ``installroot``
      - |installroot|
    * - ``keepalive``
-     - |keepalive|
+     - |use keepalive|
    * - ``keepcache``
      - |keepcache| Default value: ``false``.
    * - ``kernelpkgnames``
