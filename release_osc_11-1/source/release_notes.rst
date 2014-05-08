@@ -15,7 +15,7 @@ The following items are new for |chef server osc| 11.1 and/or are changes from p
 * **Support for Amazon S3** Support has been added to allow the |chef server osc| server to use Amazon S3 to store cookbooks.
 * **Gecode Depsolver** The |chef server osc| server switches back to using the Geocode depsolver. This resolves some cookbook dependency issues that were seen by some users due to the less-robust nature of the |erlang|-based dependency solver that was added in |chef server osc| 11.0.
 * **RabbitMQ port changes** The port used by |rabbitmq| is changed from 5672 to 8672. This resolves a conflict with the default port on the |redhat| 6 platform.
-* **chef-server-ctl upgrade** A new subcommand is available for upgrading the |chef server osc| server.
+* **chef-server-ctl upgrade** A new subcommand is available for upgrading the |chef server osc| server in standalone topologies.
 
 
 Support for IPv6
@@ -62,9 +62,9 @@ chef-server-ctl upgrade
 The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
 
 ``upgrade``
-   Use to upgrade the |chef server osc| server in place. This subcommand will apply the necessary SQL changes without having to back up data and install the server from scratch. (Data should still be backed up before performing the upgrade, just to ensure that it is available, should it be needed.)
+   Use for in-place upgrades of the |chef server osc| server, version 11.0.4 (or higher). This subcommand will apply the necessary SQL changes without having to back up data and install the server from scratch. (Data should still be backed up before performing the upgrade, just to ensure that it is available, should it be needed.)
    
-   .. note:: This subcommand may only be used when the |chef server osc| server is a standalone topology.
+   .. note:: This subcommand may only be used when the |chef server osc| server is configured for a standalone topology and it assumes that all services used by |chef server osc| are enabled.
 
 
 
