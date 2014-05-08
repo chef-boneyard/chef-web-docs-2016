@@ -400,7 +400,7 @@ Cookbooks
    resource_link
    resource_log
    resource_machine
-   resource_machine_batch
+..   resource_machine_batch
    resource_machine_execute
    resource_machine_file
    resource_macports_package
