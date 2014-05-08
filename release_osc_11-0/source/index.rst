@@ -339,4 +339,6 @@ The `Recipe DSL <http://docs.opscode.com/open_source/dsl_recipe.html>`_ is used 
 .. toctree::
    :hidden:
 
+   ctl_chef_server
+   upgrade_server_open_source
    
