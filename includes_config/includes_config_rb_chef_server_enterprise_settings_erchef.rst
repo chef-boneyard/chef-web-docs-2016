@@ -11,6 +11,10 @@ The |service erchef| service has the following settings:
      - Description
    * - ``opscode_erchef['auth_skew']``
      - Default value: ``900``.
+   * - ``opscode_erchef['authz_fanout']``
+     - Default value: ``20``.
+   * - ``opscode_erchef['authz_timeout']``
+     - Default value: ``1000``.
    * - ``opscode_erchef['base_resource_url']``
      - The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
    * - ``opscode_erchef['bulk_fetch_batch_size']``
@@ -19,12 +23,18 @@ The |service erchef| service has the following settings:
      - Default value: ``3600``.
    * - ``opscode_erchef['couchdb_max_conn']``
      - Default value: ``"100"``.
+   * - ``opscode_erchef['depsolver_timeout']``
+     - Default value: ``"5000"``.
+   * - ``opscode_erchef['depsolver_worker_count']``
+     - Default value: ``"5"``.
    * - ``opscode_erchef['db_pool_size']``
      - |db_pool_size| Default value: ``20``.
    * - ``opscode_erchef['dir']``
      - Default value: ``/var/opt/chef-server/erchef``.
    * - ``opscode_erchef['enable']``
      - |enable service| Default value: ``true``.
+   * - ``opscode_erchef['enable_actionlog']``
+     - Use to enable |actions|, an add-on for |chef server oec|. Default value: ``false``.
    * - ``opscode_erchef['ha']``
      - |use ha| Default value: ``false``.
    * - ``opscode_erchef['ibrowse_max_pipeline_size']``
@@ -39,6 +49,8 @@ The |service erchef| service has the following settings:
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_erchef['max_cache_size']``
      - Default value: ``10000``.
+   * - ``opscode_erchef['max_request_size']``
+     - Default value: ``1000000``.
    * - ``opscode_erchef['port']``
      - |port opscode_erchef| Default value: ``8000``.
    * - ``opscode_erchef['proxy_user']``
@@ -53,6 +65,8 @@ The |service erchef| service has the following settings:
      - Default value: ``5000``.
    * - ``opscode_erchef['s3_url_ttl']``
      - Default value: ``900``.
+   * - ``opscode_erchef['udp_socket_pool_size']``
+     - Default value: ``20``.
    * - ``opscode_erchef['umask']``
      - Default value: ``0022``.
    * - ``opscode_erchef['validation_client_name']``
