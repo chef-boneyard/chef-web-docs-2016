@@ -28,7 +28,6 @@ The |chef server osc| server supports IPv6. Set the ``ip_version`` setting in th
 
    * - Setting
      - Description
-
    * - ``ip_version``
      - Use to enable IPv6 and run |chef server osc| in "dual IPv4/IPv6 mode". When this setting is ``ipv6``, the |chef server osc| server will use IPv6 for all internal comunication and will be able to accept external communications that are using IPv6 (via the |nginx| load balancer). Default value: ``ipv4``. For example:
 	   
