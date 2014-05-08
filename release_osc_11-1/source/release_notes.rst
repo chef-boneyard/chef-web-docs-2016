@@ -13,7 +13,7 @@ The following items are new for |chef server osc| 11.1 and/or are changes from p
 * **Support for IPv6** Support has been added to allow the |chef server osc| server and the |chef client| to run in an IPv6 infrastructure.
 * **Support for Proxy/Firewalls** Support has been added to allow the |chef server osc| server to work through proxies and firewalls by using vhost.
 * **Support for Amazon S3** Support has been added to allow the |chef server osc| server to use Amazon S3 to store cookbooks.
-* **Gecode Depsolver** The |chef server osc| server switches back to using the Geocode depsolver. This resolves some cookbook dependency issues that were seen by some users due to the less-robust nature of the |erlang|-based dependency solver that was added in |chef server osc| 11.0.
+* **Gecode Depsolver** The |chef server osc| server switches back to using the Gecode depsolver. This resolves some cookbook dependency issues that were seen by some users due to the less-robust nature of the |erlang|-based dependency solver that was added in |chef server osc| 11.0.
 * **RabbitMQ port changes** The port used by |rabbitmq| is changed from 5672 to 8672. This resolves a conflict with the default port on the |redhat| 6 platform.
 * **chef-server-ctl upgrade** A new subcommand is available for upgrading the |chef server osc| server in standalone topologies.
 
