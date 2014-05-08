@@ -34,6 +34,8 @@ The |chef server osc| server supports IPv6. Set the ``ip_version`` setting in th
 
        .. note:: Setting ``ip_version`` to true will also set ``nginx['enable_ipv6']`` to ``true``.
 
+Literal IPv6 Addresses
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 If a URL is set to a literal IPv6 address (and not a hostname), the IPv6 address must be bracketed (``[ ]``) or the |chef server osc| server will not be able to recognize it as an IPv6 address. For example:
 
 .. code-block:: ruby
