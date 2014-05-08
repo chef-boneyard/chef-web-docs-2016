@@ -22,6 +22,18 @@ Support for IPv6
 -----------------------------------------------------
 The |chef server osc| server supports IPv6. Set the ``ip_version`` setting in the ``chef-server.rb`` file to ``ipv6`` to enable IPv6 mode. Once enabled, the |chef server osc| server will accept IPv6 connections internally and externally and will listen for both IPv4 and IPv6 connections for certain services. (The |chef server osc| server will continue to accept IPv4 connections as well.)
 
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+
+   * - ``ip_version``
+     - Use to enable IPv6 and run |chef server osc| in "dual IPv4/IPv6 mode". When this setting is ``ipv6``, the |chef server osc| server will use IPv6 for all internal comunication and will be able to accept external communications that are using IPv6 (via the |nginx| load balancer). Default value: ``ipv4``.
+
+       .. note:: Setting ``ip_version`` to true will also set ``nginx['enable_ipv6']`` to ``true``.
+
 If a URL is set to a literal IPv6 address (and not a hostname), the IPv6 address must be bracketed (``[ ]``) or the |chef server osc| server will not be able to recognize it as an IPv6 address. For example:
 
 .. code-block:: ruby
