@@ -58,7 +58,7 @@ The following setting is used to configure |nginx| support for IPv6 in |chef ser
    * - Setting
      - Description
    * - ``nginx['enable_ipv6']``
-     - Use to enable IPv6. Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6`` in the ``chef-server.rb`` file. If the ``ip_version`` is subsequently set to ``ipv4``, the |chef server osc| will use IPv4; however, |nginx| will continue to use IPv6 connections.
+     - Use to enable IPv6 handling for |nginx|. Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6`` in the ``chef-server.rb`` file. If the ``ip_version`` is subsequently set to ``ipv4``, the |chef server osc| will use IPv4; however, |nginx| will continue to use IPv6 connections.
 
 Amazon S3 Settings
 -----------------------------------------------------
