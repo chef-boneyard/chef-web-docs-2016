@@ -62,9 +62,7 @@ The following setting is used to configure |nginx| support for IPv6 in |chef ser
 
 Custom Cookbook Storage
 -----------------------------------------------------
-By defalt, |chef server osc| stores cookbooks in a location called |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means this location is on the same physical machine. 
-
-It is possible to configure a custom cookbook storage location that is not on the same physical machine. For example, |chef bookshelf| can be moved to a location that is hosted on |amazon s3|.
+By defalt, |chef server osc| stores cookbooks in a location called |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means this location is on the same physical machine. It is possible to configure this location so that is not on the same physical machine. For example, |chef bookshelf| can be moved to a location that is hosted on |amazon s3|.
 
 The following settings may be changed to support the storing of cookbook in a non-default location: 
 
