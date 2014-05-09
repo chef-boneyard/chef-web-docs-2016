@@ -129,7 +129,7 @@ The following bugs were fixed:
 * `CHEF-2380 <http://tickets.opscode.com/browse/CHEF-2380>`_  --- Clients Should be Able to Upload Their Own Public Keys to Chef-Server
 * `CHEF-2245 <http://tickets.opscode.com/browse/CHEF-2245>`_  --- chef-solr jetty request logs go into /var/chef/solr-jetty/logs instead of /var/log/chef
 
-For the |chef server oec| web user interface, the following bugs were fixed:
+For the |chef server osc| web user interface, the following bugs were fixed:
 
 * `CHEF-5284 <http://tickets.opscode.com/browse/CHEF-5284>`_  --- Upgrade Rails to 3.2.18
 * `CHEF-5242 <http://tickets.opscode.com/browse/CHEF-5242>`_  --- Fix Extra Apostrophe in webui JSON editor
