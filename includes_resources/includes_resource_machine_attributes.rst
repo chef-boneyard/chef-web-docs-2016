@@ -15,6 +15,29 @@
      - |chef_server_url|
    * - ``converge``
      - Use to manage convergence when used with the ``:create`` action. Set to ``false`` to prevent convergence. Set to ``true`` to force it. Default value: ``true``.
+   * - ``files``
+     - A list of files to upload. Syntax: ``REMOTE_PATH => LOCAL_PATH_OR_HASH``.
+       
+       For example:
+       
+       .. code-block:: ruby
+       
+          files '/remote/path.txt' => '/local/path.txt'
+       
+       or:
+       
+       .. code-block:: ruby
+       
+          files '/remote/path.txt' => { :local_path => '/local/path.txt' }
+       
+       or:
+       
+       .. code-block:: ruby
+       
+          files '/remote/path.txt' => { :content => 'foo' }
+
+   * - ``ohai_hints``
+     - |hint| For example: ``'ec2' => { 'a' => 'b' } creates file ec2.json with json contents { 'a': 'b' }``.
    * - ``private_key_options``
      - Use to generate a private key of the desired size, type, and so on.
    * - ``provisioner``
@@ -33,9 +56,6 @@
      - The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
    * - ``validator``
      - Use to specify if the |chef client| is a |chef validator|.
-   * - ``ohai_hints``
-     - |hint| For example: ``'ec2' => { 'a' => 'b' } creates file ec2.json with json contents { 'a': 'b' }``.
-
 
 
 
