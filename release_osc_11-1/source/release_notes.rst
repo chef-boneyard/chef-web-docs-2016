@@ -72,9 +72,9 @@ The following settings may be changed to support the storing of cookbooks in a n
 
    * - Setting
      - Description
-   * - ``bookshelf['s3_external_url']``
+   * - ``bookshelf['external_url']``
      - Use to specify the URL from which the |chef client| will download cookbooks. By default, this is the ``Host:`` header provided by the |chef client| when it contacts the |chef server|. When cookbook storage is located behind a firewall and/or when the ``Host:`` header is not used, this value must be a URL that is accessible to the |chef client|. Default value: ``:host_header``.
-   * - ``bookshelf['s3_url']``
+   * - ``bookshelf['url']``
      - Use to specify the URL at which cookbooks are stored.
 	 
 In addition, these settings may be necessary when configuring the storing of cookbooks in a non-default location: 
