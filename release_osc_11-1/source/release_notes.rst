@@ -64,7 +64,7 @@ Custom Cookbook Storage
 -----------------------------------------------------
 By defalt, |chef server osc| stores cookbooks in |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means |chef bookshelf| is located on the same physical machine. It is possible to offload cookbook storage, such as a different physical machine behind the firewall or to a location that is hosted on |amazon s3|.
 
-The following settings may be changed to support the storing of cookbook in a non-default location: 
+The following settings may be changed to support the storing of cookbooks in a non-default location: 
 
 .. list-table::
    :widths: 200 300
@@ -73,9 +73,24 @@ The following settings may be changed to support the storing of cookbook in a no
    * - Setting
      - Description
    * - ``bookshelf['s3_external_url']``
-     - Use to specify the URL from which the |chef client| will download cookbooks. If this location is behind a firewall, this setting must be a URL that is accessible to the |chef client|.
+     - Use to specify the URL from which the |chef client| will download cookbooks. By default, this is the ``Host:`` header provided by the |chef client| when it contacts the |chef server|. When cookbook storage is located behind a firewall and/or when the ``Host:`` header is not used, this value must be a URL that is accessible to the |chef client|. Default value: ``:host_header``.
    * - ``bookshelf['s3_url']``
      - Use to specify the URL at which cookbooks are stored.
+	 
+In addition, these settings may be necessary when configuring the storing of cookbooks in a non-default location: 
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``bookshelf['s3_access_key_id']``
+     - Use to specify the access key.
+   * - ``bookshelf['s3_secret_key_id']``
+     - Use to specify the secret key.	 
+   * - ``erchef['s3_bucket']``
+     - Use to specify the bucket name. Default value: ``bookshelf``.	 
 
 chef-server-ctl upgrade
 -----------------------------------------------------
