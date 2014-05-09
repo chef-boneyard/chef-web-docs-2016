@@ -113,6 +113,21 @@ The following bugs were fixed:
 * `CHEF-2380 <http://tickets.opscode.com/browse/CHEF-2380>`_  --- Clients Should be Able to Upload Their Own Public Keys to Chef-Server
 * `CHEF-2245 <http://tickets.opscode.com/browse/CHEF-2245>`_  --- chef-solr jetty request logs go into /var/chef/solr-jetty/logs instead of /var/log/chef
 
+For the |chef server oec| web user interface, the following bugs were fixed:
+
+* `CHEF-5284 <http://tickets.opscode.com/browse/CHEF-5284>`_  --- Upgrade Rails to 3.2.18
+* `CHEF-5242 <http://tickets.opscode.com/browse/CHEF-5242>`_  --- Fix Extra Apostrophe in webui JSON editor
+* `CHEF-5056 <http://tickets.opscode.com/browse/CHEF-5056>`_  --- Upgrade Rails to 3.2.17
+* `CHEF-4858 <http://tickets.opscode.com/browse/CHEF-4858>`_  --- Upgrade chef-server-webui Rails to 3.2.16
+* `CHEF-4757 <http://tickets.opscode.com/browse/CHEF-4757>`_  --- ruby cookbook file in web UI shows up as "Binary file not shown"
+* `CHEF-4403 <http://tickets.opscode.com/browse/CHEF-4403>`_  --- Environment edit screen: Stop json being escaped as html
+* `CHEF-4040 <http://tickets.opscode.com/browse/CHEF-4040>`_  --- Environment existing settings are not displayed correctly when editing environments or nodes via the WebUI
+* `CHEF-4004 <http://tickets.opscode.com/browse/CHEF-4004>`_  --- Select to Close Existing Environment Run List Uses Incorrect Rails Helper
+* `CHEF-3952 <http://tickets.opscode.com/browse/CHEF-3952>`_  --- Cookbook view reports ERROR: undefined method 'close!' for nil:NilClass
+* `CHEF-3951 <http://tickets.opscode.com/browse/CHEF-3951>`_  --- databag item creation not possible
+* `CHEF-3883 <http://tickets.opscode.com/browse/CHEF-3883>`_  --- Chef 11 status page does not list all nodes
+* `CHEF-3267 <http://tickets.opscode.com/browse/CHEF-3267>`_  --- webui status page doesn't respect environment selection
+* `CHEF-2060 <http://tickets.opscode.com/browse/CHEF-2060>`_  --- Auto-complete is enabled in Chef html - /users/login_exec
  
 .. What's Improved
 .. =====================================================
