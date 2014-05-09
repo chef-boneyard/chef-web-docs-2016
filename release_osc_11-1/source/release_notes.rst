@@ -11,7 +11,7 @@ What's New
 The following items are new for |chef server osc| 11.1 and/or are changes from previous versions. The short version:
 
 * **Support for IPv6** Support has been added to allow the |chef server osc| server and the |chef client| to run in an IPv6 infrastructure.
-* **Support for Proxy/Firewalls** Support has been added to allow the |chef server osc| server to work through proxies and firewalls by using vhost.
+* **Custom Cookbook Storage** Support has been added to allow the |chef server osc| server to store cookbooks in a non-default location.
 * **Support for Custom Proxy and Firewall Settings for Cookbook Storage** Support has been added to allow the |chef server osc| server to a non-Bookshelf location to store cookbooks.
 * **Gecode Depsolver** The |chef server osc| server switches back to using the Gecode depsolver. This resolves cookbook dependency issues that were seen by some users due to the less-robust nature of the |erlang|-based dependency solver that was added in |chef server osc| 11.0.
 * **RabbitMQ default port changes** The default port used by |rabbitmq| is changed from 5672 to 8672. This resolves a conflict with the default port on the |redhat| 6 platform.
@@ -60,9 +60,13 @@ The following setting is used to configure |nginx| support for IPv6 in |chef ser
    * - ``nginx['enable_ipv6']``
      - Use to enable IPv6 handling for |nginx|. Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6``.
 
-Custom Proxy/Firewall Settings
+Custom Cookbook Storage
 -----------------------------------------------------
-The following proxy and firewall settings may be updated to point to a non-Bookshelf location for cookbook storage:
+By defalt, |chef server osc| stores cookbooks in a location called |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means this location is on the same physical machine. 
+
+It is possible to configure a custom cookbook storage location that is not on the same physical machine. For example, |chef bookshelf| can be moved to a location that is hosted on |amazon s3|.
+
+The following settings may be changed to support the storing of cookbook in a non-default location: 
 
 .. list-table::
    :widths: 200 300
@@ -71,11 +75,12 @@ The following proxy and firewall settings may be updated to point to a non-Books
    * - Setting
      - Description
    * - ``bookshelf['s3_external_url']``
-     - Use to specify the URL used that is returned to the |chef client| so that they may communicate with S3. This ensures each |chef client| may be located on the other side of the proxy/firewall from the |chef server osc| server.
+     - Use to specify the URL from which the |chef client| will download cookbooks. If this location is behind a firewall, this setting must be a URL that is accessible to the |chef client|.
    * - ``bookshelf['s3_url']``
-     - Use to specify the URL used by the |chef server osc| server, when it communicates with S3.
+     - Use to specify the URL at which cookbooks are stored.
 
-	 
+
+ 
 chef-server-ctl upgrade
 -----------------------------------------------------
 The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
