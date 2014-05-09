@@ -33,9 +33,28 @@ Otherwise it will print out a list of errors, similar to the following:
 .. code-block:: bash
 
    ...
-     [OK] nginx is running correctly, and I am master.
-     [ERROR] nrpe is not running.
-     [OK] opscode-account is running correctly, and I am master.
+   [OK] nginx is running correctly, and I am master.
+   [ERROR] nrpe is not running.
+   [OK] opscode-account is running correctly, and I am master.
    ...
-     [ERROR] ERRORS WERE DETECTED.
+   [ERROR] ERRORS WERE DETECTED.
+
+For example:
+
+.. code-block:: bash
+
+   [OK] keepalived HA services enabled
+   [OK] DRBD disk replication enabled
+   [OK] DRBD partition /dev/opscode/drbd found
+   [OK] DRBD device /dev/drbd0 found
+   [OK] cluster status = master
+   [OK] found VIP IP address and I am master
+   [OK] found VRRP communications interface eth1
+   [OK] my DRBD status is Connected/Primary/UpToDate and I am master
+   [OK] my DRBD partition is mounted and I am master
+   [OK] DRBD primary IP address pings
+   [OK] DRBD secondary IP address pings
+   [OK] couchdb is running correctly and I am master
+   ...
+   [OK] all checks passed.
 
