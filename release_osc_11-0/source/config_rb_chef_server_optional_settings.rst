@@ -38,7 +38,7 @@ Load Balancer
 
 Nginx
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_nginx.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_settings_nginx.rst
 
 PostgreSQL
 -----------------------------------------------------
