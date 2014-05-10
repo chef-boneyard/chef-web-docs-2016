@@ -145,7 +145,7 @@ The following settings files are used to configure behavior for the |chef server
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/config_rb_chef_server.html">chef-server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/osc_11-0/config_rb_chef_server.html">chef-server.rb</a> </br>
 
 The following command-line tools can be run on the |chef server|:
 
@@ -339,6 +339,8 @@ The `Recipe DSL <http://docs.opscode.com/open_source/dsl_recipe.html>`_ is used 
 .. toctree::
    :hidden:
 
+   config_rb_chef_server
+   config_rb_chef_server_optional_settings
    ctl_chef_server
    upgrade_server_open_source
    
