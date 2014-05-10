@@ -18,9 +18,9 @@ This configuration file has the following settings:
    * - ``nginx['enable']``
      - |enable service| Default value: ``true``.
    * - ``nginx['enable_ipv6']``
-     - Use to enable IPv6 handling for |nginx|. Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6``.
+     - |enable ipv6| Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6``.
    * - ``nginx['enable_non_ssl']``
-     - Indicates whether port 80 redirects to port 443 are allowed. When this value is set to ``false``, load balancers on the front-end hardware are allowed to do |ssl| termination of the WebUI and API. Default value: ``false``.
+     - |port enable_non_ssl_nginx| Default value: ``false``.
    * - ``nginx['gzip']``
      - Indicates that |gzip| compression is enabled. Default value: ``on``.
    * - ``nginx['gzip_comp_level']``

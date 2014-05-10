@@ -29,7 +29,7 @@ The |chef server osc| server supports IPv6. Set the ``ip_version`` setting in th
    * - Setting
      - Description
    * - ``ip_version``
-     - Use to enable IPv6 and run |chef server osc| in "dual IPv4/IPv6 mode". When this setting is ``ipv6``, the |chef server osc| server will use IPv6 for all internal comunication and will be able to accept external communications that are using IPv6 (via the |nginx| load balancer). Default value: ``ipv4``. For example:
+     - |ip_version| Default value: ``ipv4``. For example:
 	   
 	   .. code-block:: ruby
 	   
@@ -58,7 +58,7 @@ The following setting is used to configure |nginx| support for IPv6 in |chef ser
    * - Setting
      - Description
    * - ``nginx['enable_ipv6']``
-     - Use to enable IPv6 handling for |nginx|. Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6``.
+     - |enable ipv6| Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6``.
 
 Custom Cookbook Storage
 -----------------------------------------------------
@@ -73,9 +73,9 @@ The following settings may be changed to support the storing of cookbooks in a n
    * - Setting
      - Description
    * - ``bookshelf['external_url']``
-     - Use to specify the URL from which the |chef client| will download cookbooks. By default, this is the ``Host:`` header provided by the |chef client| when it contacts the |chef server|. When cookbook storage is located behind a firewall and/or when the ``Host:`` header is not used, this value must be a URL that is accessible to the |chef client|. Default value: ``:host_header``.
+     - |bookshelf url_external| Default value: ``:host_header``.
    * - ``bookshelf['url']``
-     - Use to specify the URL at which cookbooks are stored.
+     - |bookshelf url|
 	 
 In addition, these settings may be necessary when configuring the storing of cookbooks in a non-default location: 
 
@@ -86,11 +86,11 @@ In addition, these settings may be necessary when configuring the storing of coo
    * - Setting
      - Description
    * - ``bookshelf['s3_access_key_id']``
-     - Use to specify the access key.
+     - |bookshelf id_access_key_s3|
    * - ``bookshelf['s3_secret_key_id']``
-     - Use to specify the secret key.	 
+     - |bookshelf id_secret_key_s3|	 
    * - ``erchef['s3_bucket']``
-     - Use to specify the bucket name. Default value: ``bookshelf``.	 
+     - |bookshelf bucket_s3| Default value: ``bookshelf``.	 
 
 chef-server-ctl upgrade
 -----------------------------------------------------
