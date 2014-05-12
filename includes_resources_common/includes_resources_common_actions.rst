@@ -10,4 +10,4 @@ The following actions are common to every resource:
    * - Action
      - Description
    * - ``:nothing``
-     - Use to do nothing. In the absence of another default action, ``nothing`` is the default. This action can be useful to specify a resource so that it can be notified of other actions.
+     - Use to define a resource that does nothing. This action is often used to define a resource that is later notified by other resources.
