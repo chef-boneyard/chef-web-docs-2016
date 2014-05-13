@@ -92,8 +92,12 @@ In addition, these settings may be necessary when configuring the storing of coo
    * - ``erchef['s3_bucket']``
      - |bookshelf bucket_s3| Default value: ``bookshelf``.	 
 
-chef-server-ctl upgrade
+New ``upgrade`` Subcommand
 -----------------------------------------------------
+The upgrade process for a standalone configuration |chef server osc| server has been simplified (starting with upgrades from version 11.0.4 to the current version). This process allows an in-place upgrade of the server components and applies all of the necessary SQL changes and updates without having to reinstall any components and without having to re-import data.
+
+chef-server-ctl upgrade
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
 
 ``upgrade``
@@ -101,6 +105,39 @@ The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
    
    .. note:: This subcommand may only be used when the |chef server osc| server is configured for a standalone topology and it assumes that all services used by |chef server osc| are enabled.
 
+Upgrade Process
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The new upgrade process is simpler. Stop the services, update the package on the system , run the ``upgrade`` subcommand, and then restart the |chef server osc| server.
+
+For example, stop the services:
+
+.. code-block:: bash
+
+   $ chef-server-ctl stop
+
+then update the package (using the appropriate package manager for the system on which the server is running):
+
+.. code-block:: bash
+
+   $ dpkg -i package.deb
+
+then upgrade the server itself:
+
+.. code-block:: bash
+
+   $ chef-server-ctl upgrade
+
+then bring all the services back up:
+
+.. code-block:: bash
+
+   $ chef-server-ctl restart
+
+and then check the status of everything:
+
+.. code-block:: bash
+
+   $ chef-server-ctl status
 
 
 Changelog
