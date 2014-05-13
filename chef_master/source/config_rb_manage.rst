@@ -9,4 +9,10 @@
 Settings
 ==========================================================================
 
+.. warning:: All of the following settings should be specified without using the equals symbol (``=``). For example:
+   
+   .. code-block:: ruby
+   
+      chef_documentation_url 'http://docs.opscode.com'
+
 .. include:: ../../includes_config/includes_config_rb_manage_settings.rst
