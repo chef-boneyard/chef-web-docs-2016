@@ -13,7 +13,7 @@ To use the |lwrp chef handler| resource in a recipe, add code similar to the fol
      action :enable
    end
 
-For example, a handler for |growl| needs to be enabled at the beginning of the |chef client| run::
+For example, a handler for |growl| needs to be enabled at the beginning of the |chef client| run:
 
 .. code-block:: ruby
 
