@@ -96,6 +96,8 @@ New ``upgrade`` Subcommand
 -----------------------------------------------------
 The upgrade process for a standalone configuration |chef server osc| server has been simplified (starting with upgrades from version 11.0.4 to the current version). This process allows an in-place upgrade of the server components and applies all of the necessary SQL changes and updates without having to reinstall any components and without having to re-import data.
 
+.. warning:: Back up the server data before running the ``upgrade`` command. Even though it's not a requirement (because it's an in-place upgrade) and even though there is no step for "restoring data" as part of the upgrade process, in the event something unexpected does happen, it's important to be able to restore this data to the server.
+
 chef-server-ctl upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
