@@ -27,7 +27,7 @@ A cookbook can contain the following types of files:
    * - Attributes
      - .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
    * - Definitions
-     - .. include:: ../../includes_cookbooks/includes_cookbooks_definition.rst
+     - .. include:: ../../includes_definition/includes_definition.rst
    * - Files
      - .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution.rst
    * - Libraries
