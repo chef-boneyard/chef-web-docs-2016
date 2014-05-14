@@ -78,7 +78,8 @@ The default values for the following settings were updated:
    * - ``rabbitmq['node_ip_address']``
      - Previous default value: ``127.0.0.1``. New default value: ``0.0.0.0``.
 
-   
+These changes may require updates to firewall rules for your organization.
+
 Custom Cookbook Storage
 -----------------------------------------------------
 By defalt, |chef server osc| stores cookbooks in |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means |chef bookshelf| is located on the same physical machine. It is possible to offload cookbook storage, such as a different physical machine behind the firewall or to a proxy location that is hosted on |amazon s3|.
