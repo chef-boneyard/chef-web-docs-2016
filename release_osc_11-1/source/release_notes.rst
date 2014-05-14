@@ -59,6 +59,27 @@ The following setting is used to configure |nginx| support for IPv6 in |chef ser
    * - ``nginx['enable_ipv6']``
      - |enable ipv6| Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6``.
 
+New Listen Addresses
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The default values for the following settings were updated to support running |chef server osc| in IPv6 mode:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``bookshelf['listen']``
+     - Previous default value: ``127.0.0.1``. New default value: ``0.0.0.0``.
+   * - ``chef_solr['ip_address']``
+     - Previous default value: ``127.0.0.1``. New default value: ``0.0.0.0``.
+   * - ``postgresql['listen_address']``
+     - Previous default value: ``localhost``. New default value: ``0.0.0.0``.
+   * - ``rabbitmq['node_ip_address']``
+     - Previous default value: ``127.0.0.1``. New default value: ``0.0.0.0``.
+
+These changes enable |chef server osc| to listen on both IPv4 and IPv6 modes. To return these interfaces back to the defaults that existed in earlier versions of |chef server osc| (and to run the server in IPv4 mode only, change the new default values to the previous default values.)
+   
 Custom Cookbook Storage
 -----------------------------------------------------
 By defalt, |chef server osc| stores cookbooks in |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means |chef bookshelf| is located on the same physical machine. It is possible to offload cookbook storage, such as a different physical machine behind the firewall or to a proxy location that is hosted on |amazon s3|.
