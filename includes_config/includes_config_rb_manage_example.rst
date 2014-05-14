@@ -19,9 +19,9 @@ The following example shows how the settings look when added to the configuratio
    # redis.url derived from redis.host and redis.port
    runit_timeout 30
    secret_token "abcdefghij1234567890KLMNOPQRST1234567890uvwxyzabcd"
-   services['opscode_manage_events'].enable true
-   services['opscode_manage_webapp'].enable true
-   services['opscode_manage_worker'].enable true
+   services['opscode-manage-events'].enable true
+   services['opscode-manage-webapp'].enable true
+   services['opscode-manage-worker'].enable true
    support_email_address "support@getchef.com"
    support_site_url "http://getchef.com/support"
    support_tickets_url "https://getchef.com/support/tickets"
