@@ -1,5 +1,5 @@
 =====================================================
-chef-solo
+|chef solo|
 =====================================================
 
 .. include:: ../../includes_chef_solo/includes_chef_solo.rst
@@ -26,7 +26,7 @@ Environments
 -----------------------------------------------------
 .. include:: ../../includes_chef_solo/includes_chef_solo_environments.rst
 
-chef-solo (executable)
+|chef solo| (executable)
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo.rst
 
