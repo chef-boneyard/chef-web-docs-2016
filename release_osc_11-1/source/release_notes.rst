@@ -12,7 +12,7 @@ The following items are new for |chef server osc| 11.1 and/or are changes from p
 
 * **Support for IPv6** Support has been added to allow the |chef server osc| server and the |chef client| to run in an IPv6 infrastructure.
 * **Custom Cookbook Storage** Support has been added to allow the |chef server osc| server to store cookbooks in a non-default location.
-* **Support for Custom Proxy and Firewall Settings for Cookbook Storage** Support has been added to allow the |chef server osc| server to point to a non-|chef bookshelf| location for cookbook storage.
+* **Support for Custom Cookbook Storage Locations** Support has been added to allow the |chef server osc| server to point to a non-|chef bookshelf| location for cookbook storage. For example, it is possible to offload cookbook storage to a different physical machine behind a firewall or to a proxy location that is hosted on |amazon s3|.
 * **Gecode Depsolver** The |chef server osc| server switches back to using the Gecode depsolver. This resolves cookbook dependency issues that were seen by some users due to the less-robust nature of the |erlang|-based dependency solver that was added in |chef server osc| 11.0.
 * **RabbitMQ default port changes** The default port used by |rabbitmq| is changed from 5672 to 8672. This resolves a conflict with the default port on the |redhat| 6 platform.
 * **chef-server-ctl upgrade** A new subcommand is available for upgrading the |chef server osc| server in standalone topologies.
@@ -60,9 +60,9 @@ The following setting is used to configure |nginx| support for IPv6 in |chef ser
    * - ``nginx['enable_ipv6']``
      - |enable ipv6| Default value: ``false``. This setting is automatically set to true when ``ip_version`` is set to ``ipv6``.
 
-Custom Proxy/Firewall Settings
+Custom Cookbook Storage
 -----------------------------------------------------
-By defalt, |chef server osc| stores cookbooks in |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means |chef bookshelf| is located on the same physical machine. It is possible to offload cookbook storage, such as a different physical machine behind the firewall or to a location that is hosted on |amazon s3|.
+By defalt, |chef server osc| stores cookbooks in |chef bookshelf|. |chef server osc| is designed for a standalone configuration, which means |chef bookshelf| is located on the same physical machine. It is possible to offload cookbook storage, such as a different physical machine behind the firewall or to a proxy location that is hosted on |amazon s3|.
 
 The following settings may be changed to support the storing of cookbooks in a non-default location: 
 
