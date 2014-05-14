@@ -157,7 +157,7 @@ The new upgrade process is simpler. Stop the services, update the package on the
    
       $ chef-server-ctl restart
 
-   Inspect the system for any orphaned processes. If discovered, they can be killed safely.
+   Sometimes the upgrade process may orphan processes. If orphaned processes are discovered, they can be killed safely.
 
 #. Check the status of everything:
    
