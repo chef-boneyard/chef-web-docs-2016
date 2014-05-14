@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-14 13:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_backup_restore.rst:8
+# f55fdeda5ee44dbc9a0be00f130841b6
+msgid "Backup and Restore"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore.rst:4
+# e8d46be52f3d4b3ab1291f9d25d0725d
+msgid "Periodic backups of |chef server oec| data are an essential part of managing and maintaining a healthy configuration and to help ensure that important data can be restored, if required."
+msgstr ""
+
+#: ../source/server_backup_restore.rst:13
+# 3eed8f00dc3242cba659b3aa28a9ab56
+msgid "High Availability"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:4
+# 470bf44ad59449f3ada4da4898589c7f
+msgid "To configure backups on the backend servers in a |ha| configuration, set a |cron| job in ``/etc/cron.d/opc_snapshot`` similar to the following:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:16
+# 449262da18814d69a0f8138bd6c67083
+msgid "A |cron| job similar to the previous example will mount a new snapshot logical volume named::"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:20
+# 555f4978c69e4edc98d13757a37031ba
+msgid "where ``{+%Y-%m-%d-%H-%M-%S}`` is a format string for year, month, day, so on."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:22
+# f35b17e538d44038b00bc2e4cfae55a6
+msgid "After the |cron| job has run successfully, the ``mount`` command will show the new logical volume mounted on the ``/var/opt/opscode/drbd-backups`` mount point. The backup script will create a snapshot logical volume in unused space in the ``/opscode`` volume group. After the snapshot is created, the backup script will attempt to mount the snapshot logical volume, after which the snapshot will stay mounted for 24 hours. Upon the next |cron| job run, the backup script will attempt to unmount, destroy the snapshot, and then repeat the sequence."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:24
+# 711d6f02f3b744279488863e394056bd
+msgid "The ``drbd-backups`` script with default settings requires at least 40 GB free space in the ``/opscode`` volume group on the backend servers."
+msgstr ""
+
+#: ../source/server_backup_restore.rst:18
+# b399ebf6f06a431a816e2822750f1b4e
+msgid "Required Directories"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:4
+# 9b129a81301d469bbef0d32ed65a06a2
+msgid "Data stored in the following directories should be backed up periodically:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:6
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:13
+# b19b4e2f24af46908d46e3f28e7b7b2d
+# 4e564523f84e44bf987cf4273d330b24
+msgid "/etc/opscode"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:7
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:14
+# 33214ddb59ee4fbfa2ba63040605cc9a
+# b00380ddd02c4cdbb4b98b98ad093a66
+msgid "/var/opt/opscode"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:9
+# 015a98cfa6c7426ab43fb7a6bb73cf84
+msgid "This data is also essential when any type of backup and restore operation is done for the |chef server oec| server."
+msgstr ""
+
+#: ../source/server_backup_restore.rst:23
+# 9de21f42c9ea4d27ab5587a34366ef44
+msgid "Backup"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:5
+# 15bef9af7bbe4daa90a886ecbd2d0426
+msgid "When backing up |chef server oec| data, be sure that the system is shut down (or otherwise quiet) at the time of the backup. As the ``opscode-pgsql`` user, run the following command:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:11
+# b1f82c5460e342439669f88d9044800c
+msgid "and then synchronize to make sure that all of the data is present on-disk:"
+msgstr ""
+
+#: ../source/server_backup_restore.rst:27
+# 866aff521a504e3697dd6febd17dbd72
+msgid "Restore"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:4
+# 97695b6246854f56a86026d1af2a2ff0
+msgid "When restoring |chef server oec|  data, the previously backed-up files will be required, along with the |chef server oec| running only the |service postgresql| service. To restore the database, as the ``opscode-pgsql`` user, run the following command:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:11
+# 051e6f419827472ca09c58e8fb24ccb6
+msgid "and then restore the previously backed-up files to the following locations:"
+msgstr ""
+

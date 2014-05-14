@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-14 13:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_node_object.rst:8
+# 860c8a010b6d4c05869ec78e4642e0f6
+msgid "About Node Objects"
+msgstr ""
+
+#: ../../includes_node/includes_node_object.rst:4
+# 692dd67fba514d9381a9428cac31146c
+msgid "For the |chef client|, two important aspects of nodes are groups of attributes and run-lists. An attribute is a specific piece of data about the node, such as a network interface, a file system, the number of clients a service running on a node is capable of accepting, and so on. A run-list is an ordered list of recipes and/or roles that are run in an exact order. The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef client| run and places an updated copy on the |chef server| at the end of each |chef client| run."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:4
+# 07171f244e6340cb97b1990b75a0b895
+msgid "An attribute is a specific detail about a node. Attributes are used by the |chef client| to understand:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:6
+# 541b51591ef146d69deb2ad92af55a07
+msgid "The current state of the node"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:7
+# 8379d75221a9481985b3a6bb98054b11
+msgid "What the state of the node was at the end of the previous |chef client| run"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:8
+# fb632ad5d4474338a2783fc05b3a71f6
+msgid "What the state of the node should be at the end of the current |chef client| run"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:10
+# 4c48e64d8e224146bc8ac99590409320
+msgid "Attributes are defined by:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:12
+# f20c32a7661e40aa9235857711891b80
+msgid "The state of the node itself"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:13
+# c34905d364224af2a94fb22443587284
+msgid "Cookbooks (in attribute files and/or recipes)"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:14
+# a3a58cb95f6f471ba46e37d1a1000e28
+msgid "Roles"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:15
+# ce8b52e3d3ae48c68d85c9b41ae25bf2
+msgid "Environments"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:17
+# 520517d99ff6483d84344a17692d326a
+msgid "During every |chef client| run, the |chef client| builds the attribute list using:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:19
+# a4ee624487b14f2396e0420dff16fac7
+msgid "Data about the node collected by |ohai|"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:20
+# 725d4fe63e794b48acbedef7415c7ed1
+msgid "The node object that was saved to the |chef server| at the end of the previous |chef client| run"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:21
+# cbca7b12c9444154b5595fc60684a87f
+msgid "The rebuilt node object from the current |chef client| run, after it is updated for changes to cookbooks (attribute files and/or recipes), roles, and/or environments, and updated for any changes to the state of the node itself"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:23
+# 8609e02ee96f48a4a1e74f1281ec9b70
+msgid "After the node object is rebuilt, all of attributes are compared, and then the node is updated based on attribute precedence. At the end of every |chef client| run, the node object that defines the current state of the node is uploaded to the |chef server| so that it can be indexed for search."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:15
+# 96d8e789ab5646248483292ed4d758a9
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_when_to_use.rst:5
+# 0d18b59886654515884c6f91734ccbca
+msgid "An attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. An attribute may be unique to a specific node or it can be identical across every node in the organization. Attributes are most commonly set from a cookbook, by using |knife|, or are retrieved by |ohai| from each node prior to every |chef client| run. All attributes are indexed for search on the |chef server|. Good candidates for attributes include:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_when_to_use.rst:7
+# c42c4d4782dc4fd7b2115944bcd26b77
+msgid "any cross-platform abstraction for an application, such as the path to a configuration files"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_when_to_use.rst:8
+# a1b41336032a4b159ba4a5a8876b58df
+msgid "default values for tunable settings, such as the amount of memory assigned to a process or the number of workers to spawn"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_when_to_use.rst:9
+# 57f8544fcf064f6a80ed0c8a359a9a21
+msgid "anything that may need to be persisted in node data between |chef client| runs"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_when_to_use.rst:11
+# 95cd65c03ab143c3a441e0e0f3b476a5
+msgid "In general, attribute precedence is set to enable cookbooks and roles to define attribute defaults, for normal attributes to define the values that should be specific for a node, and for override attributes to force a certain value, even when a node already has that value specified."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_when_to_use.rst:13
+# 0e5d33471c074a12a0552f1937f5eeab
+msgid "One approach is to set attributes at the same precedence level by setting attributes in a cookbook's attribute files, and then also setting the same default attributes (but with different values) using a role. The attributes set in the role will be deep merged on top of the attributes from the attribute file, and the attributes set by the role will take precedence over the attributes specified in the cookbook's attribute files."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_when_to_use.rst:15
+# 65fbbd7ebc304ca88e398bef15567a7a
+msgid "Another (much less common) approach is to set a value only if an attribute has no value. This can be done by using the ``_unless`` variants of the attribute priority methods: ``default_unless``, ``set_unless``, and ``override_unless``. These variants should be used carefully because when they are used, the attributes applied to nodes may become out of sync with the values in the cookbooks as these cookbooks are updated. This approach can create situations where two otherwise identical nodes end up having slightly different configurations. This approach can also be a challenge to debug, so it is recommended to use the ``_unless`` variants carefully (and only when they are really necessary)."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:18
+# 8cdc4b6ae6f04bb281f28ff619599ce7
+msgid "|note see_attributes_overview|"
+msgstr ""
+
+#: ../source/essentials_node_object.rst:21
+# c63ca1a19e09499a9b52c37870c59bde
+msgid "Attribute Types"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:4
+# dfe225d1ede247caad977637fdc654b1
+msgid "Attribute types can be any of the following:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:10
+# da256a2c46e14b718cbb65a8772df01d
+msgid "Attribute Type"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:11
+# f77b83d216eb43d78e850dfaa1925f38
+msgid "Description"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:12
+# 94df3b209aef4e1db7b83bcb75e68354
+msgid "``default``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:13
+# ea26756edfb84ddb8446085671deadb7
+msgid "|attribute_type default|"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:14
+# 31da18183a3e4413b2df0f12590a5bbd
+msgid "``force_default``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:15
+# 17bc9a2902a449eeb841f37bbf27fdb2
+msgid "|attribute_type force_default|"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:16
+# cfc4a4e7dd624c65bcfede55a81bc1cd
+msgid "``normal``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:17
+# 5fcc4297c51d48c28dff5b33d45902da
+msgid "|attribute_type normal|"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:18
+# 401da38dbb16477d988dcd16d7aa5036
+msgid "``override``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:19
+# 4153f39349de49328e916973565738b5
+msgid "|attribute_type override|"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:20
+# d07b60fa941c467c814ac8bebe491343
+msgid "``force_override``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:21
+# fd8119f32de34b5e9d64a53f656d22c2
+msgid "|attribute_type force_override|"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:22
+# cbca5ce6e4864099b4cb9767365a066b
+msgid "``automatic``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:23
+# 8c88553a28b244188228f7b0690498d3
+msgid "|attribute_type automatic|"
+msgstr ""
+
+#: ../source/essentials_node_object.rst:25
+# df7f92a1f4184cec9643892fa6248409
+msgid "Attribute Persistence"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_persistence.rst:4
+# 104e538d7dce4edf827e3123badd5bd5
+msgid "At the beginning of a |chef client| run, all default, override, and automatic attributes are reset. The |chef client| rebuilds them using data collected by |ohai| at the beginning of the |chef client| run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the |chef client| run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next |chef client| run."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:29
+# 1b10e8a306cf475ea7bd8ef923a6c0b6
+msgid "Attribute Precedence"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:4
+# 7000c1594b8b45b5ba55cd30b9be7cbf
+msgid "Attributes are always applied by the |chef client| in the following order:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:6
+# 26bc4b460a2d4cfe9a15d5769acddacb
+msgid "A ``default`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:7
+# 45e9c53e7d694eae92de6a77f2ad871e
+msgid "A ``default`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:8
+# 98e018f002dc4881aea5b70cb66c9574
+msgid "A ``default`` attribute located in an environment"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:9
+# c9e9d56f83504fc995e112bd1ee5208c
+msgid "A ``default`` attribute located in role"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:10
+# 8ffc7803e4ba4ca2a5a760033aed3645
+msgid "A ``force_default`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:11
+# 8f1479ef59ab4e4cb3fcd89a13e5983e
+msgid "A ``force_default`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:12
+# a86b32129daf4375bb8293a93b8f6e98
+msgid "A ``normal`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:13
+# 4ef660caa7304de78d0314e812e84f5a
+msgid "A ``normal`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:14
+# 3f2cc64a8b014ca58b9e01d46bf71cd7
+msgid "An ``override`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:15
+# ac3f23f4527d4f0c927efbdadf77b579
+msgid "An ``override`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:16
+# 08902b3e948e45c08f0ff8d8e13f44fd
+msgid "An ``override`` attribute located in a role"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:17
+# c7f149f53c8b45299687b6ee94c842dd
+msgid "An ``override`` attribute located in an environment"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:18
+# 99b80642e5d8499487d0a5a90cfcbc88
+msgid "A ``force_override`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:19
+# f367791192ee41e1b506039a18572b1c
+msgid "A ``force_override`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:20
+# 08d988d37d61404487abbd485b618d1f
+msgid "An ``automatic`` attribute identified by |ohai| at the start of the |chef client| run"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:22
+# 84a29bbd3f414bf2948fce5145334f8e
+msgid "where the last attribute in the list is the one that is applied to the node."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:24
+# c8e5680f257b4839a9b07a7ade6bc5f5
+msgid "The attribute precedence order for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows the same role to be used across multiple environments, yet ensuring that values can be set that are specific to each environment (when required). For example, the role for an application server may exist in all environments, yet one environment may use a database server that is different from other environments."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:26
+# c1a4e93db5364b3081b8729eb68fde8c
+msgid "Attribute precedence, viewed from the same perspective as the overview diagram, where the numbers in the diagram match the order of attribute precedence:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:30
+# 3b117ded003c41ec973a1cd368233d74
+msgid "Attribute precedence, when viewed as a table:"
+msgstr ""
+
