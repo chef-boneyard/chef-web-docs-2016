@@ -11,7 +11,6 @@ What's New
 The following items are new for |chef server osc| 11.1 and/or are changes from previous versions. The short version:
 
 * **Support for IPv6** Support has been added to allow the |chef server osc| server and the |chef client| to run in an IPv6 infrastructure.
-* **Custom Cookbook Storage** Support has been added to allow the |chef server osc| server to store cookbooks in a non-default location.
 * **Support for Custom Cookbook Storage Locations** Support has been added to allow the |chef server osc| server to point to a non-|chef bookshelf| location for cookbook storage. For example, it is possible to offload cookbook storage to a different physical machine behind a firewall or to a proxy location that is hosted on |amazon s3|.
 * **Gecode Depsolver** The |chef server osc| server switches back to using the Gecode depsolver. This resolves cookbook dependency issues that were seen by some users due to the less-robust nature of the |erlang|-based dependency solver that was added in |chef server osc| 11.0.
 * **RabbitMQ default port changes** The default port used by |rabbitmq| is changed from 5672 to 8672. This resolves a conflict with the default port on the |redhat| 6 platform.
