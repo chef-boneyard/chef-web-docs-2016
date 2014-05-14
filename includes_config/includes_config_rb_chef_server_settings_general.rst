@@ -21,3 +21,4 @@ This configuration file has the following settings:
      - Default value: ``info@example.com``.
    * - ``topology``
      - Default value: ``standalone``.
+
