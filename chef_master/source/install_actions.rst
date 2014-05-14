@@ -10,7 +10,7 @@ Requirements
 
 Install the Server
 =====================================================
-The |chef actions| add-on can be installed as part of a standalone or high availability configuration.
+The |chef actions| add-on can be installed as part of a standalone or combined configuration.
 
 Standalone
 -----------------------------------------------------
