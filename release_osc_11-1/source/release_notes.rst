@@ -148,6 +148,8 @@ The new upgrade process is simpler. Stop the services, update the package on the
    .. code-block:: bash
    
       $ chef-server-ctl upgrade
+   
+   .. note:: The following error may be present in the logs for |postgresql| during the upgrade process: ``ERROR: duplicate key value violates unique constraint "checksums_pkey"``. This error does not represent an issue with the upgrade process and can be safely ignored.
 
 #. Restart all of the services:
    
@@ -155,7 +157,7 @@ The new upgrade process is simpler. Stop the services, update the package on the
    
       $ chef-server-ctl restart
 
-#. Inspect the system for any orphaned processes. If discovered, they can be killed safely.
+   Inspect the system for any orphaned processes. If discovered, they can be killed safely.
 
 #. Check the status of everything:
    
