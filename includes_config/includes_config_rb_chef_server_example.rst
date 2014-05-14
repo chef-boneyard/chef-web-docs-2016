@@ -21,10 +21,9 @@ The following example shows how the settings look when added to the configuratio
    bookshelf['svlogd_size'] 1000000
    bookshelf['url'] 
    bookshelf['vip'] node['fqdn']
-
-
+   
    # Expander settings
-
+   
    chef_expander['consumer_id'] default
    chef_expander['dir'] /var/opt/chef-server/chef-expander
    chef_expander['enable'] true
@@ -32,9 +31,9 @@ The following example shows how the settings look when added to the configuratio
    chef_expander['log_directory'] /var/log/chef-server/chef-expander
    chef_expander['nodes'] 2
    chef_expander['reindexer_log_directory'] /var/log/chef-server/chef-expander-reindexer
-	 
+   
    # Solr settings
-
+   
    chef_solr['commit_interval'] 60000
    chef_solr['data_dir'] /var/opt/chef-server/chef-solr/data
    chef_solr['dir'] /var/opt/chef-server/chef-solr
@@ -53,9 +52,9 @@ The following example shows how the settings look when added to the configuratio
    chef_solr['port'] 8983
    chef_solr['ram_buffer_size'] 200
    chef_solr['vip'] 127.0.0.1
-	 
+   
    # Erchef settings
-
+   
    erchef['auth_skew'] 900
    erchef['bulk_fetch_batch_size'] 5
    erchef['cache_ttl'] 3600
@@ -81,17 +80,17 @@ The following example shows how the settings look when added to the configuratio
    erchef['validation_client_name'] chef-validator
    erchef['vip'] 127.0.0.1
    erchef['web_ui_client_name'] chef-webui
-	 
+   
    # General settings
-
+   
    api_fqdn "chef.example.com"
    bootstrap true
    ip_version ipv4
    notification_email info@example.com
    topology standalone
-	 
+   
    # Load balancer settings
-
+   
    lb['api_fqdn'] node['fqdn']
    lb['bookshelf'] 127.0.0.1
    lb['cache_cookbook_files'] false
@@ -101,9 +100,9 @@ The following example shows how the settings look when added to the configuratio
    lb['erchef'] 127.0.0.1
    lb['web_ui_fqdn'] node['fqdn']
    lb['vip'] 127.0.0.1
-	 
+   
    # Nginx settings
-
+   
    nginx['cache_max_size'] 5000m
    nginx['client_max_body_size'] 250m
    nginx['dir'] /var/opt/chef-server/nginx
@@ -137,15 +136,15 @@ The following example shows how the settings look when added to the configuratio
    nginx['url'] https://#{node['fqdn']}
    nginx['worker_connections'] 10240
    nginx['worker_processes'] node['cpu']['total'].to_i
-	 
+   
    # Pedant settings
-
+   
    chef_pedant['dir'] /var/opt/chef-server/chef-pedant
    chef_pedant['log_directory'] /var/log/chef-server/chef-pedant
    chef_pedant['log_http_requests'] true
-	 
+   
    # PostgreSQL settings
-
+   
    postgresql['checkpoint_completion_target'] 0.9
    postgresql['checkpoint_segments'] 10
    postgresql['checkpoint_timeout'] 5min
@@ -176,7 +175,7 @@ The following example shows how the settings look when added to the configuratio
    postgresql['username'] opscode-pgsql
    postgresql['vip'] 127.0.0.1
    postgresql['work_mem'] 8MB
-	 
+   
    # RabbitMQ settings
    
    rabbitmq['consumer_id'] hotsauce
@@ -192,15 +191,15 @@ The following example shows how the settings look when added to the configuratio
    rabbitmq['user'] chef
    rabbitmq['vhost'] /chef
    rabbitmq['vip'] 127.0.0.1
-	 
+   
    # User settings
    
    user['home'] /opt/chef-server/embedded
    user['shell'] /bin/sh
    user['username'] chef_server
-	 
+   
    # Default web user interface settings
-
+   
    chef_server_webui['backlog'] 1024
    chef_server_webui['cookie_domain'] all
    chef_server_webui['cookie_secret'] 47b3b8d95dea455baf32155e95d1e64e
@@ -214,7 +213,7 @@ The following example shows how the settings look when added to the configuratio
    chef_server_webui['session_key'] _sandbox_session
    chef_server_webui['tcp_nodelay'] true
    chef_server_webui['umask'] 0022
-   chef_server_webui['vip'] `127.0.0.1
+   chef_server_webui['vip'] 127.0.0.1
    chef_server_webui['web_ui_admin_default_password'] p@ssw0rd1
    chef_server_webui['web_ui_admin_user_name'] admin
    chef_server_webui['web_ui_client_name'] chef-webui
