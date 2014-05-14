@@ -6,7 +6,7 @@ Install |chef actions|
 
 Requirements
 =====================================================
-.. include:: ../../includes_system_requirements/includes_system_requirements_reporting.rst
+.. include:: ../../includes_system_requirements/includes_system_requirements_actions.rst
 
 Install the Server
 =====================================================
@@ -14,9 +14,9 @@ The |chef actions| add-on can be installed as part of a standalone or high avail
 
 Standalone
 -----------------------------------------------------
-xxxxx
+.. include:: ../../includes_install/includes_install_actions_server_standalone.rst
 
 Combined
 -----------------------------------------------------
-xxxxx
+.. include:: ../../includes_install/includes_install_actions_server_combined.rst
 

@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_actions/includes_actions.rst
 
+.. include:: ../../includes_actions/includes_actions_long.rst
+
 Architecture
 =====================================================
 .. include:: ../../includes_actions/includes_actions_architecture.rst
