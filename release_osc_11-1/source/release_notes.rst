@@ -61,7 +61,7 @@ The following setting is used to configure |nginx| support for IPv6 in |chef ser
 
 New Listen Addresses
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The default values for the following settings were updated to support running |chef server osc| in IPv6 mode:
+The default values for the following settings were updated:
 
 .. list-table::
    :widths: 200 300
@@ -78,7 +78,6 @@ The default values for the following settings were updated to support running |c
    * - ``rabbitmq['node_ip_address']``
      - Previous default value: ``127.0.0.1``. New default value: ``0.0.0.0``.
 
-These changes enable |chef server osc| to listen on both IPv4 and IPv6 modes. To return these interfaces back to the defaults that existed in earlier versions of |chef server osc| (and to run the server in IPv4 mode only, change the new default values to the previous default values.)
    
 Custom Cookbook Storage
 -----------------------------------------------------
