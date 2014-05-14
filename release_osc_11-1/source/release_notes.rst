@@ -166,9 +166,6 @@ The new upgrade process is simpler. Stop the services, update the package on the
       $ chef-server-ctl status
 
 
-Changelog
-=====================================================
-https://github.com/opscode/omnibus-chef-server/blob/master/CHANGELOG.md
 
 What's Fixed
 =====================================================
