@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |client rb| file has the following settings for configuring |ssl| for the |chef client| interation with the |chef server|:
+The |client rb| file has the following settings for configuring |ssl| for |chef client| interation with the |chef server|:
 
 .. list-table::
    :widths: 200 300
