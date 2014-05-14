@@ -259,6 +259,7 @@ Cookbooks
    handlers
    images
    install
+   install_actions
    install_bootstrap
    install_dk
    install_manage
