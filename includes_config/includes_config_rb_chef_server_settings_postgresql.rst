@@ -30,7 +30,7 @@ This configuration file has the following settings:
    * - ``postgresql['home']``
      - |directory postgresql_home| Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['listen_address']``
-     - |port listen_postgresql| Default value: ``localhost``.
+     - |port listen_postgresql| Default value: ``0.0.0.0``.
    * - ``postgresql['log_directory']``
      - |directory logs| Default value: ``/var/log/chef-server/postgresql``.
    * - ``postgresql['max_connections']``

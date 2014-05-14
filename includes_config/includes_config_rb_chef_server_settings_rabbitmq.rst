@@ -22,7 +22,7 @@ This configuration file has the following settings:
    * - ``rabbitmq['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/rabbitmq``.
    * - ``rabbitmq['node_ip_address']``
-     - |ip_address rabbitmq| Default value: ``127.0.0.1``.
+     - |ip_address rabbitmq| Default value: ``0.0.0.0``.
    * - ``rabbitmq['node_port']``
      - |port rabbitmq| Default value: ``5672``.
    * - ``rabbitmq['nodename']``

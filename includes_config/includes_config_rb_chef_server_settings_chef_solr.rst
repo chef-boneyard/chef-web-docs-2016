@@ -22,7 +22,7 @@ This configuration file has the following settings:
    * - ``chef_solr['heap_size']``
      - Default value: ``nil``.
    * - ``chef_solr['ip_address']``
-     - Default value: ``127.0.0.1``.
+     - Default value: ``0.0.0.0``.
    * - ``chef_solr['java_opts']``
      - Default value: ``(empty)``.
    * - ``chef_solr['log_directory']``

@@ -20,7 +20,7 @@ This configuration file has the following settings:
    * - ``bookshelf['ha']``
      - |use ha| Default value: ``false``.
    * - ``bookshelf['listen']``
-     - Default value: ``127.0.0.1``.
+     - Default value: ``0.0.0.0``.
    * - ``bookshelf['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/bookshelf``.
    * - ``bookshelf['port']``
