@@ -4,7 +4,6 @@ Release Notes: |chef server osc| 11.1
 
 .. include:: ../../includes_chef/includes_chef_index_osc.rst
 
-.. warning:: This page details an upcoming release of the |chef server osc| server.
 
 What's New
 =====================================================
