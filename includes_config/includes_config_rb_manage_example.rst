@@ -16,7 +16,7 @@ The following example shows how the settings look when added to the configuratio
    public_port 443
    redis.host "localhost"
    redis.port 11002
-   redis.url # derived from redis.host ad redis.port
+   # redis.url derived from redis.host and redis.port
    runit_timeout 30
    secret_token "abcdefghij1234567890KLMNOPQRST1234567890uvwxyzabcd"
    services['opscode_manage_events'].enable true
@@ -26,7 +26,7 @@ The following example shows how the settings look when added to the configuratio
    support_site_url "http://getchef.com/support"
    support_tickets_url "https://getchef.com/support/tickets"
    webapp.backlog 1024
-   webapp.listen { "127.0.0.1:#{port}" }
+   # webapp.listen derived from webapp.port
    webapp.port 9462
    webapp.tcp_nodelay true
    webapp.worker_processes 2
