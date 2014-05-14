@@ -14,7 +14,7 @@ General
 
 Bookshelf
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_bookshelf.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_settings_bookshelf.rst
 
 Chef Expander
 -----------------------------------------------------
@@ -26,7 +26,7 @@ Chef Pedant
 
 Chef Solr
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_chef_solr.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_settings_chef_solr.rst
 
 Erchef
 -----------------------------------------------------
@@ -42,11 +42,11 @@ Nginx
 
 PostgreSQL
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_postgresql.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_settings_postgresql.rst
 
 RabbitMQ
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_rabbitmq.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_settings_rabbitmq.rst
 
 User
 -----------------------------------------------------
