@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following resources are platform resources (i.e. "built into the |chef client|"):
+The following resources are "platform resources" (i.e. "resources that are built into the |chef client|"):
 
 .. list-table::
    :widths: 150 450
@@ -107,5 +107,9 @@ The following resources are platform resources (i.e. "built into the |chef clien
      - .. include:: ../../includes_resources/includes_resource_template.rst
    * - `user <http://docs.opscode.com/resource_user.html>`_
      - .. include:: ../../includes_resources/includes_resource_user.rst
+   * - `windows_package <http://docs.opscode.com/resource_windows_package.html>`_
+     - .. include:: ../../includes_resources/includes_resource_windows_package.rst
    * - `yum_package <http://docs.opscode.com/resource_yum.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
+
+In addition, the `chef_handler <http://docs.opscode.com/resource_chef_handler.html>`_ resource is configured and run using the ``chef_handler`` cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (and as a "lightweight resource"), the |resource chef_handler| resource should otherwise be considered a "platform resource".
