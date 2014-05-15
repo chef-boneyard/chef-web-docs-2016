@@ -15,7 +15,7 @@ For example, a resource that is used to install a |tar gz| package for version 1
 .. code-block:: ruby
 
    package "tar" do
-     version "1.16.1-1"
+     version "1.16.1"
      action :install
    end
 
