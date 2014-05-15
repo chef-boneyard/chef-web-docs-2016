@@ -4,42 +4,44 @@
 
 .. warning:: Use sparingly. Most resources are idempotent by design and do not require using any of the approaches that are discussed below.
 
-This page describes how to construct a resource that will perform an action on the first run of chef-client and do nothing on subsequent runs.
+This page describes how to construct a first-run resource---a resource that only performs an action on the first |chef client| run---that does nothing on all subsequent |chef client| runs.
 
-One case where using a first-run resource would be desired, for example, is to ensure idempotency when a command within an execute resource would move the state of the node away from the desired state if run a second time.
+.. note:: Some resources, by their nature, are not idempotent. For example, the |resource execute| and |resource script|-based resources are not idempotent because the commands that are executed by these resources are typically unique to the environment in which they are run. Most of the time, these resources can be made idempotent by `inspecting the state of the node using guards <http://docs.opscode.com/resource_common.html#guards>`_---``not_if`` and ``only_if``---and then defining the conditions necessary to ensure idempotence for that resource block.
 
-The ideal way to achieve idempotence when using a non-idempotent resource is to inspect the state of the node and condition the resource on that state using the ``not_if`` or ``only_if`` conditional execution resource attributes. However, it may be difficult or impossible to correctly inspect the state of the system, or you may never want to run the command again, even if the system's state is incorrect.
+However, it may be difficult (or even impossible) to correctly inspect the state of the node. Or it may be that a command should not be run again, even if the state of the node is incorrect. 
 
-In order to create a resource that runs only on the first run of chef-client:
-
-#. Set a node attribute after successfully completing the task
-#. Test for the presence of that attribute within the resource.
-
-The following code will run the command "command to run once" on the first run of the |chef client| and will not run it upon subsequent runs:
+One situation where a first-run resource is useful is to prevent a command from being run a second time. To create this type of first-run resource, set a node attribute after sucessfully completing a task, and then testing for the presence of that attribute. For example:
 
 .. code-block:: ruby
 
    execute "some_command" do
      command "command to run once"
      notifies :create, "ruby_block[some_command_run_flag]", :immediately
-     not_if { node.attribute?("some_command_complete") }
+     not_if { node.attribute?("attribute") }
    end
    
    ruby_block "some_command_run_flag" do
      block do
-       node.set['some_command_complete'] = true
+       node.set['attribute'] = true
        node.save
      end
      action :nothing
    end
 
-This method has a couple of benefits over other possible approaches. Like any other attribute, the flag will be searchable:
+where:
+
+* The ``command`` to be run (or not run) is defined by the |resource execute| resource
+* The |resource ruby_block| resource is notified by the |resource execute| resource when it runs
+* The |resource ruby_block| resource sets an attribute (to ``true``) when it is notified
+* The  ``not_if`` guard in the |resource execute| resource block tests for the presence of this attribute; when present, the |resource execute| resource block will not run
+
+Some other benefits from this approach to defining first-run resources include searchable flags:
 
 .. code-block:: bash
 
    $ knife search node "some_command_complete:*"
 
-All of the flags can be unset using knife:
+which can then be unset later using |knife|:
 
 .. code-block:: bash
 
