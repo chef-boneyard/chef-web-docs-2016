@@ -6,6 +6,22 @@
 
 .. note:: If the |chef server rb| file does not exist, create a file called ``chef-server.rb`` and put it in the ``/etc/chef-server/`` directory.
 
+Example
+=====================================================
+The following shows a common starting point for settings in a |chef server rb|:
+
+.. code-block:: ruby
+
+   # /etc/chef-server/chef-server.rb
+   # This file is used to configure the chef server. 
+   # After making any changes you need to run 'chef-server-ctl reconfigure' for the changes to be implemented
+   # For a full list of parameters, see: http://docs.opscode.com/config_rb_chef_server.html
+   # All examples shown are default values
+   
+   # lb['api_fqdn'] = node['fqdn']
+   # nginx['enable_non_ssl'] = false
+   # chef_server_webui['enable'] = true
+
 Recommended Settings
 =====================================================
 .. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_general.rst

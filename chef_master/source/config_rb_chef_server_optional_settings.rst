@@ -55,3 +55,7 @@ User
 WebUI
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_settings_webui.rst
+
+Example
+==========================================================================
+.. include:: ../../includes_config/includes_config_rb_chef_server_example.rst
