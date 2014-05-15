@@ -108,7 +108,7 @@ The following resources are "platform resources" (i.e. "resources that are built
    * - `user <http://docs.opscode.com/resource_user.html>`_
      - .. include:: ../../includes_resources/includes_resource_user.rst
    * - `windows_package <http://docs.opscode.com/resource_windows_package.html>`_
-     - .. include:: ../../includes_resources/includes_resource_windows_package.rst
+     - .. include:: ../../includes_resources/includes_resource_package_windows.rst
    * - `yum_package <http://docs.opscode.com/resource_yum.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
 
