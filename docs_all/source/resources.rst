@@ -2,7 +2,7 @@
 Resources and Providers Reference
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
+.. include:: ../../includes_resources_common/includes_resources_common.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
@@ -414,12 +414,8 @@ Examples
 
 
 
-
 chef_handler
 -----------------------------------------------------
-
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_chef_handler.rst
 
 Handler Types
@@ -2486,9 +2482,6 @@ Examples
 
 windows_package
 -----------------------------------------------------
-
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_windows.rst
 
 .. note:: |note resource_based_on_package|

@@ -2,7 +2,7 @@
 deploy
 =====================================================
 
-.. include:: ../../includes_resources/includes_resource_generic.rst
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_deploy.rst
 

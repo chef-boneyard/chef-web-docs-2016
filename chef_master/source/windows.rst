@@ -296,7 +296,7 @@ Examples
 
 Resources
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
+.. include:: ../../includes_resources_common/includes_resources_common.rst
 
 Common Functionality 
 -----------------------------------------------------
@@ -497,8 +497,6 @@ Examples
 
 windows_package
 -----------------------------------------------------
-
-.. include:: ../../includes_resources/includes_resource_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_package_windows.rst
 

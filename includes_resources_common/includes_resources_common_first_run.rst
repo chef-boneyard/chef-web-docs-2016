@@ -1,6 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+.. This topic should NOT be included in any build after chef-client 11-4 (inclusive).
+
 
 .. warning:: Use sparingly. Most resources are idempotent by design and do not require using any of the approaches that are discussed below.
 

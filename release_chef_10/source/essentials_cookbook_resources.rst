@@ -2,17 +2,17 @@
 About Resources and Providers
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
+.. include:: ../../includes_resources_common/includes_resources_common.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
 Resources Syntax
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst
+.. include:: ../../includes_resources_common/includes_resources_common_syntax.rst
 
 Platform Resources
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_10-latest_resource_platform.rst
+.. include:: ../../includes_resources_common/includes_resources_common_10-latest_platform_resources.rst
 
 Common Functionality
 -----------------------------------------------------
@@ -41,7 +41,7 @@ All resources share a set of common actions, attributes, conditional executions,
 
 First-run Resources
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst
+.. include:: ../../includes_resources_common/includes_resources_common_first_run.rst
 
 Platform Providers
 =====================================================

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following example uses the |resource file| resource to show the difference between it and what it would look like if it were a lightweight resource.
+The following example shows the difference between the |resource file| resource and what it would look like if it were a lightweight resource.
 
 .. code-block:: ruby
 
@@ -85,4 +85,4 @@ The above code is simple, traditional |ruby|---no magic at all. A number of gett
    attribute :path,     :kind_of => String
    attribute :checksum, :regex => /^[a-zA-Z0-9]{64}$/
 
-Hopefully this shows the similarities and differences between resources and lightweight resources. The lightweight resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex resources that are built in.
+Hopefully this shows the similarities and differences between resources and lightweight resources. The lightweight resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex resources that are built in to the |chef client|.

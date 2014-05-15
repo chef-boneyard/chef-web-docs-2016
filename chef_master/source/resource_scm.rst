@@ -2,7 +2,7 @@
 scm
 =====================================================
 
-.. include:: ../../includes_resources/includes_resource_generic.rst
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 The following resources can be used for version source control management:
 

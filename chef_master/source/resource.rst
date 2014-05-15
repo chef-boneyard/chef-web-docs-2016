@@ -4,7 +4,7 @@ About Resources and Providers
 
 .. note:: |note all_resources|
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
+.. include:: ../../includes_resources_common/includes_resources_common.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
@@ -12,7 +12,7 @@ About Resources and Providers
 
 Resources Syntax
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst
+.. include:: ../../includes_resources_common/includes_resources_common_syntax.rst
 
 Common Functionality
 -----------------------------------------------------
@@ -43,6 +43,6 @@ All resources share a set of common actions, attributes, conditional executions,
 
 Resources
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst
+.. include:: ../../includes_resources_common/includes_resources_common_platform_resources.rst
 
 

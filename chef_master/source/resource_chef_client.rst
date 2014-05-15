@@ -6,7 +6,7 @@ chef_client
 
 .. include:: ../../includes_chef_client/includes_chef_client.rst
 
-.. include:: ../../includes_resources/includes_resource_generic.rst
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_chef_client.rst
 

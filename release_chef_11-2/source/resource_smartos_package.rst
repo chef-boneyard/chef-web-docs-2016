@@ -2,7 +2,7 @@
 smart_o_s_package
 =====================================================
 
-.. include:: ../../includes_resources/includes_resource_generic.rst
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_11-6_package_smartos.rst
 

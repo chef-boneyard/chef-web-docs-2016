@@ -6,7 +6,7 @@ chef_node
 
 .. include:: ../../includes_node/includes_node.rst
 
-.. include:: ../../includes_resources/includes_resource_generic.rst
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_chef_node.rst
 

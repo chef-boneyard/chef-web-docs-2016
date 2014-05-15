@@ -50,8 +50,6 @@ Use the verbose logging that is built into the |chef client|:
 
 log Resource
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_log.rst
 
 Syntax
@@ -119,8 +117,6 @@ chef-shell
 
 breakpoint Resource
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_breakpoint.rst
 
 Syntax

@@ -2,7 +2,7 @@
 Library Resources
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
+.. include:: ../../includes_resources_common/includes_resources_common.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
