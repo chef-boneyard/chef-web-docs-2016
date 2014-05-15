@@ -113,9 +113,8 @@ In addition, these settings may be necessary when configuring the storing of coo
 
 New ``upgrade`` Subcommand
 -----------------------------------------------------
-The upgrade process for a standalone configuration |chef server osc| server has been simplified (starting with upgrades from version 11.0.4 to the current version). This process allows an in-place upgrade of the server components and applies all of the necessary SQL changes and updates without having to reinstall any components and without having to re-import data.
+.. include:: ../../includes_upgrade/includes_upgrade_11-0-4_server_osc.rst
 
-.. warning:: Back up the server data before running the ``upgrade`` command. Even though it's not a requirement (because it's an in-place upgrade) and even though there is no step for "restoring data" as part of the upgrade process, in the event something unexpected does happen, it's important to be able to restore this data to the server.
 
 chef-server-ctl upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -128,43 +127,7 @@ The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
 
 Upgrade Process
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The new upgrade process is simpler. Stop the services, update the package on the system , run the ``upgrade`` subcommand, and then restart the |chef server osc| server.
-
-#. Stop the services:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl stop
-
-#. After all of the services have shut down, update the package (using the appropriate package manager for the system on which the server is running):
-   
-   .. code-block:: bash
-   
-      $ dpkg -i package.deb
-
-#. Upgrade the server itself:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl upgrade
-   
-   .. note:: The following error may be present in the logs for |postgresql| during the upgrade process: ``ERROR: duplicate key value violates unique constraint "checksums_pkey"``. This error does not represent an issue with the upgrade process and can be safely ignored.
-
-#. Restart all of the services:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl restart
-
-   Sometimes the upgrade process may orphan processes. If orphaned processes are discovered, they can be killed safely.
-
-#. Check the status of everything:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl status
-
-
+.. include:: ../../includes_upgrade/includes_upgrade_11-0-4_server_osc_steps.rst
 
 What's Fixed
 =====================================================

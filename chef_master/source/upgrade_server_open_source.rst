@@ -34,42 +34,8 @@ To upgrade to newer versions of the |chef server osc| server, do the following:
 
 Upgrade from |chef server osc| 11.0.4 (or higher)
 -----------------------------------------------------
-The new ``upgrade`` option for the ``chef-server-ctl`` command provides a simpler upgrade process:
 
-#. Stop the services:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl stop
-
-#. After all of the services have shut down, update the package (using the appropriate package manager for the system on which the server is running):
-   
-   .. code-block:: bash
-   
-      $ dpkg -i package.deb
-
-#. Upgrade the server itself:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl upgrade
-   
-   .. note:: The following error may be present in the logs for |postgresql| during the upgrade process: ``ERROR: duplicate key value violates unique constraint "checksums_pkey"``. This error does not represent an issue with the upgrade process and can be safely ignored.
-
-#. Restart all of the services:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl restart
-
-   Sometimes the upgrade process may orphan processes. If orphaned processes are discovered, they can be killed safely.
-
-#. Check the status of everything:
-   
-   .. code-block:: bash
-   
-      $ chef-server-ctl status
-
+.. include:: ../../includes_upgrade/includes_upgrade_11-0-4_server_osc_steps.rst
 
 Upgrade from |chef server osc| 10.x
 =====================================================
