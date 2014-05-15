@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-.. warning:: Use sparingly. Most resources are idempotent by construction and do not require the methods discussed on this page. Whenever possible, it is best to use an idempotent resource.
+.. warning:: Use sparingly. Most resources are idempotent by design and do not require using any of the approaches that are discussed below.
 
 This page describes how to construct a resource that will perform an action on the first run of chef-client and do nothing on subsequent runs.
 
