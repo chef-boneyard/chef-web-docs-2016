@@ -35,6 +35,8 @@ To upgrade to newer versions of the |chef server osc| server, do the following:
 Upgrade from |chef server osc| 11.0.4 (or higher)
 -----------------------------------------------------
 
+.. note:: You may use this section for upgrading the |chef server osc| server. You may also use the steps described in the previous section, if you prefer.
+
 .. include:: ../../includes_upgrade/includes_upgrade_11-0-4_server_osc_steps.rst
 
 Upgrade from |chef server osc| 10.x
