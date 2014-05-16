@@ -10,7 +10,8 @@ Requirements
 
 Install the Server
 =====================================================
-The |chef actions| add-on can be installed as part of a standalone or combined configuration.
+The |chef actions| add-on can be installed in a standalone configuration or combined with Enterprise Chef
+on a single node.
 
 Standalone
 -----------------------------------------------------
