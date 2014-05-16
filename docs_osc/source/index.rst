@@ -1,5 +1,5 @@
 =====================================================
-All about |chef server osc| ...
+All about |chef server osc| ... 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_osc.rst
