@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The the name of a node is required as part of the authentication process to the |chef server|. The name of each node must be unique within an organization, but otherwise can be any string that matches the following regular expression::
+The name of a node is required as part of the authentication process to the |chef server|. The name of each node must be unique within an organization, but otherwise can be any string that matches the following regular expression::
 
    /^[\-[:alnum:]_:.]+$/
 
