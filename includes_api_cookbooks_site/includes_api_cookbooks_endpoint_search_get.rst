@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``GET`` method is used to get a list of cookbooks that match a search query.
+The ``GET`` method is used to get a list of cookbooks that match a search query. Use the ``start`` and ``items`` parameters to set limits on the number of cookbooks returned:
 
 .. list-table::
    :widths: 200 300
@@ -15,8 +15,6 @@ The ``GET`` method is used to get a list of cookbooks that match a search query.
      - |start|
    * - ``items``
      - |rows|
-
-.. note:: Using ``items`` and ``start`` can be helpful when the number of cookbooks returned is more than what is easily viewable in the returned list of cookbooks.
 
 **Request**
 
