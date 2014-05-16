@@ -4,7 +4,9 @@
 
 |chef actions| has the following requirements:
 
-* |chef server oec| version 11.1.4 (or later)
+* |chef server oec| version 11.1.5 (or later)
 * |chef client| version 11.12.0 (or later)
 
-The |chef actions| can pull run history for |chef client| runs that occur on any platform on which the |chef client| is supported.
+When configured in standalone mode:
+
+* The |chef actions| machine needs to connect to the |chef server oec| machine on the rabbitmq port (default 5432)
