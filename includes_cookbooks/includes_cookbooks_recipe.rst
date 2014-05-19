@@ -4,7 +4,7 @@
 A recipe is the most fundamental configuration element within the organization. A recipe:
 
 * Is authored using |ruby|, which is a programming language designed to read and behave in a predictable manner
-* Is mostly a collection of resources in a |ruby| syntax with some helper code around it
+* Is mostly a collection of resources, defined using patterns (resource names, attribute-value pairs, and actions); helper code is added around this using |ruby|, when needed
 * Must define everything that is required to configure part of a system
 * Must be stored in a cookbook
 * May be included in a recipe
@@ -13,3 +13,4 @@ A recipe is the most fundamental configuration element within the organization. 
 * May tag a node to facilitate the creation of arbitrary groupings
 * Must be added to a run-list before it can be used by the |chef client|
 * Is always executed in the same order as listed in a run-list
+
