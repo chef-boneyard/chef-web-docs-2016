@@ -23,14 +23,14 @@ To set up the |chef actions| server for a combined configuration:
 
    .. code-block:: bash
 
-      $ dpkg -i opscode-analytics_0.2.0-1.ubuntu.10.04_amd64.deb
+      $ dpkg -i opscode-analytics_0.2.1-1.ubuntu.10.04_amd64.deb
 
 #. Configure the |chef actions| server by setting the analytics_fqdn in /etc/opscode-analytics/opscode-analytics.rb.
-   This is the FQDN for the web console, and must be different from the api_fqdn set for |chef server oec|. For examples:
+   This is the FQDN for the |chef actions| web application, and must be different from the api_fqdn set for |chef server oec|. For example:
 
    .. code-block:: bash
 
-      analtyics_fqdn = "analytics.example.com"
+      analytics_fqdn "analytics.example.com"
 
 #. Reconfigure the |chef actions| server:
 
