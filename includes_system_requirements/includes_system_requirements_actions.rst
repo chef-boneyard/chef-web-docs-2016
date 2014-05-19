@@ -9,4 +9,4 @@
 
 When configured in standalone mode:
 
-* The |chef actions| machine needs to connect to the |chef server oec| machine on the rabbitmq port (default 5432)
+* The |chef actions| machine needs to connect to the |chef server oec| machine on the rabbitmq port (default 5672)

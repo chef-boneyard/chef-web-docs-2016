@@ -24,16 +24,16 @@ To set up the |chef actions| server for a standalone configuration:
 
    .. code-block:: bash
 
-      $ dpkg -i opscode-analytics_0.2.0-1.ubuntu.10.04_amd64.deb
+      $ dpkg -i opscode-analytics_0.2.1-1.ubuntu.10.04_amd64.deb
 
 #. Copy over the /etc/opscode-analytics/actions-source.rb file from the |chef server oec| machine to the standalone |chef actions| machine
 
-#.
+#. Configure the |chef actions| server by setting the analytics_fqdn in /etc/opscode-analytics/opscode-analytics.rb.
+   This is the FQDN for the |chef actions| web application. For example:
 
    .. code-block:: bash
 
-      dark_launch['actions'] = true
-
+      analytics_fqdn "analytics.example.com"
 
 #. Reconfigure the |chef actions| server on |chef actions| machine:
 
