@@ -43,7 +43,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |user knife|
 
 ``-V``, ``--verbose``
-  |verbose|
+   |verbose|
 
 ``-v``, ``--version``
    |version chef|
