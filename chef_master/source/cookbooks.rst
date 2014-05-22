@@ -36,4 +36,5 @@ For more information about |chef spec|:
 * `Blog post by Julian Dunn about wrapper cookbooks <http://www.getchef.com/blog/2013/12/03/doing-wrapper-cookbooks-right/>`_
 * `Blog post by Doug Ireton about cookbook anti-patterns <http://dougireton.com/blog/2013/02/16/chef-cookbook-anti-patterns/>`_
 * `Blog post by Julian Dunn about role cookbooks <http://www.getchef.com/blog/2013/11/19/chef-roles-arent-evil/>`_
+* `Blog post by Joshua Timberman about the evolution of cookbook development <http://jtimberman.housepub.org/blog/2014/02/01/evolution-of-cookbook-development/>`_
 
