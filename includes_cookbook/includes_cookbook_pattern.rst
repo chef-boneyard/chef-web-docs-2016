@@ -26,7 +26,7 @@ In addition to these basic guidelines, the cookbooks themselves should follow so
    * - .. image:: ../../images/icon_cookbook_type_wrapper.png
      - A |cookbook type_wrapper| cookbook makes specific changes to a |cookbook type_library| cookbook, effectivelly wrapping around the |cookbook type_library| cookbook a small set of specific changes.
    * - .. image:: ../../images/icon_cookbook_type_app.png
-     - A |cookbook type_application| cookbook applies the configuration necessary to run applications on a node. One (or more) |cookbook type_application| cookbooks work together to define the full appllication stack. For example, a base |cookbook type_application| cookbook applies the underlying configuration, a data |cookbook type_application| cookbook sets up the data layer, and a webserver |cookbook type_application| cookbook sets up the machine to run as a web server. Ideally, each |cookbook type_application| cookbook represents a repeatable configuration that is usable across any number of nodes.
+     - A |cookbook type_app| cookbook applies the configuration necessary to run applications on a node. One (or more) |cookbook type_app| cookbooks work together to define the full appllication stack. For example, a base |cookbook type_app| cookbook applies the underlying configuration, a data |cookbook type_app| cookbook sets up the data layer, and a webserver |cookbook type_app| cookbook sets up the machine to run as a web server. Ideally, each |cookbook type_app| cookbook represents a repeatable configuration that is usable across any number of nodes.
    * - .. image:: ../../images/icon_cookbook_type_policy.png
      - A |cookbook type_policy| cookbook applies the policy settings defined on the |chef server| to groups of nodes.
 

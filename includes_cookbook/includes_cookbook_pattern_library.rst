@@ -11,7 +11,7 @@ A |cookbook type_library| cookbook abstracts core component applications into re
 * Programming languages, such as |php|, |perl|, |ruby|, and |java|
 * Common libraries, such as -- chef run-time (chef sugar, etc.) and/or system (make, gcc, etc.) 
 
-Some common charactistics of a |cookbook type_library| cookbook include:
+Some common charactistics of a |cookbook type_library| cookbook:
 
 * Defines the desired state for core components, i.e. "creates building blocks that can be used anywhere"
 * Is typically associated 1:1 with a core component
