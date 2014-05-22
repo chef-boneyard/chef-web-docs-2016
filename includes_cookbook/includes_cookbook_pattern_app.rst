@@ -3,7 +3,7 @@
 
 An |cookbook type_application| cookbook defines the desired state for an application---the base configuration for a machine, a website, an API, a database, a load balancer, and so on. Some common charactistics of an |cookbook type_application| cookbook include:
 
-* Is associated 1:1 with an application
+* Is associated 1:1 with a working application
 * One (or more) |cookbook type_application| cookbooks define the desired state for an entire node
 * Is rarely based on a community cookbook, but often leverages |cookbook type_library| and |cookbook type_wrapper| cookbooks
 * Uses recipes to define the parts of the application
