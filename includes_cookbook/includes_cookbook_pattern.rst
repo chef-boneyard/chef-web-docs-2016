@@ -2,28 +2,33 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A primary goal of cookbook authoring is to create cookbooks are reusable building blocks, applied to nodes as needed. This approach helps ensure consistency and that for the specific configuration defined by a specific cookbook results in the same desired state on every node for which it's used.
 
-.. note:: There is no single way to use |chef|. In fact, one of the main strengths of |chef| is that is used successfully in so many different ways. What works for one organization may not work for another. Ultimately, the process that results in nodes being configured to reflect your organization's goals for desired state is the correct process, regardless of whether the cookbook patterns described in this topic are being followed.
+A primary goal of cookbook authoring is to create cookbooks that are reusable as building blocks, where each cookbook defines a specific configuration piece used by the organization. For example, all servers across the organization will run |cron| and |ntp|, but only front-end servers in production will be load balanced. This building block relies on some basic guidelines:
 
-That said, there are some simple patterns that can be followed, with regard to cookbook development. These patterns aren't strict recommendations, but rather general guidelines to be kept in mind:
+* All cookbooks are kept in version source control
+* Cookbooks are never forked from their |github| repositories
+* Cookbooks may be kept in the |chef repo|, but are typically kept in their own dedicated repositories outside of the |chef repo|
+* Cookbooks are kept as small as possible and are focused on specific configuration targets, with changes to cookbooks tracked as versions of that cookbook
+* Cookbooks are better when unit and integration testing is done against them, automatically
+* When a cookbook is uploaded to the |chef server|, it is versioned and that version is frozen
+* Community cookbooks are a great resource; often a community cookbook can be used wholesale (without changes), but sometimes a community cookbook needs a wrapper that is used to ensure specific organizational requirements are met
 
-* All cookbooks should be kept in version source control
-* Cookbooks are never forked from the |github| repositories
-* Start small, iterate, converge, evaluate, refactor
-* It's OK to start with everything in a single |chef repo|, but plan for the day when each cookbook is stored in its own dedicated repository
-* Cookbooks that have a dedicated repository are easier to manage and test
-* Cookbooks should be as small as possible, focused on specific configuration targets
-* Cookbook versions should be frozen at the time they are uploaded to the |chef server|
-* Community cookbooks are a great starting point for cookbook authoring; that said, the decision to use community cookbooks should be deliberate and once adopted, community cookbooks should always be considered |cookbook type_library| cookbooks
+In addition to these basic guidelines, the cookbooks themselves should follow some general patterns. Keep the following cookbook pattern types in mind when deciding how to build reusable cookbooks for your organization:
 
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
 
-Cookbooks themselves generally fit into the following four categories:
-
-* |cookbook type_library| cookbooks are core cookbooks designed to configure a specific component on a machine; often, these are typically community cookbooks used without modification, but also can be custom cookbooks designed to address core configurations that may not be available from the set of community cookbooks
-* |cookbook type_wrapper| cookbooks makes specific changes to |cookbook type_library| cookbooks by wrapping these changes around the |cookbook type_library| cookbook
-* |cookbook type_application| cookbooks apply the full application stack to a single node, ideally a repeatable process across many nodes
-* |cookbook type_policy| cookbooks apply policy settings that are defined on the |chef server| to groups of nodes
+   * - Cookbook Type
+     - Description
+   * - .. image:: ../../images/icon_cookbook_type_library.png
+     - A |cookbook type_library| cookbook is a core cookbook that configures a specific part of a node. A |cookbook type_library| cookbook is often a community cookbook used without modification, but is sometimes a cookbook that is build to address specific organizational requirements.
+   * - .. image:: ../../images/icon_cookbook_type_wrapper.png
+     - A |cookbook type_wrapper| cookbook makes specific changes to a |cookbook type_library| cookbook, effectivelly wrapping around the |cookbook type_library| cookbook a small set of specific changes.
+   * - .. image:: ../../images/icon_cookbook_type_app.png
+     - A |cookbook type_application| cookbook applies the configuration necessary to run applications on a node. One (or more) |cookbook type_application| cookbooks work together to define the full appllication stack. For example, a base |cookbook type_application| cookbook applies the underlying configuration, a data |cookbook type_application| cookbook sets up the data layer, and a webserver |cookbook type_application| cookbook sets up the machine to run as a web server. Ideally, each |cookbook type_application| cookbook represents a repeatable configuration that is usable across any number of nodes.
+   * - .. image:: ../../images/icon_cookbook_type_policy.png
+     - A |cookbook type_policy| cookbook applies the policy settings defined on the |chef server| to groups of nodes.
 
 Think of these cookbooks as building blocks:
 

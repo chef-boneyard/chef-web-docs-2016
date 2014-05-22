@@ -23,7 +23,7 @@ wrapper
 
 application
 -----------------------------------------------------
-.. include:: ../../includes_cookbook/includes_cookbook_pattern_application.rst
+.. include:: ../../includes_cookbook/includes_cookbook_pattern_app.rst
 
 policy
 -----------------------------------------------------
