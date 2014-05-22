@@ -18,9 +18,9 @@ This subcommand has the following options for use when configuring a |knife rb| 
    |repository|
 
 ``--validation-client-name NAME``
-   The name of the validation client, typically a client named chef-validator
+   The name of the validation client, typically a client named |chef validator|.
 
 ``--validation-key PATH``
-   The path to the validation key used by the client, typically a file named ``validation.pem``.
+   The path to the validation key used by the client, typically a file named |chef validator pem|.
 
 

@@ -360,6 +360,7 @@ Cookbooks
    orgmapper
    page_not_found
    plugin_knife
+   plugin_knife_container
    push_jobs
    reporting
    release_notes
