@@ -19,7 +19,7 @@ In addition to these basic guidelines, the cookbooks themselves should follow so
    :widths: 60 420
    :header-rows: 1
 
-   * - Cookbook Type
+   * - Pattern
      - Description
    * - .. image:: ../../images/icon_cookbook_type_library.png
      - A |cookbook type_library| cookbook is a core cookbook that configures a specific part of a node. A |cookbook type_library| cookbook is often a community cookbook used without modification, but is sometimes a cookbook that is build to address specific organizational requirements.
