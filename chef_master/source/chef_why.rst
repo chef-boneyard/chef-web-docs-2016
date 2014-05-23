@@ -1,5 +1,5 @@
 =====================================================
-Why Chef?
+Why |chef|?
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
@@ -29,16 +29,15 @@ How can I help?
 -----------------------------------------------------
 `Join the community <http://docs.opscode.com/#the-community>`_, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |company_name| open source project. For more information about participating in the community, see 
 
-Do I really need to know Ruby?
+Do I really need to know |ruby|?
 -----------------------------------------------------
 It helps, but its not required. Many recipes are just structure and patterns that use |ruby| as the definition language. Having actual |ruby| coding skills? Helpful, but not required, especially to get started. You can learn :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`.
 
-Can I trust Chef?
+Can I trust |chef|?
 -----------------------------------------------------
 Yes, absolutely. The |chef client| will not do anything to your system that isn't in a recipe. Because |chef| is an open source project, you have full access to the source code and visibility into how it all works.
 
-
-Who uses Chef?
+Who uses |chef|?
 =====================================================
 Lots of companies, ranging from `small startups to the largest companies on the planet <http://www.opscode.com/customers/>`_.
 
@@ -46,14 +45,13 @@ Why the Apache license?
 =====================================================
 .. include:: ../../includes_chef/includes_chef_why_apache_license.rst
 
-
 Comparisons
 =====================================================
 There are other applications out there that do things similar to |chef|. We believe that we are different (and better) and that by choosing |chef| you are choosing the best option.
 
 |puppet|
 -----------------------------------------------------
-|puppet| evolved from |cfengine| and showed potential to be a new kind of configuration management. The original design of |chef| was strongly influenced by our own experiences working with and contributing to the |puppet| project. That said, |chef| does not share any code from |puppet|, and is not a "fork" of the |puppet| project. 
+|puppet| evolved from |cfengine| and showed potential to be a new kind of configuration management. The original design of |chef| was strongly influenced by our own experiences working with and contributing to the |puppet| project. That said, |chef| does contain any code from |puppet|, and is not a "fork" of the |puppet| project. 
 
 |chef| is different from |puppet| in a number of important ways:
 
