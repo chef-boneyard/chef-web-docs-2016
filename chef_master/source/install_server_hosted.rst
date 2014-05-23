@@ -8,9 +8,17 @@ Steps
 =====================================================
 .. include:: ../../step_install/step_install_server_oec_hosted.rst
 
-About FQDNs and Hostnames
+About the Hostname
 =====================================================
 .. include:: ../../includes_install/includes_install_server_hostname.rst
+
+IP Addresses
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_server_hostname_ip_address.rst
+
+FQDNs
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_server_hostname_fqdn.rst
 
 **To verify if a hostname is a FQDN**
 

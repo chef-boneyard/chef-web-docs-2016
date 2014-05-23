@@ -22,9 +22,17 @@ Update Enterprise Linux Platforms
 -----------------------------------------------------
 |chef server oec| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| it is recommended to run ``yum update`` prior to the installation of |chef server oec| to prevent issues related to out-of-date dependencies |chef server oec| requires.
 
-Hostnames, FQDNs
------------------------------------------------------
+About the Hostname
+=====================================================
 .. include:: ../../includes_install/includes_install_server_hostname.rst
+
+IP Addresses
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_server_hostname_ip_address.rst
+
+FQDNs
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_server_hostname_fqdn.rst
 
 .. warning:: The |fqdn| for the |chef server oec| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef server oec| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef server oec| server is longer than 64 characters, the ``private-chef-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
 
