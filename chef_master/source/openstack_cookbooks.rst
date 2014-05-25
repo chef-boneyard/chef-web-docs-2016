@@ -1,14 +1,14 @@
 =====================================================
-|chef openstack|: Cookbooks
+|openstack chef|: Cookbooks
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack_cookbooks.rst
 
-The canonical upstream Chef cookbooks and example repository are located in the `Stackforge Github organization <https://github.com/stackforge/>`_. Each integrated OpenStack project has a separate cookbook and repository.
+The canonical upstream |chef| cookbooks and example repository are located in the `Stackforge Github organization <https://github.com/stackforge/>`_. Each integrated OpenStack project has a separate cookbook and repository.
 
 |openstack| Cookbooks
 -----------------------------------------------------
-The following table lists all of the cookbooks that are available for |chef openstack|:
+The following table lists all of the cookbooks that are available for |openstack chef|:
 
 .. list-table::
    :widths: 150 450

@@ -2,10 +2,10 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Having reviewed the architecture and deployment prerequisites, you should be ready to install |chef openstack|.
+Having reviewed the architecture and deployment prerequisites, you should be ready to install |openstack chef|.
 
 * Be sure to read and understand the prerequisites for installation
-* Check out the |chef repo openstack| from |github|
+* Check out the |openstack chef_repo| from |github|
 * Follow the Berkshelf instructions to download all of the appropriate cookbooks
 * Edit the environment that will be used
 * Upload all the roles, environments, cookbooks and data bags as necessary (using |spiceweasel|). On the appropriate nodes, apply the proper roles to deploy

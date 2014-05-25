@@ -7,4 +7,4 @@ Detailed recommendations for network configuration can be found here:
 * http://docs.openstack.org/ops/
 * http://www.rackspace.com/knowledge_center/article/rackspace-private-cloud-installation-prerequisites-and-concepts#network-prereq
 
-|chef openstack| does not have any additional requirements.
+|openstack chef| does not have any additional requirements.

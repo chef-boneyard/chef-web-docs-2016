@@ -1,5 +1,5 @@
 =====================================================
-|chef openstack|: Development Process
+|openstack chef|: Development Process
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack_develop.rst

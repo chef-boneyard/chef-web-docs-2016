@@ -1,5 +1,5 @@
 =====================================================
-|chef openstack|: Deployment
+|openstack chef|: Deployment
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack_deploy.rst

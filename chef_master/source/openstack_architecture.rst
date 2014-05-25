@@ -1,8 +1,8 @@
 =====================================================
-|chef openstack|: Architecture
+|openstack chef|: Architecture
 =====================================================
 
-This section describes the supported deployment scenarios for |chef openstack| and is based on the `OpenStack Grizzly <http://www.solinea.com/2013/06/15/openstack-grizzly-architecture-revisited/>`_ release.
+This section describes the supported deployment scenarios for |openstack chef| and is based on the `OpenStack Grizzly <http://www.solinea.com/2013/06/15/openstack-grizzly-architecture-revisited/>`_ release.
 
 .. image:: ../../images/openstack-arch-grizzly-conceptual-v2.jpg
 
@@ -21,13 +21,13 @@ There are a number of configuration options available, including block storage, 
    * - |vagrant|
      - A virtual instance on a single host using |vagrant|.
 
-.. note:: |chef openstack| is under very active development for the |openstack grizzly| release. |openstack| is flexible and additional configurations will be supported in the future.
+.. note:: |openstack chef| is under very active development for the |openstack grizzly| release. |openstack| is flexible and additional configurations will be supported in the future.
 
-|chef openstack|: Single Controller + N Compute
+|openstack chef|: Single Controller + N Compute
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_architecture_1+n.rst
 
-|chef openstack|: All-in-One Compute
+|openstack chef|: All-in-One Compute
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_architecture_allinone.rst
 
@@ -39,7 +39,7 @@ Environments
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_architecture_allinone_environments.rst
 
-|chef openstack|: |vagrant|
+|openstack chef|: |vagrant|
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_architecture_vagrant.rst
 

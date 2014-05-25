@@ -1,5 +1,5 @@
 =====================================================
-|chef openstack|: Repository
+|openstack chef|: Repository
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack_repo.rst

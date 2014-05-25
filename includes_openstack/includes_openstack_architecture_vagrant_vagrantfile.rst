@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
-|vagrant| uses a **Vagrantfile** for managing its configuration. Within the |chef repo openstack| there is a Vagrantfile that configures the |virtualbox| virtual machine for our purposes. A few parts of that file are listed here:
+|vagrant| uses a **Vagrantfile** for managing its configuration. Within the |openstack chef_repo| there is a Vagrantfile that configures the |virtualbox| virtual machine for our purposes. A few parts of that file are listed here:
 
 .. code-block:: ruby
 

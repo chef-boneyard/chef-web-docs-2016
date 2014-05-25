@@ -12,14 +12,6 @@ About the Hostname
 =====================================================
 .. include:: ../../includes_install/includes_install_server_hostname.rst
 
-IP Addresses
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_server_hostname_ip_address.rst
-
-FQDNs
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_server_hostname_fqdn.rst
-
 **To verify if a hostname is a FQDN**
 
 .. include:: ../../step_install/step_install_hostname_is_fqdn.rst

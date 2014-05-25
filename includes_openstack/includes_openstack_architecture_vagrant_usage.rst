@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
-From the |chef repo openstack|, launch the ``ubuntu1204`` virtual machine with |vagrant|. This will take several minutes as it does the ``chef-client`` run for the ``allinone-compute``.
+From the |openstack chef_repo|, launch the ``ubuntu1204`` virtual machine with |vagrant|. This will take several minutes as it does the ``chef-client`` run for the ``allinone-compute``.
 
 .. code-block:: bash
 
@@ -131,7 +131,7 @@ List the images and favors of machines available for creating instances:
     | 5  | m1.xlarge | 16384     | 160  | 0         |      | 8     | 1.0         | True      | {}          |
     +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
 
-The ``cirros`` |linux| base image is installed during the installation because the `node['openstack']['image']['image_upload']` attribute is set to `true` in the `vagrant` environment. Now create an instance named ``test1`` with the size of ``m1.tiny`` and image type of ``cirros`` (this will may take a few minutes).
+The ``cirros`` |linux| base image is installed during the installation because the ``node['openstack']['image']['image_upload']`` attribute is set to ``true`` in the ``vagrant`` environment. Now create an instance named ``test1`` with the size of ``m1.tiny`` and image type of ``cirros`` (this may take a few minutes).
 
 .. code-block:: bash
 

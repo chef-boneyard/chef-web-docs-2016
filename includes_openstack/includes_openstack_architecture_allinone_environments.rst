@@ -3,4 +3,4 @@
 
 The |vagrant| configuration uses its own ``vagrant`` environment.
 
-There is an ``allinone`` example Environment that is currently under development and will be documented here soon.
+There is an ``allinone`` example environment that is currently under development.
