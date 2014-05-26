@@ -9,6 +9,8 @@ The following |ohai| plugins are available from the open source community:
 
    * - Plugin
      - Description
+   * - `chef-ohai-mdadm <https://github.com/tas50/chef-ohai-mdadm>`_
+     - Adds output for |mdadm| software |raid| volumes.
    * - `dell.rb <https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/dell.rb>`_
      - Adds some useful Dell server information to |ohai|. For example: service tag, express service code, storage info, RAC info, and so on. To use this plugin, OMSA and SMBIOS applications need to be installed.
    * - `dpkg.rb <https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/dpkg.rb>`_
