@@ -19,7 +19,7 @@ This configuration file has the following settings:
      - |chef_zero_enabled| Default value: ``false``. For example:
        ::
  
-          chef_zero[:enabled]true
+          chef_zero[:enabled] true
    * - ``chef_zero[:port]``
      - |chef_zero_port| Default value: ``8889``. For example:
        ::
