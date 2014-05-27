@@ -12,4 +12,4 @@ This argument has the following options:
    |file private_key|
 
 ``--validator``
-   Use to create the client as the |chef validator|. Default value: ``false``.
+   Use to create the client as the |chef validator|. Default value: ``true``.
