@@ -3,6 +3,8 @@
 
 A |cookbook type_policy| cookbook applies |chef server| policy objects to groups of nodes, including how roles, environments, data bags, and cookbook versions are applied to an organization's workflow.
 
+.. warning:: This approach is often done using the policy objects themselves---the roles and environments on the |chef server|---by using the run-list to define the policy and by using attributes as needed to make specific settings changes.
+
 Some common charactistics of a |cookbook type_policy| cookbook:
 
 * Is typically associated 1:1 with a |chef server| policy object
