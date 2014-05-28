@@ -109,12 +109,14 @@ On the workstation from which the migration is being done, update the value for 
     
    client_key "/etc/chef/client.pem"
     
-   chef_server_url "http://url_for_hosted_enterprise_chef_server"
+   chef_server_url "https://api.opscode.com"
 
 
 Run ``knife upload``
 =====================================================
 To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the hosted |chef server oec| server. Use the ``knife upload`` subcommand to perform this task.
+
+.. note:: Make sure that the |chef repo| from which the data will be uploaded can authenticate to the hosted |chef server oec| server before attempting to upload data.
 
 Browse to the top level of the |chef repo| and enter:
 
