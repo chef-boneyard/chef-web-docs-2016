@@ -12,7 +12,7 @@
    * - ``architecture``
      - |architecture windows_process|
    * - ``command``
-     - |name command| See http://technet.microsoft.com/en-us/library/bb490880.aspx for more information about commands that are available when using the |windows cmd exe| interpreter.
+     - |name command|
    * - ``code``
      - |code quoted_string|
    * - ``creates``
@@ -30,4 +30,4 @@
    * - ``user``
      - |user name_or_id|
 
-
+.. note:: See http://technet.microsoft.com/en-us/library/bb490880.aspx for more information about the |windows cmd exe| interpreter.
