@@ -64,17 +64,21 @@ The |knife rb| file should look similar to the following:
     
    chef_server_url "http://url_for_open_source_chef_server"
 
-Use Versioned Cookbooks
+Update ``knife.rb``
 =====================================================
-On the workstation from which the migration is being done, add the ``versioned_cookbook`` setting to the |knife rb| file, and then set it to true. This setting ensures that all cookbooks and cookbook versions are downloaded when using the ``knife download`` subcommand.
+On the workstation from which the migration is being done, add the ``versioned_cookbook`` setting to the |knife rb| file, and then set it to true. This setting ensures that all cookbooks and cookbook versions are downloaded when using the ``knife download`` subcommand. The |knife rb| file should look similar to:
 
 .. code-block:: ruby
    
-   ######################################################################
-   # In order to download all cookbooks and all cookbook versions
-   # the following setting is *required*
+   current_dir = File.dirname(__FILE__)
+   chef_server_url           "https://open-source-chef.opscode.piab"
+   client_key                "#{current_dir}/admin.pem"
+   node_name                 "admin"
+   versioned_cookbooks       "true"
+   syntax_check_cache_path   "#{ENV['HOME']}/.chef/syntax_check_cache"
+   cookbook_path             ["#{current_dir}/../cookbooks"]
    
-   versioned_cookbooks "true"
+
 
 Run ``knife download``
 =====================================================
