@@ -18,5 +18,6 @@ Some common charactistics of a |cookbook type_library| cookbook:
 * Frequently uses libraries, definitions, attributes, and custom resources
 * Is often defined by a community cookbook
 * Is never forked from a |github| repository
+* Typically does not have a dependency on another cookbook
 
 See https://github.com/opscode-cookbooks for a good starting point for cookbooks that can be leveraged as |cookbook type_library| cookbooks. Some standouts include chef-splunk, nginx, apt, and homebrew.

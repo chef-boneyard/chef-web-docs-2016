@@ -12,6 +12,7 @@ A primary goal of cookbook authoring is to create cookbooks that are reusable as
 * Cookbooks are better when unit and integration testing is done against them, automatically
 * When a cookbook is uploaded to the |chef server|, it is versioned and that version is frozen
 * Community cookbooks are a great resource; often a community cookbook can be used wholesale (without changes), but sometimes a community cookbook needs a wrapper that is used to ensure specific organizational requirements are met
+* Recipes in cookbooks should be modular, minimally prescriptive, and use custom resources to expose repeatable patterns that are needed to solve implementation-specific requirements
 
 In addition to these basic guidelines, the cookbooks themselves should follow some general patterns. Keep the following cookbook pattern types in mind when deciding how to build reusable cookbooks for your organization:
 
@@ -22,11 +23,11 @@ In addition to these basic guidelines, the cookbooks themselves should follow so
    * - Pattern
      - Description
    * - .. image:: ../../images/icon_cookbook_type_library.png
-     - A |cookbook type_library| cookbook is a core cookbook that configures a specific part of a node. A |cookbook type_library| cookbook is often a community cookbook used without modification, but is sometimes a cookbook that is build to address specific organizational requirements.
+     - A |cookbook type_library| cookbook is a core cookbook that configures a specific part of a node, such as the platform itself---|centos|, |mac os x|, |redhat|, |ubuntu| or |windows|---but also other components like |runit|, |cron|, |ntp|. Anything that is considered core to most (or even all) nodes in the organization is a good candidate to be managed using a |cookbook type_library| cookbook. A |cookbook type_library| cookbook is often a community cookbook used without modification, but is sometimes a cookbook that is build to address specific organizational requirements.
    * - .. image:: ../../images/icon_cookbook_type_wrapper.png
-     - A |cookbook type_wrapper| cookbook makes specific changes to a |cookbook type_library| cookbook and/or extends that cookbook, effectivelly wrapping around the |cookbook type_library| cookbook a small set of specific changes.
+     - A |cookbook type_wrapper| cookbook makes specific changes to a |cookbook type_library| cookbook and/or extends that cookbook, effectivelly wrapping around the |cookbook type_library| cookbook a small set of specific changes. This is done (for the most part) to avoid forking a community cookbook, while still using the functionality built into that cookbook.
    * - .. image:: ../../images/icon_cookbook_type_app.png
-     - A |cookbook type_app| cookbook applies the configuration necessary to run applications on a node. One (or more) |cookbook type_app| cookbooks work together to define the full appllication stack. For example, a base |cookbook type_app| cookbook applies the underlying configuration, a data |cookbook type_app| cookbook sets up the data layer, and a webserver |cookbook type_app| cookbook sets up the machine to run as a web server. Ideally, each |cookbook type_app| cookbook represents a repeatable configuration that is usable across any number of nodes.
+     - A |cookbook type_app| cookbook applies the configuration necessary to run applications on a node. One (or more) |cookbook type_app| cookbooks work together to define the full appllication stack. For example, a base |cookbook type_app| cookbook applies the underlying configuration, a data |cookbook type_app| cookbook sets up the data layer, and a webserver |cookbook type_app| cookbook sets up the node to run as a web server. Ideally, each |cookbook type_app| cookbook represents a repeatable configuration that is usable across many nodes.
    * - .. image:: ../../images/icon_cookbook_type_policy.png
      - A |cookbook type_policy| cookbook applies the policy settings defined on the |chef server| to groups of nodes.
 
