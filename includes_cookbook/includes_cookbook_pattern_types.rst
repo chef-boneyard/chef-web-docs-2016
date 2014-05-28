@@ -19,7 +19,7 @@ In addition to these basic guidelines, the cookbooks themselves should follow so
    * - .. image:: ../../images/icon_cookbook_type_policy.png
      - A |cookbook type_policy| cookbook applies the policy settings defined on the |chef server| to groups of nodes.
 
-Think of these patterns as building blocks:
+Think of these patterns as building blocks. Use them to help visualize how the cookbooks your organization uses fit together:
 
 .. image:: ../../images/cookbook_types.png
 
