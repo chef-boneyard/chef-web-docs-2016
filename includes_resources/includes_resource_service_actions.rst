@@ -9,17 +9,19 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:enable``
-     - |resource action export service|
    * - ``:disable``
      - |resource action disable service|
+   * - ``:enable``
+     - |resource action export service|
    * - ``:nothing``
      - Default. |resource action nothing service|
+   * - ``:reload``
+     - |resource action reload service|
+   * - ``:restart``
+     - |resource action restart service|
    * - ``:start``
      - |resource action start service|
    * - ``:stop``
      - |resource action stop service|
-   * - ``:restart``
-     - |resource action restart service|
-   * - ``:reload``
-     - |resource action reload service|
+
+
