@@ -3,7 +3,7 @@
 
 
 
-A primary goal of cookbook authoring is to create cookbooks that are reusable as building blocks, where each cookbook defines a specific configuration piece used by the organization. For example, all servers across the organization will run |cron| and |ntp|, but only front-end servers in production will be load balanced. This building block relies on some basic guidelines:
+A primary goal of cookbook authoring is to create cookbooks that are reusable as building blocks, where each cookbook defines a specific configuration piece used by the organization. For example, say all servers across the organization will run |cron| and |ntp|, but only front-end servers in production will be load balanced. This building block approach relies on some basic guidelines:
 
 * All cookbooks are kept in version source control
 * Cookbooks are never forked from their |github| repositories
