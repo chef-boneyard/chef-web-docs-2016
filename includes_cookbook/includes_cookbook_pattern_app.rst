@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-An |cookbook type_app| cookbook defines the desired state for a working configuration. A working configuration could simply be the base configuration for a node. It may be everything to get a single application---a database, a web server, and so on---configured and running. A group of |cookbook type_app| cookbooks can be designed to work together to not only leverage a base configuration, but add web server, database server, execution runtime, and monitoring applications to run on top of the base configuration, effectively building the entire stack of applications that will be the working configuration for a node.
+An |cookbook type_app| cookbook defines the desired state for a working configuration. A working configuration could simply be the base configuration for a node. It may be everything to get a single application---a database **or** a web server---configured and running. It may be everything for the entire stack of applications that will run on a node---a database **and** a web server---configured and running.
 
 A |cookbook type_app| cookbook configures applications as reusable building blocks:
 

@@ -6,15 +6,23 @@ Cookbooks
 
 .. warning:: This topic is a work in progress. It does not represent a suggested workflow or a recommended workflow. It attempts to recognize some high-level common ways people use cookbooks, that is all.
 
-Cookbook Patterns
+Global Patterns
 =====================================================
 .. include:: ../../includes_cookbook/includes_cookbook_pattern.rst
 
-library
+Global Recipe Patterns
+-----------------------------------------------------
+.. include:: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst
+
+Pattern Types
+=====================================================
+.. include:: ../../includes_cookbook/includes_cookbook_pattern_types.rst
+
+Library Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_library.rst
 
-wrapper
+Wrapper Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst
 
@@ -22,13 +30,19 @@ wrapper
 
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst
 
-application
+App Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_app.rst
 
-policy
+**Example**
+
+.. include:: ../../includes_cookbook/includes_cookbook_pattern_app_example.rst
+
+Chef Server Policy
 -----------------------------------------------------
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_policy.rst
+
+
 
 For more information ...
 =====================================================
