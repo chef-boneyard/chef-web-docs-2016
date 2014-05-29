@@ -39,6 +39,10 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_init_options.rst
 
+**About Dockerfiles**
+
+.. include:: ../../includes_containers/includes_containers_docker_dockerfile.rst
+
 Examples
 -----------------------------------------------------
 None.
