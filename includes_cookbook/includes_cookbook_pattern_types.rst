@@ -10,7 +10,7 @@ In addition to these basic guidelines, the cookbooks themselves should follow so
 
    * - Pattern
      - Description
-   * - .. image:: ../../images/icon_cookbook_type_library.png
+   * - .. image:: ../../images/icon_cookbook_type_base.png
      - A |cookbook type_base| cookbook is a core cookbook that configures a specific part of a node, such as the platform itself---|centos|, |mac os x|, |redhat|, |ubuntu| or |windows|---but also other components like |runit|, |cron|, or |ntp|. Anything that is considered core to most (or even all) nodes in the organization is a good candidate to be managed using a |cookbook type_base| cookbook. A |cookbook type_base| cookbook is often a community cookbook used without modification, but is sometimes a cookbook that is build to address specific organizational requirements. Typically, this cookbook does not have dependencies on any other cookbook.
    * - .. image:: ../../images/icon_cookbook_type_wrapper.png
      - A |cookbook type_wrapper| cookbook makes specific changes to a |cookbook type_base| cookbook and/or extends that cookbook, effectivelly wrapping around the |cookbook type_base| cookbook a small set of specific changes. This is done (for the most part) to avoid forking a community cookbook, while still using the functionality built into that cookbook.
