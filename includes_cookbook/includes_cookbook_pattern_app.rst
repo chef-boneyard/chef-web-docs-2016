@@ -14,8 +14,8 @@ Some common charactistics of an |cookbook type_app| cookbook:
 
 * Is associated 1:1 with a working configuration
 * One (or more) |cookbook type_app| cookbooks define the desired state for the stack of applications
-* Is rarely based on a community cookbook, but often leverages |cookbook type_library| and |cookbook type_wrapper| cookbooks
-* Often contains one (or more) dependencies on other cookbooks, typically these dependencies are on |cookbook type_library| and |cookbook type_wrapper| cookbooks, but not always
+* Is rarely based on a community cookbook, but often leverages |cookbook type_base| and |cookbook type_wrapper| cookbooks
+* Often contains one (or more) dependencies on other cookbooks, typically these dependencies are on |cookbook type_base| and |cookbook type_wrapper| cookbooks, but not always
 * Uses recipes to define the parts of the application
 * May add custom resources
 * Is typically unique to an organization, but often shareable across nodes within that organization

@@ -8,7 +8,7 @@
 Some common charactistics of a |cookbook type_policy| cookbook:
 
 * Is typically associated 1:1 with a |chef server| policy object
-* Sometimes makes a small number of specific changes to |cookbook type_library|, |cookbook type_wrapper|, or |cookbook type_app| cookbooks
+* Sometimes makes a small number of specific changes to |cookbook type_base|, |cookbook type_wrapper|, or |cookbook type_app| cookbooks
 * Is sometimes extended to meet organizational requirements
 * Is unique to an organization
 * Relies on cookbook versions to be frozen, and then pinned to specific |cookbook type_policy| cookbooks

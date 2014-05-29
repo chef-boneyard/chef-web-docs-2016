@@ -4,7 +4,7 @@ Cookbooks
 
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-.. warning:: This topic is a work in progress. It does not represent a suggested workflow or a recommended workflow. It attempts to recognize some high-level common ways people use cookbooks, that is all.
+.. warning:: This topic is a work in progress. It does not represent a suggested workflow or a recommended workflow. It attempts to recognize some high-level common ways people use cookbooks, put them in a single topic so that the concepts may be discussed, that is all.
 
 Global Patterns
 =====================================================
@@ -18,9 +18,9 @@ Pattern Types
 =====================================================
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_types.rst
 
-Library Cookbooks
+Base Cookbooks
 -----------------------------------------------------
-.. include:: ../../includes_cookbook/includes_cookbook_pattern_library.rst
+.. include:: ../../includes_cookbook/includes_cookbook_pattern_base.rst
 
 Wrapper Cookbooks
 -----------------------------------------------------

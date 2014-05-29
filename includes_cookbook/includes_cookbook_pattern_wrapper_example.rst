@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-An orgainzation named ``grantmc`` uses |splunk|. The |company_name| |cookbook chef_splunk| cookbook is a public cookbook in the |company_name| cookbook repository on |github|. This cookbook will be used as a |cookbook type_library| by the ``grantmc`` organization. 
+An orgainzation named ``grantmc`` uses |splunk|. The |company_name| |cookbook chef_splunk| cookbook is a public cookbook in the |company_name| cookbook repository on |github|. This cookbook will be used as a |cookbook type_base| by the ``grantmc`` organization. 
 
 The ``server.rb`` recipe in the |cookbook chef_splunk| cookbook installs a |splunk| server, configures it to run as a service, configures user authentication, and enables |ssl|. But the |cookbook chef_splunk| cookbook does not specify how large the database can get before it is frozen:
 
