@@ -20,15 +20,6 @@ A |dockerfile| contains all of the settings needed to use a container with |chef
    * - ``RUN``
      - The command to be run inside the container. Default value: ``chef-client -c /chef/zero.rb -j /chef/first-boot.json -z``.
 
-For example:
-
-.. code-block:: ruby
-
-   FROM chef/ubuntu_12.04
-   ADD chef/ /chef/
-   RUN chef-client -c /chef/zero.rb -j /chef/first-boot.json -z
-   ENTRYPOINT ["chef-init"]
-
 For more information about these settings, plus the full list of settings available to a |dockerfile|, see http://docs.docker.io/reference/builder/.
 
 
