@@ -26,7 +26,7 @@ Examples
 =====================================================
 |generic resource statement|
 
-**xxxxx**
+**Start apachectl in a container**
 
 .. code-block:: ruby
 
@@ -37,15 +37,5 @@ Examples
    end
    
    container_service 'apache2' do
-     command 'apachectl -k start'
-   end
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   require 'chef/container'
-   
-   container_service_runit 'apache2' do
      command 'apachectl -k start'
    end
