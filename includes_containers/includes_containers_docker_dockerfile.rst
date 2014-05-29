@@ -14,7 +14,7 @@ A |dockerfile| contains all of the settings needed to use a container with |chef
    * - ``ADD <src> <dest>``
      - The path to the location from which files are copied (``<src>``) and the location in the container's file system (``<dest>``) to which those same files will be added. Default value: ``chef/ /chef/``.
    * - ``ENTRYPOINT``
-     - xxxxx. This setting may appear only once in a |dockerfile|. Default value: ``["chef-init"]``.
+     - Use to specify that a container be run as an executable. This setting may appear only once in a |dockerfile|. Default value: ``["chef-init"]``, which will run the container as the |chef client|.
    * - ``FROM``
      - The image from which a container will be built. This must be the first setting in a |dockerfile|. Default value: ``chef/ubuntu_12.04``.
    * - ``RUN``
