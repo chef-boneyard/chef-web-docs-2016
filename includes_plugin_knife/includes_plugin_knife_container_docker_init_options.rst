@@ -6,19 +6,19 @@
 This argument has the following options:
 
 ``-b``, ``--berksfile``
-   Use to generate a BERKSFILE based on the run-list specified by the ``--run-list`` option.
+   Use to generate a |berksfile| based on the run-list specified by the ``--run-list`` option.
 
 ``--cookbook-path PATH[:PATH]``
    The directory in which cookbooks are located. This may be a colon-separated path.
 
 ``-d DOCKERFILE_PATH``, ``--force DOCKERFILE_PATH``
-     Use to specify the path to the DOCKERFILE.
+     Use to specify the path to the |dockerfile|.
 
 ``--environments-path PATH[:PATH]``
    The directory in which environments are located. This may be a colon-separated path.
 
 ``-f [REPO/]IMAGE[:TAG]``, ``--from [REPO/]IMAGE[:TAG]``
-   Use to specify the image to use as the ``FROM`` value in a DOCKERFILE.
+   Use to specify the image to use as the ``FROM`` value in a |dockerfile|.
 
 ``--node-path PATH[:PATH]``
    The directory in which nodes are located. This may be a colon-separated path.
@@ -39,4 +39,4 @@ This argument has the following options:
    The path to the validation key used by the client, typically a file named |chef validator pem|.
 
 ``-z``, ``--local-mode``
-   |local_mode| This will include and use a local |chef repo| when building the DOCKER image.
+   |local_mode| This will include and use a local |chef repo| when building the |docker| image.
