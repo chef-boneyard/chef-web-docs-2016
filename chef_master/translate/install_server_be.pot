@@ -1,0 +1,898 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-02 15:47-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_server_be.rst:8
+# 3cd8b8aee8c74122b42b52812d8649f1
+msgid "Scaled Back End"
+msgstr ""
+
+#: ../source/install_server_be.rst:10
+# f25400c6b756416995d6b95975c129ea
+msgid "The scaled back end installation allows |chef server oec| to be installed on multiple servers in order to scale portions of the service horizontally, with a highly available back-end infrastructure. This is the recommended configuration for production utilization of |chef server oec|."
+msgstr ""
+
+#: ../source/install_server_be.rst:12
+# 8317a7ff893f453b866ee000267f65ce
+msgid "We refer to all the servers in a particular installation of |chef server oec| as a cluster."
+msgstr ""
+
+#: ../source/install_server_be.rst:14
+# 2485fc9c0cca4bdb82a63b2956500f4e
+msgid "The scaled back end installation consists of multiple front-end servers talking to a pair of clustered back-end servers. This allows for a higher level of concurrency on API requests, while scaling the back-end servers vertically to handle the increased I/O load."
+msgstr ""
+
+#: ../source/install_server_be.rst:17
+# 92b3ba27e7f9469598e8976c68b0e44b
+msgid "System Requirements"
+msgstr ""
+
+#: ../source/install_server_be.rst:18
+# 677061d68c344766a96d0c9f287c4cdf
+msgid "A scaled back end installation scenario has the following system requirements:"
+msgstr ""
+
+#: ../source/install_server_be.rst:20
+# 413243231853419d864b2081fba8e7e8
+msgid "8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster"
+msgstr ""
+
+#: ../source/install_server_be.rst:21
+# 5f255a6c2cb6477e8437f37a14504e6b
+msgid "16GB RAM"
+msgstr ""
+
+#: ../source/install_server_be.rst:22
+# f4b040760c85426c875b81ed4f51d729
+msgid "2 x 300GB SAS RAID1 drives"
+msgstr ""
+
+#: ../source/install_server_be.rst:23
+# 3d28af26d7b44de0862e73f52ccb2eda
+msgid "Hardware |raid| card"
+msgstr ""
+
+#: ../source/install_server_be.rst:24
+# 7a2363b1b2ef46c484eb02926e61eb12
+msgid "1 x GigE NIC interface"
+msgstr ""
+
+#: ../source/install_server_be.rst:25
+# a7d1c09f061d482a911da4453cb6019b
+msgid "20 GB of free disk space in ``/opt``"
+msgstr ""
+
+#: ../source/install_server_be.rst:26
+# 4f5d4524bab94814844f7a1af4eafd15
+msgid "40 GB of free disk space in ``/var``"
+msgstr ""
+
+#: ../source/install_server_be.rst:27
+# 6709c254f529473fb1054d7ad1df6b71
+msgid "Two back-end servers; as many front-end servers as required."
+msgstr ""
+
+#: ../source/install_server_be.rst:29
+# 027754278c8c42829a0faadc564c755f
+msgid "While |chef server oec| can be run on smaller systems, our assumption with the scaled back end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes."
+msgstr ""
+
+#: ../source/install_server_be.rst:32
+# b0a027ddc67246189e92ae91d2c34c40
+msgid "Network Requirements"
+msgstr ""
+
+#: ../source/install_server_be.rst:33
+# c49869010bcc4002a77cf9b024d3ce18
+msgid "|chef server oec| has the following network requirements for a scaled back end installation:"
+msgstr ""
+
+#: ../source/install_server_be.rst:36
+# ca173df9b9874913b3ef98bfacf63e8e
+msgid "Networking"
+msgstr ""
+
+#: ../source/install_server_be.rst:37
+# e4dbc6b4ea4344e19abee24465c8e6a7
+msgid "The back-end servers utilize |drbd|, a distributed block device, to ensure that data written to disk on one back-end server is efficiently replicated to another. For optimal performance and reliability, we recommend that:"
+msgstr ""
+
+#: ../source/install_server_be.rst:39
+# d6e99bdaaf54403caef21631261458fc
+msgid "Back-end servers should have `an ethernet interface cross-connected <http://www.drbd.org/users-guide/s-prepare-network.html>`_ to the other, 10G+ recommended, for both the cluster ``keepalive`` signal and |drbd| data replication."
+msgstr ""
+
+#: ../source/install_server_be.rst:41
+# 6a54eec2df264caf95198a2128a93518
+msgid "This is in addition to the standard network interfaces that are available and would be used for access by the frontends and management functions. While |drbd| replication can function on systems without this additional network interface, this configuration gives maximum performance and reliability."
+msgstr ""
+
+#: ../source/install_server_be.rst:44
+# bc17135dff3a429bad4c02d1e3060deb
+msgid "Virtual IP Addresses"
+msgstr ""
+
+#: ../source/install_server_be.rst:45
+# 51dfef6fdd924af9837215d242531e98
+msgid "The back-end servers will share a virtual IP address, which needs to be accessible from the front-end servers. This virtual IP address will be created and managed by |chef server oec| but will need be added to DNS to access the cluster."
+msgstr ""
+
+#: ../source/install_server_be.rst:48
+# d83912457f7f4aa5b97577296aa699dc
+msgid "Disk Configuration"
+msgstr ""
+
+#: ../source/install_server_be.rst:49
+# 55bb486a68594a60a7c49f2762285db0
+msgid "The data that is stored in the |chef server oec| database is primarily cookbook data. It is recommended that disks are dedicated entirely to storing this data for the |chef server oec| installation. These disks should:"
+msgstr ""
+
+#: ../source/install_server_be.rst:51
+# 12006db3168444f8a99f55a2d3828d5a
+msgid "Utilize hardware |raid|"
+msgstr ""
+
+#: ../source/install_server_be.rst:52
+# 8639bea678e6420e8efa4f8968e10116
+msgid "Be configured in either |raid1| or |raid5|"
+msgstr ""
+
+#: ../source/install_server_be.rst:53
+# a4103374dba44eada53020beacc99935
+msgid "Be identical across both of your back-end servers"
+msgstr ""
+
+#: ../source/install_server_be.rst:55
+# 9554611b04004e5c93ce53cdfe2a0d26
+msgid "Our recommended configuration utilizes the |linux| |lvm| as the backing store for |drbd|. This assumes that:"
+msgstr ""
+
+#: ../source/install_server_be.rst:57
+# c66b12218fb746c1ac903f748bb97af1
+msgid "~300GB of raw, unpartitioned disk space is available"
+msgstr ""
+
+#: ../source/install_server_be.rst:58
+# fc68be7b8a344ee1a1484c63f6a5ffc5
+msgid "The disk space presents as a single device, ``/dev/sdb``"
+msgstr ""
+
+#: ../source/install_server_be.rst:59
+# 28e03c9f0b094989aff5bfa386552935
+msgid "The storage is added to a volume group named ``opscode``"
+msgstr ""
+
+#: ../source/install_server_be.rst:60
+# 82f64e64b7764361a663647b8137052c
+msgid "The storage is added in a logical volume group named ``drbd``"
+msgstr ""
+
+#: ../source/install_server_be.rst:61
+# 33e3fe516cbc4ae9b7230328bf087933
+msgid "The volume group should have adequate space to enable |lvm| snapshots to be used for backups; this amount depends on many factors, including how much changes in-between snapshots, how long the snapshots will be kept, and the (eventual) size of the |chef server oec| database; a decent starting point when sizing |lvm| snapshots is ~10% of the raw, unpartitioned disk space"
+msgstr ""
+
+#: ../source/install_server_be.rst:63
+# 0c401e4960f44c4aae55d69166487aa7
+msgid "The following commands would properly set up the back-end disk configuration for |drbd|:"
+msgstr ""
+
+#: ../source/install_server_be.rst:69
+#: ../source/install_server_be.rst:75
+# a7860d3731a24eb3aebf41f23732180f
+# 66d484939fbf4a46a77872f54b5c0abb
+msgid "and:"
+msgstr ""
+
+#: ../source/install_server_be.rst:81
+# a929629af67748ee8be290f8ed711bf0
+msgid "Talk with your systems administrators about disk configuration if you are at all uncertain of how to configure a new logical volume with |lvm|, as the operations can be destructive."
+msgstr ""
+
+#: ../source/install_server_be.rst:84
+# d13d96826fc5466da37e761783a2d58b
+msgid "Load Balancing"
+msgstr ""
+
+#: ../source/install_server_be.rst:85
+# f1a85002e06a41df9bd6af70d99f14a8
+msgid "As multiple front-end servers are run, there will a need to provide a mechanism for load-balancing the requests between them. We recommend using either a hardware or software load-balancer configured for round-robin."
+msgstr ""
+
+#: ../source/install_server_be.rst:87
+# c77b788cc098431885568c36cc631575
+msgid "Create a DNS entry for the load balanced virtual IP address, which will be used to access the cluster. This is also referred to as the ``api_fqdn``."
+msgstr ""
+
+#: ../source/install_server_be.rst:90
+# d626b6835f544c989c8cbbdc42bc2273
+msgid "Firewalls"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst:4
+# 9fa6e68726f344699bf8ee9342be7c3c
+msgid "The ports that should be open depend on how the |chef server oec| is deployed---standalone, high availability, front- and back-end servers. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary."
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:4
+# cb7f2316e01047c6ad81d7c0e30eb295
+msgid "For front-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:10
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:10
+# bc6c17e11e354b4aba784e348a7468ae
+# f25b0fdc9ae04d8eb2480051fc2298b9
+msgid "Port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:11
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:11
+# efcbf06a6f834d448870757b40012195
+# 9c9d0bd31fb0430e87df194284133161
+msgid "Service"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:12
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:12
+# 3f240f3cb4244f259084d4a80bdc28f8
+# 42bc8c51f9ce4792901e2a9fe0819087
+msgid "80"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:13
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:13
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:17
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:19
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:23
+# f2b76a5e041f46a6820509783c8a7334
+# f8433d15b06f4820b1c59437f45ab337
+# b4486876693e40f49ab8cc357090e6ed
+# 444f082c60c0439f85ab428936f14a75
+# 93205fb62cc34ae2b6fcf9b51d1b7bfc
+# 607ac9f19a0f4a01a70847393085c22d
+# ec7c9ec2961e4d1bb6d0dbfd80f9539e
+# 0d0cb07024554d179ba117eb8a54a1a6
+msgid "|service nginx|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:14
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:14
+# 6200d1f9bf7d4cc3b829e6b999328771
+# 6af539931b6b469fb42cd5501422fb59
+msgid "443"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:4
+# 6d7f9dcb08474ecf8d360e5ef0c9d2f7
+msgid "For back-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:16
+# a15ffb8590e34d70ba51be9e31b3cd00
+msgid "9671"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:18
+# 4a3e3ac4713a49a08e8abb76a99724f7
+msgid "9680"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:20
+# 08a0d0e208c34aeebe90b6b76ae895da
+msgid "9685"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:22
+# 05546b084c0146868a97719e10eb8ecc
+msgid "9683"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:24
+# 22b0347b846b425284d530cd61b1f599
+msgid "5984"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:25
+# 5d05e4e9915f4d9280761bcdfbedf1c2
+msgid "|service couchdb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:26
+# 90f510b964fd4abea9aafd2b5b380a2f
+msgid "8983"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:27
+# e9dd7583f9724fabbcece046c4a94aec
+msgid "|service solr|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:28
+# 34ee065d32384362a53c6d3d768ed5ca
+msgid "5432"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:29
+# 9e853cf87df5447683c0ed508f2b39d6
+msgid "|service postgresql|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:30
+# 76682319baa3418886bf0b41d82993be
+msgid "5672"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:31
+# eceeddd184704ea988758f5e1eaabfee
+msgid "|service rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:32
+# b21add2fa99d4a09ad1db6ac9523c4e2
+msgid "16379"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:33
+# a1e2d9d9f6714294a9fcf7856dde1dcd
+msgid "|service redis_lb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:34
+# 9ff5c9194ad24e46b9cbc794c6509660
+msgid "4321"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:35
+# c40d16cae5564c0097b3d69f71f7ac58
+msgid "|service bookshelf|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:36
+# f918776da42c481da7dd87cebea6f97a
+msgid "7788-7799"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:37
+# f59b9d941e67473a837ed8e9164c5c3c
+msgid "|drbd|"
+msgstr ""
+
+#: ../source/install_server_be.rst:98
+# 7b838c214de544ec910252770bde6b43
+msgid "Hostnames, FQDNs"
+msgstr ""
+
+#: ../source/install_server_be.rst:99
+# 344af8c6c83e4969af2899d1840966a9
+msgid "The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.opscode.com/install_server_pre.html#hostnames-fqdns>`_ for more information."
+msgstr ""
+
+#: ../source/install_server_be.rst:102
+# 1fc30ec5c76d4d9ba1569f0252894c19
+msgid "private-chef.rb"
+msgstr ""
+
+#: ../source/install_server_be.rst:103
+# 4b425425cd624c38961c967246139d0f
+msgid "Each |chef server oec| cluster has a single configuration file: |private chef rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |private chef rb|."
+msgstr ""
+
+#: ../source/install_server_be.rst:106
+# 51140754d1b94ced9e1505fd84bc17f3
+msgid "Set the topology"
+msgstr ""
+
+#: ../source/install_server_be.rst:107
+# d9783e707d904205a8c40c22bf11f005
+msgid "Add the following line to the |private chef rb| configuration file:"
+msgstr ""
+
+#: ../source/install_server_be.rst:113
+# 524f242df73043458501bd0ac71e78d6
+msgid "This lets |chef server oec| know that these servers will be in a horizontally scalable configuration with a highly-available back-end."
+msgstr ""
+
+#: ../source/install_server_be.rst:116
+# 3b554ccc154747f38315502d5f3ca654
+msgid "Back-end entries"
+msgstr ""
+
+#: ../source/install_server_be.rst:117
+# d01173a189ba4726ae25774f9fe6e5cc
+msgid "Nominate a back-end server as the bootstrap server. For that server, add the following to the |private chef rb| file:"
+msgstr ""
+
+#: ../source/install_server_be.rst:127
+# fd37a9948b80420b81a0e2f4942f3501
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is a back-end server. If the server will be used to bootstrap the |chef server oec| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface to be used for cluster communications (such as |keepalived| and |drbd| replication). If no such interface is configured, exclude the ``cluster_ipaddress`` entry."
+msgstr ""
+
+#: ../source/install_server_be.rst:129
+# c3ef311245df443887c9eb85c0dae234
+msgid "For the other back-end server, add the following:"
+msgstr ""
+
+#: ../source/install_server_be.rst:138
+# cbb1e09530d9424683b7a7d1b9fc867c
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server’s interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry."
+msgstr ""
+
+#: ../source/install_server_be.rst:140
+# 1bcac848638e4292873f31865f634f9b
+msgid "Add an entry for the back-end virtual IP address that was assigned earlier:"
+msgstr ""
+
+#: ../source/install_server_be.rst:148
+# ea0492920e3a4db2a50bbdcf789055c4
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the virtual IP address. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind (i.e. the public interface of the server). Front-end entries ----------------------------------------------------- For each front-end server in the |private chef rb| file, add the following:"
+msgstr ""
+
+#: ../source/install_server_be.rst:159
+# 7c80938a8f4943bb877bbd7799498544
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is front end."
+msgstr ""
+
+#: ../source/install_server_be.rst:162
+# 4a7771e3a64b460da084280ffa9194f8
+msgid "Set api_fqdn"
+msgstr ""
+
+#: ../source/install_server_be.rst:163
+# b751a5ade3ba41c4a8c8a15146f82597
+msgid "Add the following line to the |private chef rb| config file:"
+msgstr ""
+
+#: ../source/install_server_be.rst:169
+# 8b20ad05c7a94c22b7e974296f80deb6
+msgid "Replace ``FQDN`` with the |fqdn| of the load balanced VIP."
+msgstr ""
+
+#: ../source/install_server_be.rst:172
+# 5f73a987f7e241ceb52fbae68a750d06
+msgid "Example"
+msgstr ""
+
+#: ../source/install_server_be.rst:173
+# db23383087124abb952ad4a163b6cdd9
+msgid "A completed |private chef rb| configuration file for a four server tiered |chef server oec| cluster, consisting of:"
+msgstr ""
+
+#: ../source/install_server_be.rst:179
+# a7d2050d972844c29b0695403c3e9d0e
+msgid "FQDN"
+msgstr ""
+
+#: ../source/install_server_be.rst:180
+# b0896a36c6c04c28b6b37a6c3726e9c6
+msgid "Real IP Address"
+msgstr ""
+
+#: ../source/install_server_be.rst:181
+# 0eca0113d9e74cd2bfb15e4cbf274bf4
+msgid "Cluster IP Address"
+msgstr ""
+
+#: ../source/install_server_be.rst:182
+# cfbd3ea402774c15a9956ebcdceaf110
+msgid "Role"
+msgstr ""
+
+#: ../source/install_server_be.rst:183
+# 2e7caa8339c84bbc8647594571f62327
+msgid "be1.example.com"
+msgstr ""
+
+#: ../source/install_server_be.rst:184
+# 66d167dc950747feb9225aa915f99c10
+msgid "192.168.4.1"
+msgstr ""
+
+#: ../source/install_server_be.rst:185
+# b2cc64765f71474ea15b17b0fe9930c3
+msgid "10.1.2.10"
+msgstr ""
+
+#: ../source/install_server_be.rst:186
+#: ../source/install_server_be.rst:190
+# 7670166cb7144f98851d9528b50a99e5
+# 56fee10ca3894c3fa2333c8fcab528a6
+msgid "backend"
+msgstr ""
+
+#: ../source/install_server_be.rst:187
+# 5802fbb1fd844d7ba5165c8724ed3db2
+msgid "be2.example.com"
+msgstr ""
+
+#: ../source/install_server_be.rst:188
+# 8bcdfc8594aa40c1b08a77e9d8ee950d
+msgid "192.168.4.6"
+msgstr ""
+
+#: ../source/install_server_be.rst:189
+# 2247e44ea8d2465fafcb9b12baa77911
+msgid "10.1.2.12"
+msgstr ""
+
+#: ../source/install_server_be.rst:191
+# 1a00b68c17fb4c10a0f40d2cc17b48e6
+msgid "fe1.example.com"
+msgstr ""
+
+#: ../source/install_server_be.rst:192
+# 88575e80c41b4b3baa354534f0e44623
+msgid "192.168.4.2"
+msgstr ""
+
+#: ../source/install_server_be.rst:194
+#: ../source/install_server_be.rst:198
+#: ../source/install_server_be.rst:202
+# 24ff771bb94245aa8b2ee5c98b59e12b
+# 79afa199fdb84c51b055a2b35660aab3
+# ddee50fb2bf44411973a1687b7c12f4f
+msgid "frontend"
+msgstr ""
+
+#: ../source/install_server_be.rst:195
+# 654f606bccec43d1a57c440457981ed5
+msgid "fe2.example.com"
+msgstr ""
+
+#: ../source/install_server_be.rst:196
+# 4b3f355c2cf045bc80518226fcfef0a7
+msgid "192.168.4.3"
+msgstr ""
+
+#: ../source/install_server_be.rst:199
+# 58d8f70a10c942c8b98fedbcebc0eeeb
+msgid "fe3.example.com"
+msgstr ""
+
+#: ../source/install_server_be.rst:200
+# 81f065eb9445424093c8f1a508ee8582
+msgid "192.168.4.4"
+msgstr ""
+
+#: ../source/install_server_be.rst:203
+# 2e97a4ce846944969284fd199840aa83
+msgid "chef.example.com"
+msgstr ""
+
+#: ../source/install_server_be.rst:204
+# 9e7f5382d818478c9ffde6f7c8d97127
+msgid "192.168.4.5"
+msgstr ""
+
+#: ../source/install_server_be.rst:206
+# 1e71289da5c446e8b346ae95696f89a9
+msgid "load balanced frontend VIP"
+msgstr ""
+
+#: ../source/install_server_be.rst:207
+# 2dfdcc4f4b024a14b4364bc2710c1c31
+msgid "be.example.com"
+msgstr ""
+
+#: ../source/install_server_be.rst:208
+# bf9ee3b626ea44febb0b2db3fba1a8e2
+msgid "192.168.4.7"
+msgstr ""
+
+#: ../source/install_server_be.rst:210
+# e37407a3d1d943309b9f3272f0319207
+msgid "load balanced backend VIP"
+msgstr ""
+
+#: ../source/install_server_be.rst:212
+# 2b64ff8e432b449fa42cec6502214486
+msgid "Looks like this:"
+msgstr ""
+
+#: ../source/install_server_be.rst:250
+# 1febbd7f2a7b4b9d90829a2a394ab8c9
+msgid "Add Package to Servers"
+msgstr ""
+
+#: ../source/install_server_be.rst:251
+# 4f5c3ad58189454ea4841f2018835b30
+msgid "Upload the package provided to the servers you wish to install on, and record its location on the file-system. The rest of this section will assume that it was uploaded to the ``/tmp`` directory on each system."
+msgstr ""
+
+#: ../source/install_server_be.rst:255
+# 9e1e577d050a4fd5ae531b1efa1bb8c9
+msgid "Add private-chef.rb to /etc/opscode"
+msgstr ""
+
+#: ../source/install_server_be.rst:256
+# f8d5560616d541c9a840c65440e14fd4
+msgid "Copy the |private chef rb| file to ``/etc/opscode`` on the bootstrap server."
+msgstr ""
+
+#: ../source/install_server_be.rst:259
+# 537ff88c57164a97b8e2aa07a32512d3
+msgid "Install |chef server oec| on backend"
+msgstr ""
+
+#: ../source/install_server_be.rst:260
+# 7d4a32e078ef4ff69766a31bebd83001
+msgid "Install the |chef server oec| package on both of the back-end servers. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../source/install_server_be.rst:266
+#: ../source/install_server_be.rst:284
+#: ../source/install_server_be.rst:342
+#: ../source/install_server_be.rst:463
+# 80b8a47b61de433f8048a111d34aca78
+# bcc285bffa4a42d2bfc9f9ce1d100b89
+# 8a162de596dc480a86b87900d6de1db5
+# cc177e87ac224b30a21d78cad47cf907
+msgid "For |ubuntu|:"
+msgstr ""
+
+#: ../source/install_server_be.rst:273
+# b4a6c2f0428343bc8430fd97adb270a0
+msgid "Install |drbd| on back-end servers"
+msgstr ""
+
+#: ../source/install_server_be.rst:274
+# dffc279a3e1f47f0b343b9edbf2672af
+msgid "Both of the back-end servers must have |drbd| installed:"
+msgstr ""
+
+#: ../source/install_server_be.rst:282
+# dd265ca10a6c4eec8ec086300017cffb
+msgid "The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland."
+msgstr ""
+
+#: ../source/install_server_be.rst:291
+# 22cb52cc1cdf4f5b923a1c028828ebb1
+msgid "Configure |drbd| on the back-end bootstrap server"
+msgstr ""
+
+#: ../source/install_server_be.rst:292
+# adee793ce7444906a55605efe7053cfa
+msgid "In the scaled back end configuration, setup of |chef server oec| happens in two phases - the first phase configures |drbd|, and then pauses to allow you to finish establishing |drbd| replication before moving on:"
+msgstr ""
+
+#: ../source/install_server_be.rst:298
+#: ../source/install_server_be.rst:324
+# a616ffdacf1746669d5c1b9917930dbc
+# b342e67bab2b4aaabb7a3be214a56c6e
+msgid "The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps require to set up |drbd|:"
+msgstr ""
+
+#: ../source/install_server_be.rst:307
+# 064b665a91854006b52139d9fba14e89
+msgid "Copy config to non-bootstrap back-end server"
+msgstr ""
+
+#: ../source/install_server_be.rst:308
+# fd27b6eb572345f8bc12b6b5535e52d2
+msgid "To configure |drbd| on the non-bootstrap back-end server, first copy all the contents of ``/etc/opscode`` on the bootstrap node to the non-bootstrap back-end. On the non-bootstrap server, run the following command:"
+msgstr ""
+
+#: ../source/install_server_be.rst:314
+# c92b648804ce408e9855df3df8275ec1
+msgid "Replace ``FQDN`` above with the |fqdn| of the bootstrap server."
+msgstr ""
+
+#: ../source/install_server_be.rst:317
+# 04304d0ffdba447c919b9222332bf30a
+msgid "Configure |drbd| for non-bootstrap back-end server"
+msgstr ""
+
+#: ../source/install_server_be.rst:318
+# b41aaabc37ac4f539b6619b6f504ae74
+msgid "Set up the configuration of |drbd| on the non-bootstrap back-end server:"
+msgstr ""
+
+#: ../source/install_server_be.rst:333
+# 4f93447a411b4a0f9a703e6eb5c60e6e
+msgid "Set bootstrap server to be the primary server"
+msgstr ""
+
+#: ../source/install_server_be.rst:334
+# cc19d4b4fd204be3acc42d5136075ba8
+msgid "With both servers now configured for |drbd|, let the cluster know that the bootstrap server should be primary for the shared device."
+msgstr ""
+
+#: ../source/install_server_be.rst:336
+# 764133d5362f4d36b729c70f21de4b2a
+msgid "For |drbd| on |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../source/install_server_be.rst:350
+# 8f54d6d0743d4b5c8e547c8cf5739d57
+msgid "Mount the file system on the |drbd| server"
+msgstr ""
+
+#: ../source/install_server_be.rst:351
+# 1bdcdf51f5f5481da5ccfbf47d35f024
+msgid "On the bootstrap server, if the file system is named ``ext4``, run the following command to create the file system for |drbd|:"
+msgstr ""
+
+#: ../source/install_server_be.rst:361
+# 40fec006349840e5a47b130dd27ac58d
+msgid "Monitor the |drbd| server for initial synchronization"
+msgstr ""
+
+#: ../source/install_server_be.rst:362
+# cee567d8dd1b4fbe8d8bbecce7f99408
+msgid "Before proceeding with the installation, |drbd| MUST be allowed to fully synchronize all devices. To observe the synchronization process, you can run:"
+msgstr ""
+
+#: ../source/install_server_be.rst:368
+# 38f003ea4d4447c0951c90f729fa90b7
+msgid "Output similar to the following will be shown:"
+msgstr ""
+
+#: ../source/install_server_be.rst:383
+# 1593388fffac4bd8a38523055268372f
+msgid "When the ``ds`` section of the output reads ``UpToDate/UpToDate``, the synchronization is complete."
+msgstr ""
+
+#: ../source/install_server_be.rst:385
+# 61e62f7065784237ae5c8f3278b94233
+msgid "Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization. This is to ensure that new data that may be written to the shared device is also being synchronized. To enable |drbd| to utilize more of the bandwidth available during the initial synchronization, you can run:"
+msgstr ""
+
+#: ../source/install_server_be.rst:387
+# abc97384caca47a995c9f1e0775a7649
+msgid "Speeding up initial synchronization on |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../source/install_server_be.rst:393
+# 84b1b73fdd294f1a919572ac03a247c2
+msgid "Speeding up initial synchronization on |ubuntu|:"
+msgstr ""
+
+#: ../source/install_server_be.rst:399
+# 2bd7c62ba568464985ad47ada76241e0
+msgid "With synchronization complete, |drbd| is ready to be used on the bootstrap node. Let |chef server oec| know that |drbd| is ready by running the following command:"
+msgstr ""
+
+#: ../source/install_server_be.rst:408
+# b3e621531f3e4867bf175b82c8509d3b
+msgid "Configure |chef server oec| on the bootstrap server"
+msgstr ""
+
+#: ../source/install_server_be.rst:409
+# ceee4903746c4086a611b8620ccccad7
+msgid "To continue setting up |chef server oec| on a bootstrap server, run:"
+msgstr ""
+
+#: ../source/install_server_be.rst:415
+# c2e1b8be0c564760b0ae04a55cd77dc6
+msgid "This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, the following message is displayed:"
+msgstr ""
+
+#: ../source/install_server_be.rst:421
+#: ../source/install_server_be.rst:483
+# e117dcab5c634dccb5c3c045996d7210
+# c3458451406c44e7a24fc8d5c4252ed9
+msgid "|chef server oec| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready."
+msgstr ""
+
+#: ../source/install_server_be.rst:425
+# 1425727316cc4fb9914af2aa7a3ce39d
+msgid "Configure |chef server oec| on non-bootstrap back-end"
+msgstr ""
+
+#: ../source/install_server_be.rst:426
+# ca656d814ae54eddbe15ad821cab497b
+msgid "Make sure |drbd| synchronization has completed, and that |chef server oec| has fully started on the bootstrap node before continuing!"
+msgstr ""
+
+#: ../source/install_server_be.rst:428
+# 2a26e63f038a42f9bc7d7527f3e6772e
+msgid "Each node that is part of the |chef server oec| back-end cluster participates in an election for which server should be the primary server for the |drbd| device. This means that, if the bootstrap node is not allowed to finish initializing the system before setting up the non-bootstrap server, the system may be left in an unstable state:"
+msgstr ""
+
+#: ../source/install_server_be.rst:434
+# 8dddc71aaabf4aeeba68067acce16657
+msgid "Followed by:"
+msgstr ""
+
+#: ../source/install_server_be.rst:442
+# f876b88a584542f0a1fefbbbf174f689
+msgid "Configure Front-end"
+msgstr ""
+
+#: ../source/install_server_be.rst:443
+# 3a2781e9d22745f282cc1dc79ed87b6a
+msgid "The following sections describe what is required to configure the front-end server."
+msgstr ""
+
+#: ../source/install_server_be.rst:446
+# 6bb832a15e1649a9a13c728264ee1b89
+msgid "Copy /etc/opscode"
+msgstr ""
+
+#: ../source/install_server_be.rst:447
+# dcc2f50909764ce8894693c993e8508a
+msgid "With the bootstrap complete, the ``/etc/opscode`` directory on the front-end servers can be populated with the files generated during the bootstrap process. The following command assumes the user is logged in as the root user:"
+msgstr ""
+
+#: ../source/install_server_be.rst:453
+# cc90500e30004acfbff896770eeb0cea
+msgid "This command will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install."
+msgstr ""
+
+#: ../source/install_server_be.rst:456
+# c653767b70d74dad82d694c78b057a50
+msgid "Install package"
+msgstr ""
+
+#: ../source/install_server_be.rst:457
+# e7e031eda487459d9f6ff6010a351915
+msgid "Install the |chef server oec| package on each of the front-end servers. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../source/install_server_be.rst:470
+# 685d358fc98b4902bcf16b19a3906aa1
+msgid "Configure To set up |chef server oec| on your front-end servers, run:"
+msgstr ""
+
+#: ../source/install_server_be.rst:477
+# c736376f5b9940e89e19cec2d12b6af2
+msgid "This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, the following message is shown:"
+msgstr ""
+
+#: ../source/install_server_be.rst:486
+# 9a1136411d1846178839bf7f2eab257b
+msgid "Success!"
+msgstr ""
+
+#: ../source/install_server_be.rst:487
+# a5d53f57f8444b7b9240712c7f38fb03
+msgid "Congratulations, |chef server oec| is installed in a scaled back end configuration."
+msgstr ""
+
+#: ../source/install_server_be.rst:490
+# e9b2ba51282649f8b2e6703a27ee2213
+msgid "Using GRE Tunnels"
+msgstr ""
+
+#: ../source/install_server_be.rst:491
+# 3f2c372504ea4ac0a9e35fd11b925cac
+msgid "Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the backend server that will be used for bootstrapping:"
+msgstr ""
+
+#: ../source/install_server_be.rst:501
+# 05710bf9137b40829b3df686a2c7375d
+msgid "Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end of the tunnel, and ``MY_IP`` with the IP address of the server on which the script will be located."
+msgstr ""
+
+#: ../source/install_server_be.rst:503
+# 945679c7a792495c869a241be87dbbd3
+msgid "The ``172.17.16.0/24`` network used in the above examples could be any unused reserved IP address space."
+msgstr ""
+
+#: ../source/install_server_be.rst:505
+# b43d31b802ac4152be56e0efa8850ded
+msgid "Set the following in ``/etc/opscode/private-chef.rb``:"
+msgstr ""
+
+#: ../source/install_server_be.rst:513
+# a10b20d171c1498db61df39c4a43794a
+msgid "And set the |keepalived| unicast addresses to the GRE tunnel addresses."
+msgstr ""
+

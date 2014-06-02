@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-02 15:47-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_server_oec.rst:8
+# 3988abe04e744a489a13628d24b18b57
+msgid "Install the Enterprise Chef Server"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server.rst:4
+# bb75b55a912a4055bcf9d08ad6217ab5
+msgid "The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions. The |chef client| then does as much of the configuration work as possible on the nodes themselves (and not on the |chef server|). This scalable approach distributes the configuration effort throughout the organization."
+msgstr ""
+
+#: ../source/install_server_oec.rst:12
+# 11d5926a74c0408f99e3f6384f4b757d
+msgid "The steps below describe the process for installing |chef server oec|."
+msgstr ""
+
+#: ../source/install_server_oec.rst:15
+# a866ad8f873349078d317ef32cd94def
+msgid "Steps"
+msgstr ""
+
+#: ../../step_install/step_install_server_oec.rst:4
+# d2362ad443c946a0809b8de2b1a0a30f
+msgid "To install |chef server oec|, do the following:"
+msgstr ""
+
+#: ../../step_install/step_install_server_oec.rst:6
+# c8750325e5a545c3a1723629e79e4fbc
+msgid "Go to |url opscode_chef_install_oec|."
+msgstr ""
+
+#: ../../step_install/step_install_server_oec.rst:8
+# 4c58d153b90c4ce49191d1771f733414
+msgid "Click the **Get Chef** button and sign up for |chef server oec|."
+msgstr ""
+
+#: ../../step_install/step_install_server_oec.rst:10
+# 8b679b2da50e40a7b916c50960356983
+msgid "Complete the sign-up page. At the bottom of the email that is sent to you by |company_name|, click the link to request a download of |chef server oec| to install locally."
+msgstr ""
+
+#: ../../step_install/step_install_server_oec.rst:12
+# e9355244d984410cbd3afe97acab71c0
+msgid "Review the `prerequisites <http://docs.opscode.com/enterprise/install_server_pre.html>`_."
+msgstr ""
+
+#: ../../step_install/step_install_server_oec.rst:14
+# f45a6379ca1f4b8bb4dd78c84b28c928
+msgid "Choose a topology---`standalone <http://docs.opscode.com/enterprise/install_server_standalone.html>`_, `scaled back end <http://docs.opscode.com/enterprise/install_server_be.html>`_, `scaled front end <http://docs.opscode.com/enterprise/install_server_fe.html>`_, or `scaled front and back ends <http://docs.opscode.com/enterprise/install_server_febe.html>`_---and then follow the steps for that scenario."
+msgstr ""
+
+#: ../source/install_server_oec.rst:19
+# 3587d7b990824c8a92a146350e72f74f
+msgid "About the Hostname"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_hostname.rst:4
+# c457f20317484d47a37020ed644358eb
+msgid "The hostname for the |chef server| may be specified using a |fqdn| or an IP address. This hostname must be resolvable. For example, a |chef server| running in a production environment with a resolvable |fqdn| hostname can be added the |dns| system. But when deploying |chef server| into a testing environment, adding the hostname to the ``/etc/hosts`` file is enough to ensure that hostname is resolvable."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_hostname.rst:6
+# c59e17e3e7fe4b899af98b34f7a1ca61
+msgid "**FQDN Hostnames** When the hostname for the |chef server| is a |fqdn| be sure to include the domain suffix. For example, something like ``mychefserver.example.com`` (and not something like ``mychefserver``)."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_hostname.rst:7
+# 1f5b5fd555694e6e8103d797fb76ab96
+msgid "**IP Address Hostnames** When the |chef server| is run in IPv6 mode, a hostname specified using an IP address must also be bracketed (``[ ]``) or the |chef server| will not be able to recognize it as an IPv6 address. For example:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_hostname.rst:13
+# 446f5ba523e74d939354984723a147f2
+msgid "The ``api_fqdn`` setting can be added to the |enterprise rb| file (it is not there by default). When added, its value should be equal to the |fqdn| or IP address for the service URI used by the |chef server|. Then configure the same value for the ``bookshelf['vip']`` setting prior to installing |chef server oec|. For example: ``api_fqdn \"chef.example.com\"`` or ``api_fqdn 123.45.67.890``."
+msgstr ""
+
+#: ../source/install_server_oec.rst:22
+# 6b260380a87d46cca6aab5d78802cf6f
+msgid "The |fqdn| for the |chef server oec| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef server oec| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef server oec| server is longer than 64 characters, the ``private-chef-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty."
+msgstr ""
+
+#: ../source/install_server_oec.rst:24
+# 5aff0a0459dd4d57962d44441efe9bcf
+msgid "**To verify if a hostname is a FQDN**"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_is_fqdn.rst:4
+# 6877618fac5b45b7ae5238078d8fd12d
+msgid "To verify if a hostname is a |fqdn|, run the following command:"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_is_fqdn.rst:10
+# dbd559493bec4d6a880ed520040e375b
+msgid "If the hostname is a |fqdn|, it will return something like:"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_is_fqdn.rst:16
+# 26200c2d9bb74be1a389220c32cda3a9
+msgid "If the hostname is not a |fqdn|, it must be configured so that it is one."
+msgstr ""
+
+#: ../source/install_server_oec.rst:28
+# 54d4178be6204ad4acaf61e8df5f5b3b
+msgid "**To verify is a hostname is resolvable**"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_is_resolvable.rst:4
+# 6b2b5ed1f7674672b91b41f2cdf88606
+msgid "To verify is a hostname is resolvable, run the following command:"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_is_resolvable.rst:10
+# 78ff19913033498e894ac7672634340d
+msgid "If the hostname is resolvable, it will return something like:"
+msgstr ""
+
+#: ../source/install_server_oec.rst:32
+# 6b1aebdf4e1d4e6490298b21bcd9f46b
+msgid "**To change a hostname**"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_edit.rst:4
+# 5b4671e1f00f4d539ce68ba518e1e706
+msgid "In some cases, the hostname for the |chef server| needs to be updated. The process for updating a hostname varies, depending on the platform on which the |chef server| will run. Refer to the manual for the platform or contact a local systems administrator for specific guidance for a specific platform. The following example shows how a hostname can be changed when running |redhat| or |centos|:"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_edit.rst:10
+# 46855960eb25446bb30af909065259f7
+msgid "and then:"
+msgstr ""
+
+#: ../source/install_server_oec.rst:36
+# c2277857d28847049e69e2100dc6fd04
+msgid "**To add a hostname to /etc/hosts**"
+msgstr ""
+
+#: ../../step_install/step_install_hostname_add_to_etc_hosts.rst:4
+# 52f1344327a044078f1a59909f036389
+msgid "If a hostname is not resolvable, refer to a local systems administrator for specific guidance on how to add the hostname to the |dns| system. If the |chef server| is being into a testing environment, just add the hostname to ``/etc/hosts``. The following example shows how a hostname can be added to ``/etc/hosts`` when running |redhat| or |centos|:"
+msgstr ""
+

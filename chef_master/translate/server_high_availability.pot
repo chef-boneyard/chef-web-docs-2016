@@ -1,0 +1,600 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-02 15:47-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_high_availability.rst:8
+# e4bf9ff1ea1f4b6984cf0fbb18175466
+msgid "High Availability"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:4
+# 82d829dd39d646a79fcb046aec27e3e9
+msgid "|chef server oec| can operate in a high availability configuration that provides automated failover for stateful components in the system architecture. This configuration splits servers into two segments: front-end and back-end servers. The front-end servers handle requests to the user interface and requests that use the |api chef server|. The back-end servers handle data storage and retrieval, which consists of:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:6
+# 938a6a6aa44c405683bad9fe790ad82b
+msgid "|couch db|"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:7
+# e9ec92d3b2774a1b9ef9dfb56966333c
+msgid "|postgresql|"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:8
+# ecad9a6701c049849003bc7867c1b50e
+msgid "|opscode solr|"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:9
+# 6a2af6406cc14ea6bd2b1b3e952e20d3
+msgid "|rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:10
+# dc7acb9960ec42bb8709d246f5a2e3eb
+msgid "|redis|"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:11
+# 1e5c0fa4448b4e06a39642e233474ae6
+msgid "Cookbook data"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:13
+# 5933cac9e6784300bec379a15182bd65
+msgid "Failover on the back-end servers is achieved using the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:15
+# f91d325fd41e48a0a7536cf344e718cf
+msgid "Asynchronous block level replication of logical volume managers using |drbd|, positioned between two back-end servers"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:16
+# e659ad4adb9b414a8ba86e9901fccf91
+msgid "A primary and backup cluster election using |vrrp| over unicast TCP/IP and |keepalived|"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:17
+# dce374ecc76e435fb7bbdda6d96ecc68
+msgid "A virtual IP address to the primary server, maintained based on the results of the election done by |keepalived|"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:21
+# 1b5a733ce881482f822685bb1bc59caa
+msgid "The front-end servers require load-balancers. |company_name| recommends:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:23
+# d66d21bd9c4a4a518cd3821696dedfa2
+msgid "Hardware load-balancers (such as |f5| or |netscalar|)"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:24
+# af9bc7732c924587b0fe48e33576c96e
+msgid "|ssl| off-loading"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha.rst:25
+# 62833638aeb9457a98cdb034dda41fea
+msgid "Round-robin as the load-balancing algorithm"
+msgstr ""
+
+#: ../source/server_high_availability.rst:13
+# 27bdb4b6e8704d4991015440868a1bb8
+msgid "Scalability"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scalability.rst:4
+# 9154bbb956cb4ac9be4da81798b73a4c
+msgid "Scalability for front-end servers is achieved by horizontally scaling the number of servers."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scalability.rst:6
+# fb4884b3558e4b3a8ee41dba91a74256
+msgid "Scalability for back-end servers is achieved by vertically scaling the servers. For example, adding memory, CPU, and faster disks will all increase throughput from the back-end servers. Faster disks, and dedicated network interface cards will all increase the reliability of |drbd| and the responsiveness of |chef server oec|."
+msgstr ""
+
+#: ../source/server_high_availability.rst:17
+# fcfa98ff7037429f8e33019e30684b6c
+msgid "Failover and Recovery"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_failover.rst:4
+# 28e3295f036042d9abc5c9afa7a17f5b
+msgid "When the primary server in the cluster fails, the |vrrp| heartbeat will stop. At this point the backup server will begin transitioning to the primary state, which involves:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_failover.rst:6
+# 3ecbf78af68a4c69a90264b474a3a15a
+msgid "Assigning the virtual IP address and sending a ``proxy-arp``"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_failover.rst:7
+# 893de3bb7625486abeb217aec1f715a6
+msgid "Attempting to take-over as the primary server for the |drbd| device"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_failover.rst:8
+# dd47c53b983a4848a209e1699ba652a4
+msgid "Starting all of the back-end services"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_failover.rst:10
+# 5641523d4a7c4ce989af6eb1d0aefb5b
+msgid "The first step is transitioning the virtual IP address, which means that traffic will flow to the backup server while it makes the transition to being the primary server."
+msgstr ""
+
+#: ../source/server_high_availability.rst:21
+# f477585f9ea940609018a00a94c38602
+msgid "Graceful Transitions"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_transitions.rst:4
+# 4b57a0a1e4834b5f9835118e0a013f6c
+msgid "The |keepalived| service manages the |vrrp| and cluster transitions. It should be running on both the primary and secondary servers. To transition from the primary to the secondary, simply run the following on the primary:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_transitions.rst:10
+# 878597450bcc46b3a0fe523161de718f
+msgid "which will initiate a failover from the primary to the secondary. This will cause the current primary to:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_transitions.rst:12
+# f01e8ee1a43e449ba84702e938cab868
+msgid "Remove the virtual IP address."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_transitions.rst:13
+# 623a363785a24a71a247c5b6652f6fa7
+msgid "Stop the services."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_transitions.rst:14
+# a6521af6b2b14cccb82b566ca4ddb7bc
+msgid "Unmount the |drbd| device."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_transitions.rst:15
+# 33bfa135479849bc865d6cb357a8c0d9
+msgid "Becoming secondary for the |drbd| device."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_transitions.rst:17
+# c45c1d1df0a440d7bbb3be22090c9aaf
+msgid "Meanwhile, the backup will be undergoing the same steps as listed above. Use the ``ha-status`` option to view the progress:"
+msgstr ""
+
+#: ../source/server_high_availability.rst:25
+# 59505fb1aa7b47a4a98a2e6cf8e4f674
+msgid "Status"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:4
+# 22383bf791a849779cb6e2c03f6dfa5a
+msgid "The ``/_status`` endpoint can be used to check the status of communications between the front and back end servers. This endpoint is located at ``/_status`` on the front end servers."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:6
+# d254ec55b310406c969801847a400984
+msgid "**Request**"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:12
+# e9dc00732d5a4838be4d00aa422496a2
+msgid "This method has no request body."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:14
+# a644e9cc50a94d8b892720d2f0d2c6c1
+msgid "**Response**"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:16
+# 8c256534a5244c5e9e58e7464a141ce8
+msgid "The response will return something like the following:"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:31
+# b85c99ddf96747e2ad9bb392a95cdca4
+msgid "**Response Codes**"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:37
+# 2984ccca1905443cb94939f60bf8b289
+msgid "Response Code"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:38
+# ad77240c88cc45dd9a78a8850be0d487
+msgid "Description"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:39
+# ebe055c720ee42e885c492a38724bd32
+msgid "``200``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:40
+# 8675b823c78a460b8dbb2ec476bea5e4
+msgid "All communications are OK."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:41
+# 631f833936c44da088aaac8fd51cfd80
+msgid "``500``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:42
+# ca63a022cf4b4ed5905d5539a5e64c33
+msgid "One (or more) services are down. For example:"
+msgstr ""
+
+#: ../source/server_high_availability.rst:29
+# 915632a9aad74c7da8c2208833601105
+msgid "DRBD"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd.rst:4
+# b5863d30c8bb4d2391e06a90537b30d9
+msgid "|drbd| is used as part of a |ha| topology for |chef server oec|. More information about |drbd| is available from their website: http://www.drbd.org."
+msgstr ""
+
+#: ../source/server_high_availability.rst:33
+# fb141ff9b3804b758a58eb5d0a47b451
+msgid "Split Brains"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_split_brain.rst:4
+# b608d2019ac4432a8c5fada75a5798e8
+msgid "A ``split-brain`` event is a concept of clustered computing systems in which the cluster loses its heartbeat communication channel and becomes two unconnected pieces. Recovery from a ``split-brain`` event can be a complex issue and different clustering software packages use different methods."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_split_brain.rst:6
+# 26a3368e70ba4fc4b14348b091979823
+msgid "Failures happen, so completely preventing a ``split-brain`` event is not an absolute possibility. However, it is possible to alleviate some of the issues that crop up in any ``split-brain`` event scenarios by maxing out the heartbeat network bandwidth and optimizing transfer protocols."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_split_brain.rst:8
+# 5d3df00afe074226bde90be49e5442c8
+msgid "|drbd| is a shared-nothing system. Data is replicated between hosts over a dedicated network link rather than stored on a central network-attached storage (NAS) or storage attached network (SAN) to which all hosts are connected. The most critical issue for storage in a |ha| topology is loss of or corruption of data. Maximizing the amount of data that can be passed over the wire while all systems are up and running correctly minimizes the chance that something will be lost or unrecoverable if a host goes down."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_split_brain.rst:10
+# da13a051303244c1a186f568d1041551
+msgid "At any given time, only one |drbd| host has ``userland`` access to data, This host is referred to as the primary node. The other host runs the |drbd| daemon, but cannot mount the storage into the file system. The secondary node receives information from the primary node, and then replicates disk actions on its local storage copy (even if the partition looks like it doesn’t have a file system to which a ``mount`` command can be sent)."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_split_brain.rst:12
+# abc3a83e5133443392a77e91bdf778b0
+msgid "The approach that |drbd| takes to ``split-brain`` event situations is to degrade all partners still alive to secondary status, and then wait for manual intervention. This is called auto-fencing, with a goal of minimizing the potential for damage to your data. When you lose one of the partners in a |ha| topology, a bit of manual intervention is required to ensure that the disks aren’t in a bad state and can be brought back up. These scenarios are discussed below, including suggestions for diagnosing and recovering from each scenario."
+msgstr ""
+
+#: ../source/server_high_availability.rst:37
+# 844a78b42be4453882461cdafbee073e
+msgid "Split-brain Handlers"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_handlers.rst:4
+# d37d78d643df4d7c91520172d1a81544
+msgid "|drbd| configuration allows for custom handlers when a ``split-brain`` event happens. The basic handler sends a notification email to a configurable email address so the issue can be investigated."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_handlers.rst:6
+# 14aa89555a574bb8b81186ab03b34e39
+msgid "The ``drbd.conf`` file that is used with |chef server oec| specifies other built-in actions that may be taken in certain fault scenarios:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_handlers.rst:14
+# c1e6315251d34da9adefa1cf728e7803
+msgid "What this means:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_handlers.rst:16
+# 9f81bd723b314b88912411dba91dd870
+msgid "after-sb-0pri: A ``split-brain`` event has been detected and neither node is the primary node. The ``discard-younger-primary`` action will roll back any changes made on the last host that was the primary node."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_handlers.rst:17
+# 67b05a2349fa451fa147903dd4c7f0fe
+msgid "after-sb-1pri: A ``split-brain`` event has been detected and only one node believes that it was the primary node when the event happened. The ``discard-secondary`` action will continue operations on the primary node and will assume that the secondary node was lost."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_handlers.rst:18
+# 2ca7c169c27d479bb717da9483b7d481
+msgid "after-sb-2pri: A ``split-brain`` event has been detected and both nodes believed they were primary nodes. The ``call-pri-lost-after-sb`` action will attempt to apply the ``discard-younger-primary`` from the ``0pri`` configuration to determine which host should be the primary node. Once determined, the other host takes action to become the secondary node."
+msgstr ""
+
+#: ../source/server_high_availability.rst:41
+# 4a4cd93db1154dd58ebeb4dd90726427
+msgid "Assumptions"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:4
+# 3652ad9aceac4521af41a88badbd9455
+msgid "The following assumptions exist when |chef private| is deployed in a |ha| topology:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:6
+# 23cb2f2b891f4ae983bc303bdcf41550
+msgid "The back-end processes run on two hosts: ``BE1`` and ``BE2``. ``BE1`` is the |drbd| primary and |chef server oec| master; ``BE2`` is the |drbd| secondary and the |chef server oec| backup"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:7
+# 54c14b7acd514a6b9bbeae07a3ffebf3
+msgid "The back-end uses |keepalived| and a dedicated network interface for heartbeat"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:8
+# e7475f3e6f5f4161a684e95b9218a9c9
+msgid "The back-end uses |drbd| for file redundancy"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:10
+# 1a42a370dbc042c2ad5b550c8b51ed28
+msgid "On each host, its own status is reported first, and then the status of its remote partner."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:12
+# 00b0001dc7d0400c9515f7b01f300281
+msgid "When both the primary and secondary nodes are running and behaving as expected, the contents of ``/proc/drbd`` on the primary node will look similar to the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:21
+# 8a98f8df3d0e48cbb286c2cbd447fbdf
+msgid "On the secondary node, the status will look similar to the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_drbd_assumptions.rst:30
+# c39abb1f1e5c4ea1b9fc7d6485ae99da
+msgid "For information about the settings in this file, see the |drbd| website: http://www.drbd.org/users-guide/ch-admin.html."
+msgstr ""
+
+#: ../source/server_high_availability.rst:45
+# de1e66075b064ac783982ef354d1c9d1
+msgid "Failure Scenarios"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario.rst:4
+# 3531a957dd0043b8baa6ed410096a37f
+msgid "The following four common scenarios are discussed:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario.rst:6
+# e66bb153bd98493594b408853413dd8c
+msgid "Back-end server #2 fails gracefully (all data is synced)"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario.rst:7
+# 52e97e6d0ee04665be5c6204fa0fda76
+msgid "Back-end server #2 hard fails badly (unsynced data)"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario.rst:8
+# 3a986f2d46c8435da2c493a3b38fe2f6
+msgid "Back-end server #1 fails gracefully (all data is synced)"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario.rst:9
+# c814063fb7d1459e8e4d38ba7e66011b
+msgid "Back-end server #1 hard fails badly (unsynced data)"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario.rst:10
+# 1e690e294e454ff9ba1f066fc555a03d
+msgid "Both hosts are up as secondary, and |chef server oec| is unhappy"
+msgstr ""
+
+#: ../source/server_high_availability.rst:49
+# e0f80f7dcb8140558f7ea64450a12e54
+msgid "Scenarios 1 and 2"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:4
+# 5bca473b37f44853a85bce07002e8d39
+msgid "When the acting backup server fails, |drbd| on the master will continue to function in primary mode, whether the |drbd| on the secondary was shut down gracefully or became unavailable unexpectedly. Verify that |drbd| is functioning by running ``drbdadm role pc0`` on the primary:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:12
+# 481fd4f6014b46dd95e6c9c8ecfddc9e
+msgid "You can see the full status by running cat ``/proc/drbd``:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:21
+# 424d939697c649b8bea492b44facd9f8
+msgid "The disk partition is still mounted into the file system and can be used as normal."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:23
+# 8eeb80a2dde2480b918161c9c278c71c
+msgid "When the secondary becomes available again, two things may happen:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:25
+# 913e9fdd59ca4d8cb48115a7913abd64
+msgid "If the status of the secondary reports ``Inconsistent`` or ``UpToDate`` without manual intervention, all is well."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:26
+# 386bcbc3ad884456b7731859b207d227
+msgid "If it remains ``DUnknown``, |drbd| on the secondary can be manually restarted and it will start to sync. The ``DUnknown`` status is the report which indicates that |drbd| sees no network connection to its partner."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:28
+# 8b6aef94ff8344c1aa1f9ccdc391e16e
+msgid "The last field in the ``/prod/drbd`` file (``oos``) reports how far the primary is out of sync with its partner. If the secondary is down and there are a lot of writes on the primary, this number will increase. For example:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:37
+# 57bb0465e03a498aa80f6c09b350ebf1
+msgid "When the disks return to a synced state, that field will return to ``0``. While the secondary is syncing, status about the syncing process will be shown for both hosts. For the secondary, something like the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:47
+# 1cffdca2811b4faa882a7048a595ed16
+msgid "and for the primary, something like the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:58
+# a482a1d03e424b9087638bb01b2a757e
+msgid "Eventually the hosts will quiesce and report ``ds:UpToDate/UpToDate``. Depending on how long the secondary was down, how much data was written to the primary in the interim, and the speed of the shared network, this process could be nearly instantaneous, or could take several minutes. Your |chef server oec| processes should not need to be manipulated in any way during this recovery."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst:60
+# c927c56f6f304d98a3dc0abc0300a3c8
+msgid "If the secondary host is lost completely, a new host can be installed in its place, the device built, and then |drbd| started. The new host will pair with the existing primary, sync data, and be ready to take over if necessary."
+msgstr ""
+
+#: ../source/server_high_availability.rst:53
+# 1ed6ce8da49242d483d6b7a0c6a9647e
+msgid "Scenario 3"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:4
+# 6a5af55d1292432c86b7683076106196
+msgid "Trouble starts when the |drbd| primary is the host that becomes unavailable. The |drbd| process on the secondary makes no assumptions about whether or not it should automatically take over, based on the split-brain configurations in the ``drbd.conf`` file."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:6
+# c1aa551876a047f8bbcb4c21b19828a5
+msgid "Basically, what this means is that when the primary becomes unavailable to the secondary without an explicit takeover being initiated, the secondary will assume that it itself is the wrong, ``split-brained`` host, and is the one unconnected and incorrect. It will take no automatic action."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:8
+# 227af3a44a504f03922a9f41a20b09c8
+msgid "The status of the secondary will look something like the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:17
+# ba444f016a564b25af703d0346ae6fdc
+msgid "The ``ds:UpToDate/Unknown`` is important; it indicates that the secondary has all the data that was on the primary and won’t lose anything if it is promoted."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:19
+# 467951bd69b04f44a58b44cfed520507
+msgid "If it is verified that the primary host is going to be down for a while, the secondary can be promoted to primary:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:25
+# 89116232f1c540509249b0043c0e8538
+msgid "at that point the status will change to something like the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:34
+# 9da2370b398a4a3e839fffef54479009
+msgid "Notice that ``ro`` is now ``ro:Primary/Unknown``. |chef server oec| can now be recovered by entering the following command:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:40
+# bc54c06c842e4725b1261c956b267c24
+msgid "This will start up the configured services and |chef server oec| will be master on this host."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:42
+# 50e316759d4f48d8b1ba1bdd5c3c48a5
+msgid "If the original primary can be brought back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host’s original primary |chef server oec| master status."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:44
+# 237af941321f4224bb6913544bafb42b
+msgid "The first thing it will do is attempt to promote itself to |drbd| primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the pair of servers in a good state, with the second back-end box as the |drbd| primary |chef server oec| master."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_3.rst:46
+# 63607c327aa042ce8fd9d96400813dd7
+msgid "|drbd| on the first back-end server will sync to the second back-end server and will become the clean secondary |fqdn|."
+msgstr ""
+
+#: ../source/server_high_availability.rst:57
+# ee75d9634b574d7daf0d957e0c1ca7b2
+msgid "Scenario 4"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:4
+# f0e811e3e9724594b89d6703aed787f9
+msgid "So far, the scenarios have not described any data loss. When the hosts in the High Availability pair are synced, either can be lost and the data will be safe."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:6
+# 0470d6a06162484b9e7757e97c881f64
+msgid "If you get to a situation in which the primary host is lost and unrecoverable, but the last status of the |drbd| pair was reporting that the secondary node was in an ``Inconsistent`` state, it is very likely that some data will be lost. The |drbd| status on the remaining host will look something like the following:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:15
+# 6aa41e44d33447e2aed1f9d8e9036995
+msgid "As long as good source code management is practiced with cookbooks and other files in the |chef| repository, any missing bits can be re-uploaded after there is a working cluster. In some cases, newly-created users or organizations will need to be re-created. Other actions, such as |chef| runs and uploads may fail while the cluster is in an ``Inconsistent`` state, but will be fine after there is a working cluster."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:17
+# 388a1035ce65465f9f30c4e7bc66f6bc
+msgid "When the primary back-end server has been lost while the secondary back-end server is in an ``Inconsistent`` state and it's not going to be back online quickly, the best thing to do is to provision another host to become the new |chef server oec| cluster partner for the secondary back-end server, and then build it out. If the new host has an IP address that is different from the primary back-end server, change the configuration on the secondary back-end server, and then reconfigure."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:19
+# 72c411da5f45446fbe99d0d34809451d
+msgid "In this situation, |chef server oec| may be freaking out a bit, so turn off the daemons using the ``private-chef-ctl stop`` command."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:21
+# 6601b9f1888944059d3f5b2ceb716557
+msgid "Once the new host is identified and the |drbd| devices on that host are ready, bring up |drbd| and get it talking to the secondary back-end server. This secondary server should not want to be the primary server; it should be waiting for the old primary server to return. Start up |drbd| on the new host and verify that it is listening on the correct port and that the status in ``/proc/drbd`` is reporting that the host is up, but in the ``WFConnect: waiting for connection`` state."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:23
+# f9b7906cdce04e2b951decc02dc81a12
+msgid "By the time you get the new node is up, the secondary back-end server may have taken itself into ``standalone`` mode, which means that it is no longer listening on the network port. In this situation, run the following commands to get the secondary back-end server to talk to the new node:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:29
+#: ../../includes_server_ha/includes_server_ha_scenario_5.rst:12
+# 8225232732be499096cd9e2e1c025dfe
+# 2be373d0ae82458c988614aba44413a9
+msgid "and:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:35
+# 07286bff1eb34d1baf4f341d8b44167b
+msgid "At this point, the new host should be synchronizing with the secondary back-end server. The secondary back-end server will forget all about the data it was missing from the now-gone primary back-end server, and the process of bringing |chef server oec| back online can begin."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_4.rst:37
+# 6dabd9e125324be09abe4222ecba7402
+msgid "Running a fast network between the primary and secondary hosts, and keeping it full throttle for |drbd| transfers, will go a long way to mitigating the any damage that may be done in the event of a loss of the primary from an un-synced cluster."
+msgstr ""
+
+#: ../source/server_high_availability.rst:61
+# 19e27131ce0e4ffa8db4338c71c2858f
+msgid "Scenario 5"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_5.rst:4
+# bdca7b621fda4b3fbef0b9a2785eddb7
+msgid "Sometimes |drbd| hedges its bets, and puts both nodes in a pair into secondary mode. When this happens, you can look at the contents of ``/proc/drbd`` on both hosts and see if either of them is showing out of sync. If they are both ``oos:0``, just pick one and promote it to primary using the ``drbdadm primary pc0`` command. If one or both of the hosts is out of sync, choose the one with the lower amount of ``oos`` and promote it to primary."
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_5.rst:6
+# 5348f903372f4cb4aee3cdd61ea63cd9
+msgid "If the chosen node won’t promote, run the following commands on the other host to reset its disk state:"
+msgstr ""
+
+#: ../../includes_server_ha/includes_server_ha_scenario_5.rst:18
+# 9bcb2722035c4005b7477f71585981ce
+msgid "That will tell |drbd| to abandon what is on the node and start over, and should allow it to sync with the primary."
+msgstr ""
+
