@@ -192,6 +192,7 @@ Cookbooks
    config_rb_push_jobs_server
    config_rb_solo
    config_yml_kitchen
+   containers
    cookbooks
    ctl_chef
    ctl_chef_apply
