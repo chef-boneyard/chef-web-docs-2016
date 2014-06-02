@@ -79,11 +79,6 @@ This configuration file has the following settings:
        ::
  
           node_name "mynode.example.com"
-   * - ``node_path``
-     - |node_path| For example:
-       ::
- 
-          node_path "/var/chef/node"
    * - ``recipe_url``
      - |recipe_url| For example:
        ::

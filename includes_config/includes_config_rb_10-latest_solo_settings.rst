@@ -85,11 +85,6 @@ This configuration file has the following settings:
        ::
  
           node_name "mynode.example.com"
-   * - ``node_path``
-     - |node_path| For example:
-       ::
- 
-          node_path "/var/chef/node"
    * - ``openid_cstore_couchdb``
      - |openid_cstore_couchdb| Default value: ``false``. For example:
        ::
