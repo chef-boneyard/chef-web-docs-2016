@@ -16,5 +16,5 @@ The following example shows how a ``case`` statement can be used to handle a sit
      source "application-#{node[:languages][:perl][:version]}.pm"
      owner "root"
      group "root"
-     mode 0644
+     mode "0644"
    end

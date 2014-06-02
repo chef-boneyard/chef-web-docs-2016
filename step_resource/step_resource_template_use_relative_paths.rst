@@ -7,6 +7,6 @@
 
    template "#{ENV['HOME']}/chef-getting-started.txt" do
      source "chef-getting-started.txt.erb"
-     mode 00644
+     mode "0644"
    end
 

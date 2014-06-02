@@ -22,5 +22,5 @@ Convert new lines in the private key to ``\n`` when copying it to the data bag. 
    file "/tmp/private_code/.ssh/id_deploy" do
      content app['deploy_key']
      owner "ubuntu"
-     mode 00600
+     mode "0600"
    end

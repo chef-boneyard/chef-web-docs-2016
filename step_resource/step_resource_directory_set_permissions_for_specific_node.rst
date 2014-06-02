@@ -7,7 +7,7 @@ The following example shows how permissions can be set for the "/certificates" d
    directory "#{node[:nginx][:dir]}/shared/certificates" do
      owner "root"
      group "root"
-     mode "700"
+     mode "0700"
      recursive true
    end
 

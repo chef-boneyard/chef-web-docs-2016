@@ -5,14 +5,7 @@
 .. code-block:: ruby
 
    file "/tmp/something" do
-     mode "644"
+     mode "0644"
    end
  
-or:
-
-.. code-block:: ruby
-
-   file "/tmp/something" do
-     mode 00644
-   end
 

@@ -27,7 +27,7 @@ The recipe then does the following to:
      source "modules/authorized_ip.erb"
      owner "root"
      group "root"
-     mode 00644
+     mode "0644"
      variables(
        :remote_ip_var => node['nginx']['remote_ip_var'],
        :authorized_ips => node['nginx']['authorized_ips']
