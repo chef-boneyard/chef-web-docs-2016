@@ -28,14 +28,4 @@ Examples
 
 **Start apachectl in a container**
 
-.. code-block:: ruby
-
-   require 'chef/container'
-   
-   service 'apache2' do
-     action :start
-   end
-   
-   container_service 'apache2' do
-     command 'apachectl -k start'
-   end
+.. include:: ../../step_resource/step_resource_container_service_start_apachectl.rst
