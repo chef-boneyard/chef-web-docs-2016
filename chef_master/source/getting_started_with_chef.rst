@@ -11,5 +11,3 @@ http://nathenharvey.com/blog/2012/12/07/learning-chef-part-2/
 http://nathenharvey.com/blog/2012/12/14/learning-chef-part-3/
 http://nathenharvey.com/blog/2012/12/19/learning-chef-part-4/
 http://nathenharvey.com/blog/2012/12/28/learning-chef-part-5/
-
-   
