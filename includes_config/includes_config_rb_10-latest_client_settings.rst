@@ -158,7 +158,7 @@ This configuration file has the following settings:
  
           node_name "mynode.example.com"
    * - ``node_path``
-     - |node_path| Default value: ``/var/chef/node``. For example:
+     - |node_path_10| Default value: ``/var/chef/node``. For example:
        ::
  
           node_path "/var/chef/node"
