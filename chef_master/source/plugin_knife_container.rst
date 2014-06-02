@@ -47,15 +47,4 @@ Examples
 -----------------------------------------------------
 **Create a Dockerfile**
 
-.. code-block:: bash
-
-   $ knife container docker init -d /path/to/Dockerfile
-
-will create a |dockerfile| similar to:
-
-.. code-block:: ruby
-
-   FROM chef/ubuntu_12.04
-   ADD chef/ /chef/
-   RUN chef-client -c /chef/zero.rb -j /chef/first-boot.json -z
-   ENTRYPOINT ["chef-init"]
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
