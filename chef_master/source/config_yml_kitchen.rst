@@ -39,3 +39,7 @@ The following examples show actual |kitchen yml| files used in |company_name|-ma
 |cookbook yum| Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_yum.rst
+
+Platform Attributes
+--------------------------------------------------------------------------
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_frontend_backend.rst

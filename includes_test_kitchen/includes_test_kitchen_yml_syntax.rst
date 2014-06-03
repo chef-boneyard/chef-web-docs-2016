@@ -35,6 +35,7 @@ where:
 * ``driver_name`` is the name of a driver that will be used to create platform instances used during cookbook testing. For example, ``vagrant`` is the name to use for the ``kitchen-vagrant`` driver; some drivers support custom settings
 * ``provisioner_name`` specifies how the |chef client| will be simulated during testing. ``chef_zero``  and ``chef_solo`` are the most common provisioners used for testing cookbooks
 * ``platform-version`` is a the name of a platform on which |kitchen| will perform cookbook testing, for example, ``ubuntu-12.04`` or ``centos-6.4``; depending on the platform, additional driver details---for example, instance names and URLs used with cloud platforms like |openstack| or |amazon ec2|---may be required
+* ``platforms`` may define |chef server| attributes that are common to the collection of test suites
 * ``suites`` is a collection of test suites, with each ``suite_name`` grouping defining an aspect of a cookbook to be tested. Each ``suite_name`` must specify a run-list, for example: 
    
    .. code-block:: ruby
@@ -70,3 +71,4 @@ For example, a very simple |kitchen yml| file:
 
 
 This file uses |vagrant| as the driver, which requires no additional configuration because it's the default driver used by |kitchen|, |chef zero| as the provisioner, and a single (default) test suite that runs on |ubuntu| 12.04, |centos| 6.4, and |debian| 7.1.0.
+
