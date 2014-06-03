@@ -51,7 +51,7 @@ There are other applications out there that do things similar to |chef|. We beli
 
 |puppet|
 -----------------------------------------------------
-|puppet| evolved from |cfengine| and showed potential to be a new kind of configuration management. The original design of |chef| was strongly influenced by our own experiences working with and contributing to the |puppet| project. That said, |chef| does contain any code from |puppet|, and is not a "fork" of the |puppet| project. 
+|puppet| evolved from |cfengine| and showed potential to be a new kind of configuration management. The original design of |chef| was strongly influenced by our own experiences working with and contributing to the |puppet| project. That said, |chef| does **not** contain any code from |puppet|, and is not a "fork" of the |puppet| project. 
 
 |chef| is different from |puppet| in a number of important ways:
 
