@@ -258,7 +258,7 @@ Use a single asterisk (*) to mark a text string as *italics*. What it looks like
 
 Code Strings
 -----------------------------------------------------
-Sometimes the name of a method or database field needs to be used inline in a paragraph. Use two backquotes (`) to mark certain strings as code within a regular string of text. What it looks like as reST:: 
+Sometimes the name of a method or database field needs to be used inline in a paragraph. Use two backquotes to mark certain strings as code within a regular string of text. What it looks like as reST:: 
 
    ``code goes here``
 
@@ -375,6 +375,8 @@ Literal
 -----------------------------------------------------
 These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``, such as showing a directory structure, basic syntax, or pseudocode. What it looks like as reST::
 
+   the end of a preceding paragraph, which is then followed by a literal block:
+   
       a block of literal text indented three spaces
       with more
       text as required to
