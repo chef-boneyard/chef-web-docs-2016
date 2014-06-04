@@ -1,0 +1,162 @@
+{%- block doctype -%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{%- endblock %}
+{%- set script_files = script_files + [pathto("_static/jquery.sidebar.js", 1)] %}
+{%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
+{%- set reldelim2 = reldelim2 is not defined and ' •' or reldelim2 %}
+                     
+{%- macro relbar() %}
+    <div class="subnav boxheader">
+	<ul class="noprint">
+		<li><a href="http://docs.opscode.com">Home</a></li>
+		<li>•</li>
+		<li><a href="http://docs.opscode.com/chef_overview.html">Getting Started</a></li>
+		<li>•</li>
+		<li><a href="http://docs.opscode.com/chef/resources.html">Resources Reference</a></li>
+		<li>•</li>
+		<li><a href="http://docs.opscode.com/client">chef-client</a></li>
+		<li>•</li>
+		<li><a href="http://docs.opscode.com/enterprise">Chef Server</a></li>
+		<li>•</li>
+		<li><a href="http://docs.opscode.com/devkit">chef-dk</a></li>
+		<li>•</li>
+		<li><a href="http://learnchef.opscode.com">Learnchef.com</a></li>
+		<li>•</li>
+		<li><a href="http://docs.opscode.com/index.html">Full Index</a></li>
+		<li>•</li>
+		<li><a href="http://docs.opscode.com/search.html">Search</a></li>
+	</ul>
+    </div>
+
+{%- endmacro %}
+
+{%- macro sidebar() %}
+      {%- if not embedded %}{% if not theme_nosidebar|tobool %}
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+          {%- block sidebarlogo %}
+          {%- if logo %}
+            <p class="logo"><a href="{{ pathto(master_doc) }}">
+              <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+            </a></p>
+          {%- endif %}
+          {%- endblock %}
+          {%- block sidebartoc %}
+          {%- if display_toc %}
+            <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
+            {{ toc }}
+          {%- endif %}
+          {%- endblock %}      
+
+          {%- block sidebarsourcelink %}
+          
+          {%- endblock %}
+          {%- if customsidebar %}
+          {% include customsidebar %}
+          {%- endif %}
+          {%- block sidebarsearch %}
+          {%- if pagename != "search" %}
+          <div id="searchbox" style="display: none">
+            <h3>{{ _('Quick Search') }}</h3>
+              <form class="search" action="{{ pathto('search') }}" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="{{ _('Go') }}" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip">
+              {{ _('Enter search terms, and then click Go!') }}
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+          {%- endif %}
+          {%- endblock %}
+        </div>
+      </div>
+      {%- endif %}{% endif %}
+{%- endmacro %}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {{ metatags }}
+    {%- if not embedded and docstitle %}
+      {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+    {%- else %}
+      {%- set titlesuffix = "" %}
+    {%- endif %}
+    <title>{{ title|striptags }}{{ titlesuffix }}</title>
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    {%- if not embedded %}
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '{{ pathto("", 1) }}',
+        VERSION:     '{{ release|e }}',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '{{ file_suffix }}',
+        HAS_SOURCE:  {{ has_source|lower }}
+      };
+    </script>
+    {%- for scriptfile in script_files %}
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+    {%- endfor %}
+    {%- if favicon %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    {%- endif %}
+    {%- endif %}
+
+  </head>
+  <body> 
+    
+    <div class="document">
+    <div id="pageheader"></div>
+{%- block relbar1 %}{{ relbar() }}{% endblock %}
+
+{%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+ 
+{%- block document %}
+      <div class="documentwrapper">
+      {%- if not embedded %}{% if not theme_nosidebar|tobool %}
+        <div class="bodywrapper">
+      {%- endif %}{% endif %}
+          <div class="body">
+            {% block body %} {% endblock %}
+          </div>
+      {%- if not embedded %}{% if not theme_nosidebar|tobool %}
+        </div>
+      {%- endif %}{% endif %}
+      </div>
+{%- endblock %}
+  
+{%- block sidebar2 %}{{ sidebar() }}{% endblock %}
+      <div class="clearer"></div>
+
+
+
+
+{%- block footer %}
+    <div class="footer">
+
+    {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Documentation for {{ last_updated }}.{% endtrans %}
+    {%- endif %}
+
+    &nbsp;Send feedback to <a href="mailto:docs@getchef.com">docs@getchef.com</a>.
+
+    {%- if show_copyright %}
+      {% trans copyright=copyright|e %} {{ copyright }} {% endtrans %}
+    {%- endif %}
+
+    </div>
+{%- endblock %}
+
+
+
+
+    </div>
+  </body>
+</html>
+ 
