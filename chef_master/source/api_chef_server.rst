@@ -28,6 +28,8 @@ The following authentication headers are required:
      - Description
    * - ``Accept``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst
+   * - ``Content-Type``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_content_type.rst
    * - ``Host``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst
    * - ``X-Chef-Version``
