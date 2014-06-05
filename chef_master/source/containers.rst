@@ -12,6 +12,14 @@ Using Docker
 
 .. image:: ../../images/containers_docker.png
 
+Install chef-container Library
+-----------------------------------------------------
+To use the |resource container_service| resource and the |subcommand knife container| subcommands (``knife docker build`` and ``knife docker init``), install the ``chef-container`` library. Run the following command:
+
+.. code-block:: bash
+
+   $ gem install chef-container
+
 Using |chef| with |docker|
 -----------------------------------------------------
 .. include:: ../../includes_containers/includes_containers_docker_chef.rst
