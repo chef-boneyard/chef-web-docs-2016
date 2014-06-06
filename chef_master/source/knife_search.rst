@@ -10,6 +10,84 @@ Syntax
 =====================================================
 .. include:: ../../includes_knife/includes_knife_search_syntax.rst
 
+Query Syntax
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_query_syntax.rst
+
+About Keys
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_key.rst
+
+Nested Fields
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_key_nested.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_search/step_search_key_name.rst
+
+.. include:: ../../step_search/step_search_key_wildcard_question_mark.rst
+
+.. include:: ../../step_search/step_search_key_wildcard_asterisk.rst
+
+.. include:: ../../step_search/step_search_key_nested_starting_with.rst
+
+.. include:: ../../step_search/step_search_key_nested_range.rst
+
+About Patterns
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_pattern.rst
+
+Exact Matching
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_pattern_exact.rst
+
+.. include:: ../../step_search/step_search_pattern_exact_key_and_item.rst
+
+.. include:: ../../step_search/step_search_pattern_exact_key_and_item_string.rst
+
+Wildcard Matching
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_pattern_wildcard.rst
+
+.. include:: ../../step_search/step_search_pattern_wildcard_any_node.rst
+
+.. include:: ../../step_search/step_search_pattern_wildcard_node_contains.rst
+
+Range Matching
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_pattern_range.rst
+
+.. include:: ../../step_search/step_search_pattern_range_in_between.rst
+
+.. include:: ../../step_search/step_search_pattern_range_exclusive.rst
+
+Fuzzy Matching
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_pattern_fuzzy.rst
+
+.. include:: ../../step_search/step_search_pattern_fuzzy.rst
+
+About Operators
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_boolean_operators.rst
+
+AND
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_search/step_search_boolean_and.rst
+
+NOT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_search/step_search_boolean_not.rst
+
+OR
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_search/step_search_boolean_or.rst
+
+Special Characters
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_special_characters.rst
+
 Options
 =====================================================
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
