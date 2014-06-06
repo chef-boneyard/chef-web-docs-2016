@@ -4,6 +4,27 @@ Security Notes
 
 The following sections address critical security issues related to |chef|. It is strongly recommended that any actions described below be done as soon as possible. Thank you.
 
+OpenSSL and SSL/TLS MITM (CVE-2014-0224)
+=====================================================
+|company_name| released patched versions of |chef server oec|, |chef server osc|, |chef private|, and the |chef client| to address the `OpenSSL man-in-the-middle (MITM) security vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224>`_.
+
+Background
+-----------------------------------------------------
+An attacker could use a carefully crafted handshake to force the use of weak keying material. This can result in a man-in-the-middle (MITM) attack, allowing an attacker to read or alter traffic between the client and server.
+
+Actions
+-----------------------------------------------------
+The following steps should be taken:
+
+#. Upgrade to the latest version of the |chef server|; click `here <http://www.getchef.com/blog/2014/06/06/chef-server-11-1-1-release/>`__ for |chef server osc|, `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-server-11-1-6-release/>`__ for |chef server oec|, and `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-1-4-11-release/>`__ for |chef private|.
+
+.. TODO: Add step for chef-client
+
+#. After the |chef server| and every |chef client| is patched, you should change user passwords, encryption for data bags, and/or take additional steps to protect other sensitive data.
+
+   .. note:: The private keys and certificates used by the |chef client| do not need to be regenerated unless they have been transferred by paths protected by SSL/TLS. If they have been transferred in that manner, consider regenerating those keys and certificates.
+
+
 OpenSSL and Heartbleed
 =====================================================
 |company_name| released patched versions of |chef server oec|, |chef server osc|, |chef private|, and the |chef client| to address the `OpenSSL security vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160>`_, also known as Heartbleed.
