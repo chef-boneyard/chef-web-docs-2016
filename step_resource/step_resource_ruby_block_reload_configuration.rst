@@ -25,7 +25,7 @@ The following example shows how to reload the configuration of a |chef client| u
        remote_file node[:ohai][:plugin_path] +"/#{plugin}" do
          source plugin
          owner "chef"
-         notifies :create, resources(:ruby_block => "reload_config")
+		 notifies :create, "ruby_block[reload_config]", :immediately
        end
      end
    end
