@@ -7,6 +7,6 @@
    template "/tmp/somefile" do
      mode "0644"
      source "somefile.erb"
-     notifies :reload, "service[apache]"
+     notifies :reload, "service[apache]", :immediately
    end
 
