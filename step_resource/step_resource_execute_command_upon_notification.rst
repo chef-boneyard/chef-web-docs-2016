@@ -12,5 +12,5 @@
    
    template "/tmp/something.ldif" do
      source "something.ldif"
-     notifies :run, "execute[slapadd]"
+     notifies :run, "execute[slapadd]", :immediately
    end

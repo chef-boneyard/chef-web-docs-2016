@@ -10,6 +10,6 @@ The following example shows the |resource scm| resource using the ``git`` short 
      repository node[:libvpx][:git_repository]
      revision node[:libvpx][:git_revision]
      action :sync
-     notifies :run, "bash[compile_libvpx]"
+     notifies :run, "bash[compile_libvpx]", :immediately
    end
 
