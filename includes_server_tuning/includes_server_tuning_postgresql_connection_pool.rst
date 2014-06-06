@@ -7,7 +7,9 @@ Use the following formula to help determine what the increased value should be:
 
 .. code-block:: ruby
 
-   new_value = current_value + [(# of front end machines - 2) * (20 * # of services)]
+   new_value = current_value + [
+               (# of front end machines - 2) * (20 * # of services)
+			   ]
 
 For example, if the current value is 350, there are four front end machines, and all add-ons are installed, then the formula looks like:
 
