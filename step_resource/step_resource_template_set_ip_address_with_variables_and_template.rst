@@ -33,7 +33,7 @@ The recipe then does the following to:
        :authorized_ips => node['nginx']['authorized_ips']
      )
    
-     notifies :reload, resources(:service => "nginx")
+     notifies :reload, "service[nginx]", :immediately
    end
 
 where the ``variables`` attribute tells the template to use the variables set at the beginning of the recipe and the ``source`` attribute is used to call a template file located in the cookbook's ``/templates`` directory. The template file looks something like:
