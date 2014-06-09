@@ -12,17 +12,31 @@ Background
 -----------------------------------------------------
 An attacker could use a carefully crafted handshake to force the use of weak keying material. This can result in a man-in-the-middle (MITM) attack, allowing an attacker to read or alter traffic between the client and server.
 
+.. note:: This attack can only be performed between a vulnerable client and server. If SSL is terminated on a load balancer located in front of the |chef server|, address the vulnerability on the load balancer first.
+
+.. note:: The private keys and certificates used by the |chef client| do not need to be regenerated unless they have been transferred by paths protected by SSL/TLS. If they have been transferred in that manner, consider regenerating those keys and certificates.
+
 Actions
 -----------------------------------------------------
 The following steps should be taken:
 
 #. Upgrade to the latest version of the |chef server|; click `here <http://www.getchef.com/blog/2014/06/06/chef-server-11-1-1-release/>`__ for |chef server osc|, `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-server-11-1-6-release/>`__ for |chef server oec|, and `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-1-4-11-release/>`__ for |chef private|.
 
-.. TODO: Add step for chef-client
+#. Update the |chef client|.
+   
+    For version 11, download the release from `here <xxxxx>`__ or run the following:
+ 
+    .. code-block:: bash
+    
+       curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 11.12.8
+   
+   For version 10, download the release from `here <xxxxx>`__ or run the following:
+   
+   .. code-block:: bash
+   
+      curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 10.32.2-2
 
 #. After the |chef server| and every |chef client| is patched, you should change user passwords, encryption for data bags, and/or take additional steps to protect other sensitive data.
-
-   .. note:: The private keys and certificates used by the |chef client| do not need to be regenerated unless they have been transferred by paths protected by SSL/TLS. If they have been transferred in that manner, consider regenerating those keys and certificates.
 
 
 OpenSSL and Heartbleed

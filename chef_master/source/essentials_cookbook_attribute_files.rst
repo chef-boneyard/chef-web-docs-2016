@@ -18,6 +18,8 @@ Use Attribute Files
 =====================================================
 .. include:: ../../includes_node/includes_node_attribute_when_to_use.rst
 
+.. include:: ../../includes_node/includes_node_attribute_when_to_use_unless_variants.rst
+
 .. note:: |note see_attributes_overview|
 
 Attribute Types
