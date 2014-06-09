@@ -4,7 +4,7 @@ An Overview of Open Source Chef
 
 .. include:: ../../includes_chef/includes_chef_oec.rst
 
-The following diagram shows the relationships between the various elements of |chef osc|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
+The following diagram shows the relationships between the various elements of |chef server osc|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
 .. image:: ../../images/overview_chef_osc.png
 
