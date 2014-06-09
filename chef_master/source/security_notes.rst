@@ -22,19 +22,21 @@ The following steps should be taken:
 
 #. Upgrade to the latest version of the |chef server|; click `here <http://www.getchef.com/blog/2014/06/06/chef-server-11-1-1-release/>`__ for |chef server osc|, `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-server-11-1-6-release/>`__ for |chef server oec|, and `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-1-4-11-release/>`__ for |chef private|.
 
+   .. note:: Add-ons for |chef server oec|---|reporting|, |push jobs|, and |chef manage|---are also vulnerable; however, they use the same HTTP proxy as |chef server oec|, so after the |chef server oec| server itself is patched, the add-ons will no longer be vulnerable.
+
 #. Update the |chef client|.
    
-    For version 11, download the release from `here <xxxxx>`__ or run the following:
+    For version 11, run the following:
  
     .. code-block:: bash
     
        curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 11.12.8
    
-   For version 10, download the release from `here <xxxxx>`__ or run the following:
+   For version 10, run the following:
    
    .. code-block:: bash
    
-      curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 10.32.2-2
+      curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 10.32.2
 
 #. After the |chef server| and every |chef client| is patched, you should change user passwords, encryption for data bags, and/or take additional steps to protect other sensitive data.
 
