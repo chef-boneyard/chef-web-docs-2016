@@ -4,8 +4,6 @@
 
 .. include:: ../../includes_ctl_chef/includes_ctl_chef.rst
 
-.. warning:: This topic details functionality that will be packaged with Chef in an upcoming release.
-
 chef gem
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_gem.rst
