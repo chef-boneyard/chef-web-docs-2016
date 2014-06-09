@@ -34,9 +34,9 @@ Using |chef| with |docker|
 .. Using LXC
 .. =====================================================
 .. .. include:: ../../includes_containers/includes_containers_lxc.rst
-.. 
+..
 .. .. image:: ../../images/containers_lxc.png
-.. 
+..
 
 container_service Resource
 =====================================================
@@ -100,12 +100,3 @@ Examples
 **Create a Dockerfile**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
-
-For more information ...
-=====================================================
-For more information about |chef spec|:
-
-* `Blog post by Julian Dunn about wrapper cookbooks <http://www.getchef.com/blog/2013/12/03/doing-wrapper-cookbooks-right/>`_
-* `Blog post by Doug Ireton about cookbook anti-patterns <http://dougireton.com/blog/2013/02/16/chef-cookbook-anti-patterns/>`_
-* `Blog post by Julian Dunn about role cookbooks <http://www.getchef.com/blog/2013/11/19/chef-roles-arent-evil/>`_
-
