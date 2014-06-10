@@ -103,7 +103,7 @@ Examples
 
 For more information ...
 =====================================================
-For more information about |chef spec|:
+For more information about containers:
 
 * `Blog post by Julian Dunn about wrapper cookbooks <http://www.getchef.com/blog/2013/12/03/doing-wrapper-cookbooks-right/>`_
 * `Blog post by Doug Ireton about cookbook anti-patterns <http://dougireton.com/blog/2013/02/16/chef-cookbook-anti-patterns/>`_
