@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``GET`` method is used to get a listing of the available cookbooks. Use the ``start`` and ``items`` parameters to set limits on the number of cookbooks returned:
+The ``GET`` method is used to get a listing of the available cookbooks. Use the ``start`` and ``items`` parameters to set limits on the number of cookbooks returned. Use the ``order`` parameter to change the way results are sorted. Use the ``user`` parameter to filter cookbooks by maintainer:
 
 .. list-table::
    :widths: 200 300
@@ -13,12 +13,20 @@ The ``GET`` method is used to get a listing of the available cookbooks. Use the 
      - The offset into a list of cookbooks, at which point the list of cookbooks will begin.
    * - ``items``
      - The number of items to be returned as a result of the request.
+   * - ``order``
+     - A token specifying how to order results. Possible values are:
+       recently_updated, recently_added, most_downloaded, most_followed
+   * - ``user``
+     - The username to filter by. Only cookbooks maintained by this user will be
+       returned.
 
 **Request**
 
 .. code-block:: xml
 
    GET /cookbooks?start=START&items=ITEMS
+   GET /cookbooks?order=recently_updated
+   GET /cookbooks?user=smith
 
 **Response**
 
