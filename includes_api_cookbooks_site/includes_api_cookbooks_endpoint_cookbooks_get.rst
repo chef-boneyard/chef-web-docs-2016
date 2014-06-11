@@ -14,11 +14,9 @@ The ``GET`` method is used to get a listing of the available cookbooks. Use the 
    * - ``items``
      - The number of items to be returned as a result of the request.
    * - ``order``
-     - A token specifying how to order results. Possible values are:
-       recently_updated, recently_added, most_downloaded, most_followed
+     - A token specifying how to order results. Possible values: ``recently_updated``, ``recently_added``, ``most_downloaded``, or ``most_followed``.
    * - ``user``
-     - The username to filter by. Only cookbooks maintained by this user will be
-       returned.
+     - The username to filter by. Only cookbooks maintained by this user will be returned.
 
 **Request**
 
