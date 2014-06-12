@@ -18,7 +18,15 @@ The response will return something like the following:
 .. code-block:: ruby
 
    {
-     response_placeholder
+     "name": "apt",
+     "maintainer": "opscode",
+     "description": "Configures apt and apt services and LWRPs for managing apt repositories and preferences",
+     "category": "Package Management",
+     "latest_version": "http://supermarket.getchef.com/api/v1/cookbooks/apt/versions/2_4_0",
+     "external_url": "http://github.com/opscode-cookbooks/apt",
+     "average_rating": null,
+     "created_at": "2009-10-25T23:48:48.000Z",
+     "updated_at": "2014-05-15T17:45:14.000Z"
    }
 
 .. list-table::
@@ -35,6 +43,6 @@ The response will return something like the following:
 
           {
              "error_messages":
-             ["Resource does not exist"],
-             "error_code": "NOT_FOUND"
+             ["You're not authorized to upload this cookbook."],
+             "error_code": "UNAUTHORIZED"
           }

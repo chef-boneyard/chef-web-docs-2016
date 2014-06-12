@@ -35,17 +35,22 @@ The response will return a list of cookbooks by name and description and will re
 .. code-block:: ruby
 
    {
-     "items":
-      [{"cookbook_name": "apache",
-        "cookbook_description": "installs a web server.",
-        "cookbook": "http://cookbooks.opscode.com/api/v1/cookbooks/apache",
-        "cookbook_maintainer": "jtimberman"},
-       {"cookbook_name": "webserver",
-        "cookbook_description": "installs apache.",
-        "cookbook": "http://cookbooks.opscode.com/api/v1/cookbooks/webserver",
-        "cookbook_maintainer": "raxmus"}],
      "total": 2,
-     "start": 0
+     "start": 0,
+     "items": [
+       {
+         "cookbook_name": "apache",
+         "cookbook_description": "installs a web server.",
+         "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/apache",
+         "cookbook_maintainer": "jtimberman"
+       },
+       {
+         "cookbook_name": "webserver",
+         "cookbook_description": "installs apache.",
+         "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/webserver",
+         "cookbook_maintainer": "raxmus"
+       }
+     ]
    }
 
 .. list-table::
