@@ -33,36 +33,36 @@ The response will return the name of the cookbook, a description, URI, the name 
 .. code-block:: ruby
 
    {
+      "total": 5234,
+      "start": 20,
       "items":
          [
            {"cookbook_name": "apache",
             "cookbook_description": "installs apache.",
-            "cookbook": "http://cookbooks.opscode.com/api/v1/cookbooks/apache",
+            "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/apache",
             "cookbook_maintainer": "john"
            },
            {"cookbook_name": "fail2ban",
             "cookbook_description": "installs fail2ban.",
-            "cookbook": "http://cookbooks.opscode.com/api/v1/cookbooks/fail2ban",
+            "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/fail2ban",
             "cookbook_maintainer": "jill"
            },
            {"cookbook_name": "mysql",
             "cookbook_description": null,
-            "cookbook": "http://cookbooks.opscode.com/api/v1/cookbooks/mysql",
+            "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/mysql",
             "cookbook_maintainer": "barry"
            },
            {"cookbook_name": "capistrano",
             "cookbook_description": null,
-            "cookbook": "http://cookbooks.opscode.com/api/v1/cookbooks/capistrano",
+            "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/capistrano",
             "cookbook_maintainer": "pt"
            },
            {"cookbook_name": "ptapache",
             "cookbook_description": "an alternate apache recipe.",
-            "cookbook": "http://cookbooks.opscode.com/api/v1/cookbooks/ptapache",
+            "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/ptapache",
             "cookbook_maintainer": "pt"
            }
-         ],
-      "total": 5234,
-      "start": 20
+         ]
    }
 
 .. list-table::

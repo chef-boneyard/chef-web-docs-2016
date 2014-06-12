@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``GET`` method is used to get the details for a cookbook. 
+The ``GET`` method is used to get the details for a cookbook.
 
 This method has no parameters.
 
@@ -13,23 +13,35 @@ This method has no parameters.
 
 **Response**
 
-The response will return details for a cookbook, including name of the cookbook, the category to which it belongs, the name of the individual who maintains the cookbook, the URI for the latest version, its description, and so on:
+The response will return details for a cookbook, including name of the cookbook, the category to which it belongs, the name of the individual who maintains the cookbook, the URI for the latest version and previous versions, its description, and so on it also includes metrics about the cookbooks namely number of downloads and followers:
 
 .. code-block:: ruby
 
    {
-     "name": "apache",
-     "category": "web servers",
-     "updated_at": "2009-09-26T00:51:36Z",
-     "maintainer": "jtimberman",
-     "latest_version": "http://cookbooks.opscode.com/api/v1/cookbooks/apache/versions/2_0",
-     "external_url": null,
-     "versions":
-      ["http://www.example.com/api/v1/cookbooks/apache/versions/1_0",
-       "http://www.example.com/api/v1/cookbooks/apache/versions/2_0"],
-     "description": "installs apache.",
+     "name": "yum",
+     "maintainer": "opscode",
+     "description": "Configures various yum components on Red Hat-like systems",
+     "category": "Package Management",
+     "latest_version": "http://supermarket.getchef.com/api/v1/cookbooks/yum/versions/3_2_2",
+     "external_url": "http://github.com/opscode-cookbooks/yum",
      "average_rating": null,
-     "created_at": "2009-09-26T00:51:36Z"
+     "created_at": "2011-04-20T22:16:12.000Z",
+     "updated_at": "2014-06-11T19:06:37.000Z",
+     "deprecated": false,
+     "versions": [
+       "http://supermarket.getchef.com/api/v1/cookbooks/yum/versions/3_2_2",
+       "http://supermarket.getchef.com/api/v1/cookbooks/yum/versions/3_2_0"
+     ],
+     "metrics": {
+       "downloads": {
+         "total": 8500
+         "versions": {
+           "3.2.0": 399,
+           "3.2.2": 1
+         }
+      },
+      "followers": 55
+     }
    }
 
 If a cookbook is deprecated, that status is noted by the ``deprecated`` field (being ``true``):

@@ -19,20 +19,23 @@ Or:
 
 **Response**
 
-The response will return details for a cookbook version, including the license under which the cookbook is distributed, the most recent update, version, URI, date of cookbook creation, path to the cookbook's |tar gz| file, and so on:
+The response will return details for a cookbook version, including the license under which the cookbook is distributed, the most recent update, version, URI, date of cookbook creation, path to the cookbook's |tar gz| file, its dependencies and platforms it supports and so on:
 
 .. code-block:: ruby
 
-   {
-      "license": "GPLv2",
-      "updated_at": "2009-09-26T00:51:36Z",
-      "tarball_file_size": null,
-      "version": "2.0",
-      "average_rating": null,
-      "cookbook": "http://www.example.com/api/v1/cookbooks/ptapache",
-      "created_at": "2009-09-26T00:51:36Z",
-      "file": "/tarballs/original/missing.png"
-   }
+  {
+    "license": "Apache 2.0",
+    "tarball_file_size": 18553,
+    "version": "2.4.0",
+    "average_rating": null,
+    "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/apt",
+    "file": "http://supermarket.getchef.com/api/v1/cookbooks/apt/versions/2_4_0/download",
+    "dependencies": {},
+    "platforms": {
+      "debian": ">= 0.0.0",
+      "ubuntu": ">= 0.0.0"
+    }
+  }
 
 .. list-table::
    :widths: 200 300
