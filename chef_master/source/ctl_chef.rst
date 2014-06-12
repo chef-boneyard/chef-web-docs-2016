@@ -34,38 +34,6 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
-
-chef generate attribute
-=====================================================
-.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute.rst
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute_syntax.rst
-
-Options
------------------------------------------------------
-.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute_options.rst
-
-Examples
------------------------------------------------------
-None.
-
-chef generate cookbook
-=====================================================
-.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_cookbook.rst
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_cookbook_syntax.rst
-
-Options
------------------------------------------------------
-.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_cookbook_options.rst
-
-Examples
------------------------------------------------------
 
 **Create an application**
 
@@ -114,6 +82,37 @@ will return something similar to:
      * cookbook_file[/Users/grantmc/chef-repo/.gitignore] action create
        - create new file /Users/grantmc/chef-repo/.gitignore
 
+chef generate attribute
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+chef generate cookbook
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_cookbook.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_cookbook_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_cookbook_options.rst
+
+Examples
+-----------------------------------------------------
+None.
 
 chef generate file
 =====================================================
