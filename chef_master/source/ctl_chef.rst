@@ -101,7 +101,7 @@ Examples
 
 .. code-block:: bash
 
-   $ chef generate attribute "/path/to/cookbook" FOO
+   $ chef generate attribute /path/to/cookbook FOO
    
 will return something similar to:
 
