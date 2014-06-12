@@ -82,6 +82,18 @@ will return something similar to:
      * cookbook_file[/Users/grantmc/chef-repo/.gitignore] action create
        - create new file /Users/grantmc/chef-repo/.gitignore
 
+which creates a directory structure similar to::
+
+   /chef-repo
+     /cookbooks
+	   /chef-repo
+	     Berksfile
+		 chefignore
+		 metadata.rb
+		 /recipes
+		   default.rb
+	  README.md
+
 chef generate attribute
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute.rst
