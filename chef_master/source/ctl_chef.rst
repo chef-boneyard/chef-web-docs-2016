@@ -82,9 +82,12 @@ will return something similar to:
      * cookbook_file[/Users/grantmc/chef-repo/.gitignore] action create
        - create new file /Users/grantmc/chef-repo/.gitignore
 
-which creates a directory structure similar to::
+and which creates a directory structure similar to::
 
    /chef-repo
+     /.git
+	 .gitignore
+	 .kitchen.yml
      /cookbooks
 	   /chef-repo
 	     Berksfile
