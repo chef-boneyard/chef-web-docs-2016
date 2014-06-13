@@ -62,6 +62,8 @@ Recipe DSL Methods
      - Use in a recipe to check for the platform.
    * - :doc:`platform_family? </dsl_recipe_method_platform_family>`
      - Use in a recipe to check for the platform family.
+   * - :doc:`reboot_pending? </dsl_recipe_method_reboot_pending>`
+     - Use in a recipe to test if a node requires a reboot.
    * - :doc:`recipe_name </dsl_recipe_method_recipe_name>`
      - Use in a recipe to get the name of a recipe.
    * - :doc:`resources </dsl_recipe_method_resources>`
@@ -99,10 +101,6 @@ The following methods can be used to interact with |windows| registry keys.
      - Find out if a registry key has values set (name, type, and data).
 
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
-
-Windows Reboots
------------------------------------------------------
-Use the :doc:`reboot_pending? </dsl_recipe_method_reboot_pending>` method to test if a node requires a reboot. 
 
 Windows Platform
 -----------------------------------------------------
