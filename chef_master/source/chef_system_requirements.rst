@@ -146,7 +146,7 @@ The open source |chef server| can run on the following systems:
      - x86_64
    * - Ubuntu
      - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
-     - i686, x86_64
+     - x86_64
 
 
 
