@@ -100,6 +100,10 @@ The following methods can be used to interact with |windows| registry keys.
 
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
 
+Windows Reboots
+-----------------------------------------------------
+Use the :doc:`reboot_pending? </dsl_recipe_method_reboot_pending>` method to test if a node requires a reboot. 
+
 Windows Platform
 -----------------------------------------------------
 A recipe can define specific behaviors for specific |windows| platform versions by using :doc:`a series of helper methods </dsl_recipe_helper_windows_platform>`. 
