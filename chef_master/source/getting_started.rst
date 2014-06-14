@@ -116,11 +116,11 @@ Open the ``default.rb`` recipe in the cookbook you just created. Add the followi
 
 This recipe creates a file called ``test.txt`` at the path defined by the ``HOME`` environment variable. (To view that path, run ``echo "$HOME"`` in the command shell.)
 
-Next, we'll run the |chef client|. The ``-z`` flag tells the |chef client| to run in local mode. The ``-o`` flag tells the |chef client| which recipe to run. The |chef client| itself just needs to be run from the |chef repo|. In this case, we want to run the recipe in the cookbook we just created, so use the name of that cookbook, as that maps (by default) to the default recipe. The following command will create the file ``test.txt``:
+Next, we'll run the |chef client|. This is done via the command line and from within the |chef repo|. Use the ``--local-mode`` flag to run the |chef client| in local mode. Use the ``--override-runlist`` flag to run only the recipe we have just created. (More about the run-list later.) For a cookbook's default recipe, only the name of the cookbook needs to be specified, as that maps to the default recipe. The following command will create the file ``test.txt``:
 
 .. code-block:: bash
 
-   $ chef-client -z -o chefdocs
+   $ chef-client --local-mode --override-runlist chefdocs
 
 where ``chefdocs`` is the name of your cookbook.
 
@@ -155,7 +155,7 @@ As the |chef client| adds the file to your system, output similar to the followi
    
    Chef Client finished, 1/1 resources updated in 2.418878 seconds
 
-That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. Open it, it should say ``This file created by Chef!``.
+That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``.
 
 Conclusion
 =====================================================
