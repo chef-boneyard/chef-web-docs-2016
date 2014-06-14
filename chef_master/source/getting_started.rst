@@ -151,6 +151,14 @@ As the |chef client| adds the file to your system, output similar to the followi
 
 That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``.
 
+About Resources
+=====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+The |chef client| includes many built-in resources, but several of them are used much more often than others: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
+
+For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.getchef.com>`_.
+
 Conclusion
 =====================================================
 .. include:: ../../includes_chef/includes_chef_why_principles.rst
