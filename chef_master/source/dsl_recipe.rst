@@ -67,7 +67,7 @@ Recipe DSL Methods
    * - :doc:`recipe_name </dsl_recipe_method_recipe_name>`
      - Use in a recipe to get the name of a recipe.
    * - :doc:`resources </dsl_recipe_method_resources>`
-     - Use in a recipe to include a resource.
+     - Use in a recipe to examine the resource collection.
    * - :doc:`search </dsl_recipe_method_search>`
      - Use in a recipe to include search results.
    * - :doc:`tag, tagged?, untag </dsl_recipe_method_tag>`
