@@ -2,6 +2,8 @@
 |chef solo|
 =====================================================
 
+.. warning:: The |chef client| now includes an option called local mode (``--local-mode`` or ``-z``), which runs the |chef client| against the |chef repo| on the local machine as if it were running against a |chef server|. Local mode was added to the |chef client| in the 11.8 release. If you are running that version of the |chef client| (or later), you should use local mode instead of using |chef solo|.
+
 .. include:: ../../includes_chef_solo/includes_chef_solo.rst
 
 .. note:: |chef solo| is configured using the :doc:`chef-solo (executable) </ctl_chef_solo>`.
