@@ -53,7 +53,7 @@ Recipe DSL Methods
    * - Methods
      - Description
    * - :doc:`attribute? </dsl_recipe_method_attribute>`
-     - Use in a recipe to include an attribute.
+     - Use in a recipe to check for the presence of an attribute.
    * - :doc:`cookbook_name </dsl_recipe_method_cookbook_name>`
      - Use in a recipe to get the name of the cookbook in which a recipe is located.
    * - :doc:`data_bag, data_bag_item </dsl_recipe_method_data_bag>`
