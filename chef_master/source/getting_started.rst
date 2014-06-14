@@ -45,15 +45,9 @@ Let's start by installing the |chef dk|:
 
 Tools and Libraries
 -----------------------------------------------------
-The |chef dk| installs a collection of tools and libraries into a single directory structure, which makes it easier to manage any dependencies these tools may have on each other and the dependencies that |chef| has on |ruby|. The most important tools included in the |chef dk| are:
+.. include:: ../../includes_chef_dk/includes_chef_dk_tools.rst
 
-* |berkshelf| -- a dependency manager for cookbooks
-* |chef ctl| -- a workflow tool for |chef|
-* |chef client| -- the agent that runs |chef|
-* |chef dk| -- the |chef dk| omnibus package
-* |chef spec| -- a unit testing framework that tests resources locally
-* |ruby| -- the reference language for |chef|
-* |kitchen| -- an integration testing framework tool that tests cookbooks across platforms
+.. include:: ../../includes_chef_dk/includes_chef_dk_tools_main.rst
 
 System |ruby|
 -----------------------------------------------------
