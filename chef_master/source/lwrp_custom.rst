@@ -1,5 +1,5 @@
 =====================================================
-Custom LWRPs
+Custom Resources
 =====================================================
 
 .. include:: ../../includes_lwrp/includes_lwrp.rst
