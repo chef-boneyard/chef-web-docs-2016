@@ -43,6 +43,18 @@ Let's start by installing the |chef dk|:
       ---------------------------------------------
       Verification of component '...' succeeded.
 
+Tools and Libraries
+-----------------------------------------------------
+The |chef dk| installs a collection of tools and libraries into a single directory structure, which makes it easier to manage any dependencies these tools may have on each other and the dependencies that |chef| has on |ruby|. The most important tools included in the |chef dk| are:
+
+* |berkshelf| -- a dependency manager for cookbooks
+* |chef ctl| -- a workflow tool for |chef|
+* |chef client| -- the agent that runs |chef|
+* |chef dk| -- the |chef dk| omnibus package
+* |chef spec| -- a unit testing framework that tests resources locally
+* |ruby| -- the reference language for |chef|
+* |kitchen| -- an integration testing framework tool that tests cookbooks across platforms
+
 System |ruby|
 -----------------------------------------------------
 For many users of |chef|, the |chef dk| the version of |ruby| that is included in the |chef dk| should be configured as the default version of |ruby|.
@@ -65,18 +77,6 @@ For many users of |chef|, the |chef dk| the version of |ruby| that is included i
 #. Run ``which ruby`` again. It should return ``/opt/chefdk/embedded/bin/ruby``.
 
 .. note:: Using the |chef dk|-provided |ruby| as your system |ruby| is optional. This just depends on how you are using |ruby| on your system. For many users, |ruby| is primarily used for authoring |chef| cookbooks and recipes. If that's true for you, then using the |chef dk|-provided |ruby| as your system |ruby| is recommended. But for other users who are already using tools like |rbenv| to manage |ruby| versions, then that's OK too.
-
-Tools and Libraries
------------------------------------------------------
-The |chef dk| installs a collection of tools and libraries into a single directory structure, which makes it easier to manage any dependencies these tools may have on each other and the dependencies that |chef| has on |ruby|. The most important tools included in the |chef dk| are:
-
-* |berkshelf| -- a dependency manager for cookbooks
-* |chef ctl| -- a workflow tool for |chef|
-* |chef client| -- the agent that runs |chef|
-* |chef dk| -- the |chef dk| omnibus package
-* |chef spec| -- a unit testing framework that tests resources locally
-* |ruby| -- the reference language for |chef|
-* |kitchen| -- an integration testing framework tool that tests cookbooks across platforms
 
 Your First Cookbook
 -----------------------------------------------------
