@@ -71,7 +71,7 @@ Tools and Libraries
 The |chef dk| installs a collection of tools and libraries into a single directory structure, which makes it easier to manage any dependencies these tools may have on each other and the dependencies that |chef| has on |ruby|. The most important tools included in the |chef dk| are:
 
 * |berkshelf| -- a dependency manager for cookbooks
-* |chef| -- a workflow tool for |chef|
+* |chef ctl| -- a workflow tool for |chef|
 * |chef client| -- the agent that runs |chef|
 * |chef dk| -- the |chef dk| omnibus package
 * |chef spec| -- a unit testing framework that tests resources locally
@@ -81,7 +81,7 @@ The |chef dk| installs a collection of tools and libraries into a single directo
 Your First Cookbook
 -----------------------------------------------------
 
-We have already used the ``chef`` command to verify the installation of the |chef dk|. Now let's use it to create the |chef repo|, which is the main folder in which your |chef| code will be stored. Run the following command:
+We have already used the |chef ctl| ``verify`` subcommand to verify the installation of the |chef dk|. Now let's use the |chef ctl| ``generate`` subcommand to create the |chef repo|, which is the main folder in which your |chef| code will be stored. Run the following command:
 
 .. code-block:: bash
 
