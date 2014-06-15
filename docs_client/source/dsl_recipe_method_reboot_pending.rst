@@ -1,5 +1,3 @@
-=====================================================
-reboot_pending? Method
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/dsl_recipe_method_reboot_pending.html BY DESIGN
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_reboot_pending.rst
+.. include:: ../../chef_master/source/dsl_recipe_method_reboot_pending.rst
