@@ -159,6 +159,46 @@ The |chef client| includes many built-in resources, but several of them are used
 
 For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.getchef.com>`_.
 
+See the sections below for quick overviews of the most popular resources, plus links to the individual reference pages for each of them.
+
+Execute Commands
+-----------------------------------------------------
+Commands are executed using the |resource execute| resource using an attribute to specify the actual command to run. See :doc:`execute </resource_execute>` for more information about executing commands.
+
+Manage Directories
+-----------------------------------------------------
+Directories are hierarchies of folders that comprise all the information stored on a computer. There are two ways to manage directories. The first is via the |resource directory| resource, which manages directories starting from the root directory. And the second is the |resource remote_directory|, which transfers directory structures defined in cookbooks to nodes. See :doc:`directory </resource_directory>` for more information about managing directories. If the directory is defined in a cookbook, use :doc:`remote_directory </resource_remote_directory>` instead.
+
+Manage Packages
+-----------------------------------------------------
+Packages are collections of files that comprise software applications or some part of an operating system. Use the package resource to manage these packages, unless they are sourced via |rubygems| and installed directly from within recipes or are sourced from a cookbook. See :doc:`package </resource_package>` for more information about managing packages. There are quite a few platform-specific package resources as well, though most of the time simply using the |resource package| is all that's necessary. For packages that are located in cookobooks, use :doc:`chef_gem </resource_chef_gem>`. And for packages that are only included via recipes, use :doc:`gem_package </resource_gem_package>`.
+
+Manage Services
+-----------------------------------------------------
+Services can be started, stopped, enabled, disabled, reloaded, and restarted. See :doc:`service </resource_service>` for more information about managing services.
+
+Manage Files
+-----------------------------------------------------
+Files are managed in several ways. The |resource file| resource manages files that are already present on a node. Files are transferred to nodes from cookbooks using the |resource cookbook_file| resource and are transferred to nodes from remote locations using the |resource remote_file| resource. See :doc:`file </resource_file>` for more information about managing files, :doc:`remote_file </resource_remote_file>` for transferring files from remote locations, and :doc:`cookbook_file </resource_cookbook_file>` for transferring files that are located in cookbooks.
+
+Manage Templates
+-----------------------------------------------------
+Templates are used to generate files based on variables and logic contained within the template file. |chef| uses |erb| templates and |ruby| expressions and statements to define the template file. Template source files must be located within cookbooks. See :doc:`template </resource_template>` for more information about managing files using |erb| templates.
+
+Manage Users and Groups
+-----------------------------------------------------
+Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See :doc:`user </resource_user>` for more information about managing users and user passwords. The :doc:`group </resource_group>` resource manges groups.
+
+Use Script Interpreters
+-----------------------------------------------------
+Script interpreters execute scripts on a node, similar to the |resource execute| resource, and with the ability to specify the interpreter that the |chef client| should use. See :doc:`script </resource_script>` for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with :doc:`bash </resource_bash>` being the most popular. Also available: :doc:`csh </resource_csh>`, :doc:`perl </resource_perl>`, :doc:`powershell_script </resource_powershell_script>`, :doc:`python </resource_python>`, and :doc:`ruby </resource_ruby>`. Two |windows|-specific resources are also available: :doc:`batch </resource_batch>` and :doc:`powershell_script </resource_powershell_script>`.
+
+Source Control
+-----------------------------------------------------
+|git| is a very popular version source control tool. The |resource git| resource is used to manage files that exist in a |git| repository. There is also a resource for :doc:`subversion </resource_subversion>`, another popular version source control tool.
+
+
+
 Conclusion
 =====================================================
 .. include:: ../../includes_chef/includes_chef_why_principles.rst
