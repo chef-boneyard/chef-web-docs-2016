@@ -20,6 +20,7 @@ All about the |chef dk| ...
 
    berkshelf
    chef_overview
+   chef_vault
    chefspec
    config_yml_kitchen
    ctl_chef

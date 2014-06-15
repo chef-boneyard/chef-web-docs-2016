@@ -167,6 +167,7 @@ Cookbooks
    chef_shell
    chef_solo
    chef_system_requirements
+   chef_vault
    chef_why
    chefspec
    community
