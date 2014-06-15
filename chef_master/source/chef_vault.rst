@@ -7,3 +7,5 @@
 |chef vault| adds the ``knife vault`` subcommand. For more information about this subcommands, its arguments, and other uses of |chef vault|, see https://github.com/Nordstrom/chef-vault.
 
 The ``chef-vault`` cookbook is maintained by |company_name|. Use it along with |chef vault| itself. This cookbook adds the ``chef_vault_item`` helper method to the |dsl recipe| and the ``chef_vault_secret`` resource. Use them both in recipes to work with data bag secrets. For more information about the ``chef-vault`` cookbook, see https://github.com/opscode-cookbooks/chef-vault.
+
+For more detailed discussion of managing secrets using these tools, see Joshua Timberman's blog post: http://www.getchef.com/blog/2013/09/19/managing-secrets-with-chef-vault/.
