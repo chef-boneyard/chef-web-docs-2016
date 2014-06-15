@@ -10,6 +10,8 @@ Global Patterns
 =====================================================
 .. include:: ../../includes_cookbook/includes_cookbook_pattern.rst
 
+.. note:: This topic uses the following terms: |cookbook type_app|, |cookbook type_base|, |cookbook type_wrapper|, and |cookbook type_policy| to represent different approaches for creating building blocks out of cookbooks. These terms aren't always used consistently within the larger |chef| community. That said, the most important takeaway from this topic isn't the terms themselves, but instead the following: 1) use community cookbooks as often as possible; modify community cookbooks using |cookbook type_wrapper| cookbooks (when necessary); all cookbooks should work together as building blocks that represent the various working configurations that your organization requires.
+
 Global Recipe Patterns
 -----------------------------------------------------
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst
