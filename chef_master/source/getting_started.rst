@@ -151,6 +151,8 @@ As the |chef client| adds the file to your system, output similar to the followi
 
 That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``.
 
+# We'll come back to working with |chef| later on, but the next step is to familiarize yourself with resources and cookbooks.
+
 About Resources
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
@@ -195,9 +197,21 @@ Script interpreters execute scripts on a node, similar to the |resource execute|
 
 Source Control
 -----------------------------------------------------
-|git| is a very popular version source control tool. The |resource git| resource is used to manage files that exist in a |git| repository. There is also a resource for :doc:`subversion </resource_subversion>`, another popular version source control tool.
+|git| is a very popular version source control tool. The |resource scm_git| resource is used to manage files that exist in a |git| repository. There is also a resource for :doc:`subversion </resource_subversion>`, another popular version source control tool.
 
+About Cookbooks
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
+Every cookbook follows a defined structure, but individiaul cookbooks can take on many different styles depending on how your organization wants to manage its code, who authored them, and how they are intended to be used. Some cookbooks contain only a single, default recipe. Others may contain only a library file. Some may contain only a few attributes. And other cookbooks may contain several custom resources along with many attributes and templates, and so on.
+
+Some cookbooks you will build yourself. Some cookbooks will be provided by the community. Most community cookbooks will be managed using |berkshelf|, which is a dependency manager included in the |chef dk|. Occasionally, a community cookbook will be forked, but more often a wrapper cookbook is created to handle your organization-specific requirements while still allowing use of the community cookbook.
+
+The most important thing to know about cookbooks is that there are lots of ways to build good ones. There are patterns to follow, there are guidelines. There are recomended ways of dealing with attributes. There are recommended ways of creating custom resources. But ultimately, a good cookbook is the one that works for your organization. Ideally, this cookbook works across your infrastructure. Most organizations have a mix of private (internal) and public (community) cookbooks in use in their organization.
+
+Cookbook Patterns
+-----------------------------------------------------
+.. include:: ../../includes_cookbook/includes_cookbook_pattern.rst
 
 Conclusion
 =====================================================
