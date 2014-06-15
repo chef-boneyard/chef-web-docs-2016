@@ -187,7 +187,7 @@ Manage Templates
 -----------------------------------------------------
 Templates are used to generate files based on variables and logic contained within the template file. |chef| uses |erb| templates and |ruby| expressions and statements to define the template file. Template source files must be located within cookbooks. See :doc:`template </resource_template>` for more information about managing files using |erb| templates.
 
-Manage Users and Groups
+Manage Users, Groups
 -----------------------------------------------------
 Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See :doc:`user </resource_user>` for more information about managing users and user passwords. The :doc:`group </resource_group>` resource manges groups.
 
