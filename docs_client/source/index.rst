@@ -281,6 +281,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_data_bag.html">data_bag_item</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_platform.html">platform?</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_reboot_pending.html">reboot_pending?</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_recipe_name.html">recipe_name</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_data_exists.html">registry_data_exists?</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_get_subkeys.html">registry_get_subkeys</a> </br>
@@ -328,6 +329,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    dsl_recipe_method_data_bag
    dsl_recipe_method_platform
    dsl_recipe_method_platform_family
+   dsl_recipe_method_reboot_pending
    dsl_recipe_method_recipe_name
    dsl_recipe_method_registry_data_exists
    dsl_recipe_method_registry_get_subkeys
