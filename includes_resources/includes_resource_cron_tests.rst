@@ -1,7 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following examples show recipes, and then the corresponding unit tests:
+
+|chef spec| is integrated into the |chef client| cookbook authoring workflow via the |chef dk|. The following examples show recipes and corresponding unit tests. See :doc:`ChefSpec </chefspec>` for more information about how to set up unit testing for resources in your cookbooks.
 
 **Recipes**
 
@@ -45,5 +46,3 @@ The following examples show recipes, and then the corresponding unit tests:
        expect(chef_run).to_not create_cron('with_attributes').with(minute: '10', hour: '30')
      end
    end
-
-.. note:: |chef spec| is integrated into the |chef client| cookbook authoring workflow via the |chef dk|. See :doc:`ChefSpec </chefspec>` for more information about how to set up unit testing for resources in your cookbooks.

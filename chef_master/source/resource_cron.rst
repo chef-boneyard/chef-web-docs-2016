@@ -42,6 +42,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_cron_run_only_in_november.rst
 
-Unit Tests
+Unit Testing
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cron_tests.rst
