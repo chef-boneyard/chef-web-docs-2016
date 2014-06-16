@@ -197,7 +197,7 @@ Script interpreters execute scripts on a node, similar to the |resource execute|
 
 Source Control
 -----------------------------------------------------
-|git| is a very popular version source control tool. The |resource scm_git| resource is used to manage files that exist in a |git| repository. There is also a resource for :doc:`subversion </resource_subversion>`, another popular version source control tool.
+Most users of |chef| keep their code in some type of version source control. |chef| can interact with this code from recipes. |git| is a very popular choice. The :doc:`git </resource_git>` resource is used to manage files that exist in a |git| repository. There is also a resource for :doc:`subversion </resource_subversion>`, another popular version source control tool.
 
 About Cookbooks
 =====================================================
