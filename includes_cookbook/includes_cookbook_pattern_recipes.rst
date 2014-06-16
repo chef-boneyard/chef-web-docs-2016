@@ -10,10 +10,10 @@ Recipes in cookbooks should follow some simple patterns:
   
      -- cookbook_name
         -- recipes
-	    -- config.rb
-	    -- cron.rb
+        -- config.rb
+        -- cron.rb
         -- default.rb
-	    -- delete_validation.rb
+        -- delete_validation.rb
         -- service.rb
         -- task.rb
   
