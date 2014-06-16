@@ -4,30 +4,23 @@
 
 |chef spec| is integrated into the |chef client| cookbook authoring workflow via the |chef dk|. The following examples show recipes and corresponding unit tests. See :doc:`ChefSpec </chefspec>` for more information about how to set up unit testing for resources in your cookbooks.
 
-**Recipes**
+**Recipe**
 
 .. code-block:: ruby
 
    cron 'default_action'
 
-.. code-block:: ruby
-
-   cron 'explicit_action' do
-     action :create
-   end
+**Unit Test**
 
 .. code-block:: ruby
    
-   cron 'with_attributes' do
-     minute '0'
-     hour   '20'
+   describe 'cron::create' do
+     let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
    end
 
-**Unit Tests**
+or:
 
 .. code-block:: ruby
-
-   require 'chefspec'
    
    describe 'cron::create' do
      let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
@@ -36,10 +29,43 @@
        expect(chef_run).to create_cron('default_action')
        expect(chef_run).to_not create_cron('not_default_action')
      end
+   end
+
+**Recipe**
+
+.. code-block:: ruby
+
+   cron 'explicit_action' do
+     action :create
+   end
+
+**Unit Test**
+
+.. code-block:: ruby
+   
+   describe 'cron::create' do
+     let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
    
      it 'creates a cron with an explicit action' do
        expect(chef_run).to create_cron('explicit_action')
      end
+   end
+
+**Recipe**
+
+.. code-block:: ruby
+   
+   cron 'with_attributes' do
+     minute '0'
+     hour   '20'
+   end
+
+**Unit Test**
+
+.. code-block:: ruby
+   
+   describe 'cron::create' do
+     let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
    
      it 'creates a cron with attributes' do
        expect(chef_run).to create_cron('with_attributes').with(minute: '0', hour: '20')
