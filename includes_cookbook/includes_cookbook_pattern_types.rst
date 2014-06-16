@@ -18,6 +18,7 @@ In addition to these basic guidelines, the cookbooks themselves should follow so
      - A |cookbook type_app| cookbook applies the configuration necessary to run applications on a node, such as |apache tomcat|, |postgresql|, or |sensu|. One (or more) |cookbook type_app| cookbooks can work together to define the full appllication stack. For example, a base |cookbook type_app| cookbook applies the underlying configuration, a data |cookbook type_app| cookbook sets up the data layer, and a webserver |cookbook type_app| cookbook sets up the node to run as a web server. Ideally, each |cookbook type_app| cookbook represents a repeatable configuration that is usable across many nodes.
    * - .. image:: ../../images/icon_cookbook_type_policy.png
      - A |cookbook type_policy| cookbook applies the policy settings defined on the |chef server| to groups of nodes.
+	   .. note:: This pattern to be defined by an upcoming feature of |chef| called "Policyfile". Search the chef.lists for "Policyfile" to see various discusions around what this feature will look like.
 
 Think of these patterns as building blocks. Use them to help visualize how the cookbooks your organization uses fit together:
 
