@@ -14,12 +14,10 @@ The following frameworks are good options for building integration tests with |k
      - Description
    * - `Bats <https://github.com/sstephenson/bats>`_
      - Bats (or Bash Automated Testing System) is an testing framework for |bash|. Bats is also the default framework for |kitchen|.
-   * - `ChefSpec <https://github.com/sethvargo/chefspec>`_
-     - |rspec|-based tests.
    * - `Minitest <https://github.com/seattlerb/minitest>`_
      - A small, fast, testing framework.
    * - `Rspec <http://rspec.info>`_
-     - The primary testing framework for |ruby|, using the words ``describe`` and ``it`` to express tests as conversation. |chef spec|, Minitest, Serverspec are all based on |rspec|. 
+     - The primary testing framework for |ruby|, using the words ``describe`` and ``it`` to express tests as conversation. Bats, Minitest, Serverspec are all based on |rspec|. 
    * - `Serverspec <http://serverspec.org>`_
      - |rspec|-based tests for servers.
 
