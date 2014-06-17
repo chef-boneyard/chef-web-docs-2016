@@ -7,7 +7,7 @@
 
    $ knife container docker init docker -r recipe[apache2] -b -z
 
-will create a new folder ``docker`` with subfolder ``demo`` in ``Chef::Config[:knife][:dockerfiles_path]``. In ``docker``, a directory named ``chef`` is created, which contains all of the files and folder necessary for the |chef-client| to run successfully inside a container. The |dockerfile| is similar to:
+will create a new folder ``docker`` with subfolder ``demo`` in ``Chef::Config[:knife][:dockerfiles_path]``. In ``docker``, a directory named ``chef`` is created, which contains all of the files and folder necessary for the |chef client| to run successfully inside a container. The |dockerfile| is similar to:
 
 .. code-block:: ruby
 
