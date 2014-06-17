@@ -38,38 +38,13 @@ Using |chef| with |docker|
 .. .. image:: ../../images/containers_lxc.png
 .. 
 
-container_service Resource
-=====================================================
-.. include:: ../../includes_resources/includes_resource_container_service.rst
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_container_service_syntax.rst
-
-Actions
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_container_service_actions.rst
-
-Attributes
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_container_service_attributes.rst
-
-Providers
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_container_service_providers.rst
-
-Examples
------------------------------------------------------
-|generic resource statement|
-
-**Start apachectl in a container**
-
-.. include:: ../../step_resource/step_resource_container_service_start_apache2.rst
-
-
 knife-container
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_container.rst
+
+**Install this plugin**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_install_rubygem.rst
 
 docker build
 -----------------------------------------------------
@@ -100,6 +75,37 @@ Examples
 **Create a Dockerfile**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
+
+container_service Resource
+=====================================================
+.. include:: ../../includes_resources/includes_resource_container_service.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_container_service_syntax.rst
+
+Actions
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_container_service_actions.rst
+
+Attributes
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_container_service_attributes.rst
+
+Providers
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_container_service_providers.rst
+
+Examples
+-----------------------------------------------------
+|generic resource statement|
+
+**Start apachectl in a container**
+
+.. include:: ../../step_resource/step_resource_container_service_start_apache2.rst
+
+
+
 
 For more information ...
 =====================================================
