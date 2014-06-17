@@ -11,5 +11,5 @@ This argument has the following options:
 ``--force``
    Use to force a build. Default value: ``false``.
 
-``--[no-]-berks``
-   Use to run ``berks vendor`` for local mode and ``berks upload`` for server mode.
+``--no-berks``
+   Use to prevent |berkshelf| from running, even when a |berksfile| exists.
