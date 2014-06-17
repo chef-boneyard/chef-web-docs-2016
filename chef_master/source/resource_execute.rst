@@ -108,3 +108,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_execute_source_a_file.rst
 
+**Run a Knife command**
+
+.. include:: ../../step_resource/step_resource_execute_knife_user_create.rst
