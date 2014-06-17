@@ -1,5 +1,5 @@
 =====================================================
-Containers
+|chef| for Containers
 =====================================================
 
 .. include:: ../../includes_containers/includes_containers.rst
