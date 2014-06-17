@@ -32,7 +32,7 @@ where
 * |values resource registry_key types|
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-The following is an example of how the |resource registry_key| resource can work when used in a recipe. In this example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a mulit-string value named "foo bar":
+The following is an example of how the |resource registry_key| resource can work when used in a recipe. In this example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a multi-string value named "foo bar":
 
 .. code-block:: ruby
 
