@@ -1,15 +1,13 @@
 .. This is an included how-to. 
 
-.. To start apachectl:
+.. To start apache2:
 
 .. code-block:: ruby
-
-   require 'chef/container'
    
    service 'apache2' do
      action :start
    end
    
    container_service 'apache2' do
-     command 'apachectl -k start'
+     command '/usr/sbin/apache2 -D FOREGROUND'
    end

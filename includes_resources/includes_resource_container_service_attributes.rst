@@ -11,9 +11,5 @@
      - Description
    * - ``command``
      - Use to specify the command to be run.
-   * - ``service_dir``
-     - The directory in which the |runit| service is located. Default value: ``Chef::Container::Runit::SERVICE_DIR``. ``SERVICE_DIR`` is an alias that maps to ``'/opt/chef/service'``.
-   * - ``service_name``
-     - The name of the service. Default value: the ``name`` of the resource block (see Syntax section above).
-   * - ``sv_bin``
-     - The directory in which the |runit| service's ``sv`` tool is located. Default value: ``Chef::Container::Runit::SV_BIN``. ``SV_BIN`` is an alias that maps to ``'/opt/chef/embedded/bin/sv'``.
+   * - ``binary``
+     - The binary used by |runit| to manage services in a |linux| container. Default value: ``'/opt/chef/embedded/bin/sv'``.

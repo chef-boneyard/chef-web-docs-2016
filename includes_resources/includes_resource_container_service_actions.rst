@@ -9,7 +9,5 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:disable``
-     - Use to disable a |docker| container.
-   * - ``:enable``
-     - Use to enable a |docker| container.
+   * - ``:setup``
+     - Use to configure |runit| to manage the service which runs applications inside a |linux| container.

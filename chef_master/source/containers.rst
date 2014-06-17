@@ -64,7 +64,7 @@ Examples
 
 **Start apachectl in a container**
 
-.. include:: ../../step_resource/step_resource_container_service_start_apachectl.rst
+.. include:: ../../step_resource/step_resource_container_service_start_apache2.rst
 
 
 knife-container
