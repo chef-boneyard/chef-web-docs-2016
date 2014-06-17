@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``docker init`` argument is used to set up the initial |docker| configuration.
+The ``docker init`` argument is used to set up a |dockerfile| context for the local workstation.

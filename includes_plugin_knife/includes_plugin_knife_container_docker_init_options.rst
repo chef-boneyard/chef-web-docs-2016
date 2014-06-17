@@ -6,13 +6,13 @@
 This argument has the following options:
 
 ``-b``, ``--berksfile``
-   Use to generate a |berksfile| based on the run-list specified by the ``--run-list`` option.
+   Use to generate a |berksfile| based on the run-list specified by the ``--run-list`` option. This option requires |berkshelf|.
 
 ``--cookbook-path PATH[:PATH]``
    The directory in which cookbooks are located. This may be a colon-separated path.
 
-``-d DOCKERFILE_PATH``, ``--force DOCKERFILE_PATH``
-     Use to specify the path to the |dockerfile|.
+``-d DOCKERFILES_PATH``, ``--force DOCKERFILES_PATH``
+     Use to specify the path to the folder in which |dockerfile| contexts are located.
 
 ``--environments-path PATH[:PATH]``
    The directory in which environments are located. This may be a colon-separated path.
