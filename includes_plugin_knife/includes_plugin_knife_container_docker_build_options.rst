@@ -5,8 +5,8 @@
 
 This argument has the following options:
    
-``-d DOCKERFILE_PATH``, ``--force DOCKERFILE_PATH``
-     Use to specify the path to the |dockerfile|.
+``-d DOCKERFILES_PATH``, ``--force DOCKERFILES_PATH``
+     Use to specify the path to the folder in which |dockerfile| contexts are located.
 
 ``--force``
    Use to force a build. Default value: ``false``.
