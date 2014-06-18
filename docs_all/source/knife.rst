@@ -1743,8 +1743,6 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
-
 |no_options|
 
 Examples
@@ -1775,8 +1773,6 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
-
 |no_options|
 
 Examples
