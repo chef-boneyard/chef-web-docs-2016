@@ -12,8 +12,6 @@ will create a new folder ``docker`` with subfolder ``demo`` in ``Chef::Config[:k
 .. code-block:: ruby
 
    FROM chef/ubuntu_12.04
-   ADD chef/ /chef/
-   RUN chef-client -c /chef/zero.rb -j /chef/first-boot.json -z
    ADD chef /etc/chef
    RUN chef-init --bootstrap
    ENTRYPOINT ["chef-init"]
