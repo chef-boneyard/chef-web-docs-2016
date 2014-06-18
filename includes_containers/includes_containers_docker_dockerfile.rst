@@ -18,7 +18,7 @@ A |dockerfile| contains all of the settings needed to use a container with |chef
    * - ``FROM``
      - The image from which a container will be built. This must be the first setting in a |dockerfile|. Default value: ``chef/ubuntu_12.04``.
    * - ``RUN``
-     - The command to be run inside the container. Default value: ``chef-client -c /chef/zero.rb -j /chef/first-boot.json -z``.
+     - A command to be run inside the container. There may be more than one command specified. Default value: ``chef-client -c /chef/zero.rb -j /chef/first-boot.json -z``.
 
 For more information about these settings, plus the full list of settings available to a |dockerfile|, see http://docs.docker.io/reference/builder/.
 
