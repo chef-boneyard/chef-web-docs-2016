@@ -20,24 +20,12 @@ The following examples show how to use this |knife| subcommand:
 
 **Verify the SSL configuration for the Chef server**
 
-.. code-block:: bash
-
-   $ knife ssl check
+.. include:: ../../step_knife/step_knife_ssl_check_verify_server_config.rst
 
 **Verify the SSL configuration for the chef-client**
 
-.. code-block:: bash
-
-   $ knife ssl check -c /etc/chef/client.rb
+.. include:: ../../step_knife/step_knife_ssl_check_verify_client_config.rst
 
 **Verify an external server's SSL certificate**
 
-.. code-block:: bash
-
-   $ knife ssl check URL_or_URI
-
-for example:
-
-.. code-block:: bash
-
-   $ knife ssl check https://www.getchef.com
+.. include:: ../../step_knife/step_knife_ssl_check_verify_external_server.rst
