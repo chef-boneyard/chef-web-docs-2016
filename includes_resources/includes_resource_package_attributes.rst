@@ -10,9 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``allow_downgrade``
-     - |allow_downgrade| Default value: ``false``.
+     - |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
    * - ``arch``
-     - |architecture package| This attribute is only available for the |resource yum_package| resource.
+     - |resource yum_package| resource only. |architecture package|
    * - ``flush_cache``
      - |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
    * - ``gem_binary``
