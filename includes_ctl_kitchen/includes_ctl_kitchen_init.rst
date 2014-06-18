@@ -8,5 +8,3 @@ The ``init`` subcommand is used to create an initial |kitchen| environment, incl
 * Creating a |kitchen yml| file
 * Appending |kitchen| to the |rubygems| file, |gitignore|, and |thorfile|
 * Creating the ``test/integration/default`` directory
-
-.. note:: After creating the initial |kitchen| environment, re-run ``bundle install`` to ensure that all |rubygems| file dependencies are updated.
