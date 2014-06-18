@@ -12,7 +12,7 @@
 =====================================================
 .. include:: ../../includes_containers/includes_containers_chef_container.rst
 
-**Install the |chef container| Library**
+**Install the chef-container Library**
 
 To use the |resource container_service| resource and the |subcommand knife container| subcommands (``knife container docker build`` and ``knife container docker init``), install the |chef container| library. Run the following command:
 
