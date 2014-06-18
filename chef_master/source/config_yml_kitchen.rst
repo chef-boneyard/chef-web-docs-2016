@@ -11,9 +11,9 @@ Syntax
 
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst
 
-|client rb|-specific Settings
+Provisioner-specific Settings
 ==========================================================================
-.. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_client_rb.rst
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst
 
 |chef client|-specific Settings
 ==========================================================================
