@@ -11,6 +11,8 @@ This resource has the following attributes:
      - Description
    * - ``installer_type``
      - |type package| Possible values: ``:msi``.
+   * - ``options``
+     - |command options|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``returns``
