@@ -11,7 +11,7 @@ Resources and Providers Reference
 This reference describes each of the resources available to the |chef client|, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
 
 
-Common Functionality for all Resources 
+Common Functionality
 =====================================================
 The attributes and actions in this section apply to all resources.
 
