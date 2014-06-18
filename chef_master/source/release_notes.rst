@@ -103,29 +103,18 @@ Syntax
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 **Verify the SSL configuration for the Chef server**
 
-.. code-block:: bash
-
-   $ knife ssl check
+.. include:: ../../step_knife/step_knife_ssl_check_verify_server_config.rst
 
 **Verify the SSL configuration for the chef-client**
 
-.. code-block:: bash
-
-   $ knife ssl check -c /etc/chef/client.rb
+.. include:: ../../step_knife/step_knife_ssl_check_verify_client_config.rst
 
 **Verify an external server's SSL certificate**
 
-.. code-block:: bash
-
-   $ knife ssl check URL_or_URI
-
-for example:
-
-.. code-block:: bash
-
-   $ knife ssl check https://www.getchef.com
+.. include:: ../../step_knife/step_knife_ssl_check_verify_external_server.rst
 
 ``knife ssl fetch``
 -----------------------------------------------------
@@ -137,29 +126,18 @@ Syntax
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 **Fetch the SSL certificates used by Knife from the Chef server**
 
-.. code-block:: bash
-
-   $ knife ssl fetch
+.. include:: ../../step_knife/step_knife_ssl_fetch_knife_certificates.rst
 
 **Fetch the SSL certificates used by the chef-client from the Chef server**
 
-.. code-block:: bash
-
-   $ knife ssl fetch -c /etc/chef/client.rb
+.. include:: ../../step_knife/step_knife_ssl_fetch_client_certificates.rst
 
 **Fetch SSL certificates from a URL or URI**
 
-.. code-block:: bash
-
-   $ knife ssl fetch URL_or_URI
-
-for example:
-
-.. code-block:: bash
-
-   $ knife ssl fetch https://www.getchef.com
+.. include:: ../../step_knife/step_knife_ssl_fetch_from_url_or_uri.rst
 
 
 |client rb| Settings
