@@ -20,24 +20,12 @@ The following examples show how to use this |knife| subcommand:
 
 **Fetch the SSL certificates used by Knife from the Chef server**
 
-.. code-block:: bash
-
-   $ knife ssl fetch
+.. include:: ../../step_knife/step_knife_ssl_fetch_knife_certificates.rst
 
 **Fetch the SSL certificates used by the chef-client from the Chef server**
 
-.. code-block:: bash
-
-   $ knife ssl fetch -c /etc/chef/client.rb
+.. include:: ../../step_knife/step_knife_ssl_fetch_client_certificates.rst
 
 **Fetch SSL certificates from a URL or URI**
 
-.. code-block:: bash
-
-   $ knife ssl fetch URL_or_URI
-
-for example:
-
-.. code-block:: bash
-
-   $ knife ssl fetch https://www.getchef.com
+.. include:: ../../step_knife/step_knife_ssl_fetch_from_url_or_uri.rst
