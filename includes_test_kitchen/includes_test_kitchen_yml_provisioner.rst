@@ -11,11 +11,11 @@
    * - Setting
      - Description
    * - ``chef_omnibus_url``
-     - The URL for an ``install.sh`` file. See http://docs.opscode.com/api_omnitruck.html#chef-client-downloads for more information about various URL options. Default value: ``https://www.getchef.com/chef/install.sh``.
+     - The URL for an ``install.sh`` file. Default value: ``https://www.getchef.com/chef/install.sh``.
    * - ``clients_path``
      - The relative path to the directory in which client data is located. This data must be defined as |json|.
    * - ``cookbook_files_glob``
-     - A file glob that matches the contents of the uploaded cookbook.
+     - A file glob (pattern) that matches files considered to be part of the cookbook. (Typically, this value does not need to be modified from the default.)
    * - ``data_bags_path``
      - The relative path to a directory in which data bags and data bag items are defined. This data must be structured as if it were in the |chef repo|.
    * - ``encrypted_data_bag_secret_key_path``
@@ -27,7 +27,7 @@
    * - ``nodes_path``
      - The relative path to the directory in which node data is located. This data must be defined as |json|.
    * - ``require_chef_omnibus``
-     - Use to install the latest version of the |chef client| in a node. Set to ``true`` to install the latest version. When false, the ``chef_omnibus_url`` may be used to specifiy the version of the |chef client| to be installed. Default value: ``true``.
+     - Use to install the latest version of the |chef client| in a node. Set to ``true`` to install the latest version, ``false`` to not install |chef client| (assumes the box already has it installed), or a version specifier like ``11.8.0`` to install a particular version. When set to ``true`` or a version number, the ``chef_omnibus_url`` may be used to specify the URL of an ``install.sh`` that will install the indicated version of |chef client|. Default value: ``false``.
    * - ``roles_path``
      - The relative path to the directory in which role data is located. This data must be defined as |json|.
 
