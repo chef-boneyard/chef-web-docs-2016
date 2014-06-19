@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife node edit NODE_NAME (options)
+   $ knife node environment_set NODE_NAME ENVIRONMENT_NAME (options)
 

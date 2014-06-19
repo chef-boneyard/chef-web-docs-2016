@@ -11,10 +11,10 @@ What's New
 The following items are new for |chef 11-14| and/or are changes from previous versions. The short version:
 
 * **New knife share subcommand** Use |subcommand knife share| to configure |chef zero| on the local machine.
-* **xxxxx** xxxxx
+* **New argument for knife node** The |subcommand knife node| subcommand has a new argument: ``environment set``. Use it to set the environment for a node, but without the need to edit the node object.
 * **ENV proxy configuration based on configuration settings** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically set the environment variable.
 
-|subcommand knife share|
+knife share
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_share.rst
 
@@ -24,7 +24,17 @@ The following items are new for |chef 11-14| and/or are changes from previous ve
 
 **Options**
 
-.. include:: ../../includes_knife/includes_knife_share_options.rst
+|no_options|
+
+knife node environment set
+-----------------------------------------------------
+The |subcommand knife node| subcommand has a new argument: ``environment_set``.
+
+.. include:: ../../includes_knife/includes_knife_node_environment_set.rst
+
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_node_environment_set_syntax.rst
 
 New |client rb| Settings
 -----------------------------------------------------
