@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|chef spec| is integrated into the |chef client| cookbook authoring workflow via the |chef dk|. The following examples show recipes and corresponding unit tests. See :doc:`ChefSpec </chefspec>` for more information about how to set up unit testing for resources in your cookbooks.
+|chef spec| is integrated into the |chef client| cookbook authoring workflow via the |chef dk|. The following examples show recipes and corresponding unit tests. See `ChefSpec <http://docs.opscode.com/chefspec.html>`_ for more information about how to set up unit testing for resources in your cookbooks.
 
 **Recipe**
 
