@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/essentials_node_object_deep_merge.rst:8
+# 483a1cfcfd1d43cc9c71b1dc94804535
+msgid "About Deep Merge"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:4
+# 62db2bcacc074473b5f336153cd0be51
+msgid "Attributes are typically stored in cookbooks and recipes, roles, and environments. These attributes are rolled-up to the node level during a |chef client| run. For example, a recipe can store attributes using a multi-level hash or array; a group of attributes for web servers might be:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:19
+# a3847ef179d94864ad1d2bbc281932f4
+msgid "But what if all of the web servers are not the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like the preceding example and once just like the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:34
+# a7905a3c8c7f403790ab5f31de3fe673
+msgid "But that is not very efficient, especially because most of them are identical. The deep merge capabilities of the |chef client| allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:53
+# 8e0eb1d45edd48d4afeaa46d723afb7d
+msgid "and then a role named ``web.rb``:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:69
+# 751f24a857524d0a8b23035f0b688adc
+msgid "Both of these files are similar. They share the same structure. When an attribute is of the same type of data, such as a hash or an array, that data is merged when the attribute precedence levels are the same and is replaced when the attribute precedence levels are different."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:71
+# a26403b4417c48b7a6e840b783c0710e
+msgid "For example, the ``web.rb`` references the ``baseline.rb`` role. The ``web.rb`` file only provides a value for one attribute: ``:startservers``. When the |chef client| compares these attributes, the deep merge feature will ensure that ``:startservers`` (and its value of ``30``) will be applied to any node for which the ``web.rb`` attribute structure should be applied."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:73
+# be6dea255cb24df8a51e4bcb10a13607
+msgid "This approach will allow a recipe like this:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:80
+# 6c1f345a704b40f69e8444ae86e68c98
+msgid "and a ``run_list`` like this:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:89
+# 2d33281b25f84ce590fe3021c49b327e
+msgid "to produce results like this:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge.rst:103
+# 48ec808d5b2449d1993a43530e41ac80
+msgid "Even though the ``web.rb`` file does not contain attributes and values for ``minspareservers``, ``maxspareservers``, ``serverlimit``, ``maxclients``, and ``maxrequestsperchild``, the deep merge capabilities pulled them in."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/essentials_node_object_deep_merge.rst:12
+# 2db35dd783a5481a80db73659180b433
+msgid "The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/essentials_node_object_deep_merge.rst:15
+# d00f6adabad948a78ddb52dccb5355eb
+msgid "Substitution"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_substitute.rst:4
+# 6b72950630f142b894b510317f90bb97
+msgid "The following examples show how the logic works for substituting an existing string using a hash::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_substitute.rst:12
+# d4c34cee874746f598622c081946d725
+msgid "For substituting an existing boolean using a hash::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_substitute.rst:20
+# 659d6be5456943f6b835dbf041a77b43
+msgid "For substituting an array with a hash::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_substitute.rst:28
+# 3beedde7d3154eba8e839df4d9dfebab
+msgid "When items cannot be merged through substitution, the original data is overwritten."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/essentials_node_object_deep_merge.rst:19
+# cb13261bf0d749b5a351d62e7abf97fd
+msgid "Addition"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_add.rst:4
+# fc4d2b65c3114d6c85616b8e81c3f8d7
+msgid "The following examples show how the logic works for adding a string using a hash::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_add.rst:12
+# 95af177cf8e14fe8b097510ab8e18cd4
+msgid "For adding a string using an array::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_add.rst:20
+# bb9fdeb4a16548a4a9e93361e81d5626
+msgid "For adding a string using a multi-level hash::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_node/includes_node_attribute_deep_merge_add.rst:28
+# dea28efe21074a4da9a95e20b03c3535
+msgid "For adding a string using a multi-level array::"
+msgstr ""
+

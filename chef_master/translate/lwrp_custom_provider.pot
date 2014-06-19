@@ -1,0 +1,552 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:8
+# 0b16bb256da049f3838d245a26781740
+msgid "Lightweight Providers w/Platform Resources"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_cookbooks/includes_cookbooks_provider.rst:4
+# d2cb7416ecdc4fddaf2c594e7a7afe57
+msgid "Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state. These steps are de-coupled from the request itself. The request is made in a recipe and is defined by a lightweight resource. The steps are then defined by a lightweight provider."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider.rst:5
+# a29787a7dd7542cd9ba9228472c74a2a
+msgid "A lightweight provider is a custom provider that defines the steps that are required to complete one (or more) actions defined by a lightweight resource. A lightweight provider and lightweight resource work together, each being defined in the same cookbook (the ``/providers`` and ``/resources`` subdirectories, respectively); together, they are referred as a |lwrp| (or \"lightweight resource/provider\"). A lightweight provider is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight provider. In addition to using |ruby|, the |dsl provider| provides additional methods that are specific to the |chef client|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:15
+# 07853474a0604be5a85a524c67b4d79a
+msgid "Syntax"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:5
+# 3c0b105a1a1a4d8db48d2524bfede525
+msgid "This section shows some of the common structural elements that appear in a lightweight provider that is built in a way that leverages platform resources (such as |resource file|, |resource template|, or |resource package|). Remember:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:7
+# 5308ead7253a4cbaa81d17736f596f88
+msgid "A lightweight provider tells the |chef client| how to complete a task"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:8
+# 610c593400724e5b969fda1a2d6b4e8d
+msgid "The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:9
+# 275ba487d03741bcac755302b4a0d092
+msgid "At its platform, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:11
+# e97f6deca5304072a94a8f001a444c84
+msgid "The basic syntax for a lightweight provider that is built to leverage platform resources is as follows:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:35
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_action.rst:20
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_cron_d.rst:40
+# f85634acf33a4d8ebe677fc8ba8e3752
+# cf8db1c2d80144c0b8078516a9ea840f
+# 1b0d0d20d0cd4c358798feb5dc2d9521
+msgid "where:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:37
+# 9c24725143df43c3aa26ab2cd5b53ede
+msgid "``whyrun_supported?`` indicates whether a lightweight provider can be run in |whyrun| mode"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:38
+# 22dd9a4aeefe42848b1560381aae7edb
+msgid "``use_inline_resources`` is used to tell the |chef client| to execute ``action`` blocks as part of a self-contained |chef client| run. Using this method ensures that the |chef client| can notify parent lightweight resources after embedded resources have finished processing"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:39
+# 7b133f795bc24bc8ab3d818fc009f99d
+msgid "``action`` is the code block that tells the |chef client| what to do when the ``:action_name`` is used in a recipe"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:40
+# 058a3f7f09ce4373abddec7eef631283
+msgid "``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:41
+# 06f4ab03f8b94c2f8c3cb3df07d7acd7
+msgid "``test`` is used to test for idempotence; ``test`` can be defined inline (within the ``action`` block), defined as a method using a definition block elsewhere in the lightweight provider (shown as ``def test()``), or defined using any other pattern that is available in |ruby|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:42
+# 1be2e0d358994b9280e8d349b29b61f6
+msgid "``resource`` is a resource written as a recipe"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:43
+# 63c58ca031e94903ac41655ec56d0844
+msgid "``Chef::Log.log_type`` is used to tell the |chef client| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:44
+# 73bbb702b1754b75a9b93db21d4cf8eb
+msgid "``updated_by_last_action`` is used to notify that a node was updated successfully"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_syntax.rst:46
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_current_resource.rst:7
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_load_current_resource.rst:7
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_new_resource.rst:7
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:11
+# 71171108e43444169566ee80015e8ed7
+# b7af15e373ff4b86a17d320364d4a35a
+# c45d4c6e5238476c9899ab0aa62d2d58
+# 093700e6227c468b9efd81ef62523a7b
+# 33b60d1778274777b019a7aa9eab0713
+msgid "For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:19
+# ce98a2d4da8d4094ba6d42a46d622d0d
+msgid "|dsl provider| Methods"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider.rst:5
+# adaa38efccbf468ba9e4fd8e1395cde4
+msgid "The |dsl provider| is a |ruby| DSL that is used to help define a lightweight provider and to ensure that a lightweight provider takes the correct actions when it is called from a recipe. The |dsl provider| is a small DSL with just a few methods that are specific to the |chef client|. Because the |dsl provider| is a |ruby| DSL, anything that can be done using |ruby| can also be done when defining a lightweight provider."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:23
+# 3e6f7025b0d144d3a79dff0661db7ae4
+msgid "action"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_action.rst:5
+# d29113c2cc8b4c8ba1dadbf7bd7ba786
+msgid "The ``action`` method is used to define the steps that will be taken for each of the possible actions defined by the lightweight resource. Each action must be defined in separate ``action`` blocks within the same file. The syntax for the ``action`` method is as follows:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_action.rst:22
+# b1f7603fce2a4b449539132be7fb658f
+msgid "``:action_name`` corresponds to an action defined by a lightweight resource"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_action.rst:23
+# 8f1e9bc52e884fccb7387a41de460b6f
+msgid "``if @current_resource.exists`` is a condition test that is using an instance variable to see if the object already exists on the node; this is an example of a test for idempotence"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_action.rst:24
+# 735c243765434c888eea453659b04335
+msgid "If the object already exists, a ``#{ @new_resource } already exists - nothing to do.`` log entry is created"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_action.rst:25
+# 5d1fcc236a3a4a3d95e51549f2301a37
+msgid "If the object does not already exists, the ``resource`` block is run. This block is a recipe that tells the |chef client| what to do. A ``#{ @new_resource } created.`` log entry is created"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:26
+# 7f75d593200746c2a47a86aea26ff9a3
+msgid "The ``converge_by`` method is not included in the previous syntax example because when |whyrun| mode is enabled in a lightweight provider that leverages platform resources, the ``converge_by`` blocks are already defined by the platform resources."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:29
+# c3b25d925fd04a9a8b9d8a372ad5350d
+msgid "current_resource"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_current_resource.rst:5
+# b4234b84699b491e8b046892b9f81a85
+msgid "The ``current_resource`` method is used to represent a resource as it exists on the node at the beginning of the |chef client| run. In other words: what the resource is currently. The |chef client| compares the resource as it exists on the node to the resource that is created during the |chef client| run to determine what steps need to be taken to bring the resource into the desired state. This method is often used as an instance variable (``@current_resource``)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_current_resource.rst:25
+# bef3c69cf2cb4c66b91cdcd2cca9edac
+msgid "where the ``unless`` conditional statement checks to make sure the resource doesn't already exist on a node, and then runs a series of commands when it doesn't. If the resource already exists, the log entry would be \"Foo app already exists - nothing to do.\""
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:33
+# 14b39a225727402d8f66d9820a398a59
+msgid "load_current_resource"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_load_current_resource.rst:5
+# 88a2de58326d49a798bbf5d9db07074d
+msgid "The ``load_current_resource`` method is used to find a resource on a node based on a collection of attributes. These attributes are defined in a lightweight resource and are loaded by the |chef client| when processing a recipe during a |chef client| run. This method will ask the |chef client| to look on the node to see if a resource exists with specific matching attributes."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_load_current_resource.rst:26
+# e1b4cf2a48b4480ba0b032c563ce94a2
+msgid "In the previous example, if a resource exists with matching attributes, the |chef client| does nothing and if a resource does not exist with matching attributes, the |chef client| will enforce the state declared in ``new_resource``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:37
+# 799d992474f8447eb548c8ce1aeb1804
+msgid "new_resource"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_new_resource.rst:5
+# bd8517ec5a044bcaa773d88a506bc848
+msgid "The ``new_resource`` method is used to represent a resource as loaded by the |chef client| during the |chef client| run. In other words: what the resource should be. The |chef client| compares the resource as it exists on the node to the resource that is created during the |chef client| run to determine what steps need to be taken to bring the resource into the desired state."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_new_resource.rst:23
+# 5b865b3afa6a4571912b3c5ac8a4eaef
+msgid "where the |chef client| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:41
+# d4df0a91cac6400987007eb55b2e8da0
+msgid "updated_by_last_action"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action.rst:5
+# d872a9695ef04ae29b0b30aa6f6666b8
+msgid "The ``updated_by_last_action`` method is used to notify a lightweight resource that a node was updated successfully. For example, the ``cron_d`` lightweight resource in the |cookbook cron| cookbook:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action.rst:33
+# 2fab74b28b43452a879184bc6f9b2e4e
+msgid "where ``t.updated_by_last_action?`` uses a variable to check whether a new |crontab| entry was created."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:45
+# 3042ceb87812490588d06d466d7a325c
+msgid "use_inline_resources"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources.rst:5
+# 2d26979866554665993788f4fc630570
+msgid "A lightweight resource should be set to inline compile mode by adding the ``use_inline_resources`` method at the top of the provider. This ensures that notifications work properly across the resource collection. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources.rst:15
+# 26c3c1bc45204a09b788e115106c1b65
+msgid "The ``use_inline_resources`` method was added to the |chef client| starting in version 11.0 to address the behavior described below. The ``use_inline_resources`` method should be considered a requirement for any lightweight resource authored against the 11.0+ versions of the |chef client|. This behavior will become the default behavior in an upcoming version of the |chef client|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:48
+# f7d75042afc54491a06c2a48da69bd36
+msgid "**Background**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:5
+# 45f99c08cbd047aaaf7d0b7a349c95ad
+msgid "The reason why the ``use_inline_resources`` method exists at all is due to how the |chef client| processes resources. Currently, the default behavior of the |chef client| processes a single collection of resources, converged on the node in order."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:7
+# de6865f0bf284b648dc415f1a6b5e817
+msgid "A lightweight resource is often implemented using the core |chef client| resources---|resource file|, |resource template|, |resource package|, and so on---as building blocks. A lightweight resource is then added to a recipe using the short name of the lightweight resource in the recipe (and not by using any of the building block resource components)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:9
+# 8a0801ecb93b4874bbf8efb28656b574
+msgid "This situation can create problems with notifications because the |chef client| includes embedded resources in the \"single collection of resources\" *after* the parent resource has been fully evaluated."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:24
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:68
+# 45fcadb9e1db4acc9d8560e2891276ef
+# 4de389984abd408b8cd2a2ba9797f57b
+msgid "If the ``custom_resource`` is built using the |resource file| resource, what happens during the |chef client| run is::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:30
+# 8119de8952a64435b506fe60110d0b54
+msgid "The ``custom_resource`` is converged completely, its state set to not updated before the |resource file| resource is evaluated. The ``notifies :restart`` is ignored and the service is not restarted."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:32
+# 7c1203b70dd64c18b2ebe393c0d8421c
+msgid "If the author of the custom resource knows in advance what notification is required, then the |resource file| resource can be configured for the notification in the provider. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:45
+# 113683e43bcf46d0bc03fb898c6ed29f
+msgid "And then in the recipe:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:53
+# 3461244669c1439594a55a02ec9e9ca5
+msgid "This approach works, but only when the author of the lightweight resource knows what should be notified in advance of the |chef client| run. Consequently, this is less-than-ideal for most situations."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst:55
+# 8a05190c9a684a1aa4bd67a2f0644a1d
+msgid "Using the ``use_inline_resources`` method will ensure that the |chef client| processes a lightweight resource as if it were its own resource collection---a \"mini |chef client| run\", effectively---that is converged *before* the |chef client| finishes evaluating the parent lightweight resource. This ensures that any notifications that may exist in the embedded resources are processed as if they were notifications on the parent lightweight resource. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:52
+# 80e8ee4a62904859ac466359b8b7846b
+msgid "**Turn off Inline Compile Mode**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_definition.rst:5
+# f42678cb9ec741daac57195c7e618114
+msgid "The ``use_inline_resources`` method should be considered a default method for any provider that defines a custom resource. It's the correct behavior. And it will soon become the default behavior in a future version of the |chef client|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_definition.rst:7
+# a2570acbe62c4964a7b30e2f1713dcbc
+msgid "Because inline compile mode makes it impossible for embedded resources to notify resources in the parent resource collection, inline compile mode may cause issues with some provider implementations. In these cases, use a definition to work around inline compile mode. See `this example <http://docs.opscode.com/essentials_cookbook_definitions.html#many-recipes-one-definition>`_ for how to use a definition in this situation."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:57
+# 1cd79c56aa6b446c9faff1a81899b87f
+msgid "whyrun_supported?"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode.rst:5
+# 27e8bd4b33b54b73a3f349a25db75efb
+msgid "|whyrun| mode is a way to see what the |chef client| would have configured, had an actual |chef client| run occurred. This approach is similar to the concept of \"no-operation\" (or \"no-op\"): decide what should be done, but then don't actually do anything until it's done right. This approach to configuration management can help identify where complexity exists in the system, where inter-dependencies may be located, and to verify that everything will be configured in the desired manner."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode.rst:7
+# ccc19140eac84fb9b542a95e37353c3d
+msgid "When |whyrun| mode is enabled, a |chef client| run will occur that does everything up to the point at which configuration would normally occur. This includes getting the configuration data, authenticating to the |chef server|, rebuilding the node object, expanding the run list, getting the necessary cookbook files, resetting node attributes, identifying the resources, and building the resource collection and does not include mapping each resource to a provider or configuring any part of the system."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode.rst:9
+# a7d4710ec54d4344b966775fab678620
+msgid "why-run mode is not a replacement for running cookbooks in a test environment that mirrors the production environment. |company_name| uses why-run mode to learn more about what is going on, but also test-kitchen on developer systems, along with an internal |openstack| cloud and external cloud providers to test more thoroughly."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:5
+# 0f137580f54f401d99ab4a8a051d0d2e
+msgid "When the |chef client| is run in |whyrun| mode, certain assumptions are made:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:7
+# d34a57f155a841789f8233e3e08c250a
+msgid "If the |resource service| resource cannot find the appropriate command to verify the status of a service, |whyrun| mode will assume that the command would have been installed by a previous resource and that the service would not be running"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:8
+# 406407af7a764d31b03bef12ca825638
+msgid "For ``not_if`` and ``only_if`` attribute, |whyrun| mode will assume these are commands or blocks that are safe to run. These conditions are not designed to be used to change the state of the system, but rather to help facilitate idempotency for the resource itself. That said, it may be possible that these attributes are being used in a way that modifies the system state"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:9
+# 357f0305d61742efb2eb8370c44889b7
+msgid "The closer the current state of the system is to the desired state, the more useful |whyrun| mode will be. For example, if a full run-list is run against a fresh system, that run-list may not be completely correct on the first try, but also that run-list will produce more output than smaller run-list"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst:5
+# e687bd02c0ab4835958382e3527c5d05
+msgid "The ``whyrun_supported?`` method is used to set a lightweight provider to support |whyrun| mode. The syntax for the ``whyrun_supported?`` method is as follows:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst:13
+# 94c61b59e2ee44288b2845463a7e11b2
+msgid "where ``whyrun_supported?`` is set to ``true`` for any lightweight provider that supports using |whyrun| mode. When |whyrun| mode is supported by the a lightweight provider, the ``converge_by`` method is used to define the strings that are logged by the |chef client| when it is run in |whyrun| mode."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:64
+# 7d9644acde6947c580477d6b83446cb3
+msgid "When a lightweight provider contains only platform resources, the ``converge_by`` method is not required because it is already built into all of the platform `resources <http://docs.opscode.com/resource.html>`_."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:67
+# e0e6d6a5526c4dbf968896406a92307f
+msgid "Condition Statements"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:5
+# 0642bb1f0906487ba04fcbbc777197f0
+msgid "A lightweight provider can use any conditional statement that can be used in |ruby|: ``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, and ``for``. A condition statement can test for:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:7
+# 7e52e135809e445ea64562c9eeab9e00
+msgid "A |ruby| class (such as ``::File`` or ``::String``)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:8
+# db83246cb16b4cbea5ef79e19ea64dd3
+msgid "A ``Chef`` class (such as ``::Chef::Mixin::ShellOut``)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:9
+# 8683792ed14e46fb915551910fb15f38
+msgid "Conditions present on the node by using ``@current_resource``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:10
+# 2a52f2a23d46425eb3cf3c6a34725baf
+msgid "Conditions present within the resource being processed by the |chef client| during the |chef client| run by using ``new_resource`` or ``@new_resource``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:11
+# 920493585aea425da5ad99c22d6c5dc4
+msgid "To verify if a resource was updated by using ``updated_by_last_action``, for example: ``@new_resource.updated_by_last_action``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:13
+# de15ef5e55af425daf0e5534d008a9d9
+msgid "and so on."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:15
+# 9754919693794487abc93b5cfcb015c5
+msgid "For example, an ``if`` statement is used to check if a file exists (``::File.exists?``), and then if the file exists to delete a key from that file."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_conditions.rst:29
+# 3f5f527a955b4a02939e4a2ce09ff8e3
+msgid "In the following example an ``unless`` statement is used to add a key, unless that node object already has that key assigned to it:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:71
+# 786b36be10d649ec82db89cc95c45b0f
+msgid "Log Entries"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs.rst:5
+# 2738196157e74de78d75768e90c6a1ab
+msgid "Use the ``Chef::Log`` class in a lightweight provider to define log entries that are created during a |chef client| run. The syntax for a log message is as follows:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs.rst:11
+# 6b72f4d77a0440f3b1728deb90fa4df0
+msgid "where"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs.rst:13
+# 01707d9b6f754a6da7f671ca0f564cf5
+msgid "``log_type`` can be ``.debug``, ``.info``, ``.warn``, ``.error``, or ``.fatal``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs.rst:14
+# 7a425c6b45f547898b87d8d906e414bb
+msgid "``\"message\"`` is the message that is logged. For example: ``\"#{@new_resource} added module '#{@new_resource.module_name}'\"`` or ``\"#{@new_resource} module already exists - nothing to do\"``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs.rst:16
+# 5475a7f9c6a248f69c1455c43b507b11
+msgid "For example, from the ``repository.rb`` provider in the |cookbook yum| cookbook:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs.rst:27
+# d8c3831f80cd4a22a18acc32dfb51891
+msgid "where the ``Chef::Log`` class appends ``.info`` as the log type. If the name of the repo was \"foo\", then the log message would be \"Adding foo repository to /etc/yum.repos.d/foo.repo\"."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs.rst:29
+# 96de540624c747f28f7353e04a9d4234
+msgid "Another example shows two log entries, one that is triggered when a service is being restarted, and then another that is triggered after the service has been restarted:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:75
+# 55228f41b7334daaa165775122cfb242
+msgid "rescue"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_logs_rescue.rst:5
+# 830826f676224f499f3d8e4c7645e93f
+msgid "Use the ``rescue`` clause to make sure that a log message is always provided. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:79
+# a2c8b6450ac049fa91bfd22166be4018
+msgid "Examples"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:80
+# eb2e313d33024d4080d2292172328c68
+msgid "The following examples show various lightweight providers that use platform resources."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:83
+# 0651d26dd05f46b091734e0de92dcffb
+msgid "aws_ebs_volume"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_aws_ebs_volume.rst:5
+# 137c62c98cc2477498eeef8ab7d0b8a2
+msgid "The ``aws_ebs_volume`` lightweight provider (found in the `aws <https://github.com/opscode-cookbooks/aws>`_ cookbook maintained by |company_name|) defines how the |chef client| would handle a recipe that uses the ``ebs_volume`` lightweight resource and the ``:detach`` action. The following ``action`` block tells the |chef client| what to do with the ``:detach`` action:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_aws_ebs_volume.rst:17
+# 5e22ed7c8c8c444aa56d27dff5e9ea15
+msgid "and the following ``def`` block defines the ``vol`` variable called by the ``determine_volume`` method:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:87
+# a96323c5324042b99e61bcda3196f25e
+msgid "cron_d"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_cron_d.rst:5
+# cf24ab42ac4247ac9d1d1a5ba842540f
+msgid "The ``cron_d`` lightweight provider (found in the `cron <https://github.com/opscode-cookbooks/cron>`_ cookbook maintained by |company_name|) is used to tell the |chef client| what to do whenever the ``cron_d`` lightweight resource is used in a recipe:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_cron_d.rst:42
+# 33c8bf0bbe9e44a68b76e928d3edc99e
+msgid "two ``action`` blocks are defined, one for the ``:create`` action and one for the ``:delete`` action"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_cron_d.rst:43
+# 307d88472b39418b897c89742e48b0e7
+msgid "the ``:delete`` action block calls the |resource file| resource (and it's ``:delete`` action) to delete a file in the ``/etc/cron.d`` folder"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_cron_d.rst:44
+# 4a0880ca5cae41629a4684604cc1fa56
+msgid "the ``:create`` action block creates a new entry in the ``/etc/cron.d`` folder."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_cron_d.rst:46
+# 908e8924f3524f43baf9e40b5cc4c3cd
+msgid "For example, if a recipe used the ``cron_d`` lightweight resource similar to the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_cron_d.rst:57
+# 5a394cd3899d4ab38db93554de08ef66
+msgid "this tells the |chef client| to use the ``cron_d`` lightweight provider and the credentials for a user named ``appuser`` to create a |crontab| entry named \"daily-usage-report\". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the lightweight resource."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:91
+# 568db768548f46bc92c77482ff97d50a
+msgid "rabbitmq_plugin"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_rabbitmq_plugin.rst:5
+# dd6b2d6855a94d95950083e2c319a077
+msgid "The ``rabbitmq_plugin`` lightweight provider (found in the `rabbitmq <https://github.com/opscode-cookbooks/rabbitmq>`_ cookbook maintained by |company_name|) is used to tell the |chef client| how to handle two actions (``:disable`` and ``:enable``) that are used to manage |rabbitmq| plugins. Using this lightweight resource in a recipe is simple:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_rabbitmq_plugin.rst:13
+# 121ba80fbdd248b2824c6ccc89528520
+msgid "The lightweight provider then does most of the work:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/lwrp_custom_provider.rst:95
+# 7afcd3442ffe4be9aab9cde6447b22e3
+msgid "ssh_known_hosts_entry"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_lwrp/includes_lwrp_custom_provider_example_ssh_known_hosts_entry.rst:5
+# b750a68382b34caca8263975511cc195
+msgid "The ``ssh_known_hosts_entry`` lightweight provider (found in the `ssh_known_hosts <https://github.com/opscode-cookbooks/ssh_known_hosts>`_ cookbook maintained by |company_name|) is used to add hosts and keys to the ``/etc/ssh_known_hosts`` file."
+msgstr ""
+

@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:8
+# 66d7ae896fcd49e38bc213322c51372c
+msgid "registry_key"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources_common/includes_resources_common_generic.rst:5
+# f5ba5a19b6534fef82eb127ea7c6914e
+msgid "A `resource <http://docs.opscode.com/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key.rst:4
+# d63644cbf4124af79a5583638482e210
+msgid "Use the |resource registry_key| resource to create and delete registry keys in |windows|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key.rst:6
+# c7588dc650d747e3bd698f56050f6d1e
+msgid "64-bit versions of |windows| have a 32-bit compatibility layer in the registry that reflects and redirects certain keys (and their sub-keys) into specific locations. By default, the registry functionality will default to the machine architecture of the system that is being configured. The |chef client| can access any reflected or redirected registry key. The |chef client| can write to any 64-bit registry location. (This behavior is not affected by the |chef client| running as a 32-bit application.) For more information, see: |url msdn_registry_key|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:15
+# 6646406b2fc94a289f756817b3306ac7
+msgid "Syntax"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:4
+# ca99023462494c6cada559ea3b2e5157
+msgid "The syntax for using the |resource registry_key| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:26
+# ccd06cd1a853475b81c9158387d05e05
+msgid "where"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:28
+# d28b8cf060fc4778879a062e43f521fd
+msgid "``registry_key`` tells the |chef client| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:29
+# 0809276fe4ef43749292cf27dc98a33a
+msgid "``name`` is the name of the resource block; when the ``key`` attribute is not specified as part of a recipe, ``name`` is also path to the location in which a registry key is created or from which a registry key is deleted"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:30
+# 4cfa701aeea647b19cc3fd5fb28cf334
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:31
+# af0c2148677d4582a34697f9c1a83a43
+msgid "``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:32
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:31
+# 0e7eb980f6b245279ea398cb990ca8e7
+# 4e83333f6a34435da7329920f09c3002
+msgid "|values resource registry_key types|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:33
+# 631f57279406418c9625db6b1a323e4c
+msgid "``:action`` is the step that the resource will ask the provider to take during the |chef client| run"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:35
+# 107ac8a9eacd413fae65d0c16844cf73
+msgid "The following is an example of how the |resource registry_key| resource can work when used in a recipe. In this example, a |windows| registry key named \"System\" will get a new value called \"NewRegistryKeyValue\" and a multi-string value named \"foo bar\":"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_syntax.rst:48
+# 4b463035df8940dbb5a18920ef4551b6
+msgid "and the following example shows how multiple registry key entries can be configured using a single resource block with key values based on node attributes:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:19
+# d82e65aa348f483a95373a5d3a657019
+msgid "Registry Key Path Separators"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:5
+# eb47afe7ae97434fb3a454bee740c51e
+msgid "A |windows| registry key can be used as a string in |ruby| code, such as when a registry key is used as the name of a recipe. In |ruby|, when a registry key is enclosed in a double-quoted string (``\" \"``), the same backslash character (``\\``) that is used to define the registry key path separator is also used in |ruby| to define an escape character. Therefore, the registry key path separators must be escaped. For example, the following registry key:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:11
+# 64e7a351721b439fa82096fea02b21e4
+msgid "will not work when it is defined like this:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:20
+# 1c3fe51a20cc4888b11ffb6a747e9fac
+msgid "but will work when the path separators are escaped properly:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:23
+# 2c4e27e0c9984492a70cb7844333226b
+msgid "Recipe DSL Methods"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:24
+# 5b843864877e46e2b8ccbca48dd8e68a
+msgid "The following methods can be used to interact with |windows| registry keys."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:30
+# 6d97ad8854ae4b06a0f4a863ba310a2a
+msgid "Methods"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:31
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:11
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:11
+# 769f0dc502134003bcfae344b97c57ca
+# b6fda6ec12d94bbe91e7eb6cba4f2cab
+# 7292cef377f249f4823cc1d06f4a7972
+msgid "Description"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:32
+# ca4a2454a68544f0aaafeac0e3a94657
+msgid ":doc:`registry_data_exists? </dsl_recipe_method_registry_data_exists>`"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:33
+# ce3cd1fffe574c15aa6b61d34e8e2c15
+msgid "Find out if a registry key contains data."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:34
+# 80e01d0bc8f4433bb2632e4c6c0ec555
+msgid ":doc:`registry_get_subkeys </dsl_recipe_method_registry_get_subkeys>`"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:35
+# ca3a9a8e3b384990aab57c9667cb53da
+msgid "Get a list of sub-keys for a registry setting."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:36
+# fc2870abee0747259dc1cd1923407c00
+msgid ":doc:`registry_get_values </dsl_recipe_method_registry_get_values>`"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:37
+# 54873d5fdc2a4f1eb205021dd14c6dfa
+msgid "Get values (name, type, and data) for a given registry key."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:38
+# a4b4c912e8114ef08feb88aa1282d650
+msgid ":doc:`registry_has_subkeys? </dsl_recipe_method_registry_has_subkeys>`"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:39
+# 8d8906e612f64544b9c1bf0b62047291
+msgid "Find out if a registry key has one (or more) sub-keys."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:40
+# 74556beb6b5d41a6ae2948fcfc5fca57
+msgid ":doc:`registry_key_exists? </dsl_recipe_method_registry_key_exists>`"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:41
+# ffee44c9f68a4fa392b63305db8593d6
+msgid "Find out if a registry key exists."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:42
+# 1a20c054202d498fab6244368625fc09
+msgid ":doc:`registry_value_exists? </dsl_recipe_method_registry_value_exists>`"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:43
+# bf377020bb8941ea9980af4b53e6f4dd
+msgid "Find out if a registry key has values set (name, type, and data)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:45
+# 4922a2c8cd5d4757ba9b8f490aa0ab60
+msgid "The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:48
+# 842a2498de35427f9e7871bc71643c54
+msgid "Actions"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:4
+# 24c724e06e0e46e19a0e8d176a6c0597
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:10
+# cd5c5928ecd449088c66b4be749e100a
+msgid "Action"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:12
+# 4e230528337a4379ae0d47b09620f6a4
+msgid "``:create``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:13
+# 9fb5345e6767463092a73be1916d06aa
+msgid "Default. |resource action create registry_key|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:14
+# 13240be2aca64765af8cf32405807c96
+msgid "``:create_if_missing``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:15
+# 64fec16dd49746b4ab4c1780487a4c83
+msgid "|resource action create_if_missing registry_key|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:16
+# 545a8dfbc4044bc79517a31015954287
+msgid "``:delete``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:17
+# e6c6956b26444a9b900040228be85ca1
+msgid "|resource action delete registry_key|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:18
+# 58a8f5845cc740e2be60572cef5f947e
+msgid "``:delete_key``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:19
+# dda5453d89b04c8a9bcf90fdde54a4d5
+msgid "|resource action delete key registry_key|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_actions.rst:21
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:27
+#: ../../../desktop/chef-docs/step_resource/step_resource_registry_key_delete_recursively.rst:12
+# 1dd6b86f262148868f9bf23d2d7e6bf0
+# cb99382da6ac4a8892ec0c2c92786963
+# 48cf76362d9f481aba1945d4f3665db8
+msgid "|note registry_key resource recursive|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:52
+# 77925cbeb4b54cf9a3fe0b8fbf559dbc
+msgid "Attributes"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:4
+# 18a3343e63634116a9295e67f9a7ee91
+msgid "|description resource_attributes_intro|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:10
+# f6639759d02741e683572f56cb04be1d
+msgid "Attribute"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:12
+# ef5da4b6b23f4f7389fff23bbbb59498
+msgid "``architecture``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:13
+# 1c1c5609c4284ac1be48160127e7fa56
+msgid "|architecture registry_key| Default value: ``:machine``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:15
+# 4e88a07370f04948b730c04993ded3c0
+msgid "|architecture registry_key machine|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:17
+# 25e69965303f4010afa7620089a2c109
+msgid "|note registry_key architecture|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:18
+# 35d2d8eead8d43218eb637693edd460f
+msgid "``key``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:19
+# dc0f5c8591cf4ef0a8e184785ea27975
+msgid "|key_name resource registry_key| Default value: the ``name`` of the resource block (see Syntax section above)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:21
+# 45ff039d94c74f7e8567ac2e341cfc7e
+msgid "|key_name resource registry_key hives|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:22
+# b2a1f24628be41c78234b27c371d6b18
+msgid "``provider``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:23
+# 051a280a83ea48c09240486caf345b74
+msgid "Optional. |provider resource_parameter|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:24
+# c4b2a1c67f9d4c5cb541455dfa2942be
+msgid "``recursive``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:25
+# 5f3cfaf2a3ac42cd9a354ca6b1a2926a
+msgid "|recursive registry_key|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:28
+# 401aa4abb1a74304a8de02226eaace19
+msgid "``values``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_attributes.rst:29
+# 5bcb52995b3741d7ada5dafa2afa4f44
+msgid "|values resource registry_key|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:56
+# 4eafc47dc54547f2bb1e32afe4eacd61
+msgid "Providers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_providers.rst:4
+# fc264ec322944dbc941e7bd22ad5a215
+msgid "The following providers are available. Use the short name to call the provider from a recipe:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_providers.rst:10
+# 18da5aed3f154738aea48d781e76db70
+msgid "Long name"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_providers.rst:11
+# 27d2a47454034d1ca385eb59d7ff8ba3
+msgid "Short name"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_providers.rst:12
+# f0e64f159760490b85bc9a65704d8644
+msgid "Notes"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_providers.rst:13
+# ebbeaca34694420d85e65e7605972719
+msgid "``Chef::Provider::Windows::Registry``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_providers.rst:14
+# cc761147b5404048bf26f6f00a366a6c
+msgid "``registry_key``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_registry_key_providers.rst:15
+# d04ef2b6780448a482e44dd126fc318c
+msgid "The default provider for the |windows| platform."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:60
+# c41fd843d9d74b9195e8c37f272a370c
+msgid "Examples"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:61
+# 90138eb004904f04ae06ab139923aaa3
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:63
+# 8196aa009dc040fb91012b09723b7d01
+msgid "**Create a registry key**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:67
+# 97d838c7cd724d40b3218a732c6ac834
+msgid "**Delete a registry key value**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:71
+# 089ecd194a094ed4b47e1f2397f80f35
+msgid "**Delete a registry key and its subkeys, recursively**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:75
+# 11ecad80dce041dbbb15227dac0e38ae
+msgid "**Use re-directed keys**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_resource/step_resource_registry_key_redirect.rst:3
+# e2de7412426243598e1a1451a9dd9fa8
+msgid "In 64-bit versions of |windows|, ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Example`` is a re-directed key. In the following examples, because ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Example`` is a 32-bit key, the output will be \"Found 32-bit key\" if they are run on a version of |windows| that is 64-bit:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_resource/step_resource_registry_key_redirect.rst:13
+#: ../../../desktop/chef-docs/step_resource/step_resource_registry_key_redirect.rst:23
+#: ../../../desktop/chef-docs/step_resource/step_resource_registry_key_redirect.rst:34
+# 1e87cdef212644039694c59f758407b4
+# 04ecf329f89749be94d2e5d08a98cf98
+# 9753ffe4b1d940d0877c5a74a58175f9
+msgid "or:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_registry_key.rst:79
+# 0397bc8d28ef49709fef6b8f83fd75ff
+msgid "**Set proxy settings to be the same as those used by the chef-client**"
+msgstr ""
+

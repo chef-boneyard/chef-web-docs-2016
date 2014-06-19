@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/essentials_nodes_why_run.rst:8
+# 97dfebbb6c3043ecb806a5a3ecdff965
+msgid "About why-run Mode"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode.rst:5
+# 5acbedcfa4b6486dbf9d605a5dace3b2
+msgid "|whyrun| mode is a way to see what the |chef client| would have configured, had an actual |chef client| run occurred. This approach is similar to the concept of \"no-operation\" (or \"no-op\"): decide what should be done, but then don't actually do anything until it's done right. This approach to configuration management can help identify where complexity exists in the system, where inter-dependencies may be located, and to verify that everything will be configured in the desired manner."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode.rst:7
+# 59a6f33b543949b1925d75669edef1b1
+msgid "When |whyrun| mode is enabled, a |chef client| run will occur that does everything up to the point at which configuration would normally occur. This includes getting the configuration data, authenticating to the |chef server|, rebuilding the node object, expanding the run list, getting the necessary cookbook files, resetting node attributes, identifying the resources, and building the resource collection and does not include mapping each resource to a provider or configuring any part of the system."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode.rst:9
+# fcedafdd5ddf4350bbe35675a6e5622d
+msgid "why-run mode is not a replacement for running cookbooks in a test environment that mirrors the production environment. |company_name| uses why-run mode to learn more about what is going on, but also test-kitchen on developer systems, along with an internal |openstack| cloud and external cloud providers to test more thoroughly."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:5
+# fa4b4016c58f46fe883f9cc41cb26799
+msgid "When the |chef client| is run in |whyrun| mode, certain assumptions are made:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:7
+# 2cc4d5e63aab4785a0f194f013a600d0
+msgid "If the |resource service| resource cannot find the appropriate command to verify the status of a service, |whyrun| mode will assume that the command would have been installed by a previous resource and that the service would not be running"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:8
+# 28d52f6b73814da1927978e8f49cdc8c
+msgid "For ``not_if`` and ``only_if`` attribute, |whyrun| mode will assume these are commands or blocks that are safe to run. These conditions are not designed to be used to change the state of the system, but rather to help facilitate idempotency for the resource itself. That said, it may be possible that these attributes are being used in a way that modifies the system state"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:9
+# decc1b41ae1045b589fffd9cf2d6486f
+msgid "The closer the current state of the system is to the desired state, the more useful |whyrun| mode will be. For example, if a full run-list is run against a fresh system, that run-list may not be completely correct on the first try, but also that run-list will produce more output than smaller run-list"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/essentials_nodes_why_run.rst:14
+# 1bc36e7f7c6648fcb2e163236010e167
+msgid "For example, the |resource service| resource can be used to start a service. If the action is ``:start`` and the service is not running, then start the service (if it is not running) and do nothing (if it is running). What about a service that is installed from a package? The |chef client| cannot check to see if the service is running until after the package is installed. A simple question that |whyrun| mode can answer is what the |chef client| would say about the state of the service after installing the package because service actions often trigger notifications to other resources. So it can be important to know in advance that any notifications are being triggered correctly."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/essentials_nodes_why_run.rst:16
+# a3d6c0f7169a40b085a79619fc59e810
+msgid "For a detailed explanation of the dry-run concept and how it relates to the |whyrun| mode, see `this blog post <http://blog.afistfulofservers.net/post/2012/12/21/promises-lies-and-dryrun-mode/>`_."
+msgstr ""
+

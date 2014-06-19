@@ -1,0 +1,583 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:8
+# 0591cf4b6a44480fa7762dce28afbc1c
+msgid "Scaled Front End"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:10
+# 451f115daf28419d93a01bfb03c7679a
+msgid "The scaled front end installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |company_name| generally recommends a High Availability installation rather than a scaled front end installation, whenever possible."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:12
+# 8106749a9cac42c6a099ff50dabd52a3
+msgid "We refer to all the servers in a particular installation of |chef server oec| as a cluster."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:14
+# 2d477c78c79e4475b37eac9e1c9c619d
+msgid "The scaled front end installation consists of multiple front-end servers talking to a single back-end server. This allows for a higher level of concurrency on API requests, while scaling the back-end server vertically to handle the increased I/O load."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:17
+# b3171a09470f4911885bbac67c505bad
+msgid "System Requirements"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:18
+# 21fb1bc94f4d45ab887478d04a10436c
+msgid "A scaled front end installation scenario has the following system requirements:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:20
+# a89b59c6c9b747f48fb9ec57c50d1cd4
+msgid "8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:21
+# 5451962eeb854db7815f2e1e9a81e10c
+msgid "16GB RAM"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:22
+# 2d14c3d588254264b37c299944cd4078
+msgid "2 x 300GB SAS RAID1 drives"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:23
+# 5574934698ef4da395569a18eb654726
+msgid "Hardware RAID card"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:24
+# 0f75f75ff93e49f2aae41c00ae5f370d
+msgid "1 GigE NIC interface"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:25
+# 2f6671e5734d4bc8821e29de1a52d9e0
+msgid "20 GB of free disk space in ``/opt``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:26
+# 85d6df62820c4583b437aa38dbbbbd2f
+msgid "40 GB of free disk space in ``/var``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:27
+# c60b1b86106b4173bb93bc71dce003ec
+msgid "A back-end server; all other systems will be front-end servers."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:29
+# 1eb4a82d619e4c4f82a5392912f9ad9d
+msgid "While you can certainly run |chef server oec| on smaller systems, our assumption with the scaled front end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:32
+# eaf0b0ec0d884a168d2629d9a6eb1479
+msgid "Network Requirements"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:33
+# ee4a19a1ab0e4c3e94373e46efed6ffa
+msgid "|chef server oec| has the following network requirements for a scaled front end installation:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:36
+# ae77f54d78ef4af88365b7293ea51f21
+msgid "Load Balancing"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:37
+# a6dfbcc9093d4cca8a33306d97856798
+msgid "As multiple API front-end servers are being run, provide for a mechanism to load-balancing the requests between them. We recommend using either a hardware or software load-balancer configured for round-robin."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:39
+# 2f7fec10892348cc9fc4b50c556a837b
+msgid "You will want to create a DNS entry for the load balanced virtual IP address, which is used to access the cluster---this is the ``api_fqdn``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:42
+# ada6280ce9914b768ba9f97a513ba14b
+msgid "Firewalls"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst:4
+# afeeb2ca676b46f3a811d4650b3ca870
+msgid "The ports that should be open depend on how the |chef server oec| is deployed---standalone, high availability, front- and back-end servers. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:4
+# 1d0575a37db94c8295ac112994babed2
+msgid "For front-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:10
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:10
+# cce6da6bbf9341d1bdd981818d0a5915
+# f87162745c584806ac3830d94ca1ead6
+msgid "Port"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:11
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:11
+# 1175d7a462824005bb39c6986eeb8130
+# 9916131b14bb442da6bf3bf082629f34
+msgid "Service"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:12
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:12
+# 67cbe864ec3d49259054d02f88f4a3d5
+# 304d479ec0c24818bc5a06138936eb7b
+msgid "80"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:13
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:15
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:13
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:15
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:17
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:19
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:21
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:23
+# 979c1bc512324022a55a73290ec19a91
+# 015c6aa203204fe899ec3c716ebf0b81
+# 030cdb88e39d460eac3583c47c31244d
+# 6048bcb7186d49d5a71a15031f35275e
+# 40a15b14c707486f97a89d544e1ff353
+# 12860171a18c460096e37efe3b096e97
+# 9d63e9eea69c4defa235053ce43cb6a5
+# 05efc7b92358435b8f092be23e25e117
+msgid "|service nginx|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:14
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:14
+# 25d554ea7d014e2b9f450a9a6848e1c9
+# a04ad8dea1d145179838a80378376c55
+msgid "443"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:4
+# 0bdc5996e7854e0697f6bf1c15b0dc6f
+msgid "For back-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:16
+# a689df384c774666a3d35ca43426778a
+msgid "9671"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:18
+# a62c54dfb4044abca1b45248382927fb
+msgid "9680"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:20
+# 631e8bbb021f4a2f9628650c3a720b44
+msgid "9685"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:22
+# 673138f9d87a411081c5a476eee3445b
+msgid "9683"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:24
+# 368934d0c45d469e9633134f20aa4118
+msgid "5984"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:25
+# 56033b63df514472bef9d68813834aa8
+msgid "|service couchdb|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:26
+# b9191500b1fe4bf9b21d4c9620a94186
+msgid "8983"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:27
+# 5354ab9d73274528853641ad09e63a1a
+msgid "|service solr|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:28
+# b94044303c934f93ae273a483e49cf27
+msgid "5432"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:29
+# ecb17c268f3848ca8837a349f17a16ee
+msgid "|service postgresql|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:30
+# 2b26d7850c834f239ff1c22c0fe0dde8
+msgid "5672"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:31
+# 2d293e76f04846a2a07e2371707ece56
+msgid "|service rabbitmq|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:32
+# 28222cbefa1c45c9aba69655298c8058
+msgid "16379"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:33
+# 8447dff2a1c245898dba49174950af1d
+msgid "|service redis_lb|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:34
+# c3be26c00e984257a80a922d10e22402
+msgid "4321"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:35
+# f1325b4eb9bb42b3b81a8022c02a304b
+msgid "|service bookshelf|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:36
+# b43f1100c79746cd8bc6e5a92ff66c79
+msgid "7788-7799"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:37
+# 71351e290e4b43dcbe8da2a61dc293d1
+msgid "|drbd|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:50
+# e5eff5b3ccdb453da48a005fab956264
+msgid "private-chef.rb"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:51
+# e316cb646df84373b6f69b6adbcdd7f6
+msgid "Each |chef server oec| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |private chef rb|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:54
+# 7aa91fd6409045ce88e2503ac5d1e3d6
+msgid "Configure topology"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:55
+# d15571781c8c46b29945546948546ec2
+msgid "Add the following line to the |private chef rb| configuration file:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:61
+# ad8cb0536e64408f811aa9877eb1c181
+msgid "This lets |chef server oec| know that these servers will be in a horizontally scalable configuration with a single, non-highly-available back-end."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:64
+# 15f315b6cadf4aeba357b5879dcce53f
+msgid "Back-end entries"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:65
+# dee4cd91c94045ae93d15390557cac07
+msgid "For the server that will be used as a back-end servers, add the following to the |private chef rb| file:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:74
+# 7e0463a70845426687b775ef8133950a
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is ``backend``, and you will be using this server to bootstrap this |chef server oec| installation."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:76
+# 39cafb518f184e0598090ba3aecf0300
+msgid "Additionally, this server is used exclusively for the back-end services. Let |chef server oec| know by adding the following entry to ``private-chef.rb``:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:83
+# fde3aa2c3013469e979cd8700c802c08
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:86
+# ffba4a26f46b4d25ac264b7cadb23352
+msgid "Front-end entries"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:87
+# e99f23df645e4233a3cba329813d50fd
+msgid "For each front-end server, add the following to the |private chef rb| file:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:95
+# cf432f4d37a94135a7c6c3e7a5dca4a7
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is ``frontend``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:98
+# 56be8b5ddacc49d89576b3f5fadf0165
+msgid "Set api_fqdn"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:99
+# 3f2e22bb723343bfb04ead77cc1303ab
+msgid "Add the following line to the |private chef rb| config file:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:105
+# f3bdb2c3ce6e46949b32c89ca77821e1
+msgid "Replace ``FQDN`` with the |fqdn| of the load balanced VIP."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:108
+# 59c9abfafba14dfd9c69344ade18d54b
+msgid "Example"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:109
+# 61f052e28db642c280a18b628a985f70
+msgid "A completed |private chef rb| configuration file for a four server |chef server oec| cluster, consisting of:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:115
+# 85faa7e3f84b4fc99a2b48d61810cfc5
+msgid "FQDN"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:116
+# f897a36d15f84f9098d17557ece17c33
+msgid "Real IP Address"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:117
+# 4d9da1fd342d4cbfac7a8b1d23267c08
+msgid "Role"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:118
+# 138597c7cf5f41779caf11c236aa8196
+msgid "be1.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:119
+# 8312ee71c4644bcca94ba9598437211c
+msgid "192.168.4.1"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:120
+# be749d9122cf47cd9093f4a16e40f4de
+msgid "backend"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:121
+# ef1fb24465ba4ce29d22fee61adf45d3
+msgid "fe1.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:122
+# e431f2da5acc45b28cd9113c254bb691
+msgid "192.168.4.2"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:123
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:126
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:129
+# 1e6de4f8515d40d6ba31d4c1b44f8a9e
+# 67b6e5a996994dda8b28a5004f932949
+# 2dba9e5c91144be286f31c85fa3091cc
+msgid "frontend"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:124
+# f0d6c4dd79d5425d98d821e65678c279
+msgid "fe2.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:125
+# 77089d47bce049fda2b6c6b68936f22d
+msgid "192.168.4.3"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:127
+# edb59cb20eaf4f7d83abab7e2fdf6666
+msgid "fe3.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:128
+# bb38e419719f4adf8eb29ed5d7116fe7
+msgid "192.168.4.4"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:130
+# c6b3409392a74bcfa97404a302293672
+msgid "chef.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:131
+# be41be86fca74d5a9ff750a54678a207
+msgid "192.168.4.5"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:132
+# 26bc564502934db79f849d8ba1b41c66
+msgid "backend VIP"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:134
+# 2e237a3f71db4ccf819dcb6c0bc0c954
+msgid "Looks like this:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:164
+# bc395dabeb394bc0aebd385dbe04d8ba
+msgid "Add Package to Servers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:165
+# d6fa2879790e459eb0da392703bf7f4e
+msgid "Upload the package provided to the servers you wish to install on, and record its location on the file-system. The rest of this section will assume you uploaded it to the ``/tmp`` directory on each system."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:168
+# 42411ab8f2f54be8a075574519012887
+msgid "Configure Bootstrap"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:169
+# 54815eddd5484fc38d17d374374d8ed5
+msgid "The following sections describe what is required to configure the bootstrap server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:172
+# e32e3154f30c4d81a99f52ee7d4603a3
+msgid "Add private-chef.rb"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:173
+# 86d633ba5f484b409ce2934ff943e17e
+msgid "Copy the |private chef rb| file to ``/etc/opscode/private-chef.rb`` on the bootstrap server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:176
+# a1b60984e20d48208370602e62200864
+msgid "Install |chef server oec|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:177
+# 5680f80bd87447d4a43d746dec2c3016
+msgid "On the bootstrap server copy the |private chef rb| file to ``/etc/opscode/private-chef.rb``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:180
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:225
+# f5ab7d857bc64524b91e6916f61ff956
+# bf62cfefacb345b79e67dee9c1bb0182
+msgid "Configure"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:181
+# c9725df117ca4ec3b081d444427c8e0d
+msgid "To set up |chef server oec| on your bootstrap server, run:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:187
+# 39e3864e84cf49f080268d9d675e16c8
+msgid "This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, you will see:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:193
+# 81331d3ae891410aa7fb61d3520f3b78
+msgid "|chef server oec| is composed of many different services, which work together to create a functioning system. One effect is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:196
+# 5698de23879641bbaebae598303fe303
+msgid "Configure Front-end"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:197
+# 78bff40375f647da96ab1643f1810024
+msgid "The following sections describe what is required to configure the front-end server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:200
+# 2196d2b6c3c24cb69ab104af7648e8da
+msgid "Copy /etc/opscode"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:201
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:226
+# 11972d9e2aeb4daea7cd838ce7c195ca
+# 4de28f487ad24d3aa054d22efa1e3fcb
+msgid "With the bootstrap complete, you can now populate ``/etc/opscode`` on the front-end servers with the files generated during the bootstrap process. Assuming you are logged in as root on your bootstrap server, something like:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:207
+# 217568d258ac404fb3f4153d7f20fedf
+msgid "Will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:210
+# 174ab10a14e64e7f9a709663ef0476e2
+msgid "Install package"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:211
+# 746a44f47f2e41579fd22be834228d6e
+msgid "Install the |chef server oec| package on each of the front-end servers. For on |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:217
+# 97f6c4376a1044b6bc0672d68d550f73
+msgid "Install the |chef server oec| package on |ubuntu|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:232
+# 5148f108eed94ff3984af10885a39779
+msgid "This command will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:235
+# 286d77cca773401893f9094816139a6d
+msgid "Reconfigure the Server"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:236
+# b836e4289d9c4bcb87414176cb083d7b
+msgid "Run the following command:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:243
+# 0e1040b52b614af7bf61db185baf98ab
+msgid "Success!"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_fe.rst:244
+# 4854a97c238740508c8dc98a5537157a
+msgid "Congratulations, you have installed |chef server oec| in a scaled front end configuration. Continue with the User Management section of this guide."
+msgstr ""
+

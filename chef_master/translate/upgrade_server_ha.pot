@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:8
+# 1550eb21687743bfafd2bccd67103314
+msgid "Upgrade to Enterprise Chef 11: High Availability"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:10
+# e4db77b3edbc495e9fda60b34ca9c31d
+msgid "This topic describes the upgrade process from |chef private| to |chef server oec|. The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |debian dpkg| or |rpm|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:12
+# 4d1163750dfd44b7b634d75d5a2ce4e6
+msgid "Please `view the notes <http://docs.opscode.com/upgrade_server_ha_notes.html>`_ about the high availability |chef server oec| upgrade for any changes that may exist for your upgrade process."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:14
+# 9dddff7ebc9d49c2875567d270c7c964
+msgid "To upgrade to |chef server oec|, do the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:16
+# 8337830b672044629778cc6c754545dd
+msgid "Run the following on all machines to make sure all services are in a sane state."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:22
+# ca17427e18b14978bc1b9a1496be7fb4
+msgid "Stop all of the front end machines:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:28
+# a4b7afca15b44f6daff5dbd05d780fb7
+msgid "Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:30
+# 69d0b7652d2f4aa18d4607492add7b84
+msgid "Stop |keepalived| on the original non-bootstrap backend machine. This will ensure that the bootstrap back end machine is the active machine. This action may trigger a failover."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:36
+# 15cadddc4f6945d6a8ccde221ec9d942
+msgid "Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:42
+# e69b8576a08346e3b1f1091aafd79dba
+msgid "where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:44
+# 752a14ce1d99441a985b2598541a7ecd
+msgid "For |rpm|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:50
+# a3304ff7072241f7a5d27000b965c515
+msgid "Upgrade the back end primary machine with the following command:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:56
+# 1512a9a9215c4bd89296fb9573c6924f
+msgid "If the upgrade process times out, re-run the command until it finishes successfully."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:58
+# 6f2369a166e444d9afdd4273a7c95081
+msgid "Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:64
+# 0d2d33f693c24e2ab320ff0b41b464fd
+msgid "or from the back end primary machine:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:70
+# 2146d1c13fc34cbeb1bb78d595c6047c
+msgid "Upgrade the back end secondary machine with the following command:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:76
+# 2b77d545ab7d4777becd4245705a959a
+msgid "In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:78
+# e9e1b655267b4f0cabdfae520bd8ff07
+msgid "Upgrade all front end machines with the following commands:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:84
+# 855da69803084b1fa390a339eef7ac76
+msgid "Run the following command on all front end and back end machines:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:90
+# d71079b0c4064763a2a7e4ef8725361b
+msgid "After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data by running the following command on each machine:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:96
+# 45ff73d811be43eeae8920e024fb0860
+msgid "This process will remove old services, old data, messages about old services not running, and so on."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/upgrade_server_ha.rst:98
+# 00bdef1940934d17abae9bc4d97823ae
+msgid "The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore."
+msgstr ""
+

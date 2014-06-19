@@ -1,0 +1,717 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:8
+# 0f5f677be43f4fbc89dbebd165d5e332
+msgid "knife search"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search.rst:4
+# b636972e5c4b46979989cca26e98c4bc
+msgid "Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. A defined query syntax is used to support search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the ``search`` subcommand in |knife|, or by using the ``/search`` or ``/search/INDEX`` endpoints in the |api chef server|. The search engine is based on |apache solr| and is run from the |chef server|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search.rst:6
+# 7981cfda795141dbb2a827e5a7a35c9c
+msgid "The |subcommand knife search| subcommand is used run a search query for information that is indexed on a |chef server|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:15
+# e33fd4a902894e04ba8aecd74c392da1
+msgid "Syntax"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_syntax.rst:6
+# 294e59da15c64df7adc94228ac590ca0
+msgid "This subcommand has the following syntax:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_syntax.rst:12
+# cbf9175f8ee941a7a2fa7964c75a4b70
+msgid "where ``INDEX`` is one of ``client``, ``environment``, ``node``, ``role``, or the name of a data bag and ``SEARCH_QUERY`` is the search query syntax for the query that will be executed."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_syntax.rst:14
+# 4f101e065f3b43b88e343fe1b93d6669
+msgid "``INDEX`` is implied if omitted, and will default to ``node``. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_syntax.rst:20
+# d08c557044ed4e39a2697f2d680d7bdf
+msgid "will return something similar to:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_syntax.rst:35
+# 71e9cce172644d62908f908283b87c78
+msgid "and is the same search as:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_syntax.rst:41
+# 552adafa5e2241029e56c61b7e547ad2
+msgid "If the ``SEARCH_QUERY`` does not contain a colon character (``:``), then the default query pattern is ``tags:*#{@query}* OR roles:*#{@query}* OR fqdn:*#{@query}* OR addresses:*#{@query}*``, which means the following two search queries are effectively the same:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_syntax.rst:47
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_wildcard_node_contains.rst:9
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_wildcard_node_contains.rst:15
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_wildcard_node_contains.rst:21
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_recipe.rst:9
+# 7a15f182b38646478796682d0692edba
+# cc4ffdfcc4c24ee7acae7677dddd2493
+# 3793abf294954220861904e907e651c4
+# 8189af8f911c4477a53dbb9df0f3bee5
+# e2f7cc3fb02f4cdfbc94e41cd6dceba1
+msgid "or:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:19
+# 8971dc2d435947caab6a047c040422e0
+msgid "Query Syntax"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_query_syntax.rst:5
+# 00f4b72cdf6d4bf8a6a4693276319a13
+msgid "|search query syntax| A search query has the following syntax::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_query_syntax.rst:9
+# 7879caf12062406e9f56b0656bdd2707
+msgid "where ``key`` is a field name that is found in the |json| description of an indexable object on the |chef server| (a role, node, client, environment, or data bag) and ``search_pattern`` defines what will be searched for, using one of the following search patterns: exact, wildcard, range, or fuzzy matching. Both ``key`` and ``search_pattern`` are case-sensitive; ``key`` has limited support for multiple character wildcard matching using an asterisk (\"*\") (and as long as it is not the first character)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:23
+# 7fb3bf4f94204c409ca5854c4cb3aa9e
+msgid "About Keys"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key.rst:5
+# 1a4d6b1cc3c54450bccda3884ac8cdec
+msgid "|search key| Any key that exists in any |json| description for any role, node, |chef client|, environment, or data bag can be searched. To search for the available keys for a particular object, use the ``show`` argument with any of the following |knife| sub-commands: |subcommand knife client|, |subcommand knife data bag|, |subcommand knife environment|, |subcommand knife node|, or |subcommand knife role|. For example: ``knife data bag show``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:27
+# 47c49cf39fba4041a875c6b5e48b601d
+msgid "Nested Fields"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:5
+# 9865745762b44a4dbc62892d3a0d0fd7
+msgid "A nested key is a key that appears deeper in the |json| data structure. For example, information about a network interface might be several layers deep: ``node[:network][:interfaces][:en1]``. When nested keys are present in a |json| structure, the |chef client| will extract those nested fields to the top-level, flattening them into compound keys that support wildcard search patterns."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:7
+# 5b66a360583f4c31b2c9df4004ea98c4
+msgid "By combining wildcards with range-matching patterns and wildcard queries, it is possible to perform very powerful searches, such as using the vendor part of the MAC address to find every node that has a network card made by the specified vendor."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:9
+# 4a0250ba2f184d31ba993b48c8437758
+msgid "Consider the following snippet of |json| data:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:65
+# 28c116a3e15c48dcb68c1736f8cd81ec
+msgid "Before this data is indexed on the |chef server|, the nested fields are extracted into the top level, similar to:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:73
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:101
+# 376f7fb0df2c49e685679924cfef562c
+# 8c45eae09610432996e53947e36bfa73
+msgid "which allows searches like the following to find data that is present in this node:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:79
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:85
+# 68a1d948028c4878a36ed7ea1a62c19d
+# 72ed3622697e48b9a43a4bc23389c564
+msgid "Or:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:91
+# 1259e3dc668d4d278df7323c493c17d2
+msgid "This data is also flattened into various compound keys, which follow the same pattern as the |json| hierarchy and use underscores (\"_\") to separate the levels of data, similar to:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:107
+# 9c150ac65e704b9d988fa8ecfe473829
+msgid "This flattened data structure also supports using wildcard compound keys, which allow searches to omit levels within the |json| data structure that are not important to the search query. In the following example, an asterisk (\"*\") is used to show where the wildcard can exist when searching for nested key:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:118
+# bba3038fd802487eb68c97ec4493f3fa
+msgid "For each of the wildcard examples above, the possible values are shown contained within the brackets. When running a search query, the query syntax for wildcards is to simply omit the name of the node (while preserving the underscores), similar to:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_key_nested.rst:124
+# dc3d5d3c05c74014ae2f84189f2a0f87
+msgid "This query will search within the ``flags`` node, within the |json| structure, for each of ``UP``, ``BROADCAST``, ``SMART``, ``RUNNING``, ``SIMPLEX``, and ``MULTICAST``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:31
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:103
+# 00a60cc1d3094a8684177a81cc4bc0dc
+# f3bfbd3a44004b87adfd1a332eddd610
+msgid "Examples"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_name.rst:3
+# 83002eb7ce5447a5a9c9cae148732855
+msgid "To see the available keys for a node, enter the following (for a node named \"staging\"):"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_name.rst:9
+# 42d52d6403c848e49497ca1989c13d57
+msgid "to return a full |json| description of the node and to view the available keys with which any search query can be based."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_wildcard_question_mark.rst:3
+# 1099f182c1264414b710cb5c40923a74
+msgid "To use a question mark (\"?\") to replace a single character in a wildcard search, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_wildcard_asterisk.rst:3
+# f374c08eaf5f4a4fa14820facbf0b5dc
+msgid "To use an asterisk (\"*\") to replace zero (or more) characters in a wildcard search, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_nested_starting_with.rst:3
+# 6486d1eca5174dfeb7647edd16a032fe
+msgid "To find all IP address that are on the same network, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_nested_starting_with.rst:9
+# 2b9c81d9b1da4d25897f01583d5d78e3
+msgid "where ``192.168*`` is the network address for which the search will be run."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_nested_range.rst:3
+# 9ad1af2d47634d23a7e2b5f60afab14b
+msgid "To use a range search to find IP addresses within a subnet, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_key_nested_range.rst:9
+# ae6bce098de24a5f8d9807741f309af0
+msgid "where ``192.168.0.* TO 192.168.127.*`` defines the subnet range."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:43
+# 97b9b94ce1a648c2aff38d571f854dd4
+msgid "About Patterns"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern.rst:5
+# 40065a13c1cc46c5961a2f4d7174530c
+msgid "|search pattern| There are four types of search patterns that can be used when searching the search indexes on the |chef server|: exact, wildcard, range, and fuzzy."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:47
+# 886b2bd7df5e47f28724b06556f68082
+msgid "Exact Matching"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_exact.rst:5
+# 671410362f3f470fbbbc7b85e65ce4ba
+msgid "An exact matching search pattern is used to search for a key with a name that exactly matches a search query. If the name of the key contains spaces, quotes must be used in the search pattern to ensure the search query finds the key. The entire query must also be contained within quotes, so as to prevent it from being interpreted by |ruby| or a command shell. The best way to ensure that quotes are used consistently is to quote the entire query using single quotes (' ') and a search pattern with double quotes (\" \")."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_exact_key_and_item.rst:3
+# 7775733dda62457d827034dcee2d2a8b
+msgid "To search in a specific data bag for a specific data bag item, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_exact_key_and_item.rst:9
+# 7f78677bf23e4fae846bbc1ab1dd89b8
+msgid "where ``admins`` is the name of the data bag and ``charlie`` is the name of the data bag item. Something similar to the following will be returned:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_exact_key_and_item_string.rst:3
+# fc56b02150aa4767b5253d9361c76acb
+msgid "To search in a specific data bag using a string to find any matching data bag item, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_exact_key_and_item_string.rst:9
+# f4f2e1a309e64396a501e81ef5e7d848
+msgid "where ``admins`` is the name of the data bag and ``Charlie the Unicorn`` is the string that will be used during the search. Something similar to the following will be returned:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:55
+# a472a3d66a604891ac0e952866ad2441
+msgid "Wildcard Matching"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_wildcard.rst:5
+# c76c08b533ae44e4a290124a5407acb6
+msgid "A wildcard matching search pattern is used to query for substring matches that replace zero (or more) characters in the search pattern with anything that could match the replaced character. There are two types of wildcard searches:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_wildcard.rst:7
+# d65f9b8593f543948d5ac60d847312ca
+msgid "A question mark (\"?\") can be used to replace exactly one character (as long as that character is not the first character in the search pattern)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_wildcard.rst:8
+# 622ff630298445c5800064b5a3cea6ed
+msgid "An asterisk (\"*\") can be used to replace any number of characters (including zero)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_wildcard_any_node.rst:3
+# 4a6b58d05e784ce08d4e3fdafe0f2360
+msgid "To search for any node that contains the specified key, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_wildcard_any_node.rst:9
+# 4427215f427943dbbcd4409185f726aa
+msgid "where ``foo`` is the name of the node."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_wildcard_node_contains.rst:3
+# 8622477a74c448f4a2693bd7f4bf2e61
+msgid "To search for a node using a partial name, enter one of the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_wildcard_node_contains.rst:27
+# 222993600f8349318388155fc3182e1b
+msgid "to return \"app1.example.com\" (and any other node that matches any of the string searches above)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:63
+# 5ab8b905e5c84bcc9611cef15eb8fabd
+msgid "Range Matching"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_range.rst:5
+# 7abe9ed65c9743b4ae0d590f75b88fdd
+msgid "A range matching search pattern is used to query for values that are within a range defined by upper and lower boundaries. A range matching search pattern can be inclusive or exclusive of the boundaries. Use square brackets (\"[ ]\") to denote inclusive boundaries and curly braces (\"{ }\") to denote exclusive boundaries and with the following syntax::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_range.rst:9
+# 5e971340c37143e396344d9fdb90b569
+msgid "where ``TO`` is required (and must be capitalized)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_range_in_between.rst:3
+# 48e85b93cc9a498b96cb8ef55c0abfb9
+msgid "A data bag named \"sample\" contains four data bag items: \"abc\", \"bar\", \"baz\", and \"quz\". All of the items in-between \"bar\" and \"foo\", inclusive, can be searched for using an inclusive search pattern."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_range_in_between.rst:5
+# 8290321a43bc473a9510472e866b7b5b
+msgid "To search using an inclusive range, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_range_in_between.rst:11
+# 07a4f7415f01415c942864010a2169f4
+msgid "where square brackets (\"[ ]\") are used to define the range."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_range_exclusive.rst:3
+# 51701a3d5a5e4e4fbed6a7e2f971f81e
+msgid "A data bag named \"sample\" contains four data bag items: \"abc\", \"bar\", \"baz\", and \"quz\". All of the items that are exclusive to \"bar\" and \"foo\" can be searched for using an exclusive search pattern."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_range_exclusive.rst:5
+# d175a39c34b64490972bcc18cbd75918
+msgid "To search using an exclusive range, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_range_exclusive.rst:11
+# 3c7fe6b56fa9432bbdd1b4e080bc18f7
+msgid "where curly braces (\"{ }\") are used to define the range."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:71
+# 8cbbf749e196431bb7f305029e254ae9
+msgid "Fuzzy Matching"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_fuzzy.rst:5
+# b9177aff893a4b499f113734a0eec994
+msgid "A fuzzy matching search pattern is used to search based on the proximity of two strings of characters. An (optional) integer may be used as part of the search query to more closely define the proximity. A fuzzy matching search pattern has the following syntax::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_pattern_fuzzy.rst:9
+# 8ad41a22e551402c8992a042561aa92a
+msgid "where ``search_query`` is the string that will be used during the search and ``edit_distance`` is the proximity. A tilde (\"~\") is used to separate the edit distance from the search query."
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_fuzzy.rst:3
+# 67df948be3924ebe9aa6b1fdfb602daa
+msgid "To use a fuzzy search pattern enter something similar to:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_pattern_fuzzy.rst:9
+# 8e2a6790d18a4e1ebb6de8090b0d35fb
+msgid "where ``boo~`` defines the fuzzy search pattern. This will return something similar to:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:77
+# a508af0737814a12bef568d989278fec
+msgid "About Operators"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:5
+# cc68ae3525614883ba248c99c5d503e6
+msgid "|search operator| Searches can use the following operators:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:11
+# 4bcbcb99ab6b4b9cb69600e69d38fa52
+msgid "Operator"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:12
+# c180b01f7c694f02aedcb00f6290baec
+msgid "Description"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:13
+# a038f1db59894f338b508b9942257857
+msgid "``AND``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:14
+# 270a6cb0988b43f38d1af720acb7d9d3
+msgid "Use to find a match when both terms exist."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:15
+# 1983724fe9eb41b0b8ea474a7526aadf
+msgid "``OR``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:16
+# 9f3b913db60e4a58b03563cac51d4050
+msgid "Use to find a match if either term exists."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:17
+# fd34e37da753452bbd54105851d091fa
+msgid "``NOT``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:18
+# bb62e85855e14c7aa01e1099eb9ed5aa
+msgid "Use to exclude the term after NOT from the search results."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:20
+# c2841ad85e724a4cb0cfa67fa0fc0fad
+msgid "Operators must be in ALL CAPS. Parentheses can be used to group clauses and to form sub-queries."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:22
+# 9638f925c270497a80053e3d078077d7
+msgid "Using ``AND NOT`` together may trigger an error. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_boolean_operators.rst:30
+# 65db4f016a7b4c1a90773a763d562c47
+msgid "Use ``-`` instead of ``NOT``. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:81
+# 530f43bdec214adea1a4a503968fcf8d
+msgid "AND"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_and.rst:3
+# 4f1697ec3d69438583ae90cb68cdc2fa
+msgid "To join queries using the ``AND`` boolean operator, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_and.rst:9
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_and.rst:31
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_not.rst:9
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_or.rst:9
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_platform_ids.rst:10
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_platform_instance_type.rst:10
+# 9c8ae12f1c7845d2a67e1680876837ac
+# 7ea7e390e5754746814f0556bd5fde1a
+# 64852d67de0e48398aa9d2b53632a3e6
+# ca7a0cf1744943b9b699a5342d93f1f1
+# 95d3d1cc84174296977c1c7be6ffdaa3
+# 9417d9e5f9c24a0b9b635d4eab511365
+msgid "to return something like:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_and.rst:25
+# 9bb5510775524afea8a6ae2e8bf540cd
+msgid "Or, to find all of the computers running on the |windows| platform that are associated with a role named \"jenkins\", enter:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:85
+# 33a2d594b4494067ab3ee3d6c925c5d6
+msgid "NOT"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_not.rst:3
+# 4f71a75914e444c791c1cfac7bd1aa3d
+msgid "To negate search results using the ``NOT`` boolean operator, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:89
+# 28142c8e474f42c5addffedc4ecb6e13
+msgid "OR"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_search/step_search_boolean_or.rst:3
+# 0f05c797454f4e95a0d895704d24085f
+msgid "To join queries using the ``OR`` boolean operator, enter the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:93
+# bccb7e8efc0548a6925f2f86285fcf55
+msgid "Special Characters"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_special_characters.rst:5
+# 35b44d30b1374671948da5a3872d068d
+msgid "|search special character| The following characters can be included within the search query syntax, but each occurrence of a special character must be escaped with a backslash (``\\``)::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_search/includes_search_special_characters.rst:9
+# bbeaf2489d6941e8b7608397e2478923
+msgid "For example::"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:97
+# 6a3edbeaf83a4c0cbb9c4e30bf12d388
+msgid "Options"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:98
+# c5c246c87d484c2f8e3974478e30f05a
+msgid "Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:6
+# a3c6af88d0114657b108a3959ca95dbc
+msgid "This sub-command has the following options:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:9
+# 44f7e168261e4ff7bbda114f6d56bb6e
+msgid "``-a ATTR``, ``--attribute ATTR``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:9
+# cc6b99b00d964f91937c0d9070640077
+msgid "|attribute_show|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:12
+# 6a2e184e01b343aaae77385563c202f1
+msgid "``-b ROW``, ``--start ROW``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:12
+# fdc41621769d4d23b55cd77ffdeb828d
+msgid "|start|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:15
+# 4ec8b082d85442d282c09f22bf4ce20f
+msgid "``-i``, ``--id-only``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:15
+# e2a6763520b24d30a8dbe055b6e45dcc
+msgid "|id-only|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:18
+# bdf4608ef41643daa968399a573882af
+msgid "``INDEX``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:18
+# a731f0504a8243a69fa5d5bcf179f982
+msgid "|search_index| Default index: ``node``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:21
+# 7b01d825fca549ee87061413593838d7
+msgid "``-l``, ``--long``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:21
+# 5c63cf660ff84699a2baab0437410c7b
+msgid "|long|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:24
+# f120e18bef0346e199e69f28b4f31304
+msgid "``-m``, ``--medium``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:24
+# 56a64f8690d14570a3c10700aa88124a
+msgid "|medium|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:27
+# 31a29c5fa75d45c9a8713345fcf0947e
+msgid "``-o SORT``, ``--sort SORT``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:27
+# e687a471c6584bb593399f3a270007b3
+msgid "|sort|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:30
+# 75059c06c53e4a39bd8ff527b29a1fab
+msgid "``-q SEARCH_QUERY``, ``--query SEARCH_QUERY``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:30
+# 01f9a4d6cb2d4cd690db3342a8e37e8f
+msgid "|query|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:33
+# 865dbab458d243f08b6f92dedb0d4f44
+msgid "``-r``, ``--run-list``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:33
+# efcdd85f93af497faa53d81e792af5b1
+msgid "|run-list indicator|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:36
+# fb272f73a1d4462aa73ff3940cafecad
+msgid "``-R INT``, ``--rows INT``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:36
+# 8e7e5b03567e473aa3529a21aa51f837
+msgid "|rows|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:39
+# 5f11cea219dc40028809edbead324a5b
+msgid "``SEARCH_QUERY``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_knife/includes_knife_search_options.rst:39
+# a150b6f0ac6c42dcaa28738b965d0a73
+msgid "|search_query|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:104
+# fb1c75fd430e406bbd45dfef92a2162c
+msgid "The following examples show how to use this |knife| subcommand:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:106
+# 5067a244a1304a4c825efc2fb2807e99
+msgid "**Search by platform ID**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_platform_ids.rst:4
+# 5f80fb58e58d41bfb5c9e5fd90b70cb6
+msgid "To search for the IDs of all nodes running on the |amazon ec2| platform, enter:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:110
+# 4ba989e3a2454dcd98944ad96e9c8602
+msgid "**Search by instance type**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_platform_instance_type.rst:4
+# dc8a17cdb0204ff2a0c2c583c1ef5430
+msgid "To search for the instance type (flavor) of all nodes running on the |amazon ec2| platform, enter:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:114
+# 2d48071f3c4441c180bbca7284ba9130
+msgid "**Search by recipe**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_recipe.rst:3
+# da7e150efafb468ab11b52c7b2a8b7ed
+msgid "To search for recipes that are used by a node, use the ``recipes`` attribute to search for the recipe names. Enter something like:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:118
+# d98529498350442bbdb78446dbdf11b7
+msgid "**Search by node**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_node.rst:4
+# d2aabff310cc4037a6831e602cd1fa22
+msgid "To search for all nodes running |ubuntu|, enter:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:122
+# ed3779ed661642a19d51ef394f1be5a2
+msgid "**Search by node and environment**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_node_and_environment.rst:4
+# 1fd2040984e24b57b322835248ce959f
+msgid "To search for all nodes running |centos| in the production environment, enter:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:126
+# 0bcfdf3d660f4de59646604fb6a48704
+msgid "**Search for nested attributes**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_nested_attribute.rst:4
+# 88e365ac70fb4efc9e0f19de7d92aff2
+msgid "To find a nested attribute, use a pattern similar to the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:130
+# 8363a263857746d2a4169920146e3389
+msgid "**Search for multiple attributes**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_query_for_many_attributes.rst:4
+# 2ec1e75b54af42b6834db4d77058f5eb
+msgid "To build a search query to use more than one attribute, use an underscore (``_``) to separate each attribute. For example, the following query will search for all nodes running a specific version of |ruby|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:134
+# e5bfbc9c97894251a316416722e37469
+msgid "**Search for nested attributes using a search query**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_by_query_for_nested_attribute.rst:4
+# 5ce2f3f8f8e7436b9249f7b47f1bcea1
+msgid "To build a search query that can find a nested attribute:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/knife_search.rst:138
+# 9b894f7481c647b18a75a4ff5f9297ce
+msgid "**Use a test query**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_test_query_for_ssh.rst:4
+# 5c991c70e6ed4c73b2d9353b8350e16e
+msgid "To test a search query that will be used in a |subcommand knife ssh| command:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/step_knife/step_knife_search_test_query_for_ssh.rst:10
+# 0fc4dc5a6926403893a4b3df6d1e8cbe
+msgid "where the query in the previous example will search all servers that have the ``web`` role, but not on the server named ``web03``."
+msgstr ""
+

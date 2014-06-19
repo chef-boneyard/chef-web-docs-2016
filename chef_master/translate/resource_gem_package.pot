@@ -1,0 +1,419 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:8
+# 57c3181271384d2e867dcc3b435f5939
+msgid "gem_package"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources_common/includes_resources_common_generic.rst:5
+# 2ced28829edc4a6a8fd899a82231485c
+msgid "A `resource <http://docs.opscode.com/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:12
+# 7c6b53eb940844219c542b8811e8dcc1
+msgid "|note chef_gem vs gem_package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem.rst:4
+# f093e6529fee48cc8dc52cb6a0ee0cac
+msgid "Use the |resource package_gem| resource to manage |gem| packages that are only included in recipes. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:16
+# a3f4b59c09af4e25b9340e70e730e587
+msgid "|note resource_based_on_package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:19
+# a5a1e85752be495ab6b9c7e88fb667e3
+msgid "Syntax"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_syntax.rst:4
+# 81ca0632181b4dd1939ba29e0305e66e
+msgid "The syntax for using the |resource package_gem| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_syntax.rst:14
+# d5eff5b96b444de2b4b534dadb0a5588
+msgid "where"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_syntax.rst:16
+# 06522cf5e0464f7d8ac90691263ae7a3
+msgid "``gem_package`` tells the |chef client| to use the ``Chef::Provider::Rubygems`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_syntax.rst:17
+# 0735d0f18d944f109c45f3bf5818309e
+msgid "``name`` is the name of the resource block; when the ``package_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the package"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_syntax.rst:18
+# c50e98826fe846c6861fd2d5ffb2ec85
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_syntax.rst:19
+# 0f50cf7725334d8cbf50ac8d358fb981
+msgid "``:action`` is the step that the resource will ask the provider to take during the |chef client| run"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:23
+# d77ac98b0eca4a64ae406ba45248ce09
+msgid "Gem Package Options"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options.rst:4
+# 8f831f033d1c4a6cbb9ff1907537362b
+msgid "The |rubygems| package provider attempts to use the |rubygems| API to install |gems| without spawning a new process, whenever possible. A |gems| command to install will be spawned under the following conditions:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options.rst:6
+# 01069f60e88f407f9b6ae99b9736017e
+msgid "When a ``gem_binary`` attribute is specified (as a hash, a string, or by a .gemrc file), the provider will run that command to examine its environment settings and then again to install the |gem|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options.rst:7
+# 511ae67fd7c6428c803c5d605fa0244f
+msgid "When install options are specified as a string, the provider will span a |gems| command with those options when installing the |gem|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options.rst:8
+# 65e2ffcd122e4b3385df6d5b66e92fc6
+msgid "The |omnibus installer| will search the PATH for a |gem| command rather than defaulting to the current |gem| environment. As part of ``enforce_path_sanity``, the ``bin`` directories area added to the PATH, which means when there are no other proceeding |rubygems|, the installation will still be operated against it."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:27
+# 07680ade150e4663b35826f64f4e057e
+msgid "Specify with Hash"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:4
+# ac33d5d56ce14a09a3eb4c028b9fffdc
+msgid "If an explicit ``gem_binary`` parameter is not being used with the ``gem_package`` resource, it is preferable to provide the install options as a hash. This approach allows the provider to install the |gem| without needing to spawn an external |gem| process."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:6
+# 3c51d55eb419429db98e8029678f68b4
+msgid "The following |rubygems| options are available for inclusion within a hash and are passed to the |rubygems| DependencyInstaller:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:8
+# ae9b35c7310d475c9ec125f2b01f631f
+msgid "``:env_shebang``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:9
+# 9804d846df8846ac9fe6bbc0ff4b35f1
+msgid "``:force``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:10
+# f182608022104737b4cbed18b81165b0
+msgid "``:format_executable``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:11
+# 2add55be7fa641c696ac1fbfec1797b1
+msgid "``:ignore_dependencies``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:12
+# 1d409fbe65084eedbd96d77d1590da5b
+msgid "``:prerelease``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:13
+# d4433e3ea7c044fd882a0bf6b4a64f7e
+msgid "``:security_policy``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:14
+# 33a0198eecc541c2a8c903398b4b75e9
+msgid "``:wrappers``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_hash.rst:16
+# 3d4e6b8f9b6d416d824f0a74e23d7e71
+msgid "For more information about these options, see the |rubygems| documentation: http://rubygems.rubyforge.org/rubygems-update/Gem/DependencyInstaller.html."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:30
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:38
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:46
+# 9193e501829c4ebfa4923c6dac2d3d74
+# c49bff085469482eb45daa729b45f23e
+# 40164a77ee2c46348e4ed49056cb1387
+msgid "**Example**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:35
+# 8c9826d38fe5465baa0ed91eb9fd95f1
+msgid "Specify with String"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_string.rst:4
+# 656749232b1e4b5ab6cb2304c9787388
+msgid "When using an explicit ``gem_binary``, options must be passed as a string. When not using an explicit ``gem_binary``, the |chef client| is forced to spawn a |gems| process to install the |gems| (which uses more system resources) when options are passed as a string. String options are passed verbatim to the |gems| command and should be specified just as if they were passed on a command line. For example, ``--prerelease`` for a pre-release gem."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:43
+# 7f92aaa6961f4f2ca63feaba0671c3eb
+msgid "Specify with .gemrc File"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_options_gemrc.rst:4
+# 6ee0f7b00a6a4a70bcc4d667640fb453
+msgid "Options can be specified in a .gemrc file. By default the ``gem_package`` resource will use the |ruby| interface to install |gems| which will ignore the .gemrc file. The ``gem_package`` resource can be forced to use the |gems| command instead (and to read the .gemrc file) by adding the ``gem_binary`` attribute to a code block."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:51
+# 96ab7ad9e8c84d34afcd6db5febc96ae
+msgid "Actions"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:4
+# d27a10196e184d1e87396153f2033124
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:10
+# 184f4883a5f045efa162b875e385d1a5
+msgid "Action"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:11
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:11
+# 89519fbb82d64662b1db3c8668a7ca92
+# 636907c14b0042768c055c7e59ec3e10
+msgid "Description"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:12
+# 3193ccda131d44f1bbfd0807aa76e531
+msgid "``:install``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:13
+# 7e760fd9630342fbbfe06315ceff5252
+msgid "Default. |resource action install package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:14
+# 2d39ec769ef74fcf9cc76c8f436545c6
+msgid "``:upgrade``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:15
+# 76ee6a87f8634ae9aba4fb1916f00c07
+msgid "|resource action upgrade package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:16
+# db09a08902e14d9bbc538cc024085013
+msgid "``:reconfig``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:17
+# d70f96b34fe14a6dba704b765cef533d
+msgid "|resource action reconfigure package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:18
+# 704a5940d29a47439fb5eaa6443cb0dc
+msgid "``:remove``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:19
+# 8855a923648c4eb0b487d1ff50980d77
+msgid "|resource action remove package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:20
+# 6590c8cd807941749a1aca54803a8ea3
+msgid "``:purge``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_actions.rst:21
+# 6cfa3b0d4b5741979b6da8b0477d8eea
+msgid "|resource action purge package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:55
+# 6e86cdf4231f4dc8915d12cfc5f4eb9a
+msgid "Attributes"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:4
+# 0657035a21ec41a59e6f71ef4dfc9051
+msgid "|description resource_attributes_intro|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:10
+# f320310e0b18497ab894b3356535a90e
+msgid "Attribute"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:12
+# ed1ce5a1c5484b839d2f2c599014780e
+msgid "``gem_binary``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:13
+# c2876d61d67c411885dbef18d6506234
+msgid "|gem_binary resource package| By default, the same version of |ruby| that is used by the |chef client| will be installed."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:14
+# 815bd79c512546c0b92d8721cd1a5915
+msgid "``options``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:15
+# d0c08332d00b44daba07779fc4d73f28
+msgid "|command options|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:16
+# 9d9f86a9a35948ddb72f7ea0d92eb93d
+msgid "``package_name``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:17
+# 19f3f6e113364edcaad46a23d9f9777d
+msgid "|name package| Default value: the ``name`` of the resource block (see Syntax section above)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:18
+# 28430e56702341daaaaade54632e2caf
+msgid "``provider``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:19
+# 95158c9d3bda4f1da462b4dd5a9acdc5
+msgid "Optional. |provider resource_parameter|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:20
+# 9adada7f6de74c79a0a346e1fcba683c
+msgid "``response_file``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:21
+# 7840cd60aa974f5987a3404c1028b306
+msgid "Optional. |response_file|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:22
+# 094ccf4a15e44aba8ca0e0226756e3e8
+msgid "``source``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:23
+# 47ffd953ab1b4d069dd02d93ac8cdb9a
+msgid "Optional. The URL at which the gem package is located."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:24
+# 7a783252956a49798bb1075a61280d19
+msgid "``version``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_attributes.rst:25
+# a40e034fbf9e4ffa99b510e30cb8dab8
+msgid "|version package|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:59
+# 3850725dfd6f48e6bc87c33b89fb2ba7
+msgid "Providers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:4
+# 0efd5dadb36542c093f74bea5617f86c
+msgid "The following providers are available. Use the short name to call the provider from a recipe:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:10
+# 7ce1329adbeb4cb6a8996a452e792953
+msgid "Long name"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:11
+# bc4fb54434c94ace9b0d285576dc5b96
+msgid "Short name"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:12
+# 1cb1bec058bc44bd867eda2505e8b737
+msgid "Notes"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:13
+# 2aefae5c004140b1b5feaa46fa9738ea
+msgid "``Chef::Provider::Package``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:14
+# 2b1d19c2b8f24774b831f80c4c0f50bf
+msgid "``package``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:15
+# 70e17aa56d854f778b929d98f01a1a14
+msgid "When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:16
+# 8be7c9c7aab147e6be69a2270f162e80
+msgid "``Chef::Provider::Package::Rubygems``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:17
+# b3fd530dd34644508ba4c2fe3e3c53ef
+msgid "``gem_package``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_resources/includes_resource_package_gem_providers.rst:18
+# 644ea3f5ee924edf9b47fccaaba927ec
+msgid "Can be used with the ``options`` attribute."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:63
+# f3f212f1283b461ebc8329a6242d849f
+msgid "Examples"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:64
+# 793a1ec614c04ec6824d78c7c3c6b165
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:66
+# 08c9542d9dcf4eeba5c3ee9410090a2e
+msgid "**Install a gems file from the local file system**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/resource_gem_package.rst:70
+# 390f5fdc9cb84e2bb82b1bf0fe7e1a3c
+msgid "**Use the ignore_failure common attribute**"
+msgstr ""
+

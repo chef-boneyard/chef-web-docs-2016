@@ -1,0 +1,600 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:8
+# d3fd34efde6744d2b98afbc5f506b11f
+msgid "High Availability"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:4
+# 1bf7c42c6a0a48b1afd372321faa842d
+msgid "|chef server oec| can operate in a high availability configuration that provides automated failover for stateful components in the system architecture. This configuration splits servers into two segments: front-end and back-end servers. The front-end servers handle requests to the user interface and requests that use the |api chef server|. The back-end servers handle data storage and retrieval, which consists of:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:6
+# 37c7ade4feb74735a6368a195e470163
+msgid "|couch db|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:7
+# 562b2391e70241a7a3fb94689330e77b
+msgid "|postgresql|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:8
+# 9569cedc0dda4d45a916e7d7459923a2
+msgid "|opscode solr|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:9
+# 63143c326e77466a9f428d7c26c938fa
+msgid "|rabbitmq|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:10
+# b4c25bd813674cf99a5f11415a84071f
+msgid "|redis|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:11
+# 84a1299e60cf43e585ee42b5f6a26913
+msgid "Cookbook data"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:13
+# 96c0048994114ea3bc26680d34275f60
+msgid "Failover on the back-end servers is achieved using the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:15
+# 8b8443e97748450386b777ba6754c4ff
+msgid "Asynchronous block level replication of logical volume managers using |drbd|, positioned between two back-end servers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:16
+# 377be951de46445db1cae6bf0af71efd
+msgid "A primary and backup cluster election using |vrrp| over unicast TCP/IP and |keepalived|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:17
+# 5fd605c9a12a414facace1329d11c9e3
+msgid "A virtual IP address to the primary server, maintained based on the results of the election done by |keepalived|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:21
+# 417ca7094dd14a3e8d7aa755475ed4c5
+msgid "The front-end servers require load-balancers. |company_name| recommends:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:23
+# d7cb3c974f5945229c2bba26e838e4a1
+msgid "Hardware load-balancers (such as |f5| or |netscalar|)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:24
+# 99307ec7a86a42e0849babec3eb60776
+msgid "|ssl| off-loading"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha.rst:25
+# 7c4d0b264950403c8edd4b08c6dd0d10
+msgid "Round-robin as the load-balancing algorithm"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:13
+# ae82f46261be467c860818ad61c9b059
+msgid "Scalability"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scalability.rst:4
+# ef5c4400f3564e70a274e430d4bda818
+msgid "Scalability for front-end servers is achieved by horizontally scaling the number of servers."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scalability.rst:6
+# 820917c5393b4da1aabf3cdede6abb9e
+msgid "Scalability for back-end servers is achieved by vertically scaling the servers. For example, adding memory, CPU, and faster disks will all increase throughput from the back-end servers. Faster disks, and dedicated network interface cards will all increase the reliability of |drbd| and the responsiveness of |chef server oec|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:17
+# 4f1da27d046d46f4b5b78b8993eee431
+msgid "Failover and Recovery"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_failover.rst:4
+# 5acfcb708f8b4a1d8ffc26323d3c3425
+msgid "When the primary server in the cluster fails, the |vrrp| heartbeat will stop. At this point the backup server will begin transitioning to the primary state, which involves:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_failover.rst:6
+# b9694e7acc924c1b96926ab0d390866c
+msgid "Assigning the virtual IP address and sending a ``proxy-arp``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_failover.rst:7
+# 942db6e5b55a4318b75ffd488b13d880
+msgid "Attempting to take-over as the primary server for the |drbd| device"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_failover.rst:8
+# 3e3445333ef14687905229361c169cce
+msgid "Starting all of the back-end services"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_failover.rst:10
+# 20c06039913d4d4f934b121eaa9954bb
+msgid "The first step is transitioning the virtual IP address, which means that traffic will flow to the backup server while it makes the transition to being the primary server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:21
+# d9c3ba5cc4114a369832ca4399082252
+msgid "Graceful Transitions"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_transitions.rst:4
+# 0b6bedd149d24779b41567081550a2f7
+msgid "The |keepalived| service manages the |vrrp| and cluster transitions. It should be running on both the primary and secondary servers. To transition from the primary to the secondary, simply run the following on the primary:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_transitions.rst:10
+# c1f845ee145545ffbe3cd49f97944770
+msgid "which will initiate a failover from the primary to the secondary. This will cause the current primary to:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_transitions.rst:12
+# 6d4b0419802b489aa4c763e5c15b6d48
+msgid "Remove the virtual IP address."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_transitions.rst:13
+# dd194d313bac4899871338b09202a6c4
+msgid "Stop the services."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_transitions.rst:14
+# c9d99b02016f44238715d0bdf84d8de7
+msgid "Unmount the |drbd| device."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_transitions.rst:15
+# 3e329ef40d284791a44a71d13976e517
+msgid "Becoming secondary for the |drbd| device."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_transitions.rst:17
+# 67c6e069f6a2403d9ba92b65aaf214e1
+msgid "Meanwhile, the backup will be undergoing the same steps as listed above. Use the ``ha-status`` option to view the progress:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:25
+# 12500c83acae4a6bbe93bd876c2d808d
+msgid "Status"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:4
+# d57ddfffe1c041749f679597d8922ab1
+msgid "The ``/_status`` endpoint can be used to check the status of communications between the front and back end servers. This endpoint is located at ``/_status`` on the front end servers."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:6
+# a47999675b8f42d69c908d37169489fb
+msgid "**Request**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:12
+# 34d03658d08e437a9c7af361449425b5
+msgid "This method has no request body."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:14
+# 1ccf0357bfa04fc2bb8ab8ce88c715cd
+msgid "**Response**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:16
+# f8aaebb4b9be4db896c9287f25f0de8d
+msgid "The response will return something like the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:31
+# e2137afb1da14c4485e2d40e8b6a5b40
+msgid "**Response Codes**"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:37
+# 82ab465ab32243d6bb8a74491c268caa
+msgid "Response Code"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:38
+# f067e9216659439da927930f8a024b66
+msgid "Description"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:39
+# 3d43b69ed17144b6a69b771f9f5e3727
+msgid "``200``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:40
+# 6cf2c679b8d44229b723220c51818403
+msgid "All communications are OK."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:41
+# f3db5745dbdb48a9bef3f8eea5ddfeab
+msgid "``500``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_api_chef_server/includes_api_chef_server_endpoint_status.rst:42
+# 00bd8e10256e49ea839e577082ecfbc0
+msgid "One (or more) services are down. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:29
+# ce712a2201704d29bc0ab8f3c61196dd
+msgid "DRBD"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd.rst:4
+# d36440e717a04b7fbb16718df4519fe3
+msgid "|drbd| is used as part of a |ha| topology for |chef server oec|. More information about |drbd| is available from their website: http://www.drbd.org."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:33
+# 267451e17cb144fa9a44b110ee0a2a00
+msgid "Split Brains"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_split_brain.rst:4
+# 951fe093ad424e62a540e446d6c404c8
+msgid "A ``split-brain`` event is a concept of clustered computing systems in which the cluster loses its heartbeat communication channel and becomes two unconnected pieces. Recovery from a ``split-brain`` event can be a complex issue and different clustering software packages use different methods."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_split_brain.rst:6
+# 3e41f46e0b3f4ef7be7dc2bc685d51e7
+msgid "Failures happen, so completely preventing a ``split-brain`` event is not an absolute possibility. However, it is possible to alleviate some of the issues that crop up in any ``split-brain`` event scenarios by maxing out the heartbeat network bandwidth and optimizing transfer protocols."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_split_brain.rst:8
+# 4a7ff68f4b3a4e899325b15bb1a92d6f
+msgid "|drbd| is a shared-nothing system. Data is replicated between hosts over a dedicated network link rather than stored on a central network-attached storage (NAS) or storage attached network (SAN) to which all hosts are connected. The most critical issue for storage in a |ha| topology is loss of or corruption of data. Maximizing the amount of data that can be passed over the wire while all systems are up and running correctly minimizes the chance that something will be lost or unrecoverable if a host goes down."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_split_brain.rst:10
+# 9e660a0f996845d191aedee269405e9b
+msgid "At any given time, only one |drbd| host has ``userland`` access to data, This host is referred to as the primary node. The other host runs the |drbd| daemon, but cannot mount the storage into the file system. The secondary node receives information from the primary node, and then replicates disk actions on its local storage copy (even if the partition looks like it doesn’t have a file system to which a ``mount`` command can be sent)."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_split_brain.rst:12
+# 2b2f28be6cb44f038eb50bf9dc9a4094
+msgid "The approach that |drbd| takes to ``split-brain`` event situations is to degrade all partners still alive to secondary status, and then wait for manual intervention. This is called auto-fencing, with a goal of minimizing the potential for damage to your data. When you lose one of the partners in a |ha| topology, a bit of manual intervention is required to ensure that the disks aren’t in a bad state and can be brought back up. These scenarios are discussed below, including suggestions for diagnosing and recovering from each scenario."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:37
+# bab574315df44ce48bc6dcadbd400ecc
+msgid "Split-brain Handlers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_handlers.rst:4
+# a62c8646f16648e6beecad143051ebca
+msgid "|drbd| configuration allows for custom handlers when a ``split-brain`` event happens. The basic handler sends a notification email to a configurable email address so the issue can be investigated."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_handlers.rst:6
+# c149bc3746344c8f8e2e8b1c646bc3c9
+msgid "The ``drbd.conf`` file that is used with |chef server oec| specifies other built-in actions that may be taken in certain fault scenarios:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_handlers.rst:14
+# 6535aeb19371423da7c43cd84b9c0121
+msgid "What this means:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_handlers.rst:16
+# 053f87ecc4d8466184a8b0342006654e
+msgid "after-sb-0pri: A ``split-brain`` event has been detected and neither node is the primary node. The ``discard-younger-primary`` action will roll back any changes made on the last host that was the primary node."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_handlers.rst:17
+# 2ca62dd99e244792920a0c11ef0f30f9
+msgid "after-sb-1pri: A ``split-brain`` event has been detected and only one node believes that it was the primary node when the event happened. The ``discard-secondary`` action will continue operations on the primary node and will assume that the secondary node was lost."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_handlers.rst:18
+# d57cd56b827346ce99eb80c96682ba2c
+msgid "after-sb-2pri: A ``split-brain`` event has been detected and both nodes believed they were primary nodes. The ``call-pri-lost-after-sb`` action will attempt to apply the ``discard-younger-primary`` from the ``0pri`` configuration to determine which host should be the primary node. Once determined, the other host takes action to become the secondary node."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:41
+# 8e6d8762bee6457ca2a9c03de1f47a6f
+msgid "Assumptions"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:4
+# d5c67696e58148d58affd2384479bd6f
+msgid "The following assumptions exist when |chef private| is deployed in a |ha| topology:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:6
+# 053549af761b4f9ab4d850ac83d00feb
+msgid "The back-end processes run on two hosts: ``BE1`` and ``BE2``. ``BE1`` is the |drbd| primary and |chef server oec| master; ``BE2`` is the |drbd| secondary and the |chef server oec| backup"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:7
+# 6a901a0a1d3243f8aff9c5e4fd0d9405
+msgid "The back-end uses |keepalived| and a dedicated network interface for heartbeat"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:8
+# 95bde9bf3c9842008391b8da35bad81a
+msgid "The back-end uses |drbd| for file redundancy"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:10
+# 6530f087a020491c88569e30c15c33fb
+msgid "On each host, its own status is reported first, and then the status of its remote partner."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:12
+# 431167990bc846b69649c9e7d6652e3b
+msgid "When both the primary and secondary nodes are running and behaving as expected, the contents of ``/proc/drbd`` on the primary node will look similar to the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:21
+# 4b815a3342be441ab34d6432ec0c64e5
+msgid "On the secondary node, the status will look similar to the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_drbd_assumptions.rst:30
+# 0803959ebedc4d2ea5459b5983520155
+msgid "For information about the settings in this file, see the |drbd| website: http://www.drbd.org/users-guide/ch-admin.html."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:45
+# 8261354b241a43c9b1ffb4bed04a2bd5
+msgid "Failure Scenarios"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario.rst:4
+# 13a7b8f194264c6082350b5a036a623b
+msgid "The following four common scenarios are discussed:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario.rst:6
+# 92dec077830046a190f3b010dd7cf78c
+msgid "Back-end server #2 fails gracefully (all data is synced)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario.rst:7
+# 6133673f7a064bf1a2cabced35c6b2c5
+msgid "Back-end server #2 hard fails badly (unsynced data)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario.rst:8
+# d4abfc30c3d540188ef23724bb2602ac
+msgid "Back-end server #1 fails gracefully (all data is synced)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario.rst:9
+# 80e73cb542e04d02a66d09be8d90a567
+msgid "Back-end server #1 hard fails badly (unsynced data)"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario.rst:10
+# 00db07faf33f4dceb22bb83697b85c42
+msgid "Both hosts are up as secondary, and |chef server oec| is unhappy"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:49
+# de5a4e7aeb7f4c8a82bbc2599655e9c5
+msgid "Scenarios 1 and 2"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:4
+# e0fb1a04c404461e8ecfb865407ff989
+msgid "When the acting backup server fails, |drbd| on the master will continue to function in primary mode, whether the |drbd| on the secondary was shut down gracefully or became unavailable unexpectedly. Verify that |drbd| is functioning by running ``drbdadm role pc0`` on the primary:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:12
+# 78b0c8589e2f433c8a3dc2d25306ee70
+msgid "You can see the full status by running cat ``/proc/drbd``:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:21
+# 055b2d6c04bc4394baf1c60026aa1f67
+msgid "The disk partition is still mounted into the file system and can be used as normal."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:23
+# c8352c70a6ea4cef8ab7be83f89746e5
+msgid "When the secondary becomes available again, two things may happen:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:25
+# fc9997adcd42405891c4d47cc8778e43
+msgid "If the status of the secondary reports ``Inconsistent`` or ``UpToDate`` without manual intervention, all is well."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:26
+# daff232695044208b65d65d287d786b8
+msgid "If it remains ``DUnknown``, |drbd| on the secondary can be manually restarted and it will start to sync. The ``DUnknown`` status is the report which indicates that |drbd| sees no network connection to its partner."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:28
+# 223c0c6b10ee42979b5b0ba08f8f26c1
+msgid "The last field in the ``/prod/drbd`` file (``oos``) reports how far the primary is out of sync with its partner. If the secondary is down and there are a lot of writes on the primary, this number will increase. For example:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:37
+# 718eeca7065848fe9bb393089f4f8d2b
+msgid "When the disks return to a synced state, that field will return to ``0``. While the secondary is syncing, status about the syncing process will be shown for both hosts. For the secondary, something like the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:47
+# 7e7f3ac74d654c60ba777399f89faf95
+msgid "and for the primary, something like the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:58
+# 5bcea8789fd94b19ae930409cdb0d3dc
+msgid "Eventually the hosts will quiesce and report ``ds:UpToDate/UpToDate``. Depending on how long the secondary was down, how much data was written to the primary in the interim, and the speed of the shared network, this process could be nearly instantaneous, or could take several minutes. Your |chef server oec| processes should not need to be manipulated in any way during this recovery."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_1and2.rst:60
+# 5c59e2d0a3724df9b7d954f44565ff96
+msgid "If the secondary host is lost completely, a new host can be installed in its place, the device built, and then |drbd| started. The new host will pair with the existing primary, sync data, and be ready to take over if necessary."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:53
+# 40881dee4e694f329fb84b1d91388160
+msgid "Scenario 3"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:4
+# c3573fadcad544fc937f668ab68984b8
+msgid "Trouble starts when the |drbd| primary is the host that becomes unavailable. The |drbd| process on the secondary makes no assumptions about whether or not it should automatically take over, based on the split-brain configurations in the ``drbd.conf`` file."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:6
+# f2eb50bfbd4c46bf80d2e0d34a2aeca5
+msgid "Basically, what this means is that when the primary becomes unavailable to the secondary without an explicit takeover being initiated, the secondary will assume that it itself is the wrong, ``split-brained`` host, and is the one unconnected and incorrect. It will take no automatic action."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:8
+# a51c6451622946e48bfa449f9e998678
+msgid "The status of the secondary will look something like the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:17
+# a41b44c27b114f668a67275d12d88c92
+msgid "The ``ds:UpToDate/Unknown`` is important; it indicates that the secondary has all the data that was on the primary and won’t lose anything if it is promoted."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:19
+# f36dab7d1d35482bb075be0b8c105cbc
+msgid "If it is verified that the primary host is going to be down for a while, the secondary can be promoted to primary:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:25
+# 800e5c067eab40e9a8385dfa6f74c7be
+msgid "at that point the status will change to something like the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:34
+# b1e3d9ee13e14267b963c246b55fdc48
+msgid "Notice that ``ro`` is now ``ro:Primary/Unknown``. |chef server oec| can now be recovered by entering the following command:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:40
+# 3735de0c71b348858383dabeb25b086f
+msgid "This will start up the configured services and |chef server oec| will be master on this host."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:42
+# 6f10ed5be21f4034aad38edab21acb36
+msgid "If the original primary can be brought back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host’s original primary |chef server oec| master status."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:44
+# 70969549b5514dfca75b1cfeca1bdd91
+msgid "The first thing it will do is attempt to promote itself to |drbd| primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the pair of servers in a good state, with the second back-end box as the |drbd| primary |chef server oec| master."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_3.rst:46
+# 82ac7db6317e406582125810cb2570ce
+msgid "|drbd| on the first back-end server will sync to the second back-end server and will become the clean secondary |fqdn|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:57
+# d543029716534a0187a77f87f0dae31b
+msgid "Scenario 4"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:4
+# 7429d7feaf4644faba2d1b356411dfce
+msgid "So far, the scenarios have not described any data loss. When the hosts in the High Availability pair are synced, either can be lost and the data will be safe."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:6
+# 2db4a9443ff84a5fa3c0b80d3f47df81
+msgid "If you get to a situation in which the primary host is lost and unrecoverable, but the last status of the |drbd| pair was reporting that the secondary node was in an ``Inconsistent`` state, it is very likely that some data will be lost. The |drbd| status on the remaining host will look something like the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:15
+# 73dbac58689749beb316204a8b6bcda3
+msgid "As long as good source code management is practiced with cookbooks and other files in the |chef| repository, any missing bits can be re-uploaded after there is a working cluster. In some cases, newly-created users or organizations will need to be re-created. Other actions, such as |chef| runs and uploads may fail while the cluster is in an ``Inconsistent`` state, but will be fine after there is a working cluster."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:17
+# 2015ce443ca243bba0e51b40609d9a2e
+msgid "When the primary back-end server has been lost while the secondary back-end server is in an ``Inconsistent`` state and it's not going to be back online quickly, the best thing to do is to provision another host to become the new |chef server oec| cluster partner for the secondary back-end server, and then build it out. If the new host has an IP address that is different from the primary back-end server, change the configuration on the secondary back-end server, and then reconfigure."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:19
+# e008cc5018a848c5a7535e37eb45389b
+msgid "In this situation, |chef server oec| may be freaking out a bit, so turn off the daemons using the ``private-chef-ctl stop`` command."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:21
+# 28bedb4e7cfe4cab996bd67aa42d268a
+msgid "Once the new host is identified and the |drbd| devices on that host are ready, bring up |drbd| and get it talking to the secondary back-end server. This secondary server should not want to be the primary server; it should be waiting for the old primary server to return. Start up |drbd| on the new host and verify that it is listening on the correct port and that the status in ``/proc/drbd`` is reporting that the host is up, but in the ``WFConnect: waiting for connection`` state."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:23
+# 1ec01d84e5a5415d83dd08860e4c3f00
+msgid "By the time you get the new node is up, the secondary back-end server may have taken itself into ``standalone`` mode, which means that it is no longer listening on the network port. In this situation, run the following commands to get the secondary back-end server to talk to the new node:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:29
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_5.rst:12
+# dd4f30db32b84bdd87d6d2c3b4d23011
+# 0936b8c4ada24813a83d83d6bdd72a1c
+msgid "and:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:35
+# b846aaeec0aa4d64ab0a2db8be6b70ce
+msgid "At this point, the new host should be synchronizing with the secondary back-end server. The secondary back-end server will forget all about the data it was missing from the now-gone primary back-end server, and the process of bringing |chef server oec| back online can begin."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_4.rst:37
+# e835a364f5774cda872fcbdfac4bd523
+msgid "Running a fast network between the primary and secondary hosts, and keeping it full throttle for |drbd| transfers, will go a long way to mitigating the any damage that may be done in the event of a loss of the primary from an un-synced cluster."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/server_high_availability.rst:61
+# 8ba3443c71f64032a5df7004d31c45cd
+msgid "Scenario 5"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_5.rst:4
+# b560e2de80424c38938f3e5e57b053ef
+msgid "Sometimes |drbd| hedges its bets, and puts both nodes in a pair into secondary mode. When this happens, you can look at the contents of ``/proc/drbd`` on both hosts and see if either of them is showing out of sync. If they are both ``oos:0``, just pick one and promote it to primary using the ``drbdadm primary pc0`` command. If one or both of the hosts is out of sync, choose the one with the lower amount of ``oos`` and promote it to primary."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_5.rst:6
+# ddbc5a0df8204f0fbc7e0d2b706df422
+msgid "If the chosen node won’t promote, run the following commands on the other host to reset its disk state:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_ha/includes_server_ha_scenario_5.rst:18
+# b39ac8c90ddc4a809715d1a55fd07af7
+msgid "That will tell |drbd| to abandon what is on the node and start over, and should allow it to sync with the primary."
+msgstr ""
+

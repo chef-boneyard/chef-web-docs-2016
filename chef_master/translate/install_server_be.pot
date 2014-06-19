@@ -1,0 +1,898 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-19 11:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:8
+# 7eccb1a3b2984e6eba5b91b855ae4583
+msgid "Scaled Back End"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:10
+# 4ceddda22cb1441291c425331bd703f8
+msgid "The scaled back end installation allows |chef server oec| to be installed on multiple servers in order to scale portions of the service horizontally, with a highly available back-end infrastructure. This is the recommended configuration for production utilization of |chef server oec|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:12
+# 1ca4e9266a7e4936a9655944e8cb5601
+msgid "We refer to all the servers in a particular installation of |chef server oec| as a cluster."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:14
+# f4b764b3f7a340fda87995059380d077
+msgid "The scaled back end installation consists of multiple front-end servers talking to a pair of clustered back-end servers. This allows for a higher level of concurrency on API requests, while scaling the back-end servers vertically to handle the increased I/O load."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:17
+# d63a8042a3ab4d07b5d2c4760fd1b143
+msgid "System Requirements"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:18
+# 322f77a235a3412cb68ec5ae60082778
+msgid "A scaled back end installation scenario has the following system requirements:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:20
+# 0769d5a28e2e40949a60d92e09cc7ba2
+msgid "8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:21
+# 406d7e700ffa460dbf173f99da0f4899
+msgid "16GB RAM"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:22
+# ae63ba689d3c495ab0483c6eceffe357
+msgid "2 x 300GB SAS RAID1 drives"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:23
+# febc02d2b0e84bcb891b71664db97334
+msgid "Hardware |raid| card"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:24
+# 234e1e32841b49328b8f8bfd7e3e4f32
+msgid "1 x GigE NIC interface"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:25
+# fe6f8387dd7d4d0eb47d29389b7fc3bd
+msgid "20 GB of free disk space in ``/opt``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:26
+# 0b5d5bf331b34da9b5c09fdda9aa5637
+msgid "40 GB of free disk space in ``/var``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:27
+# 540136e52a244f66baac1bb4e6d43f51
+msgid "Two back-end servers; as many front-end servers as required."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:29
+# 22bb66a3fa0e4a30abe1edca6252e1f6
+msgid "While |chef server oec| can be run on smaller systems, our assumption with the scaled back end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:32
+# 39db035c591e4598ba8eea9656fd91fb
+msgid "Network Requirements"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:33
+# 9f7d3e2cdfde4cb4846695b2c6ca2300
+msgid "|chef server oec| has the following network requirements for a scaled back end installation:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:36
+# 25b239973ed04f499b801c67993f0613
+msgid "Networking"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:37
+# 93d818efa33f4d0abff70edbc1728b8a
+msgid "The back-end servers utilize |drbd|, a distributed block device, to ensure that data written to disk on one back-end server is efficiently replicated to another. For optimal performance and reliability, we recommend that:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:39
+# 67fd56ae70f14ced90a8c7a9794d099f
+msgid "Back-end servers should have `an ethernet interface cross-connected <http://www.drbd.org/users-guide/s-prepare-network.html>`_ to the other, 10G+ recommended, for both the cluster ``keepalive`` signal and |drbd| data replication."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:41
+# 0212e98784a74db2ad42ebf24a22bbce
+msgid "This is in addition to the standard network interfaces that are available and would be used for access by the frontends and management functions. While |drbd| replication can function on systems without this additional network interface, this configuration gives maximum performance and reliability."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:44
+# 4f7bc947d1594971a872d0ad88b4586d
+msgid "Virtual IP Addresses"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:45
+# d469b3a1234641a9b0083c9a49f50a46
+msgid "The back-end servers will share a virtual IP address, which needs to be accessible from the front-end servers. This virtual IP address will be created and managed by |chef server oec| but will need be added to DNS to access the cluster."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:48
+# 207a79382a2544dcad4ac500ce4b0ae4
+msgid "Disk Configuration"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:49
+# 649778e421564528bf1cd39e9649f4dc
+msgid "The data that is stored in the |chef server oec| database is primarily cookbook data. It is recommended that disks are dedicated entirely to storing this data for the |chef server oec| installation. These disks should:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:51
+# b7b9c0f37cec43ddbf99312efb4752bb
+msgid "Utilize hardware |raid|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:52
+# 6706c19acd6b4559b235c0e64750db59
+msgid "Be configured in either |raid1| or |raid5|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:53
+# d03ce26082834591809498d6c85b2918
+msgid "Be identical across both of your back-end servers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:55
+# 407a02721bfe4836b87fe554b83a166d
+msgid "Our recommended configuration utilizes the |linux| |lvm| as the backing store for |drbd|. This assumes that:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:57
+# 008db6a687c6427780a3d54ed405abb2
+msgid "~300GB of raw, unpartitioned disk space is available"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:58
+# c7e2535be8774967a5ccfb4849aee8f5
+msgid "The disk space presents as a single device, ``/dev/sdb``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:59
+# 8855b0e84b9c4c1981f04b2cce931d59
+msgid "The storage is added to a volume group named ``opscode``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:60
+# 7ac8d577504045dd9ef9b7b5aaa4d2eb
+msgid "The storage is added in a logical volume group named ``drbd``"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:61
+# ce3903ddb31244d3949135b39df90a84
+msgid "The volume group should have adequate space to enable |lvm| snapshots to be used for backups; this amount depends on many factors, including how much changes in-between snapshots, how long the snapshots will be kept, and the (eventual) size of the |chef server oec| database; a decent starting point when sizing |lvm| snapshots is ~10% of the raw, unpartitioned disk space"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:63
+# ffe59b374c2a4409bde0eaaab03eb5f2
+msgid "The following commands would properly set up the back-end disk configuration for |drbd|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:69
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:75
+# 66629f9913884a4b834f9183d6447f15
+# 4a8f2577cf3f400abaa5f489c59399dc
+msgid "and:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:81
+# cdc62685a5564c449ab6b65f1b4497ba
+msgid "Talk with your systems administrators about disk configuration if you are at all uncertain of how to configure a new logical volume with |lvm|, as the operations can be destructive."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:84
+# ee3393c380234e6e93c125fd67a2eafe
+msgid "Load Balancing"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:85
+# 580ece835cc84bc8a0eb13d14e3648a2
+msgid "As multiple front-end servers are run, there will a need to provide a mechanism for load-balancing the requests between them. We recommend using either a hardware or software load-balancer configured for round-robin."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:87
+# 187e3f40bdd94c20a4af3eeabbb862c0
+msgid "Create a DNS entry for the load balanced virtual IP address, which will be used to access the cluster. This is also referred to as the ``api_fqdn``."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:90
+# 531d0f11b9994963992c2d252154fbdd
+msgid "Firewalls"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst:4
+# 23482facc4dd44ae9fbf230143cacfd2
+msgid "The ports that should be open depend on how the |chef server oec| is deployed---standalone, high availability, front- and back-end servers. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary."
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:4
+# af3c2aa734844ba19325cfaf32690334
+msgid "For front-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:10
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:10
+# c460f55e198742abadcd1f5c9c4ee8a0
+# d14bb8a64bb74f058210d1f33be9253a
+msgid "Port"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:11
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:11
+# 7b99399ff0c149debddb91fa182ab1eb
+# f0e2809a1d89480ebe1e4b91787cc603
+msgid "Service"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:12
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:12
+# 22705de547114c2cbd9934f67dc066e5
+# 716a0801207348858094756cd1e7fbc4
+msgid "80"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:13
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:15
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:13
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:15
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:17
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:19
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:21
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:23
+# 613e171fe8ef498d9f7308be1467667e
+# ebc9b9f0392047e8a0ec367dbda9adf1
+# 7fa9204d3e4b455a99ed265f39cd189a
+# f84e8a8bf6ab41f09b991701c6679586
+# 0f5154fc13d54c52a2ac7cde7c17ff45
+# ed8e26d76a824c84bebf19924c8aece5
+# 326af5c4c8414baf9e51ecc398d95614
+# b2e14eadff7f4ee29dcaa9969378256b
+msgid "|service nginx|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:14
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:14
+# 79a1fbdd273a46409f53d9bc3a99763c
+# 0fd9f07aabc64786adcb03acd2d9ba65
+msgid "443"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:4
+# 8247db15c6e74c8eaf8069022b5e74ea
+msgid "For back-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:16
+# b19ff27776de4987a93276478ba4473d
+msgid "9671"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:18
+# fa241e7a3f5f44cea40152f53c32d4e3
+msgid "9680"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:20
+# a78612c32f1b449cafaf59e4dede0879
+msgid "9685"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:22
+# 1c85a22065654a51b228a59f593c817f
+msgid "9683"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:24
+# 84ad6e44a5824d678983ef968c28ea06
+msgid "5984"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:25
+# 2439a120fa8e46e5a1ebf8a5d21a479e
+msgid "|service couchdb|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:26
+# a5839503bdaa4127b2f10831ac3f91cf
+msgid "8983"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:27
+# ff6515455672405ca47922280b0ceb3d
+msgid "|service solr|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:28
+# 73d3ac1ed4284663996f73e44f8bdab2
+msgid "5432"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:29
+# a549a487890244298d87aac4f46251b4
+msgid "|service postgresql|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:30
+# cff0d190b1cd4b4a9fba3fe81727b518
+msgid "5672"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:31
+# c1b7f26cdc224dc2b7d68c628530c3c1
+msgid "|service rabbitmq|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:32
+# 9aa8d72df5a2406ea18621b22e67f41d
+msgid "16379"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:33
+# b2ae5e68dd17425e84f26780cd8ebd16
+msgid "|service redis_lb|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:34
+# 137f563bb72e474db26ea1aa6028fd36
+msgid "4321"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:35
+# 88ad673afc78432dac5f32434881ffe0
+msgid "|service bookshelf|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:36
+# 1989f5b0ed94496e9f7e61f7ca6c7c07
+msgid "7788-7799"
+msgstr ""
+
+#: ../../../desktop/chef-docs/includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:37
+# fcc8002598054bb493fe35f4b0bdcfa5
+msgid "|drbd|"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:98
+# 6c6e53662a9e419a89ef922a768b708c
+msgid "Hostnames, FQDNs"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:99
+# a16ff325845d4210b2b78835a81ec3d5
+msgid "The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.opscode.com/install_server_pre.html#hostnames-fqdns>`_ for more information."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:102
+# b763fe6bc4ad4fbc8b606d0265f44198
+msgid "private-chef.rb"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:103
+# f281e869a9f6411685a4f2c08930acaf
+msgid "Each |chef server oec| cluster has a single configuration file: |private chef rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |private chef rb|."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:106
+# 5080dc7886de4c019e871a672076428d
+msgid "Set the topology"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:107
+# 40d5ebc6db6045f1a7d9bf149cc0f312
+msgid "Add the following line to the |private chef rb| configuration file:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:113
+# 3cb336a987664b54b85693d6a9c14777
+msgid "This lets |chef server oec| know that these servers will be in a horizontally scalable configuration with a highly-available back-end."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:116
+# 55ffff67994e44f4a418987873740261
+msgid "Back-end entries"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:117
+# 0c09e259c8624ec5ae3e9cde704591a8
+msgid "Nominate a back-end server as the bootstrap server. For that server, add the following to the |private chef rb| file:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:127
+# ea1d496378ac43f7a7529927133850e1
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is a back-end server. If the server will be used to bootstrap the |chef server oec| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface to be used for cluster communications (such as |keepalived| and |drbd| replication). If no such interface is configured, exclude the ``cluster_ipaddress`` entry."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:129
+# e8b7b441dd15483e9850fd4809b70aae
+msgid "For the other back-end server, add the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:138
+# ee3f3bd0d55c44f6bf459260a27b77f8
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server’s interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:140
+# 860a442c0da24848b1e15e6e1a62594f
+msgid "Add an entry for the back-end virtual IP address that was assigned earlier:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:148
+# 7a75d3386740471d8c5cd75477f6bfca
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the virtual IP address. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind (i.e. the public interface of the server). Front-end entries ----------------------------------------------------- For each front-end server in the |private chef rb| file, add the following:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:159
+# aa69609d285f497a92125f897acd826f
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is front end."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:162
+# 7b58c28604eb418398f25263d804c9f2
+msgid "Set api_fqdn"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:163
+# 9fef23e6c30149fc8cf84014dbb20f11
+msgid "Add the following line to the |private chef rb| config file:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:169
+# 66c8df1d119049d989c1b5d5c3fa188c
+msgid "Replace ``FQDN`` with the |fqdn| of the load balanced VIP."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:172
+# aa67cad18353444d9b0662e1adebb7ba
+msgid "Example"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:173
+# ba05279f8bd245eca2bdf223f6382390
+msgid "A completed |private chef rb| configuration file for a four server tiered |chef server oec| cluster, consisting of:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:179
+# 0ff489713c784a99a396d0bbbec95b86
+msgid "FQDN"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:180
+# 6cab8e76d3c447bf937042a3e41a0c84
+msgid "Real IP Address"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:181
+# 3d7e68e3976f4307b3e74f98fc567a9b
+msgid "Cluster IP Address"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:182
+# aa5a12ea3f24418391f104ff807401d7
+msgid "Role"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:183
+# c99f7aa6380b475c897ff4d4bf570366
+msgid "be1.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:184
+# b78e48625fbd4efdadafdfcd418b4271
+msgid "192.168.4.1"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:185
+# c650dd8214454283a7d334b53be9d71c
+msgid "10.1.2.10"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:186
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:190
+# 796ec436dc9349ba96531812cdb8451f
+# 6872339b51174e4fbd760dcb51eb310b
+msgid "backend"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:187
+# f9988f7f4c0b47b6a7a706df785ed02c
+msgid "be2.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:188
+# 93f9fd5f839447229d31e3131a3586e6
+msgid "192.168.4.6"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:189
+# 6e9f1e670a30470bbbbbb5cef7437ea7
+msgid "10.1.2.12"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:191
+# 5b5cda4341d94cf1bc9511d75d38d5be
+msgid "fe1.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:192
+# 7fefbede64424eaba83a236fe936efbe
+msgid "192.168.4.2"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:194
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:198
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:202
+# 799d55a0bce348029b301e0b67a76c5a
+# 0437848af19e41908c844e27e7cb11e3
+# 60341f47565c4be2bbb6593af5328e42
+msgid "frontend"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:195
+# ecf2dadffd7647e085d3b271f6fd30a3
+msgid "fe2.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:196
+# 8e4109049ce94f47bc524396cc861ff9
+msgid "192.168.4.3"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:199
+# aa73e8ad96bd497d8f48690c26c7084b
+msgid "fe3.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:200
+# b23eca8bc88a461dbf6d32ba0595dea9
+msgid "192.168.4.4"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:203
+# 423863e3bc4243d085a11fd927c0aef3
+msgid "chef.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:204
+# f16c88ef0e5b4f05b5146c6c85f12229
+msgid "192.168.4.5"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:206
+# ee4402ebd53c45f39d8c85d89ac80ffa
+msgid "load balanced frontend VIP"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:207
+# 5c8db899d0e24fbf9dbb2a587c73dc53
+msgid "be.example.com"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:208
+# b7460d87207f41529a68d0c66efc8719
+msgid "192.168.4.7"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:210
+# 429ef30482ca49fdb0757bdf64f5a07a
+msgid "load balanced backend VIP"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:212
+# ae8c02136dd349e2b9029fb94fe65426
+msgid "Looks like this:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:250
+# bed0543c74c845ef86dd8c4450fee694
+msgid "Add Package to Servers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:251
+# f41c02fdd5f345a280812a8855b99fdb
+msgid "Upload the package provided to the servers you wish to install on, and record its location on the file-system. The rest of this section will assume that it was uploaded to the ``/tmp`` directory on each system."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:255
+# dff1614db6c242b4aa350262d7bb5e80
+msgid "Add private-chef.rb to /etc/opscode"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:256
+# ef7363b4c98e4e06ae8525af02bff56d
+msgid "Copy the |private chef rb| file to ``/etc/opscode`` on the bootstrap server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:259
+# 23fb8c7f608f4c0899e1b4f4b5269171
+msgid "Install |chef server oec| on backend"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:260
+# e5045ae3820d42c99bfe45502a317505
+msgid "Install the |chef server oec| package on both of the back-end servers. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:266
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:284
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:342
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:463
+# 1401eedf32c64262820d5e76ea673e64
+# 2571ba9f34f5478484e026abbe3e8ee2
+# 57acc0dd919e4ee0a8f23ca85b86665d
+# 1c02f4a4d14c4ec99ff43b1bcda084fa
+msgid "For |ubuntu|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:273
+# 3fafba99e5fb49beb55eaf4c2bd727fc
+msgid "Install |drbd| on back-end servers"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:274
+# d8e34e7b4f41479999983abc711015b6
+msgid "Both of the back-end servers must have |drbd| installed:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:282
+# aa0a5abd49dc43309195e0e75e6cb1b9
+msgid "The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:291
+# 1d08cbe273e74168a109212ac2c69a12
+msgid "Configure |drbd| on the back-end bootstrap server"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:292
+# 0d121c2d82a847c59a480038984090d8
+msgid "In the scaled back end configuration, setup of |chef server oec| happens in two phases - the first phase configures |drbd|, and then pauses to allow you to finish establishing |drbd| replication before moving on:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:298
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:324
+# 4a5faff29e8442639452c9e9bd0ad193
+# 516c8ac41d3f4d5c9f197c07d5008f45
+msgid "The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps require to set up |drbd|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:307
+# 46744ffd230a4bd4bdf4eea24b8d6475
+msgid "Copy config to non-bootstrap back-end server"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:308
+# 5d537a475c8d48ccac28d42827cfa773
+msgid "To configure |drbd| on the non-bootstrap back-end server, first copy all the contents of ``/etc/opscode`` on the bootstrap node to the non-bootstrap back-end. On the non-bootstrap server, run the following command:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:314
+# ba084b21de084665a8b5774afc776d03
+msgid "Replace ``FQDN`` above with the |fqdn| of the bootstrap server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:317
+# 0ed703c3398a4e9187338c8440f7910d
+msgid "Configure |drbd| for non-bootstrap back-end server"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:318
+# affef248ddea4d0280d34c9052c30389
+msgid "Set up the configuration of |drbd| on the non-bootstrap back-end server:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:333
+# 974b3bbff5b84b1783e1763790476f54
+msgid "Set bootstrap server to be the primary server"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:334
+# 0b7aad4cc0d84677a2769ca4981d33af
+msgid "With both servers now configured for |drbd|, let the cluster know that the bootstrap server should be primary for the shared device."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:336
+# b04d89e4c3f44f30abca729192d35aa0
+msgid "For |drbd| on |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:350
+# 9c5c32a54a8c40cc99e7781d889afa6a
+msgid "Mount the file system on the |drbd| server"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:351
+# 5cee1a36118648adb5f7f2dfd6255389
+msgid "On the bootstrap server, if the file system is named ``ext4``, run the following command to create the file system for |drbd|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:361
+# ffeb49bef7924722bf5cebe4eccc4faf
+msgid "Monitor the |drbd| server for initial synchronization"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:362
+# abacdf18d4ed4e8a968407bf66479913
+msgid "Before proceeding with the installation, |drbd| MUST be allowed to fully synchronize all devices. To observe the synchronization process, you can run:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:368
+# 12cae6a37cd949de97ba0febbc7960cf
+msgid "Output similar to the following will be shown:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:383
+# eb54c347d1cc4cbd85ed9a6202908d87
+msgid "When the ``ds`` section of the output reads ``UpToDate/UpToDate``, the synchronization is complete."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:385
+# 752b5d036a5e4720ba320e9897d6d233
+msgid "Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization. This is to ensure that new data that may be written to the shared device is also being synchronized. To enable |drbd| to utilize more of the bandwidth available during the initial synchronization, you can run:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:387
+# 4861af8ad3524472b6cb6459ccb64793
+msgid "Speeding up initial synchronization on |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:393
+# 71de8ee33a9d40b9ad43cf4014634d1b
+msgid "Speeding up initial synchronization on |ubuntu|:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:399
+# 2e07c6539dba4586a3398ba1e40db05f
+msgid "With synchronization complete, |drbd| is ready to be used on the bootstrap node. Let |chef server oec| know that |drbd| is ready by running the following command:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:408
+# 8b8e792461e54f3591d65d7ac115c862
+msgid "Configure |chef server oec| on the bootstrap server"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:409
+# d68d9c07254544788083e093697b9db7
+msgid "To continue setting up |chef server oec| on a bootstrap server, run:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:415
+# 78b89d7698484001ab8ae318ae70857f
+msgid "This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, the following message is displayed:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:421
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:483
+# f06a061aaaf84a8188c9cc01ac5ff568
+# 455e810561ab42028b3fe08a91af6b5f
+msgid "|chef server oec| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:425
+# a821cda20c5d4f7bbca78a6228b40669
+msgid "Configure |chef server oec| on non-bootstrap back-end"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:426
+# fc398e136e574b89bcb841b4df66f0f0
+msgid "Make sure |drbd| synchronization has completed, and that |chef server oec| has fully started on the bootstrap node before continuing!"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:428
+# bb22afd84efa400c8b1d8568508a02fd
+msgid "Each node that is part of the |chef server oec| back-end cluster participates in an election for which server should be the primary server for the |drbd| device. This means that, if the bootstrap node is not allowed to finish initializing the system before setting up the non-bootstrap server, the system may be left in an unstable state:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:434
+# 4fa412e80f954b11b6685a5fca9683a2
+msgid "Followed by:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:442
+# ed61ad2a6a0d4bbab9b49cfc3bc5d606
+msgid "Configure Front-end"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:443
+# 4ffb9e9785a14a3792ee97efacd307dc
+msgid "The following sections describe what is required to configure the front-end server."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:446
+# 94ba50126b0e405a93dde76ad8b1a804
+msgid "Copy /etc/opscode"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:447
+# 1367f411d5214622a27ed52d0a4d00f1
+msgid "With the bootstrap complete, the ``/etc/opscode`` directory on the front-end servers can be populated with the files generated during the bootstrap process. The following command assumes the user is logged in as the root user:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:453
+# 4f57acbca7b54273b7d4918de12c75c7
+msgid "This command will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:456
+# b500f5ec86ee41b487ccac711e1322fb
+msgid "Install package"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:457
+# 80c54484c8f5471884af7c4daefada37
+msgid "Install the |chef server oec| package on each of the front-end servers. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:470
+# 64496d745a0748a980b653853902e6c3
+msgid "Configure To set up |chef server oec| on your front-end servers, run:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:477
+# a20e7718bebb44ea8f9f6deaee1908b9
+msgid "This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, the following message is shown:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:486
+# b779c46a3d4b4e919df69c5468bab78f
+msgid "Success!"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:487
+# 7ba7c90b852d409b87125b3cc9208331
+msgid "Congratulations, |chef server oec| is installed in a scaled back end configuration."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:490
+# 496fd01542d1499ab230cdc3c1969959
+msgid "Using GRE Tunnels"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:491
+# 99bbadf01bb743b1800cc353103efe49
+msgid "Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the backend server that will be used for bootstrapping:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:501
+# 8c85d4a374d5422999a9e67737fc8e42
+msgid "Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end of the tunnel, and ``MY_IP`` with the IP address of the server on which the script will be located."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:503
+# d380df787c454adbb88a07f37445a5bd
+msgid "The ``172.17.16.0/24`` network used in the above examples could be any unused reserved IP address space."
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:505
+# 48f5a3911efc449cbc32620545da6d10
+msgid "Set the following in ``/etc/opscode/private-chef.rb``:"
+msgstr ""
+
+#: ../../../desktop/chef-docs/chef_master/source/install_server_be.rst:513
+# 0b7b92193176406f9f749250acfc3bf5
+msgid "And set the |keepalived| unicast addresses to the GRE tunnel addresses."
+msgstr ""
+
