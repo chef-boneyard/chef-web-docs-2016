@@ -11,5 +11,7 @@ Settings
 
 .. include:: ../../includes_config/includes_config_rb_solo_settings.rst
 
-
+Example
+=====================================================
+.. include:: ../../includes_config/includes_config_rb_solo_example.rst
 

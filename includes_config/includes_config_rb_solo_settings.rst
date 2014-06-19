@@ -10,146 +10,44 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``add_formatter``
-     - |add_formatter| (See `nyan-cat <https://github.com/andreacampi/nyan-cat-chef-formatter>`_ for an example of a 3rd-party formatter.) Each formatter requires its own entry. For example:
-       ::
- 
-          add_formatter :nyan
-          add_formatter :foo
-          add_formatter :bar
+     - |add_formatter| (See `nyan-cat <https://github.com/andreacampi/nyan-cat-chef-formatter>`_ for an example of a 3rd-party formatter.) Each formatter requires its own entry.
    * - ``checksum_path``
-     - |checksum_path| For example:
-       ::
- 
-          checksum_path "/var/chef/checksums"
+     - |checksum_path|
    * - ``cookbook_path``
-     - |cookbook_path subdirectory| For example:
-       ::
- 
-          cookbook_path [ 
-            "/var/chef/cookbooks", 
-            "/var/chef/site-cookbooks" 
-          ]
+     - |cookbook_path subdirectory|
    * - ``data_bag_path``
-     - |data_bag_path| Default value: ``/var/chef/data_bags``. For example:
-       ::
- 
-          data_bag_path "/var/chef/data_bags"
+     - |data_bag_path| Default value: ``/var/chef/data_bags``.
    * - ``environment``
-     - |name environment| For example:
-       ::
- 
-          environment "production"
+     - |name environment|
    * - ``environment_path``
-     - |path environment|  Default value: ``/var/chef/environments``. For example:
-       ::
- 
-          environment_path "/var/chef/environments"
+     - |path environment|  Default value: ``/var/chef/environments``.
    * - ``file_backup_path``
-     - |path file_backup| Default value: ``/var/chef/backup``. For example:
-       ::
- 
-          file_backup_path "/var/chef/backup"
+     - |path file_backup| Default value: ``/var/chef/backup``.
    * - ``file_cache_path``
-     - |file cache_path| For example:
-       ::
- 
-          file_cache_path "/var/chef/cache"
+     - |file cache_path|
    * - ``json_attribs``
-     - |json attributes| For example:
-       ::
- 
-          json_attribs nil
+     - |json attributes|
    * - ``lockfile``
-     - |lockfile| For example:
-       ::
- 
-          lockfile nil
+     - |lockfile|
    * - ``log_level``
-     - |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. For example:
-       ::
- 
-          log_level :info
+     - |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``.
    * - ``log_location``
-     - |log_location| Default value: ``STDOUT``. For example:
-       ::
- 
-          log_location STDOUT
+     - |log_location| Default value: ``STDOUT``.
    * - ``node_name``
-     - |name node| For example:
-       ::
- 
-          node_name "mynode.example.com"
+     - |name node|
    * - ``recipe_url``
-     - |recipe_url| For example:
-       ::
- 
-          recipe_url "http://path/to/remote/cookbook"
+     - |recipe_url|
    * - ``rest_timeout``
-     - |timeout rest| Default value: ``300``. For example:
-       ::
- 
-          rest_timeout 300
+     - |timeout rest| Default value: ``300``.
    * - ``role_path``
-     - |path roles_chef| Default value: ``/var/chef/roles``. For example:
-       ::
- 
-          role_path "/var/chef/roles"
+     - |path roles_chef| Default value: ``/var/chef/roles``.
    * - ``sandbox_path``
-     - |sandbox_path| For example:
-       ::
- 
-          sandbox_path "path_to_folder"
+     - |sandbox_path|
    * - ``solo``
-     - |solo mode| Default value: ``false``. For example:
-       ::
- 
-          solo false
+     - |solo mode| Default value: ``false``.
    * - ``syntax_check_cache_path``
      - |syntax_check_cache_path|
    * - ``umask``
-     - |umask| Default value: ``0022``. For example:
-       ::
- 
-          umask 0022
+     - |umask| Default value: ``0022``.
    * - ``verbose_logging``
-     - |verbose_logging| Default value: ``nil``. For example, when ``verbose_logging`` is set to ``true`` or ``nil``:
-       ::
- 
-          [date] INFO: *** Chef 0.10.6.rc.1 ***
-          [date] INFO: Setting the run_list 
-                       to ["recipe[a-verbose-logging]"] from JSON
-          [date] INFO: Run List is [recipe[a-verbose-logging]]
-          [date] INFO: Run List expands to [a-verbose-logging]
-          [date] INFO: Starting Chef Run for some_node
-          [date] INFO: Running start handlers
-          [date] INFO: Start handlers complete.
-          [date] INFO: Loading cookbooks [test-verbose-logging]
-          [date] INFO: Processing file[/tmp/a1] action create  
-                       (a-verbose-logging::default line 20)
-          [date] INFO: Processing file[/tmp/a2] action create  
-                       (a-verbose-logging::default line 21)
-          [date] INFO: Processing file[/tmp/a3] action create  
-                       (a-verbose-logging::default line 22)
-          [date] INFO: Processing file[/tmp/a4] action create  
-                       (a-verbose-logging::default line 23)
-          [date] INFO: Chef Run complete in 1.802127 seconds
-          [date] INFO: Running report handlers
-          [date] INFO: Report handlers complete
-
-       When ``verbose_logging`` is set to ``false`` (for the same output):
-       ::
-
-          [date] INFO: *** Chef 0.10.6.rc.1 ***
-          [date] INFO: Setting the run_list 
-                       to ["recipe[a-verbose-logging]"] from JSON
-          [date] INFO: Run List is [recipe[a-verbose-logging]]
-          [date] INFO: Run List expands to [a-verbose-logging]
-          [date] INFO: Starting Chef Run for some_node
-          [date] INFO: Running start handlers
-          [date] INFO: Start handlers complete.
-          [date] INFO: Loading cookbooks [a-verbose-logging]
-          [date] INFO: Chef Run complete in 1.565369 seconds
-          [date] INFO: Running report handlers
-          [date] INFO: Report handlers complete
-
-       Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Mon, 21 Nov 2011 09:37:39 -0800]``.
+     - |verbose_logging| Default value: ``nil``.
