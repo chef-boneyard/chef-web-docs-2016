@@ -36,8 +36,8 @@ The following settings have been added to |client rb|:
 
    * - Setting
      - Description
-   * - ``xxxxx``
-     - xxxxx
+   * - ``cookbook_sync_threads``
+     - Use to specify the nuber of helper threads available for parallel cookbook synchronization. Increasing this value **may** increase the frequency of gateway errors from the |chef server| (503 and 504 errors). Decreasing this number will reduce the frequency of gateway errors, if present. Default value: ``10``.
    * - ``ftp_proxy``
      - The proxy server for FTP connections.
    * - ``yum_lock_timeout``

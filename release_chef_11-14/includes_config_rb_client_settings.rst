@@ -29,6 +29,8 @@ This configuration file has the following settings:
      - |client_registration_retries| Default value: ``5``.
    * - ``cookbook_path``
      - |cookbook_path subdirectory|
+   * - ``cookbook_sync_threads``
+     - Use to specify the nuber of helper threads available for parallel cookbook synchronization. Increasing this value **may** increase the frequency of gateway errors from the |chef server| (503 and 504 errors). Decreasing this number will reduce the frequency of gateway errors, if present. Default value: ``10``.
    * - ``data_bag_decrypt_minimum_version``
      - |data_bag_decrypt_minimum_version|
    * - ``data_bag_path``
