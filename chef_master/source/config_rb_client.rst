@@ -16,7 +16,9 @@ Settings
 
 .. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
 
-
+Example
+=====================================================
+.. include:: ../../includes_config/includes_config_rb_client_example.rst
 
 
 

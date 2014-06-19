@@ -13,17 +13,27 @@
      - |disable plugin_ohai| For example:
        ::
  
-          Ohai::Config[:disabled_plugins] = [:MyPlugin]
+          Ohai::Config[:disabled_plugins] = [
+		       :MyPlugin
+			   ]
 
        or:
        ::
  
-          Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, :MyPlugin]
+          Ohai::Config[:disabled_plugins] = [
+		       :MyPlugin, 
+			   :MyPlugin, 
+			   :MyPlugin
+			   ]
 
        or to disable both |ohai 6| and |ohai 7| versions:
        ::
  
-          Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, "my_ohai_6_plugin"]
+          Ohai::Config[:disabled_plugins] = [
+		       :MyPlugin, 
+			   :MyPlugin, 
+			   "my_ohai_6_plugin"
+			   ]
 
    * - ``Ohai::Config[:hints_path]``
      - |path hint_ohai|

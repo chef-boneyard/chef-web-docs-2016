@@ -8,3 +8,7 @@ Settings
 ==========================================================================
 
 .. include:: ../../includes_config/includes_config_rb_client_settings_oec.rst
+
+Example
+=====================================================
+.. include:: ../../includes_config/includes_config_rb_client_example.rst
