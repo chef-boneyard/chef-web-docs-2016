@@ -53,6 +53,14 @@ The following settings have been added to |client rb|:
    * - ``yum_lock_timeout``
      - The amount of time (in seconds) after which a |yum| lock request will time out. Default value: ``30``.
 
+New Options for chef-client and chef-solo
+-----------------------------------------------------
+
+The following options have been added to |chef client| and |chef solo|:
+
+``--run-lock-timeout SECONDS``
+   The amount of time (in seconds) to wait for a |chef client| run to finish. Default value: not set (indefinite).
+
 Automatic Proxy Configuration
 -----------------------------------------------------
 If ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` is set in the |client rb| file, the |chef client| will configure the ``ENV`` variable based on these (and related) settings. For example:
