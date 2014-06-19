@@ -4,6 +4,8 @@
 
 |kitchen| uses a driver plugin architecture to enable |kitchen| to simulate testing on cloud providers, such as |amazon ec2|, |openstack|, and |rackspace|. Each driver is responsible for managing a virtual instance of that platform so that it may be used by |kitchen| during cookbook testing.
 
+.. note:: The |chef dk| includes the ``kitchen-vagrant`` driver.
+
 Most drivers have driver-specific configuration settings that must be added to the |kitchen yml| file before |kitchen| will be able to use that platform during cookbook testing. Some popular drivers:
 
 .. list-table::
@@ -33,7 +35,7 @@ Most drivers have driver-specific configuration settings that must be added to t
    * - `kitchen-rackspace <https://rubygems.org/gems/kitchen-rackspace>`_
      - A driver for |rackspace|.
    * - `kitchen-vagrant <https://rubygems.org/gems/kitchen-vagrant>`_
-     - A driver for |vagrant|.
+     - A driver for |vagrant|. The default driver packaged with the |chef dk|.
 
 
 
