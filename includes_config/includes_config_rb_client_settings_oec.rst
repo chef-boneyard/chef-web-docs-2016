@@ -128,4 +128,16 @@ This configuration file has the following settings:
    * - ``verify_api_cert``
      - |ssl_verify_mode_verify_api_cert| Default value: ``false``.
    * - ``whitelist``
-     - A |ruby hash| that contains the whitelist used by |push jobs|.
+     - A |ruby hash| that contains the whitelist used by |push jobs|. For example:
+
+       .. code-block:: ruby
+
+          whitelist {
+            "job-name" => "command",
+            "job-name" => "command",
+            "chef-client" => "chef-client"
+          }
+
+       A job entry may also be ``"job-name" => {:lock => true}``, which will check the ``lockfile`` setting in the |client rb| file before starting the job.
+
+       .. warning:: The ``whitelist`` setting is available only when using |push jobs|, a tool that runs jobs against nodes in an |chef server oec| organization.
