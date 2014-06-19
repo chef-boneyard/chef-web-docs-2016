@@ -38,8 +38,8 @@ The following settings have been added to |client rb|:
      - Description
    * - ``xxxxx``
      - xxxxx
-   * - ``xxxxx``
-     - xxxxx
+   * - ``yum_lock_timeout``
+     - The amount of time (in seconds) after which a |yum| lock request will time out. Default value: ``30``.
 
 What's Fixed
 =====================================================

@@ -150,3 +150,5 @@ This configuration file has the following settings:
        A job entry may also be ``"job-name" => {:lock => true}``, which will check the ``lockfile`` setting in the |client rb| file before starting the job.
 
        .. warning:: The ``whitelist`` setting is available only when using |push jobs|, a tool that runs jobs against nodes in an |chef server oec| organization.
+   * - ``yum_lock_timeout``
+     - The amount of time (in seconds) after which a |yum| lock request will time out. Default value: ``30``.
