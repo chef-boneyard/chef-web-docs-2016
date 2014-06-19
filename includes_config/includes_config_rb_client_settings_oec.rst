@@ -119,6 +119,7 @@ This configuration file has the following settings:
      - |umask| Default value: ``0022``.
    * - ``user``
      - |user chef_client| Default value: ``nil``.
+   * - ``validation_client_name``
      - |validation_client_name|
    * - ``validation_key``
      - |validation_key| Default value: ``/etc/chef/validation.pem``.
