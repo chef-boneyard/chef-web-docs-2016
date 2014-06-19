@@ -59,6 +59,8 @@ This configuration file has the following settings:
      - |file cache_path|
    * - ``file_staging_uses_destdir``
      - |file_staging_uses_destdir| Default value: ``false``.
+   * - ``ftp_proxy``
+     - The proxy server for FTP connections.
    * - ``group``
      - |group config|
    * - ``http_proxy``
