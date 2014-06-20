@@ -10,31 +10,33 @@ What's New
 =====================================================
 The following items are new for |chef 11-14| and/or are changes from previous versions. The short version:
 
-* **New knife share subcommand** Use |subcommand knife share| to configure |chef zero| on the local machine.
+* **New knife serve subcommand** Use |subcommand knife serve| to configure |chef zero| on the local machine.
 * **New argument for knife node** The |subcommand knife node| subcommand has a new argument: ``environment set``. Use it to set the environment for a node, but without the need to edit the node object.
 * **ENV proxy configuration based on configuration settings** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically set the environment variable.
+* **New --run-lock-timeout Setting** New command line setting for |chef client| and |chef solo|.
 
-knife share
+
+|subcommand knife serve|
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_share.rst
+.. include:: ../includes_knife_serve.rst
 
 **Syntax**
 
-.. include:: ../../includes_knife/includes_knife_share_syntax.rst
+.. include:: ../includes_knife_serve_syntax.rst
 
 **Options**
 
-|no_options|
+.. include:: ../includes_knife_serve_options.rst
 
 knife node environment set
 -----------------------------------------------------
 The |subcommand knife node| subcommand has a new argument: ``environment_set``.
 
-.. include:: ../../includes_knife/includes_knife_node_environment_set.rst
+.. include:: ../includes_knife_node_environment_set.rst
 
 **Syntax**
 
-.. include:: ../../includes_knife/includes_knife_node_environment_set_syntax.rst
+.. include:: ../includes_knife_node_environment_set_syntax.rst
 
 New |client rb| Settings
 -----------------------------------------------------
@@ -57,14 +59,14 @@ The following settings have been added to |client rb|:
    * - ``yum_lock_timeout``
      - The amount of time (in seconds) after which a |yum| lock request will time out. Default value: ``30``.
 
-New Options for chef-client and chef-solo
+--run-lock-timeout
 -----------------------------------------------------
-
-The following options have been added to |chef client| and |chef solo|:
+The following option has been added to |chef client| and |chef solo|:
 
 ``--run-lock-timeout SECONDS``
    The amount of time (in seconds) to wait for a |chef client| run to finish. Default value: not set (indefinite).
 
+   
 Automatic Proxy Configuration
 -----------------------------------------------------
 If ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` is set in the |client rb| file, the |chef client| will configure the ``ENV`` variable based on these (and related) settings. For example:
