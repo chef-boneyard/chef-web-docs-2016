@@ -24,7 +24,7 @@ Install the |chef dk|
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_chef_dk.rst
 
-Tools and Libraries
+What's in the |chef dk|?
 -----------------------------------------------------
 .. include:: ../../includes_chef_dk/includes_chef_dk_tools.rst
 
