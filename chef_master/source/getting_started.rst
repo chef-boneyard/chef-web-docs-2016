@@ -2,19 +2,11 @@
 Getting Started
 =====================================================
 
-Welcome to |chef|!
+.. include:: ../../includes_chef/includes_chef.rst
 
-|chef| is a powerful automation platform that transforms complex infrastructure into code, bringing your servers and services to life. Whether you’re operating in the cloud, on-premises, or a hybrid, |chef| automates how applications are configured, deployed, and managed across your network, no matter its size.
+.. include:: ../../includes_resources_common/includes_resources_common.rst
 
-|chef| is built around simple concepts: achieving desired state, centralized modeling of IT infrastructure, and resource primitives that serve as building blocks. These concepts enable you to quickly manage any infrastructure with |chef|. These very same concepts allow |chef| to handle the most difficult infrastructure challenges on the planet.
-
-Anything that can run the |chef client| can be managed by |chef|. For instance, you can manage physical machines, virtual machines, containers, or cloud-based instances. The |chef client| is an agent that runs on a node and performs the actual tasks that configure it. The |chef server| is the central repository for all configuration data. The |chef client| and |chef server| communicate with each other. For secure communications, they use a combination of public and private keys that ensures the |chef server| responds only to requests made by the |chef client|.
-
-A resource is a statement of configuration policy. It describes the desired state of an element of your infrastructure, along with the steps needed to bring that item to the desired state. Each resource statement in a |chef| recipe corresponds to a specific part of your infrastructure: a file, a template, a directory, a package, a service, a command to be executed, and so on. Each resource statement includes the resource type (such as “file” or “package”), its name, any attributes that specify additional details, and an action that tells the |chef client| what how to implement the configuration policy.
-
-Together, resources describe all the components in your network. Recipes group resources together and describe working configurations. Add recipes to a run-list to describe the desired state for every node to which that run-list is assigned. Cookbooks are collections of recipes and are stored on the |chef server|. 
-
-|chef| uses |ruby| as its reference language. |ruby| is a simple programming language that |chef| uses to define the patterns that are found in resources, recipes, and cookbooks. In many cases, just using these patterns is enough to configure, deploy, and manage nodes across the network. |ruby| is also a powerful and complete programming language. You can use the full power of the |ruby| programming language to make decisions about what should happen to specific resources and recipes or to extend |chef| in any manner that your organization requires.
+.. include:: ../../includes_ruby/includes_ruby.rst
 
 Workstation Setup
 =====================================================
