@@ -63,6 +63,10 @@ This configuration file has the following settings:
      - |file_staging_uses_destdir| Default value: ``false``.
    * - ``ftp_proxy``
      - The proxy server for FTP connections.
+   * - ``ftp_proxy_pass``
+     - The password for the proxy server when the proxy server is using an FTP connection. Default value: ``nil``.
+   * - ``ftp_proxy_user``
+     - The user name for the proxy server when the proxy server is using an FTP connection. Default value: ``nil``.
    * - ``group``
      - |group config|
    * - ``http_proxy``
