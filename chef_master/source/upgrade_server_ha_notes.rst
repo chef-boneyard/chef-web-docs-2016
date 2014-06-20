@@ -30,10 +30,20 @@ Known Issues
 
 The following bugs may affect the upgrade:
 
+As of |chef private| 11.1.7:
+* OC-11575 --- Services start automatically at boot on backup/passive machine in HA mode
+* OC-11601 --- During an upgrade redis_lb isn't restarted before the attempt to reconfigure it.
+
+Before |chef private| 11.1.7:
 * OC-11297 --- |chef server oec| 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
 * OC-11382 --- HA Upgrades to 11.1.3+ fail because keepalived restart interferes with partybus migrations
-* OC-11490 --- Root ownership of ``/var/log/opscode/keepalived`` prevents keepalived from running properly
 * OC-11426 --- Upgrade Runit Ownership Issue OPC 1.4.6 -> EC11.1.3+
+* OC-11490 --- Root ownership of ``/var/log/opscode/keepalived`` prevents keepalived from running properly
+* OC-11540 --- Setting non_ssl_port to false causes invalid opscode-account configuration
+* OC-11656 --- Test Umask Inheritance and Cleanup Ownership in EC11 Embedded Cookbooks
+* OC-11657 --- Default svwait timeout of 7 seconds is too short, causes many unnecessary failures during reconfigure/upgrade scenarios
+* OC-11658 --- oc_authz_migrator failures are not trapped, leaving Authz -> Bifrost data un-migrated
+* OC-11662 --- redis_lb timeout is too short for the real world
 
 .. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6+ -> check runsvdir status -> |chef server oec| 11.1.3+ -> check runsvdir status. See "Runit Process Structure and Checks" below for more information.
 
