@@ -30,11 +30,13 @@ Known Issues
 
 The following bugs may affect the upgrade:
 
-As of |chef private| 11.1.7:
+As of |chef server oec| 11.1.7:
+
 * OC-11575 --- Services start automatically at boot on backup/passive machine in HA mode
 * OC-11601 --- During an upgrade redis_lb isn't restarted before the attempt to reconfigure it.
 
-Before |chef private| 11.1.7:
+Before |chef server oec| 11.1.7:
+
 * OC-11297 --- |chef server oec| 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
 * OC-11382 --- HA Upgrades to 11.1.3+ fail because keepalived restart interferes with partybus migrations
 * OC-11426 --- Upgrade Runit Ownership Issue OPC 1.4.6 -> EC11.1.3+
