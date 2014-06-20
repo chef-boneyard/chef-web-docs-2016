@@ -149,7 +149,7 @@ Use Script Interpreters
 -----------------------------------------------------
 Script interpreters execute scripts on a node, similar to the |resource execute| resource, and with the ability to specify the interpreter that the |chef client| should use. See :doc:`script </resource_script>` for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with :doc:`bash </resource_bash>` being the most popular. Also available: :doc:`csh </resource_csh>`, :doc:`perl </resource_perl>`, :doc:`powershell_script </resource_powershell_script>`, :doc:`python </resource_python>`, and :doc:`ruby </resource_ruby>`. Two |windows|-specific resources are also available: :doc:`batch </resource_batch>` and :doc:`powershell_script </resource_powershell_script>`.
 
-Source Control
+Use Source Control
 -----------------------------------------------------
 Most users of |chef| keep their code in some type of version source control. |chef| can interact with this code from recipes. |git| is a very popular choice. The :doc:`git </resource_git>` resource is used to manage files that exist in a |git| repository. There is also a resource for :doc:`subversion </resource_subversion>`, another popular version source control tool.
 
