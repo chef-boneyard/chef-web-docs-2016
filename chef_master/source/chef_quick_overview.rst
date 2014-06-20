@@ -4,6 +4,8 @@ A Quick Overview of |chef|
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+|chef| Components
+=====================================================
 The following diagram shows the relationships between the various elements of a very simple organization, including the hosted |chef server oec| server, a workstations, the |chef repo|, and some simple nodes that exist either in |virtualbox| or |amazon aws|.
 
 .. image:: ../../images/overview_chef_quick.png
