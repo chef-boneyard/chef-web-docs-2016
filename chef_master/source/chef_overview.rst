@@ -2,6 +2,8 @@
 An Overview of |chef|
 =====================================================
 
+Welcome to |chef|!
+
 .. include:: ../../includes_chef/includes_chef.rst
 
 |chef| Components

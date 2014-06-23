@@ -2,6 +2,8 @@
 Getting Started
 =====================================================
 
+Welcome to |chef|!
+
 .. include:: ../../includes_chef/includes_chef.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common.rst
