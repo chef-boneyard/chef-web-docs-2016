@@ -13,6 +13,8 @@ This configuration file has the following settings:
      - The URL at which documentation for |chef| is located. Default value: ``http://docs.opscode.com``.
    * - ``disable_sign_up``
      - Use to disable sign-up and only allow sign-in. Default value: ``false``.
+   * - ``email_from_address``
+     - The email address from which |chef server| notifications are sent. Default value: ``'Chef Notifications <notifications@getchef.com>'``.
    * - ``events.port``
      - The port on which the events services run. Default value: ``11001``.
    * - ``logging.chef_log_level``
