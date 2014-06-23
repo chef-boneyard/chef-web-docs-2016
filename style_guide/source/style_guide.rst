@@ -487,6 +487,17 @@ The quick-reference repository contains large PNG images that can be printed (fr
 
 https://github.com/opscode/quick-reference
 
+Official Names
+=====================================================
+Official names are listed in the ``/swaps/swap_names.rst`` file, including both |company_name| and 3rd party names. For |company_name| applications and components, use:
+
+* ``|company_name|`` for |company_name|
+* ``|chef|`` for |chef|, the family of products build and maintained by |company_name|
+* ``|chef server|`` for the |chef| server
+* ``|chef client|`` for the |chef client|
+
+For the full list of official names used in the documentation, see https://github.com/opscode/chef-docs/blob/master/swaps/swap_names.txt.
+
 Localization
 =====================================================
 |python sphinx| supports localization into many languages.
