@@ -258,7 +258,7 @@ Use a single asterisk (*) to mark a text string as *italics*. What it looks like
 
 Code Strings
 -----------------------------------------------------
-Sometimes the name of a method or database field needs to be used inline in a paragraph. Use two backquotes (`) to mark certain strings as code within a regular string of text. What it looks like as reST:: 
+Sometimes the name of a method or database field needs to be used inline in a paragraph. Use two backquotes to mark certain strings as code within a regular string of text. What it looks like as reST::
 
    ``code goes here``
 
@@ -487,6 +487,19 @@ quick-reference
 The quick-reference repository contains large PNG images that can be printed (front and back), plus smaller single-page images. It can be found here:
 
 https://github.com/opscode/quick-reference
+
+
+Official Names
+=====================================================
+Official names are listed in the ``/swaps/swap_names.rst`` file, including both |company_name| and 3rd party names. For |company_name| applications and components, use:
+
+* ``|company_name|`` for |company_name|
+* ``|chef|`` for |chef|, the family of products build and maintained by |company_name|
+* ``|chef server|`` for the |chef| server
+* ``|chef client|`` for the |chef client|
+
+For the full list of official names used in the documentation, see https://github.com/opscode/chef-docs/blob/master/swaps/swap_names.txt.
+
 
 Localization
 =====================================================
