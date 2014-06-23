@@ -473,3 +473,5 @@ Cookbooks
    upgrade_server_standalone
    upgrade_server_standalone_notes
    windows
+   
+   plugin_knife_pushy
