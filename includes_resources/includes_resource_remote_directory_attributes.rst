@@ -40,7 +40,7 @@
    * - ``owner``
      - Use to configure permissions for directories. |owner windows security|
    * - ``path``
-     - |path directory| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``purge``

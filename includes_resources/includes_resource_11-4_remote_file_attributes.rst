@@ -28,7 +28,7 @@
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path file| Default value: ``name``.
+     - |path file| |path_fully_qualified| Default value: ``name``.
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``rights``

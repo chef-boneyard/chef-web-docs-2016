@@ -14,6 +14,6 @@ The syntax for using the |resource remote_directory| resource in a recipe is as 
 where 
 
 * ``remote_directory`` tells the |chef client| to use the ``Chef::Provider::Directory::RemoteDirectory`` provider during the |chef client| run
-* ``name`` is the fully qualified path to the location below which the |chef client| will manage directories
+* ``name`` is the path to the location below which the |chef client| will manage directories
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

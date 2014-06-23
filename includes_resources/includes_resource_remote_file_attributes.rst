@@ -38,7 +38,7 @@
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path file| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |path file| |path_fully_qualified| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``rights``

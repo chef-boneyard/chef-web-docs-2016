@@ -28,7 +28,7 @@
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path file_cookbook|
+     - |path file_cookbook| |path_fully_qualified|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``rights``
