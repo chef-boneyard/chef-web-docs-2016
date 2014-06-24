@@ -1,5 +1,5 @@
 =====================================================
-Cookbooks Site API
+|api cookbooks site|
 =====================================================
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_site.rst
