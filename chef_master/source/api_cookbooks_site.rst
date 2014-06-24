@@ -1,5 +1,5 @@
 =====================================================
-Cookbooks Site API 
+Cookbooks Site API
 =====================================================
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_site.rst
@@ -61,3 +61,13 @@ GET
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_search_get.rst
+
+
+/universe
+-----------------------------------------------------
+
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_universe.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_universe_get.rst
