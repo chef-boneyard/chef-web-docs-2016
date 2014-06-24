@@ -2,7 +2,7 @@
 |berkshelf|
 =====================================================
 
-|berkshelf| is a dependency manager for community cookbooks.
+.. include:: ../../includes_berkshelf/includes_berkshelf.rst
 
 .. warning:: This topic details functionality that is packaged with |chef dk|.
 
