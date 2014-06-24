@@ -494,7 +494,7 @@ Official Names
 Official names are listed in the ``/swaps/swap_names.rst`` file, including both |company_name| and 3rd party names. For |company_name| applications and components, use:
 
 * ``|company_name|`` for |company_name|
-* ``|chef|`` for |chef|, the family of products build and maintained by |company_name|
+* ``|chef|`` for |chef|, the family of products built and maintained by |company_name|
 * ``|chef server|`` for the |chef| server
 * ``|chef client|`` for the |chef client|
 
