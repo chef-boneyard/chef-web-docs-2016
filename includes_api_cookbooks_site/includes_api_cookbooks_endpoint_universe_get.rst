@@ -13,9 +13,7 @@ This method has no parameters.
 
 **Response**
 
-The response will return an embedded hash, with the name of each cookbook as
-a top level key. Each cookbook will list out all of its versions, along with
-version specific information including a list of all its dependencies.
+The response will return an embedded hash, with the name of each cookbook as a top-level key. Each cookbook will list each version, along with its location information and dependencies:
 
 .. code-block:: ruby
 
@@ -57,4 +55,4 @@ version specific information including a list of all its dependencies.
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok| One or more cookbooks and associated version information were returned.
+     - |response code 200 ok| One (or more) cookbooks and associated cookbook version information was returned.
