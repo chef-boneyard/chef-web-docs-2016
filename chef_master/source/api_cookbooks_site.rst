@@ -66,6 +66,8 @@ GET
 /universe
 -----------------------------------------------------
 
+.. include:: ../../includes_berkshelf/includes_berkshelf_universe.rst
+
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_universe.rst
 
 GET
