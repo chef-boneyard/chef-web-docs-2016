@@ -103,7 +103,7 @@ The following examples show how to use ``only_if`` as a condition in a recipe:
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
-Guard Intrepreters
+Guard Interpreters
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter.rst
 
