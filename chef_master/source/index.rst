@@ -258,7 +258,6 @@ Cookbooks
    essentials_search
    feedback
    foodcritic
-   getting_started
    getting_started_with_chef
    handlers
    images
