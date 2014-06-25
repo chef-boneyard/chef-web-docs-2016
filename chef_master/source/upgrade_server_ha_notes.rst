@@ -30,12 +30,12 @@ Known Issues
 
 The following bugs may affect the upgrade:
 
-As of |chef server oec| 11.1.7:
+As of |chef server oec| 11.1.8:
 
 * OC-11575 --- Services start automatically at boot on backup/passive machine in HA mode
 * OC-11601 --- During an upgrade redis_lb isn't restarted before the attempt to reconfigure it.
 
-Before |chef server oec| 11.1.7:
+Before |chef server oec| 11.1.8:
 
 * OC-11297 --- |chef server oec| 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
 * OC-11382 --- HA Upgrades to 11.1.3+ fail because keepalived restart interferes with partybus migrations
@@ -46,6 +46,8 @@ Before |chef server oec| 11.1.7:
 * OC-11657 --- Default svwait timeout of 7 seconds is too short, causes many unnecessary failures during reconfigure/upgrade scenarios
 * OC-11658 --- oc_authz_migrator failures are not trapped, leaving Authz -> Bifrost data un-migrated
 * OC-11662 --- redis_lb timeout is too short for the real world
+* OC-11669 --- During 1.4.x -> EC 11.x upgrade on Ubuntu and EL6 systems, keepalived transitions to backup because of the opscode-runsvdir -> private-chef-runsvdir change
+* OC-11670 --- Partybus migration step 1.9 silently fails to run if keepalived is still in transition
 
 .. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6+ -> check runsvdir status -> |chef server oec| 11.1.3+ -> check runsvdir status. See "Runit Process Structure and Checks" below for more information.
 
@@ -91,16 +93,7 @@ It is recommended to do the following:
       * - |chef server oec| 11.1.3+
         - major: 1, minor: 13
 
-#. For known issue OC-11490 - After installing the |chef server oec| 11.1.3+ package and before a reconfigure or upgrade, please apply the ``OC-11490.patch`` file listed below using the following commands as root. Please change the DIRECTORY as desired.
-
-   .. code-block:: bash
-   
-      PATCH_LOCATION=/DIRECTORY/OC-11490.patch
-      cd /opt/opscode/embedded/cookbooks
-      patch --dry-run --verbose -p3 <$PATCH_LOCATION
-      patch -p3 <$PATCH_LOCATION
-
-#. For known issue OC-11426 - While running |chef private| 1.4.6+ and before the upgrade, be sure that the status for |runit| looks good. See "Runit Process Structure and Checks" below for more information.
+#. While running |chef private| 1.4.6+ and before the upgrade, be sure that the status for |runit| looks good. See "Runit Process Structure and Checks" below for more information.
 
 #. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status to make a determination about "healthy". See "Runit Process Structure and Checks" below for more information.
 
@@ -110,17 +103,28 @@ Upgrade Steps
 
 #. Install the |chef server oec| server package on all machines using |debian dpkg| or rpm.
 
-#. OC-11382 - On both back end machines, copy the ``upgrade.rb`` file from the end of these notes to ``/opt/opscode/embedded/service/omnibus-ctl/upgrade.rb``.
-
-   .. code-block:: bash
-
-      cp /tmp/upgrade.rb /opt/opscode/embedded/service/omnibus-ctl/upgrade.rb
-
 #. On the bootstrap back end machine, perform a reconfigure and then WAIT about 2 minutes until all services have returned to a normal, working state according to ha-status and ``/var/log/opscode/keepalived/cluster.log``:
 
    .. code-block:: bash
 
       private-chef-ctl reconfigure
+
+In a separate terminal window run this to monitor cluster state:
+
+   .. code-block:: bash
+
+      private-chef-ctl tail keepalived &
+      while true; do echo "`date` : `cat /var/opt/opscode/keepalived/current_cluster_status`" ; sleep 1; done
+
+During a 1.4.x to 11.x upgrade, the following services will remain down/unavailable and can be safely ignored. They will all be removed by ``private-chef-ctl cleanup`` except for ``opscode-chef-mover``
+
+* fcgiwrap
+* nagios
+* nrpe
+* opscode-chef
+* opscode-chef-mover
+* php-fpm
+* redis
 
 #. Once all services are verified, upgrade the bootstrap back end machine. (If anything strange happens here, please consider how the issue you see you could be related to runit. Please check runsvdir status for cleanup. You will also need to ensure that all ``omnibus-ctl``, ``private-chef-ctl``, and ``sv`` processes are gone. Then, be sure that the ``opscode-chef-mover`` service is started and retry the upgrade.)
 
@@ -255,72 +259,4 @@ The following is one specific problem-fix scenario encountered while proceeding 
       9. Proceeded to the end of the upgrade.
       
       10. p-c-c cleanup
-
-OC-11490 patch for |chef server oec| 11.1.3+
-=====================================================
-The following is the code for the ``OC-11490.patch`` file:
-
-.. code-block:: ruby
-
-   From 5bd73ecae3aec99930ea23b03f502da28eb5b3bb Mon Sep 17 00:00:00 2001
-   From: Jeremiah Snapp <jeremiah@getchef.com>
-   Date: Mon, 7 Apr 2014 06:49:35 -0400
-   Subject: [PATCH] OC-11490 Explicitly set keepalived directory ownership
-   
-   Keeaplived's svlogd runs as the opscode user but cannot
-   write to log files in /var/log/opscode/keepalived because
-   the directory is owned by root.
-   
-   This prevents keepalived from running properly.
-   ---
-    files/private-chef-cookbooks/private-chef/recipes/keepalived.rb | 9 ++++++++-
-    1 file changed, 8 insertions(+), 1 deletion(-)
-   
-   diff --git a/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb b/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb
-   index b8c7925..e415af6 100644
-   --- a/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb
-   +++ b/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb
-   @@ -10,13 +10,20 @@
-    keepalived_bin_dir = File.join(keepalived_dir, "bin")
-    keepalived_log_dir = node['private_chef']['keepalived']['log_directory']
-    
-   -[ keepalived_dir, keepalived_etc_dir, keepalived_bin_dir, keepalived_log_dir ].each do |dir|
-   +[ keepalived_dir, keepalived_etc_dir, keepalived_bin_dir ].each do |dir|
-      directory dir do
-   +    owner "root"
-        recursive true
-        mode "0755"
-      end
-    end
-    
-   +directory keepalived_log_dir do
-   +  owner node['private_chef']['user']['username']
-   +  recursive true
-   +  mode "0700"
-   +end
-   +
-    template File.join(keepalived_etc_dir, "keepalived.conf") do
-      source "keepalived.conf.erb"
-      mode "0644"
-   -- 
-   1.9.1
-
-upgrade.rb
-=====================================================
-The following is the code for the ``upgrade.rb`` file:
-
-.. code-block:: ruby
-
-   add_command "upgrade", "Upgrade your private chef installation.", 1 do
-     reconfigure(false)
-     Dir.chdir(File.join(base_path, "embedded", "service", "partybus"))
-     bundle = File.join(base_path, "embedded", "bin", "bundle")
-     status = run_command("echo 'Sleeping for 2 minutes before migration' ; sleep 120 ; #{bundle} exec ./bin/partybus upgrade")
-     if status.success?
-       puts "Chef Server Upgraded!"
-       exit 0
-     else
-       exit 1
-     end
-   end
 
