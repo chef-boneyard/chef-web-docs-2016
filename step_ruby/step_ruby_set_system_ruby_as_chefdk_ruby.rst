@@ -9,7 +9,7 @@ For many users of |chef|, the |chef dk| the version of |ruby| that is included i
       $ which ruby
 
    which will return something like ``/usr/bin/ruby``.
-#. To use the |chef dk| version of |ruby| as the default |ruby|, edit the ``$PATH`` and ``GEM`` environment variables to include paths to the |chef dk|. Add the For example, on a machine that runs |bash|, run:
+#. To use the |chef dk| version of |ruby| as the default |ruby|, edit the ``$PATH`` and ``GEM`` environment variables to include paths to the |chef dk|. For example, on a machine that runs |bash|, run:
 
    .. code-block:: ruby
    
