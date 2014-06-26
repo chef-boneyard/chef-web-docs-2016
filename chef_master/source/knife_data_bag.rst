@@ -120,6 +120,9 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted.rst
 
+**Create an encrypted data bag for use with chef-client local mode**
+
+.. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted_local_mode.rst
 
 list
 =====================================================

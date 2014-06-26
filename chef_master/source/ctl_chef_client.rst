@@ -20,6 +20,14 @@ About |chef zero|
 -----------------------------------------------------
 .. include:: ../../includes_chef/includes_chef_zero.rst
 
+Use Encrypted Data Bags
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag.rst
+
+**Create an encrypted data bag for use with chef-client local mode**
+
+.. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted_local_mode.rst
+
 Run with Elevated Privileges
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges.rst

@@ -9,4 +9,3 @@ To generate an encrypted data bag item in a |json| file for use when the |chef c
 this will create an encrypted |json| file in::
 
    data_bags/my_data_bag/data_bag_item.json
-
