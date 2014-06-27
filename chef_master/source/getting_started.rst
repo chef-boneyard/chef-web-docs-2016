@@ -513,7 +513,7 @@ Re-run:
    default-ubuntu-1204  Vagrant  ChefSolo     Converged
    default-centos-64    Vagrant  ChefSolo     Converged
 
-Now you can test your cookbook by running it in a virtual instance on multiple platforms.
+Now you can test your cookbooks by running them in a virtual instance on multiple platforms.
 
 Conclusion
 =====================================================
