@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``PUT`` method is used to update a key-value pair in a data bag item.
+The ``PUT`` method is used to replace the contents of a data bag item with the contents of this request.
 
 This method has no parameters.
 
