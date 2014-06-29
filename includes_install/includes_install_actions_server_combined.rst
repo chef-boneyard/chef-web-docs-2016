@@ -19,11 +19,11 @@ To set up the |chef actions| server for a combined configuration:
 
       $ private-chef-ctl reconfigure
 
-#. Install the package on the same machine that is running |chef server oec| 11.1.5 or higher. For example on |ubuntu|:
+#. Install the package on the same machine that is running |chef server oec| 11.1.8 or higher. For example on |ubuntu|:
 
    .. code-block:: bash
 
-      $ dpkg -i opscode-analytics_0.2.1-1.ubuntu.10.04_amd64.deb
+      $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
 
 #. Configure the |chef actions| server by setting the analytics_fqdn in /etc/opscode-analytics/opscode-analytics.rb.
    This is the FQDN for the |chef actions| web application, and must be different from the api_fqdn set for |chef server oec|. For example:

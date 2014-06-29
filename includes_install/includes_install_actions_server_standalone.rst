@@ -4,15 +4,24 @@
 In a standalone configuration, the |chef actions| server is on a different machine from the |chef server oec|. This allows
 you to scale |chef actions| independantly from |chef server oec|.
 
-To set up the |chef actions| server for a standalone configuration:
+To set up the |chef actions| server for a standalone configuration, firstly run the following steps on your |chef server oec| instance:
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system
-#. Get an instance running with |chef server oec| 11.1.5 or higher.
+#. Get an instance running with |chef server oec| 11.1.8 or higher.
 #. Enable |chef actions| on the |chef server oec| machine by adding the following line to /etc/opscode/private-chef.rb
 
    .. code-block:: bash
 
       dark_launch['actions'] = true
+
+#. Enable remote access to Rabbitmq on the |chef server oec| backend machine by adding the following line to /etc/opscode/private-chef.rb
+   where BACKEND_VIP is the VIP for the |chef server oec| backend.
+
+   .. code-block:: bash
+
+      rabbitmq['vip'] = BACKEND_VIP
+      rabbitmq[node_ip_address'] = BACKEND_VIP
+
 
 #. Reconfigure the |chef server oec| server on |chef server oec| machine:
 
@@ -20,13 +29,21 @@ To set up the |chef actions| server for a standalone configuration:
 
       $ private-chef-ctl reconfigure
 
-#. Install the |chef actions| package on a separate standalone machine. For example on |ubuntu|:
+#. If you are on |chef server oec| 11.1.8 you need to manually copy a single file from /etc/opscode to /etc/opscode-analytics
 
    .. code-block:: bash
 
-      $ dpkg -i opscode-analytics_0.2.1-1.ubuntu.10.04_amd64.deb
+      $ cp /etc/opscode/webui_priv.pem /etc/opscode-analytics
 
-#. Copy over the /etc/opscode-analytics/actions-source.rb file from the |chef server oec| machine to the standalone |chef actions| machine
+Now run the following steps on your |chef actions| standalone instance:
+
+#. Install the |chef actions| package on the standalone |chef actions| machine. For example on |ubuntu|:
+
+   .. code-block:: bash
+
+      $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
+
+#. Copy over the /etc/opscode-analytics directory from the |chef server oec| machine to the standalone |chef actions| machine
 
 #. Configure the |chef actions| server by setting the analytics_fqdn in /etc/opscode-analytics/opscode-analytics.rb.
    This is the FQDN for the |chef actions| web application. For example:
