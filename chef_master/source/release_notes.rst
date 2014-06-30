@@ -1,5 +1,5 @@
 =====================================================
-Release Notes: |chef client| 11.12.0
+Release Notes: |chef client| 11.12
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
