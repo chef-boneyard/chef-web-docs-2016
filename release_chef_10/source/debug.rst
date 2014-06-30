@@ -161,13 +161,13 @@ All resources share a set of common actions, attributes, and so on. Use the foll
 
 chef-solo
 -----------------------------------------------------
-.. include:: ../../includes_chef_solo/includes_chef_solo.rst
+.. include:: ../../includes_chef_solo/includes_chef_solo_11-4.rst
 
 .. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo.rst
 
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst
+.. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_11-4_options.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
