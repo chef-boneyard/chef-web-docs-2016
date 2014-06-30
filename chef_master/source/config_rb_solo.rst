@@ -9,7 +9,7 @@
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_solo_settings.rst
+.. include:: ../../includes_config/includes_config_rb_11-12_solo_settings.rst
 
 Example
 =====================================================
