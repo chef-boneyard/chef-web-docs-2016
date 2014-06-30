@@ -12,6 +12,7 @@ The following items are new for |chef 11-14| and/or are changes from previous ve
 
 * **New knife serve subcommand** Use |subcommand knife serve| to configure |chef zero| on the local machine.
 * **New argument for knife node** The |subcommand knife node| subcommand has a new argument: ``environment set``. Use it to set the environment for a node, but without the need to edit the node object.
+* **New options for knife bootstrap** The |subcommand knife bootstrap| command has four new options: ``--bootstrap-curl-options``, ``--bootstrap-install-command``, ``--bootstrap-install-sh``, and ``--bootstrap-wget-options``.
 * **ENV proxy configuration based on configuration settings** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically set the environment variable.
 * **New --run-lock-timeout Setting** New command line setting for |chef client| and |chef solo|.
 
@@ -38,6 +39,22 @@ The |subcommand knife node| subcommand has a new argument: ``environment_set``.
 
 .. include:: ../includes_knife_node_environment_set_syntax.rst
 
+New |subcommand knife bootstrap| Options
+-----------------------------------------------------
+The following options have been added to |subcommand knife bootstrap|:
+
+``--bootstrap-curl-options OPTIONS``
+   |bootstrap curl_options| |bootstrap no_install_command|
+
+``--bootstrap-install-command COMMAND``
+   |bootstrap install_command| |bootstrap no_curl_sh_wget|
+ 
+``--bootstrap-install-sh URL``
+   |bootstrap install_sh| |bootstrap no_install_command|
+
+``--bootstrap-wget-options OPTIONS``
+   |bootstrap wget_options| |bootstrap no_install_command|
+   
 New |client rb| Settings
 -----------------------------------------------------
 The following settings have been added to |client rb|:
