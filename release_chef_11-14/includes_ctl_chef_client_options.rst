@@ -79,7 +79,7 @@ This command has the following options:
    |path recipe_file|
 
 ``--run-lock-timeout SECONDS``
-   The amount of time (in seconds) to wait for a |chef client| run to finish. Default value: not set (indefinite). 
+   |run_lock_timeout| Default value: not set (indefinite). 
 
 ``-s SECONDS``, ``--splay SECONDS``
    |splay|

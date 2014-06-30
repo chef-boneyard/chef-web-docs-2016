@@ -113,6 +113,8 @@ This configuration file has the following settings:
      - |timeout rest|
    * - ``role_path``
      - |path roles_chef| Default value: ``/var/chef/roles``.
+   * - ``run_lock_timeout``
+     - |run_lock_timeout|
    * - ``splay``
      - |splay| Default value: ``nil``.
    * - ``ssl_ca_file``
