@@ -1,9 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-You can now whitelist attributes that will be saved by the node by providing a hash with the keys you want to include. Whitelist filters are described for each attribute level: ``automatic_attribute_whitelist``, ``default_attribute_whitelist``, ``normal_attribute_whitelist``, and ``override_attribute_whitelist``.
-
-If your automatic attribute data looks like
+Attributes that should not be saved by a node must be whitelisted in the |client rb| file. The whitelist is a |ruby hash| of keys that specify each attribute that will not be saved. For example, attribute data that looks like this:
 
 .. code-block:: javascript
 
@@ -24,11 +22,30 @@ If your automatic attribute data looks like
      } 
    }
 
-and your config file looks like
+the whitelist to prevent the ``network`` attributes from being saved would look like this:
 
 .. code-block:: ruby
 
-   automatic_attribute_whitelist = ["network/interfaces/eth0"]
+   attribute_whitelist = ["network/interfaces/eth0"]
 
-then the entire ``filesystem`` and ``eth1`` subtrees will not be saved by the node. To save the ``/dev/disk0s2`` subtree, you must write ``automatic_attribute_whitelist = [ ["filesystem", "/dev/disk0s2"] ]``. If your config file looks like ``automatic_attribute_whitelist = []``, then none of your automatic attribute data will be saved by the node. The default behavior is for the node to save all the attribute data. This can be ensured by setting your whitelist filter to ``nil``. We recommend only using ``automatic_attribute_whitelist`` to reduce the size of the system data being stored for nodes, and discourage the use of the other attribute whitelists except by advanced users.
+Any attribute not specified in an attribute whitelist **will** be saved. So based on the previous whitelist, the ``filesystem`` and ``map - autohome`` attributes will be saved, but the ``network`` attributes will not.
+
+Attribute are whitelisted by attribute type. Each attribute type---``automatic``, ``default``, ``normal``, and ``override``---may be whitelisted by using the following settings in the |client rb| file:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``automatic_attribute_whitelist``
+     - |whitelist attribute_automatic| For example: ``["network/interfaces/eth0"]``. Default value: all attributes are saved. |whitelist attribute_none|
+   * - ``default_attribute_whitelist``
+     - |whitelist attribute_default| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+   * - ``normal_attribute_whitelist``
+     - |whitelist attribute_normal| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+   * - ``override_attribute_whitelist``
+     - |whitelist attribute_override| For example: ``["map - autohome/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+
+.. warning:: It is recommended that only ``automatic_attribute_whitelist`` be used to whitelist attributes.
 

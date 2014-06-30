@@ -13,6 +13,7 @@ The following items are new for |chef 11-14| and/or are changes from previous ve
 * **New knife serve subcommand** Use |subcommand knife serve| to configure |chef zero| on the local machine.
 * **New argument for knife node** The |subcommand knife node| subcommand has a new argument: ``environment set``. Use it to set the environment for a node, but without the need to edit the node object.
 * **New options for knife bootstrap** The |subcommand knife bootstrap| command has four new options: ``--bootstrap-curl-options``, ``--bootstrap-install-command``, ``--bootstrap-install-sh``, and ``--bootstrap-wget-options``.
+* **New attributes for whitelisting node attributes** Use ``automatic_attribute_whitelist``, ``default_attribute_whitelist``, ``normal_attribute_whitelist``, and ``override_attribute_whitelist`` to prevent attributes from being saved by a node.
 * **ENV proxy configuration based on configuration settings** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically set the environment variable.
 * **New --run-lock-timeout Setting** New command line setting for |chef client| and |chef solo|.
 
@@ -38,6 +39,10 @@ The |subcommand knife node| subcommand has a new argument: ``environment_set``.
 **Syntax**
 
 .. include:: ../includes_knife_node_environment_set_syntax.rst
+
+Attribute Whitelists
+-----------------------------------------------------
+.. include:: ../includes_node_attribute_whitelist.rst
 
 New |subcommand knife bootstrap| Options
 -----------------------------------------------------
@@ -65,14 +70,22 @@ The following settings have been added to |client rb|:
 
    * - Setting
      - Description
+   * - ``automatic_attribute_whitelist``
+     - |whitelist attribute_automatic|
    * - ``cookbook_sync_threads``
      - |cookbook_sync_threads| Default value: ``10``.
+   * - ``default_attribute_whitelist``
+     - |whitelist attribute_default|
    * - ``ftp_proxy``
      - |ftp_proxy|
    * - ``ftp_proxy_pass``
      - |ftp_proxy_pass| Default value: ``nil``.
    * - ``ftp_proxy_user``
      - |ftp_proxy_user| Default value: ``nil``.
+   * - ``normal_attribute_whitelist``
+     - |whitelist attribute_normal|
+   * - ``override_attribute_whitelist``
+     - |whitelist attribute_override|
    * - ``yum_lock_timeout``
      - |yum_lock_timeout| Default value: ``30``.
 
