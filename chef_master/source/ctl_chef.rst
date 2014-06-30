@@ -18,7 +18,48 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+
+**Show an existing gem in the chef-dk**
+
+.. code-block:: bash
+
+   $ chef gem list chef-dk
+
+to return something similar to:
+
+.. code-block:: bash
+
+   *** LOCAL GEMS ***
+   
+   chef-dk (0.1.0)
+
+**Install a gem**
+
+.. code-block:: bash
+
+   $ chef gem install knife-config
+
+to return something similar to:
+
+.. code-block:: bash
+
+   Successfully installed knife-config-1.1.0
+   1 gem installed
+
+**View the contents of a gem**
+
+.. code-block:: bash
+
+   $ chef gem content knife-config
+
+to return something similar to:
+
+.. code-block:: bash
+
+   /Users/user/.chefdk/gem/ruby/2.1.0/gems/knife-config-1.1.0/LICENSE
+   /Users/user/.chefdk/gem/ruby/2.1.0/gems/knife-config-1.1.0/README.md
+   /Users/user/.chefdk/gem/ruby/2.1.0/gems/knife-config-1.1.0/lib/chef/knife/config.rb
+   /Users/user/.chefdk/gem/ruby/2.1.0/gems/knife-config-1.1.0/lib/knife-config.rb
 
 chef generate app
 =====================================================
