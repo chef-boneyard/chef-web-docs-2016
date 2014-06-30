@@ -8,6 +8,15 @@ This subcommand has the following options:
 ``-A``, ``--forward-agent``
    |forward_agent|
 
+``--bootstrap-curl-options OPTIONS``
+   |bootstrap curl_options| This option may not be used in the same command with ``--bootstrap-install-command``.
+
+``--bootstrap-install-command COMMAND``
+   |bootstrap install_command| This option may not be used in the same command with ``--bootstrap-curl-options``, ``--bootstrap-install-sh``, or ``--bootstrap-wget-options``.
+ 
+``--bootstrap-install-sh URL``
+   |bootstrap install_sh| This option may not be used in the same command with ``--bootstrap-install-command``.
+
 ``--bootstrap-no-proxy NO_PROXY_URL_or_IP``
    |bootstrap no_proxy| 
 
@@ -19,6 +28,9 @@ This subcommand has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap version|
 
+``--bootstrap-wget-options OPTIONS``
+   |bootstrap wget_options| This option may not be used in the same command with ``--bootstrap-install-command``.
+   
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
