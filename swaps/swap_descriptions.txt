@@ -98,15 +98,12 @@
 .. |bindings| replace:: A string that identifies the information needed to communicate with a site. This information may be an IP address, unspecified IP addresses, a port number, or an (optional) host header. For example: ``111.111.1.1:443:www.opscode.com`` or ``*:443:``.
 .. |block_ruby| replace:: A block of |ruby| code.
 .. |block-startup-timeout| replace:: The amount of time that should elapse before the deployment process is stopped.
-
 .. |bookshelf url| replace:: Use to specify the URL at which cookbooks are stored.
 .. |bookshelf url_external| replace:: Use to specify the URL from which the |chef client| will download cookbooks. By default, this is the ``Host:`` header provided by the |chef client| when it contacts the |chef server|. When cookbook storage is located behind a firewall and/or when the ``Host:`` header is not used, this value must be a URL that is accessible to the |chef client|.
 .. |bookshelf id_access_key_s3| replace:: Use to specify the access key.
 .. |bookshelf id_secret_key_s3| replace:: Use to specify the secret key.
 .. |bookshelf bucket_s3| replace:: Use to specify the bucket name.
-
 .. |boot_protocol| replace:: The boot protocol used by a network interface.
-
 .. |bootstrap curl_options| replace:: Use to specify arbitrary options to be added to the bootstrap command when using |curl|.
 .. |bootstrap install_command| replace:: Use to execute a custom installation command sequence for the |chef client|.
 .. |bootstrap install_sh| replace:: Use to fetch and execute an installation script at the specified URL.
@@ -182,8 +179,6 @@
 .. |command_or_path| replace:: The command to be run or the path to a file that contains the command to be run.
 .. |commands_yum| replace:: A list of commands to run when no functional commands are specified on the command line.
 .. |comment user| replace:: One (or more) comments about the user.
-
-
 .. |concurrency| replace:: The number of allowed concurrent connections.
 .. |config| replace:: The configuration file to use.
 .. |config chef-client| replace:: The configuration file to use.
@@ -196,8 +191,6 @@
 .. |config rb solr| replace:: A |solr rb| file is used to specify the configuration details for |chef solr|, |chef solr indexer|, and |chef solr rebuild|. 
 .. |content file| replace:: A string that is written to the file. The contents of this attribute will replace any previous content when this attribute has something other than the default value.
 .. |convert_boolean_return| replace:: Use to return ``0`` if the last line of a command is evaluated to be true or to return ``1`` if the last line is evaluated to be false.
-
-
 .. |cookbook directory attributes| replace:: The sub-directory in which attributes are located. 
 .. |cookbook directory libraries| replace:: The sub-directory in which libraries are located. 
 .. |cookbook directory providers| replace:: The sub-directory in which lightweight providers are located. 
@@ -208,6 +201,7 @@
 .. |cookbook name chef_handler| replace:: The |cookbook chef_handler| cookbook is used to distribute and enable exception and report handlers.
 .. |cookbook path| replace:: The directory in which cookbook are created. This can be a colon-separated path.
 .. |cookbook_path subdirectory| replace:: The sub-directory for cookbooks on the |chef client|. This value can be a string or an array of file system locations, processed in the specified order. The last cookbook is considered to override local modifications.
+.. |cookbook_sync_threads| replace:: Use to specify the number of helper threads available for parallel cookbook synchronization. Increasing this value **may** increase the frequency of gateway errors from the |chef server| (503 and 504 errors). Decreasing this number will reduce the frequency of gateway errors, if present. 
 .. |cookbook_tarball_path| replace:: The location in which a |chef server| stores cookbooks that have been saved in the .tar file format, and from which cookbooks are distributed to a |chef client|.
 .. |COOKBOOK_VERSION delete| replace:: The version of a cookbook to be deleted. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, |knife| will prompt for a version.
 .. |COOKBOOK_VERSION download| replace:: The version of a cookbook to be downloaded. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, the most recent version of the cookbook will be downloaded.
@@ -387,8 +381,9 @@
 .. |freeze| replace:: Use to require changes to a cookbook be included as a new version. Only the ``--force`` option can override this setting.
 .. |fstype| replace:: The file system type (fstype) of the device.
 .. |ftp_active_mode| replace:: Use to specify if the |chef client| will use active or passive FTP. Set to ``true`` to use active FTP.
-
-
+.. |ftp_proxy| replace:: The proxy server for FTP connections.
+.. |ftp_proxy_pass| replace:: The password for the proxy server when the proxy server is using an FTP connection.
+.. |ftp_proxy_user| replace:: The user name for the proxy server when the proxy server is using an FTP connection.
 
 .. Description strings that begin with the letter G.
 .. The pattern is |gxxxx| replace:: string.
@@ -1497,7 +1492,7 @@
 .. 
 
 .. |yes| replace:: Use to respond to all confirmation prompts with "Yes". |knife| will not ask for confirmation.
-
+.. |yum_lock_timeout| replace:: The amount of time (in seconds) after which a |yum| lock request will time out.
 
 
 

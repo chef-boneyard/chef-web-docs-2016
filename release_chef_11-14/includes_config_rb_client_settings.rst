@@ -30,7 +30,7 @@ This configuration file has the following settings:
    * - ``cookbook_path``
      - |cookbook_path subdirectory|
    * - ``cookbook_sync_threads``
-     - Use to specify the nuber of helper threads available for parallel cookbook synchronization. Increasing this value **may** increase the frequency of gateway errors from the |chef server| (503 and 504 errors). Decreasing this number will reduce the frequency of gateway errors, if present. Default value: ``10``.
+     - |cookbook_sync_threads| Default value: ``10``.
    * - ``data_bag_decrypt_minimum_version``
      - |data_bag_decrypt_minimum_version|
    * - ``data_bag_path``
@@ -62,11 +62,11 @@ This configuration file has the following settings:
    * - ``file_staging_uses_destdir``
      - |file_staging_uses_destdir| Default value: ``false``.
    * - ``ftp_proxy``
-     - The proxy server for FTP connections.
+     - |ftp_proxy|
    * - ``ftp_proxy_pass``
-     - The password for the proxy server when the proxy server is using an FTP connection. Default value: ``nil``.
+     - |ftp_proxy_pass| Default value: ``nil``.
    * - ``ftp_proxy_user``
-     - The user name for the proxy server when the proxy server is using an FTP connection. Default value: ``nil``.
+     - |ftp_proxy_user| Default value: ``nil``.
    * - ``group``
      - |group config|
    * - ``http_proxy``
@@ -161,4 +161,4 @@ This configuration file has the following settings:
 
        .. warning:: The ``whitelist`` setting is available only when using |push jobs|, a tool that runs jobs against nodes in an |chef server oec| organization.
    * - ``yum_lock_timeout``
-     - The amount of time (in seconds) after which a |yum| lock request will time out. Default value: ``30``.
+     - |yum_lock_timeout| Default value: ``30``.
