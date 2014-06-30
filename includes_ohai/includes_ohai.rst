@@ -8,7 +8,7 @@ The types of attributes |ohai| collects include (but are not limited to):
 * Platform details
 * Network usage
 * Memory usage
-* Processor usage
+* CPU data
 * Kernel data
 * Host names
 * Fully qualified domain names
