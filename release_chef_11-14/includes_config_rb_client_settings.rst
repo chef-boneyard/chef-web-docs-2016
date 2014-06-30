@@ -114,7 +114,7 @@ This configuration file has the following settings:
    * - ``role_path``
      - |path roles_chef| Default value: ``/var/chef/roles``.
    * - ``run_lock_timeout``
-     - |run_lock_timeout|
+     - |run_lock_timeout| Default value: not set (indefinite). Set to ``0`` to cause a second |chef client| to exit immediately.
    * - ``splay``
      - |splay| Default value: ``nil``.
    * - ``ssl_ca_file``

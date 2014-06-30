@@ -79,7 +79,7 @@ This command has the following options:
    |path recipe_file|
 
 ``--run-lock-timeout SECONDS``
-   |run_lock_timeout| Default value: not set (indefinite). 
+   |run_lock_timeout| Default value: not set (indefinite). Set to ``0`` to cause a second |chef client| to exit immediately.
 
 ``-s SECONDS``, ``--splay SECONDS``
    |splay|
