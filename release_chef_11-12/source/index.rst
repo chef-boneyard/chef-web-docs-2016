@@ -125,6 +125,7 @@ Cookbooks
    dsl_recipe_method_data_bag
    dsl_recipe_method_platform
    dsl_recipe_method_platform_family
+   dsl_recipe_method_reboot_pending
    dsl_recipe_method_recipe_name
    dsl_recipe_method_registry_data_exists
    dsl_recipe_method_registry_get_subkeys
