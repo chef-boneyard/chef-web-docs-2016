@@ -16,16 +16,4 @@ Options
 
 Examples
 =====================================================
-The following examples show how to use this |knife| subcommand:
-
-**xxxxx**
-
-.. include:: ../../step_knife/xxxxx.rst
-
-**xxxxx**
-
-.. include:: ../../step_knife/xxxxx.rst
-
-**xxxxx**
-
-.. include:: ../../step_knife/xxxxx.rst
+None.
