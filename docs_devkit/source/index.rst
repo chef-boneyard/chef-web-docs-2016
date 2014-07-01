@@ -28,4 +28,4 @@ All about the |chef dk| ...
    foodcritic
    install_dk
    kitchen
-
+   plugin_kitchen_vagrant
