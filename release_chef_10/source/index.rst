@@ -1,3 +1,5 @@
+.. THIS PAGE DOCUMENTS chef-client version 10.latest
+
 =====================================================
 Docs for |chef client| 10.latest
 =====================================================

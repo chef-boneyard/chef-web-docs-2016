@@ -1,3 +1,5 @@
+.. THIS PAGE DOCUMENTS chef-client version 10.latest
+
 =====================================================
 Changes between chef-client 10.x and 11.0
 =====================================================
