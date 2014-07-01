@@ -309,6 +309,7 @@ Cookbooks
    knife_recipe_list
    knife_role
    knife_search
+   knife_serve
    knife_show
    knife_ssh
    knife_ssl_check

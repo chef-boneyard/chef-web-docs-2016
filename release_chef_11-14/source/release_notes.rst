@@ -20,29 +20,29 @@ The following items are new for |chef 11-14| and/or are changes from previous ve
 
 |subcommand knife serve|
 -----------------------------------------------------
-.. include:: ../includes_knife_serve.rst
+.. include:: ../../includes_knife/includes_knife_serve.rst
 
 **Syntax**
 
-.. include:: ../includes_knife_serve_syntax.rst
+.. include:: ../../includes_knife/includes_knife_serve_syntax.rst
 
 **Options**
 
-.. include:: ../includes_knife_serve_options.rst
+.. include:: ../../includes_knife/includes_knife_serve_options.rst
 
 knife node environment set
 -----------------------------------------------------
 The |subcommand knife node| subcommand has a new argument: ``environment_set``.
 
-.. include:: ../includes_knife_node_environment_set.rst
+.. include:: ../../includes_knife/includes_knife_node_environment_set.rst
 
 **Syntax**
 
-.. include:: ../includes_knife_node_environment_set_syntax.rst
+.. include:: ../../includes_knife/includes_knife_node_environment_set_syntax.rst
 
 Attribute Whitelists
 -----------------------------------------------------
-.. include:: ../includes_node_attribute_whitelist.rst
+.. include:: ../../includes_node/includes_node_attribute_whitelist.rst
 
 New |subcommand knife bootstrap| Options
 -----------------------------------------------------
@@ -113,24 +113,3 @@ will be set to:
 
    ENV['http_proxy'] = "http://myself:Password1@proxy.example.org:8080"
 
-What's Fixed
-=====================================================
-
-The following bugs were fixed:
-
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
-
-What's Improved
-=====================================================
-The following improvements were made:
-
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
-
-New Features
-=====================================================
-The following features were added:
-
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx

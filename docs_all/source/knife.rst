@@ -49,7 +49,7 @@ Many Users, Same Repo
 
 Common Options
 =====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
+.. include:: ../../includes_knife/includes_knife_11-12_common_options.rst
 
 
 bootstrap
@@ -69,7 +69,7 @@ Options
 -----------------------------------------------------
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
+.. include:: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst
 
 **knife.rb Settings**
 

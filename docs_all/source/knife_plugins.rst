@@ -30,7 +30,7 @@ Syntax
 
 Common Options
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_common_options.rst
+.. include:: ../../includes_knife/includes_knife_11-12_common_options.rst
 
 Authenticated API Requests
 -----------------------------------------------------
