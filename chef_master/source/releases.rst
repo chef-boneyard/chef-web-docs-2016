@@ -11,8 +11,11 @@ The following documentation sets are available:
    * - Application
      - Home Page
      - Release Notes
-   * - chef-client 11.12
+   * - chef-client 11.14
      - `Home Page <http://docs.opscode.com>`__
+     - `Release Notes <http://docs.opscode.com/release/11-14/release_notes.html>`__
+   * - chef-client 11.12
+     - `Home Page <http://docs.opscode.com/release/11-12/>`__
      - `Release Notes <http://docs.opscode.com/release/11-12/release_notes.html>`__
    * - chef-client 11.10
      - `Home Page <http://docs.opscode.com/release/11-10/>`__
