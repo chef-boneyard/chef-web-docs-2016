@@ -4,7 +4,7 @@
 In a standalone configuration, the |chef actions| server is on a different machine from the |chef server oec|. This allows
 you to scale |chef actions| independantly from |chef server oec|.
 
-To set up the |chef actions| server for a standalone configuration, firstly run the following steps on your |chef server oec| instance:
+To set up the |chef actions| server for a standalone configuration, first run the following steps on your |chef server oec| instance:
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system
 #. Get an instance running with |chef server oec| 11.1.8 or higher.
