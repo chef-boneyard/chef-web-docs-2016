@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Attributes that should not be saved by a node must be whitelisted in the |client rb| file. The whitelist is a |ruby hash| of keys that specify each attribute that will not be saved. For example, attribute data that looks like this:
+Attributes that should not be saved by a node must be whitelisted in the |client rb| file. The whitelist is a |ruby hash| of keys that specify each attribute that will not be saved. For example, normal attribute data similar to:
 
 .. code-block:: javascript
 
@@ -22,13 +22,13 @@ Attributes that should not be saved by a node must be whitelisted in the |client
      } 
    }
 
-the whitelist to prevent the ``network`` attributes from being saved would look like this:
+To whitelistthe ``network`` attributes and prevent them from being saved, update the |client rb| file:
 
 .. code-block:: ruby
 
-   attribute_whitelist = ["network/interfaces/eth0"]
+   normal_attribute_whitelist = ["network/interfaces/"]
 
-Any attribute not specified in an attribute whitelist **will** be saved. So based on the previous whitelist, the ``filesystem`` and ``map - autohome`` attributes will be saved, but the ``network`` attributes will not.
+Any attribute that is not specified in an attribute whitelist **will** be saved. So based on the previous whitelist, the ``filesystem`` and ``map - autohome`` attributes will be saved, but the ``network`` attributes will not.
 
 Attribute are whitelisted by attribute type. Each attribute type---``automatic``, ``default``, ``normal``, and ``override``---may be whitelisted by using the following settings in the |client rb| file:
 
