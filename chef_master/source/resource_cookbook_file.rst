@@ -67,3 +67,7 @@ Examples
 **Use a case statement**
 
 .. include:: ../../step_resource/step_resource_cookbook_file_use_case_statement.rst
+
+**Manage dotfiles**
+
+.. include:: ../../step_resource/step_resource_directory_manage_dotfiles.rst

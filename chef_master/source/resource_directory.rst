@@ -70,3 +70,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
 
+**Manage dotfiles**
+
+.. include:: ../../step_resource/step_resource_directory_manage_dotfiles.rst
