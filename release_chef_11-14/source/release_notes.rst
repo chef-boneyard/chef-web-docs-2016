@@ -4,8 +4,6 @@ Release Notes: |chef client| 11.14
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-https://github.com/opscode/chef/blob/master/DOC_CHANGES.md
-
 What's New
 =====================================================
 The following items are new for |chef 11-14| and/or are changes from previous versions. The short version:
