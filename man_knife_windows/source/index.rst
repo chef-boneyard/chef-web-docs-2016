@@ -67,6 +67,8 @@ The following sections describe functionality common to all |knife| subcommands:
      - .. include:: ../../includes_knife/includes_knife_role.rst
    * - :doc:`knife_search`
      - .. include:: ../../includes_knife/includes_knife_search.rst
+   * - :doc:`knife_serve`
+     - .. include:: ../../includes_knife/includes_knife_serve.rst
    * - :doc:`knife_show`
      - .. include:: ../../includes_knife/includes_knife_show.rst
    * - :doc:`knife_ssh`
@@ -118,6 +120,7 @@ The following sections describe functionality common to all |knife| subcommands:
    knife_recipe_list
    knife_role
    knife_search
+   knife_serve
    knife_show
    knife_ssh
    knife_ssl_check
