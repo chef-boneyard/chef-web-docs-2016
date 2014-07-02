@@ -4,7 +4,7 @@ To get metadata information (as |json|) data, enter the following:
 
 .. code-block:: bash
 
-   $ curl -H "Accept: application/json" 'https://www.opscode.com/chef/metadata-server?p=ubuntu&pv=12.04&m=x86_64'
+   $ curl -H "Accept: application/json" 'https://www.getchef.com/chef/metadata-server?p=ubuntu&pv=12.04&m=x86_64'
 
 to return something like:
 
