@@ -1,0 +1,428 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-02 10:51-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/lwrp.rst:8
+# 185b3e8b89034b878e46518e5f40b0e2
+msgid "About LWRPs"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:5
+# e64ff32535684cda95c955f19cad2a4f
+msgid "A |lwrp| is a part of a cookbook that is used to extend the |chef client| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any platform resource. A |lwrp| has two principal components:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:7
+# b44f78b73b564040bdd98cc2c4ad80dd
+msgid "A `lightweight resource <http://docs.opscode.com/lwrp_custom_resource.html>`_ that defines a set of actions and attributes"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:8
+# b11869ddec484a16b06f56ead7ec6b72
+msgid "A lightweight provider that tells the |chef client| how to handle each action, what to do if certain conditions are met, and so on"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:10
+# d54fd504a91b4acea2f14d3f3bc7038f
+msgid "In addition, most lightweight providers are built `using platform resources <http://docs.opscode.com/lwrp_custom_provider.html>`_ and some lightweight providers are built `using custom Ruby code <http://docs.opscode.com/lwrp_custom_provider_ruby.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:12
+# f091eba25b294dd081e3b8cffcf8c5e5
+msgid "Once created, a |lwrp| becomes a |ruby| class within the organization. During each |chef client| run, the |chef client| will read the lightweight resources from recipes and process them alongside all of the other resources. When it is time to configure the node, the |chef client| will use the corresponding lightweight provider to determine the steps required to bring the system into the desired state."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:14
+# 72b604afd4c64ad49b07e3f736bd2228
+msgid "Where the lightweight resource represents a piece of the system, its current state, and the action that is needed to move it to the desired state, a lightweight provider defines the steps that are required to bring that piece of the system from its current state to the desired state. A |lwrp| behaves similar to platform resources and providers:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:16
+# a3363b57e5e948f08aaf47146ab37250
+msgid "A lightweight resource is a key part of a recipe"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:17
+# 2396bb1b32af44ae84c859e812dcefe3
+msgid "A lightweight resource defines the actions that can be taken"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:18
+# f9d274400a094d0b93e94fc478e9e33f
+msgid "During a |chef client| run, each lightweight resource is identified, and then associated with a lightweight provider"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:19
+# b538eed91b554f22980b09b5de983de0
+msgid "A lightweight provider does the work to complete the action requested by the lightweight resource"
+msgstr ""
+
+#: ../source/lwrp.rst:12
+# 8e2491a7a0164e13b80a63b0e697e04d
+msgid "Read more about how to build :doc:`custom lightweight resources </lwrp_custom>`."
+msgstr ""
+
+#: ../source/lwrp.rst:15
+# 3ac64758c2d14cf4a4137e568a77c0fb
+msgid "Inline Compile Mode"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst:4
+# 70bbc15cce8649fcb737b3a7fc5520e6
+msgid "A lightweight resource is created by the ``action`` block of a lightweight provider. When the resource collection is compiled, a lightweight resource is inserted into the top-level resource collection after the point at which the lightweight provider is associated. For example, if a resource collection looks like::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst:10
+# ba9edff6e4994c358bf11a8d1a9b5534
+msgid "then when ``lwrp_resource`` is executed, the resource collection will be modified as follows::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst:18
+# f7902101405d47ba8ff55e8d8efb76da
+msgid "In this situation, embedded lightweight resources cannot notify the top-level resource because the top-level resource has finished processing. This has the same effect as if the top-level resource collection were invisible to the embedded lightweight resources."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode_with.rst:5
+# a1e6d51f4d37485b98cf50549ad1b3fd
+msgid "To ensure that an embedded lightweight resource can notify the top-level resource add ``use_inline_resources`` to the top of the file that defines the lightweight provider that is associated with that lightweight resource. When ``use_inline_resources`` is added to the file, the code in the lightweight provider's ``action`` block will execute as part of a self-contained |chef client| run. If any embedded lightweight resources are updated, the top-level lightweight resource is marked as updated and notifications set for the top-level resource will be triggered normally."
+msgstr ""
+
+#: ../source/lwrp.rst:21
+# 35367102499d40168def371a2bd523f3
+msgid "|company_name|-maintained"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:5
+# ab14b941b9444e239dd92c809ed6b852
+msgid "|company_name| maintains a collection of cookbooks that define some common scenarios and provides resources to support them. These cookbooks are located at https://github.com/opscode-cookbooks. To use these resources within recipes, first download the cookbook. Then add those resources to recipes."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:7
+# 256b3a70403945938a34619e20a5450c
+msgid "Some of the most popular |company_name|-maintained cookbooks are listed below:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:13
+# c65cfc6455ca41d49aac12f00f4eba95
+msgid "Cookbook"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:14
+# 57a21066d5534549bdebb490fe37c0b3
+msgid "Description"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:15
+# 88b4b908f0ef4403b767d6cab56893a9
+msgid "`apt <https://github.com/opscode-cookbooks/apt>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:16
+# c7ae0e33f4c94aa882e47bcc5070222b
+msgid "The |cookbook apt| cookbook is used to configure |apt| and |apt| services, for managing |apt| repositories and preferences."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:17
+# 3d6f0dc950d54c52ae927535d75ce926
+msgid "`ark <https://github.com/opscode-cookbooks/ark>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:18
+# ad2874e011654810a71a3e249f638b35
+msgid "Use to manage software archives."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:19
+# 40d267a6de104c679cf31c39f3af1f8c
+msgid "`aws <https://github.com/opscode-cookbooks/aws>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:20
+# 032c2c0cf3ec4facad7283901d704107
+msgid "The |cookbook aws| cookbook is used to manage resources that are running in |amazon aws|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:21
+# 36b44a2b71ec4094a389d7a050905a6a
+msgid "`bluepill <https://github.com/opscode-cookbooks/bluepill>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:22
+# 48b6f6efab014f22a5b23084c2a9624f
+msgid "The |cookbook bluepill| cookbook is used to install |bluepill|, and then use it to manage services."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:23
+# ec9ae52b298e402097430392acc37f07
+msgid "`chef_handler <http://docs.opscode.com/lwrp_chef_handler.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:24
+# fb391e3267774d19bfb11b50ce372a1a
+msgid "|cookbook name chef_handler|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:25
+# 257d1d486eb849d0b13342a4e6874cd0
+msgid "`cron <https://github.com/opscode-cookbooks/cron>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:26
+# 42bc3bf8a2d84caeab0a7ec192e89df3
+msgid "Use to install cron and start the crond service."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:27
+# 15f577ff5ebc4719a41110f5770ae56b
+msgid "`daemontools <https://github.com/opscode-cookbooks/daemontools>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:28
+# 0134b8324ef0479385497c5a369231ea
+msgid "The |cookbook daemontools| cookbook is used to install and configure |daemontools| so that it can be used to manage |unix| services."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:29
+# e8ff5706fe6b45f4abc1fff142594c8b
+msgid "`djbdns <https://github.com/opscode-cookbooks/djbdns>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:30
+# 1a6d3f0e8d634b5a97210334d2b6acc6
+msgid "The |cookbook djbdns| cookbook is used to install |djbdns| and use it to configure DNS services."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:31
+# 6029bbe83856437881c15b61026586c6
+msgid "`dmg <https://github.com/opscode-cookbooks/dmg>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:32
+# f3e5a4a0acd04d2696244c575dee30c2
+msgid "The |cookbook dmg| cookbook is used to create a |dmg| package for use with |mac os x|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:33
+# 89b0d7e0177940eb9660ddd88c7ae383
+msgid "`dynect <https://github.com/opscode-cookbooks/dynect>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:34
+# 95574a128b02440ea87349ac237a66e5
+msgid "The |cookbook dynect| cookbook is used to manage DNS records using the |dynect| REST API."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:35
+# 4b6cdb5ecf844597b7d1d8d9b1379727
+msgid "`firewall <https://github.com/opscode-cookbooks/firewall>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:36
+# c6700c9228e14472bd836e10ebf419a4
+msgid "The |cookbook firewall| cookbook is used to manage firewalls and their associated firewall rulesets."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:37
+# 8c12920a8c9f46a799093d5e875ec7f4
+msgid "`freebsd <https://github.com/opscode-cookbooks/freebsd>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:38
+# 2f4170eb2b1148e9b451c83e88e380f4
+msgid "The |cookbook freebsd| cookbook is used to manage port options for |freebsd|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:39
+# f7a3a27bf2a349018d3c60830994758c
+msgid "`gunicorn <https://github.com/opscode-cookbooks/gunicorn>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:40
+# 363a36f2a9974aa784fbf89ff231d325
+msgid "|gunicorn desc| The |cookbook gunicorn| cookbook is used to install and configure |gunicorn|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:41
+# c18b606b84f74af0a882532f29d0e172
+msgid "`homebrew <https://github.com/opscode-cookbooks/homebrew>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:42
+# 118c755e8e0d486e8ac53b667e054914
+msgid "The |cookbook homebrew| cookbook is used to install and configure |homebrew| for use as the package manager for |mac os x|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:43
+# 718337f071fa453d8467ce486cec08c7
+msgid "`iis <https://github.com/opscode-cookbooks/iis>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:44
+# dfa8cdff2fe84712a0b357c045682564
+msgid "The |cookbook iis| cookbook is used to install and configure |microsoft iis|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:45
+# 64ae75528ca94beaa1e6da472e790025
+msgid "`lvm <https://github.com/opscode-cookbooks/lvm>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:46
+# 4f70466a90954ea78a18f61cae22557d
+msgid "Use to install the lvm2 package, and then manage LVM."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:47
+# 9b76a0660c98473e9516c1cbf9cfb922
+msgid "`maven <https://github.com/opscode-cookbooks/maven>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:48
+# 2afa29314bf54641965c73ff0c2b855d
+msgid "The |cookbook maven| cookbook is used to install and configure |apache maven|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:49
+# bac8ca9f75064ae485ee34526904233b
+msgid "`nginx <https://github.com/opscode-cookbooks/nginx>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:50
+# c81e3128b8ce48a8bcc78219480a304c
+msgid "Use to install nginx from package or source code, and then set up configuration handling."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:51
+# cc810e63245046818500813e6c42c967
+msgid "`openssh <https://github.com/opscode-cookbooks/openssh>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:52
+# 7a8473b0268a4b6ba00fa4d970a12c55
+msgid "The **openssh** cookbook is used to install OpenSSH."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:53
+# 6b505f94d52c4b4a83a4b526ed2a4750
+msgid "`omnibus <https://github.com/opscode-cookbooks/omnibus>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:54
+# 8e715c63f7c644fd9be136bafa7b32ff
+msgid "Use to prepare a machine to be an Omnibus builder."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:55
+# 77f2ac23372b4f61bdda8189622eea42
+msgid "`php <https://github.com/opscode-cookbooks/php>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:56
+# 8d40e36491e040e7ae0bad52ee8a59aa
+msgid "The |cookbook php| cookbook is used to install and configure |php| and |php| modules."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:57
+# e19dfd61b75f4e8f95a8a7a689f5bdde
+msgid "`postfix <https://github.com/opscode-cookbooks/postfix>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:58
+# a48aa177e37d4fa488461ba615a189fc
+msgid "Use to install and configure postfix for client or outbound relayhost."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:59
+# cf1edddd827b48c39896fcabe2cd41ec
+msgid "`powershell <https://github.com/opscode-cookbooks/powershell>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:60
+# 4643480a14894a25b2fbd1bede393b6f
+msgid "Use to run |windows powershell|. See the `powershell_script resource <http://docs.opscode.com/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:61
+# c480e24ac73a4d6083daa14795069c3d
+msgid "`rabbit mq <https://github.com/opscode-cookbooks/rabbitmq>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:62
+# 4fc6175e5e8846e983c435026c5f654a
+msgid "The |cookbook rabbitmq| cookbook is used to install and configure |rabbitmq|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:63
+# 116be0a7dbf3439da2dc8eddfe36a584
+msgid "`squid <https://github.com/opscode-cookbooks/squid>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:64
+# 5c57bf3568bd408688b60912d8f84774
+msgid "Use to configure squid as a caching proxy."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:65
+# c76089887f054dc9802c326751507b74
+msgid "`sudo <https://github.com/opscode-cookbooks/sudo>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:66
+# 7876934974d849df97190ce2c4c19216
+msgid "The |cookbook sudo| cookbook is used to install |sudo cmd| and configure |path etc sudoers|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:67
+# 05874e5715e648d392eaead7abd3b475
+msgid "`transmission <https://github.com/opscode-cookbooks/transmission>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:68
+# 9367b100a70a4078be0aa85f59413e0a
+msgid "The |cookbook transmission| cookbook is used to install and configure the |transmission| |bittorrent| client."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:69
+# d3ceaa7add5f43bc8a5b96f33b4d3ffb
+msgid "`webpi <https://github.com/opscode-cookbooks/webpi>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:70
+# baa8a0a7363446a7a1cf0526817ce778
+msgid "The |cookbook webpi| cookbook is used to run the |microsoft webpi|."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:71
+# e5a1650b12ca420a9949913d6b5eba47
+msgid "`windows <https://github.com/opscode-cookbooks/windows>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:72
+# c24e5db8694849719761a0414434f93b
+msgid "The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:73
+# 82de4396ee0e487fab146b4464224232
+msgid "`yum <http://docs.opscode.com/lwrp_yum.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:74
+# bdfc5783d0054b9782f5661532c40389
+msgid "The |cookbook yum| cookbook is used to manage the contents of the ``yum.conf`` configuration file for global |yum| configurations and for individual |yum| repositories."
+msgstr ""
+

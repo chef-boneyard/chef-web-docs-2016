@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-02 10:51-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_cookbook_files.rst:8
+# fa02ccf1bc7b4540922b8428de0ed0e6
+msgid "About Files"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution.rst:4
+# 2b37bacb2fe748da8ed641d77bb88433
+msgid "A file distribution is a resource that tells a cookbook how to distribute one (or more) files to servers, including by node, by platform, and by file version."
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:13
+# 6a1983d632b74a39bd46925d02fe35e2
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst:4
+# a4afd9290b9f4419827bd2ac3bc7e3dc
+msgid "The |resource cookbook_file| resource defines a file distribution. For example, the following |resource cookbook_file| details::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst:13
+# dd9c27c6346442e482479f9b1abf48ca
+msgid "would create the ``/usr/local/bin/apache2_module_conf_generate.pl`` from the ``apache2_module_conf_generate.pl`` file contained in the cookbook that is most specific to the node that is executing the recipe."
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:17
+# e400a2c354b940dea212a90ffd080838
+msgid "File Specificity"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:4
+# 0c47d1197997492fab81a9ab6e47c8b2
+msgid "A cookbook will frequently be designed to work across many platforms and will often be required to distribute a specific file to a specific platform. A cookbook can be designed to support distributing files across platforms, but ensuring that the right file ends up on each system."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst:4
+# 5eb34e96f1b84fac90f1539536d66e6e
+msgid "The pattern for file specificity is as follows:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst:6
+# cfdeb080ce1843ec85cdbc67a2ed4213
+msgid "host-node[:fqdn]"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst:7
+# 5cb9e62c89254c2095fffe136e7b7d20
+msgid "node[:platform]-node[:platform_version]"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst:8
+# 5a0f21e0054f43478f4aceb0dffd7ef4
+msgid "node[:platform]-version_components: The version string is split on decimals and searched from greatest specificity to least; for example, if the location from the last rule was centos-5.7.1, then centos-5.7 and centos-5 would also be searched."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst:9
+# e0217de2e8f045afbb09bd751c3318e8
+msgid "node[:platform]"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst:10
+# 773ac15a85cc4698bf7d603898196191
+msgid "default"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_example_files.rst:4
+# 673501ecad1142f8aa393bb70bfd2c18
+msgid "A cookbook may have a ``/files`` directory structure like this::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_example_files.rst:16
+# b1113ef33c1f43f4a62e047553e622cf
+msgid "and a resource that looks something like the following:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_example_files.rst:27
+# 555309ca477f461abe64bd09a44546c8
+msgid "where ``resource_type`` is the |resource cookbook_file| or |resource remote_file| resource. This resource would be matched in the same order as the ``/files`` directory structure. For a node that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the |resource cookbook_file| resource would be distributed:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_example_files.rst:37
+# bf4c1294696947efaec5f5603576d9ab
+msgid "If the ``apache2_module_conf_generate.pl`` file was located in the cookbook directory under ``files/host-foo.example.com/``, the specified file(s) would only be copied to the machine with the domain name foo.example.com."
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:25
+# 02dc8e15ad9340f7aa22b65d0ae51c4f
+msgid "Host Notation"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_host_notation.rst:4
+# 3ec50e7390a14102945df043bfd7a7da
+msgid "The naming of folders within cookbook directories must literally match the host notation used for file specificity matching. For example, if a host is named ``foo.example.com``, the folder must be named ``host-foo.example.com``."
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:29
+# 935cde4da17f46ed85aa66df066fb2d7
+msgid "File Transfers"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_transfers.rst:4
+# 9b6a257e9c2245179adbd406f1abc832
+msgid "When a |resource cookbook_file| resource is run, the |chef client| will calculate the checksum of each local file and then compare this against the checksum for that same file as it currently exists in the cookbook on the |chef server|. If the checksums match, that file is not transferred. Even though a cookbook may contain many files, only files that require an update are transferred from the |chef server| to a |chef client|."
+msgstr ""
+
