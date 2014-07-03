@@ -20,7 +20,7 @@ To set up the |chef actions| server for a standalone configuration, first run th
    .. code-block:: bash
 
       rabbitmq['vip'] = BACKEND_VIP
-      rabbitmq[node_ip_address'] = BACKEND_VIP
+      rabbitmq[node_ip_address'] = '0.0.0.0'
 
 
 #. Reconfigure the |chef server oec| server on |chef server oec| machine:
@@ -51,6 +51,7 @@ Now run the following steps on your |chef actions| standalone instance:
    .. code-block:: bash
 
       analytics_fqdn "analytics.example.com"
+      topology "standalone"
 
 #. Reconfigure the |chef actions| server on |chef actions| machine:
 
