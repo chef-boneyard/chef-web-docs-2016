@@ -51,6 +51,7 @@ Now run the following steps on your |chef actions| standalone instance:
    .. code-block:: bash
 
       analytics_fqdn "analytics.example.com"
+      topology "standalone"
 
 #. Reconfigure the |chef actions| server on |chef actions| machine:
 
