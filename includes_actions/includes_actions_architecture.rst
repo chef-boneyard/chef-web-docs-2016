@@ -21,7 +21,7 @@ As events occur on the |chef server oec| server, the following happens:
    * - **WebUI**
      - The web user interface for |chef actions|. It provides visibility into every action tracked by |chef actions|, allows searching of the actions data store, and can be used to generate reports (CSV files, send emails, and so on).
    * - **Actions Pipeline**
-     - The Actions Pipeline is used to parse each action as it is tracked, tagging each action with the appropriate tags, idenfitying which notifications (if any) should be sent for each specific action, idenfitying any custom actions (if any) that should be taken against each specific action, and then archiving each action to the data store.
+     - The Actions Pipeline is used to parse each action as it is tracked, tagging each action with the appropriate tags, identifying which notifications (if any) should be sent for each specific action, identifying any custom actions (if any) that should be taken against each specific action, and then archiving each action to the data store.
    * - **Notifications**
      - |chef actions| includes a few built in notification engines: HipChat, Campfire, Email, IRC. Custom engines can be built using a simple plugin architecture.
    * - **Data Store**
