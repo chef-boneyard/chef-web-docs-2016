@@ -107,6 +107,16 @@ The following features are available in both |chef server oec| and |chef server 
 
 **APIs:** :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Chef Server API </api_chef_server>`
 
+|chef analytics|
+=====================================================
+|chef analytics| is an add-on for |chef server oec| that provides visibility into what is happening on the server.  It runs on separate hardware from |chef server oec| and consists of several components, initially |chef actions|.
+
+**Components:** :doc:`Chef Actions </actions>`
+
+**Install:** :doc:`Prerequisites </install_analytics_pre>` | :doc:`Install Chef Actions </install_actions>`
+
+**Settings and Tools:** :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>`
+
 
 The Nodes
 =====================================================
@@ -179,6 +189,7 @@ Cookbooks
    community_plugin_ohai
    community_plugin_report_handler
    config
+   config_rb_analytics
    config_rb_chef_server
    config_rb_chef_server_optional_settings
    config_rb_chef_server_enterprise
@@ -194,6 +205,7 @@ Cookbooks
    config_yml_kitchen
    containers
    cookbooks
+   ctl_analytics
    ctl_chef
    ctl_chef_apply
    ctl_chef_client
@@ -264,6 +276,7 @@ Cookbooks
    images
    install
    install_actions
+   install_analytics_pre
    install_bootstrap
    install_dk
    install_manage
@@ -492,7 +505,7 @@ Cookbooks
    upgrade_server_standalone
    upgrade_server_standalone_notes
    windows
-   
-   
+
+
    plugin_knife_pushy
    pushy
