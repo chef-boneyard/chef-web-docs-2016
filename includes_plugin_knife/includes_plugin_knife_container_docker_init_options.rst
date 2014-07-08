@@ -18,7 +18,7 @@ This argument has the following options:
    The directory in which environments are located. This may be a colon-separated path.
 
 ``-f [REPO/]IMAGE[:TAG]``, ``--from [REPO/]IMAGE[:TAG]``
-   Use to specify the image to use as the ``FROM`` value in a |dockerfile|.
+   Use to specify the image to use as the ``BASE`` value in a |dockerfile|. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|.
 
 ``--node-path PATH[:PATH]``
    The directory in which nodes are located. This may be a colon-separated path.

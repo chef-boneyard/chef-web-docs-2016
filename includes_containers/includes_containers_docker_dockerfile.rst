@@ -17,7 +17,7 @@ A |dockerfile| contains all of the settings needed to use a container with |chef
    * - ``ENTRYPOINT``
      - Use to specify that a container be run as an executable. This setting may appear only once in a |dockerfile|. Default value: ``["chef-init"]``, which will run the container as the |chef client|.
    * - ``FROM``
-     - The image from which a container will be built. This must be the first setting in a |dockerfile|. Default value: ``chef/ubuntu_12.04``.
+     - The image from which a container will be built. This must be the first setting in a |dockerfile|. This value of this setting is the ``REPO_NAME_OR_IMAGE_NAME`` value that is specified when using the ``docker init`` argument with the |subcommand knife container| subcommand. Default value: ``chef/ubuntu_12.04``.
    * - ``RUN``
      - A command to be run inside the container. There may be more than one command specified. Default value: ``chef-init --bootstrap``.
 
