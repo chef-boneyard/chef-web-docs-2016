@@ -82,7 +82,7 @@ For example, the ``first-boot.json`` file may look similar to:
 
    {
      "run_list": [
-	   "recipe[service_name]"
+	   "recipe[recipe_name]"
 	 ],
      "container_service": {
 	   "service_resource_name": {
@@ -93,7 +93,7 @@ For example, the ``first-boot.json`` file may look similar to:
 
 where:
 
-* ``service_name`` is the name of the service that runs in the container
+* ``recipe_name`` is the name of the recipe
 * ``service_resource_name`` is the service resource name that will be managed by |runit|
 * ``service_run_command`` is the command that will be executed by |runit| to manage the service
 
@@ -107,7 +107,7 @@ For example, if the service is |nginx|, the ``container_service`` paramaters wou
 	 ],
      "container_service": {
 	   "nginx": {
-	     "command": "/usr/sbin/nginx -c /etc/conf/nginx/conf"
+	     "command": "/usr/sbin/nginx -c /etc/conf/nginx.conf"
 	   }
 	 }
    }
@@ -116,10 +116,10 @@ The container service setting may also be specified using an attributes file in 
 
 .. code-block:: ruby
 
-   default['container_service']['service_resource_name']['command'] = '/usr/sbin/nginx -c /etc/conf/nginx/conf'
+   default['container_service']['service_resource_name']['command'] = 'service_run_command'
 
 or, using the same |nginx| example as above:
 
 .. code-block:: ruby
 
-   default['container_service']['nginx']['command'] = '/usr/sbin/nginx -c /etc/conf/nginx/conf'
+   default['container_service']['nginx']['command'] = '/usr/sbin/nginx -c /etc/conf/nginx.conf'
