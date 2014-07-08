@@ -276,6 +276,7 @@ Cookbooks
    images
    install
    install_actions
+   install_analytics
    install_analytics_pre
    install_bootstrap
    install_dk

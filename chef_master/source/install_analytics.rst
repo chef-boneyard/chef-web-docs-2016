@@ -1,5 +1,5 @@
 =====================================================
-Install |chef actions|
+Install |chef analytics|
 =====================================================
 
 .. include:: ../../includes_actions/includes_actions.rst
