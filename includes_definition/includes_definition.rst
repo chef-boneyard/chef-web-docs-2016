@@ -2,17 +2,14 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A definition is used to declare resources so they can be added to the resource collection. A definition:
+A definition is code that is reused across recipes, similar to a compile-time macro. A definition is created using arbitrary code wrapped around built-in |chef client| resources---|resource file|, |resource execute|, |resource template|, and so on---by declaring those resources into the definition as if they were declared in a recipe. A definition is then used in one (or more) recipes as if it were a resource.
+
+Though a definition behaves like a resource, some key differences exist. A definition:
 
 * Is not a resource or a lightweight resource
-* Groups two (or more) resource declarations; there is no limit to the number of resources that can be part of this declaration
-* Is often described as a "recipe macro"
-* Is never declared into a cookbook; all definitions must be located within the ``definitions/`` directory
-* Does not have an associated provider (unlike a lightweight resource)
-* Supports |whyrun| mode automatically
+* Is defined from within the ``/definitions`` directory of a cookbook
+* Is loaded before resources during the |chef client| run; this ensures the definition is available to all of the resources that may need it
+* May not notify resources in the resource collection because a definition is loaded **before** the resource collection itself is created; however, a resource in a definition **may** notify a resource that exists within the same definition
+* Automatically supports |whyrun| mode, unlike lightweight resources
 
-A definition is best-used when:
-
-* Data needs to be passed from one (or more) recipes into a single declaration
-* A repeating usage pattern exists for one (or more) resources
-* A simple, direct approach is desired
+Use a defintion when repeating patterns exist across resources and/or when a simple, direct approach is desired. There is no limit to the number of resources that may be included in a definition: use as many built-in |chef client| resources as necessary.
