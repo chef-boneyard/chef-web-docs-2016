@@ -4,7 +4,7 @@
 Use a library to:
 
 * Define a custom resource
-* Create a custom class or module; for example, create a subclass of the ``Chef::Recipe`` class
+* Create a custom class or module; for example, create a subclass of ``Chef::Recipe``
 * Access attributes that are stored in files
 * Connect to a database
 * Talk to an LDAP provider
