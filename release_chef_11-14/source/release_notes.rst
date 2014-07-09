@@ -15,6 +15,7 @@ The following items are new for |chef 11-14| and/or are changes from previous ve
 * **New client.rb settings** The following settings have been added to the |client rb| file: ``automatic_attribute_whitelist``, ``cookbook_sync_threads``, ``default_attribute_whitelist``, ``ftp_proxy``, ``ftp_proxy_pass``, ``ftp_proxy_user``, ``normal_attribute_whitelist``, ``override_attribute_whitelist``, and ``yum_lock_timeout``.
 * **New --run-lock-timeout Setting** New command line setting for |chef client| and |chef solo|.
 * **Automatic proxy configuration** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically configure the ``ENV`` environment variable with proxy settings.
+* **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute to ensure that sensitive resource data is not logged by the |chef client|.
 
 |subcommand knife serve|
 -----------------------------------------------------
@@ -111,6 +112,19 @@ will be set to:
 
    ENV['http_proxy'] = "http://myself:Password1@proxy.example.org:8080"
 
+New Resource Attribute
+-----------------------------------------------------
+The following attribute may be used with any resource:
+
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+   * - ``sensitive``
+     - Use to ensure that sensitive resource data is not logged by the |chef client|. Default value: ``false``.
+	 
 What's Fixed
 =====================================================
 For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
