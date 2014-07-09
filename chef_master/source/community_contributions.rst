@@ -4,15 +4,13 @@ Community Contributions
 
 We are glad you want to contribute to Chef! Here's how:
 
-#. Create an account on the open source ticket tracking system: http://tickets.opscode.com
-#. Sign the contributor licensing agreement (`CLA <http://docs.opscode.com/community_contributions.html#about-clas-and-cclas>`_) or corporate contributor license agreement (`CCLA <http://docs.opscode.com/community_contributions.html#about-clas-and-cclas>`_): https://secure.echosign.com/public/hostedForm?formid=PJIF5694K6L; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.opscode.com/community_contributions.html#the-obvious-fix-rule>`_
-#. Create a ticket for the change on the bug tracker
-#. Link to your patch as a rebased git branch or pull request from the ticket; pull requests may be made in |github| against any |company_name|-managed open source project
-#. Resolve the ticket as ``Fix Provided``
+#. Sign the `individual contributor licensing agreement <https://secure.echosign.com/public/hostedForm?formid=PJIF5694K6L>`_ or `corporate contributor license agreement <https://secure.echosign.com/public/hostedForm?formid=PIE6C7AX856>`_; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.opscode.com/community_contributions.html#the-obvious-fix-rule>`_
+#. Create a |github| pull request
+#. Do a `code review <https://github.com/opscode/chef/blob/master/CONTRIBUTING.md#cr>`_ with the |company_name| team and/or core committers on the pull request
 
-We regularly review contributions and will get back to you if we have any suggestions or concerns.
+|company_name| regularly reviews contributions and will get back to you if we have any suggestions or concerns.
 
-|company_name|-managed open source projects are located here: https://github.com/opscode.
+|company_name|-managed open source projects are located here: https://github.com/opscode. See https://github.com/opscode/chef/blob/master/CONTRIBUTING.md for more information about the contribution process itself. See below for more information about CLAs, the |apache| license, and the obvious fix rule.
 
 
 About CLAs and CCLAs
