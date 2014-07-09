@@ -32,11 +32,7 @@ To remove the symlinks under ``/usr/bin``:
 
 .. code-block:: bash
 
-   $ ls -la /usr/bin | egrep '/opt/chefdk' | awk '{ print $9 }' | sudo xargs -I % rm -f /usr/bin/%
-
-|windows|
------------------------------------------------------
-Use **Add / Remove Programs** to remove the |chef dk|.
+   $ ls -la /usr/bin | egrep '/opt/chefdk' | awk '{ print $9 }' | sudo xargs -I % rm -f /usr/bin/
 
 |redhat enterprise linux|
 -----------------------------------------------------
@@ -59,3 +55,7 @@ For |debian|-based platforms, such as |ubuntu|, remove the |chef dk| using the p
 .. code-block:: bash
 
    $ dpkg -P chefdk
+
+|windows|
+-----------------------------------------------------
+Use **Add / Remove Programs** to remove the |chef dk|.
