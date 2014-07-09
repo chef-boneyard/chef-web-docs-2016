@@ -4,7 +4,7 @@
 In a standalone configuration, the |chef actions| server is on a different machine from the |chef server oec|. This allows
 you to scale |chef actions| independantly from |chef server oec|.
 
-To set up the |chef actions| server for a standalone configuration, we assume you have an existing |chef server oec| install already running.
+To set up the |chef actions| server for a standalone configuration,  you should have an existing |chef server oec| install already running.
 
 First run the following steps on your |chef server oec| instance:
 
@@ -19,7 +19,7 @@ First run the following steps on your |chef server oec| instance:
 
    .. code-block:: bash
 
-      rabbitmq['vip'] = BACKEND_VIP
+      rabbitmq['vip'] = 'BACKEND_VIP'
       rabbitmq['node_ip_address'] = '0.0.0.0'
 
 
