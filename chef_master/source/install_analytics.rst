@@ -6,18 +6,18 @@ Install |chef analytics|
 
 Requirements
 =====================================================
-.. include:: ../../includes_system_requirements/includes_system_requirements_actions.rst
+.. include:: ../../includes_system_requirements/includes_system_requirements_analytics.rst
 
 Install the Server
 =====================================================
-The |chef actions| add-on can be installed in a standalone configuration or combined with Enterprise Chef
+The |chef analytics| add-on can be installed in a standalone configuration or combined with Enterprise Chef
 on a single node.
 
 Standalone
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_actions_server_standalone.rst
+.. include:: ../../includes_install/includes_install_analytics_standalone.rst
 
 Combined
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_actions_server_combined.rst
+.. include:: ../../includes_install/includes_install_analytics_combined.rst
 
