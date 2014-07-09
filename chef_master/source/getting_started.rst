@@ -309,9 +309,7 @@ This will start |vagrant|, which will then build a machine that rubs |centos| 6.
           Finished creating <default-centos-64> (11m29.44s).
    -----> Kitchen is finished. (11m29.76s)
 
-Verify Instance List
------------------------------------------------------
-Re-run the following command:
+Verify the instance list with the following command:
 
 .. code-block:: bash
 
@@ -368,9 +366,7 @@ this may also take a few minutes, but will (eventually) return something similar
           Finished creating <default-ubuntu-1204> (10m57.93s).
    -----> Kitchen is finished. (10m58.24s)
 
-Verify Instance List
------------------------------------------------------
-Re-run:
+Verify the instance list with the following command:
 
 .. code-block:: bash
 
@@ -501,7 +497,7 @@ Like |centos|, the |chef client| will need to be downloaded:
 
 Verify Instance List
 -----------------------------------------------------
-Re-run:
+To verify if both instances have been converged, run the following command:
 
 .. code-block:: bash
 
@@ -513,7 +509,7 @@ Re-run:
    default-ubuntu-1204  Vagrant  ChefSolo     Converged
    default-centos-64    Vagrant  ChefSolo     Converged
 
-Now you can test your cookbooks by running them in a virtual instance on multiple platforms.
+Now you can run your cookbooks in a virtual instance managed by |kitchen| on multiple platforms (|ubuntu| and |centos|).
 
 Conclusion
 =====================================================
