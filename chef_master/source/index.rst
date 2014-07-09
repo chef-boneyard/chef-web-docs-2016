@@ -113,7 +113,7 @@ The following features are available in both |chef server oec| and |chef server 
 
 **Components:** :doc:`Chef Actions </actions>`
 
-**Install:** :doc:`Prerequisites </install_analytics_pre>` | :doc:`Install Chef Actions </install_actions>`
+**Install:** :doc:`Prerequisites </install_analytics_pre>` | :doc:`Install Chef Analytics </install_analytics>`
 
 **Settings and Tools:** :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>`
 
