@@ -32,14 +32,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
-
+None.
 
 chef_data_bag_item
 -----------------------------------------------------
@@ -65,14 +58,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
-
+None.
 
 chef_data_bag
 -----------------------------------------------------
@@ -98,13 +84,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 chef_environment
 -----------------------------------------------------
@@ -130,13 +110,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 chef_node
 -----------------------------------------------------
@@ -162,13 +136,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 chef_role
 -----------------------------------------------------
@@ -194,13 +162,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 chef_user
 -----------------------------------------------------
@@ -224,13 +186,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 machine
 -----------------------------------------------------
@@ -254,13 +210,10 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
 
-**xxxxx**
+**Build machines dynamically**
 
-.. code-block:: ruby
-
-   #example_code_to_go_here
+.. include:: ../../step_resource/step_resource_machine_build_machines_dynamically.rst
 
 machine_execute
 -----------------------------------------------------
@@ -284,13 +237,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 machine_file
 -----------------------------------------------------
@@ -314,13 +261,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 private_key
 -----------------------------------------------------
@@ -344,13 +285,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 public_key
 -----------------------------------------------------
@@ -374,13 +309,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
 
 
 
