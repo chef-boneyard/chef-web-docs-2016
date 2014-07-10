@@ -2,8 +2,6 @@
 Ohai Custom Plugins
 =====================================================
 
-.. warning:: This topic includes descriptions of functionality will be available in an upcoming release for |ohai|.
-
 .. include:: ../../includes_ohai/includes_ohai.rst
 
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
