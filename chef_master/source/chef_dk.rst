@@ -6,8 +6,11 @@
 
 .. include:: ../../includes_chef/includes_chef_dk.rst
 
-**The Basics:** :doc:`Overview of Chef </chef_overview>`
+After :doc:`installing the chef-dk </install_dk>`, learn more about the tools that are packaged with the |chef dk|:
 
-**Install:** :doc:`Install the chef-dk </install_dk>`
-
-**Tools:** :doc:`chef (executable) </ctl_chef>` | :doc:`Berkshelf </berkshelf>` | :doc:`chef-vault </chef_vault>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`test-kitchen </kitchen>`
+* :doc:`chef (executable) </ctl_chef>`
+* |:doc:`Berkshelf </berkshelf>`
+* :doc:`chef-vault </chef_vault>`
+* :doc:`ChefSpec </chefspec>`
+* :doc:`Foodcritic </foodcritic>`
+* :doc:`test-kitchen </kitchen>`
