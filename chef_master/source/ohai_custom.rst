@@ -6,6 +6,8 @@ Ohai Custom Plugins
 
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
 
+.. note:: See https://github.com/rackerlabs/ohai-plugins/tree/master/plugins for some great examples of custom |ohai| plugins.
+
 Syntax
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst
