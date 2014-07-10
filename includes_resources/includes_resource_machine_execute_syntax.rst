@@ -14,6 +14,6 @@ The syntax for using the |resource machine_execute| resource in a recipe is as f
 where 
 
 * ``machine_execute`` tells the |chef client| to use the ``Chef::Provider::MachineExecute`` provider during the |chef client| run
-* ``name`` is the name of the resource block and also the name of the xxxxx
+* ``name`` is the name of the resource block; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the command to be run
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

@@ -10,10 +10,10 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:delete``
-     - Use to delete xxxxx from a machine.
+     - Use to delete a file from a machine.
    * - ``:download``
-     - Use to download xxxxx from a machine.
+     - Use to download a file from a machine.
    * - ``:nothing``
      - Use to do nothing.
    * - ``:upload``
-     - Default. Use to upload xxxxx to a machine.
+     - Default. Use to upload a file to a machine.
