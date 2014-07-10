@@ -26,10 +26,4 @@ Providers
 
 Examples
 =====================================================
-|generic resource statement|
-
-**xxxxx**
-
-.. code-block:: ruby
-
-   #example_code_to_go_here
+None.
