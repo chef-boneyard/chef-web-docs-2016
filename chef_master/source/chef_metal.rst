@@ -2,6 +2,8 @@
 |chef metal|
 =====================================================
 
+.. warning:: This functionality is available when `chef-metal <https://github.com/opscode/chef-metal>`_ is installed. |chef metal| is a framework that allows clusters to be managed by the |chef client| and the |chef server| in the same way nodes are managed: with recipes. Use |chef metal| to describe, version, deploy, and manage clusters of any size and complexity using a common set of tools.
+
 .. include:: ../../includes_chef_metal/includes_chef_metal.rst
 
 Resources
