@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef generate file COOKBOOK_PATH COOKBOOK NAME (options)
+   $ chef generate file COOKBOOK_PATH NAME (options)

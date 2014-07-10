@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef generate lwrp COOKBOOK_PATH COOKBOOK NAME (options)
+   $ chef generate lwrp COOKBOOK_PATH NAME (options)
