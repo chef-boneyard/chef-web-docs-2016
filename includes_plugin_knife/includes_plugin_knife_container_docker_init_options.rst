@@ -29,8 +29,14 @@ This argument has the following options:
 ``--role-path PATH[:PATH]``
    The directory in which roles are located. This may be a colon-separated path.
 
+``--secret-file PATH``
+   |secret-file|
+
 ``--server-url URL``
    |url chef_server|
+
+``--trusted-certs-dir PATH``
+   The path to the directory in which trusted certificates are stored.
 
 ``--validation-client-name NAME``
    The name of the validation client, typically a client named |chef validator|.
