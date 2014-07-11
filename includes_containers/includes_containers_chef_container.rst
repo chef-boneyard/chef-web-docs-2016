@@ -6,6 +6,5 @@
 
 * |chef container| comes packaged with |chef client|, |runit| and ``chef-init``
 * Bootstrap the |chef client| without an |ssh| connection
-* Use the |resource container_service| resource in recipes; this resource is built in to |chef container|
 * Use the |subcommand knife container| |knife| plugin to work with |linux| containers; use the ``docker build`` and ``docker init`` arguments to manage |docker| image contexts
 * Use |chef client| resources the same way in a container as on any |unix|- or |linux|-based platform
