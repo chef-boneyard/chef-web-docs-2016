@@ -3,8 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``status`` subcommand is used to show the status of all services available to |chef analytics|. The results
-will vary based on the configuration of a given server. This subcommand has the following syntax:
+The ``status`` subcommand is used to show the status of all services available to |chef analytics|. The results will vary based on the configuration of a given server. This subcommand has the following syntax:
 
 .. code-block:: bash
 
@@ -37,10 +36,7 @@ For example:
 
    $ down: actions: (pid 35546) 10s
 
-By default, |runit| will restart services automatically when the services fail. Therefore, |runit| may report the status of a
-service as ``run:`` even when there is an issue with that service. When investigating why a particular service is not
-running as it should be, look for the services with the shortest uptimes. For example, the list below indicates
-that the |service actions| should be investigated further:
+By default, |runit| will restart services automatically when the services fail. Therefore, |runit| may report the status of a service as ``run:`` even when there is an issue with that service. When investigating why a particular service is not running as it should be, look for the services with the shortest uptimes. For example, the list below indicates that the |service actions| should be investigated further:
 
 .. code-block:: bash
 

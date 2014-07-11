@@ -5,7 +5,6 @@
 
 The ``restart`` subcommand is used to restart all services enabled on |chef analytics| or to restart an individual service by specifying the name of that service in the command.
 
-
 This subcommand has the following syntax:
 
 .. code-block:: bash
