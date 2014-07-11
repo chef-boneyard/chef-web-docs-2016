@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife container docker build REPO_NAME_OR_IMAGE_NAME[TAG]
+   $ knife container docker build NAMESPACE_OR_IMAGE_NAME
 
