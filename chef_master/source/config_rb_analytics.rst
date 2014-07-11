@@ -15,3 +15,15 @@ Settings
 
 .. include:: ../../includes_config/includes_config_rb_analytics_settings.rst
 
+Optional Settings
+=====================================================
+The following settings are often used for performance tuning of |chef analytics| in larger installations.
+
+.. note:: When changes are made to the |analytics rb| file the |chef analytics| must be reconfigured by
+   running the ``opscode-analytics-ctl reconfigure`` command.
+
+actions
+-----------------------------------------------------
+.. include:: ../../includes_analytics_tuning/includes_analytics_tuning_actions.rst
+
+

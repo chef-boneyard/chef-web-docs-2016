@@ -22,8 +22,8 @@ First run the following steps on your |chef server oec| instances:
       rabbitmq['vip'] = 'BACKEND_VIP'
       rabbitmq['node_ip_address'] = '0.0.0.0'
 
-.. note :: rabbitmq['node_ip_address'] should either be an IP address, or a hostname. If it is a hostname it should be resolvable
-   either via DNS or /etc/hosts.
+   .. note:: rabbitmq['node_ip_address'] should either be an IP address, or a hostname. If it is a hostname it should be resolvable
+      either via DNS or /etc/hosts.
 
 #. Reconfigure the |chef server oec| server on |chef server oec| machines:
 
@@ -55,13 +55,22 @@ Now run the following steps on your |chef analytics| standalone instance:
       analytics_fqdn "analytics.example.com"
       topology "standalone"
 
-#. Reconfigure the |chef analytics| server on |chef analytics| machine:
+#. Verify your configuration with the preflight check tool:
+
+   .. code-block:: bash
+
+      $ opscode-analytics-ctl preflight-check
+
+  If there are any errors in the preflight check, correct them before carrying on to the
+  next step.
+
+#. Reconfigure the |chef analytics| server on the |chef analytics| machine:
 
    .. code-block:: bash
 
       $ opscode-analytics-ctl reconfigure
 
-#. Verify the installation on |chef analytics| machine:
+#. Verify the installation on the |chef analytics| machine:
 
    .. code-block:: bash
 

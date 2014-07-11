@@ -12,6 +12,10 @@ help
 =====================================================
 .. include:: ../../includes_ctl_analytics/includes_ctl_analytics_help.rst
 
+preflight-check
+=====================================================
+.. include:: ../../includes_ctl_analytics/includes_ctl_analytics_preflight_check.rst
+
 reconfigure
 =====================================================
 .. include:: ../../includes_ctl_analytics/includes_ctl_analytics_reconfigure.rst
