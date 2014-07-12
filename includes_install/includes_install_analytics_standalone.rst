@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 In a standalone configuration, the |chef analytics| deployment is on a different machine from |chef server oec|. This allows
-you to scale |chef analytics| independantly from |chef server oec|.
+you to scale |chef analytics| independently from |chef server oec|.
 
 To set up |chef analytics| in a standalone configuration,  you should have an existing |chef server oec| deployment already running.
 
