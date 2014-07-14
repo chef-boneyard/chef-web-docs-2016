@@ -48,3 +48,11 @@ Examples
 **Create a Dockerfile**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
+
+**Local Mode**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_local_mode.rst
+
+**Server Mode**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_server_mode.rst
