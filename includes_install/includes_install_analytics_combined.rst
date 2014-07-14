@@ -7,7 +7,7 @@
 To set up the |chef analytics| server for a |combined| deployment:
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system
-#. Enable your |chef server oec| deployment to publish to |chef actions| by adding the following line to /etc/opscode/private-chef.rb
+#. Enable your |chef server oec| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/private-chef.rb``:
 
    .. code-block:: bash
 
@@ -25,7 +25,7 @@ To set up the |chef analytics| server for a |combined| deployment:
 
       $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
 
-#. Configure the |chef analytics| server by setting the analytics_fqdn in /etc/opscode-analytics/opscode-analytics.rb.
+#. Configure the |chef analytics| server by setting the analytics_fqdn in ``/etc/opscode-analytics/opscode-analytics.rb``.
    This is the FQDN for the |chef analytics| web application, and must be different from the api_fqdn set for |chef server oec|. For example:
 
    .. code-block:: bash
