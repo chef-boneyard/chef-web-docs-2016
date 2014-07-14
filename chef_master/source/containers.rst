@@ -11,8 +11,12 @@
 |chef container|
 =====================================================
 .. include:: ../../includes_containers/includes_containers_chef_container.rst
-   
-|chef| for Docker
+
+Securing Credentials
+-----------------------------------------------------
+The best practice for securing credentials like private keys, secrets, and certificates in container images. To support this best practice, |knife container| by default deletes these files upon the completion of the image build. The process for mounting or otherwise making these files available to the |chef client| varies, depending on the solution being used for containers.
+
+|chef| for |docker|
 =====================================================
 .. include:: ../../includes_containers/includes_containers_docker.rst
 
@@ -22,6 +26,16 @@
 
 .. image:: ../../images/containers_docker_chef.png
 
+Credential Management
+-----------------------------------------------------
+Credentials such as private keys, secrets, and certificates should not be kept in |docker| images. By default, secure credentials are deleted after the ``knife container docker build`` process is completed. In order for the resulting image to launch properly, the secure credentials must be mounted into the ``/etc/chef/secure`` directory. Credentials must be copied into a folder on the host machine, and then mounted into the container using the ``-v`` flag of the ``docker run`` command: https://docs.docker.com/reference/commandline/cli/#run.
+
+For example, if all secure credentials are located in the ``/etc/chef-container/secure`` directory on the |docker| host, run the following command:
+
+.. code-block:: bash
+
+   $$ docker run -d -v /etc/chef-container/secure:/etc/chef/secure:ro NAMESPACE/IMAGE
+   
 |dockerfile|
 -----------------------------------------------------
 .. include:: ../../includes_containers/includes_containers_docker_dockerfile.rst
