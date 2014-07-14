@@ -1,12 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-In a standalone configuration, the |chef analytics| deployment is on a different machine from |chef server oec|. This allows
-you to scale |chef analytics| independantly from |chef server oec|.
-
-To set up |chef analytics| in a standalone configuration,  you should have an existing |chef server oec| deployment already running.
-
-First run the following steps on your |chef server oec| instances:
+In a standalone configuration, the |chef analytics| deployment is on a different machine from |chef server oec|. This allows you to scale |chef analytics| independantly from |chef server oec|. To set up |chef analytics| in a standalone configuration,  you should have an existing |chef server oec| deployment already running. First run the following steps on your |chef server oec| instances:
 
 #. Enable your |chef server oec| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/private-chef.rb``:
 
@@ -14,8 +9,7 @@ First run the following steps on your |chef server oec| instances:
 
       dark_launch['actions'] = true
 
-#. Enable remote access to |rabbitmq| on the |chef server oec| backend machine by adding the following line to ``/etc/opscode/private-chef.rb``,
-   where ``BACKEND_VIP`` is the VIP for the |chef server oec| backend.
+#. Enable remote access to |rabbitmq| on the |chef server oec| backend machine by adding the following line to ``/etc/opscode/private-chef.rb``, where ``BACKEND_VIP`` is the VIP for the |chef server oec| backend:
 
    .. code-block:: bash
 
@@ -59,7 +53,7 @@ Now run the following steps on your |chef analytics| standalone instance:
 
       $ opscode-analytics-ctl preflight-check
 
-  If there are any errors in the preflight check, correct them before carrying on to the next step.
+   If there are any errors in the preflight check, correct them before carrying on to the next step.
 
 #. Reconfigure the |chef analytics| server on the |chef analytics| machine:
 
