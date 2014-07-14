@@ -12,7 +12,7 @@ A sample |client rb| file that contains all possible settings (listed alphabetic
    checksum_path "/var/chef/checksums"
    chef_repo_path "/path/to/chef-repo"
    chef_server_url "http://localhost:4000"
-   chef_zero[:enabled]true
+   chef_zero.enabled true
    chef_zero[:port] 8889
    client_key "/etc/chef/client.pem"
    client_registration_retries 5

@@ -17,7 +17,7 @@ This configuration file has the following settings:
      - |checksum_path|
    * - ``chef_server_url``
      - |chef_server_url|
-   * - ``chef_zero[:enabled]``
+   * - ``chef_zero.enabled``
      - |chef_zero_enabled| Default value: ``false``.
    * - ``chef_zero[:port]``
      - |chef_zero_port| Default value: ``8889``.
