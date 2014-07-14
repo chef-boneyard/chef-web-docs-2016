@@ -38,7 +38,7 @@ Now run the following steps on your |chef analytics| standalone instance:
 
       $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
 
-#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server oec| machine to the standalone |chef analytics| machine
+#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server oec| machine to the standalone |chef analytics| machine.
 
 #. Configure the |chef analytics| server by setting the ``analytics_fqdn`` in ``/etc/opscode-analytics/opscode-analytics.rb``. This is the |fqdn| for the |chef analytics| web application. For example:
 

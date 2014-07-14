@@ -1,8 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-.. note :: The combined configuration places |chef server oec| and |chef analytics| on a single machine for testing purposes.
-  This configuration should not be used in production scenarios.
+.. note:: The combined configuration places |chef server oec| and |chef analytics| on a single machine for testing purposes. This configuration should not be used in production scenarios.
 
 To set up the |chef analytics| server for a |combined| deployment:
 
@@ -25,8 +24,7 @@ To set up the |chef analytics| server for a |combined| deployment:
 
       $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
 
-#. Configure the |chef analytics| server by setting the analytics_fqdn in ``/etc/opscode-analytics/opscode-analytics.rb``.
-   This is the FQDN for the |chef analytics| web application, and must be different from the api_fqdn set for |chef server oec|. For example:
+#. Configure the |chef analytics| server by setting the analytics_fqdn in ``/etc/opscode-analytics/opscode-analytics.rb``. This is the FQDN for the |chef analytics| web application, and must be different from the api_fqdn set for |chef server oec|. For example:
 
    .. code-block:: bash
 
