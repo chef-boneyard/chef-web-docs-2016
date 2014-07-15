@@ -21,6 +21,7 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 * **Generate the public/private key pair on a node** The ``local_key_generation`` setting has been added to the |client rb| file. When ``true``, key pairs will be generated on the node and the public key will be sent to the |chef server|.
 * **knife cookbook test and .chefignore files** The ``knife cookbook test`` command will respect the settings in a |chefignore| file.
 * **knife bootstrap -V -V** The |subcommand knife bootstrap| command can set the initial |chef client| run to be logged at the debug level.
+* **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute with the |resource template| and |resource file| resources to ensure that sensitive data is not logged by the |chef client|.
 
 |ohai 7|
 -----------------------------------------------------
@@ -150,6 +151,11 @@ New settings have been added to the |client rb| file:
 
    * - Setting
      - Description
+   * - ``local_key_generation``
+     - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. For example:
+       ::
+ 
+          local_key_generation false
    * - ``ssl_verify_mode``
      - |ssl_verify_mode|
        
@@ -199,9 +205,9 @@ New options have been added to the |chef client|:
    |runlist_items|
 
 
-|client rb| Settings
+New Resource Attribute
 -----------------------------------------------------
-New settings have been added to the |client rb| file:
+A new common resource attribute has been added:
 
 .. list-table::
    :widths: 200 300
@@ -209,11 +215,8 @@ New settings have been added to the |client rb| file:
 
    * - Setting
      - Description
-   * - ``local_key_generation``
-     - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. For example:
-       ::
- 
-          local_key_generation false
+   * - ``sensitive``
+     - |sensitive| Default value: ``false``. This setting only applies to the |resource file| and |resource template| resources.
 
 Disable |ohai| plugins
 -----------------------------------------------------
