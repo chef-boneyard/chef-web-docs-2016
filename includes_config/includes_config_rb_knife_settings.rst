@@ -16,7 +16,7 @@ This configuration file has the following settings:
  
           chef_server_url "http://localhost:4000"
    * - ``chef_zero.enabled``
-     - |chef_zero_enabled| Default value: ``false``. For example:
+     - |chef_zero_enabled| This setting requires ``local_mode`` to be set to ``true``. Default value: ``false``. For example:
        ::
  
           chef_zero.enabled true

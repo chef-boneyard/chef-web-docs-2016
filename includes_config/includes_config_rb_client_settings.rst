@@ -20,7 +20,7 @@ This configuration file has the following settings:
    * - ``chef_server_url``
      - |chef_server_url|
    * - ``chef_zero.enabled``
-     - |chef_zero_enabled| Default value: ``false``.
+     - |chef_zero_enabled| This setting requires ``local_mode`` to be set to ``true``. Default value: ``false``.
    * - ``chef_zero[:port]``
      - |chef_zero_port| Default value: ``8889``.
    * - ``client_key``
