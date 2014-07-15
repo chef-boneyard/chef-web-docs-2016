@@ -10,15 +10,13 @@ About Resources
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common.rst
 
-The |chef client| includes many built-in resources that handle just about any sutuation, but three of these resources are an essential part of any |chef| workflow: |resource package|, |resource template|, and |resource service|. This is because many configuration management tasks involve getting a package to a node, unpacking it, configuring it, and then starting it.
+The |chef client| includes many built-in resources that handle just about any sutuation. Three of these resources are an essential part of any |chef| workflow: |resource package|, |resource template|, and |resource service|. Use the |resource package| resource to install a package, the |resource template| resource to generate a file on the node that applies configuration settings for that package, and then use the |resource service| resource to start (or restart) the service associated with that package. This is a combination of resources that you will use often with |chef|.
 
-Use the |resource package| resource to install a package, then use the |resource template| resource to generate a file on the node that applies configuration settings for that package, and then use the |resource service| resource to start (or restart) the service associated with that package.
-
-That's all you need to know about resources for the moment. Let's install |chef|, configure your workstation, and configure |kitchen| to run virtual instances locally on that workstation. Then we'll revisit these resources and use them along with |kitchen| to converge |ntp| in a virtual instance managed by |kitchen|.
+The next step is to install |chef|, configure your workstation, and then configure |kitchen| to run virtual instances locally on that workstation. After that is finished, we'll revisit the |resource package|, |resource template|, and |resource service| resources and use them with |kitchen| to converge |ntp| into a virtual instance that is spun up and managed by |kitchen|.
 
 Workstation Setup
 =====================================================
-The |chef dk| is a package that contains everything you need to start using |chef|, along with a collection of tools and libaries that can help manage the code you are using to run your business.
+The |chef dk| is a package that contains everything you need to start using |chef|, along with a collection of tools and libaries that can help improve the code you are using to run your business.
 
 Install the |chef dk|
 -----------------------------------------------------
