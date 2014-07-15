@@ -4,7 +4,7 @@ Community Contributions
 
 We are glad you want to contribute to Chef! Here's how:
 
-#. Sign the `individual contributor licensing agreement <https://secure.echosign.com/public/hostedForm?formid=PJIF5694K6L>`_ or `corporate contributor license agreement <https://secure.echosign.com/public/hostedForm?formid=PIE6C7AX856>`_; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.opscode.com/community_contributions.html#the-obvious-fix-rule>`_
+#. Review the `Become a contributor <https://supermarket.getchef.com/become-a-contributor>`_ page on |supermarket| and follow the steps described there for signing the contributor license agreement; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.opscode.com/community_contributions.html#the-obvious-fix-rule>`_
 #. Create a |github| pull request
 #. Do a `code review <https://github.com/opscode/chef/blob/master/CONTRIBUTING.md#cr>`_ with the |company_name| team and/or core committers on the pull request
 
