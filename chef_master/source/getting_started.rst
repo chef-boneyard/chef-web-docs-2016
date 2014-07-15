@@ -10,7 +10,7 @@ About Resources
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common.rst
 
-The |chef client| includes many built-in resources that handle just about any sutuation. Three of these resources are an essential part of any |chef| workflow: |resource package|, |resource template|, and |resource service|. Use the |resource package| resource to install a package, the |resource template| resource to generate a file on the node that applies configuration settings for that package, and then use the |resource service| resource to start (or restart) the service associated with that package. This is a combination of resources that you will use often with |chef|.
+The |chef client| includes many built-in resources that handle just about any situation. Three of these resources are an essential part of any |chef| workflow: |resource package|, |resource template|, and |resource service|. Use the |resource package| resource to install a package, the |resource template| resource to generate a file on the node that applies configuration settings for that package, and then use the |resource service| resource to start (or restart) the service associated with that package. This is a combination of resources that you will use often with |chef|.
 
 The next step is to install |chef|, configure your workstation, and then configure |kitchen| to run virtual instances locally on that workstation. After that is finished, we'll revisit the |resource package|, |resource template|, and |resource service| resources and use them with |kitchen| to converge |ntp| into a virtual instance that is spun up and managed by |kitchen|.
 
