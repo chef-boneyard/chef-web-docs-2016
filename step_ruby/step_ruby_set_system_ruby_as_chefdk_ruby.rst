@@ -15,7 +15,7 @@ For many users of |chef|, the |chef dk| the version of |ruby| that is included i
    
       $ export PATH="/opt/chefdk/embedded/bin:${HOME}/.chefdk/gem/ruby/2.1.0/bin:$PATH"
 
-   or if the version of the |chef dk| you are running has the ``chef shell_init`` command:
+   or if the version of the |chef dk| you are running has the ``chef shell-init`` command:
 
    .. code-block:: ruby
    

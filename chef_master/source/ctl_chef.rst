@@ -4,6 +4,22 @@
 
 .. include:: ../../includes_ctl_chef/includes_ctl_chef.rst
 
+chef exec
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_exec.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_exec_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_exec_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
 chef gem
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_gem.rst
@@ -299,6 +315,22 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_template_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+chef shell-init
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_shell_init.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_shell_init_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_shell_init_options.rst
 
 Examples
 -----------------------------------------------------
