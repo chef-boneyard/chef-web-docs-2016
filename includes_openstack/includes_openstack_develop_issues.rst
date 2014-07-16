@@ -2,32 +2,38 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Bugs found in cookbooks are tracked and managed using |launchpad|:
+Bugs that are found in cookbooks should be tracked and managed using |launchpad|.
 
 * View the main project: https://launchpad.net/openstack-chef
 * View the list of open bugs: https://bugs.launchpad.net/openstack-chef
 * File a new bug: https://bugs.launchpad.net/openstack-chef/+filebug
 
-There are some nice to have guidelines for filing a new bug:
+Use these guidelines when filing a bug:
 
-* Summary: Should look something like ``[cookbook] short description of the issue`` where [cookbook] is the effected short name of the cookbook, and the short description is a one sentence description of the issue.
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
 
-* Further information:
-  - If adding an attribute, where in the base OpenStack code that attribute can be found, what configuration file and section it goes into, and changes to the default value for chef.
-  - if fixing a converge exception, snip-it of log that contains the exception
-  - if adding functionality, a brief example of a real world use case
-  - if something platform specific, please note that and any platform ref link that might help explain why it needed.
-  - if fixing logic, a good before and after flow
-  - if added driver or mechanism support, ref links would be nice
-  - if fixing spec tests, general summary
-  - if bumping gem or cookbook versions, please explain why it needed.
+   * - Setting
+     - Description
+   * - Summary
+     - A bug summary should be similar to ``[cookbook] short description of the issue`` where ``[cookbook]`` is the short name of the cookbook, and the short description is a one sentence description of the issue.
+   * - Status
+     - This setting should be left alone and remain ``New`` until someone has triaged the issue.
+   * - Importance
+     - Optional. This setting should only be modified when an issue is a blocker or a gating issue. In those situations, please set ``Importance`` to ``High``. Only use ``Critical`` for serious bugs, such as those that could take down entire infrastructures.
+   * - Tags
+     - Optional. Use tags to help group an issue. Tags should be high level and may be auto-completed.
 
-** Extra options **
+Also:
 
-* Tags: Can help us group the issue, they should be higher level, and there is a selection that can be auto completed.
+* When adding an attribute, please specify the code location in which the base |openstack| attribute can be found, the configuration file, the section it goes into, and any changes to the default value for |chef|
+* When fixing a converge exception, please provide the log information that contains the exception
+* When adding functionality, please provide a brief example of a real world use case
+* When an issue is platform-specific, please note that and provide any platform reference links that help explain why it's needed
+* When fixing logic, please provide a good before/after description of the logic changes
+* When adding driver or mechanism support, please provide reference links for the driver and/or mechanism
+* When fixing unit or integration tests, please provide a general summary
+* When bumping |rubygems| or cookbook versions, please explain why it needed
 
-* Status: Please leave this alone, it should be New till someone triages the issue.
-
-* Importance: Should only be touched if it is a Blocker/Gating issue. If it is, please set to High, and only use Critical if you have found a bug that can take down whole infrastructures.
-
-Issues with the |subcommand knife openstack| plugin are tracked using the |company_name| github issue tracking system: https://github.com/opscode/knife-openstack/issues
+Issues with the |subcommand knife openstack| plugin are tracked using the |company_name| github issue tracking system: https://github.com/opscode/knife-openstack/issues.
