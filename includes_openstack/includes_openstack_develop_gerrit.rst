@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|gerritt| is leveraged to do the code review located https://review.openstack.org/.
+|gerrit| is leveraged to do the code review located https://review.openstack.org/.
 
 * If you would like to pull down all the repositories to start playing around with them, https://gist.github.com/jjasghar/ef5410192f053ebdb6c0O
 * You do need to `create an account <https://login.launchpad.net/QSVcvczkg2PH7pM0/+new_account>`_ here to get |gerritt| to recognize you
