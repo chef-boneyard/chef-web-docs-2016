@@ -29,7 +29,7 @@ The |resource dsc_resource| resource allows any |windows powershell_dsc| resourc
    * - ``WindowsFeature``
      - Use to add or remove |windows| features and roles.
    * - ``Script``
-     - Use to run |powershell| script blocks.
+     - Use to run |windows powershell| script blocks.
    * - ``Service``
      - Use to manage services.
    * - ``User``
