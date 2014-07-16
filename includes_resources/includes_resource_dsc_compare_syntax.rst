@@ -47,5 +47,3 @@ and how that same resource would be authored in a |chef| recipe:
    end
 
 
-   The example above translates DSC's Archive to the dsc_archive Chef resource in the recipe, and the properties in the DSC resource are translated into valid attributes of the dsc_archive resource. From a DSC standpoint, the Chef fragment above is analogous to the DSC fragment below:
-

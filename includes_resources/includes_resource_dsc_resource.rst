@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |resource dsc_resource| resource allows any |windows powershell dsc| resource to be used in a |chef| recipe, including the following `built-in resources <http://technet.microsoft.com/en-us/library/dn249921.aspx>`_:
+The |resource dsc_resource| resource allows any |windows powershell_dsc| resource to be used in a |chef| recipe, including the following `built-in resources <http://technet.microsoft.com/en-us/library/dn249921.aspx>`_:
 
 .. list-table::
    :widths: 80 420

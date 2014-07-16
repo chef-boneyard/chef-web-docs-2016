@@ -16,7 +16,7 @@ where
 
 * ``dsc_resource`` tells the |chef client| use a |windows powershell_dsc| resource
 * ``:dsc_resource_name`` is the name of the |windows powershell_dsc| resource
-* ``property`` is zero (or more) properties in the |windows powershell dsc| resource, where each property is entered on a separate line, ``:dsc_resource_property`` is the case-insensitive name of that property, and ``"value"`` is the value to be applied by the |chef client|
+* ``property`` is zero (or more) properties in the |windows powershell_dsc| resource, where each property is entered on a separate line, ``:dsc_resource_property`` is the case-insensitive name of that property, and ``"value"`` is the value to be applied by the |chef client|
 
 The following shows a |windows powershell_dsc| ``Archive`` resource:
 
