@@ -16,7 +16,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
       rabbitmq['vip'] = 'BACKEND_VIP'
       rabbitmq['node_ip_address'] = '0.0.0.0'
 
-   .. note:: ``rabbitmq['node_ip_address']`` should either be an IP address, or a hostname. If it is a hostname it should be resolvable either via DNS or ``/etc/hosts``.
+   .. note:: ``rabbitmq['vip']`` should either be an IP address, or a hostname. If it is a hostname it should be resolvable either via DNS or ``/etc/hosts``.
 
 #. Reconfigure the |chef server oec| server on |chef server oec| machines:
 
