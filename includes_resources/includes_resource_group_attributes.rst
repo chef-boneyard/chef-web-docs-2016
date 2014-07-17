@@ -18,7 +18,7 @@
    * - ``group_name``
      - |name group| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``members``
-     - |members_group|
+     - |members_group| When more than one group member is identified, the list of members should be an array: ``members ['user1', 'user2'].``
    * - ``non_unique``
      - |non_unique_members| Default value: ``false``.
    * - ``provider``
