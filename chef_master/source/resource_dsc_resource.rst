@@ -4,17 +4,17 @@ dsc_resource
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_dsc.rst
+.. include:: ../../includes_resources/includes_resource_dsc_common_overview.rst
 
 .. include:: ../../includes_resources/includes_resource_dsc_resource.rst
+
+.. note:: |windows powershell| 4.0 is required for using the |resource dsc_resource| resource with |chef|.
 
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_dsc_resource_syntax.rst
 
-Compare |chef| and DSC
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_dsc_compare_syntax.rst
+.. include:: ../../includes_resources/includes_resource_dsc_common_compare_syntax.rst
 
 Attributes
 =====================================================

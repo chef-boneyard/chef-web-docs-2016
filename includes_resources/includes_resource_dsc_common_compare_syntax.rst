@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following examples show the differences between |windows powershell_dsc| resources and |chef| resources. For |windows powershell_dsc|:
+The following example shows the differences between |windows powershell_dsc_short| resources and |chef| resources. For |windows powershell_dsc|:
 
 .. code-block:: powershell
 
@@ -21,7 +21,7 @@ and for |chef|:
      property :name, "Web-Server"
    end
    
-The following examples show the difference between using the |windows powershell_dsc| ``Archive`` resource:
+The following example shows the difference between using the |windows powershell_dsc_short| ``Archive`` resource in |windows powershell| and in |chef|. First, |windows powershell|:
 
 .. code-block:: powershell
 
@@ -35,7 +35,7 @@ The following examples show the difference between using the |windows powershell
      }
    }
 
-and how that same resource would be authored in a |chef| recipe:
+and then in a |chef| recipe:
 
 .. code-block:: ruby
 

@@ -14,11 +14,11 @@ The syntax for using the |resource dsc_mof| resource in a recipe is as follows:
 
 where 
 
-* ``dsc_mof`` tells the |chef client| that a |windows powershell_dsc| resource is based on a |windows powershell_mof| schema file
-* ``:mof_resource_name`` is the name of the |windows powershell_dsc| resource, as defined by the |windows powershell_mof| schema file
-* ``property`` is zero (or more) properties in the |windows powershell_dsc| resource, where each property is entered on a separate line, ``:mof_resource_property`` is the case-insensitive name of that property, and ``"value"`` is the value to be applied by the |chef client|
+* ``dsc_mof`` tells the |chef client| that a |windows powershell_dsc_short| resource is based on a |windows powershell_mof| schema file
+* ``:mof_resource_name`` is the name of the |windows powershell_dsc_short| resource, as defined by the |windows powershell_mof| schema file
+* ``property`` is zero (or more) properties in the |windows powershell_dsc_short| resource, where each property is entered on a separate line, ``:mof_resource_property`` is the case-insensitive name of that property, and ``"value"`` is the value to be applied by the |chef client|
 
-The following shows a |windows powershell_dsc| resource that is built using a |windows powershell_mof| schema file:
+The following shows a |windows powershell_dsc_short| resource that is built using a |windows powershell_mof| schema file:
 
 .. code-block:: powershell
 

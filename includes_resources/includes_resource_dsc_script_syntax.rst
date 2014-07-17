@@ -11,6 +11,6 @@ The syntax for using the |resource dsc_script| resource in a recipe is as follow
 
 where 
 
-* ``dsc_script`` tells the |chef client| that a |windows powershell_dsc| resource is based on a |windows powershell| script
+* ``dsc_script`` tells the |chef client| that a |windows powershell_dsc_short| resource is based on a |windows powershell| script
 
-# need to add the syntax for the script itself
+.. need to add the syntax for the script itself

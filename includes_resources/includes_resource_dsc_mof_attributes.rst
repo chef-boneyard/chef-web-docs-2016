@@ -12,5 +12,5 @@
    * - ``property``
      - |property dsc_resource| Format: ``property :dsc_property_name, "value"``.
    * - ``resource_name``
-     - |name powershell_dsc_resource|
+     - |name powershell_mof_resource|
 
