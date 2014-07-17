@@ -16,8 +16,6 @@ Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_dsc_resource_syntax.rst
 
-.. include:: ../../includes_resources/includes_resource_dsc_common_compare_syntax.rst
-
 Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_dsc_resource_attributes.rst
