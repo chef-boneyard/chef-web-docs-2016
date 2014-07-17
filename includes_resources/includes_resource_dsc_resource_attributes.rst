@@ -12,7 +12,7 @@
    * - ``property``
      - |property dsc_resource| Format: ``property :dsc_property_name, "value"``.
    * - ``resource_name``
-     - |name powershell_dsc_resource| This value is case-insensitive.
+     - |name powershell_dsc_resource| This value is case-insensitive and must be a symbol that matches the name of the |windows powershell_dsc_short| resource.
 
        For built-in |windows powershell_dsc_short| resources, possible values: ``:archive`` (to `unpack archive (.zip) files <http://technet.microsoft.com/en-us/library/dn249917.aspx>`_), ``:environment`` (to `manage system environment variables <http://technet.microsoft.com/en-us/library/dn282121.aspx>`_), ``:file`` (to `manage files and directories <http://technet.microsoft.com/en-us/library/dn282129.aspx>`_), ``:group`` (to `manage local groups <http://technet.microsoft.com/en-us/library/dn282124.aspx>`_), ``:log`` (to `log configuration messages <http://technet.microsoft.com/en-us/library/dn282117.aspx>`_), ``:package`` (to `install and manage packages <http://technet.microsoft.com/en-us/library/dn282132.aspx>`_), ``:registry`` (to `manage registry keys and registry key values <http://technet.microsoft.com/en-us/library/dn282133.aspx>`_), ``:script`` (to `run Powershell script blocks <http://technet.microsoft.com/en-us/library/dn282130.aspx>`_), ``:service`` (to `manage services <http://technet.microsoft.com/en-us/library/dn282120.aspx>`_), ``:user`` (to `manage local user accounts <http://technet.microsoft.com/en-us/library/dn282118.aspx>`_), ``:windowsfeature`` (to `add or remove Windows features and roles <http://technet.microsoft.com/en-us/library/dn282127.aspx>`_), and ``:windowsprocess`` (to `configure Windows processes <http://technet.microsoft.com/en-us/library/dn282123.aspx>`_).
 
