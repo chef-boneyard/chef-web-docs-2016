@@ -2,7 +2,7 @@
 dsc_resource
 =====================================================
 
-.. warning:: This page discusses functionality that is available for preview via the https://github.com/opscode-cookbooks/dsc cookbook. This functionality adds the ability to use Powershell DSC resources in Chef and is planned to be included in a future update of the chef-client. For now, please download the cookbook and try this new feature out. Please provide feedback about this resource to that cookbook repository.
+.. warning:: This page discusses functionality that is available for preview via the https://github.com/opscode-cookbooks/dsc cookbook. This functionality adds the ability to use Powershell DSC resources in Chef and is planned to be included in a future update of the chef-client. Watch the video of a recent Chef meetup where Chef's Adam Edwards and Microsoft's Jeffrey Snover discussed this new feature: https://www.youtube.com/watch?v=mXaAIawzNic.
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
