@@ -15,3 +15,7 @@ Architecture
 Data Tracking
 -----------------------------------------------------
 .. include:: ../../includes_actions/includes_actions_tracked_data.rst
+
+User Interface
+=====================================================
+.. include:: ../../includes_actions/includes_actions_ui.rst
