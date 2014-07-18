@@ -12,3 +12,4 @@ The |chef actions| user interface allows you to:
 * Correlate calls from a single client invocation. Group all the items that happened during a single client (e.g. |chef client|, |knife|) invocation.
 * Browse actions for after-the-fact investigation. A persistent log can be saved on demand for auditing purposes or for analyzing information after an event has occurred. All messages are immutable. Non-modifiable messages are delivered reliably to the actions database. They can be used as a trusted source of data about changes to your infrastructure.
 
+.. image:: ../../images/actions_log_ui.png
