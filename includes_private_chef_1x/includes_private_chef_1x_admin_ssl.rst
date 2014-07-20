@@ -1,9 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Configuration of |chef private| SSL using certificate authority-verified certificates is done by placing the 
-certificate and private key file obtained from your certifying authority in the correct files after the
-initial configuration of |chef private|.
+Configuration of |chef private| SSL using certificate authority-verified certificates is done by placing the certificate and private key file obtained from your certifying authority in the correct files after the initial configuration of |chef private|.
 
 Initial configuration of |chef private| is done automatically using a |company_name| self-signed certificate to create the certificate and private key files for |nginx|.
 
