@@ -53,4 +53,6 @@ The following documentation sets are available:
    * - Enterprise Chef Server
      - `Home Page <http://docs.opscode.com/enterprise/>`__
      - 
-
+   * - Private Chef Server
+     - `Home Page <http://docs.opscode.com/release/private_chef/>`__
+     - 
