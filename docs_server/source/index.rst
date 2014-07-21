@@ -1,26 +1,25 @@
 =====================================================
-|chef private| 1.4.x
+Chef Server
 =====================================================
 
-.. warning:: This documentation is about |chef private|. For documentation about the newly-released |chef server oec|, see http://docs.opscode.com/enterprise/.
+The |chef server| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 
-**Engagement:** :doc:`How Consulting Works </private_chef_1x_engage_how_consulting_works>` | :doc:`Pre-Installation Steps </private_chef_1x_engage_preinstall>` | :doc:`Onsite Installation </private_chef_1x_engage_onsite>` | :doc:`Acceptance </private_chef_1x_engage_acceptance>`
-
-**Architecture:** :doc:`Standalone </private_chef_1x_architecture_standalone>` | :doc:`Tiered </private_chef_1x_architecture_tiered>` | :doc:`High Availability </private_chef_1x_architecture_ha>` | :doc:`Modifications </private_chef_1x_architecture_modifications>`
-
-**Installation:** :doc:`Prerequisites </private_chef_1x_install_prerequisites>` | :doc:`Standalone </private_chef_1x_install_standalone>` | :doc:`Tiered </private_chef_1x_install_tiered>` | :doc:`High Availability </private_chef_1x_install_ha>` | :doc:`Create Users </private_chef_1x_install_create_users>` | :doc:`Create Organization </private_chef_1x_install_create_organization>` | :doc:`AD / LDAP </private_chef_1x_install_ad_ldap>`
-
-**Admin:** :doc:`Configure </private_chef_1x_admin_configure>` | :doc:`Upgrade </private_chef_1x_admin_upgrade>` | :doc:`High Availability </private_chef_1x_admin_ha>` | :doc:`Logs </private_chef_1x_admin_logs>` | :doc:`AD / LDAP </private_chef_1x_admin_ad_ldap>` | :doc:`User Management </private_chef_1x_admin_user_management>` | :doc:`SSL Configuration </private_chef_1x_admin_ssl>` | :doc:`orgmapper </private_chef_1x_admin_orgmapper>` | :doc:`private-chef-ctl </private_chef_1x_admin_private_chef_ctl>`
-
-Contact |company_name| :doc:`Support </private_chef_1x_support>` for additional questions.
-
-.. note:: Unless otherwise stated, all the commands in the documentation for |chef private| should be run as root, either directly or via the ``sudo`` command.
+.. note:: This content is in the process of being re-structured. See http://docs.opscode.com/open_source/ for the Open Source Chef server and http://docs.opscode.com/enterprise/ for the Enterprise Chef server.
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
 .. toctree::
    :hidden:
 
+   api_chef_server
+   config_rb_chef_server
+   config_rb_manage
+   ctl_private_chef
+   ctl_reporting
+   install_manage
+   install_reporting
+   install_server
+   manage
    private_chef_1x
    private_chef_1x_engage
    private_chef_1x_engage_acceptance
@@ -51,8 +50,26 @@ Contact |company_name| :doc:`Support </private_chef_1x_support>` for additional 
    private_chef_1x_admin_upgrade
    private_chef_1x_admin_user_management
    private_chef_1x_support
-
-
-
-
+   reporting
+   backup_restore
+   components
+   data
+   firewalls_and_ports
+   high_availability
+   ldap
+   logs
+   manage_clients
+   manage_cookbooks
+   manage_data_bags
+   manage_environments
+   manage_nodes
+   manage_reports
+   manage_roles
+   monitor
+   orgs
+   overview
+   security
+   services
+   tuning
+   users
 
