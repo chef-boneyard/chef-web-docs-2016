@@ -2,18 +2,4 @@
 Standalone
 =====================================================
 
-.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
-
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone.rst
-
-Hosts
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_hosts.rst
-
-Backup
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_backup.rst
-
-Scaling
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_scaling.rst
+.. warning:: This topic is about an older version of the |chef server| and has been moved to http://docs.opscode.com/release/private_chef/private_chef_1x_architecture_standalone.html. For documentation about the current version of the |chef server| see http://docs.opscode.com/server/.

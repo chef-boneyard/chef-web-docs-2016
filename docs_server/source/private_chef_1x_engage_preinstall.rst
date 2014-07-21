@@ -2,30 +2,4 @@
 Pre-installation Steps
 =====================================================
 
-.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
-
-This section details what needs to be done before your consultants arrive on-site to install and configure |chef private|.
-
-Questionnaire
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_questions.rst
-
-Requirements
-=====================================================
-A |chef private| deployment has some important requirements that should be identified before the actual deployment begins.
-
-Server and Network
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_server_and_network.rst
-
-Installation
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_install.rst
-
-SSL
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_ssl.rst
-
-Review
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_review.rst
+.. warning:: This topic is about an older version of the |chef server| and has been moved to http://docs.opscode.com/release/private_chef/private_chef_1x_engage_preinstall.html. For documentation about the current version of the |chef server| see http://docs.opscode.com/server/.

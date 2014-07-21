@@ -2,22 +2,4 @@
 Active Directory / LDAP
 =====================================================
 
-.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
-
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_adldap.rst
-
-Login when AD / LDAP Enabled
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_adldap_login_enabled.rst
-
-First-time Login
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_adldap_login_first_time.rst
-
-Accessing Chef
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_adldap_enable_then_access.rst
-
-Accessing when AD/LDAP is down
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_adldap_access_when_down.rst
+.. warning:: This topic is about an older version of the |chef server| and has been moved to http://docs.opscode.com/release/private_chef/private_chef_1x_admin_ad_ldap.html. For documentation about the current version of the |chef server| see http://docs.opscode.com/server/.

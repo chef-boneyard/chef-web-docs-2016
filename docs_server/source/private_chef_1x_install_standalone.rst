@@ -2,30 +2,4 @@
 Standalone
 =====================================================
 
-.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
-
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone.rst
-
-System Requirements
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_requirements_system.rst
-
-Firewall Requirements
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_requirements_firewall.rst
-
-Add Package to Server
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_put_package_on_server.rst
-
-Install the Package
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_install_package.rst
-
-Configure
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_configure.rst
-
-Success!
-=====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_success.rst
+.. warning:: This topic is about an older version of the |chef server| and has been moved to http://docs.opscode.com/release/private_chef/private_chef_1x_install_standalone.html. For documentation about the current version of the |chef server| see http://docs.opscode.com/server/.
