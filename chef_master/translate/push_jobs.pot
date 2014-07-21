@@ -1,0 +1,1021 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-21 13:50-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/push_jobs.rst:8
+# 28ede8c1ce384b56bda3ee34a2163362
+msgid "|push jobs|"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs.rst:5
+#: ../../includes_push_jobs/includes_push_jobs.rst:5
+# 0b0ed0a98f76465fb089d45ab1900a23
+# 718df6ec88954150827162213b75d503
+msgid "|push jobs| is an add-on to |chef server oec| that allows jobs to be run against nodes independently of a |chef client| run. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is run are determined by the results of a search query made to the |chef server|."
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs.rst:7
+#: ../../includes_push_jobs/includes_push_jobs.rst:7
+# dd585e66361a45bc84a157adc1f43329
+# dadd8a9c6b6c4c95b48e4d8f25dd941c
+msgid "|push jobs| is an extension of the |api chef server| and uses a |ruby| client to initiate all connections to the |chef server|. Connections use the same authentication and authorization model as any other request made to the |chef server|. A |knife| plugin is used to initiate job creation and job tracking."
+msgstr ""
+
+#: ../source/push_jobs.rst:12
+# 1554a5a7b23b41b58d421c2a28823417
+msgid "|push jobs| is an add-on feature for on-premise installations of the |chef server oec| server only."
+msgstr ""
+
+#: ../source/push_jobs.rst:14
+# 47e83e4f62bf4cbd93368558c178933c
+msgid ":doc:`Install Push Jobs </install_push_jobs>` using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes."
+msgstr ""
+
+#: ../source/push_jobs.rst:17
+# 2b84b2a521cb4393a2332d8902d68677
+msgid "Requirements"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:5
+# 473355585e884c52923408dc07859160
+msgid "|push jobs| has the following requirements:"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:7
+# 7c1d613e51194d25b93b827744db05ac
+msgid "|chef server oec| version 11.0.1 (or later)"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:8
+# 08a59a8de87f43bdaefefe22493da4f9
+msgid "To use the |cookbook push jobs| cookbook to configure the |push jobs| client, the |chef client| must also be present on the node (because only the |chef client| can use a cookbook to configure a node)"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:9
+# 1c19254d89484d79a6a27361b7381e4e
+msgid "TCP protocol ports 10000-10003 must be open. This allows the |push jobs| clients to communicate with the |push jobs| server. In a configuration with both front and back ends, these ports only need to be open on the back end servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client)."
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:11
+# 4008b86c9fe94e83aad0bc4a51d2ab3c
+msgid "The |push jobs| client can run on the following platforms:"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:13
+# a157551d74044356af3a3bf6ca0fbe98
+msgid "|ubuntu| 10.04, 10.10, 12.04, and 12.10"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:14
+# 6690e390eb114b1f8066078e61d29317
+msgid "|centos| 5 and 6"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_requirements.rst:15
+# 1404da19d7b54c91a20e6fe241e4bc94
+msgid "|windows|"
+msgstr ""
+
+#: ../source/push_jobs.rst:20
+# 7d0f51d631764dcba5a9e05982ac3c0a
+msgid "|push jobs| is only available when running |chef server oec| version 11.0.1 (or higher). (If |chef server oec| version 11.0.0 was installed on new machines that were not upgraded from an earlier version of |chef private|, these machines must be upgraded to |chef server oec| version 11.0.1 using the same steps as the :doc:`high availability </upgrade_server_ha>` or :doc:`standalone </upgrade_server_standalone>` configurations, but using the ``private-chef-ctl reconfigure`` command in place of all instances of the ``private-chef-ctl upgrade`` command.)"
+msgstr ""
+
+#: ../source/push_jobs.rst:23
+# 2f16ed55782c4ee08a034bedb6dd49ba
+msgid "Components"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component.rst:5
+# aa1f7b87737f42c298e78c3d15d4609e
+msgid "|push jobs| has three main components: jobs (managed by the |push jobs| server), a client that is installed on every node in the organization, and one (or more) workstations from which job messages are initiated."
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component.rst:7
+# c223b0c90aa642989a1cdf70ad3310b2
+msgid "All communication between these components is done with the following:"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component.rst:9
+# 651c5d85b04b47139b25e80bb338256a
+msgid "A heartbeat message between the |push jobs| server and each managed node"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component.rst:10
+# c07275488767460283dd5274dbba84e3
+msgid "A |knife| plugin named |subcommand knife push jobs| with four subcommands: ``job list``, ``job start``, ``job status``, and ``node status``"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component.rst:11
+# 3226feb843ea4631a986bf84f6ed4963
+msgid "Various job messages sent from a workstation to the |push jobs| server"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component.rst:12
+# e8ae5f90ca3948a78fcea26ea5576fd6
+msgid "A single job message that is sent (per job) from the |push jobs| server to one (or more) nodes that are being managed by an |chef server oec| server"
+msgstr ""
+
+#: ../source/push_jobs.rst:26
+# a114944707c8440dae57d47cfd5aa47c
+msgid "The following diagram shows the various components of |push jobs|:"
+msgstr ""
+
+#: ../source/push_jobs.rst:32
+# 620da8c1089f496f94a562240197d5ff
+msgid "Jobs"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component_jobs.rst:5
+# da4b2672efdc4992b32c86c944f4f0fe
+msgid "The |push jobs| server is used to send job messages to one (or more) managed nodes and also to manage the list of jobs that are available to be run against nodes."
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component_jobs.rst:7
+# fb8a55dce6d14408b751038b932fe77e
+msgid "A heartbeat message is used to let all of the nodes in an organization that the |push jobs| server is available. The |push jobs| server listens for heartbeat messages from each |push jobs| client. If there is no heartbeat from a |push jobs| client, the |push jobs| server will mark that node as unavailable for job messages until the heartbeat resumes."
+msgstr ""
+
+#: ../source/push_jobs.rst:36
+# 894a26169da644d5aaa80e5151f72876
+msgid "Nodes"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component_nodes.rst:5
+# 3c544426c52d4cda8b6896c0a7a9c635
+msgid "The |push jobs| client is used to receive job messages from the |push jobs| server and to verify the heartbeat status. The |push jobs| client uses the same authorization / authentication model as the |chef client|. The |push jobs| client listens for heartbeat messages from the |push jobs| server. If there is no heartbeat from the |push jobs| server, the |push jobs| client will finish its current job, but then stop accepting any new jobs until the heartbeat from the |push jobs| server resumes."
+msgstr ""
+
+#: ../source/push_jobs.rst:40
+# 4b8e723ddf444f29859cb3cc1619f88d
+msgid "Workstations"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_component_workstations.rst:5
+# 89ead6913a0f428d8f375f5a7f8b3bef
+msgid "A workstation is used to manage |push jobs| jobs, including maintaining the |cookbook push jobs| cookbook, using |knife| to start and stop jobs, view job status, and to manage job lists."
+msgstr ""
+
+#: ../source/push_jobs.rst:45
+# ffc27683363348b2900693693a0bbb0e
+msgid "|cookbook push jobs| Cookbook"
+msgstr ""
+
+#: ../source/push_jobs.rst:46
+# 9f05b5c45bf24260bc131ce7f4c3c7a0
+msgid "The |cookbook push jobs| cookbook contains attributes that are used to configure the |push jobs| client. In addition, |push jobs| relies on the ``whitelist`` attribute to manage the list of jobs (and commands) that are available to |push jobs|."
+msgstr ""
+
+#: ../source/push_jobs.rst:49
+# 8f3dd15b815c4f289858b93ebdf161c2
+msgid "Whitelist"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_whitelist.rst:5
+# ddea9e8d516d43fc8dcb449bc4a66795
+msgid "A whitelist is a list of jobs and commands that are used by |push jobs|. A whitelist is saved as an attribute in the |cookbook push jobs| cookbook. For example:"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_whitelist.rst:13
+# a08bb40470994feb82ead141f2463b36
+msgid "The whitelist is accessed from a recipe using the ``node['push_jobs']['whitelist]`` attribute. For example:"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_whitelist.rst:23
+# e72310716f29485ab83fdd0a7909b806
+msgid "Use the |subcommand knife exec| subcommand to add a job to the whitelist. For example:"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs_whitelist.rst:31
+# 0bf15f86b69a426aac386362d05ddcb1
+msgid "where ``[\"ntpdate\"] = \"ntpdate -u time\"`` is added to the whitelist:"
+msgstr ""
+
+#: ../source/push_jobs.rst:68
+# 956c33f310994080850274a3a7b8bb28
+msgid "Reference"
+msgstr ""
+
+#: ../source/push_jobs.rst:69
+# af16355ada0541bca7e43a6c1badda7d
+msgid "The following sections describe the |knife| subcommands, the |api push jobs|, and configuration settings used by |push jobs|."
+msgstr ""
+
+#: ../source/push_jobs.rst:73
+# 35d20843a40b4ce692ef2986d709f7d4
+msgid "|subcommand knife push jobs|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs.rst:6
+# 1a64e91ac6a942acbdb6a381c2b2b4be
+msgid "The |subcommand knife push jobs| subcommand is used by |push jobs| to start jobs, view job status, view job lists, and view node status."
+msgstr ""
+
+#: ../source/push_jobs.rst:76
+# 64aa85473f684f88be86f72e8c7c0d41
+msgid "Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins."
+msgstr ""
+
+#: ../source/push_jobs.rst:83
+# 81c8dc6a1ccd4503b89a0ffd3873fef9
+msgid "job list"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_list.rst:6
+# 4d9abd21c6084ad883064b6eeef54619
+msgid "The ``job list`` argument is used to view a list of |push jobs| jobs."
+msgstr ""
+
+#: ../source/push_jobs.rst:87
+#: ../source/push_jobs.rst:99
+#: ../source/push_jobs.rst:125
+#: ../source/push_jobs.rst:143
+# 8fa5bdf470a7474b81814328c80afa32
+# 306aef7df5404998ab9291fd499aa116
+# fce2772a660c4df19b13042e38ec090a
+# d41e3bb238ce4059b801a5db0e8cb55b
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_list_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_start_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_status_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_node_status_syntax.rst:6
+# aa3e16907db8425396920c38eafac6ef
+# d821f606c16c4c919beb200d409f014c
+# 25e54fd8d2964c63a507f7489b36605c
+# a39866ab78584a19978adfe2d37b7b10
+msgid "This argument has the following syntax:"
+msgstr ""
+
+#: ../source/push_jobs.rst:91
+#: ../source/push_jobs.rst:103
+#: ../source/push_jobs.rst:129
+#: ../source/push_jobs.rst:147
+#: ../source/push_jobs.rst:211
+# a1876dce6b04454396a49868a9072ae0
+# c9292c7b126f4c1abe1eeed55700c11c
+# 8fff97c1053a4b24a41299e2aa2db961
+# 1f46c3952ee24033b9a23211f52554b4
+# e5d47b39f0644deca411c25800a968c5
+msgid "Options"
+msgstr ""
+
+#: ../source/push_jobs.rst:92
+#: ../source/push_jobs.rst:130
+#: ../source/push_jobs.rst:148
+# 48adc1ce8e0c42e2aab504bac9b23dde
+# edb21be055b943a4b97997b9d9faf5c0
+# 6728af53f9814ac6b63bf903f5b8a604
+msgid "|no_options|"
+msgstr ""
+
+#: ../source/push_jobs.rst:95
+# f42ea56ea3d44ee1a6f8a3ec3ab4b907
+msgid "job start"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_start.rst:6
+# 36361a81872b4106b1b1d0b6ca65535e
+msgid "The ``job start`` argument is used to start a |push jobs| job."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_start_options.rst:6
+# 2accaa53ba6e4b3fb78bae939b47960b
+msgid "This argument has the following options:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_start_options.rst:9
+# 3b391d5f8c52456ea8305a01e45a0710
+msgid "``--timeout TIMEOUT``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_start_options.rst:9
+# 7d3d6597be1745539869c0c0d1625e83
+msgid "|timeout push jobs|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_start_options.rst:13
+# 421a39722ed04ed4b846355d36004d6b
+msgid "``-q QUORUM``, ``--quorum QUORUM``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_start_options.rst:12
+# 9974e08394b54ae4904208e889e4fb7d
+msgid "|quorum push jobs| Default value: ``100%``"
+msgstr ""
+
+#: ../source/push_jobs.rst:107
+#: ../source/push_jobs.rst:133
+# b6fbedf6414446aebdf472e1ca3f72c1
+# 3c300f5562134e82b309b36a50af86c4
+msgid "Examples"
+msgstr ""
+
+#: ../source/push_jobs.rst:108
+# aef36e075f414dc6af15dd76ec0e985d
+msgid "**Run a job**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_start_run_job.rst:3
+# 6cec8773d3ea4a3fbfc1935c02d41fab
+msgid "To run a job named ``add-glasses`` against a node named ``ricardosalazar``, run the following command:"
+msgstr ""
+
+#: ../source/push_jobs.rst:112
+# 984c603b875b46cfbfcbcea3e87742c6
+msgid "**Run a job using quorum percentage**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_start_search_by_quorum.rst:3
+# 89410e862bcb4edebfa93ca3dbaa146a
+msgid "To search for nodes assigned the role \"webapp\", and where 90% of those nodes must be available, run the following command:"
+msgstr ""
+
+#: ../source/push_jobs.rst:116
+# cdf07d7c6e1f4af096d3bbceaf7bc486
+msgid "**Run a job using node names**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_start_search_by_nodes.rst:3
+# 8121077defa84ce3aeb8e584734670da
+msgid "To search for a specific set of nodes (named ``chico``, ``harpo``, ``groucho``, ``gummo``, ``zeppo``), and where 90% of those nodes must be available, run the following command:"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_start_search_by_nodes.rst:9
+#: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_status_by_id.rst:9
+# 0c6ada673a52426eb187be1f31a70bf2
+# 5212e90205104d34b82a120c2dc4a2e3
+msgid "to return something similar to:"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_start_search_by_nodes.rst:26
+# 7f9455c0a0dd47ada27d7471917a7ffe
+msgid "If quorum had been set at 80% (``--quorum 80%``), then quorum would have passed with the previous example."
+msgstr ""
+
+#: ../source/push_jobs.rst:121
+# b91a594af01d4e489c3d6e8f39b678d7
+msgid "job status"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_status.rst:6
+# 8015fe888af64b0ca57f0ff23124affe
+msgid "The ``job status`` argument is used to view the status of |push jobs| jobs. Each job is always in one of the following states: ``new``, ``voting``, ``running``, ``complete``, ``quorum_failed``, ``crashed``, ``aborted``, or ``timed_out``."
+msgstr ""
+
+#: ../source/push_jobs.rst:134
+# 48c6aa41f3184f20a611ac7dac4a82ad
+msgid "**View job status by job identifier**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_status_by_id.rst:3
+# 1cb2ccb85d254b68b7bbb8fc8d37dacf
+msgid "To view the status of a job that has the identifier of \"235\", run the following command:"
+msgstr ""
+
+#: ../source/push_jobs.rst:139
+# 2467f3699a234894b17bce7c9651ccc7
+msgid "node status"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_node_status.rst:6
+# 8ca0bebfb03f47acadbdb523e57d3218
+msgid "The ``node status`` argument is used to identify nodes that |push jobs| may interact with. Each node is always in one of the following states: ``new``, ``ready``, ``running``, ``succeeded``, ``failed``, ``aborted``, ``unavailable``, ``nacked``, ``crashed``, ``was_ready``, or ``timed_out``."
+msgstr ""
+
+#: ../source/push_jobs.rst:153
+# b37e0735048c49639b8d17fa77ca06b1
+msgid "|api push jobs|"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs.rst:5
+# 4cde8763e34c4eb3848905e3530abd17
+msgid "The |api push jobs| is used to create jobs and retrieve status using |push jobs|, a tool that pushes jobs against a set of nodes in the organization. All requests are signed using the |api chef server| and the validation key on the workstation from which the requests are made. All commands are sent to the |chef server| using the |subcommand knife exec| subcommand."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint.rst:5
+# d885214cd9ae4af2a5917792bdf19b96
+msgid "Each authentication request must include ``/organizations/organization_name/pushy/`` as part of the name for the endpoint. For example: ``/organizations/organization_name/pushy/jobs/ID`` or ``/organizations/organization_name/pushy/node_states``."
+msgstr ""
+
+#: ../source/push_jobs.rst:159
+# 1258d0e3bac5417f88984115fcaa9ccb
+msgid "connect/NODE_NAME"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name.rst:5
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name.rst:5
+# 4a6af735d2b94732aed3b1744dc7be28
+# 021677e766074c06b2aab779c5acc92c
+msgid "The ``/organizations/ORG_NAME/pushy/node_states/NODE_NAME`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../source/push_jobs.rst:163
+#: ../source/push_jobs.rst:171
+#: ../source/push_jobs.rst:183
+#: ../source/push_jobs.rst:191
+#: ../source/push_jobs.rst:199
+# 7384be8527ca46a7a026de6340a8746c
+# 4f088a220b0448fca54d11b95b05db6b
+# 8aa36d7ca84b465d8ff5b0529059f9ad
+# e81341e01f9244969fcf551226eadc9f
+# 41f09c7af079409db87cf8c9d411563c
+msgid "GET"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:4
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:4
+# cc3ac2da6d084b3186ac0db180c8185d
+# 95b22afc5beb40c3ad1ad44e11b7faec
+msgid "The ``GET`` method is used to get the status (``up`` or ``down``) for an individual node."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:6
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:6
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:6
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:11
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:6
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:6
+# e7a442cd779148bcabe39d2533ff36f0
+# 2bacd9e503b14f0f975bec14aa8f81d6
+# 06f8f7607a5a49dab80a8db3568c5050
+# 986c8f9701ef4e65b0f640d8f5b18a45
+# ded921bada38424c9c0fc64c4533b06d
+# 41ee650e9a9a46438a386bc2dfc1be5d
+msgid "This method has no parameters."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:8
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:8
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:8
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:13
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:56
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:8
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:8
+# dd004230b4c0432ab57fe83737533619
+# d2fa20ac8c7e443db1dc49f306944b79
+# 3cff8f8b457b481da5f67a66b483fb21
+# 3ea29ceab65d4db59bca13b7536ec1ce
+# 266fde8af94c4e9aa8c03a319f3c8b3c
+# 8dd952bfc2764b8393dabbac8a83ecf6
+# 5862d61ea9e54424baa75f96fb494bcc
+msgid "**Request**"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:14
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:14
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:24
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:29
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:62
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:14
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:14
+# 2100ddb4556741049bf3185ab1b832ff
+# 9e796c91f526485287bc5bb9f8167337
+# 7b92882f84b3450e8793c68ecc728ec8
+# d45c0a370c2446cda33d214dfeda98d0
+# a0ca1aa79ce2412ba9a2be1d0cc6fabc
+# 6d3a7afe87cc48f9ae457e1f26b0ebe1
+# 2b9e1fb8e91440debfe6d1f0c2011eb2
+msgid "**Response**"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:16
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:16
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:26
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:31
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:64
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:16
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:16
+# 48a23c11b8ea4bc4b2c33805a0a059fe
+# 093fcdc23edc4d35af8ddd1006a1d659
+# 5ef4730b5b8b423291ecc6f8065c56e6
+# 891fa27805fd460f9235502dd07b0920
+# 970d0b3e39514b599737de1375b94a23
+# 95618737e97d45c0a1baac006e513e0d
+# 873dfd7a0c464de48c0dc59ccd0952df
+msgid "The response will return something similar to:"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:26
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:26
+# bd5cdffe2fdf44768a3ac51cabcf389a
+# e63e60bf74294a768435591a3c61ba07
+msgid "where ``updated_at`` shows the date and time at which a node's status last changed."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:32
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:29
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:38
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:43
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:92
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:44
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:32
+# eb62520b324f4d84a62a84775cd15f4d
+# 722310fd49ff4d7084d95740d73f3a8f
+# e5226d37ffdb44c5a30f725988b491b1
+# 4a8c7b54f7994d6a8c127ec4b129c308
+# f6137f2c6e4c4c9086a0d3636b2a7189
+# 7bb8cd32ddba4d88b7df1b6519330331
+# e4d688001b1f4ed5a70582a7cfa9e4ba
+msgid "Response Code"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:33
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:30
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:39
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:44
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:93
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:45
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:33
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:11
+# d40cb35425e9493dad1ccfd08aafdfba
+# d2da5e6f86114c25ae03c26877d0e255
+# 89e61391eb874da8b23d0041f6efb899
+# 34d62b4d19764cb7be8c3024521f2e8b
+# f71da0b87e1a49f5b593c7a79a0eea58
+# 4232c93aab0a40c287a42a403050c009
+# 0e8c63ac14524b6b813818a22c150ea3
+# 0d20bb97ef844ca7a3190a3f313b8097
+msgid "Description"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:34
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:31
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:94
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:46
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:34
+# 8031190c6f2f420c8f2777fa794d27b3
+# 3aed11bb04e549b8b232db07fdaa7aa2
+# f2ea41f2d1054c1797ae94896b5dd899
+# 07af0c82b9d04536a4c6b515f0992bb6
+# ef2dd26091b347619e398c795a204e77
+msgid "``200``"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:35
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:32
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:95
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:47
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:35
+# 7f53e40ee6bb4b188ee3214d6bc5e7b3
+# 9baaee823efa4991b4b6aeb7d427b5e0
+# 286a9c75f4b14a55848b7f8f07e2a23d
+# 97d9d95e79d74dbeb4da7f80faaab5bb
+# bdbb91d002e346e8b7e4a134486bbca6
+msgid "|response code 200 ok|"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:36
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:33
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:42
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:47
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:96
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:48
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:36
+# d168813e5e9a43169d97535e6b1f7ce1
+# 3be3ecbc42be4afb9dee92f3b51db192
+# e08141c5208c4f65adef92be8ef829b9
+# bb014485fbc34012ae42bc483cdf518e
+# 2f8b1974c69943aaa678dabf02a1dda8
+# 8c08da4adf09459b9afbee7796c304ba
+# fe37705bb0c54785ba3b4358d243ef67
+msgid "``400``"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:37
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:34
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:43
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:48
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:97
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:49
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:37
+# 1637a4db5e3241358f895809e47f9054
+# ab05368e57304d7bb98753e7a33c18cc
+# d26cea5926fd49d4b033151e2a23ea6e
+# fb0794877ce249e4b149dc7d826baced
+# b7814879171d448f9c1e587c761a19f8
+# 9d367c0b4f864b6e85d182b17dea5bac
+# 628e23a4ce244594ad29237c6549e593
+msgid "|response code 400 bad request|"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:38
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:35
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:44
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:49
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:98
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:50
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:38
+# fcb28c0a0a194c049baf1bf26f1183ba
+# df2f1bef9983438ca276aec4231e169c
+# f6baf99947474db4ac7cc05fc548081b
+# c80938fb7eeb42d1ad5bd22b7d6a14e7
+# 4ae1d5c0bd16486a92a7bec491b4dd75
+# 360a6f942bde4e2da605dee085b1b18f
+# 02f5173d00644378bb433603145f9b16
+msgid "``401``"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:39
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:36
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:45
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:50
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:99
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:51
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:39
+# 8fcd1c1f33824e82ae22bd117682d2d6
+# 6d170ed0d9c24655b3ffb1be62299e2e
+# dba8eb6153c34ce88f2b454bec50b78a
+# ed10cbeb69974c7788d36c66cc395367
+# 4e1a8f9616654f88bb46f9914d54365e
+# bdd1f44006734917b73e14c4392e287b
+# 7f6bb8db9698448d8c246bd8c359d76b
+msgid "|response code 401 unauthorized|"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:40
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:37
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:46
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:51
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:100
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:52
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:40
+# 8a99d239a7c64c4b8bbc7f6466f6b658
+# 7d1f9d22d8854b25ab89125591e0a875
+# aff5be00b1f04a53a7b8a8b22f1005ad
+# 005d529ea12543e198432653d0cdfeb0
+# 85cc6bac723d48339e0216102bc7f59e
+# fbac320d777a43719867b15606d4fcb4
+# 90b51007edcf447cbca3ea2d3b738e9f
+msgid "``403``"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:41
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:38
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:47
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:52
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:101
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:53
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:41
+# fc973e26ae7e41f8a4504a7ee8ccd09e
+# 7fd66e204d324a4ab13897bcc71c0a0f
+# c31de76af73846d2983b4d523f141a8a
+# 1ca19af8264544ffa4e03fa49af02ddc
+# 32a48573120f48c2addd52afd884287a
+# 17eb3f3dd877407f8d687a4285c48f3a
+# 361374b88c8845b68968f3aaa22da954
+msgid "|response code 403 forbidden|"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:42
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:39
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:48
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:53
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:102
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:54
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:42
+# 912c606234054ea9a23998c6dde263b0
+# bb479542d7ef4aefa7282002e6818e34
+# 3d7df34d179b46fd9f9f25708ed788a4
+# 59a03afc17e2471aa64679bd05d6016a
+# 23fdc7abba0446a6840d589bda7f88ce
+# 33711127f0a24f51be7b8c53660f1fd0
+# d083cb8dbb894ede9cbaa099793c0031
+msgid "``404``"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:43
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:40
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:49
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:54
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:103
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:55
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_name_get.rst:43
+# 46645ddb648f43cb95a86561b2f12804
+# 638eba46376b44b2bcb3c7bf6651317a
+# 34150a16b8d44f99bc09f304ae7f1b1b
+# b21804b82ce346a5b0021bb1aef7b24a
+# 82d8b822b1ca4e0c9d8e5e9022d154c8
+# c8c79a0c50284837a5748a3260cdf063
+# 2745406a898045038a23c4777d54de02
+msgid "|response code 404 not found|"
+msgstr ""
+
+#: ../source/push_jobs.rst:167
+# ce90c6c7b02847e6816355effbc896c0
+msgid "jobs"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs.rst:4
+# 7044c8c688cb478290b70c8bc08cc0e7
+msgid "The ``/organizations/ORG_NAME/pushy/jobs`` endpoint has the following methods: ``GET`` and ``POST``."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_get.rst:4
+# 8b884b0da9b142bab7fe7ed64525c532
+msgid "The ``GET`` method is used to get a list of jobs."
+msgstr ""
+
+#: ../source/push_jobs.rst:175
+# 2049b09998594d6fbb9da1b89a63f354
+msgid "POST"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:4
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:9
+# 33bb1b2cc14c428bb692758192484fa2
+# 995d8aa313a74b7eaf3b21cd62430480
+msgid "The ``POST`` method is used to start a job."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:14
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:19
+# 99a2fcf125654f8da874d9e9bb3b7c5f
+# 1ecd95bb1e124e268a48409be2810533
+msgid "with a request body that looks something like:"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:40
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:45
+# 8af0dfaff2874d668d71c4e070510438
+# 6b182f6c91c9421986012a5e9658e7f9
+msgid "``201``"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_post.rst:41
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:46
+# 633295adf33e4e3da7fc99afab217726
+# 59f27c25119b49a190be28ff8bdc0410
+msgid "|response code 201 created|"
+msgstr ""
+
+#: ../source/push_jobs.rst:179
+# 4e1bd1fbef644a479c57c0b7eedf2a27
+msgid "jobs/ID"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id.rst:4
+# d7b7303fd4e14cdd8143e09374b64213
+msgid "The ``/organizations/ORG_NAME/pushy/jobs/ID`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:4
+# 1de1ac55d6274dbfae6d868771646c4e
+msgid "The ``GET`` method is used to get the status of an individual job, including node state (running, complete, crashed)."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:6
+# b89d3c5c2e9142cc9238cd76e4c3830f
+msgid "This method has no parameters... The contents of this file are included in multiple topics. .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:82
+# b1709d92525942afb0ecd94e298837ad
+msgid "where:"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:84
+# 5d0a04ca53254feba5ccc6584e9129cf
+msgid "``nodes`` is one of the following: ``aborted`` (node ran command, stopped before completion), ``complete`` (node ran command to completion), ``crashed`` (node went down after command started running), ``nacked`` (node was busy), ``new`` (node has not accepted or rejected command), ``ready`` (node has accepted command, command has not started running), ``running`` (node has accepted command, command is running), and ``unavailable`` (node went down before command started)."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:85
+# ada804a1a76e4ef3bf8c2b39e475fab5
+msgid "``status`` is one of the following: ``aborted`` (the job was aborted), ``complete`` (the job completed; see ``nodes`` for individual node status), ``quorum_failed`` (the command was not run on any nodes), ``running`` (the command is running), ``timed_out`` (the command timed out), and ``voting`` (waiting for nodes; quorum not yet met)."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_jobs_id_get.rst:86
+# 45c3cf37668b4db99c39716f7d1d0896
+msgid "``updated_at`` is the date and time at which the job entered its present ``status``"
+msgstr ""
+
+#: ../source/push_jobs.rst:187
+# 02a4708ffc0c46b5849ed8fd0b41c187
+msgid "node_states"
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states.rst:4
+# 1a6bc64c64824be6b5d10c5375b4fb23
+msgid "The ``/organizations/ORG_NAME/pushy/node_states`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:4
+# c39086a0b35b42d8a6f46df900fc6532
+msgid "The ``GET`` method is used to get a list of nodes and their status (``up`` or ``down``)."
+msgstr ""
+
+#: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint_node_states_get.rst:38
+# ae9cb1b037014dfc918ff9da9c556fc5
+msgid "The following values are possible: ``up`` or ``down``."
+msgstr ""
+
+#: ../source/push_jobs.rst:195
+# 51bece5781ca40438a04dc643cea24e6
+msgid "node_states/NODE_NAME"
+msgstr ""
+
+#: ../source/push_jobs.rst:205
+# e3f51d2561394927907f6084077401c9
+msgid "|push jobs client|"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client.rst:4
+# c32c9e0c1bc8469da61676067a7cd166
+msgid "The |push jobs| executable can be run as a command-line tool."
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:6
+# 51cdec1ed6134b308c7de84efc075c01
+msgid "This command has the following syntax::"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:10
+# 9e54813d86cd4912a777a5131eb97423
+msgid "This command has the following options:"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:13
+# e859a7794d76462f9d93b33036f1a7dc
+msgid "``-c CONFIG``, ``--config CONFIG``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:13
+# a93279946a69434f86925a5cb0ecdcc6
+msgid "|config chef-client| This is the same configuration file used by |push jobs|. Default value: ``Chef::Config.platform_specific_path(\"/etc/chef/client.rb\")``."
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:16
+# 72abd9445f4546f38cb2aa21f881ab23
+msgid "``-h``, ``--help``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:16
+# 2eed6c03be6b4abb95558bd176a7c31b
+msgid "|help subcommand|"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:19
+# 3a5fdfd0f1e44a3f94696bdf9f5b4bf3
+msgid "``-k KEY_FILE``, ``--client-key KEY_FILE``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:19
+# f9c8468563ab4f569aac4e4bad56b14b
+msgid "|client_key|"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:22
+# a2c98848da954814a5f8cd486478ce08
+msgid "``-l LEVEL``, ``--log_level LEVEL``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:22
+# 5babc07cee1f48e09e10b2635bce9c9e
+msgid "|log_level|"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:25
+# 902de92903f54a15a1e5dd50a1123124
+msgid "``-L LOCATION``, ``--logfile LOCATION``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:25
+# b6db6d8703124674b8f9a2a57d234927
+msgid "|log_location| This is recommended when starting any executable as a daemon."
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:28
+# 65c7860b61104034a852f2cba0b403ad
+msgid "``-N NODE_NAME``, ``--node-name NODE_NAME``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:28
+# 6d8b330e0b7f40de9ae4da8e9c4bda92
+msgid "|name node|"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:31
+# 2d99f8eee7c0495c8b252a8f1e50e796
+msgid "``-S URL``, ``--server URL``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:31
+# 5362a9c80df7482298080392db80b966
+msgid "|chef_server_url|"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:41
+# 663cca1cc727494bbb4ec9bc429f11dd
+msgid "``-v``, ``--version``"
+msgstr ""
+
+#: ../../includes_ctl_push_jobs_client/includes_ctl_push_jobs_client_options.rst:34
+# aab0d7c675c744c7b8eb4280dcd6a207
+msgid "|version push jobs|"
+msgstr ""
+
+#: ../source/push_jobs.rst:217
+# 9510f7f22bfc4ebc9416f1a85d81d25d
+msgid "|push_jobs_server rb|"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server.rst:4
+# 27fc1cde4c264b8b896adacba8c763cf
+msgid "A |push_jobs_server rb| file is used to specify the configuration settings used by the |push jobs| server."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server.rst:6
+# 8167e9f830854206881e72f74a1ebe69
+msgid "This file is the default configuration file and is located at: ``/etc/opscode-push-jobs-server``."
+msgstr ""
+
+#: ../source/push_jobs.rst:221
+# 58adfc8af5164cee95e370201400894a
+msgid "Settings"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:4
+# d5b3cb44c3e84f43af7ca413c9fb7ddb
+msgid "This configuration file has the following settings:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:10
+# 95ae34f435714a78ad5b9178baffe72a
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:12
+# 5b9398eee0ec46f391d6d0f817859e56
+msgid "``api_port``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:13
+# ee633452c6fd43a49baac36587c25857
+msgid "The port used by the |api push jobs|. Default: 10003"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:14
+# 12153b9e53fb48768a63853fcfff6845
+msgid "``command_port``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:15
+# b0307c92fcb14105aa6ded8cc17d43f4
+msgid "The port on which a |push jobs| server listens for requests that are to be executed on managed nodes. Default: 10002"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:16
+# f92b504a132247bb9fd3fcc239dd3653
+msgid "``heartbeat_interval``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:17
+# 3bce74e11d5d49369aa75f523d5a521e
+msgid "The frequency of the |push jobs| server heartbeat message. Default: 1000 (seconds)"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:18
+# 514bd03a08dd48ef8921582be41a2f86
+msgid "``server_heartbeat_port``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:19
+# 6c8e96810451482b97b2740d9e705857
+msgid "The port on which the |push jobs| server receives heartbeat messages from each |push jobs| client. (This port is the ``ROUTER`` half of the |zeromq| DEALER / ROUTER pattern.) Default: 10000"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:20
+# 0c73a6b8338c4137b0c17643ea9f0f39
+msgid "``server_name``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:21
+# 3f01be6dd22e4b6ca015854e74e8800b
+msgid "The name of the |push jobs| server."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:22
+# bdcc263ff65a4da590b1572e31d28803
+msgid "``zeromq_listen_address``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_push_jobs_server_settings.rst:23
+# 468edb258d694107b706361512aac7d2
+msgid "The IP address used by |zeromq|. Default: tcp://*"
+msgstr ""
+

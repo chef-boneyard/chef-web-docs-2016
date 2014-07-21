@@ -1,0 +1,663 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-21 13:50-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_chef_handler.rst:8
+# 483fce2d3bb44032b39b99eaf2265497
+msgid "chef_handler"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_generic.rst:5
+# 113817f29208489c8534b753ccc9e324
+msgid "A `resource <http://docs.opscode.com/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler.rst:4
+# 03780ab8ecea42958beacba8747d978a
+msgid "Use the |lwrp chef handler| resource to enable handlers during a |chef client| run. The resource allows arguments to be passed to the |chef client|, which then applies the conditions defined by the custom handler to the node attribute data collected during the |chef client| run, and then processes the handler based on that data."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler.rst:6
+# 7f61a35ee4564055929a296866e5caeb
+msgid "The |lwrp chef handler| resource is typically defined early in a node's run-list (often being the first item). This ensures that all of the handlers will be available for the entire |chef client| run."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler.rst:8
+# e6532464e6164cccbc9bf468f31eb5c3
+msgid "The |lwrp chef handler| resource is included with the |cookbook chef_handler| cookbook. This cookbook defines the the resource itself and also provides the location in which the |chef client| looks for custom handlers. All custom handlers should be added to the ``files/default/handlers`` directory in the |cookbook chef_handler| cookbook."
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:15
+# cb0d9db7d7d94be0bbbca3284970ca0d
+msgid "Handler Types"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:4
+# c71aed8b430c4ebf9ba18f30e292d2d1
+msgid "There are three types of handlers:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:10
+# 380205a5bd26433abad7c72b7bd33aea
+msgid "Handler"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:11
+#: ../../includes_resources/includes_resource_chef_handler_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:11
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:12
+# 4f18152700b24f05909e09ed7ca820e2
+# 515e75f38f2f4fb883f904222dab3b43
+# ea0c423ed2004fc18fdc1a06dc24c80d
+# d8b8c03888664242860d77965cddaf31
+msgid "Description"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:12
+# e085e0074e1c4e07a8a4e03bddd450ec
+msgid "exception"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:13
+# 7ca448b7fa244ca6b7c2c5e85e7fa173
+msgid "An exception handler is used to identify situations that have caused a |chef client| run to fail. An exception handler can be loaded at the start of a |chef client| run by adding a recipe that contains the ``chef_handler`` resource to a node's run-list. An exception handler runs when the ``failed?`` property for the ``run_status`` object returns ``true``."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:14
+# cb216ea8ad08439896745788e8225522
+msgid "report"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:15
+# 77491826e384450ca276f4188800a6c7
+msgid "A report handler is used when a |chef client| run succeeds and reports back on certain details about that |chef client| run. A report handler can be loaded at the start of a |chef client| run by adding a recipe that contains the ``chef_handler`` resource to a node's run-list. A report handler runs when the ``success?`` property for the ``run_status`` object returns ``true``."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:16
+# ba604c84f7164e77948fb24d42087afa
+msgid "start"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_types.rst:17
+# 5e0976f2950548f9bb169d37b1022213
+msgid "A start handler is used to run events at the beginning of the |chef client| run. A start handler can be loaded at the start of a |chef client| run by adding the start handler to the ``start_handlers`` setting in the |client rb| file or by installing the |gem| that contains the start handler by using the |resource chef_gem| resource in a recipe in the |cookbook chef_client| cookbook. (A start handler may not be loaded using the ``chef_handler`` resource.)"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:19
+# 93ab0272fddf4e48b56e0f69022be780
+msgid "Exception / Report"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report.rst:5
+# c769d32a274f4bed9d68aba8cd514456
+msgid "Exception and report handlers are used to trigger certain behaviors in response to specific situations, typically identified during a |chef client| run."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report.rst:7
+# e2a3d0f64940432786471f784cac11c9
+msgid "An exception handler is used to trigger behaviors when a defined aspect of a |chef client| run fails."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report.rst:8
+# c1fd88bdb5434e0292446efed712850e
+msgid "A report handler is used to trigger behaviors when a defined aspect of a |chef client| run is successful."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report.rst:10
+# 374a08df11514295a641356a107cfa6d
+msgid "Both types of handlers can be used to gather data about a |chef client| run and can provide rich levels of data about all types of usage, which can be used later for trending and analysis across the entire organization."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report.rst:12
+# 1c5df630da8645e886a92472cd7ac5f1
+msgid "Exception and report handlers are made available to the |chef client| run in one of the following ways:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report.rst:14
+# b6bded471857417ab8e31b32622195f3
+msgid "By adding the ``chef_handler`` resource to a recipe, and then adding that recipe to the run-list for a node. (The ``chef_handler`` resource is available from the |cookbook chef_handler| cookbook.)"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report.rst:15
+# 0ad83608d3184e9eb3075885295a912b
+msgid "By adding the handler to one of the following settings in the node's client.rb file: ``exception_handlers`` and/or ``report_handlers``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report_run_from_recipe.rst:5
+# 6a9a4cd219d144efa655e38f441aa5ba
+msgid "The |lwrp chef handler| resource allows exception and report handlers to be enabled from within recipes, which can then added to the run-list for any node on which the exception or report handler should run. The |lwrp chef handler| resource is available from the |cookbook chef_handler| cookbook."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report_run_from_recipe.rst:7
+# 0875bbd07d0e4d72be03d2ac0219331f
+msgid "To use the |lwrp chef handler| resource in a recipe, add code similar to the following:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report_run_from_recipe.rst:16
+# b7dc904509d44a308336f21367021690
+msgid "For example, a handler for |growl| needs to be enabled at the beginning of the |chef client| run:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_exception_report_run_from_recipe.rst:22
+# 585fa6d7ff0841f5ab7e8ad58ffab15a
+msgid "and then is activated in a recipe by using the |lwrp chef handler| resource:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:25
+# 024ec0c5659546ffa610091d70bbc515
+msgid "Start"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_start.rst:5
+# 45e9415c97284d57ba3b86ab4167d182
+msgid "A start handler is not loaded into the |chef client| run from a recipe, but is instead listed in the |client rb| file using the ``start_handlers`` attribute. The start handler must be installed on the node and be available to the |chef client| prior to the start of the |chef client| run. Use the |cookbook chef_client| cookbook to install the start handler."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_start.rst:7
+# 98f19113cb18464b8fa3857befe86e55
+msgid "Start handlers are made available to the |chef client| run in one of the following ways:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_start.rst:9
+# 71eaf69ed1a14da68980ebf0671eac5c
+msgid "By adding a start handler to the |cookbook chef_client| cookbook, which installs the handler on the node so that it is available to the |chef client| at the start of the |chef client| run"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_start.rst:10
+# edb1d1f34507445cac5efd0e38c0a149
+msgid "By adding the handler to one of the following settings in the node's client.rb file: ``start_handlers``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_type_start_run_from_recipe.rst:5
+# 7de694118da543b98d82bae668c7a85e
+msgid "The |cookbook chef_client| cookbook can be configured to automatically install and configure gems that are required by a start handler. For example:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:31
+#: ../source/resource_chef_handler.rst:48
+# e35c753c59fe47eb99efb4cb74ec9240
+# e91ea3c50c33424792c96b65b7976654
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_syntax.rst:4
+# f0be340660bc45b1b74d1da582693c82
+msgid "The syntax for using the |lwrp chef handler| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:35
+# 95febaa474cf43efbd926f4a19a40425
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_actions.rst:4
+# 86f0216327844165b8f82b087974b77b
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_actions.rst:10
+# 94cbd7684e1c45caab30d743daf3cf52
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_actions.rst:12
+# 5c3120b15a8646dfb8427830465395cd
+msgid "``:enable``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_actions.rst:13
+# fffae8baaa56405992aea9e5d520d482
+msgid "|resource action enable chef_handler|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_actions.rst:14
+# b94310f396b54252b4435790176ab805
+msgid "``:disable``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_actions.rst:15
+# be33c81884c94c088a42b976b5f80f96
+msgid "|resource action disable chef_handler|"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:39
+# 97a1f01e4f5b481197dc6fd5f364ef50
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:4
+# ba7126fa58be463685199c85a47fdc0c
+msgid "|description resource_attributes_intro|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:10
+# ed68d4673d0b44c680618378655a7c7e
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:12
+# b5582daa90984d4da7f8e852dd032f59
+msgid "``class_name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:13
+# dfd01d61cc14469792d90b3be415f6b4
+msgid "|name class_chef_handler|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:14
+# 06ec86b983f84db698d04285081f78de
+msgid "``source``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:15
+# 38ef14c28c054f3d8dd1b4bf4c9be6a2
+msgid "|path chef_handler|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:16
+# 848d47f6e9b04fc0b87c3c1dfba265f0
+msgid "``arguments``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:17
+# c139013118734c7b959aef981e62dc72
+msgid "|arguments chef_handler| Default value: ``[]``. For example: ::"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:22
+# e47ef00cdfcd40e291831e0f5dd4e781
+msgid "or: ::"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:26
+# 3835bfaf70b04d64b17e75f219d9ef56
+msgid "``supports``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_handler_attributes.rst:27
+# e92217d47f5e42edabdeb22c8e214d76
+msgid "|supports chef_handler| Possible values: ``:exception``, ``:report``, ``:both`` (exception **and** report handlers), or ``:start``. Default value: ``{ :report => true, :exception => true }``."
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:44
+# ee10d6bc71924ca49a8d59d8d1b2ff91
+msgid "Custom Handlers"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom.rst:5
+# b4c449ab6d3a42a89b22d264bd2e104f
+msgid "A custom handler can be created to support any situation. The easiest way to build a custom handler:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom.rst:7
+# 7ab76701077e477d9bc3f7fa2e95ca9e
+msgid "Download the |cookbook chef_handler| cookbook"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom.rst:8
+# e4be751ec748484e96dc87ccb69c7b75
+msgid "Create a custom handler"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom.rst:9
+# e5a66256621544eb97f7ce0558d0c717
+msgid "Write a recipe using the |lwrp chef handler| resource"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom.rst:10
+# cd7ccf543c394f189ce968d8ed301170
+msgid "Add that recipe to a node's run-list, often as the first recipe in that run-list"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:4
+# 8bc6439b35724acab0c57eb86a5c5da6
+msgid "The syntax for a handler can vary, depending on what the the situations the handler is being asked to track, the type of handler being used, and so on. All custom exception and report handlers are defined using |ruby| and must be a subclass of the ``Chef::Handler`` class."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:18
+# 0fbdfcaede6540d1be138964408656b5
+msgid "where:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:20
+# 99299e074dfe44e3959fd963c111c085
+msgid "``require`` ensures that the logging functionality of the |chef client| is available to the handler"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:21
+# 652e7b722d2c4f40bc5b8504b0efa6dd
+msgid "``ModuleName`` is the name of the module as it exists within the ``Chef`` library"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:22
+# ec644401dcd94249ad8b9505b67ffdb0
+msgid "``HandlerName`` is the name of the handler as it is used in a recipe"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:23
+# 719fda7de3f946c68b9838e782e92513
+msgid "``report`` is an interface that is used to define the custom handler"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:25
+# 196fd74ad2be470c813136d7be8fe3b8
+msgid "For example, the following shows a custom handler that sends an email that contains the exception data when a |chef client| run fails:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_syntax.rst:50
+# eb081b505df9450a858b195be149358c
+msgid "and then is used in a recipe like:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:52
+# 95a2a00b970846b1b90d49be61420e04
+msgid "``report`` Interface"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_interface_report.rst:5
+# b406dd8e927d4c0fa5117db0972304b0
+msgid "The ``report`` interface is used to define how a handler will behave and is a required part of any custom handler. The syntax for the ``report`` interface is as follows:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_interface_report.rst:13
+# ffbc9a7d2fa540c3ab97cbd42b8c3dea
+msgid "The |ruby| code used to define a custom handler will vary significantly from handler to handler. The |chef client| includes two default handlers: ``error_report`` and ``json_file``. Their use of the ``report`` interface is shown below."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_interface_report.rst:15
+# 356fb8d5a19f496a8fc896399b738683
+msgid "The `error_report <https://github.com/opscode/chef/blob/master/lib/chef/handler/error_report.rb>`_ handler:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_interface_report.rst:33
+# d9d13fdd891d497c86b1086df5cc9b64
+msgid "The `json_file <https://github.com/opscode/chef/blob/master/lib/chef/handler/json_file.rb>`_ handler:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:56
+# 4d3e480ac59a4b718301b8c1d4c5c833
+msgid "Optional Interfaces"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:57
+# 01470f0002b148bc8ba6ad2f7230bac3
+msgid "The following interfaces may be used in a handler in the same way as the ``report`` interface to override the default handler behavior in the |chef client|. That said, the following interfaces are not typically used in a handler and, for the most part, are completely unnecessary for a handler to work properly and/or as desired."
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:60
+# c46c70b171aa46b09d5aaeb3d47c6163
+msgid "``data``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_interface_data.rst:5
+# 0ccd8073e9c8484194427df92bb0f667
+msgid "The ``data`` method is used to return the Hash representation of the ``run_status`` object. For example:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:64
+# 23fb9e19558a43838ed1722ba908af4c
+msgid "``run_report_safely``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_interface_run_report_safely.rst:5
+# 9c4d13add4ff4843886fe84c1f8dbb85
+msgid "The ``run_report_safely`` method is used to run the report handler, rescuing and logging errors that may arise as the handler runs and ensuring that all handlers get a chance to run during the |chef client| run (even if some handlers fail during that run). In general, this method should never be used as an interface in a custom handler unless this default behavior simply must be overridden."
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:68
+# 900f166271064357914a63eb75079744
+msgid "``run_report_unsafe``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_interface_run_report_unsafe.rst:5
+# 0fc6ddb1f4114e1c90199e2cb5be278d
+msgid "The ``run_report_unsafe`` method is used to run the report handler without any error handling. This method should never be used directly in any handler, except during testing of that handler. For example:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:72
+# b2a4e2ff4cc64a7ab0afbdfe86889021
+msgid "``run_status`` Object"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:5
+# c4a27655657346ae8726bc3805d95608
+msgid "The ``run_status`` object is initialized by the |chef client| before the ``report`` interface is run for any handler. The ``run_status`` object keeps track of the status of the |chef client| run and will contain some (or all) of the following properties:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:11
+# 330f7ed94af3464991bd4cbc4019c16a
+msgid "Property"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:13
+# 5385145bbd224da794fec77676af2eb9
+msgid "``all_resources``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:14
+# e94af7d67a5049ed858ad2c337a237b7
+msgid "|handler method_all_resources|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:15
+# 2aded032635c41b186e59e9d0fd85796
+msgid "``backtrace``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:16
+# 0b604c64b3914acbafe0966289e8921c
+msgid "|handler method_backtrace|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:17
+# 6bebaf4a1ded4fd096f2bbb5635c3ce1
+msgid "``elapsed_time``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:18
+# 48703fba62c746cea71435c3aa4b3232
+msgid "|handler method_elapsed_time|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:19
+# 1c1284bbd15c4108b04065b1b0ee70f6
+msgid "``end_time``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:20
+# c01e9548905448b393cd29eb8e0b9959
+msgid "|handler method_end_time|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:21
+# f408da65da8a410faa58247ff372129b
+msgid "``exception``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:22
+# 562d8ca50d284f0b87ed527eb5b8f1b5
+msgid "|handler method_exception|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:23
+# cdadb26e228d4fcaa0408141f160db27
+msgid "``failed?``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:24
+# 27410842b01541d499d046a95f4d978e
+msgid "|handler method_failed| An exception handler runs when the ``failed?`` indicator is ``true``."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:25
+# 9be506e5f1ab4763b7c4431935a31f4d
+msgid "``node``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:26
+# 4775e1e5b5a546709c8cae73295df2d6
+msgid "|handler method_node|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:27
+# 7a36dc5619f9465592528f7738dd44da
+msgid "``run_context``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:28
+# e8c0ab348a7b4c60ab56bc26bbacf129
+msgid "|handler method_run_context|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:29
+# d39a0ac4c24043f38ad6cfa99dc89391
+msgid "``start_time``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:30
+# f01b3eb410564a7295b335226f0e18f4
+msgid "|handler method_start_time|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:31
+# edfcb1e286d34d4f97454a7d9323387e
+msgid "``success?``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:32
+# 4e27dc8850b546faad9602cdc69a7ea6
+msgid "|handler method_success| A report handler runs when the ``success?`` indicator is ``true``."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:33
+# 79175f1ac85c41ad91cedba6fc5213a0
+msgid "``updated_resources``"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:34
+# 9bb88158b99e44a2b4172fae177639b2
+msgid "|handler method_updated_resources|"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_object_run_status.rst:36
+# 578531445c2a47bb9f88a00d374cf965
+msgid "These properties are not always available. For example, a start handler runs at the beginning of the |chef client| run, which means that properties like ``end_time`` and ``elapsed_time`` are still unknown and will be unavailable to the ``run_status`` object."
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:76
+# e2490c3eab2e481fb23387e6952a4af3
+msgid "Examples"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:77
+# 6131943b722d4db6840d97d937b9174b
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:79
+# 1524d363ef374c969d6c9f0165b34ec3
+msgid "**Enable the CloudkickHandler handler**"
+msgstr ""
+
+#: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst:3
+# dd7c7ebc1a7c4dfa9778d975df05e0fe
+msgid "The following example shows how to enable the ``CloudkickHandler`` handler, which adds it to the default handler path and passes the ``oauth`` key/secret to the handler's initializer:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:83
+# 970ad12ec317457493c6b84517553f28
+msgid "**Enable handlers during the compile phase**"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:87
+# eb446627780f4a37b8ed8e131cdf52e5
+msgid "**Handle only exceptions**"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:91
+# 0149991e0023482f82684140ccab407b
+msgid "**Cookbook Versions (a custom handler)**"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_cookbook_versions.rst:5
+# 50c44ad4e1d7458cac442c3dcad22e1d
+msgid "Community member ``juliandunn`` created a custom `report handler that logs all of the cookbooks and cookbook versions <https://github.com/juliandunn/cookbook_versions_handler>`_ that were used during the |chef client| run, and then reports after the run is complete. This handler requires the |lwrp chef handler| resource (which is available from the |cookbook chef_handler| cookbook)."
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:95
+# e3281558718c4180b37e85847212ab20
+msgid "cookbook_versions.rb:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_cookbook_versions_handler.rst:5
+# 277b0cce84a24020a75be575a45f1047
+msgid "The following custom handler defines how cookbooks and cookbook versions that are used during the |chef client| run will be compiled into a report using the ``Chef::Log`` class in the |chef client|:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:99
+# 2b0937cdf16c4644a7d26c2d853d3a28
+msgid "default.rb:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_cookbook_versions_recipe.rst:5
+# 7df0b9c34e52428991cd0b83aa5684dc
+msgid "The following recipe is added to the run-list for every node on which a list of cookbooks and versions will be generated as report output after every |chef client| run."
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_cookbook_versions_recipe.rst:25
+# faf1ca3e599a407cb9a4884b1941d8d2
+msgid "This recipe will generate report output similar to the following:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:103
+# 8e8c842c018049cb98c7fc3b4d478473
+msgid "**JsonFile Handler**"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_json_file.rst:5
+# 8b4615e456a24a2096042b607e9f293d
+msgid "The `json_file <https://github.com/opscode/chef/blob/master/lib/chef/handler/json_file.rb>`_ handler is available from the ``chef_handler`` cookbook and can be used with exceptions and reports. It serializes run status data to a |json| file. This handler needs to be enabled by adding the following lines of |ruby| code to either |client rb| or |solo rb|:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_json_file.rst:13
+#: ../../includes_handler/includes_handler_custom_example_error_report.rst:13
+# 4da9d66a05a34539a64575fea7b138a3
+# 40db54149db7442795365ad22746cb06
+msgid "and then is added to a recipe:"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_json_file.rst:23
+# 2c164cbd4b234977961b25f81386180a
+msgid "After it has run, the run status data can be loaded and inspected via |ruby irb|:"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:107
+# d3380f9f3e8c43e6973ad276178840ae
+msgid "**Register the JsonFile handler**"
+msgstr ""
+
+#: ../source/resource_chef_handler.rst:111
+# 56236858ed374dc0bc9ed437a4c7a59d
+msgid "**ErrorReport Handler**"
+msgstr ""
+
+#: ../../includes_handler/includes_handler_custom_example_error_report.rst:5
+# 048a08c1619342d2b66c524818051a3c
+msgid "The `error_report <https://github.com/opscode/chef/blob/master/lib/chef/handler/error_report.rb>`_ handler is built into the |chef client| and can be used for both exceptions and reports. It serializes error report data to a |json| file. This handler needs to be enabled by adding the following lines of |ruby| code to either the |client rb| file or the |solo rb| file, depending on how the |chef client| is being run:"
+msgstr ""
+

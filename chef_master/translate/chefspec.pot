@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-21 13:50-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/chefspec.rst:8
+# 7afccc4d9d524adfbe0cf1b5bd20bfdf
+msgid "|chef spec|"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec.rst:5
+# b489192b2c784df59959452c53ba5aa1
+msgid "|chef spec| is a unit testing framework that runs |chef zero| (or |chef solo|) on your local machine for the purpose of simulating the convergence of resources on a node. |chef spec| is `an extension of Rspec <https://relishapp.com/rspec/rspec-core/docs/command-line>`_, which is a behavior-driven development (BDD) framework for |ruby|."
+msgstr ""
+
+#: ../source/chefspec.rst:12
+# 5246434d0f124956a0de59d3224ef8df
+msgid "This topic details functionality that is packaged with |chef dk|."
+msgstr ""
+
+#: ../source/chefspec.rst:15
+# bdd27774e63e437094be0301a261cd0a
+msgid "Unit Test Syntax"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:5
+# 30af167204504a82a8009cd50803958e
+msgid "The following code block shows the basic structure of a |chef spec| unit test:"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:20
+# 162904cc6d504086945a22b2b42a2455
+msgid "where:"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:22
+# 7bef3a400214485ea13ae3f51b0db337
+msgid "``'../spec_helper.rb'`` is the path to the |spec_helper rb| file, typically located at the root of the ``/spec`` folder that contains |chef spec| unit tests"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:23
+# cba2e710260d487989d45389010b09eb
+msgid "``describe`` is the |rspec| method that defines the unit test; ``context`` is another |rspec| method that is used to group specific contexts, such as \"do this on |windows|\" and \"do that on |linux|\""
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:24
+# 39aa8f8c9d2644e2b7b5842dff66423c
+msgid "``cookbook_name::recipe_name`` identifies the cookbook and recipe that is being tested; this pattern typically appears many times within the same unit test"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:25
+# 0fde0cbea6484e829410262d6453503c
+msgid "``let`` is a helper method in |rspec| that is used to kick off the |chef client| run, using ``(:chef_run)``"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:26
+# 60539cec5bf54529b1eb13e55bd757b0
+msgid "``it`` is an |rspec| helper method that puts context around each unit test, i.e. \"it should do this\", \"it stops that\", \"it disables this service\", and so on."
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:28
+# 3f53210c3bd749d08546613a4bd29be6
+msgid "The actual unit test is defined within the ``it`` block, often something like ``expect(chef_run).to action('object')``."
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:30
+# 4ffbdaa51d284399ba303cda529eea47
+msgid "``expect().to`` is the assertion syntax in |rspec|."
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:32
+# fa65fd034eb34127a9a3c1c6618d237f
+msgid "``(chef_run)`` calls the ``Chef::Runner`` class to execute the mock |chef client| run."
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:34
+# 7a32e83a15fe4006aa26e5fd4b6d1f53
+msgid "``ACTION_RESOURCE(NAME)`` is the action from a resource, the resource itself, and the name of the resource (e.g. the same as \"name\" at the start of the ``resource \"name\" do`` block in the recipe)."
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax.rst:36
+# 3e3fe836a3234665a8f8dc4783a02c21
+msgid "For example:"
+msgstr ""
+
+#: ../source/chefspec.rst:18
+# 1f194947b3264677b7c471d9a45a655e
+msgid "**Example**"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax_example.rst:5
+# fe41b201a216492f84239649afc7b8dd
+msgid "The following example starts with a recipe in the |cookbook chef_splunk| cookbook:"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax_example.rst:21
+# 9e274406134d4c9ba3f0321a24a5175e
+msgid "This recipe is used to start the ``splunk`` service, but only if the node itself is a licensed |splunk| node. This recipe has a corresponding |chef spec| unit test, which does several things: first testing to see that the recipe does test for the |splunk| license, and then restarting the ``splunk`` service, but only if the license is present:"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_syntax_example.rst:43
+# 32a8eb969789412c8e73d4d8f2d58bcb
+msgid "When ``enables the service at boot and accepts the license`` is true, then ``starts the splunk service`` is unit tested. When both are true, the recipe is behaving in the intended manner."
+msgstr ""
+
+#: ../source/chefspec.rst:23
+# 5b495411ca9942f889c9783d8db46522
+msgid "Examples"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_example.rst:5
+# bc00f8b65cdb40189d5bbe3b2645eaa3
+msgid "The |chef spec| repo on github has `an impressive collection of examples <https://github.com/sethvargo/chefspec/tree/master/examples>`_. For all of the core |chef client| resources, for guards, attributes, multiple actions, and so on. Take a look at those examples and use them as a starting point for building your own unit tests. Some of them are included below, for reference here."
+msgstr ""
+
+#: ../source/chefspec.rst:27
+# 62f2c1d073054dd6be756e51d6ba1ac0
+msgid "file Resource"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_example_resource_file.rst:5
+#: ../../includes_chefspec/includes_chefspec_example_resource_template.rst:5
+#: ../../includes_chefspec/includes_chefspec_example_resource_package.rst:5
+#: ../../includes_chefspec/includes_chefspec_example_resource_chef_gem.rst:5
+#: ../../includes_chefspec/includes_chefspec_example_resource_directory.rst:5
+#: ../../includes_chefspec/includes_chefspec_example_guards.rst:5
+#: ../../includes_chefspec/includes_chefspec_example_method_include_recipe.rst:5
+#: ../../includes_chefspec/includes_chefspec_example_multiple_actions.rst:5
+# 99cba2d3659b46fa88f3a557a0dec12d
+# 6b107967d4e34669afb4e27f5fa324b5
+# 195c2dfb972c483f92f4108e53a7a543
+# f562ab478ef14fd5b6cc4e5db1f3e0dd
+# e512fbdfbebd4914a2c1ec80bf8ff4b9
+# 1bbc4e9b85434707821cb9ecd79b297d
+# 4e1c6846201f4aeda929473dd845ae8e
+# df73e321f8a54dc199bb09fa1d113f6c
+msgid "**Recipe**"
+msgstr ""
+
+#: ../../includes_chefspec/includes_chefspec_example_resource_file.rst:25
+#: ../../includes_chefspec/includes_chefspec_example_resource_template.rst:25
+#: ../../includes_chefspec/includes_chefspec_example_resource_package.rst:23
+#: ../../includes_chefspec/includes_chefspec_example_resource_chef_gem.rst:23
+#: ../../includes_chefspec/includes_chefspec_example_resource_directory.rst:24
+#: ../../includes_chefspec/includes_chefspec_example_guards.rst:23
+#: ../../includes_chefspec/includes_chefspec_example_method_include_recipe.rst:11
+#: ../../includes_chefspec/includes_chefspec_example_multiple_actions.rst:17
+# 165769dcb0c647859b2650e9e56c640a
+# f108eb1b96a24d4082185f68e20e834b
+# ff6fda18a87d4da691ac36959a9d5863
+# d9d12a6ad79d4f679c9107308b20077d
+# 61d4ccbebc1849578bb304e9fc348321
+# 0f6a3cacd4f94182bca513ac3b2e2136
+# 78ebac4efcdd49deb479e9abda5ea564
+# 35e7bbca5a9b42c39d4e75c9a9dbd858
+msgid "**Unit Test**"
+msgstr ""
+
+#: ../source/chefspec.rst:31
+# 621e0ea3f48f46548e3f703d23d2ea32
+msgid "template Resource"
+msgstr ""
+
+#: ../source/chefspec.rst:35
+# 15aa2251178a4889a38da0797b35c8a2
+msgid "package Resource"
+msgstr ""
+
+#: ../source/chefspec.rst:39
+# 35b91c5f68364a988864830541b437d1
+msgid "chef_gem Resource"
+msgstr ""
+
+#: ../source/chefspec.rst:43
+# b8ea1b91dc7544b7ac8f087f593b3055
+msgid "directory Resource"
+msgstr ""
+
+#: ../source/chefspec.rst:47
+# ae37c5a3ae904fff8c2430cb3cb1a0cc
+msgid "Guards"
+msgstr ""
+
+#: ../source/chefspec.rst:51
+# 3e000b99e2b34a5da116bd6fc54d163c
+msgid "include_recipe Method"
+msgstr ""
+
+#: ../source/chefspec.rst:55
+# 9eac8a31091f465d87eb31bb446d1e2b
+msgid "Multiple Actions"
+msgstr ""
+
+#: ../source/chefspec.rst:59
+# ca85a5763867425da4a057b6bdb40dc5
+msgid "For more information ..."
+msgstr ""
+
+#: ../source/chefspec.rst:60
+# 094d74a9c4674fb09ee75a0743d4a81f
+msgid "For more information about |chef spec|:"
+msgstr ""
+
+#: ../source/chefspec.rst:62
+# fd0afb0240e24efb8cc06c9ee256ec52
+msgid "`ChefSpec Github Repo <https://github.com/sethvargo/chefspec>`_"
+msgstr ""
+
+#: ../source/chefspec.rst:63
+# d95042dae42d4b2b941bb89e227fdad6
+msgid "`RSpec Documentation <https://relishapp.com/rspec/rspec-core/docs/command-line>`_"
+msgstr ""
+

@@ -1,0 +1,783 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-21 13:50-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_script.rst:8
+# 58fd4ac304214560a208b19356b54868
+msgid "script"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_generic.rst:5
+# c00f372a383f40779bedabce880ab8e9
+msgid "A `resource <http://docs.opscode.com/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script.rst:4
+# 58be2f25657941c3b718c4dd0b215ec8
+msgid "Use the |resource script| resource to execute scripts using a specified interpreter (|bash|, |csh|, |perl|, |python|, or |ruby|). This resource may also use any of the actions and attributes that are available to the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script.rst:6
+# be8120149c86416eb31f0663e1d13e4a
+msgid "The |resource script| resource is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline."
+msgstr ""
+
+#: ../source/resource_script.rst:14
+# 2d0567e815754742819009d586bcc267
+msgid "This resource is the base resource for several other resources used for scripting on specific platforms. For more information about specific resources for specific platforms, see the following topics:"
+msgstr ""
+
+#: ../source/resource_script.rst:16
+# 527c2b94667e426da6079ed7f48eb938
+msgid ":doc:`bash </resource_bash>`"
+msgstr ""
+
+#: ../source/resource_script.rst:17
+# 88fe985464dc42939c7eba35723d0d7e
+msgid ":doc:`csh </resource_csh>`"
+msgstr ""
+
+#: ../source/resource_script.rst:18
+# 98a27090efe6424080f9b3b988cafb28
+msgid ":doc:`perl </resource_perl>`"
+msgstr ""
+
+#: ../source/resource_script.rst:19
+# 40bf4fcc637f47f88766a70afaccadda
+msgid ":doc:`python </resource_python>`"
+msgstr ""
+
+#: ../source/resource_script.rst:20
+# 51a3f6eef0f94733a687bdc277108a60
+msgid ":doc:`ruby </resource_ruby>`"
+msgstr ""
+
+#: ../source/resource_script.rst:23
+# 116b3588aadc49c5943391e31166b8b1
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_syntax.rst:4
+# 5e4bec0385a54f5b8c014ccace7df614
+msgid "The syntax for using the |resource script| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_syntax.rst:14
+# e03bdd8e60d8489899b15f1205b7b7d0
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_syntax.rst:16
+# 2863b7e02e9c433281c5b3d6374fb534
+msgid "``script`` tells the |chef client| to use one of the following providers during the |chef client| run: ``Chef::Resource::Script``, ``Chef::Resource::Script::Bash``, ``Chef::Resource::Script::Csh``, ``Chef::Resource::Script::Perl``, ``Chef::Resource::Script::Python``, or ``Chef::Resource::Script::Ruby``. The provider that is used by the |chef client| depends on the platform of the machine on which the run is taking place"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_syntax.rst:17
+# 7ca74caf4c01420fb2b1dbf06f271516
+msgid "``name`` is the name of the resource block; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the name of the command to be executed"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_syntax.rst:18
+# 5215053c0b60437b9981e19cd4f6c4aa
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_syntax.rst:19
+# 093e2867b1de4d02a81dfacd3e3b8e1d
+msgid "``:action`` is the step that the resource will ask the provider to take during the |chef client| run"
+msgstr ""
+
+#: ../source/resource_script.rst:27
+# aff760f5dbfa48b3b276535d35656575
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_actions.rst:4
+# 865b425853284c3da6af5a0d800cd406
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_actions.rst:10
+# d439f43298b748b0a81e2f91dc7ab6a1
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_actions.rst:11
+#: ../../includes_resources/includes_resource_script_attributes.rst:11
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:11
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:11
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:12
+# c13441174fc34bcea6ad66aa60cf8414
+# 3caf05b8e6ac49d0aa3f895947018b84
+# 1497182cbdcf4881a2c350ad1767d81e
+# 22730d1ca0f643bd8527df6e5977143d
+# daa5deb1089c44eea3ffcfaeac3d8586
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_actions.rst:12
+# ea2dead77ca146ba9230d5168a4454a5
+msgid "``:run``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_actions.rst:13
+# 0e8b1c774ac44667815d25b5760efee1
+msgid "Default. |resource action run script|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_actions.rst:14
+# 171e16bffbd6439c96b624b70e8c7c14
+msgid "``:nothing``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_actions.rst:15
+# f129dd42f0be467bb39e2e59bc2fe4df
+msgid "|resource action nothing execute|"
+msgstr ""
+
+#: ../source/resource_script.rst:31
+# 22ac46522a0f4373992e6c4a2ff189ad
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:4
+# a94a422919a54239b5bbcff644ad1c4d
+msgid "This resource has the following attributes:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:10
+# ec9cdf792d1f4e9781ff34725ca54fa8
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:12
+# c8bb159be30f4f6c8d5f0779bc64c84a
+msgid "``code``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:13
+# 9fc559196ad0411fbaba5e71f6ef5b98
+msgid "|code quoted_string|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:14
+# 19f26cf55eed42d989acab012627a8ab
+msgid "``command``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:15
+# 2da318cb0a854106ae32258f4da03d3a
+msgid "|name command| Default value: the ``name`` of the resource block (see Syntax section above)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:16
+# b72317ac7833431f99ea0fbf818219fc
+msgid "``creates``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:17
+# 3be701bf482843fc891eaf170344dfe4
+msgid "|creates file_exists|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:18
+# c4869457c8ee4a3aa9f6d3d502dab349
+msgid "``cwd``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:19
+# f890e67728024dcc8ed1af1c65bb70fe
+msgid "|cwd|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:20
+# 32872309d29e42ba977051903e227416
+msgid "``environment``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:21
+# 58372d8481804900b73b55c50c422c85
+msgid "|environment variables|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:22
+# 5c3c6ebac4e84e58bb0dbeaf71eccc48
+msgid "``flags``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:23
+# 048134fd0f3347cb9d98a39424e5c9f3
+msgid "|flags|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:24
+# 5b7e91a868a840a6a0c46d985a4db488
+msgid "``group``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:25
+# 02844f83fd87424abb537d2d5a2e1c9a
+msgid "|group command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:26
+# f34d99fbecb446148fa9e7ab63ef4648
+msgid "``interpreter``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:27
+# 8359bdccbad44330b54c320bccb91bb3
+msgid "|interpreter|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:28
+# c5a9a7bf75b544d3924c29d302907c7c
+msgid "``path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:29
+# bd7ef2e480434b0f9bf4c10c7e96780a
+msgid "|path resource execute| The default value uses the system path."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:30
+# 0a09d8de2363455b911e4b75317956ae
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:31
+# ce3d27717dce487da11f48c165e3421f
+msgid "Optional. |provider resource_parameter|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:32
+# eab0e0c9065c40cd9b8c7a2d51f85209
+msgid "``returns``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:33
+# d716acaa1cdb4eaaa1bd1c19e87bd7cb
+msgid "|return_value cmd| Default value: ``0``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:34
+# e492d42679e34593a616ddb4fac3eba0
+msgid "``timeout``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:35
+# 4d8426e714b5405b94a99e6617f0b4a7
+msgid "|timeout command| Default value: ``3600``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:36
+# 44a70e3cd0cd49a48b1790eeb9300933
+msgid "``user``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:37
+# 059c9659c8f242bc982c2b13a73f561e
+msgid "|user command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:38
+# 2d203ac7f4904cca83c853a355bf29aa
+msgid "``umask``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_attributes.rst:39
+# fdc530a69891436e87c6c09cf343ce1c
+msgid "|umask|"
+msgstr ""
+
+#: ../source/resource_script.rst:35
+# 6093c10d26bf459cb3e1716ba6da4b3b
+msgid "Guards"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:5
+# f07149acb35c43849e3d09288dff73b2
+msgid "A guard attribute can be used to evaluate the state of a node during the execution phase of the |chef client| run. Based on the results of this evaluation, a guard attribute is then used to tell the |chef client| if it should continue executing a resource. A guard attribute accepts either a string value or a |ruby| block value:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:7
+# 8f508630a068414a959e7334f94a7ac3
+msgid "A string is executed as a shell command. If the command returns ``0``, the guard is applied. If the command returns any other value, then the guard attribute is not applied."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:8
+# 56370e4ce8dd4d7c908642cce6ebb587
+msgid "A block is executed as |ruby| code that must return either ``true`` or ``false``. If the block returns ``true``, the guard attribute is applied. If the block returns ``false``, the guard attribute is not applied."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:10
+# 37fbbf96fdd14ff6846d1032bf50780d
+msgid "A guard attribute is useful for ensuring that a resource is idempotent by allowing that resource to test for the desired state as it is being executed, and then if the desired state is present, for the |chef client| to do nothing."
+msgstr ""
+
+#: ../source/resource_script.rst:38
+#: ../source/resource_script.rst:50
+# 215d6b4edab94e87a80eb43ebe75831f
+# 524af528a7644028a5e020907e5b89f1
+msgid "**Attributes**"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:4
+# 04efe7516b684eea89dca4f5565eeca7
+msgid "The following attributes can be used to define a guard that is evaluated during the execution phase of the |chef client| run:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:10
+# 71de716663c84f7c9548e51c9f75395b
+msgid "Guard"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:12
+# 964e825507f549e9bc1d065cf230ff59
+msgid "``not_if``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:13
+# a4ecfdc5a039461a915d7a665906b136
+msgid "Use to prevent a resource from executing when the condition returns ``true``."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:14
+# 9e99cb392ec74eec9fb1473ca87c4681
+msgid "``only_if``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:15
+# 8581d6869433448b86761613586cf134
+msgid "Use to allow a resource to execute only if the condition returns ``true``."
+msgstr ""
+
+#: ../source/resource_script.rst:42
+# 14964f3be888400fb67846acfba532d3
+msgid "**Arguments**"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:4
+# 253c08e54315417fb9b02c08d55b0b9b
+msgid "The following arguments can be used with the ``not_if`` or ``only_if`` guard attributes:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:10
+# 3233237775f44f1c80c0dc4f7b5bdaba
+msgid "Argument"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:12
+# 9d5223f4c2634a3d9fb744a0339617d9
+msgid "``:user``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:13
+# ef1bdaa377754cea8bb843e820d3a2c2
+msgid "Use to specify the user that a command will run as. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:19
+# 1db7b0f885804bf4a9cb87e49b759257
+msgid "``:group``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:20
+# d1cc56c0aae24deea33d3e34ea429c38
+msgid "Use to specify the group that a command will run as. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:26
+# d113393c1f7c409ab2addaf7f0087d7d
+msgid "``:environment``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:27
+# a31dc0118fd74a63b685b9822337a341
+msgid "Use to specify a |ruby hash| of environment variables to be set. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:33
+# d2d05418718c4f408b9864b3477348a7
+msgid "``:cwd``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:34
+# 8a605a5aede2453eb588a9794889f0c8
+msgid "Use to set the current working directory before running a command. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:40
+# 61a8f4f37f4a4e3b8e888651bac634e5
+msgid "``:timeout``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:41
+# 6de9f5cfee2f4c3fbc6eb78f1b3486f5
+msgid "Use to set a timeout for a command. For example:"
+msgstr ""
+
+#: ../source/resource_script.rst:47
+# 5c867c334f874d739ec2fc0788aa2bdc
+msgid "Guard Interpreter"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter.rst:5
+# 50eb87862a8b49e3b436f69a07fddcb2
+msgid "Any resource that passes a string command may also specify the interpreter that will be used to evaluate that string command. This is done by using the ``guard_interpreter`` attribute to specify a |resource script|-based resource: |resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, and |resource script_ruby|, plus the |resource batch| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:5
+# dfceba296bba4e49b3b2a15dfabf2d59
+msgid "The ``guard_interpreter`` attribute may be set to any of the following values:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:11
+# 66f27f11413d4506a6dab3ec14e4f4e7
+msgid "Value"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:13
+# 156b6746fd2b42c1a1601809632bd8d8
+msgid "``:bash``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:14
+# ba2b7c237f934404ad48bdcc81464da6
+msgid "Use to evaluate a string command using the |resource script_bash| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:15
+# 5039b82030b746d1b060b39b28accd46
+msgid "``:batch``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:16
+# ee620368392743dab4f1813104ac9987
+msgid "Use to evaluate a string command using the |resource batch| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:17
+# 3eabf36804b04157a53a6ded71719704
+msgid "``:csh``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:18
+# 784b0d3d81fd43a1b3f1ec9d4e19e9f2
+msgid "Use to evaluate a string command using the |resource script_csh| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:19
+# 0b667231fdef4018b923ce1a7af7c30d
+msgid "``:default``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:20
+# 56383d0a5b9d4264befc3d95571a75e5
+msgid "Default. Use to execute the default interpreter as identified by the |chef client|."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:21
+# 61502e37508b4b3b8691e357b435df46
+msgid "``:perl``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:22
+# 8699e0cec5bf4ef087722342e5d7af59
+msgid "Use to evaluate a string command using the |resource script_perl| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:23
+# 8e56fdd3a1e94bb588d692de40780ee3
+msgid "``:powershell_script``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:24
+# 53d20404156845e5a6c4e4d1d0aa3621
+msgid "Use to evaluate a string command using the |resource powershell_script| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:25
+# 37e03292db1b4c2fb358246acd1a0a66
+msgid "``:python``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:26
+# aefc825db72c4d2880afb613a335c21b
+msgid "Use to evaluate a string command using the |resource script_python| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:27
+# aba7c6b4f9a64121a412d252d620fd80
+msgid "``:ruby``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst:28
+# 0ea84a8cd6e14a05b822b246fd81b4a6
+msgid "Use to evaluate a string command using the |resource script_ruby| resource."
+msgstr ""
+
+#: ../source/resource_script.rst:54
+# 681e7b7ad4bc448980d2f87379f8b945
+msgid "**Inheritance**"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes_inherit.rst:5
+# d5eb112231db4ced9cee3dec2f5e55de
+msgid "All non-default interpreters will **not** inherit arguments that are available to guard attributes unless the ``guard_interpreter`` attribute is specified. For example, the following resource block will not inherit the ``environment`` attribute (and requires that the environment variable be specified within the ``not_if`` guard in addition to the resource block itself):"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes_inherit.rst:15
+# 1144b1b5b38a414386a06f70e8e03076
+msgid "and the following resource block will inherit the ``environment`` attribute:"
+msgstr ""
+
+#: ../source/resource_script.rst:58
+# 45a4196cb6af4da2b8d08491df149c24
+msgid "**Example**"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guard_interpreter_example_default.rst:5
+# 56b79225c2ee44b4a06af403824feece
+msgid "For example, the following code block will ensure the command is evaluated using the default intepreter as identified by the |chef client|:"
+msgstr ""
+
+#: ../source/resource_script.rst:63
+# 7627ea1b58a740daad32b0af0d043470
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:4
+# 8ce75c30de3a4cafa8112328c1d11d17
+msgid "The following providers are available. Use the short name to use the provider in a recipe:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:10
+# 54fa8a6aa2e7475782fcd0ed41d56c3c
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:11
+# dc21551be0944feea183b4d2917bd9c0
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:12
+# df7a4bec6ff549c18c9974fe139a9f2c
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:13
+# f9532bc65f3543f59ada44cd740da997
+msgid "``Chef::Provider::Script``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:14
+# 514c78e40d114915b192e9cc278d0f89
+msgid "``script``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:15
+# aefc6607eedc4f00ac03e7a45831302a
+msgid "When this short name is used, the |chef client| will determine the correct provider during the |chef client| run."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:16
+# 2f2ee9f4286b4bb09c29f14293edaee2
+msgid "``Chef::Provider::Script::Bash``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:17
+# 2fb358cc92f3409e81837f3e11fd8edd
+msgid "``bash``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:18
+# 81d61d6525484ef985b4282bc3149ddb
+msgid "The provider that is used with the |bash| command interpreter."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:19
+# 11e84182fac84e82b57a101153c46691
+msgid "``Chef::Provider::Script::Csh``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:20
+# 48e87be7203c40f98d931bbb70ffaef6
+msgid "``csh``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:21
+# 6dc7b8f2e9ab45c08204473220050eb8
+msgid "The provider that is used with the |csh| command interpreter."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:22
+# e9570e0bd26948a0bd040da3bd18b364
+msgid "``Chef::Provider::Script::Perl``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:23
+# 5da12223ffb04c14b40f3c253b01abd0
+msgid "``perl``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:24
+# 515ebbb2d88c4a5897be06efeeea7d55
+msgid "The provider that is used with the |perl| command interpreter."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:25
+# 5bafd02d71f64798a8fcced880638db3
+msgid "``Chef::Provider::Script::Python``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:26
+# 0bff55b78e1e45d79f644be17432b48e
+msgid "``python``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:27
+# b48c83a840504e358f3223c7282f245e
+msgid "The provider that is used with the |python| command interpreter."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:28
+# fcc6706884a64e70b3cd941a806760bc
+msgid "``Chef::Provider::Script::Ruby``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:29
+# 159254545b974b59822c7dd67c271ee4
+msgid "``ruby``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_providers.rst:30
+# 3669eec7d1c24007838801e125e39b44
+msgid "The provider that is used with the |ruby| command interpreter."
+msgstr ""
+
+#: ../source/resource_script.rst:67
+# 9372f676e2ae44df9fbbcd1da65e7518
+msgid "Examples"
+msgstr ""
+
+#: ../source/resource_script.rst:68
+# 3eb8cbd2c56e446caa1599cc83eb8e99
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/resource_script.rst:70
+# 9049254e61ef4c84a93ad0ccd4b370a8
+msgid "**Use a named provider to run a script**"
+msgstr ""
+
+#: ../source/resource_script.rst:74
+# 0052a779a444496382a45e0abbcb3aaa
+msgid "**Run a script**"
+msgstr ""
+
+#: ../../step_resource/step_resource_script_bash_script.rst:21
+# 52c8d343e4d444309d1b9637cb247d3b
+msgid "or something like:"
+msgstr ""
+
+#: ../../step_resource/step_resource_script_bash_script.rst:36
+# f38c4302f2e84ba1837f279b011dffd4
+msgid "where ``code`` contains the |open ssl| command to be run. The ``not_if`` method tells the |chef client| not to run the command if the file already exists."
+msgstr ""
+
+#: ../source/resource_script.rst:78
+# 55c52140af044323a3f267e5e1d6169f
+msgid "**Install a file from a remote location using bash**"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_install_with_bash.rst:3
+# 3717cbc1320e4eb79de284632a40b261
+msgid "The following is an example of how to install the ``foo123`` module for |nginx|. This module adds shell-style functionality to an |nginx| configuration file and does the following:"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_install_with_bash.rst:5
+# f3e4a134406143ee87e6c150adb2661d
+msgid "Declares three variables"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_install_with_bash.rst:6
+# 8b10060c139849fbb117fc1a6045a881
+msgid "Gets the |nginx| file from a remote location"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_install_with_bash.rst:7
+# 624d83028a6d43faae5fe8ce1c1d513e
+msgid "Installs the file using |bash| to the path specified by the ``src_filepath`` variable"
+msgstr ""
+
+#: ../source/resource_script.rst:82
+# 0f982b387b0b4a36a177bca35935a108
+msgid "**Install an application from git using bash**"
+msgstr ""
+
+#: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst:3
+# e87de0ae46104176a968fced0c9ff9e8
+msgid "The following example shows how |bash| can be used to install a plug-in for |rbenv| named \"ruby-build\", which is located in |git| version source control. First, the application is synchronized, and then |bash| changes its working directory to the location in which \"ruby-build\" is located, and then runs a command."
+msgstr ""
+
+#: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst:23
+# d3fbba32981e4f018371e58b4a0bca24
+msgid "To read more about ``ruby-build``, see here: https://github.com/sstephenson/ruby-build."
+msgstr ""
+
+#: ../source/resource_script.rst:86
+# f7cb675828164249a2ea9ec0bc467d70
+msgid "**Store certain settings**"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_store_certain_settings.rst:3
+# 578cb7e77a264f1ea0b6eef5f802caf5
+msgid "The following recipe shows how an attributes file can be used to store certain settings. An attributes file is located in the ``attributes/`` directory in the same cookbook as the recipe which calls the attributes file. In this example, the attributes file specifies certain settings for |python| that are then used across all nodes against which this recipe will run."
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_store_certain_settings.rst:5
+# 68db2afa818049268975295233fb20cd
+msgid "|python| packages have versions, installation directories, URLs, and checksum files. An attributes file that exists to support this type of recipe would include settings like the following:"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_store_certain_settings.rst:20
+# 0f8ea875d5be48eb850f07d968eae0dc
+msgid "and then the methods in the recipe may refer to these values. A recipe that is used to install |python| will need to do the following:"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_store_certain_settings.rst:22
+# 412b8f023b4b47cc89edf4193a659b11
+msgid "Identify each package to be installed (implied in this example, not shown)"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_store_certain_settings.rst:23
+# 46f1d41d245e4c6dafd55abd47db801d
+msgid "Define variables for the package ``version`` and the ``install_path``"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_store_certain_settings.rst:24
+# 65bf7146fd4f4723ba4f4de8a6355910
+msgid "Get the package from a remote location, but only if the package does not already exist on the target system"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_store_certain_settings.rst:25
+# e4ad88a4949e4150bbe0dde1674eb02f
+msgid "Use the |resource script_bash| resource to install the package on the node, but only when the package is not already installed"
+msgstr ""
+
