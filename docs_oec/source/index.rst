@@ -1,5 +1,5 @@
 =====================================================
-All about |chef server oec| ... 
+All about |chef server oec| ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
@@ -172,9 +172,10 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Upgrade for Standalone</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">Upgrade for High Availability</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_enterprise.html">Migrate to Enterprise Chef from Open Source Chef</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install the Reporting Add-on</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manage.html">Install the Manager Add-on</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_push_jobs.html">Install the Push Jobs Add-on</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install Chef Reporting</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manage.html">Install Chef Manager</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_analytics.html">Install Chef Analytics</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_push_jobs.html">Install Push Jobs</a> </br>
 
 Options: 
 
@@ -494,6 +495,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_repository_create
    essentials_roles
    essentials_search
+   install_analytics
    install_bootstrap
    install_manage
    install_push_jobs
