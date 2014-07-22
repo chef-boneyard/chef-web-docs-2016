@@ -3,7 +3,7 @@
 
 To install |chef server 11| on a virtual machine:
 
-#. Go to http://www.opscode.com/chef/install. Select a platform, version, and architecture, and then choose the version of the |chef server| to be downloaded. The name of the package will be displayed after the version is selected. Right-click the name of the package and copy the link location.
+#. Go to http://www.getchef.com/chef/install. Select a platform, version, and architecture, and then choose the version of the |chef server| to be downloaded. The name of the package will be displayed after the version is selected. Right-click the name of the package and copy the link location.
 
    .. image:: ../../images/step_install_server_open_download_page.png
 
@@ -11,7 +11,7 @@ To install |chef server 11| on a virtual machine:
 
    .. code-block:: bash
 
-      $ wget https://opscode-omnitruck-release.s3.amazonaws.com/ubuntu/12.04/x86_64/chef-server_11.0.6-1.ubuntu.12.04_amd64.deb
+      $ wget https://getchef-omnitruck-release.s3.amazonaws.com/ubuntu/12.04/x86_64/chef-server_11.0.6-1.ubuntu.12.04_amd64.deb
 
    where the URL is the copied link location from the previous step. As the download progresses, the command window will appear similar to the following:
 

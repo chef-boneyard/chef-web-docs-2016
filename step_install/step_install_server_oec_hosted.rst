@@ -3,7 +3,7 @@
 
 To sign up for the hosted |chef server oec|, do the following:
 
-#. Go to http://www.opscode.com/enterprise-chef/.
+#. Go to http://www.getchef.com/chef/choose-your-version/.
 
 #. Click the **Get Chef** button and sign up for the hosted |chef server oec|.
 
