@@ -204,6 +204,7 @@ Cookbooks
    config_rb_metadata
    config_rb_metadata
    config_rb_push_jobs_server
+   config_rb_server
    config_rb_solo
    config_yml_kitchen
    containers
