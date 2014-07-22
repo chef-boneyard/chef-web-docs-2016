@@ -32,7 +32,7 @@ The |chef_shell rb| file can be used to configure |chef shell| in the same way a
 
    node_name                'your-knife-clientname'
    client_key               File.expand_path('~/.chef/my-client.pem')
-   chef_server_url          'https://api.opscode.com/organizations/myorg'
+   chef_server_url          'https://api.getchef.com/organizations/myorg'
 
 and then add them to the |chef_shell rb| file. Other configuration possibilities include disabling |ohai| plugins (which will speed up the |chef shell| boot process) or including arbitrary |ruby| code in the |chef_shell rb| file.
 
@@ -296,8 +296,8 @@ Debug Existing Recipe
    
    This is chef-shell, the Chef shell.
     Chef Version: 0.10.10
-    http://www.opscode.com/chef
-    docs.opscode.com
+    http://www.getchef.com/chef
+    docs.getchef.com
    
    run `help' for help, `exit' or ^D to quit.
    
@@ -380,8 +380,8 @@ When the |chef client| is installed using |rubygems| or a package manager, |chef
    
      This is shef, the Chef shell.
       Chef Version: 0.10.4
-      http://www.opscode.com/chef
-      http://wiki.opscode.com/display/chef/Home
+      http://www.getchef.com/chef
+      http://wiki.getchef.com/display/chef/Home
    
    run `help' for help, `exit' or ^D to quit.
    

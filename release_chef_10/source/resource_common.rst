@@ -104,7 +104,7 @@ Notifies Syntax
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_10-latest_notifications_syntax.rst
 
-.. note:: In the 11.0.0 version of the |chef client| the syntax for `defining notifications <http://docs.opscode.com/resource_common.html#notifications>`_ is changed.
+.. note:: In the 11.0.0 version of the |chef client| the syntax for `defining notifications <http://docs.getchef.com/resource_common.html#notifications>`_ is changed.
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

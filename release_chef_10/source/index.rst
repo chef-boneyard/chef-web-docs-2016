@@ -4,7 +4,7 @@
 Docs for |chef client| 10.latest 
 =====================================================
 
-.. warning:: This document collection is only about the current version of the 10.x |chef client|. For information about the current version of the chef-client 11, see docs.opscode.com. For information about specific Chef 11 servers, see docs.opscode.com/open_source or docs.opscode.com/enterprise.
+.. warning:: This document collection is only about the current version of the 10.x |chef client|. For information about the current version of the chef-client 11, see docs.getchef.com. For information about specific Chef 11 servers, see docs.getchef.com/open_source or docs.getchef.com/enterprise.
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
@@ -53,7 +53,7 @@ Server Essentials
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
 
 * A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
-* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_. 
+* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.getchef.com/essentials_node_object.html#attributes>`_. 
 * All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
 * The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
@@ -61,11 +61,11 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 |chef server oec| 
 -----------------------------------------------------
-|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes support for high availability deployment scenarios. For more information about |chef server oec|, see docs.opscode.com/enterprise/.
+|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes support for high availability deployment scenarios. For more information about |chef server oec|, see docs.getchef.com/enterprise/.
 
 |chef server osc|
 -----------------------------------------------------
-|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|. For more information about |chef server osc|, see docs.opscode.com/open_source/.
+|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|. For more information about |chef server osc|, see docs.getchef.com/open_source/.
 
 Common Features
 -----------------------------------------------------

@@ -8,7 +8,7 @@ About the Recipe DSL
 
 Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |ruby| can also be done in a recipe, including ``if`` and ``case`` statements, using the ``include?`` |ruby| method, including recipes in recipes, and checking for dependencies.
 
-.. note:: Read all about the `Recipe DSL <http://docs.opscode.com/chef/dsl_recipe.html>`_ in a single topic.
+.. note:: Read all about the `Recipe DSL <http://docs.getchef.com/chef/dsl_recipe.html>`_ in a single topic.
 
 Use Ruby
 =====================================================
@@ -46,7 +46,7 @@ Recipe DSL Methods
 =====================================================
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method.rst
 
-.. note:: Read all about the `Recipe DSL <http://docs.opscode.com/chef/dsl_recipe.html>`_ in a single topic. The topics in the tables below provide links to individual pages for each method.
+.. note:: Read all about the `Recipe DSL <http://docs.getchef.com/chef/dsl_recipe.html>`_ in a single topic. The topics in the tables below provide links to individual pages for each method.
 
 .. list-table::
    :widths: 150 450
