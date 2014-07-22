@@ -124,7 +124,7 @@ A completed |private chef rb| configuration file for a four server |chef server 
      - frontend
    * - chef.example.com
      - 192.168.4.5
-     - backend VIP
+     - load balanced frontend VIP
 
 Looks like this:
 
