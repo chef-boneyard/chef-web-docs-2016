@@ -256,6 +256,16 @@ and which creates a directory structure similar to::
      /recipes
        default.rb
 
+**Create a cookbook using a custom skeleton cookbook**
+
+If a custom skeleton cookbook is located in a subdirectory named ``generators/``, the following command will use that skeleton cookbook to generate cookbooks:
+
+.. code-block:: bash
+
+   $ chef generate cookbook --generator-cookbook generators/ testcookbook
+
+.. note:: The ``code_generator`` cookbook itself is not specified as part of the path.
+
 chef generate file
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_file.rst
