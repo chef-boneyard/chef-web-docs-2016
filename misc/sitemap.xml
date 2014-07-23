@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+<%
+    site.pages.findAll { it.layout }.each {
+%>
+    <url>
+        <loc>${site.url}${it.url}</loc>
+        <lastmod>${toXmlTime(it.updated)}</lastmod>
+    </url>
+<% } %>
+</urlset>
