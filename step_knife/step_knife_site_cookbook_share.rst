@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To share a cookbook named "apache2":
+To share a cookbook named ``apache2``:
 
 .. code-block:: bash
 

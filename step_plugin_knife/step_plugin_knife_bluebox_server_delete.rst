@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete an instance at block "12345" with a hostname of "dev", enter:
+To delete an instance at block ``12345`` with a hostname of ``dev``, enter:
 
 .. code-block:: bash
 

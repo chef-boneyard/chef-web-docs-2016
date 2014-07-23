@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To delete tags named "denver" and "phoenix", enter:
+To delete tags named ``denver`` and ``phoenix``, enter:
 
 .. code-block:: bash
 

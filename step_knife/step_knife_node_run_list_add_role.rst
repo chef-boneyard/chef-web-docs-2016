@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To add a role to a run list, enter:
+To add a role to a run-list, enter:
 
 .. code-block:: bash
 

@@ -23,7 +23,7 @@ To view |chef client| details:
       * - ``Step``
         - The order in which resources were executed during the |chef client| run.
       * - ``Type``
-        - The type of resource. http://docs.opscode.com/resource.html#resources
+        - The type of resource. http://docs.getchef.com/resource.html#resources
       * - ``Name``
         - A string that describes the action taken. For example, a log entry or the name of the service that is enabled.
       * - ``Action``

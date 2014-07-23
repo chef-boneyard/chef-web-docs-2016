@@ -7,13 +7,13 @@ There are three ways to use |subcommand knife exec| to run |ruby| script files. 
 
    $ knife exec /path/to/script_file
 
-Or:
+or:
 
 .. code-block:: bash
 
    $ knife exec -E 'RUBY CODE'
 
-Or:
+or:
 
 .. code-block:: bash
 

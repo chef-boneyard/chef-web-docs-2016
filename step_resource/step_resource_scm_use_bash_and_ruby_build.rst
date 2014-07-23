@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how |bash| can be used to install a plug-in for |rbenv| named "ruby-build", which is located in |git| version source control. First, the application is synchronized, and then |bash| changes its working directory to the location in which "ruby-build" is located, and then runs a command.
+The following example shows how |bash| can be used to install a plug-in for |rbenv| named ``ruby-build``, which is located in |git| version source control. First, the application is synchronized, and then |bash| changes its working directory to the location in which ``ruby-build`` is located, and then runs a command.
 
 .. code-block:: ruby
 

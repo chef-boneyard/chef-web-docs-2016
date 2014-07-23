@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To add a role named "role1", enter:
+To add a role named ``role1``, enter:
 
 .. code-block:: bash
 
@@ -25,8 +25,5 @@ In the |chef editor| enter the role data in |json|:
       "override_attributes": {
       }
    }
-
-
-
 
 When finished, save it.

@@ -2,8 +2,7 @@
 
 To upload a role to the |chef server|:
 
-
-1. Verify the role data:
+#. Verify the role data:
 
    .. code-block:: ruby
 
@@ -16,7 +15,7 @@ To upload a role to the |chef server|:
          # Attributes applied no matter what the node has set already.
          #override_attributes()
 
-2. Run the following command:
+#. Run the following command:
 
    .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To provision a medium-sized |centos| machine configured as a web server in the "West US" data center, while reusing existing hosted service and storage accounts, enter something like:
+To provision a medium-sized |centos| machine configured as a web server in the ``West US`` data center, while reusing existing hosted service and storage accounts, enter something like:
 
 .. code-block:: bash
 

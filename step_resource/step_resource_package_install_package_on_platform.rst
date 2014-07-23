@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to use the |resource package| resource to install an application named "app" and ensure that the correct packages are installed for the correct platform:
+The following example shows how to use the |resource package| resource to install an application named ``app`` and ensure that the correct packages are installed for the correct platform:
 
 .. code-block:: ruby
 

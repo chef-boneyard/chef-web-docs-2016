@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To add roles and recipes to a run list, enter:
+To add roles and recipes to a run-list, enter:
 
 .. code-block:: bash
 

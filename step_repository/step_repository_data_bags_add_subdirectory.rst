@@ -2,21 +2,23 @@
 
 To create a data bag sub-directory:
 
-1. Enter the following:
+#. Enter the following:
 
    .. code-block:: bash
 
       $ mkdir data_bags/NAME_OF_DATA_BAG
 
    where ``NAME_OF_DATA_BAG`` is the name of the data bag to be created.
-2. Create the |json| files for each data bag item. For example:
+
+#. Create the |json| files for each data bag item. For example:
 
    .. code-block:: bash
 
       $ data_bags/NAME_OF_DATA_BAG/NAME_OF_DATA_BAG_ITEM.json
 
    where ``NAME_OF_DATA_BAG_ITEM`` is the name of the data bag item, repeating for each data bag item as required.
-3. Add information to each data bag item. The |json| format is similar to the following:
+
+#. Add information to each data bag item. The |json| format is similar to the following:
 
    .. code-block:: javascript
 

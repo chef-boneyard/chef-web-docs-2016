@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To search for nodes assigned the role "webapp", and where 90% of those nodes must be available, run the following command:
+To search for nodes assigned the role ``webapp``, and where 90% of those nodes must be available, run the following command:
 
 .. code-block:: bash
 

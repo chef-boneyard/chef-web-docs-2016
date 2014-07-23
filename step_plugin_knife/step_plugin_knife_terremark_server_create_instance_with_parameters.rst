@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To provision a new dual-core 1.0 GB |ubuntu| 10.04 web server with three attached disks with sizes of "25G", "50G", and "50G", enter something like:
+To provision a new dual-core 1.0 GB |ubuntu| 10.04 web server with three attached disks with sizes of 25G, 50G, and 50G, enter something like:
 
 .. code-block:: bash
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To search for recipes that are used by a node, use the ``recipes`` attribute to search for the recipe names. Enter something like:
+To search for recipes that are used by a node, use the ``recipes`` attribute to search for the recipe names, enter something like:
 
 .. code-block:: bash
 

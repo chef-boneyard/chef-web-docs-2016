@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view all data for a node named "build", enter:
+To view all data for a node named ``build``, enter:
 
 .. code-block:: bash
 

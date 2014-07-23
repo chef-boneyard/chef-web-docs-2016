@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-A case statement can be used to compare an expression (specified by case) and then executing the code that matches the expression.
+A case statement can be used to compare an expression, and then execute the code that matches.
 
 To select a package name based on platform:
 

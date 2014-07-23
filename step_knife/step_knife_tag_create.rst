@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create tags named "seattle", "portland", and "vancouver", enter:
+To create tags named ``seattle``, ``portland``, and ``vancouver``, enter:
 
 .. code-block:: bash
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To show the contents of a data bag named "passwords" with an item that contains encrypted data named "mysql", enter:
+To show the contents of a data bag named ``passwords`` with an item that contains encrypted data named ``mysql``, enter:
 
 .. code-block:: bash
 

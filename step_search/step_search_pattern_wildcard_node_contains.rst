@@ -24,4 +24,4 @@ or:
 
    $ knife search node 'name:app1.example.???'
 
-to return "app1.example.com" (and any other node that matches any of the string searches above).
+to return ``app1.example.com`` (and any other node that matches any of the string searches above).

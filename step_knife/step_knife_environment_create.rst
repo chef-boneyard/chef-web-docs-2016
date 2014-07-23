@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To create an environment named "dev" with a description of "The development environment.":
+To create an environment named ``dev`` with a description of ``The development environment.``:
 
 .. code-block:: bash
 

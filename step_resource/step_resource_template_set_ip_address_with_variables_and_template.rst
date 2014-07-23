@@ -11,7 +11,7 @@ The recipe then does the following to:
 
 * Declare two variables at the beginning of the recipe, one for the remote IP address and the other for the authorized IP address
 * Use the |resource service| resource to restart and reload the |nginx| service
-* Load a template named "authorized_ip.erb" from the ``/templates`` directory that is used to set the IP address values based on the variables specified in the recipe
+* Load a template named ``authorized_ip.erb`` from the ``/templates`` directory that is used to set the IP address values based on the variables specified in the recipe
 
 .. code-block:: ruby
 

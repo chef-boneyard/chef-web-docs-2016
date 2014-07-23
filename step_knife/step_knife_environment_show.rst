@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view information about the "dev" environment enter:
+To view information about the ``dev`` environment enter:
 
 .. code-block:: bash
 

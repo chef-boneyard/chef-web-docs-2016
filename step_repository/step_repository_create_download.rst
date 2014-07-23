@@ -5,17 +5,19 @@ Instead of cloning the |chef repo| from |github|, a |tar gz| file can be downloa
 
 To download the |chef repo|:
 
-1. Run the following command:
+#. Run the following command:
 
    .. code-block:: bash
 
       $ wget http://github.com/opscode/chef-repo/tarball/master
-2. Extract the |tar gz| file into a directory. For example:
+
+#. Extract the |tar gz| file into a directory. For example:
 
    .. code-block:: bash
 
       $ tar -zxf master
-3. Move the extracted file to the |chef repo|. For example:
+
+#. Move the extracted file to the |chef repo|. For example:
 
    .. code-block:: bash
 

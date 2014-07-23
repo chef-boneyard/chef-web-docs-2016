@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To add the default recipe of a cookbook to a run list, enter:
+To add the default recipe of a cookbook to a run-list, enter:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete a |rackspace| instance with an Instance ID of "12345678", enter:
+To delete a |rackspace| instance with an Instance ID of ``12345678``, enter:
 
 .. code-block:: bash
 

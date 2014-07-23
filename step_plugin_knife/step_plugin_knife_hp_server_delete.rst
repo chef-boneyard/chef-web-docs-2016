@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete an instance named "65646", enter:
+To delete an instance named ``65646``, enter:
 
 .. code-block:: bash
 

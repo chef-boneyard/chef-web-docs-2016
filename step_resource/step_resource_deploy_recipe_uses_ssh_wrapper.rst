@@ -2,15 +2,16 @@
 
 To write a recipe that uses an |ssh| wrapper:
 
-1. Create a file in the ``cookbooks/COOKBOOK_NAME/files/default`` directory that is named ``wrap-ssh4git.sh`` and which contains the following:
+#. Create a file in the ``cookbooks/COOKBOOK_NAME/files/default`` directory that is named ``wrap-ssh4git.sh`` and which contains the following:
 
    .. code-block:: ruby
 
       #!/usr/bin/env bash
       /usr/bin/env ssh -o "StrictHostKeyChecking=no" -i "/tmp/private_code/.ssh/id_deploy" $1 $2
 
-2. Set up the cookbook file.
-3. Add a recipe to the cookbook file similar to the following:
+#. Set up the cookbook file.
+
+#. Add a recipe to the cookbook file similar to the following:
 
    .. code-block:: ruby
 

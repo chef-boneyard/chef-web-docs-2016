@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To remove a role from a run list, enter:
+To remove a role from a run-list, enter:
 
 .. code-block:: bash
 

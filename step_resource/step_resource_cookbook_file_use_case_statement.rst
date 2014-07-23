@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how a ``case`` statement can be used to handle a situation where an application needs to be installed on multiple platforms, but where the install directories are different paths, depending on the platform:
+The following example shows how a case statement can be used to handle a situation where an application needs to be installed on multiple platforms, but where the install directories are different paths, depending on the platform:
 
 .. code-block:: ruby
 

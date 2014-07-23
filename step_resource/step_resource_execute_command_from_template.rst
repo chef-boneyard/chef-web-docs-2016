@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The following example shows how to set up IPv4 packet forwarding using the |resource execute| resource to run a command named "forward_ipv4" that uses a template defined by the |resource template| resource:
+The following example shows how to set up IPv4 packet forwarding using the |resource execute| resource to run a command named ``forward_ipv4`` that uses a template defined by the |resource template| resource:
 
 .. code-block:: ruby
 

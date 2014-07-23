@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To edit the data for a role named "role1", enter:
+To edit the data for a role named ``role1``, enter:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To edit the data for a node named "node1", enter:
+To edit the data for a node named ``node1``, enter:
 
 .. code-block:: bash
 

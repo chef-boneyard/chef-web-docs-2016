@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To compare the "base.json" role to a "webserver.json" role, enter:
+To compare the ``base.json`` role to a ``webserver.json`` role, enter:
 
 .. code-block:: bash
 

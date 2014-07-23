@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The following example shows how to add a rule named "test_rule" to an IP table using the |resource execute| resource to run a command using a template that is defined by the |resource template| resource:
+The following example shows how to add a rule named ``test_rule`` to an IP table using the |resource execute| resource to run a command using a template that is defined by the |resource template| resource:
 
 .. code-block:: ruby
 

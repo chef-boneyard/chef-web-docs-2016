@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To show the details for a cookbook named "haproxy":
+To show the details for a cookbook named ``haproxy``:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete an instance named "devops12", enter:
+To delete an instance named ``devops12``, enter:
 
 .. code-block:: bash
 

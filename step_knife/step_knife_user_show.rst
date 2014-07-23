@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view a user named "Dennis Teck", enter:
+To view a user named ``Dennis Teck``, enter:
 
 .. code-block:: bash
 

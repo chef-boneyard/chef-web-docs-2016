@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To see the available keys for a node, enter the following (for a node named "staging"):
+To see the available keys for a node, enter the following (for a node named ``staging``):
 
 .. code-block:: bash
 

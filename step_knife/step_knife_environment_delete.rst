@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete an environment named "dev", enter:
+To delete an environment named ``dev``, enter:
 
 .. code-block:: bash
 

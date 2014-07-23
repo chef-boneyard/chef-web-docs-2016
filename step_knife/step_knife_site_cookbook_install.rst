@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To install the cookbook "getting-started", enter:
+To install the cookbook ``getting-started``, enter:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view a list of instances associated with a project named "dev-01", enter:
+To view a list of instances associated with a project named ``dev-01``, enter:
 
 .. code-block:: bash
 

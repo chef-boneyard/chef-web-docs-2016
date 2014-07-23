@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how start a service named "example_service" and immediately notify the |nginx| service to restart.
+The following example shows how start a service named ``example_service`` and immediately notify the |nginx| service to restart.
 
 .. code-block:: ruby
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To check the status of |knife| using a |ruby| script named "status.rb" (which looks like):
+To check the status of |knife| using a |ruby| script named ``status.rb`` (which looks like):
 
 .. code-block:: ruby
 
@@ -13,7 +13,7 @@ To check the status of |knife| using a |ruby| script named "status.rb" (which lo
       printf "%-20s %-12s %-8s %s\n", checkin, n.name, rubyver, recipes
    end
 
-and is located in a directory named "scripts", enter:
+and is located in a directory named ``scripts/``, enter:
 
 .. code-block:: bash
 

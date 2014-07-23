@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To download the cookbook "getting-started", enter:
+To download the cookbook ``getting-started``, enter:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To launch a new |rackspace| instance with the "webserver" role, enter:
+To launch a new |rackspace| instance with the ``webserver`` role, enter:
 
 .. code-block:: bash
 

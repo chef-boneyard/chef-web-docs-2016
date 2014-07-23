@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To view the status of a job that has the identifier of "235", run the following command:
+To view the status of a job that has the identifier of ``235``, run the following command:
 
 .. code-block:: bash
 

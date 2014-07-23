@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To edit an environment named "devops", enter:
+To edit an environment named ``devops``, enter:
 
 .. code-block:: bash
 
