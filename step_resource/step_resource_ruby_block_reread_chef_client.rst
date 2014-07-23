@@ -8,5 +8,5 @@
      block do
        Chef::Config.from_file("/etc/chef/client.rb")
      end
-     action :create
+     action :run
    end
