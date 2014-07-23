@@ -2,11 +2,11 @@
 Upgrade Private Chef
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 There are two upgrade scenarios for |chef private|: standalone and high availability.
 
-.. warning:: This topic is not about how to upgrade from |chef private| to |chef server oec| 11. For information about how to upgrade from |chef private| to |chef server oec|, see the topics for `standalone <http://docs.opscode.com/upgrade_server_standalone.html>`_ and/or `high availability <http://docs.opscode.com/upgrade_server_ha.html>`_ upgrades.
+.. warning:: This topic is not about how to upgrade from |chef private| to |chef server oec| 11. For information about how to upgrade from |chef private| to |chef server oec|, see the topics for `standalone <http://docs.getchef.com/upgrade_server_standalone.html>`_ and/or `high availability <http://docs.getchef.com/upgrade_server_ha.html>`_ upgrades.
 
 Standalone Upgrade
 =====================================================

@@ -2,7 +2,7 @@
 Configure Private Chef
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 Configuration of |chef private| is done using the |private chef rb| file that is located at ``/etc/opscode``. This file is written in |ruby|, which allows some flexibility around how |chef private| can be configured.
 

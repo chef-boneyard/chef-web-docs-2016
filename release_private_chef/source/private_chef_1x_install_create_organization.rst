@@ -2,7 +2,7 @@
 Create the Organization
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 In order to begin managing your infrastructure with |chef private|, you will need to create an organization. An organization is completely multi-tenant |chef| infrastructure that shares nothing with other organizations on your |chef private| server.
 

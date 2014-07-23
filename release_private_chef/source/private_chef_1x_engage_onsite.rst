@@ -2,7 +2,7 @@
 Onsite Installation
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 Once the pre-installation tasks are verified, your primary Consultant (and sometimes a secondary Consultant) will arrive on-site to perform the installation. The first steps are to:
 

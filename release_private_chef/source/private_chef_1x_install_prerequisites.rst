@@ -2,13 +2,13 @@
 Prerequisites
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 The following prerequisites apply to every installation of |chef private|.
 
 Download |chef private| 1.x.x
 =====================================================
-.. warning:: |chef private| has been replaced by |chef server oec|. The instructions on this page describe how to install |chef private| for historical purposes. To install |chef server oec|, visit http://pages.getchef.com/ChooseYourVersion.html and http://docs.opscode.com/enterprise/#install-chef-server-oec.
+.. warning:: |chef private| has been replaced by |chef server oec|. The instructions on this page describe how to install |chef private| for historical purposes. To install |chef server oec|, visit http://pages.getchef.com/ChooseYourVersion.html and http://docs.getchef.com/enterprise/#install-chef-server-oec.
 
 |chef private| is distributed on |redhat| and |centos| using |rpm|, and on |ubuntu| as a deb.
 

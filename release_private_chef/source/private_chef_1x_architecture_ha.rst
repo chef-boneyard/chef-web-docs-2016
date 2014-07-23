@@ -2,7 +2,7 @@
 High Availability
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 The High Availability configuration for |chef private| provides for a robust system that is fully supported by |company_name|. This configuration consists of a back-end pair of hosts with redundant storage, and any number of front-end web hosts, scaled to meet your needs. The most common configuration is two front-ends behind a virtual IP address.
 

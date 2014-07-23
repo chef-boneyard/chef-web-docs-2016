@@ -2,7 +2,7 @@
 How Consulting Works
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 The following sections describe how |company_name| consulting works from the initial engagement through to the point at which the engagement is finished.
 

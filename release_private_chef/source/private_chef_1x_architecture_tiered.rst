@@ -2,7 +2,7 @@
 Tiered
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 In a Tiered topology, your |chef private| environment will run on multiple servers, but the back-end datastore layer will live on a single host. No highly available data storage is provided on the back-end host, though the front-end layer can be scaled horizontally. This topology may be of interest for environments that wish to provide their own methods for backup and data redundancy.
 

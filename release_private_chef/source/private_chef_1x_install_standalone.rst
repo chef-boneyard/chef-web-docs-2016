@@ -2,7 +2,7 @@
 Standalone
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 The Standalone installation of |chef private| creates a working installation on a single server. This installation is typically useful when you are installing |chef private| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 

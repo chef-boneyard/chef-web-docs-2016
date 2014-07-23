@@ -2,7 +2,7 @@
 Modifications
 =====================================================
 
-.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.opscode.com/server/.
+.. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
 
 The three supported |chef private| topologies discussed in this guide are the product of our experiences with |chef hosted| and, we feel, will provide our customers with the best |chef| platform for their environments.
 
