@@ -29,7 +29,7 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
-.. note:: See the `Ohai 7 documentation <http://docs.opscode.com/release/ohai-7/>`_ and `release notes <http://docs.opscode.com/release/ohai-7/release_notes.html>`_ for all of the details.
+.. note:: See the `Ohai 7 documentation <http://docs.getchef.com/release/ohai-7/>`_ and `release notes <http://docs.getchef.com/release/ohai-7/release_notes.html>`_ for all of the details.
 
 ``collect_data`` Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
