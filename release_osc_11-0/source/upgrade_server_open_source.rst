@@ -1,3 +1,5 @@
+.. THIS PAGE DOCUMENTS Open Source Chef server version 11.0
+
 =====================================================
 Upgrade the |chef server osc| Server
 =====================================================
