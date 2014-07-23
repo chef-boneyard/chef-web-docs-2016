@@ -17,27 +17,27 @@ The following |knife| plug-ins are maintained by |company_name|:
 
    * - Sub-command
      - Description
-   * - `knife azure <http://docs.opscode.com/plugin_knife_azure.html>`_
+   * - `knife azure <http://docs.getchef.com/plugin_knife_azure.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
-   * - `knife bluebox <http://docs.opscode.com/plugin_knife_bluebox.html>`_
+   * - `knife bluebox <http://docs.getchef.com/plugin_knife_bluebox.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
-   * - `knife ec2 <http://docs.opscode.com/plugin_knife_ec2.html>`_
+   * - `knife ec2 <http://docs.getchef.com/plugin_knife_ec2.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2.rst
-   * - `knife eucalyptus <http://docs.opscode.com/plugin_knife_eucalyptus.html>`_
+   * - `knife eucalyptus <http://docs.getchef.com/plugin_knife_eucalyptus.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus.rst
-   * - `knife google <http://docs.opscode.com/plugin_knife_google.html>`_
+   * - `knife google <http://docs.getchef.com/plugin_knife_google.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_google.rst
-   * - `knife hp <http://docs.opscode.com/plugin_knife_hp.html>`_
+   * - `knife hp <http://docs.getchef.com/plugin_knife_hp.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_hp.rst
-   * - `knife linode <http://docs.opscode.com/plugin_knife_linode.html>`_
+   * - `knife linode <http://docs.getchef.com/plugin_knife_linode.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_linode.rst
-   * - `knife openstack <http://docs.opscode.com/plugin_knife_openstack.html>`_
+   * - `knife openstack <http://docs.getchef.com/plugin_knife_openstack.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
-   * - `knife rackspace <http://docs.opscode.com/plugin_knife_rackspace.html>`_
+   * - `knife rackspace <http://docs.getchef.com/plugin_knife_rackspace.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace.rst
-   * - `knife terremark <http://docs.opscode.com/plugin_knife_terremark.html>`_
+   * - `knife terremark <http://docs.getchef.com/plugin_knife_terremark.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark.rst
-   * - `knife windows <http://docs.opscode.com/plugin_knife_windows.html>`_
+   * - `knife windows <http://docs.getchef.com/plugin_knife_windows.html>`_
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
 
