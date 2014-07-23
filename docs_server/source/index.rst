@@ -1,5 +1,5 @@
 =====================================================
-Chef Server
+Chef Server 
 =====================================================
 
 The |chef server| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.

@@ -1,7 +1,7 @@
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
 =====================================================
-Docs for |chef client| 10.latest 
+Docs for |chef client| 10.latest
 =====================================================
 
 .. warning:: This document collection is only about the current version of the 10.x |chef client|. For information about the current version of the chef-client 11, see docs.getchef.com. For information about specific Chef 11 servers, see docs.getchef.com/open_source or docs.getchef.com/enterprise.
