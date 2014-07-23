@@ -1,3 +1,4 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/server_orgs.html BY DESIGN
+.. THIS PAGE IS IDENTICAL TO docs.getchef.com/server_orgs.html BY DESIGN
+.. THIS PAGE DOCUMENTS Enterprise Chef server version 11.0
 
 .. include:: ../../chef_master/source/server_orgs.rst

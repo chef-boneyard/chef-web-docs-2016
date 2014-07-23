@@ -1,3 +1,4 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/migrate_to_enterprise.html BY DESIGN
+.. THIS PAGE IS IDENTICAL TO docs.getchef.com/migrate_to_enterprise.html BY DESIGN
+.. THIS PAGE DOCUMENTS Enterprise Chef server version 11.0
 
 .. include:: ../../chef_master/source/migrate_to_enterprise.rst

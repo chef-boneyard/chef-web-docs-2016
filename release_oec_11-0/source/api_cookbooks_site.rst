@@ -1,3 +1,5 @@
+.. THIS PAGE DOCUMENTS Enterprise Chef server version 11.0
+
 =====================================================
 Cookbooks Site API
 =====================================================
