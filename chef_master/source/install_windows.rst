@@ -5,7 +5,7 @@ Install the |chef client| on |windows|
 .. include:: ../../includes_windows/includes_windows_install_overview.rst
 
 
-Use knife-windows
+Use |subcommand knife windows|
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 

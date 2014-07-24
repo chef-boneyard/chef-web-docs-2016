@@ -4,7 +4,7 @@
 
 The |company_name| style guide is just a limited subset of the full capabilities of Sphinx, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
 
-All of the documents built by Sphinx can be found at docs.opscode.com.
+All of the documents built by Sphinx can be found at |url docs|.
 
 Basic Doc Template
 =====================================================
@@ -22,7 +22,7 @@ This is the only section header that requires the structure above and below the 
 
 Body
 -----------------------------------------------------
-The body of the topic contains anything else needed for the topic. Often, a topic contains an include file (or three), and then some topics contain sub-headers. Most of the topics that are published to docs.opscode.com contain a series of includes files. But some topics, like "An Overview of Chef", include original content alongside the includes files. It just depends on what the topic requires.
+The body of the topic contains anything else needed for the topic. Often, a topic contains an include file (or three), and then some topics contain sub-headers. Most of the topics that are published to |url docs| contain a series of includes files. But some topics, like "An Overview of Chef", include original content alongside the includes files. It just depends on what the topic requires.
 
 Example
 -----------------------------------------------------
@@ -288,7 +288,7 @@ where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will e
 
 External
 -----------------------------------------------------
-An external link points to something that does not live on docs.opscode.com. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
+An external link points to something that does not live on |url docs|. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
 
    http://www.codecademy.com/tracks/ruby
 

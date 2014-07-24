@@ -2,7 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A fuzzy matching search pattern is used to search based on the proximity of two strings of characters. An (optional) integer may be used as part of the search query to more closely define the proximity. A fuzzy matching search pattern has the following syntax::
+A fuzzy matching search pattern is used to search based on the proximity of two strings of characters. An (optional) integer may be used as part of the search query to more closely define the proximity. A fuzzy matching search pattern has the following syntax:
+
+.. code-block:: ruby
 
    "search_query"~edit_distance
 

@@ -13,13 +13,17 @@ A search query can be made for roles that are at the top-level of a run-list and
    * - Role Location
      - Description
    * - Top-level
-     - To find a node with a role in the top-level of its run-list, search within the ``role`` field (and escaping any special characters with the slash symbol) using the following syntax::
+     - To find a node with a role in the top-level of its run-list, search within the ``role`` field (and escaping any special characters with the slash symbol) using the following syntax:
+	 
+	   .. code-block:: ruby
        
           role:ROLE_NAME
        
        where ``role`` (singlular!) indicates the top-level run-list.
    * - Expanded
-     - To find a node with a role in an expanded run-list, search within the ``roles`` field (and escaping any special characters with the slash symbol) using the following syntax::
+     - To find a node with a role in an expanded run-list, search within the ``roles`` field (and escaping any special characters with the slash symbol) using the following syntax:
+	 
+	   .. code-block:: ruby
        
           roles:ROLE_NAME
        

@@ -88,7 +88,7 @@ Or:
 
    $ knife search node "flags:UP"
 
-This data is also flattened into various compound keys, which follow the same pattern as the |json| hierarchy and use underscores ("_") to separate the levels of data, similar to:
+This data is also flattened into various compound keys, which follow the same pattern as the |json| hierarchy and use underscores (``_``) to separate the levels of data, similar to:
 
 .. code-block:: javascript
 
@@ -104,7 +104,7 @@ which allows searches like the following to find data that is present in this no
 
    $ knife search node "network_interfaces_en1_addresses:192.168.0.195"
 
-This flattened data structure also supports using wildcard compound keys, which allow searches to omit levels within the |json| data structure that are not important to the search query. In the following example, an asterisk ("*") is used to show where the wildcard can exist when searching for nested key:
+This flattened data structure also supports using wildcard compound keys, which allow searches to omit levels within the |json| data structure that are not important to the search query. In the following example, an asterisk (``*``) is used to show where the wildcard can exist when searching for nested key:
 
 .. code-block:: ruby
 
