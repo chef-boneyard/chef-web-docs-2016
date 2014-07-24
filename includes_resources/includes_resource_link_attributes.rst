@@ -12,7 +12,7 @@
    * - ``group``
      - |group resource link|
    * - ``link_type``
-     - |link_type| Default value: ``symbolic``.
+     - |link_type| Default value: ``:symbolic``.
    * - ``owner``
      - |owner resource link|
    * - ``provider``

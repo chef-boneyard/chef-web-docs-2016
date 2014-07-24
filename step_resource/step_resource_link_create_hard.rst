@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To create a hard link:
+The following example will create a hard link from ``/tmp/passwd`` to ``/etc/passwd``:
 
 .. code-block:: ruby
 

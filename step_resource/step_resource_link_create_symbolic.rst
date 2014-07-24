@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To create a symbolic link:
+The following example will create a symbolic link from ``/tmp/passwd`` to ``/etc/passwd``:
 
 .. code-block:: ruby
 

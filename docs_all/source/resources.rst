@@ -1323,6 +1323,8 @@ link
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_link.rst
 
+.. include:: ../../includes_resources/includes_resource_link_about.rst
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_link_syntax.rst
@@ -1354,6 +1356,14 @@ Examples
 **Delete links**
 
 .. include:: ../../step_resource/step_resource_link_delete.rst
+
+**Create multiple symbolic links**
+
+.. include:: ../../step_resource/step_resource_link_multiple_links_files.rst
+
+**Create platform-specific symbolic links**
+
+.. include:: ../../step_resource/step_resource_link_multiple_links_redhat.rst
 
 
 log
