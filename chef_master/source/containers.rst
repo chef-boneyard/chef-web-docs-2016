@@ -28,13 +28,7 @@ The best practice for securing credentials like private keys, secrets, and certi
 
 Credential Management
 -----------------------------------------------------
-Credentials such as private keys, secrets, and certificates should not be kept in |docker| images. By default, secure credentials are deleted after the ``knife container docker build`` process is completed. In order for the resulting image to launch properly, the secure credentials must be mounted into the ``/etc/chef/secure`` directory. Credentials must be copied into a folder on the host machine, and then mounted into the container using the ``-v`` flag of the ``docker run`` command: https://docs.docker.com/reference/commandline/cli/#run.
-
-For example, if all secure credentials are located in the ``/etc/chef-container/secure`` directory on the |docker| host, run the following command:
-
-.. code-block:: bash
-
-   $$ docker run -d -v /etc/chef-container/secure:/etc/chef/secure:ro NAMESPACE/IMAGE
+.. include:: ../../includes_containers/includes_containers_credential_management.rst
    
 |dockerfile|
 -----------------------------------------------------
@@ -86,13 +80,18 @@ Examples
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
 
-**Local Mode**
+**Local mode**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_local_mode.rst
 
-**Server Mode**
+**Server mode**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_server_mode.rst
+
+**Include secure credentials in image**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_include_credentials.rst
+
 
 Container Services
 =====================================================

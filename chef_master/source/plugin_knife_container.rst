@@ -43,16 +43,24 @@ Options
 
 .. include:: ../../includes_containers/includes_containers_docker_dockerfile.rst
 
+**Credential Management**
+
+.. include:: ../../includes_containers/includes_containers_credential_management.rst
+
 Examples
 -----------------------------------------------------
 **Create a Dockerfile**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
 
-**Local Mode**
+**Local mode**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_local_mode.rst
 
-**Server Mode**
+**Server mode**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_server_mode.rst
+
+**Include secure credentials in image**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_include_credentials.rst
