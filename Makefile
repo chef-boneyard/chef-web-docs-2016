@@ -23,6 +23,7 @@ master:
 	mkdir -p $(BUILDDIR)
 	cp -r misc/robots.txt build/
 	cp -r misc/sitemap.xml build/
+	cp -r misc/google46c9c5ad0fd168a0.html build/
 	sphinx-build chef_master/source $(BUILDDIR)
 
 all:
