@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /chef/ PATH.
+
 =====================================================
 All about Chef ... 
 =====================================================
@@ -95,7 +97,6 @@ All about Chef ...
 .. toctree::
    :hidden:
 
-   chef_pedant
    ctl_chef_server
    chef_client
    chef_overview

@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /chef/ PATH.
+
 =====================================================
 Recipe DSL
 =====================================================
@@ -88,6 +90,10 @@ The following examples show how the ``platform_family?`` method can be used in a
 **Use the platform_family? method**
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
+reboot_pending? Method
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_reboot_pending.rst
 
 recipe_name
 -----------------------------------------------------

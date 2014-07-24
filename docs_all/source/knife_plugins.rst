@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /chef/ PATH.
+
 =====================================================
 Knife Cloud Plugins Reference
 =====================================================
@@ -61,8 +63,6 @@ knife azure
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
 
 .. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -159,8 +159,6 @@ knife bluebox
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
 
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
-
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_plugin_knife/step_plugin_knife_bluebox_install_rubygem.rst
@@ -224,8 +222,6 @@ knife bluelock
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluelock.rst
 
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
-
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_plugin_knife/step_plugin_knife_bluelock_install_rubygem.rst
@@ -284,8 +280,6 @@ knife ec2
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2.rst
 
 .. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -359,8 +353,6 @@ Options
 knife eucalyptus
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus.rst
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -448,8 +440,6 @@ Options
 knife google
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google.rst
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -644,8 +634,6 @@ knife hp
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_hp.rst
 
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
-
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_plugin_knife/step_plugin_knife_hp_install_rubygem.rst
@@ -685,7 +673,6 @@ Examples
 **View a list of images**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_hp_image_list.rst
-
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -739,8 +726,6 @@ Options
 knife linode
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_linode.rst
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -859,8 +844,6 @@ knife openstack
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
 
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
-
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_plugin_knife/step_plugin_knife_openstack_install_rubygem.rst
@@ -882,7 +865,6 @@ Examples
 **View a list of flavors**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_openstack_flavor_list.rst
-
 
 group list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -955,8 +937,6 @@ knife rackspace
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace.rst
 
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
-
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_plugin_knife/step_plugin_knife_rackspace_install_rubygem.rst
@@ -1007,7 +987,6 @@ Examples
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_rackspace_server_create_instance_with_many_roles.rst
 
-
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_delete.rst
@@ -1048,8 +1027,6 @@ Examples
 knife terremark
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark.rst
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1114,14 +1091,9 @@ Examples
 .. include:: ../../step_plugin_knife/step_plugin_knife_terremark_server_list.rst
 
 
-
-
 knife vcloud
 -----------------------------------------------------
-
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud.rst
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1174,7 +1146,6 @@ Options
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 None.
-   
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1205,22 +1176,9 @@ Options
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud_server_list_options.rst
 
 
-
-
-
-
-
-
-
-
-
-
-
 knife windows
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
-
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

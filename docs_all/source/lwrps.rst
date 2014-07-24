@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /chef/ PATH.
+
 =====================================================
 Lightweight Resources
 =====================================================
@@ -203,7 +205,7 @@ The following groups of lightweight resources are available in open source cookb
 * `apt <https://github.com/opscode-cookbooks/apt>`_
 * `aws <https://github.com/opscode-cookbooks/aws>`_
 * `bluepill <https://github.com/opscode-cookbooks/bluepill>`_
-* `chef_handler <http://docs.opscode.com/resource_chef_handler.html>`_
+* `chef_handler <http://docs.getchef.com/resource_chef_handler.html>`_
 * `daemontools <https://github.com/opscode-cookbooks/daemontools>`_
 * `djbdns <https://github.com/opscode-cookbooks/djbdns>`_
 * `dmg <https://github.com/opscode-cookbooks/dmg>`_
@@ -213,7 +215,7 @@ The following groups of lightweight resources are available in open source cookb
 * `gunicorn <https://github.com/opscode-cookbooks/gunicorn>`_
 * `homebrew <https://github.com/opscode-cookbooks/homebrew>`_
 * `iis <https://github.com/opscode-cookbooks/iis>`_
-* `junos <http://docs.opscode.com/junos.html>`_
+* `junos <http://docs.getchef.com/junos.html>`_
 * `maven <https://github.com/opscode-cookbooks/maven>`_
 * `netdev <https://github.com/opscode-cookbooks/netdev>`_
 * `nginx <https://github.com/opscode-cookbooks/nginx>`_
@@ -226,5 +228,5 @@ The following groups of lightweight resources are available in open source cookb
 * `transmission <https://github.com/opscode-cookbooks/transmission>`_
 * `webpi <https://github.com/opscode-cookbooks/webpi>`_
 * `windows <https://github.com/opscode-cookbooks/windows>`_
-* `yum <http://docs.opscode.com/lwrp_yum.html>`_
+* `yum <http://docs.getchef.com/lwrp_yum.html>`_
 

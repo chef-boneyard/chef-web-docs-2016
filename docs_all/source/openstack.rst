@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /chef/ PATH.
+
 =====================================================
 |openstack chef|
 =====================================================
@@ -194,7 +196,7 @@ Install
 
 knife-openstack
 =====================================================
-See http://docs.opscode.com/plugin_knife_openstack.html.
+See http://docs.getchef.com/plugin_knife_openstack.html.
 
 
 
