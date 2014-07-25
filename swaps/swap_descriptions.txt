@@ -63,6 +63,7 @@
 .. |availability_zone| replace:: The name of the availability zone. Each availability zone is unique within a region.
 .. |aws_access_key_id| replace:: The access key identifier used with |amazon ec2|.
 .. |aws_access_key_secret| replace:: The secret access key for the API endpoint used with |amazon ec2|.
+.. |azure connect_to_existing_dns| replace:: Use to add a new virtual machine to the existing deployment and/or service. Use with ``--azure-dns-name`` to ensure the correct DNS is used.
 .. |azure host description| replace:: The description for the host.
 .. |azure_host_name| replace:: The host name for the |azure| environment.
 .. |azure_pem_filename| replace:: The name of the file that contains the |ssh| public key that is used when authenticating to |azure|.
@@ -77,7 +78,9 @@
 .. |azure network_name| replace:: The network for the virtual machine.
 .. |azure subnet_name| replace:: The subnet for the virtual machine.
 .. |azure virtual_machine_name| replace:: The name of the virtual machine. Must be unique within |azure|. Required for advanced server creation options.
-.. |azure connect_to_existing_dns| replace:: Use to add a new virtual machine to the existing deployment and/or service. Use with ``--azure-dns-name`` to ensure the correct DNS is used.
+.. |azure wait| replace:: Use to have the console wait until the server has finished processing the request.
+
+
 
 .. Description strings that begin with the letter B.
 .. The pattern is |bxxxx| replace:: string.
@@ -276,12 +279,22 @@
 .. |directory postgresql_data| replace:: The location in which |postgresql| will store on-disk data.
 .. |directory postgresql_home| replace:: The home directory for |postgresql|.
 .. |directory redis| replace:: The working directory. (Also the location in which an append-only log file is created, if used.)
+
+
+.. |directory cookbooks| replace:: The directory in which cookbooks are located.
+.. |directory dockerfile_context| replace:: The directory in which |dockerfile| contexts are located.
+.. |directory environments| replace:: The directory in which environments are located.
+.. |directory nodes| replace:: The directory in which nodes are located.
+.. |directory roles| replace:: The directory in which roles are located.
+.. |directory trusted_certificates| replace:: The directory in which trusted certificates are located.
+
 .. |disable plugin_ohai| replace:: An array of |ohai| plugins to be disabled on a node.
 .. |disable-bootstrap| replace:: Use to disable the bootstrap process.
 .. |diskspacecheck| replace:: Use to check for sufficient disk space before running a transaction.
 .. |distroverpkg| replace:: The package used by |yum| to determine the version for a distribution.
 .. |distributed_erlang_node| replace:: Use to specify that a node is a distributed |erlang| node.
 .. |distro| replace:: The template file to be used during a bootstrap operation. The following distributions are supported: ``chef-full`` (the default bootstrap), ``centos5-gems``, ``fedora13-gems``, ``ubuntu10.04-gems``, ``ubuntu10.04-apt``, ``ubuntu12.04-gems``, and the name of a custom bootstrap template file. When this option is used, |knife| will search for the template file in the following order: the ``bootstrap/`` folder in the current working directory, the ``bootstrap/`` folder in the |chef repo|, the ``bootstrap/`` folder in the ``~/.chef/`` directory, or a default bootstrap file. Do not use the ``--template-file`` option when ``--distro`` is specified.
+.. |docker base_image| replace:: Use to specify the image to use as the base image. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|. Currently, this value must be an image made available via the `Chef Docker Hub account <https://registry.hub.docker.com/repos/chef/>`_.
 .. |dns_zone| replace:: The DNS zone.
 .. |dry_run| replace:: Use to take no action and only print out results.
 .. |dry_run no_upload| replace:: Use to prevent changes from being uploaded to the |chef server|.
@@ -369,6 +382,8 @@
 .. |force knife download| replace:: Use ``--force`` to download files even when the file on the hard drive is identical to the object on the server (role, cookbook, etc.). By default, files are compared to see if they have equivalent content, and local files are only overwritten if they are different.
 .. |force knife upload| replace:: Use ``--force`` to upload roles, cookbooks, etc. even if the file in the directory is identical (by default, no ``POST`` or ``PUT`` is performed unless an actual change would be made).
 .. |force update| replace:: Use to update a cookbook even if the ``--freeze`` flag has been set.
+.. |force_docker_build| replace:: Use to force a build.
+.. |force_docker_contexts| replace:: When ``true``, use to overwrite existing |dockerfile| contexts.
 .. |force_formatter| replace:: Use to show formatter output instead of logger output.
 .. |force_logger| replace:: Use to show logger output instead of formatter output.
 .. |force_unlink| replace:: Use to specify how the |chef client| handles certain situations when the target file turns out not to be a file. For example, when a target file is actually a symlink. Set to ``true`` to have the |chef client| delete the non-file target and replace it with the specified file. Set to ``false`` for the |chef client| to raise an error.
@@ -397,8 +412,18 @@
 
 .. |gem_binary resource package| replace:: An attribute for the ``gem_package`` provider that is used to specify a |gems| binary.
 .. |gems_array| replace:: An array of |gems| to be installed.
+.. |generate_berksfile| replace:: Use to generate a |berksfile| based on the run-list specified by the ``--run-list`` option.
 .. |generic resource statement| replace:: The following examples demonstrate various approaches for using resources in recipes. If you want to see examples of how |company_name| uses resources in recipes, take a closer look at the cookbooks that |company_name| authors and maintains: https://github.com/opscode-cookbooks.
 .. |git_ssh_wrapper| replace:: The alias for the ``ssh_wrapper``.
+
+.. |google_boot_disk_name| replace:: The name of the persistent boot disk.
+.. |google_boot_disk_size| replace:: The size (in GB) of the persistent boot disk. This must be a value between 10 and 10000.
+.. |google_image_project_id| replace:: The ID for the project that contains the image.
+.. |google_service_account_name| replace:: The name of the service account associated with the server. The typical format is similar to: ``12345678@project.gceserviceaccount.com``.
+.. |google_service_account_scope| replace:: Additional metadata for the server.
+.. |google_auto_server_migrate| replace:: Use to specify if |google compute engine| can migrate the virtual machine instance without downtime, prior to periodic infrastructure maintenance.
+.. |google_auto_server_restart| replace:: Use to specify if |google compute engine| will automatically restart the virtual machine instance if it is terminated by non-user initiated actions.
+
 .. |google_image| replace:: The name of the virtual application template or image that will be used to create the virtual machine.
 .. |google_compute_disks| replace:: A comma-separated list of disks to be attached.
 .. |google_compute_public_ip| replace:: The public IP address for |google compute engine|.
@@ -514,6 +539,7 @@
 .. |image| replace:: The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
 .. |include-dependencies| replace:: Use to ensure that when a cookbook has a dependency on one (or more) cookbooks, those cookbooks will also be uploaded.
 .. |include_config| replace:: The external configuration files to be included.
+.. |include_credentials| replace:: Use to include secure credentials in a |docker| image.
 .. |include_packages| replace:: A list of packages in a |yum| repository.
 .. |insecure openstack| replace:: Use to have the Auth URL ignore |ssl| certificates.
 .. |internet_host_address| replace:: The Internet host address for the network interface.
@@ -788,6 +814,7 @@
 .. |name user rackspace| replace:: The |rackspace| account user name.
 .. |name user vcloud| replace:: The |vcloud| account user name.
 .. |name user yum_basic_auth| replace:: The user name for basic authentication to a repository or to a URL.
+.. |name validation_client| replace:: The name of the validation client, typically a client named |chef validator|.
 .. |name virtual_environment| replace:: The name of the virtual environment.
 .. |name virtual_host| replace:: The name of the virtual host.
 .. |name virtual_machine| replace:: The host name for the virtual machine.
@@ -798,6 +825,7 @@
 .. |network_name| replace:: The name of the network in which a virtual machine is created.
 .. |network_address| replace:: The address for the network interface.
 .. |no name tags| replace:: Use to prevent tag names from being displayed in the output.
+.. |no_berkshelf| replace:: Use to prevent |berkshelf| from running, even when a |berksfile| exists.
 .. |no_bootstrap| replace:: Use to enable the |chef client| bootstrap.
 .. |no_diff| replace:: Use to show a diff when a file changes.
 .. |no_editor| replace:: Use to prevent the |chef editor| from being opened and to accept data as-is.
@@ -898,6 +926,7 @@
 .. |path ssl_certificate yum_client| replace:: The path to the |ssl| client certificate that |yum| should use to connect to repositories and/or remote sites.
 .. |path ssl_certificate yum_client_key| replace:: The path of the location in which the |ssl| client key used by |yum| is located.
 .. |path ssl_certificate yum_directory| replace:: The path to the directory in which the certificate authorities |yum| should use to verify |ssl| certificates are located.
+.. |path validation_client| replace:: The path to the validation key used by the client, typically a file named |chef validator pem|.
 .. |pattern command_line| replace:: One (or more) patterns for a command line. If this option is not specified, a list of patterns may be expected on standard input.
 .. |pattern process_table| replace:: The pattern to look for in the process table.
 .. |permission create| replace:: Use the |webui permission create| global permission to define which users and groups may create the following server object types: cookbooks, data bags, environments, nodes, roles, and tags.
@@ -973,6 +1002,7 @@
 ..
 
 .. |query| replace:: Use to protect search queries that start with a hyphen (-). A ``-q`` query may be specified as an argument or an option, but not both.
+.. |quota_limit| replace:: Use to set a quota limit.
 .. |quorum push jobs| replace:: The minimum number of nodes that match the search criteria, are available, and acknowledge the job request. This can be expressed as a percentage (e.g. ``50%``) or as an absolute number of nodes (e.g. ``145``).
 
 

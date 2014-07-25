@@ -27,13 +27,13 @@ This argument has the following options:
    |purge windows azure|
 
 ``--preserve-azure-dns-name``
-  |azure preserve_dns_name|
+   |azure preserve_dns_name|
 
 ``--preserve-azure-os-disk``
    |azure preserve_os_disk|
 
 ``--preserve-azure-vhd``
-  |azure preserve_virtual_disk|
+   |azure preserve_virtual_disk|
 
 ``-S ID``, ``--azure-subscription-id ID``
    |azure_subscription_id|
@@ -42,5 +42,5 @@ This argument has the following options:
    |ssl_certificate|
 
 ``--wait``
-  Use to have the console wait until the server has finished processing the request.  
+   |azure wait|  
 

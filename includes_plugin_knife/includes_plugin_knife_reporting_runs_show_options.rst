@@ -6,5 +6,5 @@
 This argument has the following options:
 
 ``RUN_ID``
-   The identifier for a |chef client| run.
+   |id chef_client_run|
 

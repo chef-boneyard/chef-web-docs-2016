@@ -9,4 +9,4 @@ This argument has the following options:
    |credential_file google|
 
 ``-L``, ``--with-limits``
-   Use to set a quota limit.
+   |quota_limit|

@@ -6,10 +6,10 @@
 This argument has the following options:
    
 ``-d DOCKERFILES_PATH``, ``--force DOCKERFILES_PATH``
-     Use to specify the path to the folder in which |dockerfile| contexts are located.
+   |directory dockerfile_context|
 
 ``--force``
-   Use to force a build. Default value: ``false``.
+   |force_docker_build| Default value: ``false``.
 
 ``--no-berks``
-   Use to prevent |berkshelf| from running, even when a |berksfile| exists.
+   |no_berkshelf|

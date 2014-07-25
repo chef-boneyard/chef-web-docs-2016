@@ -15,13 +15,13 @@ This argument has the following options:
    |credential_file google|
 
 ``--gce-boot-disk-name DISK``
-   The name of the persistent boot disk.
+   |google_boot_disk_name|
 
 ``--gce-boot-disk-size SIZE``
-   The size (in GB) of the persistent boot disk. This must be a value between 10 and 10000. Default value: ``10``.
+   |google_boot_disk_size| Default value: ``10``.
 
 ``--gce-image-project-id IMAGE_PROJECT_ID``
-   The ID for the project that contains the image.
+   |google_image_project_id|
 
 ``--gce-metadata Key=Value[,Key=Value...]``
    |google_compute_metadata|
@@ -33,10 +33,10 @@ This argument has the following options:
    |google_compute_server_connect_ip| Default value: ``PUBLIC``.
 
 ``--gce-service-account-name NAME``
-   The name of the service account associated with the server. The typical format is similar to: ``12345678@project.gceserviceaccount.com``. Default value: ``'default'``.
+   |google_service_account_name| Default value: ``'default'``.
 
 ``--gce-service-account-scopes SCOPE1, SCOPE2, SCOPE3``
-   Additional metadata for the server.
+   |google_service_account_scope|
 
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
@@ -63,10 +63,10 @@ This argument has the following options:
    |name node|
 
 ``--[no-]gce-auto-server-restart``
-   Use to specify if |google compute engine| will automatically restart the virtual machine instance if it is terminated by non-user initiated actions. Default value: ``true``.
+   |google_auto_server_restart| Default value: ``true``.
 
 ``--[no-]gce-auto-server-migrate``
-   Use to specify if |google compute engine| can migrate the virtual machine instance without downtime, prior to periodic infrastructure maintenance. Default value: ``true``.
+   |google_auto_server_migrate| Default value: ``true``.
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh_port| Default value: ``22``.
