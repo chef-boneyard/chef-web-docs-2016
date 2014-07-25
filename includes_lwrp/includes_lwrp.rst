@@ -4,10 +4,10 @@
 
 A |lwrp| is a part of a cookbook that is used to extend the |chef client| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any platform resource. A |lwrp| has two principal components:
 
-* A `lightweight resource <http://docs.opscode.com/lwrp_custom_resource.html>`_ that defines a set of actions and attributes
+* A `lightweight resource <http://docs.getchef.com/lwrp_custom_resource.html>`_ that defines a set of actions and attributes
 * A lightweight provider that tells the |chef client| how to handle each action, what to do if certain conditions are met, and so on
 
-In addition, most lightweight providers are built `using platform resources <http://docs.opscode.com/lwrp_custom_provider.html>`_ and some lightweight providers are built `using custom Ruby code <http://docs.opscode.com/lwrp_custom_provider_ruby.html>`_
+In addition, most lightweight providers are built `using platform resources <http://docs.getchef.com/lwrp_custom_provider.html>`_ and some lightweight providers are built `using custom Ruby code <http://docs.getchef.com/lwrp_custom_provider_ruby.html>`_
 
 Once created, a |lwrp| becomes a |ruby| class within the organization. During each |chef client| run, the |chef client| will read the lightweight resources from recipes and process them alongside all of the other resources. When it is time to configure the node, the |chef client| will use the corresponding lightweight provider to determine the steps required to bring the system into the desired state.
 

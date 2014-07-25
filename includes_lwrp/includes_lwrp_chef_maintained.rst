@@ -20,7 +20,7 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - The |cookbook aws| cookbook is used to manage resources that are running in |amazon aws|.
    * - `bluepill <https://github.com/opscode-cookbooks/bluepill>`_
      - The |cookbook bluepill| cookbook is used to install |bluepill|, and then use it to manage services.
-   * - `chef_handler <http://docs.opscode.com/lwrp_chef_handler.html>`_
+   * - `chef_handler <http://docs.getchef.com/lwrp_chef_handler.html>`_
      - |cookbook name chef_handler|
    * - `cron <https://github.com/opscode-cookbooks/cron>`_
      - Use to install cron and start the crond service.
@@ -57,7 +57,7 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
    * - `postfix <https://github.com/opscode-cookbooks/postfix>`_
      - Use to install and configure postfix for client or outbound relayhost.
    * - `powershell <https://github.com/opscode-cookbooks/powershell>`_
-     - Use to run |windows powershell|. See the `powershell_script resource <http://docs.opscode.com/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|. 
+     - Use to run |windows powershell|. See the `powershell_script resource <http://docs.getchef.com/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|. 
    * - `rabbit mq <https://github.com/opscode-cookbooks/rabbitmq>`_
      - The |cookbook rabbitmq| cookbook is used to install and configure |rabbitmq|.
    * - `squid <https://github.com/opscode-cookbooks/squid>`_
@@ -70,5 +70,5 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - The |cookbook webpi| cookbook is used to run the |microsoft webpi|.
    * - `windows <https://github.com/opscode-cookbooks/windows>`_
      - The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
-   * - `yum <http://docs.opscode.com/lwrp_yum.html>`_
+   * - `yum <http://docs.getchef.com/lwrp_yum.html>`_
      - The |cookbook yum| cookbook is used to manage the contents of the ``yum.conf`` configuration file for global |yum| configurations and for individual |yum| repositories.
