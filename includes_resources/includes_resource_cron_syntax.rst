@@ -27,12 +27,12 @@ For example, the following example runs weekly cookbook reports:
      minute "0"
      hour "0"
      weekday "1"
-     user "opscode"
-     mailto "nharvey@opscode.com"
-     home "/srv/opscode-community-site/shared/system"
+     user "getchef"
+     mailto "nharvey@getchef.com"
+     home "/srv/supermarket/shared/system"
      command %Q{
-       cd /srv/opscode-community-site/current &&
-       env RUBYLIB="/srv/opscode-community-site/current/lib"
+       cd /srv/supermarket/current &&
+       env RUBYLIB="/srv/supermarket/current/lib"
        RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
        bundle exec rake cookbooks_report
      }
