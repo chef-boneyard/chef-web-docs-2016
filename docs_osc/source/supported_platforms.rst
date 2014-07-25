@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /open_source/ PATH.
+
 =====================================================
 Supported Platforms for |chef server osc|
 =====================================================

@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /open_source/ PATH.
+
 =====================================================
 An Overview of Open Source Chef
 =====================================================
