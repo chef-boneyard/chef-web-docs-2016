@@ -5,7 +5,7 @@ The following example shows how the settings look when added to the configuratio
 
 .. code-block:: ruby
 
-   chef_documentation_url "http://docs.opscode.com"
+   chef_documentation_url "http://docs.getchef.com"
    disable_sign_up false
    events.port 11001
    logging.chef_log_level "info"

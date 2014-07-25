@@ -10,7 +10,7 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``chef_documentation_url``
-     - The URL at which documentation for |chef| is located. Default value: ``http://docs.opscode.com``.
+     - The URL at which documentation for |chef| is located. Default value: ``http://docs.getchef.com``.
    * - ``disable_sign_up``
      - Use to disable sign-up and only allow sign-in. Default value: ``false``.
    * - ``email_from_address``
