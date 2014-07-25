@@ -76,13 +76,13 @@ which allows searches like the following to find data that is present in this no
 
    $ knife search node "broadcast:192.168.0.*"
 
-Or:
+or:
 
 .. code-block:: bash
 
    $ knife search node "mtu:1500"
 
-Or:
+or:
 
 .. code-block:: bash
 
