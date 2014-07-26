@@ -153,6 +153,7 @@ Cookbooks
 
    actions
    analytics
+   analytics_webui_tasks
    api_chef_server
    api_cookbooks_site
    api_omnitruck
