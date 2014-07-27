@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
+
 =====================================================
 About Resources and Providers
 =====================================================

@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
+
 =====================================================
 An Overview of Enterprise Chef
 =====================================================
