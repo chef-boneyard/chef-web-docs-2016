@@ -1,6 +1,6 @@
 # chef-docs
 
-The source of the Chef documentation, located at http://docs.opscode.com/
+The source of the Chef documentation, located at http://docs.getchef.com/
 
 This README focuses on people who want to contribute to the Chef documentation.
 
@@ -10,9 +10,9 @@ This README focuses on people who want to contribute to the Chef documentation.
 
 Sphinx is the authoring tool: http://sphinx-doc.org/
 
-reStructuredText (RST) is the authoring format. Only a subset of the formatting options are used, plus there are some specific approaches to what type of formatting goes where, so please review the style guide: http://docs.opscode.com/style_guide.html
+reStructuredText (RST) is the authoring format. Only a subset of the formatting options are used, plus there are some specific approaches to what type of formatting goes where, so please review the style guide: http://docs.getchef.com/style_guide.html
 
-There are several ways to provide feedback about the Chef documentation. See http://docs.opscode.com/feedback.html or read [CONTRIBUTING](CONTRIBUTING).
+There are several ways to provide feedback about the Chef documentation. See http://docs.getchef.com/feedback.html or read [CONTRIBUTING](CONTRIBUTING).
 
 
 
@@ -72,19 +72,19 @@ IMPORTANT: If you want to build only the latest version of the docs, update your
 
 The following folders are used to build Chef documentation sets:
 
-chef_master -- the main set of documentation about the current versions of the chef-client, Ohai, the Open Source Chef Server, and the Enterprise Chef Server. http://docs.opscode.com
+chef_master -- the main set of documentation about the current versions of the chef-client, Ohai, the Open Source Chef Server, and the Enterprise Chef Server. http://docs.getchef.com
 
-client -- the main set of documentation about the current version of the chef-client. http://docs.opscode.com/client/
+client -- the main set of documentation about the current version of the chef-client. http://docs.getchef.com/client/
 
-docs_oec -- a filtered set of documentation about the current version of the Enterprise Chef Server. http://docs.opscode.com/enterprise/
+docs_oec -- a filtered set of documentation about the current version of the Enterprise Chef Server. http://docs.getchef.com/enterprise/
 
-docs_osc -- a filtered set of documentation about the current version of the Open Source Chef Server. http://docs.opscode.com/open_source/
+docs_osc -- a filtered set of documentation about the current version of the Open Source Chef Server. http://docs.getchef.com/open_source/
 
 These sets of docs are actively maintained and in many places are identical (because the functionality is the same). Only where there is some divergence---some knife commands, server functionality, and so on---is there a difference in the documentation.
 
-docs_all -- a filtered set of the main set of documentation that a) has a single-page flat structure (including a flat table of contents) and b) consolidates much of the information in the main doc set into a smaller collection of longer pages. Some of the most popular pages in all of chef-docs land are found here, such as http://docs.opscode.com/chef/resources.html, http://docs.opscode.com/chef/dsl_recipe.html, and http://docs.opscode.com/chef/knife.html. http://docs.opscode.com/chef/
+docs_all -- a filtered set of the main set of documentation that a) has a single-page flat structure (including a flat table of contents) and b) consolidates much of the information in the main doc set into a smaller collection of longer pages. Some of the most popular pages in all of chef-docs land are found here, such as http://docs.getchef.com/chef/resources.html, http://docs.getchef.com/chef/dsl_recipe.html, and http://docs.getchef.com/chef/knife.html. http://docs.getchef.com/chef/
 
-docs_server -- the documentation for the first version of the on-premises Chef server, Private Chef. http://docs.opscode.com/server/
+docs_server -- the documentation for the first version of the on-premises Chef server, Private Chef. http://docs.getchef.com/server/
 
 The following folders are for versions of the chef-client:
 
@@ -96,7 +96,7 @@ release_11-6
 release_11-8
 release_11-10
 
-These docs collections can be found at http://docs.opscode.com/release/version#/, i.e. http://docs.opscode.com/release/10/ or http://docs.opscode.com/release/11-6/
+These docs collections can be found at http://docs.getchef.com/release/version#/, i.e. http://docs.getchef.com/release/10/ or http://docs.getchef.com/release/11-6/
 
 The following folders are for versions of the Enterprise Chef Server:
 
@@ -111,7 +111,7 @@ release_ohai-7
 
 ### About Release Notes
 
-All of the versions have release notes. Append release_notes.html at the end of the base URL, i.e. http://docs.opscode.com/release/ohai-7/release_notes.html
+All of the versions have release notes. Append release_notes.html at the end of the base URL, i.e. http://docs.getchef.com/release/ohai-7/release_notes.html
 
 
 ### How Frequently are Docs Versions Built?
@@ -147,7 +147,7 @@ Note that Ohai 7 documents are also included in the chef_master doc collection (
 
 The contents of many of the topics in this repo simply look like this:
 
-    .. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server.html BY DESIGN
+    .. THIS PAGE IS IDENTICAL TO docs.getchef.com/api_chef_server.html BY DESIGN
       
     .. include:: ../../chef_master/source/api_chef_server.rst
 
@@ -219,7 +219,7 @@ We want as many topics as possible to be true for as many versions of Chef as po
 
 ## Editing
 
-chef-docs uses only a subset of the RST syntax. Review the style guide: http://docs.opscode.com/style_guide.html
+chef-docs uses only a subset of the RST syntax. Review the style guide: http://docs.getchef.com/style_guide.html
 
 Always make changes on a 'feature' branch in your own fork, so you can always merge back to `master` cleanly.
 
