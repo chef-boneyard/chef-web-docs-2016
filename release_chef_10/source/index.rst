@@ -120,6 +120,7 @@ Cookbooks
    auth_authentication
    auth_authorization
    chef_client
+   chef_cookbooks
    chef_overview
    chef_overview_attributes
    chef_overview_cookbooks
