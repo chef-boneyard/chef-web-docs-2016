@@ -15,6 +15,8 @@ The |enterprise rb| file contains the settings required to configure |ldap| or |
      - |ldap bind_dn| This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. |chef server oec| must do an |ldap| search before any user can log in. Many |windows ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` setting blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to ``'cn=user_name,dc=domain_name,dc=com'``. Default value: ``nil``.
    * - ``ldap['bind_password']``
      - |ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``.
+   * - ``ldap['encryption']``
+     - Use to specify the encryption method. Possible values: ``start_tls`` or ``:simple_tls``. Default value: ``nil``.
    * - ``ldap['host']``
      - |ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``nil``.
    * - ``ldap['login_attribute']``
