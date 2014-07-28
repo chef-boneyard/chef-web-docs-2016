@@ -13,22 +13,22 @@ This command has the following options:
    |help subcommand|
 
 ``reconfigure``
-   Use to reconfigure the |chef server|. This option will read from the |path chef server chef server rb| file and apply that configuration to the |chef server|. Any time changes are made to the |chef server rb| file, the |chef server ctl| command should be run with this option.
+   |server command_reconfigure|
 
 ``restart [SERVICE_NAME]``
-   Use to restart all enabled services or to restart a single service.
+   |server command_restart|
 
 ``start [SERVICE_NAME]``
-   Use to start all enabled services or to start a single service.
+   |server command_start|
 
 ``status [SERVICE_NAME]``
-   Use to view the status of all services or to view the status of a single service.
+   |server command_status|
 
 ``stop [SERVICE_NAME]``
-   Use to stop all enabled services or to stop a single service.
+   |server command_stop|
 
 ``tail [SERVICE_NAME]``
-   Use to follow the |chef server| logs for all services or for a single service.
+   |server command_tail|
 
 ``test --all``
-   Use to execute |chef pedant|, an integration test suite for the |chef server| installation. By default, only a subset of the available test are run. Add the ``--all`` flag to run the full test suite.
+   |server command_test|
