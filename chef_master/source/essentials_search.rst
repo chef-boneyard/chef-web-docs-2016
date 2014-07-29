@@ -54,6 +54,8 @@ Query Syntax
 =====================================================
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
+.. note:: Search queries may not contain newlines.
+
 Partial Search
 =====================================================
 .. include:: ../../includes_search/includes_search_partial.rst
