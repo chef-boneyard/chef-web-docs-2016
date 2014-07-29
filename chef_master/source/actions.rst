@@ -18,4 +18,4 @@ Data Tracking
 
 User Interface
 =====================================================
-.. include:: ../../includes_actions/includes_actions_ui.rst
+.. include:: ../../includes_analytics/includes_analytics_ui.rst

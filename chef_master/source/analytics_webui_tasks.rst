@@ -2,7 +2,7 @@
 |chef analytics| Tasks
 =====================================================
 
-.. include:: ../../includes_actions/includes_actions_ui.rst
+.. include:: ../../includes_analytics/includes_analytics_ui.rst
 
 This topic is an alphabetical list of the various tasks that can be performed when using the |chef analytics|.
 
