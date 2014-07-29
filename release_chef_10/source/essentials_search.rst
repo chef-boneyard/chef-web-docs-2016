@@ -52,6 +52,8 @@ Query Syntax
 =====================================================
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
+.. include:: ../../includes_search/includes_search_10-latest_query_syntax_newlines.rst
+
 Keys
 =====================================================
 .. include:: ../../includes_search/includes_search_key.rst

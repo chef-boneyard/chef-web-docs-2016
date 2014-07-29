@@ -14,6 +14,10 @@ The following changes have been made to |chef client| and |chef solo|. Some of t
 -----------------------------------------------------
 |shef| has been renamed to |chef shell| (CHEF-2925). Recipe mode and attributes mode must now be entered using the ``recipe_mode`` and ``attributes_mode`` commands.
 
+Search query syntax changes
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_10-latest_query_syntax_newlines.rst
+
 Node attribute changes
 -----------------------------------------------------
 In order to fix bugs and surprising behaviors with attributes, the implementation of ``Chef::Node::Attribute`` has been completely overhauled. The APIs for reading and writing values are now completely separate.
