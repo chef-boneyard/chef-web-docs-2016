@@ -2,8 +2,9 @@
 |chef analytics| Tasks
 =====================================================
 
-This topic is an alphabetical list of the various tasks that can be performed when using the |chef analytics|.
+.. include:: ../../includes_actions/includes_actions_ui.rst
 
+This topic is an alphabetical list of the various tasks that can be performed when using the |chef analytics|.
 
 Enable Auto-Refresh Mode
 =====================================================
