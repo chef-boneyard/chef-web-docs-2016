@@ -390,7 +390,7 @@ Copy this file to ``/opt/opscode/embedded/cookbooks/private-chef/recipes/redis_l
       notifies :restart, 'service[redis_lb]', :immediately if is_data_master?
     end
     
-    service "redis_lb" do
+    runit_service "redis_lb" do
       action :start
       only_if { is_data_master? }
     end
