@@ -32,7 +32,7 @@ Install the Workstation
 
 Upgrade the Server
 =====================================================
-The |reporting| add-on can be upgraded as part of a standalone or high availability configuration:
+|reporting| can be upgraded as part of a standalone or high availability configuration:
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system.
 

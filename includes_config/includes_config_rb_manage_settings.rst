@@ -22,7 +22,7 @@ This configuration file has the following settings:
    * - ``logging.log_level``
      - The log level for |ruby on rails| services. Default value: ``info``.
    * - ``nginx_addon_prefix``
-     - The prefix used by the |chef manage| add-on. Default value: ``30``.
+     - The prefix used by |chef manage|. Default value: ``30``.
    * - ``platform.user``
      - The name of the privileged user that manages requests to the |chef server|. Default value: ``'pivotal'``.
    * - ``platform.key_file``

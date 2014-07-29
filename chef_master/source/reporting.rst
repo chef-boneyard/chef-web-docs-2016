@@ -1,14 +1,14 @@
 =====================================================
-Reporting
+|reporting|
 =====================================================
 
 .. include:: ../../includes_reporting/includes_reporting.rst
 
-Install :doc:`Reporting </install_reporting>` using the |reporting| add-on package.
-
 Requirements
 =====================================================
 .. include:: ../../includes_system_requirements/includes_system_requirements_reporting.rst
+
+|reporting| is configured as :doc:`a premium feature </install_reporting>` of the |chef server|.
 
 The Reporting Run
 =====================================================
