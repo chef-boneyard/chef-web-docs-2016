@@ -39,8 +39,8 @@ The |service rabbitmq| service has the following settings:
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``rabbitmq['node_ip_address']``
      - |ip_address rabbitmq| Default value: ``"127.0.0.1"``.
-	   
-	   |chef analytics| uses the same |rabbitmq| service as the |chef server|. However, because |chef analytics| is installed on its own hardware, the default settings for ``rabbitmq['node_ip_address']`` and ``rabbitmq['vip']`` must be updated to allow connections from the |chef analytics| server when the |chef server| is run in a standalone configuration. When running |chef analytics| with the |chef server|, this value must be ``0.0.0.0``.
+
+       |chef analytics| uses the same |rabbitmq| service as the |chef server|. However, because |chef analytics| is installed on its own hardware, the default settings for ``rabbitmq['node_ip_address']`` and ``rabbitmq['vip']`` must be updated to allow connections from the |chef analytics| server when the |chef server| is run in a standalone configuration. When running |chef analytics| with the |chef server|, this value must be ``0.0.0.0``.
    * - ``rabbitmq['node_port']``
      - |port rabbitmq| Default value: ``"5672"``.
    * - ``rabbitmq['nodename']``
@@ -55,5 +55,5 @@ The |service rabbitmq| service has the following settings:
      - Default value: ``"/chef"``.
    * - ``rabbitmq['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``.
-	   
-	   |chef analytics| uses the same |rabbitmq| service as the |chef server|. However, because |chef analytics| is installed on its own hardware, the default settings for ``rabbitmq['node_ip_address']`` and ``rabbitmq['vip']`` must be updated to allow connections from the |chef analytics| server when the |chef server| is run in a standalone configuration. When running |chef analytics| with the |chef server|, this value must specify the external IP address for the |chef server|.
+
+       |chef analytics| uses the same |rabbitmq| service as the |chef server|. However, because |chef analytics| is installed on its own hardware, the default settings for ``rabbitmq['node_ip_address']`` and ``rabbitmq['vip']`` must be updated to allow connections from the |chef analytics| server when the |chef server| is run in a standalone configuration. When running |chef analytics| with the |chef server|, this value must specify the external IP address for the |chef server|.
