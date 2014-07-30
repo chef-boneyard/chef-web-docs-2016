@@ -10,7 +10,7 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Discussion:** `Guidelines <http://docs.getchef.com/community_guidelines.html>`_ | `lists.opscode.com <http://docs.getchef.com/community_lists.html>`_ | `Food Fight Show <http://foodfightshow.org/>`_
 
-**Books about Chef:** `Test-Driven Infrastructure with Chef, 2nd Edition <http://shop.oreilly.com/product/0636920030973.do>`_ | `Instant Chef Starter <http://www.packtpub.com/chef-starter/book>`_ | `Chef Infrastructure Automation Cookbook <http://www.packtpub.com/chef-infrastructure-automation-cookbook/book>`_ | `Chef Survival Guide <https://leanpub.com/chef-survival-guide>`_
+**Books about Chef:** `Test-Driven Infrastructure with Chef, 2nd Edition <http://shop.oreilly.com/product/0636920030973.do>`_ | `Instant Chef Starter <http://www.packtpub.com/chef-starter/book>`_ | `Chef Infrastructure Automation Cookbook <http://www.packtpub.com/chef-infrastructure-automation-cookbook/book>`_ | `Learning Chef (A Guide to Configuration Management and Automation) -- Early Release <http://shop.oreilly.com/product/0636920032397.do>`_
 
 **Plugins:** `chef-client <http://docs.getchef.com/community_plugin_chef.html>`_ | `Knife <http://docs.getchef.com/community_plugin_knife.html>`_ | `Ohai <http://docs.getchef.com/community_plugin_ohai.html>`_ | `Handlers <http://docs.getchef.com/community_plugin_report_handler.html>`_ | `Ridley <https://github.com/reset/ridley>`_
 
