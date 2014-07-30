@@ -19,29 +19,6 @@ This configuration file has the following settings for |keepalived|:
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``.
    * - ``keepalived['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
-   * - ``keepalived['service_order']``
-     - |service_order keepalived| |opscode_support| Default value:
-       ::
-
-          [{"key"=>"couchdb", "service_name"=>"couchdb"},
-           {"key"=>"postgresql", "service_name"=>"postgres"},
-           {"key"=>"rabbitmq", "service_name"=>"rabbitmq"},
-           {"key"=>"redis", "service_name"=>"redis"},
-           {"key"=>"opscode-authz", "service_name"=>"opscode-authz"},
-           {"key"=>"opscode-certificate", "service_name"=>"opscode-certificate"},
-           {"key"=>"opscode-account", "service_name"=>"opscode-account"},
-           {"key"=>"opscode-solr", "service_name"=>"opscode-solr"},
-           {"key"=>"opscode-expander", "service_name"=>"opscode-expander"},
-           {"key"=>"opscode-expander", "service_name"=>"opscode-expander-reindexer"},
-           {"key"=>"opscode-org-creator", "service_name"=>"opscode-org-creator"},
-           {"key"=>"opscode-chef", "service_name"=>"opscode-chef"},
-           {"key"=>"opscode-erchef", "service_name"=>"opscode-erchef"},
-           {"key"=>"opscode-webui", "service_name"=>"opscode-webui"},
-           {"key"=>"nagios", "service_name"=>"php-fpm"},
-           {"key"=>"nagios", "service_name"=>"fcgiwrap"},
-           {"key"=>"nagios", "service_name"=>"nagios"},
-           {"key"=>"nginx", "service_name"=>"nginx"}]``. 
-
    * - ``keepalived['smtp_connect_timeout']``
      - |timeout smtp_connect| Default value: ``"30"``.
    * - ``keepalived['smtp_server']``
