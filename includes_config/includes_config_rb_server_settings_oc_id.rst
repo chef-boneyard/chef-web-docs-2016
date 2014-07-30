@@ -1,0 +1,39 @@
+.. The contents of this file are included in multiple topics.
+.. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
+
+This configuration file has the following settings for ``oc_id``:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``oc_id['administrators']``
+     - Default value: ``[ ]``.
+   * - ``oc_id['db_pool_size']``
+     - Default value: ``'20'``.
+   * - ``oc_id['dir']``
+     - Default value: none.
+   * - ``oc_id['enable']``
+     - Default value: ``true``.
+   * - ``oc_id['ha']``
+     - Default value: ``false``.
+   * - ``oc_id['log_directory']``
+     - Default value: ``"/var/opt/opscode/oc_id"``.
+   * - ``oc_id['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+   * - ``oc_id['num_to_keep']``
+     - Default value: ``10``.
+   * - ``oc_id['port']``
+     - Default value: ``9090``.
+   * - ``oc_id['sql_database']``
+     - Default value: ``oc_id``.
+   * - ``oc_id['sql_password']``
+     - Default value: ``snakepliskin``.
+   * - ``oc_id['sql_user']``
+     - Default value: ``oc_id``.
+   * - ``oc_id['vip']``
+     - Default value: ``"127.0.0.1"``.
+
+
