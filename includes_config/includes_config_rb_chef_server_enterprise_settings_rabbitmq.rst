@@ -9,6 +9,14 @@ The |service rabbitmq| service has the following settings:
 
    * - Setting
      - Description
+   * - ``rabbitmq['actions_exchange']``
+     - Default value: ``'actions'``.
+   * - ``rabbitmq['actions_password']``
+     - Default value: ``'changeme'``.
+   * - ``rabbitmq['actions_user']``
+     - Default value: ``'actions'``.
+   * - ``rabbitmq['actions_vhost']``
+     - Default value: ``'/analytics'``.
    * - ``rabbitmq['consumer_id']``
      - Default value: ``"hotsauce"``.
    * - ``rabbitmq['data_dir']``

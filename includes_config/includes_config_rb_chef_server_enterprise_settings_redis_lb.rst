@@ -9,7 +9,7 @@ The |service redis_lb| service has the following settings:
 
    * - Setting
      - Description
-   * - ``redis_lb['activewritehashing']``
+   * - ``redis_lb['activerehashing']``
      - |active_rehashing| Default value: ``"no"``.
    * - ``redis_lb['aof_rewrite_min_size']``
      - |appendonly_min_size| Default value: ``"16mb"``.
@@ -35,10 +35,8 @@ The |service redis_lb| service has the following settings:
      - |keepalive request_time| Default value: ``"60"``.
    * - ``redis_lb['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/redis_lb"``.
-   * - ``redis_lb['log_rotation']['file_maxbytes']``
-     - |log_rotation| Default value: ``1000000``.
-   * - ``redis_lb['log_rotation']['num_to_keep']``
-     - |num_to_keep| Default value: ``10``.
+   * - ``redis_lb['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``redis_lb['loglevel']``
      - |log_level|. Possible values: ``debug``, ``notice``, ``verbose``, and ``warning``. Default value: ``"notice"``.
    * - ``redis_lb['maxmemory']``
