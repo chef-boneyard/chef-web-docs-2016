@@ -9,16 +9,14 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
       dark_launch['actions'] = true
 
-#. Enable remote access to |rabbitmq| on the |chef server oec| backend machine by adding the following line to ``/etc/opscode/private-chef.rb``, where ``BACKEND_VIP`` is the VIP for the |chef server oec| backend:
+#. Enable remote access to |rabbitmq| on the |chef server oec| backend machine by adding the following line to ``/etc/opscode/private-chef.rb``, where ``EXTERNAL_IP`` is the external IP address for the |chef server oec|:
 
    .. code-block:: bash
 
-      rabbitmq['vip'] = 'BACKEND_VIP'
+      rabbitmq['vip'] = 'EXTERNAL_IP'
       rabbitmq['node_ip_address'] = '0.0.0.0'
 
-   .. note:: ``rabbitmq['vip']`` should either be an IP address, or hostname of the chef server when in standalone mode. If it is a hostname it should be resolvable either via DNS or ``/etc/hosts``.
-   
-   .. note:: ``rabbitmq['node_ip_address']`` should always be '0.0.0.0'. It implies that rabbit will listen both on loopback and external interfaces.
+   .. note:: |chef analytics| uses the same |rabbitmq| service as the |chef server|. However, because |chef analytics| is installed on its own hardware, the default settings for ``rabbitmq['node_ip_address']`` and ``rabbitmq['vip']`` must be updated to allow connections from the |chef analytics| server when the |chef server| is run in a standalone configuration. 
 
 #. Reconfigure the |chef server oec| server on |chef server oec| machines:
 
