@@ -69,5 +69,7 @@ And for the internal load balancers:
      - Default value: ``9680``.
    * - ``lb_internal['enable']``
      - Default value: ``true``.
+   * - ``lb_internal['oc_bifrost_port']``
+     - Default value: ``9683``.
    * - ``lb_internal['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``.
