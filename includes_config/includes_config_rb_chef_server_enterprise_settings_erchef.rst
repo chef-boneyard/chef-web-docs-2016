@@ -53,8 +53,6 @@ The |service erchef| service has the following settings:
      - Default value: ``2500000``.
    * - ``opscode_erchef['port']``
      - |port opscode_erchef| Default value: ``8000``.
-   * - ``opscode_erchef['proxy_user']``
-     - Default value: ``pivotal``.
    * - ``opscode_erchef['root_metric_key']``
      - Default value: ``chefAPI``.
    * - ``opscode_erchef['s3_bucket']``

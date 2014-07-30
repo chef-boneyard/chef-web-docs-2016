@@ -29,6 +29,12 @@ The |service postgresql| service has the following settings:
      - |use ha| Default value: ``false``.
    * - ``postgresql['home']``
      - |directory postgresql_home| Default value: ``/var/opt/chef-server/postgresql``.
+   * - ``postgresql['keepalives_count']``
+     - Default value: ``2``.
+   * - ``postgresql['keepalives_idle']``
+     - Default value: ``60``.
+   * - ``postgresql['keepalives_interval']``
+     - Default value: ``15``.
    * - ``postgresql['listen_address']``
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
@@ -63,11 +69,9 @@ The |service postgresql| service has the following settings:
      - Default value: ``/opt/chef-server/embedded/bin:/opt/chef-server/bin:$PATH``.
    * - ``postgresql['username']``
      - |name user postgresql| Default value: ``opscode-pgsql``.
+   * - ``postgresql['version']``
+     - The (currently) hardcoded version of |postgresql|. Default value: ``"9.2"``.
    * - ``postgresql['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``postgresql['work_mem']``
      - |work_mem| Default value: ``8MB``.
-
-
-
-
