@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
+.. warning:: This is a preview topic of Chef server settings. In general, these settings are documented, but should not be changed from their default settings without first consulting with Chef Support or a member of the Chef consulting team.
+
 Settings
 =====================================================
 The following sections describe the various settings that are available in the |enterprise rb| file.
