@@ -10,7 +10,7 @@ This configuration file has the following settings for load balancers:
    * - Setting
      - Description
    * - ``lb['api_fqdn']``
-     - Default value: ``ubuntu.localdomain``.
+     - Default value: ``node['fqdn']``.
    * - ``lb['ban_refresh_interval']``
      - Default value: ``600``.
    * - ``lb['bookshelf']``
@@ -35,21 +35,26 @@ This configuration file has the following settings for load balancers:
      - Default value: ``250``.
    * - ``lb['redis_connection_timeout']``
      - Default value: ``60``.
+   * - ``lb['redis_keepalive_timeout']``
+     - Default value: ``2000``.
    * - ``lb['upstream']``
      - Default value:
        ::
 
-          {"opscode-chef"=>["127.0.0.1"],
-           "opscode-erchef"=>["127.0.0.1"],
+          {"oc_bifrost"=>["127.0.0.1"],
            "opscode-account"=>["127.0.0.1"],
-           "opscode-webui"=>["127.0.0.1"],
-          "opscode-solr"=>["127.0.0.1"]}``
+           "opscode-authz"=>["127.0.0.1"],
+           "opscode-bookshelf"=>["127.0.0.1"],
+           "opscode-erchef"=>["127.0.0.1"],
+          "opscode-solr4"=>["127.0.0.1"]}``
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``lb['web_ui_fqdn']``
-     - Default value: ``"ubuntu.localdomain"``.
+     - Default value: ``node['fqdn']``.
    * - ``lb['xdl_defaults']['503_mode']``
      - Default value: ``false``.
+   * - ``lb['xdl_defaults']['couchdb_acls']``
+     - Default value: ``true``.
    * - ``lb['xdl_defaults']['couchdb_containers']``
      - Default value: ``true``.
    * - ``lb['xdl_defaults']['couchdb_groups']``
