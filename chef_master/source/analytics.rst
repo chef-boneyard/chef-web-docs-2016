@@ -4,6 +4,10 @@
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
+Requirements
+=====================================================
+.. include:: ../../includes_system_requirements/includes_system_requirements_analytics.rst
+
 |chef actions|
 =====================================================
 
