@@ -17,6 +17,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
       rabbitmq['node_ip_address'] = '0.0.0.0'
 
    .. note:: ``rabbitmq['vip']`` should either be an IP address, or hostname of the chef server when in standalone mode. If it is a hostname it should be resolvable either via DNS or ``/etc/hosts``.
+   
    .. note:: ``rabbitmq['node_ip_address']`` should always be '0.0.0.0'. It implies that rabbit will listen both on loopback and external interfaces.
 
 #. Reconfigure the |chef server oec| server on |chef server oec| machines:
