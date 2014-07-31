@@ -38,7 +38,7 @@ The |service erchef| service has the following settings:
    * - ``opscode_erchef['max_cache_size']``
      - Default value: ``10000``.
    * - ``opscode_erchef['port']``
-     - |port opscode_erchef| Default value: ``8000``.
+     - |port service| Default value: ``8000``.
    * - ``opscode_erchef['proxy_user']``
      - Default value: ``pivotal``.
    * - ``opscode_erchef['root_metric_key']``

@@ -46,7 +46,7 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['md5_auth_cidr_addresses']``
      - Default value: ``[ ]``.
    * - ``postgresql['port']``
-     - |port postgresql| Default value: ``5432``.
+     - |port service| Default value: ``5432``.
    * - ``postgresql['shared_buffers']``
      - |shared_buffers postgresql| Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``.
    * - ``postgresql['shell']``

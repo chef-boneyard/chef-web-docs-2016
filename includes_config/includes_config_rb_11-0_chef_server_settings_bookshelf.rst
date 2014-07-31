@@ -24,7 +24,7 @@ This configuration file has the following settings:
    * - ``bookshelf['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/bookshelf``.
    * - ``bookshelf['port']``
-     - Default value: ``4321``.
+     - |port service| Default value: ``4321``.
    * - ``bookshelf['secret_access_key']``
      - Default value: ``generated-by-default``.
    * - ``bookshelf['stream_download']``

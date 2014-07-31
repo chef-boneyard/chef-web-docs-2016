@@ -24,7 +24,7 @@ This configuration file has the following settings:
    * - ``rabbitmq['node_ip_address']``
      - |ip_address rabbitmq| Default value: ``0.0.0.0``.
    * - ``rabbitmq['node_port']``
-     - |port rabbitmq| Default value: ``5672``.
+     - |port service| Default value: ``5672``.
    * - ``rabbitmq['nodename']``
      - |name node|  Default value: ``rabbit@localhost``.
    * - ``rabbitmq['password']``

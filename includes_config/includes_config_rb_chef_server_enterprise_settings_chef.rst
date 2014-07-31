@@ -26,7 +26,7 @@ The |service chef| service has the following settings:
    * - ``opscode_chef['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-chef"``.
    * - ``opscode_chef['port']``
-     - |port opscode_chef| Default value: ``9460``.
+     - |port service| Default value: ``9460``.
    * - ``opscode_chef['proxy_user']``
      - Default value: ``"pivotal"``.
    * - ``opscode_chef['sandbox_path']``

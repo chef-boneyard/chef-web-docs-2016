@@ -26,7 +26,7 @@ The |service orgcreator| service has the following settings:
    * - ``opscode_org_creator['max_workers']``
      - Default value: ``1``.
    * - ``opscode_org_creator['port']``
-     - |port opscode_orgcreator| Default value: ``4369``.
+     - |port service| Default value: ``4369``.
    * - ``opscode_org_creator['ready_org_depth']``
      - Default value: ``10``.
 

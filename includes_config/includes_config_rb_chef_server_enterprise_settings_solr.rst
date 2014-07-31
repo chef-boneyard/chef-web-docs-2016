@@ -42,7 +42,7 @@ The |service solr| service has the following settings:
    * - ``opscode_solr['poll_seconds']``
      - Default value: ``20``.
    * - ``opscode_solr['port']``
-     - |port opscode_solr| Default value: ``8983``.
+     - |port service| Default value: ``8983``.
    * - ``opscode_solr['ram_buffer_size']``
      - Default value: ``200``.
    * - ``opscode_solr['url']``

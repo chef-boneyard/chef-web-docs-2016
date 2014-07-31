@@ -26,7 +26,7 @@ The |service account| service has the following settings:
    * - ``opscode_account['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_account['port']``
-     - Default value: ``9465``.
+     - |port service| Default value: ``9465``.
    * - ``opscode_account['proxy_user']``
      - Default value: ``"pivotal"``.
    * - ``opscode_account['session_secret_key']``

@@ -40,7 +40,7 @@ The |service couchdb| service has the following settings:
    * - ``couchdb['os_process_timeout']``
      - How long before timing out external processes, in milliseconds. Default value: ``"300000"``.
    * - ``couchdb['port']``
-     - The port CouchDB will listen on. Default value: ``5984``.
+     - |port service| Default value: ``5984``.
    * - ``couchdb['reduce_limit']``
      - Disable limiting the number of reduces. Default value: ``"false"``.
    * - ``couchdb['vip']``

@@ -28,7 +28,7 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``bookshelf['port']``
-     - Default value: ``4321``.
+     - |port service| Default value: ``4321``.
    * - ``bookshelf['secret_access_key']``
      - Default value: ``generated-by-default``.
    * - ``bookshelf['stream_download']``

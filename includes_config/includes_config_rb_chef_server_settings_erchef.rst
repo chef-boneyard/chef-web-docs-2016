@@ -34,7 +34,7 @@ This configuration file has the following settings:
    * - ``erchef['max_cache_size']``
      - Default value: ``10000``.
    * - ``erchef['port']``
-     - |port opscode_erchef| Default value: ``8000``.
+     - |port service| Default value: ``8000``.
    * - ``erchef['proxy_user']``
      - Default value: ``pivotal``.
    * - ``erchef['root_metric_key']``

@@ -26,7 +26,7 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``oc_bifrost['port']``
-     - Default value: ``9463``.
+     - |port service| Default value: ``9463``.
    * - ``oc_bifrost['sql_password']``
      - Default value: ``"challengeaccepted"``.
    * - ``oc_bifrost['sql_ro_password']``

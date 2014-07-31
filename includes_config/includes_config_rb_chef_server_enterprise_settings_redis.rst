@@ -32,7 +32,7 @@ The |service redis| service has the following settings:
    * - ``redis['maxmemory_policy']``
      - |memory maximum_policy_redis| Default value: ``"volatile-lru"``.
    * - ``redis['port']``
-     - |port redis| Default value: ``"6379"``.
+     - |port service| Default value: ``"6379"``.
    * - ``redis['root']``
      - |root redis| Default value: ``"/var/opt/opscode/redis"``.
    * - ``redis['timeout']``

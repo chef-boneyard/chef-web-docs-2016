@@ -44,7 +44,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['poll_seconds']``
      - Default value: ``20``.
    * - ``opscode_solr4['port']``
-     - |port opscode_solr| Default value: ``8983``.
+     - |port service| Default value: ``8983``.
    * - ``opscode_solr4['ram_buffer_size']``
      - Default value: ``200``.
    * - ``opscode_solr4['url']``

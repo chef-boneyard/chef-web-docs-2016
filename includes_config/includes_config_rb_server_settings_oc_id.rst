@@ -26,7 +26,7 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['num_to_keep']``
      - Default value: ``10``.
    * - ``oc_id['port']``
-     - Default value: ``9090``.
+     - |port service| Default value: ``9090``.
    * - ``oc_id['sql_database']``
      - Default value: ``oc_id``.
    * - ``oc_id['sql_password']``

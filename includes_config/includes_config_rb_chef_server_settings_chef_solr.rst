@@ -40,7 +40,7 @@ This configuration file has the following settings:
    * - ``chef_solr['poll_seconds']``
      - Default value: ``20``.
    * - ``chef_solr['port']``
-     - Default value: ``8983``.
+     - |port service| Default value: ``8983``.
    * - ``chef_solr['ram_buffer_size']``
      - Default value: ``200``.
    * - ``chef_solr['vip']``

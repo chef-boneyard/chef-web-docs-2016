@@ -24,6 +24,6 @@ This configuration file has the following settings for ``opscode-certificate``:
    * - ``opscode_certificate['num_workers']``
      - Default value: ``"2"``.
    * - ``opscode_certificate['port']``
-     - |port opscode_certificate| Default value: ``5140``.
+     - |port service| Default value: ``5140``.
    * - ``opscode_certificate['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``.

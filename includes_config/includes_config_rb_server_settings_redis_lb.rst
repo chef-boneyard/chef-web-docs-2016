@@ -44,7 +44,7 @@ This configuration file has the following settings for ``redis_lb``:
    * - ``redis_lb['maxmemory_policy']``
      - |memory maximum_policy_redis| Default value: ``"noeviction"``.
    * - ``redis_lb['port']``
-     - |port redis| Default value: ``"16379"``.
+     - |port service| Default value: ``"16379"``.
    * - ``redis_lb['save_frequency']``
      - |save_frequency_redis| ``Default value: ``{ "900" => "1", "300" => "10", "60" => "1000" }``, which will save the database every 15 minutes if at least one key changes, every 5 minutes if at least 10 keys change, and every 60 seconds if 10000 keys change.
    * - ``redis_lb['timeout']``

@@ -16,6 +16,6 @@ This configuration file has the following settings for ``estatsd``:
    * - ``estatsd['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/estatsd"``.
    * - ``estatsd['port']``
-     - Default value: ``9466``.
+     - |port service| Default value: ``9466``.
    * - ``estatsd['vip']``
      - Default value: ``"127.0.0.1"``.
