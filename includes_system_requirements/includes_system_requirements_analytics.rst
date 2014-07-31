@@ -5,7 +5,6 @@
 |chef analytics| has the following requirements:
 
 * |chef server oec| version 11.1.8 (or later)
-* |chef client| version 11.12.0 (or later)
 * |chef analytics| will run on any platform supported by |chef server oec|
 
 When configured in |standalone| mode:
@@ -24,4 +23,4 @@ For a standalone deployment:
 * 4 total cores, 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
 * 4 GB of RAM
 * 5 GB of free disk space in /opt
-* 5 GB of free disk space in /var
+* 20 GB of free disk space in /var (The actions database is installed under /var)
