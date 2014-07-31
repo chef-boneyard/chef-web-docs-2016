@@ -10,13 +10,13 @@ This configuration file has the following settings for ``opscode-certificate``:
    * - Setting
      - Description
    * - ``opscode_certificate['dir']``
-     - The directory in which ``opscode-certificate`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/opscode-certificate"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-certificate"``.
    * - ``opscode_certificate['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_certificate['ha']``
      - |use ha| Default value: ``false``.
    * - ``opscode_certificate['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-certificate"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/opscode-certificate"``.
    * - ``opscode_certificate['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_certificate['num_certificates_per_worker']``

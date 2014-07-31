@@ -14,7 +14,7 @@ The |service chef| service has the following settings:
    * - ``opscode_chef['checksum_path']``
      - Default value: ``"/var/opt/opscode/opscode-chef/checksum"``.
    * - ``opscode_chef['dir']``
-     - Default value: ``"/var/opt/opscode/opscode-chef"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-chef"``.
    * - ``opscode_chef['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_chef['environment']``

@@ -32,7 +32,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['depsolver_worker_count']``
      - Default value: ``"5"``.
    * - ``opscode_erchef['dir']``
-     - The directory in which ``opscode-erchef`` is located. The default value is the recommended value. Default value: ``/var/opt/chef-server/erchef``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/erchef``.
    * - ``opscode_erchef['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_erchef['enable_actionlog']``
@@ -46,7 +46,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['listen']``
      - Default value: ``127.0.0.1``.
    * - ``opscode_erchef['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/erchef``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/erchef``.
    * - ``opscode_erchef['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_erchef['max_cache_size']``

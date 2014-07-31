@@ -22,11 +22,11 @@ The |service redis_lb| service has the following settings:
    * - ``redis_lb['bind']``
      - |bind redis| Default value: ``"127.0.0.1"``.
    * - ``redis_lb['data_dir']``
-     - |directory redis| Default value: ``"/var/opt/opscode/redis_lb/data"``.
+     - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/redis_lb/data"``.
    * - ``redis_lb['databases']``
      - |database_quantity| Default value: ``"16"``.
    * - ``redis_lb['dir']``
-     - |directory redis| Default value: ``"/var/opt/opscode/redis_lb"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/redis_lb"``.
    * - ``redis_lb['enable']``
      - |enable service| Default value: ``true``.
    * - ``redis_lb['ha']``

@@ -10,7 +10,7 @@ The |service certificate| service has the following settings:
    * - Setting
      - Description
    * - ``opscode_certificate['dir']``
-     - Default value: ``"/var/opt/opscode/opscode-certificate"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-certificate"``.
    * - ``opscode_certificate['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_certificate['ha']``

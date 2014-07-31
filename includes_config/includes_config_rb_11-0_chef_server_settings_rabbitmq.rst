@@ -12,9 +12,9 @@ This configuration file has the following settings:
    * - ``rabbitmq['consumer_id']``
      - Default value: ``hotsauce``.
    * - ``rabbitmq['data_dir']``
-     - Default value: ``/var/opt/chef-server/rabbitmq/db``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/rabbitmq/db``.
    * - ``rabbitmq['dir']``
-     - Default value: ``/var/opt/chef-server/rabbitmq``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/rabbitmq``.
    * - ``rabbitmq['enable']``
      - |enable service| Default value: ``true``.
    * - ``rabbitmq['ha']``

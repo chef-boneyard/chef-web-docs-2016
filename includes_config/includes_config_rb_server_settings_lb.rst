@@ -26,7 +26,7 @@ This configuration file has the following settings for ``lb``:
    * - ``lb['debug']``
      - Default value: ``false``.
    * - ``lb['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``lb['erchef']``
      - Default value: ``127.0.0.1``.
    * - ``lb['maint_refresh_interval']``
@@ -47,18 +47,19 @@ This configuration file has the following settings for ``lb``:
            "opscode-bookshelf"=>["127.0.0.1"],
            "opscode-erchef"=>["127.0.0.1"],
           "opscode-solr4"=>["127.0.0.1"]}``
+
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``lb['web_ui_fqdn']``
      - Default value: ``node['fqdn']``.
    * - ``lb['xdl_defaults']['503_mode']``
-     - Default value: ``false``.
+     - |default_value_recommended| Default value: ``false``.
    * - ``lb['xdl_defaults']['couchdb_acls']``
-     - Default value: ``true``.
+     - |default_value_recommended| Default value: ``true``.
    * - ``lb['xdl_defaults']['couchdb_containers']``
-     - Default value: ``true``.
+     - |default_value_recommended| Default value: ``true``.
    * - ``lb['xdl_defaults']['couchdb_groups']``
-     - Default value: ``true``.
+     - |default_value_recommended| Default value: ``true``.
 
 And for the internal load balancers:
 

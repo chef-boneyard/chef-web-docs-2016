@@ -12,7 +12,7 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['db_pool_size']``
      - |db_pool_size| This value should be increased if failures indicate that the |service bifrost| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``.
    * - ``oc_bifrost['dir']``
-     - 
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/oc_bifrost``.
    * - ``oc_bifrost['enable']``
      - |enable service| Default value: ``true``.
    * - ``oc_bifrost['extended_perf_log']``
@@ -22,7 +22,7 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['listen']``
      - Default value: ``'127.0.0.1'``.
    * - ``oc_bifrost['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``/var/log/opscode/oc_bifrost``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/oc_bifrost``.
    * - ``oc_bifrost['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``oc_bifrost['port']``

@@ -47,7 +47,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:distro]``
      - |distro|
    * - ``knife[:download_directory]``
-     - |dir|
+     - |directory cookbooks|
    * - ``knife[:editor]``
      - |editor|
    * - ``knife[:environment]``

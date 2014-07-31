@@ -14,13 +14,13 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['db_pool_size']``
      - Default value: ``'20'``.
    * - ``oc_id['dir']``
-     - The directory in which ``oc-id`` is located. The default value is the recommended value. Default value: none.
+     - |directory generic| |default_value_recommended| Default value: none.
    * - ``oc_id['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``oc_id['ha']``
      - Default value: ``false``.
    * - ``oc_id['log_directory']``
-     - Default value: ``"/var/opt/opscode/oc_id"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/opt/opscode/oc_id"``.
    * - ``oc_id['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``oc_id['num_to_keep']``

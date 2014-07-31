@@ -18,9 +18,9 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['checkpoint_warning']``
      - |checkpoint_warning| Default value: ``30s``.
    * - ``postgresql['data_dir']``
-     - |directory postgresql_data| Default value: ``/var/opt/chef-server/postgresql/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/postgresql/data``.
    * - ``postgresql['dir']``
-     - |directory postgresql| Default value: ``/var/opt/chef-server/postgresql``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['effective_cache_size']``
      - |effective_cache_size postgresql| Default value: ``#{(node['memory']['total'].to_i / 2) / (1024)}MB``.
    * - ``postgresql['enable']``
@@ -38,7 +38,7 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['listen_address']``
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/postgresql``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/postgresql``.
    * - ``postgresql['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``postgresql['max_connections']``

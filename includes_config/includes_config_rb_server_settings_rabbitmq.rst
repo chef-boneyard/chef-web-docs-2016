@@ -20,9 +20,9 @@ This configuration file has the following settings for ``rabbitmq``:
    * - ``rabbitmq['consumer_id']``
      - Default value: ``"hotsauce"``.
    * - ``rabbitmq['data_dir']``
-     - Default value: ``"/var/opt/opscode/rabbitmq/db"``.
+     - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/rabbitmq/db"``.
    * - ``rabbitmq['dir']``
-     - Default value: ``"/var/opt/opscode/rabbitmq"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/rabbitmq"``.
    * - ``rabbitmq['enable']``
      - |enable service| Default value: ``true``.
    * - ``rabbitmq['ha']``
@@ -34,7 +34,7 @@ This configuration file has the following settings for ``rabbitmq``:
    * - ``rabbitmq['jobs_vhost']``
      - Default value: ``"/jobs"``.
    * - ``rabbitmq['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/rabbitmq"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/rabbitmq"``.
    * - ``rabbitmq['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``rabbitmq['node_ip_address']``

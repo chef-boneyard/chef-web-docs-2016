@@ -14,7 +14,7 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['client_max_body_size']``
      - Default value: ``250m``.
    * - ``nginx['dir']``
-     - Default value: ``/var/opt/chef-server/nginx``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/nginx``.
    * - ``nginx['enable']``
      - |enable service| Default value: ``true``.
    * - ``nginx['enable_ipv6']``
@@ -36,7 +36,7 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['keepalive_timeout']``
      - |worker_max_keepalive| Default value: ``65``.
    * - ``nginx['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/nginx``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/nginx``.
    * - ``nginx['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``nginx['non_ssl_port']``

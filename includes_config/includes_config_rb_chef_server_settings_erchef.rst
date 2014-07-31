@@ -18,7 +18,7 @@ This configuration file has the following settings:
    * - ``erchef['db_pool_size']``
      - Default value: ``20``.
    * - ``erchef['dir']``
-     - Default value: ``/var/opt/chef-server/erchef``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/erchef``.
    * - ``erchef['enable']``
      - Default value: ``true``.
    * - ``erchef['ha']``

@@ -18,7 +18,7 @@ The |service redis| service has the following settings:
    * - ``redis['databases']``
      - |database_quantity| Default value: ``"16"``.
    * - ``redis['dir']``
-     - |directory redis| Default value: ``"/var/opt/opscode/redis"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/redis"``.
    * - ``redis['enable']``
      - |enable service| Default value: ``true``.
    * - ``redis['ha']``

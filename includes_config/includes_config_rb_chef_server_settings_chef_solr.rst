@@ -12,9 +12,9 @@ This configuration file has the following settings:
    * - ``chef_solr['commit_interval']``
      - |solr_commit_interval| |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``chef_solr['data_dir']``
-     - The directory in which the index data for |apache solr| is located. Default value: ``/var/opt/chef-server/chef-solr/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr/data``.
    * - ``chef_solr['dir']``
-     - Default value: ``/var/opt/chef-server/chef-solr``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr``.
    * - ``chef_solr['enable']``
      - Default value: ``true``.
    * - ``chef_solr['ha']``

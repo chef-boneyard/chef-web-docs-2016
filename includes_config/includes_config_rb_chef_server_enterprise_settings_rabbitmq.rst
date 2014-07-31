@@ -20,9 +20,9 @@ The |service rabbitmq| service has the following settings:
    * - ``rabbitmq['consumer_id']``
      - Default value: ``"hotsauce"``.
    * - ``rabbitmq['data_dir']``
-     - Default value: ``"/var/opt/opscode/rabbitmq/db"``.
+     - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/rabbitmq/db"``.
    * - ``rabbitmq['dir']``
-     - Default value: ``"/var/opt/opscode/rabbitmq"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/rabbitmq"``.
    * - ``rabbitmq['enable']``
      - |enable service| Default value: ``true``.
    * - ``rabbitmq['ha']``

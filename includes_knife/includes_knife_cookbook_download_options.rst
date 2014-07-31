@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-d DOWNLOAD_DIRECTORY``, ``--dir DOWNLOAD_DIRECTORY``
-   |dir|
+   |directory cookbooks|
 
 ``-f``, ``--force``
    |force directory|

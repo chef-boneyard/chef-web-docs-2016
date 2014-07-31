@@ -10,9 +10,9 @@ This configuration file has the following settings for ``oc_chef_pedant``:
    * - Setting
      - Description
    * - ``oc_chef_pedant['dir']``
-     - Default value: ``/var/opt/chef-server/chef-pedant``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-pedant``.
    * - ``oc_chef_pedant['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-pedant``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/chef-pedant``.
    * - ``oc_chef_pedant['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``oc_chef_pedant['log_http_requests']``

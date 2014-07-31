@@ -14,9 +14,9 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['commit_interval']``
      - |solr_commit_interval| This value should be tuned carefully. |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``opscode_solr4['data_dir']``
-     - The directory in which the index data for |apache solr| is located. Default value: ``/var/opt/chef-server/chef-solr/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr/data``.
    * - ``opscode_solr4['dir']``
-     - The directory in which ``opscode-solr4`` is located. The default value is the recommended value. Default value: ``/var/opt/chef-server/chef-solr``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr``.
    * - ``opscode_solr4['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_solr4['ha']``
@@ -28,7 +28,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['java_opts']``
      - Default value: ``(empty)``.
    * - ``opscode_solr4['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-solr``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/chef-solr``.
    * - ``opscode_solr4['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_solr4['max_commit_docs']``

@@ -10,13 +10,13 @@ This configuration file has the following settings for ``keepalived``:
    * - Setting
      - Description
    * - ``keepalived['dir']``
-     - |directory keepalived| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/keepalived"``.
    * - ``keepalived['enable']``
-     - |enable service| Backend servers in a high availability topologies should have this setting enabled. Default value: ``false``.
+     - |enable service| |ha backend| Default value: ``false``.
    * - ``keepalived['ipv6_on']``
      - Use to enable IPv6. Default value: ``false``.
    * - ``keepalived['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/keepalived"``.
    * - ``keepalived['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``keepalived['service_posthooks']``

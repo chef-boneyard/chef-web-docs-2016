@@ -14,7 +14,7 @@ This configuration file has the following settings for |nginx|:
    * - ``nginx['client_max_body_size']``
      - Default value: ``250m``.
    * - ``nginx['dir']``
-     - Default value: ``/var/opt/chef-server/nginx``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/nginx``.
    * - ``nginx['enable']``
      - |enable service| Default value: ``true``.
    * - ``nginx['enable_ipv6']``

@@ -12,9 +12,9 @@ The |service bookshelf| service has the following settings:
    * - ``bookshelf['access_key_id']``
      - Default value: ``generated-by-default``.
    * - ``bookshelf['data_dir']``
-     - Default value: ``/var/opt/chef-server/bookshelf/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/bookshelf/data``.
    * - ``bookshelf['dir']``
-     - Default value: ``/var/opt/chef-server/bookshelf``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/bookshelf``.
    * - ``bookshelf['enable']``
      - |enable service| Default value: ``true``.
    * - ``bookshelf['external_url']``

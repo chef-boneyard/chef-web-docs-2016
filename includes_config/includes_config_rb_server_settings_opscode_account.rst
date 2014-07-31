@@ -12,7 +12,7 @@ This configuration file has the following settings for ``opscode-account``:
    * - ``opscode_account['backlog']``
      - Default value: ``1024``.
    * - ``opscode_account['dir']``
-     - The directory in which ``opscode-account`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/opscode-account"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-account"``.
    * - ``opscode_account['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_account['enable_code_coverage']``
@@ -24,7 +24,7 @@ This configuration file has the following settings for ``opscode-account``:
    * - ``opscode_account['listen']``
      - Default value: ``"127.0.0.1:9465"``.
    * - ``opscode_account['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-account"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/opscode-account"``.
    * - ``opscode_account['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_account['port']``

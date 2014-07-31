@@ -30,7 +30,7 @@ The |service erchef| service has the following settings:
    * - ``opscode_erchef['db_pool_size']``
      - |db_pool_size| Default value: ``20``.
    * - ``opscode_erchef['dir']``
-     - Default value: ``/var/opt/chef-server/erchef``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/erchef``.
    * - ``opscode_erchef['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_erchef['enable_actionlog']``

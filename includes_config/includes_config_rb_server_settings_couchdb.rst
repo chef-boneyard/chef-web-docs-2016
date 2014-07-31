@@ -16,17 +16,17 @@ This configuration file has the following settings for ``couchdb``:
    * - ``couchdb['bind_address']``
      - The address that CouchDB will bind to. Default value: ``"127.0.0.1"``.
    * - ``couchdb['data_dir']``
-     - Where CouchDB will store its on-disk data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/couchdb/db"``.
+     - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/couchdb/db"``.
    * - ``couchdb['delayed_commits']``
      - Whether commits are delayed. For performance, we tune CouchDB to batch commits according to the ``batch_save_interval`` and ``batch_save_size`` options above. Default value: ``"true"``.
    * - ``couchdb['dir']``
-     - The directory in which ``couchdb`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/couchdb"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/couchdb"``.
    * - ``couchdb['enable']``
      - |enable service| Default value: ``true``.
    * - ``couchdb['ha']``
      - |use ha| This is typically managed by the topology of the cluster and the role this server plays in that topology. This setting (when ``true``) will set the |couch db| service to be down. Default value: ``false``.
    * - ``couchdb['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/couchdb"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/couchdb"``.
    * - ``couchdb['log_level']``
      - |log_level| Default value: ``"error"``.
    * - ``couchdb['log_rotation']``

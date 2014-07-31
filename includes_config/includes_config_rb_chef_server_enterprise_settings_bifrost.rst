@@ -12,7 +12,7 @@ The |service bifrost| service has the following settings:
    * - ``oc_bifrost['db_pool_size']``
      - |db_pool_size| This value should be increased if failures indicate that the |service bifrost| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``.
    * - ``oc_bifrost['dir']``
-     - 
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/oc_bifrost``.
    * - ``oc_bifrost['enable']``
      - |enable service| Default value: ``true``.
    * - ``oc_bifrost['extended_perf_log']``

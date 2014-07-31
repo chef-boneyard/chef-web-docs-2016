@@ -10,7 +10,7 @@ The |service bifrost| service has the following settings:
    * - Setting
      - Description
    * - ``oc_bifrost['dir']``
-     - 
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/oc_bifrost``.
    * - ``oc_bifrost['enable']``
      - |enable service| Default value: ``true``.
    * - ``oc_bifrost['ha']``

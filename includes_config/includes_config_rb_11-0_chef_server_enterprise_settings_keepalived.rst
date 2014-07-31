@@ -10,7 +10,7 @@ This configuration file has the following settings for |keepalived|:
    * - Setting
      - Description
    * - ``keepalived['dir']``
-     - |directory keepalived| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/keepalived"``.
    * - ``keepalived['enable']``
      - |enable service| Backend servers in a high availability topologies should have this setting enabled. Default value: ``false``.
    * - ``keepalived['log_directory']``

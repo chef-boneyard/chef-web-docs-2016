@@ -12,7 +12,7 @@ The |service account| service has the following settings:
    * - ``opscode_account['backlog']``
      - Default value: ``1024``.
    * - ``opscode_account['dir']``
-     - Default value: ``"/var/opt/opscode/opscode-account"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-account"``.
    * - ``opscode_account['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_account['environment']``

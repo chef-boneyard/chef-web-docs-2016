@@ -16,7 +16,7 @@ This configuration file has the following settings:
    * - ``chef_server_webui['cookie_secret']``
      - Default value: ``47b3b8d95dea455baf32155e95d1e64e``.
    * - ``chef_server_webui['dir']``
-     - Default value: ``/var/opt/chef-server/chef-server-webui``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-server-webui``.
    * - ``chef_server_webui['enable']``
      - |enable service| Default value: ``true``.
    * - ``chef_server_webui['environment']``

@@ -22,11 +22,11 @@ This configuration file has the following settings for ``redis_lb``:
    * - ``redis_lb['bind']``
      - |bind redis| Default value: ``"127.0.0.1"``.
    * - ``redis_lb['data_dir']``
-     - |directory redis| Default value: ``"/var/opt/opscode/redis_lb/data"``.
+     - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/redis_lb/data"``.
    * - ``redis_lb['databases']``
      - |database_quantity| Default value: ``"16"``.
    * - ``redis_lb['dir']``
-     - |directory redis| Default value: ``"/var/opt/opscode/redis_lb"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/redis_lb"``.
    * - ``redis_lb['enable']``
      - |enable service| Default value: ``true``.
    * - ``redis_lb['ha']``
@@ -34,7 +34,7 @@ This configuration file has the following settings for ``redis_lb``:
    * - ``redis_lb['keepalive']``
      - |keepalive request_time| Default value: ``"60"``.
    * - ``redis_lb['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/redis_lb"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/redis_lb"``.
    * - ``redis_lb['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``redis_lb['loglevel']``

@@ -10,7 +10,7 @@ This configuration file has the following settings for |chef pedant|:
    * - Setting
      - Description
    * - ``oc_chef_pedant['dir']``
-     - Default value: ``/var/opt/chef-server/chef-pedant``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-pedant``.
    * - ``oc_chef_pedant['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-pedant``.
    * - ``oc_chef_pedant['log_rotation']``

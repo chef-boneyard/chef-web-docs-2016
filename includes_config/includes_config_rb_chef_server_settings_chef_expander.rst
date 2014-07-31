@@ -12,7 +12,7 @@ This configuration file has the following settings:
    * - ``chef_expander['consumer_id']``
      - Default value: ``default``.
    * - ``chef_expander['dir']``
-     - Default value: ``/var/opt/chef-server/chef-expander``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-expander``.
    * - ``chef_expander['enable']``
      - Default value: ``true``.
    * - ``chef_expander['ha']``

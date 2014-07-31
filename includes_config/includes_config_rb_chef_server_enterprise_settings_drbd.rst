@@ -10,11 +10,11 @@ This configuration file has the following settings for |drbd|:
    * - Setting
      - Description
    * - ``drbd['data_dir']``
-     - Where data that should reside on DRBD should live. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/drbd/data"``.
+     - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/drbd/data"``.
    * - ``drbd['device']``
      - The device name to use for |drbd|. Default value: ``"/dev/drbd0"``.
    * - ``drbd['dir']``
-     - The top level directory for |drbd| configuration. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/drbd"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/drbd"``.
    * - ``drbd['disk']``
      - The local LVM logical volume to use behind |drbd|. Default value: ``"/dev/opscode/drbd"``.
    * - ``drbd['enable']``

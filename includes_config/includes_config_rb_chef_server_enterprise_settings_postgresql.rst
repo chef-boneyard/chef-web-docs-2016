@@ -18,9 +18,9 @@ The |service postgresql| service has the following settings:
    * - ``postgresql['checkpoint_warning']``
      - |checkpoint_warning| Default value: ``30s``.
    * - ``postgresql['data_dir']``
-     - |directory postgresql_data| Default value: ``/var/opt/chef-server/postgresql/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/postgresql/data``.
    * - ``postgresql['dir']``
-     - |directory postgresql| Default value: ``/var/opt/chef-server/postgresql``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['effective_cache_size']``
      - |effective_cache_size postgresql| Default value: ``#{(node['memory']['total'].to_i / 2) / (1024)}MB``.
    * - ``postgresql['enable']``

@@ -12,7 +12,7 @@ The |service expander| service has the following settings:
    * - ``opscode_expander['consumer_id']``
      - Default value: ``default``.
    * - ``opscode_expander['dir']``
-     - Default value: ``/var/opt/chef-server/chef-expander``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-expander``.
    * - ``opscode_expander['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_expander['ha']``

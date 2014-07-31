@@ -12,9 +12,9 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['access_key_id']``
      - Default value: ``generated-by-default``.
    * - ``bookshelf['data_dir']``
-     - Default value: ``/var/opt/chef-server/bookshelf/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/bookshelf/data``.
    * - ``bookshelf['dir']``
-     - The directory in which ``bookshelf`` is located. The default value is the recommended value. Default value: ``/var/opt/chef-server/bookshelf``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/bookshelf``.
    * - ``bookshelf['enable']``
      - |enable service| Default value: ``true``.
    * - ``bookshelf['external_url']``
@@ -24,7 +24,7 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['listen']``
      - Default value: ``127.0.0.1``.
    * - ``bookshelf['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/bookshelf``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/bookshelf``.
    * - ``bookshelf['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``bookshelf['port']``

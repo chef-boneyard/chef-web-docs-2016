@@ -14,7 +14,7 @@ The |service orgcreator| service has the following settings:
    * - ``opscode_org_creator['create_wait_ms']``
      - Default value: ``30000``.
    * - ``opscode_org_creator['dir']``
-     - Default value: ``"/var/opt/opscode/opscode-org-creator"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-org-creator"``.
    * - ``opscode_org_creator['enable']``
      - Default value: ``true``.
    * - ``opscode_org_creator['ha']``

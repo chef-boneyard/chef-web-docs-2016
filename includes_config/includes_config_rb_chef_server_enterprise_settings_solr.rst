@@ -12,9 +12,9 @@ The |service solr| service has the following settings:
    * - ``opscode_solr['commit_interval']``
      - |solr_commit_interval| This value should be tuned carefully. |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``opscode_solr['data_dir']``
-     - The directory in which the index data for |apache solr| is located. Default value: ``/var/opt/chef-server/chef-solr/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr/data``.
    * - ``opscode_solr['dir']``
-     - Default value: ``/var/opt/chef-server/chef-solr``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr``.
    * - ``opscode_solr['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_solr['ha']``

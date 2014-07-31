@@ -16,11 +16,11 @@ The |service couchdb| service has the following settings:
    * - ``couchdb['bind_address']``
      - The address that CouchDB will bind to. Default value: ``"127.0.0.1"``.
    * - ``couchdb['data_dir']``
-     - Where CouchDB will store its on-disk data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/couchdb/db"``.
+     - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/couchdb/db"``.
    * - ``couchdb['delayed_commits']``
      - Whether commits are delayed. For performance, we tune CouchDB to batch commits according to the ``batch_save_interval`` and ``batch_save_size`` options above. Default value: ``"true"``.
    * - ``couchdb['dir']``
-     - The base directory for CouchDB data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/couchdb"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/couchdb"``.
    * - ``couchdb['enable']``
      - |enable service| Default value: ``true``.
    * - ``couchdb['ha']``

@@ -10,11 +10,11 @@ This configuration file has the following settings for ``estatsd``:
    * - Setting
      - Description
    * - ``estatsd['dir']``
-     - The directory in which ``estatsd`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/estatsd"``.
+     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/estatsd"``.
    * - ``estatsd['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``estatsd['log_directory']``
-     - Default value: ``"/var/log/opscode/estatsd"``.
+     - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/estatsd"``.
    * - ``estatsd['port']``
      - Default value: ``9466``.
    * - ``estatsd['vip']``

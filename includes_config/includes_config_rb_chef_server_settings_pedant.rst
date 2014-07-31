@@ -10,7 +10,7 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``chef_pedant['dir']``
-     - Default value: ``/var/opt/chef-server/chef-pedant``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-pedant``.
    * - ``chef_pedant['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/chef-pedant``.
    * - ``chef_pedant['log_http_requests']``
