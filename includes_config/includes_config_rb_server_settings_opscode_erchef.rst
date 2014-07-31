@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``opscode_erchef``:
+This configuration file has the following settings for ``opscode-erchef``:
 
 .. list-table::
    :widths: 200 300
@@ -32,7 +32,7 @@ This configuration file has the following settings for ``opscode_erchef``:
    * - ``opscode_erchef['depsolver_worker_count']``
      - Default value: ``"5"``.
    * - ``opscode_erchef['dir']``
-     - Default value: ``/var/opt/chef-server/erchef``.
+     - The directory in which ``opscode-erchef`` is located. The default value is the recommended value. Default value: ``/var/opt/chef-server/erchef``.
    * - ``opscode_erchef['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_erchef['enable_actionlog']``

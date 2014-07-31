@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``opscode_expander``:
+This configuration file has the following settings for ``opscode-expander``:
 
 .. list-table::
    :widths: 200 300
@@ -12,7 +12,7 @@ This configuration file has the following settings for ``opscode_expander``:
    * - ``opscode_expander['consumer_id']``
      - Default value: ``default``.
    * - ``opscode_expander['dir']``
-     - Default value: ``/var/opt/chef-server/chef-expander``.
+     - The directory in which ``opscode-expander`` is located. The default value is the recommended value. Default value: ``/var/opt/chef-server/chef-expander``.
    * - ``opscode_expander['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_expander['ha']``

@@ -10,7 +10,7 @@ This configuration file has the following settings for ``estatsd``:
    * - Setting
      - Description
    * - ``estatsd['dir']``
-     - Default value: ``"/var/opt/opscode/estatsd"``.
+     - The directory in which ``estatsd`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/estatsd"``.
    * - ``estatsd['enable']``
      - Default value: ``true``.
    * - ``estatsd['log_directory']``

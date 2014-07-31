@@ -14,7 +14,7 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['data_dir']``
      - Default value: ``/var/opt/chef-server/bookshelf/data``.
    * - ``bookshelf['dir']``
-     - Default value: ``/var/opt/chef-server/bookshelf``.
+     - The directory in which ``bookshelf`` is located. The default value is the recommended value. Default value: ``/var/opt/chef-server/bookshelf``.
    * - ``bookshelf['enable']``
      - |enable service| Default value: ``true``.
    * - ``bookshelf['external_url']``

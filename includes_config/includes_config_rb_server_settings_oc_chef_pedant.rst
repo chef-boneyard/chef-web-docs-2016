@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``oc_chef_pedant``:
+This configuration file has the following settings for ``oc-chef-pedant``:
 
 .. list-table::
    :widths: 200 300
@@ -12,7 +12,7 @@ This configuration file has the following settings for ``oc_chef_pedant``:
    * - ``oc_chef_pedant['debug_org_creation']``
      - Default value: ``false``.
    * - ``oc_chef_pedant['dir']``
-     - Default value: ``"/var/opt/opscode/oc-chef-pedant"``.
+     - The directory in which ``oc-chef-pedant`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/oc-chef-pedant"``.
    * - ``oc_chef_pedant['log_directory']``
      - Default value: ``"/var/log/opscode/oc-chef-pedant"``.
    * - ``oc_chef_pedant['log_http_requests']``

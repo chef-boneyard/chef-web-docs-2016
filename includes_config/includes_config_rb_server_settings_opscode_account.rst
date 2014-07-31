@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``opscode_account``:
+This configuration file has the following settings for ``opscode-account``:
 
 .. list-table::
    :widths: 200 300
@@ -12,7 +12,7 @@ This configuration file has the following settings for ``opscode_account``:
    * - ``opscode_account['backlog']``
      - Default value: ``1024``.
    * - ``opscode_account['dir']``
-     - Default value: ``"/var/opt/opscode/opscode-account"``.
+     - The directory in which ``opscode-account`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/opscode-account"``.
    * - ``opscode_account['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_account['enable_code_coverage']``

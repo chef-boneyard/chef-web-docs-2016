@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``opscode_certificate``:
+This configuration file has the following settings for ``opscode-certificate``:
 
 .. list-table::
    :widths: 200 300
@@ -10,7 +10,7 @@ This configuration file has the following settings for ``opscode_certificate``:
    * - Setting
      - Description
    * - ``opscode_certificate['dir']``
-     - Default value: ``"/var/opt/opscode/opscode-certificate"``.
+     - The directory in which ``opscode-certificate`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/opscode-certificate"``.
    * - ``opscode_certificate['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_certificate['ha']``

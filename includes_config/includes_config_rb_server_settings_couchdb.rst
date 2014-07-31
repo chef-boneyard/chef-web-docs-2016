@@ -20,7 +20,7 @@ This configuration file has the following settings for ``couchdb``:
    * - ``couchdb['delayed_commits']``
      - Whether commits are delayed. For performance, we tune CouchDB to batch commits according to the ``batch_save_interval`` and ``batch_save_size`` options above. Default value: ``"true"``.
    * - ``couchdb['dir']``
-     - The base directory for CouchDB data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/couchdb"``.
+     - The directory in which ``couchdb`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/couchdb"``.
    * - ``couchdb['enable']``
      - |enable service| Default value: ``true``.
    * - ``couchdb['ha']``

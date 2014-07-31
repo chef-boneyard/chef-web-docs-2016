@@ -14,7 +14,7 @@ This configuration file has the following settings for ``drbd``:
    * - ``drbd['device']``
      - The device name to use for |drbd|. Default value: ``"/dev/drbd0"``.
    * - ``drbd['dir']``
-     - The top level directory for |drbd| configuration. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/drbd"``.
+     - The directory in which ``drbd`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/drbd"``.
    * - ``drbd['disk']``
      - The local LVM logical volume to use behind |drbd|. Default value: ``"/dev/opscode/drbd"``.
    * - ``drbd['enable']``

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``opscode_chef_mover``:
+This configuration file has the following settings for ``opscode-chef-mover``:
 
 .. list-table::
    :widths: 200 300
@@ -18,7 +18,7 @@ This configuration file has the following settings for ``opscode_chef_mover``:
    * - ``opscode_chef_mover['data_dir']``
      - Default value: ``"/var/opt/opscode/opscode-chef-mover/data"``.
    * - ``opscode_chef_mover['dir']``
-     - Default value: ``"/var/opt/opscode/opscode-chef-mover"``.
+     - The directory in which ``opscode-chef-mover`` is located. The default value is the recommended value. Default value: ``"/var/opt/opscode/opscode-chef-mover"``.
    * - ``opscode_chef_mover['enable']``
      - Default value: ``true``.
    * - ``opscode_chef_mover['ha']``

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``oc_id``:
+This configuration file has the following settings for ``oc-id``:
 
 .. list-table::
    :widths: 200 300
@@ -14,7 +14,7 @@ This configuration file has the following settings for ``oc_id``:
    * - ``oc_id['db_pool_size']``
      - Default value: ``'20'``.
    * - ``oc_id['dir']``
-     - Default value: none.
+     - The directory in which ``oc-id`` is located. The default value is the recommended value. Default value: none.
    * - ``oc_id['enable']``
      - Default value: ``true``.
    * - ``oc_id['ha']``

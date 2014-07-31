@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
-This configuration file has the following settings for ``opscode_solr4``:
+This configuration file has the following settings for ``opscode-solr4``:
 
 .. list-table::
    :widths: 200 300
@@ -16,7 +16,7 @@ This configuration file has the following settings for ``opscode_solr4``:
    * - ``opscode_solr4['data_dir']``
      - The directory in which the index data for |apache solr| is located. Default value: ``/var/opt/chef-server/chef-solr/data``.
    * - ``opscode_solr4['dir']``
-     - Default value: ``/var/opt/chef-server/chef-solr``.
+     - The directory in which ``opscode-solr4`` is located. The default value is the recommended value. Default value: ``/var/opt/chef-server/chef-solr``.
    * - ``opscode_solr4['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_solr4['ha']``
