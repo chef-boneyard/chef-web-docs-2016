@@ -58,3 +58,4 @@ If you have questions or concerns outside the mailing list, please email matt@op
    openstack_example
    openstack_install
    openstack_repository
+   plugin_knife_openstack
