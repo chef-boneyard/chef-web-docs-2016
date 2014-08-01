@@ -12,7 +12,7 @@ The following sections describe the various settings that are available in the |
 
 General
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst
+.. include:: ../../includes_config/includes_config_rb_server_settings_general.rst
 
 bookshelf
 -----------------------------------------------------
