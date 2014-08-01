@@ -18,4 +18,4 @@ This configuration file has the following settings for ``estatsd``:
    * - ``estatsd['port']``
      - |port service| Default value: ``9466``.
    * - ``estatsd['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.

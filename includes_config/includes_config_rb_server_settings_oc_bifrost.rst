@@ -38,7 +38,7 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['superuser_id']``
      - Default value: ``'5ca1ab1ef005ba111abe11eddecafbad'``.
    * - ``oc_bifrost['vip']``
-     - Default value: ``'127.0.0.1'``.
+     - |ip_address virtual| Default value: ``'127.0.0.1'``.
 
 
 

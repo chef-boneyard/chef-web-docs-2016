@@ -18,7 +18,7 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['enable']``
      - |enable service| Default value: ``true``.
    * - ``oc_id['ha']``
-     - Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``oc_id['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``"/var/opt/opscode/oc_id"``.
    * - ``oc_id['log_rotation']``
@@ -34,6 +34,6 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['sql_user']``
      - Default value: ``oc_id``.
    * - ``oc_id['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.
 
 
