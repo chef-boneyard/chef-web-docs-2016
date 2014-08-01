@@ -17,6 +17,8 @@ This configuration file has the following settings:
      - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/bookshelf``.
    * - ``bookshelf['enable']``
      - Default value: ``true``.
+   * - ``bookshelf['external_url']``
+     - The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
    * - ``bookshelf['ha']``
      - |use ha| Default value: ``false``.
    * - ``bookshelf['listen']``

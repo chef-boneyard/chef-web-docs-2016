@@ -11,10 +11,16 @@ This configuration file has the following settings:
      - Description
    * - ``erchef['auth_skew']``
      - Default value: ``900``.
+   * - ``erchef['base_resource_url']``
+     - The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
    * - ``erchef['bulk_fetch_batch_size']``
      - Default value: ``5``.
    * - ``erchef['cache_ttl']``
      - Default value: ``3600``.
+   * - ``erchef['depsolver_timeout']``
+     - Default value: ``"5000"``.
+   * - ``erchef['depsolver_worker_count']``
+     - Default value: ``"5"``.
    * - ``erchef['db_pool_size']``
      - Default value: ``20``.
    * - ``erchef['dir']``
@@ -31,8 +37,12 @@ This configuration file has the following settings:
      - Default value: ``127.0.0.1``.
    * - ``erchef['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/erchef``.
+   * - ``erchef['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``erchef['max_cache_size']``
      - Default value: ``10000``.
+   * - ``opscode_erchef['max_request_size']``
+     - Default value: ``2500000``.
    * - ``erchef['port']``
      - |port service| Default value: ``8000``.
    * - ``erchef['proxy_user']``
