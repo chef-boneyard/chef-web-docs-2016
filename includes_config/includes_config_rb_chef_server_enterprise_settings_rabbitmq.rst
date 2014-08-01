@@ -10,13 +10,13 @@ The |service rabbitmq| service has the following settings:
    * - Setting
      - Description
    * - ``rabbitmq['actions_exchange']``
-     - Default value: ``'actions'``.
+     - The name of the exchange to which |chef analytics| publishes actions data. Default value: ``'actions'``.
    * - ``rabbitmq['actions_password']``
-     - Default value: ``'changeme'``.
+     - The password for the ``actions_user``. Default value: ``'changeme'``.
    * - ``rabbitmq['actions_user']``
-     - Default value: ``'actions'``.
+     - The user with permission to publish actions data. Default value: ``'actions'``.
    * - ``rabbitmq['actions_vhost']``
-     - Default value: ``'/analytics'``.
+     - The virtual host to which |chef analytics| publishes actions data. Default value: ``'/analytics'``.
    * - ``rabbitmq['consumer_id']``
      - Default value: ``"hotsauce"``.
    * - ``rabbitmq['data_dir']``
