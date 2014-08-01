@@ -34,6 +34,10 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
+Whitelist Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_node/includes_node_attribute_whitelist.rst
+
 Attribute File Methods
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst

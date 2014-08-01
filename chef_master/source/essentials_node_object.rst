@@ -26,3 +26,6 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
+Whitelist Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_node/includes_node_attribute_whitelist.rst

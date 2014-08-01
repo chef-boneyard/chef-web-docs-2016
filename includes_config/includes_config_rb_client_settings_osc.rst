@@ -11,6 +11,8 @@ This configuration file has the following settings:
      - Description
    * - ``add_formatter``
      - |add_formatter| (See `nyan-cat <https://github.com/andreacampi/nyan-cat-chef-formatter>`_ for an example of a 3rd-party formatter.) Each formatter requires its own entry.
+   * - ``automatic_attribute_whitelist``
+     - |whitelist attribute_automatic|
    * - ``cache_path``
      - Optional. |cache_path|
    * - ``checksum_path``
@@ -27,10 +29,14 @@ This configuration file has the following settings:
      - |client_registration_retries| Default value: ``5``.
    * - ``cookbook_path``
      - |cookbook_path subdirectory|
+   * - ``cookbook_sync_threads``
+     - |cookbook_sync_threads| Default value: ``10``.
    * - ``data_bag_decrypt_minimum_version``
      - |data_bag_decrypt_minimum_version|
    * - ``data_bag_path``
      - |data_bag_path| Default value: ``/var/chef/data_bags``.
+   * - ``default_attribute_whitelist``
+     - |whitelist attribute_default|
    * - ``diff_disabled``
      - |diff_disabled| Default value: ``false``.
    * - ``diff_filesize_threshold``
@@ -53,6 +59,12 @@ This configuration file has the following settings:
      - |file cache_path|
    * - ``file_staging_uses_destdir``
      - |file_staging_uses_destdir| Default value: ``false``.
+   * - ``ftp_proxy``
+     - |ftp_proxy|
+   * - ``ftp_proxy_pass``
+     - |ftp_proxy_pass| Default value: ``nil``.
+   * - ``ftp_proxy_user``
+     - |ftp_proxy_user| Default value: ``nil``.
    * - ``group``
      - |group config|
    * - ``http_proxy``
@@ -89,6 +101,10 @@ This configuration file has the following settings:
      - |name node| |name node_client_rb|
    * - ``node_path``
      - |node_path| Default value: ``/var/chef/node``.
+   * - ``normal_attribute_whitelist``
+     - |whitelist attribute_normal|
+   * - ``override_attribute_whitelist``
+     - |whitelist attribute_override|
    * - ``pid_file``
      - |path pid_file| Default value: ``/tmp/name-of-executable.pid``.
    * - ``rest_timeout``
@@ -127,3 +143,5 @@ This configuration file has the following settings:
      - |verbose_logging| Default value: ``nil``.
    * - ``verify_api_cert``
      - |ssl_verify_mode_verify_api_cert| Default value: ``false``.
+   * - ``yum_lock_timeout``
+     - |yum_lock_timeout| Default value: ``30``.

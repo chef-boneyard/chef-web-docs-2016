@@ -26,6 +26,10 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
+Whitelist Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_node/includes_node_attribute_whitelist.rst
+
 How |ohai| Saves Data
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_json.rst

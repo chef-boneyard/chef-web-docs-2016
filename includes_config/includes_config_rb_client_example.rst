@@ -8,6 +8,9 @@ A sample |client rb| file that contains all possible settings (listed alphabetic
    add_formatter :nyan
    add_formatter :foo
    add_formatter :bar
+   automatic_attribute_whitelist [ 
+                 "network/interfaces/eth0" 
+                 ]
    cache_path File.join(File.expand_path("~"), ".chef", "cache")
    checksum_path "/var/chef/checksums"
    chef_repo_path "/path/to/chef-repo"
@@ -20,8 +23,12 @@ A sample |client rb| file that contains all possible settings (listed alphabetic
                  "/var/chef/cookbooks", 
                  "/var/chef/site-cookbooks" 
                  ]
+   cookbook_sync_threads "10"
    data_bag_decrypt_minimum_version "2"
    data_bag_path "/var/chef/data_bags"
+   default_attribute_whitelist [ 
+                 "filesystem/dev/disk0s2/size"
+                 ]
    diff_disabled false
    diff_filesize_threshold 10000000
    diff_output_threshold 1000000
@@ -35,6 +42,9 @@ A sample |client rb| file that contains all possible settings (listed alphabetic
    file_backup_path "/var/chef/backup"
    file_cache_path "/var/chef/cache"
    file_staging_uses_destdir false
+   ftp_proxy
+   ftp_proxy_passs
+   ftp_proxy_user
    group nil
    http_proxy "http://proxy.vmware.com:3128"
    http_proxy_pass "1234567890"
@@ -55,6 +65,12 @@ A sample |client rb| file that contains all possible settings (listed alphabetic
    no_proxy "*.vmware.com,10.*"
    node_name "mynode.example.com"
    node_path "/var/chef/node"
+   normal_attribute_whitelist [ 
+                 "filesystem/dev/disk0s2/size" 
+                 ]
+   override_attribute_whitelist [ 
+                 "map - autohome/size" 
+                 ]
    pid_file "/tmp/chef-client.pid"
    rest_timeout 300
    role_path "/var/chef/roles"
@@ -76,3 +92,4 @@ A sample |client rb| file that contains all possible settings (listed alphabetic
               "job-name" => "command",
               "chef-client" => "chef-client"
              }
+   yum_lock_timeout "30"

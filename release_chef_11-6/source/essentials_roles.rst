@@ -1,4 +1,51 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/essentials_roles.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.6
 
-.. include:: ../../chef_master/source/essentials_roles.rst
+=====================================================
+About Roles
+=====================================================
+
+.. include:: ../../includes_role/includes_role.rst
+
+Role Attributes
+=====================================================
+.. include:: ../../includes_role/includes_role_attribute.rst
+
+.. note:: |note see_attributes_overview|
+
+Attribute Types
+-----------------------------------------------------
+.. include:: ../../includes_role/includes_role_attribute_type.rst
+
+Attribute Persistence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
+
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
+
+Role Formats
+=====================================================
+.. include:: ../../includes_role/includes_role_formats.rst
+
+Ruby DSL
+-----------------------------------------------------
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
+
+.. include:: ../../includes_role/includes_role_formats_ruby.rst
+
+JSON
+-----------------------------------------------------
+.. include:: ../../includes_role/includes_role_formats_json.rst
+
+Manage Roles
+=====================================================
+.. include:: ../../includes_role/includes_role_manage.rst
+
+Set Per-environment Run-lists
+------------------------------------------------------
+.. include:: ../../includes_role/includes_role_manage_per_environment_run_lists.rst
+
+Delete from Run-list
+-----------------------------------------------------
+.. include:: ../../includes_role/includes_role_manage_delete.rst
