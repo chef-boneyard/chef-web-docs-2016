@@ -25,6 +25,11 @@
  
           Ohai::Config[:disabled_plugins] = ["my_plugin", "my_plugin", "my_plugin"]
 
+       When a plugin is disabled, the |chef client| log file will contain entries similar to:
+       ::
+ 
+		  [2014-06-13T23:49:12+00:00] DEBUG: Skipping disabled plugin my_plugin 
+
    * - ``Ohai::Config[:hints_path]``
      - |path hint_ohai|
    * - ``Ohai::Config[:log_level]``
