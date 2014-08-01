@@ -93,6 +93,23 @@ The following examples show how to use this |knife| subcommand:
 .. include:: ../../step_knife/step_knife_node_edit.rst
 
 
+environment set
+=====================================================
+.. include:: ../../includes_knife/includes_knife_node_environment_set.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_node_environment_set_syntax.rst
+
+Options
+-----------------------------------------------------
+|no_options|
+
+Examples
+-----------------------------------------------------
+None.
+
+
 from file
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_from_file.rst
