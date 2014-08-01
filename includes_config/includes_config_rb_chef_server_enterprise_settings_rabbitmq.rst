@@ -56,4 +56,4 @@ The |service rabbitmq| service has the following settings:
    * - ``rabbitmq['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``.
 
-       |analytics rabbitmq_settings| When running |chef analytics| with the |chef server|, this value must specify the external IP address for the |chef server|.
+       |analytics rabbitmq_settings| When running |chef analytics| with the |chef server|, this value must specify the backend VIP address for the |chef server|.
