@@ -7,7 +7,11 @@
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_11-12_client_settings.rst
+.. include:: ../../includes_config/includes_config_rb_client_settings.rst
+
+Automatic Proxy Config
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_client_automatic_proxy.rst
 
 |ohai| Settings
 =====================================================

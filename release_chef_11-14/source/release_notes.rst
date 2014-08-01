@@ -95,23 +95,10 @@ The following option has been added to |chef client| and |chef solo|:
 
 ``--run-lock-timeout SECONDS``
    The amount of time (in seconds) to wait for a |chef client| run to finish. Default value: not set (indefinite).
-
    
-Automatic Proxy Configuration
+Automatic Proxy Config
 -----------------------------------------------------
-If ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` is set in the |client rb| file, the |chef client| will configure the ``ENV`` variable based on these (and related) settings. For example:
-
-.. code-block:: ruby
-
-   http_proxy "http://proxy.example.org:8080"
-   http_proxy_user "myself"
-   http_proxy_pass "Password1"
-
-will be set to:
-
-.. code-block:: ruby
-
-   ENV['http_proxy'] = "http://myself:Password1@proxy.example.org:8080"
+.. include:: ../../includes_config/includes_config_rb_client_automatic_proxy.rst
 
 Updated Resource Attribute
 -----------------------------------------------------
