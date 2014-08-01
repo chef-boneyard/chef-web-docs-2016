@@ -1,7 +1,10 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Attributes that should not be saved by a node must be whitelisted in the |client rb| file. The whitelist is a |ruby hash| of keys that specify each attribute that will not be saved. For example, normal attribute data similar to:
+
+.. warning:: When these settings are used, any attribute not defined in a whitelist will not be saved.
+
+Attributes that should be saved by a node may be whitelisted in the |client rb| file. The whitelist is a |ruby hash| of keys that specify each attribute to be saved. For example, normal attribute data similar to:
 
 .. code-block:: javascript
 
@@ -22,15 +25,15 @@ Attributes that should not be saved by a node must be whitelisted in the |client
      } 
    }
 
-To whitelistthe ``network`` attributes and prevent them from being saved, update the |client rb| file:
+To whitelist the ``network`` attributes and prevent the other attributes from being saved, update the |client rb| file:
 
 .. code-block:: ruby
 
    normal_attribute_whitelist = ["network/interfaces/"]
 
-Any attribute that is not specified in an attribute whitelist **will** be saved. So based on the previous whitelist, the ``filesystem`` and ``map - autohome`` attributes will be saved, but the ``network`` attributes will not.
+Any attribute that is not specified in an attribute whitelist **will not** be saved. So based on the previous whitelist, the ``filesystem`` and ``map - autohome`` attributes will not be saved, but the ``network`` attributes will.
 
-Attribute are whitelisted by attribute type. Each attribute type---``automatic``, ``default``, ``normal``, and ``override``---may be whitelisted by using the following settings in the |client rb| file:
+Attribute are whitelisted by attribute type. Each attribute type---``automatic``, ``default``, ``normal``, and ``override``---may define whitelists by using the following settings in the |client rb| file:
 
 .. list-table::
    :widths: 200 300
