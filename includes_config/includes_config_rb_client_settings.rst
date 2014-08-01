@@ -22,7 +22,7 @@ This configuration file has the following settings:
    * - ``chef_zero.enabled``
      - |chef_zero_enabled| This setting requires ``local_mode`` to be set to ``true``. Default value: ``false``.
    * - ``chef_zero.port``
-     - |chef_zero_port| Default value: ``8889``.
+     - |chef_zero_port| This value may be specified as a range; the |chef client| will take the first available port in the range. For example ``10,20,30`` or ``10000-20000``. Default value: ``8889``.
    * - ``client_key``
      - |client_key| Default value: ``/etc/chef/client.pem``.
    * - ``client_registration_retries``

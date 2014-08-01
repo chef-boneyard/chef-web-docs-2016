@@ -16,6 +16,7 @@ The following items are new for |chef 11-14| and/or are changes from previous ve
 * **New --run-lock-timeout Setting** New command line setting for |chef client| and |chef solo|.
 * **Automatic proxy configuration** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically configure the ``ENV`` environment variable with proxy settings.
 * **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute with **any** resource to ensure that sensitive data is not logged by the |chef client|.
+* **chef-zero port ranges** The ``chef_zero.port`` setting (in the |client rb| file) and the ``--chef-zero-port`` option from the command line for the |chef client| now supports using a range of ports. For example ``chef_zero.port ="10,20,30"`` or ``--chef-zero-port 10000-20000``.
 
 |subcommand knife serve|
 -----------------------------------------------------
