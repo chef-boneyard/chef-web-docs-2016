@@ -16,7 +16,7 @@ The |enterprise rb| file contains the settings required to configure |ldap| or |
    * - ``ldap['bind_password']``
      - |ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``.
    * - ``ldap['encryption']``
-     - Use to specify the encryption method. Possible values: ``start_tls`` or ``:simple_tls``. Default value: ``nil``.
+     - Use to specify the encryption method. Possible values: ``:start_tls`` or ``:simple_tls``. Default value: ``nil``.
    * - ``ldap['host']``
      - |ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``nil``.
    * - ``ldap['login_attribute']``
