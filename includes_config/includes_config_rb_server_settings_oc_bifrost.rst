@@ -20,7 +20,7 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['ha']``
      - |use ha|
    * - ``oc_bifrost['listen']``
-     - Default value: ``'127.0.0.1'``.
+     - The IP address on which the service will listen. Default value: ``'127.0.0.1'``.
    * - ``oc_bifrost['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/oc_bifrost``.
    * - ``oc_bifrost['log_rotation']``

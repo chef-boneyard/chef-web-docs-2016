@@ -22,7 +22,7 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['ha']``
      - |use ha| Default value: ``false``.
    * - ``bookshelf['listen']``
-     - Default value: ``127.0.0.1``.
+     - The IP address on which the service will listen. Default value: ``127.0.0.1``.
    * - ``bookshelf['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/bookshelf``.
    * - ``bookshelf['log_rotation']``
