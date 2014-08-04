@@ -10,4 +10,4 @@ This configuration file has the following settings for ``opscode_chef``:
    * - Setting
      - Description
    * - ``opscode_chef['checksum_path']``
-     - Default value: ``"/var/opt/opscode/opscode-chef/checksum"``.
+     - The path at which cookbook checksums are located. Default value: ``"/var/opt/opscode/opscode-chef/checksum"``.

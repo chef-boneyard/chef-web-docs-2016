@@ -20,9 +20,9 @@ This configuration file has the following settings for ``opscode-certificate``:
    * - ``opscode_certificate['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_certificate['num_certificates_per_worker']``
-     - Default value: ``"50"``.
+     - The number of certificates for each allowed worker processes. Default value: ``"50"``.
    * - ``opscode_certificate['num_workers']``
-     - Default value: ``"2"``.
+     - The number of allowed worker processes. Default value: ``"2"``.
    * - ``opscode_certificate['port']``
      - |port service| Default value: ``5140``.
    * - ``opscode_certificate['vip']``
