@@ -24,6 +24,6 @@ This configuration file has the following settings for ``opscode-expander``:
    * - ``opscode_expander['nodes']``
      - |worker_processes| Default value: ``2``.
    * - ``opscode_expander['reindexer_log_directory']``
-     - Default value: ``/var/log/chef-server/chef-expander-reindexer``.
+     - The directory in which ``opscode-expander-reindexer`` logs files are located. Default value: ``/var/log/chef-server/chef-expander-reindexer``.
 
 
