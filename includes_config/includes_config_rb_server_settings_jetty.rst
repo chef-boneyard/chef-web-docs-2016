@@ -10,7 +10,7 @@ This configuration file has the following settings for ``jetty``:
    * - Setting
      - Description
    * - ``jetty['enable']``
-     - |enable service| Default value: ``"false"``.
+     - |enable service| Default value: ``"false"``. This value should not be modified.
    * - ``jetty['ha']``
      - |use ha| Default value: ``"false"``.
    * - ``jetty['log_directory']``
