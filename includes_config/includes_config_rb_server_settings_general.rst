@@ -10,21 +10,21 @@ This configuration file has the following general settings:
    * - Setting
      - Description
    * - ``enterprise['name']``
-     - Default value: ``"private_chef"``.
+     - The name of the |chef server| configuration. Default value: ``"private_chef"``.
    * - ``private_chef['api_version']``
-     - Default value: ``"11.1.0"``.
+     - The version of the |chef server|. Default value: ``"11.1.0"``.
    * - ``private_chef['flavor']``
      - Default value: ``"ec"``.
    * - ``private_chef['from_email']``
      - Default value: ``'"Opscode" <donotreply@opscode.com>'``.
    * - ``private_chef['install_path']``
-     - Default value: ``"/opt/opscode"``.
+     - The directory in which the |chef server| is installed. Default value: ``"/opt/opscode"``.
    * - ``private_chef['notification_email']``
-     - Default value: ``"pc-default@opscode.com"``.
+     - The email addressed to which email notifications are sent. Default value: ``"pc-default@opscode.com"``.
    * - ``private_chef['license']['nodes']``
-     - Default value: ``25``.
+     - The number of |chef server| licenses. Default value: ``25``.
    * - ``private_chef['license']['upgrade_url']``
      - Default value: ``"http://example.com"``.
    * - ``private_chef['role']``
-     - Default value: ``"standalone"``.
+     - The configuration for the |chef server|. Possible values: ``ha``, ``tiered``, ``standalone``. Default value: ``"standalone"``.
 
