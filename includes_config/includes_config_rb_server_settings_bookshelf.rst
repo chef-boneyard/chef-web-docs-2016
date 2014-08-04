@@ -10,7 +10,7 @@ This configuration file has the following settings for ``bookshelf``:
    * - Setting
      - Description
    * - ``bookshelf['access_key_id']``
-     - Default value: ``generated-by-default``.
+     - The access key identifier used with the Bookshelf service. (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. Four settings require configuration when pointing at an external cookbook storage location: ``bookshelf['vip']``, for the endpoint; ``bookshelf['access_key_id']``, for user access key; ``bookshelf['secret_access_key']``, for secret key; and ``opscode_erchef['s3_bucket']``, for the bucket name. Run the |chef server| ``reconfigure`` command after changing these settings.) Default value: ``generated-by-default``.
    * - ``bookshelf['data_dir']``
      - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/bookshelf/data``.
    * - ``bookshelf['dir']``
@@ -30,8 +30,8 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['port']``
      - |port service| Default value: ``4321``.
    * - ``bookshelf['secret_access_key']``
-     - Default value: ``generated-by-default``.
+     - The secret access key for the API endpoint used with the Bookshelf service. (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. Four settings require configuration when pointing at an external cookbook storage location: ``bookshelf['vip']``, for the endpoint; ``bookshelf['access_key_id']``, for user access key; ``bookshelf['secret_access_key']``, for secret key; and ``opscode_erchef['s3_bucket']``, for the bucket name. Run the |chef server| ``reconfigure`` command after changing these settings.) Default value: ``generated-by-default``.
    * - ``bookshelf['stream_download']``
      - Default value: ``true``.
    * - ``bookshelf['vip']``
-     - |ip_address virtual| Default value: ``node['fqdn']``.
+     - |ip_address virtual| (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. Four settings require configuration when pointing at an external cookbook storage location: ``bookshelf['vip']``, for the endpoint; ``bookshelf['access_key_id']``, for user access key; ``bookshelf['secret_access_key']``, for secret key; and ``opscode_erchef['s3_bucket']``, for the bucket name. Run the |chef server| ``reconfigure`` command after changing these settings.) Default value: ``node['fqdn']``.

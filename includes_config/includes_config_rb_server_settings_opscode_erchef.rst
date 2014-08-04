@@ -44,7 +44,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['ibrowse_max_sessions']``
      - Default value: ``256``.
    * - ``opscode_erchef['listen']``
-     - Default value: ``127.0.0.1``.
+     - The IP address on which the service will listen. Default value: ``127.0.0.1``.
    * - ``opscode_erchef['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/erchef``.
    * - ``opscode_erchef['log_rotation']``
@@ -58,7 +58,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['root_metric_key']``
      - Default value: ``chefAPI``.
    * - ``opscode_erchef['s3_bucket']``
-     - Default value: ``bookshelf``.
+     - The |amazon s3| bucket. (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. Four settings require configuration when pointing at an external cookbook storage location: ``bookshelf['vip']``, for the endpoint; ``bookshelf['access_key_id']``, for user access key; ``bookshelf['secret_access_key']``, for secret key; and ``opscode_erchef['s3_bucket']``, for the bucket name. Run the |chef server| ``reconfigure`` command after changing these settings.) Default value: ``bookshelf``.
    * - ``opscode_erchef['s3_parallel_ops_fanout']``
      - Default value: ``20``.
    * - ``opscode_erchef['s3_parallel_ops_timeout']``

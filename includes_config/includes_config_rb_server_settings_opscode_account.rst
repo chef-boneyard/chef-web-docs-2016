@@ -22,7 +22,7 @@ This configuration file has the following settings for ``opscode-account``:
    * - ``opscode_account['ha']``
      - |use ha| Default value: ``false``.
    * - ``opscode_account['listen']``
-     - Default value: ``"127.0.0.1:9465"``.
+     - The IP address on which the service will listen. Default value: ``"127.0.0.1:9465"``.
    * - ``opscode_account['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/opscode-account"``.
    * - ``opscode_account['log_rotation']``
