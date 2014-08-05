@@ -2,7 +2,7 @@
 
 .. To use symbols to reference attributes
 
-Do this:
+Symbols may be used to reference attributes:
 
 .. code-block:: ruby
 
@@ -11,7 +11,7 @@ Do this:
      action :install
    end
 
-and not this:
+instead of strings:
 
 .. code-block:: ruby
 
