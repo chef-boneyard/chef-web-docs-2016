@@ -10,9 +10,9 @@ This configuration file has the following settings for ``opscode_org_creator``:
    * - Setting
      - Description
    * - ``opscode_org_creator['create_splay_ms']``
-     - Default value: ``25000``.
+     - A number (in milliseconds) to add to ``create_wait_ms``. Default value: ``25000``.
    * - ``opscode_org_creator['create_wait_ms']``
-     - Default value: ``30000``.
+     - The amount of time (in milliseconds) to wait before creating an organization. Default value: ``30000``.
    * - ``opscode_org_creator['dir']``
      - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-org-creator"``.
    * - ``opscode_org_creator['enable']``
@@ -24,7 +24,7 @@ This configuration file has the following settings for ``opscode_org_creator``:
    * - ``opscode_org_creator['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_org_creator['max_workers']``
-     - Default value: ``1``.
+     - |worker_processes| Default value: ``1``.
    * - ``opscode_org_creator['port']``
      - |port service| Default value: ``4369``.
    * - ``opscode_org_creator['ready_org_depth']``
