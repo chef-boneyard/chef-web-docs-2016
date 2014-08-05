@@ -14,7 +14,7 @@ This configuration file has the following settings for ``opscode-chef-mover``:
    * - ``opscode_chef_mover['cache_ttl']``
      - Default value: ``'3600'``.
    * - ``opscode_chef_mover['db_pool_size']``
-     - Default value: ``'5'``.
+     - **TYPO INTENTIONAL, PENDING REVIEW/SYNC** |db_pool_size| Default value: ``'5'``.
    * - ``opscode_chef_mover['data_dir']``
      - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-chef-mover/data"``.
    * - ``opscode_chef_mover['dir']``
