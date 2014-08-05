@@ -217,6 +217,10 @@ Examples
 
 .. include:: ../../step_resource/step_resource_machine_build_machines_dynamically.rst
 
+**Get a remote file onto a new machine**
+
+.. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
+
 machine_execute
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_machine_execute.rst
@@ -263,7 +267,10 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
+
+**Get a remote file onto a new machine**
+
+.. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
 
 private_key
 -----------------------------------------------------
