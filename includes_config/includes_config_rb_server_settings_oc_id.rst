@@ -12,7 +12,7 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['administrators']``
      - A comma-separated list of users who may add applications to the identity service. Default value: ``[ ]``.
    * - ``oc_id['db_pool_size']``
-     - **TYPO INTENTIONAL, PENDING REVIEW/SYNC** |db_pool_size| Default value: ``'20'``.
+     - |db_pool_size| Default value: ``'20'``.
    * - ``oc_id['dir']``
      - |directory generic| |default_value_recommended| Default value: none.
    * - ``oc_id['enable']``

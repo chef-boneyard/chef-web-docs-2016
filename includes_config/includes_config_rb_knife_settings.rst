@@ -76,6 +76,8 @@ This configuration file has the following settings:
        ::
  
           validation_key "/etc/chef/validation.pem"
+   * - ``verify_api_cert``
+     - |ssl_verify_mode_verify_api_cert| Default value: ``false``.
    * - ``versioned_cookbooks``
      - |versioned_cookbooks| For example:
        ::
