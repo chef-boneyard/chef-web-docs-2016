@@ -221,6 +221,14 @@ Examples
 
 .. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
 
+**Build machines that depend on each other**
+
+.. include:: ../../step_resource/step_resource_machine_codependent_servers.rst
+
+**Use a loop to build many machines**
+
+.. include:: ../../step_resource/step_resource_machine_use_a_loop_to_create_many_machines.rst
+
 machine_execute
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_machine_execute.rst
