@@ -10,7 +10,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - Setting
      - Description
    * - ``opscode_solr4['auto_soft_commit']``
-     - Default value: ``1000``.
+     - The maximum number of documents before a soft commit is triggered. Default value: ``1000``.
    * - ``opscode_solr4['commit_interval']``
      - |solr_commit_interval| This value should be tuned carefully. |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``opscode_solr4['data_dir']``
@@ -24,7 +24,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['heap_size']``
      - |heap_size solr| The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``, which is equivalent to 25% of the system memory or 1024 (MB, but this setting is specified as an integer number of MB in EC11), whichever is smaller.
    * - ``opscode_solr4['ip_address']``
-     - Default value: ``127.0.0.1``.
+     - The IP address for the machine on which |apache solr| is running. Default value: ``127.0.0.1``.
    * - ``opscode_solr4['java_opts']``
      - Default value: ``(empty)``.
    * - ``opscode_solr4['log_directory']``
@@ -42,7 +42,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['new_size']``
      - Default value: ``nil``.
    * - ``opscode_solr4['poll_seconds']``
-     - Default value: ``20``.
+     - The frequency (in seconds) at which the secondary machine polls the primary. Default value: ``20``.
    * - ``opscode_solr4['port']``
      - |port service| Default value: ``8983``.
    * - ``opscode_solr4['ram_buffer_size']``
