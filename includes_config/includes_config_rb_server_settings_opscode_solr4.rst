@@ -46,7 +46,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['port']``
      - |port service| Default value: ``8983``.
    * - ``opscode_solr4['ram_buffer_size']``
-     - Default value: ``200``.
+     - The size (in megabytes) of the RAM buffer. When document updates exceed this amout, pending updates will be flushed. Default value: ``200``.
    * - ``opscode_solr4['url']``
      - Default value: ``"http://localhost:8983"``.
    * - ``opscode_solr4['vip']``
