@@ -18,7 +18,7 @@ This configuration file has the following settings for ``rabbitmq``:
    * - ``rabbitmq['actions_vhost']``
      - The virtual host to which |chef actions| publishes actions data. Default value: ``'/analytics'``.
    * - ``rabbitmq['consumer_id']``
-     - Default value: ``"hotsauce"``.
+     - The identity of the consumer to which messages are published. Default value: ``"hotsauce"``.
    * - ``rabbitmq['data_dir']``
      - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/rabbitmq/db"``.
    * - ``rabbitmq['dir']``

@@ -10,7 +10,7 @@ This configuration file has the following settings for ``opscode-expander``:
    * - Setting
      - Description
    * - ``opscode_expander['consumer_id']``
-     - Default value: ``default``.
+     - The identity of the consumer to which messages are published. Default value: ``default``.
    * - ``opscode_expander['dir']``
      - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-expander``.
    * - ``opscode_expander['enable']``
