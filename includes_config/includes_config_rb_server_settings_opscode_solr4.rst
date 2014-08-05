@@ -26,7 +26,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['ip_address']``
      - The IP address for the machine on which |apache solr| is running. Default value: ``127.0.0.1``.
    * - ``opscode_solr4['java_opts']``
-     - Default value: ``(empty)``.
+     - A |ruby hash| of ``JAVA_OPTS`` environment variables to be set. (``-XX:NewSize`` is configured using the ``new_size`` setting.) Default value: ``(empty)``.
    * - ``opscode_solr4['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/chef-solr``.
    * - ``opscode_solr4['log_rotation']``
@@ -40,7 +40,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['merge_factor']``
      - The maximum number of document updates that can be stored in memory before being flushed and added to the current index segment. Default value: ``100``.
    * - ``opscode_solr4['new_size']``
-     - Default value: ``nil``.
+     - Use to configure the ``-XX:NewSize`` ``JAVA_OPTS`` environment variable. Default value: ``nil``.
    * - ``opscode_solr4['poll_seconds']``
      - The frequency (in seconds) at which the secondary machine polls the primary. Default value: ``20``.
    * - ``opscode_solr4['port']``
