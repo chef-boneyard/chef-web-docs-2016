@@ -18,7 +18,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['base_resource_url']``
      - The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
    * - ``opscode_erchef['bulk_fetch_batch_size']``
-     - Default value: ``5``.
+     - Use to specify the number of nodes that may be deserialized. Currently only applies to the ``/search`` endpoint in the |api chef server|. |default_value_recommended| Default value: ``5``.
    * - ``opscode_erchef['cache_ttl']``
      - Default value: ``3600``.
    * - ``opscode_erchef['cleanup_batch_size']``

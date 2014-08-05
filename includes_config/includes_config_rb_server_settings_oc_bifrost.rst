@@ -28,13 +28,13 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['port']``
      - |port service| Default value: ``9463``.
    * - ``oc_bifrost['sql_password']``
-     - Default value: ``"challengeaccepted"``.
+     - The password for ``oc_bifrost`` user account. Default value: ``"challengeaccepted"``.
    * - ``oc_bifrost['sql_ro_password']``
      - Default value: ``"foreveralone"``.
    * - ``oc_bifrost['sql_ro_user']``
      - Default value: ``"bifrost_ro"``.
    * - ``oc_bifrost['sql_user']``
-     - Default value: ``"bifrost"``.
+     - The user with permission to publish data. Default value: ``"bifrost"``.
    * - ``oc_bifrost['superuser_id']``
      - Default value: ``'5ca1ab1ef005ba111abe11eddecafbad'``.
    * - ``oc_bifrost['vip']``
