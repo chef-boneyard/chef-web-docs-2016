@@ -30,11 +30,11 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['home']``
      - |directory postgresql_home| Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['keepalives_count']``
-     - Default value: ``2``.
+     - The maximum number of keepalive proves that should be sent before dropping a connection. Default value: ``2``.
    * - ``postgresql['keepalives_idle']``
-     - Default value: ``60``.
+     - The amount of time (in seconds) a connection must remain idle before keepalive probes will resume. Default value: ``60``.
    * - ``postgresql['keepalives_interval']``
-     - Default value: ``15``.
+     - The amount of time (in seconds) between keepalive probes. Default value: ``15``.
    * - ``postgresql['listen_address']``
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
@@ -44,7 +44,7 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['max_connections']``
      - |max_connections| Default value: ``350``.
    * - ``postgresql['md5_auth_cidr_addresses']``
-     - Default value: ``[ ]``.
+     - Use instead of ``trust_auth_cidr_addresses`` to encrypt passwords using MD5 hashes. Default value: ``[ ]``.
    * - ``postgresql['port']``
      - |port service| Default value: ``5432``.
    * - ``postgresql['shared_buffers']``
@@ -64,7 +64,7 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['sql_user']``
      - Default value: ``opscode_chef``.
    * - ``postgresql['trust_auth_cidr_addresses']``
-     - Default value: ``'127.0.0.1/32', '::1/128'``.
+     - Use for clear-text passwords. See ``md5_auth_cidr_addresses``. Default value: ``'127.0.0.1/32', '::1/128'``.
    * - ``postgresql['user_path']``
      - Default value: ``/opt/chef-server/embedded/bin:/opt/chef-server/bin:$PATH``.
    * - ``postgresql['username']``
