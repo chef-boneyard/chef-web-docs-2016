@@ -46,4 +46,4 @@ This configuration file has the following settings for ``opscode-account``:
    * - ``opscode_account['worker_processes']``
      - |worker_processes| Default value: ``4``.
    * - ``opscode_account['worker_timeout']``
-     - Default value: ``3600``.
+     - The amount of time (in seconds) to wait before a worker process times out. Default value: ``3600``.

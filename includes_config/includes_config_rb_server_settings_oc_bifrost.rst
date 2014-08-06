@@ -28,9 +28,9 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['port']``
      - |port service| Default value: ``9463``.
    * - ``oc_bifrost['sql_password']``
-     - The password for ``oc_bifrost`` user account. Default value: ``"challengeaccepted"``.
+     - The password for ``sql_user`` user account. Default value: ``"challengeaccepted"``.
    * - ``oc_bifrost['sql_ro_password']``
-     - Default value: ``"foreveralone"``.
+     - The password for the ``sql_ro_user`` user account. Default value: ``"foreveralone"``.
    * - ``oc_bifrost['sql_ro_user']``
      - Default value: ``"bifrost_ro"``.
    * - ``oc_bifrost['sql_user']``
