@@ -30,7 +30,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['depsolver_timeout']``
      - The amount of time (in milliseconds) to wait for cookbook dependency problems to be solved. Default value: ``"5000"``.
    * - ``opscode_erchef['depsolver_worker_count']``
-     - The number of |ruby| processes for which cookbook dependency problems are unsolved. Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. Default value: ``"5"``.
+     - The number of |ruby| processes for which cookbook dependency problems are unsolved. Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. If you are seeing 503 service unavailable errors, increase this value. Default value: ``"5"``.
    * - ``opscode_erchef['dir']``
      - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/erchef``.
    * - ``opscode_erchef['enable']``
@@ -64,7 +64,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['s3_parallel_ops_timeout']``
      - Default value: ``5000``.
    * - ``opscode_erchef['s3_url_ttl']``
-     - Default value: ``900``.
+     - Use to specify the amount of time (in seconds) before connections to the server expire. If node bootstraps are timing out, increase this setting. Default value: ``900``.
    * - ``opscode_erchef['udp_socket_pool_size']``
      - Default value: ``20``.
    * - ``opscode_erchef['umask']``
