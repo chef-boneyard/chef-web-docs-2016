@@ -10,8 +10,8 @@ This configuration file has the following settings for ``user``:
    * - Setting
      - Description
    * - ``user['home']``
-     - Default value: ``/opt/chef-server/embedded``.
+     - The home directory for the user under which |chef server| services run. Default value: ``/opt/chef-server/embedded``.
    * - ``user['shell']``
-     - Default value: ``/bin/sh``.
+     - The shell for the user under which |chef server| services run. Default value: ``/bin/sh``.
    * - ``user['username']``
-     - Default value: ``opscode``.
+     - The user name under which |chef server| services run. Default value: ``opscode``.
