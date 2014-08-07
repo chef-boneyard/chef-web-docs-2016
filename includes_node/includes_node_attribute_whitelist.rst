@@ -33,6 +33,12 @@ To whitelist the ``network`` attributes and prevent the other attributes from be
 
 When a whitelist is defined, any attribute of that type that is not specified in that attribute whitelist **will not** be saved. So based on the previous whitelist for normal attributes, the ``filesystem`` and ``map - autohome`` attributes will not be saved, but the ``network`` attributes will.
 
+Leave the value empty to prevent all attributes of that attribute type from being saved:
+
+.. code-block:: ruby
+
+   normal_attribute_whitelist = []
+
 For attributes that contain slashes (``/``) within the attribute value, such as the ``filesystem`` attribute ``'/dev/diskos2'``, use an array. For example:
 
 .. code-block:: ruby
