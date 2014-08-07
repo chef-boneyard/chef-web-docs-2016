@@ -11,10 +11,10 @@
      - Description
    * - ``architecture``
      - |architecture windows_process|
-   * - ``command``
-     - |name command|
    * - ``code``
      - |code quoted_string|
+   * - ``command``
+     - |name command|
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``
@@ -27,6 +27,8 @@
      - Optional. |provider resource_parameter|
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
+   * - ``timeout``
+     - |timeout command| Default value: ``3600``.
    * - ``user``
      - |user name_or_id|
 
