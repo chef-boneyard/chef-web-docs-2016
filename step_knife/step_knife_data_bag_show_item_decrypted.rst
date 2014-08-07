@@ -12,9 +12,9 @@ to return:
 
    ## sample:
    {
-      "id": "mysql",
-      "pass": "thesecret123",
-      "user": "fred"
+     "id": "mysql",
+     "pass": "thesecret123",
+     "user": "fred"
    }
 
 
