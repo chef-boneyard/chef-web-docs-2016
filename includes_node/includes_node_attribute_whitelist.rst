@@ -4,7 +4,28 @@
 
 .. warning:: When these settings are used, any attribute not defined in a whitelist will not be saved. Each attribute type is whitelisted independently of the other attribute types. For example, if ``automatic_attribute_whitelist`` defines attributes to be saved, but ``normal_attribute_whitelist``, ``default_attribute_whitelist``, and ``override_attribute_whitelist`` are not defined, then all normal, default and override attributes are saved, along with only the specified automatic attributes.
 
-Attributes that should be saved by a node may be whitelisted in the |client rb| file. The whitelist is a |ruby hash| of keys that specify each attribute to be saved. For example, normal attribute data similar to:
+Attributes that should be saved by a node may be whitelisted in the |client rb| file. The whitelist is a |ruby hash| of keys that specify each attribute to be saved. 
+
+Attribute are whitelisted by attribute type, with each attribute type being whitelisted independently. Each attribute type---``automatic``, ``default``, ``normal``, and ``override``---may define whitelists by using the following settings in the |client rb| file:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``automatic_attribute_whitelist``
+     - |whitelist attribute_automatic| For example: ``["network/interfaces/eth0"]``. Default value: all attributes are saved. |whitelist attribute_none|
+   * - ``default_attribute_whitelist``
+     - |whitelist attribute_default| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+   * - ``normal_attribute_whitelist``
+     - |whitelist attribute_normal| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+   * - ``override_attribute_whitelist``
+     - |whitelist attribute_override| For example: ``["map - autohome/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+
+.. warning:: It is recommended that only ``automatic_attribute_whitelist`` be used to whitelist attributes. This is primarily because automatic attributes generate the most data, but also that normal, default, and override attributes are typically much more important attributes and are more likely to cause issues if they are whitelisted incorrectly.
+
+For example, normal attribute data similar to:
 
 .. code-block:: javascript
 
@@ -45,22 +66,5 @@ For attributes that contain slashes (``/``) within the attribute value, such as 
 
    automatic_attribute_whitelist = [['filesystem','/dev/diskos2']]
 
-Attribute are whitelisted by attribute type, with each attribute type being whitelisted independently. Each attribute type---``automatic``, ``default``, ``normal``, and ``override``---may define whitelists by using the following settings in the |client rb| file:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Setting
-     - Description
-   * - ``automatic_attribute_whitelist``
-     - |whitelist attribute_automatic| For example: ``["network/interfaces/eth0"]``. Default value: all attributes are saved. |whitelist attribute_none|
-   * - ``default_attribute_whitelist``
-     - |whitelist attribute_default| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
-   * - ``normal_attribute_whitelist``
-     - |whitelist attribute_normal| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
-   * - ``override_attribute_whitelist``
-     - |whitelist attribute_override| For example: ``["map - autohome/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
-
-.. warning:: It is recommended that only ``automatic_attribute_whitelist`` be used to whitelist attributes. This is primarily because automatic attributes generate the most data, but also that normal, default, and override attributes are typically much more important attributes and are more likely to cause
 
