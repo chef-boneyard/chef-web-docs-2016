@@ -10,10 +10,7 @@ The following settings are typically added to the |analytics rb| file:
    * - Setting
      - Description
    * - ``analytics_fqdn``
-     - The |fqdn| for the |chef analytics server|. This setting is not in the |analytics rb| file by default. When added,
-       its value should be equal to the |fqdn| for the service URI used by the |chef analytics server|. If you are installing in
-       combined mode (|chef server oec| and |chef analytics| on the same node) then this must be different from the |fqdn| for the
-       |chef server oec|.
+     - The |fqdn| for the |chef analytics| server. This setting is not in the |analytics rb| file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef analytics| server. If you are installing in combined mode (|chef server oec| and |chef analytics| servers on the same node) then this must be different from the |fqdn| for the |chef server oec| server.
    * - ``topology``
      - Default value: ``combined``.
    * - ``actions_consumer['hipchat_api_token']``
