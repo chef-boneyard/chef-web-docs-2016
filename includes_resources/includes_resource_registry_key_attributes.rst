@@ -30,3 +30,5 @@
        
        |values resource registry_key types|
 
+       .. warning:: |values resource registry_key multi_string|
+
