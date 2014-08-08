@@ -1,7 +1,5 @@
-.. THIS PAGE DOCUMENTS chef-client version 11.10
-
 =====================================================
-Docs for |chef client| 11.10
+Docs for |chef client| 11.10 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
