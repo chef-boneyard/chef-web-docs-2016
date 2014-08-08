@@ -1,4 +1,7 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/essentials_nodes_chef_run.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.6
 
-.. include:: ../../chef_master/source/essentials_nodes_chef_run.rst
+=====================================================
+About the chef-client Run
+=====================================================
+
+.. include:: ../../includes_chef_client/includes_chef_client_11-14_run.rst
