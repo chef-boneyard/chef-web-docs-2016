@@ -1,5 +1,5 @@
 =====================================================
-All about Chef ...  
+All about Chef ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -114,6 +114,8 @@ The following features are available in both |chef server oec| and |chef server 
 **Components:** :doc:`Chef Actions </actions>`
 
 **Install:** :doc:`Prerequisites </install_analytics_pre>` | :doc:`Install Chef Analytics </install_analytics>`
+
+**Chef Analytics Web User Interface:** :doc:`Chef Actions </analytics_webui_tasks>`
 
 **Settings and Tools:** :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>`
 
