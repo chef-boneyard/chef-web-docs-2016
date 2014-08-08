@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Actions are policy and administrative changes made to the |chef server|. The |chef server| gathers a lot of data—--each node object, the node run history for all nodes, the history of every cookbook and cookbook version, how policy settings, such as roles, environments, and data bags, are applied and to what they are applied, individual user data, and so on. Actions are changes to any of these objects. Actions can occur as the result of user interaction in the management console, as the result of knife commands, or by running the |chef client|. No matter what the source, all actions are tracked by the analytics platform and recorded in the action log. The result is real-time tracking with an intuitive display.
+Actions are policy and administrative changes made to the |chef server|. The |chef server| gathers a lot of data—--each node object, the node run history for all nodes, the history of every cookbook and cookbook version, how policy settings, such as roles, environments, and data bags, are applied and to what they are applied, individual user data, and so on. Actions are changes to any of these objects. Actions can occur as the result of user interaction in the management console, as the result of knife commands, or by running the |chef client|. No matter what the source, all actions are tracked by the analytics platform and recorded. The result is real-time tracking with an intuitive display.
 
 |chef actions| help you to answer the following questions:
 
