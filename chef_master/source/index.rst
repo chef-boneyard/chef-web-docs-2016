@@ -109,13 +109,13 @@ The following features are available in both |chef server oec| and |chef server 
 
 |chef analytics|
 =====================================================
-|chef analytics| is an add-on for |chef server oec| that provides visibility into what is happening on the server.  It runs on separate hardware from |chef server oec| and consists of several components, initially |chef actions|.
+|chef analytics| is an add-on for |chef server oec| that provides visibility into what is happening on the server.  It runs on separate hardware from |chef server oec| and consists of several components, initially built around |chef actions|.
 
-**Components:** :doc:`Chef Actions </actions>`
+**Components:** :doc:`Chef Analytics </analytics>` | :doc:`Chef Actions </actions>`
 
 **Install:** :doc:`Prerequisites </install_analytics_pre>` | :doc:`Install Chef Analytics </install_analytics>`
 
-**Settings and Tools:** :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>`
+**Settings and Tools:** :doc:`Web user interface </analytics_webui_tasks>` | :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>`
 
 
 The Nodes
