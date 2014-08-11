@@ -13,6 +13,8 @@ For back-end servers in an |chef server oec| installation:
      - |service nginx|
    * - 443
      - |service nginx|
+   * - 9463
+     - **oc_bifrost**
    * - 9671
      - |service nginx|
    * - 9680
