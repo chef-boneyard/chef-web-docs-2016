@@ -13,7 +13,7 @@ This method has no parameters.
 
 **Response**
 
-The response will return details for a user, including the Chef username of the user, the name of the user, the associated account details for the user, the cookbooks that user owns, the cookbooks that user collaborates on, and the cookbooks that user follows.
+The response will return details for a user, including their name, |chef| username, associated account details, and a list of cookbooks that are associated with the user. Cookbooks are grouped into three categories: those that are owned by this user, those in which this user has collaborated, and those that are followed.
 
 .. code-block:: ruby
 
