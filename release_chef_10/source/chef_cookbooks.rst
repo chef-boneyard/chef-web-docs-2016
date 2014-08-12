@@ -1,7 +1,12 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/chef_cookbooks.html BY DESIGN
-.. THIS PAGE DOCUMENTS chef-client version 11.0
+.. THIS PAGE DOCUMENTS chef-client version 10.latest
 
-.. include:: ../../chef_master/source/chef_cookbooks.rst
+=====================================================
+|company_name| Maintained Cookbooks
+=====================================================
+
+.. include:: ../../includes_chef/includes_chef_maintained_cookbooks.rst
+
+Review the `full list of cookbooks <https://github.com/opscode-cookbooks>`_ maintained by |company_name|.
 
 
 

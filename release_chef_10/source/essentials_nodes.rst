@@ -1,4 +1,31 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/essentials_nodes.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
-.. include:: ../../chef_master/source/essentials_nodes.rst
+=====================================================
+About Nodes
+=====================================================
+
+.. include:: ../../includes_node/includes_node.rst
+
+Cloud vs. Physical Nodes
+=====================================================
+.. include:: ../../includes_node/includes_node_type_cloud.rst
+
+.. include:: ../../includes_node/includes_node_type_physical.rst
+
+Virtual Nodes
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_type_virtual.rst
+
+Network Nodes
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_type_network.rst
+
+Node Names
+=====================================================
+.. include:: ../../includes_node/includes_node_name.rst
+
+Manage Nodes
+=====================================================
+.. include:: ../../includes_node/includes_node_manage.rst
+
+

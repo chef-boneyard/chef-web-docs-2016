@@ -1,4 +1,35 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/resource_pacman_package.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
-.. include:: ../../chef_master/source/resource_pacman_package.rst
+=====================================================
+pacman_package
+=====================================================
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_pacman.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_pacman_syntax.rst
+
+Actions
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_pacman_actions.rst
+
+Attributes
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_pacman_attributes.rst
+
+Providers
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_pacman_providers.rst
+
+Examples
+=====================================================
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_pacman_package_install.rst

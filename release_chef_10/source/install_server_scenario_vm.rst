@@ -1,4 +1,11 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/install_server_scenario_vm.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
-.. include:: ../../chef_master/source/install_server_scenario_vm.rst
+=====================================================
+Install the Server on a Virtual Machine
+=====================================================
+
+.. include:: ../../includes_install/includes_install_server_scenario_vm_intro.rst
+
+.. include:: ../../step_install/step_install_server_scenario_vm.rst
+
+.. include:: ../../includes_install/includes_install_server_scenario_vm_outro.rst

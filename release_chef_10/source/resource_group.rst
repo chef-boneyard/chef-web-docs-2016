@@ -1,4 +1,33 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/resource_group.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
-.. include:: ../../chef_master/source/resource_group.rst
+=====================================================
+group
+=====================================================
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_group.rst
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_group_syntax.rst
+
+Actions
+=====================================================
+.. include:: ../../includes_resources/includes_resource_group_actions.rst
+
+Attributes
+=====================================================
+.. include:: ../../includes_resources/includes_resource_group_attributes.rst
+
+Providers
+=====================================================
+.. include:: ../../includes_resources/includes_resource_group_providers.rst
+
+Examples
+=====================================================
+|generic resource statement|
+
+**Append users to groups**
+
+.. include:: ../../step_resource/step_resource_group_append_user.rst

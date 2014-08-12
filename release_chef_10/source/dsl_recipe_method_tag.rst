@@ -1,4 +1,9 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/dsl_recipe_method_tag.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
-.. include:: ../../chef_master/source/dsl_recipe_method_tag.rst
+=====================================================
+tag, tagged?, and untag Methods
+=====================================================
+
+.. include:: ../../includes_chef/includes_chef_tags.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst

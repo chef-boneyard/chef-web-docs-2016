@@ -1,4 +1,11 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/install.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
-.. include:: ../../chef_master/source/install.rst
+=====================================================
+Install Chef
+=====================================================
+
+|chef| is installed and configured in three main phases:
+
+#. :doc:`install_server` (or :doc:`install_server_scenario_vm`)
+#. :doc:`install_workstation` or :doc:`install_windows`
+#. :doc:`install_bootstrap`
