@@ -148,7 +148,7 @@ Analytics
 
    * - Feature
      - Description
-   * - .. image:: ../../images/icon_webui_actions.png
+   * - .. image:: ../../images/icon_actions.png
      - Actions are policy and administrative changes made to the |chef server|. The |chef server| gathers a lot of data—--each node object, the node run history for all nodes, the history of every cookbook and cookbook version, how policy settings, such as roles, environments, and data bags, are applied and to what they are applied, individual user data, and so on.
    * - .. image:: ../../images/icon_reports.png
      - The |reporting| feature of |chef server oec| is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure being managed by the |chef server|. Reports can be generated for the entire organization and they can be generated for specific nodes.
