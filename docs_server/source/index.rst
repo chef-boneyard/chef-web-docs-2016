@@ -70,7 +70,6 @@ The |chef server| is a centralized location where all of the objects needed by |
    manage_roles
    monitor
    orgs
-   overview
    security
    services
    tuning
