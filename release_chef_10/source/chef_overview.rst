@@ -16,7 +16,7 @@ Anything that can run the |chef client| can be managed by |chef|. For instance, 
 =====================================================
 The following diagram shows the relationships between the various elements of |chef|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
-.. image:: ../../images/overview_chef_draft.png
+.. image:: ../../images/overview_chef_11-6.png
 
 |chef| comprises three main elements: a server, one (or more) nodes, and at least one workstation. 
 
