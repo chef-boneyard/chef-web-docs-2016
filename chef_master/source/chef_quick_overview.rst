@@ -50,8 +50,5 @@ Conclusion
 
 .. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
 
-For more information ...
------------------------------------------------------
-.. include:: ../../includes_chef/includes_chef_for_more_info.rst
 
 
