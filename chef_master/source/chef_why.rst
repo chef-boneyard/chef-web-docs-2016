@@ -64,7 +64,3 @@ There are other applications out there that do things similar to |chef|. We beli
 |cfengine|
 -----------------------------------------------------
 |cfengine| and |chef| aren't very similar at all, outside of both applications embracing the concept of Single Copy Nirvana.
-
-For more information ...
-=====================================================
-.. include:: ../../includes_chef/includes_chef_for_more_info.rst
