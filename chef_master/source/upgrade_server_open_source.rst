@@ -39,7 +39,7 @@ Upgrade from |chef server osc| 11.0.4 (or higher)
 
 .. include:: ../../includes_upgrade/includes_upgrade_11-0-4_server_osc_steps.rst
 
-Upgrade from |chef server osc| 11.1.4 (or higher)
+Upgrade to |chef server osc| 11.1.4 (or higher)
 -----------------------------------------------------
 .. warning:: This section applies only to upgrading standalone configurations of the |chef server osc| server.
 
