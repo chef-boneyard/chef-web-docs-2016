@@ -397,7 +397,7 @@ This configuration file has the following settings for |keepalived|:
    * - Setting
      - Description
    * - ``keepalived['dir']``
-     - |directory keepalived| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``. For example:
+     - |directory generic| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``. For example:
        ::
 
           keepalived['dir'] = "/var/opt/opscode/keepalived"
@@ -1403,7 +1403,7 @@ This configuration file has the following settings for the |service nrpe| servic
           nrpe['log_directory'] = "/var/log/opscode/nrpe"
 
    * - ``nrpe['port']``
-     - |port nrpe| Default value: ``9672``. For example:
+     - |port service| Default value: ``9672``. For example:
        ::
 
           nrpe['port'] = 9672
@@ -1597,7 +1597,7 @@ This configuration file has the following settings for the |service authz| servi
           opscode_authz['svlogd_num'] = 10
 
    * - ``opscode_authz['port']``
-     - |port opscode_authz| Default value: ``9463``. For example:
+     - |port service| Default value: ``9463``. For example:
        ::
 
           opscode_authz['port'] = 9463
@@ -1655,7 +1655,7 @@ This configuration file has the following settings for the |service certificate|
           opscode_certificate['num_workers'] = "2"
 
    * - ``opscode_certificate['port']``
-     - |port opscode_certificate| Default value: ``5140``. For example:
+     - |port service| Default value: ``5140``. For example:
        ::
 
           opscode_certificate['port'] = 5140
@@ -1737,7 +1737,7 @@ This configuration file has the following settings for the |service chef| servic
           opscode_chef['log_directory'] = "/var/log/opscode/opscode-chef"
 
    * - ``opscode_chef['port']``
-     - |port opscode_chef| Default value: ``9460``. For example:
+     - |port service| Default value: ``9460``. For example:
        ::
 
           opscode_chef['port'] = 9460
@@ -1939,7 +1939,7 @@ This configuration file has the following settings for the |service erchef| serv
           opscode_erchef['max_cache_size'] = "10000"
 
    * - ``opscode_erchef['port']``
-     - |port opscode_erchef| Default value: ``8000``. For example:
+     - |port service| Default value: ``8000``. For example:
        ::
 
           opscode_erchef['port'] = 8000
@@ -2093,7 +2093,7 @@ This configuration file has the following settings for the |service orgcreator| 
           opscode_org_creator['max_workers'] = 1
 
    * - ``opscode_org_creator['port']``
-     - |port opscode_orgcreator| Default value: ``4369``. For example:
+     - |port service| Default value: ``4369``. For example:
        ::
 
           opscode_org_creator['port'] = 4369
@@ -2211,7 +2211,7 @@ This configuration file has the following settings for the |service solr| servic
           opscode_solr['poll_seconds'] = 20
 
    * - ``opscode_solr['port']``
-     - |port opscode_solr| Default value: ``8983``. For example:
+     - |port service| Default value: ``8983``. For example:
        ::
 
           opscode_solr['port'] = 8983
@@ -2311,7 +2311,7 @@ This configuration file has the following settings for the |service webui| servi
           opscode_webui['log_directory'] = "/var/log/opscode/opscode-webui"
 
    * - ``opscode_webui['port']``
-     - |port opscode_webui| Default value: ``9462``. For example:
+     - |port service| Default value: ``9462``. For example:
        ::
 
           opscode_webui['port'] = 9462
@@ -2387,13 +2387,13 @@ This configuration file has the following settings for the |service postgresql| 
    * - Setting
      - Description
    * - ``postgresql['data_dir']``
-     - |directory postgresql_data| Default value: ``"/var/opt/opscode/postgresql/data"``. For example:
+     - |directory generic_data| Default value: ``"/var/opt/opscode/postgresql/data"``. For example:
        ::
 
           postgresql['data_dir'] = "/var/opt/opscode/postgresql/data"
 
    * - ``postgresql['dir']``
-     - |directory postgresql| Default value: ``"/var/opt/opscode/postgresql"``. For example:
+     - |directory generic| Default value: ``"/var/opt/opscode/postgresql"``. For example:
        ::
 
           postgresql['dir'] = "/var/opt/opscode/postgresql"
@@ -2418,7 +2418,7 @@ This configuration file has the following settings for the |service postgresql| 
           postgresql['home'] = "/opt/opscode/embedded"
 
    * - ``postgresql['listen_address']``
-     - |port listen_postgresql| Default value: ``"localhost"``. For example:
+     - |port service| Default value: ``"localhost"``. For example:
        ::
 
           postgresql['listen_address'] = "localhost"
@@ -2443,7 +2443,7 @@ This configuration file has the following settings for the |service postgresql| 
           postgresql['md5_auth_cidr_addresses'] = []
 
    * - ``postgresql['port']``
-     - |port postgresql| Default value: ``5432``. For example:
+     - |port service| Default value: ``5432``. For example:
        ::
 
           postgresql['port'] = 5432
@@ -2591,7 +2591,7 @@ This configuration file has the following settings for the |service rabbitmq| se
           rabbitmq['node_ip_address'] = "127.0.0.1"
 
    * - ``rabbitmq['node_port']``
-     - |port rabbitmq| Default value: ``"5672"``. For example:
+     - |port service| Default value: ``"5672"``. For example:
        ::
 
           rabbitmq['node_port'] = "5672"
@@ -2720,7 +2720,7 @@ This configuration file has the following settings for the |service redis| servi
           redis['maxmemory_policy'] = "volatile-lru"
 
    * - ``redis['port']``
-     - |port redis| Default value: ``"6379"``. For example:
+     - |port service| Default value: ``"6379"``. For example:
        ::
 
           redis['port'] = "6379"
