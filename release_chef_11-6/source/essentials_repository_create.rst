@@ -1,4 +1,15 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/essentials_repository_create.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.6
 
-.. include:: ../../chef_master/source/essentials_repository_create.rst
+=====================================================
+Create the |chef repo|
+=====================================================
+
+.. include:: ../../includes_repository/includes_repository_11-all_create.rst
+
+Clone
+=====================================================
+.. include:: ../../step_repository/step_repository_create_clone.rst
+
+Download
+=====================================================
+.. include:: ../../step_repository/step_repository_create_download.rst
