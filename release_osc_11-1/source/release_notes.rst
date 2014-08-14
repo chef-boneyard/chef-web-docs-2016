@@ -127,7 +127,7 @@ The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
 
 Upgrade Process
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_upgrade/includes_upgrade_11-0-4_server_osc_steps.rst
+.. include:: ../../includes_upgrade/includes_upgrade_11-1-4_server_osc_steps.rst
 
 What's Fixed
 =====================================================
