@@ -2,7 +2,7 @@
 About the /cookbooks Directory
 =====================================================
 
-.. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
+.. include:: ../../includes_repository/includes_repository_11-all_directory_cookbooks.rst
 
 .. include:: ../../step_repository/step_repository_cookbooks_configure_settings.rst
 

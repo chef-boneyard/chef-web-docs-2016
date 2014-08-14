@@ -2,7 +2,7 @@
 Create the chef-repo
 =====================================================
 
-.. include:: ../../includes_repository/includes_repository_create.rst
+.. include:: ../../includes_repository/includes_repository_11-all_create.rst
 
 Clone
 =====================================================
