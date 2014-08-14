@@ -97,6 +97,8 @@ In addition to node objects, policy, and cookbooks, a |chef server| includes:
      - .. include:: ../../includes_search/includes_search.rst
    * - .. image:: ../../images/icon_manager.png
      - .. include:: ../../includes_chef/includes_chef_manager.rst
+   * - .. image:: ../../images/icon_data_bags.png
+     - .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 Node Objects
 -----------------------------------------------------
@@ -129,8 +131,6 @@ Some important aspects of policy include:
      - Description
    * - .. image:: ../../images/icon_roles.png
      - .. include:: ../../includes_role/includes_role.rst
-   * - .. image:: ../../images/icon_data_bags.png
-     - .. include:: ../../includes_data_bag/includes_data_bag.rst
    * - .. image:: ../../images/icon_environments.png
      - .. include:: ../../includes_environment/includes_environment.rst
    * - .. image:: ../../images/icon_cookbook_versions.png
