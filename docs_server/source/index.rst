@@ -54,24 +54,24 @@ The |chef server| is a centralized location where all of the objects needed by |
    private_chef_1x_admin_user_management
    private_chef_1x_support
    reporting
-   backup_restore
-   components
-   data
-   firewalls_and_ports
-   high_availability
-   ldap
-   logs
-   manage_clients
-   manage_cookbooks
-   manage_data_bags
-   manage_environments
-   manage_nodes
-   manage_reports
-   manage_roles
-   monitor
-   orgs
-   security
-   services
-   tuning
-   users
+   server_backup_restore
+   server_components
+   server_data
+   server_firewalls_and_ports
+   server_high_availability
+   server_ldap
+   server_logs
+   server_manage_clients
+   server_manage_cookbooks
+   server_manage_data_bags
+   server_manage_environments
+   server_manage_nodes
+   server_manage_reports
+   server_manage_roles
+   server_monitor
+   server_orgs
+   server_security
+   server_services
+   server_tuning
+   server_users
 
