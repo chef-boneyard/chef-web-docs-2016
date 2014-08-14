@@ -172,7 +172,7 @@ Some important components of cookbooks include:
    * - .. image:: ../../images/icon_cookbook_recipes.png
      - .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
-The |chef client| will run a recipe only when asked. When the |chef client| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, the |chef client| won't change anything.
+       The |chef client| will run a recipe only when asked. When the |chef client| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, the |chef client| won't change anything.
 
 In addition to attributes, recipes, and versions, the following items are also part of cookbooks:
 
