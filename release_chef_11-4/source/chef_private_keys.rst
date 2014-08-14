@@ -1,4 +1,45 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/chef_private_keys.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.4
 
-.. include:: ../../chef_master/source/chef_private_keys.rst
+=====================================================
+Public and Private Keys
+=====================================================
+
+.. include:: ../../includes_chef/includes_chef.rst
+
+How Keys are Used?
+=====================================================
+.. include:: ../../includes_chef_auth/includes_chef_auth_authentication.rst
+
+|chef client|
+-----------------------------------------------------
+.. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
+
+|knife|
+-----------------------------------------------------
+.. include:: ../../includes_security/includes_security_key_pairs_knife.rst
+
+.. include:: ../../includes_security/includes_security_key_pairs_knife_exec.rst
+
+|chef validator|
+-----------------------------------------------------
+.. include:: ../../includes_security/includes_security_chef_validator.rst
+
+Where are Keys Stored?
+=====================================================
+.. include:: ../../includes_security/includes_security_key_storage.rst
+
+Nodes
+-----------------------------------------------------
+.. include:: ../../includes_security/includes_security_key_storage_nodes.rst
+
+Workstations
+-----------------------------------------------------
+.. include:: ../../includes_security/includes_security_key_storage_workstation.rst
+
+.. include:: ../../includes_repository/includes_repository_11-all.rst
+
+.. include:: ../../includes_repository/includes_repository_11-all_directory_chef.rst
+
+Generating Keys
+=====================================================
+.. include:: ../../includes_security/includes_security_key_generate.rst
