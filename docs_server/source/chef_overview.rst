@@ -67,7 +67,7 @@ Some important components of workstations include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_commands.png
-     - |chef| incudes two important command-line tools. Use the |knife ctl| command-line tool when interacting with nodes or when working with the objects that are uploaded to (or downloaded from) the |chef server|. Use the |chef ctl| command line tool when working with the |chef repo|, which is the repository structure in which cookbooks are authored, tested, and maintained.
+     - |chef| incudes two important command-line tools. Use the |knife| command-line tool when interacting with nodes or when working with the objects that are uploaded to (or downloaded from) the |chef server|. Use the |chef ctl| command line tool when working with the |chef repo|, which is the repository structure in which cookbooks are authored, tested, and maintained.
    * - .. image:: ../../images/icon_chef_dk.png
      - The |chef dk| is a set of tooling that is packaged by |chef|. It includes the |chef ctl| command line tool, |kitchen|, |chef spec|, |berkshelf|, and more.
    * - .. image:: ../../images/icon_kitchen.png
