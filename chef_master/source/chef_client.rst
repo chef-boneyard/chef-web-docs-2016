@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_chef_client/includes_chef_client.rst
 
+.. note:: |daemonize chef_client|
+
 Node Types
 =====================================================
 
