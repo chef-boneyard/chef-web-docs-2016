@@ -67,17 +67,17 @@ Some important components of workstations include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_commands.png
-     - |chef| incudes two important command-line tools. Use ``knife`` when interacting with nodes or when working with the objects that are uploaded to (or downloaded from) the |chef server|. Use ``chef`` when working with the |chef repo|, which is the source control repository structure in which you author cookbooks.
+     - |chef| incudes two important command-line tools. Use the |knife ctl| command-line tool when interacting with nodes or when working with the objects that are uploaded to (or downloaded from) the |chef server|. Use the |chef ctl| command line tool when working with the |chef repo|, which is the repository structure in which cookbooks are authored, tested, and maintained.
    * - .. image:: ../../images/icon_chef_dk.png
-     - The |chef dk| is a set of tooling that is packaged by |chef|. It includes the ``chef`` command line utility, |kitchen|, |chef spec|, and more.
+     - The |chef dk| is a set of tooling that is packaged by |chef|. It includes the |chef ctl| command line tool, |kitchen|, |chef spec|, |berkshelf|, and more.
    * - .. image:: ../../images/icon_kitchen.png
      - .. include:: ../../includes_test_kitchen/includes_test_kitchen.rst
    * - .. image:: ../../images/icon_chefspec.png
      - .. include:: ../../includes_chefspec/includes_chefspec.rst
    * - .. image:: ../../images/icon_policy.png
-     - Policy settings are used to map business and operational requirements, process, and workflow to settings and objects stored on the |chef server|.
+     - Policy is used define how business and operational requirements, processes, and production workflows map to objects that are stored on the |chef server|. Policy objects on the |chef server| include roles, environments, and cookbook versions.
    * - .. image:: ../../images/icon_repository.png
-     - .. include:: ../../includes_repository/includes_repository.rst
+     - The |chef repo| is the repository structure in which cookbooks are authored, tested, and maintained. Cookbooks contain recipes---the most fundamental configuration element within |chef|!---attributes, resources, providers, libraries, files, templates, and so on. The |chef repo| should be synchronized with a version control system, such as |git| and then managed as if it were source code. 
 
 While |chef| includes tooling like the |chef dk|, encourages integration and unit testing, and defines workflow around cookbook authoring and policy, it's important to note that you know best about how your infrastructure should be put together. Therefore, |chef| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed. While |chef| encourages the use of the tooling packaged in the |chef dk|, none of these tools should be seen as a requirement or pre-requisite for being successful using |chef|.
 
@@ -151,7 +151,7 @@ Analytics
    * - .. image:: ../../images/icon_actions.png
      - Actions are policy and administrative changes made to the |chef server|. The |chef server| gathers a lot of data—--each node object, the node run history for all nodes, the history of every cookbook and cookbook version, how policy settings, such as roles, environments, and data bags, are applied and to what they are applied, individual user data, and so on.
    * - .. image:: ../../images/icon_reports.png
-     - The |reporting| feature of |chef server oec| is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure being managed by the |chef server|. Reports can be generated for the entire organization and they can be generated for specific nodes.
+     - Reporting is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure that is being managed by |chef|. Reports can be generated for the entire organization and they can be generated for specific nodes.
 	 
 Cookbooks
 -----------------------------------------------------
@@ -176,12 +176,11 @@ The |chef client| will run a recipe only when asked. When the |chef client| runs
 
 In addition to attributes, recipes, and versions, the following items are also part of cookbooks:
 
+* Files and templates. A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios. Files can be transferred from cookbooks to nodes.
 * Resources and providers. A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks, such as installing packages, running |ruby| code, or accessing directories and file systems. A resource is generic: "install program A" while a provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. Default providers exist that cover the most common scenarios.
-* File distributions. A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
-* Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.
 * Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
-* Templates. A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
-* Configuration files. A metadata file to ensure that each cookbook is correctly deployed to each node.
+* Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.
+
 
 Conclusion
 =====================================================
