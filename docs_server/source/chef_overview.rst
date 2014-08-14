@@ -67,7 +67,7 @@ Some important components of workstations include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_commands.png
-     - |chef| incudes two important command-line tools. Use the |knife| command-line tool when interacting with nodes or when working with the objects that are uploaded to (or downloaded from) the |chef server|. Use the |chef ctl| command line tool when working with the |chef repo|, which is the repository structure in which cookbooks are authored, tested, and maintained.
+     - |chef| incudes two important command-line tools. Use the |knife| command-line tool when interacting with nodes or when working with objects on the |chef server|. Use the |chef ctl| command line tool when working with the |chef repo|, which is the repository structure in which cookbooks are authored, tested, and maintained.
    * - .. image:: ../../images/icon_chef_dk.png
      - The |chef dk| is a set of tooling that is packaged by |chef|. It includes the |chef ctl| command line tool, |kitchen|, |chef spec|, |berkshelf|, and more.
    * - .. image:: ../../images/icon_kitchen.png
@@ -77,7 +77,7 @@ Some important components of workstations include:
    * - .. image:: ../../images/icon_policy.png
      - Policy is used define how business and operational requirements, processes, and production workflows map to objects that are stored on the |chef server|. Policy objects on the |chef server| include roles, environments, and cookbook versions.
    * - .. image:: ../../images/icon_repository.png
-     - The |chef repo| is the repository structure in which cookbooks are authored, tested, and maintained. Cookbooks contain recipes---the most fundamental configuration element within |chef|!---attributes, resources, providers, libraries, files, templates, and so on. The |chef repo| should be synchronized with a version control system, such as |git| and then managed as if it were source code. 
+     - .. include:: ../../includes_repository/includes_repository.rst
 
 While |chef| includes tooling like the |chef dk|, encourages integration and unit testing, and defines workflow around cookbook authoring and policy, it's important to note that you know best about how your infrastructure should be put together. Therefore, |chef| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed. While |chef| encourages the use of the tooling packaged in the |chef dk|, none of these tools should be seen as a requirement or pre-requisite for being successful using |chef|.
 

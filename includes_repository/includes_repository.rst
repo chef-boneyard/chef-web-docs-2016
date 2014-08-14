@@ -2,15 +2,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef repo| is the location in which the following data objects are stored: 
+The |chef repo| is the repository structure in which cookbooks are authored, tested, and maintained. Cookbooks contain recipes---the most fundamental configuration element within |chef|!---attributes, resources, providers, libraries, files, templates, and so on. The |chef repo| should be synchronized with a version control system, such as |git| and then managed as if it were source code.
 
-* Cookbooks (including recipes, versions, cookbook attributes, resources, providers, libraries, and templates)
-* Roles
-* Data bags
-* Environments
-* Configuration files (for clients, workstations, and servers) 
+The directory structure within the |chef repo| varies. Some organizations prefer to keep all of their cookbooks in a single |chef repo|, while other organizations prefer to use a |chef repo| for every cookbook.
 
-The |chef repo| is located on a workstation and should be synchronized with a version control system, such as |git|. All of the data in the |chef repo| should be treated like source code. 
-
-|knife| is used to upload data to the |chef server| from the |chef repo|. Once uploaded, that data is used by the |chef client| to manage all of the nodes that are registered with the |chef server| and to ensure that the correct cookbooks, environments, roles, and other settings are applied to nodes correctly. 
 
