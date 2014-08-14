@@ -18,9 +18,9 @@ This configuration file has the following settings for ``lb``:
    * - ``lb['cache_cookbook_files']``
      - Default value: ``false``.
    * - ``lb['chef_max_version']``
-     - Default value: ``11``.
+     - The maximum version of the |chef client| that is allowed to access the |chef server| via the |api chef server|. Default value: ``11``.
    * - ``lb['chef_min_version']``
-     - Default value: ``10``.
+     - The minimum version of the |chef client| that is allowed to access the |chef server| via the |api chef server|. Default value: ``10``.
    * - ``lb['chef_server_webui']``
      - Default value: ``127.0.0.1``.
    * - ``lb['debug']``
