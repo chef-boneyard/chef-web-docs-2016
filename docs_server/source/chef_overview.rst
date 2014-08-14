@@ -75,7 +75,7 @@ Some important components of workstations include:
    * - .. image:: ../../images/icon_chefspec.png
      - .. include:: ../../includes_chefspec/includes_chefspec.rst
    * - .. image:: ../../images/icon_policy.png
-     - Policy is used define how business and operational requirements, processes, and production workflows map to objects that are stored on the |chef server|. Policy objects on the |chef server| include roles, environments, and cookbook versions.
+     - Policy defines how business and operational requirements, processes, and production workflows map to objects that are stored on the |chef server|. Policy objects on the |chef server| include roles, environments, and cookbook versions.
    * - .. image:: ../../images/icon_repository.png
      - .. include:: ../../includes_repository/includes_repository.rst
 
