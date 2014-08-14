@@ -6,7 +6,7 @@ The following sections address critical security issues related to |chef|. It is
 
 OpenSSL and SSL/TLS MITM (CVE-2014-0224)
 =====================================================
-|company_name| released patched versions of |chef server oec|, |chef server osc|, |chef private|, and the |chef client| to address the `OpenSSL man-in-the-middle (MITM) security vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224>`_.
+(June 6, 2014) |company_name| released patched versions of |chef server oec|, |chef server osc|, |chef private|, and the |chef client| to address the `OpenSSL man-in-the-middle (MITM) security vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224>`_.
 
 Background
 -----------------------------------------------------
@@ -43,7 +43,7 @@ The following steps should be taken:
 
 OpenSSL and Heartbleed
 =====================================================
-|company_name| released patched versions of |chef server oec|, |chef server osc|, |chef private|, and the |chef client| to address the `OpenSSL security vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160>`_, also known as Heartbleed.
+(April 25, 2014) |company_name| released patched versions of |chef server oec|, |chef server osc|, |chef private|, and the |chef client| to address the `OpenSSL security vulnerability <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160>`_, also known as Heartbleed.
 
 Background
 -----------------------------------------------------
