@@ -1053,6 +1053,13 @@ Examples
 
 .. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
 
+**Add the value of a data bag item to a file**
+
+.. include:: ../../step_resource/step_resource_file_content_data_bag.rst
+
+**Write a YAML file**
+
+.. include:: ../../step_resource/step_resource_file_content_yaml_config.rst
 
 freebsd_package
 -----------------------------------------------------
