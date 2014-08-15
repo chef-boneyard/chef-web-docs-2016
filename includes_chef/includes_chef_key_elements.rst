@@ -20,7 +20,11 @@
      - The |chef manage| web user interface is used to manage objects that are stored on the |chef server|, including data bags, attributes, run-lists, roles, environments, and cookbooks. Additionally, reports are views into what happened during every |chef client| run that has occurred across all of the nodes that are under management by |chef|.
    * - .. image:: ../../images/icon_big_chef_analytics.png
      - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Actions details are tracked on the |chef server| and are visible to users from the |chef analytics| web user interface.
-   * - .. image:: ../../images/icon_big_chef_supermarket.png
-     - |supermarket| is the location in which community cookbooks are authored and maintained. Cookbooks that are part of the |supermarket| may be used by any |chef| user. How community cookbooks are used varies from organization to organization.
-   * - .. image:: ../../images/icon_big_chef_ha.png
-     - |chef ha| provides support for running the |chef server| at scale.
+
+
+
+
+..   * - .. image:: ../../images/icon_big_chef_supermarket.png
+..     - |supermarket| is the location in which community cookbooks are authored and maintained. Cookbooks that are part of the |supermarket| may be used by any |chef| user. How community cookbooks are used varies from organization to organization.
+..   * - .. image:: ../../images/icon_big_chef_ha.png
+..     - |chef ha| provides support for running the |chef server| at scale.
