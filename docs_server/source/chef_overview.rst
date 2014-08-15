@@ -8,7 +8,7 @@ Welcome to |chef|!
 
 |chef| Components
 =====================================================
-The following diagram shows the relationships between the various elements of |chef|, including the nodes, the server, premium features of the server, and the workstation. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
+The following diagram shows the relationships between the various elements of |chef|, including the nodes, the server, premium features of the server, and the workstation. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this topic, use the icons in the tables to refer back to this image.
 
 .. image:: ../../images/chef_overview.png
 
