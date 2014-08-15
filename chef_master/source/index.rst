@@ -423,6 +423,7 @@ Cookbooks
    resource_chef_role
    resource_chef_user
    resource_common
+   resource_container_service
    resource_cookbook_file
    resource_cron
    resource_csh
