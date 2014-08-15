@@ -14,7 +14,7 @@ This argument has the following options:
 ``-d DOCKERFILES_PATH``, ``--dockerfiles-path DOCKERFILES_PATH``
    |directory dockerfile_context|
 
-``--environments-path PATH[:PATH]``
+``--environment-path PATH[:PATH]``
    |directory environments| This may be a colon-separated path.
 
 ``-f [REPO/]IMAGE[:TAG]``, ``--from [REPO/]IMAGE[:TAG]``
