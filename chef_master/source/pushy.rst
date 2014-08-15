@@ -2,4 +2,4 @@
 |push jobs|
 =====================================================
 
-.. warning:: This topic has been moved to http://docs.opscode.com/push_jobs.html.
+.. warning:: This topic has been moved to http://docs.getchef.com/push_jobs.html.
