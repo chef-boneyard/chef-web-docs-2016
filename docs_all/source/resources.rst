@@ -1061,6 +1061,10 @@ Examples
 
 .. include:: ../../step_resource/step_resource_file_content_yaml_config.rst
 
+**Write a string to a file**
+
+.. include:: ../../step_resource/step_resource_file_content_add_string.rst
+
 freebsd_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_freebsd.rst

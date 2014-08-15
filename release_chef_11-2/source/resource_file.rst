@@ -69,3 +69,7 @@ Examples
 **Write a YAML file**
 
 .. include:: ../../step_resource/step_resource_file_content_yaml_config.rst
+
+**Write a string to a file**
+
+.. include:: ../../step_resource/step_resource_file_content_add_string.rst
