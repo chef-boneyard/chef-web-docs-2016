@@ -44,7 +44,7 @@ The |resource remote_directory| resource can be used to build a website using th
      files_owner "yan"
      mode "0770"
      owner "hamilton"
-     source "/website"
+     source "website"
    end
 
 When the |chef client| runs, the |resource remote_directory| resource will tell the |chef client| to copy the directory tree from the cookbook to the file system using the structure defined in cookbook:
