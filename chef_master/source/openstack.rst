@@ -38,7 +38,7 @@ We are a community of developers, deployers and integrators who make working wit
    :header-rows: 0
 
    * - |irc|
-     - ``#openstack-chef`` is our channel on ``irc.freenode.net``. Many useful conversations and debugging sessions happen there. Archives are available at `community.opscode.com/chat/openstack-chef <http://community.opscode.com/chat/openstack-chef>`_
+     - ``#openstack-chef`` is our channel on ``irc.freenode.net``. Many useful conversations and debugging sessions happen there. Archives are available at `botbot.me/irc.freenode.net/openstack-chef/ <http://botbot.me/irc.freenode.net/openstack-chef/>`_ or the meeting notes via `http://eavesdrop.openstack.org/meetings/openstack-chef/ <http://eavesdrop.org/meetings/openstack-chef/>`_
    * - Mailing List
      - `groups.google.com/group/opscode-chef-openstack <http://groups.google.com/group/opscode-chef-openstack>`_ is the mailing list. Traffic is typically a few posts a day, a great place for updates and longer discussions
    * - |openstack chef| Wiki
@@ -46,7 +46,7 @@ We are a community of developers, deployers and integrators who make working wit
    * - |twitter|
      - `@chefopenstack <http://twitter.com/chefopenstack>`_
 
-If you have questions or concerns outside the mailing list, please email matt@opscode.com.
+If you have questions or concerns outside the mailing list, please email jj@getchef.com.
 
 .. toctree::
    :hidden:
