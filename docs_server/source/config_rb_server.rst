@@ -16,6 +16,8 @@ General
 
 bookshelf
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_bookshelf.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst
 
 bootstrap
@@ -24,6 +26,8 @@ bootstrap
 
 couchdb
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_couchdb.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_couchdb.rst
 
 dark_launch
@@ -44,6 +48,8 @@ jetty
 
 keepalived
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_keepalived.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_keepalived.rst
 
 lb / lb_internal
@@ -60,10 +66,14 @@ nginx
 
 oc_bifrost
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_bifrost.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst
 
 oc_chef_authz
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_authz.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst
 
 oc-chef-pedant
@@ -76,10 +86,14 @@ oc-id
 
 opscode-account
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_account.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_account.rst
 
 opscode-certificate
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_certificate.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_certificate.rst
 
 opscode-chef
@@ -92,18 +106,26 @@ opscode-chef-mover
 
 opscode-erchef
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_erchef.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst
 
 opscode-expander
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_expander.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst
 
 opscode-org-creator
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_orgcreator.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_orgcreator.rst
 
 opscode-solr4
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_solr.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst
 
 opscode-webui
@@ -112,14 +134,20 @@ opscode-webui
 
 postgresql
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_postgresql.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_postgresql.rst
 
 rabbitmq
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst
 
 redis_lb
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_redis.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst
 
 upgrades
