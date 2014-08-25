@@ -162,4 +162,6 @@ The following APIs can be used to access data on the |chef server|:
    server_tuning
    server_users
    upgrade_server_ha
+   upgrade_server_ha_notes
    upgrade_server_standalone
+   upgrade_server_standalone_notes
