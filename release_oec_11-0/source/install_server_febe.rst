@@ -1,4 +1,7 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/install_server_febe.html BY DESIGN
 .. THIS PAGE DOCUMENTS Enterprise Chef server version 11.0
 
-.. include:: ../../chef_master/source/install_server_febe.rst
+=====================================================
+Scaled Front End and Back End
+=====================================================
+
+This scenario has all of the same requirements as the :doc:`scaled front end </install_server_fe>` and :doc:`scaled back end </install_server_be>` scenarios.
