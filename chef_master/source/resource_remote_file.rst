@@ -66,3 +66,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
 
+**Specify local Windows file path as a valid URI**
+
+.. include:: ../../step_resource/step_resource_remote_file_local_windows_path.rst

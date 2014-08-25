@@ -494,6 +494,12 @@ Examples
 
 **Delete a registry key and its subkeys, recursively**
 
+remote_file
+-----------------------------------------------------
+
+**Specify local Windows file path as a valid URI**
+
+.. include:: ../../step_resource/step_resource_remote_file_local_windows_path.rst
 
 windows_package
 -----------------------------------------------------
