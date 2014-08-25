@@ -18,7 +18,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-10_powershell_script_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-12_powershell_script_attributes.rst
 
 Providers
 =====================================================
