@@ -58,7 +58,7 @@ postgresql
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_postgresql.rst
 
-.. warning:: Review the full list of `optional settings <http://docs.opscode.com/release/oec_11-0/config_rb_chef_server_enterprise_optional_settings.html>`_ that can be added to the |enterprise rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
+.. warning:: Review the full list of :doc:`optional_settings </config_rb_chef_server_enterprise_optional_settings>` that can be added to the |chef server rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
 
 
