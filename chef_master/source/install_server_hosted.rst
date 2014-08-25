@@ -1,5 +1,5 @@
 =====================================================
-Sign up for Hosted Enterprise Chef
+Sign up for Hosted |chef server oec|
 =====================================================
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
