@@ -71,7 +71,7 @@ Options:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/release/oec_11-1/install_server_users.html">Create Users</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/release/oec_11-1/install_server_orgs.html">Create Organizations</a> </br>
 
-Manage Enterprise Chef 
+Manage |chef server oec|
 =====================================================
 The |chef server| can be managed in the following ways:
 

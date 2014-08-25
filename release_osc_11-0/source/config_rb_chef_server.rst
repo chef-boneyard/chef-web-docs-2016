@@ -46,7 +46,7 @@ webui
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_webui.rst
 
-.. warning:: Review the full list of `optional settings <http://docs.opscode.com/release/osc_11-0/config_rb_chef_server_optional_settings.html>`_ that can be added to the |chef server rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
+.. warning:: Review the full list of :doc:`optional_settings </config_rb_chef_server_optional_settings>` that can be added to the |chef server rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
 
 
