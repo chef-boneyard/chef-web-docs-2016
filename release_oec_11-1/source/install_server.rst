@@ -1,4 +1,33 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/install_server_oec.html BY DESIGN
 .. THIS PAGE DOCUMENTS Enterprise Chef server version 11.1
 
-.. include:: ../../chef_master/source/install_server_oec.rst
+=====================================================
+Install Chef Server 11.x
+=====================================================
+
+.. include:: ../../includes_chef_server/includes_chef_server.rst
+
+The steps below describe the process for installing |chef server 11|.
+
+Steps
+=====================================================
+.. include:: ../../step_install/step_install_server.rst
+
+About the Hostname
+=====================================================
+.. include:: ../../includes_install/includes_install_server_hostname.rst
+
+**To verify if a hostname is a FQDN**
+
+.. include:: ../../step_install/step_install_hostname_is_fqdn.rst
+
+**To verify is a hostname is resolvable**
+
+.. include:: ../../step_install/step_install_hostname_is_resolvable.rst
+
+**To change a hostname**
+
+.. include:: ../../step_install/step_install_hostname_edit.rst
+
+**To add a hostname to /etc/hosts**
+
+.. include:: ../../step_install/step_install_hostname_add_to_etc_hosts.rst

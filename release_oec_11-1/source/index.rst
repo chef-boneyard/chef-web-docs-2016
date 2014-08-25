@@ -127,6 +127,7 @@ The following APIs can be used to access data on the |chef server|:
    auth_authentication
    auth_authorization
    config_rb_chef_server_enterprise
+   config_rb_chef_server_enterprise_optional_settings
    ctl_private_chef
    install_server
    install_server_be
@@ -144,7 +145,6 @@ The following APIs can be used to access data on the |chef server|:
    release_notes
    server_backup_restore
    server_components
-   server_data
    server_deploy_be
    server_deploy_fe
    server_deploy_febe
@@ -160,4 +160,6 @@ The following APIs can be used to access data on the |chef server|:
    server_tuning
    server_users
    upgrade_server_ha
+   upgrade_server_ha_notes
    upgrade_server_standalone
+   upgrade_server_standalone_notes
