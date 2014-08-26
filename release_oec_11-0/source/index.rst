@@ -144,7 +144,6 @@ The following APIs can be used to access data on the |chef server|:
    migrate_to_enterprise
    oec_overview
    orgmapper
-   release_notes
    server_backup_restore
    server_components
    server_deploy_be
