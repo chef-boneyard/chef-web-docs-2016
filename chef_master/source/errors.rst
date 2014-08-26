@@ -186,7 +186,7 @@ HTTP 500 is a non-speciﬁc error message. The full error message for the error 
 * ``/var/log/opscode/opscode-account/current`` 
 * ``/var/log/opscode/opscode-erchef/current``
 
-The error will likely found in a stacktrace from the application error. In some cases the error message will clearly indicate a problem with another service which can be investigated further. For non-obvious errors, please contact |company name| and attach the log files.
+The error will likely found in a stacktrace from the application error. In some cases the error message will clearly indicate a problem with another service which can be investigated further. For non-obvious errors, please contact |company_name| and attach the log files.
 
 502 / 504 (Gateway)
 =====================================================
