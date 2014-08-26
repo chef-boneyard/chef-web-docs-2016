@@ -143,6 +143,7 @@ The following APIs can be used to access data on the |chef server|:
    oec_overview
    orgmapper
    release_notes
+   runbook
    server_backup_restore
    server_components
    server_deploy_be
