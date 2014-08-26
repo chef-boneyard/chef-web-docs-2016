@@ -2,7 +2,7 @@
 Errors
 =====================================================
 
-The following sections describe troubleshooting some common errors and problems.
+The following sections describe how to troubleshoot some common errors and problems.
 
 401 Unauthorized
 =====================================================
