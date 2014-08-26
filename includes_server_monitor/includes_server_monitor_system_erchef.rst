@@ -21,7 +21,6 @@ For each of the upstream services, ``pong`` or ``fail`` is returned. The possibl
 
 * ``chef_solr`` (for the |service solr| service)
 * ``chef_sql`` (for the |service postgresql| service)
-* ``chef_otto`` (for the |service couchdb| service)
 * ``oc_chef_authz`` (for the |service authz| service)
 
 If any of the status values return ``fail``, this typically means the |chef server| is unavailable for that service.
