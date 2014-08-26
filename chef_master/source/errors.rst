@@ -179,6 +179,41 @@ To fix object permissions:
 
 #. Check the checkboxes needed and save the updates.
 
+500 (Unexpected)
+=====================================================
+HTTP 500 is a non-speciﬁc error message. The full error message for the error the |chef client| is receiving can be found in one of the following log ﬁles:
+
+* ``/var/log/opscode/opscode-account/current`` 
+* ``/var/log/opscode/opscode-erchef/current``
+
+The error will likely found in a stacktrace from the application error. In some cases the error message will clearly indicate a problem with another service which can be investigated further. For non-obvious errors, please contact |company name| and attach the log files.
+
+502 / 504 (Gateway)
+=====================================================
+.. see: includes_server_monitor_application_nginx
+
+Determine which API service is returning 504s using the |nginx| access logs. API requests returning 504 can be found with the following command on a frontend:
+
+.. code-block:: bash
+
+   $ grep ’HTTP/1.1" 504’ /var/log/opscode/nginx/access.log
+
+The following will extract the URLs and sort them by ``uniq`` count:
+
+.. code-block:: bash
+
+   $ grep ’HTTP/1.1" 504’ nginx-access.log | cut -d’ ’ -f8 | sort | uniq -c | sort
+
+In a large installation, you may need to restrict this to a subset of the requests:
+
+.. code-block:: bash
+
+   $ tail -10000 nginx-access.log | grep ’HTTP/1.1" 504’ | cut -d’ ’ -f8 | sort | uniq -c | sort
+
+You can also use the ``ntail`` utility.
+
+If the problematic service is a |ruby|-based service and the frontend machines have free RAM or CPU, consider increasing the number of worker processes. If the problematic service is |service erchef|, use the request log to determine whether a particular component of requests is slow.
+
 Workflow Problems
 =====================================================
 In working with |chef|, you'll most likely encounter issues in your regular workflow. This page is a collection of common errors our users have reported while working with |chef|. Please use the accordion below to select the error message that most closely matches your output. If you are unable to find a matching error, or if the provided steps are unhelpful, please `file a help ticket <http://www.opscode.com/support/tickets>`_.
