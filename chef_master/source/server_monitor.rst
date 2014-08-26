@@ -4,7 +4,6 @@ Monitor
 
 .. include:: ../../includes_server_monitor/includes_server_monitor.rst
 
-
 Application Checks
 =====================================================
 .. include:: ../../includes_server_monitor/includes_server_monitor_application.rst
@@ -36,18 +35,6 @@ Application Checks
 |redis|
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_redis.rst
-
-Node and/or Workstation
-=====================================================
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_client.rst
-
-Disks
-=====================================================
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
-
-Ports
-=====================================================
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_ports.rst
 
 System Checks
 =====================================================
@@ -83,3 +70,10 @@ opscode-expanderctl
 
 .. include:: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_example.rst
 
+Nodes, Workstations
+=====================================================
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_client.rst
+
+Disks
+=====================================================
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
