@@ -44,7 +44,7 @@ When the values for certain settings in the |client rb| file---``node_name`` and
    ERROR: Failed to authenticate to https://api.opscode.com/organizations/ORGANIZATION as USERNAME with key /path/to/USERNAME.pem
    Response:  Failed to authenticate as USERNAME. Ensure that your node_name and client key are correct.
 
-To resolve this type of error, do one of the following:
+**Troubleshooting Steps**
 
 * Verify you have the correct values in your |knife rb| file, especially for the ``node_name`` and ``client_key`` settings.
 
