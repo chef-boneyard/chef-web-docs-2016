@@ -99,7 +99,7 @@ rst_prolog = """
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'chef verify', u'The man page for the chef gem command line tool.',
+    ('index', 'chef verify', u'The man page for the chef verify command line tool.',
      [u'Chef'], 8)
 ]
 
