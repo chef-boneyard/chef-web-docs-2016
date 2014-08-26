@@ -83,3 +83,30 @@ GET
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_users_get.rst
+
+/tools
+-----------------------------------------------------
+
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_get.rst
+
+/tools-search
+-----------------------------------------------------
+
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_search.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_search_get.rst
+
+/tools/SLUG
+-----------------------------------------------------
+
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tool_slug.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tool_slug_get.rst
