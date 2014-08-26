@@ -54,7 +54,6 @@ For example:
    [OK] my DRBD partition is mounted and I am master
    [OK] DRBD primary IP address pings
    [OK] DRBD secondary IP address pings
-   [OK] couchdb is running correctly and I am master
    ...
    [OK] all checks passed.
 
