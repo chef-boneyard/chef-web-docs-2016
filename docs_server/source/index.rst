@@ -54,6 +54,7 @@ The |chef server| is a centralized location where all of the objects needed by |
    private_chef_1x_admin_user_management
    private_chef_1x_support
    reporting
+   runbook
    server_backup_restore
    server_components
    server_data
