@@ -18,7 +18,7 @@
    * - ``flags``
      - |flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``.
    * - ``interpreter``
-     - |interpreter| The default interpreter is ``Cmd.exe``.
+     - |interpreter| The default interpreter is ``Cmd.exe``; use the ``guard_interpreter`` attribute with the ``:powershell_script`` value to use |windows powershell| as the interpreter.
    * - ``provider``
      - Optional. |provider resource_parameter|
 
