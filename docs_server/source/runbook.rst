@@ -158,6 +158,70 @@ Disks
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
 
+
+
+
+
+
+Log Files
+=====================================================
+
+.. include:: ../../includes_server_logs/includes_server_logs.rst
+
+View Log Files
+=====================================================
+.. include:: ../../includes_server_logs/includes_server_logs_view.rst
+
+tail Log Files
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
+
+.. include:: ../../step_server_services/step_server_services_general_tail.rst
+
+Supervisor
+=====================================================
+.. include:: ../../includes_server_logs/includes_server_logs_type_supervisor.rst
+
+nginx, access
+-----------------------------------------------------
+.. include:: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst
+
+opscode-account
+-----------------------------------------------------
+.. include:: ../../includes_server_logs/includes_server_logs_account_log_current.rst
+
+opscode-erchef, current
+-----------------------------------------------------
+.. include:: ../../includes_server_logs/includes_server_logs_erchef_log_current.rst
+
+opscode-erchef, erchef
+-----------------------------------------------------
+.. include:: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst
+
+opscode-webui
+-----------------------------------------------------
+.. include:: ../../includes_server_logs/includes_server_logs_webui_log_current.rst
+
+Application
+=====================================================
+.. include:: ../../includes_server_logs/includes_server_logs_type_application.rst
+
+nginx
+-----------------------------------------------------
+.. include:: ../../includes_server_logs/includes_server_logs_nginx.rst
+
+.. include:: ../../step_server_services/step_server_services_nginx_tail.rst
+
+Read Log Files
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst
+
+
+
+
+
+
+
 Firewalls and Ports
 =====================================================
 
@@ -176,3 +240,64 @@ Front End
 Back End
 -----------------------------------------------------
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
+
+
+
+
+
+
+Services
+=====================================================
+The following subcommands are built into the |private chef ctl| command line tool.
+
+hup
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_hup.rst
+
+int
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_int.rst
+
+kill
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_kill.rst
+
+once
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_once.rst
+
+restart
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_restart.rst
+
+service-list
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_service_list.rst
+
+start
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_start.rst
+
+status
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status.rst
+
+High Availability
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status_ha.rst
+
+Log Files
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status_logs.rst
+
+stop
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop.rst
+
+tail
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
+
+term
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_term.rst
