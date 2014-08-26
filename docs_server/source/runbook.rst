@@ -2,86 +2,42 @@
 Runbook
 =====================================================
 
-xxxxx
+.. include:: ../../includes_chef_server/includes_chef_server.rst
 
-xxxxx
-=====================================================
-xxxxx
+.. include:: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst
 
-xxxxx
------------------------------------------------------
-xxxxx
+The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another.
 
-xxxxx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
+.. image:: ../../images/server_components.png
 
-**xxxxx**
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
 
+   * - Component
+     - Description
+   * - Bookshelf
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
 
+       All cookbooks are stored in a dedicated repository.
+   * - WebUI
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_webui.rst
+   * - Erchef
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
+   * - Message Queues
+     - Messages are sent to the Search Index using the following components:
+       
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
 
+       All messages are added to a dedicated search index repository.
+   * - Nginx
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
+   * - PostgreSQL
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
-
-
-xxxxx
-=====================================================
-xxxxx
-
-xxxxx
------------------------------------------------------
-xxxxx
-
-
-
-
-
-Monitoring
-=====================================================
-includes_server_monitor
-
-General Status
------------------------------------------------------
-xxxxx
-
-High Availability
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-|rabbitmq| Queues
------------------------------------------------------
-.. include:: ../../includes_server_monitor/includes_server_monitor_application_rabbitmq.rst
-
-opscode-expander
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_expander.rst
-
-|redis|
------------------------------------------------------
-xxxxx
-
-|api chef server|
------------------------------------------------------
-xxxxx
-
-Authorization
------------------------------------------------------
-xxxxx
-
-Disk Sizes
------------------------------------------------------
-xxxxx
-
-Ports
------------------------------------------------------
-xxxxx
-
-oc_bifrost
------------------------------------------------------
-xxxxx
-
-
-
-
+The following sections detail how to monitor the server, manage log files, manage services, manage firewalls and ports, configure SSL, tune server configuration settings, and backup and restore data.
 
 
 Monitoring
@@ -169,51 +125,51 @@ Log Files
 .. include:: ../../includes_server_logs/includes_server_logs.rst
 
 View Log Files
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_server_logs/includes_server_logs_view.rst
 
 tail Log Files
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
 
 .. include:: ../../step_server_services/step_server_services_general_tail.rst
 
 Supervisor
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_server_logs/includes_server_logs_type_supervisor.rst
 
 nginx, access
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst
 
 opscode-account
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_account_log_current.rst
 
 opscode-erchef, current
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_erchef_log_current.rst
 
 opscode-erchef, erchef
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst
 
 opscode-webui
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_webui_log_current.rst
 
 Application
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_server_logs/includes_server_logs_type_application.rst
 
 nginx
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_nginx.rst
 
 .. include:: ../../step_server_services/step_server_services_nginx_tail.rst
 
-Read Log Files
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+**Read Log Files**
+
 .. include:: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst
 
 
@@ -316,13 +272,108 @@ SSL Configuration
 .. warning:: By default, the |chef server| uses the |fqdn| to determine the common name (``CN``). If the |fqdn| of the |chef server| is longer than 64 characters, the ``reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
 
 Custom Certificates
-=====================================================
+-----------------------------------------------------
 .. include:: ../../step_server_security/step_server_security_ssl_custom_certificates.rst
 
 Regenerate Certificates
-=====================================================
+-----------------------------------------------------
 .. include:: ../../step_server_security/step_server_security_ssl_regenerate_certificates.rst
 
 |chef client| Settings
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_server_security/includes_server_security_ssl_config_settings.rst
+
+
+
+
+
+
+
+
+Server Tuning
+=====================================================
+
+.. include:: ../../includes_server_tuning/includes_server_tuning.rst
+
+.. note:: |note enterprise_chef_tuning|
+
+
+Customize the Config File
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
+
+Use Conditions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_config/step_config_add_condition.rst
+
+
+Recommended Settings
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
+
+Optional Settings
+-----------------------------------------------------
+The following settings are often used to for performance tuning of |chef server oec| in larger installations.
+
+.. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
+
+bookshelf
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
+
+opscode-account
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_account.rst
+
+opscode-chef
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_chef.rst
+
+opscode-erchef
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_erchef.rst
+
+opscode-expander
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_expander.rst
+
+opscode-solr
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_solr.rst
+
+**Update Frequency**
+
+.. include:: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst
+
+opscode-webui
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_webui.rst
+
+postgresql
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_postgresql.rst
+
+
+
+
+
+
+Backup and Restore
+=====================================================
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore.rst
+
+High Availability
+-----------------------------------------------------
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst
+
+Required Directories
+-----------------------------------------------------
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst
+
+Backup
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst
+
+Restore
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst
