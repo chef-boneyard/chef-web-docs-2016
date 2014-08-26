@@ -47,12 +47,18 @@ The following documentation sets are available:
    * - Chef Developer Kit
      - `http://docs.opscode.com/devkit/ <http://docs.opscode.com/devkit/>`__
      - 
-   * - Open Source Chef Server
-     - `http://docs.opscode.com/open_source/ <http://docs.opscode.com/open_source/>`__
+   * - Open Source Chef Server 11.0
+     - `http://docs.opscode.com/release/osc_11-0/ <http://docs.opscode.com/release/osc_11-0/>`__
      - 
-   * - Enterprise Chef Server
-     - `http://docs.opscode.com/enterprise/ <http://docs.opscode.com/enterprise/>`__
+   * - Open Source Chef Server 11.1
+     - `http://docs.opscode.com/release/osc_11-1/ <http://docs.opscode.com/release/osc_11-1/>`__
+     - `Release Notes <http://docs.opscode.com/release/osc_11-1/release_notes.html>`__
+   * - Enterprise Chef Server 11.0
+     - `http://docs.opscode.com/release/oec_11-0/ <http://docs.opscode.com/release/oec_11-0/>`__
      - 
+   * - Enterprise Chef Server 11.1
+     - `http://docs.opscode.com/release/oec_11-1/ <http://docs.opscode.com/release/oec_11-1/>`__
+     - `Release Notes <http://docs.opscode.com/release/oec_11-1/release_notes.html>`__
    * - Private Chef Server
      - `http://docs.opscode.com/release/private_chef/ <http://docs.opscode.com/release/private_chef/>`__
      - 
