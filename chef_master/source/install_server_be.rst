@@ -210,7 +210,7 @@ Looks like this:
 
    topology "ha"
    
-   server "be1.example.com"
+   server "be1.example.com",
      :ipaddress => "192.168.4.1",
      :role => "backend",
      :bootstrap => true,
