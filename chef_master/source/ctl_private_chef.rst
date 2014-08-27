@@ -40,6 +40,18 @@ uninstall
 =====================================================
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_uninstall.rst
 
+upgrade
+=====================================================
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_upgrade.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_upgrade_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_upgrade_options.rst
+
 Service Subcommands
 =====================================================
 |chef private| has a built in process supervisor, which ensures that all of the required services are in the appropriate state at any given time. The supervisor starts two processes per service.
