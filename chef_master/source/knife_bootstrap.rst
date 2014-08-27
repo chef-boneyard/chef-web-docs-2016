@@ -60,7 +60,7 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
 
-**Fetch and execute an installation script from a URL **
+**Fetch and execute an installation script from a URL**
 
 .. code-block:: bash
 
