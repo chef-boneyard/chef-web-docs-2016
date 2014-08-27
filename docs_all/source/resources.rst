@@ -31,6 +31,10 @@ Attributes
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_attributes.rst
 
+Provider
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following examples show how to use common attributes in a recipe.
@@ -1620,6 +1624,8 @@ Attributes
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
 .. include:: ../../includes_resources/includes_resource_package_providers.rst
 
 Examples
