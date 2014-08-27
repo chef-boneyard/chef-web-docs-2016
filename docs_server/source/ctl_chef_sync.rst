@@ -11,8 +11,6 @@ dirty-objects
 =====================================================
 Use to show unsynchronized objects for the specified organization.
 
-Syntax
------------------------------------------------------
 This option has the following syntax:
 
 .. code-block:: bash
@@ -24,8 +22,6 @@ manager-log
 =====================================================
 Use to show the log file for the synchronization manager.
 
-Syntax
------------------------------------------------------
 This option has the following syntax:
 
 .. code-block:: bash
@@ -37,8 +33,6 @@ prepare-org
 =====================================================
 Use to prepare the specified organization for synchronization, including identifying all groups, organizations, users, and clients.
 
-Syntax
------------------------------------------------------
 This option has the following syntax:
 
 .. code-block:: bash
@@ -51,8 +45,6 @@ sync-log
 =====================================================
 Use to show the log file for the specified organization.
 
-Syntax
------------------------------------------------------
 This option has the following syntax:
 
 .. code-block:: bash
@@ -64,8 +56,6 @@ sync-start
 =====================================================
 Use to start synchronizing an organization.
 
-Syntax
------------------------------------------------------
 This option has the following syntax:
 
 .. code-block:: bash
@@ -77,8 +67,6 @@ sync-status
 =====================================================
 Use to show the current status of all organizations that are synchronizing.
 
-Syntax
------------------------------------------------------
 This option has the following syntax:
 
 .. code-block:: bash
@@ -91,8 +79,6 @@ sync-stop
 =====================================================
 Use to stop synchronizing an organization.
 
-Syntax
------------------------------------------------------
 This option has the following syntax:
 
 .. code-block:: bash
