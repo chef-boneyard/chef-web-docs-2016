@@ -12,7 +12,7 @@ The following attributes are common to every resource:
    * - ``ignore_failure``
      - |ignore_failure| Default value: ``false``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. The |chef client| will attempt to determine the correct provider during the |chef client| run, and then choose the best/correct provider based on configuration data collected at the start of the |chef client| run. In general, a specific provider does not need to be specified.
    * - ``retries``
      - |retries| Default value: ``0``.
    * - ``retry_delay``
