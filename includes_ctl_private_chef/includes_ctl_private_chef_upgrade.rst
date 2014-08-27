@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``upgrade`` subcommand is used to upgrade the |chef server| from the |chef server osc| and |chef server oec| version 11 servers.
+The ``upgrade`` subcommand is used to upgrade the |chef server|.

@@ -50,6 +50,8 @@ upgrade
 
 **Options**
 
+.. note:: Options for the ``upgrade`` subcommand may only be used when upgrading from |chef server osc| to |chef server| 12.
+
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_upgrade_options.rst
 
 Service Subcommands
