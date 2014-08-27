@@ -24,6 +24,8 @@ Attributes
 
 Providers
 =====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
 .. include:: ../../includes_resources/includes_resource_package_ips_providers.rst
 
 Examples
