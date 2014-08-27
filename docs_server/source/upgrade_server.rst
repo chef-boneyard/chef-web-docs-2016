@@ -191,7 +191,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ private-chef-ctl upgrade
 
-   The upgrade process will automatically detect the upgrade from |chef server osc| 11, and will prompt to migrate data and will ask for the organization name to use. To skip prompts, you can specify command line arguments to the upgrade commands.
+   The upgrade process will automatically detect the upgrade from |chef server osc| 11, and will prompt to migrate data and will ask for the organization names to use. To skip prompts, you can specify command line arguments to the upgrade commands.
 
 #. Start |chef server| 12:
 
