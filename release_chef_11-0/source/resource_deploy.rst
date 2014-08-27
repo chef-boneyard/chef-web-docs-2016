@@ -48,6 +48,8 @@ Attributes
 
 Providers
 =====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
 .. include:: ../../includes_resources/includes_resource_deploy_providers.rst
 
 deploy_branch
