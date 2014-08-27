@@ -8,7 +8,7 @@ To set up the |reporting| server for a high availability configuration:
 
    .. code-block:: bash
 
-      $ dpkg -i opscode-reporting_1.0.0-1.ubuntu.10.04_amd64.deb
+      $ dpkg -i opscode-reporting_1.0.1-1.ubuntu.10.04_amd64.deb
 
 #. Reconfigure the |chef server oec| server on the back end primary server (bootstrap):
 

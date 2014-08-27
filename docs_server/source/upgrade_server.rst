@@ -1,5 +1,200 @@
 =====================================================
-Upgrade to |chef server| xx
+Upgrade to |chef server| 12
 =====================================================
+The following sections describe the upgrade process for |chef server| 12.
 
-placeholder
+From |chef server oec|
+=====================================================
+There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: high availability and standalone.
+
+High Availability
+-----------------------------------------------------
+This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+
+To upgrade to |chef server| 12 from a high availability |chef server oec| server, do the following:
+
+#. Run the following on all machines to make sure all services are in a sane state.
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl reconfigure
+
+#. Stop all of the front end machines:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl stop
+
+#. Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
+
+#. Stop |keepalived| on the original non-bootstrap backend machine. This will ensure that the bootstrap back end machine is the active machine. This action may trigger a failover.
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl stop keepalived
+
+#. Once failover is complete, stop the remaining services on the back end machines.
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl stop
+
+#. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
+
+   .. code-block:: bash
+      
+      $ dpkg -D10 -i <new package>
+
+   where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
+   
+   For |rpm|:
+
+   .. code-block:: bash
+      
+      $ rpm -Uvh <new package>
+
+#. Upgrade the back end primary machine with the following command:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl upgrade
+
+   If the upgrade process times out, re-run the command until it finishes successfully.
+
+#. Copy the entire /etc/opscode directory from the back end primary machine to all front and back end nodes. For example, from each server run:
+
+   .. code-block:: bash
+      
+      $ scp -r <Bootstrap server IP>:/etc/opscode /etc
+
+   or from the back end primary machine:
+
+   .. code-block:: bash
+      
+      $ scp -r /etc/opscode <each servers IP>:/etc
+
+#. Upgrade the back end secondary machine with the following command:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl upgrade
+
+   In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine.
+
+#. Upgrade all front end machines with the following commands:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl upgrade
+
+#. Run the following command on all front end and back end machines:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl start
+
+#. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl cleanup
+
+.. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
+
+Standalone
+-----------------------------------------------------
+This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+
+To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:
+
+
+#. Run the following on all machines to make sure all services are in a sane state.
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl reconfigure
+
+#. Stop all of the front end machines:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl stop
+
+#. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
+
+   .. code-block:: bash
+      
+      $ dpkg -D10 -i <new package>
+
+   where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
+   
+   For |rpm|:
+
+   .. code-block:: bash
+      
+      $ rpm -Uvh <new package>
+
+#. Upgrade the machine with the following command:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl upgrade
+
+#. After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl cleanup
+
+#. Start |chef server| 12:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl start
+
+
+From |chef server osc|
+=====================================================
+This section describes the upgrade process from |chef server osc| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
+
+To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
+
+#. Run the following to make sure all services are in a sane state.
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl reconfigure
+
+#. Stop the |chef server osc| server:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl stop
+
+#. Run |debian dpkg| or |rpm| on the machine. For |debian dpkg|:
+
+   .. code-block:: bash
+      
+      $ dpkg -D10 -i <new package>
+
+   where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
+   
+   For |rpm|:
+
+   .. code-block:: bash
+      
+      $ rpm -Uvh <new package>
+
+#. Upgrade the machine with the following command:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl upgrade
+
+   The upgrade process will automatically detect the upgrade from |chef server osc| 11, and will prompt to migrate data and will ask for the organization name to use. To skip prompts, you can specify command line arguments to the upgrade commands.
+
+#. Start |chef server| 12:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl start
