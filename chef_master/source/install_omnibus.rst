@@ -8,7 +8,7 @@ The |omnibus installer| is used to install |chef| on a server, a workstation, an
 
    .. code-block:: bash
 
-      curl -L https://www.opscode.com/chef/install.sh | sudo bash
+      curl -L https://www.getchef.com/chef/install.sh | sudo bash
 
    and then enter the password for the local machine.
 #. As the |chef client| is being installed, the command window will show something like the following:
@@ -40,13 +40,13 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -LO https://www.opscode.com/chef/install.sh && sudo bash ./install.sh -v 10.26.0 && rm install.sh
+   $ curl -LO https://www.getchef.com/chef/install.sh && sudo bash ./install.sh -v 10.26.0 && rm install.sh
 
 and
 
 .. code-block:: bash
 
-   $ curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 10.26.0
+   $ curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -v 10.26.0
 
 will both install the |chef client|, version 10.26.0.
 

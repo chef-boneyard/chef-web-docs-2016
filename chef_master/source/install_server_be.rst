@@ -91,7 +91,7 @@ Firewalls
 
 Hostnames, FQDNs
 -----------------------------------------------------
-The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.opscode.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
+The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
 
 private-chef.rb
 =====================================================
