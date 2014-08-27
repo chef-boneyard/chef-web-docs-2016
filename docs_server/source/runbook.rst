@@ -142,10 +142,6 @@ nginx, access
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst
 
-opscode-account
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_logs/includes_server_logs_account_log_current.rst
-
 opscode-erchef, current
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_erchef_log_current.rst
@@ -153,10 +149,6 @@ opscode-erchef, current
 opscode-erchef, erchef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst
-
-opscode-webui
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_logs/includes_server_logs_webui_log_current.rst
 
 Application
 -----------------------------------------------------
@@ -321,10 +313,6 @@ bookshelf
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
 
-opscode-account
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_tuning/includes_server_tuning_account.rst
-
 opscode-chef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_tuning/includes_server_tuning_chef.rst
@@ -344,10 +332,6 @@ opscode-solr
 **Update Frequency**
 
 .. include:: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst
-
-opscode-webui
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_tuning/includes_server_tuning_webui.rst
 
 postgresql
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

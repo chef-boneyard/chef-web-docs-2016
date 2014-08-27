@@ -73,14 +73,12 @@ The following services are part of |chef server oec|:
 * couchdb
 * keepalived
 * nginx
-* opscode-account
 * opscode-certificate
 * opscode-erchef
 * opscode-expander
 * opscode-expander-reindexer
 * opscode-org-creator
 * opscode-solr
-* opscode-webui
 * postgresql
 * rabbitmq
 * redis
@@ -252,39 +250,6 @@ tail
 .. include:: ../../step_server_services/step_server_services_nginx_tail.rst
 
 
-opscode-account
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_account.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_tail.rst
-
-
 opscode-certificate
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_certificate.rst
@@ -448,39 +413,6 @@ run once
 tail
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_solr_tail.rst
-
-
-opscode-webui
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_webui.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_tail.rst
 
 
 postgresql

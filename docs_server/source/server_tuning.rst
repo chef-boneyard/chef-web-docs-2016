@@ -33,10 +33,6 @@ bookshelf
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
 
-opscode-account
------------------------------------------------------
-.. include:: ../../includes_server_tuning/includes_server_tuning_account.rst
-
 opscode-chef
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_chef.rst
@@ -56,10 +52,6 @@ opscode-solr
 Update Frequency
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst
-
-opscode-webui
------------------------------------------------------
-.. include:: ../../includes_server_tuning/includes_server_tuning_webui.rst
 
 postgresql
 -----------------------------------------------------
