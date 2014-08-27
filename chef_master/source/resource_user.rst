@@ -28,6 +28,8 @@ Password Shadow Hash
 
 Providers
 =====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
 .. include:: ../../includes_resources/includes_resource_user_providers.rst
 
 Examples

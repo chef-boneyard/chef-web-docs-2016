@@ -34,7 +34,6 @@ Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_chef_handler_attributes.rst
 
-
 Custom Handlers
 =====================================================
 .. include:: ../../includes_handler/includes_handler_custom.rst

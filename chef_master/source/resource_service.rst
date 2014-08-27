@@ -20,6 +20,8 @@ Attributes
 
 Providers
 =====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
 .. include:: ../../includes_resources/includes_resource_service_providers.rst
 
 Examples
