@@ -60,3 +60,32 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
 
+**Fetch and execute an installation script from a URL **
+
+.. code-block:: bash
+
+   $ knife bootstrap --bootstrap-install-sh http://mycustomserver.com/custom_install_chef_script.sh
+
+**Specify options when using cURL**
+
+.. code-block:: bash
+
+   $ knife bootstrap --bootstrap-curl-options "--proxy http://myproxy.com:8080"
+
+**Specify options when using GNU Wget**
+
+.. code-block:: bash
+
+   $ knife bootstrap --bootstrap-wget-options "-e use_proxy=yes -e http://myproxy.com:8080"
+
+**Specify a custom installation command sequence**
+
+.. code-block:: bash
+
+   $ knife bootstrap --bootstrap-install-command "curl -l http://mycustomserver.com/custom_install_chef_script.sh | sudo bash -s --"
+
+
+
+
+
+
