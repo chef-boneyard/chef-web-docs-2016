@@ -5,6 +5,12 @@
 Install the |chef server|
 =====================================================
 
+High Availability
+=====================================================
+placeholder
+
+Standalone
+=====================================================
 The standalone installation of |chef server oec| creates a working installation on a single server. This installation is also useful when you are installing |chef server oec| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 
 To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
