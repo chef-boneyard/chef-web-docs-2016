@@ -75,4 +75,4 @@ The |chef server| is a centralized location where all of the objects needed by |
    server_services
    server_tuning
    server_users
-
+   upgrade_server
