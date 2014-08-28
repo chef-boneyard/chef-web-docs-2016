@@ -537,7 +537,7 @@ Every Sphinx build has a configuration file.
 
 rst_prolog
 -----------------------------------------------------
-Opscode has added this configuration setting to every conf.py file to help streamline the inclusion of files at the beginning of the build process and to help support localization efforts. This setting is added to the general configuration settings and looks like this:
+|company_name| has added this configuration setting to every conf.py file to help streamline the inclusion of files at the beginning of the build process and to help support localization efforts. This setting is added to the general configuration settings and looks like this:
 
 .. code-block:: python
 

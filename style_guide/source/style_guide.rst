@@ -539,7 +539,6 @@ rst_prolog
    # A string of reStructuredText that will be included at the beginning of every source file that is read.
    rst_prolog = """
    .. include:: ../../swaps/swap_descriptions.txt
-   .. include:: ../../swaps/swap_http.txt
    .. include:: ../../swaps/swap_names.txt
    .. include:: ../../swaps/swap_notes.txt
    """
