@@ -8,7 +8,7 @@ Release Notes: |chef server oec| 11.1
 
 What's New
 =====================================================
-The following items are new for |chef server oec| 11.1.x and/or are changes from previous versions:
+The following items are new for |chef server oec| 11.1 and/or are changes from previous versions:
 
 * **Support for IPv6** Support has been added to allow the |chef server oec| server and the |chef client| to run in an IPv6 infrastructure.
 * **Lua / Redis-based API routing** The routing mechanisms used by the API proxy have been reworked. This allows for more dynamic and fine-tuned control over routing upstreams and feature flags.
