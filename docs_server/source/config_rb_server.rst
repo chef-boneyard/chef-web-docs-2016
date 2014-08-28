@@ -82,6 +82,8 @@ oc-chef-pedant
 
 oc-id
 -----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_oc_id.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_oc_id.rst
 
 opscode-account
