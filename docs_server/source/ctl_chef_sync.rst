@@ -7,16 +7,6 @@ chef-sync-ctl (executable)
 
 ``chef-sync-ctl`` is the command line tool for Chef Replication, which allows asynchronous replication of cookbook content---roles, environments, data bags, and so on---across |chef server| organizations, including both standalone and high avaiability configurations.
 
-dirty-objects
-=====================================================
-Use to show unsynchronized objects for the specified organization.
-
-This option has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-sync-ctl dirty-objects ORG_NAME
-
 
 manager-log
 =====================================================
@@ -85,4 +75,14 @@ This option has the following syntax:
 
    $ chef-sync-ctl sync-stop ORG_NAME
 
+
+unsynced-objects
+=====================================================
+Use to show unsynchronized objects for the specified organization.
+
+This option has the following syntax:
+
+.. code-block:: bash
+
+   $ chef-sync-ctl dirty-objects ORG_NAME
 
