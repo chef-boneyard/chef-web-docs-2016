@@ -8,7 +8,7 @@ Please `view the notes <http://docs.getchef.com/upgrade_server_ha_notes.html>`_ 
 
 To upgrade to |chef server oec|, do the following:
 
-#. Run the following on all machines to make sure all services are in a sane state.
+#. Run the following command on all machines to make sure all services are in a sane state.
 
    .. code-block:: bash
       

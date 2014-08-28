@@ -58,7 +58,7 @@ It is recommended to do the following:
 
 #. Backup the data on the bootstrap back end machine. (e.g. LVM snapshot, VMware snapshot, etc)
 
-#. Run the following on all machines to make sure things are in a sane state. (e.g. runit):
+#. Run the following command on all machines to make sure things are in a sane state. (e.g. runit):
 
    .. code-block:: bash
 
