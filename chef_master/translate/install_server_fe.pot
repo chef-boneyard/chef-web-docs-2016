@@ -1,0 +1,593 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-27 16:02-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_server_fe.rst:8
+# 89dec299511540d9aaa38d8820223ac6
+msgid "Scaled Front End"
+msgstr ""
+
+#: ../source/install_server_fe.rst:10
+# 23932cc6635f426ca787e12a5c0f28d0
+msgid "The scaled front end installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |company_name| generally recommends a High Availability installation rather than a scaled front end installation, whenever possible."
+msgstr ""
+
+#: ../source/install_server_fe.rst:12
+# 7037a55e882f4e34bfb115690fc0e6e0
+msgid "We refer to all the servers in a particular installation of |chef server oec| as a cluster."
+msgstr ""
+
+#: ../source/install_server_fe.rst:14
+# 6c7ae2e262dd4104bbf6ace2284e728f
+msgid "The scaled front end installation consists of multiple front-end servers talking to a single back-end server. This allows for a higher level of concurrency on API requests, while scaling the back-end server vertically to handle the increased I/O load."
+msgstr ""
+
+#: ../source/install_server_fe.rst:17
+# 35dd28d40fd64547ba095c0f097a5602
+msgid "System Requirements"
+msgstr ""
+
+#: ../source/install_server_fe.rst:18
+# b1be24f598194bed9061423915aee4f3
+msgid "A scaled front end installation scenario has the following system requirements:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:20
+# 47ec994d1b7a49ccbd352fbe42a7d09e
+msgid "8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster"
+msgstr ""
+
+#: ../source/install_server_fe.rst:21
+# 96c6acf45da84024a2a5a5b66aa13f71
+msgid "16GB RAM"
+msgstr ""
+
+#: ../source/install_server_fe.rst:22
+# cca8a2e294694a3d966e769ddc54bee8
+msgid "2 x 300GB SAS RAID1 drives"
+msgstr ""
+
+#: ../source/install_server_fe.rst:23
+# e7c354e62ef94f2f991dc7ef5d3d2871
+msgid "Hardware RAID card"
+msgstr ""
+
+#: ../source/install_server_fe.rst:24
+# 713468e9eb0947a593ef1bf7b04e4828
+msgid "1 GigE NIC interface"
+msgstr ""
+
+#: ../source/install_server_fe.rst:25
+# 75b03b177cbe4a55bb55834579ff0022
+msgid "20 GB of free disk space in ``/opt``"
+msgstr ""
+
+#: ../source/install_server_fe.rst:26
+# 32627c31859d41598454f8c8f8f1f525
+msgid "40 GB of free disk space in ``/var``"
+msgstr ""
+
+#: ../source/install_server_fe.rst:27
+# ed2061847a174a94827b28d37c227f2d
+msgid "A back-end server; all other systems will be front-end servers."
+msgstr ""
+
+#: ../source/install_server_fe.rst:29
+# 0dcd3e88776a4aaf93e391d1573a195d
+msgid "While you can certainly run |chef server oec| on smaller systems, our assumption with the scaled front end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes."
+msgstr ""
+
+#: ../source/install_server_fe.rst:32
+# dbc8101b7a62497fafc137579d315463
+msgid "Network Requirements"
+msgstr ""
+
+#: ../source/install_server_fe.rst:33
+# a993541709804653b81cf6ca6fc09770
+msgid "|chef server oec| has the following network requirements for a scaled front end installation:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:36
+# a8e54f7d9445477183bb49128bd27efb
+msgid "Load Balancing"
+msgstr ""
+
+#: ../source/install_server_fe.rst:37
+# cdf0fd3a96db4a769c4836a64f2b71e2
+msgid "As multiple API front-end servers are being run, provide for a mechanism to load-balancing the requests between them. We recommend using either a hardware or software load-balancer configured for round-robin."
+msgstr ""
+
+#: ../source/install_server_fe.rst:39
+# 0cbce27e91a54e0b8ac3109b5e931883
+msgid "You will want to create a DNS entry for the load balanced virtual IP address, which is used to access the cluster---this is the ``api_fqdn``."
+msgstr ""
+
+#: ../source/install_server_fe.rst:42
+# 52a6875e5e0b4794befe04b00744c700
+msgid "Firewalls"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst:4
+# 0c54c7c132b84f94a13dcd453e729071
+msgid "The ports that should be open depend on how the |chef server oec| is deployed---standalone, high availability, front- and back-end servers. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary."
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:4
+# 8fad2eeb4d09416cb9e8786f71100e93
+msgid "For front-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:10
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:10
+# 947812e7973b4873a5ddf4c021353885
+# da3a7905293b48f08cf0f3db82cb27d9
+msgid "Port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:11
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:11
+# 1d8142f71f584bdda582c7d27cdbfab1
+# 9ddebfd70906485d8edf226c84f8ae6e
+msgid "Service"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:12
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:12
+# e98b7b27a6124031a0fd3f5b6fcd3b14
+# fa71647443b246beb2ebf2d6cd71e036
+msgid "80"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:13
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:13
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:19
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:23
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:25
+# 6ef2c1023cfa490facd02a0d7da9f9d1
+# 59402252660643709551c93cbb4f8aea
+# 3c8d772703bd4513835896bbce2705bc
+# c64fbcaca4b642abafa606795955d025
+# acd6999a0e65431a942561b46ed4c1ea
+# 1ba44d0f40bb45028abe725ab6263a77
+# 1f8fbf10a2e545099689a8bfffcd595c
+# c6459dfdead64805bc6fc1815ff98f51
+msgid "|service nginx|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:14
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:14
+# a3cd781ca8cc430788b79fa1e3b34fcc
+# f7a03becb30248c4bca4013df985f361
+msgid "443"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:4
+# 3807ff7b07414a298845eb2e1bd9cec7
+msgid "For back-end servers in an |chef server oec| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:16
+# acdfa24c0d964e0eaf692e9abb465393
+msgid "9463"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:17
+# 9bd83fb4ad1e4d3987c6b34c6baa0c70
+msgid "**oc_bifrost**"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:18
+# 579a9b54db094192a2f9822e39415503
+msgid "9671"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:20
+# 75916e3554aa49cf8b867949254426d4
+msgid "9680"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:22
+# a43e8be46af949e78b7abe288b07552e
+msgid "9685"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:24
+# 788d248e650d43ea829fc151b9c208d0
+msgid "9683"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:26
+# e82ae24820a7435581693dc534f46327
+msgid "5984"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:27
+# 819de341de76414ba67f80d6dc1b651d
+msgid "|service couchdb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:28
+# 6d91f24ad880469d89b70d0d3ee014b0
+msgid "8983"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:29
+# 1cb200ff84f645109038d65059696b86
+msgid "|service solr|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:30
+# bc9a6bbd4cfc4e638659e9eff71449ee
+msgid "5432"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:31
+# 2042e1b74f1a4a0f821555ebeaaa2be8
+msgid "|service postgresql|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:32
+# 230cb28bd6e64e85903343051582c2d1
+msgid "5672"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:33
+# 3a56fe4710484ae0ba8a8800767555ce
+msgid "|service rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:34
+# c6d0b4397fd94342bdae7e979698e027
+msgid "16379"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:35
+# 58e21481101d46899023db59a81e8600
+msgid "|service redis_lb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:36
+# 854fbb549838430981ba4f195889c33e
+msgid "4321"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:37
+# afc530347ef24918b8df030ec0b12f21
+msgid "|service bookshelf|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:38
+# ce9cfbc54ec44e8f926badca4a65d2e8
+msgid "7788-7799"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:39
+# bebafbd16f0e46f9b1a91c7edad603f1
+msgid "|drbd|"
+msgstr ""
+
+#: ../source/install_server_fe.rst:50
+# 0c55144278a54463ac9e3b7af0cb86db
+msgid "private-chef.rb"
+msgstr ""
+
+#: ../source/install_server_fe.rst:51
+# 15a292ef342e4792b3b1255d6e221060
+msgid "Each |chef server oec| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |private chef rb|."
+msgstr ""
+
+#: ../source/install_server_fe.rst:54
+# 447c7fd7ccb5468db73effcb5dfe5225
+msgid "Configure topology"
+msgstr ""
+
+#: ../source/install_server_fe.rst:55
+# 5e6666049fb9435192e2f17b1dcc6de3
+msgid "Add the following line to the |private chef rb| configuration file:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:61
+# 1738ed242f6446e59c8f2b3d2acae24e
+msgid "This lets |chef server oec| know that these servers will be in a horizontally scalable configuration with a single, non-highly-available back-end."
+msgstr ""
+
+#: ../source/install_server_fe.rst:64
+# 97082f7de2294cb29a890f4243157ec0
+msgid "Back-end entries"
+msgstr ""
+
+#: ../source/install_server_fe.rst:65
+# 0fcecd7fd1d24fd1b5cc8f41cb5f45a5
+msgid "For the server that will be used as a back-end servers, add the following to the |private chef rb| file:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:74
+# 8529b7e6aec949b4b34c49e647d52eb4
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is ``backend``, and you will be using this server to bootstrap this |chef server oec| installation."
+msgstr ""
+
+#: ../source/install_server_fe.rst:76
+# 32b5e0ede7694a2690ae51a8d516b729
+msgid "Additionally, this server is used exclusively for the back-end services. Let |chef server oec| know by adding the following entry to ``private-chef.rb``:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:83
+# 089cd31fbe3e45e7b4ce77c6e6a1973e
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server."
+msgstr ""
+
+#: ../source/install_server_fe.rst:86
+# 58567705fd9d4f4daee316c5c888ec55
+msgid "Front-end entries"
+msgstr ""
+
+#: ../source/install_server_fe.rst:87
+# e703aa7886714bdd8812c30b96c0cb7f
+msgid "For each front-end server, add the following to the |private chef rb| file:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:95
+# 6f5e490f3ee1420f97e1e0ad1e18e752
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is ``frontend``."
+msgstr ""
+
+#: ../source/install_server_fe.rst:98
+# 6ce8049d03ea453db49079728c773bda
+msgid "Set api_fqdn"
+msgstr ""
+
+#: ../source/install_server_fe.rst:99
+# de02a7c0daa24e91bf7184c17d19f5b9
+msgid "Add the following line to the |private chef rb| config file:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:105
+# 38248f3673e546809484a49686149f0b
+msgid "Replace ``FQDN`` with the |fqdn| of the load balanced VIP."
+msgstr ""
+
+#: ../source/install_server_fe.rst:108
+# 7c0b6328208a49c08022c6a6997c743a
+msgid "Example"
+msgstr ""
+
+#: ../source/install_server_fe.rst:109
+# 10cae7bbd823410db7be5a9d7ae14af7
+msgid "A completed |private chef rb| configuration file for a four server |chef server oec| cluster, consisting of:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:115
+# ed059f49bce84ddb935bc93e26dc5351
+msgid "FQDN"
+msgstr ""
+
+#: ../source/install_server_fe.rst:116
+# 8c89f537cf9848db84396cec2a7ae049
+msgid "Real IP Address"
+msgstr ""
+
+#: ../source/install_server_fe.rst:117
+# 4d6011958936483db90f898aa7d2bc3d
+msgid "Role"
+msgstr ""
+
+#: ../source/install_server_fe.rst:118
+# 528cb5b2b09646179171ee96794fdf65
+msgid "be1.example.com"
+msgstr ""
+
+#: ../source/install_server_fe.rst:119
+# c61960b4b6aa44e193495395378b60d2
+msgid "192.168.4.1"
+msgstr ""
+
+#: ../source/install_server_fe.rst:120
+# f6508dc0a09149ecbc98ae320cad1d3e
+msgid "backend"
+msgstr ""
+
+#: ../source/install_server_fe.rst:121
+# 273d2dfb8a944926a6dfb2eb9d774d23
+msgid "fe1.example.com"
+msgstr ""
+
+#: ../source/install_server_fe.rst:122
+# edee5ac4b2734bf982855f5961a5161c
+msgid "192.168.4.2"
+msgstr ""
+
+#: ../source/install_server_fe.rst:123
+#: ../source/install_server_fe.rst:126
+#: ../source/install_server_fe.rst:129
+# 955b44ef37104c2593c70ab59dc1d09c
+# 7fec5b82a4a34662a35adb4fc0a362f7
+# 447d60d1f54e49c2a3b0519750202e22
+msgid "frontend"
+msgstr ""
+
+#: ../source/install_server_fe.rst:124
+# baa81b4d32b7429f946139e77dc9bb01
+msgid "fe2.example.com"
+msgstr ""
+
+#: ../source/install_server_fe.rst:125
+# cd1d2cea70414248b589f68b252e165d
+msgid "192.168.4.3"
+msgstr ""
+
+#: ../source/install_server_fe.rst:127
+# 61223d833e4f4df7b394a4397630caa6
+msgid "fe3.example.com"
+msgstr ""
+
+#: ../source/install_server_fe.rst:128
+# 9168db121665478d9c177b2b9e59c6f3
+msgid "192.168.4.4"
+msgstr ""
+
+#: ../source/install_server_fe.rst:130
+# 88b66f1e0b2c4d8796ba30c2d046c50b
+msgid "chef.example.com"
+msgstr ""
+
+#: ../source/install_server_fe.rst:131
+# 3dc084f5e17543d5ba08201ec143d965
+msgid "192.168.4.5"
+msgstr ""
+
+#: ../source/install_server_fe.rst:132
+# d960ffea8fa04264acc1871c42b5e663
+msgid "backend VIP"
+msgstr ""
+
+#: ../source/install_server_fe.rst:134
+# 8198dddb4a2a40299571aa64783e11c7
+msgid "Looks like this:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:164
+# 8262e5c6299a473aa405ed2f54b53039
+msgid "Add Package to Servers"
+msgstr ""
+
+#: ../source/install_server_fe.rst:165
+# 29b265bcfdfc45d9bc9eebf07cd2a593
+msgid "Upload the package provided to the servers you wish to install on, and record its location on the file-system. The rest of this section will assume you uploaded it to the ``/tmp`` directory on each system."
+msgstr ""
+
+#: ../source/install_server_fe.rst:168
+# 40556cd4495540be845ff125eb581c35
+msgid "Configure Bootstrap"
+msgstr ""
+
+#: ../source/install_server_fe.rst:169
+# 75ccbcbaf6ed4437bae1ceaa1a69803a
+msgid "The following sections describe what is required to configure the bootstrap server."
+msgstr ""
+
+#: ../source/install_server_fe.rst:172
+# a97012f86c4c4a14a9e7c3ab77c29473
+msgid "Add private-chef.rb"
+msgstr ""
+
+#: ../source/install_server_fe.rst:173
+# bb28a6c2b62a44e5b4e7a6ad49719b2e
+msgid "Copy the |private chef rb| file to ``/etc/opscode/private-chef.rb`` on the bootstrap server."
+msgstr ""
+
+#: ../source/install_server_fe.rst:176
+# c4d425703a0647bbacc140d36df94ba6
+msgid "Install |chef server oec|"
+msgstr ""
+
+#: ../source/install_server_fe.rst:177
+# 66d0f500c8ab48229de3992f5b28e9be
+msgid "On the bootstrap server copy the |private chef rb| file to ``/etc/opscode/private-chef.rb``."
+msgstr ""
+
+#: ../source/install_server_fe.rst:180
+#: ../source/install_server_fe.rst:225
+# 2a964ad54dc848c2a4c8be273f192c2b
+# 09e63bbebb074c2691deccfbfc911db3
+msgid "Configure"
+msgstr ""
+
+#: ../source/install_server_fe.rst:181
+# cd91349c62044bad8f2879016abc301f
+msgid "To set up |chef server oec| on your bootstrap server, run:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:187
+# b4b0cfa4a5a1445aab5bc2c89c55e38a
+msgid "This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, you will see:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:193
+# 33dde70743cf4da5a004f8bcd4e6ea3c
+msgid "|chef server oec| is composed of many different services, which work together to create a functioning system. One effect is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready."
+msgstr ""
+
+#: ../source/install_server_fe.rst:196
+# d5b0b6a5da6441999c80f1b4765d511f
+msgid "Configure Front-end"
+msgstr ""
+
+#: ../source/install_server_fe.rst:197
+# da2d2770d382406caaaafd89d1d54c50
+msgid "The following sections describe what is required to configure the front-end server."
+msgstr ""
+
+#: ../source/install_server_fe.rst:200
+# d2dd986b581947e7b706dd3fd6211048
+msgid "Copy /etc/opscode"
+msgstr ""
+
+#: ../source/install_server_fe.rst:201
+#: ../source/install_server_fe.rst:226
+# 37590e97e1e84f2185f4c92cb8672c69
+# 04b7add49a104485ab2bbd641018cd2c
+msgid "With the bootstrap complete, you can now populate ``/etc/opscode`` on the front-end servers with the files generated during the bootstrap process. Assuming you are logged in as root on your bootstrap server, something like:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:207
+# ec5422b80f01447c80d2ce4a36ae0d0d
+msgid "Will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install."
+msgstr ""
+
+#: ../source/install_server_fe.rst:210
+# 841cc495a9f449b280bfbf5ae2fb803a
+msgid "Install package"
+msgstr ""
+
+#: ../source/install_server_fe.rst:211
+# 70203cff9f9943b3abd9be936e00e1cf
+msgid "Install the |chef server oec| package on each of the front-end servers. For on |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:217
+# 5db1975d32d84cb3971a1cc51d063f46
+msgid "Install the |chef server oec| package on |ubuntu|:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:232
+# 43bfc86a62334935b84ccb929591cf99
+msgid "This command will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install."
+msgstr ""
+
+#: ../source/install_server_fe.rst:235
+# 61a940546e404c6e8c51dc79ca612478
+msgid "Reconfigure the Server"
+msgstr ""
+
+#: ../source/install_server_fe.rst:236
+# b0ff2ac473b54ee6b3331518cc346316
+msgid "Run the following command:"
+msgstr ""
+
+#: ../source/install_server_fe.rst:243
+# 57a2ec9c49ee4b1995c9beca25b1fbf4
+msgid "Success!"
+msgstr ""
+
+#: ../source/install_server_fe.rst:244
+# 892d5d188dcd487b96233cd1ba1035ad
+msgid "Congratulations, you have installed |chef server oec| in a scaled front end configuration. Continue with the User Management section of this guide."
+msgstr ""
+

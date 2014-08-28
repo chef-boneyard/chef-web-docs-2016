@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-27 16:02-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_chef_client.rst:8
+# 686c7fcb8d4e40f9898f4f65214c3e5c
+msgid "About the chef-client"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:5
+# d7d35f20e9374ed583c69005031277e2
+msgid "A |chef client| is an agent that runs locally on every node that is registered with the |chef server|. When a |chef client| is run, it will perform all of the steps that are required to bring the node into the expected state, including:"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:7
+# f90f4c8504af4b20b827d880b27de09d
+msgid "Registering and authenticating the node with the |chef server|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:8
+# 328e05dde7654f59ad895a5867663817
+msgid "Building the node object"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:9
+# f26db2be7030412d998836f1a360b63c
+msgid "Synchronizing cookbooks"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:10
+# f4df9cc4d4364933b18f667c75079743
+msgid "Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:11
+# 426526633041443d994e67b4fa8adb56
+msgid "Taking the appropriate and required actions to configure the node"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:12
+# fb96813ff5bb44e2ab07f1e251608a46
+msgid "Looking for exceptions and notifications, handling each as required"
+msgstr ""
+
+#: ../source/essentials_chef_client.rst:13
+# 8e56c8fcf9e74476a0d87ec73b4bab55
+msgid "|chef validator|"
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:5
+# d91a0b5090b84bc3a36f9786c68473e4
+msgid "Every request made by the |chef client| to the |chef server| must be an authenticated request using the |api chef server| and a private key. When the |chef client| makes a request to the |chef server|, the |chef client| authenticates each request using a private key located in ``/etc/chef/client.pem``."
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:7
+# c35724b493c743cca2073a455d0c4f4d
+msgid "However, during the first |chef client| run, this private key does not exist. Instead, the |chef client| will attempt to use the private key assigned to the |chef validator|, located in ``/etc/chef/validation.pem``. (If, for any reason, the |chef validator| is unable to make an authenticated request to the |chef server|, the initial |chef client| run will fail.)"
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:9
+# a31341eb702a4c699576afd757042af4
+msgid "During the initial |chef client| run, the |chef client| will register with the |chef server| using the private key assigned to the |chef validator|, after which the |chef client| will obtain a ``client.pem`` private key for all future authentication requests to the |chef server|."
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:11
+# b8742613be0a4129aeefedc3ff0e817f
+msgid "After the initial |chef client| run has completed successfully, the |chef validator| is no longer required and may be deleted from the node. Use the ``delete_validation`` recipe found in the ``chef-client`` cookbook (https://github.com/opscode-cookbooks/chef-client) to remove the |chef validator|."
+msgstr ""
+
+#: ../source/essentials_chef_client.rst:17
+# 53e2837c79e14b28955b765ed1acdbe0
+msgid "SSL Certificates"
+msgstr ""
+
+#: ../../includes_node/includes_node_certificate.rst:4
+# eb5b2775db804717848c0a41f8ab98fe
+msgid "An |ssl| certificate is used between the |chef client| and the |chef server| to ensure that each node has access to the right data."
+msgstr ""
+
+#: ../source/essentials_chef_client.rst:21
+# d3675cd7b164430abab3e3c8656e2729
+msgid "Signed Header Authentication"
+msgstr ""
+
+#: ../../includes_security/includes_security_signed_header_authentication.rst:5
+# 6fd2f63a51dd462fa9a1c1d8f3330c4c
+msgid "Signed header authentication is used to validate communications between the |chef server| and any node that is being managed by the |chef server|. An API client manages each authentication request. A public and private key pair is used for the authentication itself. The public key is stored in the database on the |chef server|. The private key is stored locally on each node and is kept separate from node data (typically in the |path chef private key| directory). Each request to the |chef server| by a node must include a request signature in the HTTP headers. This signature is computed from a hash of request content and is encrypted using the private key."
+msgstr ""
+
