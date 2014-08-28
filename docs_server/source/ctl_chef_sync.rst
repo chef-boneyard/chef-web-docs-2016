@@ -21,7 +21,7 @@ This option has the following syntax:
 
 prepare-org
 =====================================================
-Use to prepare the specified organization for synchronization by associating the synchronizing user, and then making that user an administrator. This option must be run on both the source and target organizations.
+Use to prepare the specified organization for synchronization by associating the synchronizing user, and then making that user an administrator. This subcommand must be run on both the source and target organizations.
 
 This option has the following syntax:
 
