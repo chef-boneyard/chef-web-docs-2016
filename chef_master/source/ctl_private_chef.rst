@@ -12,6 +12,10 @@ cleanse
 =====================================================
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_cleanse.rst
 
+gather-logs
+=====================================================
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_gather_logs.rst
+
 ha-status
 =====================================================
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst
