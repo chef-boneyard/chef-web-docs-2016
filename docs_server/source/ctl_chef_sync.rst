@@ -5,7 +5,7 @@
 chef-sync-ctl (executable)
 =====================================================
 
-``chef-sync-ctl`` is the command line tool for Chef Replication, which allows asynchronous replication of cookbook content---roles, environments, data bags, and so on---across |chef server| organizations, including both standalone and high avaiability configurations.
+``chef-sync-ctl`` is the command line tool for Chef Replication, which allows asynchronous replication of cookbook content across |chef server| organizations, including both standalone and high avaiability configurations.
 
 
 manager-log
