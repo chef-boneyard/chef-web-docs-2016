@@ -84,5 +84,5 @@ This option has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-sync-ctl dirty-objects ORG_NAME
+   $ chef-sync-ctl unsynced-objects ORG_NAME
 
