@@ -4,7 +4,7 @@ Docs for |chef client| 11.6
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-View the :doc:`release notes </release_notes>` for |chef client| 11.6.x.
+View the :doc:`release notes </release_notes>` for |chef client| 11.6.
 
 Getting Started 
 =====================================================
