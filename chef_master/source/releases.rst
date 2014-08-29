@@ -59,6 +59,9 @@ The following documentation sets are available:
    * - Enterprise Chef Server 11.1
      - `http://docs.getchef.com/release/oec_11-1/ <http://docs.getchef.com/release/oec_11-1/>`__
      - `Release Notes <http://docs.getchef.com/release/oec_11-1/release_notes.html>`__
+   * - Enterprise Chef Server 11.2
+     - `http://docs.getchef.com/release/oec_11-2/ <http://docs.getchef.com/release/oec_11-2/>`__
+     - `Release Notes <http://docs.getchef.com/release/oec_11-2/release_notes.html>`__
    * - Private Chef Server
      - `http://docs.getchef.com/release/private_chef/ <http://docs.getchef.com/release/private_chef/>`__
      - 
