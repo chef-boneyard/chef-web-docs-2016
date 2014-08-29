@@ -8,6 +8,8 @@ The |chef server oec| is a centralized location where all of the objects needed 
 
 .. note:: This set of topics is only about the |chef server oec| server, version 11.1. For information about the |chef client|, |ohai|, cookbooks, and so on, see |url docs|.
 
+View the :doc:`release notes </release_notes>` for |chef server oec| 11.1.
+
 Server Essentials
 =====================================================
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
