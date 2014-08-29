@@ -54,6 +54,10 @@ oc-chef-pedant
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_pedant.rst
 
+oc-id
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_server_settings_oc_id.rst
+
 opscode-account
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_account.rst
