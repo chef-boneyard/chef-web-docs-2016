@@ -10,7 +10,7 @@ This configuration file has the following settings for ``oc-id``:
    * - Setting
      - Description
    * - ``oc_id['administrators']``
-     - An array of users who may add applications to the identity service. For example, ``["user1", "user2"]``. Default value: ``[ ]``.
+     - |user ocid_admins| For example, ``["user1", "user2"]``. Default value: ``[ ]``.
    * - ``oc_id['db_pool_size']``
      - |db_pool_size| Default value: ``'20'``.
    * - ``oc_id['dir']``
@@ -28,11 +28,11 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['port']``
      - |port service| Default value: ``9090``.
    * - ``oc_id['sql_database']``
-     - The name of the database. Default value: ``oc_id``.
+     - |name db_ocid| Default value: ``oc_id``.
    * - ``oc_id['sql_password']``
-     - The password for the ``sql_user``. Default value: ``snakepliskin``.
+     - |password sql_user| Default value: ``snakepliskin``.
    * - ``oc_id['sql_user']``
-     - The user with permission to write to ``sql_databas``. Default value: ``oc_id``.
+     - |user ocid| Default value: ``oc_id``.
    * - ``oc_id['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``.
 

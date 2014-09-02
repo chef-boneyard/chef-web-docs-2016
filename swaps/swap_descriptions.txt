@@ -93,6 +93,7 @@
 
 .. |backups_kept| replace:: The number of backups to be kept. Set to ``false`` to prevent backups from being kept.
 .. |bandwidth_yum| replace:: The maximum amount of network bandwidth (in bytes).
+.. |batch_size bulk_fetch| replace:: Use to specify the number of nodes that may be deserialized. Currently only applies to the ``/search`` endpoint in the |api chef server|.
 .. |before| replace:: Use this to add the run list item before the specified run list item.
 .. |before_fork| replace:: The object that is called by the master process before executing the |unicorn| binary.
 .. |before_migrate| replace:: A block of code (or a path to a file that contains code) that is run before a migration.
@@ -104,7 +105,7 @@
 .. |block-startup-timeout| replace:: The amount of time that should elapse before the deployment process is stopped.
 .. |bookshelf url| replace:: Use to specify the URL at which cookbooks are stored.
 .. |bookshelf url_external| replace:: Use to specify the URL from which the |chef client| will download cookbooks. By default, this is the ``Host:`` header provided by the |chef client| when it contacts the |chef server|. When cookbook storage is located behind a firewall and/or when the ``Host:`` header is not used, this value must be a URL that is accessible to the |chef client|.
-.. |bookshelf id_access_key_s3| replace:: Use to specify the access key.
+.. |bookshelf id_access_key_s3| replace:: Use to specify the access key identifier.
 .. |bookshelf id_secret_key_s3| replace:: Use to specify the secret key.
 .. |bookshelf bucket_s3| replace:: Use to specify the bucket name.
 .. |boot_protocol| replace:: The boot protocol used by a network interface.
@@ -204,9 +205,11 @@
 .. |cookbook directory resources| replace:: The sub-directory in which lightweight resources are located.
 .. |cookbook directory templates| replace:: The sub-directory in which templates are located.
 .. |cookbook file_location| replace:: The cookbook in which a file is located (if it is not located in the current cookbook).
+.. |cookbook external_storage_settings| replace:: Four settings require configuration when pointing at an external cookbook storage location: ``bookshelf['vip']``, for the endpoint; ``bookshelf['access_key_id']``, for user access key; ``bookshelf['secret_access_key']``, for secret key; and ``opscode_erchef['s3_bucket']``, for the bucket name. Run the |chef server| ``reconfigure`` command after changing these settings.)
 .. |cookbook name chef_handler| replace:: The |cookbook chef_handler| cookbook is used to distribute and enable exception and report handlers.
 .. |cookbook path| replace:: The directory in which cookbooks are created. This can be a colon-separated path.
 .. |cookbook_path subdirectory| replace:: The sub-directory for cookbooks on the |chef client|. This value can be a string or an array of file system locations, processed in the specified order. The last cookbook is considered to override local modifications.
+.. |cookbook stream_download| replace:: Use to enable stream downloading of cookbooks. This setting (when ``true``) typically results in improved cookbook download performance, especially with the memory usage of the |service bookshelf| service and the behavior of load balancers and proxies in-between the |chef client| and the |chef server|.
 .. |cookbook_sync_threads| replace:: Use to specify the number of helper threads available for parallel cookbook synchronization. Increasing this value **may** increase the frequency of gateway errors from the |chef server| (503 and 504 errors). Decreasing this number will reduce the frequency of gateway errors, if present.
 .. |cookbook_tarball_path| replace:: The location in which a |chef server| stores cookbooks that have been saved in the .tar file format, and from which cookbooks are distributed to a |chef client|.
 .. |COOKBOOK_VERSION delete| replace:: The version of a cookbook to be deleted. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, |knife| will prompt for a version.
@@ -279,8 +282,11 @@
 .. |directory cookbooks| replace:: The directory in which cookbooks are located.
 .. |directory dockerfile_context| replace:: The directory in which |dockerfile| contexts are located.
 .. |directory environments| replace:: The directory in which environments are located.
+.. |directory expander_reindexer| replace:: The directory in which ``opscode-expander-reindexer`` logs files are located.
 .. |directory generic| replace:: The working directory.
 .. |directory generic_data| replace:: The directory in which on-disk data is stored.
+.. |directory chef_server| replace:: The directory in which the |chef server| is installed.
+.. |directory keepalive_post_hooks| replace:: The directory to which |keepalived| will send ``POST`` hooks.
 .. |directory logs| replace:: The directory in which log data is stored.
 .. |directory nodes| replace:: The directory in which nodes are located.
 .. |directory package_download| replace:: The directory to which a package is downloaded.
@@ -288,7 +294,6 @@
 .. |directory redis| replace:: Also the location in which an append-only log file is created, if used.
 .. |directory roles| replace:: The directory in which roles are located.
 .. |directory trusted_certificates| replace:: The directory in which trusted certificates are located.
-
 .. |disable plugin_ohai| replace:: An array of |ohai| plugins to be disabled on a node.
 .. |disable-bootstrap| replace:: Use to disable the bootstrap process.
 .. |diskspacecheck| replace:: Use to check for sufficient disk space before running a transaction.
@@ -297,6 +302,15 @@
 .. |distro| replace:: The template file to be used during a bootstrap operation. The following distributions are supported: ``chef-full`` (the default bootstrap), ``centos5-gems``, ``fedora13-gems``, ``ubuntu10.04-gems``, ``ubuntu10.04-apt``, ``ubuntu12.04-gems``, and the name of a custom bootstrap template file. When this option is used, |knife| will search for the template file in the following order: the ``bootstrap/`` folder in the current working directory, the ``bootstrap/`` folder in the |chef repo|, the ``bootstrap/`` folder in the ``~/.chef/`` directory, or a default bootstrap file. Do not use the ``--template-file`` option when ``--distro`` is specified.
 .. |docker base_image| replace:: Use to specify the image to use as the base image. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|. Currently, this value must be an image made available via the |chef docker_hub_account|: https://registry.hub.docker.com/repos/chef/.
 .. |dns_zone| replace:: The DNS zone.
+.. |drbd device| replace:: The device name to use for |drbd|.
+.. |drbd disk| replace:: The local LVM logical volume to use behind |drbd|.
+.. |drbd flexible_meta_disk| replace:: Where |drbd| meta-data is stored.
+.. |drbd primary| replace:: The ``fqdn``, ``ip`` and ``port`` of the server we consider the |drbd| *primary*. This is typically set automatically from the ``server`` entries with the ``backend`` ``role`` when in an ``ha`` topology.
+.. |drbd secondary| replace:: Identical to the ``drbd['primary']`` setting, including caveats.
+.. |drbd shared_secret| replace:: The shared secret for |drbd|.
+.. |drbd sync_rate| replace:: The amount of bandwidth to use for data synchronization; typically a small percentage of the available bandwidth available for |drbd| replication.
+.. |drbd version| replace:: The version of |drbd| that is installed on the system.
+
 .. |dry_run| replace:: Use to take no action and only print out results.
 .. |dry_run no_upload| replace:: Use to prevent changes from being uploaded to the |chef server|.
 .. |dump_frequency| replace:: The dump frequency (in days) used while creating a file systems table (fstab) entry.
@@ -318,10 +332,12 @@
 .. |editor| replace:: The |chef editor| that is used for all interactive commands.
 .. |effective_cache_size postgresql| replace:: The size of the disk cache that is used for data files.
 .. |email| replace:: The email address for the individual who maintains the cookbook. This option will place an email address in each of the pre-created files. If this option is not specified, an email name of "your_email" will be used instead; it can be easily modified later.
+.. |email chef_server| replace:: The email addressed to which email notifications are sent.
+.. |enable actions| replace:: Use to enable |chef actions|.
 .. |enable_checkout git| replace:: Use to check out a repo from master.
 .. |enable_group_conditionals| replace:: Use to allow conditional packages.
 .. |enable_package_groups| replace:: Use to allow the use of package groups for a repository.
-.. |enable_reporting| replace:: Use to enable data collection reporting during a |chef client| run.
+.. |enable_reporting| replace:: Use to enable |reporting|, which performs data collection during a |chef client| run.
 .. |enable_selinux_file_permission_fixup| replace:: |selinux| environments only. Use to have the |chef client| attempt to apply the correct file permissions to an updated file via the ``restorecon`` command. Set this value to ``false`` to prevent the |chef client| from attempting this action.
 .. |enable_submodules| replace:: Use to perform a sub-module initialization and update.
 .. |enable gzip| replace:: Use to enable  |gzip| compression.
@@ -524,6 +540,7 @@
 .. |id hp_tenant| replace:: The tenant identifier that represents a collection of service subscriptions and/or resources in the |hp cloud| account.
 .. |id network_vcloud| replace:: The |vcloud| network ID.
 .. |id chef_client_run| replace:: The identifier for a |chef client| run.
+.. |id consumer| replace:: The identity of the consumer to which messages are published.
 .. |id report_instance| replace:: Use to ensure that instances running |amazon linux| can log the instance identifier (e.g. ``i-12345678``) and region (e.g. ``us-west-1``) for an instance that downloads a package.
 .. |id site| replace:: The identifier for the site.
 .. |id vlan| replace:: The identifier for the VLAN.
@@ -558,6 +575,7 @@
 .. |ip_address floating_openstack| replace:: The floating IP address to be associated with a new |openstack| node (assuming that IP addresses have been allocated to the project).
 .. |ip_address node| replace:: The IP address for the node.
 .. |ip_address rabbitmq| replace:: The IP address for machine on which |rabbitmq| is running.
+.. |ip_address service| replace:: The IP address on which the service will listen.
 .. |ip_address virtual| replace:: The virtual IP address.
 .. |ip_version| replace:: Use to enable IPv6 and run |chef server osc| in "dual IPv4/IPv6 mode". When this setting is ``ipv6``, the |chef server osc| server will use IPv6 for all internal comunication and will be able to accept external communications that are using IPv6 (via the |nginx| load balancer).
 
@@ -585,6 +603,7 @@
 
 .. K
 ..
+
 
 
 .. |keepalive request_time| replace:: The amount of time (in seconds) to wait for requests on a connection.
@@ -640,6 +659,7 @@
 .. |level log| replace:: The level of logging that will be displayed by the |chef client|. The |chef client| uses the ``mixlib-log`` (https://github.com/opscode/mixlib-log) to handle logging behavior. Options (in order of priority): ``:debug``, ``:info``, ``:warn``, ``:error``, and ``:fatal``.
 .. |level mdadm| replace:: The |raid| level.
 .. |license| replace:: The type of license under which a cookbook is distributed: ``apachev2``, ``gplv2``, ``gplv3``, ``mit``, or ``none`` (default). This option will place the appropriate license notice in the pre-created files: ``Apache v2.0`` (for ``apachev2``), ``GPL v2`` (for ``gplv2``), ``GPL v3`` (for ``gplv3``), ``MIT`` (for ``mit``), or ``license 'Proprietary - All Rights Reserved`` (for ``none``). Be aware of the licenses for files inside of a cookbook and be sure to follow any restrictions they describe.
+.. |license chef_server| replace:: The number of |chef server| licenses.
 .. |license metadata_rb| replace:: The type of license under which a cookbook is distributed: ``Apache v2.0``, ``GPL v2``, ``GPL v3``, ``MIT``, or ``license 'Proprietary - All Rights Reserved`` (default). Please be aware of the licenses for files inside of a cookbook and be sure to follow any restrictions they describe.
 .. |link_type| replace:: The type of link: ``:symbolic`` or ``:hard``.
 .. |links interface_lag| replace:: An array of interfaces to be configured as members of a link aggregation group (LAG).
@@ -756,6 +776,7 @@
 .. |name application| replace:: The name of the application.
 .. |name application_pool| replace:: The name of the application pool.
 .. |name availability_zone| replace:: The name of the availability zone. Each availability zone is unique within a region.
+.. |name chef_server| replace:: The name of the |chef server|.
 .. |name class_chef_handler| replace:: The name of the handler class. This can be module name-spaced.
 .. |name client_webui| replace:: The name of the |chef server| web user interface.
 .. |name cluster| replace:: The name of the cluster.
@@ -763,6 +784,7 @@
 .. |name cookbook| replace:: The name of the cookbook.
 .. |name data_bag| replace:: The name of the data bag.
 .. |name data_bag_item| replace:: The name of a specific item within a data bag.
+.. |name db_ocid| replace:: The name of the database.
 .. |name distribution| replace:: The name of the distribution.
 .. |name dns_azure| replace:: The name of the DNS server (also known as the |azure hosted_service|).
 .. |name environment| replace:: The name of the environment.
@@ -800,6 +822,7 @@
 .. |name proxy| replace:: The user name for the proxy.
 .. |name repository_yum| replace:: The name of the |yum| repository.
 .. |name ruby_block| replace:: The name of the |ruby| block.
+.. |name s3_bucket| replace:: The name of the |amazon s3| bucket.
 .. |name scm_provider| replace:: The name of the source control management provider.
 .. |name server| replace:: The name of the server.
 .. |name service| replace:: The name of the service.
@@ -821,11 +844,21 @@
 .. |name virtual_host| replace:: The name of the virtual host.
 .. |name virtual_machine| replace:: The host name for the virtual machine.
 .. |name vlan| replace:: The name of the VLAN.
+.. |name vrrp_sync_group| replace:: The name of the |vrrp| synchronization group.
+.. |name vrrp_sync_instance| replace:: The name of the |vrrp| synchronization instance.
 .. |name windows_registry_value| replace:: The name of the value to be stored in the |windows| registry.
 .. |name only| replace:: Use to show only the names of modified files.
 .. |netmask| replace:: The decimal representation of the network mask.
 .. |network_name| replace:: The name of the network in which a virtual machine is created.
 .. |network_address| replace:: The address for the network interface.
+.. |nginx cache_max_size| replace:: Use to specify the ``max_size`` parameter used by the |nginx| cache manager, which is part of the ``proxy_cache_path`` directive. When the size of file storage exceeds this value, the |nginx| cache manager will remove the least recently used data.
+.. |nginx client_max_body_size| replace:: Use to specify the maximum accepted body size for a client request, as indicated by the ``Content-Length`` request header. When the maximum accepted body size is greater than this value, a ``413 Request Entity Too Large`` error is returned.
+.. |nginx ssl_company_name| replace:: The name of your company.
+.. |nginx ssl_country_name| replace:: The country in which your company is located.
+.. |nginx ssl_email_address| replace:: The default email address for your company.
+.. |nginx ssl_locality_name| replace:: The city in which your company is located.
+.. |nginx ssl_organizational_unit_name| replace:: The organization or group within your company that is running the |chef server|.
+.. |nginx ssl_state_name| replace:: The state, province, or region in which your company is located.
 .. |no name tags| replace:: Use to prevent tag names from being displayed in the output.
 .. |no_berkshelf| replace:: Use to prevent |berkshelf| from running, even when a |berksfile| exists.
 .. |no_bootstrap| replace:: Use to enable the |chef client| bootstrap.
@@ -897,12 +930,14 @@
 .. |params| replace:: A |ruby hash| of extra parameters that will be passed to a template file.
 .. |PART| replace:: The part of the cookbook to show: ``attributes``, ``definitions``, ``files``, ``libraries``, ``providers``, ``recipes``, ``resources``, or ``templates``. More than one part can be specified.
 .. |pass_number| replace:: The pass number used by the file system check (``fsck``) command while creating a file systems table (``fstab``) entry.
-.. |password bluelock| replace:: The password for the |bluelock| account.
-.. |password shadow_hash| replace:: The password shadow hash. This attribute requires that ``ruby-shadow`` be installed. This is part of the |debian| package: ``libshadow-ruby1.8``.
 .. |password application| replace:: The application password.
+.. |password bluelock| replace:: The password for the |bluelock| account.
 .. |password openstack_compute| replace:: The |openstack compute| password.
 .. |password proxy_server| replace:: The password for the proxy server.
 .. |password rabbitmq| replace:: The password for the |rabbitmq| user.
+.. |password shadow_hash| replace:: The password shadow hash. This attribute requires that ``ruby-shadow`` be installed. This is part of the |debian| package: ``libshadow-ruby1.8``.
+.. |password sql_user| replace:: The password for the ``sql_user``.
+.. |password sql_ro_user| replace:: The password for the ``sql_ro_user``.
 .. |password terremark| replace:: The password for the |terremark| service.
 .. |password user| replace:: The user password.
 .. |password vcloud| replace:: The |vcloud| password.
@@ -911,6 +946,7 @@
 .. |path chef_handler| replace:: The full path to the handler file or the path to a |gem| (if the handler ships as part of a |ruby| |gem|).
 .. |path chef_handler_directory| replace:: The directory in which handlers are dropped.
 .. |path chef_repo| replace:: The path to the |chef repo|.
+.. |path cookbook_checksum| replace:: The path at which cookbook checksums are located.
 .. |path directory| replace:: The path to the directory.
 .. |path environment| replace:: The path to the environment.
 .. |path file| replace:: The path to the file.
@@ -931,6 +967,8 @@
 .. |path validation_client| replace:: The path to the validation key used by the client, typically a file named |chef validator pem|.
 .. |pattern command_line| replace:: One (or more) patterns for a command line. If this option is not specified, a list of patterns may be expected on standard input.
 .. |pattern process_table| replace:: The pattern to look for in the process table.
+.. |pedant debug_org_creation| replace:: Use to run tests with full output.
+.. |pedant log_http_requests| replace:: Use to log HTTP requests in a file named ``http-traffic.log`` that is located in the path specified by ``log_directory``.
 .. |permission create| replace:: Use the |webui permission create| global permission to define which users and groups may create the following server object types: cookbooks, data bags, environments, nodes, roles, and tags.
 .. |permission delete| replace:: Use the |webui permission delete| permission to define which users and groups may delete an object.
 .. |permission grant| replace:: Use the |webui permission grant| permission to define which users and groups may configure permissions on an object.
@@ -1148,6 +1186,7 @@
 .. |return_value cmd| replace:: The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match.
 .. |revision| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
 .. |rights windows security| replace:: The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a |ruby hash| with one (or more) advanced rights options.
+.. |role chef_server| replace:: The configuration type of the |chef server|. Possible values: ``ha``, ``tiered``, ``standalone``.
 .. |role memcached| replace:: The name of a role. During a |chef client| run, a search will be performed to find a node with the same name as this value in the same environment as the current role. If a node is found, it's IP address will be used when rendering the ``memcached.yml`` file.
 .. |role-name| replace:: The name of the virtual machine.
 .. |role-size| replace:: The size of the virtual machine: ``ExtraSmall``, ``Small``, ``Medium``, ``Large``, or ``ExtraLarge``.
@@ -1185,7 +1224,7 @@
 .. S
 ..
 
-.. |s3_url_ttl| replace:: The amount of time (in seconds) before the |chef client| run will time out.
+.. |s3_url_ttl| replace:: Use to specify the amount of time (in seconds) before connections to the server expire.
 .. |sandbox_path| replace:: The location in which cookbook files are stored (temporarily) during upload.
 .. |save_frequency_redis| replace:: Use to set the save frequency. Pattern: ``{ "seconds" => "keys", "seconds" => "keys", "seconds" => "keys" }``.
 .. |script-path| replace:: A colon-separated path at which |ruby| scripts are located.
@@ -1242,14 +1281,22 @@
 .. |skip-dependencies| replace:: Use to ensure that all cookbooks to which the installed cookbook has a dependency will not be installed.
 .. |smtp server| replace:: The |smtp| server to which a connection is made.
 .. |solo mode| replace:: Use to run the |chef client| in |chef solo| mode. This setting determines if the |chef client| should attempt to communicate with the |chef server|.
+
+.. |solr_auto_soft_commit| replace:: The maximum number of documents before a soft commit is triggered.
 .. |solr_commit_interval| replace:: The frequency (in seconds) at which node objects are added to the |apache solr| search index.
 .. |solr_data_path| replace:: The location in which the |apache solr| indexes are located.
 .. |solr_heap_size| replace:: The amount of memory allocated to the |jvm| that is being used to run |apache solr|.
 .. |solr_home_path| replace:: The path to the |apache solr| home directory.
-.. |solr_java_opts| replace:: The additional options (if any) that are passed to the |jvm| that is being used to run |apache solr|.
+.. |solr_ip_address| replace:: The IP address for the machine on which |apache solr| is running.
+.. |solr_java_opts| replace:: A |ruby hash| of ``JAVA_OPTS`` environment variables to be set.
 .. |solr_jetty_path| replace:: The path to the settings that control the |apache jetty| environment.
 .. |solr_max_commit_docs| replace:: The frequency (in documents) at which node objects are added to the |apache solr| search index.
 .. |solr_max_field_length| replace:: The maximum field length (in number of tokens/terms). If a field length exceeds this value, |apache solr| may not be able to complete building the index.
+.. |solr_max_merge_docs| replace:: The maximum number of index segments allowed before they are merged into a single index.
+.. |solr_merge_factor| replace:: The maximum number of document updates that can be stored in memory before being flushed and added to the current index segment.
+.. |solr_new_size| replace:: Use to configure the ``-XX:NewSize`` ``JAVA_OPTS`` environment variable.
+.. |solr_poll_seconds| replace:: The frequency (in seconds) at which the secondary machine polls the primary.
+.. |solr_ram_buffer_size| replace:: The size (in megabytes) of the RAM buffer. When document updates exceed this amout, pending updates will be flushed.
 .. |solr_update_frequency_caveat| replace:: When data is committed to the |apache solr| index, all incoming updates are blocked. If the duration between updates is too short, it is possible for the rate at which updates are asked to occur to be faster than the rate at which objects can be actually committed.
 .. |solr_url| replace:: The URL for the server from which the |apache solr| search engine is run.
 .. |sort| replace:: The order in which search results will be sorted.
@@ -1266,6 +1313,7 @@
 .. |source-image| replace:: The name of the disk image that will be used to create the virtual machine.
 .. |speed interface| replace:: The speed for the interface. Possible values: ``auto``, ``100m``, ``1g``, ``10g``, ``40g``, ``56g``, or ``100g``.
 .. |splay| replace:: A number (in seconds) to add to the ``interval`` that is used to determine the frequency of |chef client| runs. This number can help prevent server load when there are many clients running at the same time.
+.. |splay org_create| replace:: A number (in milliseconds) to add to ``create_wait_ms``.
 .. |ssh_command| replace:: The command that will be run against the results of a search query.
 .. |ssh_gateway| replace:: The |ssh| tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
 .. |ssh_key amazon_ec2| replace:: The |ssh| key for the |amazon ec2| environment.
@@ -1343,8 +1391,11 @@
 .. |time reports_start| replace:: Use to find runs with a start time greater than or equal to the specified date. This option must be used in conjunction with ``--endtime`` and may define up to a 90-day time period.
 .. |timestamp reports_unix| replace:: Use to show start and end times as |unix| timestamps. This option may be used when the ``--endtime`` and ``--starttime`` options are used.
 .. |timeout| replace:: The amount of time (in seconds) to wait before timing out.
+.. |timeout authz| replace:: The amount of time (in milliseconds) to wait for a connection to be established.
 .. |timeout command| replace:: The amount of time (in seconds) a command will wait before timing out.
 .. |timeout connection| replace:: The amount of time (in seconds) to wait before a connection times out.
+.. |timeout depsolver| replace:: The amount of time (in milliseconds) to wait for cookbook dependency problems to be solved.
+.. |timeout org_create| replace:: The amount of time (in milliseconds) to wait before creating an organization.
 .. |timeout os_process| replace:: The amount of time (in milliseconds) before an external process times out.
 .. |timeout push jobs| replace:: The maximum amount of time (in seconds) by which a job must complete, before it will be stopped.
 .. |timeout reboot| replace:: The amount of time (in seconds) a command will wait before proceeding with a reboot.
@@ -1379,6 +1430,8 @@
 .. |uri repository_svn| replace:: The URI for the |svn| repository.
 .. |url_bugtracker| replace:: The URL at which bugs are filed.
 .. |url chef_server| replace:: The URL for the |chef server|.
+.. |url chef_server_base| replace:: The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request.
+.. |url external_bookshelf| replace:: The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request.
 .. |url http_request| replace:: The URL to which an HTTP request is sent.
 .. |url key_download| replace:: The URL from which a key is downloaded.
 .. |url package_download| replace:: The URL from which a package is downloaded.
@@ -1402,12 +1455,15 @@
 .. |use sudo_password| replace:: Use to perform a bootstrap operation with |sudo cmd|; specify the password with the ``-P`` (or ``--ssh-password``) option.
 .. |use tcpip| replace:: Use to enable |tcpip| transactions.
 .. |use trailing_slash| replace:: Use to show directories with trailing slashes (/).
+.. |user bifrost| replace:: The user with permission to publish data.
 .. |user checked_out_code| replace:: The system user that is responsible for the checked-out code.
 .. |user chef_client| replace:: The user that owns a process. This is required when starting any executable as a daemon.
 .. |user command| replace:: The user name or user ID that should be changed before running a command.
 .. |user data_file_ec2| replace:: The |amazon ec2| user data file used during instance provisioning.
 .. |user knife| replace:: The user name used by |knife| to sign requests made by the |chef api client| to the |chef server|. Authentication will fail if the user name does not match the private key.
 .. |user name_or_id| replace:: A user name or identifier that must be changed before running a command.
+.. |user ocid| replace:: The user with permission to write to ``sql_database``.
+.. |user ocid_admins| replace:: An array of users who may add applications to the identity service.
 .. |user terremark| replace:: A user name with permission to access a |terremark| service.
 .. |user uid| replace:: The numeric user identifier.
 
@@ -1432,6 +1488,9 @@
 .. |verbose knife_bootstrap| replace:: Use to run the initial |chef client| run at the ``debug`` log-level (e.g. ``chef-client -l debug``).
 .. |verbose_logging| replace:: Use to set the log level. Options: ``true``, ``nil``, and ``false``. When this is set to ``false``, notifications about individual resources being processed will be suppressed (and will be output at the ``:info`` logging level). Setting this to ``false`` can be useful when a |chef client| is run as a daemon.
 .. |version chef| replace:: The version of the |chef client|.
+.. |version chef_max| replace:: The maximum version of the |chef client| that is allowed to access the |chef server| via the |api chef server|.
+.. |version chef_min| replace:: The minimum version of the |chef client| that is allowed to access the |chef server| via the |api chef server|.
+.. |version chef_server| replace:: The version of the |chef server|.
 .. |version ohai| replace:: The version of |ohai|.
 .. |version cookbook| replace:: The current version of a cookbook. Version numbers always follow a simple three-number version sequence.
 .. |version cookbook_download| replace:: The version of a cookbook to download.
@@ -1447,10 +1506,13 @@
 .. |vrrp_instance_interface| replace:: The interface over which |vrrp| traffic is sent.
 .. |vrrp_instance_ipaddress| replace:: The virtual IP address to be managed.
 .. |vrrp_instance_ipaddress_device| replace:: The device to which the virtual IP address is added.
+.. |vrrp_instance_nopreempt| replace:: Use to specify that a lower priority machine maintains the master role, even if a higher priority machine is available.
 .. |vrrp_instance_password| replace:: The secret key for |vrrp| pairs.
+.. |vrrp_instance_prempt_delay| replace:: The ``prempt_delay`` value for the |vrrp| instance.
 .. |vrrp_instance_priority| replace:: The priority for this server.
 .. |vrrp_instance_state| replace:: The state of the |vrrp| server.
 .. |vrrp_instance_virtual_router_id| replace:: The virtual router identifier used by the |keepalived| pair.
+
 .. |vrrp_unicast_bind| replace:: The unicast cluster IP address to which |keepalived| binds.
 .. |vrrp_unicast_peer| replace:: The unicast cluster IP address used by |keepalived| to talk to its peer.
 
@@ -1490,13 +1552,11 @@
 .. |webapp_template| replace:: The template used to render the virtual host configuration file.
 .. |weekday cron| replace:: The day of the week on this entry should run (0 - 6), where Sunday = 0.
 .. |whyrun_mode| replace:: Use to run the executable in |whyrun| mode, which is a type of |chef client| run that does everything except modify the system. Use |whyrun| mode to understand why the |chef client| makes the decisions that it makes and to learn more about the current and proposed state of the system.
-
 .. |whitelist attribute_automatic| replace:: Use to specify a |ruby hash| that whitelists ``automatic`` attributes, preventing non-whitelisted attributes from being saved.
 .. |whitelist attribute_default| replace:: Use to specify a |ruby hash| that whitelists ``default`` attributes, preventing non-whitelisted attributes from being saved.
 .. |whitelist attribute_none| replace:: If the |ruby hash| is empty, no attributes will be saved.
 .. |whitelist attribute_normal| replace:: Use to specify a |ruby hash| that whitelists ``normal`` attributes, preventing non-whitelisted attributes from being saved.
 .. |whitelist attribute_override| replace:: Use to specify a |ruby hash| that whitelists ``override`` attributes, preventing non-whitelisted attributes from being saved.
-
 .. |windows group_identifier| replace:: A string or ID that identifies the group owner by group name, including fully qualified group names such as ``domain\group`` or ``group@domain``. If this value is not specified, existing groups will remain unchanged and new group assignments will use the default ``POSIX`` group (if available).
 .. |windows registry| replace:: The |windows| registry is a database that stores configuration information for machines that run |windows|. The registry stores information about the system hardware, installed programs, and other settings, including for each user of the computer.
 .. |winrm_basic| replace:: Set this value to ``true`` for development and testing purposes. The ``knife windows`` subcommand supports |kerberos| and |windows basic| authentication schemes.
@@ -1512,7 +1572,8 @@
 .. |worker_connections| replace:: The maximum number of simultaneous clients.
 .. |worker_max_keepalive| replace:: The amount of time (in seconds) to wait for requests on a |keepalived| connection.
 .. |worker_processes| replace:: The number of allowed worker processes.
-
+.. |worker_processes certificates| replace:: The number of certificates for each allowed worker processes.
+.. |worker_processes depsolver| replace:: The number of |ruby| processes for which cookbook dependency problems are unsolved.
 
 
 

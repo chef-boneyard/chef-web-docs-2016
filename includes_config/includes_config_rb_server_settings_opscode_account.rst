@@ -22,7 +22,7 @@ This configuration file has the following settings for ``opscode-account``:
    * - ``opscode_account['ha']``
      - |use ha| Default value: ``false``.
    * - ``opscode_account['listen']``
-     - The IP address on which the service will listen. Default value: ``"127.0.0.1:9465"``.
+     - |ip_address service| Default value: ``"127.0.0.1:9465"``.
    * - ``opscode_account['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/opscode-account"``.
    * - ``opscode_account['log_rotation']``
@@ -36,7 +36,7 @@ This configuration file has the following settings for ``opscode-account``:
    * - ``opscode_account['tcp_nodelay']``
      - |use nagle| Default value: ``true``.
    * - ``opscode_account['umask']``
-     - Default value: ``"0022"``.
+     - |umask| Default value: ``"0022"``.
    * - ``opscode_account['url']``
      - Default value: ``"http://127.0.0.1:9465"``.
    * - ``opscode_account['validation_client_name']``
@@ -46,4 +46,4 @@ This configuration file has the following settings for ``opscode-account``:
    * - ``opscode_account['worker_processes']``
      - |worker_processes| Default value: ``4``.
    * - ``opscode_account['worker_timeout']``
-     - The amount of time (in seconds) to wait before a worker process times out. Default value: ``3600``.
+     - |timeout worker_process| Default value: ``3600``.

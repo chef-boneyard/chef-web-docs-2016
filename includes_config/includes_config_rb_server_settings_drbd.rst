@@ -12,22 +12,22 @@ This configuration file has the following settings for ``drbd``:
    * - ``drbd['data_dir']``
      - |directory generic_data| |default_value_recommended| Default value: ``"/var/opt/opscode/drbd/data"``.
    * - ``drbd['device']``
-     - The device name to use for |drbd|. Default value: ``"/dev/drbd0"``.
+     - |drbd device| Default value: ``"/dev/drbd0"``.
    * - ``drbd['dir']``
      - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/drbd"``.
    * - ``drbd['disk']``
-     - The local LVM logical volume to use behind |drbd|. Default value: ``"/dev/opscode/drbd"``.
+     - |drbd disk| Default value: ``"/dev/opscode/drbd"``.
    * - ``drbd['enable']``
      - |enable service| |ha backend| Default value: ``false``.
    * - ``drbd['flexible_meta_disk']``
-     - Where |drbd| meta-data is stored. Default value: ``"internal"``.
+     - |drbd flexible_meta_disk| Default value: ``"internal"``.
    * - ``drbd['primary']``
-     - The ``fqdn``, ``ip`` and ``port`` of the server we consider the |drbd| *primary*. This is typically set automatically from the ``server`` entries with the ``backend`` ``role`` when in an ``ha`` topology. Default value: ``{"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}``.
+     - |drbd primary| Default value: ``{"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}``.
    * - ``drbd['secondary']``
-     - Identical to the ``drbd['primary']`` setting, including caveats. Default value: ``{"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}``.
+     - |drbd secondary| Default value: ``{"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}``.
    * - ``drbd['shared_secret']``
-     - The shared secret for |drbd|. This attribute is randomly generated for you when you install the ``bootstrap`` server. You should not need to set it explicitly. Default value: ``"promisespromises"``.
+     - |drbd shared_secret| This attribute is randomly generated during the installation of the ``bootstrap`` server and does not need to be set explicitly. Default value: ``"promisespromises"``.
    * - ``drbd['sync_rate']``
-     - The amount of bandwidth to use for data synchronization; typically a small percentage of the available bandwidth available for |drbd| replication. Default value: ``"40M"``.
+     - |drbd sync_rate| Default value: ``"40M"``.
    * - ``drbd['version']``
-     - The version of |drbd| that is installed on the system. Auto-detected. Default value: ``"8.4.1"``.
+     - |drbd version| Auto-detected. Default value: ``"8.4.1"``.

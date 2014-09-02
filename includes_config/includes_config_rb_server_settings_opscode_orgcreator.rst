@@ -10,9 +10,9 @@ This configuration file has the following settings for ``opscode_org_creator``:
    * - Setting
      - Description
    * - ``opscode_org_creator['create_splay_ms']``
-     - A number (in milliseconds) to add to ``create_wait_ms``. Default value: ``25000``.
+     - |splay org_create| Default value: ``25000``.
    * - ``opscode_org_creator['create_wait_ms']``
-     - The amount of time (in milliseconds) to wait before creating an organization. Default value: ``30000``.
+     - |timeout org_create| Default value: ``30000``.
    * - ``opscode_org_creator['dir']``
      - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-org-creator"``.
    * - ``opscode_org_creator['enable']``

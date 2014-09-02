@@ -20,7 +20,7 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['ha']``
      - |use ha|
    * - ``oc_bifrost['listen']``
-     - The IP address on which the service will listen. Default value: ``'127.0.0.1'``.
+     - |ip_address service| Default value: ``'127.0.0.1'``.
    * - ``oc_bifrost['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/oc_bifrost``.
    * - ``oc_bifrost['log_rotation']``
@@ -28,13 +28,13 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['port']``
      - |port service| Default value: ``9463``.
    * - ``oc_bifrost['sql_password']``
-     - The password for ``sql_user`` user account. Default value: ``"challengeaccepted"``.
+     - |password sql_user| Default value: ``"challengeaccepted"``.
    * - ``oc_bifrost['sql_ro_password']``
-     - The password for the ``sql_ro_user`` user account. Default value: ``"foreveralone"``.
+     - |password sql_ro_user| Default value: ``"foreveralone"``.
    * - ``oc_bifrost['sql_ro_user']``
      - Default value: ``"bifrost_ro"``.
    * - ``oc_bifrost['sql_user']``
-     - The user with permission to publish data. Default value: ``"bifrost"``.
+     - |user bifrost| Default value: ``"bifrost"``.
    * - ``oc_bifrost['superuser_id']``
      - Default value: ``'5ca1ab1ef005ba111abe11eddecafbad'``.
    * - ``oc_bifrost['vip']``

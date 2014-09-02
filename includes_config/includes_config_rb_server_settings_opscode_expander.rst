@@ -10,7 +10,7 @@ This configuration file has the following settings for ``opscode-expander``:
    * - Setting
      - Description
    * - ``opscode_expander['consumer_id']``
-     - The identity of the consumer to which messages are published. Default value: ``default``.
+     - |id consumer| Default value: ``default``.
    * - ``opscode_expander['dir']``
      - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-expander``.
    * - ``opscode_expander['enable']``
@@ -24,6 +24,4 @@ This configuration file has the following settings for ``opscode-expander``:
    * - ``opscode_expander['nodes']``
      - |worker_processes| Default value: ``2``.
    * - ``opscode_expander['reindexer_log_directory']``
-     - The directory in which ``opscode-expander-reindexer`` logs files are located. Default value: ``/var/log/chef-server/chef-expander-reindexer``.
-
-
+     - |directory expander_reindexer| Default value: ``/var/log/chef-server/chef-expander-reindexer``.

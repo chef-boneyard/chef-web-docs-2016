@@ -10,9 +10,9 @@ This configuration file has the following settings for ``nginx``:
    * - Setting
      - Description
    * - ``nginx['cache_max_size']``
-     - Use to specify the ``max_size`` parameter used by the |nginx| cache manager, which is part of the ``proxy_cache_path`` directive. When the size of file storage exceeds this value, the |nginx| cache manager will remove the least recently used data. Default value: ``5000m``.
+     - |nginx cache_max_size| Default value: ``5000m``.
    * - ``nginx['client_max_body_size']``
-     - Use to specify the maximum accepted body size for a client request, as indicated by the ``Content-Length`` request header. When the maximum accepted body size is greater than this value, a ``413 Request Entity Too Large`` error is returned. Default value: ``250m``.
+     - |nginx client_max_body_size| Default value: ``250m``.
    * - ``nginx['dir']``
      - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/nginx``.
    * - ``nginx['enable']``
@@ -52,21 +52,21 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['ssl_ciphers']``
      - |ssl_ciphers| Default value: varies.
    * - ``nginx['ssl_company_name']``
-     - The name of your company. Default value: ``YouCorp``.
+     - |nginx ssl_company_name| Default value: ``YouCorp``.
    * - ``nginx['ssl_country_name']``
-     - The country in which your company is located. Default value: ``US``.
+     - |nginx ssl_country_name| Default value: ``US``.
    * - ``nginx['ssl_email_address']``
-     - The default email address for your company. Default value: ``you@example.com``.
+     - |nginx ssl_email_address| Default value: ``you@example.com``.
    * - ``nginx['ssl_locality_name']``
-     - The city in which your company is located. Default value: ``Seattle``.
+     - |nginx ssl_locality_name| Default value: ``Seattle``.
    * - ``nginx['ssl_organizational_unit_name']``
-     - The organization or group within your company that is running the |chef server|. Default value: ``Operations``.
+     - |nginx ssl_organizational_unit_name| Default value: ``Operations``.
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
      - |version protocols_ssl| Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
-     - The state, province, or region in which your company is located. Default value: ``WA``.
+     - |nginx ssl_state_name| Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``
      - |use nagle| Default value: ``on``.
    * - ``nginx['tcp_nopush']``

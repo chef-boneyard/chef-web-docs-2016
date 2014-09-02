@@ -10,7 +10,7 @@ This configuration file has the following settings for ``dark_launch``:
    * - Setting
      - Description
    * - ``dark_launch['actions']``
-     - Use to enable |chef actions|. Default value: ``true``.
+     - |enable actions| Default value: ``true``.
    * - ``dark_launch['add_type_and_bag_to_items']``
      - Default value: ``true``.
    * - ``dark_launch['new_theme']``
@@ -20,7 +20,7 @@ This configuration file has the following settings for ``dark_launch``:
    * - ``dark_launch['quick_start']``
      - Default value: ``false``.
    * - ``dark_launch['reporting']``
-     - Use to enable |reporting|. Default value: ``true``.
+     - |enable_reporting| Default value: ``true``.
    * - ``dark_launch['sql_users']``
      - Default value: ``true``.
 

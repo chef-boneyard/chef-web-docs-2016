@@ -16,4 +16,4 @@ This configuration file has the following settings for ``oc_chef_pedant``:
    * - ``oc_chef_pedant['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``oc_chef_pedant['log_http_requests']``
-     - Use to specify if HTTP requests should be saved to a log file named ``http-traffic.log``, located in the same path defined by ``log_directory``. Default value: ``true``.
+     - |pedant log_http_requests| Default value: ``true``.

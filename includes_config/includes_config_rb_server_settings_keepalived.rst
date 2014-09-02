@@ -14,13 +14,13 @@ This configuration file has the following settings for ``keepalived``:
    * - ``keepalived['enable']``
      - |enable service| |ha backend| Default value: ``false``.
    * - ``keepalived['ipv6_on']``
-     - Use to enable IPv6. Default value: ``false``.
+     - |enable ipv6| Default value: ``false``.
    * - ``keepalived['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``"/var/log/opscode/keepalived"``.
    * - ``keepalived['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``keepalived['service_posthooks']``
-     - The directory to which |keepalived| will send ``POST`` hooks. Default value: ``"{ "rabbitmq" => "/opt/opscode/bin/wait-for-rabbit" }"``.
+     - |directory keepalive_post_hooks| Default value: ``"{ "rabbitmq" => "/opt/opscode/bin/wait-for-rabbit" }"``.
    * - ``keepalived['smtp_connect_timeout']``
      - |timeout smtp_connect| Default value: ``"30"``.
    * - ``keepalived['smtp_server']``
@@ -34,11 +34,11 @@ This configuration file has the following settings for ``keepalived``:
    * - ``keepalived['vrrp_instance_ipaddress_dev']``
      - |vrrp_instance_ipaddress_device| Default value: ``"eth0"``. 
    * - ``keepalived['vrrp_instance_nopreempt']``
-     - Use to specify that a lower priority machine maintains the master role, even if a higher priority machine is available. (This setting configures the ``noprempt`` value in VRRP.) Default value: ``"true"``.
+     - |vrrp_instance_nopreempt| (This setting configures the ``noprempt`` value in |vrrp|.) Default value: ``"true"``.
    * - ``keepalived['vrrp_instance_password']``
      - |vrrp_instance_password| This value is generated randomly when the bootstrap server is installed and does not need to be set explicitly. Default value: ``"sneakybeaky"``.
    * - ``keepalived['vrrp_instance_preempt_delay']``
-     - The ``prempt_delay`` value for the VRRP instance. Default value: ``"30"``.
+     - |vrrp_instance_prempt_delay| Default value: ``"30"``.
    * - ``keepalived['vrrp_instance_priority']``
      - |vrrp_instance_priority| By default, all servers have equal priority. The server with the lowest value will have the highest priority. Default value: ``"100"``.
    * - ``keepalived['vrrp_instance_state']``
@@ -46,9 +46,9 @@ This configuration file has the following settings for ``keepalived``:
    * - ``keepalived['vrrp_instance_virtual_router_id']``
      - |vrrp_instance_virtual_router_id| This value should be unique within the multicast domain used for |keepalived|. Default value: ``"1"``.
    * - ``keepalived['vrrp_sync_group']``
-     - The name of the VRRP synchronization group. Default value: ``"PC_GROUP"``.
+     - |name vrrp_sync_group| Default value: ``"PC_GROUP"``.
    * - ``keepalived['vrrp_sync_instance']``
-     - The name of the VRRP synchronization instance. Default value: ``"PC_VI"``.
+     - |name vrrp_sync_instance| Default value: ``"PC_VI"``.
    * - ``keepalived['vrrp_unicast_bind']``
      - |vrrp_unicast_bind| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``<ip address of cluster IP or eth0>``.
    * - ``keepalived['vrrp_unicast_peer']``
