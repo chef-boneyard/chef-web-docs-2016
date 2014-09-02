@@ -88,6 +88,7 @@ The |chef server| can be managed in the following ways:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/release/oec_11-1/server_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/release/oec_11-1/server_users.html">Users</a> </br>
 
+or view the :doc:`runbook </runbook>`, which consolidates this information onto a single page.
 
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/release/oec_11-1/server_orgs.html">Organizations</a> </br>
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/release/oec_11-1/server_data.html">Server Data</a> </br>
