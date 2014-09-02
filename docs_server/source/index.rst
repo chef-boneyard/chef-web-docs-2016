@@ -72,6 +72,7 @@ The |chef server| is a centralized location where all of the objects needed by |
    server_manage_roles
    server_monitor
    server_orgs
+   server_replication
    server_security
    server_services
    server_tuning
