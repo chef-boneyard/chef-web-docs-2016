@@ -10,7 +10,7 @@ This configuration file has the following settings for ``oc-id``:
    * - Setting
      - Description
    * - ``oc_id['administrators']``
-     - A comma-separated list of users who may add applications to the identity service. Default value: ``[ ]``.
+     - An array of users who may add applications to the identity service. For example, ``["user1", "user2"]``. Default value: ``[ ]``.
    * - ``oc_id['db_pool_size']``
      - |db_pool_size| Default value: ``'20'``.
    * - ``oc_id['dir']``
