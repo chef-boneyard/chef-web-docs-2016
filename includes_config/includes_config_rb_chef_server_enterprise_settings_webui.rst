@@ -43,12 +43,6 @@ The |service webui| service has the following settings:
      - |webui validation_client_name| Default value: ``"chef"``.
    * - ``opscode_webui['vip']``
      - Default value: ``127.0.0.1``.
-   * - ``opscode_webui['web_ui_admin_default_password']``
-     - Default value: ``p@ssw0rd1``.
-   * - ``opscode_webui['web_ui_admin_user_name']``
-     - |name admin_webui| Default value: ``admin``.
-   * - ``opscode_webui['web_ui_client_name']``
-     - |name client_webui| Default value: ``chef-webui``.
    * - ``opscode_webui['worker_processes']``
      - |worker_processes| Default value: ``2``.
    * - ``opscode_webui['worker_timeout']``
