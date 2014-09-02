@@ -60,6 +60,8 @@ Other |ssh|-related settings that are sometimes helpful when added to the |knife
 
    * - Setting
      - Description
+   * - ``knife[:forward_agent]``
+     - |forward_agent|
    * - ``knife[:ssh_attribute]``
      - |attribute ssh|
    * - ``knife[:ssh_password]``

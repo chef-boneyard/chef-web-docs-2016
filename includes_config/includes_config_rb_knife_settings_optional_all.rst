@@ -62,6 +62,8 @@ The following list describes all of the optional settings that can be added to t
      - |fqdn|
    * - ``knife[:freeze]``
      - |freeze|
+   * - ``knife[:forward_agent]``
+     - |forward_agent|
    * - ``knife[:hide_healthy]``
      - |hide_healthy|
    * - ``knife[:host_key_verify]``
