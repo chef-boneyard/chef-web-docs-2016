@@ -401,7 +401,9 @@ postgresql
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_tuning/includes_server_tuning_postgresql.rst
 
-
+rabbitmq
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst
 
 
 
