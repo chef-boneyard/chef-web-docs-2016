@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following settings must be modified when the |chef server| is configured as a standalone server and is also being run with |chef analytics|:
+The following settings must be modified when the |chef analytics| server is configured as a standalone server:
 
 .. list-table::
    :widths: 200 300
