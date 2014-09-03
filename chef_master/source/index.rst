@@ -16,7 +16,7 @@ Getting Started
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
-**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Open Source Chef Server <http://docs.getchef.com/open_source/>`_ | `Enterprise Chef Server <http://docs.getchef.com/enterprise/>`_ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release Notes for chef-client 11.12 </release_notes>` | :doc:`Previous Releases </releases>`
+**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Open Source Chef Server <http://docs.getchef.com/open_source/>`_ | `Enterprise Chef Server <http://docs.getchef.com/enterprise/>`_ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release Notes for chef-client 11.14 </release_notes>` | :doc:`Previous Releases </releases>`
 
 
 The Community
