@@ -9,8 +9,23 @@
 
    * - Attribute
      - Description
-   * - ``property``
-     - |property dsc_resource| Format: ``property :dsc_property_name, "value"``.
-   * - ``resource_name``
-     - |name powershell_dsc_resource|
+   * - ``code``
+     - The code for the |windows powershell_dsc| configuration script. This attribute may not be used in the same recipe as the ``command`` attribute.
+   * - ``command``
+     - The path to a file that contains the |windows powershell_dsc| configuration script. This attribute may not be used in the same recipe as the ``code`` attribute.
+   * - ``configuration_data``
+     - This attribute may not be used in the same recipe as the ``configuration_data_script`` attribute.
+   * - ``configuration_data_script``
+     - This attribute may not be used in the same recipe as the ``configuration_data`` attribute.
+   * - ``configuration_name``
+     - The name of a valid PowerShell cmdlet. The name may only contain letter (a-z, A-Z), number (0-9), and underscore (_) characters and should start with a letter. The name may not be null or empty. This attribute may not be used in the same recipe as the ``code`` attribute.
+   * - ``flags``
+     - 
+   * - ``cwd``
+     - 
+   * - ``environment``
+     - 
+   * - ``timeout``
+     - 
+
 
