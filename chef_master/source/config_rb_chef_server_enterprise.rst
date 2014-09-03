@@ -56,6 +56,10 @@ postgresql
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_postgresql.rst
 
+rabbitmq
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst
+
 .. warning:: Review the full list of `optional settings <http://docs.opscode.com/config_rb_chef_server_enterprise_optional_settings.html>`_ that can be added to the |enterprise rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
 
