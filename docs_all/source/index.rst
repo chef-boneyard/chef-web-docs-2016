@@ -97,7 +97,6 @@ All about Chef ...
 .. toctree::
    :hidden:
 
-   ctl_chef_server
    chef_client
    chef_overview
    api_chef_server

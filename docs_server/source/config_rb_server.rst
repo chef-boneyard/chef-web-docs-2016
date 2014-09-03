@@ -24,12 +24,6 @@ bootstrap
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_server_settings_bootstrap.rst
 
-couchdb
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_couchdb.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_couchdb.rst
-
 dark_launch
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst
