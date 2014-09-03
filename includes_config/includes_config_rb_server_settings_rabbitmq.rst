@@ -40,7 +40,7 @@ This configuration file has the following settings for ``rabbitmq``:
    * - ``rabbitmq['node_ip_address']``
      - |ip_address rabbitmq| Default value: ``"127.0.0.1"``.
 
-       |analytics rabbitmq_settings| When the |chef server| is configured as a standalone server, change this value to ``0.0.0.0``.
+       |analytics rabbitmq_settings| When the |chef analytics| server is configured as a standalone server, change this value to ``0.0.0.0``.
    * - ``rabbitmq['node_port']``
      - |port service| Default value: ``"5672"``.
    * - ``rabbitmq['nodename']``
@@ -56,4 +56,4 @@ This configuration file has the following settings for ``rabbitmq``:
    * - ``rabbitmq['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``.
 
-       |analytics rabbitmq_settings| When the |chef server| is configured as a standalone server, change this value to the backend VIP address for the |chef server|.
+       |analytics rabbitmq_settings| When the |chef analytics| server is configured as a standalone server, change this value to the backend VIP address for the |chef server|.
