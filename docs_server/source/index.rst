@@ -19,6 +19,7 @@ The |chef server| is a centralized location where all of the objects needed by |
    config_rb_manage
    ctl_chef_sync
    ctl_chef_server
+   ctl_opscode_expander
    ctl_reporting
    install_manage
    install_reporting
