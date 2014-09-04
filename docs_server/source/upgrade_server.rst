@@ -120,7 +120,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ private-chef-ctl stop
 
-#. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
+#. Run |debian dpkg| or |rpm|. For |debian dpkg|:
 
    .. code-block:: bash
       
