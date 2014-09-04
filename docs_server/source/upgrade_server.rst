@@ -108,13 +108,13 @@ This section describes the upgrade process from a standalone |chef server oec| 1
 To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:
 
 
-#. Run the following on all machines to make sure all services are in a sane state.
+#. Run the following command to make sure all services are in a sane state.
 
    .. code-block:: bash
       
       $ private-chef-ctl reconfigure
 
-#. Stop all of the front end machines:
+#. Stop the machine:
 
    .. code-block:: bash
       
