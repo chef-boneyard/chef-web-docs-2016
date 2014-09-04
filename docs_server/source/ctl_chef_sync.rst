@@ -2,7 +2,7 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-chef-sync-ctl (executable)
+|chef sync ctl| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_chef_sync/includes_ctl_chef_sync.rst
