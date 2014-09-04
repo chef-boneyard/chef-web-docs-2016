@@ -9,8 +9,8 @@ By adding the following lines of |ruby| code to either the |client rb| file or t
 .. code-block:: ruby
 
    require 'chef/handler/error_report'
-   report_handlers << Chef::Handler::ErrorReport.new(:path => "/var/chef/reports")
-   exception_handlers << Chef::Handler::ErrorReport.new(:path => "/var/chef/reports")
+   report_handlers << Chef::Handler::ErrorReport.new()
+   exception_handlers << Chef::Handler::ErrorReport.new()
 
 By using the :doc:`chef_handler </resource_chef_handler>` resource in a recipe, similar to the following:
 
@@ -18,6 +18,5 @@ By using the :doc:`chef_handler </resource_chef_handler>` resource in a recipe, 
 
    chef_handler "Chef::Handler::ErrorReport" do
      source "chef/handler/error_report"
-     arguments :path => '/var/chef/reports'
      action :enable
    end
