@@ -5,8 +5,7 @@ When restoring |chef server oec|  data, the previously backed-up files will be r
 
 .. code-block:: bash
 
-   $ gunzip -c postgresql-dump.tgz | tar -xf
-      /opt/opscode/embedded/bin/psql -U "opscode-pgsql" -d postgres -f postgresql-dump
+   $ gunzip -c postgresql-dump.gz | /opt/opscode/embedded/bin/psql -U "opscode-pgsql" -d postgres
 
 and then restore the previously backed-up files to the following locations:
 
