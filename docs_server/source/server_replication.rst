@@ -69,7 +69,7 @@ unsynced-objects
 =====================================================
 The following |api chef server| endpoints support |chef replication|. 
 
-/ORGS/ORG_NAME/updated_since
+/updated_since
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since.rst
 
