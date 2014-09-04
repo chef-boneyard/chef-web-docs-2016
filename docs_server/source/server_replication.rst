@@ -2,18 +2,18 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-Replication
+|chef replication|
 =====================================================
 
 .. 
 .. placeholder
 .. 
-.. |chef replication| provides a way to synchronize replicas of a |chef server| with a single, primary |chef server|.
+.. Chef Replication provides a way to synchronize replicas of a Chef server with a single, primary Chef server.
 .. 
 .. 
 .. This processes uses pull-based synchronization that is initiated by each of the replica instances. 
 .. 
-.. Replication occurs on a per-organization basis. Each organization on the primary |chef server| must be configured for synchronization with replica instances of the |chef server|.
+.. Replication occurs on a per-organization basis. Each organization on the primary Chef server must be configured for synchronization with replica instances of the Chef server.
 .. 
 .. 
 .. .. image:: ../../images/chef_server_replication.png
