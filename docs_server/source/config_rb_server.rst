@@ -80,18 +80,6 @@ oc-id
 
 .. include:: ../../includes_config/includes_config_rb_server_settings_oc_id.rst
 
-opscode-account
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_account.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_account.rst
-
-opscode-certificate
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_certificate.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_certificate.rst
-
 opscode-chef
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_chef.rst
@@ -111,12 +99,6 @@ opscode-expander
 .. include:: ../../includes_server_services/includes_server_services_expander.rst
 
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst
-
-opscode-org-creator
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_orgcreator.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_orgcreator.rst
 
 opscode-solr4
 -----------------------------------------------------

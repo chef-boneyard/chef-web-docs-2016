@@ -10,3 +10,5 @@ The |service account| service is a |ruby|-based service that handles the followi
 * Organizations
 * Clients
 * Users
+
+.. note:: This service is deprecated in |chef server| 12.
