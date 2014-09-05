@@ -1,5 +1,5 @@
 =====================================================
-All about the |chef dk| ... 
+All about the Chef Development Kit ... 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
