@@ -128,7 +128,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 Server Components
 -----------------------------------------------------
-The |chef server oec| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data.
+The |chef server oec| server acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data.
 
 In addition to the built-in features of |chef server oec|, the following optional components are available:
 
