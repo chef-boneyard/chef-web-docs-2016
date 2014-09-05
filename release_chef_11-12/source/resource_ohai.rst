@@ -1,39 +1,4 @@
+.. THIS PAGE IS IDENTICAL TO docs.getchef.com/resource_ohai.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.12
 
-=====================================================
-ohai
-=====================================================
-
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
-.. include:: ../../includes_resources/includes_resource_ohai.rst
-
-Syntax
-=====================================================
-.. include:: ../../includes_resources/includes_resource_ohai_syntax.rst
-
-Actions
-=====================================================
-.. include:: ../../includes_resources/includes_resource_ohai_actions.rst
-
-Attributes
-=====================================================
-.. include:: ../../includes_resources/includes_resource_11-10_ohai_attributes.rst
-
-Providers
-=====================================================
-.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
-
-.. include:: ../../includes_resources/includes_resource_ohai_providers.rst
-
-Examples
-=====================================================
-|generic resource statement|
-
-**Reload Ohai**
-
-.. include:: ../../step_resource/step_resource_ohai_reload.rst
-
-**Reload Ohai after a new user is created**
-
-.. include:: ../../step_resource/step_resource_11-10_ohai_reload_after_create_user.rst
+.. include:: ../../chef_master/source/resource_ohai.rst
