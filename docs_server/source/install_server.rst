@@ -11,7 +11,7 @@ placeholder
 
 Standalone
 =====================================================
-The standalone installation of |chef server oec| creates a working installation on a single server. This installation is also useful when you are installing |chef server oec| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
+The standalone installation of |chef server| creates a working installation on a single server. This installation is also useful when you are installing |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 
 To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
 
@@ -21,17 +21,17 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
 #. Upload the package provided to the server on which the |chef server| will be installed, and then record its location on the file system. The rest of this section assumes this location is in ``/tmp`` directory.
 
-#. Install the |chef server oec| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
+#. Install the |chef server| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
-      $ rpm -Uvh /tmp/private-chef-full-1.0.0–1.x86_64.rpm
+      $ rpm -Uvh /tmp/chef-server-core-<version>.rpm
 
    For |ubuntu|:
 
    .. code-block:: bash
       
-      $ dpkg -i /tmp/private-chef-full_1.0.0–1_amd64.deb
+      $ dpkg -i /tmp/chef-server-core-<version>.deb
 
    The |chef server| is now installed on the server.
 
@@ -39,7 +39,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ private-chef-ctl reconfigure
+      $ chef-server-ctl reconfigure
 
    Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
 

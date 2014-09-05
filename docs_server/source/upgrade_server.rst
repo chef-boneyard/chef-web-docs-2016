@@ -17,13 +17,13 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ private-chef-ctl reconfigure
+      $ chef-server-ctl reconfigure
 
 #. Stop all of the front end machines:
 
    .. code-block:: bash
       
-      $ private-chef-ctl stop
+      $ chef-server-ctl stop
 
 #. Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
 
@@ -31,13 +31,13 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ private-chef-ctl stop keepalived
+      $ chef-server-ctl stop keepalived
 
 #. Once failover is complete, stop the remaining services on the back end machines.
 
    .. code-block:: bash
       
-      $ private-chef-ctl stop
+      $ chef-server-ctl stop
 
 #. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
 
@@ -57,7 +57,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ private-chef-ctl upgrade
+      $ chef-server-ctl upgrade
 
    If the upgrade process times out, re-run the command until it finishes successfully.
 
@@ -77,7 +77,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ private-chef-ctl upgrade
+      $ chef-server-ctl upgrade
 
    In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine.
 
@@ -85,19 +85,19 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ private-chef-ctl upgrade
+      $ chef-server-ctl upgrade
 
 #. Run the following command on all front end and back end machines:
 
    .. code-block:: bash
       
-      $ private-chef-ctl start
+      $ chef-server-ctl start
 
 #. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:
 
    .. code-block:: bash
       
-      $ private-chef-ctl cleanup
+      $ chef-server-ctl cleanup
 
 .. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
 
@@ -107,18 +107,17 @@ This section describes the upgrade process from a standalone |chef server oec| 1
 
 To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:
 
-
 #. Run the following command to make sure all services are in a sane state.
 
    .. code-block:: bash
       
-      $ private-chef-ctl reconfigure
+      $ chef-server-ctl reconfigure
 
 #. Stop the machine:
 
    .. code-block:: bash
       
-      $ private-chef-ctl stop
+      $ chef-server-ctl stop
 
 #. Run |debian dpkg| or |rpm|. For |debian dpkg|:
 
@@ -138,19 +137,19 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
 
    .. code-block:: bash
       
-      $ private-chef-ctl upgrade
+      $ chef-server-ctl upgrade
 
 #. After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:
 
    .. code-block:: bash
       
-      $ private-chef-ctl cleanup
+      $ chef-server-ctl cleanup
 
 #. Start |chef server| 12:
 
    .. code-block:: bash
       
-      $ private-chef-ctl start
+      $ chef-server-ctl start
 
 
 From |chef server osc|
@@ -189,7 +188,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ private-chef-ctl upgrade
+      $ chef-server-ctl upgrade
 
    .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_upgrade_options.rst
    
@@ -199,4 +198,4 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ private-chef-ctl start
+      $ chef-server-ctl start
