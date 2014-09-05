@@ -280,6 +280,34 @@ Examples
 
 .. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
 
+
+
+machine_image
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_machine_image.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+
 private_key
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_private_key.rst
