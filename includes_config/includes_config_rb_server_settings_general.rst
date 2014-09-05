@@ -12,7 +12,7 @@ This configuration file has the following general settings:
    * - ``enterprise['name']``
      - |name chef_server| Default value: ``"private_chef"``.
    * - ``private_chef['addons']['path']``
-     - Use to specify the location from which add-on packages are downloaded. This may be a local or a remote path.
+     - Use to specify the location from which add-on packages are downloaded. This may be a local or a remote path. The remote path uses apt and yum repositories. A proxy server may be used with a remote path.
    * - ``private_chef['api_version']``
      - |version chef_server| Default value: ``"11.1.0"``.
    * - ``private_chef['flavor']``
