@@ -51,7 +51,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ rpm -Uvh <new package>
+      $ rpm -Uvh --nopostun <new package>
 
 #. Upgrade the back end primary machine with the following command:
 
@@ -131,7 +131,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
 
    .. code-block:: bash
       
-      $ rpm -Uvh <new package>
+      $ rpm -Uvh --nopostun <new package>
 
 #. Upgrade the machine with the following command:
 
