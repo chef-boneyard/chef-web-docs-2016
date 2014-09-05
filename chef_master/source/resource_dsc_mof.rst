@@ -6,6 +6,10 @@ dsc_mof
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
+.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
+
 .. include:: ../../includes_resources/includes_resource_dsc_mof.rst
 
 .. note:: |windows powershell| 4.0 is required for using the |resource dsc_mof| resource with |chef|.
