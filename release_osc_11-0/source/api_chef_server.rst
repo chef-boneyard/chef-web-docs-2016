@@ -16,7 +16,7 @@ Authentication Headers
 
 Header Format
 -----------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_11_headers_format.rst
 
 Required Headers
 -----------------------------------------------------
