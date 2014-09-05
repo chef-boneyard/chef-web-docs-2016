@@ -11,21 +11,29 @@ The following items are new for |chef client| 11-16 and/or are changes from prev
 * **New dsc_script resource** Use the |resource dsc_script| resource to embed |windows powershell_dsc| scripts in |chef| recipes.
 
 
-xxxxx Resource
+dsc_script Resource
 -----------------------------------------------------
-.. include:: ../../includes_resources/xxxxx.rst
+.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
+
+.. include:: ../../includes_resources/includes_resource_dsc_script.rst
+
+.. note:: |windows powershell| 4.0 is required for using the |resource dsc_script| resource with |chef|.
+
+.. note:: The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/xxxxx.rst
+.. include:: ../../includes_resources/includes_resource_dsc_script_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/xxxxx.rst
+.. include:: ../../includes_resources/includes_resource_dsc_script_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/xxxxx.rst
+.. include:: ../../includes_resources/includes_resource_dsc_script_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -57,8 +65,6 @@ Configuration data in |windows powershell_dsc_short| scripts may be customized f
 **Using DSC with other Chef resources**
 
 .. include:: ../../step_resource/step_resource_dsc_script_remote_files.rst
-
-
 
 
 Changelog
