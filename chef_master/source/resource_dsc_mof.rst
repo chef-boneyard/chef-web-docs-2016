@@ -2,38 +2,6 @@
 dsc_mof
 =====================================================
 
-.. warning:: This page discusses functionality that will be added to the https://github.com/opscode-cookbooks/dsc cookbook. This functionality is planned to be included in a future update of the chef-client. For now, please download the cookbook and try this new feature out. Please provide feedback about this resource to that cookbook repository.
+A valid |windows powershell| data file (.psd1) describes the contents of a module and determines how a module is processed. This data file is a text file that contains a hash table of keys and values and must be located in the root of the module directory. 
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
-.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
-
-.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
-
-.. include:: ../../includes_resources/includes_resource_dsc_mof.rst
-
-.. note:: |windows powershell| 4.0 is required for using the |resource dsc_mof| resource with |chef|.
-
-Syntax
-=====================================================
-.. include:: ../../includes_resources/includes_resource_dsc_mof_syntax.rst
-
-Attributes
-=====================================================
-.. include:: ../../includes_resources/includes_resource_dsc_mof_attributes.rst
-
-Examples
-=====================================================
-
-**Add a user to Active Directory**
-
-.. code-block:: ruby
-
-   dsc_mof "create user" do
-     resource_name :cADUser
-	 property :ensure, "Present"
-     property :domainname "ad.getchef.com"
-	 property :username, "grantmc"
-     property :password, "snakeplisskin"
-	 property :domainadministratorcredential, "credential"
-   end
+.. warning:: This resource has been deprecated. Use attributes of the :doc:`role </resource_dsc_script>` resource to .
