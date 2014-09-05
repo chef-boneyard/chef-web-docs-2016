@@ -14,6 +14,6 @@ The syntax for using the |resource dsc_script| resource in a recipe is as follow
 where 
 
 * ``dsc_script`` tells the |chef client| that a |windows powershell_dsc_short| resource is based on a |windows powershell| script
-* ``name`` is the name of the |windows powershell_dsc_short| configuration script; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the name of the command to be executed
+* ``name`` is the name of the configuration within a |windows powershell_dsc_short| script
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
