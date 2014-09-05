@@ -10,4 +10,4 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:run``
-     - Default. Use to run the |windows powershell_dsc| configuration as part of a |chef| recipe.
+     - Default. Use to run the |windows powershell_dsc_short| configuration defined as defined in this resource.
