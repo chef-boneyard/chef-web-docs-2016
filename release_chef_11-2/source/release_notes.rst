@@ -8,7 +8,7 @@ Release Notes: |chef client| 11.2
 
 What's New
 =====================================================
-The following items are new for |chef 11-2| and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 11.2 and/or are changes from previous versions. The short version:
 
 * **knife user** A new subcommand for creating users in |chef server osc|
 

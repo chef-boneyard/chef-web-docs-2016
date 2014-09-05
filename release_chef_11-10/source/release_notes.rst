@@ -10,7 +10,7 @@ Release Notes: |chef client| 11.10
 
 What's New
 =====================================================
-The following items are new for |chef 11-10| and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 11.10 and/or are changes from previous versions. The short version:
 
 * **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode
 * **New attributes for the group resource** Members can be removed from groups (``excluded_members``) and duplicate group identifiers are allowed (``non_unique``)

@@ -6,7 +6,7 @@ Release Notes: |chef client| 11.12
 
 What's New
 =====================================================
-The following items are new for |chef 11-12| and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 11.12 and/or are changes from previous versions. The short version:
 
 * **Ohai 7.0** |ohai 7| is part of the |chef client| 11-12 install
 * **New windows_package resource** Use the |resource package_windows| resource to manage packages on the |windows| platform.

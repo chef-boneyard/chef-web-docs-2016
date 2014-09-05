@@ -4,7 +4,7 @@ Release Notes: |chef client| 11.0
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-The following items are new for |chef 11| and/or are changes from |chef 10|.
+The following items are new for |chef client| 11.0 and/or are changes from |chef client| 10.x.
 
 What's New for |chef client| and |chef solo|
 =====================================================

@@ -6,7 +6,7 @@ Release Notes: |chef client| 11.6
 
 Known Issues
 =====================================================
-The following issues are known for |chef 11-6| and/or may affect the behavior of your current environment if you upgrade to |chef 11-6|:
+The following issues are known for |chef client| 11.6 and/or may affect the behavior of your current environment if you upgrade to |chef client| 11.6:
 
 * `CHEF-4406 <http://tickets.opscode.com/browse/CHEF-4406>`_  --- response_file fails trying to load preseed templates and falls back to cookbook files
 * `CHEF-4419 <http://tickets.opscode.com/browse/CHEF-4419>`_  --- Absolute file paths with no drive letter for file resources on Windows fails chef-client run
@@ -15,7 +15,7 @@ The following issues are known for |chef 11-6| and/or may affect the behavior of
 
 What's New
 =====================================================
-The following items are new for |chef 11-6| and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 11.6 and/or are changes from previous versions. The short version:
 
 * **Support for SELinux** Support for |selinux| has been improved, including the |chef client| using the ``restorecon`` command when using |resource file|-based resources, correctly matching default policy settings (when the underlying cookbook also conforms to the same policy settings), and configurable file permission fixup (with the ``enable_selinux_file_permission_fixup`` setting in the |client rb| file).
 * **Atomic file updates** Atomic file updates ensure that updates are still made in certain situations, such as if disk space runs out or when a binary is being updated.

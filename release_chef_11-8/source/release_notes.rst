@@ -7,7 +7,7 @@ Release Notes: |chef client| 11.8
 
 What's New
 =====================================================
-The following items are new for |chef 11-8| and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 11.8 and/or are changes from previous versions. The short version:
 
 * **Local mode for the chef-client** The |chef client| can now be run in local mode, which allows the |chef client| to run against the local |chef repo| as if it were running against a |chef server|.
 * **New configuration settings** Three configuration settings have been added to support the use of local mode: ``chef_zero[:enabled]``, ``chef_zero[:port]``, and ``local_mode``.

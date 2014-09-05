@@ -1,10 +1,10 @@
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
 =====================================================
-Changes between chef-client 10.x and 11.0
+Changes between |chef client| 10.x and 11.0
 =====================================================
 
-The following items are new for |chef 11| and/or are changes from |chef 10|.
+The following items are new for |chef client| 11.0 and/or are changes from |chef client| 10.x.
 
 .. note:: The |chef client| 11.2 release is updated for Ruby 1.9.3-p484, which resolves a security vulnerability that existed when using prior versions of |ruby|.
 
