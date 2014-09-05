@@ -31,7 +31,9 @@ Attributes
 Examples
 =====================================================
 
-**Simple usage of DSC embedded in the Chef dsc_script resource**
+**Specify DSC code directly**
+
+|windows powershell_dsc_short| data can be specified directly in a recipe:
 
 .. code-block:: ruby
 
@@ -45,15 +47,10 @@ Examples
      EOH
    end
 
-The same DSC content could be supplied by specifying a file that contains it within a PowerShell Configuration language element using the command attribute to specify a path to the DSC script file. When using command, you mest either set the configuration_name attribute to the value of the argument supplied to Configuration in the DSC script, or just set the dsc_script resource's name attribute to that value, like this:
 
-.. code-block:: ruby
+**Specify DSC code using a Windows Powershell data file**
 
-   dsc_script `DefaultEditor` do
-     command 'c:\dsc_scripts\emacs.ps1'
-   end
-
-which assumes that c:\dsc_scripts\emacs.ps1 contains a configuration called DefaultEditor as in the PowerShell DSC script below:
+Use the ``command`` attribute to specify the path to a |windows powershell| data file. For example, the following |windows powershell| data file defines the ``DefaultEditor``:
 
 .. code-block:: javascript
 
@@ -66,51 +63,18 @@ which assumes that c:\dsc_scripts\emacs.ps1 contains a configuration called Defa
        }
    }
 
-**Using the configuration_name attribute**
-
-The configuration_name attribute may be used to allow the name attribute to be set to something other than the configuration in a DSC script. In this example, configuration_name is used to select one of the configurations in the DSC script:
-
-.. code-block:: ruby
-
-   dsc_script `EDITOR` do
-     configuration_name 'vi'
-     command 'c:\dsc_scripts\editors.ps1'
-   end
-
-The content of c:\dsc_scripts\editors.ps1 in this case was:
-
-.. code-block:: javascript
-
-   Configuration 'emacs'  
-     {
-       Environment 'TextEditor'
-       {
-         Name = 'EDITOR'
-         Value = 'c:\emacs\bin\emacs.exe'
-       }
-   }
-   
-   Configuration 'vi'   
-   {
-       Environment 'TextEditor'
-       {
-         Name = 'EDITOR'
-         Value = 'c:\vim\bin\vim.exe'
-       }
-   }
-
-**Passing parameters to DSC configurations**
-
-If a DSC script specified with the command attribute has a configuration that takes parameters, those may be passed using the flags attribute:
+Use the following recipe to specify the location of that data file:
 
 .. code-block:: ruby
 
    dsc_script `DefaultEditor` do
-     flags { :EditorChoice => 'emacs', :EditorFlags => '--maximized' }
-     command 'c:\dsc_scripts\editors.ps1'
+     command 'c:\dsc_scripts\emacs.ps1'
    end
 
-This could be used with the following PowerShell DSC script content for c:\dsc_scripts\editors.ps1
+
+**Pass parameters to DSC configurations**
+
+If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` attribute. For example, the following |windows powershell| data file takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:
 
 .. code-block:: javascript
 
@@ -130,14 +94,21 @@ This could be used with the following PowerShell DSC script content for c:\dsc_s
          }
        }
 
+Use the following recipe to set those parameters:
 
-**Using configuration data**
+.. code-block:: ruby
 
-DSC's configuration data feature allows further customization of DSC scripts. In some cases, such as setting behavior for Powershell credential data types, its use in a DSC configuration is required. The configuration data supplied MUST contain an entry for a node name of localhost to be applied by dsc_script.
+   dsc_script `DefaultEditor` do
+     flags { :EditorChoice => 'emacs', :EditorFlags => '--maximized' }
+     command 'c:\dsc_scripts\editors.ps1'
+   end
 
-Configuration data may be supplied directly through the configuration_data attribute of dsc_script or the configuration_data_script or by specifying the path to a .psd1 with the same contents that could be supplied to configuration_data.
 
-The following example demonstrates DSC's User resource using DSC configuration data to create a user using a plaintext specification of a password:
+**Use custom configuration data**
+
+Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
+
+The following example shows how to specify custom configuration data using the ``configuration_data`` attribute:
 
 .. code-block:: ruby
 
@@ -179,10 +150,41 @@ The following example demonstrates DSC's User resource using DSC configuration d
        EOH
    end
 
+The following example shows how to specify custom configuration data using the ``configuration_name`` attribute. For example, the following |windows powershell| data file defines the ``vi`` configuration:
 
-**Using dsc_script with other Chef resources**
+.. code-block:: javascript
 
-Like any other resource in Chef, dsc_script can be used in concert with other Chef resources -- here's an example that downloads a file using Chef's remote_file resource and uncompresses it using DSC's Archive resource via dsc_script into a target directory:
+   Configuration 'emacs'  
+     {
+       Environment 'TextEditor'
+       {
+         Name = 'EDITOR'
+         Value = 'c:\emacs\bin\emacs.exe'
+       }
+   }
+   
+   Configuration 'vi'   
+   {
+       Environment 'TextEditor'
+       {
+         Name = 'EDITOR'
+         Value = 'c:\vim\bin\vim.exe'
+       }
+   }
+
+Use the following recipe to specify that configuration:
+
+.. code-block:: ruby
+
+   dsc_script `EDITOR` do
+     configuration_name 'vi'
+     command 'c:\dsc_scripts\editors.ps1'
+   end
+
+
+**Using DSC with other Chef resources**
+
+The |resource dsc_script| resource can be used with other resources. The following example shows how to download a file using the |resource remote_file| resource, and then uncompress it using the |windows powershell_dsc_short| ``Archive`` resource:
 
 .. code-block:: ruby
 
@@ -192,7 +194,7 @@ Like any other resource in Chef, dsc_script can be used in concert with other Ch
    
    dsc_script 'get-dsc-resource-kit' do
      code <<-EOH
-     Archive reskit
+       Archive reskit
        {
          ensure = 'Present'
          path = "#{Chef::Config[:file_cache_path]}\\DSCResourceKit620082014.zip"
@@ -200,6 +202,4 @@ Like any other resource in Chef, dsc_script can be used in concert with other Ch
        }
      EOH
    end
-
-
 
