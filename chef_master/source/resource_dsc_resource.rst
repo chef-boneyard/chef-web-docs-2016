@@ -6,7 +6,9 @@ dsc_resource
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_dsc_common_overview.rst
+.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
 
 .. include:: ../../includes_resources/includes_resource_dsc_resource.rst
 
