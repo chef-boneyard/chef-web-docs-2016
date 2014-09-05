@@ -10,7 +10,9 @@ Settings
 =====================================================
 The following sections describe the various settings that are available in the |enterprise rb| file.
 
-
+General
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_server_settings_general.rst
 
 bookshelf
 -----------------------------------------------------
