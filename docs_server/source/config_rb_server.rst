@@ -1,5 +1,5 @@
 =====================================================
-|enterprise rb| Settings
+|chef server rb| Settings
 =====================================================
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
