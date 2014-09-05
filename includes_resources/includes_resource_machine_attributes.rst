@@ -57,7 +57,7 @@
    * - ``public_key_path``
      - The path to a public key.
    * - ``raw_json``
-     - The |chef client| as |json| data. For example:
+     - The machine as |json| data. For example:
        
        .. code-block:: javascript
        
@@ -87,7 +87,7 @@
    * - ``source_key_path``
      - The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
    * - ``tags``
-     - Use to specify the list of tags to be applied to the machine or machine image. Any tag not specified in this list will be removed.
+     - Use to specify the list of tags to be applied to the machine. Any tag not specified in this list will be removed.
    * - ``validator``
      - Use to specify if the |chef client| is a |chef validator|.
 
