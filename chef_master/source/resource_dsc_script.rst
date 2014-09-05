@@ -1,5 +1,5 @@
 =====================================================
-|resource dsc_script|
+dsc_script
 =====================================================
 
 .. warning:: This page discusses functionality that will be added to an upcoming release of the |chef client|.
