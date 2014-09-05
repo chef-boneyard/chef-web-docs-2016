@@ -451,6 +451,7 @@ Cookbooks
    resource_machine
    resource_machine_execute
    resource_machine_file
+   resource_machine_image
    resource_macports_package
    resource_mdadm
    resource_mount
