@@ -1,8 +1,8 @@
 .. This is an included how-to. 
 
-The following example shows how to specify custom configuration data using the ``configuration_name`` attribute. For example, the following |windows powershell| data file defines the ``vi`` configuration:
+The following example shows how to specify custom configuration data using the ``configuration_name`` attribute. For example, the following |windows powershell| script defines the ``vi`` configuration:
 
-.. code-block:: javascript
+.. code-block:: powershell
 
    Configuration 'emacs'  
      {

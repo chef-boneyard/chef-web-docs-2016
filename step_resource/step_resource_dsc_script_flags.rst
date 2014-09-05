@@ -1,8 +1,8 @@
 .. This is an included how-to. 
 
-If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` attribute. For example, the following |windows powershell| data file takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:
+If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` attribute. For example, the following |windows powershell| script takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:
 
-.. code-block:: javascript
+.. code-block:: powershell
 
    $choices = @{'emacs' = 'c:\emacs\bin\emacs';'vi' = 'c:\vim\vim.exe';'powershell' = 'powershell_ise.exe'}
      Configuration 'DefaultEditor' 
