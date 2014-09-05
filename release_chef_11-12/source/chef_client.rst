@@ -14,7 +14,7 @@
 
 Options
 =====================================================
-.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_11-8_options.rst
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_11-12_options.rst
 
 Run with Elevated Privileges
 =====================================================
