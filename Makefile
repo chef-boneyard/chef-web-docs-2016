@@ -2,7 +2,7 @@ BUILDDIR = build
 S3BUCKET = chef-docs
 S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: max-age=900"
 
-release: master server
+release: master server 11-16
  
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -69,6 +69,10 @@ server:
 11-14:
 	mkdir -p $(BUILDDIR)/release/11-14/
 	sphinx-build release_chef_11-14/source $(BUILDDIR)/release/11-14/
+
+11-16:
+	mkdir -p $(BUILDDIR)/release/11-16/
+	sphinx-build release_chef_11-16/source $(BUILDDIR)/release/11-16/
 
 oec_11-0:
 	mkdir -p $(BUILDDIR)/release/oec_11-0/
