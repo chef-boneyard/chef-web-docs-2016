@@ -2,7 +2,7 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-|chef replication|
+Replication
 =====================================================
 
 |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
