@@ -194,6 +194,8 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl upgrade
 
+   When prompted, confirm that the upgrade process should take place.
+
    The upgrade process will automatically detect the presence of |chef server osc| 11, and will step through the migration process, prompting for organization name details along the way.
 
    The migration process will first download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| version 12, and then upload that data to the server.
@@ -203,8 +205,6 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
    The organization name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``.
 
    The full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``.
-
-#. When prompted, confirm that the upgrade process should take place.
 
 #. Start |chef server| 12:
 
