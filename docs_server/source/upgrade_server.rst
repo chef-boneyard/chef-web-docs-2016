@@ -37,7 +37,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ private-chefr-ctl stop
+      $ private-chef-ctl stop
 
 #. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
 
