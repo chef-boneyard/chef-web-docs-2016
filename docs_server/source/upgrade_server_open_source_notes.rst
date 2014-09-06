@@ -10,7 +10,7 @@ The following assumptions are made about all upgrades from |chef server osc| ver
 
 * An organization must be created. Add the organization name as the vaue for the ``default_orgname`` setting in the ``chef-server.rb`` file. This will ensure that API requests made to the server prior to the upgrade process can still be made after.
 
-Standalone >> Standalone
+Standalone>>Standalone
 -----------------------------------------------------
 The only supported upgrade path for a |chef server osc| server to |chef server| version 12 is from a standalone configuration to a standalone configuration.
 
