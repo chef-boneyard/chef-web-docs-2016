@@ -17,13 +17,13 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ chef-server-ctl reconfigure
+      $ private-chef-ctl reconfigure
 
 #. Stop all of the front end machines:
 
    .. code-block:: bash
       
-      $ chef-server-ctl stop
+      $ private-chef-ctl stop
 
 #. Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
 
@@ -31,13 +31,13 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ chef-server-ctl stop keepalived
+      $ private-chef-ctl stop keepalived
 
 #. Once failover is complete, stop the remaining services on the back end machines.
 
    .. code-block:: bash
       
-      $ chef-server-ctl stop
+      $ private-chefr-ctl stop
 
 #. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
 
@@ -111,13 +111,13 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
 
    .. code-block:: bash
       
-      $ chef-server-ctl reconfigure
+      $ private-chef-ctl reconfigure
 
 #. Stop the machine:
 
    .. code-block:: bash
       
-      $ chef-server-ctl stop
+      $ private-chef-ctl stop
 
 #. Run |debian dpkg| or |rpm|. For |debian dpkg|:
 
