@@ -17,6 +17,6 @@ Use the following recipe to specify the location of that data file:
 
 .. code-block:: ruby
 
-   dsc_script `DefaultEditor` do
+   dsc_script 'DefaultEditor' do
      command 'c:\dsc_scripts\emacs.ps1'
    end

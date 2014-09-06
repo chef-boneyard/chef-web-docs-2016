@@ -26,7 +26,7 @@ Use the following recipe to specify that configuration:
 
 .. code-block:: ruby
 
-   dsc_script `EDITOR` do
+   dsc_script 'EDITOR' do
      configuration_name 'vi'
      command 'c:\dsc_scripts\editors.ps1'
    end

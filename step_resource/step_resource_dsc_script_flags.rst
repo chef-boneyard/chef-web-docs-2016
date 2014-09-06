@@ -24,7 +24,7 @@ Use the following recipe to set those parameters:
 
 .. code-block:: ruby
 
-   dsc_script `DefaultEditor` do
+   dsc_script 'DefaultEditor' do
      flags { :EditorChoice => 'emacs', :EditorFlags => '--maximized' }
      command 'c:\dsc_scripts\editors.ps1'
    end
