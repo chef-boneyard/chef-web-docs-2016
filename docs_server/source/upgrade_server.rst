@@ -194,8 +194,6 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl upgrade
 
-   When prompted, confirm that the upgrade process should take place.
-
    The upgrade process will automatically detect the presence of |chef server osc| 11, and will step through the migration process, prompting for organization name details along the way.
 
    The migration process will first download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| version 12, and then upload that data to the server.
