@@ -172,7 +172,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl stop
 
-#. Run |debian dpkg| or |rpm| on the machine. For |debian dpkg|:
+#. Run |debian dpkg| or |rpm| on the machine to install |chef server| version 12. For |debian dpkg|:
 
    .. code-block:: bash
       
@@ -185,6 +185,8 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
    .. code-block:: bash
       
       $ rpm -Uvh /path/to/chef-server-core-<version>.rpm
+
+   |chef server| 12 is installed to ``/opt/opscode``. (The existing |chef server osc| remains at ``/opt/chef-server``.)
 
 #. Upgrade the machine with the following command:
 
