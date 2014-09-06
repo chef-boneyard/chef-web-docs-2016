@@ -83,6 +83,7 @@ Reference
    ctl_chef_sync
    ctl_chef_server
    ctl_opscode_expander
+   ctl_private_chef
    ctl_reporting
    install_manage
    install_reporting
