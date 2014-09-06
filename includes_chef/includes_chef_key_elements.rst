@@ -20,8 +20,10 @@
      - The |chef manage| web user interface is used to manage objects that are stored on the |chef server|, including data bags, attributes, run-lists, roles, environments, and cookbooks. Additionally, reports are views into what happened during every |chef client| run that has occurred across all of the nodes that are under management by |chef|.
    * - .. image:: ../../images/icon_big_chef_analytics.png
      - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Actions details are tracked on the |chef server| and are visible to users from the |chef analytics| web user interface.
-
-
+   * - .. image:: ../../images/icon_big_chef_ha.png
+     - Availability supports out-of-the-box and custom high availability scenarios, plus server replication from a |chef server| master to any number of replica instances of the |chef server|.
+   * - .. image:: ../../images/icon_big_chef_supermarket.png
+     - |supermarket| is the new community site for |chef|, located at |url opscode_community|.
 
 
 ..   * - .. image:: ../../images/icon_big_chef_supermarket.png
