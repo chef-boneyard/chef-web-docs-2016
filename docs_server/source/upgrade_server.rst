@@ -186,7 +186,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ rpm -Uvh /path/to/chef-server-core-<version>.rpm
 
-   |chef server| 12 is installed to ``/opt/opscode``. (The existing |chef server osc| remains at ``/opt/chef-server``.)
+   |chef server| 12 is installed to ``/opt/opscode``. (The existing |chef server osc| remains at ``/opt/chef-server``.) From this point, the ``chef-server-ctl`` commands are running against the ``/opt/opscode`` location.
 
 #. Upgrade the machine with the following command:
 
@@ -194,9 +194,17 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl upgrade
 
-   .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_upgrade_options.rst
+   The upgrade process will automatically detect the presence of |chef server osc| 11, and will step through the migration process, prompting for organization name details along the way.
+
+   The migration process will first download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| version 12, and then upload that data to the server.
    
-   The upgrade process will automatically detect the upgrade from |chef server osc| 11, and will prompt to migrate data and will ask for the organization names to use. To skip prompts, you can specify command line arguments to the upgrade commands.
+#. Before data can be uploaded, an organization must be created. When prompted, enter the organization name, and then a full organization name.
+
+   The organization name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``.
+
+   The full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``.
+
+#. When prompted, confirm that the upgrade process should take place.
 
 #. Start |chef server| 12:
 
