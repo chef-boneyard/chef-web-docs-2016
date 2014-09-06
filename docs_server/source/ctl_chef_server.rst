@@ -57,7 +57,7 @@ upgrade
 
 **Options**
 
-.. note:: Options for the ``upgrade`` subcommand may only be used when upgrading from |chef server osc| to |chef server| 12.
+.. note:: Options for the ``upgrade`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_options.rst
 
@@ -67,7 +67,7 @@ chef12-upgrade-data-transform
 
 **Options**
 
-.. note:: Options for the ``chef12-upgrade-data-transform`` subcommand may only be used when upgrading from |chef server osc| to |chef server| 12.
+.. note:: Options for the ``chef12-upgrade-data-transform`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst
 
@@ -77,7 +77,7 @@ chef12-upgrade-download
 
 **Options**
 
-.. note:: Options for the ``chef12-upgrade-download`` subcommand may only be used when upgrading from |chef server osc| to |chef server| 12.
+.. note:: Options for the ``chef12-upgrade-download`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst
 
@@ -87,7 +87,7 @@ chef12-upgrade-upload
 
 **Options**
 
-.. note:: Options for the ``chef12-upgrade-upload`` subcommand may only be used when upgrading from |chef server osc| to |chef server| 12.
+.. note:: Options for the ``chef12-upgrade-upload`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst
 
