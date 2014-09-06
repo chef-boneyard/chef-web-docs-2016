@@ -95,6 +95,8 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl upgrade chef12-upgrade-download
 
+   When prompted, confirm that the upgrade process should take place.
+
    This command will download data from the |chef server osc| server and place it into a temporary directory. See the "Subcommand Reference" section below for information about options that may be used with this command.
 
 #. Upgrade the machine with the following command:
@@ -119,13 +121,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    The full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``.
 
-#. When prompted, confirm that the upgrade process should take place.
-
-#. Start |chef server| 12:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl start
+#. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporarily data that was created during the upgrade process.
 
 Subcommand Reference
 -----------------------------------------------------
