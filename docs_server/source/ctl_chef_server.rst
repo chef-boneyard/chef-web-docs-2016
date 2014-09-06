@@ -61,38 +61,6 @@ upgrade
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_options.rst
 
-chef12-upgrade-data-transform
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform.rst
-
-**Options**
-
-.. note:: Options for the ``chef12-upgrade-data-transform`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst
-
-chef12-upgrade-download
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download.rst
-
-**Options**
-
-.. note:: Options for the ``chef12-upgrade-download`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst
-
-chef12-upgrade-upload
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload.rst
-
-**Options**
-
-.. note:: Options for the ``chef12-upgrade-upload`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst
-
-
-
 
 Service Subcommands
 =====================================================
