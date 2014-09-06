@@ -43,7 +43,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ dpkg -D10 -i <new package>
+      $ dpkg -D10 -i /path/to/chef-server-core-<version>.deb
 
    where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
    
@@ -51,7 +51,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. code-block:: bash
       
-      $ rpm -Uvh --nopostun <new package>
+      $ rpm -Uvh --nopostun /path/to/chef-server-core-<version>.rpm
 
 #. Upgrade the back end primary machine with the following command:
 
@@ -123,7 +123,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
 
    .. code-block:: bash
       
-      $ dpkg -D10 -i <new package>
+      $ dpkg -D10 -i /path/to/chef-server-core-<version>.deb
 
    where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
    
@@ -131,7 +131,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
 
    .. code-block:: bash
       
-      $ rpm -Uvh --nopostun <new package>
+      $ rpm -Uvh --nopostun /path/to/chef-server-core-<version>.rpm
 
 #. Upgrade the machine with the following command:
 
@@ -174,7 +174,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ dpkg -D10 -i <new package>
+      $ dpkg -D10 -i /path/to/chef-server-core-<version>.deb
 
    where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
    
@@ -182,7 +182,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ rpm -Uvh <new package>
+      $ rpm -Uvh /path/to/chef-server-core-<version>.rpm
 
 #. Upgrade the machine with the following command:
 
