@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |chef server| can operate in a high availability configuration that provides automated failover for stateful components in the system architecture. This type of configuration typically splits the servers into two segments: front-end and back-end machines: 
+The |chef server| can operate in a high availability configuration that provides automated load balancing and failover for stateful components in the system architecture. This type of configuration typically splits the servers into two segments: front-end and back-end machines: 
 
 .. image:: ../../images/chef_server_ha.png
 
