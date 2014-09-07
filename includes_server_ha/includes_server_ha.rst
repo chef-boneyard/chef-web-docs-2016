@@ -5,7 +5,6 @@ The |chef server| can operate in a high availability configuration that provides
 
 .. image:: ../../images/chef_server_ha.png
 
-Front-end machines handle requests to the |api chef server| and access to the web user interface. Front-end machines should be load balanced.
+Front-end machines handle requests to the |api chef server| and access to the web user interface. Front-end machines should be load balanced and scaled horizontally by increasing the number of servers available to handle requests.
 
 Back-end machines handle data storage and retrieval, messaging and routing, analytics processing, and search. Back-end machines should be configured for failover using block level replication.
-
