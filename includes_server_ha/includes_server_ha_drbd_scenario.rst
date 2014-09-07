@@ -7,4 +7,4 @@ The following four common scenarios are discussed:
 #. Back-end server #2 hard fails badly (unsynced data)
 #. Back-end server #1 fails gracefully (all data is synced)
 #. Back-end server #1 hard fails badly (unsynced data)
-#. Both hosts are up as secondary, and |chef server oec| is unhappy
+#. Both hosts are up as secondary, and the |chef server| is unhappy

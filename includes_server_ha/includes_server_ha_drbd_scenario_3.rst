@@ -31,16 +31,16 @@ at that point the status will change to something like the following:
     0: cs:WFConnection ro:Primary/Unknown ds:UpToDate/DUnknown C r-----
        ns:0 nr:3505480 dw:4938128 dr:672 al:0 bm:290 lo:0 pe:0 ua:0 ap:0 ep:1 wo:f oos:0
 
-Notice that ``ro`` is now ``ro:Primary/Unknown``. |chef server oec| can now be recovered by entering the following command:
+Notice that ``ro`` is now ``ro:Primary/Unknown``. The |chef server| can now be recovered by entering the following command:
 
 .. code-block:: bash
 
    $ private-chef-ctl master-recover
 
-This will start up the configured services and |chef server oec| will be master on this host.
+This will start up the configured services and the |chef server| will be master on this host.
 
-If the original primary can be brought back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host’s original primary |chef server oec| master status.
+If the original primary can be brought back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host’s original primary |chef server| master status.
 
-The first thing it will do is attempt to promote itself to |drbd| primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the pair of servers in a good state, with the second back-end box as the |drbd| primary |chef server oec| master.
+The first thing it will do is attempt to promote itself to |drbd| primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the pair of servers in a good state, with the second back-end box as the |drbd| primary |chef server| master.
 
 |drbd| on the first back-end server will sync to the second back-end server and will become the clean secondary |fqdn|.

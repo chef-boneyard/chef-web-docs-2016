@@ -55,6 +55,6 @@ and for the primary, something like the following:
            [==========>.........] sync'ed: 57.3% (1121600/2613068)K
            finish: 0:00:32 speed: 34,328 (21,304) K/sec
 
-Eventually the hosts will quiesce and report ``ds:UpToDate/UpToDate``. Depending on how long the secondary was down, how much data was written to the primary in the interim, and the speed of the shared network, this process could be nearly instantaneous, or could take several minutes. Your |chef server oec| processes should not need to be manipulated in any way during this recovery.
+Eventually the hosts will quiesce and report ``ds:UpToDate/UpToDate``. Depending on how long the secondary was down, how much data was written to the primary in the interim, and the speed of the shared network, this process could be nearly instantaneous, or could take several minutes. The processes used to manage the |chef server| should not require manipulation in any way during this recovery.
 
 If the secondary host is lost completely, a new host can be installed in its place, the device built, and then |drbd| started. The new host will pair with the existing primary, sync data, and be ready to take over if necessary.

@@ -3,7 +3,7 @@
 
 |drbd| configuration allows for custom handlers when a ``split-brain`` event happens. The basic handler sends a notification email to a configurable email address so the issue can be investigated.
 
-The ``drbd.conf`` file that is used with |chef server oec| specifies other built-in actions that may be taken in certain fault scenarios:
+The ``drbd.conf`` file that is used with the |chef server| specifies other built-in actions that may be taken in certain fault scenarios:
 
 .. code-block:: bash
 
