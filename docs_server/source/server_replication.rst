@@ -31,39 +31,50 @@ and for example, a single primary |chef server| and multiple replicas:
 
 Configure Replication
 =====================================================
-The following 
+To configure replication of |chef server| data, first install |chef sync|, then configure the master |chef server|, then configure the replica |chef server|, and then start the synchronization process. 
 
+#. To install |chef sync|, run the following on all machines in the |chef server| configuration. For |debian dpkg|:
 
-Install chef-sync
------------------------------------------------------
-Install the components to run both the master and replica services. On every machine in the |chef server| configuration, do the following:
+   .. code-block:: bash
+      
+      $ dpkg -i chef-sync-<version>.deb
 
-#. Install the ``chef-sync`` package.
-#. Run ``chef-sync-ctl reconfigure``.
-#. Run ``chef-server-ctl reconfigure``.
+   For |rpm|:
 
-This will install the ``chef-sync`` components on the machine. The configuration file for ``chef-sync`` is located at ``/etc/chef-sync/chef-sync.rb``.
+   .. code-block:: bash
+      
+      $ rpm -Uvh chef-sync-<version>.rpm
 
-Configure the Master
------------------------------------------------------
-In the ``chef-sync.rb`` file, add the following setting:
+#. For each replica |chef server|, move the ``/etc/chef-sync/ec_sync_client.pem`` file from the master |chef server| to the ``/etc/chef-sync`` directory on the replica. (This file is created automatically on the master |chef server|.)
 
-.. code-block:: ruby
+#. Run the following command:
+  
+   .. code-block:: bash
+      
+      $ chef-sync-ctl reconfigure
 
-   role :master
+#. Run the following command:
+  
+   .. code-block:: bash
+      
+      $ chef-server-ctl reconfigure
 
-Configure a Replica
------------------------------------------------------
-In the ``chef-sync.rb`` file, add the following settings:
+   |chef sync| is now installed on all machines. The |chef_sync rb| file is located at ``/etc/chef-sync/chef-sync.rb``.
 
-.. code-block:: ruby
+#. Add the following setting to the |chef sync rb| file on the master |chef server|:
 
-   role :replica
-   master "https://FQDN_OF_MASTER"
+   .. code-block:: ruby
+      
+      role :master
 
-Synchronize an Organization
------------------------------------------------------
-The synchronization daemon on the replica |chef server| will sychronize from a source organization on the master |chef server|. To configure synchronization for an organization, do the following:
+#. Add the following setting to the |chef sync rb| file on each replica |chef server|:
+
+   .. code-block:: ruby
+      
+      role :replica
+      master "https://FQDN_OF_MASTER"
+
+#. The synchronization daemon on the replica |chef server| will sychronize from a source organization on the master |chef server|. To configure synchronization for an organization, do the following:
 
 #. In the ``chef-sync.rb`` file on the replica |chef server|, add the following settings:
 
@@ -156,7 +167,7 @@ Settings
 
 |api chef server| Endpoints
 =====================================================
-The following |api chef server| endpoints support |chef replication|. 
+The following |api chef server| endpoint supports |chef replication|. 
 
 /updated_since
 -----------------------------------------------------
