@@ -78,6 +78,7 @@ Reference
    api_chef_server
    chef_overview
    config_rb_chef_server
+   config_rb_chef_sync
    config_rb_server
    config_rb_manage
    ctl_chef_sync
