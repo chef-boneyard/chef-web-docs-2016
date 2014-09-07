@@ -12,7 +12,7 @@ This configuration file has the following general settings:
    * - ``enterprise['name']``
      - |name chef_server| Default value: ``"private_chef"``.
    * - ``private_chef['addons']['path']``
-     - Use to specify a local path from which packages are downloaded. When a local path is not specified, packages are downloaded from |company_name|-mangaed |apt| or |yum| repositories. A proxy may be configured to access the |apt| or |yum| repositories.
+     - Use to specify a local path from which packages are installed. When a local path is not specified, packages are installed from |company_name|-mangaed |apt| or |yum| repositories. A proxy may be configured to access the |apt| or |yum| repositories.
    * - ``private_chef['api_version']``
      - |version chef_server| Default value: ``"11.1.0"``.
    * - ``default_orgname``
