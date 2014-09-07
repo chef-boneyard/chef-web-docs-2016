@@ -6,13 +6,13 @@ If the search indexes are not being updated properly, first ensure that the |ser
 
 .. code-block:: bash
 
-   $ private-chef-ctl status opscode-expander
+   $ chef-server-ctl status opscode-expander
 
 and then (if it is not running), start the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl start opscode-expander
+   $ chef-server-ctl start opscode-expander
 
 If the |service expander| does not start correctly, then take a look at the ``/var/log/opscode/opscode-expander/current`` log file for error messages. 
 

@@ -96,13 +96,17 @@ Application Checks
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_application.rst
 
+|couchdb|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_monitor/includes_server_monitor_11_application_couchdb.rst
+
 |drbd|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_monitor/includes_server_monitor_application_drbd.rst
+.. include:: ../../includes_server_monitor/includes_server_monitor_11_application_drbd.rst
 
 |erlang|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst
+.. include:: ../../includes_server_monitor/includes_server_monitor_11_application_erlang.rst
 
 |nginx|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -130,7 +134,7 @@ ha-status
 
 opscode-authz
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_authz.rst
+.. include:: ../../includes_server_monitor/includes_server_monitor_11_system_authz.rst
 
 opscode-erchef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
