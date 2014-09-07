@@ -61,13 +61,13 @@ To configure replication of |chef server| data, first install |chef sync|, then 
 
    |chef sync| is now installed on all machines. The |chef_sync rb| file is located at ``/etc/chef-sync/chef-sync.rb``.
 
-#. Add the following setting to the |chef sync rb| file on the master |chef server|:
+#. Add the following setting to the |chef_sync rb| file on the master |chef server|:
 
    .. code-block:: ruby
       
       role :master
 
-#. Add the following setting to the |chef sync rb| file on each replica |chef server|:
+#. Add the following setting to the |chef_sync rb| file on each replica |chef server|:
 
    .. code-block:: ruby
       
