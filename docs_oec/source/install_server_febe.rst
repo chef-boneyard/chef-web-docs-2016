@@ -1,4 +1,7 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/install_server_febe.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
 
-.. include:: ../../chef_master/source/install_server_febe.rst
+=====================================================
+Scaled Front End and Back End
+=====================================================
+
+This scenario has all of the same requirements as the `scaled front end <http://docs.getchef.com/enterprise/install_server_fe.html>`_ and `scaled back end <http://docs.getchef.com/enterprise/install_server_be.html>`_ scenarios.
