@@ -1,20 +1,12 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/config_rb_chef_sync.html BY DESIGN
-.. THIS PAGE IS LOCATED AT THE /server/ PATH.
-
-=====================================================
-chef-sync.rb
-=====================================================
-
-The chef-sync.rb file is the default configuration file used by |chef sync|.
-
-Settings
-==========================================================================
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This configuration file has the following settings:
 
 .. list-table::
    :widths: 200 300
    :header-rows: 1
+
    * - Setting
      - Description
    * - ``bootstrap``
@@ -81,3 +73,8 @@ This configuration file has the following settings:
      - The shell for the user under which |chef server| services run. Default value: ``/bin/sh``.
    * - ``user['username']``
      - The user name under which |chef server| services run. Default value: ``opscode``.
+
+
+
+
+
