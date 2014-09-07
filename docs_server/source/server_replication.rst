@@ -80,7 +80,7 @@ To configure replication of |chef server| data, first install |chef sync|, then 
 
    .. code-block:: ruby
       
-	  organizations [
+      organizations [
                       {
                         :destination => "DEST_ORG_NAME",
                         :source => "SOURCE_ORG_NAME"
