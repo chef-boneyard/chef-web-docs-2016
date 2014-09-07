@@ -6,15 +6,15 @@ High Availability
 
 Scalability 
 =====================================================
-.. include:: ../../includes_server_ha/includes_server_ha_scalability.rst
+.. include:: ../../includes_server_ha/includes_server_ha_11_scalability.rst
 
 Failover and Recovery
 =====================================================
-.. include:: ../../includes_server_ha/includes_server_ha_failover.rst
+.. include:: ../../includes_server_ha/includes_server_ha_11_failover.rst
 
 Graceful Transitions
 =====================================================
-.. include:: ../../includes_server_ha/includes_server_ha_transitions.rst
+.. include:: ../../includes_server_ha/includes_server_ha_11_transitions.rst
 
 Status
 =====================================================
@@ -38,20 +38,20 @@ Assumptions
 
 Failure Scenarios
 =====================================================
-.. include:: ../../includes_server_ha/includes_server_ha_scenario.rst
+.. include:: ../../includes_server_ha/includes_server_ha_drbd_scenario.rst
 
 Scenarios 1 and 2
 -----------------------------------------------------
-.. include:: ../../includes_server_ha/includes_server_ha_scenario_1and2.rst
+.. include:: ../../includes_server_ha/includes_server_ha_drbd_scenario_1and2.rst
 
 Scenario 3
 -----------------------------------------------------
-.. include:: ../../includes_server_ha/includes_server_ha_scenario_3.rst
+.. include:: ../../includes_server_ha/includes_server_ha_drbd_scenario_3.rst
 
 Scenario 4
 -----------------------------------------------------
-.. include:: ../../includes_server_ha/includes_server_ha_scenario_4.rst
+.. include:: ../../includes_server_ha/includes_server_ha_drbd_scenario_4.rst
 
 Scenario 5
 -----------------------------------------------------
-.. include:: ../../includes_server_ha/includes_server_ha_scenario_5.rst
+.. include:: ../../includes_server_ha/includes_server_ha_drbd_scenario_5.rst

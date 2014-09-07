@@ -1,25 +1,11 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef server oec| can operate in a high availability configuration that provides automated failover for stateful components in the system architecture. This configuration splits servers into two segments: front-end and back-end servers. The front-end servers handle requests to the user interface and requests that use the |api chef server|. The back-end servers handle data storage and retrieval, which consists of:
+The |chef server| can operate in a high availability configuration that provides automated failover for stateful components in the system architecture. This type of configuration typically splits the servers into two segments: front-end and back-end machines: 
 
-* |couch db|
-* |postgresql|
-* |opscode solr|
-* |rabbitmq|
-* |redis|
-* Cookbook data
+.. image:: ../../images/chef_server_ha.png
 
-Failover on the back-end servers is achieved using the following:
+Front-end machines handle requests to the |api chef server| and access to the web user interface. Front-end machines should be load balanced.
 
-* Asynchronous block level replication of logical volume managers using |drbd|, positioned between two back-end servers
-* A primary and backup cluster election using |vrrp| over unicast TCP/IP and |keepalived|
-* A virtual IP address to the primary server, maintained based on the results of the election done by |keepalived|
+Back-end machines handle data storage and retrieval, messaging and routing, analytics processing, and search. Back-end machines should be configured for failover using block level replication.
 
-.. image:: ../../images/oec_ha.png
-
-The front-end servers require load-balancers. |company_name| recommends:
-
-* Hardware load-balancers (such as |f5| or |netscalar|)
-* |ssl| off-loading
-* Round-robin as the load-balancing algorithm
