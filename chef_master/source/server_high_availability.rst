@@ -2,7 +2,7 @@
 High Availability
 =====================================================
 
-.. include:: ../../includes_server_ha/includes_server_ha.rst
+.. include:: ../../includes_server_ha/includes_server_ha_11.rst
 
 Scalability 
 =====================================================
