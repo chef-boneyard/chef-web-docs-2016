@@ -22,7 +22,7 @@ This configuration file has the following settings:
    * - ``rabbitmq['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/rabbitmq``.
    * - ``rabbitmq['node_ip_address']``
-     - |ip_address rabbitmq| Default value: ``0.0.0.0``.
+     - |ip_address rabbitmq| Default value: ``0.0.0.0``. If analytics is installed, this value should be set to '0.0.0.0' and ``rabbitmq['vip']`` should be set to CHEF_SERVER_VIP.
    * - ``rabbitmq['node_port']``
      - |port service| Default value: ``5672``.
    * - ``rabbitmq['nodename']``
@@ -34,6 +34,6 @@ This configuration file has the following settings:
    * - ``rabbitmq['vhost']``
      - The virtual host. Default value: ``/chef``.
    * - ``rabbitmq['vip']``
-     - |ip_address virtual| Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``. If analytics is installed, this value should be set to 'CHEF_SERVER_VIP' and ``rabbitmq['node_ip_address']`` should be set to '0.0.0.0'.
 
 
