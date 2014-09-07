@@ -12,9 +12,7 @@ For |chef server| 12, the following high availability configurations are support
 * DRBD
 * AWS
 
-Status
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst
+
 
 DRBD
 =====================================================
@@ -59,3 +57,10 @@ Scenario 5
 AWS
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_aws.rst
+
+
+
+
+Check HA Status
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst
