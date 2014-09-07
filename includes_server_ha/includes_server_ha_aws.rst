@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-AWS is a supported high availability configuration option for the |chef server|. 
+AWS is a supported high availability configuration option for the |chef server|.
 
 .. image:: ../../images/chef_server_ha_aws.png
 

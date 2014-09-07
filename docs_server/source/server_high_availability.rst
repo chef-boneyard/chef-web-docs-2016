@@ -2,7 +2,7 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-High Availability 
+High Availability
 =====================================================
 
 .. include:: ../../includes_server_ha/includes_server_ha.rst
