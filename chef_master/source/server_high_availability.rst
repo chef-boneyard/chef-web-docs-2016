@@ -22,7 +22,7 @@ Status
 
 DRBD
 =====================================================
-.. include:: ../../includes_server_ha/includes_server_ha_drbd.rst
+.. include:: ../../includes_server_ha/includes_server_ha_11_drbd.rst
 
 Split Brains
 -----------------------------------------------------
