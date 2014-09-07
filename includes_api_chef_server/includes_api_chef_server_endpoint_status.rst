@@ -21,10 +21,9 @@ The response will return something like the following:
      "status" => "pong", 
      "upstreams" => 
        {
-         "chef_solr" => "pong", 
-         "chef_sql" => "pong", 
-         "chef_otto" => "pong", 
-         "oc_chef_authz" => "pong"
+         "service_name" => "pong", 
+         "service_name" => "pong", 
+         ...
        }
     }
 
@@ -47,8 +46,8 @@ The response will return something like the following:
             "status":"fail",
             "upstreams":
               {
-                "chef_solr":"fail",
-                "chef_sql":"pong",
-                "oc_chef_authz":"pong"
+                "service_name":"fail",
+                "service_name":"pong",
+                ...
               }
           }
