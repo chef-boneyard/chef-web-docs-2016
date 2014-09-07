@@ -26,7 +26,7 @@ Split Brains
 -----------------------------------------------------
 .. include:: ../../includes_server_ha/includes_server_ha_drbd_split_brain.rst
 
-Handlers
+Custom Handlers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_ha/includes_server_ha_drbd_handlers.rst
 
