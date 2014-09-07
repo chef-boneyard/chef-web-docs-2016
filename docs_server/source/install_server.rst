@@ -4,10 +4,7 @@
 =====================================================
 Install the |chef server|
 =====================================================
-
-High Availability
-=====================================================
-placeholder
+There are two configuration scenarios for the |chef server|: standalone (everything on a single machine) and high availability (machines configured for front-end and back-end, allowing for failover and load-balancing, as required).
 
 Standalone
 =====================================================
@@ -42,5 +39,15 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       $ chef-server-ctl reconfigure
 
    Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
+
+High Availability
+=====================================================
+The following links describe how to configure the |chef server| for high availability.
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_pre.html">Prerequisites</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_fe.html">Front-end Machines</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_be.html">Back-end Machines</a> </br>
 
 
