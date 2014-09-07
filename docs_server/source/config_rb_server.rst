@@ -36,6 +36,10 @@ estatsd
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_server_settings_estatsd.rst
 
+ha
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_server_settings_ha.rst
+
 jetty
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_server_settings_jetty.rst
