@@ -15,6 +15,8 @@ About Chef
 
 **Premium Features of the Chef Server**
 
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/analytics.html">Analytics</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_high_availability.html">High Availability</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/manage.html">Manage Webui</a> </br>
