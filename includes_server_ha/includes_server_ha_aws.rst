@@ -2,3 +2,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 placeholder
+
+
+For more information about |amazon ebs|, see http://aws.amazon.com/ebs/.
