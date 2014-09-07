@@ -52,7 +52,7 @@ Meanwhile, the backup will be undergoing the same steps as listed above. Use the
 
 .. code-block:: bash
 
-   $ watch -n1 sudo private-chef-ctl ha-status
+   $ watch -n1 sudo chef-server-ctl ha-status
 
 Split Brains
 -----------------------------------------------------

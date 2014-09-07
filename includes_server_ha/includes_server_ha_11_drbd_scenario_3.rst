@@ -35,7 +35,7 @@ Notice that ``ro`` is now ``ro:Primary/Unknown``. The |chef server| can now be r
 
 .. code-block:: bash
 
-   $ chef-server-ctl master-recover
+   $ private-chef-ctl master-recover
 
 This will start up the configured services and the |chef server| will be master on this host.
 

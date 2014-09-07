@@ -48,11 +48,11 @@ Scenarios 1 and 2
 
 Scenario 3
 -----------------------------------------------------
-.. include:: ../../includes_server_ha/includes_server_ha_drbd_scenario_3.rst
+.. include:: ../../includes_server_ha/includes_server_ha_11_drbd_scenario_3.rst
 
 Scenario 4
 -----------------------------------------------------
-.. include:: ../../includes_server_ha/includes_server_ha_drbd_scenario_4.rst
+.. include:: ../../includes_server_ha/includes_server_ha_11_drbd_scenario_4.rst
 
 Scenario 5
 -----------------------------------------------------
