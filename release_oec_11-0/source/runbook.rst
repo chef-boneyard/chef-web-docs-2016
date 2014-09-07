@@ -170,11 +170,11 @@ Disks
 Log Files
 =====================================================
 
-.. include:: ../../includes_server_logs/includes_server_logs.rst
+.. include:: ../../includes_server_logs/includes_server_logs_11.rst
 
 View Log Files
 -----------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_view.rst
+.. include:: ../../includes_server_logs/includes_server_logs_11_view.rst
 
 tail Log Files
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -184,7 +184,7 @@ tail Log Files
 
 Supervisor
 -----------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_type_supervisor.rst
+.. include:: ../../includes_server_logs/includes_server_logs_11_type_supervisor.rst
 
 nginx, access
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -200,7 +200,7 @@ opscode-erchef, current
 
 opscode-erchef, erchef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst
+.. include:: ../../includes_server_logs/includes_server_logs_11_erchef_log_erchef.rst
 
 opscode-webui
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

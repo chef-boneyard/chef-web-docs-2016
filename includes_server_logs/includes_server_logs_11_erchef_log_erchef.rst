@@ -24,6 +24,8 @@ where important fields in this log include:
 
 In addition, the log file may contain additional entries that detail the amounts of time spent interacting with other services:
 
+* ``authz_time`` (the time spent talking to the |service authz| service)
+* ``couchdb_time`` (the time spent talking to the |service couchdb| service)
 * ``rdbms_time`` (the time spent talking to the |service postgresql| service)
 * ``req_time`` (the request time)
 * ``solr_time`` (the time spent talking to the |service solr| service)
