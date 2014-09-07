@@ -14,6 +14,8 @@ The following diagram shows the relationships between the various elements of |c
 
 .. include:: ../../includes_chef/includes_chef_key_elements.rst
 
+The premium features of the |chef server|---|chef manage|, |chef analytics|, high availability, and synchronization---may all be installed and configured for use with the |chef server|. Each of these premium features simply needs to be installed, and then enabled, to be run as part of the |chef server|!
+
 The following sections discuss these elements (and their various components) in more detail.
 
 Nodes
