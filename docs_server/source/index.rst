@@ -13,6 +13,14 @@ About Chef
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/chef_overview.html">An Overview of Chef</a> </br>
 
+**Premium Features of the Chef Server**
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/analytics.html">Analytics</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_high_availability.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/manage.html">Manage Webui</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_replication.html">Replication</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/reporting.html">Reporting</a> </br>
+   
 Install and Upgrade
 =====================================================
 
@@ -59,6 +67,9 @@ Reference
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_server.html">chef-server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_chef_sync.html">chef-sync.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_manage.html">manage.rb</a> </br>
+
 
 **Command line tools:**
 
@@ -75,6 +86,7 @@ Reference
 .. toctree::
    :hidden:
 
+   analytics
    api_chef_server
    chef_overview
    config_rb_chef_server
