@@ -5,8 +5,3 @@
 
 The ``org-list`` subcommand is used to list all of the organizations currently present on the |chef server|. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-list

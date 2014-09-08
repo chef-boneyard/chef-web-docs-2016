@@ -5,8 +5,3 @@
 
 The ``org-delete`` subcommand is used to delete an organization. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-delete ORG_NAME

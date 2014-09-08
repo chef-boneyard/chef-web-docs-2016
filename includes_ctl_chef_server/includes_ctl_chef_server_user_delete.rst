@@ -5,9 +5,4 @@
 
 The ``user-delete`` subcommand is used to delete a user. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl user-delete USER_NAME
 

@@ -5,9 +5,4 @@
 
 The ``org-show`` subcommand is used to show the details for an organization. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-show ORG_NAME
 

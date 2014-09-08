@@ -5,9 +5,4 @@
 
 The ``user-show`` subcommand is used to show the details for a user. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl user-show USER_NAME
 

@@ -5,9 +5,4 @@
 
 The ``org-create`` subcommand is used to create an organization. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create ORG_NAME ORG_FULL_NAME --filename FILE_NAME --association_user USER_NAME
 

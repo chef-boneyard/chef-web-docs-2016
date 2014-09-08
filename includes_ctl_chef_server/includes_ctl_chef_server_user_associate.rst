@@ -5,10 +5,5 @@
 
 The ``user-associate`` subcommand is used to associate a user to an organization. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl user-associate ORG_NAME USER_NAME
 
 

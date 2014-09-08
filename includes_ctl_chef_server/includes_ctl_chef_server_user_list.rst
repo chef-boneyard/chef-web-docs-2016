@@ -5,9 +5,4 @@
 
 The ``user-list`` subcommand is used to view a list of users. 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl user-list
 

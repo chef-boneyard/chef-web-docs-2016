@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``user-disassociate`` subcommand is used to disassociate a user from an organization. 
+This subcommand has the following options:
 
-
-
+``-f FILE_NAME``, ``--filename FILE_NAME``
+   Use to write the private key to a file instead of ``STDOUT``.

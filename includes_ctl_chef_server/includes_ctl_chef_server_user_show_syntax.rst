@@ -3,7 +3,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``user-disassociate`` subcommand is used to disassociate a user from an organization. 
+This subcommand has the following syntax:
 
+.. code-block:: bash
 
-
+   $ chef-server-ctl user-show USER_NAME (options)

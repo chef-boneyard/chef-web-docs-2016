@@ -39,17 +39,41 @@ org-create
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
 
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst
+
 org-delete
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst
 
 org-list
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
 
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst
+
 org-show
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
 
 password
 =====================================================
@@ -85,30 +109,69 @@ user-associate
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_associate.rst
 
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_associate_syntax.rst
+
 user-create
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst
 
 user-delete
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete.rst
 
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete_syntax.rst
+
 user-disassociate
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_disassociate.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_disassociate_syntax.rst
 
 user-edit
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst
 
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit_syntax.rst
+
 user-list
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst
 
 user-show
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show.rst
 
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst
 
 Service Subcommands
 =====================================================
