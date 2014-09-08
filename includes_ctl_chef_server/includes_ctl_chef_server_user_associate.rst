@@ -9,6 +9,6 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl user-associate USER_NAME ORG_NAME
+   $ chef-server-ctl user-associate ORG_NAME USER_NAME
 
 

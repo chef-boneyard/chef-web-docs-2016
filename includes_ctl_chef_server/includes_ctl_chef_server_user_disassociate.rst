@@ -9,6 +9,6 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl user-disassociate USER_NAME ORG_NAME
+   $ chef-server-ctl user-disassociate ORG_NAME USER_NAME
 
 
