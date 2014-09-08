@@ -61,7 +61,7 @@ Multiple Organizations
 
 Manage Organizations
 =====================================================
-The following commands are built-in to the |ctl chef server| command line tool:
+The following commands are built-in to the |chef server ctl| command line tool:
 
 org-create
 -----------------------------------------------------
