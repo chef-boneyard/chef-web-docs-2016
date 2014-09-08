@@ -14,7 +14,7 @@ This subcommand has the following syntax:
 where ``name_of_premium_feature`` represents the command line value associated with the premium feature:
 
 .. list-table::
-   :widths: 60 420
+   :widths: 100 400
    :header-rows: 1
 
    * - Feature
