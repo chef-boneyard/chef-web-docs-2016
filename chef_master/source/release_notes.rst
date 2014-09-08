@@ -1,118 +1,93 @@
 =====================================================
-Release Notes: |chef client| 11.14
+Release Notes: |chef client| 11.16
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
 
 What's New
 =====================================================
-The following items are new for |chef 11-14| and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 11-16 and/or are changes from previous versions. The short version:
 
-* **New knife serve subcommand** Use |subcommand knife serve| to run |chef zero| on the local machine.
-* **New argument for knife node** The |subcommand knife node| subcommand has a new argument: ``environment set``. Use it to set the environment for a node, but without the need to edit the node object.
-* **New options for knife bootstrap** The |subcommand knife bootstrap| command has four new options: ``--bootstrap-curl-options``, ``--bootstrap-install-command``, ``--bootstrap-install-sh``, and ``--bootstrap-wget-options``.
-* **New attributes for whitelisting node attributes** Use ``automatic_attribute_whitelist``, ``default_attribute_whitelist``, ``normal_attribute_whitelist``, and ``override_attribute_whitelist`` to prevent attributes from being saved by a node.
-* **New client.rb settings** The following settings have been added to the |client rb| file: ``automatic_attribute_whitelist``, ``cookbook_sync_threads``, ``default_attribute_whitelist``, ``ftp_proxy``, ``ftp_proxy_pass``, ``ftp_proxy_user``, ``normal_attribute_whitelist``, ``override_attribute_whitelist``, and ``yum_lock_timeout``.
-* **New --run-lock-timeout Setting** New command line setting for |chef client| and |chef solo|.
-* **Automatic proxy configuration** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically configure the ``ENV`` environment variable with proxy settings.
-* **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute with **any** resource to ensure that sensitive data is not logged by the |chef client|.
-* **chef-zero port ranges** The ``chef_zero.port`` setting (in the |client rb| file) and the ``--chef-zero-port`` option from the command line for the |chef client| now supports using a range of ports. For example ``chef_zero.port ="10,20,30"`` or ``--chef-zero-port 10000-20000``.
+* **New dsc_script resource** Use the |resource dsc_script| resource to embed |windows powershell_dsc| scripts in |chef| recipes.
 
-|subcommand knife serve|
+
+dsc_script Resource
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_serve.rst
+.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
 
-**Syntax**
+.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
 
-.. include:: ../../includes_knife/includes_knife_serve_syntax.rst
+.. include:: ../../includes_resources/includes_resource_dsc_script.rst
 
-**Options**
+.. note:: |windows powershell| 4.0 is required for using the |resource dsc_script| resource with |chef|.
 
-.. include:: ../../includes_knife/includes_knife_serve_options.rst
+.. note:: The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)
 
-knife node environment set
------------------------------------------------------
-The |subcommand knife node| subcommand has a new argument: ``environment_set``.
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_script_syntax.rst
 
-.. include:: ../../includes_knife/includes_knife_node_environment_set.rst
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_script_actions.rst
 
-**Syntax**
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_script_attributes.rst
 
-.. include:: ../../includes_knife/includes_knife_node_environment_set_syntax.rst
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-New |subcommand knife bootstrap| Options
------------------------------------------------------
-The following options have been added to |subcommand knife bootstrap|:
+**Specify DSC code directly**
 
-``--bootstrap-curl-options OPTIONS``
-   |bootstrap curl_options| |bootstrap no_install_command|
+.. include:: ../../step_resource/step_resource_dsc_script_code.rst
 
-``--bootstrap-install-command COMMAND``
-   |bootstrap install_command| |bootstrap no_curl_sh_wget|
- 
-``--bootstrap-install-sh URL``
-   |bootstrap install_sh| |bootstrap no_install_command|
 
-``--bootstrap-wget-options OPTIONS``
-   |bootstrap wget_options| |bootstrap no_install_command|
+**Specify DSC code using a Windows Powershell data file**
 
-Attribute Whitelists
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_whitelist.rst
-   
-New |client rb| Settings
------------------------------------------------------
-The following settings have been added to |client rb|:
+.. include:: ../../step_resource/step_resource_dsc_script_command.rst
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
 
-   * - Setting
-     - Description
-   * - ``automatic_attribute_whitelist``
-     - |whitelist attribute_automatic|
-   * - ``cookbook_sync_threads``
-     - |cookbook_sync_threads| Default value: ``10``.
-   * - ``default_attribute_whitelist``
-     - |whitelist attribute_default|
-   * - ``ftp_proxy``
-     - |ftp_proxy|
-   * - ``ftp_proxy_pass``
-     - |ftp_proxy_pass| Default value: ``nil``.
-   * - ``ftp_proxy_user``
-     - |ftp_proxy_user| Default value: ``nil``.
-   * - ``normal_attribute_whitelist``
-     - |whitelist attribute_normal|
-   * - ``override_attribute_whitelist``
-     - |whitelist attribute_override|
-   * - ``yum_lock_timeout``
-     - |yum_lock_timeout| Default value: ``30``.
+**Pass parameters to DSC configurations**
 
---run-lock-timeout
------------------------------------------------------
-The following option has been added to |chef client| and |chef solo|:
+.. include:: ../../step_resource/step_resource_dsc_script_flags.rst
 
-``--run-lock-timeout SECONDS``
-   The amount of time (in seconds) to wait for a |chef client| run to finish. Default value: not set (indefinite).
-   
-Automatic Proxy Config
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_client_automatic_proxy.rst
 
-Updated Resource Attribute
------------------------------------------------------
-The following attribute may now be used with any resource (prior releases only supported using this attribute with the |resource template| and |resource file| resources):
+**Use custom configuration data**
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
+Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
 
-   * - Parameter
-     - Description
-   * - ``sensitive``
-     - |sensitive| Default value: ``false``.
-	 
-What's Fixed
+.. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
+
+.. include:: ../../step_resource/step_resource_dsc_script_configuration_name.rst
+
+
+**Using DSC with other Chef resources**
+
+.. include:: ../../step_resource/step_resource_dsc_script_remote_files.rst
+
+
+Changelog
 =====================================================
-For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
+https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
+
+.. What's Fixed
+.. =====================================================
+.. The following bugs were fixed:
+.. 
+.. * `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
+.. * `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
+.. 
+.. What's Improved
+.. =====================================================
+.. The following improvements were made:
+.. 
+.. * `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
+.. * `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
+.. 
+.. New Features
+.. =====================================================
+.. The following features were added:
+.. 
+.. * `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
+.. * `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx

@@ -2,7 +2,7 @@
 Standalone
 =====================================================
 
-The standalone installation of |chef server oec| creates a working installation on a single server. This installation is also useful when you are installing |chef server oec| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
+The standalone installation of the |chef server| creates a working installation on a single server. This installation is also useful when you are installing the |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 
 System Requirements
 =====================================================
@@ -13,50 +13,54 @@ A standalone installation scenario has the following system requirements:
 * 5 GB of free disk space in ``/opt``
 * 5 GB of free disk space in ``/var``
 
-Firewall Requirements
------------------------------------------------------
+**Firewall Requirements**
+
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
 
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst
 
-Hostnames, FQDNs
------------------------------------------------------
+**Hostnames, FQDNs**
+
 The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
 
-Add Package to Server
+Install the |chef server|
 =====================================================
-Upload the package provided to the server on which |chef server oec| will be installed, and then record its location on the file system. The rest of this section assumes this location is in ``/tmp`` directory.
+The standalone installation of |chef server| creates a working installation on a single server. This installation is also useful when you are installing |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 
-Install the Package
-=====================================================
-Install the |chef server oec| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
+To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
 
-.. code-block:: bash
+#. Review the system requirements:
 
-   $ rpm -Uvh /tmp/private-chef-full-1.0.0–1.x86_64.rpm
+   .. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
 
-For |ubuntu|:
+#. Upload the package provided to the server on which the |chef server| will be installed, and then record its location on the file system. The rest of this section assumes this location is in ``/tmp`` directory.
 
-.. code-block:: bash
+#. Install the |chef server| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
 
-   $ dpkg -i /tmp/private-chef-full_1.0.0–1_amd64.deb
+   .. code-block:: bash
+      
+      $ rpm -Uvh /tmp/chef-server-core-<version>.rpm
 
-Configure
-=====================================================
-|chef server oec| is now installed on your server, but is not configured for use. To configure it for a standalone installation, simply run:
+   For |ubuntu|:
 
-.. code-block:: bash
+   .. code-block:: bash
+      
+      $ dpkg -i /tmp/chef-server-core-<version>.deb
 
-   $ private-chef-ctl reconfigure
+   The |chef server| is now installed on the server.
 
-This command may take several minutes to run, during which the output of the |chef| run that is configuring your new |chef server oec| installation is shown. When it is complete, you will see:
+#. Run the following to start all of the services:
 
-.. code-block:: bash
+   .. code-block:: bash
+      
+      $ chef-server-ctl reconfigure
 
-   Chef Server Reconfigured!
+   Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
 
-.. note:: |chef server oec| is composed of many different services, which work together to create a functioning system. One outcome is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
+#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following command:
 
-Success!
-=====================================================
-Congratulations, a standalone |chef server oec| server is installed.
+   .. code-block:: bash
+      
+      $ chef-server-ctl install name_of_premium_feature
+
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).

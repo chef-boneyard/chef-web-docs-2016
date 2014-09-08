@@ -22,17 +22,13 @@ Recommended Settings
 
 Optional Settings
 =====================================================
-The following settings are often used to for performance tuning of |chef server oec| in larger installations.
+The following settings are often used to for performance tuning of the |chef server| in larger installations.
 
-.. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
+.. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``chef-server-ctl reconfigure`` command.
 
 bookshelf
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
-
-opscode-account
------------------------------------------------------
-.. include:: ../../includes_server_tuning/includes_server_tuning_account.rst
 
 opscode-chef
 -----------------------------------------------------
@@ -54,12 +50,10 @@ Update Frequency
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst
 
-opscode-webui
------------------------------------------------------
-.. include:: ../../includes_server_tuning/includes_server_tuning_webui.rst
-
 postgresql
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_postgresql.rst
 
-
+rabbitmq
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst

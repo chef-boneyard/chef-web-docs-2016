@@ -75,7 +75,7 @@ The following services are part of |chef server oec|:
 * opscode-solr4
 * postgresql
 * rabbitmq
-* redis
+* redis-lb
 
 
 bifrost
@@ -144,7 +144,6 @@ tail
 .. include:: ../../step_server_services/step_server_services_bookshelf_tail.rst
 
 
-
 keepalived
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_keepalived.rst
@@ -210,8 +209,6 @@ run once
 tail
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_nginx_tail.rst
-
-
 
 
 opscode-erchef
@@ -315,7 +312,7 @@ tail
 
 opscode-solr4
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_solr.rst
+.. include:: ../../includes_server_services/includes_server_services_solr4.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -344,7 +341,6 @@ run once
 tail
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_solr_tail.rst
-
 
 
 postgresql

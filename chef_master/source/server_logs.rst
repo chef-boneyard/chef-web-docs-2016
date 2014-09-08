@@ -4,7 +4,7 @@ Log Files
 
 .. include:: ../../includes_server_logs/includes_server_logs.rst
 
-View Logs
+View Log Files
 =====================================================
 .. include:: ../../includes_server_logs/includes_server_logs_view.rst
 
@@ -22,10 +22,6 @@ nginx, access
 -----------------------------------------------------
 .. include:: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst
 
-opscode-account
------------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_account_log_current.rst
-
 opscode-erchef, current
 -----------------------------------------------------
 .. include:: ../../includes_server_logs/includes_server_logs_erchef_log_current.rst
@@ -34,11 +30,7 @@ opscode-erchef, erchef
 -----------------------------------------------------
 .. include:: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst
 
-opscode-webui
------------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_webui_log_current.rst
-
-Application Logs
+Application
 =====================================================
 .. include:: ../../includes_server_logs/includes_server_logs_type_application.rst
 
@@ -48,6 +40,6 @@ nginx
 
 .. include:: ../../step_server_services/step_server_services_nginx_tail.rst
 
-Read nginx Logs
+Read Log Files
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst

@@ -51,7 +51,7 @@ Example
 
 Endpoints
 =====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_11_endpoints.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst
 
 
 /clients
@@ -422,7 +422,12 @@ PUT
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst
 
+/updated_since
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since.rst
 
-
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst
 
 
