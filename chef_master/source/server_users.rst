@@ -4,34 +4,46 @@ Users
 
 .. include:: ../../includes_server_users/includes_server_users.rst
 
-Change Password
+org-create
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_users_change_password.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
 
-Generate Config File
+org-delete
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_generate_config.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
 
-Get Starter Kit
+org-list
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_get_starter_kit.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
 
-Reset Client Key
+org-show
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_client_reset_key.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst
 
-Reset Node Key
+user-associate
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_node_reset_key.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_associate.rst
 
-Reset User Key
+user-create
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_users_reset_key.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create.rst
 
-Reset Org Key
+user-delete
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_reset_key.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete.rst
 
-View User Account Details
+user-disassociate
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_users_view_account.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_disassociate.rst
+
+user-edit
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst
+
+user-list
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list.rst
+
+user-show
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show.rst
