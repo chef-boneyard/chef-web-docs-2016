@@ -4,21 +4,6 @@ About the Server
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-There are three types of servers:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Server
-     - Description
-   * - Enterprise Chef
-     - .. include:: ../../includes_chef/includes_chef_private.rst
-   * - Hosted Enterprise Chef
-     - .. include:: ../../includes_chef/includes_chef_hosted.rst
-   * - Open Source Chef
-     - .. include:: ../../includes_chef/includes_chef_open_source.rst
-
 Components
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst
@@ -77,4 +62,30 @@ Each type of |chef server| provides the following features:
    * - :doc:`Roles </essentials_roles>`
      - A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function. 
    * - :doc:`Search </essentials_search>`
-     - Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. 
+     - Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles.
+   * - |supermarket|
+     - |supermarket| is the new community site for |chef|, located at |url opscode_community|.
+
+Premium Features
+=====================================================
+The following premium feature are available for use with the |chef server|:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Feature
+     - Description
+   * - |chef analytics|
+     - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Actions details are tracked on the |chef server| and are visible to users from the |chef analytics| web user interface.
+   * - High Availability
+     - Availability supports out-of-the-box and custom high availability scenarios, including using |drbd| and |amazon aws|.
+   * - |chef manage|
+     - The |chef manage| web user interface is used to manage objects that are stored on the |chef server|, including data bags, attributes, run-lists, roles, environments, and cookbooks. Additionally, reports are views into what happened during every |chef client| run that has occurred across all of the nodes that are under management by |chef|.
+   * - |push jobs|
+     - |push jobs| allows jobs to be run against nodes independently of a |chef client| run. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is run are determined by the results of a search query made to the |chef server|. 
+   * - Replication
+     - |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
+   * - |reporting|
+     - The |reporting| feature of the |chef server| is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure being managed by |chef|. Reports can be generated for the entire organization and they can be generated for specific nodes.
+
