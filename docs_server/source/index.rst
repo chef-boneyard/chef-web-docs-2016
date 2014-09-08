@@ -100,6 +100,7 @@ Reference
    ctl_opscode_expander
    ctl_private_chef
    ctl_reporting
+   high_availability
    install_manage
    install_reporting
    install_server
