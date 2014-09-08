@@ -6,9 +6,6 @@ Chef Server
 
 The |chef server| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 
-About Chef
-=====================================================
-
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/chef_overview.html">An Overview of Chef</a> </br>
@@ -23,27 +20,18 @@ About Chef
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_replication.html">Replication</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/reporting.html">Reporting</a> </br>
    
-Install and Upgrade
-=====================================================
+**Install and Upgrade**
 
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/install_server.html">Install the Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/upgrade_server.html">Upgrade the Chef Server</a> </br>
 
-Manage the Chef Server
-=====================================================
-
-**Single topic:**
+**Manage the Chef Server**
 
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/runbook.html">Runbook</a> </br>
-
-**Individual topics:**
-
-.. raw:: html
-
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_backup_restore.html">Backup / Restore</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_high_availability.html">High Availability</a> </br>
@@ -55,33 +43,17 @@ Manage the Chef Server
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_tuning.html">Server Tuning</a> </br>
 
-Reference
-=====================================================
-
-**APIs:**
+**Reference**
 
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/api_chef_server.html">Chef Server API</a> </br>
-
-**Configuration files:**
-
-.. raw:: html
-
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_server.html">chef-server.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_chef_sync.html">chef-sync.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_manage.html">manage.rb</a> </br>
-
-
-**Command line tools:**
-
-.. raw:: html
-
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/ctl_chef_server.html">chef-server-ctl</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/ctl_chef_sync.html">chef-sync-ctl</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/ctl_opscode_expander.html">opscode-expander-ctl</a> </br>
-
-.. note:: This content replaces content for earlier versions of the |chef server|. For the most recent docs for those servers, see http://docs.getchef.com/open_source/ for the Open Source Chef server and http://docs.getchef.com/enterprise/ for the Enterprise Chef server.
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
