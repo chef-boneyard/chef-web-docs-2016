@@ -1,4 +1,7 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/server_data.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
 
-.. include:: ../../chef_master/source/server_data.rst
+=====================================================
+Server Data
+=====================================================
+
+.. include:: ../../includes_server_data/includes_server_data.rst
