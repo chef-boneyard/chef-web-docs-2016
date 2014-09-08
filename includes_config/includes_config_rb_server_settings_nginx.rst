@@ -78,4 +78,4 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['worker_processes']``
      - |worker_processes| Use with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.
    * - ``nginx['x_forwarded_proto']``
-     - |x_forwarded_proto| This is the protocol used to connect to |chef server oec| by a |chef client| or a workstation. Default value: ``"https"``.
+     - |x_forwarded_proto| This is the protocol used to connect to the |chef server| by a |chef client| or a workstation. Default value: ``"https"``.
