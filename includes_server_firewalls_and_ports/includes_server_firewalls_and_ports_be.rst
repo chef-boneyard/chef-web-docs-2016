@@ -14,7 +14,7 @@ For back-end servers in an |chef server| installation:
    * - 443
      - |service nginx|
    * - 9463
-     - **oc_bifrost**
+     - |service bifrost|
    * - 9671
      - |service nginx|
    * - 9680
@@ -23,8 +23,6 @@ For back-end servers in an |chef server| installation:
      - |service nginx|
    * - 9683
      - |service nginx|
-   * - 5984
-     - |service couchdb|
    * - 8983
      - |service solr|
    * - 5432
