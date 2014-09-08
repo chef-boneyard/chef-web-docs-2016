@@ -17,7 +17,7 @@ where ``name_of_premium_feature`` represents the command line value associated w
    :widths: 60 420
    :header-rows: 1
 
-   * - Premium Feature
+   * - Feature
      - Command
    * - Chef Analytics
      - ``chef-server-ctl install opscode-analytics``
