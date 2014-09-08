@@ -18,19 +18,19 @@ where ``name_of_premium_feature`` represents the command line value associated w
    :header-rows: 1
 
    * - Premium Feature
-     - Command Line Value
+     - Command
    * - Chef Analytics
-     - ``opscode-analytics``
+     - ``chef-server-ctl install opscode-analytics``
    * - Chef Manage
-     - ``opscode-manage``
+     - ``chef-server-ctl install opscode-manage``
    * - High Availability
-     - ``chef-ha``	 
+     - ``chef-server-ctl install chef-ha``	 
    * - Push Jobs
-     - ``opscode-push-jobs-server``
+     - ``chef-server-ctl install opscode-push-jobs-server``
    * - Replication
-     - ``chef-sync``
+     - ``chef-server-ctl install chef-sync``
    * - Reporting
-     - ``opscode-reporting``
+     - ``chef-server-ctl install opscode-reporting``
 
 	 
 	 
