@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-|chef server oec| can be configured to use |ssl| certificates by adding the following settings in the |private chef rb| file:
+The |chef server| can be configured to use |ssl| certificates by adding the following settings in the server configuration file:
 
 .. list-table::
    :widths: 200 300
@@ -25,4 +25,4 @@ Save the file, and then run the following command:
 
 .. code-block:: bash
 
-   $ sudo private-chef-ctl reconfigure
+   $ sudo chef-server-ctl reconfigure
