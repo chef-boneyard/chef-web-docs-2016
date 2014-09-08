@@ -5,7 +5,7 @@ At the end of every |chef client| run, the node object is saved to the |chef ser
 
 |solr_update_frequency_caveat|
 
-For |chef server oec|, these settings are configurable in the |enterprise rb| file:
+For |chef server|, these settings are configurable:
 
 .. list-table::
    :widths: 200 300
