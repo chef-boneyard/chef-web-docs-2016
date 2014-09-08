@@ -101,6 +101,14 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
 .. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
 
+#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following command:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl install name_of_premium_feature
+
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``opscode-push-jobs-server`` (for |push jobs|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
+
 Standalone
 -----------------------------------------------------
 This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
@@ -151,6 +159,13 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ chef-server-ctl start
 
+#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following command:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl install name_of_premium_feature
+
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``opscode-push-jobs-server`` (for |push jobs|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
 
 From |chef server osc|
 =====================================================
@@ -205,3 +220,11 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
    The full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``.
 
 #. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporarily data that was created during the upgrade process.
+
+#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following command:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl install name_of_premium_feature
+
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``opscode-push-jobs-server`` (for |push jobs|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
