@@ -35,21 +35,5 @@ But with this example, the ``group``, ``mode``, and ``owner`` attribute values w
 
 This approach will create the correct hierarchy---``/foo``, then ``/bar`` in ``/foo``, and then ``/baz`` in ``/bar``---and also with the correct attribute values for ``group``, ``mode``, and ``owner``.
 
-A similar approach is required when changing the access permissions to directory objects, the owner of a file, or the group associated with a directory object. For example:
-
-.. code-block:: ruby
-
-   %w[ "/usr/local/**/*" ].each do |path|
-     file path do
-       owner "root"
-       group "root"
-     end if File.file?(path)
-     directory path do
-       owner "root"
-       group "root"
-     end if File.directory?(path)
-   end
-
-Though it should be noted that the previous example isn't a great approach when there are a large number of actions that will take place. Consider using the |resource execute| resource and/or a definition to handle use cases that need to support a large number of recursive actions.
 
 
