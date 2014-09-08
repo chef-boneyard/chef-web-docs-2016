@@ -100,7 +100,7 @@ To configure AWS for high availability, first create machines in AWS. Two back-e
 
    .. code-block:: bash
       
-      $ sudo lvcreate -l 80%VG -n data
+      $ sudo lvcreate -l 85%VG -n data chef
 
    then:
 
