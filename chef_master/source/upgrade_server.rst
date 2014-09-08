@@ -1,5 +1,5 @@
 =====================================================
-Upgrade to |chef server| 12
+Upgrade to Chef Server 12
 =====================================================
 The following sections describe the upgrade process for |chef server| 12.
 
