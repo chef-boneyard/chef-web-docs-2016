@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart bookshelf
+   $ chef-server-ctl restart bookshelf
 
 to return something like:
 

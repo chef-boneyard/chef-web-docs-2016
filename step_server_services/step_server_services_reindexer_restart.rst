@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart opscode-expander-reindexer
+   $ chef-server-ctl restart opscode-expander-reindexer
 
 to return something like:
 

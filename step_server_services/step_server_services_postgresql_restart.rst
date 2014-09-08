@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart postgresql
+   $ chef-server-ctl restart postgresql
 
 to return something like:
 

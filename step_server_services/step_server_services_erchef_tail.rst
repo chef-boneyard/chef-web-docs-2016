@@ -5,4 +5,4 @@ To follow the logs for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl tail opscode-erchef
+   $ chef-server-ctl tail opscode-erchef

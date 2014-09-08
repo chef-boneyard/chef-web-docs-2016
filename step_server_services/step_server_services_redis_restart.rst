@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart redis
+   $ chef-server-ctl restart redis
 
 to return something like:
 

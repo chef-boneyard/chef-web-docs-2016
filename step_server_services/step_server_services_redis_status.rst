@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status redis
+   $ chef-server-ctl status redis
 
 to return something like:
 

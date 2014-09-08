@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart opscode-erchef
+   $ chef-server-ctl restart opscode-erchef
 
 to return something like:
 

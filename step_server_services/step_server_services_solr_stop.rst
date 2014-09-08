@@ -5,4 +5,4 @@ To stop the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl stop opscode-solr
+   $ chef-server-ctl stop opscode-solr

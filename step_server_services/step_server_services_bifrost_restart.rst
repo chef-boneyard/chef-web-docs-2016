@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart bifrost
+   $ chef-server-ctl restart bifrost
 
 to return something like:
 

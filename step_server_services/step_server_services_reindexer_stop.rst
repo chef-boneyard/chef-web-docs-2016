@@ -5,4 +5,4 @@ To stop the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl stop opscode-expander-reindexer
+   $ chef-server-ctl stop opscode-expander-reindexer

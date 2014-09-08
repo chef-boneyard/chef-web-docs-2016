@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status nginx
+   $ chef-server-ctl status nginx
 
 to return something like:
 

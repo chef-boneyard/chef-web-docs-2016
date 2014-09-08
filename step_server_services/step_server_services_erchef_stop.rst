@@ -5,4 +5,4 @@ To stop the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl stop opscode-erchef
+   $ chef-server-ctl stop opscode-erchef

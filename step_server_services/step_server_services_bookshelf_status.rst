@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status bookshelf
+   $ chef-server-ctl status bookshelf
 
 to return something like:
 

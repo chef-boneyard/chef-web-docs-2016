@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status keepalived
+   $ chef-server-ctl status keepalived
 
 to return something like:
 

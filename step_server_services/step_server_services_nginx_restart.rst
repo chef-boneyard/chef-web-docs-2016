@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart nginx
+   $ chef-server-ctl restart nginx
 
 to return something like:
 

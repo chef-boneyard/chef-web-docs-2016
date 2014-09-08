@@ -5,4 +5,4 @@ To kill the service (send a ``SIGKILL`` command):
 
 .. code-block:: bash
 
-   $ private-chef-ctl kill opscode-solr
+   $ chef-server-ctl kill opscode-solr

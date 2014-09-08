@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart opscode-expander
+   $ chef-server-ctl restart opscode-expander
 
 to return something like:
 

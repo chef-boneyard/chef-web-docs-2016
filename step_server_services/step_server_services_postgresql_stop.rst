@@ -5,4 +5,4 @@ To stop the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl stop postgresql
+   $ chef-server-ctl stop postgresql

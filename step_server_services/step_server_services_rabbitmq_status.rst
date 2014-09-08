@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status rabbitmq
+   $ chef-server-ctl status rabbitmq
 
 to return something like:
 

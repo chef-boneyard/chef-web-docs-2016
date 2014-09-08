@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart rabbitmq
+   $ chef-server-ctl restart rabbitmq
 
 to return something like:
 

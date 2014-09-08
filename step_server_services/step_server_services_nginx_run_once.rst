@@ -5,4 +5,4 @@ To run the service, but not restart it (if the service fails):
 
 .. code-block:: bash
 
-   $ private-chef-ctl once nginx
+   $ chef-server-ctl once nginx

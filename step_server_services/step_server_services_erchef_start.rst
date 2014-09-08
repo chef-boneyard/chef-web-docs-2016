@@ -5,4 +5,4 @@ To start the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl start opscode-erchef
+   $ chef-server-ctl start opscode-erchef

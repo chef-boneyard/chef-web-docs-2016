@@ -5,4 +5,4 @@ To start the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl start bookshelf
+   $ chef-server-ctl start bookshelf

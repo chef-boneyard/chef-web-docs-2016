@@ -5,4 +5,4 @@ To start the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl start opscode-expander-reindexer
+   $ chef-server-ctl start opscode-expander-reindexer

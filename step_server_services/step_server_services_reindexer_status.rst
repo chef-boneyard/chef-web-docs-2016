@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status opscode-expander-reindexer
+   $ chef-server-ctl status opscode-expander-reindexer
 
 to return something like:
 

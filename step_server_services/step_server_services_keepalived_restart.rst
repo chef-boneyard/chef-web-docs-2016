@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart keepalived
+   $ chef-server-ctl restart keepalived
 
 to return something like:
 

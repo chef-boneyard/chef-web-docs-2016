@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status postgresql
+   $ chef-server-ctl status postgresql
 
 to return something like:
 

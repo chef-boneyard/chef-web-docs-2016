@@ -5,7 +5,7 @@ To view the status for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl status opscode-erchef
+   $ chef-server-ctl status opscode-erchef
 
 to return something like:
 

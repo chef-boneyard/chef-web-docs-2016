@@ -5,4 +5,4 @@ To follow the logs for the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl tail bifrost
+   $ chef-server-ctl tail bifrost

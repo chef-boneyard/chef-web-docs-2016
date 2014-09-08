@@ -5,4 +5,4 @@ To kill the service (send a ``SIGKILL`` command):
 
 .. code-block:: bash
 
-   $ private-chef-ctl kill name_of_service
+   $ chef-server-ctl kill name_of_service

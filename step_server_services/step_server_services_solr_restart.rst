@@ -5,7 +5,7 @@ To restart the service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl restart opscode-solr
+   $ chef-server-ctl restart opscode-solr
 
 to return something like:
 
