@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-e DIRECTORY``, ``--chef12-data-dir DIRECTORY``
-   The directory in which Chef server 12 data is located. Default value: a temporary directory.
+   The directory in which |chef server| version 12 data is located. Default value: a temporary directory.
 
 ``-h``, ``--help``
    Use to show help for the ``chef-server-ctl upgrade`` subcommand.
@@ -15,4 +15,4 @@ This subcommand has the following options:
    The number of threads to use when migrating cookbooks. Default value: ``10``.
 
 ``-x URL``, ``--chef12-server-url URL``
-   The URL for the Chef server, version 12. Default value: ``https://localhost``.
+   The URL for the |chef server| version 12. Default value: ``https://localhost``.

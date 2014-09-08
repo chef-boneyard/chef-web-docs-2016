@@ -27,18 +27,12 @@ will return something similar to:
 
 .. code-block:: bash
 
-   ok: down: couchdb: 394s, normally up
    ok: down: nginx: 393s, normally up
-   ok: down: opscode-account: 393s, normally up
-   ok: down: opscode-authz: 392s, normally up
-   ok: down: opscode-certificate: 392s, normally up
    ok: down: opscode-chef: 391s, normally up
    ok: down: opscode-erchef: 391s, normally up
    ok: down: opscode-expander: 390s, normally up
    ok: down: opscode-expander-reindexer: 389s, normally up
-   ok: down: opscode-org-creator: 389s, normally up
-   ok: down: opscode-solr: 389s, normally up
-   ok: down: opscode-webui: 388s, normally up
+   ok: down: opscode-solr4: 389s, normally up
    ok: down: postgresql: 388s, normally up
    ok: down: rabbitmq: 388s, normally up
-   ok: down: redis: 387s, normally up
+   ok: down: redis_lb: 387s, normally up

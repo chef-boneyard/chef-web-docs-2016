@@ -34,8 +34,8 @@ Otherwise it will print out a list of errors, similar to the following:
 
    ...
    [OK] nginx is running correctly, and I am master.
-   [ERROR] nrpe is not running.
-   [OK] opscode-account is running correctly, and I am master.
+   [ERROR] redis_lb is not running.
+   [OK] opscode-erchef is running correctly, and I am master.
    ...
    [ERROR] ERRORS WERE DETECTED.
 

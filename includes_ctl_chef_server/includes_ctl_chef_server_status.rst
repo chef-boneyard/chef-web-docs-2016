@@ -40,9 +40,7 @@ By default, |runit| will restart services automatically when the services fail. 
 
 .. code-block:: bash
 
-   run: opscode-account: (pid 3912) 13706s; run: log: (pid 3911) 13706s
-   run: opscode-authz: (pid 3804) 13718s; run: log: (pid 3803) 13718s
-   run: opscode-certificate: (pid 3866) 13712s; run: log: (pid 3865) 13712s
+   run: oc-id
    run: opscode-chef: (pid 4327) 13671s; run: log: (pid 4326) 13671s
    run: opscode-erchef: (pid 5383) 5s; run: log: (pid 4382) 13669s
    run: opscode-expander: (pid 4078) 13694s; run: log: (pid 4077) 13694s

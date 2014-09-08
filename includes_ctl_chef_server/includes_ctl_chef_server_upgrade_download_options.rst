@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-d DIRECTORY``, ``--chef11-data-dir DIRECTORY``
-   The directory in which Open Source Chef server 11 data is located. Default value: a temporary directory.
+   The directory in which |chef server osc| 11 data is located. Default value: a temporary directory.
 
 ``-h``, ``--help``
    Use to show help for the ``chef-server-ctl upgrade`` subcommand.
@@ -15,7 +15,7 @@ This subcommand has the following options:
    |file public_key| Default value: ``/etc/chef-server/admin.pem``.
 
 ``-s URL``, ``--chef11-server-url URL``
-   The URL for the Open Source Chef or Enterprise Chef server, version 11. Default value: ``https://localhost``.
+   The URL for the |chef server osc| or |chef server oec| server, version 11. Default value: ``https://localhost``.
 
 ``-u USER``, ``--user``
    |admin client|
