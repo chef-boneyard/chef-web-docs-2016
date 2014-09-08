@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl upgrade
+   $ chef-server-ctl upgrade (options)
