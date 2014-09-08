@@ -5,7 +5,6 @@ To configure backups on the backend servers in a |ha| configuration, set a |cron
 
 .. code-block:: bash
 
-   # rendered by private-chef-ctl reconfigure, do not modify
    # Add to /etc/cron.d/opc_snapshot, and then remove comment below MAILTO to activate the cron job
    SHELL=/bin/bash
    HOME=/opt/opscode/bin
