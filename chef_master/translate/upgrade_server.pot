@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-08 14:52-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/upgrade_server.rst:8
+# d75ef4c20e6a40d498d02e76aa8844ba
+msgid "Upgrade to |chef server| 12"
+msgstr ""
+
+#: ../source/upgrade_server.rst:9
+# bfaa782e602f4059a3d541a315c057c2
+msgid "The following sections describe the upgrade process for |chef server| 12."
+msgstr ""
+
+#: ../source/upgrade_server.rst:12
+# 122b655a97464b4486d084c2cdce8fb1
+msgid "From |chef server oec|"
+msgstr ""
+
+#: ../source/upgrade_server.rst:13
+# 932a61e72f6d49459b4e6e72afcbd952
+msgid "There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: high availability and standalone."
+msgstr ""
+
+#: ../source/upgrade_server.rst:16
+# af9e0eec135d4412bbfdc64b302e51c3
+msgid "High Availability"
+msgstr ""
+
+#: ../source/upgrade_server.rst:17
+# 71c42bbf6c894905b05e838ab964d75b
+msgid "This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete."
+msgstr ""
+
+#: ../source/upgrade_server.rst:19
+# 030ef3b8f0ce4f8bba187e624aef4e54
+msgid "To upgrade to |chef server| 12 from a high availability |chef server oec| server, do the following:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:21
+# 2ce823e936f74485b36c167e044f5fd4
+msgid "Run the following on all machines to make sure all services are in a sane state."
+msgstr ""
+
+#: ../source/upgrade_server.rst:27
+# d0645279fa734f19abee70ff62bac6b9
+msgid "Stop all of the front end machines:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:33
+# b78a77d78dc44949b86b78ba530de357
+msgid "Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``."
+msgstr ""
+
+#: ../source/upgrade_server.rst:35
+# b2976c81683e441f879e248e779933d3
+msgid "Stop |keepalived| on the original non-bootstrap backend machine. This will ensure that the bootstrap back end machine is the active machine. This action may trigger a failover."
+msgstr ""
+
+#: ../source/upgrade_server.rst:41
+# de905cf6684a4da98247f05e1f49da98
+msgid "Once failover is complete, stop the remaining services on the back end machines."
+msgstr ""
+
+#: ../source/upgrade_server.rst:47
+# 949fad73d1964695956514d4ffd218f7
+msgid "Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:53
+#: ../source/upgrade_server.rst:141
+#: ../source/upgrade_server.rst:201
+# 44bcb28ea20649fdba5a7e8555130467
+# 53ad65927d8d451fb79b2316d77c039f
+# 648639125c2b4abaae768407cdfb3185
+msgid "where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option."
+msgstr ""
+
+#: ../source/upgrade_server.rst:55
+#: ../source/upgrade_server.rst:143
+#: ../source/upgrade_server.rst:203
+# 53cb129cf22c4f3db387cc6c49684cba
+# 64de7d25563c4045a43161aeccba4070
+# 15504c9bfe40443bbb84ce62eaa0a15c
+msgid "For |rpm|:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:61
+# e9d2f84c9ee14882bf2780defdbf9fe2
+msgid "Upgrade the back end primary machine with the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:67
+# 4d7895175dd943f58e150418aa492088
+msgid "If the upgrade process times out, re-run the command until it finishes successfully."
+msgstr ""
+
+#: ../source/upgrade_server.rst:69
+# 065059a855e54927ba833bf6892ae3d4
+msgid "Copy the entire /etc/opscode directory from the back end primary machine to all front and back end nodes. For example, from each server run:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:75
+# 658f8af5d3064826bd463c8c65d3dfb0
+msgid "or from the back end primary machine:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:81
+# 0aa17005968e4974897945f27b8ca626
+msgid "Upgrade the back end secondary machine with the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:87
+# af841a590e6d4aa9ad1465cae2d8856a
+msgid "In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine."
+msgstr ""
+
+#: ../source/upgrade_server.rst:89
+# 8279153e73354e05ae2e583e5e9c2920
+msgid "Upgrade all front end machines with the following commands:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:95
+# a0671dcbc75b473ca7663f5a5c73b5ff
+msgid "Run the following command on all front end and back end machines:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:101
+# a6084dec6c2a4024a980cb88e64bd7a8
+msgid "After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:107
+# 495ab56b57104a9591919aa371c30011
+msgid "The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore."
+msgstr ""
+
+#: ../source/upgrade_server.rst:109
+#: ../source/upgrade_server.rst:167
+#: ../source/upgrade_server.rst:229
+# a46493d2ba384515b2872659d08c2560
+# 69e44d76b0194e65a540eeb51d91dcd4
+# 4c367ce6c644470bae3bc35f3448220e
+msgid "Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:115
+#: ../source/upgrade_server.rst:173
+#: ../source/upgrade_server.rst:235
+# 427508132c0544339c1c18c37c6d0072
+# c0181c42d4df403880ddcb7ec51f63f3
+# 9386e1ab60d14bc08efbf0f5511093ce
+msgid "where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|)."
+msgstr ""
+
+#: ../source/upgrade_server.rst:118
+# 4e0e4ca3d1d7421eb1b99fc2b53f0b6b
+msgid "Standalone"
+msgstr ""
+
+#: ../source/upgrade_server.rst:119
+# 095b3bfd2a2d44e4837bd2bcd4809273
+msgid "This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete."
+msgstr ""
+
+#: ../source/upgrade_server.rst:121
+# b7ab063a432740bfbe012bb810dc3e2b
+msgid "To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:123
+# 7e60d6a0818a4af08c164fdbd8b839ad
+msgid "Run the following command to make sure all services are in a sane state."
+msgstr ""
+
+#: ../source/upgrade_server.rst:129
+# d566b884206c4a0ea2039d1ab97e81c8
+msgid "Stop the machine:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:135
+# 7d45aedb3b0b4d8595b93f8bfec65d1d
+msgid "Run |debian dpkg| or |rpm|. For |debian dpkg|:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:149
+#: ../source/upgrade_server.rst:211
+# 5f0ad720bf2a481b82686991ea76ea36
+# 98f6834d81214e22b7a9877c77878eb2
+msgid "Upgrade the machine with the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:155
+# f7cb9c2cd23e48c88b2a6227cdc77ae1
+msgid "After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:161
+# dee09e3ddcba40ec8828759d27eea947
+msgid "Start |chef server| 12:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:176
+# 3a0462cd430a4148bc1363c5b91aca85
+msgid "From |chef server osc|"
+msgstr ""
+
+#: ../source/upgrade_server.rst:177
+# 8f9df1430c8e44b79d68200fb33b81da
+msgid "This section describes the upgrade process from a standalone configuration of |chef server osc| 11 to a standalone configuration of |chef server| version 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine."
+msgstr ""
+
+#: ../source/upgrade_server.rst:179
+# c66e3b89d26a4336846021cf1a931893
+msgid "Please :doc:`view the notes </upgrade_server_open_source_notes>` for more background on the upgrade process from from |chef server osc| 11 to |chef server| 12."
+msgstr ""
+
+#: ../source/upgrade_server.rst:181
+# 783cbd598b904cd0a223918db0d03624
+msgid "To upgrade to |chef server| 12 from the |chef server osc| server, do the following:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:183
+# 9962d71e17df4ba2b1bbd5633fc04739
+msgid "Run the following to make sure all services are in a sane state."
+msgstr ""
+
+#: ../source/upgrade_server.rst:189
+# ac9a1d45c2b6494c93c0f9af3a4deaa1
+msgid "Stop the |chef server osc| server:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:195
+# 9453d4f03fdb494080ae7aca8e1a8462
+msgid "Run |debian dpkg| or |rpm| on the machine to install |chef server| version 12. For |debian dpkg|:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:209
+# 6aff8a88641149d1ad0d60bb4fe63d44
+msgid "|chef server| 12 is installed to ``/opt/opscode``. (The existing |chef server osc| remains at ``/opt/chef-server``.) From this point, the ``chef-server-ctl`` commands are running against the ``/opt/opscode`` location."
+msgstr ""
+
+#: ../source/upgrade_server.rst:217
+# af689934d9b94cf8ba7b622ec16d214e
+msgid "The upgrade process will automatically detect the presence of |chef server osc| 11, and will step through the migration process, prompting for organization name details along the way."
+msgstr ""
+
+#: ../source/upgrade_server.rst:219
+# 0e7667d8b4d4465da2c76e10c07df851
+msgid "The migration process will first download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| version 12, and then upload that data to the server."
+msgstr ""
+
+#: ../source/upgrade_server.rst:221
+# 4a8d6e5f7fba4e87835d5e040adc855e
+msgid "Before data can be uploaded, an organization must be created. When prompted, enter the organization name, and then a full organization name."
+msgstr ""
+
+#: ../source/upgrade_server.rst:223
+# 515d0e0335174b7789726b34a9f4bb1d
+msgid "The organization name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``."
+msgstr ""
+
+#: ../source/upgrade_server.rst:225
+# 7435abcd231245bc87b7f8681ebdcee7
+msgid "The full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``."
+msgstr ""
+
+#: ../source/upgrade_server.rst:227
+# e816b53560004e518711dae554b1d0a4
+msgid "The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporarily data that was created during the upgrade process."
+msgstr ""
+

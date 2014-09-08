@@ -1,0 +1,714 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-08 14:52-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/knife_search.rst:8
+# aa7418c557f742aeb288c5290d23b38a
+msgid "knife search"
+msgstr ""
+
+#: ../../includes_search/includes_search.rst:4
+# f8500a8d8b1f4112b4a96fd33e18ed76
+msgid "Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. A defined query syntax is used to support search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the ``search`` subcommand in |knife|, or by using the ``/search`` or ``/search/INDEX`` endpoints in the |api chef server|. The search engine is based on |apache solr| and is run from the |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search.rst:6
+# 0820a46210a64c8d977e864bf92d3b03
+msgid "The |subcommand knife search| subcommand is used run a search query for information that is indexed on a |chef server|."
+msgstr ""
+
+#: ../source/knife_search.rst:15
+# 88643ba25b084a128f1cce3f811cf584
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_syntax.rst:6
+# 8cd4b62ec40b4e918be10df53184b1c3
+msgid "This subcommand has the following syntax:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_syntax.rst:12
+# 4b96f14ec94649f58a550c6d3076ac9e
+msgid "where ``INDEX`` is one of ``client``, ``environment``, ``node``, ``role``, or the name of a data bag and ``SEARCH_QUERY`` is the search query syntax for the query that will be executed."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_syntax.rst:14
+# 786dc988bf1d46d8ad2c03a53b0c2854
+msgid "``INDEX`` is implied if omitted, and will default to ``node``. For example:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_syntax.rst:20
+# 56b0816662074064b25e1da0dfea118d
+msgid "will return something similar to:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_syntax.rst:35
+# d058cdb778d444618be6be85c5d4c33f
+msgid "and is the same search as:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_syntax.rst:41
+# 0291028960354ed08282264acc949a83
+msgid "If the ``SEARCH_QUERY`` does not contain a colon character (``:``), then the default query pattern is ``tags:*#{@query}* OR roles:*#{@query}* OR fqdn:*#{@query}* OR addresses:*#{@query}*``, which means the following two search queries are effectively the same:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_syntax.rst:47
+#: ../../includes_search/includes_search_key_nested.rst:79
+#: ../../includes_search/includes_search_key_nested.rst:85
+#: ../../step_search/step_search_pattern_wildcard_node_contains.rst:9
+#: ../../step_search/step_search_pattern_wildcard_node_contains.rst:15
+#: ../../step_search/step_search_pattern_wildcard_node_contains.rst:21
+#: ../../step_knife/step_knife_search_by_recipe.rst:9
+# 0d648b43d43a4dd9b068e5921476d7ee
+# 0ebe0f01553544df91c29c9b56399d4d
+# 4dbd4bf2b9b746b4a23c5772d518e907
+# a04282ee2f3646eaa79508b1ba3e8269
+# 4a553d36f3474d0d9ae050b0974f9e48
+# e59f0846f9544e3c9c00435eee8627fe
+# f752a411d3244290bea4f2eeb1e33c38
+msgid "or:"
+msgstr ""
+
+#: ../source/knife_search.rst:19
+# f7ed0399d7a04ced911c463d53e703ec
+msgid "Query Syntax"
+msgstr ""
+
+#: ../../includes_search/includes_search_query_syntax.rst:5
+# ac600f0f462b45d7ae9819a66046930b
+msgid "|search query syntax| A search query has the following syntax:"
+msgstr ""
+
+#: ../../includes_search/includes_search_query_syntax.rst:11
+# 06068113bb05442aab8037da89a132ce
+msgid "where ``key`` is a field name that is found in the |json| description of an indexable object on the |chef server| (a role, node, client, environment, or data bag) and ``search_pattern`` defines what will be searched for, using one of the following search patterns: exact, wildcard, range, or fuzzy matching. Both ``key`` and ``search_pattern`` are case-sensitive; ``key`` has limited support for multiple character wildcard matching using an asterisk (\"*\") (and as long as it is not the first character)."
+msgstr ""
+
+#: ../source/knife_search.rst:23
+# 3a23d5209eda46b1bcbd1f3798fc0ed8
+msgid "About Keys"
+msgstr ""
+
+#: ../../includes_search/includes_search_key.rst:5
+# 51b342f8fb1744b08a40814a9526f749
+msgid "|search key| Any key that exists in any |json| description for any role, node, |chef client|, environment, or data bag can be searched. To search for the available keys for a particular object, use the ``show`` argument with any of the following |knife| sub-commands: |subcommand knife client|, |subcommand knife data bag|, |subcommand knife environment|, |subcommand knife node|, or |subcommand knife role|. For example: ``knife data bag show``."
+msgstr ""
+
+#: ../source/knife_search.rst:27
+# b4aee1a829654b63b0dea5ce9ebd7994
+msgid "Nested Fields"
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:5
+# 4e3d9dac575745f3a10dc3e13e577e6a
+msgid "A nested key is a key that appears deeper in the |json| data structure. For example, information about a network interface might be several layers deep: ``node[:network][:interfaces][:en1]``. When nested keys are present in a |json| structure, the |chef client| will extract those nested fields to the top-level, flattening them into compound keys that support wildcard search patterns."
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:7
+# 9f83654522d6402d836315e6dc9dc138
+msgid "By combining wildcards with range-matching patterns and wildcard queries, it is possible to perform very powerful searches, such as using the vendor part of the MAC address to find every node that has a network card made by the specified vendor."
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:9
+# 6c3281bdd7094402ad75fbb79917b97c
+msgid "Consider the following snippet of |json| data:"
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:65
+# 1c609410aadf45e7baf893e4994da5c4
+msgid "Before this data is indexed on the |chef server|, the nested fields are extracted into the top level, similar to:"
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:73
+#: ../../includes_search/includes_search_key_nested.rst:101
+# ea8a12c11518415a83e4b6e7c9a3ec6f
+# 723867b8ef2347e1bbaeccb03fb25760
+msgid "which allows searches like the following to find data that is present in this node:"
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:91
+# babb7aaa7a0544ebb602e7c2d21db314
+msgid "This data is also flattened into various compound keys, which follow the same pattern as the |json| hierarchy and use underscores (``_``) to separate the levels of data, similar to:"
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:107
+# f3b1e2f5e42746a397b525db5d192b5e
+msgid "This flattened data structure also supports using wildcard compound keys, which allow searches to omit levels within the |json| data structure that are not important to the search query. In the following example, an asterisk (``*``) is used to show where the wildcard can exist when searching for nested key:"
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:118
+# 2d6d1329b16a4b779a4b54abfc7c896a
+msgid "For each of the wildcard examples above, the possible values are shown contained within the brackets. When running a search query, the query syntax for wildcards is to simply omit the name of the node (while preserving the underscores), similar to:"
+msgstr ""
+
+#: ../../includes_search/includes_search_key_nested.rst:124
+# c02bbc8ba7dc493aacebd823374b1a16
+msgid "This query will search within the ``flags`` node, within the |json| structure, for each of ``UP``, ``BROADCAST``, ``SMART``, ``RUNNING``, ``SIMPLEX``, and ``MULTICAST``."
+msgstr ""
+
+#: ../source/knife_search.rst:31
+#: ../source/knife_search.rst:103
+# 73ebaa6b406f4ab3bc57720ce3675917
+# 725807a36de64ec4abfa40f7b3474947
+msgid "Examples"
+msgstr ""
+
+#: ../../step_search/step_search_key_name.rst:3
+# 9ce11e81e5b349d6bfdf4034f86e164d
+msgid "To see the available keys for a node, enter the following (for a node named ``staging``):"
+msgstr ""
+
+#: ../../step_search/step_search_key_name.rst:9
+# a373946610794918bb077b1e0590dcc9
+msgid "to return a full |json| description of the node and to view the available keys with which any search query can be based."
+msgstr ""
+
+#: ../../step_search/step_search_key_wildcard_question_mark.rst:3
+# 8acd5263a99840fb959f6709e3c489d9
+msgid "To use a question mark (``?``) to replace a single character in a wildcard search, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_key_wildcard_asterisk.rst:3
+# a7f7cc0b188c48b180d8bac3d00c2965
+msgid "To use an asterisk (``*``) to replace zero (or more) characters in a wildcard search, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_key_nested_starting_with.rst:3
+# 8d8a7f78995e45c88e47ac327e7c1e76
+msgid "To find all IP address that are on the same network, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_key_nested_starting_with.rst:9
+# ebae372472244f678dc504a272738f6e
+msgid "where ``192.168*`` is the network address for which the search will be run."
+msgstr ""
+
+#: ../../step_search/step_search_key_nested_range.rst:3
+# d83492a00aa94b31910227295f3e39fe
+msgid "To use a range search to find IP addresses within a subnet, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_key_nested_range.rst:9
+# 65e8bd1e55ab496d8b57456d207bac03
+msgid "where ``192.168.0.* TO 192.168.127.*`` defines the subnet range."
+msgstr ""
+
+#: ../source/knife_search.rst:43
+# add2d2f452234e889baa41795e7bb7cc
+msgid "About Patterns"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern.rst:5
+# d723a86a18ac4e1fa1c3d36f3837b68d
+msgid "|search pattern| There are four types of search patterns that can be used when searching the search indexes on the |chef server|: exact, wildcard, range, and fuzzy."
+msgstr ""
+
+#: ../source/knife_search.rst:47
+# 29b5a3f6cd634dcd837473d2d492a7fb
+msgid "Exact Matching"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_exact.rst:5
+# fa57a404e13b4bbc9efd74cc8126fbdb
+msgid "An exact matching search pattern is used to search for a key with a name that exactly matches a search query. If the name of the key contains spaces, quotes must be used in the search pattern to ensure the search query finds the key. The entire query must also be contained within quotes, so as to prevent it from being interpreted by |ruby| or a command shell. The best way to ensure that quotes are used consistently is to quote the entire query using single quotes (' ') and a search pattern with double quotes (\" \")."
+msgstr ""
+
+#: ../../step_search/step_search_pattern_exact_key_and_item.rst:3
+# 319a1ec61a6b4c658893430b17fecc7b
+msgid "To search in a specific data bag for a specific data bag item, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_exact_key_and_item.rst:9
+# 7580567eb5d141f2bf951800cb57f7ff
+msgid "where ``admins`` is the name of the data bag and ``charlie`` is the name of the data bag item. Something similar to the following will be returned:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_exact_key_and_item_string.rst:3
+# fe8db9003e194ed2ae270a760773affd
+msgid "To search in a specific data bag using a string to find any matching data bag item, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_exact_key_and_item_string.rst:9
+# 136c017f049f4d509a7b605a5a9231db
+msgid "where ``admins`` is the name of the data bag and ``Charlie the Unicorn`` is the string that will be used during the search. Something similar to the following will be returned:"
+msgstr ""
+
+#: ../source/knife_search.rst:55
+# 4b42c57108d24495946ee9cffde7c203
+msgid "Wildcard Matching"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_wildcard.rst:5
+# 826cef09f24e4657a93acdf64cafec81
+msgid "A wildcard matching search pattern is used to query for substring matches that replace zero (or more) characters in the search pattern with anything that could match the replaced character. There are two types of wildcard searches:"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_wildcard.rst:7
+# b079319c008d426e80d947fc9413da1b
+msgid "A question mark (``?``) can be used to replace exactly one character (as long as that character is not the first character in the search pattern)"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_wildcard.rst:8
+# a90faaf8bf724137980d229162bde29c
+msgid "An asterisk (``*``) can be used to replace any number of characters (including zero)"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_wildcard_any_node.rst:3
+# a4cc1a2385f94227aff44a05ca6fcb1a
+msgid "To search for any node that contains the specified key, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_wildcard_any_node.rst:9
+# 3346802e2669460d965c080f43fd3978
+msgid "where ``foo`` is the name of the node."
+msgstr ""
+
+#: ../../step_search/step_search_pattern_wildcard_node_contains.rst:3
+# 6a5951a5733a44bc9ac7de4c6e15237c
+msgid "To search for a node using a partial name, enter one of the following:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_wildcard_node_contains.rst:27
+# 9be338fb4a844e6abf6d2029ef532c88
+msgid "to return ``app1.example.com`` (and any other node that matches any of the string searches above)."
+msgstr ""
+
+#: ../source/knife_search.rst:63
+# caedcc38f36a4496b21e8549244f4940
+msgid "Range Matching"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_range.rst:5
+# 55d27562b31d467ca8e27e81de1565ff
+msgid "A range matching search pattern is used to query for values that are within a range defined by upper and lower boundaries. A range matching search pattern can be inclusive or exclusive of the boundaries. Use square brackets (\"[ ]\") to denote inclusive boundaries and curly braces (\"{ }\") to denote exclusive boundaries and with the following syntax:"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_range.rst:11
+# a09d4061bd8349788ee6db58e137eea6
+msgid "where ``TO`` is required (and must be capitalized)."
+msgstr ""
+
+#: ../../step_search/step_search_pattern_range_in_between.rst:3
+# 1de79d1bf88c45d580c21f1147722acd
+msgid "A data bag named ``sample`` contains four data bag items: ``abc``, ``bar``, ``baz``, and ``quz``. All of the items in-between ``bar`` and ``foo``, inclusive, can be searched for using an inclusive search pattern."
+msgstr ""
+
+#: ../../step_search/step_search_pattern_range_in_between.rst:5
+# 675afe641a1f42e7926e75118fea7eb4
+msgid "To search using an inclusive range, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_range_in_between.rst:11
+# f5c08bc6cdc9474f92de7a8ff96c47f1
+msgid "where square brackets (``[ ]``) are used to define the range."
+msgstr ""
+
+#: ../../step_search/step_search_pattern_range_exclusive.rst:3
+# d3b67694e49f4b358b8071011e479fa6
+msgid "A data bag named ``sample`` contains four data bag items: ``abc``, ``bar``, ``baz``, and ``quz``. All of the items that are exclusive to ``bar`` and ``foo`` can be searched for using an exclusive search pattern."
+msgstr ""
+
+#: ../../step_search/step_search_pattern_range_exclusive.rst:5
+# 69873307c1ec44dea662d0d191f21a19
+msgid "To search using an exclusive range, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_range_exclusive.rst:11
+# a2f59470a66e4a39964358e352ba1840
+msgid "where curly braces (``{ }``) are used to define the range."
+msgstr ""
+
+#: ../source/knife_search.rst:71
+# 3fe440fbe7c6460a9201f2bf9db1f747
+msgid "Fuzzy Matching"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_fuzzy.rst:5
+# c8246b8babaf4273a5d10b25383f7ff6
+msgid "A fuzzy matching search pattern is used to search based on the proximity of two strings of characters. An (optional) integer may be used as part of the search query to more closely define the proximity. A fuzzy matching search pattern has the following syntax:"
+msgstr ""
+
+#: ../../includes_search/includes_search_pattern_fuzzy.rst:11
+# 98861f0d6c8e4aaa94be91509e361b20
+msgid "where ``search_query`` is the string that will be used during the search and ``edit_distance`` is the proximity. A tilde (\"~\") is used to separate the edit distance from the search query."
+msgstr ""
+
+#: ../../step_search/step_search_pattern_fuzzy.rst:3
+# 23d47a9fd811476aa4e7f43a7b44525e
+msgid "To use a fuzzy search pattern enter something similar to:"
+msgstr ""
+
+#: ../../step_search/step_search_pattern_fuzzy.rst:9
+# 33bfa82df7f5438b93c1d8cac796e384
+msgid "where ``boo~`` defines the fuzzy search pattern. This will return something similar to:"
+msgstr ""
+
+#: ../source/knife_search.rst:77
+# 6368980a719d4e278f05c22fc15854f9
+msgid "About Operators"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:5
+# eb60577d15af4346b71bd26b1041d01b
+msgid "|search operator| Searches can use the following operators:"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:11
+# 5326d7e084294d14a2cad2a616e04dfd
+msgid "Operator"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:12
+# e304ca6d818140af9b44a36eee301735
+msgid "Description"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:13
+# ef24aba8b6b54bcfb1638d965db2764b
+msgid "``AND``"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:14
+# d80f2f43335f4f7db3331e88a864b9ff
+msgid "Use to find a match when both terms exist."
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:15
+# 127a0ed564814bd3bc9f92e869080514
+msgid "``OR``"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:16
+# 39bb1de03ace4e0ab97bfaef360ff9e9
+msgid "Use to find a match if either term exists."
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:17
+# d1990fec8aac470291eeef51475fd80e
+msgid "``NOT``"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:18
+# feb6f1524b294338aac3cea11e1cf0c3
+msgid "Use to exclude the term after NOT from the search results."
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:20
+# 5400361a29b54e5faf3e4bf6ad3269e8
+msgid "Operators must be in ALL CAPS. Parentheses can be used to group clauses and to form sub-queries."
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:22
+# abe069cf856e424993f0ef38c858c3d8
+msgid "Using ``AND NOT`` together may trigger an error. For example:"
+msgstr ""
+
+#: ../../includes_search/includes_search_boolean_operators.rst:30
+# ba01ec2a00fc4a5ea6df78a3eaa14829
+msgid "Use ``-`` instead of ``NOT``. For example:"
+msgstr ""
+
+#: ../source/knife_search.rst:81
+# 6ea9c74835064adf8219891b70b3be46
+msgid "AND"
+msgstr ""
+
+#: ../../step_search/step_search_boolean_and.rst:3
+# 4a0e4d0b54834e918fdc7c9d7cb8af96
+msgid "To join queries using the ``AND`` boolean operator, enter the following:"
+msgstr ""
+
+#: ../../step_search/step_search_boolean_and.rst:9
+#: ../../step_search/step_search_boolean_and.rst:31
+#: ../../step_search/step_search_boolean_not.rst:9
+#: ../../step_search/step_search_boolean_or.rst:9
+#: ../../step_knife/step_knife_search_by_platform_ids.rst:10
+#: ../../step_knife/step_knife_search_by_platform_instance_type.rst:10
+# e2298202d0ed4d73b47138f82453863d
+# b26cc64770a14bb9bd2aff9ad6c154da
+# 4ce9021f444d414c9570062db6c6eb66
+# 5bd60c9e12b347498f3d6830a1ff8ebc
+# 904beaa14ba24ba697dee3ed48f29683
+# bf805c15856e406295129d78a6fed1bc
+msgid "to return something like:"
+msgstr ""
+
+#: ../../step_search/step_search_boolean_and.rst:25
+# 4126b38cdc9b4710a78ba970e594e99a
+msgid "Or, to find all of the computers running on the |windows| platform that are associated with a role named ``jenkins``, enter:"
+msgstr ""
+
+#: ../source/knife_search.rst:85
+# 3f9789157cb249f4bda3de46b4935aab
+msgid "NOT"
+msgstr ""
+
+#: ../../step_search/step_search_boolean_not.rst:3
+# d7f8116d3e1b435884604ae2f475893a
+msgid "To negate search results using the ``NOT`` boolean operator, enter the following:"
+msgstr ""
+
+#: ../source/knife_search.rst:89
+# e4c3a4c28ae743b29d1ced29b2702c2a
+msgid "OR"
+msgstr ""
+
+#: ../../step_search/step_search_boolean_or.rst:3
+# a3583be8d0564959a809de4562c6b0c7
+msgid "To join queries using the ``OR`` boolean operator, enter the following:"
+msgstr ""
+
+#: ../source/knife_search.rst:93
+# 9c33cd231d06472d81846027ae0f7509
+msgid "Special Characters"
+msgstr ""
+
+#: ../../includes_search/includes_search_special_characters.rst:5
+# c71c20a0b5da47db9eaefc0a45e18b0e
+msgid "|search special character| The following characters can be included within the search query syntax, but each occurrence of a special character must be escaped with a backslash (``\\``):"
+msgstr ""
+
+#: ../../includes_search/includes_search_special_characters.rst:11
+# 290626f60dd443cc8327b46e9bf65ffb
+msgid "For example:"
+msgstr ""
+
+#: ../source/knife_search.rst:97
+# e950a07a3ec34d6093bbceca8fccc518
+msgid "Options"
+msgstr ""
+
+#: ../source/knife_search.rst:98
+# 2b182a89825944b08ec81bd0be2451f2
+msgid "Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:6
+# 6e105ae9191c4184b70b6018fd752b54
+msgid "This sub-command has the following options:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:9
+# 75865f309f104395909458b925e81e24
+msgid "``-a ATTR``, ``--attribute ATTR``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:9
+# 07502d134d6f41f1b7b1a5adf84bc01b
+msgid "|attribute_show|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:12
+# 45cb68554f2e43269fba688eeb9feb02
+msgid "``-b ROW``, ``--start ROW``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:12
+# 6e72c8f1f52b439dbce4265cd3aa4deb
+msgid "|start|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:15
+# 6cf42065bcec42f7a63184ba4064eb9a
+msgid "``-i``, ``--id-only``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:15
+# 993b7e093a8d43bd94505c2b6109c10d
+msgid "|id-only|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:18
+# aa91831dbf224e17ab004c27ebe2c077
+msgid "``INDEX``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:18
+# 1f147d67ff49455881daa40af9e90f67
+msgid "|search_index| Default index: ``node``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:21
+# acb3cb5e4f264dcfa265ebfea2028f30
+msgid "``-l``, ``--long``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:21
+# 3801e7256a67432abc0f7b9be1d1a467
+msgid "|long|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:24
+# 40c8c2097beb43c791a2277e9694c8f5
+msgid "``-m``, ``--medium``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:24
+# 3510eda46f0b4157ac8086ced50b02b0
+msgid "|medium|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:27
+# f3ccb1df800741199b47f85db85c6a69
+msgid "``-o SORT``, ``--sort SORT``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:27
+# 9beb27b483f047bd82bfc66948208bd2
+msgid "|sort|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:30
+# 9d5c0fb8dfba48f282a322109385e2cb
+msgid "``-q SEARCH_QUERY``, ``--query SEARCH_QUERY``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:30
+# 1ce0b393348f41de993bed1feaeb096c
+msgid "|query|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:33
+# a685a67ecec342bfba0a8062a367a150
+msgid "``-r``, ``--run-list``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:33
+# 9c29221d0697414a9c587da01ce0ab5a
+msgid "|run-list indicator|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:36
+# 8506635113f94bd2846c54f7faf9e6b9
+msgid "``-R INT``, ``--rows INT``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:36
+# 8c484ce524394bcf855a8bcf23038d7e
+msgid "|rows|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:39
+# 7838f85b51474da19e4233298c058da4
+msgid "``SEARCH_QUERY``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_search_options.rst:39
+# 821aafa3b99643108352e7bb16c5ba8d
+msgid "|search_query|"
+msgstr ""
+
+#: ../source/knife_search.rst:104
+# 279616867f1d49cdbc31869cc66155bd
+msgid "The following examples show how to use this |knife| subcommand:"
+msgstr ""
+
+#: ../source/knife_search.rst:106
+# 70fcb2d62d7c4aa1a03ff55c39b86dc7
+msgid "**Search by platform ID**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_platform_ids.rst:4
+# 160da4ddbe744f88b2900f274f4e3ec7
+msgid "To search for the IDs of all nodes running on the |amazon ec2| platform, enter:"
+msgstr ""
+
+#: ../source/knife_search.rst:110
+# 9224a562e1264946857ee143353b7f63
+msgid "**Search by instance type**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_platform_instance_type.rst:4
+# 96de25b127ed45ff8120d39f3224f74c
+msgid "To search for the instance type (flavor) of all nodes running on the |amazon ec2| platform, enter:"
+msgstr ""
+
+#: ../source/knife_search.rst:114
+# 779c481795d34256b56363bd4bfb624a
+msgid "**Search by recipe**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_recipe.rst:3
+# b7ca9c5fb49b40d2be34896cba12fd33
+msgid "To search for recipes that are used by a node, use the ``recipes`` attribute to search for the recipe names, enter something like:"
+msgstr ""
+
+#: ../source/knife_search.rst:118
+# bab32cf5237b4d11b482e4e839d54fd6
+msgid "**Search by node**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_node.rst:4
+# c3b971e67bf3400b990c9daad2d2003c
+msgid "To search for all nodes running |ubuntu|, enter:"
+msgstr ""
+
+#: ../source/knife_search.rst:122
+# 4c9e3ac6fb3448628ab233b1d8d0a49f
+msgid "**Search by node and environment**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_node_and_environment.rst:4
+# a577aed438544168800f51bf3ea4b842
+msgid "To search for all nodes running |centos| in the production environment, enter:"
+msgstr ""
+
+#: ../source/knife_search.rst:126
+# a661537c700c4c6eba7274da82a90819
+msgid "**Search for nested attributes**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_nested_attribute.rst:4
+# 62f992caa1c04eeaa6fdf0aa0618de8d
+msgid "To find a nested attribute, use a pattern similar to the following:"
+msgstr ""
+
+#: ../source/knife_search.rst:130
+# fb9636ad3ecf443595081c73d6b6edad
+msgid "**Search for multiple attributes**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_query_for_many_attributes.rst:4
+# c29de0e2552247d2904e34f4b0276337
+msgid "To build a search query to use more than one attribute, use an underscore (``_``) to separate each attribute. For example, the following query will search for all nodes running a specific version of |ruby|:"
+msgstr ""
+
+#: ../source/knife_search.rst:134
+# a703d472aaa24ca0bbdc6398e1068ccf
+msgid "**Search for nested attributes using a search query**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_by_query_for_nested_attribute.rst:4
+# ecd5f69673c14d1ba07b964a10cc9f54
+msgid "To build a search query that can find a nested attribute:"
+msgstr ""
+
+#: ../source/knife_search.rst:138
+# ef3e4e33f60f4c3b98955cbf3478fabf
+msgid "**Use a test query**"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_test_query_for_ssh.rst:4
+# 7f70bbea137d4bc3a8104268e945d19c
+msgid "To test a search query that will be used in a |subcommand knife ssh| command:"
+msgstr ""
+
+#: ../../step_knife/step_knife_search_test_query_for_ssh.rst:10
+# 72ff628d9fc1410e9e426943095e5fd1
+msgid "where the query in the previous example will search all servers that have the ``web`` role, but not on the server named ``web03``."
+msgstr ""
+

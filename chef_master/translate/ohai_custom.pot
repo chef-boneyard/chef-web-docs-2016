@@ -1,0 +1,396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-08 14:52-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/ohai_custom.rst:8
+# 080244ba79bf45cdb47549b652de668b
+msgid "Ohai Custom Plugins"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:4
+# 1d0930e09b784ceb89612e724a42c347
+msgid "|ohai| is a tool that is used to detect attributes on a node, and then provide these attributes to the |chef client| at the start of every |chef client| run. |ohai| is required by the |chef client| and must be present on a node. (|ohai| is installed on a node as part of the |chef client| install process.)"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:6
+# 0663be6ba7f142cba318a182d2b4323b
+msgid "The types of attributes |ohai| collects include (but are not limited to):"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:8
+# 88e8ad66dbbd4d8d8273c20b0e07c8d0
+msgid "Platform details"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:9
+# 6427d9fbb27f42e4b9bbecd9ac813003
+msgid "Network usage"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:10
+# 5e824ef5e1c14f4a8ab980cae3b6010d
+msgid "Memory usage"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:11
+# 3b9957ac57ca4fa48be86eb423a16eb0
+msgid "CPU data"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:12
+# 02ba0c83430c4ae18aa80d10ffa13235
+msgid "Kernel data"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:13
+# 118b4673adf443418185d6edb67cef9b
+msgid "Host names"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:14
+# 5abe284c03644ec9890d09a768821349
+msgid "Fully qualified domain names"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:15
+# 828f1450070d4aa1834f1e9878047ffa
+msgid "Other configuration details"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai.rst:17
+# ab7c9d50d7814521b50d0c712ce225a9
+msgid "Attributes that are collected by |ohai| are automatic attributes, in that these attributes are used by the |chef client| to ensure that these attributes remain unchanged after the |chef client| is done configuring the node."
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin.rst:5
+# 3471e465808b4aa0a468213b50f10fd2
+msgid "A custom |ohai| plugin describes a set of attributes to be collected by |ohai|, and then provided to the |chef client| at the start of the |chef client| run."
+msgstr ""
+
+#: ../source/ohai_custom.rst:14
+# f53fec5bbf404d65a75ecd905131a379
+msgid "See https://github.com/rackerlabs/ohai-plugins/tree/master/plugins for some great examples of custom |ohai| plugins."
+msgstr ""
+
+#: ../source/ohai_custom.rst:17
+# 1dd914a9f86845b3a83732d351912ab8
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:5
+# fee2d6741f984013bff64d30dc8e514f
+msgid "The syntax for an |ohai| plugin is as follows:"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:31
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:97
+#: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst:11
+# 9782f586b6634277bb19f8e72e919f16
+# ed14df76727143f5878264a8cfaaf343
+# bc00f03c5fe74c47b91c0abcb337ffeb
+msgid "where"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:33
+# fe36514bdc5041189dcab394784d1267
+msgid "Required. ``(:Name)`` is used to identify the plugin; when two plugins have the same ``(:Name)``, those plugins are joined together and run as if they were a single plugin. This value must be a valid |ruby| class name, starting with a capital letter and containing only alphanumeric characters"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:34
+# f44bf44265d6435f9e2b440b9a6cee4c
+msgid "``include`` is a standard |ruby| method that allows an |ohai| plugin to include a class, such as ``Ohai::Mixin::ModuleName``"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:35
+# a9a82848ee44407d85f69ddbb40aa7a6
+msgid "Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This attribute will become an automatic attribute (i.e. ``node[:attribute]``) after it is collected by |ohai| at the start of the |chef client| run. An attribute can also be defined using an ``attribute/subattribute`` pattern"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:36
+# 964e23808f93401db7f209782c36e962
+msgid "``depends`` is a comma-separated list of one (or more) attributes that are collected by another plugin; as long as the value is collected by another |ohai| plugin, it can be used by any plugin"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:37
+# 5eb6ac299ac442af962cdba2dce1d05c
+msgid "``shared_method`` defines code that can be shared among one (or more) ``collect_data`` blocks; for example, instead of defining a mash for each ``collect_data`` block, the code can be defined as a shared method, and then called from any ``collect_data`` block"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:38
+# 7cc57cbc41644056a031c8ace1e6dc38
+msgid "``collect_data`` is a block of |ruby| code that is called by |ohai| when it runs; one (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run."
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:39
+# 15adc3633eb74fb1afddfaca5eda9d72
+msgid "``collect_data(:default)`` is the code block that runs when a node's platform is not defined by a platform-specific ``collect_data`` block"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:40
+# 8aaf3243ea9347af9d7f66249a9da076
+msgid "``collect_data(:platform)`` is a platform-specific code block that is run when a match exists between the node's platform and this ``collect_data`` block; only one ``collect_data`` block may exist for each platform; possible values: ``:aix``, ``:darwin``, ``:freebsd``, ``:hpux``, ``:linux``, ``:openbsd``, ``:netbsd``, ``:solaris2``, ``:windows``, or any other value from ``RbConfig::CONFIG['host_os']``"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:41
+# a201fdbdc68646fbba221595c9276094
+msgid "``my_data`` is  string (``a string value``) or an empty mash (``{ :setting_a => \"value_a\", :setting_b\" => \"value_b\" }``). This is used to define the data that should be collected by the plugin"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:43
+# dacc4771dc244df0bb64213baf17e258
+msgid "For example, the following plugin looks up data on virtual machines hosted in |amazon ec2|, |google compute engine|, |rackspace|, |eucalyptus|, |linode|, |openstack|, and |azure|:"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:99
+# 99b7601600aa4d09a8dd45b8f2a38295
+msgid "``provides`` defines the ``cloud`` attribute, which is then turned into an object using the ``create_objects`` shared method, which then generates a hash based on public or private IP addresses"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:100
+# 078b58abbf5c4f46836737debf957faa
+msgid "if the cloud provider is |google compute engine|, then based on the IP address for the node, the ``cloud`` attribute data is populated into a hash"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst:102
+# 6f28c76929754930b7452e4351a1610d
+msgid "To see the rest of the code in this plugin, go to : https://github.com/opscode/ohai/blob/master/lib/ohai/plugins/cloud.rb."
+msgstr ""
+
+#: ../source/ohai_custom.rst:21
+# ba00bca4613c4fadb5ef3206def30a5b
+msgid "|dsl ohai| Methods"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai.rst:5
+# 80d537d943414d808fcb7b742fb03dce
+msgid "The |dsl ohai| is a |ruby| DSL that is used to define an |ohai| plugin and to ensure that |ohai| collects the right data at the start of every |chef client| run. The |dsl ohai| is a small DSL with a single method that is specific to |ohai| plugins. Because the |dsl ohai| is a |ruby| DSL, anything that can be done using |ruby| can also be done when defining an |ohai| plugin."
+msgstr ""
+
+#: ../source/ohai_custom.rst:25
+# 90ce2fc5937c4d68b331f8e477572b4c
+msgid "collect_data"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:5
+# 894a2123c3e74a7cad280e6f32cf5412
+msgid "The ``collect_data`` method is a block of |ruby| code that is called by |ohai| when it runs. One (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run. The ``collect_data`` block that is run is determined by the platform on which the node is running, which is then matched up against the available ``collect_data`` blocks in the plugin."
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:7
+# 24f32d39ac0746838672852883fd518a
+msgid "A ``collect_data(:default)`` block is used when |ohai| is not able to match the platform of the node with a ``collect_data(:platform)`` block in the plugin"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:8
+# e004ddc67a48488587484d7548bfc535
+msgid "A ``collect_data(:platform)`` block is required for each platform that requires non-default behavior"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:10
+# ca636920194945b69a4b00e2b0a62cd2
+msgid "When |ohai| runs, if there isn't a matching ``collect_data`` block for a platform, the ``collect_data(:default)`` block is used. The syntax for the ``collect_data`` method is:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:18
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_example.rst:25
+# 7502b26c62c64f8aa3833b4a618f4d94
+# 8ff78465f43841eb88d2e3c7e4acbf27
+msgid "or:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:26
+# f844cda234264063960aff1f25cb440f
+msgid "where:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:28
+# cf3f1a928f7e4c468d32ac72488b45b3
+msgid "``:default`` is the name of the default ``collect_data`` block"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst:29
+# 4fa3819b96af488e94bb133b41ccb3a9
+msgid "``:platform`` is the name of a platform, such as ``:aix`` for |ibm aix| or ``:windows`` for |windows|"
+msgstr ""
+
+#: ../source/ohai_custom.rst:29
+# a6fd42b6063d4035af8784150446eb23
+msgid "Use a Mash"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst:5
+# 9d5a9c55064e439c85e511e2db48da35
+msgid "Use a mash to store data. This is done by creating a new mash, and then setting an attribute to it. For example:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:33
+#: ../source/ohai_custom.rst:57
+# 6ee89428b2d14e2cbcea5539959f96a4
+# 71c4989bb0894022b86d389b39f860dc
+msgid "Examples"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_example.rst:5
+# 499c12e05e284e258e07574d19880842
+msgid "The following examples show how to use the ``collect_data`` block:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:37
+# fe63d9f4d61e49e889b230578933147e
+msgid "require"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst:5
+# 9201c843625c4e02be2d47c527a765c9
+msgid "The ``require`` method is a standard |ruby| method that can be used to list files that may be required by a platform, such as an external class library. As a best practice, even though the ``require`` method is often used at the top of a |ruby| file, it is recommended that the use of the ``require`` method be used as part of the platform-specific ``collect_data`` block. For example, the |ruby| WMI is required with |windows|:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst:25
+# 40b661b4629a44f7bb0c54cc62c25842
+msgid "|ohai| will attempt to fully qualify the name of any class by prepending ``Ohai::`` to the loaded class. For example both:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst:31
+# e8ff3c818e8a4e2c9857d938998e108d
+msgid "and:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst:37
+# 868c1ab0b947437397dec3f6754ccdcf
+msgid "are both understood by the |ohai| in the same way: ``Ohai::Mixin::ShellOut``."
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst:39
+# c90ac82b7842452cb8483c1a6142e191
+msgid "When a class is an external class (and therefore should not have ``Ohai::`` prepended), use ``::`` to let the |ohai| know. For example:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:41
+# 0682f621e0a8458faa083022d612fd21
+msgid "/common Directory"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_require_common.rst:5
+# f5f7b854562b4375b1348a75a952c8ac
+msgid "The ``/common`` directory stores code that is used across all |ohai| plugins. For example, a file in the ``/common`` directory named ``virtualization.rb`` that includes code like the following:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_require_common.rst:49
+# 073cc9856b914c34bfa540bd5270d287
+msgid "can then be leveraged in a plugin by using the ``require`` method to require the ``virtualization.rb`` file and then later calling each of the methods in the required module:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:45
+# e01997b789584c75842b0103b85ec58f
+msgid "Shared Methods"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst:5
+# a0c544d29ee948a387a837335d8d0310
+msgid "A shared method defines behavior that may be used by more than one ``collect_data`` block, such as a data structure, a hash, or a mash. The syntax for a shared method is:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst:13
+# 54f08450656344be9d839b5e5d7bb378
+msgid "For example, the following shared method is used to collect data about various cloud providers, depending on the cloud provider and the type of IP address:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst:23
+# 2958cee6a88f4f6a8601f60adb0d98f1
+msgid "and then later on in the same plugin, the ``cloud`` object can be reused:"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst:37
+# 33f86cbd70ec4115a765228e4db22d2b
+msgid "and"
+msgstr ""
+
+#: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst:50
+# 55f9c936228a4385a2f9889a49a2aaef
+msgid "and so on, for each of the various cloud providers."
+msgstr ""
+
+#: ../source/ohai_custom.rst:49
+# 8c31c8b0dda04d21b0a0dc3356c7aa45
+msgid "Log Entries"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst:5
+# c7bcd059210841e88db8a9ef9890e696
+msgid "Use the ``Chef::Log`` class in an |ohai| plugin to define log entries that are created during a |chef client| run. The syntax for a log message is as follows:"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst:13
+# ec94570b7a9647b4870d51b6ff0ff1a8
+msgid "``log_type`` can be ``.debug``, ``.info``, ``.warn``, ``.error``, or ``.fatal``"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst:14
+# 4e80b774f52547379f4fc073c8d04e7e
+msgid "``\"message\"`` is the message that is logged."
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst:16
+# f55412ff45a5470697f210391f3922bd
+msgid "For example:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:53
+# f645119ff6be40c1bcfe6957361fb00a
+msgid "rescue"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_logs_rescue.rst:5
+# 933bb010f90f4b99aeb6abd59b6309ac
+msgid "Use the ``rescue`` clause to make sure that a log message is always provided. For example:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:58
+# c6e30d781cf34835b0f3dc9fb28f9699
+msgid "The following examples show different ways of building |ohai| plugins."
+msgstr ""
+
+#: ../source/ohai_custom.rst:61
+# e1e5cc36172746a1b302c2775c496c18
+msgid "``collect_data`` Blocks"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_example_multiple_collect_data_blocks.rst:5
+# 6d98fa9a00264fceb5295481e997f152
+msgid "The following |ohai| plugin uses multiple ``collect_data`` blocks and shared methods to define platforms:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:65
+# dc0595d294064c4cbaf1e7e97a14c78b
+msgid "Use a ``mixin`` Library"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_example_use_mixin_library.rst:5
+# 36cae256646d40fd8f0c49f48e8c8add
+msgid "The following |ohai| example shows a plugin can use a ``mixin`` library and also depend on another plugin:"
+msgstr ""
+
+#: ../source/ohai_custom.rst:69
+# f6e3fb763bad4f71bd4cd1fda3733d11
+msgid "Get Kernel Values"
+msgstr ""
+
+#: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst:5
+# 6005b2cefa274f57a0e7667b97c230c4
+msgid "The following |ohai| example shows part of a file that gets initial kernel attribute values:"
+msgstr ""
+
