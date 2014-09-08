@@ -3,4 +3,3 @@
 
 |nginx| is an open-source HTTP and reverse proxy server that is used as the front-end load balancer for the |chef server|. All requests to the |api chef server| are routed through |nginx|.
 
-
