@@ -2,9 +2,9 @@
 Scaled Back End
 =====================================================
 
-The scaled back end installation allows |chef server oec| to be installed on multiple servers in order to scale portions of the service horizontally, with a highly available back-end infrastructure. This is the recommended configuration for production utilization of |chef server oec|.
+The scaled back end installation allows the |chef server| to be installed on multiple servers in order to scale portions of the service horizontally, with a highly available back-end infrastructure. This is the recommended configuration for production utilization of the |chef server|.
 
-We refer to all the servers in a particular installation of |chef server oec| as a cluster.
+We refer to all the servers in a particular installation of the |chef server| as a cluster.
 
 The scaled back end installation consists of multiple front-end servers talking to a pair of clustered back-end servers. This allows for a higher level of concurrency on API requests, while scaling the back-end servers vertically to handle the increased I/O load.
 
@@ -21,11 +21,11 @@ A scaled back end installation scenario has the following system requirements:
 * 40 GB of free disk space in ``/var``
 * Two back-end servers; as many front-end servers as required.
 
-.. note:: While |chef server oec| can be run on smaller systems, our assumption with the scaled back end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
+.. note:: While the |chef server| can be run on smaller systems, our assumption with the scaled back end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
 
 Network Requirements
 =====================================================
-|chef server oec| has the following network requirements for a scaled back end installation:
+The |chef server| has the following network requirements for a scaled back end installation:
 
 Networking
 -----------------------------------------------------
@@ -37,11 +37,11 @@ This is in addition to the standard network interfaces that are available and wo
 
 Virtual IP Addresses
 -----------------------------------------------------
-The back-end servers will share a virtual IP address, which needs to be accessible from the front-end servers. This virtual IP address will be created and managed by |chef server oec| but will need be added to DNS to access the cluster.
+The back-end servers will share a virtual IP address, which needs to be accessible from the front-end servers. This virtual IP address will be created and managed by the |chef server| but will need be added to DNS to access the cluster.
 
 Disk Configuration
 -----------------------------------------------------
-The data that is stored in the |chef server oec| database is primarily cookbook data. It is recommended that disks are dedicated entirely to storing this data for the |chef server oec| installation. These disks should:
+The data that is stored in the |chef server| database is primarily cookbook data. It is recommended that disks are dedicated entirely to storing this data for the |chef server| installation. These disks should:
 
 * Utilize hardware |raid|
 * Be configured in either |raid1| or |raid5|
@@ -53,7 +53,7 @@ Our recommended configuration utilizes the |linux| |lvm| as the backing store fo
 * The disk space presents as a single device, ``/dev/sdb``
 * The storage is added to a volume group named ``opscode``
 * The storage is added in a logical volume group named ``drbd``
-* The volume group should have adequate space to enable |lvm| snapshots to be used for backups; this amount depends on many factors, including how much changes in-between snapshots, how long the snapshots will be kept, and the (eventual) size of the |chef server oec| database; a decent starting point when sizing |lvm| snapshots is ~10% of the raw, unpartitioned disk space
+* The volume group should have adequate space to enable |lvm| snapshots to be used for backups; this amount depends on many factors, including how much changes in-between snapshots, how long the snapshots will be kept, and the (eventual) size of the |chef server| database; a decent starting point when sizing |lvm| snapshots is ~10% of the raw, unpartitioned disk space
 
 The following commands would properly set up the back-end disk configuration for |drbd|:
 
@@ -93,23 +93,23 @@ Hostnames, FQDNs
 -----------------------------------------------------
 The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
 
-private-chef.rb
+|chef server rb|
 =====================================================
-Each |chef server oec| cluster has a single configuration file: |private chef rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |private chef rb|.
+Each |chef server oec| cluster has a single configuration file: |chef server rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |chef server rb|.
 
 Set the topology
 -----------------------------------------------------
-Add the following line to the |private chef rb| configuration file:
+Add the following line to the |chef server rb| configuration file:
 
 .. code-block:: ruby
 
    topology "ha"
 
-This lets |chef server oec| know that these servers will be in a horizontally scalable configuration with a highly-available back-end.
+This lets the |chef server| know that these servers will be in a horizontally scalable configuration with a highly-available back-end.
 
 Back-end entries
 -----------------------------------------------------
-Nominate a back-end server as the bootstrap server. For that server, add the following to the |private chef rb| file:
+Nominate a back-end server as the bootstrap server. For that server, add the following to the |chef server rb| file:
 
 .. code-block:: ruby
 
@@ -119,7 +119,7 @@ Nominate a back-end server as the bootstrap server. For that server, add the fol
      :bootstrap => true,
      :cluster_ipaddress => "CLUSTER_IPADDRESS"
 
-Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is a back-end server. If the server will be used to bootstrap the |chef server oec| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface to be used for cluster communications (such as |keepalived| and |drbd| replication). If no such interface is configured, exclude the ``cluster_ipaddress`` entry.
+Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is a back-end server. If the server will be used to bootstrap the |chef server| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface to be used for cluster communications (such as |keepalived| and |drbd| replication). If no such interface is configured, exclude the ``cluster_ipaddress`` entry.
 
 For the other back-end server, add the following:
 
@@ -141,9 +141,10 @@ Add an entry for the back-end virtual IP address that was assigned earlier:
      :device => "eth0",
 
 Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the virtual IP address. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind (i.e. the public interface of the server).
+
 Front-end entries
 -----------------------------------------------------
-For each front-end server in the |private chef rb| file, add the following:
+For each front-end server in the |chef server rb| file, add the following:
 
 .. code-block:: ruby
 
@@ -155,7 +156,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Set api_fqdn
 -----------------------------------------------------
-Add the following line to the |private chef rb| config file:
+Add the following line to the |chef server rb| config file:
 
 .. code-block:: ruby
 
@@ -165,7 +166,7 @@ Replace ``FQDN`` with the |fqdn| of the load balanced VIP.
 
 Example
 -----------------------------------------------------
-A completed |private chef rb| configuration file for a four server tiered |chef server oec| cluster, consisting of:
+A completed |chef server rb| configuration file for a four server tiered |chef server| cluster, consisting of:
 
 .. list-table::
    :widths: 100 150 150 100
@@ -246,23 +247,23 @@ Add Package to Servers
 Upload the package provided to the servers you wish to install on, and record its location on the file-system. The rest of this section will assume that it was uploaded to the ``/tmp`` directory on each system.
 
 
-Add private-chef.rb to /etc/opscode
+Add |chef server rb| to /etc/opscode
 =====================================================
-Copy the |private chef rb| file to ``/etc/opscode`` on the bootstrap server.
+Copy the |chef server rb| file to ``/etc/opscode`` on the bootstrap server.
 
-Install |chef server oec| on backend
+Install the |chef server| on backend
 =====================================================
-Install the |chef server oec| package on both of the back-end servers. For |redhat| and |centos| 6:
+Install tthe |chef server| package on both of the back-end servers. For |redhat| and |centos| 6:
 
 .. code-block:: bash
 
-   $ rpm -Uvh /tmp/private-chef-full-1.0.0–1.x86_64.rpm
+   $ rpm -Uvh /tmp/chef-server-core-<version>.rpm
 
 For |ubuntu|:
 
 .. code-block:: bash
 
-   $ dpkg -i /tmp/private-chef-full_1.0.0–1_amd64.deb
+   $ dpkg -i /tmp/chef-server-core-<version>.deb
 
 Install |drbd| on back-end servers
 =====================================================
@@ -284,11 +285,11 @@ For |ubuntu|:
 
 Configure |drbd| on the back-end bootstrap server
 =====================================================
-In the scaled back end configuration, setup of |chef server oec| happens in two phases - the first phase configures |drbd|, and then pauses to allow you to finish establishing |drbd| replication before moving on:
+In the scaled back end configuration, setup of the |chef server| happens in two phases - the first phase configures |drbd|, and then pauses to allow you to finish establishing |drbd| replication before moving on:
 
 .. code-block:: bash
 
-   $ private-chef-ctl reconfigure
+   $ chef-server-ctl reconfigure
 
 The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps require to set up |drbd|:
 
@@ -314,7 +315,7 @@ Set up the configuration of |drbd| on the non-bootstrap back-end server:
 
 .. code-block:: bash
 
-   $ private-chef-ctl reconfigure
+   $ chef-server-ctl reconfigure
 
 The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps require to set up |drbd|:
 
@@ -391,7 +392,7 @@ Speeding up initial synchronization on |ubuntu|:
 
    $ drbdsetup /dev/drbd0 syncer -r 1100M
 
-With synchronization complete, |drbd| is ready to be used on the bootstrap node. Let |chef server oec| know that |drbd| is ready by running the following command:
+With synchronization complete, |drbd| is ready to be used on the bootstrap node. Let the |chef server| know that |drbd| is ready by running the following command:
 
 .. code-block:: bash
 
@@ -399,28 +400,28 @@ With synchronization complete, |drbd| is ready to be used on the bootstrap node.
 
 
 
-Configure |chef server oec| on the bootstrap server
+Configure the |chef server| on the bootstrap server
 =====================================================
-To continue setting up |chef server oec| on a bootstrap server, run:
+To continue setting up the |chef server| on a bootstrap server, run:
 
 .. code-block:: bash
 
-   $ private-chef-ctl reconfigure
+   $ chef-server-ctl reconfigure
 
-This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, the following message is displayed:
+This command may take several minutes to run, during which you will see the output of the |chef client| run that is configuring the |chef server| installation. When it is complete, the following message is displayed:
 
 .. code-block:: bash
 
    Chef Server Reconfigured!
 
-.. note:: |chef server oec| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
+.. note:: |chef server| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
 
 
-Configure |chef server oec| on non-bootstrap back-end
+Configure the |chef server| on non-bootstrap back-end
 =====================================================
-.. warning:: Make sure |drbd| synchronization has completed, and that |chef server oec| has fully started on the bootstrap node before continuing!
+.. warning:: Make sure |drbd| synchronization has completed, and that the |chef server| has fully started on the bootstrap node before continuing!
 
-Each node that is part of the |chef server oec| back-end cluster participates in an election for which server should be the primary server for the |drbd| device. This means that, if the bootstrap node is not allowed to finish initializing the system before setting up the non-bootstrap server, the system may be left in an unstable state:
+Each node that is part of the |chef server| back-end cluster participates in an election for which server should be the primary server for the |drbd| device. This means that, if the bootstrap node is not allowed to finish initializing the system before setting up the non-bootstrap server, the system may be left in an unstable state:
 
 .. code-block:: bash
 
@@ -430,7 +431,7 @@ Followed by:
 
 .. code-block:: bash
 
-   $ private-chef-ctl reconfigure
+   $ chef-server-ctl reconfigure
 
 
 Configure Front-end
@@ -449,37 +450,38 @@ This command will copy all the files from the bootstrap server to another system
 
 Install package
 -----------------------------------------------------
-Install the |chef server oec| package on each of the front-end servers. For |redhat| and |centos| 6:
+Install the |chef server| package on each of the front-end servers. For |redhat| and |centos| 6:
 
 .. code-block:: bash
 
-   $ rpm -Uvh /tmp/private-chef-full-1.0.0–1.x86_64.rpm
+   $ rpm -Uvh /tmp/chef-server-core-<version>.rpm
 
 For |ubuntu|:
 
 .. code-block:: bash
 
-   $ dpkg -i /tmp/private-chef-full_1.0.0–1_amd64.deb
+   $ dpkg -i /tmp/chef-server-core-<version>.deb
 
 
 Configure
-To set up |chef server oec| on your front-end servers, run:
+-----------------------------------------------------
+To set up the |chef server| on your front-end servers, run:
 
 .. code-block:: bash
 
-   $ private-chef-ctl reconfigure
+   $ chef-server-ctl reconfigure
 
-This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, the following message is shown:
+This command may take several minutes to run, during which you will see the output of the |chef client| run that is configuring the |chef server| installation. When it is complete, the following message is shown:
 
 .. code-block:: bash
 
    Chef Server Reconfigured!
 
-.. note:: |chef server oec| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
+.. note:: |chef server| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
 
 Success!
 =====================================================
-Congratulations, |chef server oec| is installed in a scaled back end configuration.
+Congratulations, the |chef server| is installed in a scaled back end configuration.
 
 Using GRE Tunnels
 =====================================================
@@ -497,7 +499,7 @@ Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end o
 
 The ``172.17.16.0/24`` network used in the above examples could be any unused reserved IP address space.
 
-Set the following in ``/etc/opscode/private-chef.rb``:
+Set the following in ``/etc/opscode/chef-server.rb``:
 
 .. code-block:: ruby
 
