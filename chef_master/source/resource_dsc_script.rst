@@ -28,6 +28,7 @@ Attributes
 
 Examples
 =====================================================
+|generic resource statement|
 
 **Specify DSC code directly**
 

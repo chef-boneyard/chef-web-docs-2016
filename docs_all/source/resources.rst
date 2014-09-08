@@ -250,6 +250,8 @@ The following resources are platform resources with built-in providers:
 
 * apt_package (based on the package resource)
 * bash
+* batch
+* breakpoint
 * chef_gem (based on the package resource)
 * chef_handler (available from the chef_handler cookbook)
 * cookbook_file
@@ -258,6 +260,7 @@ The following resources are platform resources with built-in providers:
 * deploy (including |git| and |svn|)
 * directory
 * dpkg_package (based on the package resource)
+* dsc_script
 * easy_install_package (based on the package resource)
 * env
 * erl_call
@@ -285,17 +288,18 @@ The following resources are platform resources with built-in providers:
 * registry_key
 * remote_directory
 * remote_file
-* rpm_package (based on the package resource)
 * route
+* rpm_package (based on the package resource)
 * ruby
 * ruby_block
 * script
 * service
-* smart_o_s_package (based on the package resource)
+* smartos_package (based on the package resource)
 * solaris_package (based on the package resource)
 * subversion
 * template
 * user
+* windows_package
 * yum (based on the package resource)
 
 See below for more information about each of these resources, their related actions and attributes, the providers they rely on, and examples of how these resources can be used in recipes.
@@ -378,6 +382,89 @@ Examples
 
 .. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
 
+
+batch
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_batch.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_batch_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_batch_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_batch_attributes.rst
+
+Guards
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources_common/includes_resources_common_guards.rst
+
+**Attributes**
+
+.. include:: ../../includes_resources_common/includes_resources_common_guards_attributes.rst
+
+**Arguments**
+
+.. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
+.. include:: ../../includes_resources/includes_resource_batch_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Unzip a file, and then move it**
+
+.. include:: ../../step_resource/step_resource_batch_unzip_file_and_move.rst
+
+
+breakpoint
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_breakpoint.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
+.. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**A recipe without a breakpoint**
+
+.. include:: ../../step_resource/step_resource_breakpoint_no.rst
+
+**The same recipe with breakpoints**
+
+.. include:: ../../step_resource/step_resource_breakpoint_yes.rst
 
 
 chef_gem
@@ -826,6 +913,72 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_dpkg_package_install.rst
+
+
+
+dsc_script
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
+
+.. include:: ../../includes_resources/includes_resource_dsc_script.rst
+
+.. note:: |windows powershell| 4.0 is required for using the |resource dsc_script| resource with |chef|.
+
+.. note:: The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_script_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_script_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_script_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Specify DSC code directly**
+
+.. include:: ../../step_resource/step_resource_dsc_script_code.rst
+
+
+**Specify DSC code using a Windows Powershell data file**
+
+.. include:: ../../step_resource/step_resource_dsc_script_command.rst
+
+
+**Pass parameters to DSC configurations**
+
+.. include:: ../../step_resource/step_resource_dsc_script_flags.rst
+
+
+**Use custom configuration data**
+
+Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
+
+.. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
+
+.. include:: ../../step_resource/step_resource_dsc_script_configuration_name.rst
+
+
+**Using DSC with other Chef resources**
+
+.. include:: ../../step_resource/step_resource_dsc_script_remote_files.rst
+
+
+
+
+
+
 
 
 easy_install_package
@@ -1785,6 +1938,86 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_portage_package_install.rst
+
+
+
+perl
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_script_perl.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_perl_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_perl_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_perl_attributes.rst
+
+Guards
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources_common/includes_resources_common_guards.rst
+
+**Attributes**
+
+.. include:: ../../includes_resources_common/includes_resources_common_guards_attributes.rst
+
+**Arguments**
+
+.. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
+.. include:: ../../includes_resources/includes_resource_script_perl_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+portage_package
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_portage.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_portage_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_portage_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_portage_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+
+.. include:: ../../includes_resources/includes_resource_package_portage_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_portage_package_install.rst
+
 
 
 
