@@ -121,11 +121,19 @@ To configure AWS for high availability, first create machines in AWS. Two back-e
       $ sudo mount /dev/mapper/chef-data /var/opt/opscode/drbd/data
 
 #. Proceed with the installation as normal.
-#. Run the following command to all nodes:
+#. Run the one of the following commands on all nodes:
 
    .. code-block:: bash
       
-      $ scp /etc/opscode
+      $ rsync -avz /etc/opscode FQDN:/etc
+
+   or:
+
+   .. code-block:: bash
+      
+      $ rsync -avz /etc/opscode/ FQDN:/etc/opscode
+
+   where ``FQDN`` is the address of the passive back-end.
 
 #. Install packages on all nodes.
 #. Run the following command:
