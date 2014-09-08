@@ -89,3 +89,6 @@ The following premium feature are available for use with the |chef server|:
    * - |reporting|
      - The |reporting| feature of the |chef server| is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure being managed by |chef|. Reports can be generated for the entire organization and they can be generated for specific nodes.
 
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install.rst
+
+
