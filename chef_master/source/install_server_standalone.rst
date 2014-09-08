@@ -13,14 +13,14 @@ A standalone installation scenario has the following system requirements:
 * 5 GB of free disk space in ``/opt``
 * 5 GB of free disk space in ``/var``
 
-**Firewall Requirements**
-
+Firewall Requirements
+-----------------------------------------------------
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
 
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst
 
-**Hostnames, FQDNs**
-
+Hostnames, FQDNs
+-----------------------------------------------------
 The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
 
 Install the |chef server|
