@@ -4,7 +4,7 @@ Organizations, Groups, and Users
 
 .. include:: ../../includes_server_rbac/includes_server_rbac.rst
 
-|chef server oec| uses organizations, groups, and users to define role-based access control:
+The |chef server| uses organizations, groups, and users to define role-based access control:
 
 .. list-table::
    :widths: 60 420
