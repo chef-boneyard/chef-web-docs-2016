@@ -96,7 +96,7 @@ Application Checks
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_application.rst
 
-|couchdb|
+|couch db|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_monitor/includes_server_monitor_11_application_couchdb.rst
 
@@ -134,7 +134,7 @@ ha-status
 
 opscode-authz
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_monitor/includes_server_monitor_11_system_authz.rst
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_authz.rst
 
 opscode-erchef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

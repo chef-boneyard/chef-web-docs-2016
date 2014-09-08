@@ -152,7 +152,7 @@ tail
 
 couchdb
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_couchdb.rst
+.. include:: ../../includes_server_services/includes_server_services_11_couchdb.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -252,7 +252,7 @@ tail
 
 opscode-account
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_account.rst
+.. include:: ../../includes_server_services/includes_server_services_11_account.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -285,7 +285,7 @@ tail
 
 opscode-certificate
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_certificate.rst
+.. include:: ../../includes_server_services/includes_server_services_11_certificate.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -417,7 +417,7 @@ tail
 
 opscode-solr
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_solr.rst
+.. include:: ../../includes_server_services/includes_server_services_11_solr.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -450,7 +450,7 @@ tail
 
 opscode-webui
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_webui.rst
+.. include:: ../../includes_server_services/includes_server_services_11_webui.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
