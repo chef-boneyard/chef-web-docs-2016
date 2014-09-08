@@ -10,55 +10,55 @@ The following subcommands are built into the |private chef ctl| command line too
 
 hup
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_hup.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_hup.rst
 
 int
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_int.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_int.rst
 
 kill
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_kill.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_kill.rst
 
 once
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_once.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_once.rst
 
 restart
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_restart.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_restart.rst
 
 service-list
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_service_list.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_service_list.rst
 
 start
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_start.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_start.rst
 
 status
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst
 
 High Availability
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status_ha.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst
 
 Log Files
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status_logs.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst
 
 stop
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_stop.rst
 
 tail
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst
 
 term
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_term.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_term.rst
 
 
 List of Services
