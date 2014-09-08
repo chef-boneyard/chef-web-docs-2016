@@ -9,5 +9,5 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl user-create USER_NAME
+   $ chef-server-ctl user-create USER_NAME FIRST_NAME [MIDDLE_NAME] LAST_NAME EMAIL PASSWORD --filename WRITE_PRIVATE_KEY_TO_FILE_PATH
 
