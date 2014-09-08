@@ -10,8 +10,6 @@ The following diagram shows the relationships between the various elements of |c
 
 .. image:: ../../images/overview_chef_oec.png
 
-.. include:: ../../includes_chef/includes_chef_key_elements.rst
-
 The following sections discuss these elements (and their various components) in more detail.
 
 Nodes
