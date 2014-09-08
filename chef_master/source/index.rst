@@ -6,13 +6,11 @@ All about Chef ...
 
 Getting Started
 =====================================================
-**From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
+**From the beginning:** :doc:`Overview (long) </chef_overview>`
 
 **Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs (Custom Resources) </lwrp_custom>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
-
-.. include:: ../../includes_chef/includes_chef_index_getchef.rst
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
