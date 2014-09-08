@@ -70,18 +70,15 @@ The following services are part of |chef server oec|:
 
 * bifrost
 * bookshelf
-* couchdb
 * keepalived
 * nginx
-* opscode-certificate
 * opscode-erchef
 * opscode-expander
 * opscode-expander-reindexer
-* opscode-org-creator
-* opscode-solr
+* opscode-solr4
 * postgresql
 * rabbitmq
-* redis
+* redis-lb
 
 
 bifrost
@@ -150,39 +147,6 @@ tail
 .. include:: ../../step_server_services/step_server_services_bookshelf_tail.rst
 
 
-couchdb
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_couchdb.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_tail.rst
-
-
 keepalived
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_keepalived.rst
@@ -248,39 +212,6 @@ run once
 tail
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_nginx_tail.rst
-
-
-opscode-certificate
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_certificate.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_tail.rst
 
 
 opscode-erchef
@@ -382,9 +313,9 @@ tail
 .. include:: ../../step_server_services/step_server_services_reindexer_tail.rst
 
 
-opscode-solr
+opscode-solr4
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_solr.rst
+.. include:: ../../includes_server_services/includes_server_services_solr4.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -106,7 +106,7 @@ opscode-expander
 
 opscode-solr4
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_solr.rst
+.. include:: ../../includes_server_services/includes_server_services_solr4.rst
 
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst
 
