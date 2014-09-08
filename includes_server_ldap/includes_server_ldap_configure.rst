@@ -8,4 +8,4 @@ When the settings for |ldap| or |windows ad| are changed in the |enterprise rb| 
 
    $ private-chef-ctl reconfigure
 
-At this point, all users will be able to use their |windows ad| or |ldap| username and password to log in to |chef server oec|. The first time they log in, they can either create a new account linked to their |windows ad| credentials or link an existing |chef server oec| account to their |windows ad| credentials.
+At this point, all users will be able to use their |windows ad| or |ldap| username and password to log in to the |chef server|. The first time they log in, they can either create a new account linked to their |windows ad| credentials or link an existing |chef server| account to their |windows ad| credentials.
