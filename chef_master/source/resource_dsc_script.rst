@@ -2,8 +2,6 @@
 dsc_script
 =====================================================
 
-.. warning:: This page discusses functionality that will be added to an upcoming release of the |chef client|.
-
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
