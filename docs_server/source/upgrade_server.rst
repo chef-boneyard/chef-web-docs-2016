@@ -99,7 +99,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ chef-server-ctl cleanup
 
-.. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
+   .. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
 
 #. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following command:
 
