@@ -416,7 +416,7 @@ tail
 
 opscode-solr
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_solr.rst
+.. include:: ../../includes_server_services/includes_server_services_11_solr.rst
 
 status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
