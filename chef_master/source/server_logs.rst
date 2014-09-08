@@ -10,7 +10,7 @@ View Log Files
 
 tail Log Files
 -----------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst
 
 .. include:: ../../step_server_services/step_server_services_general_tail.rst
 
