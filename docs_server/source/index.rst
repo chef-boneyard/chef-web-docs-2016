@@ -6,6 +6,8 @@ Chef Server
 
 The |chef server| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 
+.. note:: |chef server| 12 is the new |chef server|! The documentation for `Open Source Chef <http://docs.getchef.com/open_source/>`_ and `Enterprise Chef <http://docs.getchef.com/enterprise/>`_ is still available.
+
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/chef_overview.html">An Overview of Chef</a> </br>
