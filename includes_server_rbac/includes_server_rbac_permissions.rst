@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Permissions are used in |chef server oec| to define how users and groups can interact with objects on the server.
+Permissions are used in the |chef server| to define how users and groups can interact with objects on the server.
