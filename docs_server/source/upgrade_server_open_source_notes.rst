@@ -20,7 +20,7 @@ Like any migration or upgrade, it's strongly recommended to back up your data be
 
 Organization Names
 -----------------------------------------------------
-The |chef server osc| server does not have the concept of organizations. The |chef server| version 12 server will require an organization to be created. 
+The |chef server osc| does not have the concept of organizations. The |chef server| version 12 upgrade process will require an organization to be created.
 
 After an upgrade, the organization is an endpoint in the |api chef server|. The |api chef server| used by the |chef server osc| server does not contain this endpoint. Needless to say, API requests made to the |chef server| by the |chef client|, |knife|, and so on will fail until the ``/organizations/ORG_NAME`` endpoint isn't defined.
 
@@ -37,7 +37,9 @@ To resolve this API request issue, add the following setting to the |chef server
 
 Validation Keys
 -----------------------------------------------------
-<notes going here>
+The |chef server osc| does not have the concept of organizations. The |chef server| version 12 upgrade process will require an organization to be created.
+
+The |chef server osc| uses a validation key and validation client name to ensure that clients can validate to the |chef server osc| server. In |chef server osc|, this is a generic validation client and key. These two settings in the the |client rb| and/or |knife rb| files specifiy the generic client and key:
 
 .. list-table::
    :widths: 200 300
@@ -49,6 +51,12 @@ Validation Keys
      - |validation_client_name| 
    * - ``validation_key``
      - |validation_key| Default value: ``/etc/chef/validation.pem``.
+
+In |chef server| version 12, the server supports multiple organizations and each organization has a unique validation client and key. The upgrade process will create a new validation client and key and will associate their names with the newly-created organization.
+
+The ``default_orgname`` setting will ensure that the existing generic validation client and key will work with the newly-created organization. Post-upgrate, there will be TWO validation clients and validation keys. The organization-specific client and key is not required; in some cases, it may be necessary to reset that validation key through the |chef manage| web user interface.
+
+.. note:: The |chef manage| web user interface will not be able to reset the generic validation client and key that was migrated from |chef server osc|.
 
 
 Server Data on Disk
