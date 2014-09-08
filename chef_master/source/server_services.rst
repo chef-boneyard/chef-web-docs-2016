@@ -67,17 +67,12 @@ The following services are part of |chef server oec|:
 
 * bifrost
 * bookshelf
-* couchdb
 * keepalived
 * nginx
-* opscode-account
-* opscode-certificate
 * opscode-erchef
 * opscode-expander
 * opscode-expander-reindexer
-* opscode-org-creator
-* opscode-solr
-* opscode-webui
+* opscode-solr4
 * postgresql
 * rabbitmq
 * redis
@@ -149,38 +144,6 @@ tail
 .. include:: ../../step_server_services/step_server_services_bookshelf_tail.rst
 
 
-couchdb
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_couchdb.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_couchdb_tail.rst
-
 
 keepalived
 -----------------------------------------------------
@@ -249,70 +212,6 @@ tail
 .. include:: ../../step_server_services/step_server_services_nginx_tail.rst
 
 
-opscode-account
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_account.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_account_tail.rst
-
-
-opscode-certificate
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_certificate.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_certificate_tail.rst
 
 
 opscode-erchef
@@ -414,7 +313,7 @@ tail
 .. include:: ../../step_server_services/step_server_services_reindexer_tail.rst
 
 
-opscode-solr
+opscode-solr4
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_11_solr.rst
 
@@ -446,38 +345,6 @@ tail
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_solr_tail.rst
 
-
-opscode-webui
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_webui.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_tail.rst
 
 
 postgresql
@@ -576,4 +443,4 @@ run once
 
 tail
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_webui_tail.rst
+.. include:: ../../step_server_services/step_server_services_redis_tail.rst
