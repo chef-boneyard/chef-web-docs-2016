@@ -1,48 +1,4 @@
 .. THIS PAGE IS IDENTICAL TO docs.getchef.com/server_logs.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
-=====================================================
-Log Files
-=====================================================
-
-.. include:: ../../includes_server_logs/includes_server_logs.rst
-
-View Log Files
-=====================================================
-.. include:: ../../includes_server_logs/includes_server_logs_view.rst
-
-tail Log Files
------------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
-
-.. include:: ../../step_server_services/step_server_services_general_tail.rst
-
-Supervisor
-=====================================================
-.. include:: ../../includes_server_logs/includes_server_logs_type_supervisor.rst
-
-nginx, access
------------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst
-
-opscode-erchef, current
------------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_erchef_log_current.rst
-
-opscode-erchef, erchef
------------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst
-
-Application
-=====================================================
-.. include:: ../../includes_server_logs/includes_server_logs_type_application.rst
-
-nginx
------------------------------------------------------
-.. include:: ../../includes_server_logs/includes_server_logs_nginx.rst
-
-.. include:: ../../step_server_services/step_server_services_nginx_tail.rst
-
-Read Log Files
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst
+.. include:: ../../chef_master/source/server_logs.rst
