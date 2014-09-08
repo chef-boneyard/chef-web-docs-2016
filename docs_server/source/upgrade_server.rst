@@ -107,7 +107,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ chef-server-ctl install name_of_premium_feature
 
-   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``opscode-push-jobs-server`` (for |push jobs|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
 
 Standalone
 -----------------------------------------------------
@@ -165,7 +165,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ chef-server-ctl install name_of_premium_feature
 
-   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``opscode-push-jobs-server`` (for |push jobs|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
 
 From |chef server osc|
 =====================================================
@@ -227,4 +227,4 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl install name_of_premium_feature
 
-   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``opscode-push-jobs-server`` (for |push jobs|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).

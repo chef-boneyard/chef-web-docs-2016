@@ -46,7 +46,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl install name_of_premium_feature
 
-   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``opscode-push-jobs-server`` (for |push jobs|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
+   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
 
 High Availability
 =====================================================
