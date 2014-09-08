@@ -11,6 +11,9 @@ The following documentation sets are available:
    * - Application
      - Home Page
      - Release Notes
+   * - chef-client 11.16
+     - `http://docs.getchef.com <http://docs.getchef.com>`__
+     - `Release Notes <http://docs.getchef.com/release/11-16/release_notes.html>`__
    * - chef-client 11.14
      - `http://docs.getchef.com <http://docs.getchef.com>`__
      - `Release Notes <http://docs.getchef.com/release/11-14/release_notes.html>`__
@@ -47,21 +50,24 @@ The following documentation sets are available:
    * - Chef Developer Kit
      - `http://docs.getchef.com/devkit/ <http://docs.getchef.com/devkit/>`__
      - 
-   * - Open Source Chef Server 11.0
-     - `http://docs.getchef.com/release/osc_11-0/ <http://docs.getchef.com/release/osc_11-0/>`__
+   * - The Chef Server
+     - `http://docs.getchef.com/server/ <http://docs.getchef.com/server/>`__
+     - 
+   * - Enterprise Chef Server 11.2
+     - `http://docs.getchef.com/release/oec_11-2/ <http://docs.getchef.com/release/oec_11-2/>`__
+     - `Release Notes <http://docs.getchef.com/release/oec_11-2/release_notes.html>`__
+   * - Enterprise Chef Server 11.1
+     - `http://docs.getchef.com/release/oec_11-1/ <http://docs.getchef.com/release/oec_11-1/>`__
+     - `Release Notes <http://docs.getchef.com/release/oec_11-1/release_notes.html>`__
+   * - Enterprise Chef Server 11.0
+     - `http://docs.getchef.com/release/oec_11-0/ <http://docs.getchef.com/release/oec_11-0/>`__
      - 
    * - Open Source Chef Server 11.1
      - `http://docs.getchef.com/release/osc_11-1/ <http://docs.getchef.com/release/osc_11-1/>`__
      - `Release Notes <http://docs.getchef.com/release/osc_11-1/release_notes.html>`__
-   * - Enterprise Chef Server 11.0
-     - `http://docs.getchef.com/release/oec_11-0/ <http://docs.getchef.com/release/oec_11-0/>`__
+   * - Open Source Chef Server 11.0
+     - `http://docs.getchef.com/release/osc_11-0/ <http://docs.getchef.com/release/osc_11-0/>`__
      - 
-   * - Enterprise Chef Server 11.1
-     - `http://docs.getchef.com/release/oec_11-1/ <http://docs.getchef.com/release/oec_11-1/>`__
-     - `Release Notes <http://docs.getchef.com/release/oec_11-1/release_notes.html>`__
-   * - Enterprise Chef Server 11.2
-     - `http://docs.getchef.com/release/oec_11-2/ <http://docs.getchef.com/release/oec_11-2/>`__
-     - `Release Notes <http://docs.getchef.com/release/oec_11-2/release_notes.html>`__
    * - Private Chef Server
      - `http://docs.getchef.com/release/private_chef/ <http://docs.getchef.com/release/private_chef/>`__
      - 
