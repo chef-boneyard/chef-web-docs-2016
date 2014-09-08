@@ -1,0 +1,12 @@
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for chef-server-ctl.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+
+The ``org-list`` subcommand is used to list all of the organizations currently present on the |chef server|. 
+
+This subcommand has the following syntax:
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-list
