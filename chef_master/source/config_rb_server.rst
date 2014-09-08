@@ -2,9 +2,9 @@
 |chef server rb| Settings
 =====================================================
 
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
+.. include:: ../../includes_config/includes_config_rb_server.rst
 
-.. warning:: This is a preview topic of Chef server settings. In general, these settings are documented, but should not be changed from their default settings without first consulting with Chef Support or a member of the Chef consulting team.
+.. warning:: This is a preview topic of |chef| server settings. In general, these settings are documented, but should not be changed from their default settings without first consulting with |company_name| support or a member of the |chef| consulting team.
 
 Settings
 =====================================================
