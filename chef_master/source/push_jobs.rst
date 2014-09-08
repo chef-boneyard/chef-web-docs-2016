@@ -6,13 +6,11 @@
 
 .. note:: |push jobs| is an add-on feature for on-premise installations of the |chef server oec| server only.
 
-:doc:`Install Push Jobs </install_push_jobs>` using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
+Install `Push Jobs <http://docs.getchef.com/install_push_jobs.html>`_ using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
 
 Requirements
 =====================================================
 .. include:: ../../includes_push_jobs/includes_push_jobs_requirements.rst
-
-.. warning:: |push jobs| is only available when running |chef server oec| version 11.0.1 (or higher). (If |chef server oec| version 11.0.0 was installed on new machines that were not upgraded from an earlier version of |chef private|, these machines must be upgraded to |chef server oec| version 11.0.1 using the same steps as the :doc:`high availability </upgrade_server_ha>` or :doc:`standalone </upgrade_server_standalone>` configurations, but using the ``private-chef-ctl reconfigure`` command in place of all instances of the ``private-chef-ctl upgrade`` command.)
 
 Components
 =====================================================
