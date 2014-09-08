@@ -58,3 +58,47 @@ Multiple Organizations
 .. include:: ../../includes_reporting/includes_reporting.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst
+
+Manage Organizations
+=====================================================
+The following commands are built-in to the |ctl chef server| command line tool:
+
+org-create
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst
+
+org-delete
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst
+
+org-list
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst
+
+org-show
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
