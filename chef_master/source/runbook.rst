@@ -78,7 +78,7 @@ System Checks
 
 ha-status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst
 
 opscode-authz
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -292,7 +292,7 @@ Server Tuning
 
 Customize the Config File
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
+.. include:: ../../includes_config/includes_config_rb_server.rst
 
 Use Conditions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -305,9 +305,9 @@ Recommended Settings
 
 Optional Settings
 -----------------------------------------------------
-The following settings are often used to for performance tuning of |chef server oec| in larger installations.
+The following settings are often used to for performance tuning of the |chef server| in larger installations.
 
-.. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
+.. note:: When changes are made to the |chef server rb| file, the |chef server| must be reconfigured by running the ``chef-server-ctl reconfigure`` command.
 
 bookshelf
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
