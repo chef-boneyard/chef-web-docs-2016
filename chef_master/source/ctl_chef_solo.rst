@@ -18,6 +18,7 @@ Run as Non-root User
 
 Examples
 =====================================================
+
 **Run chef-solo using solo.rb settings**
 
 .. code-block:: bash
