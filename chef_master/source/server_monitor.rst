@@ -58,7 +58,7 @@ Search Indexes
 
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst
 
-opscode-expanderctl
+|opscode expander ctl|
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander.rst
 

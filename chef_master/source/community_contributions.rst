@@ -35,7 +35,7 @@ The CLA is beneficial to our contributors and users because:
 
 |company_name| does not merge any pull requests made against an |company_name|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/opscode/chef-docs).
 
-About the Apache License
+About the |apache| License
 =====================================================
 |company_name| uses the Apache License Version 2 because it provides the same level of freedom for our users that we desire for ourselves. Based upon the Apache Licensing FAQ, it allows you to:
 

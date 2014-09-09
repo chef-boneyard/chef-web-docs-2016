@@ -30,13 +30,13 @@ Role Formats
 =====================================================
 .. include:: ../../includes_role/includes_role_formats.rst
 
-Ruby DSL
+|ruby| DSL
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 .. include:: ../../includes_role/includes_role_formats_ruby.rst
 
-JSON
+|json|
 -----------------------------------------------------
 .. include:: ../../includes_role/includes_role_formats_json.rst
 

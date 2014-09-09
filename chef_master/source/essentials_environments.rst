@@ -34,13 +34,13 @@ Environment Formats
 =====================================================
 .. include:: ../../includes_environment/includes_environment_format.rst
 
-Ruby DSL
+|ruby| DSL
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 .. include:: ../../includes_environment/includes_environment_format_ruby.rst
 
-JSON
+|json|
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment_format_json.rst
 

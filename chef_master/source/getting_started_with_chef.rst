@@ -1,10 +1,10 @@
 =====================================================
-Getting Started with Chef
+Getting Started with |chef|
 =====================================================
 
-Getting started with Chef is easy. A great place to start is here: https://learnchef.opscode.com/.
+Getting started with |chef| is easy. A great place to start is here: https://learnchef.opscode.com/.
 
-Also, Chef Community Manager Nathen Harvey has created a series of videos that walk through the process of setting up and configuring Chef:
+Also, |chef| community manager Nathen Harvey has created a series of videos that walk through the process of setting up and configuring Chef:
 
 http://www.nathenharvey.com/blog/2012/12/06/learning-chef-part-1
 http://nathenharvey.com/blog/2012/12/07/learning-chef-part-2/

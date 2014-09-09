@@ -21,7 +21,7 @@ Order Matters
 -----------------------------------------------------
 .. include:: ../../includes_chef/includes_chef_why_principles_order_matters.rst
 
-Why was Chef created?
+Why was |chef| created?
 =====================================================
 .. include:: ../../includes_chef/includes_chef_why_origins.rst
 
@@ -39,9 +39,9 @@ Yes, absolutely. The |chef client| will not do anything to your system that isn'
 
 Who uses |chef|?
 =====================================================
-Lots of companies, ranging from `small startups to the largest companies on the planet <http://www.opscode.com/customers/>`_.
+Lots of companies, ranging from `small startups to the largest companies on the planet <http://www.getchef.com/customers/>`_.
 
-Why the Apache license?
+Why the |apache| license?
 =====================================================
 .. include:: ../../includes_chef/includes_chef_why_apache_license.rst
 

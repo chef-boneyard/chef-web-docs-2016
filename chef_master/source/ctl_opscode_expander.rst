@@ -2,7 +2,7 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-opscode-expander (executable)
+|opscode expander ctl| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander.rst

@@ -1,5 +1,5 @@
 =====================================================
-About the Recipe DSL
+About the |dsl recipe|
 =====================================================
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst
@@ -8,7 +8,7 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
 
 .. note:: Read all about the `Recipe DSL <http://docs.opscode.com/chef/dsl_recipe.html>`_ in a single topic.
 
-Use Ruby
+Use |ruby|
 =====================================================
 Common |ruby| techniques can be used with the |dsl recipe| methods.
 
@@ -40,7 +40,7 @@ Accessor Methods
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
 
-Recipe DSL Methods
+|dsl recipe| Methods
 =====================================================
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method.rst
 

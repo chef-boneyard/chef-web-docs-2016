@@ -1,5 +1,5 @@
 =====================================================
-Install the Enterprise Chef Server
+Install |chef server oec|
 =====================================================
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
