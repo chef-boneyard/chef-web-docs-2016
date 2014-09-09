@@ -23,10 +23,4 @@
    * - .. image:: ../../images/icon_big_chef_ha.png
      - Availability supports out-of-the-box and custom high availability scenarios, plus server replication from a |chef server| master to any number of replica instances of the |chef server|.
    * - .. image:: ../../images/icon_big_chef_supermarket.png
-     - |supermarket| is the new community site for |chef|, located at |url opscode_community|.
-
-
-..   * - .. image:: ../../images/icon_big_chef_supermarket.png
-..     - |supermarket| is the location in which community cookbooks are authored and maintained. Cookbooks that are part of the |supermarket| may be used by any |chef| user. How community cookbooks are used varies from organization to organization.
-..   * - .. image:: ../../images/icon_big_chef_ha.png
-..     - |chef ha| provides support for running the |chef server| at scale.
+     - |supermarket| is the location in which community cookbooks are authored and maintained. Cookbooks that are part of the |supermarket| may be used by any |chef| user. How community cookbooks are used varies from organization to organization.
