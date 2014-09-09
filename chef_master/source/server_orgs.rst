@@ -45,14 +45,14 @@ Multiple Organizations
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst
 
-|push jobs| Groups
+|push jobs_title| Groups
 =====================================================
 
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst
 
-|reporting| Groups
+|reporting_title| Groups
 =====================================================
 
 .. include:: ../../includes_reporting/includes_reporting.rst

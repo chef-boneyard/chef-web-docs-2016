@@ -23,7 +23,7 @@ Hostnames, FQDNs
 -----------------------------------------------------
 The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`__ for more information.
 
-Install the |chef server|
+Install the |chef server_title|
 =====================================================
 The standalone installation of |chef server| creates a working installation on a single server. This installation is also useful when you are installing |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 

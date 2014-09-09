@@ -1,5 +1,5 @@
 =====================================================
-About Knife
+About |knife_title|
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife.rst

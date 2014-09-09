@@ -1,5 +1,5 @@
 =====================================================
-|chef analytics| Tasks
+|chef analytics_title| Tasks
 =====================================================
 
 .. include:: ../../includes_analytics/includes_analytics_ui.rst

@@ -8,7 +8,7 @@ Create a Data Bag
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag_create.rst
 
-Using Knife
+Using |knife_title|
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_create_knife.rst
 
@@ -36,7 +36,7 @@ Encryption Versions
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_versions.rst
 
-Knife Options
+|knife_title| Options
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_knife_options.rst
 
@@ -76,7 +76,7 @@ with Recipes
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_recipes.rst
 
-Load with Recipe DSL
+Load with |dsl recipe|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_recipes_load_using_recipe_dsl.rst
 

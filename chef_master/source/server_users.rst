@@ -116,7 +116,7 @@ user-show
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst
 
-|chef manage|
+|chef manage_title|
 =====================================================
 This topic is an alphabetical list of the various user-specific tasks that can be performed when using |chef manage|.
 

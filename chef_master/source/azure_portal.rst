@@ -1,5 +1,5 @@
 =====================================================
-Microsoft Azure Portal
+|microsoft| |azure portal|
 =====================================================
 
 |azure| is a cloud hosting platform from |microsoft| that provides virtual machines. The |azure portal| (https://manage.windowsazure.com/) can boostrap |windows|-based virtual machines that are already provisioned with the |chef client| running as a background service. Once provisioned, these virtual machines are ready to be managed by |chef|.
@@ -13,7 +13,7 @@ The following platforms within the |azure portal| may be integrated with |chef|:
 
 .. note:: Virtual machines running on |azure| can also be provisioned from the command-line using the |subcommand knife azure| plugin for |knife|. This approach is ideal for cases that require automation or for users who are more suited to command-line interfaces.
 
-|chef client| Settings
+|chef client_title| Settings
 =====================================================
 Before virtual machines are created using the |azure portal|, some |chef client|-specific settings will need to be identified so they may be provided to the |azure portal| during the virtual machine creation workflow. These settings are available from the |chef client| configuration settings:
 
@@ -117,7 +117,7 @@ Log files are available from within the |azure portal|:
 
 #. This should display the log files, including the |chef client| log file. 
 
-From the |chef client|
+From the |chef client_title|
 -----------------------------------------------------
 The |chef client| can be run interactively by using |windows remote desktop| to connect to the virtual machine, and then running the |chef client|:
 

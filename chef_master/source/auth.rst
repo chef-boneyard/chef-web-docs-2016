@@ -12,11 +12,11 @@ Authentication
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_chef_validator.rst
 
-During a |chef client| Run
+During a |chef client_title| Run
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
 
-|knife|
+|knife_title|
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_pairs_knife.rst
 
@@ -50,11 +50,11 @@ Authorization
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization.rst
 
-|chef server oec|
+|chef server_title|
 -----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac.rst
 
-|chef server oec| uses organizations, groups, and users to define role-based access control:
+The |chef server| uses organizations, groups, and users to define role-based access control:
 
 .. list-table::
    :widths: 60 420
@@ -90,10 +90,6 @@ Multiple Organizations
 .. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst
-
-Open Source |chef server|
------------------------------------------------------
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst
 
 |api chef server|
 =====================================================

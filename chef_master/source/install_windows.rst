@@ -1,5 +1,5 @@
 =====================================================
-Install the |chef client| on |windows|
+Install the |chef client_title| on |windows|
 =====================================================
 
 .. include:: ../../includes_windows/includes_windows_install_overview.rst

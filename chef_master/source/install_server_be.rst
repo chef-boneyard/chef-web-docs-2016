@@ -251,7 +251,7 @@ Add |chef server rb| to /etc/opscode
 =====================================================
 Copy the |chef server rb| file to ``/etc/opscode`` on the bootstrap server.
 
-Install the |chef server| on backend
+Install the |chef server_title| on backend
 =====================================================
 Install tthe |chef server| package on both of the back-end servers. For |redhat| and |centos| 6:
 
@@ -400,8 +400,8 @@ With synchronization complete, |drbd| is ready to be used on the bootstrap node.
 
 
 
-Configure the |chef server| on the bootstrap server
-=====================================================
+Configure the |chef server_title| on the bootstrap server
+=========================================================
 To continue setting up the |chef server| on a bootstrap server, run:
 
 .. code-block:: bash
@@ -417,8 +417,8 @@ This command may take several minutes to run, during which you will see the outp
 .. note:: |chef server| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
 
 
-Configure the |chef server| on non-bootstrap back-end
-=====================================================
+Configure the |chef server_title| on non-bootstrap back-end
+===========================================================
 .. warning:: Make sure |drbd| synchronization has completed, and that the |chef server| has fully started on the bootstrap node before continuing!
 
 Each node that is part of the |chef server| back-end cluster participates in an election for which server should be the primary server for the |drbd| device. This means that, if the bootstrap node is not allowed to finish initializing the system before setting up the non-bootstrap server, the system may be left in an unstable state:

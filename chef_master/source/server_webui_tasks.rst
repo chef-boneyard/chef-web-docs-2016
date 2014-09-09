@@ -1,5 +1,5 @@
 =====================================================
-|chef manage| Tasks
+|chef manage_title| Tasks
 =====================================================
 
 This topic is an alphabetical list of the various tasks that can be performed when using |chef manage|.
@@ -416,9 +416,9 @@ View Validation Client Details
 
 
 
-List of Reporting Tasks
+List of |reporting_title| Tasks
 =====================================================
-This section is an alphabetical list of tasks available when using the |reporting| add-on for |chef server oec|.
+This section is an alphabetical list of tasks available when using |reporting|, a premium feature of the |chef server|.
 
 Filter by Environment
 -----------------------------------------------------

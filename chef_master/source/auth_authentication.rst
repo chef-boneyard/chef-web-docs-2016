@@ -10,11 +10,11 @@ Authentication
 =====================================================
 .. include:: ../../includes_security/includes_security_chef_validator.rst
 
-During a |chef client| Run
+During a |chef client_title| Run
 =====================================================
 .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
 
-|knife|
+|knife_title|
 =====================================================
 .. include:: ../../includes_security/includes_security_key_pairs_knife.rst
 

@@ -12,7 +12,7 @@ Reset Validation Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_validation_reset_key.rst
 
-Generate Knife Config File
+Generate |knife_title| Config File
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_generate_config.rst
 

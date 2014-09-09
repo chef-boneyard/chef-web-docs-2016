@@ -4,7 +4,7 @@ Prerequisites
 
 The following prerequisites apply to every installation of the |chef server|.
 
-Download the |chef server|
+Download the |chef server_title|
 =====================================================
 If you do not have a copy of the |chef server|, please contact your sales representative (sales@opscode.com) or installation engineer via the customer portal to receive one.
 

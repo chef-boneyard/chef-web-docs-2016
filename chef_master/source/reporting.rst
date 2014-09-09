@@ -1,5 +1,5 @@
 =====================================================
-|reporting|
+|reporting_title|
 =====================================================
 
 .. include:: ../../includes_reporting/includes_reporting.rst
@@ -14,7 +14,7 @@ The Reporting Run
 =====================================================
 .. include:: ../../includes_reporting/includes_reporting_run.rst
 
-|chef manage|, Reports
+|chef manage_title|, Reports
 =====================================================
 .. include:: ../../includes_manage/includes_manage.rst
 
@@ -22,7 +22,7 @@ When |reporting| and |chef manage| are both added to |chef server oec|, a user i
 
 .. image:: ../../images/step_manage_webui_reports.png
 
-knife reporting
+|knife_title| reporting
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_reporting.rst
 

@@ -1,10 +1,10 @@
 =====================================================
-|chef manage|
+|chef manage_title|
 =====================================================
 
 .. include:: ../../includes_manage/includes_manage.rst
 
-.. note:: |chef manage| is a user interface add-on to |chef server oec| and must be :doc:`installed on the same physical hardware </install_manage>` as the |chef server oec| server.
+.. note:: |chef manage| is a premium feature of the |chef server| and is `easily installed <http://docs.getchef.com/ctl_chef_server.html#install>`_.
 
 Nodes
 =====================================================

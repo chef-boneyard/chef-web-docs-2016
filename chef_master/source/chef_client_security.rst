@@ -1,5 +1,5 @@
 =====================================================
-|chef client| Security
+|chef client_title| Security
 =====================================================
 
 .. include:: ../../includes_chef_auth/includes_chef_auth.rst
@@ -12,7 +12,7 @@ Authentication
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_chef_validator.rst
 
-During a |chef client| Run
+During a |chef client_title| Run
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst
 
@@ -29,6 +29,6 @@ During a |chef client| Run
 .. .. include:: ../../step_server_security/step_server_security_ssl_regenerate_certificates.rst
 .. 
 
-|chef client| SSL Settings
+|chef client_title| SSL Settings
 =====================================================
 .. include:: ../../includes_server_security/includes_server_security_ssl_config_settings.rst

@@ -1,5 +1,5 @@
 =====================================================
-Debug Recipes and chef-client Runs
+Debug Recipes and |chef client_title| Runs
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
@@ -29,7 +29,7 @@ Using an empty run-list is an effective way to determine if the failed |chef cli
 * configuration settings in the |knife rb| file
 * permissions for the user to both the |chef server| and to the node on which the |chef client| run is to take place
 
-Knife
+|knife_title|
 -----------------------------------------------------
 Use the verbose logging that is built into |knife|:
 
@@ -38,7 +38,7 @@ Use the verbose logging that is built into |knife|:
 
 .. note:: Plugins do not always support verbose logging.
 
-chef-client
+|chef client_title|
 -----------------------------------------------------
 Use the verbose logging that is built into the |chef client|:
 
@@ -109,7 +109,7 @@ chef_hander
 Read more :doc:`about exception, report, and start handlers </handlers>`.
 
 
-chef-shell
+|chef shell|
 -----------------------------------------------------
 .. include:: ../../includes_chef_shell/includes_chef_shell.rst
 
@@ -161,7 +161,7 @@ All resources share a set of common actions, attributes, and so on. Use the foll
      - |ignore_failure| Default value: ``false``.
 
 
-chef-solo
+|chef solo|
 -----------------------------------------------------
 .. include:: ../../includes_chef_solo/includes_chef_solo.rst
 

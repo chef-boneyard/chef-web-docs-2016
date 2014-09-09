@@ -2,7 +2,7 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-Install the Chef Server
+Install the |chef server_title|
 =====================================================
 There are two configuration scenarios for the |chef server|: standalone (everything on a single machine) and high availability (machines configured for front-end and back-end, allowing for failover and load-balancing, as required).
 

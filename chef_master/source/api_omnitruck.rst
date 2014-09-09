@@ -1,5 +1,5 @@
 =====================================================
-Omnitruck API
+|api omnitruck|
 =====================================================
 
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck.rst
@@ -8,7 +8,7 @@ Syntax
 =====================================================
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck_syntax.rst
 
-|chef client| Downloads
+|chef client_title| Downloads
 =====================================================
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck_client.rst
 
@@ -27,7 +27,7 @@ Examples
 
 .. include:: ../../step_api_omnitruck/step_api_omnitruck_client_download_directly.rst
 
-|chef server| Downloads
+|chef server_title| Downloads
 =====================================================
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck_server.rst
 

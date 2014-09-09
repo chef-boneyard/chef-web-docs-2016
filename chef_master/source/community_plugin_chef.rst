@@ -1,5 +1,5 @@
 =====================================================
-Community Plugins: chef-client
+Community Plugins: |chef client_title|
 =====================================================
 
 .. include:: ../../includes_handler/includes_handler.rst

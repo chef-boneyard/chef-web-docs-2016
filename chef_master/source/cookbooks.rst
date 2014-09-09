@@ -40,11 +40,9 @@ App Cookbooks
 
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_app_example.rst
 
-Chef Server Policy
+|chef server_title| Policy
 -----------------------------------------------------
 .. include:: ../../includes_cookbook/includes_cookbook_pattern_policy.rst
-
-
 
 For more information ...
 =====================================================

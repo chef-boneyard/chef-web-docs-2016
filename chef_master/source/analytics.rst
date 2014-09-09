@@ -1,10 +1,10 @@
 =====================================================
-|chef analytics|
+|chef analytics_title|
 =====================================================
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
-|chef actions|
+|chef actions_title|
 =====================================================
 
 .. include:: ../../includes_actions/includes_actions.rst

@@ -35,7 +35,7 @@ The Workstation
 
 **Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
-|chef dk|
+|chef dk_title|
 -----------------------------------------------------
 The |chef dk| defines a common workflow for cookbook development, including unit and integration testing, identifying lint-like behavior, dedicated tooling, and more:
 
@@ -46,7 +46,7 @@ The |chef dk| defines a common workflow for cookbook development, including unit
 **Tools:** :doc:`kitchen (executable) </ctl_kitchen>` | :doc:`chef (executable) </ctl_chef>`
 
 
-The |chef server|
+The |chef server_title|
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
@@ -74,7 +74,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
 * The |chef server| provides :doc:`powerful search </essentials_search>` functionality
 
-|chef analytics|
+|chef analytics_title|
 -----------------------------------------------------
 :doc:`Chef Analytics </analytics>` is an add-on for the |chef server| that provides visibility into what is happening on the server. It runs on separate hardware from the |chef server| and consists of several components, initially built around :doc:`Chef Actions </actions>`.
 

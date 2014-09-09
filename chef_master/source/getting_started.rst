@@ -18,11 +18,11 @@ Workstation Setup
 =====================================================
 The |chef dk| is a package that contains everything you need to start using |chef|, along with a collection of tools and libaries that can help improve the code you are using to run your business.
 
-Install the |chef dk|
+Install the |chef dk_title|
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_chef_dk.rst
 
-What's in the |chef dk|?
+What's in the |chef dk_title|?
 -----------------------------------------------------
 .. include:: ../../includes_chef_dk/includes_chef_dk_tools.rst
 
@@ -56,7 +56,7 @@ where ``name`` is a name that you have chosen for the both the |chef repo| and t
            default.rb
      README.md
 
-Run the |chef client|
+Run the |chef client_title|
 -----------------------------------------------------
 The |chef client| includes a mode called "local mode", which runs the |chef client| locally on your machine. Local mode allows you to run recipes and work locally with the code you are using to run your business. Local mode does not require a connection to a |chef server|, public or private keys, or configuring of nodes. (Though we'll do all of these things later!) Many people use local mode for simple, local testing of recipes and cookbooks, often as a pre-cursor to running unit and integration tests against the same recipes and cookbooks.
 
@@ -113,7 +113,7 @@ That's it. The warnings, for the moment, can be ignored. Check the root of the p
 
 # We'll come back to working with |chef| later on, but the next step is to familiarize yourself with resources and cookbooks.
 
-|kitchen| Setup
+|kitchen_title| Setup
 =====================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen.rst
 

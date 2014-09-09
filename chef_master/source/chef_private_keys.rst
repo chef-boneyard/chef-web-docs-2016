@@ -8,11 +8,11 @@ How Keys are Used?
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication.rst
 
-|chef client|
+|chef client_title|
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
 
-|knife|
+|knife_title|
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_pairs_knife.rst
 

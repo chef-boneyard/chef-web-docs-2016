@@ -11,63 +11,63 @@ The following documentation sets are available:
    * - Application
      - Home Page
      - Release Notes
-   * - chef-client 11.16
+   * - |chef client_title| 11.16
      - `http://docs.getchef.com <http://docs.getchef.com>`__
      - `Release Notes <http://docs.getchef.com/release/11-16/release_notes.html>`__
-   * - chef-client 11.14
+   * - |chef client_title| 11.14
      - `http://docs.getchef.com <http://docs.getchef.com>`__
      - `Release Notes <http://docs.getchef.com/release/11-14/release_notes.html>`__
-   * - chef-client 11.12
+   * - |chef client_title| 11.12
      - `http://docs.getchef.com/release/11-12/ <http://docs.getchef.com/release/11-12/>`__
      - `Release Notes <http://docs.getchef.com/release/11-12/release_notes.html>`__
-   * - chef-client 11.10
+   * - |chef client_title| 11.10
      - `http://docs.getchef.com/release/11-10/ <http://docs.getchef.com/release/11-10/>`__
      - `Release Notes <http://docs.getchef.com/release/11-10/release_notes.html>`__
-   * - chef-client 11.8
+   * - |chef client_title| 11.8
      - `http://docs.getchef.com/release/11-8/ <http://docs.getchef.com/release/11-8/>`__
      - `Release Notes <http://docs.getchef.com/release/11-8/release_notes.html>`__
-   * - chef-client 11.6
+   * - |chef client_title| 11.6
      - `http://docs.getchef.com/release/11-6/ <http://docs.getchef.com/release/11-6/>`__
      - `Release Notes <http://docs.getchef.com/release/11-6/release_notes.html>`__
-   * - chef-client 11.4
+   * - |chef client_title| 11.4
      - `http://docs.getchef.com/release/11-4/ <http://docs.getchef.com/release/11-4/>`__
      - `Release Notes <http://docs.getchef.com/release/11-4/release_notes.html>`__
-   * - chef-client 11.2
+   * - |chef client_title| 11.2
      - `http://docs.getchef.com/release/11-2/ <http://docs.getchef.com/release/11-2/>`__
      - `Release Notes <http://docs.getchef.com/release/11-2/release_notes.html>`__
-   * - chef-client 11.0
+   * - |chef client_title| 11.0
      - `http://docs.getchef.com/release/11-0/ <http://docs.getchef.com/release/11-0/>`__
      - `Release Notes <http://docs.getchef.com/release/11-0/release_notes.html>`__
-   * - chef-client 10.latest
+   * - |chef client_title| 10.latest
      - `http://docs.getchef.com/release/10/ <http://docs.getchef.com/release/10/>`__
      - `Release Notes <http://docs.getchef.com/release/10/release_notes.html>`__
-   * - Ohai 7
+   * - |ohai| 7
      - `http://docs.getchef.com/release/ohai-7/ <http://docs.getchef.com/release/ohai-7/>`__
      - `Release Notes <http://docs.getchef.com/release/ohai-7/release_notes.html>`__
-   * - Ohai 6
+   * - |ohai| 6
      - `http://docs.getchef.com/release/ohai-6/ <http://docs.getchef.com/release/ohai-6/>`__
      - `Release Notes <http://docs.getchef.com/release/ohai-6/release_notes.html>`__
-   * - Chef Developer Kit
+   * - |chef dk_title|
      - `http://docs.getchef.com/devkit/ <http://docs.getchef.com/devkit/>`__
      - 
-   * - The Chef Server
+   * - |chef server_title| 12
      - `http://docs.getchef.com/server/ <http://docs.getchef.com/server/>`__
      - 
-   * - Enterprise Chef Server 11.2
+   * - |chef server oec| 11.2
      - `http://docs.getchef.com/release/oec_11-2/ <http://docs.getchef.com/release/oec_11-2/>`__
      - `Release Notes <http://docs.getchef.com/release/oec_11-2/release_notes.html>`__
-   * - Enterprise Chef Server 11.1
+   * - |chef server oec| 11.1
      - `http://docs.getchef.com/release/oec_11-1/ <http://docs.getchef.com/release/oec_11-1/>`__
      - `Release Notes <http://docs.getchef.com/release/oec_11-1/release_notes.html>`__
-   * - Enterprise Chef Server 11.0
+   * - |chef server oec| 11.0
      - `http://docs.getchef.com/release/oec_11-0/ <http://docs.getchef.com/release/oec_11-0/>`__
      - 
-   * - Open Source Chef Server 11.1
+   * - |chef server osc| 11.1
      - `http://docs.getchef.com/release/osc_11-1/ <http://docs.getchef.com/release/osc_11-1/>`__
      - `Release Notes <http://docs.getchef.com/release/osc_11-1/release_notes.html>`__
-   * - Open Source Chef Server 11.0
+   * - |chef server osc| 11.0
      - `http://docs.getchef.com/release/osc_11-0/ <http://docs.getchef.com/release/osc_11-0/>`__
      - 
-   * - Private Chef Server
+   * - |chef private|
      - `http://docs.getchef.com/release/private_chef/ <http://docs.getchef.com/release/private_chef/>`__
      - 

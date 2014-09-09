@@ -1,5 +1,5 @@
 =====================================================
-Chef Server API
+|api chef server|
 =====================================================
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server.rst

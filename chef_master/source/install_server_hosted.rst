@@ -1,5 +1,5 @@
 =====================================================
-Sign up for Hosted |chef server oec|
+Sign up for the Hosted |chef server_title|
 =====================================================
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst

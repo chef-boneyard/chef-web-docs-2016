@@ -1,5 +1,5 @@
 =====================================================
-|push jobs|
+|push jobs_title|
 =====================================================
 
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst
@@ -62,7 +62,7 @@ Reference
 The following sections describe the |knife| subcommands, the |api push jobs|, and configuration settings used by |push jobs|.
 
 
-|subcommand knife push jobs|
+knife push jobs
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_push_jobs.rst
 

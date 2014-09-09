@@ -16,6 +16,6 @@ Regenerate Certificates
 =====================================================
 .. include:: ../../step_server_security/step_server_security_ssl_regenerate_certificates.rst
 
-|chef client| Settings
+|chef client_title| Settings
 =====================================================
 .. include:: ../../includes_server_security/includes_server_security_ssl_config_settings.rst

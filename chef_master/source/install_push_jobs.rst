@@ -1,5 +1,5 @@
 =====================================================
-Install |push jobs|
+Install |push jobs_title|
 =====================================================
 
 .. include:: ../../includes_install/includes_install_push_jobs_overview.rst

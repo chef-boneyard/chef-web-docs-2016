@@ -2,10 +2,10 @@
 Supported Platforms
 =====================================================
 
-The sections below list the supported platforms for the |chef client|, |ohai|, and the |chef server| (|chef server oec| and |chef server osc|).
+The sections below list the supported platforms for the |chef client|, |ohai|, and the |chef server|.
 
 
-|chef client|
+|chef client_title|
 =====================================================
 .. include:: ../../includes_supported_platforms/includes_supported_platforms_client.rst
 
@@ -13,10 +13,6 @@ The sections below list the supported platforms for the |chef client|, |ohai|, a
 =====================================================
 .. include:: ../../includes_supported_platforms/includes_supported_platforms_ohai.rst
 
-|chef server oec|
+|chef server_title|
 =====================================================
-.. include:: ../../includes_supported_platforms/includes_supported_platforms_server_oec.rst
-
-|chef server osc|
-=====================================================
-.. include:: ../../includes_supported_platforms/includes_supported_platforms_server_osc.rst
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_server.rst

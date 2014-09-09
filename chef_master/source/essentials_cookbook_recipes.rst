@@ -4,7 +4,6 @@ About Recipes
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
-
 Recipe Attributes
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
@@ -36,7 +35,6 @@ Environment Variables
 .. include:: ../../includes_environment_variables/includes_environment_variables.rst
 
 .. include:: ../../includes_environment_variables/includes_environment_variables_access_resource_attributes.rst
-
 
 Work with Recipes
 =====================================================
@@ -76,7 +74,7 @@ Accessor Methods
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
 
-Use Ruby
+Use |ruby|
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_use_ruby.rst
 
@@ -108,7 +106,7 @@ Apply to Run-lists
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists.rst
 
-|chef server|
+|chef server_title|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists_chef_server.rst
 
@@ -128,7 +126,7 @@ Use Tags
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
-End |chef client| Run 
+End |chef client_title| Run 
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client_run_end.rst
 

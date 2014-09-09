@@ -22,7 +22,7 @@ The file-based resources---|resource cookbook_file|, |resource file|, |resource 
 The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
 
 
-Install the |chef client| on Windows
+Install the |chef client_title| on Windows
 =====================================================
 .. include:: ../../includes_windows/includes_windows_install_overview.rst
 
@@ -84,7 +84,7 @@ PATH System Variable
 -----------------------------------------------------
 .. include:: ../../includes_windows/includes_windows_environment_variable_path.rst
 
-Knife
+|knife_title|
 =====================================================
 .. include:: ../../includes_knife/includes_knife.rst
 
@@ -616,7 +616,7 @@ Some of the most popular |company_name|-maintained cookbooks that contain lightw
    * - `windows <https://github.com/opscode-cookbooks/windows>`_
      - The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
 
-Recipe DSL Methods
+|dsl recipe| Methods
 =====================================================
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst
 
@@ -651,7 +651,7 @@ registry_value_exists? Method
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
 
 
-|chef client|
+|chef client_title|
 =====================================================
 .. include:: ../../includes_chef_client/includes_chef_client.rst
 

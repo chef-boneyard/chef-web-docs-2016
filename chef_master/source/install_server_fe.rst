@@ -25,7 +25,7 @@ A scaled front end installation scenario has the following system requirements:
 
 Network Requirements
 =====================================================
-|chef server| has the following network requirements for a scaled front end installation:
+The |chef server| has the following network requirements for a scaled front end installation:
 
 Load Balancing
 -----------------------------------------------------
@@ -43,7 +43,7 @@ Firewalls
 
 |chef server rb|
 -----------------------------------------------------
-Each |chef server| cluster has a single configuration file called |chef server rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/chef-server.rb`` on each server. Using the text editor of your choice, create a file called |chef server rb|.
+Each machine in a |chef server| cluster has a single configuration file called |chef server rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/chef-server.rb`` on each server. Using the text editor of your choice, create a file called |chef server rb|.
 
 Configure topology
 -----------------------------------------------------
@@ -167,7 +167,7 @@ Add |chef server rb|
 -----------------------------------------------------
 Copy the |chef server rb| file to ``/etc/opscode/chef-server.rb`` on the bootstrap server.
 
-Install the |chef server|
+Install the |chef server_title|
 -----------------------------------------------------
 On the bootstrap server copy the |chef server rb| file to ``/etc/opscode/chef-server.rb``.
 

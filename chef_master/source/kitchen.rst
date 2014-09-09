@@ -1,5 +1,5 @@
 =====================================================
-|kitchen|
+|kitchen_title|
 =====================================================
 
 .. include:: ../../includes_test_kitchen/includes_test_kitchen.rst

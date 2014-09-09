@@ -4,7 +4,7 @@ Prerequisites
 
 The following prerequisites apply to every installation of |chef analytics|. It is assumed that you have already a running |chef server oec| installation.
 
-Download |chef analytics|
+Download |chef analytics_title|
 =====================================================
 If you do not have a copy of |chef analytics|, please contact your sales representative (sales@opscode.com) or installation engineer via the customer portal to receive one.
 

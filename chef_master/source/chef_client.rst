@@ -1,5 +1,5 @@
 =====================================================
-|chef client|
+|chef client_title|
 =====================================================
 
 .. include:: ../../includes_chef_client/includes_chef_client.rst
@@ -41,6 +41,6 @@ Some important components of nodes include:
    * - .. image:: ../../images/icon_ohai.png
      - .. include:: ../../includes_ohai/includes_ohai.rst
 
-The |chef client| Run
+The |chef client_title| Run
 =====================================================
 .. include:: ../../includes_chef_client/includes_chef_client_11-14_run.rst

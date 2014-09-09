@@ -1,5 +1,5 @@
 =====================================================
-About the Server
+About the |chef server_title|
 =====================================================
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst

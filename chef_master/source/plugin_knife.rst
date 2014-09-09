@@ -1,5 +1,5 @@
 =====================================================
-About Knife Cloud Plugins
+About |knife_title| Cloud Plugins
 =====================================================
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst

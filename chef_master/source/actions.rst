@@ -1,5 +1,5 @@
 =====================================================
-|chef actions|
+|chef actions_title|
 =====================================================
 
 .. include:: ../../includes_actions/includes_actions.rst
