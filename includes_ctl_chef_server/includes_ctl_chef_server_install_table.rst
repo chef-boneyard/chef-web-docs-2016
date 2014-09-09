@@ -59,7 +59,7 @@
 
        .. code-block:: ruby
 
-          $ chef-server-ctl reconfigure	 
+          $ opscode-push-jobs-server-ctl reconfigure	 
 
    * - |chef replication_title|
      - Run:
