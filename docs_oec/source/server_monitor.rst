@@ -49,7 +49,7 @@ ha-status
 
 opscode-authz
 -----------------------------------------------------
-.. include:: ../../includes_server_monitor/includes_server_monitor_11_system_authz.rst
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_authz.rst
 
 opscode-erchef
 -----------------------------------------------------
