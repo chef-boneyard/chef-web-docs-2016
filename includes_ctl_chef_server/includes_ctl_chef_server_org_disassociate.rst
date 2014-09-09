@@ -3,8 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This subcommand has the following syntax:
+The ``org-disassociate`` subcommand is used to disassociate a user from an organization. 
 
-.. code-block:: bash
 
-   $ chef-server-ctl user-associate ORG_NAME USER_NAME
+

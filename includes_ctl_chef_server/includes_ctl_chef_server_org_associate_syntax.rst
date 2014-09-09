@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl user-disassociate ORG_NAME USER_NAME
+   $ chef-server-ctl org-associate ORG_NAME USER_NAME

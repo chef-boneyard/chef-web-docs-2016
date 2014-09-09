@@ -35,6 +35,14 @@ master-recover
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_master_recover.rst
 
+org-associate
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate_syntax.rst
+
 org-create
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
@@ -54,6 +62,14 @@ org-delete
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst
+
+org-disassociate
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate_syntax.rst
 
 org-list
 =====================================================
@@ -105,14 +121,6 @@ upgrade
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_options.rst
 
-user-associate
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_associate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_associate_syntax.rst
-
 user-create
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create.rst
@@ -132,14 +140,6 @@ user-delete
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete_syntax.rst
-
-user-disassociate
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_disassociate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_disassociate_syntax.rst
 
 user-edit
 =====================================================
