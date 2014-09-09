@@ -1,7 +1,7 @@
 .. THIS PAGE IS LOCATED AT THE /client/ PATH.
 
 =====================================================
-All about the |chef client| ...  
+All about the |chef client_title| ...  
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -39,7 +39,7 @@ A workstation must be configured with a |chef client|, must have access to a |ch
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/install_workstation.html">Set up a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/install_bootstrap.html">Bootstrap a Node</a> </br>
 
-Knife
+|knife_title|
 -----------------------------------------------------
 |knife| is a command-line tool that provides an interface between a local |chef repo| and the |chef server|. All |knife| subcommands share a set of :doc:`common options </knife_common_options>` and :doc:`usage patterns </knife_using>`. 
 
@@ -79,7 +79,7 @@ The following |knife| subcommands are built-in:
 
 |knife| settings are stored in the :doc:`knife.rb </config_rb_knife>` file. There is a default |knife rb| file and there are :doc:`optional settings </config_rb_knife_optional_settings>` that can be added to the |knife rb| file.
 
-Knife Cloud Plugins
+|knife_title| Cloud Plugins
 -----------------------------------------------------
 Plugins allow |knife| to interact with all of the major cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
 
@@ -103,42 +103,23 @@ The following command-line tools can be run on the workstation to simulate a |ch
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/ctl_chef_shell.html">chef-shell</a> </br>
 
 
-The Server
+The |chef server_title|
 =====================================================
-The |chef server| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
+.. include:: ../../includes_chef_server/includes_chef_server.rst
 
-Server Essentials
------------------------------------------------------
-The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
-
-* A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
-* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.getchef.com/client/essentials_node_object.html#attributes>`_.
-* All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
-* The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
-* The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
-* Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
-* The :doc:`Chef Server API </api_chef_server>` can be used to access objects on the |chef server|
-
-|chef server oec|
------------------------------------------------------
-|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes additional functionality like |reporting| and built-in support for high availability deployment scenarios. For more information about |chef server oec|, see http://docs.getchef.com/enterprise/.
-
-|chef server osc|
------------------------------------------------------
-|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|. For more information about |chef server osc|, see http://docs.getchef.com/open_source/.
-
+For more information about the |chef server| see docs.getchef.com/server/.
 
 The Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
 
-About the chef-client
+About the |chef client_title|
 -----------------------------------------------------
 The |chef client| does the actual configuration on :doc:`the nodes </essentials_nodes>`. The |chef client| receives its instructions from cookbooks (:doc:`recipes </essentials_cookbook_recipes>`, mostly). The process of configuring a node is called :doc:`the chef-client run </essentials_nodes_chef_run>`. At the beginning of each run, the |chef client| :doc:`validates to the server </essentials_chef_client>`, :doc:`collects important data about that node </ohai>`, and then configures the node. At the end of each run, the |chef client| :doc:`reports the successes and failures that may have occurred </handlers>`.
 
 Be sure to :doc:`test and debug your recipes </chef_shell>` before running them in production! Run the |chef client| in :doc:`why-run mode </essentials_nodes_why_run>` to simulate what should happen during the |chef client| run, but without configuring anything.
 
-Install the |chef client|
+Install the |chef client_title|
 -----------------------------------------------------
 The |chef client| is typically installed using a :doc:`bootstrap operation </essentials_nodes_bootstrap>`. This is done by running the :doc:`knife bootstrap </knife_bootstrap>` subcommand from a workstation. Alternately, the |chef client| can be downloaded to a node directly using the |api omnitruck|.
 
@@ -271,7 +252,7 @@ A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much lik
 
 See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository for the full list.
 
-The Recipe DSL
+The |dsl recipe|
 -----------------------------------------------------
 The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The |chef client| relies on recipes to know what action(s) to take as it is configuring a node. The |dsl recipe| contains the following methods:
 
