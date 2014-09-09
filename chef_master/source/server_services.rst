@@ -6,7 +6,7 @@ Services
 
 Service Subcommands
 =====================================================
-The following subcommands are built into the |private chef ctl| command line tool.
+The following subcommands are built into the |chef server ctl| command line tool.
 
 hup
 -----------------------------------------------------
@@ -63,7 +63,7 @@ term
 
 List of Services
 =====================================================
-The following services are part of |chef server oec|:
+The following services are part of the |chef server|:
 
 * bifrost
 * bookshelf

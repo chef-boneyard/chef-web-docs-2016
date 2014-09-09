@@ -92,7 +92,6 @@ Examples
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_include_credentials.rst
 
-
 Container Services
 =====================================================
 .. include:: ../../includes_containers/includes_containers_container_service_attributes.rst

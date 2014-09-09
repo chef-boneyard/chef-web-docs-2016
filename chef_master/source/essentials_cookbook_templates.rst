@@ -34,6 +34,6 @@ Partial Templates
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_partials.rst
 
-``render`` Method
+render Method
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst

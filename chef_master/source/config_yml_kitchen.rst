@@ -8,7 +8,6 @@
 
 Syntax
 ==========================================================================
-
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst
 
 Provisioner-specific Settings
@@ -17,7 +16,6 @@ Provisioner-specific Settings
 
 |chef client|-specific Settings
 ==========================================================================
-
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_chef_client.rst
 
 Driver-specific Settings

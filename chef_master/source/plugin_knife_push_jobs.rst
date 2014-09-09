@@ -1,5 +1,5 @@
 =====================================================
-|subcommand knife push jobs|
+knife push jobs
 =====================================================
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_push_jobs.rst

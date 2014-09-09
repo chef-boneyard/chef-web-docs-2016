@@ -8,11 +8,11 @@ Child Processes and Inheritance
 =====================================================
 .. include:: ../../includes_environment_variables/includes_environment_variables_child_processes.rst
 
-Managing Environments when Using Chef
+Managing Environments
 =====================================================
 .. include:: ../../includes_environment_variables/includes_environment_variables_access.rst
 
-Using the Service's Init Script
+Using an Init Script
 -----------------------------------------------------
 .. include:: ../../includes_environment_variables/includes_environment_variables_access_init.rst
 
