@@ -39,7 +39,7 @@ The following diagram shows the various components that are part of a |chef serv
    * - PostgreSQL
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
-For hosted |chef server oec|, these components are mostly transparent because of the hosted interface for the |chef server|. For |chef server oec| and |chef server osc|, these relationships can be more complex, depending on how the machines on which the |chef server| will run need to be deployed. 
+For the hosted |chef server|, these components are mostly transparent because of the hosted interface for the |chef server|. When the |chef server| is deployed on-premises, these relationships can be more complex, depending on how the machines on which the |chef server| will run need to be deployed. 
 
 Common Features
 =====================================================
@@ -76,17 +76,17 @@ The following premium feature are available for use with the |chef server|:
 
    * - Feature
      - Description
-   * - |chef analytics|
+   * - |chef analytics_title|
      - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Actions details are tracked on the |chef server| and are visible to users from the |chef analytics| web user interface.
-   * - High Availability
+   * - |chef ha_title|
      - Availability supports out-of-the-box and custom high availability scenarios, including using |drbd| and |amazon aws|.
-   * - |chef manage|
+   * - |chef manage_title|
      - The |chef manage| web user interface is used to manage objects that are stored on the |chef server|, including data bags, attributes, run-lists, roles, environments, and cookbooks. Additionally, reports are views into what happened during every |chef client| run that has occurred across all of the nodes that are under management by |chef|.
-   * - |push jobs|
+   * - |push jobs_title|
      - |push jobs| allows jobs to be run against nodes independently of a |chef client| run. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is run are determined by the results of a search query made to the |chef server|. 
-   * - Replication
+   * - |chef replication_title|
      - |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
-   * - |reporting|
+   * - |reporting_title|
      - The |reporting| feature of the |chef server| is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure being managed by |chef|. Reports can be generated for the entire organization and they can be generated for specific nodes.
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install.rst
