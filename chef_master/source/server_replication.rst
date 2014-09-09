@@ -2,7 +2,7 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-Replication
+|chef replication_title|
 =====================================================
 
 |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
@@ -29,11 +29,11 @@ and for example, a single primary |chef server| and multiple replicas:
 * Synchronizing a replica instance with another replica instance
 * Node re-registration. A node may be associated only with a single |chef server|
 
-Configure Replication
+Configure |chef replication_title|
 =====================================================
-To configure replication of |chef server| data, first install |chef sync|, then configure the master |chef server|, then configure the replica |chef server|, and then start the synchronization process. 
+To configure replication of |chef server| data, first install |chef replication|, then configure the master |chef server|, then configure the replica |chef server|, and then start the synchronization process. 
 
-#. To install |chef sync|, run the following on all machines in the |chef server| configuration. For |debian dpkg|:
+#. To install |chef replication|, run the following on all machines in the |chef server| configuration. For |debian dpkg|:
 
    .. code-block:: bash
       
@@ -59,7 +59,7 @@ To configure replication of |chef server| data, first install |chef sync|, then 
       
       $ chef-server-ctl reconfigure
 
-   |chef sync| is now installed on all machines. The |chef_sync rb| file is located at ``/etc/chef-sync/chef-sync.rb``.
+   |chef replication| is now installed on all machines. The |chef_sync rb| file is located at ``/etc/chef-sync/chef-sync.rb``.
 
 #. Add the following setting to the |chef_sync rb| file on the master |chef server|:
 
