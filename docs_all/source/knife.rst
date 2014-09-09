@@ -1,13 +1,13 @@
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
 =====================================================
-Knife Reference
+|knife_title| Reference
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife.rst
 
 
-Working with Knife
+Working with |knife_title|
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_using.rst
@@ -1154,31 +1154,6 @@ Examples
 .. include:: ../../step_knife/step_knife_exec_query_for_multiple_attributes.rst
 
 
-
-
-index rebuild
-=====================================================
-.. include:: ../../includes_knife/includes_knife_index_rebuild.rst
-
-.. note:: This subcommand ONLY works when run against the open source |chef server| version 10.x. This subcommand will NOT run against open source |chef server| 11, |chef server oec| (including hosted |chef server oec|), or |chef private|.
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_index_rebuild_syntax.rst
-
-Options
------------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
-
-|no_options|
-
-Examples
------------------------------------------------------
-None.
-
-
-
-
 list
 =====================================================
 
@@ -1673,6 +1648,24 @@ Examples
 
 
 
+knife serve
+=====================================================
+
+.. include:: ../../includes_knife/includes_knife_serve.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_serve_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_serve_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+
 
 show
 =====================================================
@@ -1734,7 +1727,7 @@ Examples
 .. include:: ../../step_knife/step_knife_ssh_shell_type.rst
 
 
-knife ssl check
+knife ssl_check
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_ssl_check.rst

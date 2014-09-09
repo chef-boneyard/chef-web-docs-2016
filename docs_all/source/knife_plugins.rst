@@ -1,12 +1,12 @@
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
 =====================================================
-Knife Cloud Plugins Reference
+|knife_title| Cloud Plugins Reference
 =====================================================
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 
-Working with Knife
+Working with |knife_title|
 =====================================================
 .. include:: ../../includes_knife/includes_knife_using.rst
 
