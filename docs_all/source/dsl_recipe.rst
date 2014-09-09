@@ -165,7 +165,3 @@ Windows Platform Helpers
 Helper Methods
 ----------------------------------------------------- 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform_helpers.rst
-
-
-    
-  

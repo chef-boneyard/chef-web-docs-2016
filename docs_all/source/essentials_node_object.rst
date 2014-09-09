@@ -53,4 +53,3 @@ Substitution
 Addition
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_deep_merge_add.rst
-
