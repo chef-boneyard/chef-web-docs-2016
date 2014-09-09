@@ -12,7 +12,7 @@ In the following sections, the settings are listed alphabetically, with a descri
 
    * - Config File
      - Description
-   * - :doc:`config_rb_chef_server`
+   * - :doc:`config_rb_server`
      - |config rb chef server|
    * - :doc:`config_rb_client`
      - |config rb client|
@@ -20,8 +20,7 @@ In the following sections, the settings are listed alphabetically, with a descri
      - |config rb knife|
    * - :doc:`config_rb_metadata`
      - |config rb metadata|
-   * - :doc:`config_rb_solo`
-     - |config rb solo|
+
 
 
 
