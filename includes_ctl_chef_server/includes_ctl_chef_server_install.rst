@@ -19,17 +19,17 @@ where ``name_of_premium_feature`` represents the command line value associated w
 
    * - Feature
      - Command
-   * - Chef Analytics
+   * - |chef analytics_title|
      - ``$ chef-server-ctl install opscode-analytics``
-   * - Chef Manage
+   * - |chef manage_title|
      - ``$ chef-server-ctl install opscode-manage``
-   * - High Availability
+   * - |chef ha_title|
      - ``$ chef-server-ctl install chef-ha``	 
-   * - Push Jobs
+   * - |push jobs_title|
      - ``$ chef-server-ctl install opscode-push-jobs-server``
-   * - Replication
+   * - |chef replication_title|
      - ``$ chef-server-ctl install chef-sync``
-   * - Reporting
+   * - |reporting_title|
      - ``$ chef-server-ctl install opscode-reporting``
 
 	 
