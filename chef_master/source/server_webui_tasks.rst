@@ -2,7 +2,7 @@
 |chef manage| Tasks
 =====================================================
 
-This topic is an alphabetical list of the various tasks that can be performed when using the |chef manage| add-on for |chef server oec|.
+This topic is an alphabetical list of the various tasks that can be performed when using |chef manage|.
 
 
 Add Client
