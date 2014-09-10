@@ -8,7 +8,7 @@ Configure LDAP
 =====================================================
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst
 
-.. note:: If the |enterprise rb| file does not exist, create a file called ``private-chef.rb`` and put it in the ``/etc/opscode/`` directory.
+.. note:: If the |enterprise rb| file does not exist, create a file called ``chef-server.rb`` and put it in the ``/etc/opscode/`` directory.
 
 .. include:: ../../includes_server_ldap//includes_server_ldap_configure.rst
 
