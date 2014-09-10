@@ -93,7 +93,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ chef-server-ctl start
 
-#. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:
+#. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:
 
    .. code-block:: bash
       
@@ -161,9 +161,9 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
 
 From |chef server osc|
 =====================================================
-This section describes the upgrade process from a standalone configuration of |chef server osc| 11.1.0 (or higher) to a standalone configuration of |chef server| version 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
+This section describes the upgrade process from a standalone configuration of |chef server osc| 11.1.0 (or higher) to a standalone configuration of |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
 
-Please :doc:`view the notes </upgrade_server_open_source_notes>` for more background on the upgrade process from from |chef server osc| 11 to |chef server| 12.
+Please :doc:`view the notes </upgrade_server_open_source_notes>` for more background on the upgrade process from |chef server osc| 11 to |chef server| 12.
 
 To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
 
@@ -179,7 +179,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl stop
 
-#. Run |debian dpkg| or |rpm| on the machine to install |chef server| version 12. For |debian dpkg|:
+#. Run |debian dpkg| or |rpm| on the machine to install |chef server| 12. For |debian dpkg|:
 
    .. code-block:: bash
       
@@ -203,7 +203,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    The upgrade process will automatically detect the presence of |chef server osc| 11, and will step through the migration process, prompting for organization name details along the way.
 
-   The migration process will first download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| version 12, and then upload that data to the server.
+   The migration process will first download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| 12, and then upload that data to the server.
    
 #. Before data can be uploaded, an organization must be created. When prompted, enter the organization name, and then a full organization name.
 
@@ -211,7 +211,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    The full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``.
 
-#. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporarily data that was created during the upgrade process.
+#. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporary data that was created during the upgrade process.
 
 #. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
 

@@ -46,7 +46,7 @@
 
        .. code-block:: ruby
 
-          $ opscode-push-jobs-server-ctl reconfigure	 Hmm
+          $ opscode-push-jobs-server-ctl reconfigure
 
    * - |chef replication_title|
      - Run:

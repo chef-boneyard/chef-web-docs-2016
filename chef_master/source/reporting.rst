@@ -22,13 +22,13 @@ When |reporting| and |chef manage| are both added to |chef server oec|, a user i
 
 .. image:: ../../images/step_manage_webui_reports.png
 
-|knife_title| reporting
+|knife_title| Reporting
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_reporting.rst
 
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
-Install this plugin
+Install the Plugin
 -----------------------------------------------------
 .. include:: ../../step_plugin_knife/step_plugin_knife_reporting_install_rubygem.rst
 

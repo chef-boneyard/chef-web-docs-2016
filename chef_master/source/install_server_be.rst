@@ -37,7 +37,7 @@ This is in addition to the standard network interfaces that are available and wo
 
 Virtual IP Addresses
 -----------------------------------------------------
-The back-end servers will share a virtual IP address, which needs to be accessible from the front-end servers. This virtual IP address will be created and managed by the |chef server| but will need be added to DNS to access the cluster.
+The back-end servers will share a virtual IP address, which needs to be accessible from the front-end servers. This virtual IP address will be created and managed by the |chef server| but will need to be added to DNS to access the cluster.
 
 Disk Configuration
 -----------------------------------------------------
@@ -77,7 +77,7 @@ and:
 
 Load Balancing
 -----------------------------------------------------
-As multiple front-end servers are run, there will a need to provide a mechanism for load-balancing the requests between them. We recommend using either a hardware or software load-balancer configured for round-robin.
+As multiple front-end servers are run, there will be a need to provide a mechanism for load-balancing the requests between them. We recommend using either a hardware or software load-balancer configured for round-robin.
 
 Create a DNS entry for the load balanced virtual IP address, which will be used to access the cluster. This is also referred to as the ``api_fqdn``.
 
@@ -95,7 +95,7 @@ The hostname for the |chef server| must be a |fqdn|, including the domain suffix
 
 |chef server rb|
 =====================================================
-Each |chef server oec| cluster has a single configuration file: |chef server rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |chef server rb|.
+Each |chef server| cluster has a single configuration file: |chef server rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |chef server rb|.
 
 Set the topology
 -----------------------------------------------------
@@ -251,7 +251,7 @@ Add |chef server rb| to /etc/opscode
 =====================================================
 Copy the |chef server rb| file to ``/etc/opscode`` on the bootstrap server.
 
-Install the |chef server_title| on backend
+Install the |chef server| on backend
 =====================================================
 Install tthe |chef server| package on both of the back-end servers. For |redhat| and |centos| 6:
 
@@ -291,7 +291,7 @@ In the scaled back end configuration, setup of the |chef server| happens in two 
 
    $ chef-server-ctl reconfigure
 
-The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps require to set up |drbd|:
+The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps required to set up |drbd|:
 
 .. code-block:: bash
 
@@ -400,7 +400,7 @@ With synchronization complete, |drbd| is ready to be used on the bootstrap node.
 
 
 
-Configure the |chef server_title| on the bootstrap server
+Configure the |chef server| on the bootstrap server
 =========================================================
 To continue setting up the |chef server| on a bootstrap server, run:
 
@@ -417,7 +417,7 @@ This command may take several minutes to run, during which you will see the outp
 .. note:: |chef server| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
 
 
-Configure the |chef server_title| on non-bootstrap back-end
+Configure the |chef server| on non-bootstrap back-end
 ===========================================================
 .. warning:: Make sure |drbd| synchronization has completed, and that the |chef server| has fully started on the bootstrap node before continuing!
 
@@ -434,7 +434,7 @@ Followed by:
    $ chef-server-ctl reconfigure
 
 
-Configure Front-end
+Configure the front-end
 =====================================================
 The following sections describe what is required to configure the front-end server.
 
@@ -483,9 +483,9 @@ Success!
 =====================================================
 Congratulations, the |chef server| is installed in a scaled back end configuration.
 
-Using GRE Tunnels
+Using GRE tunnels
 =====================================================
-Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the backend server that will be used for bootstrapping:
+Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the back-end server that will be used for bootstrapping:
 
 .. code-block:: bash
 
@@ -497,7 +497,7 @@ Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To acc
 
 Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end of the tunnel, and ``MY_IP`` with the IP address of the server on which the script will be located.
 
-The ``172.17.16.0/24`` network used in the above examples could be any unused reserved IP address space.
+The ``172.17.16.**`` network addresses used in the previous examples could be any unused reserved IP address space.
 
 Set the following in ``/etc/opscode/chef-server.rb``:
 
