@@ -149,7 +149,9 @@ Fatal Messages
 .. include:: ../../step_recipe/step_recipe_end_chef_run_application_fatal.rst
 
 
-
+node.run_state
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_run_context_node_run_state.rst
 
 
 
