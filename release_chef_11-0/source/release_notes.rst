@@ -212,11 +212,11 @@ In |chef 10|, the value of node"app_name" will be "from-recipe" and in |chef 11|
 
 Likewise, if you take any action based on the value of attributes when evaluating attributes files, be aware that attributes from roles and environments will now be used to compute the attribute value.
 
-node.run_state Replaced
+node.run_state[:seen_recipes] Replaced
 -----------------------------------------------------
 In |chef 10| and lower, you could see which recipes had been evaluated by looking at ``node.run_state[:seen_recipes]``. ``Chef::Node`` was not the correct place to track this information, and the previous implementation resulted in bugs where a recipe like ``nginx::default`` could be loaded after ``nginx``, even though they are the same recipe.
 
-In the new implementation, this is tracked by ``Chef::RunContext``. The following example is no longer valid:
+The following example is no longer valid:
 
 .. code-block:: ruby
 
@@ -224,7 +224,7 @@ In the new implementation, this is tracked by ``Chef::RunContext``. The followin
      # etc...
    end
 
-Use the following approach instead:
+In the new implementation, this is tracked by ``Chef::RunContext``. Use the following approach instead:
 
 .. code-block:: ruby
 
