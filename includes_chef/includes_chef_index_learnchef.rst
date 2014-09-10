@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-**learnchef.getchef.com:**  `Learn Chef <http://learnchef.getchef.com>`_ | `Get started <http://learnchef.getchef.com/get-started>`_ | `Create your first cookbook <http://learnchef.getchef.com/tutorials/create-your-first-cookbook>`_
+**learn.getchef.com:**  `Learn Chef <http://learn.getchef.com>`_ | `Get started <http://learn.getchef.com/get-started>`_ | `Create your first cookbook <http://learn.getchef.com/tutorials/create-your-first-cookbook>`_
 
 
 
