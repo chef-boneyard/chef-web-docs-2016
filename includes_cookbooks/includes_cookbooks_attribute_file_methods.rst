@@ -9,4 +9,3 @@ Use the following methods within the attributes file for a cookbook or within a 
 * ``_unless``
 * ``attribute?``
 
-Additionally, there are ``_unless`` methods available.
