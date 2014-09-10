@@ -2,9 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
 
-Use ``node.run_state`` to stash transient data so that it may be passed between resources and evaluated during the execution phase of the |chef client| run. ``run_state`` is an empty |ruby hash| that is always discarded at the end of the |chef client| run.
+Use ``node.run_state`` to stash transient data so that it may be passed between resources, and then evaluated during the execution phase of the |chef client| run. ``run_state`` is an empty |ruby hash| that is always discarded at the end of the |chef client| run.
 
-For example, the following recipe will install the |apache| web server, and then randomly choose |php| or |perl| as the scripting language:
+For example, the following recipe will install the |apache| web server, randomly choose |php| or |perl| as the scripting language, and then install that scripting language:
 
 .. code-block:: ruby
 
