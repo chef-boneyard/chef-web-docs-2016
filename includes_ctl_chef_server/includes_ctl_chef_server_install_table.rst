@@ -59,6 +59,12 @@
 
        .. code-block:: ruby
 
+          $ chef-sync-ctl reconfigure
+
+       and then:
+
+       .. code-block:: ruby
+
           $ chef-server-ctl reconfigure 
 
    * - |reporting_title|
