@@ -31,7 +31,7 @@ where:
 
 * The |resource ruby_block| resource declares a ``block`` of |ruby| code that is run during the execution phase of the |chef client| run
 * The ``if`` statement randomly chooses |php| or |perl|, saving the choice to ``node.run_state['scripting_language']``
-* When the |resource package| resource has to install the package for the scripting language, it looks up the ``scripting_language`` and uses the one defined in ``node.run_state``
+* When the |resource package| resource has to install the package for the scripting language, it looks up the scripting language and uses the one defined in ``node.run_state['scripting_language']``
 * ``lazy {}`` ensures that the |resource package| resource evaluates this during the execution phase of the |chef client| run (as opposed to during the compile phase)
 
 When this recipe runs, the |chef client| will print something like the following:
