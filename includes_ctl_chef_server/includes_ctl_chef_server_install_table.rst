@@ -59,14 +59,14 @@
 
        .. code-block:: ruby
 
-          $ opscode-push-jobs-server-ctl reconfigure	 
+          $ opscode-push-jobs-server-ctl reconfigure	 Hmm
 
    * - |chef replication_title|
      - Run:
 
        .. code-block:: ruby
 
-          $ chef-server-ctl install chef-sync
+          $ chef-sync-ctl install chef-sync
 
        and then:
 
