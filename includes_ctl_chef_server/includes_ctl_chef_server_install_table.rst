@@ -35,19 +35,6 @@
 
           $ opscode-manage-ctl reconfigure
 
-   * - |chef ha_title|
-     - Run:
-
-       .. code-block:: ruby
-
-          $ chef-server-ctl install chef-ha
-
-       and then:
-
-       .. code-block:: ruby
-
-          $ chef-server-ctl reconfigure
-
    * - |push jobs_title|
      - Run:
 
@@ -86,4 +73,18 @@
        .. code-block:: ruby
 
           $ opscode-reporting-ctl reconfigure	 
-	 
+
+..
+..   * - |chef ha_title|
+..     - Run:
+..
+..       .. code-block:: ruby
+..
+..          $ chef-server-ctl install chef-ha
+..
+..       and then:
+..
+..       .. code-block:: ruby
+..
+..          $ chef-server-ctl reconfigure
+..
