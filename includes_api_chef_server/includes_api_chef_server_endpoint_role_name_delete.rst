@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   DELETE /roles/NAME
+   DELETE /organizations/ORG_NAME/roles/NAME
 
 **Response**
 

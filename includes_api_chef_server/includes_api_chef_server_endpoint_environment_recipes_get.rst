@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /environments/NAME/recipes
+   GET /organizations/ORG_NAME/environments/NAME/recipes
 
 where the first instance of ``NAME`` is the name of the environment, and the second instance is the name of the recipe.
 

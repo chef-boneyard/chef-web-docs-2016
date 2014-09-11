@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /sandboxes
+   POST /organizations/ORG_NAME/sandboxes
 
 with a request body that looks something like:
 

@@ -18,7 +18,7 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   GET /environments/NAME/cookbooks/NAME
+   GET /organizations/ORG_NAME/environments/NAME/cookbooks/NAME
 
 where the first instance of ``NAME`` is the name of the environment, and the second instance is the name of the cookbook.
 

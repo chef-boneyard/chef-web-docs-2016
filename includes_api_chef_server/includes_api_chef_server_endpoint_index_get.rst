@@ -24,7 +24,7 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   GET /search/INDEX
+   GET /organizations/ORG_NAME/search/INDEX
 
 **Response**
 

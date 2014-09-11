@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /search
+   GET /organizations/ORG_NAME/search
 
 This method has no request body.
 

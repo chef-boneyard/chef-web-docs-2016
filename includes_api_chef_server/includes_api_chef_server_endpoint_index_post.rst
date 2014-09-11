@@ -38,7 +38,7 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   GET /search
+   GET /organizations/ORG_NAME/search
 
 with a request body that looks something like:
 

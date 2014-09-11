@@ -11,7 +11,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /clients/NAME
+   PUT /organizations/ORG_NAME/clients/NAME
 
 with a request body that looks something like:
 
