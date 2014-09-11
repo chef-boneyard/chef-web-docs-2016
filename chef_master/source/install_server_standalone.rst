@@ -57,10 +57,6 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following command:
+#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
 
-   .. code-block:: bash
-      
-      $ chef-server-ctl install name_of_premium_feature
-
-   where ``name_of_premium_feature`` is one of the following values: ``opscode-analytics`` (for |chef analytics|), ``opscode-manage`` (for |chef manage|), ``chef-ha`` (for |chef ha|), ``chef-sync`` (for |chef server| replication), or ``opscode-reporting`` (for |reporting|).
+   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
