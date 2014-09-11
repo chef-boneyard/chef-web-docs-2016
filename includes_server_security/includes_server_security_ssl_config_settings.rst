@@ -14,9 +14,9 @@ The |client rb| file has the following settings for configuring |ssl| for |chef 
    * - ``ssl_ca_path``
      - |ssl_ca_path|
    * - ``ssl_client_cert``
-     - |ssl_client_cert|
+     - |ssl_client_cert| Default value: ``nil``.
    * - ``ssl_client_key``
-     - |ssl_client_key|
+     - |ssl_client_key| Default value: ``nil``.
    * - ``ssl_verify_mode``
      - |ssl_verify_mode|
        
