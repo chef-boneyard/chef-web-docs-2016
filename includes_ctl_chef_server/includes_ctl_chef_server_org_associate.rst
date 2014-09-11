@@ -5,5 +5,10 @@
 
 The ``org-associate`` subcommand is used to associate a user to an organization. 
 
+Examples:
 
+.. code-block:: bash
+
+   $ chef-server-ctl org-associate prod john_smith
+   $ chef-server-ctl org-associate preprod testmaster
 

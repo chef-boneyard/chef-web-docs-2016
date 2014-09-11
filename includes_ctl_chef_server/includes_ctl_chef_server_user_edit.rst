@@ -5,4 +5,10 @@
 
 The ``user-edit`` subcommand is used to edit the details for a user. The data will be made available in the |chef editor| for editing.
 
+Example:
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-edit john_smith
+   $ chef-server-ctl user-edit jane_doe
 
