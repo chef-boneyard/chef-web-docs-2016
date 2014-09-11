@@ -3,8 +3,7 @@
 
 To set up the |push jobs| server for a high availability configuration:
 
-#. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system.
-#. Install the package on the back end primary machine that is running |chef server oec|. For example on |ubuntu|:
+#. Install the package on the back end primary machine that is running |chef server|. For example on |ubuntu|:
 
    .. code-block:: bash
 
@@ -30,7 +29,7 @@ To set up the |push jobs| server for a high availability configuration:
 
       $ opscode-push-jobs-server-ctl reconfigure
 
-   This step is required for each of the servers in the |chef server oec| deployment. After this has been completed, run the following command on each of the back end servers:
+   This step is required for each of the servers in the |chef server| deployment. After this has been completed, run the following command on each of the back end servers:
 
    .. code-block:: bash
 
