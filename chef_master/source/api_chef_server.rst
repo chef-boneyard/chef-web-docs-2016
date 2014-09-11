@@ -49,7 +49,84 @@ Example
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst
 
-Endpoints
+Global Endpoints
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst
+
+/organizations
+-----------------------------------------------------
+The |chef server| may contain multiple organizations.
+
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_orgs.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_orgs_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_orgs_post.rst
+
+/organizations/NAME
+-----------------------------------------------------
+.. include:: ../../includes_chef/includes_chef_organization.rst
+
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name.rst
+
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_get.rst
+
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_put.rst
+
+/users
+-----------------------------------------------------
+.. include:: ../../includes_chef/includes_chef_user.rst
+
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_users.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_users_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_users_post.rst
+
+/users/NAME
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user.rst
+
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst
+
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst
+
+
+
+
+
+
+
+
+Organization Endpoints
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst
 
@@ -399,28 +476,6 @@ POST
 _status
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst
-
-/users
------------------------------------------------------
-.. include:: ../../includes_chef/includes_chef_user.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user.rst
-
-DELETE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst
-
-GET
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst
-
-POST
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst
-
-PUT
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst
 
 /updated_since
 -----------------------------------------------------
