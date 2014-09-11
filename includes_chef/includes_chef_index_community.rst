@@ -6,7 +6,7 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Workflow:**  `Berkshelf <http://berkshelf.com/>`_ | `Librarian <https://github.com/applicationsonline/librarian>`_ | `Spiceweasel <https://github.com/mattray/spiceweasel>`_
 
-**Development tools:**  `test-kitchen <https://github.com/test-kitchen/test-kitchen>`_ | `Food Critic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `chefspec <https://github.com/acrmp/chefspec>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Supermarket <https://supermarket.getchef.com/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_ | `chef-zero <https://github.com/opscode/chef-zero>`_
+**Development tools:**  `Kitchen <https://github.com/test-kitchen/test-kitchen>`_ | `Foodcritic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `ChefSpec <https://github.com/acrmp/chefspec>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Supermarket <https://supermarket.getchef.com/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_ | `chef-zero <https://github.com/opscode/chef-zero>`_
 
 **Discussion:** `Guidelines <http://docs.getchef.com/community_guidelines.html>`_ | `lists.opscode.com <http://docs.getchef.com/community_lists.html>`_ | `Food Fight Show <http://foodfightshow.org/>`_
 
@@ -16,5 +16,5 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Chef for OpenStack:** `Overview <http://docs.getchef.com/openstack.html>`_ | `knife-openstack <http://docs.getchef.com/plugin_knife_openstack.html>`_
 
-**Contributions:** `Contribute to Open Source Chef <http://docs.getchef.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.getchef.com/style_guide.html>`_
+**Contributions:** `Contribute to Chef <http://docs.getchef.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Send Feedback to chef-docs <http://docs.getchef.com/feedback.html>`_ | `Style Guide <http://docs.getchef.com/style_guide.html>`_
 
