@@ -51,7 +51,7 @@ Example
 
 Global Endpoints
 =====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints_global.rst
 
 /organizations
 -----------------------------------------------------
