@@ -5,4 +5,11 @@
 
 The ``user-create`` subcommand is used to create a user. 
 
+Examples:
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-create john_smith John Smith john_smith@example.com insecure-passord
+   $ chef-server-ctl user-create jane_doe Jane Doe jane_doe@example.com PaSSword -f /tmp/jane_doe.key
+   $ chef-server-ctl user-create waldendude Henry David Thoreau waldendude@example.com excursions
 
