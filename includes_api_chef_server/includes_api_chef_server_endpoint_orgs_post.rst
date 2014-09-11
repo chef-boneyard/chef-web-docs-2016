@@ -45,9 +45,9 @@ The response will return something like the following:
      - Description
    * - ``200``
      - |response code 200 ok|
-   * - ``401``
-     - |response code 401 unauthorized|
+   * - ``400``
+     - |response code 400 bad request|
    * - ``403``
      - |response code 403 forbidden|
-   * - ``404``
-     - |response code 404 not found|
+   * - ``409``
+     - |response code 409 unauthorized|
