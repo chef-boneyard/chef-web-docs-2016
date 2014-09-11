@@ -3,14 +3,14 @@
 
 To set up the |reporting| server for a standalone configuration:
 
-#. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system
-#. Install the package on the same machine that is running |chef server oec| 11.0.1 or higher. For example on |ubuntu|:
+#. Contact |company_name| and get the package that is appropriate for the |chef server| platform and operating system
+#. Install the package on the same machine that is running |chef server| 11.0.1 or higher. For example on |ubuntu|:
 
    .. code-block:: bash
 
       $ dpkg -i opscode-reporting_1.0.0-1.ubuntu.10.04_amd64.deb
 
-#. Reconfigure the |chef server oec| server:
+#. Reconfigure the |chef server|:
 
    .. code-block:: bash
 

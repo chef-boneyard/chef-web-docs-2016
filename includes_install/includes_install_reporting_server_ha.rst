@@ -3,14 +3,14 @@
 
 To set up the |reporting| server for a high availability configuration:
 
-#. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system
-#. Install the package on the same machine that is running |chef server oec| 11.0.1 or higher. For example on |ubuntu|:
+#. Contact |company_name| and get the package that is appropriate for the |chef server| platform and operating system
+#. Install the package on the same machine that is running |chef server| 11.0.1 or higher. For example on |ubuntu|:
 
    .. code-block:: bash
 
       $ dpkg -i opscode-reporting_1.0.1-1.ubuntu.10.04_amd64.deb
 
-#. Reconfigure the |chef server oec| server on the back end primary server (bootstrap):
+#. Reconfigure the |chef server| on the back end primary server (bootstrap):
 
    .. code-block:: bash
 
@@ -34,7 +34,7 @@ To set up the |reporting| server for a high availability configuration:
       
       $ scp -r /etc/opscode-reporting <each servers IP>:/etc
 
-#. Reconfigure the |chef server oec| servers on which |reporting| services have been installed:
+#. Reconfigure any |chef server| on which |reporting| services have been installed:
 
    .. code-block:: bash
 
