@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
 
-run_context >> cookbook_collection
+.. notes for future documentation: run_context >> cookbook_collection
