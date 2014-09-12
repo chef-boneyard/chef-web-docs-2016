@@ -2,6 +2,8 @@
 |chef server rb|
 =====================================================
 
+.. warning:: This topic documents the settings for |chef server osc|. The current version of the |chef server| is version 12. All of the documentation at http://docs.getchef.com and http://docs.getchef.com/server/ is about the current version of the |chef server|. The documentation for |chef server osc| has been moved to http://docs.getchef.com/open_source/ and is archived for specific versions: `Open Source Chef 11.0 <http://docs.getchef.com/release/osc_11-0/>`__ and `Open Source Chef 11.1 <http://docs.getchef.com/release/osc_11-1/>`__.
+
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst
 
 .. note:: If the |chef server rb| file does not exist, create a file called ``chef-server.rb`` and put it in the ``/etc/chef-server/`` directory.
