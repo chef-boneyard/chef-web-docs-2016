@@ -7,7 +7,8 @@
 The |chef client| has specific components that are designed to support unique aspects of the |windows| platform, including |windows powershell|, |microsoft iis|, and |microsoft sqlserver|.
 
 * The |chef client| is `installed on a machine <http://docs.opscode.com/windows.html#install-the-chef-client-on-windows>`_ running |windows| by using a |microsoft installer package|
-* Three resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource powershell_script|, and |resource registry_key|
+* Six resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource dsc_script|, |resource env|, |resource powershell_script|, |resource registry_key|, and |resource package_windows|
+* A resource named |resource dsc_resource| is in development---available for preview via the https://github.com/opscode-cookbooks/dsc cookbook---that adds the ability to use Powershell DSC resources in Chef!
 * Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
 * Four cookbooks provide application-specific support. For `PowerShell 4.0 <https://github.com/opscode-cookbooks/powershell>`_. For `IIS 7.0/7.5/8.0 <https://github.com/opscode-cookbooks/iis>`_. For `SQL Server <https://github.com/opscode-cookbooks/database>`_. And for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/opscode-cookbooks/windows>`_ 
 * Support for both :i386 and :x86_64 architectures
@@ -19,7 +20,7 @@ The file-based resources---|resource cookbook_file|, |resource file|, |resource 
 
 .. note:: The |windows| platform does not support running as an alternate user unless full credentials (a username and password or equivalent) are specified.
 
-The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
+The following sections are pulled in from the larger |url docs| site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
 
 
 Install the |chef client_title| on Windows
