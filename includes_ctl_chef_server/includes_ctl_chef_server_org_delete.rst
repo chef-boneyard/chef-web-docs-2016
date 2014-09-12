@@ -8,6 +8,12 @@ The ``org-delete`` subcommand is used to delete an organization.
 Examples:
 
 .. code-block:: bash
+
    $ chef-server-ctl org-delete infra-testing-20140909
+
+or:
+
+.. code-block:: bash
+      
    $ chef-server-ctl org-delete pedant-testing-org
 
