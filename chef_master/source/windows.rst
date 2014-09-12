@@ -621,32 +621,32 @@ Some of the most popular |company_name|-maintained cookbooks that contain lightw
 =====================================================
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst
 
-registry_data_exists? Method
+registry_data_exists?
 -----------------------------------------------------
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst
 
-registry_get_subkeys Method 
+registry_get_subkeys 
 -----------------------------------------------------
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst
 
-registry_get_values Method
+registry_get_values
 -----------------------------------------------------
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst
 
-registry_has_subkeys? Method
+registry_has_subkeys?
 -----------------------------------------------------
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst
 
-registry_key_exists? Method
+registry_key_exists?
 -----------------------------------------------------
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst
 
-registry_value_exists? Method
+registry_value_exists?
 -----------------------------------------------------
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
