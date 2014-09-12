@@ -530,7 +530,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_syntax.rst
 
-Registry Key Path Separators
+Path Separators
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst
 
