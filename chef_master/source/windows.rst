@@ -660,7 +660,7 @@ registry_value_exists?
 
 .. note:: |chef solo| also uses the ``--daemonize`` setting for |windows|.
 
-Run with Elevated Privileges
+Run w/Elevated Privileges
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges.rst
 
