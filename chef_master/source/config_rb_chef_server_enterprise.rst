@@ -2,6 +2,8 @@
 |enterprise rb|
 =====================================================
 
+.. warning:: This topic documents the settings for |chef server oec|. The current version of the |chef server| is version 12. All of the documentation at http://docs.getchef.com and http://docs.getchef.com/server/ is about the current version of the |chef server|. The documentation for |chef server oec| has been moved to http://docs.getchef.com/enterprise/ and is archived for specific versions: `Enterprise Chef 11.0 <http://docs.getchef.com/release/oec_11-0/>`__, `Enterprise Chef 11.1 <http://docs.getchef.com/release/oec_11-1/>`__, and `Enterprise Chef 11.2 <http://docs.getchef.com/release/oec_11-1/>`__.
+
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
 .. note:: If the |enterprise rb| file does not exist, create a file called ``private-chef.rb`` and put it in the ``/etc/opscode/`` directory.
