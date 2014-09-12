@@ -142,7 +142,7 @@ Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_plugin_knife/step_plugin_knife_azure_install_rubygem.rst
 
-Generate the Management Certificate
+Generate Certificates
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst
 
@@ -317,7 +317,7 @@ Windows File Security
 
 .. note:: Windows File Security applies to the |resource cookbook_file|, |resource directory|, |resource file|, |resource remote_directory|, |resource remote_file|, and |resource template| resources.
 
-Access Control Lists (ACLs)
+ACLs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst
 
