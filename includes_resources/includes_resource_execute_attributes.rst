@@ -10,7 +10,7 @@
    * - Attribute
      - Description
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |name command| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``

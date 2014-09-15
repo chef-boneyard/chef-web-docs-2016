@@ -16,7 +16,7 @@
 
        .. note:: |note registry_key architecture|
    * - ``key``
-     - |key_name resource registry_key| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |key_name resource registry_key| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
 
        |key_name resource registry_key hives|
    * - ``provider``

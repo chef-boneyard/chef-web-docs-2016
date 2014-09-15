@@ -14,7 +14,7 @@
    * - ``gid``
      - |id group|
    * - ``group_name``
-     - |name group| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |name group| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``members``
      - |members_group|
    * - ``provider``

@@ -18,7 +18,7 @@
    * - ``pass_phrase``
      - Use to specify the pass phrase for a .pem file.
    * - ``path``
-     - Use to specify the path to a private key. Set to ``none`` to create a private key in-memory and not on-disk. Default value: the ``name`` of the resource block (see Syntax section above).
+     - Use to specify the path to a private key. Set to ``none`` to create a private key in-memory and not on-disk. Default value: the ``name`` of the resource block. (See "Syntax" section above.)
    * - ``public_key_format``
      - Use to specify the format of a public key. Possible values: ``der``, ``openssh``, and ``pem``. Default value: ``openssh``.
    * - ``public_key_path``

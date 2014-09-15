@@ -16,7 +16,7 @@
    * - ``depth``
      - |depth git_shallow_clone| The default behavior will do a full clone.
    * - ``destination``
-     - |destination resource scm| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |destination resource scm| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``enable_checkout``
      - |enable_checkout git| Default value: ``true``.
    * - ``enable_submodules``

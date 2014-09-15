@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``returns``
      - |returns| This code signals a successful ``:install`` action. Default value: ``0``.
    * - ``source``
-     - Optional. |source resource package| Default value: the ``name`` of the resource block (see Syntax section above).
+     - Optional. |source resource package| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``timeout``
      - |timeout| Default value: ``600`` (seconds).
 

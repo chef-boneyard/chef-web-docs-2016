@@ -14,7 +14,7 @@
    * - ``code``
      - |code quoted_string|
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |name command| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``flags``
      - |flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``.
    * - ``interpreter``

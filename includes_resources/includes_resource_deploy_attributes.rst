@@ -22,7 +22,7 @@
    * - ``create_dirs_before_symlink``
      - |create_dirs_before_symlink| Default value: ``%w{tmp public config}`` (or the same as ``["tmp", "public", "config"]``).
    * - ``deploy_to``
-     - |deploy_to| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |deploy_to| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``environment``
      - |environment variables|
    * - ``group``

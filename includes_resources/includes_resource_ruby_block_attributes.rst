@@ -12,6 +12,6 @@
    * - ``block``
      - |block_ruby|
    * - ``block_name``
-     - |name ruby_block| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |name ruby_block| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``provider``
      - Optional. |provider resource_parameter| (See "Providers" section below for more information.)

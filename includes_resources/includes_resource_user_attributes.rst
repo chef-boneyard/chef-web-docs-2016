@@ -28,4 +28,4 @@
    * - ``uid``
      - |user uid|
    * - ``username``
-     - |name user| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |name user| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)

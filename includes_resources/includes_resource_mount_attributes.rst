@@ -22,7 +22,7 @@
    * - ``fstype``
      - Required. |fstype|
    * - ``mount_point``
-     - |mount_point| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |mount_point| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``mounted``
      - Use to specify if a file system is already mounted. Default value: ``false``.
    * - ``options``

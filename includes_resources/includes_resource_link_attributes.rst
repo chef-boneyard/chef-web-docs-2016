@@ -18,7 +18,7 @@
    * - ``provider``
      - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``target_file``
-     - |name_link| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |name_link| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``to``
      - |to resource link|
 

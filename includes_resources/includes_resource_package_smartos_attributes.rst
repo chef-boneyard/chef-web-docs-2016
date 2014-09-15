@@ -12,7 +12,7 @@
    * - ``options``
      - |command options|
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |name package| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``provider``
      - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``response_file``

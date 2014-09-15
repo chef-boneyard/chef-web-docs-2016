@@ -10,7 +10,7 @@
    * - Attribute
      - Description
    * - ``name``
-     -  Always the same value as the ``name`` of the resource block (see Syntax section above).
+     -  Always the same value as the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``plugin``
      - Optional. |plugin reload_by_ohai| The default behavior reloads all plug-ins.
    * - ``provider``
