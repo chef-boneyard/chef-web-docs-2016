@@ -24,7 +24,7 @@
    * - ``group``
      - |group deploy|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``reference``
      - |reference resource scm|
    * - ``remote``

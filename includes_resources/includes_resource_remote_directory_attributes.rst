@@ -42,7 +42,7 @@
    * - ``path``
      - |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``purge``
      - |purge target_directory| Default value: ``false``.
    * - ``recursive``

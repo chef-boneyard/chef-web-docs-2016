@@ -20,7 +20,7 @@
    * - ``package_name``
      - |name package_yum| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``source``
      - Optional. |source resource package|
    * - ``version``

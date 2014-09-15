@@ -20,7 +20,7 @@
 
        |key_name resource registry_key hives|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``recursive``
      - |recursive registry_key|
 

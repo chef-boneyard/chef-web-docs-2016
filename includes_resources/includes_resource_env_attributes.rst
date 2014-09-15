@@ -14,7 +14,7 @@
    * - ``key_name``
      - |name key_directory| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``value``
      - |value resource directory|
 

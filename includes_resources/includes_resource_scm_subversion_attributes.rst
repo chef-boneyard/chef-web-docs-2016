@@ -14,7 +14,7 @@
    * - ``group``
      - |group deploy|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``repository``
      - |uri repository_svn|
    * - ``revision``

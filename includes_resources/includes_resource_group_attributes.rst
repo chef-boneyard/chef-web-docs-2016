@@ -22,6 +22,6 @@
    * - ``non_unique``
      - |non_unique_members| Default value: ``false``.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``system``
      - |system group|

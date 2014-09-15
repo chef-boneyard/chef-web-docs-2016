@@ -18,7 +18,7 @@
    * - ``package_name``
      - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``python_binary``
      - The location of the |python| binary.
    * - ``response_file``

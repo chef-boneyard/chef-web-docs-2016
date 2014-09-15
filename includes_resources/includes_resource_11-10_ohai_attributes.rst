@@ -14,4 +14,4 @@
    * - ``plugin``
      - Optional. |plugin reload_by_ohai| The default behavior reloads all plug-ins.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See Providers section below for more information.)
+     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
