@@ -22,6 +22,7 @@ The following items are new for |chef client| 11.12 and/or are changes from prev
 * **knife cookbook test and .chefignore files** The ``knife cookbook test`` command will respect the settings in a |chefignore| file.
 * **knife bootstrap -V -V** The |subcommand knife bootstrap| command can set the initial |chef client| run to be logged at the debug level.
 * **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute with the |resource template| and |resource file| resources to ensure that sensitive data is not logged by the |chef client|.
+* **cron resource accepts symbols for weekday attribute** Symbols---``:sunday``, ``:monday``, ``:tuesday``, ``:wednesday``, ``:thursday``, ``:friday``, ``:saturday``---may be used with the ``weekday`` attribute and the |resource cron| resource.
 
 |ohai 7|
 -----------------------------------------------------
