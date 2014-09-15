@@ -26,7 +26,7 @@
    * - ``path``
      - |path directory| Default value: ``name``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``recursive``
      - |recursive directory|
    * - ``rights``

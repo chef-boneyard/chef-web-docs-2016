@@ -34,7 +34,7 @@
    * - ``migration_command``
      - |migration command_string|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``purge_before_symlink``
      - |purge_before_symlink| Default value: ``%w{log tmp/pids public/system}`` (or the same as ``["log", "tmp/pids", "public/system"]``.
    * - ``repo``

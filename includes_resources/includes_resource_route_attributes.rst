@@ -16,6 +16,6 @@
    * - ``netmask``
      - |netmask| For example: ``255.255.255.0``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``target``
      - |target_address| Default value: the ``name`` of the resource block (see Syntax section above).

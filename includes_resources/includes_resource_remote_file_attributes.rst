@@ -40,7 +40,7 @@
    * - ``path``
      - |path file| |path_fully_qualified| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``

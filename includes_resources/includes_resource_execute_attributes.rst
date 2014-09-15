@@ -22,7 +22,7 @@
    * - ``path``
      - |path resource execute| The default value uses the system path.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``timeout``

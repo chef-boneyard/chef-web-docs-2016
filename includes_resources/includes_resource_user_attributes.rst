@@ -18,7 +18,7 @@
    * - ``password``
      - |password shadow_hash|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``shell``
      - |shell|
    * - ``supports``

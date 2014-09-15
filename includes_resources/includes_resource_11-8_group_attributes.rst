@@ -18,6 +18,6 @@
    * - ``members``
      - |members_group|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``system``
      - |system group|

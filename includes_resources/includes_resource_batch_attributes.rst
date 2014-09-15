@@ -24,7 +24,7 @@
    * - ``group``
      - |group command|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``timeout``

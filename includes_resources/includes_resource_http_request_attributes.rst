@@ -14,6 +14,6 @@
    * - ``message``
      - |message http_request| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``url``
      - |url http_request|

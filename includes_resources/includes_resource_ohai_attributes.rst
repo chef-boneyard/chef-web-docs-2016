@@ -14,4 +14,4 @@
    * - ``plugin``
      - Optional. The attribute to be reloaded. The |chef client| will identify the correct plugin.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)

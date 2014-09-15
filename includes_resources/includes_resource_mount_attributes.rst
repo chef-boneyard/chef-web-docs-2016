@@ -32,7 +32,7 @@
    * - ``password``
      - |windows| only. Use to specify the password for ``username``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``supports``
      - |supports mount| Default value: ``{ :remount => false }``.
    * - ``username``

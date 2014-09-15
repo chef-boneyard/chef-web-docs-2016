@@ -30,7 +30,7 @@
    * - ``path``
      - |path file_cookbook| |path_fully_qualified|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``

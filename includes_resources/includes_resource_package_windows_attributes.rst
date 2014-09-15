@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``options``
      - |command options|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - Optional. |provider resource_parameter| (See Providers section below for more information.)
    * - ``returns``
      - |returns| This code signals a successful ``:install`` action. Default value: ``0``.
    * - ``source``
