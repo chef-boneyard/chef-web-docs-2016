@@ -10,7 +10,9 @@
    * - Feature
      - Command
    * - |chef analytics_title|
-     - Run:
+     - Use |chef analytics| for real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred.
+
+       Run:
 
        .. code-block:: ruby
 
@@ -23,7 +25,9 @@
           $ opscode-analytics-ctl reconfigure
 
    * - |chef manage_title|
-     - Run:
+     - Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface.
+
+       Run:
 
        .. code-block:: ruby
 
@@ -36,7 +40,9 @@
           $ opscode-manage-ctl reconfigure
 
    * - |push jobs_title|
-     - Run:
+     - Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run.
+
+       Run:
 
        .. code-block:: ruby
 
@@ -49,7 +55,9 @@
           $ opscode-push-jobs-server-ctl reconfigure
 
    * - |chef replication_title|
-     - Run:
+     - Use |chef replication| to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
+
+       Run:
 
        .. code-block:: ruby
 
@@ -68,7 +76,9 @@
           $ chef-server-ctl reconfigure 
 
    * - |reporting_title|
-     - Run:
+     - Use |reporting| to keep track of what happens during every |chef client| runs across all of the infrastructure being managed by |chef|. Run |reporting| with |chef manage| to view reports from a web user interface.
+
+       Run:
 
        .. code-block:: ruby
 
