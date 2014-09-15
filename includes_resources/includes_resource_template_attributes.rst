@@ -48,7 +48,7 @@
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. (See "File Specificity" below for more information.) Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``variables``
      - |variables passed_to_template|
        
