@@ -34,4 +34,4 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['stream_download']``
      - |cookbook stream_download| Default value: ``true``.
    * - ``bookshelf['vip']``
-     - |ip_address virtual| (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. |cookbook external_storage_settings| Default value: ``node['fqdn']``.
+     - |ip_address virtual| (This is configurable and may be pointed at external storage locations, such as |amazon ec2|.) |cookbook external_storage_settings| Default value: ``node['fqdn']``.

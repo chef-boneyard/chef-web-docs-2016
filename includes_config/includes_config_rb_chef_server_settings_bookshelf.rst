@@ -38,4 +38,4 @@ This configuration file has the following settings:
    * - ``bookshelf['url']``
      - This value will default to the value of the URL for |nginx|, which is built from the configured ``api_fqdn`` and the SSL port for |nginx|.
    * - ``bookshelf['vip']``
-     - Default value: ``node['fqdn']``.
+     - |ip_address virtual| (This is configurable and may be pointed at external storage locations, such as |amazon ec2|.) |cookbook external_storage_settings| Default value: ``node['fqdn']``.
