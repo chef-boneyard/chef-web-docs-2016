@@ -118,3 +118,59 @@ org-show
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
+
+Manage Users
+=====================================================
+The following commands are built-in to the |chef server ctl| command line tool:
+
+user-create
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst
+
+user-delete
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete_syntax.rst
+
+user-edit
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit_syntax.rst
+
+user-list
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst
+
+user-show
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst
