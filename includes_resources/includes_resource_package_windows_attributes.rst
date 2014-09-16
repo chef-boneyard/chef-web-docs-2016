@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``installer_type``
-     - |type package| Possible values: ``:msi``.
+     - |type package| Possible values: ``:inno``, ``:installshield``, ``:msi``, ``:nsis``, and ``:wise``.
    * - ``options``
      - |command options|
    * - ``provider``
