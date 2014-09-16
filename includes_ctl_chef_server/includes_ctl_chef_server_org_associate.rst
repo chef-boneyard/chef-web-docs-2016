@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``org-associate`` subcommand is used to associate a user to an organization. 
+The ``org-associate`` subcommand is used to associate a user to an organization and add them to the |webui group admins| and |webui group billing| security groups.
 
 Examples:
 
