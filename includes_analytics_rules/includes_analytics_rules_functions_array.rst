@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``array:contains`` to look for an attribute in the |json| object, and then look for its value.
+Use ``array:contains`` to look for an attribute in the |json| object, and then determine its value.
 
 The syntax for this function:
 
