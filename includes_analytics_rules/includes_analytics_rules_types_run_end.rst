@@ -2,9 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``run_end`` rule type to xxxxx.
+Use the ``run_end`` message type to xxxxx.
 
-The syntax for this rule type:
+The syntax for this message type:
 
 .. code-block:: java
 

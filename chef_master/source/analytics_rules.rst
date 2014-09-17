@@ -8,7 +8,7 @@ Syntax
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst
 
-Rule Types
+Message Types
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types.rst
 
