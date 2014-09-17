@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``run_start`` message type to xxxxx.
+Use the ``run_start`` message type to build rules for messages that are sent by |reporting| at the start of a |chef client| run.
 
 The syntax for this message type:
 

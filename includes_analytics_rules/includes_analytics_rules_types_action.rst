@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``action`` message type to xxxxx.
+Use the ``action`` message type to build rules for messages about any action that occurs on the |chef server|.
 
 The syntax for this message type:
 
