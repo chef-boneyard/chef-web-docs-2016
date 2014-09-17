@@ -4,7 +4,7 @@
 
 Use ``groovy:eval`` to evaluate a GROOVY expression. This must return ``true`` or ``false``.
 
-.. warning:: Groovy expressions may be slow! Use them carefully when required. In general, use one of the non-Groovy functions whenever possible. A Groovy function can be useful for debugging. BLARGH!!!!!!!
+.. warning:: Groovy expressions may be slow! Use them carefully when required. In general, use one of the non-Groovy functions whenever possible. A Groovy function can be useful for debugging.
 
 The syntax for this function:
 

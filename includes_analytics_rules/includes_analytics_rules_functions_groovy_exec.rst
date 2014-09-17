@@ -4,7 +4,7 @@
 
 Use ``groovy:exec`` to execute arbitrary GROOVY code. The return value is ignored.
 
-.. warning:: Groovy expressions may be slow! Use them carefully when required. In general, use one of the non-Groovy functions whenever possible. A Groovy function can be useful for debugging. BLARGH!!!!!!!
+.. warning:: Groovy expressions may be slow! Use them carefully when required. In general, use one of the non-Groovy functions whenever possible. A Groovy function can be useful for debugging.
 
 The syntax for this function:
 
