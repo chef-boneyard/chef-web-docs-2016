@@ -31,6 +31,8 @@ The following resources are "platform resources" (i.e. "resources that are built
      - .. include:: ../../includes_resources/includes_resource_directory.rst
    * - `dpkg_package <http://docs.getchef.com/resource_dpkg_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
+   * - `dsc_script <http://docs.getchef.com/resource_dsc_script.html>`_
+     - .. include:: ../../includes_resources/includes_resource_dsc_script.rst
    * - `easy_install_package <http://docs.getchef.com/resource_easy_install_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
    * - `env <http://docs.getchef.com/resource_env.html>`_
