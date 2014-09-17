@@ -44,9 +44,9 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst
 
-
 Examples
 =====================================================
+
 **Find Uptime for Web Servers**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_windows_winrm_find_uptime.rst
