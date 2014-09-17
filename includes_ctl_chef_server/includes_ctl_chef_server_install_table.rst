@@ -61,7 +61,7 @@
 
        .. code-block:: ruby
 
-          $ chef-sync-ctl install chef-sync
+          $ chef-server-ctl install chef-sync
 
        and then:
 
