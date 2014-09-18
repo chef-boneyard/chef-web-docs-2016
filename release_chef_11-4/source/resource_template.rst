@@ -4,7 +4,7 @@
 template
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
+.. include:: ../../includes_template/includes_template.rst
 
 .. note:: |note cookbook template erubis|
 
@@ -44,31 +44,35 @@ Providers
 
 Using Templates
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_requirements.rst
+.. include:: ../../includes_template/includes_template_requirements.rst
 
 File Specificity
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+.. include:: ../../includes_template/includes_template_specificity.rst
+
+.. include:: ../../includes_template/includes_template_specificity_pattern.rst
+
+.. include:: ../../includes_template/includes_template_specificity_example.rst
 
 Host Notation
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_host_notation.rst
+.. include:: ../../includes_template/includes_template_host_notation.rst
 
 Partial Templates
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials.rst
+.. include:: ../../includes_template/includes_template_partials.rst
 
 ``render`` Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst
+.. include:: ../../includes_template/includes_template_partials_render_method.rst
 
 Transfer Frequency
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_transfer_frequency.rst
+.. include:: ../../includes_template/includes_template_transfer_frequency.rst
 
 Variables
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_variables.rst
+.. include:: ../../includes_template/includes_template_variables.rst
 
 Examples
 =====================================================

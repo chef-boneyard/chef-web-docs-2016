@@ -2584,6 +2584,8 @@ template
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_template.rst
 
+.. include:: ../../includes_template/includes_template_requirements.rst
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_syntax.rst
@@ -2602,15 +2604,52 @@ Providers
 
 File Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+.. include:: ../../includes_template/includes_template_specificity.rst
 
 **Pattern**
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst
+.. include:: ../../includes_template/includes_template_specificity_pattern.rst
 
 **Example**
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_example_templates.rst
+.. include:: ../../includes_template/includes_template_specificity_example.rst
+
+Helpers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_template_helper.rst
+
+**Inline Methods**
+
+.. include:: ../../step_resource/step_resource_template_inline_method.rst
+
+**Inline Modules**
+
+.. include:: ../../step_resource/step_resource_template_inline_module.rst
+
+**Library Modules**
+
+.. include:: ../../step_resource/step_resource_template_library_module.rst
+
+Host Notation
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_template/includes_template_host_notation.rst
+
+Partial Templates
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_template/includes_template_partials.rst
+
+**render Method**
+
+.. include:: ../../includes_template/includes_template_partials_render_method.rst
+
+Transfer Frequency
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_template/includes_template_transfer_frequency.rst
+
+Variables
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_template/includes_template_variables.rst
+
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -37,7 +37,7 @@ A cookbook can contain the following types of files:
    * - Resources
      - .. include:: ../../includes_resources_common/includes_resources_common.rst
    * - Templates
-     - .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
+     - .. include:: ../../includes_template/includes_template.rst
 
 All of the file types that are part of any cookbook uploaded to the |chef server| are visible from the |chef manage| add-on.
 
