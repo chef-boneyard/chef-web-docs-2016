@@ -2,13 +2,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``run_end`` message type to build rules for messages that are sent by |reporting| at the end of a |chef client| run.
+Use the ``run end`` message type to build rules for messages that are sent by |reporting| at the end of a |chef client| run.
 
 The syntax for this message type:
 
 .. code-block:: java
 
-   rule(run_end) when
+   rule(run end) when
      ...
    then
      ...

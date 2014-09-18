@@ -16,19 +16,19 @@ action
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst
 
-run_control
+run control
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_control.rst
 
-run_end
+run end
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_end.rst
 
-run_resource
+run resource
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_resource.rst
 
-run_start
+run start
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_start.rst
 
@@ -43,14 +43,6 @@ array:contains()
 datetime:component()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst
-
-groovy:eval()
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_groovy_eval.rst
-
-groovy:exec()
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_groovy_exec.rst
 
 log()
 -----------------------------------------------------

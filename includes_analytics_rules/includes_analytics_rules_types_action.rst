@@ -31,7 +31,7 @@ A rule that always calls its ``otherwise`` section:
 	rule(action) when
      true
    then
-     log("Shouldn't get here") // You can't have an empty `then` section, just add a log stmt
+     log("Shouldn't get here")
    otherwise
      log("Hello world")  
 

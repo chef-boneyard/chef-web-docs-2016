@@ -2,13 +2,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``run_resource`` message type to build rules for messages that are sent by |reporting| as each resource is converged during a |chef client| run.
+Use the ``run resource`` message type to build rules for messages that are sent by |reporting| as each resource is converged during a |chef client| run.
 
 The syntax for this message type:
 
 .. code-block:: java
 
-   rule(run_resource) when
+   rule(run resource) when
      ...
    then
      ...
