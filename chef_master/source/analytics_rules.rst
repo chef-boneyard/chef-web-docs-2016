@@ -2,6 +2,8 @@
 |chef analytics_title| Rules
 =====================================================
 
+.. warning:: This topic is a preview of upcoming functionality that will be part of the |chef analytics| platform.
+
 .. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
 
 Syntax
