@@ -22,6 +22,7 @@
        or:
        ::
  
-          arguments [:key1 => 'val1', :key2 => 'val2]
+          arguments [:key1 => 'val1', :key2 => 'val2']
+
    * - ``supports``
      - |supports chef_handler| Possible values: ``:exception``, ``:report``, or ``:start``. Default value: ``{ :report => true, :exception => true }``.
