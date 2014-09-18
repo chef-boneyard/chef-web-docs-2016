@@ -6,5 +6,5 @@
 
    cookbook_file "/tmp/testfile" do
      source "testfile"
-     mode "0644"
+     mode '0644'
    end

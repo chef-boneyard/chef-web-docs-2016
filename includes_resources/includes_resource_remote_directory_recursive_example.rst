@@ -40,10 +40,10 @@ The |resource remote_directory| resource can be used to build a website using th
 .. code-block:: ruby
 
    remote_directory "/var/www/html" do
-     files_mode "0440"
-     files_owner "yan"
-     mode "0770"
-     owner "hamilton"
+     files_mode '0440'
+     files_owner 'yan'
+     mode '0770'
+     owner 'hamilton'
      source "website"
    end
 

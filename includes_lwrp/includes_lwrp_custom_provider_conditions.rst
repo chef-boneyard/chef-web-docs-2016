@@ -33,7 +33,7 @@ In the following example an ``unless`` statement is used to add a key, unless th
    unless new_resource.url.nil?
      remote_file "/etc/pki/rpm-gpg/#{new_resource.key}" do
        source new_resource.url
-       mode "0644"
+       mode '0644'
        notifies :run, "execute[import-rpm-gpg-key-#{new_resource.key}]", :immediately
      end
    end

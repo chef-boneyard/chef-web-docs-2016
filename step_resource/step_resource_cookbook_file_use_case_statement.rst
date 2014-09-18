@@ -14,7 +14,7 @@ The following example shows how a case statement can be used to handle a situati
          "/etc/version/dir/application.pm"
        end
      source "application-#{node['languages']['perl']['version']}.pm"
-     owner "root"
-     group "root"
-     mode "0644"
+     owner 'root'
+     group 'root'
+     mode '0644'
    end

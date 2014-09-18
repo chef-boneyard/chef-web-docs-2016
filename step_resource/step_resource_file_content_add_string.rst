@@ -7,9 +7,9 @@ The following example specifies a directory, and then uses the ``content`` attri
    status_file = "/path/to/file/status_file"
    
    file status_file do
-     owner "root"
-     group "root"
-     mode "0600"
+     owner 'root'
+     group 'root'
+     mode '0600'
      content "My favourite foremost coastal Antarctic shelf, oh Larsen B!"
    end
 

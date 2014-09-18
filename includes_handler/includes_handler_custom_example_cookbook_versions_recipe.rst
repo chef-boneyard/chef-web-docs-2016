@@ -10,9 +10,9 @@ The following recipe is added to the run-list for every node on which a list of 
    
    cookbook_file "#{node["chef_handler"]["handler_path"]}/cookbook_versions.rb" do
      source "cookbook_versions.rb"
-     owner "root"
-     group "root"
-     mode "0755"
+     owner 'root'
+     group 'root'
+     mode '0755'
      action :create
    end
    

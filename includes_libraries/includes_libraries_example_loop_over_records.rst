@@ -19,8 +19,8 @@ If there are many customer records in an environment, a simple recipe can be use
 
    all_customers do |name, info|
      directory info[:webdir] do
-       owner name
-       group name
+       owner 'name'
+       group 'name'
        action :create
      end
    end

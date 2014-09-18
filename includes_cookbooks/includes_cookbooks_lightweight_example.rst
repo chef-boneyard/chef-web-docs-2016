@@ -28,14 +28,14 @@ A lightweight provider named ``mysql.rb`` should be created in the ``providers/`
      end
    end
 
-If the name of the cookbook was ``opscode``, the short name of the provider that is created is ``opscode_mysql``, where the name of the cookbook and the name of the provider are joined with an underscore to comprise the name of the provider. The ``load_current_resource`` method will do nothing (because it is not defined), and the ``action_create`` and ``action_delete`` methods will be available for use in a recipe. For example:
+If the name of the cookbook was ``chef``, the short name of the provider that is created is ``chef_mysql``, where the name of the cookbook and the name of the provider are joined with an underscore to comprise the name of the provider. The ``load_current_resource`` method will do nothing (because it is not defined), and the ``action_create`` and ``action_delete`` methods will be available for use in a recipe. For example:
 
 .. code-block:: ruby
 
-   opscode_database "database" do
+   chef_database "database" do
      type "innodb"
      action :create
-     provider "opscode_mysql"
+     provider "chef_mysql"
    end
 
 This resource will execute the ``action :create do`` block in the provider (similar to the preceding example) and would create a |mysql| database called "database".

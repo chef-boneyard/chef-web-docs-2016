@@ -8,8 +8,8 @@ To add a private key to a node:
 
    cookbook_file "/tmp/private_code/.ssh/id_deploy" do
      source "id_deploy"
-     owner "ubuntu"
-     mode "0600"
+     owner 'ubuntu'
+     mode '0600'
    end
 
 

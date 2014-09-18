@@ -25,9 +25,9 @@ The recipe then does the following to:
    template "authorized_ip" do
      path "#{node['nginx']['dir']}/authorized_ip"
      source "modules/authorized_ip.erb"
-     owner "root"
-     group "root"
-     mode "0644"
+     owner 'root'
+     group 'root'
+     mode '0644'
      variables(
        :remote_ip_var => node['nginx']['remote_ip_var'],
        :authorized_ips => node['nginx']['authorized_ips']

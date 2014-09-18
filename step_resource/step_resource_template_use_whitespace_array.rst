@@ -8,9 +8,9 @@ The following example shows how to use a |ruby| whitespace array to define a lis
    %w{openssl.cnf pkitool vars Rakefile}.each do |f|
      template "/etc/openvpn/easy-rsa/#{f}" do
        source "#{f}.erb"
-       owner "root"
-       group "root"
-       mode "0755"
+       owner 'root'
+       group 'root'
+       mode '0755'
      end
    end
 

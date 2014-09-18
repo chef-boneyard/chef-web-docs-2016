@@ -25,8 +25,8 @@ The following example shows how to use the |resource execute|, |resource service
    
      [node['mysql']['ec2_path'], node['mysql']['data_dir']].each do |dir|
        directory dir do
-         owner "mysql"
-         group "mysql"
+         owner 'mysql'
+         group 'mysql'
        end
      end
    

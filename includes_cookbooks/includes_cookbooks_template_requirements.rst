@@ -12,9 +12,9 @@ For example, the following template file and template resource settings can be u
 
    template "/etc/sudoers" do
      source "sudoers.erb"
-     mode 0440
-     owner "root"
-     group "root"
+     mode '0440'
+     owner 'root'
+     group 'root'
      variables({
         :sudoers_groups => node[:authorization][:sudo][:groups],
         :sudoers_users => node[:authorization][:sudo][:users]

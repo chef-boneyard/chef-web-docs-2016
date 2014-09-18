@@ -5,7 +5,7 @@
 .. code-block:: ruby
 
    cron "noop" do
-     hour "5"
-     minute "0"
+     hour '5'
+     minute '0'
      command "/bin/true"
    end

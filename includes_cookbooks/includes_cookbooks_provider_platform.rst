@@ -6,9 +6,9 @@ The ``Chef::Platform`` class maps providers to platforms (and platform versions)
 .. code-block:: ruby
 
    directory "/tmp/folder" do
-     owner "root"
-     group "root"
-     mode "0755"
+     owner 'root'
+     group 'root'
+     mode '0755'
      action :create
    end
 

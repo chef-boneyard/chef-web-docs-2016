@@ -15,9 +15,9 @@ The following example shows a way create a file in the ``/baz`` directory:
 .. code-block:: ruby
 
    directory "/foo/bar/baz" do
-     owner "root"
-     group "root"
-     mode "0755"
+     owner 'root'
+     group 'root'
+     mode '0755'
      action :create
    end
 
@@ -27,9 +27,9 @@ But with this example, the ``group``, ``mode``, and ``owner`` attribute values w
 
    %w[ /foo /foo/bar /foo/bar/baz ].each do |path|
      directory path do
-       owner "root"
-       group "root"
-       mode "0755"
+       owner 'root'
+       group 'root'
+       mode '0755'
      end
    end
 

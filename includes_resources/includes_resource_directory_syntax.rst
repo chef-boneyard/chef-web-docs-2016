@@ -23,9 +23,9 @@ The following is an example of how the |resource directory| resource can work wh
 .. code-block:: ruby
 
    directory "/var/lib/foo" do
-     owner "root"
-     group "root"
-     mode "0644"
+     owner 'root'
+     group 'root'
+     mode '0644'
      action :create
    end
 

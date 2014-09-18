@@ -9,7 +9,7 @@ The following example shows how to reload the configuration of a |chef client| u
 .. code-block:: ruby
 
    directory node[:ohai][:plugin_path] do
-     owner "chef"
+     owner 'chef'
      recursive true
    end
    
@@ -24,7 +24,7 @@ The following example shows how to reload the configuration of a |chef client| u
      node[:ohai][:plugins].each do |plugin|
        remote_file node[:ohai][:plugin_path] +"/#{plugin}" do
          source plugin
-         owner "chef"
+         owner 'chef'
 		 notifies :run, "ruby_block[reload_config]", :immediately
        end
      end

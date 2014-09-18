@@ -24,9 +24,9 @@ For example, the following example runs weekly cookbook reports:
 
    cron "cookbooks_report" do
      action node.tags.include?('cookbooks-report') ? :create : :delete
-     minute "0"
-     hour "0"
-     weekday "1"
+     minute '0'
+     hour '0'
+     weekday '1'
      user "getchef"
      mailto "nharvey@getchef.com"
      home "/srv/supermarket/shared/system"

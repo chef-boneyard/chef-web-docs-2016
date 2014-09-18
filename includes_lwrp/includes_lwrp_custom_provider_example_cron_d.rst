@@ -16,7 +16,7 @@ The ``cron_d`` lightweight provider (found in the `cron <https://github.com/opsc
      t = template "/etc/cron.d/#{new_resource.name}" do
        cookbook new_resource.cookbook
        source "cron.d.erb"
-       mode "0644"
+       mode '0644'
        variables({
            :name => new_resource.name, 
            :minute => new_resource.minute,
@@ -48,8 +48,8 @@ For example, if a recipe used the ``cron_d`` lightweight resource similar to the
 .. code-block:: ruby
 
    cron_d "daily-usage-report" do
-     minute 0
-     hour 23
+     minute '0'
+     hour '23'
      command "/srv/app/scripts/daily_report"
      user "appuser"
    end

@@ -29,7 +29,7 @@ For example, a simple template resource like this:
 
    node[:fqdn] = "latte"
    template "/tmp/foo" do
-     source "foo.erb"
+     source 'foo.erb'
      variables({
        :x_men => "are keen"
      })

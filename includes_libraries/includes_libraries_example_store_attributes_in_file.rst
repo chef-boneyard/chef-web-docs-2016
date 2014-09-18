@@ -18,8 +18,8 @@ A simple recipe may contain something like this:
 .. code-block:: ruby
 
    directory node[:mycompany_customers][:bob][:webdir] do
-     owner "bob"
-     group "bob"
+     owner 'bob'
+     group 'bob'
      action :create
    end
 
@@ -28,8 +28,8 @@ Or a less verbose version of the same simple recipe:
 .. code-block:: ruby
 
    directory customer(:bob)[:webdir] do
-     owner "bob"
-     group "bob"
+     owner 'bob'
+     group 'bob'
      action :create
    end
 

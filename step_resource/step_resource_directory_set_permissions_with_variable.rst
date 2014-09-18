@@ -7,9 +7,9 @@ The following example shows how read/write/execute permissions can be set using 
    user_home = "/#{node[:matching_node][:user]}"
    
    directory user_home do
-     owner node[:matching_node][:user]
-     group node[:matching_node][:group]
-     mode "0755"
+     owner 'node[:matching_node][:user]'
+     group 'node[:matching_node][:group]'
+     mode '0755'
      action :create
    end
 
@@ -20,8 +20,8 @@ where ``matching_node`` represents a type of node. For example, if the ``user_ho
    user_home = "/#{node[:nginx][:user]}"
    
    directory user_home do
-     owner node[:nginx][:user]
-     group node[:nginx][:group]
-     mode "0755"
+     owner 'node[:nginx][:user]'
+     group 'node[:nginx][:group]'
+     mode '0755'
      action :create
    end
