@@ -8,7 +8,7 @@ The ``Chef::Platform`` class maps providers to platforms (and platform versions)
    directory "/tmp/folder" do
      owner "root"
      group "root"
-     mode 0755
+     mode "0755"
      action :create
    end
 

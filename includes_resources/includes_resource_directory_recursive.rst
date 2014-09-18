@@ -17,7 +17,7 @@ The following example shows a way create a file in the ``/baz`` directory:
    directory "/foo/bar/baz" do
      owner "root"
      group "root"
-     mode 00755
+     mode "0755"
      action :create
    end
 
@@ -29,7 +29,7 @@ But with this example, the ``group``, ``mode``, and ``owner`` attribute values w
      directory path do
        owner "root"
        group "root"
-       mode 00755
+       mode "0755"
      end
    end
 

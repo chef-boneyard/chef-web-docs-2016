@@ -25,7 +25,7 @@ The following is an example of how the |resource directory| resource can work wh
    directory "/var/lib/foo" do
      owner "root"
      group "root"
-     mode 00644
+     mode "0644"
      action :create
    end
 

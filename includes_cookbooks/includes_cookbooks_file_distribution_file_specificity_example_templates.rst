@@ -16,7 +16,7 @@ and a resource that looks something like the following:
 
    template "C:\path\to\file\text_file.txt" do
      source "text_file.txt"
-     mode 0755
+     mode "0755"
      owner "root"
      group "root"
    end

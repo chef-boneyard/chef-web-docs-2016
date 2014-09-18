@@ -12,7 +12,7 @@ The following recipe is added to the run-list for every node on which a list of 
      source "cookbook_versions.rb"
      owner "root"
      group "root"
-     mode 00755
+     mode "0755"
      action :create
    end
    
