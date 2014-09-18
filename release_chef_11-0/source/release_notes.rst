@@ -415,11 +415,11 @@ In |chef 11|, lightweight resources resources now inherit from a ``LWRPBase`` re
 
 Partial Support in Templates
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials.rst
+.. include:: ../../includes_template/includes_template_partials.rst
 
 ``render`` Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst
+.. include:: ../../includes_template/includes_template_partials_render_method.rst
  
 |chef apply|
 -----------------------------------------------------
