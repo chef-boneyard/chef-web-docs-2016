@@ -1,6 +1,7 @@
 .. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
 
-|chef server| Components
+=====================================================
+|chef server oec| Components
 =====================================================
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
@@ -9,7 +10,7 @@
 
 The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another.
 
-.. image:: ../../images/server_components.png
+.. image:: ../../images_old/server_components_oec.png
 
 .. list-table::
    :widths: 60 420
