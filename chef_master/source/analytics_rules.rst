@@ -18,10 +18,6 @@ action
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst
 
-run control
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_control.rst
-
 run end
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_end.rst
