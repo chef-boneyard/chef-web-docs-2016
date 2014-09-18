@@ -1,4 +1,4 @@
 .. THIS PAGE IS IDENTICAL TO docs.getchef.com/essentials_nodes.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /open_source/ PATH.
 
-.. include:: ../../chef_master/source/essentials_nodes.rst
+.. include:: ../../release_11-x_master/essentials_nodes.rst
