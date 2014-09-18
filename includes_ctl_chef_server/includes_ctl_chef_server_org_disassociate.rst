@@ -4,16 +4,3 @@
 
 
 The ``org-disassociate`` subcommand is used to disassociate a user from an organization.
-
-Examples:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-disassociate prod john_smith
-
-or:
-
-.. code-block:: bash
-
-      $ chef-server-ctl org-disassociate prod testmaster
-

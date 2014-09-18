@@ -4,22 +4,3 @@
 
 
 The ``org-create`` subcommand is used to create an organization. (The validation key for the organization is returned to ``STDOUT`` when creating an organization using this command.)
-
-For example:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create prod Production
-
-or:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create staging Staging -a chef-admin
-
-or:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create dev Development -f /tmp/id-dev.key
-

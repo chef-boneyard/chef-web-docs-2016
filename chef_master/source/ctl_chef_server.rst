@@ -45,6 +45,18 @@ org-associate
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate_syntax.rst
 
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-associate prod john_smith
+
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-associate preprod testmaster
+
+
 org-create
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
@@ -57,6 +69,23 @@ org-create
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst
 
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-create prod Production
+
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-create staging Staging -a chef-admin
+
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-create dev Development -f /tmp/id-dev.key
+
+
 org-delete
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
@@ -65,6 +94,18 @@ org-delete
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst
 
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-delete infra-testing-20140909
+
+
+.. code-block:: bash
+      
+   $ chef-server-ctl org-delete pedant-testing-org
+
+
 org-disassociate
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate.rst
@@ -72,6 +113,18 @@ org-disassociate
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-disassociate prod john_smith
+
+
+.. code-block:: bash
+
+      $ chef-server-ctl org-disassociate prod testmaster
+
 
 org-list
 =====================================================
@@ -135,6 +188,23 @@ user-create
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst
 
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-create john_smith John Smith john_smith@example.com insecure-passord
+
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-create jane_doe Jane Doe jane_doe@example.com PaSSword -f /tmp/jane_doe.key
+
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-create waldendude Henry David Thoreau waldendude@example.com excursions
+
+
 user-delete
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete.rst
@@ -143,6 +213,17 @@ user-delete
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete_syntax.rst
 
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-delete john_smith
+
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-delete jane_doe
+
 user-edit
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst
@@ -150,6 +231,18 @@ user-edit
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-edit john_smith
+
+
+.. code-block:: bash
+
+   $ chef-server-ctl user-edit jane_doe
+
 
 user-list
 =====================================================
