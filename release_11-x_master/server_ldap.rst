@@ -1,4 +1,4 @@
-.. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
+.. THIS PAGE DOCUMENTS Enterprise Chef server version 11.2
 
 =====================================================
 LDAP and Active Directory

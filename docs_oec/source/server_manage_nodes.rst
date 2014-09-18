@@ -98,6 +98,3 @@ View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_view_tags.rst
 
-
-
-
