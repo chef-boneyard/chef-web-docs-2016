@@ -10,4 +10,3 @@ All communication between these components is done with the following:
 * A |knife| plugin named |subcommand knife push jobs| with four subcommands: ``job list``, ``job start``, ``job status``, and ``node status``
 * Various job messages sent from a workstation to the |push jobs| server
 * A single job message that is sent (per job) from the |push jobs| server to one (or more) nodes that are being managed by a |chef server| server
-

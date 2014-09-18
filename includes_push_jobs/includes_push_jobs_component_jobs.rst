@@ -6,9 +6,3 @@ The |push jobs| server is used to send job messages to one (or more) managed nod
 
 A heartbeat message is used to let all of the nodes in an organization that the |push jobs| server is available. The |push jobs| server listens for heartbeat messages from each |push jobs| client. If there is no heartbeat from a |push jobs| client, the |push jobs| server will mark that node as unavailable for job messages until the heartbeat resumes.
 
-
-
-
-
-
-

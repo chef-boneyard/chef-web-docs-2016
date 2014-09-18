@@ -3,8 +3,3 @@
 
 
 A workstation is used to manage |push jobs| jobs, including maintaining the |cookbook push jobs| cookbook, using |knife| to start and stop jobs, view job status, and to manage job lists.
-
-
-
-
-

@@ -36,6 +36,3 @@ where ``["ntpdate"] = "ntpdate -u time"`` is added to the whitelist:
      "ntpdate" => "ntpdate -u time",
    }
 
-
-
-
