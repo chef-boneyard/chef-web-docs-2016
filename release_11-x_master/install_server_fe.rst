@@ -1,12 +1,10 @@
-.. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
-
 =====================================================
 Scaled Front End
 =====================================================
 
-The scaled front end installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |company_name| generally recommends a High Availability installation rather than a scaled front end installation, whenever possible.
+The scaled front end installation allows you to install the |chef server| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |company_name| generally recommends a High Availability installation rather than a scaled front end installation, whenever possible.
 
-We refer to all the servers in a particular installation of |chef server oec| as a cluster.
+We refer to all the servers in a particular installation of the |chef server| as a cluster.
 
 The scaled front end installation consists of multiple front-end servers talking to a single back-end server. This allows for a higher level of concurrency on API requests, while scaling the back-end server vertically to handle the increased I/O load.
 
@@ -23,11 +21,11 @@ A scaled front end installation scenario has the following system requirements:
 * 40 GB of free disk space in ``/var``
 * A back-end server; all other systems will be front-end servers.
 
-.. note:: While you can certainly run |chef server oec| on smaller systems, our assumption with the scaled front end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
+.. note:: While you can certainly run the |chef server| on smaller systems, our assumption with the scaled front end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
 
 Network Requirements
 =====================================================
-|chef server oec| has the following network requirements for a scaled front end installation:
+The |chef server| has the following network requirements for a scaled front end installation:
 
 Load Balancing
 -----------------------------------------------------
@@ -37,29 +35,74 @@ You will want to create a DNS entry for the load balanced virtual IP address, wh
 
 Firewalls
 -----------------------------------------------------
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
+The ports that should be open depend on how the |chef server| is deployed---standalone, high availability, front- and back-end servers. All of the ports used by the |chef server| are TCP ports. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary.
 
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst
+For front-end servers in an |chef server| installation:
 
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
 
-private-chef.rb
+   * - Port
+     - Service
+   * - 80
+     - |service nginx|
+   * - 443
+     - |service nginx|
+
+For back-end servers in an |chef server| installation:
+
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Port
+     - Service
+   * - 80
+     - |service nginx|
+   * - 443
+     - |service nginx|
+   * - 9463
+     - |service bifrost|
+   * - 9671
+     - |service nginx|
+   * - 9680
+     - |service nginx|
+   * - 9685
+     - |service nginx|
+   * - 9683
+     - |service nginx|
+   * - 8983
+     - |service solr|
+   * - 5432
+     - |service postgresql|
+   * - 5672
+     - |service rabbitmq|
+   * - 16379
+     - |service redis_lb|
+   * - 4321
+     - |service bookshelf|
+   * - 7788-7799
+     - |drbd|
+
+
+|chef server rb|
 -----------------------------------------------------
-Each |chef server oec| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |private chef rb|.
+Each machine in a |chef server| cluster has a single configuration file called |chef server rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/chef-server.rb`` on each server. Using the text editor of your choice, create a file called |chef server rb|.
 
 Configure topology
 -----------------------------------------------------
-Add the following line to the |private chef rb| configuration file:
+Add the following line to the |chef server rb| configuration file:
 
 .. code-block:: ruby
 
    topology "tier"
 
-This lets |chef server oec| know that these servers will be in a horizontally scalable configuration with a single, non-highly-available back-end.
+This lets the |chef server| know that these servers will be in a horizontally scalable configuration with a single, non-highly-available back-end.
 
 Back-end entries
 -----------------------------------------------------
-For the server that will be used as a back-end servers, add the following to the |private chef rb| file:
+For the server that will be used as a back-end servers, add the following to the |chef server rb| file:
 
 .. code-block:: ruby
 
@@ -68,9 +111,9 @@ For the server that will be used as a back-end servers, add the following to the
      :role => "backend",
      :bootstrap => true
 
-Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is ``backend``, and you will be using this server to bootstrap this |chef server oec| installation.
+Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is ``backend``, and you will be using this server to bootstrap the |chef server| installation.
 
-Additionally, this server is used exclusively for the back-end services. Let |chef server oec| know by adding the following entry to ``private-chef.rb``:
+Additionally, this server is used exclusively for the back-end services. Let the |chef server| know by adding the following entry to |chef server rb|:
 
 .. code-block:: ruby
 
@@ -81,7 +124,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Front-end entries
 -----------------------------------------------------
-For each front-end server, add the following to the |private chef rb| file:
+For each front-end server, add the following to the |chef server rb| file:
 
 .. code-block:: ruby
 
@@ -93,7 +136,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Set api_fqdn
 -----------------------------------------------------
-Add the following line to the |private chef rb| config file:
+Add the following line to the |chef server rb| config file:
 
 .. code-block:: ruby
 
@@ -103,7 +146,7 @@ Replace ``FQDN`` with the |fqdn| of the load balanced VIP.
 
 Example
 -----------------------------------------------------
-A completed |private chef rb| configuration file for a four server |chef server oec| cluster, consisting of:
+A completed |chef server rb| configuration file for a four server |chef server| cluster, consisting of:
 
 .. list-table::
    :widths: 100 150 150
@@ -165,29 +208,29 @@ Configure Bootstrap
 =====================================================
 The following sections describe what is required to configure the bootstrap server.
 
-Add private-chef.rb
+Add |chef server rb|
 -----------------------------------------------------
-Copy the |private chef rb| file to ``/etc/opscode/private-chef.rb`` on the bootstrap server.
+Copy the |chef server rb| file to ``/etc/opscode/chef-server.rb`` on the bootstrap server.
 
-Install |chef server oec|
+Install the |chef server_title|
 -----------------------------------------------------
-On the bootstrap server copy the |private chef rb| file to ``/etc/opscode/private-chef.rb``.
+On the bootstrap server copy the |chef server rb| file to ``/etc/opscode/chef-server.rb``.
 
 Configure 
 -----------------------------------------------------
-To set up |chef server oec| on your bootstrap server, run:
+To set up the |chef server| on your bootstrap server, run:
 
 .. code-block:: bash
 
-   $ private-chef-ctl reconfigure
+   $ chef-server-ctl reconfigure
 
-This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef server oec| installation. When it is complete, you will see:
+This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring the |chef server| installation. When it is complete, you will see:
 
 .. code-block:: bash
 
    Chef Server Reconfigured!
 
-.. note:: |chef server oec| is composed of many different services, which work together to create a functioning system. One effect is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
+.. note:: |chef server| is composed of many different services, which work together to create a functioning system. One effect is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
 
 Configure Front-end
 =====================================================
@@ -205,17 +248,17 @@ Will copy all the files from the bootstrap server to another system. Replace ``F
 
 Install package
 -----------------------------------------------------
-Install the |chef server oec| package on each of the front-end servers. For on |redhat| and |centos| 6:
+Install the |chef server| package on each of the front-end servers. For on |redhat| and |centos| 6:
 
 .. code-block:: bash
 
-   $ rpm -Uvh /tmp/private-chef-full-1.0.0–1.x86_64.rpm
+   $ rpm -Uvh /tmp/chef-server-core-<version>.rpm
 
-Install the |chef server oec| package on |ubuntu|:
+Install the |chef server| package on |ubuntu|:
 
 .. code-block:: bash
 
-   $ dpkg -i /tmp/private-chef-full_1.0.0–1_amd64.deb
+   $ dpkg -i /tmp/chef-server-core-<version>.deb
 
 
 Configure
@@ -234,9 +277,9 @@ Run the following command:
 
 .. code-block:: bash
 
-   $ private-chef-ctl reconfigure
+   $ chef-server-ctl reconfigure
 
 Success!
 =====================================================
-Congratulations, you have installed |chef server oec| in a scaled front end configuration. Continue with the User Management section of this guide.
+Congratulations, you have installed the |chef server| in a scaled front end configuration. Continue with the User Management section of this guide.
 
