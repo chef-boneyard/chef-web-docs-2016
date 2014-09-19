@@ -234,3 +234,43 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
    .. code-block:: bash
 
       $ opscode-manage-ctl reconfigure
+
+|push jobs_title|
+=====================================================
+|push jobs| can be upgraded as part of a standalone or high availability configuration:
+
+#. After upgrading the |chef server|, run the following command on all front and back end servers:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl install opscode-push-jobs-server
+
+#. TCP protocol ports 10000-10003 must be open. This allows the |push jobs| clients to communicate with the |push jobs| server. In a configuration with both front and back ends, these ports only need to be open on the back end servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client).
+
+#. Reconfigure the |push jobs| servers:
+
+   .. code-block:: bash
+
+      $ opscode-push-jobs-server-ctl reconfigure
+
+#. Run the following command on each of the back end servers:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl reconfigure
+
+   This ensures that the |keepalived| scripts are regenerated so they are aware of |push jobs|.
+
+#. Restart the |push jobs| components:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl restart opscode-pushy-server
+
+#. Verify the installation:
+
+   .. code-block:: bash
+
+      $ opscode-push-jobs-server-ctl test
+
+#. Install the |push jobs| client on all nodes using the |cookbook push jobs| cookbook, as needed.
