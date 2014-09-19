@@ -17,7 +17,7 @@ The |chef server| has the :doc:`following prerequisites </install_server_pre>`:
 * Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks
 * Disabling the |apache qpid| daemon on |centos| and |redhat| systems
 * A local user account under which services will run
-* A local user account for |postgresql|, but only if the |chef server| is run in a high availability configuration
+* A local user account for |postgresql|
 * A group account under which services will run 
 
 Standalone
