@@ -7,13 +7,13 @@ To set up the |push jobs| server for a high availability configuration:
 
    .. code-block:: bash
 
-      $ dpkg -i opscode-push-jobs-server_0.0.1+20130307070157.git.98.c04f587-1.ubuntu.10.04_amd64.deb
+      $ dpkg -i opscode-push-jobs-server_<package>.ubuntu.10.04_amd64.deb
 
-#. Reconfigure the primary backend |chef server|:
+#. Reconfigure the primary backend |push jobs| server:
 
    .. code-block:: bash
 
-      $ private-chef-ctl reconfigure
+      $ opscode-push-jobs-server-ctl reconfigure
 
 #. Copy the entire ``/etc/opscode-push-jobs-server`` directory from the back end primary machine to all front and back end machines. For example, from each server run:
 
@@ -43,7 +43,7 @@ To set up the |push jobs| server for a high availability configuration:
 
    This ensures that the |keepalived| scripts are regenerated so they are aware of |push jobs|.
 
-#. Restart the |push jobs| components:
+#. Restart all machines on which |push jobs| will run:
 
    .. code-block:: bash
 
