@@ -40,18 +40,6 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
 
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
-
-High Availability
-=====================================================
-The following links describe how to configure the |chef server| for high availability.
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_pre.html">Prerequisites</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_fe.html">Front-end Machines</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_be.html">Back-end Machines</a> </br>
 
 
