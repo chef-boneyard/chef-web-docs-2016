@@ -1,0 +1,1 @@
+.. include:: ../../release_11-x_master/install_analytics_pre.rst
