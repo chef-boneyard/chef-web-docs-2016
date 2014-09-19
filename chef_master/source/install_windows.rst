@@ -1,1 +1,1 @@
-.. include:: ../../release_11-x_master/install_server_windows.rst
+.. include:: ../../release_11-x_master/install_windows.rst
