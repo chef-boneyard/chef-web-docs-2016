@@ -1,5 +1,4 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/install_server_oec.html BY DESIGN
-.. THIS PAGE IS LOCATED AT THE /server/ PATH.
+.. This page is the Chef 12 server install page.
 
 =====================================================
 Install the |chef server_title|
