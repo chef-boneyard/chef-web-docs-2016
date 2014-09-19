@@ -65,7 +65,7 @@ Incident Handling
 
 Disagreements, both social and technical, happen all the time. When they occur, we seek to resolve disagreements and differing views constructively and with the help of the community and community processes. When disagreements escalate, we ask our community advocates to step in to moderate, mediate, and help resolve tense situations.
 
-The |chef| community advocates are well informed on how to deal with incidents. Report the incident (preferably in writing) to one of the community advocates listed below. See the "Roles" section above for a description of each role.
+The |chef| community advocates are well informed on how to deal with incidents. Report the incident (preferably in writing) to one of the community advocates listed below.
 
 .. list-table::
    :widths: 60 420
@@ -78,17 +78,7 @@ The |chef| community advocates are well informed on how to deal with incidents. 
    * - Ombudsperson
      - Nathen Harvey - nharvey @ getchef.com; phone - +1 202-368-7264; IRC - nathenharvey
    * - Advocates
-     - Advocates for locations in which |chef| community discussions take place:
-
-       * IRC - generally, individuals with operator in a channel are designated as community advocates.
-       * \#chef -
-       * \#chef-hacking -
-       * chef@ mailing list -
-       * chef-dev@ mailing list -
-       * |github| -
-       * Stackoverflow -
-       * LinkedIn |chef| Users' Group -
-       * `chef_opscode reddit <https://www.reddit.com/r/chef_opscode/>`__ - 
+     - The `list of advocates <https://github.com/opscode/chef-rfc/blob/master/rfc020-community-guidelines.md>`__ for the various locations in which |chef| community discussions take place is maintained in the RFC.
 
 The important information to report consists of:
 
