@@ -216,3 +216,21 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 #. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+
+
+
+|chef manage_title|
+=====================================================
+|chef manage| can be upgraded as part of a standalone or high availability configuration:
+
+#. After upgrading the |chef server|, run the following command on each of the front end servers:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl install opscode-manage
+
+#. Reconfigure each of the front end servers:
+
+   .. code-block:: bash
+
+      $ opscode-manage-ctl reconfigure
