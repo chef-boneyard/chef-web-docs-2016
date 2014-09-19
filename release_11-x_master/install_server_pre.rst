@@ -12,7 +12,7 @@ The |chef server| is distributed on |redhat| and |centos| using |rpm|, and on |u
 
 Supported Platforms
 =====================================================
-.. include:: ../../includes_supported_platforms/includes_supported_platforms_11_server_oec.rst
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_server_oec.rst
 
 Configuring the Platform
 =====================================================
