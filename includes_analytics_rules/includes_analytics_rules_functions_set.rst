@@ -4,8 +4,6 @@
 
 Use ``set`` to specify an attribute that exists in the |json| object, and then get its value.
 
-?WHATWHAT? "Non-user defined values that already exist in the JSON document CANNOT be modified. A user CANNOT change an existing non-user defined value in the JSON object." ?WHATWHAT?
-
 The syntax for this function:
 
 .. code-block:: java

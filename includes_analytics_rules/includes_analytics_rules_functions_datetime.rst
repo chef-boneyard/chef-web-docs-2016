@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``datetime:component`` to specify xxxxx.
+Use ``datetime:component`` to specify the date and time at which a rule is applied.
 
 The syntax for this function:
 
