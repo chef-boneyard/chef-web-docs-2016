@@ -2,9 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``groovy:exec`` to execute arbitrary GROOVY code. The return value is ignored.
+Use ``groovy:exec`` to execute arbitrary |groovy| code. The return value is ignored.
 
-.. warning:: Groovy expressions may be slow! Use them carefully when required. In general, use one of the non-Groovy functions whenever possible. A Groovy function can be useful for debugging.
+.. warning:: |groovy| expressions may be slow! Use them carefully when required. In general, use one of the non-|groovy| functions whenever possible. A |groovy| function can be useful for debugging.
 
 The syntax for this function:
 

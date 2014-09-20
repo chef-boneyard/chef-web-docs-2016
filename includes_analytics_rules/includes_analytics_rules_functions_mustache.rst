@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``mustache_template`` to render a MUSTACHE expression. If a MUSTACHE template is invalid, an error is logged and the MUSTACHE template will return an empty, non-null string.
+Use ``mustache_template`` to render an expression that is defined in a |mustache| template. If the |mustache| template is invalid, an error is logged and the expression will return an empty, non-null string.
 
 The syntax for this function:
 
