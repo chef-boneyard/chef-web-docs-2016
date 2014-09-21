@@ -18,7 +18,7 @@ The Reporting Run
 =====================================================
 .. include:: ../../includes_manage/includes_manage.rst
 
-When |reporting| and |chef manage| are both added to |chef server oec|, a user interface for |reporting| is also available.
+When |reporting| and |chef manage| are both added to the |chef server|, a user interface for |reporting| is also available.
 
 .. image:: ../../images/step_manage_webui_reports.png
 
@@ -91,20 +91,12 @@ Configuration Settings
    * - Setting
      - Description
    * - ``enable_reporting``
-     - |enable reporting| 
-
-       .. warning:: This setting is available only when using |reporting|, an add-on for |chef server oec| that collects reporting data about nodes.
-
-       For example:
+     - |enable reporting| For example:
        ::
  
           enable_reporting true
    * - ``enable_reporting_url_fatals``
-     - |enable reporting_url_fatals|
-
-       .. warning:: This setting is available only when using |reporting|, an add-on for |chef server oec| that collects reporting data about nodes.
-
-       For example:
+     - |enable reporting_url_fatals| For example:
        ::
  
           enable_reporting_url_fatals false
