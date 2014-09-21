@@ -21,16 +21,19 @@ The |chef client| can run on any node or workstation that runs one of the follow
    * - Operating System
      - Version
      - Architecture
-   * - Debian
-     - 6
+   * - |debian|
+     - 6, 7
      - i686, x86_64
    * - Enterprise Linux
      - 5, 6
      - i686, x86_64
-   * - Mac OS X
-     - 10.6, 10.7
+   * - |freebsd|
+     - 9
+     - amd64, i386
+   * - |mac os x|
+     - 10.6, 10.7, 10.8, 10.9
      - x86_64
-   * - openSUSE
+   * - |opensuse|
      - 12.1
      - i686, x86_64
    * - Solaris
@@ -42,14 +45,14 @@ The |chef client| can run on any node or workstation that runs one of the follow
    * - SUSE Enterprise
      - 11.2
      - i686, x86_64
-   * - Ubuntu
-     - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
+   * - |ubuntu|
+     - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10, 13.03, 13.10, 14.04
      - i686, x86_64
-   * - Windows
+   * - |windows|
      - 2003 R2, 2008
      - i686, x86_64
    * - 
-     - 2008 R2, 2012
+     - 7, 8, 2008 R2, 2012, 2012 R2
      - x86_64
 
 In addition:
@@ -72,8 +75,24 @@ The hosted |chef server| has the following requirements:
 * **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 9 or better)
 * Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with the hosted |chef server|
 
-|chef server|, On-premises
+|chef server_title|, On-premises
 -----------------------------------------------------
+The |chef server| can run on any of the following systems:
+
+.. list-table::
+   :widths: 200 200 200
+   :header-rows: 1
+
+   * - Operating System
+     - Version
+     - Architecture
+   * - |redhat enterprise linux|
+     - 5, 6
+     - x86_64
+   * - |ubuntu|
+     - 10.04, 11.04, 12.04
+     - x86_64
+
 Before installing the |chef server|, ensure that each machine has the following installed and configured properly:
 
 * **Host names** --- Ensure that all systems have properly configured host names
@@ -120,3 +139,32 @@ For a high availability deployment:
 * 40 GB of free disk space in ``/var``
 * Two back-end servers; as many front-end servers as required.
 
+|chef dk_title|
+=====================================================
+The |chef dk| can run on any workstation that runs one of the following systems:
+
+.. list-table::
+   :widths: 200 200 200
+   :header-rows: 1
+
+   * - Operating System
+     - Version
+     - Architecture
+   * - |debian|
+     - 6, 7
+     - x86_64
+   * - |redhat enterprise linux|
+     - 6
+     - x86_64
+   * - |mac os x|
+     - 10.8, 10.9
+     - x86_64
+   * - |ubuntu|
+     - 12.04, 13.10
+     - x86_64
+   * - |windows|
+     - 7, 8, 8.1
+     - 
+   * - |windows server|
+     - 2008 R2, 2012, 2012 R2
+     - 
