@@ -12,10 +12,10 @@ The following documentation sets are available:
      - Home Page
      - Release Notes
    * - |chef client_title| 11.16
-     - `http://docs.getchef.com <http://docs.getchef.com>`__
+     - `http://docs.getchef.com <http://docs.getchef.com/release/11-16/>`__
      - `Release Notes <http://docs.getchef.com/release/11-16/release_notes.html>`__
    * - |chef client_title| 11.14
-     - `http://docs.getchef.com <http://docs.getchef.com>`__
+     - `http://docs.getchef.com/release/11-12/ <http://docs.getchef.com/release/11-14/>`__
      - `Release Notes <http://docs.getchef.com/release/11-14/release_notes.html>`__
    * - |chef client_title| 11.12
      - `http://docs.getchef.com/release/11-12/ <http://docs.getchef.com/release/11-12/>`__
@@ -53,21 +53,21 @@ The following documentation sets are available:
    * - |chef server_title| 12
      - `http://docs.getchef.com/server/ <http://docs.getchef.com/server/>`__
      - 
-   * - |chef server oec| 11.2
+   * - |chef server oec| Server 11.2
      - `http://docs.getchef.com/release/oec_11-2/ <http://docs.getchef.com/release/oec_11-2/>`__
      - `Release Notes <http://docs.getchef.com/release/oec_11-2/release_notes.html>`__
-   * - |chef server oec| 11.1
+   * - |chef server oec| Server 11.1
      - `http://docs.getchef.com/release/oec_11-1/ <http://docs.getchef.com/release/oec_11-1/>`__
      - `Release Notes <http://docs.getchef.com/release/oec_11-1/release_notes.html>`__
-   * - |chef server oec| 11.0
+   * - |chef server oec| Server 11.0
      - `http://docs.getchef.com/release/oec_11-0/ <http://docs.getchef.com/release/oec_11-0/>`__
      - 
-   * - |chef server osc| 11.1
+   * - |chef server osc| Server 11.1
      - `http://docs.getchef.com/release/osc_11-1/ <http://docs.getchef.com/release/osc_11-1/>`__
      - `Release Notes <http://docs.getchef.com/release/osc_11-1/release_notes.html>`__
-   * - |chef server osc| 11.0
+   * - |chef server osc| Server 11.0
      - `http://docs.getchef.com/release/osc_11-0/ <http://docs.getchef.com/release/osc_11-0/>`__
      - 
-   * - |chef private|
+   * - |chef private| Server
      - `http://docs.getchef.com/release/private_chef/ <http://docs.getchef.com/release/private_chef/>`__
      - 
