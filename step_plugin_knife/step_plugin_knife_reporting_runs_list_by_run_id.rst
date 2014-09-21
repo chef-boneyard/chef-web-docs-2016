@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To return a list of |chef client| runs that occurred for a specific |chef client| run, run the following command:
+To return a list of |chef client| runs that occurred for a specific node, run the following command:
 
 .. code-block:: bash
 
