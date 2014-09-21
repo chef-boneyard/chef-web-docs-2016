@@ -50,6 +50,8 @@ The |chef server_title|
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
+.. note:: |chef server| 12 is the new |chef server|! The documentation for `Open Source Chef <http://docs.getchef.com/open_source/>`_ and `Enterprise Chef <http://docs.getchef.com/enterprise/>`_ is still available.
+
 **Install Scenarios:** :doc:`Installs </install_server>` | :doc:`Upgrades </upgrade_server>`
 
 **Premium Features:** :doc:`Chef Manage </manage>` | :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>` | :doc:`Chef Analytics </analytics>` | :doc:`Replication </server_replication>` | :doc:`High Availability </server_high_availability>`
