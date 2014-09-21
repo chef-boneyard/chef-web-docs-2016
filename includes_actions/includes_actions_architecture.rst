@@ -19,8 +19,8 @@ As events occur on the |chef server|, the following happens:
    * - **WebUI**
      - The web user interface for |chef actions|. It provides visibility into every action tracked by |chef actions|, allows searching of the actions data store, and can be used to generate reports (CSV files, send emails, and so on).
    * - **Actions Pipeline**
-     - The Actions Pipeline is used to parse each action as it is tracked, tagging each action with the appropriate tags, identifying which notifications (if any) should be sent for each specific action, identifying any custom actions (if any) that should be taken against each specific action, and then archiving each action to the data store.
+     - The |chef actions| pipeline is used to parse each action as it is tracked, tagging each action with the appropriate tags, identifying which notifications (if any) should be sent for each specific action, identifying any custom actions (if any) that should be taken against each specific action, and then archiving each action to the data store.
    * - **Notifications**
-     - |chef actions| includes a few built in notification engines: HipChat and Email. Custom engines can be integrated using a simple webhook architecture via HTTP.
+     - |chef actions| includes a few built-in notification engines: |hipchat| and email. Custom engines can be integrated using a simple webhook architecture via HTTP.
    * - **Data Store**
-     - The data store is a PostgreSQL database that is used to store all of the actions that are tracked by |chef actions|. Users of the |chef actions| web user interface interact with the data in the data store via the Actions API.
+     - The data store is a |postgresql| database that is used to store all of the actions that are tracked by |chef actions|. Users of the |chef actions| web user interface interact with the data in the data store via the |api actions|.
