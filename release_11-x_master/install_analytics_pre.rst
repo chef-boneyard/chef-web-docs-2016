@@ -6,7 +6,7 @@ The following prerequisites apply to every installation of |chef analytics|. It 
 
 Download |chef analytics_title|
 =====================================================
-If you do not have a copy of |chef analytics|, please contact your sales representative (sales@opscode.com) or installation engineer via the customer portal to receive one.
+If you do not have a copy of |chef analytics|, please contact your sales representative (|sales_email|) or installation engineer via the customer portal to receive one.
 
 |chef analytics| is distributed on |redhat| and |centos| using |rpm|, and on |ubuntu| as a deb.
 
