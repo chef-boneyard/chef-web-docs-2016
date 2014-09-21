@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand knife reporting| subcommand is used by |reporting| to reports about |chef client| runs across the organization.
+The |subcommand knife reporting| subcommand is used by |reporting| to report about |chef client| runs across the organization.
