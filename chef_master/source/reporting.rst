@@ -93,10 +93,10 @@ Configuration Settings
    * - ``enable_reporting``
      - |enable reporting| For example:
        ::
- 
+
           enable_reporting true
    * - ``enable_reporting_url_fatals``
      - |enable reporting_url_fatals| For example:
        ::
- 
+
           enable_reporting_url_fatals false
