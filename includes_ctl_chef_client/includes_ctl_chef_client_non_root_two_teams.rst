@@ -2,7 +2,6 @@
 .. This file describes a command or a sub-command for chef-client.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-
 One example of running the |chef client| as a non-root user involves multiple teams in a  distributed organization. One is the core application services team, the other is a development team. The core application services team manages the system itself. The development team manages the application stack that runs on that system. Each team has its own set of privileges. In addition, the development team must run the |chef client| as a non-root user.
 
 There are two approaches:

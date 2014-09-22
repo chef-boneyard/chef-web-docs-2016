@@ -44,10 +44,6 @@ Set the Cache Path
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root_set_cache_path.rst
 
-Configure Multiple Teams
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root_two_teams.rst
-
 Elevate Commands
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root_use_attributes.rst
