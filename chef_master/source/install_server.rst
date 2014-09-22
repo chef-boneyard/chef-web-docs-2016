@@ -17,19 +17,20 @@ The |chef server| has the :doc:`following prerequisites </install_server_pre>`:
 * Disabling the |apache qpid| daemon on |centos| and |redhat| systems
 * A local user account under which services will run
 * A local user account for |postgresql|
-* A group account under which services will run 
+* A group account under which services will run
 
 Standalone
 =====================================================
 The standalone installation of |chef server| creates a working installation on a single server. This installation is also useful when you are installing |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 
-To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
+To install |chef server| 12:
 
+#. Download the package from http://downloads.getchef.com/chef-server/.
 #. Review the system requirements:
 
    .. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
 
-#. Upload the package provided to the server on which the |chef server| will be installed, and then record its location on the file system. The rest of this section assumes this location is in ``/tmp`` directory.
+#. Upload the package to the machine that will run the |chef server|, and then record its location on the file system. The rest of these steps assume this location is in the ``/tmp`` directory.
 
 #. Install the |chef server| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
 
@@ -43,7 +44,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ dpkg -i /tmp/chef-server-core-<version>.deb
 
-   The |chef server| is now installed on the server.
+   After a few minutes, the |chef server| will be installed on the server.
 
 #. Run the following to start all of the services:
 
