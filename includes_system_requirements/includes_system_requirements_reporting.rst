@@ -11,6 +11,6 @@
 The |reporting| client is built into the |chef client| and can run on all platforms that |chef client| is
 supported on.
 
-.. warning:: |reporting| does not work on |chef client| version 11.8.0; upgrade to |chef client| version 11.8.2 if |reporting| is being run in your organization.
+.. warning:: |reporting| does not work on |chef client| version 11.8.0; upgrade to |chef client| version 11.8.2 (or later) if |reporting| is being run in your organization.
 
 .. warning:: |reporting| requires version 1.0.1 (or later) when the |chef server oec| is run in a high availability configuration.
