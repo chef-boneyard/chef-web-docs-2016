@@ -165,7 +165,7 @@ Settings
 
 
 
-|api chef server| Endpoints
+|api chef server| Endpoint
 =====================================================
 The following |api chef server| endpoint supports |chef replication|. 
 
