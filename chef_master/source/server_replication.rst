@@ -45,7 +45,7 @@ To configure replication of |chef server| data, first install |chef replication|
       
       $ rpm -Uvh chef-sync-<version>.rpm
 
-#. For each replica |chef server|, move the ``/etc/chef-sync/ec_sync_client.pem`` file from the master |chef server| to the ``/etc/chef-sync`` directory on the replica. (This file is created automatically on the master |chef server|.)
+#. For each replica |chef server|, move the ``/etc/chef-sync/ec_sync_user.pem`` file from the master |chef server| to the ``/etc/chef-sync`` directory on the replica. (This file is created automatically on the master |chef server|.)
 
 #. Run the following command:
   
