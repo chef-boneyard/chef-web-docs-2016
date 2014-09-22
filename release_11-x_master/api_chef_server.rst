@@ -1,7 +1,5 @@
-.. THIS PAGE IS LOCATED AT THE /enterprise/ PATH.
-
 =====================================================
-Chef Server API
+|api chef server_title|
 =====================================================
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server.rst
