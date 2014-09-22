@@ -495,6 +495,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_repository_create
    essentials_roles
    essentials_search
+   install
    install_analytics
    install_bootstrap
    install_manage
@@ -503,7 +504,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    install_server
    install_server_be
    install_server_fe
-   install_server_febe
    install_server_hosted
    install_server_ldap
    install_server_orgs
