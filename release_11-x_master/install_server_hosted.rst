@@ -10,7 +10,7 @@ Steps
 
 About the Hostname
 =====================================================
-.. include:: ../../includes_install/includes_install_server_hostname.rst
+.. include:: ../../includes_install/includes_install_common_hostname.rst
 
 **To verify if a hostname is a FQDN**
 
