@@ -31,5 +31,3 @@ To clone the |chef repo|:
          data_bags
          environments/
          roles/
-
-

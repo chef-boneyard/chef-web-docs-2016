@@ -26,4 +26,3 @@ To move files to the |chef repo hidden| directory:
    where ``/path/to/`` represents the path to the location in which these three files were placed after they were downloaded.
 
 #. Verify that the files are in the |chef repo hidden| folder.
-

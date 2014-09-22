@@ -23,3 +23,4 @@ To verify that a workstation can connect to the |chef server|:
 
        workstation
        registered_node
+
