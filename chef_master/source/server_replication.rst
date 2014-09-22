@@ -74,7 +74,7 @@ To configure replication of |chef server| data, first install |chef replication|
       role :replica
       master "https://FQDN_OF_MASTER"
 
-#. The synchronization daemon on the replica |chef server| will sychronize from a source organization on the master |chef server|. To configure synchronization for an organization, do the following:
+#. The synchronization daemon on the replica |chef server| will synchronize from a source organization on the master |chef server|. To configure synchronization for an organization, do the following:
 
 #. In the ``chef-sync.rb`` file on the replica |chef server|, add the following settings:
 
