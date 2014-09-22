@@ -13,7 +13,7 @@ A node is any physical, virtual, or cloud machine that is configured to be maint
 
 **Run the bootstrap command**
 
-.. include:: ../../step_install/step_install_chef_client_bootstrap_knife.rst
+.. include:: ../../step_knife/step_knife_bootstrap_install_chef_client.rst
 
 Unattended Installs
 =====================================================
@@ -21,5 +21,5 @@ Unattended Installs
 
 **Setting the initial run-list**
 
-.. include:: ../../step_install/step_install_chef_client_bootstrap_initial_run_list.rst
+.. include:: ../../step_ctl_chef_client/step_ctl_chef_client_bootstrap_initial_run_list.rst
 

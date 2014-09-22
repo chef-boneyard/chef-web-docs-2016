@@ -10,15 +10,15 @@ Requirements
 
 Install the Server
 =====================================================
-The |chef manage| server can be installed as part of a standalone or high availability configuration.
+The |chef manage| is installed as a premium feature of the |chef server| and can be enabled in both standalone or high availability configurations.
 
 Standalone
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_manager_server.rst
+.. include:: ../../includes_install/includes_install_11_manager_server.rst
 
 High Availability
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_manager_server_ha.rst
+.. include:: ../../includes_install/includes_install_11_manager_server_ha.rst
 
 Upgrade the Server
 =====================================================

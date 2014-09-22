@@ -25,11 +25,11 @@ Use MSI Installer
 =====================================================
 A |microsoft installer package| is available for installing the |chef client| on a |windows| machine.
 
-.. include:: ../../step_install/step_install_windows.rst
+.. include:: ../../includes_install/includes_install_chef_client_windows.rst
 
 Run as a Service
 -----------------------------------------------------
-.. include:: ../../step_install/step_install_windows_as_service.rst
+.. include:: ../../includes_install/includes_install_chef_client_windows_as_service.rst
 
 Use an Existing Process
 =====================================================

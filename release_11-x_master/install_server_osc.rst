@@ -1,16 +1,11 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/install_server_oec.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-Install the |chef server_title|
+Install |chef server osc|
 =====================================================
-There are two configuration scenarios for the |chef server|: standalone (everything on a single machine) and high availability (machines configured for front-end and back-end, allowing for failover and load-balancing, as required).
+The |chef server osc| server may be installed in a standalone configuration. This creates a working installation on a single server. This approach is also useful for installing the |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 
-Standalone
-=====================================================
-The standalone installation of |chef server| creates a working installation on a single server. This installation is also useful when you are installing |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
-
-To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
+To install the |chef server osc| server:
 
 #. Review the system requirements:
 

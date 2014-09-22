@@ -2,25 +2,23 @@
 Prerequisites
 =====================================================
 
-The following prerequisites apply to every installation of the |chef analytics| server. A |chef server| must be installed and configured before the |chef analytics| server.
+The following prerequisites apply to every installation of the |chef analytics| server. 
 
-Download |chef analytics_title|
-=====================================================
-The |chef analytics| server is available for download at http://downloads.getchef.com/analytics/.
+.. note:: A |chef server| must be installed and configured before the |chef analytics| server.
 
-Supported Platforms
+|apache qpid|
 =====================================================
-.. include:: ../../includes_supported_platforms/includes_supported_platforms_server_oec.rst
+.. include:: ../../includes_install/includes_install_common_apache_qpid.rst
 
-Configuring the Platform
+|cron|
 =====================================================
-Before installing |chef analytics|, ensure that each system has the following installed and configured:
+.. include:: ../../includes_install/includes_install_common_cron.rst
 
 Enterprise Linux Platform Updates
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_install/includes_install_common_enterprise_linux_platform_updates.rst
 
-About the Hostname
+Hostnames
 =====================================================
 .. include:: ../../includes_install/includes_install_common_hostname.rst
 
@@ -28,39 +26,31 @@ About the Hostname
 
 **To verify if a hostname is a FQDN**
 
-.. include:: ../../step_install/step_install_hostname_is_fqdn.rst
+.. include:: ../../includes_install/includes_install_common_hostname_is_fqdn.rst
 
 **To verify is a hostname is resolvable**
 
-.. include:: ../../step_install/step_install_hostname_is_resolvable.rst
+.. include:: ../../includes_install/includes_install_common_hostname_is_resolvable.rst
 
 **To change a hostname**
 
-.. include:: ../../step_install/step_install_hostname_edit.rst
+.. include:: ../../includes_install/includes_install_common_hostname_edit.rst
 
 **To add a hostname to /etc/hosts**
 
-.. include:: ../../step_install/step_install_hostname_add_to_etc_hosts.rst
+.. include:: ../../includes_install/includes_install_common_hostname_add_to_etc_hosts.rst
+
+Mail Relay
+=====================================================
+.. include:: ../../includes_install/includes_install_common_mail_relay.rst
 
 NTP
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_install/includes_install_common_ntp.rst
 
 |chef client_title|
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_install/includes_install_common_ntp_chef_client.rst
-
-Mail Relay
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_common_mail_relay.rst
-
-|cron|
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_common_cron.rst
-
-|apache qpid|
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_common_apache_qpid.rst
 
 Required Accounts
 =====================================================

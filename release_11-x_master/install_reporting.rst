@@ -10,17 +10,17 @@ Requirements
 
 Install the Server
 =====================================================
-The |reporting| server can be installed as part of a standalone or high availability configuration.
+The |reporting| server is installed as a premium feature of the |chef server| and can be enabled in both standalone or high availability configurations.
 
 Standalone
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_reporting_server.rst
+.. include:: ../../includes_install/includes_install_11_reporting_server.rst
 
 High Availability
 -----------------------------------------------------
 .. warning:: This option requires |reporting| version 1.0.1.
 
-.. include:: ../../includes_install/includes_install_reporting_server_ha.rst
+.. include:: ../../includes_install/includes_install_11_reporting_server_ha.rst
 
 Install the Client
 =====================================================
@@ -32,18 +32,4 @@ Install the Workstation
 
 Upgrade the Server
 =====================================================
-|reporting| can be upgraded as part of a standalone or high availability configuration:
-
-#. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system.
-
-#. Install the package on the same machines that are currently running |reporting|. For example on |ubuntu|:
-
-   .. code-block:: bash
-
-      $ dpkg -i opscode-reporting_1.0.0-1.ubuntu.10.04_amd64.deb
-
-#. Reconfigure |reporting| services on each server:
-
-   .. code-block:: bash
-
-      $ opscode-reporting-ctl reconfigure
+.. include:: ../../includes_upgrade/includes_upgrade_11_reporting.rst
