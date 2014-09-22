@@ -1,8 +1,9 @@
-=====================================================
-About the Omnibus Installer
-=====================================================
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
-The |omnibus installer| is used to install |chef| on a server, a workstation, and a node. To install |chef| using the |omnibus installer|:
+The |omnibus installer| is used to install the |chef client| on a server, a workstation, and a node. 
+
+To install the |chef client| using the |omnibus installer|:
 
 #. Run the command that appears (for |unix| and |linux| environments) or download the |omnibus installer| (for |windows| environments). For example, for the |mac os x|:
 
@@ -49,5 +50,7 @@ and
    $ curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -v 10.26.0
 
 will both install the |chef client|, version 10.26.0.
+
+
 
 

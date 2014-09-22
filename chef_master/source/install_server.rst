@@ -64,7 +64,6 @@ The following links describe how to configure the |chef server| for high availab
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_pre.html">Prerequisites</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_fe.html">Front-end Machines</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_be.html">Back-end Machines</a> </br>
 
