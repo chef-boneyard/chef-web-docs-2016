@@ -75,9 +75,16 @@ The |chef server| is a centralized location where all of the objects needed by |
    ctl_private_chef
    ctl_reporting
    high_availability
-   install_manage
-   install_reporting
+   install
+   install_analytics
+   install_bootstrap
+   install_dk
+   install_push_jobs
    install_server
+   install_server_be
+   install_server_fe
+   install_server_post
+   install_server_pre
    manage
    private_chef_1x
    private_chef_1x_engage
