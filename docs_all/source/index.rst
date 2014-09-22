@@ -53,7 +53,6 @@ All about |chef| ...
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/install_workstation.html">Install the chef-client on a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/install_windows.html">Install the chef-client on a Machine Running Microsoft Windows</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/install_bootstrap.html">Bootstrap a Node</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/install_server_scenario_vm.html">Install Chef Server 11.x on a Virtual Machine</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/migrate_to_enterprise.html">Migrate to Enterprise Chef</a> </br>
 
 **Configuration Files** 
@@ -124,7 +123,7 @@ All about |chef| ...
    essentials_search
    install_bootstrap
    install_server
-   install_server_scenario_vm
+   install_server_pre
    install_windows
    install_workstation
    just_enough_ruby_for_chef
