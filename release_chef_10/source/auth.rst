@@ -50,7 +50,7 @@ Debug Authentication Issues
 
 Authorization
 =====================================================
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization.rst
+.. include:: ../../includes_chef_auth/includes_chef_auth_11_authorization.rst
 
 |chef server oec|
 -----------------------------------------------------
@@ -95,7 +95,7 @@ Multiple Organizations
 
 Open Source |chef server|
 -----------------------------------------------------
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst
+.. include:: ../../includes_chef_auth/includes_chef_auth_11_authorization_open_source.rst
 
 |api chef server|
 =====================================================
