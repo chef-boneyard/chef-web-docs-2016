@@ -9,21 +9,6 @@
 
    * - Feature
      - Command
-   * - |chef analytics_title|
-     - Use |chef analytics| for real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred.
-
-       Run:
-
-       .. code-block:: ruby
-
-          $ chef-server-ctl install opscode-analytics
-
-       and then:
-
-       .. code-block:: ruby
-
-          $ opscode-analytics-ctl reconfigure
-
    * - |chef manage_title|
      - Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface.
 
