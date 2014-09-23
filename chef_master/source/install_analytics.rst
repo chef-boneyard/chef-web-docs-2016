@@ -9,7 +9,7 @@ Prerequisites
 The |chef analytics| server shares the :doc:`same prerequisites </install_server_pre>` as the |chef server|:
 
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
-* A resolvable hostname that is specified using a FQDN or an IP address, and that does not exceed 64 characters; see below for additional information about hostnames that is specific to |chef analytics|
+* A resolvable hostname that is specified using a FQDN or an IP address
 * A connection to |ntp| to prevent clock drift
 * A local mail transfer agent that allows the |chef server| to send email notifications
 * Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks
