@@ -10,7 +10,7 @@ Requirements
 
 Install the Server
 =====================================================
-After the |chef server| is installed, use the `chef-server-ctl install <http://docs.getchef.com/server/ctl_chef_server.html#install>`_ command to add |chef reporting|.
+After the |chef server| is installed, use the `chef-server-ctl install <http://docs.getchef.com/server/ctl_chef_server.html#install>`_ command to add |reporting|.
 
 Install the Client
 =====================================================
