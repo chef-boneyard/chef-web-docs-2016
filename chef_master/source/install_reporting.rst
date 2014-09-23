@@ -2,7 +2,20 @@
 Install |reporting_title|
 =====================================================
 
-.. warning:: This topic has been moved! For the current version---|chef| 12---see :doc:`this page </install>` page. Setup and configuration docs for previous versions of |chef| can be found at the following links:
+.. include:: ../../includes_reporting/includes_reporting.rst
 
-   * `Enterprise Chef Server <http://docs.getchef.com/enterprise/install.html>`_
-   * `Open Source Chef Server <http://docs.getchef.com/open_source/install.html>`_
+Requirements
+=====================================================
+.. include:: ../../includes_system_requirements/includes_system_requirements_reporting.rst
+
+Install the Server
+=====================================================
+After the |chef server| is installed, use the `chef-server-ctl install <http://docs.getchef.com/server/ctl_chef_server.html#install>`_ command to add |chef reporting|.
+
+Install the Client
+=====================================================
+.. include:: ../../includes_install/includes_install_reporting_client.rst
+
+Install the Workstation
+=====================================================
+.. include:: ../../includes_install/includes_install_reporting_workstation.rst
