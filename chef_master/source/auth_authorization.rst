@@ -49,7 +49,4 @@ Multiple Organizations
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst
 
-Open Source Server
-=====================================================
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst
 
