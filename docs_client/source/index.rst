@@ -1,7 +1,7 @@
 .. THIS PAGE IS LOCATED AT THE /client/ PATH.
 
 =====================================================
-All about the |chef client_title| ...  
+All about the |chef client_title| ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
