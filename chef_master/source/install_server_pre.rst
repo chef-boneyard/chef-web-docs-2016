@@ -12,7 +12,7 @@ The following prerequisites apply to every installation of the |chef server|.
 =====================================================
 .. include:: ../../includes_install/includes_install_common_cron.rst
 
-Enterprise Linux Platform Updates
+Enterprise Linux Updates
 =====================================================
 .. include:: ../../includes_install/includes_install_common_enterprise_linux_platform_updates.rst
 
@@ -25,6 +25,10 @@ Hostnames
 .. include:: ../../includes_install/includes_install_analytics_hostname.rst
 
 .. warning:: The |fqdn| for the |chef analytics| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef analytics| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef analytics| server is longer than 64 characters, the ``chef-server-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
+
+Configure Hostnames
+-----------------------------------------------------
+Use the following sections to verify the hostnames that is used by the |chef server|.
 
 **To verify if a hostname is a FQDN**
 
