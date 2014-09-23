@@ -27,17 +27,17 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
    .. note:: |analytics rabbitmq_settings| 
 
-#. Restart the |chef server|:
-   
-   .. code-block:: bash
-
-      $ chef-server-ctl start
-
 #. Reconfigure the |chef server| on |chef server| machines:
 
    .. code-block:: bash
 
       $ chef-server-ctl reconfigure
+
+#. Restart the |chef server|:
+   
+   .. code-block:: bash
+
+      $ chef-server-ctl start
 
 #. If you are on |chef server| 11.1.8 you need to manually copy a single file from ``/etc/opscode`` to ``/etc/opscode-analytics``:
 
