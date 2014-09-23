@@ -2063,4 +2063,4 @@ Review the list of `common options <http://docs.getchef.com/chef/knife.html#comm
 
 Examples
 -----------------------------------------------------
-.. include:: ../../step_knife/step_knife_xargs_pass_command_to.rst
+.. include:: ../../step_knife/step_knife_xargs_find_and_replace.rst
