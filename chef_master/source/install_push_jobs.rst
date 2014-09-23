@@ -6,15 +6,7 @@ Install |push jobs_title|
 
 Install the Server
 =====================================================
-The |push jobs| server can be installed as part of a standalone or high availability configuration.
-
-Standalone
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_push_jobs_server.rst
-
-High Availability
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_push_jobs_server_ha.rst
+The |push jobs| server can be installed as part of a standalone or high availability configuration. Use the `chef-server-ctl install <http://docs.getchef.com/server/ctl_chef_server.html#install>`_ command to add |push jobs|.
 
 Install the Client
 =====================================================
