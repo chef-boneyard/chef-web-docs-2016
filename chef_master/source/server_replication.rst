@@ -45,38 +45,40 @@ To configure replication of |chef server| data, first install |chef replication|
       
       $ rpm -Uvh chef-sync-<version>.rpm
 
-#. For each replica |chef server|, move the ``/etc/chef-sync/ec_sync_user.pem`` file from the master |chef server| to the ``/etc/chef-sync`` directory on the replica. (This file is created automatically on the master |chef server|.)
-
-#. Run the following command:
-  
-   .. code-block:: bash
-      
-      $ chef-sync-ctl reconfigure
-
-#. Run the following command:
-  
-   .. code-block:: bash
-      
-      $ chef-server-ctl reconfigure
-
-   |chef replication| is now installed on all machines. The |chef_sync rb| file is located at ``/etc/chef-sync/chef-sync.rb``.
-
-#. Add the following setting to the |chef_sync rb| file on the master |chef server|:
+#. On the master |chef server|, create the |chef_sync rb| file in the ``/etc/chef-sync/`` directory, and then add the following setting:
 
    .. code-block:: ruby
       
       role :master
 
-#. Add the following setting to the |chef_sync rb| file on each replica |chef server|:
+#. On the master |chef server|, run the following command:
+  
+   .. code-block:: bash
+      
+      $ chef-sync-ctl reconfigure
+
+#. On the master |chef server|, run the following command:
+  
+   .. code-block:: bash
+      
+      $ chef-server-ctl reconfigure
+
+#. On the master |chef server|, run the following command:
+
+   .. code-block:: bash
+      
+      $ chef-sync-ctl prepare-org SOURCE_ORG_NAME
+
+#. For each replica |chef server|, move the ``/etc/chef-sync/ec_sync_user.pem`` file from the master |chef server| to the ``/etc/chef-sync`` directory on the replica. (This file is created automatically on the master |chef server|.)
+
+#. For each replica |chef server|, create the |chef_sync rb| file in the ``/etc/chef-sync/`` directory, and then add the following setting:
 
    .. code-block:: ruby
       
       role :replica
       master "https://FQDN_OF_MASTER"
 
-#. The synchronization daemon on the replica |chef server| will synchronize from a source organization on the master |chef server|. To configure synchronization for an organization, do the following:
-
-#. In the ``chef-sync.rb`` file on the replica |chef server|, add the following settings:
+   and then define the source and destination organizations:
 
    .. code-block:: ruby
       
@@ -89,36 +91,23 @@ To configure replication of |chef server| data, first install |chef replication|
    
    where ``DEST_ORG_NAME`` is an organization on the replica |chef server| and ``SOURCE_ORG_NAME`` is an organization on the master |chef server|. Both of these organizations must already exist.
 
-#. On the master |chef server|, run the following command:
-
+#. For each replica |chef server|, run the following command:
+  
    .. code-block:: bash
       
-      $ chef-sync-ctl prepare-org SOURCE_ORG_NAME
+      $ chef-sync-ctl reconfigure
 
-#. On the replica |chef server|, run the following command:
+#. For each replica |chef server|, run the following command:
 
    .. code-block:: bash
       
       $ chef-sync-ctl prepare-org DEST_ORG_NAME
 
-   and then:
-   
+#. For each replica |chef server|, run the following command:
+  
    .. code-block:: bash
       
-      $ chef-sync-ctl reconfigure
-
-#. Confirm that ``chef-sync`` is running on the replica |chef server|:
-
-   .. code-block:: bash
-      
-      $ chef-sync-ctl sync-status
-	  
-#. If any errors are received during this process, run the following:
-
-   .. code-block:: bash
-      
-      $ chef-sync-ctl manager-log
-
+      $ chef-server-ctl reconfigure
 
 |chef sync ctl| (executable)
 =====================================================
