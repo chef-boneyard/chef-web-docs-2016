@@ -1648,7 +1648,7 @@ Examples
 
 
 
-knife serve
+serve
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_serve.rst
@@ -1727,7 +1727,7 @@ Examples
 .. include:: ../../step_knife/step_knife_ssh_shell_type.rst
 
 
-knife ssl_check
+ssl_check
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_ssl_check.rst
@@ -1757,7 +1757,7 @@ The following examples show how to use this |knife| subcommand:
 .. include:: ../../step_knife/step_knife_ssl_check_verify_external_server.rst
 
 
-knife ssl_fetch
+ssl_fetch
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_ssl_fetch.rst
