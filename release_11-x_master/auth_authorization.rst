@@ -1,16 +1,14 @@
-.. THIS PAGE DOCUMENTS Enterprise Chef server version 11.0
-
 =====================================================
 Authorization
 =====================================================
 
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization.rst
+.. include:: ../../includes_chef_auth/includes_chef_auth_11_authorization.rst
 
-|chef server oec|
+|chef server_title|
 =====================================================
 .. include:: ../../includes_server_rbac/includes_server_rbac.rst
 
-|chef server oec| uses organizations, groups, and users to define role-based access control:
+The |chef server| uses organizations, groups, and users to define role-based access control:
 
 .. list-table::
    :widths: 60 420
@@ -51,4 +49,7 @@ Multiple Organizations
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst
 
+Open Source Server
+=====================================================
+.. include:: ../../includes_chef_auth/includes_chef_auth_11_authorization_open_source.rst
 
