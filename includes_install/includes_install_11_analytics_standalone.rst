@@ -21,9 +21,9 @@ In a standalone configuration, the |chef analytics| deployment is on a different
    .. code-block:: ruby
 
       rabbitmq['vip'] = 'BACKEND_VIP'
-      rabbitmq['node_ip_address'] = '0.0.0.0'
+      rabbitmq['node_ip_address'] = ''
 
-   where ``BACKEND_VIP`` is the external IP address for the backend |chef server| and ``0.0.0.0`` is the value that MUST be set for ``node_ip_address``.
+   where ``BACKEND_VIP`` is the external IP address for the backend |chef server|. ``node_ip_address`` MUST be set to ``0.0.0.0``.
 
    .. note:: |analytics rabbitmq_settings| 
 
