@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-.. include:: ../../includes_chef/includes_chef_dk.rst
+.. include:: ../../includes_chef_dk/includes_chef_dk.rst
 
 After :doc:`installing the ChefDK </install_dk>`, learn more about the tools that are packaged with the |chef dk|:
 
