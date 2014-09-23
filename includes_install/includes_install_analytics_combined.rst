@@ -16,7 +16,7 @@ To set up the |chef analytics| server for a |combined| deployment:
 
    .. code-block:: bash
 
-      $ private-chef-ctl reconfigure
+      $ chef-server-ctl reconfigure
 
 #. Install the package on the same machine that is running |chef server| 11.1.8 or higher. For example on |ubuntu|:
 

@@ -10,22 +10,24 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
       dark_launch['actions'] = true
 
-#. Enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following line to ``/etc/opscode/private-chef.rb``, where ``BACKEND_VIP`` is the external IP address for the backend |chef server| and where ``0.0.0.0`` is the value that must be set for ``node_ip_address``. First, stop the |chef server|:
+#. Stop the |chef server|:
 
    .. code-block:: bash
 
       $ private-chef-ctl stop
-
-   Update the configuration file:
+	  
+#. Enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/private-chef.rb``:
 
    .. code-block:: ruby
 
       rabbitmq['vip'] = 'BACKEND_VIP'
       rabbitmq['node_ip_address'] = '0.0.0.0'
 
+   where ``BACKEND_VIP`` is the external IP address for the backend |chef server| and ``0.0.0.0`` is the value that MUST be set for ``node_ip_address``.
+
    .. note:: |analytics rabbitmq_settings| 
 
-   And then restart the |chef server|:
+#. Restart the |chef server|:
    
    .. code-block:: bash
 
