@@ -4,8 +4,6 @@ Authentication
 
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication.rst
 
-.. include:: ../../includes_chef_auth/includes_chef_auth_authentication.rst
-
 |chef validator|
 =====================================================
 .. include:: ../../includes_security/includes_security_chef_validator.rst
