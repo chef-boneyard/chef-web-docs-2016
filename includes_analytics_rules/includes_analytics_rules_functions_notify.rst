@@ -25,8 +25,8 @@ For example:
      and (entity_type = "foo" or entity_type = "bar")
      and remote_hostname ~= "33\.3[0-9].*"
    then
-     set value $foo = "100"
-     set value $xyz = "test"
+     set value #foo = "100"
+     set value #xyz = "test"
      notify(hipchat "Hipchat notification <obj.requestor_name> did something at <obj.recorded_at>!")
 
 And:

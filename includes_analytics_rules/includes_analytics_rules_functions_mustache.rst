@@ -21,4 +21,4 @@ For example:
 .. code-block:: java
 
    rule(action) when true then
-   set($foo, mustache_template('Organization = {{message.organization_name}}.'))
+   set(#foo, mustache_template('Organization = {{message.organization_name}}.'))

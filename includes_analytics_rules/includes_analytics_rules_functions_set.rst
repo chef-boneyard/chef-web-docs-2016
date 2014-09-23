@@ -8,7 +8,7 @@ The syntax for this function:
 
 .. code-block:: java
 
-   set($variableToSet, valueToSet)
+   set(#variableToSet, valueToSet)
 
 where:
 
@@ -19,5 +19,5 @@ For example:
 
 .. code-block:: java
 
-   set(organization_name = "ponyville")
+   set(#organization_name = "ponyville")
 

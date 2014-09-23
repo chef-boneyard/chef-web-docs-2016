@@ -40,9 +40,9 @@ For example:
      and (entity_type = 'foo' or entity_type = "bag")
      and remote_hostname ~= "33\.3[0-9].*"
    then
-     set($foo, "100")
-     set($xyz, 'te\'st')
-     set($baz, 99)
+     set(#foo, "100")
+     set(#xyz, 'te\'st')
+     set(#baz, 99)
      notify("hipchat")
      log("Added rule for org <obj.organization_name>")
   
@@ -53,6 +53,6 @@ or:
    rule(action) when
      organization_name = "ponyville"
    then
-     set($foo, "100")
+     set(#foo, "100")
    otherwise
-     set($foo, "200")
+     set(#foo, "200")
