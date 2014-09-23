@@ -12,17 +12,17 @@ Getting Started
 =====================================================
 If you are new to |chef|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes </chef_overview>`. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.getchef.com/client/>`_.
 
+The `Chef supermarket <https://supermarket.getchef.com>`_ is the location in which community cookbooks are authored and maintained. Cookbooks that are part of the |supermarket| may be used by any |chef| user.
+
 Premium Features
 =====================================================
-The following features are premium features of the |chef server| that may be added and used by anyone
+The following features are premium features of the |chef server| that may be added and used freely (up to 25 nodes):
 
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/analytics.html">Analytics</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_high_availability.html">High Availability</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/manage.html">Manage Webui</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/server_replication.html">Replication</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/reporting.html">Reporting</a> </br>
+* The :doc:`Chef analytics platform </analytics>` provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred.
+* :doc:`Chef high availability </server_high_availability>` helps ensure that your |chef| service is uninterrupted within your data center or |amazon aws| region, even if a |chef| server fails. |chef ha| supports using distributed replicated block devices (DRBD) as well as |amazon ebs| volumes and the remapping of elastic IP addresses.
+* The :doc:`Chef management console </manage>` provides a web user interface with access to objects, such as nodes and cookbooks, through role-based access control.
+* :doc:`Chef replication </server_replication>` provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
+* :doc:`Chef reporting </reporting>` enables a tab within the |chef manage| that shows the results of |chef client| runs as they occur across your organization.
 
 Install, Upgrade
 =====================================================
@@ -33,8 +33,19 @@ The |chef server| can be installed on new hardware. Existing |chef server oec| a
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/install_server.html">Install the Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/upgrade_server.html">Upgrade the Chef Server</a> </br>
 
+The premium features of the |chef server| must be installed and configured after the |chef server|. The |chef manage| must be installed before |reporting| because they share the same web user interface. |chef manage|, |reporting|, and |chef replication| can all be installed using the `chef-server-ctl install <http://docs.getchef.com/server/ctl_chef_server.html#install>`_ command. 
+
+The following premium features require additional steps:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/install_analytics.html">Chef Analytics</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/install_push_jobs.html">Chef Push Jobs</a> </br>
+
+
 Manage the Chef Server
 =====================================================
+The |chef server| can be managed in the following ways:
 
 .. raw:: html
 
@@ -53,6 +64,7 @@ Manage the Chef Server
 
 Management Console
 -----------------------------------------------------
+The |chef manage| provides a web user interface with access to objects, such as nodes and cookbooks, through role-based access control:
 
 .. raw:: html
 
@@ -66,12 +78,9 @@ Management Console
 
 Reference
 =====================================================
+This section contains links to topics about configuration files, command-line tools, and APIs that are used by the |chef server| and its premium features.
 
-
-
-Settings
------------------------------------------------------
-The following settings files contain configuration settings used by the |chef server| and its premium features:
+**Configuration Files**
 
 .. raw:: html
 
@@ -79,10 +88,7 @@ The following settings files contain configuration settings used by the |chef se
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_chef_sync.html">chef-sync.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/config_rb_manage.html">manage.rb</a> </br>
 
-
-Tools 
------------------------------------------------------
-The following command-line tools can be run on the |chef server|:
+**Command-line Tools**
 
 .. raw:: html
 
@@ -90,10 +96,7 @@ The following command-line tools can be run on the |chef server|:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/ctl_chef_sync.html">chef-sync-ctl</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/ctl_opscode_expander.html">opscode-expander-ctl</a> </br>
 
-
-APIs
------------------------------------------------------
-The following APIs can be used to access data on the |chef server|:
+**APIs**
 
 .. raw:: html
 
@@ -124,6 +127,7 @@ The following APIs can be used to access data on the |chef server|:
    install_bootstrap
    install_dk
    install_push_jobs
+   install_reporting
    install_server
    install_server_be
    install_server_fe
