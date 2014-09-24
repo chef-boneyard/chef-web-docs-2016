@@ -44,7 +44,7 @@ To install |chef server| 12:
       
       $ dpkg -i /tmp/chef-server-core-<version>.deb
 
-   After a few minutes, the |chef server| will be installed on the server.
+   After a few minutes, the |chef server| will be installed.
 
 #. Run the following to start all of the services:
 
