@@ -55,7 +55,7 @@ AWS
 
 Configuration
 -----------------------------------------------------
-.. include:: ../../includes_server_ha/includes_server_ha_aws_setup.rst
+.. include:: ../../includes_install/includes_install_server_ha_aws.rst
 
 Check HA Status
 =====================================================
