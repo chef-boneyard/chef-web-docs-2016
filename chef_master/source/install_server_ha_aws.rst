@@ -1,7 +1,7 @@
 .. This page is the Chef 12 server install page, for high availablty in AWS.
 
 =====================================================
-High Availability: |amazon aws|
+High Availability: AWS
 =====================================================
 
 This topic describes how to set up the |chef server| for high availability when running the |chef server| in |amazon aws|.
@@ -273,9 +273,12 @@ Use the following steps to set up each frontend |chef server|:
 
    This will reconfigure the |chef server|, start |keepalived|, grab the VIP IP address, and then configure the machine as the secondary backend server.
 
+Reference
+=====================================================
+The following sections show the settings as they appear in a |chef server rb| file and for IAM access management.
 
 |chef server rb|
-=====================================================
+-----------------------------------------------------
 The following example shows a |chef server rb| file:
 
 .. code-block:: ruby
@@ -309,7 +312,7 @@ The following example shows a |chef server rb| file:
 
 
 IAM Access Management
-=====================================================
+-----------------------------------------------------
 The following example shows IAM access management settings that are required for |chef ha|:
 
 .. code-block:: javascript
