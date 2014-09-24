@@ -65,7 +65,7 @@ To configure AWS for high availability, first create machines in AWS. Two back-e
       $ sudo mount /dev/mapper/chef-data /var/opt/opscode/drbd/data
 
 #. Proceed with the installation as normal.
-#. Run the one of the following commands on all nodes:
+#. Run one of the following commands on all nodes:
 
    .. code-block:: bash
       
