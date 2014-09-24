@@ -27,7 +27,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
    .. note:: |analytics rabbitmq_settings| 
 
-#. Reconfigure the |chef server| on |chef server| machines:
+#. Reconfigure the |chef server|:
 
    .. code-block:: bash
 
