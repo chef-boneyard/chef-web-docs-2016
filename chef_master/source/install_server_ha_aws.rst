@@ -14,8 +14,8 @@ Before installing the |chef server| software, perform the following steps.
 #. Create appropriate security groups to contain the backend instances. The only requirement for the |chef server| is that ICMP is permitted between the two backend instances; |keepalived| requires it for communication and heartbeat.
 #. Launch two servers for the backend |chef server|s. Use the same Amazon Machine Image so that they are identical platform and versions. The servers must be in the same Amazon Availability Zone.
 #. Create an |amazon ebs| volume to store the |chef server|'s data. It is recommended that you use a Provisioned IOPS (io1) volume type, with the maximum IOPS ratio for the size of volume.
-#. Decide on what IP address the backend virtual IP (VIP) will be. It must reside in the same network segment as the backend machines. It will be specified in the |chef server rb| file; during installation, the high-availability plugin will automatically assign the VIP to the primary instance.
-#. Create an Amazon Identity and Access Management (IAM) user with at least the permissions documented in the reference section. Record the user's access and secret keys; these will be used in the |chef server rb| configuration file.
+#. Decide on what IP address the backend virtual IP (VIP) will be. It must reside in the same network segment as the backend machines. It will be specified in the |chef server rb| file; during installation, the high-availability plugin will automatically assign the VIP to the primary instance's |amazon eni|.
+#. Create an |amazon iam| user with at least the permissions documented in the reference section. Record the user's access and secret keys; these will be used in the |chef server rb| configuration file.
 
 Primary Backend
 =====================================================
@@ -191,7 +191,7 @@ To verify that failover is working, stop keepalived on the primary machine. To w
 
      $ watch -n1 sudo chef-server-ctl ha-status
 
-in terminal windows on both the primary and backend prior to stopping keepalived.
+in terminal windows on both the primary and secondary prior to stopping keepalived.
 
 Stop |keepalived| on the primary backend machine:
 
@@ -199,7 +199,7 @@ Stop |keepalived| on the primary backend machine:
       
       $ sudo chef-server-ctl stop keepalived
 
-   A cluster failover should occur.
+A cluster failover should occur.
 
 Once you have verified that failover was successful, restart keepalived on the primary backend machine:
 
@@ -225,7 +225,7 @@ Use the following steps to set up each frontend |chef server|:
       
       $ dpkg -i /tmp/chef-server-core-<version>.deb
 
-   After a few minutes, the |chef server| will be installed.
+   After a few minutes, the |chef server| will be installed. The |chef ha| package is not required on frontend servers.
 
 #. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary, including all certificates and the |chef server rb| file.
 
@@ -241,7 +241,7 @@ Use the following steps to set up each frontend |chef server|:
 
 References
 =====================================================
-The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in Amazon IAM (Identity and Access Management).
+The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in |amazon iam|.
 
 |chef server rb|
 -----------------------------------------------------
@@ -279,7 +279,7 @@ The following example shows a |chef server rb| file:
 
 IAM Access Management
 -----------------------------------------------------
-The following example shows IAM access management settings that are required for |chef ha|:
+The following example shows |amazon iam| settings that are required for |chef ha|:
 
 .. code-block:: javascript
 
@@ -302,4 +302,4 @@ The following example shows IAM access management settings that are required for
      ]
    }
 
-It is possible to further restrict access using a more sophisticated policy document, for example, to permit the IAM user only to attach/detach the volume ID associated with the |chef server| data volume and not all volumes.
+It is possible to further restrict access using a more sophisticated policy document. For example, administrators may choose to permit the |amazon iam| user only to attach/detach the volume ID associated with the |chef server| data volume, and not all volumes.
