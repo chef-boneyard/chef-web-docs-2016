@@ -19,6 +19,10 @@ The following settings are typically added to the |analytics rb| file:
      - The hipchat room to which notifications will be published.
    * - ``actions_consumer['hipchat_enabled']``
      - A list of organizations for which hipchat notifications will be published.
+   * - ``ssl['certificate']``
+     - |ssl_certificate|
+   * - ``ssl['certificate_key']``
+     - |ssl_certificate key|
 
 
 

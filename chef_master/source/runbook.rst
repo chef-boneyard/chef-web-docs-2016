@@ -265,11 +265,11 @@ SSL Configuration
 
 Custom Certificates
 -----------------------------------------------------
-.. include:: ../../step_server_security/step_server_security_ssl_custom_certificates.rst
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst
 
 Regenerate Certificates
 -----------------------------------------------------
-.. include:: ../../step_server_security/step_server_security_ssl_regenerate_certificates.rst
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst
 
 |chef client| Settings
 -----------------------------------------------------
