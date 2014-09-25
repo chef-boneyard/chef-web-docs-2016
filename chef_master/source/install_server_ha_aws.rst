@@ -6,16 +6,16 @@ High Availability: AWS
 
 This topic describes how to set up the |chef server| for high availability in |amazon aws|.
 
-Pre-Requisites
+Prerequisites
 =====================================================
-Before installing the |chef server| software, perform the following steps.
+Before installing the |chef server| software, perform the following steps:
 
-#. Use an |amazon vpc|. EC2-Classic is not supported.
-#. Create appropriate security groups to contain the backend instances. The only requirement for the |chef server| is that ICMP is permitted between the two backend instances; |keepalived| requires it for communication and heartbeat.
-#. Launch two servers for the backend |chef server|s. Use the same Amazon Machine Image so that they are identical platform and versions. The servers must be in the same Amazon Availability Zone.
-#. Create an |amazon ebs| volume to store the |chef server|'s data. It is recommended that you use a Provisioned IOPS (io1) volume type, with the maximum IOPS ratio for the size of volume.
+#. Use an |amazon vpc|. |amazon ec2_classic| is not supported.
+#. Create appropriate security groups to contain the backend instances. The only requirement for the |chef server| is that |icmp| is permitted between the two backend instances; |keepalived| requires it for communication and heartbeat.
+#. Launch two servers, one for the primary backend |chef server| and the other for the secondary backend |chef server|. Use the same |amazon ami| so that both backend servers have identical platform and versions. The servers must be in the same |amazon zones|.
+#. Create an |amazon ebs| volume to store the |chef server|'s data. It is recommended that you use an |amazon ebs_volume_provisioned| volume type, with the maximum IOPS ratio for the size of volume.
 #. Decide on what IP address the backend virtual IP (VIP) will be. It must reside in the same network segment as the backend machines. It will be specified in the |chef server rb| file; during installation, the high-availability plugin will automatically assign the VIP to the primary instance.
-#. Create an Amazon Identity and Access Management (IAM) user with at least the permissions documented in the reference section. Record the user's access and secret keys; these will be used in the |chef server rb| configuration file.
+#. Create an |amazon iam| user with at least the permissions documented in the reference section. Record this user's access and secret keys; these will be used in the |chef server rb| configuration file.
 
 Primary Backend
 =====================================================
@@ -48,9 +48,9 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ dpkg -i /tmp/chef-ha-<version>.deb
 
-#. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required. The ``ha['ebs_device']`` setting must specify the actual ``/dev`` device name that is reported by the machine's kernel, which may not be the same value that is reported by |amazon aws|. For example, |amazon aws| may refer to a volume as ``/dev/sdf`` through the management console, but to the Linux kernel on the instance, it may appear as ``/dev/xvdf``.
+#. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required. The ``ha['ebs_device']`` setting must specify the actual ``/dev`` device name that is reported by the machine's kernel, which may not be the same value that is reported by |amazon aws|. For example, |amazon aws| may refer to a volume as ``/dev/sdf`` through the management console, but to the |linux| kernel on the instance, it may appear as ``/dev/xvdf``.
 
-#. Install Logical Volume Manager tools. For |redhat| and |centos| 6:
+#. Install |lvm| tools. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
@@ -104,7 +104,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo chef-server-ctl reconfigure
 
-   This will reconfigure the |chef server|, start |keepalived|, assign the VIP IP address as a secondary address on the Elastic Network Interface, and then configure the machine as the primary backend server.
+   This will reconfigure the |chef server|, start |keepalived|, assign the VIP IP address as a secondary address on the |amazon eni|, and then configure the machine as the primary backend server.
 
 #. Verify the machine is the primary backend server:
 
@@ -112,7 +112,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo chef-server-ctl ha-status
 
-   This should display a screen of output indicating that the server is PRIMARY and that all services are running.
+   This should display a screen of output indicating that the server is ``PRIMARY`` and that all services are running.
 
    Additionally, you may run the following command to verify that the VIP IP address is configured on the Ethernet interface:
 
@@ -120,7 +120,7 @@ Use the following steps to set up the primary backend |chef server|:
 
       $ ip addr list dev eth0
 
-   Do *not* use the ``ifconfig`` command as it will not show all aliases.
+   .. warning:: Do *not* use the ``ifconfig`` command as it will not show all aliases.
 
 Secondary Backend
 =====================================================
@@ -151,7 +151,7 @@ Use the following steps to set up the secondary backend |chef server|:
       
       $ dpkg -i /tmp/chef-ha-<version>.deb
 
-#. Install Logical Volume Manager tools. For |redhat| and |centos| 6:
+#. Install |lvm| tools. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
@@ -179,21 +179,20 @@ Use the following steps to set up the secondary backend |chef server|:
       
       $ sudo chef-server-ctl ha-status
 
-   This should indicate that the server is BACKUP.
+   This should indicate that the server is ``BACKUP``.
 
 
 Verify Failover
 =====================================================
+To verify that failover is working, stop |keepalived| on the primary machine.
 
-To verify that failover is working, stop keepalived on the primary machine. To watch the failover live, it is recommended that you run
+#. To watch the failover occur as it happens, run the following command in terminal windows on both the primary and backend servers prior to stopping |keepalived|:
 
-  .. code-block:: bash
+   .. code-block:: bash
 
-     $ watch -n1 sudo chef-server-ctl ha-status
+      $ watch -n1 sudo chef-server-ctl ha-status
 
-in terminal windows on both the primary and backend prior to stopping keepalived.
-
-Stop |keepalived| on the primary backend machine:
+#. Stop |keepalived| on the primary backend machine:
 
    .. code-block:: bash
       
@@ -201,13 +200,13 @@ Stop |keepalived| on the primary backend machine:
 
    A cluster failover should occur.
 
-Once you have verified that failover was successful, restart keepalived on the primary backend machine:
+#. After a successful failover, restart |keepalived| on the primary backend machine:
 
-  .. code-block:: bash
+   .. code-block:: bash
 
-     $ sudo chef-server-ctl start keepalived
+      $ sudo chef-server-ctl start keepalived
 
-The primary has now become the secondary, and vice-versa. If you wish to fail back to the original primary, repeat the procedure using the new primary.
+   The primary has now become the secondary, and vice-versa. If you wish to fail back to the original primary, repeat these using the new primary.
 
 Frontend Installation
 =====================================================
@@ -241,7 +240,7 @@ Use the following steps to set up each frontend |chef server|:
 
 References
 =====================================================
-The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in Amazon IAM (Identity and Access Management).
+The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in |amazon iam|.
 
 |chef server rb|
 -----------------------------------------------------
@@ -277,9 +276,9 @@ The following example shows a |chef server rb| file:
    api_fqdn 'ec2-54-183-175-188.us-west-1.compute.amazonaws.com'
 
 
-IAM Access Management
+|amazon iam|
 -----------------------------------------------------
-The following example shows IAM access management settings that are required for |chef ha|:
+The following example shows |amazon iam| access management settings that are required for |chef ha|:
 
 .. code-block:: javascript
 
