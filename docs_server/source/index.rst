@@ -33,6 +33,13 @@ The |chef server| can be installed on new hardware. Existing |chef server oec| a
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/install_server.html">Install the Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/upgrade_server.html">Upgrade the Chef Server</a> </br>
 
+The |chef server| may be configured for high availability after installing the |chef ha| premium feature. This enables failover on backend and load balancing on frontend machines. The following high availability scenarios are supported:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/install_server_ha_aws.html">High Availability: Amazon Web Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/server/install_server_ha_drbd.html">High Availability: DRBD</a> </br>
+
 The premium features of the |chef server| must be installed and configured after the |chef server|. The |chef manage| must be installed before |reporting| because they share the same web user interface. The |chef manage|, |reporting|, and |chef replication| can all be installed using the `chef-server-ctl install <http://docs.getchef.com/server/ctl_chef_server.html#install>`_ command. 
 
 The following premium features require additional steps:
@@ -129,8 +136,8 @@ This section contains links to topics about configuration files, command-line to
    install_push_jobs
    install_reporting
    install_server
-   install_server_be
-   install_server_fe
+   install_server_ha_aws
+   install_server_ha_drbd
    install_server_post
    install_server_pre
    manage
