@@ -26,7 +26,7 @@ Frontend Installation
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_aws_frontend.rst
 
-References
+Reference
 =====================================================
 The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in |amazon iam|.
 
