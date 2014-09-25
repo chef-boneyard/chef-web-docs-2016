@@ -266,6 +266,7 @@ Cookbooks
    install_server_fe
    install_server_febe
    install_server_ha_aws
+   install_server_ha_drbd
    install_server_hosted
    install_server_ldap
    install_server_oec
