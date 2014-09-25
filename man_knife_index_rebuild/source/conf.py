@@ -59,7 +59,7 @@ project = u'knife index rebuild'
 # 
 # This is being used to define the version number for Chef, for now.
 # 
-today = 'Chef 11.14'
+today = 'Chef 11.16'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 

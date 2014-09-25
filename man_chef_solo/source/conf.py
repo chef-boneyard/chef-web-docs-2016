@@ -56,7 +56,7 @@ project = u'chef-solo'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
-today = 'Chef 11.14'
+today = 'Chef 11.16'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
