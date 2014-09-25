@@ -4,7 +4,7 @@ Install |chef|!
 
 |chef| is installed and configured in three main phases: setting up the |chef server|, setting up a workstation, and then installing the |chef client| on each node that will be under management by |chef|:
 
-* :doc:`Install the Chef Server </install_server>`; the |chef server| may be :doc:`configured for high availability </server_high_availability>`, including :doc:`failover on the back end </install_server_be>` machines and :doc:`load balancing on the front end </install_server_fe>`
+* :doc:`Install the Chef Server </install_server>`; the |chef server| may be :doc:`configured for high availability </server_high_availability>`, including `failover on the back end <http://docs.getchef.com/install_server_be.html>`_ machines and `load balancing on the front end <http://docs.getchef.com/install_server_fe.html>`_
 * :doc:`Set up a Workstation </install_dk>`
 * :doc:`Install the chef-client </install_bootstrap>`
 
