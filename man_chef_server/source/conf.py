@@ -103,7 +103,7 @@ rst_prolog = """
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'chef-server-ctl', u'The man page for the chef-server-ctl command line tool.',
-     [u'chef-server-ctl'], 1)
+     [u'chef-server-ctl'], 8)
 ]
 
 # If true, show URL addresses after external links.
