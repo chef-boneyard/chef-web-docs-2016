@@ -5,16 +5,16 @@ The following examples show various ways of listing all nodes on the server, and
 
 .. code-block:: bash
 
-   $ knife list 'nodes/*' | knife xargs perl -ex "s/grantmc/gmc"
+   $ knife list 'nodes/*' | knife xargs "perl -i -pe 's/grantmc/gmc'"
 
 or without quotes and the backslash escaped:
 
 .. code-block:: bash
 
-   $ knife list /nodes/\* | knife xargs perl -ex "s/grantmc/gmc"
+   $ knife list /nodes/\* | knife xargs "perl -i -pe 's/grantmc/gmc'"
 
 or by using the ``--pattern`` option:
 
 .. code-block:: bash
 
-   $ knife xargs --pattern '/nodes.*' perl -ex "s/grantmc/gmc"
+   $ knife xargs --pattern '/nodes.*' "perl -i -pe 's/grantmc/gmc'"
