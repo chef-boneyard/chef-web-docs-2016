@@ -6,7 +6,7 @@ A lightweight resource should be set to inline compile mode by adding the ``use_
 
 .. code-block:: ruby
 
-   use_inline_resoures
+   use_inline_resources
 
    action :run do
      # Ruby code that implements the provider
