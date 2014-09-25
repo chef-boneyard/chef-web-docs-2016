@@ -5,4 +5,4 @@ The following example will go through all nodes on the server, and then replace 
 
 .. code-block:: bash
 
-   $ knife xargs --pattern /nodes/* | perl -ex "s/foobar/baz"
+   $ knife xargs --pattern /nodes/* "perl -i -pe 's/foobar/baz'"
