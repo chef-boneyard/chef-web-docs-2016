@@ -14,7 +14,7 @@ Before installing the |chef server| software, perform the following steps:
 #. Create appropriate security groups to contain the backend instances. The only requirement for the |chef server| is that |icmp| is permitted between the two backend instances; |keepalived| requires it for communication and heartbeat.
 #. Launch two servers, one for the primary backend |chef server| and the other for the secondary backend |chef server|. Use the same |amazon ami| so that both backend servers have identical platform and versions. The servers must be in the same |amazon zones|.
 #. Create an |amazon ebs| volume to store the |chef server|'s data. It is recommended that you use an |amazon ebs_volume_provisioned| volume type, with the maximum IOPS ratio for the size of volume.
-#. Decide on what IP address the backend virtual IP (VIP) will be. It must reside in the same network segment as the backend machines. It will be specified in the |chef server rb| file; during installation, the high-availability plugin will automatically assign the VIP to the primary instance.
+#. Decide on what IP address the backend virtual IP (VIP) will be. It must reside in the same network segment as the backend machines. It will be specified in the |chef server rb| file; during installation, the high-availability plugin will automatically assign the VIP to the |amazon eni| for the primary instance.
 #. Create an |amazon iam| user with at least the permissions documented in the reference section. Record this user's access and secret keys; these will be used in the |chef server rb| configuration file.
 
 Primary Backend
@@ -186,7 +186,7 @@ Verify Failover
 =====================================================
 To verify that failover is working, stop |keepalived| on the primary machine.
 
-#. To watch the failover occur as it happens, run the following command in terminal windows on both the primary and backend servers prior to stopping |keepalived|:
+#. To watch the failover occur as it happens, run the following command in terminal windows on both the primary and secondary backend servers prior to stopping |keepalived|:
 
    .. code-block:: bash
 
@@ -224,7 +224,7 @@ Use the following steps to set up each frontend |chef server|:
       
       $ dpkg -i /tmp/chef-server-core-<version>.deb
 
-   After a few minutes, the |chef server| will be installed.
+   After a few minutes, the |chef server| will be installed. The |chef ha| package is **not** required on front end machines.
 
 #. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary, including all certificates and the |chef server rb| file.
 
@@ -301,4 +301,4 @@ The following example shows |amazon iam| access management settings that are req
      ]
    }
 
-It is possible to further restrict access using a more sophisticated policy document, for example, to permit the IAM user only to attach/detach the volume ID associated with the |chef server| data volume and not all volumes.
+It is possible to further restrict access using a more sophisticated policy document, for example, administrators may choose to permit the |amazon iam| user only to attach/detach the volume ID associated with the |chef server| data volume, and not all volumes.
