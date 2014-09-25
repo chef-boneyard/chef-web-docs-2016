@@ -53,9 +53,7 @@ AWS
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_aws.rst
 
-Configuration
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_server_ha_aws.rst
+View the topic :doc:`High Availability: AWS </install_server_ha_aws>` for more information about how to set up the |chef server| for high availability in |amazon aws|.
 
 Check HA Status
 =====================================================
