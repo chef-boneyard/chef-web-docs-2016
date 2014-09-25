@@ -1,20 +1,21 @@
-.. This page is the Chef 12 server install page, for high availablty in AWS.
+.. This page is the Chef 12 server install page, for high availabilty in AWS.
 
 =====================================================
 High Availability: AWS
 =====================================================
 
-This topic describes how to set up the |chef server| for high availability when running the |chef server| in |amazon aws|.
+This topic describes how to set up the |chef server| for high availability in |amazon aws|.
 
-Requirements
+Pre-Requisites
 =====================================================
-Running the |chef server| for high availability in |amazon aws| has the following requirements:
+Before installing the |chef server| software, perform the following steps.
 
-* Each backend |chef server| must be in an |amazon ebs| volume; the |chef server| may be attached to an |amazon ebs| volume through the |amazon aws| console or via the command line
-* Each backend |chef server| must be running the same platform and version
-* A VIP IP address must exist and should be in the same network segment as the backend machines; for example: ``172.31.24.180``. The VIP IP address must be specified in the |chef server rb| file
-* The |amazon vpc| security group must allow ICMP between the backend machines; |keepalived| uses it for communication/heartbeat when in unicast mode
-* The frontend machines must be able to communicate with the backend VIP IP address
+#. Use an |amazon vpc|. EC2-Classic is not supported.
+#. Create appropriate security groups to contain the backend instances. The only requirement for the |chef server| is that ICMP is permitted between the two backend instances; |keepalived| requires it for communication and heartbeat.
+#. Launch two servers for the backend |chef server|s. Use the same Amazon Machine Image so that they are identical platform and versions. The servers must be in the same Amazon Availability Zone.
+#. Create an |amazon ebs| volume to store the |chef server|'s data. It is recommended that you use a Provisioned IOPS (io1) volume type, with the maximum IOPS ratio for the size of volume.
+#. Decide on what IP address the backend virtual IP (VIP) will be. It must reside in the same network segment as the backend machines. It will be specified in the |chef server rb| file; during installation, the high-availability plugin will automatically assign the VIP to the primary instance.
+#. Create an Amazon Identity and Access Management (IAM) user with at least the permissions documented in the reference section. Record the user's access and secret keys; these will be used in the |chef server rb| configuration file.
 
 Primary Backend
 =====================================================
@@ -47,9 +48,9 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ dpkg -i /tmp/chef-ha-<version>.deb
 
-#. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required. The ``ha['ebs_device']`` setting must specify the actual ``/dev`` device name that is reported by the machine's kernel, which may not be the same value that is reported by |amazon aws|.
+#. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required. The ``ha['ebs_device']`` setting must specify the actual ``/dev`` device name that is reported by the machine's kernel, which may not be the same value that is reported by |amazon aws|. For example, |amazon aws| may refer to a volume as ``/dev/sdf`` through the management console, but to the Linux kernel on the instance, it may appear as ``/dev/xvdf``.
 
-#. Install ``lvm2``. For |redhat| and |centos| 6:
+#. Install Logical Volume Manager tools. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
@@ -61,13 +62,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo apt-get install lvm2
 
-#. Configure ``lvm2`` with the following series of commands:
-
-   .. code-block:: bash
-      
-      $ sudo apt-get install lvm2
-
-   then:
+#. Create a physical volume, volume group, and logical volume with the following series of commands. The volume group and logical volume names must be ``data`` and ``chef``, respectively.
 
    .. code-block:: bash
       
@@ -85,7 +80,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo lvcreate -l 85%VG -n data chef
 
-   then:
+#. Format and mount the new volume with the following series of commands:
 
    .. code-block:: bash
       
@@ -103,13 +98,13 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo mount /dev/mapper/chef-data /var/opt/opscode/drbd/data
 
-#. Run the following command:
+#. Run the following command to configure |chef server|:
 
    .. code-block:: bash
       
       $ sudo chef-server-ctl reconfigure
 
-   This will reconfigure the |chef server|, start |keepalived|, grab the VIP IP address, and then configure the machine as the primary backend server.
+   This will reconfigure the |chef server|, start |keepalived|, assign the VIP IP address as a secondary address on the Elastic Network Interface, and then configure the machine as the primary backend server.
 
 #. Verify the machine is the primary backend server:
 
@@ -117,13 +112,20 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo chef-server-ctl ha-status
 
-   ``ip addr list dev eth0`` should show the VIP IP address configured as an alias on ``eth0``.
+   This should display a screen of output indicating that the server is PRIMARY and that all services are running.
+
+   Additionally, you may run the following command to verify that the VIP IP address is configured on the Ethernet interface:
+
+   .. code-block:: bash
+
+      $ ip addr list dev eth0
+
+   Do *not* use the ``ifconfig`` command as it will not show all aliases.
 
 Secondary Backend
 =====================================================
 Use the following steps to set up the secondary backend |chef server|:
 
-#. Create an |amazon ebs| volume and attach it to the secondary backend.
 #. Install the ``chef-server-core`` package. For |redhat| and |centos| 6:
 
    .. code-block:: bash
@@ -149,7 +151,7 @@ Use the following steps to set up the secondary backend |chef server|:
       
       $ dpkg -i /tmp/chef-ha-<version>.deb
 
-#. Install ``lvm2``. For |redhat| and |centos| 6:
+#. Install Logical Volume Manager tools. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
@@ -161,49 +163,7 @@ Use the following steps to set up the secondary backend |chef server|:
       
       $ sudo apt-get install lvm2
 
-#. Configure ``lvm2`` with the following series of commands:
-
-   .. code-block:: bash
-      
-      $ sudo apt-get install lvm2
-
-   then:
-
-   .. code-block:: bash
-      
-      $ sudo pvcreate /dev/xvdf
-
-   then:
-
-   .. code-block:: bash
-      
-      $ sudo vgcreate chef /dev/xvdf
-
-   then:
-
-   .. code-block:: bash
-      
-      $ sudo lvcreate -l 85%VG -n data chef
-
-   then:
-
-   .. code-block:: bash
-      
-      $ sudo mkdir -p /var/opt/opscode/drbd/data
-
-   then:
-
-   .. code-block:: bash
-      
-      $ sudo mkfs.ext4 /dev/mapper/chef-data
-
-   and then:
-
-   .. code-block:: bash
-      
-      $ sudo mount /dev/mapper/chef-data /var/opt/opscode/drbd/data
-
-#. Create the ``/etc/opscode/`` directory, and then copy the |chef server rb| file from the primary backend to the secondary. The settings will be identical in both files.
+#. Create the ``/etc/opscode/`` directory, and then copy the contents of the entire ``/etc/opscode`` directory from the primary server, including all certificates and the |chef server rb|.
 
 #. Run the following command:
 
@@ -211,7 +171,7 @@ Use the following steps to set up the secondary backend |chef server|:
       
       $ sudo chef-server-ctl reconfigure
 
-   This will reconfigure the |chef server|, start |keepalived|, grab the VIP IP address, and then configure the machine as the secondary backend server.
+   This will reconfigure the |chef server|, start |keepalived|, and configure the machine as the secondary backend server.
 
 #. Verify the machine is the secondary backend server:
 
@@ -219,14 +179,21 @@ Use the following steps to set up the secondary backend |chef server|:
       
       $ sudo chef-server-ctl ha-status
 
-   ``ip addr list dev eth0`` should show the VIP IP address configured as an alias on ``eth0``.
+   This should indicate that the server is BACKUP.
 
 
 Verify Failover
 =====================================================
-To verify that failover is working, run one (or both) of the following commands:
 
-#. Stop |keepalived| on the primary backend machine:
+To verify that failover is working, stop keepalived on the primary machine. To watch the failover live, it is recommended that you run
+
+  .. code-block:: bash
+
+     $ watch -n1 sudo chef-server-ctl ha-status
+
+in terminal windows on both the primary and backend prior to stopping keepalived.
+
+Stop |keepalived| on the primary backend machine:
 
    .. code-block:: bash
       
@@ -234,17 +201,18 @@ To verify that failover is working, run one (or both) of the following commands:
 
    A cluster failover should occur.
 
-#. View status using the ``ha-status`` subcommand for the |chef server ctl| command:
+Once you have verified that failover was successful, restart keepalived on the primary backend machine:
 
-   .. code-block:: bash
-      
-      $ watch -n1 sudo chef-server-ctl ha-status
+  .. code-block:: bash
 
-Frontend
+     $ sudo chef-server-ctl start keepalived
+
+The primary has now become the secondary, and vice-versa. If you wish to fail back to the original primary, repeat the procedure using the new primary.
+
+Frontend Installation
 =====================================================
 Use the following steps to set up each frontend |chef server|:
 
-#. Create an |amazon ebs| volume and attach it to the secondary backend.
 #. Install the ``chef-server-core`` package. For |redhat| and |centos| 6:
 
    .. code-block:: bash
@@ -259,7 +227,7 @@ Use the following steps to set up each frontend |chef server|:
 
    After a few minutes, the |chef server| will be installed.
 
-#. Create the ``/etc/opscode/`` directory, and then copy the |chef server rb| file from the primary backend to the frontend. The only setting that is required is ``topology "ha"``.
+#. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary, including all certificates and the |chef server rb| file.
 
 #. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
 
@@ -271,11 +239,9 @@ Use the following steps to set up each frontend |chef server|:
       
       $ sudo chef-server-ctl reconfigure
 
-   This will reconfigure the |chef server|, start |keepalived|, grab the VIP IP address, and then configure the machine as the secondary backend server.
-
-Reference
+References
 =====================================================
-The following sections show the settings as they appear in a |chef server rb| file and for IAM access management.
+The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in Amazon IAM (Identity and Access Management).
 
 |chef server rb|
 -----------------------------------------------------
@@ -335,3 +301,5 @@ The following example shows IAM access management settings that are required for
        }
      ]
    }
+
+It is possible to further restrict access using a more sophisticated policy document, for example, to permit the IAM user only to attach/detach the volume ID associated with the |chef server| data volume and not all volumes.
