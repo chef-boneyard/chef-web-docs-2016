@@ -15,7 +15,7 @@ Before installing the |chef server| software, perform the following steps:
 * The |chef server| database is primarily comprised of cookbook data. Disks should be dedicated entirely to storing this data, prior to installing the |chef server|.
 * Load-balancing should be used with frontend machines, along with a DNS entry for the virtual IP address used for load balancing. This virtual IP address is added to the |chef server rb| file as the ``api_fqdn``. 
 * All required ports must be open. See the Firewalls section (below) for the list of ports. All of the ports used by the |chef server| are TCP ports. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary.
-* The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
+* The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames>`_ for more information.
 
 Disk Configuration
 =====================================================
