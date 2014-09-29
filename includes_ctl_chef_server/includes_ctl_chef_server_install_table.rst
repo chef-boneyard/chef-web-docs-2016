@@ -12,17 +12,23 @@
    * - |chef manage_title|
      - Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface.
 
-       Run:
+       (Front end machines only.) Run:
 
        .. code-block:: ruby
 
           $ chef-server-ctl install opscode-manage
 
-       and then:
+       then:
 
        .. code-block:: ruby
 
           $ opscode-manage-ctl reconfigure
+
+       and then:
+
+       .. code-block:: ruby
+
+          $ chef-server-ctl reconfigure 
 
    * - |push jobs_title|
      - Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run.
@@ -33,11 +39,18 @@
 
           $ chef-server-ctl install opscode-push-jobs-server
 
-       and then:
+       then:
 
        .. code-block:: ruby
 
           $ opscode-push-jobs-server-ctl reconfigure
+
+       and then:
+
+       .. code-block:: ruby
+
+          $ chef-server-ctl reconfigure 
+
 
    * - |chef replication_title|
      - Use |chef replication| to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
@@ -63,17 +76,23 @@
    * - |reporting_title|
      - Use |reporting| to keep track of what happens during every |chef client| runs across all of the infrastructure being managed by |chef|. Run |reporting| with |chef manage| to view reports from a web user interface.
 
-       Run:
+       (Front end machines only.) Run:
 
        .. code-block:: ruby
 
           $ chef-server-ctl install opscode-reporting
 
-       and then:
+       then:
 
        .. code-block:: ruby
 
           $ opscode-reporting-ctl reconfigure	 
+
+       and then:
+
+       .. code-block:: ruby
+
+          $ chef-server-ctl reconfigure 
 
 ..
 ..   * - |chef ha_title|
