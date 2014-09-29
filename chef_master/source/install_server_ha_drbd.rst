@@ -4,6 +4,8 @@
 High Availability: DRBD
 =====================================================
 
+.. no mention of supported platforms, how do folks get to this page? Have they already seen something about supported platforms for the chef server?
+
 This topic describes how to set up the |chef server| for high availability using physical machines and |drbd|.
 
 Prerequisites
@@ -12,18 +14,18 @@ Before installing the |chef server| software, perform the following steps:
 
 * Backend machines `should have a dedicated connection <http://www.drbd.org/users-guide/s-prepare-network.html>`_. This is required for replication between the two machines.
 * Backend machines will share a virtual IP address that must also be accessible from each frontend server. This virtual IP address is created and managed by the |chef server|, but will also need to be added to the DNS so that all machines in the high availability configuration may access it.
-* The |chef server| database is primarily comprised of cookbook data. Disks should be dedicated entirely to storing this data, prior to installing the |chef server|.
+* Persistent data on backend machines of the |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|.
 * Load-balancing should be used with frontend machines, along with a DNS entry for the virtual IP address used for load balancing. This virtual IP address is added to the |chef server rb| file as the ``api_fqdn``. 
-* All required ports must be open. See the Firewalls section (below) for the list of ports. All of the ports used by the |chef server| are TCP ports. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary.
-* The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames>`_ for more information.
+* All required ports must be open. See the Firewalls section (below) for the list of ports. All connections to and from the |chef server| are accomplished via TCP. Refer to the operating system's manual or your systems administrators for instructions on how to configure to ports, if necessary.
+* The hostname for the |chef server| must be an |fqdn|, including the domain suffix, and must be resolvable by the other backend and frontends. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames>`_ for more information.
 
 Disk Configuration
 =====================================================
-The data that is stored in the |chef server| database is primarily cookbook data. It is recommended that disks are dedicated entirely to storing this data for the |chef server| installation. These disks should:
+Persistent data on backend machines of the |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|. These disks should:
 
 * Utilize hardware |raid|
 * Be configured in either |raid1| or |raid5|
-* Be identical across both of your back-end servers
+* Be identical across both of your backend servers
 
 The recommended configuration utilizes the |linux| |lvm| as the backing store for |drbd|. This assumes that:
 
@@ -60,6 +62,7 @@ Use the following steps to set up the primary backend |chef server|:
 
 #. Download the packages from http://downloads.getchef.com/chef-server/.
 
+.. we'll want to make "chef-server-core" (chef server 12 package name) a swap, it may change in the future
 #. Install the ``chef-server-core`` package. For |redhat| and |centos| 6:
 
    .. code-block:: bash
