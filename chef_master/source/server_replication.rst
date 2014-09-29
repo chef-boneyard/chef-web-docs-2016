@@ -7,9 +7,7 @@
 
 |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
 
-A daemon named |service ecsyncd| runs on each of the replica instances of the |chef server| and periodically polls the primary |chef server| via the ``updated_since`` endpoint in the |api chef server|. The |service ecsyncd| daemon requests a list of objects that have been updated since the last successful synchronization time. If there are updates, the |service ecsyncd| daemon then pulls down the updated data from the primary |chef server| to the replica. 
-
-The |chef sync ctl| command line tool is used to set up and maintain synchronization between one (or more) replica instances of the |chef server| and the primary |chef server|. 
+.. note:: |chef replication| requires |chef server| version 12.
 
 Replication is configured on a per-organization and also a per-replica basis. Each organization must be configured to synchronize with each replica instance. Each organization may be configured to synchronize with all, some, or none of the available replica instances. 
 
@@ -21,13 +19,17 @@ and for example, a single primary |chef server| and multiple replicas:
 
 .. image:: ../../images/chef_server_replication_many.png
 
-.. note:: |chef replication| requires |chef server| version 12.
-
 |chef replication| should not be used for:
 
 * Disaster recovery or backup/restore processes. The replication process is read-only and cannot be changed to read-write
 * Synchronizing a replica instance with another replica instance
 * Node re-registration. A node may be associated only with a single |chef server|
+
+How Replication Works
+=====================================================
+A daemon named |service ecsyncd| runs on each of the replica instances of the |chef server| and periodically polls the primary |chef server| via the ``updated_since`` endpoint in the |api chef server|. The |service ecsyncd| daemon requests a list of objects that have been updated since the last successful synchronization time. If there are updates, the |service ecsyncd| daemon then pulls down the updated data from the primary |chef server| to the replica. 
+
+.. image:: ../../images/chef_server_replication_sequence.png
 
 Configure |chef replication_title|
 =====================================================
