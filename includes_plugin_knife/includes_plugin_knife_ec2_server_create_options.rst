@@ -21,7 +21,7 @@ This argument has the following options:
    |credential_file amazon|
 
 ``--bootstrap-protocol PROTOCOL``
-   |bootstrap protocol|
+   |bootstrap protocol| Possible values: ``ssh`` and ``winrm``.
 
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
@@ -65,12 +65,6 @@ This argument has the following options:
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
 
-``--[no-]host-key-verify``
-   |no_host_key_verify| Default setting: ``--host-key-verify``.
-   
-``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
-   |identity-file|
-
 ``-I IMAGE``, ``--image IMAGE``
    |image|
 
@@ -85,12 +79,6 @@ This argument has the following options:
 
 ``-N NAME``, ``--node-name NAME``
    |name node|
-
-``-p PORT``, ``--ssh-port PORT``
-   |ssh_port|
-
-``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh_password|
 
 ``--placement-group PLACEMENT_GROUP``
    |name placement_group|
@@ -143,9 +131,48 @@ This argument has the following options:
 ``--windows-auth-timeout MINUTES``
    |timeout auth_windows| Default: ``25``.
 
+``-Z ZONE``, ``--availability-zone ZONE``
+   |availability_zone| Default: ``us-east-1b``.
+
+
+The following settings may be used when ``--bootstrap-protocol`` is set to ``ssh``:
+
+``--[no-]host-key-verify``
+   |no_host_key_verify| Default setting: ``--host-key-verify``.
+   
+``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
+   |identity-file|
+
+``-p PORT``, ``--ssh-port PORT``
+   |ssh_port|
+
+``-P PASSWORD``, ``--ssh-password PASSWORD``
+   |ssh_password|
+
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh_user|
 
-``-Z ZONE``, ``--availability-zone ZONE``
-   |availability_zone| Default: ``us-east-1b``.
+The following settings may be used when ``--bootstrap-protocol`` is set to ``winrm``:
+
+``-i KEYTAB_FILE``, ``--keytab-file KEYTAB_FILE``
+   |keytab-file|
+
+``-p PORT``, ``--winrm-port PORT``
+   |winrm_port| Default: ``5985``.
+
+``-P PASSWORD``, ``--winrm-password PASSWORD``
+   |winrm_password|
+
+``-R KERBEROS_REALM``, ``--kerberos-realm KERBEROS_REALM``
+   |kerberos-realm|
+
+``-S KERBEROS_SERVICE``, ``--kerberos-service KERBEROS_SERVICE``
+   |kerberos-service| 
+
+``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
+   |winrm_transport|
+
+``-x USERNAME``, ``--winrm-user USERNAME``
+   |winrm_user|
+
 
