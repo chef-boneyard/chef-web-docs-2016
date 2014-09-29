@@ -10,7 +10,7 @@ Prerequisites
 =====================================================
 Before installing the |chef server| software, perform the following steps:
 
-* Backend machines should have `an ethernet interface cross-connected <http://www.drbd.org/users-guide/s-prepare-network.html>`_ to the other. This is required by |keepalived| and |drbd|. 10G+ is recommended.
+* Backend machines `should have a dedicated connection <http://www.drbd.org/users-guide/s-prepare-network.html>`_. This is required for replication between the two machines.
 * Backend machines will share a virtual IP address that must also be accessible from each frontend server. This virtual IP address is created and managed by the |chef server|, but will also need to be added to the DNS so that all machines in the high availability configuration may access it.
 * The |chef server| database is primarily comprised of cookbook data. Disks should be dedicated entirely to storing this data, prior to installing the |chef server|.
 * Load-balancing should be used with frontend machines, along with a DNS entry for the virtual IP address used for load balancing. This virtual IP address is added to the |chef server rb| file as the ``api_fqdn``. 
@@ -323,15 +323,18 @@ For each frontend machine, use the following steps to set up the |chef server|:
 
 #. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file.
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
-
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
-
 #. Run the following command:
 
    .. code-block:: bash
       
       $ sudo chef-server-ctl reconfigure
+
+
+Enable Premium Features
+=====================================================
+Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 
 
 Reference
