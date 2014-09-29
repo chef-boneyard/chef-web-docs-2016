@@ -4,8 +4,6 @@
 High Availability: DRBD
 =====================================================
 
-.. no mention of supported platforms, how do folks get to this page? Have they already seen something about supported platforms for the chef server?
-
 This topic describes how to set up the |chef server| for high availability using physical machines and |drbd|.
 
 Prerequisites
@@ -61,9 +59,6 @@ Primary Backend
 Use the following steps to set up the primary backend |chef server|:
 
 #. Download the packages from http://downloads.getchef.com/chef-server/.
-
-.. we'll want to make "chef-server-core" (chef server 12 package name) a swap, it may change in the future
-#. Install the ``chef-server-core`` package. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
@@ -310,7 +305,7 @@ Frontend
 =====================================================
 For each frontend machine, use the following steps to set up the |chef server|:
 
-#. Install the ``chef-server-core`` package. For |redhat| and |centos| 6:
+#. Install the |chef server| package. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
