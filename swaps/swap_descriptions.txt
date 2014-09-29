@@ -64,6 +64,7 @@
 .. |availability_zone| replace:: The name of the availability zone. Each availability zone is unique within a region.
 .. |aws_access_key_id| replace:: The access key identifier used with |amazon ec2|.
 .. |aws_access_key_secret| replace:: The secret access key for the API endpoint used with |amazon ec2|.
+.. |aws_dedicated_instance| replace:: Use to launch this instance as an |amazon ec2_dedicated|.
 .. |azure connect_to_existing_dns| replace:: Use to add a new virtual machine to the existing deployment and/or service. Use with ``--azure-dns-name`` to ensure the correct DNS is used.
 .. |azure host description| replace:: The description for the host.
 .. |azure_host_name| replace:: The host name for the |azure| environment.
@@ -224,6 +225,7 @@
 .. |couchdb_version| replace:: Optional. The version of the |couch db| database.
 .. |create_dirs_before_symlink| replace:: Use this attribute to create directories before symbolic links are created. This attribute runs after ``purge_before_symlink`` and before ``symlink``.
 .. |creates file_exists| replace:: Use to prevent a command from creating a file when that file already exists.
+.. |credential_file amazon| replace:: The credential file that is used by |amazon aws| command-line tools.
 .. |credential_file google| replace:: The credential file used by |google compute engine|. (This file is created when running the ``knife google setup`` command.)
 .. |cwd| replace:: The current working directory.
 .. |cwd run_command| replace:: The current working directory from which a command is run.
@@ -326,8 +328,11 @@
 .. E
 ..
 
-.. |ebs-no-delete-on-term| replace:: Use to prevent the |amazon ebs| volume from being deleted upon instance termination. This option is only available for instances that are backed with |amazon ebs|.
-.. |ebs-size| replace:: The size of the |amazon ebs| volume, in GB. This option is only available for instances that are backed with |amazon ebs|.
+.. |ebs_no_delete_on_term| replace:: Use to prevent the |amazon ebs| volume from being deleted upon instance termination. This option is only available for instances that are backed with |amazon ebs|.
+.. |ebs_optimized| replace:: Use to enable optimized I/O for |amazon ebs|.
+.. |ebs_size| replace:: The size of the |amazon ebs| volume, in GB. This option is only available for instances that are backed with |amazon ebs|.
+.. |ebs_volume_type| replace:: The type of |amazon ebs| volume.
+.. |ebs_volume_type provisioned_iops| replace:: The IOPS rate used for a |amazon ebs_volume_provisioned| volume.
 .. |edit| replace:: Use to edit instance data using the default text editor.
 .. |editor| replace:: The |chef editor| that is used for all interactive commands.
 .. |effective_cache_size postgresql| replace:: The size of the disk cache that is used for data files.
@@ -572,7 +577,9 @@
 .. |interpreter| replace:: The script interpreter to be used during code execution.
 .. |interval| replace:: The frequency (in seconds) at which the |chef client| runs.
 .. |ip_address| replace:: The IP address.
+.. |ip_address amazon_vpc| replace:: Use to specify the private IP address of the instance |amazon vpc| mode.
 .. |ip_address floating_openstack| replace:: The floating IP address to be associated with a new |openstack| node (assuming that IP addresses have been allocated to the project).
+.. |ip_address elastic| replace:: Use to associate an elastic IP address with this instance.
 .. |ip_address node| replace:: The IP address for the node.
 .. |ip_address rabbitmq| replace:: The bind IP address for |rabbitmq|.
 .. |ip_address service| replace:: The IP address on which the service will listen.
@@ -797,6 +804,7 @@
 .. |name group_process_owner| replace:: The name of the group that owns a process. This is required when starting any executable as a daemon.
 .. |name group_service_directory| replace:: The name of the group for which access to service directory and scripts is granted.
 .. |name gunicorn_process| replace:: The name of an instance of |gunicorn|. This attribute is only necessary when more than one instance of |gunicorn| is running.
+.. |name iam_profile| replace:: The name of the |amazon iam| to apply to this instance.
 .. |name interface| replace:: The name of the interface.
 .. |name key_directory| replace:: The name of the key that will be created, deleted, or modified.
 .. |name lag| replace:: The name of the link aggregation group (LAG).
@@ -814,6 +822,7 @@
 .. |name package_group| replace:: The name of the package group.
 .. |name package_yum| replace:: One of the following: the name of a package, the name of a package and its architecture; the name of a dependency.
 .. |name pid_file| replace:: The file name for the process identifier (PID) file.
+.. |name placement_group| replace:: The name of the placement group.
 .. |name plugin| replace:: The name of the plugin.
 .. |name port| replace:: The name of the port.
 .. |name powershell_dsc_resource| replace:: The name of the |windows powershell_dsc_short| resource.
@@ -1265,6 +1274,7 @@
 .. |shell| replace:: The login shell.
 .. |show_all_images| replace:: Use to show all fields for all images.
 .. |show_local_files| replace:: Use to show local files instead of remote files.
+.. |show_availability_zone| replace:: Use to show a list of availability zones.
 .. |showdupesfromrepos| replace:: Use to show duplicate packages. When false, only the newest packages are shown.
 .. |signing_ca_cert| replace:: The path to where the certificate is located. This setting is generated automatically by the |chef client| and is passed to |open ssl|.
 .. |signing_ca_country| replace:: The country code associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
@@ -1316,6 +1326,7 @@
 .. |splay org_create| replace:: A number (in milliseconds) to add to ``create_wait_ms``.
 .. |ssh_command| replace:: The command that will be run against the results of a search query.
 .. |ssh_gateway| replace:: The |ssh| tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
+.. |ssh_gateway_identity| replace:: The private key for the SSH gateway.
 .. |ssh_key amazon_ec2| replace:: The |ssh| key for the |amazon ec2| environment.
 .. |ssh_key eucalyptus| replace:: The |ssh| key for the |eucalyptus| environment.
 .. |ssh_key hp| replace:: The |ssh| key for the |hp cloud| environment.
@@ -1403,6 +1414,7 @@
 .. |timeout rest| replace:: The time (in seconds) after which an HTTP REST request will time out.
 .. |timeout smtp_connect| replace:: The amount of time (in seconds) to wait for a connection to an |smtp| server.
 .. |timeout worker| replace:: The amount of time (in seconds) that a worker can be silent before it is killed and restarted.
+.. |timeout auth_windows| replace:: The amount of time (in minutes) to wait for authentication to succeed.
 .. |timeout worker_process| replace:: The amount of time (in seconds) before a worker process times out.
 .. |to resource link| replace:: The actual file to which the link will be created.
 .. |tolerant| replace:: Use to be tolerant of errors that may occur on the command line.
@@ -1442,13 +1454,15 @@
 .. |use current_branch| replace:: Use to ensure that the current branch is used.
 .. |use custom_log_script| replace:: Use to specify that a service has a custom logging script.
 .. |use etag| replace:: Use to enable |etag| headers. Set to ``false`` to disable |etag| headers. To use this setting, ``use_conditional_get`` must also be set to ``true``.
-.. |use ha| replace:: Use to run the |chef server| in a high availability topology.
 .. |use file_overwrite| replace:: Use to overwrite a file when it is different.
+.. |use ha| replace:: Use to run the |chef server| in a high availability topology.
+.. |use iam_profile| replace:: Use the |amazon iam| that is assigned to the current machine.
 .. |use interface| replace:: Use to activate the interface.
 .. |use keepalive| replace:: Use to enable HTTP keepalive (if available).
 .. |use last_modified| replace:: Use to enable |if_modified_since| headers. Set to ``false`` to disable |if_modified_since| headers. To use this setting, ``use_conditional_get`` must also be set to ``true``.
 .. |use nagle| replace:: Use to enable the |nagle| buffering algorithm.
 .. |use null_character| replace:: Use to show a ``NULL`` character (``\0``) instead of white space as the separator.
+.. |use public_ip_address| replace:: Use to associate a public IP address to an |amazon vpc| instance.
 .. |use repo| replace:: Use to enable a repository.
 .. |use sendfile| replace:: Use to copy data between file descriptors when ``sendfile()`` is used.
 .. |use ssl| replace:: Use to enable |ssl|.

@@ -8,6 +8,12 @@ This argument has the following options:
 ``-A KEY``, ``--aws-access-key-id KEY``
    |aws_access_key_id|
 
+``--aws-credential-file FILE``
+   |credential_file amazon|
+
+``-K SECRET``, ``--aws-secret-access-key SECRET``
+   |aws_access_key_secret|
+
 ``-n``, ``--no-name``
    |no name tags|
 
@@ -17,3 +23,8 @@ This argument has the following options:
 ``-t TAG1, TAG2``, ``--tags TAG1, TAG2``
    |tags list|
 
+``--use-iam-profile``
+   |use iam_profile| Default value: ``false``.
+
+``-z``, ``--availability-zone``
+   |show_availability_zone|

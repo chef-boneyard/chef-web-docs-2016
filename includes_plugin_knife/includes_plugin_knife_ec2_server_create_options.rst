@@ -5,11 +5,26 @@
 
 This argument has the following options:
 
+``-a ATTRIBUTE``, ``--server-connect-attribute ATTRIBUTE``
+   |attribute ssh| This should be an |amazon ec2| server attribute. This option is especially useful when creating instances in a VPC and will allow the bootstrapping ssh client to connect to the VPC after an EIP is attached.
+
 ``-A KEY``, ``--aws-access-key-id KEY``
    |aws_access_key_id|
 
+``--associate-eip IP_ADDRESS``
+   |ip_address elastic|
+
+``--associate-public-ip``
+   |use public_ip_address|
+
+``--aws-credential-file FILE``
+   |credential_file amazon|
+
 ``--bootstrap-protocol PROTOCOL``
    |bootstrap protocol|
+
+``--bootstrap-proxy PROXY_URL``
+   |bootstrap proxy|
 
 ``--bootstrap-version VERSION``
    |bootstrap version|
@@ -17,11 +32,20 @@ This argument has the following options:
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
-``--ebs-size SIZE``
-   |ebs-size|
+``--dedicated_instance``
+   |aws_dedicated_instance|
 
 ``--ebs-no-delete-on-term``
-   |ebs-no-delete-on-term|
+   |ebs_no_delete_on_term|
+
+``--ebs-optimized``
+   |ebs_optimized|
+
+``--ebs-size SIZE``
+   |ebs_size|
+
+``--ebs-volume-type TYPE``
+   |ebs_volume_type| Possible values: ``standard`` or ``io1``.
 
 ``--ephemeral DEVICE``
    |ephemeral device|
@@ -41,11 +65,20 @@ This argument has the following options:
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
 
+``--[no-]host-key-verify``
+   |no_host_key_verify| Default setting: ``--host-key-verify``.
+   
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
 
 ``-I IMAGE``, ``--image IMAGE``
    |image|
+
+``--iam-profile``
+   |name iam_profile|
+
+``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
+   |json first_run_string|
 
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
    |aws_access_key_secret|
@@ -53,17 +86,23 @@ This argument has the following options:
 ``-N NAME``, ``--node-name NAME``
    |name node|
 
-``--[no-]host-key-verify``
-   |no_host_key_verify| Default setting: ``--host-key-verify``.
-
 ``-p PORT``, ``--ssh-port PORT``
    |ssh_port|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh_password|
 
+``--placement-group PLACEMENT_GROUP``
+   |name placement_group|
+
 ``--prerelease``
    |prerelease|
+
+``--private-ip-address IP-ADDRESS``
+   |ip_address amazon_vpc|
+
+``--provisioned-iops IOPS``
+   |ebs_volume_type provisioned_iops|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
@@ -71,14 +110,20 @@ This argument has the following options:
 ``--region REGION``
    |region amazon|
 
-``-s SUBNET_ID``, ``--subnet SUBNET_ID``
-   |subnet|
+``-s SECRET``, ``--secret SECRET``
+   |secret|
 
 ``-S KEY``, ``--ssh-key KEY``
    |ssh_key amazon_ec2|
 
-``--server-connect-attribute ATTRIBUTE``
-   |attribute ssh| This should be an |amazon ec2| server attribute. This option is especially useful when creating instances in a VPC and will allow the bootstrapping ssh client to connect to the VPC after an EIP is attached.
+``--secret-file FILE``
+   |secret-file|
+
+``--ssh-gateway-identity IDENTITY_FILE``
+   |ssh_gateway_identity|
+
+``--subnet SUBNET_ID``
+   |subnet|
 
 ``--T Tag=Value[,Tag=Value]``, ``--tags Tag=Value[,Tag=Value]``
    |tags|
@@ -86,15 +131,21 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |path bootstrap_template|
 
+``--use-iam-profile``
+   |use iam_profile| Default value: ``false``.
+
 ``-u USER_DATA_FILE``, ``--user-data USER_DATA_FILE``
    |user data_file_ec2|
 
 ``-w GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh_gateway|
 
+``--windows-auth-timeout MINUTES``
+   |timeout auth_windows| Default: ``25``.
+
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh_user|
 
-``-Z ZONE"``, ``--availability-zone ZONE``
+``-Z ZONE``, ``--availability-zone ZONE``
    |availability_zone| Default: ``us-east-1b``.
 

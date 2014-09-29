@@ -8,15 +8,14 @@ This argument has the following options:
 ``-A KEY``, ``--aws-access-key-id KEY``
    |aws_access_key_id|
 
-``-e``, ``--edit``
-   |edit|
+``--aws-credential-file FILE``
+   |credential_file amazon|
 
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
    |aws_access_key_secret|
 
-``-r RUN_LIST``, ``--run-list RUN_LIST``
-   |run-list|
-
 ``--region REGION``
    |region amazon|
 
+``--use-iam-profile``
+   |use iam_profile| Default value: ``false``.
