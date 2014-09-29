@@ -351,6 +351,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_roles
    essentials_search
    handlers
+   install
    install_bootstrap
    install_windows
    install_workstation
