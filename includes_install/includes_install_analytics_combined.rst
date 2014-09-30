@@ -42,14 +42,14 @@ To set up the |chef analytics| server for a |combined| deployment:
 
       $ opscode-analytics-ctl test
 
-#. Verify that TCP/10012 connections can be established from the Chef server to the analytics fqdn. Tools like ``telnet client`` or ``nc`` can be used for this:
+#. Use a tool like ``telnet client`` or ``nc`` to verify that TCP/10012 connections can be established from the |chef server| to the |chef analytics| |fqdn|. For example, using ``nc``:
 
    .. code-block:: bash
 
       $ nc -zv analytics.example.com 10012
       Connection to analytics.example.com 10012 port [tcp/*] succeeded!
 
-#. Troubleshoot issues by cheking logs in ``/var/log/opscode-analytics/`` or running this command:
+#. Troubleshoot issues by checking logs in ``/var/log/opscode-analytics/``, or by running the following command:
 
    .. code-block:: bash
 
