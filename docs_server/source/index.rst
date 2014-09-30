@@ -1,7 +1,7 @@
 .. THIS PAGE IS LOCATED AT THE /server/ PATH.
 
 =====================================================
-The |chef server_title|  
+The |chef server_title|
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
