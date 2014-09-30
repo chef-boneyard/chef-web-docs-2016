@@ -4,7 +4,7 @@
 Lightweight Providers w/Platform Resources
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
 
 .. include:: ../../includes_lwrp/includes_lwrp_custom_provider.rst
 

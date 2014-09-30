@@ -1,7 +1,7 @@
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
 =====================================================
-All about |chef| ... 
+All about |chef| ...  
 =====================================================
 
 .. note:: This page contains the same exact set of topics that are available from docs.getchef.com, just organized differently and in bigger sections.

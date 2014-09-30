@@ -1,5 +1,5 @@
 =====================================================
-All about Chef for OpenStack ...  
+All about Chef for OpenStack ...   
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack.rst

@@ -1,5 +1,5 @@
 =====================================================
-Docs for |chef client| 10.latest
+Docs for |chef client| 10.latest 
 =====================================================
 
 .. warning:: This document collection is only about the current version of the 10.x |chef client|. For information about other releases of |chef|, see http://docs.getchef.com/releases.html.

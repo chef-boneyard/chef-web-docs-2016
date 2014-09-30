@@ -4,9 +4,9 @@ Resources and Providers Reference
 
 .. include:: ../../includes_resources_common/includes_resources_common.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
+.. include:: ../../includes_resources_common/includes_resources_common_provider_platform.rst
 
 This reference describes each of the resources available to the |chef client|, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
 
@@ -33,7 +33,7 @@ Attributes
 
 Provider
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -416,8 +416,6 @@ Guards
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
-
 .. include:: ../../includes_resources/includes_resource_batch_providers.rst
 
 Examples
@@ -450,8 +448,6 @@ Attributes
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
-
 .. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
 
 Examples
@@ -1777,8 +1773,6 @@ Attributes
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
-
 .. include:: ../../includes_resources/includes_resource_package_providers.rst
 
 Examples
@@ -1974,8 +1968,6 @@ Guards
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
-
 .. include:: ../../includes_resources/includes_resource_script_perl_providers.rst
 
 Examples
@@ -2006,8 +1998,6 @@ Attributes
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_attributes_provider.rst
-
 .. include:: ../../includes_resources/includes_resource_package_portage_providers.rst
 
 Examples
