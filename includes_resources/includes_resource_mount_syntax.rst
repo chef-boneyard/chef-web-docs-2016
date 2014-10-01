@@ -20,7 +20,7 @@ where
 * ``fstype`` is the file system type; this attribute is required
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-The following is an example of how the |resource mount| resource can work when used in a recipe:
+For example:
 
 .. code-block:: ruby
 

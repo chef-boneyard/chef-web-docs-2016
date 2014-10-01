@@ -18,7 +18,7 @@ where
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-For example, the following example runs weekly cookbook reports:
+For example, weekly cookbook reports:
 
 .. code-block:: ruby
 

@@ -20,7 +20,7 @@ where
 * ``url`` is the URL that will precede ``?message=`` in the HTTP request
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-The following is an example of how the |resource http_request| resource can work when used in a recipe. In this example, the following example will send a ``DELETE`` request to "http://www.getchef.com/some_page?message=please_delete_me".
+For example, send a ``DELETE`` request to "http://www.getchef.com/some_page?message=please_delete_me".
 
 .. code-block:: ruby
 

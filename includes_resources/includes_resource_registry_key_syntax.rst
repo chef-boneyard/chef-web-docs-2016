@@ -35,7 +35,7 @@ where
 
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-The following is an example of how the |resource registry_key| resource can work when used in a recipe. In this example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a multi-string value named "foo bar":
+For example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a multi-string value named "foo bar":
 
 .. code-block:: ruby
 
@@ -48,7 +48,7 @@ The following is an example of how the |resource registry_key| resource can work
      action :create
    end
 
-and the following example shows how multiple registry key entries can be configured using a single resource block with key values based on node attributes:
+Or, using multiple registry key entries to configure a single resource block with key values based on node attributes:
 
 .. code-block:: ruby
 

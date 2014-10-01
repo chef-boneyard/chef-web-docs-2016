@@ -18,7 +18,7 @@ where
 * ``:dsc_resource_name`` is the name of the |windows powershell_dsc_short| resource
 * ``property`` is zero (or more) properties in the |windows powershell_dsc_short| resource, where each property is entered on a separate line, ``:dsc_resource_property`` is the case-insensitive name of that property, and ``"value"`` is the value to be applied by the |chef client|
 
-The following shows a |windows powershell_dsc_short| ``Archive`` resource:
+For example, a |windows powershell_dsc_short| ``Archive`` resource:
 
 .. code-block:: powershell
 
@@ -28,7 +28,7 @@ The following shows a |windows powershell_dsc_short| ``Archive`` resource:
      Destination = "C:\Users\Public\Documents\ExtractionPath"
    } 
 
-and then using that same |resource dsc_resource| with |chef|:
+and then the same |resource dsc_resource| with |chef|:
 
 .. code-block:: ruby
 

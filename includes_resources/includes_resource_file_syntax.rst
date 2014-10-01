@@ -18,7 +18,7 @@ where
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-The following is an example of how the |resource file| resource can work when used in a recipe:
+For example:
 
 .. code-block:: ruby
 

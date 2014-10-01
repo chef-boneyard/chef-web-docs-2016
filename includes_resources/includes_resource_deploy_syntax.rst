@@ -27,7 +27,7 @@ where
 * ``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-The following is an example of how the ``deploy_revision`` resource can work when used in a recipe. In this example, an application will be deployed to a folder named "/path/to/application":
+For example, an application that is deployed to a folder named ``"/path/to/application"``:
 
 .. code-block:: ruby
 
