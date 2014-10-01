@@ -14,13 +14,11 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - Description
    * - `apt <https://github.com/opscode-cookbooks/apt>`_
      - The |cookbook apt| cookbook is used to configure |apt| and |apt| services, for managing |apt| repositories and preferences.
-   * - `ark <https://github.com/opscode-cookbooks/ark>`_
-     - Use to manage software archives.
    * - `aws <https://github.com/opscode-cookbooks/aws>`_
      - The |cookbook aws| cookbook is used to manage resources that are running in |amazon aws|.
    * - `bluepill <https://github.com/opscode-cookbooks/bluepill>`_
      - The |cookbook bluepill| cookbook is used to install |bluepill|, and then use it to manage services.
-   * - `chef_handler <http://docs.getchef.com/lwrp_chef_handler.html>`_
+   * - `chef_handler <http://docs.gethef.com/resource_chef_handler.html>`_
      - |cookbook name chef_handler|
    * - `cron <https://github.com/opscode-cookbooks/cron>`_
      - Use to install cron and start the crond service.
@@ -46,8 +44,6 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - Use to install the lvm2 package, and then manage LVM.
    * - `maven <https://github.com/opscode-cookbooks/maven>`_
      - The |cookbook maven| cookbook is used to install and configure |apache maven|.
-   * - `nginx <https://github.com/opscode-cookbooks/nginx>`_
-     - Use to install nginx from package or source code, and then set up configuration handling.
    * - `openssh <https://github.com/opscode-cookbooks/openssh>`_
      - The **openssh** cookbook is used to install OpenSSH.
    * - `omnibus <https://github.com/opscode-cookbooks/omnibus>`_
@@ -70,5 +66,5 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - The |cookbook webpi| cookbook is used to run the |microsoft webpi|.
    * - `windows <https://github.com/opscode-cookbooks/windows>`_
      - The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
-   * - `yum <http://docs.getchef.com/lwrp_yum.html>`_
+   * - `yum <https://github.com/opscode-cookbooks/yum>`_
      - The |cookbook yum| cookbook is used to manage the contents of the ``yum.conf`` configuration file for global |yum| configurations and for individual |yum| repositories.
