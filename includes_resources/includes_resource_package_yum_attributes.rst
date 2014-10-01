@@ -16,7 +16,7 @@
    * - ``flush_cache``
      - |flush_cache| Default value: ``{ :before => false, :after => false }``.
 
-       |flush_cache yum_cache|
+       .. note:: |flush_cache yum_cache|
    * - ``options``
      - |command options|
    * - ``package_name``
