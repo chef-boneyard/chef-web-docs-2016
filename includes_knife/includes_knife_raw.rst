@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand knife raw| subcommand is used to send a REST request to a specified path using the |api chef server|.
+The |subcommand knife raw| subcommand is used to send a REST request to an endpoint in the |api chef server|.
