@@ -25,7 +25,7 @@ where
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``callback`` represents additional |ruby| code that is used to pass a block or to specify a file, and then provide additional information to the |chef client| at specific times during the deployment process
 * ``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
 
 For example, an application that is deployed to a folder named ``"/path/to/application"``:
 

@@ -18,7 +18,7 @@ where
 * ``name`` is the name of the resource block; when the ``message`` attribute is not specified as part of a recipe, ``name`` is also the message that is sent by the HTTP request
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``url`` is the URL that will precede ``?message=`` in the HTTP request
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
 
 For example, send a ``DELETE`` request to "http://www.getchef.com/some_page?message=please_delete_me".
 

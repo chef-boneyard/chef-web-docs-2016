@@ -18,4 +18,4 @@ where
 * ``name`` is the path to the location in which a file will be created *and* the name of the file to be managed; for example: ``/var/www/html/index.html``, where ``/var/www/html/`` is the fully qualified path to the location and ``index.html`` is the name of the file
 * ``source`` is the template file that will be used to create the file on the node, for example: ``index.html.erb``; the template file is located in the ``/templates`` directory of a cookbook
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state

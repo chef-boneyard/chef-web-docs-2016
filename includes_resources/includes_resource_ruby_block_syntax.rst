@@ -17,4 +17,4 @@ where
 * ``ruby_block`` tells the |chef client| to use the ``Chef::Provider::RubyBlock`` provider during the |chef client| run
 * ``name`` is the name of the resource block; when the ``block_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the |ruby| block
 * ``block`` is the attribute that is used to define the |ruby| block
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state

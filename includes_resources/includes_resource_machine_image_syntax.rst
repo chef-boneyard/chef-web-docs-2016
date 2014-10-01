@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the machine_image resource in a recipe is as follows:
+The syntax for using the |resource machine_image| resource in a recipe is as follows:
 
 .. code-block:: ruby
 
@@ -16,4 +16,4 @@ where
 * ``machine_image`` tells the |chef client| to use the ``Chef::Provider::MachineImage`` provider during the |chef client| run
 * ``name`` is the name of the resource block and also the name of the machine image
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state

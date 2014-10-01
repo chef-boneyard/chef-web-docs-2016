@@ -18,7 +18,7 @@ where
 * ``name`` is the name of the resource block; when the ``mount_point`` attribute is not specified as part of a recipe, ``name`` is also the directory (or path) in which a device should be mounted
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``fstype`` is the file system type; this attribute is required
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
 
 For example:
 

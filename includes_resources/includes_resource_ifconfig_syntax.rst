@@ -16,4 +16,4 @@ where
 * ``ifconfig`` tells the |chef client| to use the ``Chef::Provider::Ifconfig`` provider during the |chef client| run
 * ``name`` is the name of the resource block; when the ``target`` attribute is not specified as part of a recipe, ``name`` is also the IP address that will be assigned to the network interface
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state

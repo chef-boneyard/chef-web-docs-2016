@@ -33,7 +33,7 @@ where
 
   .. warning:: |values resource registry_key multi_string|
 
-* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
+* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
 
 For example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a multi-string value named "foo bar":
 
