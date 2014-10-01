@@ -194,9 +194,9 @@ Examples
 
 Inline Resources
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_inline_compile_mode.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode_with.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_inline_compile_mode_with.rst
 
 Lightweight Resources and Providers
 =====================================================
