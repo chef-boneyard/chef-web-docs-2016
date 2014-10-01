@@ -54,7 +54,7 @@ To install |chef server| 12:
 
    Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+# Enable additional features of the |chef server|! Run the following commands:
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 

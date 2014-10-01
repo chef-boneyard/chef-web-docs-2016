@@ -328,9 +328,9 @@ For each frontend machine, use the following steps to set up the |chef server|:
       $ sudo chef-server-ctl reconfigure
 
 
-Enable Premium Features
+Enable Features
 =====================================================
-Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+Enable additional features of the |chef server|! Run the following commands:
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 

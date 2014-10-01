@@ -19,7 +19,7 @@ Use the following steps to set up each frontend |chef server|:
 
 #. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file.
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+#. Enable additional features of the |chef server|! Run the following commands:
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 
