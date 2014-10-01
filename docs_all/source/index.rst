@@ -89,7 +89,6 @@ All about |chef| ...
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/ohai.html">Ohai</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/resources.html">Resources and Providers</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/lwrps.html">Lightweight Resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/chef/cookbooks_opscode.html">Cookbooks Maintained by Opscode</a> </br>
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
@@ -102,7 +101,6 @@ All about |chef| ...
    api_cookbooks_site
    api_omnitruck
    client_rb
-   cookbooks_opscode
    dsl_recipe
    essentials_chef_client
    essentials_cookbook_attribute_files
