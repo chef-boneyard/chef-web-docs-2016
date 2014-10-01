@@ -13,6 +13,28 @@ This method has no parameters.
 
 This method has no request body.
 
+For example, run the following command:
+
+.. code-block:: bash
+
+   $ knife raw /data/dogs
+
+which returns a list of data bags on the server:
+
+.. code-block:: xml
+
+   {
+     "pomeranian": "https://api.opscode.com/organizations/ORG_NAME/data/dogs/pomeranian",
+     "shihtzu": "https://api.opscode.com/organizations/ORG_NAME/data/dogs/shihtzu",
+     "tibetanspaniel": "https://api.opscode.com/organizations/ORG_NAME/data/dogs/tibetanspaniel"
+   }
+
+Run the following command:
+
+.. code-block:: bash
+
+   $ knife raw -m DELETE /data/dogs/shihtzu
+
 **Response**
 
 The response will return something like the following:
@@ -20,11 +42,30 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "id": "adam",
-     "real_name": "Adam Brent Jacob"
+     "name": "data_bag_item_dogs_shihtzu",
+     "json_class": "Chef::DataBagItem",
+     "chef_type": "data_bag_item",
+     "data_bag": "dogs",
+     "raw_data": {
+       "description": "small annoying dog that doesn't bark all that often",
+       "id": "shihtzu"
+     }
    }
 
-where the key-value pairs represent the last state of the data bag item.
+Run the following command:
+
+.. code-block:: bash
+
+   $ knife raw /data/dogs
+
+to view an updated list:
+
+.. code-block:: javascript
+
+   {
+     "pomeranian": "https://api.opscode.com/organizations/ORG_NAME/data/dogs/pomeranian",
+     "tibetanspaniel": "https://api.opscode.com/organizations/ORG_NAME/data/dogs/tibetanspaniel"
+   }
 
 **Response Codes**
 
