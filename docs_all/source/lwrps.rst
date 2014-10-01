@@ -102,7 +102,7 @@ The following examples show how to use ``only_if`` as a condition in a recipe:
 
 File Locations
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_file_locations.rst
 
 Notifications
 -----------------------------------------------------
