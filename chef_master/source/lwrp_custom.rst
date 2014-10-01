@@ -26,11 +26,11 @@ In addition to the commonly-used lightweight resources and lightweight providers
 
 File Locations
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_file_locations.rst
 
 Platform vs. Lightweight
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_compared_to_platform_resource.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_compare_to_platform_resource.rst
 
 |company_name|-maintained
 =====================================================
