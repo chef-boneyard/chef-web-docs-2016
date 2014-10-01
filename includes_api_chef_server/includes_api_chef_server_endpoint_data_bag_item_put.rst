@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /organizations/ORG_NAME/data/NAME/ITEM
+   PUT /organizations/ORG_NAME/data/NAME/ITEM
 
 with a request body that looks something like:
 
