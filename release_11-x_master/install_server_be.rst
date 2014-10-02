@@ -334,7 +334,7 @@ In the scaled back end configuration, setup of the |chef server| happens in two 
 
 .. code-block:: bash
 
-   $ chef-server-ctl reconfigure
+   $ private-chef-ctl reconfigure
 
 The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps required to set up |drbd|:
 
@@ -360,7 +360,7 @@ Set up the configuration of |drbd| on the non-bootstrap back-end server:
 
 .. code-block:: bash
 
-   $ chef-server-ctl reconfigure
+   $ private-chef-ctl reconfigure
 
 The installer will pause, asking you to confirm that you have set up |drbd|. Press ``CTRL-C`` to exit, and continue the last few steps require to set up |drbd|:
 
@@ -451,7 +451,7 @@ To continue setting up the |chef server| on a bootstrap server, run:
 
 .. code-block:: bash
 
-   $ chef-server-ctl reconfigure
+   $ private-chef-ctl reconfigure
 
 This command may take several minutes to run, during which you will see the output of the |chef client| run that is configuring the |chef server| installation. When it is complete, the following message is displayed:
 
@@ -476,7 +476,7 @@ Followed by:
 
 .. code-block:: bash
 
-   $ chef-server-ctl reconfigure
+   $ private-chef-ctl reconfigure
 
 
 Configure the front-end
@@ -514,7 +514,7 @@ To set up the |chef server| on your front-end servers, run:
 
 .. code-block:: bash
 
-   $ chef-server-ctl reconfigure
+   $ private-chef-ctl reconfigure
 
 This command may take several minutes to run, during which you will see the output of the |chef client| run that is configuring the |chef server| installation. When it is complete, the following message is shown:
 

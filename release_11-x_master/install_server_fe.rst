@@ -88,7 +88,7 @@ For back-end servers in an |chef server| installation:
 
 |chef server rb|
 -----------------------------------------------------
-Each machine in a |chef server| cluster has a single configuration file called |chef server rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/chef-server.rb`` on each server. Using the text editor of your choice, create a file called |chef server rb|.
+Each machine in a |chef server| cluster has a single configuration file called |chef server rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |chef server rb|.
 
 Configure topology
 -----------------------------------------------------
@@ -210,11 +210,11 @@ The following sections describe what is required to configure the bootstrap serv
 
 Add |chef server rb|
 -----------------------------------------------------
-Copy the |chef server rb| file to ``/etc/opscode/chef-server.rb`` on the bootstrap server.
+Copy the |chef server rb| file to ``/etc/opscode/private-chef.rb`` on the bootstrap server.
 
 Install the |chef server_title|
 -----------------------------------------------------
-On the bootstrap server copy the |chef server rb| file to ``/etc/opscode/chef-server.rb``.
+On the bootstrap server copy the |chef server rb| file to ``/etc/opscode/private-chef.rb``.
 
 Configure 
 -----------------------------------------------------
@@ -222,7 +222,7 @@ To set up the |chef server| on your bootstrap server, run:
 
 .. code-block:: bash
 
-   $ chef-server-ctl reconfigure
+   $ private-chef-ctl reconfigure
 
 This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring the |chef server| installation. When it is complete, you will see:
 
@@ -277,7 +277,7 @@ Run the following command:
 
 .. code-block:: bash
 
-   $ chef-server-ctl reconfigure
+   $ private-chef-ctl reconfigure
 
 Success!
 =====================================================
