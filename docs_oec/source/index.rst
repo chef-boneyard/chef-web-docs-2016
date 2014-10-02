@@ -102,17 +102,13 @@ The following command-line tools can be run on the workstation to simulate a |ch
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/ctl_chef_shell.html">chef-shell</a> </br>
 
 
-
-
-
 The Server
 =====================================================
-The |chef server oec| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
+The |chef server oec| server is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 
 .. **The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>` | :doc:`Authentication and Authorization </auth>` | :doc:`Private Keys </chef_private_keys>`
 
 .. **Install:** `Sign up for Hosted Chef <http://www.getchef.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Sign up for Private Chef <http://www.getchef.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Download with Omnitruck API </api_omnitruck>`
-
 
 
 Server Essentials
