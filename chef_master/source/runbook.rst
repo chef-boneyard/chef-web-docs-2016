@@ -250,10 +250,6 @@ term
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_term.rst
 
-
-
-
-
 SSL Configuration
 =====================================================
 
@@ -274,13 +270,6 @@ Regenerate Certificates
 |chef client| Settings
 -----------------------------------------------------
 .. include:: ../../includes_server_security/includes_server_security_ssl_config_settings.rst
-
-
-
-
-
-
-
 
 Server Tuning
 =====================================================
