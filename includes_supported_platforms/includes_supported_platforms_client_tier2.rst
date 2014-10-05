@@ -1,0 +1,36 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+
+The following table lists the Tier 2 supported platforms for the |chef client|:
+
+.. list-table::
+   :widths: 280 100 120
+   :header-rows: 1
+ 
+   * - Platform
+     - Architecture
+     - Version
+   * - |archlinux|
+     - 
+     - current version
+   * - |debian|
+     - ``i686``, ``x86_64``
+     - ``6``, ``7``
+   * - |fedora|
+     - 
+     - current non-EOL releases
+   * - |freebsd|
+     - ``amd64``
+     - ``9``
+   * - |omnios|
+     - 
+     - stable and LTS releases
+   * - |opensuse|
+     - 
+     - ``12.3`` (through EOL), ``13.1``
+   * - |scientific linux|
+     - ``i386``, ``x86-64``
+     - ``5.x``, ``6.x``, ``7.x``
+   * - |suse els|
+     - 
+     - ``10``, ``11``
