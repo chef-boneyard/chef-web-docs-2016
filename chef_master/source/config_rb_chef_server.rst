@@ -6,7 +6,7 @@
 
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst
 
-.. note:: If the |chef server rb| file does not exist, create a file called ``chef-server.rb`` and put it in the ``/etc/chef-server/`` directory.
+.. note:: The |chef server rb| file does not exist by default. To modify the settings for the |chef server|, create a file named ``chef-server.rb`` in the ``/etc/chef-server/`` directory.
 
 Example
 =====================================================

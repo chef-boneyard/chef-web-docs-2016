@@ -6,7 +6,7 @@
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
-.. note:: If the |enterprise rb| file does not exist, create a file called ``private-chef.rb`` and put it in the ``/etc/opscode/`` directory.
+.. note:: The |enterprise rb| file does not exist by default. To modify the settings for the |chef server|, create a file named ``private-chef.rb`` in the ``/etc/opscode/`` directory.
 
 Use Conditions
 =====================================================

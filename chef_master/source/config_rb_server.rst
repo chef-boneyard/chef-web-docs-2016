@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_config/includes_config_rb_server.rst
 
-.. warning:: This is a preview topic of |chef| server settings. In general, these settings are documented, but should not be changed from their default settings without first consulting with |company_name| support or a member of the |chef| consulting team.
+.. note:: The |chef server rb| file does not exist by default. To modify the settings for the |chef server|, create a file named ``chef-server.rb`` in the ``/etc/opscode/`` directory.
 
 Settings
 =====================================================
