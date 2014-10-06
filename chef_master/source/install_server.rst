@@ -60,11 +60,11 @@ To install |chef server| 12:
 
 High Availability
 =====================================================
-The following links describe how to configure the |chef server| for high availability.
+The following links describe how to configure the |chef server| for high availability:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_fe.html">Front-end Machines</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_be.html">Back-end Machines</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_ha_aws.html">High Availability using Amazon Web Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_ha_drbd.html">High Availability using DRBD</a> </br>
 
 
