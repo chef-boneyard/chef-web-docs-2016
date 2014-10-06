@@ -4,7 +4,7 @@
 Firewalls and Ports
 =====================================================
 
-The ports that should be open depend on how the |chef server oec| is deployed---standalone, high availability, front- and back-end servers. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary.
+The ports that should be open depend on how the |chef server oec| is deployed---standalone, high availability, front and back end servers. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary.
 
 Standalone
 -----------------------------------------------------
@@ -23,7 +23,7 @@ For a standalone |chef server oec| installation, and if host-based firewalls (ip
 
 Front End
 -----------------------------------------------------
-For front-end servers in an |chef server oec| installation:
+For front end servers in an |chef server oec| installation:
 
 .. list-table::
    :widths: 60 420
@@ -38,7 +38,7 @@ For front-end servers in an |chef server oec| installation:
 
 Back End
 -----------------------------------------------------
-For back-end servers in an |chef server oec| installation:
+For back end servers in an |chef server oec| installation:
 
 .. list-table::
    :widths: 60 420
@@ -74,3 +74,7 @@ For back-end servers in an |chef server oec| installation:
      - |service bookshelf|
    * - 7788-7799
      - |drbd|
+	   
+	   .. note:: This port range must be open between all back end servers.
+   * - 8000
+     - |service erchef|
