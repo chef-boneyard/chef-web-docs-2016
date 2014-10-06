@@ -133,8 +133,12 @@ On the back-end servers:
      - rabbitmq
    * - 6379
      - redis
-   * - 7788
-     - drbd
+   * - 7788-7799
+     - |drbd|
+	   
+	   .. note:: This port range must be open between all back end servers.
+   * - 8000
+     - |service erchef|
 
 Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
 

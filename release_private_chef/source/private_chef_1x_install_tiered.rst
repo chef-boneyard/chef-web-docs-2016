@@ -78,8 +78,10 @@ On the back-end server:
      - couchdb
    * - 6379
      - redis
-   * - 7788
-     - drbd
+   * - 7788-7799
+     - |drbd|
+	   
+	   .. note:: This port range must be open between all back end servers.
    * - 8000
      - opscode-erchef
    * - 8983
