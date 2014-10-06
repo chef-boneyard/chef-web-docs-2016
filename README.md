@@ -68,7 +68,7 @@ Subsequent runs of `make release` should be relatively fast (2-5 mins), and you 
 
 All of the Chef documentation versions are maintained synchronously, without branches. This is to ensure that shared, single-sourced topics and strings are always shareable and never have to be maintained in separate files or branches.
 
-IMPORTANT: If you want to build only the latest version of the docs, update your make file to only specify one (or more) of master, open_source, or enterprise.
+IMPORTANT: If you want to build only the latest version of the docs, update your make file to only specify one (or more) of master, client, or server.
 
 The following folders are used to build Chef documentation sets:
 
@@ -76,15 +76,13 @@ chef_master -- the main set of documentation about the current versions of the c
 
 client -- the main set of documentation about the current version of the chef-client. http://docs.getchef.com/client/
 
-docs_oec -- a filtered set of documentation about the current version of the Enterprise Chef Server. http://docs.getchef.com/enterprise/
-
-docs_osc -- a filtered set of documentation about the current version of the Open Source Chef Server. http://docs.getchef.com/open_source/
+docs_server -- the documentation for the current version of the Chef server, Private Chef. http://docs.getchef.com/server/
 
 These sets of docs are actively maintained and in many places are identical (because the functionality is the same). Only where there is some divergence---some knife commands, server functionality, and so on---is there a difference in the documentation.
 
 docs_all -- a filtered set of the main set of documentation that a) has a single-page flat structure (including a flat table of contents) and b) consolidates much of the information in the main doc set into a smaller collection of longer pages. Some of the most popular pages in all of chef-docs land are found here, such as http://docs.getchef.com/chef/resources.html, http://docs.getchef.com/chef/dsl_recipe.html, and http://docs.getchef.com/chef/knife.html. http://docs.getchef.com/chef/
 
-docs_server -- the documentation for the first version of the on-premises Chef server, Private Chef. http://docs.getchef.com/server/
+See http://docs.getchef.com/releases.html for the full list of versions that are available.
 
 The following folders are for versions of the chef-client:
 
@@ -92,15 +90,15 @@ release_10
 release_11-0
 release_11-2
 release_11-4
-release_11-6
-release_11-8
-release_11-10
+release_11-...
 
-These docs collections can be found at http://docs.getchef.com/release/version#/, i.e. http://docs.getchef.com/release/10/ or http://docs.getchef.com/release/11-6/
+These docs collections can be found at http://docs.getchef.com/release/version#/, e.g. http://docs.getchef.com/release/10/ or http://docs.getchef.com/release/11-6/
 
 The following folders are for versions of the Enterprise Chef Server:
 
 release_oec_11-0
+release_oec_11-1
+release_oec_11-2
 
 The following folders are for versions of Ohai:
 
