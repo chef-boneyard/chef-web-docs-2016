@@ -6,6 +6,12 @@ This README focuses on people who want to contribute to the Chef documentation.
 
 
 
+## Supported Documentation Formats
+
+Chef currently builds HTML outputs from this docs collection for all versions of Chef since the 10.x releases. In addition, Man page outputs are maintained for the current versions of the chef-client and the Chef server. Sphinx can build other formats--PDF, ePub, and so on---but Chef is not actively maintaining documentation that builds into non-HTML or Man page formats.
+
+
+
 ## Getting Started
 
 Sphinx is the authoring tool: http://sphinx-doc.org/
@@ -57,11 +63,11 @@ Open `./build/chef/index.html` to view the rendered files locally.
 
 IMPORTANT: Depending on what has changed since the last time a build was run, the build process can take anywhere from a few minutes to a few hours. The make file gets changed a lot because Chef uses this file to manage how the docs get published to our website. For your local builds, you may want to edit the make file prior to building to only use the chef_master build, which is the build to use for the current version of Chef.
 
-The first time you run the build, it will probably take longer (30-45 min), as it has to generate _every_ file from scratch.
+The first time you run the build, it will take longer (45-75 mins), as it has to generate _every_ file from scratch. (This time estimate assumes that you're building only the chef_master docs collection; additional docs collections will take additional time.)
 
 This will also apply when you've run the `make clean` command, which effectively resets your working environment or if files located in the `/swaps` folder are changed.
 
-Subsequent runs of `make release` should be relatively fast (2-5 mins), and you can use subsets. For example: `master` for the main docs build, `enterprise` for Enterprise Chef, `open_source` for Open Source Chef, and so on. The full list is available at the top of the `makefile`.
+Subsequent runs of `make release` should be relatively fast (2-5 mins), and you can use subsets. For example: `master` for the main docs build, `server` for the Chef server, `client` for the chef-client, and so on. The full list is available at the top of the `makefile`.
 
 
 ## About Docs Versions
@@ -72,11 +78,13 @@ IMPORTANT: If you want to build only the latest version of the docs, update your
 
 The following folders are used to build Chef documentation sets:
 
-chef_master -- the main set of documentation about the current versions of the chef-client, Ohai, the Open Source Chef Server, and the Enterprise Chef Server. http://docs.getchef.com
+chef_master -- the main set of documentation about the current versions of the chef-client, Ohai, the Chef server, and the Chef development kit. http://docs.getchef.com
 
 client -- the main set of documentation about the current version of the chef-client. http://docs.getchef.com/client/
 
 docs_server -- the documentation for the current version of the Chef server, Private Chef. http://docs.getchef.com/server/
+
+devkit -- the main set of documentation about the current version of the development kit for the chef-client. http://docs.getchef.com/client/
 
 These sets of docs are actively maintained and in many places are identical (because the functionality is the same). Only where there is some divergence---some knife commands, server functionality, and so on---is there a difference in the documentation.
 
@@ -94,18 +102,29 @@ release_11-...
 
 These docs collections can be found at http://docs.getchef.com/release/version#/, e.g. http://docs.getchef.com/release/10/ or http://docs.getchef.com/release/11-6/
 
-The following folders are for versions of the Enterprise Chef Server:
+The following folders are for versions of the Enterprise Chef server:
 
 release_oec_11-0
 release_oec_11-1
 release_oec_11-2
+
+The following folder is for the Private Chef server:
+
+release_private_chef
+
+The following folders are for versions of the Open Source Chef server:
+
+release_osc_11-0
+release_osc_11-1
 
 The following folders are for versions of Ohai:
 
 release_ohai-6
 release_ohai-7
 
+If the subject matter for a specific release is identical to the current version of Chef (i.e. "hasn't changed"), then the file is simply a copy of the file that is located in chef_master. In some cases, subject matter has been consolidated for the 11 and 10 releases (so that it may take a new path for the 12 release) and the files from which those copies are made can be found in release_11-x_master.
 
+All of the man_ folders are used to generate man pages for the various command line tools in Chef. Because man page layouts are different from HTML layouts, they cannot be simple copies. That said, they are otherwise identical and are using the same inclusion paths and follow the same layout patterns.
 
 ### About Release Notes
 
@@ -117,26 +136,23 @@ All of the versions have release notes. Append release_notes.html at the end of 
 Chef builds the following docs collections on a daily basis:
 
 chef_master
-client
-docs_oec
-docs_osc
-release_ohai-7
-release_11-10
-
-Chef builds the following docs collections often, but not necessarily every day:
-
 docs_all
-
-Chef builds the following docs collections as needed, by request, or based on specific feedback, but typically not "daily" or "often":
-
+docs_client
+docs_devkit
 docs_server
+release_ohai-7
+release_[current_version]
+
+Chef builds the following docs collections as needed, by request, or based on specific feedback:
+
 release_10
 release_11-0
 release_11-2
 release_11-4
-release_11-6
-release_11-8
-release_oec_11-0
+release_11-...
+release_oec_11-...
+release_osc_11-...
+release_private_chef
 release_ohai-6
 
 Note that Ohai 7 documents are also included in the chef_master doc collection (so those topics get rebuilt every day for the root collection).
@@ -234,6 +250,7 @@ Here's how this might look:
     # enter a good commit message
     git push origin my_new_edit
     
+
 Once pushed, visit your repo on GitHub, and open a Pull Request against `opscode/chef-docs:master`.
 
 ## License
