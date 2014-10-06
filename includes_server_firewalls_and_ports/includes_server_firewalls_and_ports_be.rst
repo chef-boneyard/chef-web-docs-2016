@@ -34,8 +34,6 @@ For back-end servers in an |chef server| installation:
    * - 4321
      - |service bookshelf|
    * - 7788-7799
-     - |drbd|
-	   
-	   .. note:: This port range must be open between all back end servers.
+     - |drbd| This port range must be open between all back end servers.
    * - 8000
      - |service erchef|

@@ -134,13 +134,15 @@ On the back-end servers:
    * - 6379
      - redis
    * - 7788-7799
-     - |drbd|
-	   
-	   .. note:: This port range must be open between all back end servers.
+     - |drbd| This port range must be open between all back end servers.
    * - 8000
      - |service erchef|
 
 Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
+
+Loopback Interface
+-----------------------------------------------------
+A single loopback interface should be configured using the ``127.0.0.1`` address. This ensures that all of the services are available to the |chef server|, in the event that the |chef server| attempts to contact itself from within a front or back end machine.
 
 private-chef.rb
 =====================================================
