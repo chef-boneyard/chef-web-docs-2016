@@ -12,7 +12,7 @@ A |chef client| on which |reporting| is configured always sends data to the |che
    * - ``reporting_readers``
      - Use to view and configure reports.
 
-This group does not exist by default, even after |reporting| has been installed to the |chef server|. If this group is not created, all members of the organization will be able to view reports.
+This group does not exist by default, even after |reporting| has been installed to the |chef server|. If this group is not created, all members of the organization will be unable to view reports.
 
 .. SAVE FOR LATER
 ..
