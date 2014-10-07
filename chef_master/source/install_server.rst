@@ -54,6 +54,40 @@ To install |chef server| 12:
 
    Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
 
+#. Run the following command to create an organization:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl org-create short_name full_organization_name
+
+   The ``short_name`` name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``.
+
+   The ``full_organization_name`` must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``.
+
+   This will return an RSA private key, which is the validation key for the organization. For example:
+   
+   .. code-block:: bash
+      
+      $ chef-server-ctl org-create chef Chef Software, Inc.
+
+#. Run the following command to create an administrator:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl user-create admin first_name last_name email password
+
+   This will return an RSA private key, which is the validation key for the user. For example:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl user-create admin Steve Danno steved@getchef.com abc123
+
+#. Run the following command to associate the administrator to the organization:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl org-associate chef admin
+
 #. Enable additional features of the |chef server|! Run the following commands:
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
