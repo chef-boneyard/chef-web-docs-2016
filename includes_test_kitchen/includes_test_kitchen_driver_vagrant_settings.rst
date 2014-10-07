@@ -34,5 +34,4 @@ The following attributes are used to configure ``kitchen-vagrant`` for |chef|:
      - Use to specify the username for |ssh| authentication. Default value: username for the default |vagrant| user.   * - ``vagrantfile_erb``
      - Use to specify an alternate ``Vagrantfile`` |erb| template to be used by this driver. Should be a rarely-used setting.
    * - ``vm_hostname``
-     - Use to specify the internal hostname for the instance. This is not required when connecting
-to a |vagrant| virtual machine. Set this to ``false`` to prevent this value from being rendered in the default ``Vagrantfile``. Default value: computed from the platform name of the instance.
+     - Use to specify the internal hostname for the instance. This is not required when connecting to a |vagrant| virtual machine. Set this to ``false`` to prevent this value from being rendered in the default ``Vagrantfile``. Default value: computed from the platform name of the instance.
