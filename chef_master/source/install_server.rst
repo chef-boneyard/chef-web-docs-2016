@@ -90,7 +90,9 @@ To install |chef server| 12:
 ..       $ chef-server-ctl org-associate chef admin
 .. 
 
-6. Enable additional features of the |chef server|! Run the following commands:
+6. Create an organization and an administrator user. First install the Chef management console. Then, once installed, access the web user interface, and then create an organization and administrator user.
+
+7. Enable additional features of the |chef server|! Run the following commands:
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 
