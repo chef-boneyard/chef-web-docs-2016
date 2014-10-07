@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following |kitchen yml| file shows how to configure settings related to |busser|, a test setup and execution framework designed for situations where a testing environment cannot be trusted to execute tests that depend on |serverspec|, |rspec|, |bash_bats|, |bash|, and |minitest|. 
+The following |kitchen yml| file shows how to configure settings related to |busser|, a test setup and execution framework designed for situations where a testing environment cannot reliably execute tests that depend on |serverspec|, |rspec|, |bash_bats|, |bash|, and |minitest|. 
 
 self-administered test execution may not always be accurate.
 
@@ -15,8 +15,8 @@ self-administered test execution may not always be accurate.
 
    busser:
      version: busser@1.2.3
-	 root_path: /var/tmp/kitchen-busser
-	 ruby_bindir: /opt/local/bin
+     root_path: /var/tmp/kitchen-busser
+     ruby_bindir: /opt/local/bin
      plugins: ['app_A@1.2.3', 'app_B@1.2.3', ...]
 
    provisioner:
@@ -24,8 +24,8 @@ self-administered test execution may not always be accurate.
    
    platforms:
      - name: centos-5.10
-	   ...
-	   busser: busser-alternate@1.2.3
+       ...
+       busser: busser-alternate@1.2.3
      - name: ...
 
    suites:
@@ -58,8 +58,8 @@ For example:
 
    busser:
      version: busser@0.9.0rc2
-	 root_path: /var/tmp/kitchen-busser
-	 ruby_bindir: /opt/local/bin
+     root_path: /var/tmp/kitchen-busser
+     ruby_bindir: /opt/local/bin
      plugins: ['serverspec@0.2.6', 'minitest@x', 'bats@x', 'rspec@x']
    
    provisioner:
