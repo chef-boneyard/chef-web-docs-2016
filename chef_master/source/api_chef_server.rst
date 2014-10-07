@@ -165,6 +165,17 @@ PUT
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst
 
 
+
+/containers
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_containers.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_containers_get.rst
+
+
+
 /cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
