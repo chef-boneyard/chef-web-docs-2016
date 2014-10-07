@@ -12,7 +12,7 @@
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``checksum``
-     - Optional. |checksum file|
+     - Optional. |checksum remote_file|
    * - ``group``
      - |windows group_identifier|
    * - ``inherits``
