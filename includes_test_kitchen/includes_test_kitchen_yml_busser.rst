@@ -2,11 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following |kitchen yml| file shows how to configure settings related to |busser|, a test setup and execution framework designed for situations where a testing environment cannot reliably execute tests that depend on |serverspec|, |rspec|, |bash_bats|, |bash|, and |minitest|. 
-
-self-administered test execution may not always be accurate.
-
-. |busser| is `a standalone gem <https://github.com/test-kitchen/busser>`_ that can be added to |kitchen|. The following example shows how to specify |busser| as part of a |kitchen yml| file.
+The following |kitchen yml| file shows how to configure settings related to |busser|, a test setup and execution framework designed for situations where a testing environment cannot reliably execute tests that depend on |serverspec|, |rspec|, |bash_bats|, |bash|, and |minitest|. |busser| is `a standalone gem <https://github.com/test-kitchen/busser>`_ that can be added to |kitchen|. The following example shows how to specify |busser| as part of a |kitchen yml| file.
 
 .. code-block:: yaml
 
