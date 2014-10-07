@@ -12,10 +12,10 @@ The following documentation sets are available:
      - Home Page
      - Release Notes
    * - |chef client_title| 11.16
-     - `http://docs.getchef.com <http://docs.getchef.com/release/11-16/>`__
+     - `http://docs.getchef.com/release/11-14/ <http://docs.getchef.com/release/11-16/>`__
      - `Release Notes <http://docs.getchef.com/release/11-16/release_notes.html>`__
    * - |chef client_title| 11.14
-     - `http://docs.getchef.com/release/11-12/ <http://docs.getchef.com/release/11-14/>`__
+     - `http://docs.getchef.com/release/11-14/ <http://docs.getchef.com/release/11-14/>`__
      - `Release Notes <http://docs.getchef.com/release/11-14/release_notes.html>`__
    * - |chef client_title| 11.12
      - `http://docs.getchef.com/release/11-12/ <http://docs.getchef.com/release/11-12/>`__
