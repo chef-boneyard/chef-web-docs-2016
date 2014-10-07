@@ -348,6 +348,27 @@ GET
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles_get.rst
 
 
+/groups
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_groups.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_groups_get.rst
+
+
+/groups/GROUP_NAME
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_groups_name.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_groups_name_get.rst
+
+
+
+
+
 /nodes
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node.rst
