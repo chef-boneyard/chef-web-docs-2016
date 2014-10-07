@@ -11,6 +11,8 @@
      - Description
    * - ``backup``
      - |backups_kept| Default value: ``5``.
+   * - ``checksum``
+     - |checksum file| Default value: no checksum required.
    * - ``content``
      - |content file| The default behavior will not modify content.
    * - ``group``
