@@ -59,10 +59,6 @@ Assign Dependencies
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_cookbook_dependencies.rst
 
-Create Exceptions
------------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_exceptions_and_logging.rst
-
 Include Recipes
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_include_in_recipe.rst
