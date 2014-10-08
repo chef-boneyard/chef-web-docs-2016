@@ -4,6 +4,10 @@ Prerequisites
 
 The following prerequisites apply to every installation of the |chef server|.
 
+Minimum Requirements
+=====================================================
+.. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
+
 |apache qpid|
 =====================================================
 .. include:: ../../includes_install/includes_install_common_apache_qpid.rst
