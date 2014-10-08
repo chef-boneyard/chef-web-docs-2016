@@ -19,6 +19,8 @@ The most important tools included in the |chef dk| are:
      - The |chef dk| omnibus package.
    * - |chef spec|
      - A unit testing framework that tests resources locally.
+   * - |foodcritic|
+     - A lint tool for static analysis of recipe code.
    * - |ruby|
      - The reference language for |chef|.
    * - |kitchen|

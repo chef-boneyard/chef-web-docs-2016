@@ -2,16 +2,54 @@
 All about the |chef dk_title| ...  
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_index.rst
-
 .. include:: ../../includes_chef_dk/includes_chef_dk.rst
 
-**The Basics:** :doc:`Overview of Chef </chef_overview>`
+Getting Started
+=====================================================
+.. include:: ../../includes_chef/includes_chef_index.rst
 
-**Install:** :doc:`Install the chef-dk </install_dk>`
+.. raw:: html
 
-**Tools:** :doc:`chef (executable) </ctl_chef>` | :doc:`Berkshelf </berkshelf>` | :doc:`chef-vault </chef_vault>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`test-kitchen </kitchen>`
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/chef_overview.html">An Overview of Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/install_dk.html">Install the Chef DK</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/getting_started.html">Getting Started with the Chef DK and Kitchen</a> </br>
 
+.. note:: The topic "Getting Started with the Chef DK and Kitchen" is a work in progress. It needs some editing, but you should be able to install the Chef DK and then configure Kitchen to build CentOS and Ubuntu instances, and then converge a node using the NTP cookbook. More sections are planned for future updates that will include more scenarios for Kitchen, new scenarios for ChefSpec, Berkshelf, and Chef policy. Feedback on the getting started page may be sent to docs @ getchef dot com.
+
+About Workflow
+-----------------------------------------------------
+.. include:: ../../includes_chef_dk/includes_chef_dk_workflow.rst
+
+Tools
+=====================================================
+.. include:: ../../includes_chef_dk/includes_chef_dk_tools.rst
+
+.. include:: ../../includes_chef_dk/includes_chef_dk_tools_main.rst
+
+|chef dk_title| Tools
+-----------------------------------------------------
+The following tools are available only in the |chef dk|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/ctl_chef.html">chef (executable)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/policy.html">Policy</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/config_rb_policyfile.html">Policyfile.rb</a> </br>
+
+Community Tools
+-----------------------------------------------------
+The following tools have been developed by members of the |chef| community. These tools are considered to be a useful part of the |chef| workflow and have been packaged as part of the |chef dk|. (They are all available independently of the |chef dk|, as well.) The use of these tools in your organization's workflow is recommended, but at the same time is completely optional. Use them in the way that makes sense for your organization:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/berkshelf.html">Berkshelf</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/chef_vault.html">chef-vault</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/chefspec.html">ChefSpec</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/foodcritic.html">Foodcritic</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/kitchen.html">Kitchen</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/ctl_kitchen.html">kitchen (the command-line executable for Kitchen)</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/config_yml_kitchen.html">kitchen.yml (the configuration file for Kitchen)</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/plugin_kitchen_vagrant.html">kitchen-vagrant (the default driver plugin for Kitchen)</a> </br>
 
 .. Hide the TOC from this file.
 
