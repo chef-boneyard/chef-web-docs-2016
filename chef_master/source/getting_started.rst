@@ -6,6 +6,8 @@ Welcome to |chef|!
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+.. note:: This topic is a work in progress. It needs some editing, but you should be able to install the Chef DK and then configure Kitchen to build CentOS and Ubuntu instances, and then converge a node using the NTP cookbook. More sections are planned for future updates that will include more scenarios for Kitchen, new scenarios for ChefSpec, Berkshelf, and Chef policy. Feedback on the getting started page may be sent to docs @ getchef dot com.
+
 About Resources
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common.rst
