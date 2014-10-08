@@ -361,6 +361,25 @@ Examples
 -----------------------------------------------------
 None.
 
+
+chef install
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_install.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_install_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_install_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+
+
 chef shell-init
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_shell_init.rst
