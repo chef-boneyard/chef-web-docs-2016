@@ -22,6 +22,7 @@ All about the |chef dk_title| ...
    chef_overview
    chef_vault
    chefspec
+   config_rb_policyfile
    config_yml_kitchen
    ctl_chef
    ctl_kitchen
@@ -29,3 +30,4 @@ All about the |chef dk_title| ...
    install_dk
    kitchen
    plugin_kitchen_vagrant
+   policy
