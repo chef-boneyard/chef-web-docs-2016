@@ -8,5 +8,3 @@ The |chef dk| is a package that contains everything that is needed to start usin
 * |ohai|
 * |chef zero|
 * and everything else needed to author cookbooks and upload them to the |chef server|
-
-The |chef dk| also includes optional (but recommended) tooling that helps make those cookbooks better, including |berkshelf|, |kitchen|, |chef spec|, and |foodcritic|.
