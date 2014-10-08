@@ -18,4 +18,4 @@
    * - Hostname
      - The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#about-the-hostname>`_ for more information
 
-
+.. note:: Front end machines, when load balanced, may have fewer than 4 cores and 4 GB of RAM.
