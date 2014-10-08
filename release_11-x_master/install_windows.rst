@@ -27,7 +27,7 @@ A |microsoft installer package| is available for installing the |chef client| on
 
 .. include:: ../../includes_install/includes_install_chef_client_windows.rst
 
-Run as a Service
+Enable as a Service
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_chef_client_windows_as_service.rst
 
