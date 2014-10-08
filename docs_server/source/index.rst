@@ -4,7 +4,7 @@
 The |chef server_title|
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_index_oec.rst
+.. include:: ../../includes_chef/includes_chef_index.rst
 
 .. note:: |chef server| 12 is the new |chef server|! The documentation for `Open Source Chef <http://docs.getchef.com/open_source/>`_ and `Enterprise Chef <http://docs.getchef.com/enterprise/>`_ is still available.
 
