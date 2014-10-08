@@ -172,6 +172,7 @@ This section contains links to topics about configuration files, command-line to
    private_chef_1x_admin_user_management
    private_chef_1x_support
    push_jobs
+   release_notes
    reporting
    runbook
    server_backup_restore
