@@ -13,4 +13,4 @@ Install |chef server oec|!
 * The :doc:`Chef management console </manage>` provides a web user interface for managing objects on the |chef server|.
 * :doc:`Chef reporting </reporting>` enables |chef client| run reporting data from within the |chef manage|.
 
-In addition, there are some post-configuration options for the |chef server|, including :doc:`configuring LDAP </install_server_ldap>`, :doc:`creating organizations </install_server_orgs>`, and:doc:`managing users </install_server_users>`.
+In addition, there are some post-configuration options for the |chef server|, including :doc:`configuring LDAP </install_server_ldap>`, :doc:`creating organizations </install_server_orgs>`, and :doc:`managing users </install_server_users>`.
