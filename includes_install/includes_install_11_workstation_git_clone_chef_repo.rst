@@ -5,7 +5,13 @@ The |chef repo| on |github| must be cloned to every workstation that will intera
 
 To clone the |chef repo|:
 
-#. In a command window, enter the following:
+#. In a command window, open the home directory:
+
+   .. code-block:: bash
+
+      $ cd ~
+
+   and then clone the |chef repo|:
 
    .. code-block:: bash
 
