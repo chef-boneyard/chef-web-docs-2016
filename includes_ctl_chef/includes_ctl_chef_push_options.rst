@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-c CONFIG_FILE``, ``--config CONFIG_FILE``
-   The path to the configuration file.
+   The path to the |knife| configuration file.
 
 ``-D``, ``--debug``
    Use to enable stack traces and other debug output.
