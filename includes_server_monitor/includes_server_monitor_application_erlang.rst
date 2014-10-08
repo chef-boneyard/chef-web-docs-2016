@@ -6,11 +6,11 @@ Many components of the |chef server| are written using |erlang| and run on the |
 
 .. code-block:: bash
 
-   $ cd /opt/opscode/embedded/service/erl/
+   $ cd /opt/opscode/embedded
      export PATH=$PATH:/opt/opscode/bin:/opt/opscode/embedded/bin
      bin/erl -setcookie service_name -name me@127.0.0.1 -remsh service_name@127.0.0.1
 
-where ``service_name`` is ``authz`` or ``erchef``. This command will then open a shell that is connected to the |erchef| processes:
+where ``service_name`` is ``bifrost`` or ``erchef``. This command will then open a shell that is connected to the |erchef| processes:
 
 .. code-block:: bash
 
@@ -18,11 +18,11 @@ where ``service_name`` is ``authz`` or ``erchef``. This command will then open a
 
 .. warning:: Connecting to the |erlang| processes should only be done when directed by |company_name| support services.
 
-To connect to the |service authz| service, use the following command:
+To connect to the |service bifrost| service, use the following command:
 
 .. code-block:: bash
 
-   $ erl -setcookie authz -name me@127.0.0.1 -remsh authz@127.0.0.1
+   $ erl -setcookie oc_bifrost -name me@127.0.0.1 -remsh oc_bifrost@127.0.0.1
 
 To connect to the |service erchef| service, use the following command:
 
