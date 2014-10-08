@@ -11,8 +11,6 @@ Other useful tools include:
      - Description
    * - |chef vault|
      - An encryption manager for usernames, passwords, and files.
-   * - |foodcritic|
-     - A lint tool for static analysis of recipe code.
    * - |kitchen_vagrant|
      - A |vagrant| driver for |kitchen|.
    * - |subcommand knife spork|
