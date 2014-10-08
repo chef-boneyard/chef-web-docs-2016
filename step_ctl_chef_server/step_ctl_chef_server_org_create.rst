@@ -17,6 +17,6 @@ For example:
 
 .. code-block:: bash
   
-   $ chef-server-ctl org-create chef Chef Software, Inc. --association_user steved
+   $ chef-server-ctl org-create chef Chef Software, Inc. --association_user stevedanno
 
 This will return an RSA private key, which is the validation key for the organization.
