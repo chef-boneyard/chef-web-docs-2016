@@ -11,7 +11,7 @@ Run the following command to create an organization:
 
 |name_rules org_full| For example: ``Chef Software, Inc.``.
 
-The ``--association_user`` option will associate the ``user_name`` with the admins security group on the |chef server|.
+The ``--association_user`` option will associate the ``user_name`` with the |webui group admins| security group on the |chef server|.
 
 For example:
 
