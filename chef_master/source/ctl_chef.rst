@@ -379,6 +379,22 @@ Examples
 None.
 
 
+chef push
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_push.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_push_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_push_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
 
 chef shell-init
 =====================================================
