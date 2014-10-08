@@ -10,7 +10,7 @@ All machines in a |chef server| deployment have the following requirements:
 
 .. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
 
-Front end machines, when load balanced, may have fewer than 4 cores and 4 GB of RAM.
+.. note:: Front end machines, when load balanced, may have fewer than 4 cores and 4 GB of RAM.
 
 |apache qpid|
 =====================================================
