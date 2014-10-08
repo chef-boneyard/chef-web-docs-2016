@@ -35,7 +35,7 @@ View the topic :doc:`High Availability: AWS </install_server_ha_aws>` for more i
 
 .. include:: ../../includes_server_replication/includes_server_replication_how_it_works.rst
 
-View the topic :doc:`Chef Replication </server_replicatin>` for more information about how to set up the |chef server| for replication.
+View the topic :doc:`Chef Replication </server_replication>` for more information about how to set up the |chef server| for replication.
 
 |chef server ctl|
 -----------------------------------------------------
