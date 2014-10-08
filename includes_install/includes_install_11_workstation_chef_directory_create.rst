@@ -34,4 +34,4 @@ To create the |chef repo hidden| directory:
 
    .. code-block:: bash
 
-      $ echo '.chef' >> .gitignore
+      $ echo '.chef' >> ~/chef-repo/.gitignore
