@@ -171,6 +171,7 @@ Cookbooks
    config_rb_manage
    config_rb_metadata
    config_rb_metadata
+   config_rb_policyfile
    config_rb_push_jobs_server
    config_rb_server
    config_rb_solo
@@ -375,6 +376,7 @@ Cookbooks
    plugin_knife_terremark
    plugin_knife_vcloud
    plugin_knife_windows
+   policy
    push_jobs
    reporting
    release_notes
