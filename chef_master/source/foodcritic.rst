@@ -4,7 +4,7 @@
 
 |foodcritic| is a tool that helps identify lint-like behavior in cookbooks. Lint-like behavior is anything that may cause issues when the |chef client| attempts to converge a node, such as invalid search syntax, conditions not behaving as expected, invalid notification syntax, or the presence of deprecated |dsl recipe| methods. Automatically checking cookbooks in advance will help ensure that cookbooks are being authored correctly.
 
-.. warning:: This topic details functionality that is packaged with |chef dk|.
+.. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See http://acrmp.github.io/foodcritic/ for more information about |foodcritic|.
 
 Rules
 =====================================================

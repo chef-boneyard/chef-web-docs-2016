@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_chefspec/includes_chefspec.rst
 
-.. warning:: This topic details functionality that is packaged with |chef dk|.
+.. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See https://github.com/sethvargo/chefspec for more information about |chef spec|.
 
 Unit Test Syntax
 =====================================================

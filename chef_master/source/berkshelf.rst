@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_berkshelf/includes_berkshelf.rst
 
-.. warning:: This topic details functionality that is packaged with |chef dk|.
+.. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See http://berkshelf.com for more information about |berkshelf|.
 
 For more information ...
 =====================================================

@@ -6,7 +6,7 @@
 
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_key_concepts.rst
 
-.. note:: This topic details functionality that is packaged with |chef dk|. See http://kitchen.ci/docs/getting-started/ for more information about |kitchen|.
+.. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See http://kitchen.ci/docs/getting-started/ for more information about |kitchen|.
 
 Test Frameworks
 =====================================================
