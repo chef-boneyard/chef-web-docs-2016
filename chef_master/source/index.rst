@@ -12,7 +12,7 @@ Getting Started
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
-**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Chef Server <http://docs.getchef.com/server/>`_ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release Notes for chef-client 11.16 </release_notes>` | :doc:`Previous Releases </releases>`
+**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Chef Server <http://docs.getchef.com/server/>`_ | `Chef DK <http://docs.getchef.com/devkit/>`__ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release Notes for chef-client 11.16 </release_notes>` | :doc:`Previous Releases </releases>`
 
 
 The Community
@@ -39,10 +39,11 @@ The |chef dk| defines a common workflow for cookbook development, including unit
 
 **Install:** :doc:`Install the chef-dk </install_dk>`
 
-**Components:** :doc:`Kitchen </kitchen>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`Berkshelf </berkshelf>`
+**Components:** :doc:`Kitchen </kitchen>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`Berkshelf </berkshelf>` | :doc:`chef-vault </chef_vault>`
 
 **Tools:** :doc:`kitchen (executable) </ctl_kitchen>` | :doc:`chef (executable) </ctl_chef>`
 
+**Settings:** :doc:`kitchen.yml </config_yml_kitchen>`
 
 The |chef server_title|
 =====================================================
