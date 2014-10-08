@@ -38,7 +38,7 @@ The following tools are available only in the |chef dk|:
 
 Community Tools
 -----------------------------------------------------
-The following tools have been developed by members of the |chef| community. These tools are considered to be a useful part of the |chef| workflow and have been packaged as part of the |chef dk|. (They are all available independently of the |chef dk|, as well.) The use of these tools in your organization's workflow is recommended, but at the same time is completely optional. Use them in the way that makes sense for your organization:
+The following tools have been developed by members of the |chef| community. These tools are considered to be a useful part of the |chef| workflow and have been packaged as part of the |chef dk|. (They are all available independently of the |chef dk|, as well.) The use of these tools as part of your workflow is recommended, but at the same time is completely optional. Use them in the way that makes sense for your organization:
 
 .. raw:: html
 
