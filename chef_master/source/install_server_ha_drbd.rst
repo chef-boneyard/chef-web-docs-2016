@@ -327,6 +327,9 @@ For each frontend machine, use the following steps to set up the |chef server|:
       
       $ sudo chef-server-ctl reconfigure
 
+#. .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst
+
+#. .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst
 
 Enable Features
 =====================================================
