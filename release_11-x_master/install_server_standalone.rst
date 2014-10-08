@@ -23,40 +23,40 @@ Hostnames, FQDNs
 -----------------------------------------------------
 The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`__ for more information.
 
-Install the |chef server_title|
+Add Package to Server
 =====================================================
-The standalone installation of |chef server| creates a working installation on a single server. This installation is also useful when you are installing |chef server| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
+Upload the package provided to the server on which |chef server oec| will be installed, and then record its location on the file system. The rest of this section assumes this location is in ``/tmp`` directory.
 
-To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
+Install the Package
+=====================================================
+Install the |chef server oec| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
 
-#. Review the system requirements:
+.. code-block:: bash
 
-   .. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
+   $ rpm -Uvh /tmp/private-chef-full-1.0.0–1.x86_64.rpm
 
-#. Upload the package provided to the server on which the |chef server| will be installed, and then record its location on the file system. The rest of this section assumes this location is in ``/tmp`` directory.
+For |ubuntu|:
 
-#. Install the |chef server| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
+.. code-block:: bash
 
-   .. code-block:: bash
-      
-      $ rpm -Uvh /tmp/chef-server-core-<version>.rpm
+   $ dpkg -i /tmp/private-chef-full_1.0.0–1_amd64.deb
 
-   For |ubuntu|:
+Configure
+=====================================================
+|chef server oec| is now installed on your server, but is not configured for use. To configure it for a standalone installation, simply run:
 
-   .. code-block:: bash
-      
-      $ dpkg -i /tmp/chef-server-core-<version>.deb
+.. code-block:: bash
 
-   The |chef server| is now installed on the server.
+   $ private-chef-ctl reconfigure
 
-#. Run the following to start all of the services:
+This command may take several minutes to run, during which the output of the |chef| run that is configuring your new |chef server oec| installation is shown. When it is complete, you will see:
 
-   .. code-block:: bash
-      
-      $ chef-server-ctl reconfigure
+.. code-block:: bash
 
-   Because the |chef server| is composed of many different services that work together to create a functioning system, this step may take a few minutes to complete.
+   Chef Server Reconfigured!
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+.. note:: |chef server oec| is composed of many different services, which work together to create a functioning system. One outcome is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
 
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+Success!
+=====================================================
+Congratulations, a standalone |chef server oec| server is installed.
