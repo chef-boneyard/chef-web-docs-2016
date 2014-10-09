@@ -56,8 +56,8 @@ Application Checks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst
 
-|erlang| eper tools
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+``eper`` tools
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst
 
 |nginx|
