@@ -12,6 +12,8 @@ Custom Certificates
 =====================================================
 .. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst
 
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value.rst
+
 |chef analytics_title|
 -----------------------------------------------------
 .. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_analytics.rst

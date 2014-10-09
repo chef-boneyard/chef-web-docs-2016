@@ -58,6 +58,11 @@ The ``default_orgname`` setting will ensure that the existing generic validation
 
 .. note:: The |chef manage| web user interface will not be able to reset the generic validation client and key that was migrated from |chef server osc|.
 
+Custom Certificates
+-----------------------------------------------------
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst
+
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade.rst
 
 Server Data on Disk
 -----------------------------------------------------
