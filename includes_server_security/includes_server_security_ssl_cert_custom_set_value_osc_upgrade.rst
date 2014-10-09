@@ -1,15 +1,4 @@
 .. This is an included how-to. 
 
 
-After an upgrade to |chef server| 12 from |chef server osc|, you may continue using the |ssl| certificates that were used with |chef server osc| with |chef server| 12 by setting these values to specify the paths to the existing certificate and key. For example:
-
-.. code-block:: ruby
-
-   nginx['ssl_certificate']  = "/path/to/existing/your-host.crt"
-   nginx['ssl_certificate_key']  = "/path/to/existing/your-host.key"
-
-Save the file, and then run the following command:
-
-.. code-block:: bash
-
-   $ sudo chef-server-ctl reconfigure
+After an upgrade to |chef server| 12 from |chef server osc|, you may continue using the |ssl| certificates that were used with |chef server osc| with |chef server| 12. There are two options: move the |ssl| certificates to a new directory in |chef server| 12 or adding two settings to the |chef server rb| file, and then specifying the paths to the directory in which the |ssl| certificate files are located.

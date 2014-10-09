@@ -64,6 +64,14 @@ SSL Certificates
 
 .. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade.rst
 
+**Move the SSL certificates**
+
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade_move.rst
+
+**Add settings to chef-server.rb**
+
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade_config.rst
+
 Server Data on Disk
 -----------------------------------------------------
 After the upgrade process, data related to the upgrade process will remain on the system:
