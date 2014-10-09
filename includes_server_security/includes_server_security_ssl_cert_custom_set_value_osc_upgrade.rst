@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-After an upgrade to |chef server| 12 from |chef server osc|, you may continue using the same |ssl| certificates by setting these values to specify the paths to the existing certificate and key. For example:
+After an upgrade to |chef server| 12 from |chef server osc|, you may continue using the |ssl| certificates that were used with |chef server osc| with |chef server| 12 by setting these values to specify the paths to the existing certificate and key. For example:
 
 .. code-block:: ruby
 
