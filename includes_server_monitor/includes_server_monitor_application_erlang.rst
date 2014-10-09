@@ -30,11 +30,13 @@ To connect to the |service erchef| service, use the following command:
 
    $ erl -setcookie erchef -name me@127.0.0.1 -remsh erchef@127.0.0.1
 
-To disconnect from the shell, use the following key sequence "Ctrl-g q enter".
-The output from the shell after the "Ctrl-g" will look like this, you will enter "q", then the enter key to exit the shell.
+To disconnect from the shell, use the following key sequence ``CTRL-g``, ``q``, and then ``ENTER``.
+
+The output from the shell after the ``CTRL-g`` looks similar to:
 
 .. code-block:: bash
 
    (erchef@127.0.0.1)1>
    User switch command
-   --> q
+
+then enter ``q``, and then hit ``ENTER`` to exit the shell.
