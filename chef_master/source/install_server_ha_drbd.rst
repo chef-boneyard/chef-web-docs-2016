@@ -52,58 +52,14 @@ The following sections show an example |chef server rb| file and a list of the p
 
 Firewalls
 -----------------------------------------------------
-All of the ports used by the |chef server| are TCP ports. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary. 
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
+
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_loopback.rst
 
 Backend
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-For back-end servers in an |chef server| installation:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Port
-     - Service
-   * - 80
-     - |service nginx|
-   * - 443
-     - |service nginx|
-   * - 9463
-     - |service bifrost|
-   * - 9671
-     - |service nginx|
-   * - 9680
-     - |service nginx|
-   * - 9685
-     - |service nginx|
-   * - 9683
-     - |service nginx|
-   * - 8983
-     - |service solr|
-   * - 5432
-     - |service postgresql|
-   * - 5672
-     - |service rabbitmq|
-   * - 16379
-     - |service redis_lb|
-   * - 4321
-     - |service bookshelf|
-   * - 7788-7799
-     - |drbd|
-
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
 
 Frontend
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-For front-end servers in an |chef server| installation:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Port
-     - Service
-   * - 80
-     - |service nginx|
-   * - 443
-     - |service nginx|
-
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst
