@@ -62,6 +62,8 @@ To install |chef server| 12:
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 
+   .. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_manual.rst
+
 High Availability
 =====================================================
 The following links describe how to configure the |chef server| for high availability:

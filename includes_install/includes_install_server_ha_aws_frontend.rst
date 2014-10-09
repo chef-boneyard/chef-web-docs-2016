@@ -23,10 +23,6 @@ Use the following steps to set up each frontend |chef server|:
 
 #. .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst
 
-#. Enable additional features of the |chef server|! Run the following commands:
-
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
-
 #. Run the following command:
 
    .. code-block:: bash
