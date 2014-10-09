@@ -8,6 +8,14 @@ Minimum Requirements
 =====================================================
 .. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
 
+UIDs and GIDs
+=====================================================
+.. include:: ../../includes_install/includes_install_common_uid_max.rst
+
+|selinux|
+=====================================================
+.. include:: ../../includes_install/includes_install_common_selinux.rst
+
 |apache qpid|
 =====================================================
 .. include:: ../../includes_install/includes_install_common_apache_qpid.rst
