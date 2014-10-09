@@ -26,6 +26,14 @@ Frontend Installation
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_aws_frontend.rst
 
+Enable Features
+=====================================================
+Enable additional features of the |chef server|! Run the following commands:
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+
+.. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_manual.rst
+
 Reference
 =====================================================
 The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in |amazon iam|.
