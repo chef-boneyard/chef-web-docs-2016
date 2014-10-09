@@ -56,6 +56,10 @@ Application Checks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst
 
+|erlang| eper tools
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst
+
 |nginx|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst
@@ -476,3 +480,4 @@ user-show
 **Options**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst
+
