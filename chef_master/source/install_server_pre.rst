@@ -12,6 +12,10 @@ UIDs and GIDs
 =====================================================
 .. include:: ../../includes_install/includes_install_common_uid_max.rst
 
+|selinux|
+=====================================================
+.. include:: ../../includes_install/includes_install_common_selinux.rst
+
 |apache qpid|
 =====================================================
 .. include:: ../../includes_install/includes_install_common_apache_qpid.rst
