@@ -33,6 +33,8 @@ install
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 
+.. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_manual.rst
+
 master-recover
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_master_recover.rst
