@@ -2,6 +2,19 @@
 .. This file describes a command or a sub-command for chef-server-ctl.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+**Manual Package Installs**
+
+.. note:: If your systems are behind a firewall and you would like to install any package found below manually, you can use a command like the following after downloading a package for your OS version and architecture. In the following example, the Chef Manage package version 1.6.2 for RHEL6 64 bit is installed from the path /home/vagrant. The full package name will look like opscode-manage-1.6.2-1.el6.x86_64.rpm .
+
+First become root, then
+
+.. code-block:: bash
+
+  $ chef-server-ctl install opscode-manage-1.6.2-1.el6.x86_64 --path /home/vagrant
+
+**Automated Package Installs**
+
+If your datacenter has connectivity to packagecloud.io, you can avoid the extra package download step and install add-ons with any of the following
 
 .. list-table::
    :widths: 100 400
