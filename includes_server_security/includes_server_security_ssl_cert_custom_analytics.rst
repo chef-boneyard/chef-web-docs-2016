@@ -14,7 +14,9 @@ The |chef analytics| server can be configured to use |ssl| certificates by addin
    * - ``ssl['certificate_key']``
      - |ssl_certificate key|
 
-and setting their values to define the path to the certificate and the path to the certificate key, similar to the following:
+and then setting their values to define the paths to the certificate and key.
+
+For example:
 
 .. code-block:: ruby
 
