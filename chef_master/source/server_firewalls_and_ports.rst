@@ -14,6 +14,8 @@ High Availability
 =====================================================
 The following sections describe the ports that are required by the |chef server| in a high availability configuration.
 
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_loopback.rst
+
 Front End
 -----------------------------------------------------
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst
@@ -21,7 +23,3 @@ Front End
 Back End
 -----------------------------------------------------
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
-
-Loopback Interface
------------------------------------------------------
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_loopback.rst
