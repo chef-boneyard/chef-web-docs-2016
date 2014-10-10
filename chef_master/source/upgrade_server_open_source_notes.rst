@@ -138,7 +138,7 @@ If this error occurs, first try re-running the upgrade process. If this error pe
 
 .. code-block:: bash
 
-   $ chef-server-ctl upgrade chef12-upgrade-upload 1
+   $ chef-server-ctl upgrade --upload-threads 1
 
 
 Manual Upgrades
