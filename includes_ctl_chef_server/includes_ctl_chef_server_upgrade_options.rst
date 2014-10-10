@@ -27,7 +27,7 @@ This subcommand has the following options:
    The URL for the |chef server osc| or |chef server oec| server, version 11. Default value: ``https://localhost``.
 
 ``-t NUMBER``, ``--upload-threads NUMBER``
-   The number of threads to use when migrating cookbooks. Set this value to ``1`` to prevent race conditions that may occur when uploading cookbook data. Default value: ``10``.
+   The number of threads to use when migrating cookbooks. Default value: ``10``.
 
 ``-u USER``, ``--user``
    |admin client|
