@@ -97,7 +97,7 @@ Before installing the |chef server|, ensure that each machine has the following 
 
 * **Host names** --- Ensure that all systems have properly configured host names
 * **FQDNs** --- Ensure that all systems have a resolvable |fqdn|
-* **NTP** --- Ensure that every server is connected to NTP; the |chef server| is sensitive to click drift
+* **NTP** --- Ensure that every server is connected to NTP; the |chef server| is sensitive to clock drift
 * **Mail Relay** --- The |chef server| uses email to send notifications for various events; a local mail transfer agent should be installed and available to the |chef server|
 * **cron** --- Periodic maintenance tasks are performed using |cron|
 * **git** --- |git| must be installed so that various internal services can confirm revisions
