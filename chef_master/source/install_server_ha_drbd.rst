@@ -36,11 +36,15 @@ Frontend
 
 Enable Features
 =====================================================
-Enable additional features of the |chef server|! Run the following commands:
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
 
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+**Use Downloads**
 
-.. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_manual.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
+
+**Use Local Packages**
+
+.. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 Reference
 =====================================================

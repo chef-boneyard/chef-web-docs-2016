@@ -55,7 +55,21 @@ In addition, two new subcommand groupings have been added for managing users and
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install.rst
 
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_options.rst
+
+**Use Downloads**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
+
+**Use Local Packages**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 ``user-*`` Commands
 -----------------------------------------------------

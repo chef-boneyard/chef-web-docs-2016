@@ -103,9 +103,15 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    .. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+#. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
 
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+   **Use Downloads**
+
+   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
+
+   **Use Local Packages**
+
+   .. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 Standalone
 -----------------------------------------------------
@@ -157,9 +163,15 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ chef-server-ctl start
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+#. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
 
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+   **Use Downloads**
+
+   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
+
+   **Use Local Packages**
+
+   .. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 From |chef server osc|
 =====================================================
@@ -215,9 +227,15 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
 #. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporary data that was created during the upgrade process.
 
-#. Enable the premium features of the |chef server|! For each of the premium features you want to install, run the following commands:
+#. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
 
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+   **Use Downloads**
+
+   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
+
+   **Use Local Packages**
+
+   .. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 
 

@@ -41,11 +41,11 @@ install
 
 Use Downloads
 -----------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
 
 Use Local Packages
 -----------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_manual.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 master-recover
 =====================================================
