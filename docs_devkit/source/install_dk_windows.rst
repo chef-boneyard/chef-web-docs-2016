@@ -2,8 +2,6 @@
 Install the |chef dk_title|, Windows
 =====================================================
 
-.. include:: ../../includes_install/includes_install_chef_dk.rst
-
 .. warning:: This topic is a work in progress, currently capturing issues known to Windows users of the chef-dk, which is also a work in progress. The issues are captured based on the assumption that the http://docs.getchef.com/install_dk.html topic is accurate for Windows users, as a starting point for installing the chef-dk, but also with the following exceptions and caveats.
 
 Spaces and Directories
