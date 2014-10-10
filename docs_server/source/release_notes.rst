@@ -10,7 +10,7 @@ What's New
 =====================================================
 The following items are new for |chef server| 12:
 
-* **CouchDB removed** |couchdb| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
+* **CouchDB removed** |couch db| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
 * **Solr has been upgraded to Solr 4** The search capabilities of the |chef server| now use |apache solr| 4.
 * **High availability using Amazon Web Services** |amazon aws| is a supported high availability configuration option for the |chef server|. Machines are stored as |amazon ebs| volumes. A passive node monitors the availabilty of the active node, and will take over if required.
 * **Chef server replication** |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
