@@ -65,7 +65,9 @@ The following tools have been developed by members of the |chef| community. Thes
    ctl_chef
    ctl_kitchen
    foodcritic
+   getting_started
    install_dk
+   install_dk_windows
    kitchen
    plugin_kitchen_vagrant
    policy
