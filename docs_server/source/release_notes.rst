@@ -270,7 +270,12 @@ xxxxx
 
 What's Fixed
 =====================================================
-The following bugs/issues were fixed:
+The following bugs/issues were fixed.
 
 * [xxxxx] xxxxx
 * [xxxxx] xxxxx
+
+``private-chef-ctl stop``
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop_ubuntu12.rst
+

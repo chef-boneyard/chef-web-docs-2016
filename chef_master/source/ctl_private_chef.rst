@@ -106,6 +106,8 @@ Log Files
 
 stop
 -----------------------------------------------------
+.. warning:: .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop_ubuntu12.rst
+
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop.rst
 
 tail

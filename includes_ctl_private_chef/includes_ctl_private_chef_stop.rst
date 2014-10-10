@@ -2,8 +2,7 @@
 .. This file describes a command or a sub-command for Private Chef, an early version of the Chef Server.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-
-The ``stop`` subcommand is used to stop all services enabled on |chef server oec|. This command can also be run for an individual service by specifying the name of the service in the command. 
+The ``stop`` subcommand is used to stop services enabled on |chef server oec|. This command can also be run for an individual service by specifying the name of the service in the command. 
 
 This subcommand has the following syntax:
 
