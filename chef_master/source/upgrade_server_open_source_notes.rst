@@ -87,7 +87,59 @@ The upgrade process may be run multiple times, as long as |chef server osc| 11 a
 
 Email Address
 -----------------------------------------------------
-The |chef server| version 12 server requires that the administrator user provide an email address. During the upgrade process, a default email address (``username@example.com``) is created, where ``username`` is the same user that was specified during the upgrade process. This email address may be changed later, post upgrade. 
+The |chef server| version 12 server requires that the administrator user provide an email address. During the upgrade process, a default email address (``username@example.com``) is created, where ``username`` is the same user that was specified during the upgrade process. This email address may be changed later, post upgrade.
+
+Cookbook Uploads
+-----------------------------------------------------
+Sometimes when uploading cookbooks, a race condition may occur that prevents one (or more) cookbooks from finishing the upload process. For example:
+
+.. code-block:: bash
+
+   ......
+   Chef Client finished, 32/386 resources updated in 42.23452 seconds
+   opscode Reconfigured!
+   Ensuring Chef 12 server components are started
+   ok: run: bookshelf: (pid 24580) 0s
+   ok: run: nginx: (pid 24617) 1s
+   ok: run: oc_bifrost: (pid 24626) 0s
+   ok: run: oc_id: (pid 24657) 0s
+   ok: run: opscode-chef-mover: (pid 24662) 1s
+   ok: run: opscode-erchef: (pid 24689) 0s
+   ok: run: opscode-expander: (pid 24723) 1s
+   ok: run: opscode-expander-reindexer: (pid 24757) 0s
+   ok: run: opscode-solr4: (pid 24761) 0s
+   ok: run: postgresql: (pid 24389) 26s
+   ok: run: rabbitmq: (pid 23835) 39s
+   ok: run: redis_lb: (pid 24559) 6s
+   Writing knife-ec-backup config to /tmp/knife-ec-backup-config.rb
+   Uploading transformed open source Chef 11 server data to Chef 12 server
+   WARNING: WebUI not specified. Using /etc/opscode/webui_priv.pem
+   WARNING: Unable to detect Chef Server version.
+   Restoring users ...
+   Updating key for admin
+   Updating key for ...
+   Restoring org grantmc ...
+   Restoring the org admin data
+   Restoring the rest of the org
+   Updated /clients/chef-webui.json
+   Updated /clients/chef-server.json
+   Updated /clients/grantmc.json
+   Created /cookbooks/iis-2.1.5
+   Created /cookbooks/passenger_apache2-2.1.0
+   Created /cookbooks/php-1.2.0
+   ...
+   Created /cookbooks/windows-1.33.1
+   Created /cookbooks/windows-1.34.2
+   ERROR: internal server error
+   Response: internal service error
+   Failed uploading transformed data to the Chef 12 server 
+
+If this error occurs, first try re-running the upgrade process. If this error persists, see the "Subcommand Reference" below and run each of the upgrade steps individually. When doing the upgrade step, be sure to specify the ``--upload-threads`` command and set its value to ``1``, which will ensure that only one cookbook is uploaded at a time. This approach will be slower, but will prevent a race condition from occuring. For example:
+
+.. code-block:: bash
+
+   $ chef-server-ctl upgrade chef12-upgrade-upload 1
+
 
 Manual Upgrades
 =====================================================
