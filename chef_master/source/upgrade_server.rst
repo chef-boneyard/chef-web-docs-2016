@@ -111,7 +111,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    **Use Local Packages**
 
-   .. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
+   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 Standalone
 -----------------------------------------------------
@@ -171,7 +171,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
 
    **Use Local Packages**
 
-   .. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
+   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 From |chef server osc|
 =====================================================
@@ -235,7 +235,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    **Use Local Packages**
 
-   .. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
+   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 
 

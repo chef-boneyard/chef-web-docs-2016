@@ -36,7 +36,7 @@ Enable Features
 
 **Use Local Packages**
 
-.. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
 Reference
 =====================================================
