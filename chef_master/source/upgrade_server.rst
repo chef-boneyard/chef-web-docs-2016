@@ -39,6 +39,8 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ private-chef-ctl stop
 
+   .. warning:: .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop_ubuntu12.rst
+
 #. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
 
    .. code-block:: bash
