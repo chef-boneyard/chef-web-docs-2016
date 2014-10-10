@@ -182,7 +182,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ chef-server-ctl upgrade chef12-upgrade-download
+      $ chef-server-ctl chef12-upgrade-download
 
    When prompted, confirm that the upgrade process should take place.
 
@@ -192,7 +192,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ chef-server-ctl upgrade chef12-upgrade-data-transform
+      $ chef-server-ctl chef12-upgrade-data-transform
 
    This command will create a temporary directory in which |chef server osc| data is transformed into the |chef server| version 12 format. See the "Subcommand Reference" section below for information about options that may be used with this command.
 
@@ -200,7 +200,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. code-block:: bash
       
-      $ chef-server-ctl upgrade chef12-upgrade-upload
+      $ chef-server-ctl chef12-upgrade-upload
 
    See the "Subcommand Reference" section below for information about options that may be used with this command.
    
