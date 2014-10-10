@@ -15,6 +15,8 @@ This resource has the following attributes:
      - |resource yum_package| resource only. |architecture package|
    * - ``flush_cache``
      - |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
+
+       .. note:: |flush_cache yum_cache|
    * - ``gem_binary``
      - |gem_binary resource package|
    * - ``options``
