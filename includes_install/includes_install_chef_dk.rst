@@ -22,4 +22,4 @@ To install the |chef dk|:
       ---------------------------------------------
       Verification of component '...' succeeded.
 
-#. Set the default shell. On |windows| it is strongly recommended to use |powershell| and cmd.exe.
+#. Set the default shell. On |windows| it is strongly recommended to use |windows powershell| and cmd.exe.
