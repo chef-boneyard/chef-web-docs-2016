@@ -11,5 +11,8 @@ This subcommand has the following options:
 ``-h``, ``--help``
    Use to show help for the ``chef-server-ctl upgrade`` subcommand.
 
+``-t NUMBER``, ``--upload-threads NUMBER``
+   The number of threads to use when migrating cookbooks. Set this value to ``1`` to prevent race conditions that may occur when uploading cookbook data. Default value: ``10``.
+
 ``-x URL``, ``--chef12-server-url URL``
    The URL for the |chef server| version 12. Default value: ``https://localhost``.
