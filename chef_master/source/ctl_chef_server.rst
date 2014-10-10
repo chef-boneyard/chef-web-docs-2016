@@ -31,9 +31,21 @@ install
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install.rst
 
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_options.rst
+
+Use Downloads
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_table.rst
 
-.. note:: .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_manual.rst
+Use Local Packages
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_manual.rst
 
 master-recover
 =====================================================

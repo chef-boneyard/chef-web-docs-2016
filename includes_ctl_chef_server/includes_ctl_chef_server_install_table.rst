@@ -3,6 +3,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
+The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are not behind a firewall (and have connectivity to https://packagecloud.io/), these packages can be installed as described below.
+
 .. list-table::
    :widths: 100 400
    :header-rows: 1
