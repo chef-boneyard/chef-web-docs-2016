@@ -14,7 +14,7 @@
    * - ``pattern``
      - |pattern process_table| Default value: ``service_name``.
    * - ``priority``
-     - |debian| platform only. |priority service| May be an integer or a hash. An integer is used to define the start run levels; stop run levels are then 100-integer. A hash is used to define values for specific run levels. For example, ``{ 2 => [:start, 20], 3 => [:stop, 55] }`` will set a priority of twenty for run level two and a priority of fifty-five for run level three.
+     - |debian| platform only. |priority service| May be an integer or a |ruby hash|. An integer is used to define the start run levels; stop run levels are then 100-integer. A |ruby hash| is used to define values for specific run levels. For example, ``{ 2 => [:start, 20], 3 => [:stop, 55] }`` will set a priority of twenty for run level two and a priority of fifty-five for run level three.
    * - ``provider``
      - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``reload_command``
