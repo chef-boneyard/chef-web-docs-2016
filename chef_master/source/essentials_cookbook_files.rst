@@ -2,19 +2,9 @@
 About Files
 =====================================================
 
-.. include:: ../../includes_resources/includes_resource_cookbook_file.rst
+.. warning:: This topic has been moved! See the following links for information about the resources used to manage file:
 
-.. include:: ../../includes_resources/includes_resource_cookbook_file_transfers.rst
-
-File Specificity
-=====================================================
-.. include:: ../../includes_file/includes_file_cookbook_specificity.rst
-
-.. include:: ../../includes_file/includes_file_cookbook_specificity_pattern.rst
-
-.. include:: ../../includes_file/includes_file_cookbook_specificity_example.rst
-
-Host Notation
-=====================================================
-.. include:: ../../includes_file/includes_file_cookbook_specificity_host_notation.rst
-
+   * `cookbook_file <http://docs.getchef.com/resource_cookbook_file.html>`_
+   * `file <http://docs.getchef.com/resource_file.html>`_
+   * `remote_file <http://docs.getchef.com/resource_remote_file.html>`_
+   * `template <http://docs.getchef.com/resource_template.html>`_
