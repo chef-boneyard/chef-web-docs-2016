@@ -2,24 +2,18 @@
 About Files
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution.rst
+.. include:: ../../includes_resources/includes_resource_cookbook_file.rst
 
-Syntax
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst
+.. include:: ../../includes_resources/includes_resource_cookbook_file_transfers.rst
 
 File Specificity
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+.. include:: ../../includes_file/includes_file_cookbook_specificity.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_pattern.rst
+.. include:: ../../includes_file/includes_file_cookbook_specificity_pattern.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity_example_files.rst
+.. include:: ../../includes_file/includes_file_cookbook_specificity_example.rst
 
 Host Notation
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_host_notation.rst
-
-File Transfers
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_transfers.rst
+.. include:: ../../includes_file/includes_file_cookbook_specificity_host_notation.rst

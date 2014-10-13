@@ -8,6 +8,8 @@ file
 
 .. include:: ../../includes_resources/includes_resource_11-4_file.rst
 
+.. include:: ../../includes_resources/includes_resource_cookbook_file_transfers.rst
+
 .. note:: |note file resource use other resources|
 
 Syntax

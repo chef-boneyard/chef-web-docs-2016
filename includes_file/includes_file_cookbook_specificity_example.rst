@@ -17,14 +17,14 @@ and a resource that looks something like the following:
 
 .. code-block:: ruby
 
-   resource_type "/usr/local/bin/apache2_module_conf_generate.pl" do
+   cookbook_file "/usr/local/bin/apache2_module_conf_generate.pl" do
      source "apache2_module_conf_generate.pl"
      mode '0755'
      owner 'root'
      group 'root'
    end
 
-where ``resource_type`` is the |resource cookbook_file| or |resource remote_file| resource. This resource would be matched in the same order as the ``/files`` directory structure. For a node that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the |resource cookbook_file| resource would be distributed:
+This resource is matched in the same order as the ``/files`` directory structure. For a node that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the |resource cookbook_file| resource would be distributed:
 
 .. code-block:: ruby
 
