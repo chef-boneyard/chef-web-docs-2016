@@ -46,7 +46,7 @@
    * - ``source``
      - Required. |source file_location|
        
-       .. include:: ../../includes_template/includes_resource_remote_file_source_location.rst
+       .. include:: ../../includes_resources/includes_resource_remote_file_source_location.rst
 
    * - ``use_conditional_get``
      - |use conditional_get| Default value: ``true``.
