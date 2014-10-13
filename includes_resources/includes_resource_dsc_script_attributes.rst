@@ -10,17 +10,17 @@
    * - Attribute
      - Description
    * - ``code``
-     - The code for the |windows powershell_dsc_short| configuration script. This attribute may not be used in the same recipe as the ``command`` attribute.
+     - |code powershell| |dsc_script no_command|
    * - ``command``
-     - The path to a valid |windows powershell| data file that contains the |windows powershell_dsc_short| configuration script. This data file must be capable of running independently of |chef| and must generate a valid |windows powershell_dsc_short| configuration. This attribute may not be used in the same recipe as the ``code`` attribute.
+     - |command powershell| |dsc_script no_code|
    * - ``configuration_data``
-     - Use to specify the configuration data for the |windows powershell_dsc_short| script. The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. This attribute may not be used in the same recipe as the ``configuration_data_script`` attribute.
+     - |config powershell| The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. |dsc_script no_config_data_script|
    * - ``configuration_data_script``
-     - The path to a valid |windows powershell| data file. The data file MUST contain a node named ``localhost``. This attribute may not be used in the same recipe as the ``configuration_data`` attribute.
+     - |path powershell_data_file| |dsc_script no_config_data|
    * - ``configuration_name``
-     - The name of a valid |windows powershell| cmdlet. The name may only contain letter (a-z, A-Z), number (0-9), and underscore (_) characters and should start with a letter. The name may not be null or empty. This attribute may not be used in the same recipe as the ``code`` attribute.
+     - |name powershell_cmdlet| |dsc_script no_code|
    * - ``flags``
-     - Use this to pass parameters to the |windows powershell_dsc_short| script that is specified by the ``command`` attribute. Parameters are defined as key-value pairs, where the value of each key is the parameter to pass. This attribute may not be used in the same recipe as the ``code`` attribute. For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
+     - |flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
    * - ``cwd``
      - |cwd|
    * - ``environment``
