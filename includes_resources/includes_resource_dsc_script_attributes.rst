@@ -20,7 +20,7 @@
    * - ``configuration_name``
      - The name of a valid |windows powershell| cmdlet. The name may only contain letter (a-z, A-Z), number (0-9), and underscore (_) characters and should start with a letter. The name may not be null or empty. This attribute may not be used in the same recipe as the ``code`` attribute.
    * - ``flags``
-     - Use this to pass parameters to the |windows powershell_dsc_short| script that is specified by the ``command`` attribute. Parameters are defined as key-value pairs, where the value of each key is the parameter to pass. This attribute may not be used in the same recipe as the ``code`` attribute. Default value: ``nil``.
+     - Use this to pass parameters to the |windows powershell_dsc_short| script that is specified by the ``command`` attribute. Parameters are defined as key-value pairs, where the value of each key is the parameter to pass. This attribute may not be used in the same recipe as the ``code`` attribute. For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
    * - ``cwd``
      - |cwd|
    * - ``environment``
