@@ -14,9 +14,9 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['commit_interval']``
      - |solr_commit_interval| This value should be tuned carefully. |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``opscode_solr4['data_dir']``
-     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr/data``.
+     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-solr4/data``.
    * - ``opscode_solr4['dir']``
-     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/chef-solr``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-solr4``.
    * - ``opscode_solr4['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_solr4['ha']``
@@ -26,9 +26,9 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['ip_address']``
      - |solr_ip_address| Default value: ``127.0.0.1``.
    * - ``opscode_solr4['java_opts']``
-     - |solr_java_opts| (``-XX:NewSize`` is configured using the ``new_size`` setting.) Default value: ``(empty)``.
+     - |solr_java_opts| (``-XX:NewSize`` is configured using the ``new_size`` setting.) Default value: ``" "`` (empty).
    * - ``opscode_solr4['log_directory']``
-     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/chef-solr``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-solr4``.
    * - ``opscode_solr4['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_solr4['max_commit_docs']``
@@ -38,7 +38,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['max_merge_docs']``
      - |solr_max_merge_docs| Default value: ``2147483647``.
    * - ``opscode_solr4['merge_factor']``
-     - |solr_merge_factor| Default value: ``100``.
+     - |solr_merge_factor| Default value: ``15``.
    * - ``opscode_solr4['new_size']``
      - |solr_new_size| Default value: ``nil``.
    * - ``opscode_solr4['poll_seconds']``
@@ -46,8 +46,8 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['port']``
      - |port service| Default value: ``8983``.
    * - ``opscode_solr4['ram_buffer_size']``
-     - |solr_ram_buffer_size| Default value: ``200``.
+     - |solr_ram_buffer_size| Default value: ``100``.
    * - ``opscode_solr4['url']``
-     - Default value: ``"http://localhost:8983"``.
+     - Default value: ``"http://localhost:8983/solr"``.
    * - ``opscode_solr4['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.

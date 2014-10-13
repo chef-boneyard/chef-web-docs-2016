@@ -32,7 +32,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['depsolver_worker_count']``
      - |worker_processes depsolver| Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. If you are seeing 503 service unavailable errors, increase this value. Default value: ``"5"``.
    * - ``opscode_erchef['dir']``
-     - |directory generic| |default_value_recommended| Default value: ``/var/opt/chef-server/erchef``.
+     - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-erchef``.
    * - ``opscode_erchef['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_erchef['enable_actionlog']``
@@ -46,13 +46,13 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['listen']``
      - |ip_address service| Default value: ``127.0.0.1``.
    * - ``opscode_erchef['log_directory']``
-     - |directory logs| |default_value_recommended| Default value: ``/var/log/chef-server/erchef``.
+     - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-erchef``.
    * - ``opscode_erchef['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_erchef['max_cache_size']``
      - Default value: ``10000``.
    * - ``opscode_erchef['max_request_size']``
-     - Default value: ``2500000``.
+     - Default value: ``1000000``.
    * - ``opscode_erchef['port']``
      - |port service| Default value: ``8000``.
    * - ``opscode_erchef['root_metric_key']``
@@ -64,7 +64,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['s3_parallel_ops_timeout']``
      - Default value: ``5000``.
    * - ``opscode_erchef['s3_url_ttl']``
-     - |s3_url_ttl| If node bootstraps are timing out, increase this setting. Default value: ``900``.
+     - |s3_url_ttl| If node bootstraps are timing out, increase this setting. Default value: ``28800``.
    * - ``opscode_erchef['udp_socket_pool_size']``
      - Default value: ``20``.
    * - ``opscode_erchef['umask']``

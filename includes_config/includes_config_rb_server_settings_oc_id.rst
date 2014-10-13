@@ -11,6 +11,8 @@ This configuration file has the following settings for ``oc-id``:
      - Description
    * - ``oc_id['administrators']``
      - |user ocid_admins| For example, ``["user1", "user2"]``. Default value: ``[ ]``.
+   * - ``oc_id['applications']``
+     - Default value: ``{ }``.
    * - ``oc_id['db_pool_size']``
      - |db_pool_size| Default value: ``'20'``.
    * - ``oc_id['dir']``

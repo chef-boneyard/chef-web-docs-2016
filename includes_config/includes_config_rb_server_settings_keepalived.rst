@@ -30,7 +30,7 @@ This configuration file has the following settings for ``keepalived``:
    * - ``keepalived['vrrp_instance_interface']``
      - |vrrp_instance_interface| Should be set to the name of the dedicated interface for |keepalived|. Default value: ``"eth0"``.
    * - ``keepalived['vrrp_instance_ipaddress']``
-     - |vrrp_instance_ipaddress| This is typically set by the ``backend_vip`` option. Default value: ``keepalived['vrrp_instance_ipaddress'] = "192.168.4.131"``.
+     - |vrrp_instance_ipaddress| This is typically set by the ``backend_vip`` option. Default value: ``node['ipaddress']``.
    * - ``keepalived['vrrp_instance_ipaddress_dev']``
      - |vrrp_instance_ipaddress_device| Default value: ``"eth0"``. 
    * - ``keepalived['vrrp_instance_nopreempt']``
@@ -42,7 +42,7 @@ This configuration file has the following settings for ``keepalived``:
    * - ``keepalived['vrrp_instance_priority']``
      - |vrrp_instance_priority| By default, all servers have equal priority. The server with the lowest value will have the highest priority. Default value: ``"100"``.
    * - ``keepalived['vrrp_instance_state']``
-     - |vrrp_instance_state| This value should be the same for both servers in the backend. Default value: ``"MASTER"``.
+     - |vrrp_instance_state| This value should be the same for both servers in the backend. Default value: ``"BACKUP"``.
    * - ``keepalived['vrrp_instance_virtual_router_id']``
      - |vrrp_instance_virtual_router_id| This value should be unique within the multicast domain used for |keepalived|. Default value: ``"1"``.
    * - ``keepalived['vrrp_sync_group']``
@@ -50,6 +50,6 @@ This configuration file has the following settings for ``keepalived``:
    * - ``keepalived['vrrp_sync_instance']``
      - |name vrrp_sync_instance| Default value: ``"PC_VI"``.
    * - ``keepalived['vrrp_unicast_bind']``
-     - |vrrp_unicast_bind| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``<ip address of cluster IP or eth0>``.
+     - |vrrp_unicast_bind| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``node['ipaddress']``.
    * - ``keepalived['vrrp_unicast_peer']``
-     - |vrrp_unicast_peer| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``<ip address of peer cluster IP or eth0>``.
+     - |vrrp_unicast_peer| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``nil``.

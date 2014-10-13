@@ -34,20 +34,17 @@ This configuration file has the following settings for ``lb``:
    * - ``lb['redis_connection_pool_size']``
      - Default value: ``250``.
    * - ``lb['redis_connection_timeout']``
-     - Default value: ``60``.
+     - Default value: ``1000``.
    * - ``lb['redis_keepalive_timeout']``
      - Default value: ``2000``.
-   * - ``lb['upstream']``
-     - Default value:
-       ::
-
-          {"oc_bifrost"=>["127.0.0.1"],
-           "opscode-account"=>["127.0.0.1"],
-           "opscode-authz"=>["127.0.0.1"],
-           "opscode-bookshelf"=>["127.0.0.1"],
-           "opscode-erchef"=>["127.0.0.1"],
-          "opscode-solr4"=>["127.0.0.1"]}``
-
+   * - ``lb['upstream']['bookshelf']``
+     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
+   * - ``lb['upstream']['oc_bifrost']``
+     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
+   * - ``lb['upstream']['opscode_erchef']``
+     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
+   * - ``lb['upstream']['opscode_solr4']``
+     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``lb['web_ui_fqdn']``
@@ -56,9 +53,15 @@ This configuration file has the following settings for ``lb``:
      - |default_value_recommended| Default value: ``false``.
    * - ``lb['xdl_defaults']['couchdb_acls']``
      - |default_value_recommended| Default value: ``true``.
+   * - ``lb['xdl_defaults']['couchdb_association_requests']``
+     - |default_value_recommended| Default value: ``true``.
+   * - ``lb['xdl_defaults']['couchdb_associations']``
+     - |default_value_recommended| Default value: ``true``.
    * - ``lb['xdl_defaults']['couchdb_containers']``
      - |default_value_recommended| Default value: ``true``.
    * - ``lb['xdl_defaults']['couchdb_groups']``
+     - |default_value_recommended| Default value: ``true``.
+   * - ``lb['xdl_defaults']['couchdb_organizations']``
      - |default_value_recommended| Default value: ``true``.
 
 And for the internal load balancers:

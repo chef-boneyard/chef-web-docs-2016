@@ -40,7 +40,7 @@ This configuration file has the following settings for ``opscode-chef-mover``:
    * - ``opscode_chef_mover['solr_http_max_age']``
      - Default value: ``"{70, sec}"``.
    * - ``opscode_chef_mover['solr_http_max_connection_duration']``
-     - Default value: ``"{70,sec}"``.
+     - Default value: ``"{70, sec}"``.
    * - ``opscode_chef_mover['solr_http_max_count']``
      - Default value: ``100``.
    * - ``opscode_chef_mover['solr_ibrowse_options']``
