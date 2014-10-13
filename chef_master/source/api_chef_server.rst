@@ -53,6 +53,14 @@ Global Endpoints
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints_global.rst
 
+/license
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_license.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_license_get.rst
+
 /organizations
 -----------------------------------------------------
 The |chef server| may contain multiple organizations.
