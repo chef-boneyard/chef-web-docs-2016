@@ -134,6 +134,10 @@ apt_package
 
 .. include:: ../../step_resource/step_resource_apt_package_install_package_using_local_file.rst
 
+**Install without using recommend packages as a dependency**
+
+.. include:: ../../step_resource/step_resource_apt_package_install_without_recommends_suggests.rst
+
 
 bash
 =====================================================
@@ -156,6 +160,28 @@ bash
 .. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
 
 
+batch
+=====================================================
+.. include:: ../../includes_resources/includes_resource_batch.rst
+
+**Unzip a file, and then move it**
+
+.. include:: ../../step_resource/step_resource_batch_unzip_file_and_move.rst
+
+
+breakpoint
+=====================================================
+.. include:: ../../includes_resources/includes_resource_breakpoint.rst
+
+**A recipe without a breakpoint**
+
+.. include:: ../../step_resource/step_resource_breakpoint_no.rst
+
+**The same recipe with breakpoints**
+
+.. include:: ../../step_resource/step_resource_breakpoint_yes.rst
+
+
 
 chef_gem
 =====================================================
@@ -168,6 +194,48 @@ chef_gem
 **Install MySQL for Chef**
 
 .. include:: ../../step_resource/step_resource_chef_gem_install_mysql.rst
+
+
+chef_handler
+=====================================================
+.. include:: ../../includes_resources/includes_resource_chef_handler.rst
+
+**Enable the CloudkickHandler handler**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
+
+**Enable handlers during the compile phase**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
+
+**Handle only exceptions**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
+
+**Cookbook Versions (a custom handler)**
+
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions.rst
+
+cookbook_versions.rb:
+
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions_handler.rst
+
+default.rb:
+
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions_recipe.rst
+
+**JsonFile Handler**
+
+.. include:: ../../includes_handler/includes_handler_custom_example_json_file.rst
+
+**Register the JsonFile handler**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst
+
+**ErrorReport Handler**
+
+.. include:: ../../includes_handler/includes_handler_custom_example_error_report.rst
+
 
 
 cookbook_file
@@ -189,6 +257,10 @@ cookbook_file
 **Use a case statement**
 
 .. include:: ../../step_resource/step_resource_cookbook_file_use_case_statement.rst
+
+**Manage dotfiles**
+
+.. include:: ../../step_resource/step_resource_directory_manage_dotfiles.rst
 
 
 
@@ -293,6 +365,10 @@ directory
 
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
 
+**Manage dotfiles**
+
+.. include:: ../../step_resource/step_resource_directory_manage_dotfiles.rst
+
 
 dpkg_package
 =====================================================
@@ -302,6 +378,37 @@ dpkg_package
 
 .. include:: ../../step_resource/step_resource_dpkg_package_install.rst
 
+
+dsc_script
+=====================================================
+
+**Specify DSC code directly**
+
+.. include:: ../../step_resource/step_resource_dsc_script_code.rst
+
+
+**Specify DSC code using a Windows Powershell data file**
+
+.. include:: ../../step_resource/step_resource_dsc_script_command.rst
+
+
+**Pass parameters to DSC configurations**
+
+.. include:: ../../step_resource/step_resource_dsc_script_flags.rst
+
+
+**Use custom configuration data**
+
+Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
+
+.. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
+
+.. include:: ../../step_resource/step_resource_dsc_script_configuration_name.rst
+
+
+**Using DSC with other Chef resources**
+
+.. include:: ../../step_resource/step_resource_dsc_script_remote_files.rst
 
 easy_install_package
 =====================================================
@@ -394,6 +501,15 @@ execute
 
 .. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
 
+**Sourcing a file**
+
+.. include:: ../../step_resource/step_resource_execute_source_a_file.rst
+
+**Run a Knife command**
+
+.. include:: ../../step_resource/step_resource_execute_knife_user_create.rst
+
+
 
 file
 =====================================================
@@ -418,6 +534,19 @@ file
 **Delete a repository using yum to scrub the cache**
 
 .. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
+
+**Add the value of a data bag item to a file**
+
+.. include:: ../../step_resource/step_resource_file_content_data_bag.rst
+
+**Write a YAML file**
+
+.. include:: ../../step_resource/step_resource_file_content_yaml_config.rst
+
+**Write a string to a file**
+
+.. include:: ../../step_resource/step_resource_file_content_add_string.rst
+
 
 
 
@@ -498,6 +627,10 @@ http_request
 
 .. include:: ../../step_resource/step_resource_http_request_send_post.rst
 
+**Transfer a file only when the remote source changes**
+
+.. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst
+
 
 ifconfig
 =====================================================
@@ -531,6 +664,14 @@ link
 **Delete links**
 
 .. include:: ../../step_resource/step_resource_link_delete.rst
+
+**Create multiple symbolic links**
+
+.. include:: ../../step_resource/step_resource_link_multiple_links_files.rst
+
+**Create platform-specific symbolic links**
+
+.. include:: ../../step_resource/step_resource_link_multiple_links_redhat.rst
 
 
 log
@@ -630,18 +771,6 @@ package
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package.rst
 
-**Specify Gem Package Options with a Hash**
-
-.. include:: ../../step_resource/step_resource_package_install_gem_with_hash_options.rst
-
-**Specify Gem Package Options with a String**
-
-.. include:: ../../step_resource/step_resource_package_install_gem_with_options_string.rst
-
-**Specify Gem Package Options with a .gemrc File**
-
-.. include:: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst
-
 **Install a gems file for use in recipes**
 
 .. include:: ../../step_resource/step_resource_package_install_gems_for_chef_recipe.rst
@@ -686,6 +815,14 @@ package
 
 .. include:: ../../step_resource/step_resource_package_upgrade.rst
 
+**Use the ignore_failure common attribute**
+
+.. include:: ../../step_resource/step_resource_package_use_ignore_failure_attribute.rst
+
+**Use the provider common attribute**
+
+.. include:: ../../step_resource/step_resource_package_use_provider_attribute.rst
+
 **Avoid unnecessary string interpolation**
 
 .. include:: ../../step_resource/step_resource_package_avoid_unnecessary_string_interpolation.rst
@@ -709,6 +846,8 @@ package
 **Use a whitespace array to simplify a recipe**
 
 .. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst
+
+
 
 pacman_package
 =====================================================
@@ -755,6 +894,10 @@ powershell_script
 **Pass an environment variable to a script**
 
 .. include:: ../../step_resource/step_resource_powershell_pass_env_to_script.rst
+
+**Evaluate for true and/or false**
+
+.. include:: ../../step_resource/step_resource_powershell_convert_boolean_return.rst
 
 
 
@@ -812,10 +955,6 @@ remote_file
 
 .. include:: ../../step_resource/step_resource_remote_file_transfer_from_url.rst
 
-**Transfer a file only when the source has changed**
-
-.. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst
-
 **Install a file from a remote location using bash**
 
 .. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
@@ -827,6 +966,10 @@ remote_file
 **Use the platform_family? method**
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
+**Specify local Windows file path as a valid URI**
+
+.. include:: ../../step_resource/step_resource_remote_file_local_windows_path.rst
 
 
 route
@@ -888,10 +1031,6 @@ ruby_block
 
 .. include:: ../../step_resource/step_resource_ruby_block_use_variables_to_set_java_home.rst
 
-**Run specific blocks of Ruby code on specific platforms**
-
-.. include:: ../../step_resource/step_resource_ruby_block_run_specific_ruby_blocks_on_specific_platforms.rst
-
 **Reload the configuration**
 
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
@@ -939,6 +1078,18 @@ service
 
 .. include:: ../../step_resource/step_resource_service_process_table_has_different_value.rst
 
+**Use the :nothing common action**
+
+.. include:: ../../step_resource/step_resource_service_use_nothing_action.rst
+
+**Use the supports common attribute**
+
+.. include:: ../../step_resource/step_resource_service_use_supports_attribute.rst
+
+**Use the supports and providers common attributes**
+
+.. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
+
 **Manage a service, depending on the node platform**
 
 .. include:: ../../step_resource/step_resource_service_manage_ssh_based_on_node_platform.rst
@@ -946,6 +1097,14 @@ service
 **Change a service provider, depending on the node platform**
 
 .. include:: ../../step_resource/step_resource_service_change_service_provider_based_on_node.rst
+
+**Reload a service using a template**
+
+.. include:: ../../step_resource/step_resource_service_subscribes_reload_using_template.rst
+
+**Enable a service after a restart or reload**
+
+.. include:: ../../step_resource/step_resource_service_notifies_enable_after_restart_or_reload.rst
 
 **Set an IP address using variables and a template**
 
@@ -968,7 +1127,8 @@ service
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
 
 
-smart_o_s_package
+
+smartos_package
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_smartos.rst
 
@@ -1082,6 +1242,8 @@ template
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
+
+
 user
 =====================================================
 .. include:: ../../includes_resources/includes_resource_user.rst
@@ -1097,6 +1259,15 @@ user
 **Create a system user with a variable**
 
 .. include:: ../../step_resource/step_resource_user_create_system_user_with_variable.rst
+
+
+windows_package
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_windows.rst
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_windows_package_install.rst
 
 yum_package
 =====================================================
@@ -1137,8 +1308,3 @@ yum_package
 **Handle cookbook_file and yum_package resources in the same recipe**
 
 .. include:: ../../step_resource/step_resource_yum_package_handle_cookbook_file_and_yum_package.rst
-
-
-
-
-
