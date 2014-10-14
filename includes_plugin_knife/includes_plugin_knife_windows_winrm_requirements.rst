@@ -2,7 +2,7 @@
 .. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This subcommand requires |windows remote management| to be installed, and then configured correctly. For more information, see: http://msdn.microsoft.com/en-us/library/aa384426(v=vs.85).aspx and/or http://support.microsoft.com/kb/968930. Use the quick configuration option in |windows remote management| to allow outside connections and the entire network path from |knife| (and the workstation):
+This subcommand requires |windows remote management| to be installed, and then configured correctly. For more information, see: http://msdn.microsoft.com/en-us/library/aa384372(v=vs.85).aspx and/or http://support.microsoft.com/kb/968930. Use the quick configuration option in |windows remote management| to allow outside connections and the entire network path from |knife| (and the workstation):
 
 .. code-block:: bash
 
@@ -49,7 +49,7 @@ and then:
 
    $ winrm set winrm/config/service/auth @{Basic="true"}
 
-Ensure that the |windows firewall| is configured to allow |windows remote management| connections from the workstation. For example:
+Ensure that the |windows firewall| is configured to allow |windows remote management| connections between the workstation and the |chef server|. For example:
 
 .. code-block:: bash
 
