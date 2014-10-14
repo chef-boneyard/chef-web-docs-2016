@@ -87,7 +87,7 @@ The upgrade process may be run multiple times, as long as |chef server osc| 11 a
 
 Email Address
 -----------------------------------------------------
-The |chef server| version 12 server requires that the administrator user provide an email address. During the upgrade process, a default email address (``username@example.com``) is created, where ``username`` is the same user that was specified during the upgrade process. This email address may be changed later, post upgrade via the ``knife user edit`` subcommand or via the |chef manage| web user interface.
+The |chef server| version 12 server requires that the all users provide an email address. During the upgrade process, a default email address (``username@example.com``) is created, where ``username`` is the same user that was specified during the upgrade process. This email address may be changed later, post upgrade via the ``knife user edit`` subcommand or via the |chef manage| web user interface.
 
 Cookbook Uploads
 -----------------------------------------------------
