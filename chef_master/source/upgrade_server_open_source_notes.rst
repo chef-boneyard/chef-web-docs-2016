@@ -140,10 +140,7 @@ If this error occurs, re-run the upgrade process, adding the ``--upload-threads`
 
    $ chef-server-ctl upgrade --upload-threads 1
 
-This option will ensure that only one cookbook is uploaded at a time. This approach will be slower, but will prevent a race condition (and this error) from occuring.
-
-
-
+This option will ensure that only one cookbook is uploaded at a time. This approach will be slower, but will prevent a race condition (and this error) from occuring. It may also be helpful to run each stage of the upgrade process separately. See the section "Subcommands Reference" below for more information about the individual commands.
 
 Manual Upgrades
 =====================================================
