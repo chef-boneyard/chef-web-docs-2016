@@ -28,7 +28,7 @@ This configuration file has the following general settings:
    * - ``license['nodes']``
      - |license chef_server| Default value: ``25``.
    * - ``license['upgrade_url']``
-     - Default value: ``"http://www.getchef.com/contact/on-premises-simple"``.
+     - The URL to visit to learn more about how to update the number of nodes licensed for your organization. Default value: ``"http://www.getchef.com/contact/on-premises-simple"``.
    * - ``notification_email``
      - |email chef_server| Default value: ``"pc-default@opscode.com"``.
    * - ``role'``
