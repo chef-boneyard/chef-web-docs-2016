@@ -1,0 +1,3904 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-14 14:12-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/windows.rst:8
+# 9ce28b74a7d94d75aeb9763bf35b0b6d
+msgid "|windows chef|"
+msgstr ""
+
+#: ../source/windows.rst:10
+# ccf0071cf934400881938b10d3d42831
+msgid "This page collects information about |chef| that is specific to using |chef| with |windows|."
+msgstr ""
+
+#: ../source/windows.rst:12
+# f634535c60f7451081e90c420db91d2d
+msgid "The |chef client| has specific components that are designed to support unique aspects of the |windows| platform, including |windows powershell|, |microsoft iis|, and |microsoft sqlserver|."
+msgstr ""
+
+#: ../source/windows.rst:14
+# f8c0ea7af5dd450bad1498d9f9b353d1
+msgid "The |chef client| is `installed on a machine <http://docs.opscode.com/windows.html#install-the-chef-client-on-windows>`_ running |windows| by using a |microsoft installer package|"
+msgstr ""
+
+#: ../source/windows.rst:15
+# ff0dde85948243009375159a116db30b
+msgid "Six resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource dsc_script|, |resource env|, |resource powershell_script|, |resource registry_key|, and |resource package_windows|"
+msgstr ""
+
+#: ../source/windows.rst:16
+# 3d2e44f3726442e5bc6379a17cc1ad7d
+msgid "A resource named |resource dsc_resource| is in development---available for preview via the https://github.com/opscode-cookbooks/dsc cookbook---that adds the ability to use Powershell DSC resources in Chef!"
+msgstr ""
+
+#: ../source/windows.rst:17
+# 68597a3bb51b4d63a5b7ece22d0e79bf
+msgid "Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers"
+msgstr ""
+
+#: ../source/windows.rst:18
+# d51a74d141f34aadbcffa29506fb589d
+msgid "Four cookbooks provide application-specific support. For `PowerShell 4.0 <https://github.com/opscode-cookbooks/powershell>`_. For `IIS 7.0/7.5/8.0 <https://github.com/opscode-cookbooks/iis>`_. For `SQL Server <https://github.com/opscode-cookbooks/database>`_. And for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/opscode-cookbooks/windows>`_"
+msgstr ""
+
+#: ../source/windows.rst:19
+# 1817b518e2314062950698dbc61dfe0d
+msgid "Support for both :i386 and :x86_64 architectures"
+msgstr ""
+
+#: ../source/windows.rst:20
+# 9d1e1eaf745b466aa27c38b5f4b9d3fd
+msgid "Six helpers are present in the |dsl recipe| to help verify the registry during a |chef client| run---``registry_data_exists?``, ``registry_get_subkeys``, ``registry_get_values``, ``registry_has_subkeys?``, ``registry_key_exists?``, and ``registry_value_exists?``---these helpers ensure the |resource powershell_script| resource is idempotent"
+msgstr ""
+
+#: ../source/windows.rst:22
+# 69fd3478395d4f379aa109febc989b21
+msgid "The most popular core resources in the |chef client|---:doc:`cookbook_file </resource_cookbook_file>`, :doc:`directory </resource_directory>`, :doc:`env </resource_env>`, :doc:`execute </resource_execute>`, :doc:`file </resource_file>`, :doc:`group </resource_group>`, :doc:`http_request </resource_http_request>`, :doc:`link </resource_link>`, :doc:`mount </resource_mount>`, :doc:`package </resource_package>`, :doc:`remote_directory </resource_remote_directory>`, :doc:`remote_file </resource_remote_file>`, :doc:`ruby_block </resource_ruby_block>`, :doc:`service </resource_service>`, :doc:`template </resource_template>`, and :doc:`user </resource_user>`---work the same way in |windows| as they do on any |unix|- or |linux|-based platform."
+msgstr ""
+
+#: ../source/windows.rst:24
+# 4bc4192427f24c7db0028f3710608841
+msgid "The file-based resources---|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|---have attributes that support unique requirements within the |windows| platform, including ``inherits`` (for file inheritence), ``mode`` (for octal modes), and ``rights`` (for access control lists, or ACLs)."
+msgstr ""
+
+#: ../source/windows.rst:26
+# 76b334743a324a55b769b06bf38de952
+msgid "The |windows| platform does not support running as an alternate user unless full credentials (a username and password or equivalent) are specified."
+msgstr ""
+
+#: ../source/windows.rst:28
+# 2150e90c1de2427690500a5eaa891540
+msgid "The following sections are pulled in from the larger |url docs| site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference."
+msgstr ""
+
+#: ../source/windows.rst:32
+# a067701fad3d4baf905b48bf15611ffa
+msgid "Install the |chef client_title| on Windows"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_install_overview.rst:5
+# 826d34c5cb374f8d99d811822aa14508
+msgid "The |chef client| can be installed on machines running |windows| in the following ways:"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_install_overview.rst:7
+# c2511e40ce5147e8a2bd6b24314da221
+msgid "By using the `knife windows <http://docs.getchef.com/plugin_knife_windows.html>`_ plugin to bootstrap the |chef client|; this process requires the target node be available via |ssh| (port 22) or by using the HTTP or HTTPS ports that are required by |windows remote management|"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_install_overview.rst:8
+# fe12954db9db40c3bdc265e6e866f1d0
+msgid "By downloading the |chef client| to the target node, and then running the |microsoft installer package| locally"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_install_overview.rst:9
+# 6f25111507bb425f85f8571c4c18e513
+msgid "By using an existing process already in place for managing |windows| machines, such as |windows server system_center|"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_install_overview.rst:11
+# fdc233be5ba04a32a1973e16077e3f6d
+msgid "To run the |chef client| at periodic intervals (so that it can check in with the |chef server| automatically), configure the |chef client| to run as a service or as a scheduled task. (The |chef client| can be configured to run as a service during the setup process.)"
+msgstr ""
+
+#: ../source/windows.rst:35
+# 4847dc18b5f240ef9534d78ada972b5d
+msgid "The |chef client| can be used to manage machines that run on the following versions of |windows|:"
+msgstr ""
+
+#: ../source/windows.rst:41
+# bd3eeb6924e942e58c05b54636e4406c
+msgid "Operating System"
+msgstr ""
+
+#: ../source/windows.rst:42
+# 9faca850339d4777b52b152e68e61a76
+msgid "Version"
+msgstr ""
+
+#: ../source/windows.rst:43
+# 7e6dc52502ca4b8f83dfcf2b45996ad2
+msgid "Architecture"
+msgstr ""
+
+#: ../source/windows.rst:44
+# b971bd6a3540421abc2d776655aecbe5
+msgid "Windows"
+msgstr ""
+
+#: ../source/windows.rst:45
+# 0d3d6a87f3ef4d92800c847410305985
+msgid "2003 R2, 2008"
+msgstr ""
+
+#: ../source/windows.rst:46
+# af54f09e256a4b7d9f6d121019a5a51c
+msgid "i686, x86_64"
+msgstr ""
+
+#: ../source/windows.rst:48
+# 43592c2889ce44faa5be34ec545ab3ca
+msgid "2008 R2, 2012"
+msgstr ""
+
+#: ../source/windows.rst:49
+# e76fad3f41af43d8b016c60edbf36500
+msgid "x86_64"
+msgstr ""
+
+#: ../source/windows.rst:51
+# 56d9b6eeacd04fdf92aa0adeae859cd6
+msgid "(The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB. Each node and workstation must have access to the |chef server| via HTTPS. |ruby| version 1.9.1 or |ruby| version 1.9.2 with |ssl| bindings is required.)"
+msgstr ""
+
+#: ../source/windows.rst:53
+# 4090c1b157794b1d985daaa678626163
+msgid "The |microsoft installer package| for |windows| is available at http://www.opscode.com/chef/install/. From the drop-downs, select the operating system (``Windows``), then the version, and then the architecture."
+msgstr ""
+
+#: ../source/windows.rst:55
+# a2b4809ca7d8439b8b9ea4bc52d5a5b0
+msgid "After the |chef client| is installed, it is located at ``C:\\chef``. The main configuration file for the |chef client| is located at ``C:\\chef\\client.rb``."
+msgstr ""
+
+#: ../source/windows.rst:58
+# 12d6aced2e43454cab0daa2661d58206
+msgid "Use knife-windows"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_windows.rst:6
+# dea709668e614ac7bb5df9c15b6158a9
+# 62ddffcd335a4ecb90f5d75ddc9813c6
+msgid "The |subcommand knife windows| subcommand is used to configure and interact with nodes that exist on server and/or desktop machines that are running |windows|. Nodes are configured using |windows remote management|, which allows native objects---batch scripts, |windows powershell| scripts, or scripting library variables---to be called by external applications."
+msgstr ""
+
+#: ../source/windows.rst:61
+# 3aaf671721bc4f05bfd2600eb5768313
+msgid "For more information about the |subcommand knife windows| plugin, see :doc:`windows </plugin_knife_windows>`."
+msgstr ""
+
+#: ../source/windows.rst:64
+# 6e9af3abe7f141bc91cfc472a5f72e6a
+msgid "Ports"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_ports.rst:5
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_ports.rst:5
+# 380c93f92ea343acb552c66898f23d0e
+# c4613f29f7de480a9858fbcb36cd7181
+msgid "|windows remote management| requires that a target node be accessible via the ports configured to support access via HTTP or HTTPS."
+msgstr ""
+
+#: ../source/windows.rst:68
+# 6fbf09fa89794f64a1bf17594053e871
+msgid "|microsoft msiexec|"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec.rst:5
+# 38b6f08067fd4f5b84cc120017dc22d2
+msgid "|microsoft msiexec| is used to install the |chef client| on a node as part of a bootstrap operation. The actual command that is run by the default bootstrap script is:"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec.rst:11
+# d45a6a81d1ce4c9d8bc0d92955ac0570
+msgid "where ``/qn`` is used to set the user interface level to \"No UI\", ``/i`` is used to define the location in which the |chef client| is installed, and ``\"%LOCAL_DESTINATION_MSI_PATH%\"`` is a variable defined in the default `windows-chef-client-msi.erb <https://github.com/opscode/knife-windows/blob/master/lib/chef/knife/bootstrap/windows-chef-client-msi.erb>`_ bootstrap template. See http://msdn.microsoft.com/en-us/library/aa367988%28v=vs.85%29.aspx for more information about the options available to |microsoft msiexec|."
+msgstr ""
+
+#: ../source/windows.rst:72
+# 033c73af349144bba94a3f4f3712755e
+msgid "ADDLOCAL Options"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:5
+# c753a034307944559af60bdfdffc526c
+msgid "The ``ADDLOCAL`` parameter adds two setup options that are specific to the |chef client|. These options can be passed along with an |microsoft msiexec| command:"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:11
+# aeeec9cf59e249a49e62bf1f5d899b86
+msgid "Option"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:12
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:18
+#: ../../includes_resources_common/includes_resources_common_relative_paths.rst:11
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:25
+#: ../source/windows.rst:342
+#: ../../includes_resources/includes_resource_batch_actions.rst:11
+#: ../../includes_resources/includes_resource_batch_attributes.rst:11
+#: ../../includes_resources/includes_resource_dsc_script_actions.rst:11
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:11
+#: ../../includes_resources/includes_resource_env_actions.rst:11
+#: ../../includes_resources/includes_resource_env_attributes.rst:11
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:11
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:11
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:11
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:11
+#: ../../includes_resources/includes_resource_package_windows_actions.rst:11
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:11
+#: ../source/windows.rst:617
+# 9317cb60bca34b218d55c7069096a976
+# 529df4290b244f8fa38a3368ad0a457f
+# cb9bab8713d54311a3c1801ee7fa31d9
+# 3d3c48b2ed1147ccbf9a3d6ccdd937e6
+# 96e78354268d4e968db09c175f3a790c
+# 7a06c1af069e4b699b8cfa8295f90953
+# ea30748f6f0b4bd5b59dff7677753ea6
+# dd57892aceba4bdb915030f7b2bad039
+# b3750981932643f5b0479aeb552a28d5
+# bc6316b28dc94f8e93f999f7c8593600
+# 0526b9937a2845b59b24a8941643e21f
+# 644929efb8bf4b109834b61cc2fc3723
+# 213bc71ee5e54158a463aa9ae76871e6
+# f62e9df27ea8433b9174eb6382f47463
+# f453c899d3e74b6f8d92402714a5e2a9
+# 9f5316c73a2a4fe3b1b5bb280d8e6fb4
+# 2ff2b6aa10084ac0a8c49f1022187dd8
+# 62099d2082b44a4c9fc9475f2f8102f3
+msgid "Description"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:13
+# 3b32555fe5cc4344bd4c5bcb90f388aa
+msgid "``ChefClientFeature``"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:14
+# c0a8328159ee4b528ced17933fcca321
+msgid "Use to install the |chef client|."
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:15
+# 697f8cd3279744a0bb90df392e7aa3d3
+msgid "``ChefServiceFeature``"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:16
+# 9b8da3d213c34a098d954ef8859f1c88
+msgid "Use to configure the |chef client| as a service in |windows|."
+msgstr ""
+
+#: ../../includes_windows/includes_windows_msiexec_addlocal.rst:18
+# d69941096bc1412a94145004fb11607e
+msgid "First install the |chef client|, and then enable it to run as a service. For example:"
+msgstr ""
+
+#: ../source/windows.rst:76
+# 16e535f5d85c49ec8f70f08e16cf49df
+msgid "Use MSI Installer"
+msgstr ""
+
+#: ../source/windows.rst:77
+# 61749f3e66b64111a90a5e21b4fbef69
+msgid "A |microsoft installer package| is available for installing the |chef client| on a |windows| machine."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:4
+# 832617066ffc445793058ecd95932356
+msgid "To install the |chef client| on |windows|, do the following:"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:6
+# 03df0361f2ee43b7bb00e1ab29139f27
+msgid "Go to http://www.getchef.com/chef/install."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:8
+# 708e585ad98045a38554638c8b1ed8d4
+msgid "Click the **Chef Client** tab."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:10
+# 22618fbf71d04ded98d49490473377ba
+msgid "Select **Windows**, a version, and an architecture."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:12
+# 3125a851536146ba9b81f674ab14c9a3
+msgid "Under **Downloads**, select the version of the |chef client| to download, and then click the link that appears below to download the package."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:14
+# 5f9d867ea9a64cbf97dba19ee2d9a185
+msgid "Ensure that the MSI is on the target node."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:16
+# b6321cc8a64645279e3e40c3b1f533aa
+msgid "Run the MSI package and use all the default options:"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:20
+#: ../../includes_install/includes_install_chef_client_windows.rst:24
+#: ../../includes_install/includes_install_chef_client_windows.rst:30
+#: ../../includes_install/includes_install_chef_client_windows.rst:34
+#: ../../includes_install/includes_install_chef_client_windows.rst:38
+# 2c5c500ff4a44b3181d84f23137b0d22
+# bf48c9310aed414b97e9104224e39ade
+# 02d84a4f1b8148be9701cdaba7e87c6d
+# 478117658836480d80d96d18dbf1d1da
+# 6b41a98d870e4dab85a9effec08e57bf
+msgid "then:"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows.rst:28
+# 9761060e77964d55b3e8a659b0e29fc4
+msgid "The |chef client| must be run as a service for it to be able to regularly check in with the |chef server|. Select the **Chef Client Service** option to have the MSI configure the |chef client| as a service."
+msgstr ""
+
+#: ../source/windows.rst:82
+# 1b3ec194c695409c97e2095fc903d386
+msgid "Enable as a Service"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows_as_service.rst:4
+# 41d0c0bfb52042e088b431f2a24ccdd1
+msgid "To run the |chef client| at periodic intervals (so that it can check in with the |chef server| automatically), configure the |chef client| to run as a service or as a scheduled task. This can be done via the MSI, by selecting the **Chef Client Service** option on the **Custom Setup** page or by running the following command after the |chef client| is installed:"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows_as_service.rst:10
+# 92cb26a282a1441abb1199859e99438a
+msgid "and then start the |chef client| as a service:"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_windows_as_service.rst:16
+# 2a502caa1f4b47fa8032ce6d4a09695e
+msgid "After the |chef client| is configured to run as a service, the default file path is: ``c:\\chef\\chef-client.log``."
+msgstr ""
+
+#: ../source/windows.rst:86
+# dba03e40700741e4ab8672c0401aad44
+msgid "Use an Existing Process"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_install_system_center.rst:5
+# 95fef5e5e868498ca42c4dca1d0dc44e
+msgid "Many organizations already have processes in place for managing the applications and settings on various |windows| machines. For example, |windows server system_center|. The |chef client| can be installed using this method."
+msgstr ""
+
+#: ../source/windows.rst:90
+# 86b3ba6bd0b2492aad3f05269d28b434
+msgid "PATH System Variable"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_environment_variable_path.rst:5
+# db47c556e80a4a1d882a7d02212efa77
+msgid "On |windows|, the |chef client| must have two entries added to the ``PATH`` environment variable:"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_environment_variable_path.rst:7
+# 663f6d3b2239424fa408f94f912c266f
+msgid "``C:\\opscode\\chef\\bin``"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_environment_variable_path.rst:8
+# 8153831ac3e944ceb9406b3ea1d9ddea
+msgid "``C:\\opscode\\chef\\embedded\\bin``"
+msgstr ""
+
+#: ../../includes_windows/includes_windows_environment_variable_path.rst:10
+# 1d38069513944022ad398efb52bfe176
+msgid "This is typically done during the installation of the |chef client| automatically. If these values (for any reason) are not in the ``PATH`` environment variable, the |chef client| will not run properly."
+msgstr ""
+
+#: ../../includes_windows/includes_windows_environment_variable_path.rst:14
+# 447ef5d74a3c427587a25c43ec895ec9
+msgid "This value can be set from a recipe. For example, from the |cookbook php| cookbook:"
+msgstr ""
+
+#: ../source/windows.rst:94
+# 7e4709eb23ac41a1849891af4d9d4e99
+msgid "|knife_title|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:4
+# b25616815a49446da277d3df620d86a3
+msgid "|knife| is a command-line tool that provides an interface between a local |chef repo| and the |chef server|. |knife| helps users to manage:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:6
+# f40ad8b6740c47678d04ad1e5492b4da
+msgid "Nodes"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:7
+# 6a2905071b6f44f0a8c125d23715fb6b
+msgid "Cookbooks and recipes"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:8
+# 4fc2a852e58c4a5da78673344842766b
+msgid "Roles"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:9
+# 99e94c527981487287e5a877f87b4fb7
+msgid "Stores of |json| data (data bags), including encrypted data"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:10
+# da24afa4cd4e418da9d8c05ef0302ae3
+msgid "Environments"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:11
+# d203a8ff2d68457797689b954c7ab25b
+msgid "Cloud resources, including provisioning"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:12
+# 365d84efe96746e9b03eb089d3e40e1c
+msgid "The installation of the |chef client| on management workstations"
+msgstr ""
+
+#: ../../includes_knife/includes_knife.rst:13
+# 45c070f8401246d2aa27c9c690224ba1
+msgid "Searching of indexed data on the |chef server|"
+msgstr ""
+
+#: ../source/windows.rst:98
+# 06f4a3971cbc4bde8d34bf2f74272501
+msgid "Set the Text Editor"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:4
+# 14a57a4ee794426fa5662732970f2bf5
+msgid "Some |knife| commands, such as ``knife data bag edit``, require that information be edited as |json| data using a text editor. For example, the following command:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:10
+# 6dc5c9b72999473d94cf41d09947796b
+msgid "will open up the text editor with data similar to:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:18
+# 938f2a4de62d47f7be862e776b88489b
+msgid "Changes to that file can then be made:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:27
+# 1a23ff724a494d51a0e0dab48a7db36f
+msgid "The type of text editor that is used by |knife| can be configured by adding an entry to the |knife rb| file or by setting an ``EDITOR`` environment variable. For example, to configure the text editor to always open with |vim|, add the following to the |knife rb| file:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:33
+# f8c27b9e6fd145a98888d2b5a749e60f
+msgid "When a |windows| file path is enclosed in a double-quoted string (\" \"), the same backslash character (``\\``) that is used to define the file path separator is also used in |ruby| to define an escape character. The |knife rb| file is a |ruby| file; therefore, file path separators must be escaped. In addition, spaces in the file path must be replaced with ``~1`` so that the length of each section within the file path is not more than 8 characters. For example, if EditPad Pro is the text editor of choice and is located at the following path::"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:37
+# f6c52c3587f24ac988ee45e85be6f1d0
+msgid "the setting in the |knife rb| file would be similar to:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:43
+# 79236f7033c04093861703f40cf4321a
+msgid "One approach to working around the double- vs. single-quote issue is to put the single-quotes outside of the double-quotes. For example, for |notepad plusplus|:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:49
+# 5d6d6542be6e422b94d2e3888e85ba21
+msgid "for |sublime|:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:55
+# 3c232de1cfdc424dacfef1207daf1050
+msgid "for |textpad|:"
+msgstr ""
+
+#: ../../step_knife/step_knife_common_set_editor.rst:61
+# f9ef97c54ebf4c1bbdc0b80b1e2ecf46
+msgid "and for |vim|:"
+msgstr ""
+
+#: ../source/windows.rst:102
+# 29850c1429574059a45d68b03f192b9f
+msgid "knife bootstrap"
+msgstr ""
+
+#: ../../includes_chef/includes_chef_bootstrap.rst:4
+# 135fad31a91d49738e04762fa11236b0
+msgid "A bootstrap is a process that installs the |chef client| on a target system so that it can run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap.rst:6
+# 10d13cd0976a408397a94a362bfc1721
+msgid "The |subcommand knife bootstrap| subcommand is used to run a bootstrap operation that installs the |chef client| on the target system. The bootstrap operation must specify the IP address or |fqdn| of the target system."
+msgstr ""
+
+#: ../source/windows.rst:107
+# 57c8170d87c04e91ae1c3975ae7cfb3a
+msgid "To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.opscode.com/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation."
+msgstr ""
+
+#: ../source/windows.rst:110
+#: ../source/windows.rst:159
+#: ../source/windows.rst:171
+#: ../source/windows.rst:193
+#: ../source/windows.rst:211
+#: ../source/windows.rst:229
+#: ../source/windows.rst:260
+#: ../source/windows.rst:274
+#: ../source/windows.rst:374
+#: ../source/windows.rst:414
+#: ../source/windows.rst:467
+#: ../source/windows.rst:495
+#: ../source/windows.rst:535
+#: ../source/windows.rst:583
+# 3b9fa2adf20145b2a634e1196625257f
+# e0bd1bf2c962453a9f8117a7531afdd2
+# 10d9fa0e091b420586112bb7889c7bfe
+# 194a627a97454aaf9adbb63d3a86e96e
+# afa2230ae6074bc7b11b6c8bad307a1d
+# 7758299764ab46968e0c705ae00ac9f1
+# 666dfcf6a19c4199a8d9a01663d8399c
+# 22c05f02febf440989bb59ed6a339e30
+# 10238eea630447caa8923ac7cdc49727
+# 9633f4e4a2024dcd9a17a236e1294d5c
+# e9a1407e6a314139bb403fac7b5dd32a
+# b1174b24066f48dc988cb0654937ba7a
+# 50c0b50a79d74d19a938f2d8b8fb90ce
+# b3e8ad4558dc474b8dd742a22968e5cc
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_syntax.rst:6
+# f4900156c315425ba13852af031401d1
+msgid "This subcommand has the following syntax:"
+msgstr ""
+
+#: ../source/windows.rst:114
+#: ../source/windows.rst:163
+#: ../source/windows.rst:175
+#: ../source/windows.rst:197
+#: ../source/windows.rst:215
+#: ../source/windows.rst:233
+#: ../source/windows.rst:264
+#: ../source/windows.rst:278
+# e52cb19898f2406282d8550ffff0b98a
+# e3b955130bef4aad9d3f4e4e828c2474
+# 2fa5e634bb074e7a8c7d15a1029323a0
+# 4560b66063dd409c895441c5030c2245
+# 5934c2afce1d463a8c64a2cde663be79
+# b7692e3279c24358ade1a97e4b850c91
+# 9e0173df9afc49958d6dcd9209b8b943
+# 5a14756b5e95495aa52ff43c8e34c26c
+msgid "Options"
+msgstr ""
+
+#: ../source/windows.rst:115
+# a0b4c7212a7b4fe0a15f2ba814fc10ad
+msgid "Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:6
+# 2af4e0e24e5043cbb6483fa30aaefdba
+msgid "This subcommand has the following options:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:9
+# 612cb137ad9c442ba76cc0fc05a663f1
+msgid "``-A``, ``--forward-agent``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:9
+# d256ba7811744f98bc693ae3f133cf2c
+msgid "|forward_agent|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:14
+# 92ee16af9d654b5b8cb8d74fc2b696bc
+msgid "``--bootstrap-no-proxy NO_PROXY_URL_or_IP``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:12
+# 53dac03ca52c42d28fb0248e9dab8048
+msgid "|bootstrap no_proxy|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:14
+# e52f469baf854b288481382b9fbd6aa8
+msgid "This option is used internally by |company_name| to help verify bootstrap operations during testing and should never be used during an actual bootstrap operation."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:17
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:9
+# cb3187dedc764ab88c89d28211a8a156
+# 93d46cc904d04707838b9e166debfe32
+msgid "``--bootstrap-proxy PROXY_URL``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:17
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:9
+# 82a938d7da96409c9218ff09abf8ffbd
+# d5aa7766b59f41d7b8e376a920c7a23d
+msgid "|bootstrap proxy|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:20
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:36
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:12
+# 752552ce42614d439e57b81f634ed263
+# eb1d2c9112ba4ddaafa3f64363430e82
+# 6965c7ad01ec471eb660c7b1583094e0
+msgid "``--bootstrap-version VERSION``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:20
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:36
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:12
+# 0c514ed85ce04a1ebbfafd6ce911e50b
+# e22e509ceb834057aba8038c97dcef01
+# 545e48b927b9468d97301351adacf6ce
+msgid "|bootstrap version|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:25
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:42
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:15
+# cc1ad43a89794e22b3f094436abcbdad
+# 13c467b5ac0d4c7fa0ee97bfb58b0d7c
+# 51370271e611448a9c56f63afee3707d
+msgid "``-d DISTRO``, ``--distro DISTRO``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:23
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:42
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:15
+# c0389af920b446b9942686bd6b829f60
+# 3a69db7817484c26974b49540c581e96
+# b1a0fa5cb95e417492809cbb21d830da
+msgid "|distro|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:25
+# ab847cc8391644c2a467ac91e81f9a9a
+msgid "The default bootstrap operation uses the |omnibus installer|, which means the default template file (``chef-full``) should work on all supported platforms. It is recommended to use custom bootstrap templates only when the |omnibus installer| cannot be used. The ``.erb`` file extension is added automatically and should not be passed as part of the bootstrap command."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:28
+# c4e496e5c70a47fd802fd55b06406211
+msgid "``-E ENVIRONMENT``, ``--environment ENVIRONMENT``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:28
+# 99b4819f1970458f9e69d7f6a042875e
+msgid "|name environment| When this option is added to a command, the command will run only against the named environment."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:31
+# 992f432b245744579f190408263e038c
+msgid "``-G GATEWAY``, ``--ssh-gateway GATEWAY``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:31
+# d451741c61f44a6da571f191bc6e3dd7
+msgid "|ssh_gateway|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:34
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:48
+# 7bec145e208f4706b7587ca63aaf39a4
+# d76b35e52d79411c91cc14ccbf5c600d
+msgid "``--hint HINT_NAME[=HINT_FILE]``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:34
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:48
+# 9112786004de4d52901b14aa7fcf50eb
+# c677604284fe4dc3bae7443f5f40e479
+msgid "|hint|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:37
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:15
+# f5dd238f58ea4b268c79a40cba4ff0ef
+# f156f27105e7464d8bc25c05529370a0
+# 2181deae34164bbfa9255afd9a48beb4
+msgid "``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:37
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:57
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:15
+# 2c65dc98eb174ca3ad34e12d5740224e
+# 38a1f7980d8f4423b272e459eb662687
+# b0980255146c487d82810dbb9fd5f9a0
+# 7572f67bd38742df9cef5d1b2501e815
+msgid "|identity-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:40
+# d84c92e2cb6e40b9b2c0b383883dc43a
+msgid "``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:40
+# 9299f33fe86f4a8b8f9123e176f42b96
+msgid "|json first_run_string|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:43
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:66
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:21
+# 6c79ed14161f4b0798be82ef63e91a7e
+# a7937ade78b4449aab27fe88c06cc1b5
+# b0f6930e429041ba9d8da5dbe556c589
+msgid "``-N NAME``, ``--node-name NAME``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:43
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:21
+# fa9ff695516541c0a9215725a4e3e417
+# 5389f34f5c654093b335da46bc1c63cf
+msgid "|name node|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:46
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:69
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:24
+# 913c483edc4944f38c77945fbaa7294f
+# bea29cf58500448b8730b4e8315c568c
+# 4acb5eebc22440708fdf9ded926c3ab6
+msgid "``--[no-]host-key-verify``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:46
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:69
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:24
+# 754050e04ff447b99a6a182d701e91e1
+# 8b06d2be8b6c4106b62afc3ec3cb9e42
+# ca6f494872f64eeb8c41e9ca1a2ddf81
+msgid "|no_host_key_verify| Default setting: ``--host-key-verify``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:49
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:27
+# 4e5b076481ad47ce85c9e2587402e64a
+# 5fa012bb8ba349509abe8764c06ff477
+msgid "``-p PORT``, ``--ssh-port PORT``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:49
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:27
+# b316cbcbb9a74922a3e1c0a687f83d2a
+# 978c5894361c4abb8cac944ecfddfd30
+msgid "|ssh_port|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:52
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:78
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:30
+# 5e5f418bc3054e4ca9a5472fcd83261f
+# 4e074950717d46f3b8a45fdd83d1404b
+# 76b7ee2e1feb4fcdbe928b8ac999b505
+msgid "``-P PASSWORD``, ``--ssh-password PASSWORD``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:52
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:78
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:30
+# 2d195066a69e461c931a0225c1f71fe3
+# 5d086280b2104f4caaedd25aebd4b513
+# 71241876059c4bb681e4b4febde50797
+msgid "|ssh_password|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:55
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:81
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:33
+# 8b1afcc842fc44fb8476f071a95117c4
+# 9fc6d940f9584f7b9db51941a37bbda5
+# 3d7fc33b148e48eab012be48f22825d0
+msgid "``--prerelease``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:55
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:81
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:33
+# 3ad2cc4f4adf44278a575193ce5d0388
+# 8f10c2488d7f40b5bd5de693a6ae650d
+# d5f3ff3631474845b877d6deac823bc1
+msgid "|prerelease|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:58
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:84
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:36
+# 14a483e7009547b2886fccfabb74a812
+# 3824141c361447c786ba41f2de173783
+# 1fd45c451e1747bb8ad1402142ce043a
+msgid "``-r RUN_LIST``, ``--run-list RUN_LIST``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:58
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:84
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:36
+# 7f396396d2a3409ca571fc4f6419f2c5
+# 19647b31a72c4192bb9dbc188626113d
+# dd24001f0d5b4e669cac5c9309496b98
+msgid "|run-list|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:61
+# 3f55634b775942a289c02a97a930bfc6
+msgid "``--secret SECRET``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:61
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:39
+# 75475dbc015a405ea77c222bf36ee728
+# 08aa14e933584bd7ad00c62593e7dac0
+msgid "|secret|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:64
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:42
+# 9c961bc7ada7470698102f588e21155c
+# 59dbf8233f804b11b4948364fe1699ac
+msgid "``--secret-file FILE``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:64
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:42
+# 3e295f618d8546578f7ea7cb44ff54a7
+# 1f472677aa404050bf0a4c14528e70f6
+msgid "|secret-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:67
+# 91dab6584bfb48bb9f2bae3cbef6ae6b
+msgid "``--sudo``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:67
+# cf6197f734e54fd19cf6a15c47363891
+msgid "|sudo bootstrap|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:70
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:96
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:45
+# b929c882e877473bab90a24bfa910328
+# 9818677102df4ac6ab40588ada7ce126
+# 785e673b95de48a2a67da3a92bdd062a
+msgid "``--template-file TEMPLATE``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:70
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:96
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:45
+# ab97fd5496b44763a6b0905e96d0f416
+# d799f195b5bb4c74b6b19c6396349990
+# 9f79c7fa7bcd464abbcebb9ec1d7c08a
+msgid "|path bootstrap_template|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:73
+# 43624bee9e6844559581389940aceab9
+msgid "``--use-sudo-password``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:73
+# f31f12904a764950b99713797ee8bb2b
+msgid "|use sudo_password|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:76
+# 12c3cb271509474cb278825f70636969
+msgid "``-V -V``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:76
+# 87d13e69ce8147eaa73bcd8b69c2b129
+msgid "|verbose knife_bootstrap|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:80
+# 44b2b3abd63c48a3a568f66c2b492b0e
+msgid "``-x USERNAME``, ``--ssh-user USERNAME``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst:79
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:105
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:48
+# adb72f26be46409a9e86e1d1d357ed97
+# 6be423c11c2c4724a866688e6c4ac578
+# 70d8ca88c20e4212a60084af0d00feb9
+msgid "|ssh_user|"
+msgstr ""
+
+#: ../source/windows.rst:120
+# d391dc43a0344fa188f4fa06ac8ad7d5
+msgid "knife.rb Settings"
+msgstr ""
+
+#: ../source/windows.rst:121
+# 2f6349b27db34549a878ec15c772fa66
+msgid "See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:6
+# 00e4388ec64e43c7be6717b75d899cb3
+msgid "The following ``knife bootstrap`` settings can be added to the |knife rb| file:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:9
+# b8884ed48af8466a99ae912ddbe02f47
+msgid "``knife[:bootstrap_proxy]``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:9
+# 964635f007d443c8918089d24b7bee87
+msgid "Use to add the ``--bootstrap-proxy`` option."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:12
+# 9b495f705df74bae9db72ad52359f9f8
+msgid "``knife[:bootstrap_version]``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:12
+# 5552790392594f49aa68252f823e4d4c
+msgid "Use to add the ``--bootstrap-version`` option."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:15
+# a61c18f1785f46769d731d9985fb03cf
+msgid "``knife[:distro]``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:15
+# b68fc3d40e9548ab8865d0e3920139d1
+msgid "Use to add the ``--distro`` option."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:18
+# 5cd1c7051402452780d554adb2708e99
+msgid "``knife[:run_list]``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:18
+# 827a1d7ff17b4030996455f49bb6f4ea
+msgid "Use to add the ``--run-list`` option."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:21
+# 693543eef8b54eb6a5d7abbc858023b3
+msgid "``knife[:template_file]``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:21
+# 1749290aa72d4ecc976ecc2339db7239
+msgid "Use to add the ``--template-file`` option."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:24
+# a7b70f47c1ad44d9b80a47a510972cd1
+msgid "``knife[:use_sudo]``"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:24
+# 59c628639e7b4e4a8fe84df14ff2eb0e
+msgid "Use to add the ``--sudo`` option."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_settings.rst:26
+# a12db1e4c7304f078378bd42c17a7c12
+msgid "The ``knife bootstrap`` subcommand relies on a number of |ssh|-related settings that are handled by the ``knife ssh`` subcommand."
+msgstr ""
+
+#: ../source/windows.rst:126
+# a9b5e0d88a84420d82614c9829990903
+msgid "Custom Templates"
+msgstr ""
+
+#: ../source/windows.rst:127
+# de3d0c373b0f42f581150c8da8523a93
+msgid "A custom bootstrap template file (``template_filename.erb``) must be located in a ``bootstrap/`` directory. Use the ``--distro`` option with the ``knife bootstrap`` subcommand to specify the bootstrap template file. For example, a bootstrap template file named \"british_sea_power.erb\":"
+msgstr ""
+
+#: ../source/windows.rst:133
+# 83daca0666d34bca8992385cbebd7f61
+msgid "The following examples show how a bootstrap template file can be customized for various platforms."
+msgstr ""
+
+#: ../source/windows.rst:136
+# 37a8a7118c7f45e0a609c37b5526cfdf
+msgid "Microsoft Windows"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bootstrap_example_windows.rst:6
+# 5094d8267d90423793d323e87c2594e8
+msgid "The following example shows how to modify the default script for |windows| and |windows powershell|:"
+msgstr ""
+
+#: ../source/windows.rst:141
+# b23597eba73841698a12f0cef07e7605
+msgid "knife azure"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure.rst:6
+# 7ebdd37628fc45219d647ec6d16ce3d2
+msgid "|azure| is a cloud hosting platform from |microsoft| that provides virtual machines for |linux| and |windows server|, cloud and database services, and more. The |subcommand knife azure| subcommand is used to manage API-driven cloud servers that are hosted by |azure|."
+msgstr ""
+
+#: ../source/windows.rst:144
+#: ../source/windows.rst:241
+# b059f9a47a1843369c7525786f03d1b9
+# 1b3d75ff7d83494a98cc392f943f7dc2
+msgid "Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins."
+msgstr ""
+
+#: ../source/windows.rst:147
+#: ../source/windows.rst:244
+# 8f7848a077464a0eb735b29e9fbf652f
+# ee8838942cf346c5b991fc27cb96429b
+msgid "Install this plugin"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_azure_install_rubygem.rst:3
+# d9739a5b23054e9aad8319a675bf355f
+msgid "To install the |subcommand knife azure| plugin using |rubygems|, run the following command:"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_azure_install_rubygem.rst:9
+#: ../../step_plugin_knife/step_plugin_knife_windows_install_rubygem.rst:9
+# 7fab592cfc924674aa5395e93f8a2f5e
+# db05f9dce486460aad93b323ab2fa1d3
+msgid "where ``/opt/chef/embedded/bin/`` is the path to the location where the |chef client| expects |knife| plugins to be located. If the |chef client| was installed using |rubygems|, omit the path in the previous example."
+msgstr ""
+
+#: ../source/windows.rst:151
+# ca193b7d255a41daa2e8bd3c3499095c
+msgid "Generate Certificates"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst:6
+# 3c68cf86d61f4e7ab96655aa4558ce54
+msgid "|knife azure certificate|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst:8
+# 9ae422d98733472a9a4c5a8090560940
+msgid "The management certificate is required for secure communication with the |azure| platform via the REST APIs. To generate the management certificate (.pem file):"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst:10
+# f0d2b05f2c88470b91523c51d58eb03b
+msgid "Download the settings file: http://go.microsoft.com/fwlink/?LinkId=254432."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst:11
+# 492c20abba0f42199edddf4e48a6e7cb
+msgid "Extract the data from the ``ManagementCertificate`` field into a separate file named ``cert.pfx``."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst:12
+# 9b71b48f60604afd89ebb8555a54fdb0
+msgid "Decode the certificate file with the following command:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst:17
+# f91813ffcaf44d1c9a35426aac5f333b
+msgid "Convert the decoded PFX file to a PEM file with the following command:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst:23
+# 9e6992410dd344c89ec1dec19a770e01
+msgid "It is possible to generate certificates, and then upload them. See the following link for more information: www.windowsazure.com/en-us/manage/linux/common-tasks/manage-certificates/."
+msgstr ""
+
+#: ../source/windows.rst:155
+# e2cd2c429d7842fb884263a211f7f4d1
+msgid "image list"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list.rst:6
+# a1ff9154fea24f04adc14c3628db4d3e
+msgid "The ``image list`` argument is used to get a list of images that exist in a |azure| environment. Any image in this list may be used for provisioning."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_syntax.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_syntax.rst:6
+# 76bc7822e1484639bc7cdcdc837891b9
+# 0dfd61770750425ba9927d34d261dab2
+# 71896ae4c847406dadf140ef57e536b9
+# 563cb8f64c774b47a7092ae95d25d1da
+# ca8f41d1c1c54446be5af637237c6437
+# 4058e5c857f549d6837de8687f13a11b
+# d270df9a74a64341ba2e7856c3288704
+msgid "This argument has the following syntax:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:6
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:6
+# df2e2e88c0364d08a7b62938e324f48d
+# 0c79ee66fd394ef8bd85c9d1890e1ab6
+# 20173e062e964998bec754e3730097c7
+# 66e73839f73942b3a8c21889e0382873
+# 708957897a75491e8a2202e324d2bebe
+# 883c38c566cb41f6a1305565c8014514
+# 3b736978025b4ce9b2c4c8716dc55195
+msgid "This argument has the following options:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:9
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:21
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:12
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:9
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:9
+# c90b99fec5f542a68184e378cedd09a0
+# 516b461c369e402c8a332279f33aef5e
+# 32a956170b3d40d38776c4009a78d42f
+# a67917c63dd6466ca8a4701b040520b2
+# fbf199fe4b434ce58ffacd06f41f2037
+msgid "``--azure-publish-settings-file FILE_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:9
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:21
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:12
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:9
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:9
+# 7972f4115c924691bf114768c892d5a2
+# f91dd77bb7d94a73aa4435baf0f6789c
+# 9e2c45ca7e574ad692c45f7c22eaadb2
+# aa260bb3c61c4fc3a6dea9b7a68c1d12
+# 057414000f334ea6b5a20e84d2118cf9
+msgid "|file azure_publish_settings|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:12
+# 6d3c8a5d698b4aeaa3e7896cb5f73143
+msgid "``--full``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:12
+# c21ad930b09646cb9a151bef27b6f5b1
+msgid "|show_all_images|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:15
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:45
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:12
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:12
+# daa6dfdc141240119ab860881f96b58b
+# 21b7973e25ea4a3892a843c6181d83fd
+# 90f96f31290644a399a5bcd4596c4b5a
+# 1772f66b21d74d2e87d7d6bf9491f948
+# ad03a3aec914418a8486d3db7d35b8ec
+msgid "``-H HOST_NAME``, ``--azure_host_name HOST_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:15
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:51
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:12
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:12
+# 4ac4f4d5316b45cfb3d61e65e545d2be
+# ccba29656f5f4621bc5e7f969a30189c
+# 4cfa0dc220034a1d88b709c0fb3bc1cc
+# ea549b3016f148c2a658b614b9a48569
+# b3d267b6b92c473391a36e9ecdb97342
+msgid "|azure_host_name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:75
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:24
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:15
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:15
+# 0321ac4e7cde4380b6b7f7ecec6a24c5
+# 1f585a9427a14dce9421cb97e63796e3
+# bf025004dda2466283a285e3b0790dcd
+# 9d2df06cf6d64801be565dcd66f6ca2c
+# 387228a3251e440b8bfaf63a3d06caf8
+msgid "``-p FILE_NAME``, ``--azure-mgmt-cert FILE_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:75
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:24
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:15
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:15
+# afdcf70efe314650b57c6c667bfe8660
+# f6df79fe286d42dbbb07f639b49b496b
+# 9382e66b49c3476e93929709895a26f4
+# 41a0f3a147df4dc581a2d9bcf2f49e96
+# aa9fe2c8eb8c4fc7a4678fae16a61190
+msgid "|azure_pem_filename|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:21
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:39
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:18
+# a7a11497bb454ae0a0f5393f80e18fb6
+# 63eb0b29e14d4cdeb84659f77d73be1b
+# 2c2144a25cea42c6a51ad5eb87d028ab
+# 1b51c6bf5cfc4e04b70af1ad473eb3af
+msgid "``-S ID``, ``--azure-subscription-id ID``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:21
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:39
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:18
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:18
+# f5ee627a6e2e4b029fcd90bd60f7608f
+# 6fcddd5e87104d47bf8f60ebd734a4d6
+# 1813b58698da461f8942b9b45dd72da8
+# beb29952302d4ab7941dfd9e702ffc01
+msgid "|azure_subscription_id|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:25
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:102
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:42
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:22
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:22
+# 32fdd552ba34494b98a8b7d4ff6937f2
+# e8dc78ce5a0642feaf5218dda1022e48
+# f016cbd3c4944977a71f2d9226d3748c
+# d1b975be6af44c9290557dbea18cad0f
+# 267af227dcf448299d51c7b5719781ad
+msgid "``--verify-ssl-cert``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst:24
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:102
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:42
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst:21
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst:21
+# ff0821e3ab23419caaee7c2a38b4a575
+# 8d669ee402044fb29d39908f0894b776
+# abc779fc5cff4e3faa50b2a6b1bc3822
+# 3be17b1087f64d7c87631ab48ac6c875
+# d29c3cf4232e44668a6797a12cd66a33
+msgid "|ssl_certificate|"
+msgstr ""
+
+#: ../source/windows.rst:167
+# aec698faab374b49ab34a344c50bad68
+msgid "server create"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create.rst:6
+# 6672daa2ae4743e6afd5b313989bc6d0
+msgid "The ``server create`` argument is used to create a new |azure| cloud instance. This will provision a new image in |azure|, perform a bootstrap (using the |ssh| protocol), and then install the |chef client| on the target system so that it can be used to configure the node and to communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:9
+# 77a5ebcfd1c44234b2fbe967a1fec25e
+msgid "``--azure-affinity-group GROUP``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:9
+# 709b39d31e8c42d99c9c7f11ab12951b
+msgid "|azure affinity_group| Required when not using ``--azure-service-location``."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:12
+# 0975c5e378564b35abce635a4bf83e9b
+msgid "``--azure-availability-set NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:12
+# 1d65a29e52224bc281be079489f1d95e
+msgid "|azure availability_set|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:15
+# 042e9436d33b47e5aa63e0bd6777a66c
+msgid "``--azure-dns-name DNS_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:15
+# 40f8b07eb1de49e9914b2dda1c8a1bbd
+msgid "|azure dns_name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:18
+# bc4939d5190649e6a6a45e876c17610e
+msgid "``--azure-network-name NETWORK_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:18
+# ffa8dbad91834947b7ba3a934e639715
+msgid "|azure network_name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:24
+# 06d24c2a09bc4448b343fb9aea5aa8bd
+msgid "``--azure-storage-account STORAGE_ACCOUNT_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:24
+# 6c14b2135c9048df904231154892c0a4
+msgid "|storage account| A storage account name may be between 3 and 24 characters (lower-case letters and numbers only) and must be unique within |azure|."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:27
+# 84c560f03f32456489f9bddfc7e91b0d
+msgid "``--azure-subnet-name SUBNET_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:27
+# f555b7ac952d42a79a35559d255ecd68
+msgid "|azure subnet_name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:30
+# 7bbfc17d0e344aa78e92a69481052953
+msgid "``--azure-vm-name NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:30
+# a2fb99db5499404b8c8e18ad9841ba3e
+msgid "|azure virtual_machine_name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:33
+# 5c61417ec90b48be88135259b4f91177
+msgid "``--bootstrap-protocol PROTOCOL``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:33
+# 7aa9ae8bff3147588b4dac128a994dd7
+msgid "|bootstrap protocol| Default value: ``winrm``."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:39
+# d50cb56a04ac47f8ba981e5526f2903e
+msgid "``-c``, ``--azure-connect-to-existing-dns``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:39
+# 6eddc0ec5ef24cbb9a80f8c3f6d7b704
+msgid "|azure connect_to_existing_dns|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:45
+# 73924a06b9d44218b83972ec0bc97f84
+msgid "|name virtual_machine|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:51
+# d08efc2502dc49b4a28cefca240034a8
+msgid "``--host-name HOST_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:54
+# 157a7cf4069043309950d910da7095b3
+msgid "``-I IMAGE``, ``--azure-source-image IMAGE``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:54
+# 461fd772f3324ca583ad3e4977dfe2f5
+msgid "|source-image|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:57
+# c839d3a116894ffc8a31f9a73cf57cdc
+msgid "``--identity-file IDENTITY_FILE``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:60
+# e36b042ae41a4cb7b7ff7abbc9959120
+msgid "``--identity-file_passphrase PASSWORD``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:60
+# 6673de57a9c2446fadf8a9e7562c9b2d
+msgid "|identity_file_passphrase|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:63
+# 6d88964797a94f52bfaa8a1479f4915d
+msgid "``-m LOCATION``, ``--azure-service-location LOCATION``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:63
+# 1a4f2a815034468da2b4aee0bab5cf0d
+msgid "|media location| Required when not using ``--azure-affinity-group``."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:66
+# c6b365ef0afd4555abfc26b7a94f3e9a
+msgid "|name node| Node names, when used with |azure|, must be 91 characters or shorter."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:72
+# dd3d6077425140e0829fd06442e28f5f
+msgid "``-o DISK_NAME``, ``--azure-os-disk-name DISK_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:72
+# 6f488b00d2df48a0aa4bf80c8b40c465
+msgid "|os-disk-name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:87
+# aaf1767987e945c18d0485363a8fbd95
+msgid "``-R ROLE_NAME``, ``--role-name ROLE_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:87
+# de60fe242e564f44996419ceb0c5e5ba
+msgid "|role-name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:90
+# 50a900aaccb5425fbfbebcff1ed43644
+msgid "``--ssh-port PORT``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:90
+# a82f84bf742b4e198f71f9113d982ea1
+msgid "|ssh_port| Default value: ``22``."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:93
+# 8516c7d696be468194d41beb996f5015
+msgid "``-t PORT_LIST``, ``--tcp-endpoints PORT_LIST``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:93
+# df698c051bd94980993b6d2b4a2290ed
+msgid "|tcp_ports|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:99
+# f7eb697f9d1e41688afa6ec7ee99ef20
+msgid "``-u PORT_LIST``, ``---udp-endpoints PORT_LIST``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:99
+# 4f50c0d2256941a8aa628e20fa854ec4
+msgid "|udp_ports|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:105
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:49
+# c2a81a0325c44a55b82575d102a1d8a7
+# f44ddc9dca8a4bc68a72f33c557e14bc
+msgid "``-x USER_NAME``, ``--ssh-user USER_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:109
+# 4e0b2a8994e1479785a18c02ab2661ee
+msgid "``-z SIZE``, ``--azure-vm-size SIZE``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst:108
+# b30e7cb00e15453f9508d55604cd2684
+msgid "|role-size| Default value: ``Small``."
+msgstr ""
+
+#: ../source/windows.rst:179
+#: ../source/windows.rst:201
+#: ../source/windows.rst:219
+#: ../source/windows.rst:283
+#: ../source/windows.rst:316
+#: ../source/windows.rst:390
+#: ../source/windows.rst:426
+#: ../source/windows.rst:483
+#: ../source/windows.rst:511
+#: ../source/windows.rst:555
+#: ../source/windows.rst:599
+# a733bbfd6c864b0c9289af4fa18f8624
+# ff42a38f9866414a81097f74a0432275
+# 10ac5d70cf6b4f5d82b7e08dcf1b8bd7
+# cf36ca6fc4fd435abf8dbd4508370ddf
+# 2a7d699db4f84fb5a7297d2ffbc52903
+# a745f608ae1c49fba5a4d536765ca175
+# fa89197c9933432bbdbdf84da9582d91
+# 7dcc08cad8124b5b95e93a4c4f2f0a27
+# 4cbc03ea042a436ba24f4f1d0ab93c9f
+# 8eb79133c03d4882a00c960fbd2f16c1
+# e65678ff04f542f39f8a9a198f9b2a2e
+msgid "Examples"
+msgstr ""
+
+#: ../source/windows.rst:180
+#: ../source/windows.rst:184
+# d715d093f0bb45e3bd889940946ac129
+# d78eb2f9508646a292396e2f92bba9e7
+msgid "**Provision an instance using new hosted service and storage accounts**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_azure_server_create_use_existing_hosted_service.rst:4
+# 824cd67eb42742538fcff0f2457dadc0
+msgid "To provision a medium-sized |centos| machine configured as a web server in the ``West US`` data center, while reusing existing hosted service and storage accounts, enter something like:"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_azure_server_create_use_new_hosted_service.rst:4
+# 0eb83a7a4da048ef925d877ae84027e0
+msgid "To provision a medium-sized |centos| machine configured as a web server in the ``West US`` data center, while also creating new hosted service and storage accounts, enter something like:"
+msgstr ""
+
+#: ../source/windows.rst:189
+# 075e3c090a4a46c69ea69e474fab9374
+msgid "server delete"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete.rst:6
+# beef427a0cb849e4b8be3c8aa5e05ab5
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |azure| cloud. To find a specific cloud instance, use ``knife azure server list``. Use the ``--purge`` option to delete all associated node and client objects from the |chef server| or use the ``knife node delete`` and ``knife client delete`` sub-commands to delete specific node and client objects."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:9
+# 54184e44c04242ea85856f216b8feaa1
+msgid "``--azure-dns-name NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:9
+# a865223c321943c2b6eae0992924cdd7
+msgid "|name dns_azure|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:15
+# 224cab81fe004bd29428ef5d199b8b76
+msgid "``--delete-azure-storage-account``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:15
+# a767281b4fb747b2b47a00149f4bd0aa
+msgid "|azure delete_storage_account|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:21
+# 45badca95c504c6a98b887ce1b43774f
+msgid "``-N NODE_NAME``, ``--node-name NODE_NAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:21
+# db4771b1f0954931b0a57e0b356b0a88
+msgid "|node_purge| This must be used with the ``-p`` (purge) option."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:27
+# e95e157ef3614e3d8a74cf8f5dd04939
+msgid "``-P``, ``--purge``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:27
+# 616d8bc7338344a997666be527fb2e8e
+msgid "|purge windows azure|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:30
+# deb40e349195469199ca937147fd888f
+msgid "``--preserve-azure-dns-name``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:30
+# 7c53ae25025d44eabfd37a43e97e6eb2
+msgid "|azure preserve_dns_name|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:33
+# 3e28ccb88a044445ba0a7cec2f33fbb6
+msgid "``--preserve-azure-os-disk``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:33
+# 38de5468d3c44603b04c14d6bbfdab97
+msgid "|azure preserve_os_disk|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:36
+# 8a835d9086174b32a29bccac4ebfdc85
+msgid "``--preserve-azure-vhd``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:36
+# e08e38ead63e448592196a4179883794
+msgid "|azure preserve_virtual_disk|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:46
+# bf75f93566324682bf015c02ecbf0919
+msgid "``--wait``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst:45
+# dffed5bdb054422997417374bd323b93
+msgid "|azure wait|"
+msgstr ""
+
+#: ../source/windows.rst:202
+# a282ac37e9d34bd5acf72d88727decd1
+msgid "**Delete an instance**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_azure_server_delete.rst:4
+# fb1eaa2bc6a84ba99057eaf0bdf6b8a2
+msgid "To delete an instance named ``devops12``, enter:"
+msgstr ""
+
+#: ../source/windows.rst:207
+# 7803f69dad0244479d054ccea725fa10
+msgid "server describe"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe.rst:6
+# 7c49773f4b8943f398cf36c6519e9355
+msgid "The ``server describe`` argument is used to view a detailed description of one (or more) roles that exist in a |azure| cloud instance. For each specified role name, information such as status, size, hosted service name, deployment name, ports (open, local, public) and IP are displayed."
+msgstr ""
+
+#: ../source/windows.rst:220
+# 40172f9d29994ef7802642cecd7729b2
+msgid "**View role details**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_azure_server_describe.rst:4
+# 29ff0841c5cb48c28060906b3daf1c36
+msgid "To view the details for a role named ``admin``, enter:"
+msgstr ""
+
+#: ../source/windows.rst:225
+# 8ec37d3d458b4847a1c2584315fefff6
+msgid "server list"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list.rst:6
+# 522acad563b34d1f908bbb2062e06713
+msgid "The ``server list`` argument is used to find instances that are associated with a |azure| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../source/windows.rst:238
+# 188dc948a9c24d22b92f9b620f49e4cd
+msgid "knife windows"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_windows_install_rubygem.rst:3
+# 5cbc9cbc7f764445b68541ebd734b3f2
+msgid "To install the |subcommand knife windows| plugin using |rubygems|, run the following command:"
+msgstr ""
+
+#: ../source/windows.rst:248
+# 3b28871c4d4b4a599ec2465f2c4f9669
+msgid "Requirements"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:5
+# 13e33c7df1204b1fbb312265fd62145a
+msgid "This subcommand requires |windows remote management| to be installed, and then configured correctly, including ensuring the correct ports are open. For more information, see: http://msdn.microsoft.com/en-us/library/aa384372(v=vs.85).aspx and/or http://support.microsoft.com/kb/968930. Use the quick configuration option in |windows remote management| to allow outside connections and the entire network path from |knife| (and the workstation):"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:11
+# 3e3ad414dc5744d38b5040d74372b7c2
+msgid "The following |windows remote management| configuration settings should be updated:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:17
+# 61afc9dd952a43e399bec9c273d3f1cd
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:19
+# ca2fa0cde8f9455186449fc740d0d898
+msgid "``MaxMemoryPerShellMB``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:20
+# b00ac85071404596aba07ecc74e3cb1e
+msgid "|winrm_max_memory_per_shell_mb|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:21
+# e487b56ef1b14860bcd117d8dedce07b
+msgid "``MaxTimeoutms``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:22
+# 2c080c99c5e74af4aacab7860542acc4
+msgid "|winrm_max_timeouts|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:23
+# df695a2d6a0642048ce9d883e8d1c9ac
+msgid "``AllowUnencrypted``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:24
+# 410752a9ba9d4e64aa2db8ca07bdb931
+msgid "|winrm_allow_unencrypted|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:25
+# 24299531a88042eaba0b41c201e1b136
+msgid "``Basic``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:26
+# 39eb7fa9f681409cbe02e53378690c9b
+msgid "|winrm_basic|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:28
+# 5f3895780ac64831aa8165e14b04e9eb
+msgid "To update these settings, run the following commands:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:34
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:40
+# c58a5baace1c4bab9f6195747ee5ff90
+# af0b47a38afc45ea9e81967bf4b4d65a
+msgid "and:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:46
+# 140affcdb6c2428ab6a157766775453d
+msgid "and then:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst:52
+# 8fd423a880ee48aba744399bc7cc181e
+msgid "Ensure that the |windows firewall| is configured to allow |windows remote management| connections between the workstation and the |chef server|. For example:"
+msgstr ""
+
+#: ../source/windows.rst:252
+# 8865bce513434a958b0eeab73c300bfe
+msgid "Domain Authentication"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst:6
+# bafa3ae53fa741a992c38452f419582a
+msgid "The |subcommand knife windows| plugin supports |windows| domain authentication. This requires:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst:8
+# 3bebbe7cf8ee45b892fc1ce9ae4ef998
+msgid "An |ssl| certificate on the target node"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst:9
+# a207f390dd70430aa9d6fea9b332f9bf
+msgid "The certificate details can be viewed and its `thumbprint hex values copied <http://msdn.microsoft.com/en-us/library/ms788967.aspx>`_"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst:11
+# 9150b102552544f7a511b71802f806fa
+msgid "To create the listener over HTTPS, run the following command:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst:17
+# d0b32b797633429194f76a65545ba98c
+msgid "where the ``CertificateThumbprint`` is the thumbprint hex value copied from the certificate details. (The hex value may require that spaces be removed before passing them to the node using the |subcommand knife windows| plugin.) |windows remote management| 2.0 uses port ``5985`` for HTTP and port ``5986`` for HTTPS traffic, by default."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst:19
+# 612f8c1b911f48ffbb43d833a14cc518
+msgid "To bootstrap the target node using the |subcommand knife bootstrap| subcommand, run a command similar to the following:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst:25
+# b646a58295cd43f4ba8bde802c25970d
+msgid "and then use the ``winrm`` argument in the |subcommand knife windows| plugin to verify the communication with the new node:"
+msgstr ""
+
+#: ../source/windows.rst:256
+# ee47ec950e68416581929ce767864a2b
+msgid "bootstrap windows ssh"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh.rst:6
+# 1ed967def5b54011a59ab9f88f44c0f5
+msgid "The ``bootstrap windows ssh`` argument is used to bootstrap |chef client| installations in a |windows| environment, using a command shell that is native to |windows|."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst:39
+# 31ec6467296d45f3b95f257e2bb21f6c
+msgid "``-s SECRET``, ``--secret SECRET``"
+msgstr ""
+
+#: ../source/windows.rst:268
+# 8eb5054f66ed49cf92056bc3c46e5e92
+msgid "winrm"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm.rst:6
+# 053f5baa1a18452d83a25fa7c7b384e4
+msgid "The ``winrm`` argument is used to create a connection to one or more remote machines. As each connection is created, a password must be provided. This argument uses the same syntax as the ``search`` subcommand."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:9
+# 3bb772e3695c489789a644fd9f71f3c2
+msgid "``-a ATTR``, ``--attribute ATTR``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:9
+# 34e1a683cfe64a4383a9029da65e1d27
+msgid "|attribute ssh| The default attribute is the |fqdn| of the host. Other possible values include a public IP address, a private IP address, or a hostname."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:12
+# 6d2ae41925ac4d25b5da2bf1a6419779
+msgid "``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:12
+# 55b812237e5c42638f19541ec13478cc
+msgid "|ca_trust_file|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:18
+# 9bd65b98da934b54b22a7e107f0c2eae
+msgid "``-i KEYTAB_FILE``, ``--keytab-file KEYTAB_FILE``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:18
+# 823e2ddbc1d442b3b729413d198fab37
+msgid "|keytab-file|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:21
+# e87c96c2e8424076b52c293ce4561651
+msgid "``-m``, ``--manual-list``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:21
+# 952a6372c09949f989513448a7469a33
+msgid "|manual_list|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:24
+# 70b11b88a2034690bff708c3bc6bdd06
+msgid "``-p PORT``, ``--winrm-port PORT``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:24
+# 257abd7966704bbb9da4791d9c7c44aa
+msgid "|winrm_port| Default: ``5985``."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:27
+# dde140b596eb4a3193cc2ffc5da3f93d
+msgid "``-P PASSWORD``, ``--winrm-password PASSWORD``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:27
+# 431f6eb3726147eab858e30f8f6a2d0a
+msgid "|winrm_password|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:30
+# f3bba329e4d94459ac9ef0c136a9e106
+msgid "``-R KERBEROS_REALM``, ``--kerberos-realm KERBEROS_REALM``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:30
+# 798b2568aa9e4433b9be4d7fc8ad7d94
+msgid "|kerberos-realm|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:33
+# 618dfc3b4fc94ba193894991ec3159cb
+msgid "``--returns CODES``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:33
+# afa6220b3c37464892075812138df27a
+msgid "|returns|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:36
+# 514c7bfaa0b6496d96843af0fc719df9
+msgid "``-S KERBEROS_SERVICE``, ``--kerberos-service KERBEROS_SERVICE``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:36
+# b373d40d9ac6481baeb058de58562811
+msgid "|kerberos-service|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:39
+# 9a5e44b6aab849b09ba59a813eecfa2e
+msgid "``SEARCH_QUERY``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:39
+# 5ec0e4638ebe4c3dbd0fe22ebf52cd41
+msgid "|search_query ssh|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:42
+# 599f8c88688044e58bf04652103778b9
+msgid "``SSH_COMMAND``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:42
+# 59caa35d32ee49b39105d8dbd2be7c23
+msgid "|ssh_command|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:45
+# 253039f47e4541b58ef7a4fa0b3c264d
+msgid "``-t TRANSPORT``, ``--winrm-transport TRANSPORT``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:45
+# 06fad2d434df479db92d34e75b427aac
+msgid "|winrm_transport|"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:49
+# 6d5de38e7d084b9e82fb3004e3b1e53e
+msgid "``-x USERNAME``, ``--winrm-user USERNAME``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst:48
+# 9aabcc3ac76a4418b01943f0a4a85b99
+msgid "|winrm_user|"
+msgstr ""
+
+#: ../source/windows.rst:285
+# 96dcf8734e374b0cbb133611b36160bb
+msgid "**Find Uptime for Web Servers**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_windows_winrm_find_uptime.rst:4
+# 3cf751e4675042358c6df7813ced724c
+msgid "To find the uptime of all web servers, enter:"
+msgstr ""
+
+#: ../source/windows.rst:289
+# 317c9a982fdf43b19baef2f844c5ce68
+msgid "**Force a chef-client run**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_windows_winrm_force_chef_run.rst:4
+# 31a9388138dc4c0d9e3f9daf59eb9300
+msgid "To force a |chef client| run:"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_windows_winrm_force_chef_run.rst:16
+# 6b35023c54ba45d7a55167d852c68328
+msgid "Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Fri, 04 Mar 2011 22:00:53 +0000]``."
+msgstr ""
+
+#: ../source/windows.rst:293
+# b3baeeb9810a49809352ea4edd8fb5b4
+msgid "**Bootstrap a Windows machine using SSH**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_windows_bootstrap_ssh.rst:4
+# 81d8531f901d497097695ef2a355a2fc
+msgid "To bootstrap a |windows| machine using |ssh|:"
+msgstr ""
+
+#: ../source/windows.rst:297
+# 60e38aff552845698b88685170b7f8aa
+msgid "**Bootstrap a Windows machine using Windows Remote Management**"
+msgstr ""
+
+#: ../../step_plugin_knife/step_plugin_knife_windows_bootstrap_winrm.rst:4
+# 074351353fe4403f9758553e220c6e3d
+msgid "To bootstrap a |windows| machine using |windows remote management|:"
+msgstr ""
+
+#: ../source/windows.rst:304
+# 5df14c29c4494e0f89571396a6bc68c3
+msgid "Resources"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:5
+# b03b0131232d470283db08740b4dae46
+msgid "A resource is a statement of configuration policy. It describes the desired state of an element of your infrastructure, along with the steps needed to bring that item to the desired state. Each resource statement in a |chef| recipe corresponds to a specific part of your infrastructure: a file, a template, a directory, a package, a service, a command to be executed, and so on. Each resource statement includes the resource type (such as ``template``, ``service`` or ``package``), its name, any attributes that specify additional details, and an action that tells the |chef client| how to implement the configuration policy."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:7
+# 4d9077ff982140a59a5f030b2b6f8439
+msgid "Together, resources describe all the components in your network. Recipes group resources together and describe working configurations. Add recipes to a run-list to describe the desired state for every node to which that run-list is assigned. Cookbooks are collections of recipes and are stored on the |chef server|."
+msgstr ""
+
+#: ../source/windows.rst:308
+# d6aa2ca6f2254b30b719a2d822f59694
+msgid "Common Functionality"
+msgstr ""
+
+#: ../source/windows.rst:309
+# d5f0f0cff3044293932ec3baa20b3b87
+msgid "The following sections describe |windows|-specific functionality that applies generally to all resources:"
+msgstr ""
+
+#: ../source/windows.rst:312
+# f28a5966bc4d47f8814812ee32b9734f
+msgid "Relative Paths"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_relative_paths.rst:4
+# da5d8dfe03e442ddbef931fe038371a8
+msgid "The following relative paths can be used with any resource:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_relative_paths.rst:10
+# 219dc4f731de4279ac8dd6be15351fc0
+msgid "Relative Path"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_relative_paths.rst:12
+# d21c65aad5854899a25eb8536ae84d62
+msgid "``#{ENV['HOME']}``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_relative_paths.rst:13
+# 92ec16e0570f412388fe3653e5d9c35e
+msgid "Use to return the ``~`` path in |linux| and |mac os x| or the ``%HOMEPATH%`` in |windows|."
+msgstr ""
+
+#: ../source/windows.rst:320
+# f008262f6b634689a4e48fdf7927c685
+msgid "Windows File Security"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security.rst:4
+# cd01f175d58b4984b626bd0bf78e4f9c
+msgid "To support |windows| security, the |resource template|, |resource file|, |resource remote_file|, |resource cookbook_file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes."
+msgstr ""
+
+#: ../source/windows.rst:323
+# 0e0566e3d9814942ae207599cb4c0202
+msgid "Windows File Security applies to the |resource cookbook_file|, |resource directory|, |resource file|, |resource remote_directory|, |resource remote_file|, and |resource template| resources."
+msgstr ""
+
+#: ../source/windows.rst:326
+# 6f6d961c084c4c5dadca1014cb397ed2
+msgid "ACLs"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:4
+# c0d094559cc4498daa8e50ce51fbf03a
+msgid "The ``rights`` attribute can be used in a recipe to manage access control lists (ACLs), which allow permissions to be given to multiple users and groups. The syntax for the ``rights`` attribute is as follows:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:10
+#: ../../includes_resources/includes_resource_batch_syntax.rst:14
+#: ../../includes_resources/includes_resource_dsc_script_syntax.rst:14
+#: ../../includes_resources/includes_resource_env_syntax.rst:14
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:14
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:26
+#: ../../includes_resources/includes_resource_package_windows_syntax.rst:14
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:18
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:14
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:14
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:14
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:14
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:18
+# d20821419be04a8ab24a1f3076bbf608
+# 9e9cccc044964fcd9ce7cc63c315fa0b
+# 827b8be6aa3a4d4791a635fc03d2be7a
+# 1f92130895684b9aa6fbc521d1036019
+# 04da0c90e5904de7b7248ad952a05130
+# 4f99225a40734a19ae7d88e638170167
+# 76480cf0260a4a9d8dd3736e0c1b49ef
+# d59c59ddd47e44ae86368f91ff39285f
+# 217340f5d5a9426caffd6d8e0b57ee7a
+# 4cd384105575493b985191e05b7e603a
+# 7c7257af69f64a1a869c77abbe3f0cc7
+# da531104067149ed908cdca00825f491
+# 0b7c7e314dc54d20ba2d59d2d8703f1a
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:12
+# 84aab2467acc48c5869a5f2bb523f230
+msgid "``permission`` is used to specify which rights will be granted to the ``principal``. The possible values are: ``:read``, ``:write``, ``read_execute``, ``:modify``, ``:full_control``,  and ``:deny``."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:14
+# 32285625eeb34150bd3552037f5965ec
+msgid "These permissions are cumulative. If ``:write`` is specified, then it includes ``:read``. If ``:full_control`` is specified, then it includes both ``:write`` and ``:read``. If ``:deny`` is specified, then the user or group will not have rights to the object."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:16
+# 5e43a84a40bc475ebccdb6874041a1f5
+msgid "(For those who know the |windows| API: ``:read`` corresponds to ``GENERIC_READ``; ``:write`` corresponds to ``GENERIC_WRITE``; ``:read_execute`` corresponds to ``GENERIC_READ`` and ``GENERIC_EXECUTE``; ``:modify`` corresponds to ``GENERIC_WRITE``, ``GENERIC_READ``, ``GENERIC_EXECUTE``, and ``DELETE``; ``:full_control`` corresponds to ``GENERIC_ALL``, which allows a user to change the owner and other metadata about a file.)"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:17
+# 6af045d62b9642a09fe7542711f7c98a
+msgid "``principal`` is used to specify a group or user name. This is identical to what is entered in the login box for |windows|, such as ``user_name``, ``domain\\user_name``, or ``user_name@fully_qualified_domain_name``. The |chef client| does not need to know if a principal is a user or a group."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:18
+# 3f83333819784d889e07645ca88614ac
+msgid "``option_type`` is a hash that contains advanced rights options. For example, the rights to a directory that only applies to the first level of children might look something like: ``rights :write, \"domain\\group_name\", :one_level_deep => true``. Possible option types:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:24
+# 6f68cb43fcb8462ba4fac64cea7d5327
+msgid "Option Type"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:26
+# 3d2319d07a9b4df8b21b6b7bc4a8fa67
+msgid "``:applies_to_children``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:27
+# 2b6c8f42c28d40d3ad91b7baf819ba1d
+msgid "Use to specify how permissions are applied to children. Possible values: ``true`` to inherit both child directories and files;  ``false`` to not inherit any child directories or files; ``:containers_only`` to inherit only child directories (and not files); ``:objects_only`` to recursively inherit files (and not child directories)."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:28
+# 87e134c6c79c435791e3f992b6185d4b
+msgid "``:applies_to_self``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:29
+# 6cf5aac648c3431da0bca108d83a98e2
+msgid "Indicates whether a permission is applied to the parent directory. Possible values: ``true`` to apply to the parent directory or file and its children; ``false`` to not apply only to child directories and files."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:30
+# 4dd6af1b7c5b4e7791b89d02a713c7bb
+msgid "``:one_level_deep``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:31
+# 8187260d539c41699fc2cc06ce5df60e
+msgid "Indicates the depth to which permissions will be applied. Possible values: ``true`` to apply only to the first level of children; ``false`` to apply to all children."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:33
+# 01af6d32e7bf41bd8d2f241e662dfe65
+msgid "The ``rights`` attribute can be used as many times as necessary; the |chef client| will apply them to the file or directory as required. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:44
+#: ../../step_resource/step_resource_batch_unzip_file_and_move.rst:24
+# 12e747690e5a405d9d92614b3813c9ca
+# 31a12b81983a45ee83459260eaffc9c8
+msgid "or:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:53
+# 1318dfd283aa4be3b10497490cd96fc6
+msgid "Some other important things to know when using the ``rights`` attribute:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:55
+# 30dd5fb33e6c4b5cbfbfe5c39d09a794
+msgid "Order independence. It doesn't matter if ``rights :deny, [\"Julian\", \"Lewis\"]`` is placed before or after ``rights :read, [\"Julian\", \"Lewis\"]``, both Julian and Lewis will be unable to read the document."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:56
+# b61fd561b756445f8a7deb2609aad695
+msgid "Only inherited rights remain. All existing explicit rights on the object are removed and replaced."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:57
+# 4842b53c47714fd6aabe2628f40bcb27
+msgid "If rights are not specified, nothing will be changed. The |chef client| does not clear out the rights on a file or directory if rights are not specified."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:58
+# 009c819c16f24bacb29c70f2c9455a30
+msgid "Changing inherited rights can be expensive. |windows| will propagate rights to all children recursively due to inheritance. This is a normal aspect of |windows|, so consider the frequency with which this type of action is necessary and take steps to control this type of action if performance is the primary consideration."
+msgstr ""
+
+#: ../source/windows.rst:330
+# 4e580772735a4510b3026345dd0ba5ea
+msgid "Inheritance"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:4
+# 49d705d28e784f61a091d741417c1697
+msgid "By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The ``inherits`` attribute can be used to specifically tell the |chef client| to apply (or not apply) inherited rights from its parent directory."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:6
+# 07c0e0cd78884e5fa3971ff5581fcf89
+msgid "For example, the following example specifies the rights for a directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:15
+# 2d879aaf840943c99367ec84f4d8be43
+msgid "and then the following example specifies how to use inheritance to deny access to the child directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:24
+# d3ff2e3952c24621b13684e617bee3c7
+msgid "If the ``:deny`` permission were to be used instead, something could slip through unless all users and groups were denied."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:26
+# ac33b70347534e3aa4b7f2eb245df2d7
+msgid "Another example also shows how to specify rights for a directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:36
+# ffb1d6dd3128425f82614560de0d02a2
+msgid "but then not use the ``inherits`` attribute to deny those rights on a child directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:44
+# b48546a5f61245f1b6c9a466d1a02141
+msgid "Because the ``inherits`` attribute is not specified, the |chef client| will default it to ``true``, which will ensure that security settings for existing files remain unchanged."
+msgstr ""
+
+#: ../source/windows.rst:334
+# d2a45e507d7348d087402b1b735ff94d
+msgid "Attributes for File-based Resources"
+msgstr ""
+
+#: ../source/windows.rst:335
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:4
+# c00fd7e9b2984556afb317611e2d43bc
+# ea6892bb185143d29e1479c111113d80
+msgid "This resource has the following attributes:"
+msgstr ""
+
+#: ../source/windows.rst:341
+#: ../../includes_resources/includes_resource_batch_attributes.rst:10
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:10
+#: ../../includes_resources/includes_resource_env_attributes.rst:10
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:10
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:10
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:10
+# d3cf0deba2b2452393b90148fc970e74
+# fd3cd7fd903b430b94e776cdf52336db
+# d0f5f767b78b4c119e643789de6c22db
+# b68fd77adcd0477d8249dc87c5d2b568
+# 88b00c9621f84508aaa4241cf0a61be1
+# 427423675f5f43809700d32baa231d5e
+# 8e5a22e7984d463bae064b4cc571ba5d
+msgid "Attribute"
+msgstr ""
+
+#: ../source/windows.rst:343
+#: ../../includes_resources/includes_resource_batch_attributes.rst:24
+# a58a38b58a00495f90e16d7c70dd809b
+# 7025bc00c69e4d53950b6a7777acac62
+msgid "``group``"
+msgstr ""
+
+#: ../source/windows.rst:344
+# 8d3ebc76f55d413e9700d970a3ba96da
+msgid "|windows group_identifier|"
+msgstr ""
+
+#: ../source/windows.rst:345
+# 5eecbedde9fa40948852caaf01ded04e
+msgid "``inherits``"
+msgstr ""
+
+#: ../source/windows.rst:346
+# a3527273ff5e4b4f8278447fcb846783
+msgid "|windows| only. |inherits windows security| Default value: ``true``."
+msgstr ""
+
+#: ../source/windows.rst:347
+# 478ceed51a964c8ab628e43cb50cac29
+msgid "``mode``"
+msgstr ""
+
+#: ../source/windows.rst:348
+# aa0fc3120bf34dcc97979e1fb3f27d12
+msgid "|mode resource_file|"
+msgstr ""
+
+#: ../source/windows.rst:350
+# 258433dcf2d146f0b1da8663364e5a7a
+msgid "|windows|: |mode windows security|"
+msgstr ""
+
+#: ../source/windows.rst:351
+# ae15ff59067c46a3b985675c6a28122e
+msgid "``owner``"
+msgstr ""
+
+#: ../source/windows.rst:352
+# 472182d9caab444bacb87384b18a4211
+msgid "|owner windows security|"
+msgstr ""
+
+#: ../source/windows.rst:353
+# 8d6437e2beee426e85998fe62bfed34c
+msgid "``path``"
+msgstr ""
+
+#: ../source/windows.rst:354
+# 3c54b72178dd4d7c8ad803f03a136322
+msgid "|path file|"
+msgstr ""
+
+#: ../source/windows.rst:356
+# 4f316d42b3d64dde86818c157c7f4501
+msgid "|windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended."
+msgstr ""
+
+#: ../source/windows.rst:357
+# c9fa65601819458a86db84c06b7803ea
+msgid "``rights``"
+msgstr ""
+
+#: ../source/windows.rst:358
+# f2b70b9c6bc8409194833019e09f4976
+msgid "|windows| only. |rights windows security|"
+msgstr ""
+
+#: ../source/windows.rst:360
+# 23f51864ccf44c088016ae75d7677524
+msgid "Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice."
+msgstr ""
+
+#: ../source/windows.rst:363
+# 3925bf280b0b4819827ae14e3e24cf7c
+msgid "Atomic File Updates"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_atomic_update.rst:5
+# 621368f2adf047a8b7ad2cd24a70de74
+msgid "Atomic updates are used with |resource file|-based resources to help ensure that file updates can be made when updating a binary or if disk space runs out."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_atomic_update.rst:7
+# 8b8d8a3198ea439bbeee8fe0c8f79a12
+msgid "Atomic updates are enabled by default. They can be managed globally using the ``file_atomic_update`` attribute in the |client rb| file. They can be managed on a per-resource basis using the ``atomic_update`` attribute that is available with the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_atomic_update.rst:9
+# cee6380ecfd84fd7a21e2b857e383ab2
+msgid "On certain platforms, and after a file has been moved into place, the |chef client| may modify file permissions to support features specific to those platforms. On platforms with |selinux| enabled, the |chef client| will fix up the security contexts after a file has been moved into the correct location by running the ``restorecon`` command. On the |windows| platform, the |chef client| will create files so that ACL inheritance works as expected."
+msgstr ""
+
+#: ../source/windows.rst:366
+# 17b55c3778624dc4bbc44f6b6bd199ef
+msgid "Atomic File Updates applies to the |resource template| resource."
+msgstr ""
+
+#: ../source/windows.rst:370
+# 0394fdc060314d0cab6c1947d287e761
+msgid "batch"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch.rst:4
+# 10d8465fd80041a4b644516330d13e8b
+msgid "Use the |resource batch| resource to execute a batch script using the |windows cmd exe| interpreter. The |resource batch| resource creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource inherits actions (``:run`` and ``:nothing``) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:4
+# dcbd65147dc64e62b0f23dba5f03ab74
+msgid "The syntax for using the |resource batch| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:16
+# 194bfe866f6d452f9543eb037737be87
+msgid "``batch`` tells the |chef client| to use the ``Chef::Provider::Batch`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:17
+# 3c540d7cdaa74816b28a93704f96b99a
+msgid "``\"name\"`` is the name of the batch script or the path to a file which contains it"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:18
+#: ../../includes_resources/includes_resource_dsc_script_syntax.rst:18
+#: ../../includes_resources/includes_resource_env_syntax.rst:18
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:18
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:30
+#: ../../includes_resources/includes_resource_package_windows_syntax.rst:18
+# 8cfc03fa7b3746e3bb844102062f58f9
+# 8ed820b18f104957af5ab17c9b490cc8
+# e403e9c726424d3584f38c7810b5df54
+# 4eb6c0e8de4949af82b3005f1e57943a
+# 5051b703f8c6457fa30e70439348fd40
+# 5fb8c03ba2244ed6bf970e4da63b32b7
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:19
+#: ../../includes_resources/includes_resource_dsc_script_syntax.rst:19
+#: ../../includes_resources/includes_resource_env_syntax.rst:19
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:19
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:36
+#: ../../includes_resources/includes_resource_package_windows_syntax.rst:19
+# c0727463fd2d490c980f0f3bae280a8b
+# 29e7f1746c8442478299e6faa3a9c9bb
+# 88e2c5534a9742189cf412bd927f94f6
+# b9592383ded54da8b2e404f02fac33d7
+# b994c9f9a6b84cad956d4d2524ff8136
+# c696601f16444ab3ba29e54264a364e2
+msgid "``:action`` identifies which steps the |chef client| will take to bring the node into the desired state"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:21
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:21
+# 79b266a52d3649ab89fa1d820d885f4d
+# 7dec41afcc5140e39b7ecb227fa7ada2
+msgid "For example:"
+msgstr ""
+
+#: ../source/windows.rst:378
+#: ../source/windows.rst:418
+#: ../source/windows.rst:471
+#: ../source/windows.rst:499
+#: ../source/windows.rst:543
+#: ../source/windows.rst:587
+# c8d04b666dee4394813434be8f831fce
+# 4b2841af448e4e02b7903afd53389402
+# 9534bb75d5794b22aeb8077c410a75aa
+# ca7d231e9bcb4294b4f86d94b6fa82ad
+# a3639ea2c49c4fd2b377b52c780e6ea9
+# 0bd4a7e3367f457889c61865efcd5821
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:4
+#: ../../includes_resources/includes_resource_dsc_script_actions.rst:4
+#: ../../includes_resources/includes_resource_env_actions.rst:4
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:4
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:4
+#: ../../includes_resources/includes_resource_package_windows_actions.rst:4
+# 982e79f6d2f04c1fa28091ad1d1eaebd
+# 1146af8b32764b45b5f3709524d40453
+# ba096d0169184ecca86679085a48cb91
+# e26cd80294f444fa9cd9eb5747f997fc
+# 3fe5a4a0d8ed4442bb7f1573cf656760
+# fa8af125f53749c483dc1aaa182222a2
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:10
+#: ../../includes_resources/includes_resource_dsc_script_actions.rst:10
+#: ../../includes_resources/includes_resource_env_actions.rst:10
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:10
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:10
+#: ../../includes_resources/includes_resource_package_windows_actions.rst:10
+# 1eee404e6091413e9c0e72406127061f
+# 8bb8aa9cdbdd4f249967276e72611a93
+# 021c352209a543f49071aae1bbbeaf95
+# 57af3bd1b6a14654a0671bae682d617c
+# 86a7675031d64cb0b0343cc046e4819d
+# fe726cf26d174accb931bc73fab36f21
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:12
+#: ../../includes_resources/includes_resource_dsc_script_actions.rst:12
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:12
+# a1c95fd017514e6c9521f83ea8a9ed47
+# 6b56fec0f7454c43ae28fef7a89e913a
+# a89f6020786948e4b6786b87acc49bd3
+msgid "``:run``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:13
+# c422927c4f2a4d3a9b2c7dc719240a22
+msgid "|resource action run windows_batch|"
+msgstr ""
+
+#: ../source/windows.rst:382
+#: ../source/windows.rst:422
+#: ../source/windows.rst:475
+#: ../source/windows.rst:503
+#: ../source/windows.rst:547
+#: ../source/windows.rst:591
+# d3011b43df03493dafa8bf26ae7c5db7
+# d24f585d7f90486d906f6bb6d5655839
+# b7a2f58e975e432ebc08d60458c72ff6
+# 846fc560611f4d8990aa202fccb33693
+# 6b85d567a0c8402190949165e021d896
+# 396bf2c590df40af9d2c6786093bb4b9
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:4
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:4
+#: ../../includes_resources/includes_resource_env_attributes.rst:4
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:4
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:4
+# 0ae506f5b760493999b04e8226acf05c
+# b849e921fae348f8b9ebd7d2330d3fef
+# 23e468716b1a46f2a8bc0843f3ade9e9
+# 9cac7c8ca0404d3f89c0cc6d3965345f
+# 91c080794f58481e96a9328f3b4b27f4
+msgid "|description resource_attributes_intro|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:12
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:12
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:12
+# 7f9c3ca8ace24d4081baf270a7887149
+# 78bd5a9d933d4c6099ad8564df70da03
+# 40496334aa924f6289d62ca780854de7
+msgid "``architecture``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:13
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:13
+# c5435f5bcc384a51b89b38dcdddb174b
+# 55f6eb0b4ffe420f820a207fffdb0ff1
+msgid "|architecture windows_process|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:14
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:12
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:14
+# 0f62dc66947045a68a8f1336e31c5552
+# d4b01b04278c4bec84e9726ddbfe0f5e
+# 5d70a80dec7045a5a77140fa5a81b55e
+msgid "``code``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:15
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:15
+# ca8bee9afb0748ceac1b5e38d2b86803
+# 82ba7b20d14e4b74919e2799bcc21ec6
+msgid "|code quoted_string|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:16
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:14
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:16
+# 1bbbdf49f7a0445b85cc3de960c33101
+# 83e9795d516b4cdbb99c5c2a291e3d2b
+# f0ec574d44a344acb9e6e76983a7baa4
+msgid "``command``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:17
+# 11d10118c3884625a324970e8b994107
+msgid "|name command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:18
+# 93868a528e4b4cf19b8a5f7b0df28643
+msgid "``creates``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:19
+# 580348f2e8a94932abc1e9f479d8c137
+msgid "|creates file_exists|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:20
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:24
+# 105ad0e556df40879ce468f8f8201e68
+# d1c7899969104dcd9aab0e85933976d3
+msgid "``cwd``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:21
+# 86cf5878894f438fbcd4831d015c415f
+msgid "|cwd run_command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:22
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:22
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:40
+# 45e32d40cc224482b53cef7a16b1879b
+# f4ef886c43ca4e3babe00d23af3d3869
+# 232182a6e5ac479fa557b7a1c9fe64f0
+msgid "``flags``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:23
+# aeab9f71a7c546838fa75a36b17bdf00
+msgid "|flags|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:25
+# 5cc94dab7e3d48be98682b7dc6ee76cf
+msgid "|group command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:26
+#: ../../includes_resources/includes_resource_env_attributes.rst:16
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:44
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:22
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:16
+# 68b005d0d25943218344bc3489f55666
+# ce9df3047b77484391423bc6401eced2
+# f39b600be40346199e1fd8effd34cd2f
+# 26cc16c730914a29b0dd33c737f8ce06
+# 7afa770ea9fe4a0b91a2a13c05613a3d
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:27
+#: ../../includes_resources/includes_resource_env_attributes.rst:17
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:45
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:23
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:17
+# baddb749c66940ff87d30085bad00b33
+# af4d8326b3054bb0a1b12545f4e2efc7
+# 22daae2efe6a484ba6a61f9bc03a1ad9
+# 2456c7a8c96544198d43e7e603499110
+# 81f95617b2b941ddaae212bcf94d3dd4
+msgid "Optional. |provider resource_parameter| (See \"Providers\" section below for more information.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:28
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:18
+# 35b3880fcb934d48a8fa8ead0279de70
+# dca8f4ab0f764789ae8f85f21f5e20bf
+msgid "``returns``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:29
+# caad601716ee4a5094a45d8795ed5a85
+msgid "|return_value cmd| Default value: ``0``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:30
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:22
+# 6c0a9a55d8aa456c84902e4984e6c6e1
+# 7d71bd8aa3874d278eb5430f2541f20a
+msgid "``timeout``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:31
+# 1566f148e9c748f5a5c91c572d68bc2d
+msgid "|timeout command| Default value: ``3600``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:32
+# 4d7cbb9945f7460bbedd7deaebefb848
+msgid "``user``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:33
+# 8241ab0c47344949bcb311394fa73056
+msgid "|user name_or_id|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:35
+# 6db20b82cbe8400fbc28d7d962575613
+msgid "See http://technet.microsoft.com/en-us/library/bb490880.aspx for more information about the |windows cmd exe| interpreter."
+msgstr ""
+
+#: ../source/windows.rst:386
+#: ../source/windows.rst:479
+#: ../source/windows.rst:507
+#: ../source/windows.rst:551
+#: ../source/windows.rst:595
+# d228b2a4485945349d15495b2a45041b
+# 189b3ee5b5a449b59b8b74dadbcc6888
+# be5d3464262f4b6a80d43376d692724d
+# 899d2a2b4905425cad265fe23a7a76ed
+# 48f0129fdac941d29a77f5c851c09958
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_providers.rst:4
+#: ../../includes_resources/includes_resource_env_providers.rst:4
+#: ../../includes_resources/includes_resource_powershell_script_providers.rst:4
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:4
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:4
+# eec967beb7af4bdf82a6ba78dd3870a8
+# af46b1aace4b4e75aaa59d2cb17aee2d
+# d5a14142471e4160a5c2caa3e86cffff
+# 5983a1ae33194d238c9f19d9c0afa453
+# ed19ee415d2d4f64b9f2b9759867022a
+msgid "This resource has the following providers:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_providers.rst:10
+#: ../../includes_resources/includes_resource_env_providers.rst:10
+#: ../../includes_resources/includes_resource_powershell_script_providers.rst:10
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:10
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:10
+# 46b506279005488bb4d600b41fee48d3
+# 19ee6f2e3e164e8b9db5b5ec7ffed5ad
+# 274121444b2e4a6b96dc7372fda047d1
+# 0e65bb62514646cb822f44e3f1f27e19
+# 495fe99f0ff8407d96e9d5de463a7e94
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_providers.rst:11
+#: ../../includes_resources/includes_resource_env_providers.rst:11
+#: ../../includes_resources/includes_resource_powershell_script_providers.rst:11
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:11
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:11
+# 0c6a918ee30b4211ba543c1f2f763aed
+# dd9812051fdd448680ce7d781b3ed808
+# cd6c385db1e343dda614371fc5e95c65
+# ba3b9624f72346728c8a73ed291481e2
+# 18c6080262444fdd9d9582e1fae16930
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_providers.rst:12
+#: ../../includes_resources/includes_resource_env_providers.rst:12
+#: ../../includes_resources/includes_resource_powershell_script_providers.rst:12
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:12
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:12
+# 3776e0386cb842b982c557042d00e2dc
+# 229e1d2b1ae143f582448f080beaf4a7
+# 1774319dd1cb47a2bcb586148231daf5
+# 720b48142f794784a0032b15f0d18a6e
+# 42c27a8c172240e097ea0a069e465826
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_providers.rst:13
+# b91abf057b55437b81b5dfe9b08d5ec0
+msgid "``Chef::Provider::Batch``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_providers.rst:14
+# b182dff7cee349829d2780fae94d9b08
+msgid "``batch``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_providers.rst:15
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:15
+# f79b5adfd6e34e00853527054f7e09b9
+# c6f10ba2cd7245d6b4f273ff2faba470
+msgid "The default provider for the |windows| platform."
+msgstr ""
+
+#: ../source/windows.rst:391
+#: ../source/windows.rst:427
+#: ../source/windows.rst:484
+#: ../source/windows.rst:512
+#: ../source/windows.rst:556
+#: ../source/windows.rst:600
+# 087d8cbc93434742896b00fc386b4c6c
+# e9bc1e522f1f4854bc91c7fd391be2d3
+# cb3f6bf7cf90461384ea9415163ae78f
+# 12c6f3fae98e42a2986f55d085306697
+# 3b33a7416ff14a8b98c230a870ac5745
+# f00bc4f987584eabb73081a92f69311c
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/windows.rst:393
+# b731ba3a403e43e5886410b4af50e784
+msgid "**Unzip a file, and then move it**"
+msgstr ""
+
+#: ../../step_resource/step_resource_batch_unzip_file_and_move.rst:3
+# f1ad109979054f499af8413461b8e009
+msgid "To run a batch file that unzips and then moves |ruby|, do something like:"
+msgstr ""
+
+#: ../source/windows.rst:399
+# cc80c217535e486982188f2c3929d0a6
+msgid "dsc_script"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_generic.rst:5
+# f6fd67dfdc8849e68eed03af7fa0a6d1
+msgid "A `resource <http://docs.getchef.com/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.getchef.com/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_powershell.rst:5
+# 7a92b65e09c84338a79465fad06a454b
+msgid "|windows powershell| is a task-based command-line shell and scripting language developed by |microsoft|. |windows powershell| uses a document-oriented approach for managing |windows|-based machines, similar to the approach that is used for managing |unix|- and |linux|-based machines. |windows powershell| is `a tool-agnostic platform <http://technet.microsoft.com/en-us/library/bb978526.aspx>`_ that supports using |chef| for configuration management."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst:5
+# 51b2f443e1114bb18964e163101eb086
+msgid "|windows powershell_dsc| is a feature of |windows powershell| that provides `a set of language extensions, cmdlets, and resources <http://technet.microsoft.com/en-us/library/dn249912.aspx>`_ that can be used to declaratively configure software. |windows powershell_dsc_short| is similar to |chef|, in that both tools are idempotent, take similar approaches to the concept of resources, describe the configuration of a system, and then take the steps required to do that configuration. The most important difference between |chef| and |windows powershell_dsc_short| is that |chef| uses |ruby| and |windows powershell_dsc_short| is exposed as configuration data from within |windows powershell|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script.rst:5
+# 649a580bb8a142a3a65ebe8b0ce8333e
+msgid "Many |windows powershell_dsc_short| resources are comparable to built-in |chef| resources. For example, both |windows powershell_dsc_short| and |chef| have |resource file|, |resource package|, and |resource service| resources. The |resource dsc_script| resource is most useful for those |windows powershell_dsc_short| resources that do not have a direct comparison to a resource in |chef|, such as the ``Archive`` resource, a custom |windows powershell_dsc_short| resource, an existing |windows powershell_dsc_short| script that performs an important task, and so on. Use the |resource dsc_script| resource to embed the code that defines a |windows powershell_dsc_short| configuration directly within a |chef| recipe."
+msgstr ""
+
+#: ../source/windows.rst:409
+# c947913d3a6244e99be701755ef24fff
+msgid "|windows powershell| 4.0 is required for using the |resource dsc_script| resource with |chef|."
+msgstr ""
+
+#: ../source/windows.rst:411
+# d2ee1c29a08f46d09e809cbe3989d18b
+msgid "The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_syntax.rst:4
+# 07a74b57791a4e98bc65583f8b6e1863
+msgid "The syntax for using the |resource dsc_script| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_syntax.rst:16
+# a89f58ff4b3c4280aaca8246f2d45ce3
+msgid "``dsc_script`` tells the |chef client| that a |windows powershell_dsc_short| resource is based on a |windows powershell| script"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_syntax.rst:17
+# 23d0edeec8f945baa0c5e7bd3e5c4eb6
+msgid "``name`` is the name of the configuration within a |windows powershell_dsc_short| script; when the ``configuration_name`` attribute is not specified as part of a recipe, ``name`` must also be the name of a valid |windows powershell| cmdlet"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_actions.rst:13
+# 7a0fd9034150437aa3bb38e1a865ce9f
+msgid "Default. Use to run the |windows powershell_dsc_short| configuration defined as defined in this resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:13
+# da09fe9b00ae48588e979a9102434a45
+msgid "|code powershell| |dsc_script no_command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:15
+# e22221d30c7149d496a78c8523ba8574
+msgid "|command powershell| |dsc_script no_code|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:16
+# 39a14f117953408c9ce5114708759b11
+msgid "``configuration_data``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:17
+# eb95525134754c21a5c3de2e51c225ef
+msgid "|config powershell| The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. |dsc_script no_config_data_script|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:18
+# afc816707443482f9a21f18436972081
+msgid "``configuration_data_script``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:19
+# 163e3acf25aa4599a800e543f49df69c
+msgid "|path powershell_data_file| |dsc_script no_config_data|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:20
+# e0a81aa4513d4d748b01bd0a0129cb29
+msgid "``configuration_name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:21
+# 49e03a3ad58e4f90855b6658c3cb343c
+msgid "|name powershell_cmdlet| |dsc_script no_code|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:23
+# c176cec4e6ca4e508ba226e1974e3ab2
+msgid "|flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:25
+# e336cb7be2eb41d3be12d727afebaba5
+msgid "|cwd|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:26
+# bd85c35d3fa044a28e84d16b9293e98c
+msgid "``environment``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:27
+# bdc5da7f86b940218ea09d4e201d7a25
+msgid "|environment variables|"
+msgstr ""
+
+#: ../source/windows.rst:429
+# 942fab4f8d124c8f9e914320a8ae9e55
+msgid "**Specify DSC code directly**"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_code.rst:3
+# 823512d5a4274ea196d99205b8afae57
+msgid "|windows powershell_dsc_short| data can be specified directly in a recipe:"
+msgstr ""
+
+#: ../source/windows.rst:434
+# 96dea732d50b4f4d983a2912967a63d2
+msgid "**Specify DSC code using a Windows Powershell data file**"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_command.rst:3
+# 90cde82a15424411a3e826191768c827
+msgid "Use the ``command`` attribute to specify the path to a |windows powershell| data file. For example, the following |windows powershell| script defines the ``DefaultEditor``:"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_command.rst:16
+# 59730313c46342c7b884763a89eb696c
+msgid "Use the following recipe to specify the location of that data file:"
+msgstr ""
+
+#: ../source/windows.rst:439
+# 8f651989a97a4c89923d7a435b918354
+msgid "**Pass parameters to DSC configurations**"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_flags.rst:3
+# c660f25401504bc898d19425d85fb029
+msgid "If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` attribute. For example, the following |windows powershell| script takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_flags.rst:23
+# fdf9bbdaa76e4669a7b46891b9bbf730
+msgid "Use the following recipe to set those parameters:"
+msgstr ""
+
+#: ../source/windows.rst:444
+# 9d04a7482461479192bc53ae21072398
+msgid "**Use custom configuration data**"
+msgstr ""
+
+#: ../source/windows.rst:446
+# b3d28e2ce30e4aca9b1e669b2857b1af
+msgid "Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file."
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_configuration_data.rst:3
+# cbbd80c381ae4ee398395d62da7b7d69
+msgid "The following example shows how to specify custom configuration data using the ``configuration_data`` attribute:"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_configuration_name.rst:3
+# c3df6277b63f4be69cb1cdca19a151ef
+msgid "The following example shows how to specify custom configuration data using the ``configuration_name`` attribute. For example, the following |windows powershell| script defines the ``vi`` configuration:"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_configuration_name.rst:25
+# 31c3cf73773847a0b23e8d6917f4d2a4
+msgid "Use the following recipe to specify that configuration:"
+msgstr ""
+
+#: ../source/windows.rst:453
+# 39b1df0cfe0f4c88a58ec9774892bd23
+msgid "**Using DSC with other Chef resources**"
+msgstr ""
+
+#: ../../step_resource/step_resource_dsc_script_remote_files.rst:3
+# 3d8018124fb14d3a8c069af69e199371
+msgid "The |resource dsc_script| resource can be used with other resources. The following example shows how to download a file using the |resource remote_file| resource, and then uncompress it using the |windows powershell_dsc_short| ``Archive`` resource:"
+msgstr ""
+
+#: ../source/windows.rst:463
+# 0fd02ea1cc1f44e8bb1a7e4084998578
+msgid "env"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env.rst:4
+# 5263e1587281490ca2ca7cf3b1c9e78b
+msgid "Use the |resource env| resource to manage environment keys in |windows|. After an environment key is set, |windows| must be restarted before the environment key will be available to the |windows task scheduler|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_syntax.rst:4
+# b20d3832155d41df8e99eaf74b15b87e
+msgid "The syntax for using the |resource env| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_syntax.rst:16
+# 1d9243682ac54e71b9c13c194b7bc437
+msgid "``env`` tells the |chef client| to use the ``Chef::Provider::Env::Windows`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_syntax.rst:17
+# b875ab26be3c4bf1a9b9d001434fbb79
+msgid "``name`` is the name of the resource block; when the ``key_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the environment key that is created, deleted, or modified"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_actions.rst:12
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:12
+# f9363b334986499abd65ba7bffeaa8f3
+# 5f581b4f4d7c409faff181b7b2bd3027
+msgid "``:create``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_actions.rst:13
+# cfa69318781149d197dd90ee8a172a0e
+msgid "Default. |resource action create env|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_actions.rst:14
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:16
+# 2c8525e99e724fff94a9e75f4f10e661
+# ecb043d5f0dd41be967ecd0d7bcadb6e
+msgid "``:delete``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_actions.rst:15
+# ca428900c3df4c82bb1bbb1d4c9a07a3
+msgid "|resource action delete env|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_actions.rst:16
+# 6607c01a50e04958993a0e323893c4fc
+msgid "``:modify``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_actions.rst:17
+# f34ccc5734304b09af971587e2e088be
+msgid "|resource action modify env|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_attributes.rst:12
+# 00490a12cc2447539cc00d31f23e9bc4
+msgid "``delim``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_attributes.rst:13
+# ea54bda2383c470c8c01572bf2bb4002
+msgid "|delim resource directory|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_attributes.rst:14
+# e2c92dbaae474c1aa373447ae72e2671
+msgid "``key_name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_attributes.rst:15
+# e60651e53d7e481a8611ce752919a3e9
+msgid "|name key_directory| Default value: the ``name`` of the resource block. (See \"Syntax\" section above for more information.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_attributes.rst:18
+# 8c3e623eb8cb45ce9ada78a95ece1c8a
+msgid "``value``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_attributes.rst:19
+# 6a9ad42a9f9d4340b3d83db0a7e15802
+msgid "|value resource directory|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_providers.rst:13
+# 0f067c281a1c407e88e4ba4e1ea34ce2
+msgid "``Chef::Provider::Env::Windows``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_providers.rst:14
+# 0f8c2382cb44407b9a81835902954eb0
+msgid "``env``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env_providers.rst:15
+# 53b70662e09e4e5ab5ba98263b1d3e73
+msgid "The default provider for all |windows| platforms."
+msgstr ""
+
+#: ../source/windows.rst:486
+# 6888b3638c064bc6812a3d0b5ade77d6
+msgid "**Set an environment variable**"
+msgstr ""
+
+#: ../source/windows.rst:491
+# 1532ef37a17a413d991ee67d0bfb451a
+msgid "powershell_script"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script.rst:4
+# b93bce5f563a4becb2b822c7c572d5b4
+msgid "Use the |resource powershell_script| resource to execute a script using the |windows powershell| interpreter, much like how the |resource script| and |resource script|-based resources---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource script_python|, and |resource script_ruby|---are used. The |resource powershell_script| is specific to the |windows| platform and the |windows powershell| interpreter. This resource creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource includes actions (``:run`` and ``:nothing``; ) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) that are inherited from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:4
+# 99f4d8fa78644912bebe615c98995148
+msgid "The syntax for using the |resource powershell_script| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:16
+# 069f31b9b0e3445c93e3fdcd30ef638e
+msgid "``powershell_script`` tells the |chef client| to use the ``Chef::Provider::PowershellScript`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:17
+# 39363a83712245a1a300f7db4ce002ce
+msgid "``name`` is the name of the resource block; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the command to be executed"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:13
+# 4e7673f282ce475390bbc3f0e11ff592
+msgid "Default. |resource action run powershell_script|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:17
+# 04092b8778954ab3b4bc8dd2bd03bd45
+msgid "|name command| Default value: the ``name`` of the resource block. (See \"Syntax\" section above for more information.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:18
+# 35614948216f4f598a09a4b601638a8b
+msgid "``convert_boolean_return``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:19
+# 26ea36d7e90d463a9effa784e4e440b4
+msgid "|convert_boolean_return| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:21
+# c4a2b13ee8cb4da6ae13026bb1813e20
+msgid "When the ``guard_intrepreter`` common attribute is set to ``:powershell_script``, a string command will be evaluated as if this value were set to ``true``. This is because the behavior of this attribute is similar to the value of the ``\"$?\"`` expression common in |unix| interpreters. For example, this:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:31
+# 164617e9977d4b1e91c226ce041a3fce
+msgid "is similar to:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:41
+# 2c1eec5ea84c409885317abc0d8dab2c
+msgid "|flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:42
+# 874b61cfa4a34e3fbf6a72915b36a3bb
+msgid "``interpreter``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:43
+# 4e7db636775a478dbe8e4a9ec58b9770
+msgid "|interpreter|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_providers.rst:13
+# e2005ab8083c421ca18f19fd44f322f6
+msgid "``Chef::Provider::PowershellScript``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_providers.rst:14
+# dbe3174ede3c442f879c455a006fab1f
+msgid "``powershell_script``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_providers.rst:15
+# 9bf500835e6f44999bc4f2f5dae27e6b
+msgid "The default provider for all platforms."
+msgstr ""
+
+#: ../source/windows.rst:514
+# be2f6f06f3ad4f8c9bb8dcff00fba0a9
+msgid "**Write to an interpolated path**"
+msgstr ""
+
+#: ../source/windows.rst:518
+# 4d0734004da74a13adad6c543cf4ed00
+msgid "**Change the working directory**"
+msgstr ""
+
+#: ../source/windows.rst:522
+# d176bb32b9e1402a9d27c9217cb2e77d
+msgid "**Change the working directory in Microsoft Windows**"
+msgstr ""
+
+#: ../source/windows.rst:526
+# aa83c438c6a349b093db5d4b8338e175
+msgid "**Pass an environment variable to a script**"
+msgstr ""
+
+#: ../source/windows.rst:531
+# f1e87b28127742d98128cfc55187a6d1
+msgid "registry_key"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:4
+# cd307c43c7a2431bbbe4af36ccaa4c87
+msgid "Use the |resource registry_key| resource to create and delete registry keys in |windows|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:6
+# 71b462087e104c32a6de5c514f8ae439
+msgid "64-bit versions of |windows| have a 32-bit compatibility layer in the registry that reflects and redirects certain keys (and their sub-keys) into specific locations. By default, the registry functionality will default to the machine architecture of the system that is being configured. The |chef client| can access any reflected or redirected registry key. The |chef client| can write to any 64-bit registry location. (This behavior is not affected by the |chef client| running as a 32-bit application.) For more information, see: |url msdn_registry_key|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:4
+# 9cc6b7e296904b3ab8fbfd78667b4620
+msgid "The syntax for using the |resource registry_key| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:28
+# 5700398bbff047b1a42c2d737a910624
+msgid "``registry_key`` tells the |chef client| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:29
+# a073e0ba868c4d38af7f9376eafb6ab4
+msgid "``name`` is the name of the resource block; when the ``key`` attribute is not specified as part of a recipe, ``name`` is also path to the location in which a registry key is created or from which a registry key is deleted"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:31
+# 8a4967dba5c140c4a2e87ad25ea3f54c
+msgid "``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:32
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:31
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:22
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:22
+# 5bb20bedbb71415598516233f3c5e4b3
+# fe574698c1bb48e79a0801529c6a32aa
+# 44c8b6e21c324adda5660d2d2a061379
+# 01be8146da3e48ad9193b608441b78df
+msgid "|values resource registry_key types|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:34
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:33
+# dd48056b1a724051a1b5e96f78ce8fb0
+# 8a60565fb9f74f41980219b52cdee930
+msgid "|values resource registry_key multi_string|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:38
+# c4ef857fefa74888a1600566d06d47d4
+msgid "For example, a |windows| registry key named \"System\" will get a new value called \"NewRegistryKeyValue\" and a multi-string value named \"foo bar\":"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:51
+# 6c4e160087f64da19393568b98688371
+msgid "Or, using multiple registry key entries to configure a single resource block with key values based on node attributes:"
+msgstr ""
+
+#: ../source/windows.rst:539
+# 086211a0631446c8ac82a94869583e68
+msgid "Path Separators"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:5
+# 176477c62bfd4e5d9bd38644759a5672
+msgid "A |windows| registry key can be used as a string in |ruby| code, such as when a registry key is used as the name of a recipe. In |ruby|, when a registry key is enclosed in a double-quoted string (``\" \"``), the same backslash character (``\\``) that is used to define the registry key path separator is also used in |ruby| to define an escape character. Therefore, the registry key path separators must be escaped. For example, the following registry key:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:11
+# c32a02aa357446efa3c253cc1ae815ab
+msgid "will not work when it is defined like this:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:20
+# dd7f1ea128454454a1c4f8df5bbcbe4b
+msgid "but will work when the path separators are escaped properly:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:13
+# 13a1fda1b1af40bd9bf2bc41ea71fd71
+msgid "Default. |resource action create registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:14
+# b2ed7ff7544342c0b40fde7859235d25
+msgid "``:create_if_missing``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:15
+# 771cfc9b3b4a490fbe7b265c77f7d807
+msgid "|resource action create_if_missing registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:17
+# cba1811fafd0499aa2d8ac64cce87565
+msgid "|resource action delete registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:18
+# 5ffd05b7622b42989316f017dbfc7144
+msgid "``:delete_key``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:19
+# 2a44abe5dc9949e2ab685ba57fd6cefe
+msgid "|resource action delete key registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:21
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:27
+# d32bc22d83fb4c4e901a8be8811231a0
+# 60dc1d380eee482c9c469ae6747f292f
+msgid "|note registry_key resource recursive|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:13
+# 28ac41ecafd14ea5837bbc65aaacdd69
+msgid "|architecture registry_key| Default value: ``:machine``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:15
+# 0310baf15fc8484cbfea08bd1c8374f7
+msgid "|architecture registry_key machine|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:17
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:27
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:21
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:21
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:21
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:21
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:27
+# bfd7ec0fae2c4929832e90350bd014e7
+# 6666f7c99dbf457eb145356976348b9b
+# 6b5d03acd53245c09dee6e06931acea6
+# 3deb470fdf06470aa51e09da5ca12d57
+# c0c7bb0d2210412f98ade8d6df6f9ebe
+# 49bc09e881d24937a5db439162a2fa3e
+# fc0a5dc4fe2c4157832231855587194b
+msgid "|note registry_key architecture|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:18
+# 6fd6a4abb83b4406b059e72fbe779c74
+msgid "``key``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:19
+# f646b108399844ae82b05c794cb87eae
+msgid "|key_name resource registry_key| Default value: the ``name`` of the resource block. (See \"Syntax\" section above for more information.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:21
+# 212d2af5edb24724a16bf778192938ac
+msgid "|key_name resource registry_key hives|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:24
+# bc6c601f70e94fdfa2824b8848b41a2c
+msgid "``recursive``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:25
+# 60e41859973142089f5bd79d2ba95a74
+msgid "|recursive registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:28
+# 90bda741f1dd47579dbb6f3decef1a9b
+msgid "``values``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:29
+# 25037c20cd5e42a9993f2375ecff11c7
+msgid "|values resource registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:13
+# 8baa153cc3564a67b05233a2a9903012
+msgid "``Chef::Provider::Windows::Registry``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:14
+# c868640a9fdb491d9465fa19e3249c14
+msgid "``registry_key``"
+msgstr ""
+
+#: ../source/windows.rst:558
+# 70f6caba338143949a25dd1053b040f0
+msgid "**Create a registry key**"
+msgstr ""
+
+#: ../source/windows.rst:562
+# 58446cd9a134474299ead46468990402
+msgid "**Delete a registry key value**"
+msgstr ""
+
+#: ../source/windows.rst:566
+# 1d1d456990e941c2b4f4e194cc453b79
+msgid "**Delete a registry key and its subkeys, recursively**"
+msgstr ""
+
+#: ../source/windows.rst:569
+# 603f4ab12bd64f0cbe7e6f96c9f196c2
+msgid "remote_file"
+msgstr ""
+
+#: ../source/windows.rst:571
+# 82cb00c4c36f40a19055d16b363ff41d
+msgid "**Specify local Windows file path as a valid URI**"
+msgstr ""
+
+#: ../../step_resource/step_resource_remote_file_local_windows_path.rst:3
+# 4ce9064d65154d24b79643b7108094b3
+msgid "When specifying a local |windows| file path as a valid file URI, an additional forward slash (``/``) is required. For example:"
+msgstr ""
+
+#: ../source/windows.rst:576
+# 4fcb16c0853d48fe983b106417f89146
+msgid "windows_package"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows.rst:4
+# 31df534f8a3045d8832acca9207f1162
+msgid "Use the |resource package_windows| resource to manage |microsoft installer package| packages for the |windows| platform."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows.rst:6
+# 84436de461944488ab121233404d775d
+msgid "This resource effectively replaces the ``windows_package`` resource found in the |cookbook windows| cookbook by moving that functionality into the |chef client|. The |cookbook windows| cookbook may still be used, but in that situation use the generic |resource package| resource instead of the |resource package_windows| resource."
+msgstr ""
+
+#: ../source/windows.rst:580
+# c6dd71bfc9844ba8a605ef3d5b0f5673
+msgid "|note resource_based_on_package|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_syntax.rst:4
+# ad86b81a1b6049f5b4a5b077338f9c11
+msgid "The syntax for using the |resource package_windows| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_syntax.rst:16
+# b341bf0577e54bc3a6cda69fb1462476
+msgid "``windows_package`` tells the |chef client| to use the ``Chef::Provider::Windows`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_syntax.rst:17
+# 0ce474315f6b4c538df0721518603b3d
+msgid "``\"name\"`` is the name of the package"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_actions.rst:12
+# 69b04edae6a4418eaba27d3e9299fd15
+msgid "``:install``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_actions.rst:13
+# f1d2d3d88ec4405b8483ed857ffbb4c8
+msgid "Default. |resource action install package|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_actions.rst:14
+# 79e8b283fb6a4b8593266541f3f8ecdb
+msgid "``:remove``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_actions.rst:15
+# dc0153bc2c3543cf959df552c9b49994
+msgid "|resource action remove package|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:12
+# dac6213698854b489768caab8138d27f
+msgid "``installer_type``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:13
+# 9c378331f59049cbb4fe37427a213666
+msgid "|type package| Possible values: ``:inno``, ``:installshield``, ``:msi``, ``:nsis``, and ``:wise``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:14
+# ccd90e416c5f4a53b3d66891abbd13c9
+msgid "``options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:15
+# b787a84fb769480bb1b93e8b186a4d12
+msgid "|command options|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:19
+# b42e05f4a8f2463fba07574569394305
+msgid "|returns| This code signals a successful ``:install`` action. Default value: ``0``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:20
+# 447a1d658c2e497b89c826fa1431fc44
+msgid "``source``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:21
+# 218b38509ddf43bbbe1b75044081ac81
+msgid "Optional. |source resource package| Default value: the ``name`` of the resource block. (See \"Syntax\" section above for more information.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_attributes.rst:23
+# 419b1b38729544b080ac0da91620c8dd
+msgid "|timeout| Default value: ``600`` (seconds)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:13
+# 4423adf173924c3ea06f91c31641244b
+msgid "``Chef::Provider::Package``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:14
+# cd733d0fe3e54665be0204cdaa10937b
+msgid "``package``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:15
+# 877f2e3fef644e6cb5f79a4f892fa392
+msgid "When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:16
+# 96438016cf7c42de9959a5bcfa1656d6
+msgid "``Chef::Provider::Package::Windows``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:17
+# 8d02d6a2f38d45d08d072d115fba16da
+msgid "``windows_package``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows_providers.rst:18
+# 47ed17099ba14731a93dbf48d24f7179
+msgid "The provider that is used with the |windows| platform."
+msgstr ""
+
+#: ../source/windows.rst:602
+# 668d926c45f74f8d91ccd77960b599eb
+msgid "**Install a package**"
+msgstr ""
+
+#: ../source/windows.rst:609
+# 0a76dfa0be904c5796becfd7c2893d3b
+msgid "Cookbook Resources"
+msgstr ""
+
+#: ../source/windows.rst:610
+# ad7b427d21264dee873aebb8eba8ab07
+msgid "Some of the most popular |company_name|-maintained cookbooks that contain lightweight resources useful when configuring machines running |windows| are listed below:"
+msgstr ""
+
+#: ../source/windows.rst:616
+# 4917b9e19d9b4bb8926d62c6c75e5f0c
+msgid "Cookbook"
+msgstr ""
+
+#: ../source/windows.rst:618
+# fc3fb784a269495f944bac032b607841
+msgid "`iis <https://github.com/opscode-cookbooks/iis>`_"
+msgstr ""
+
+#: ../source/windows.rst:619
+# b17f0316f68d40c48b13cf917c45c28e
+msgid "The |cookbook iis| cookbook is used to install and configure |microsoft iis|."
+msgstr ""
+
+#: ../source/windows.rst:620
+# fa2628022f044404b6dca048c735d785
+msgid "`webpi <https://github.com/opscode-cookbooks/webpi>`_"
+msgstr ""
+
+#: ../source/windows.rst:621
+# baa9bb37d397494c92fc97649a028172
+msgid "The |cookbook webpi| cookbook is used to run the |microsoft webpi|."
+msgstr ""
+
+#: ../source/windows.rst:622
+# 9015b9be7fbd4a22b8cf756f9dc413d5
+msgid "`windows <https://github.com/opscode-cookbooks/windows>`_"
+msgstr ""
+
+#: ../source/windows.rst:623
+# dd7436aa484842ccb6dfeca4eefd510e
+msgid "The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more."
+msgstr ""
+
+#: ../source/windows.rst:626
+# 7982f82ee6d04b73a0eaeaec893d9b77
+msgid "|dsl recipe| Methods"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe.rst:4
+# 38a10e3fc5bb4aa78e6b967dd72d017e
+msgid "The |dsl recipe| is a |ruby| DSL that is primarily used to declare resources from within a recipe. The |dsl recipe| also helps ensure that recipes interact with nodes (and node properties) in the desired manner. Most of the methods in the |dsl recipe| are used to find a specific parameter and then tell the |chef client| what action(s) to take, based on whether that parameter is present on a node."
+msgstr ""
+
+#: ../source/windows.rst:630
+# 596d0d7eeb484fc1b7456533cb1a05a1
+msgid "registry_data_exists?"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:4
+# 09fdd40654a64dc9810bd9b16bd71a83
+msgid "The ``registry_data_exists?`` method can be used in a recipe to find out if a |windows| registry key contains the specified data."
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:6
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:6
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:6
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:6
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:6
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:6
+# 0098c082f4cc4944ad03807795aa5099
+# 40c625d9418b4665ab1de69532735dc4
+# e7692b61a1ff44ef84c8c175213030e9
+# 530c3d877ce24100af3bc2fc8c05bbfa
+# 92a9926a7847460ba187d872a78e5081
+# 88363a1bd31a4e618933ea6839978a29
+msgid "|note registry_key not_if only_if|"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:8
+# a1f36da9e4f44380bb01e5960a7eb291
+msgid "The syntax for the ``registry_data_exists?`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:20
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:16
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:16
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:16
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:16
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:20
+# 00f2f4310a9045a58232bb93a42b2a73
+# 5588b33c42aa4ef4a65ee2b5aa97bdee
+# 116ddd92afdd4636a3eaa60ff3c33f8d
+# cb0eae61a6714a3fb7dd8efd9036d507
+# 23a42abd481c4ba5af82aaed76669024
+# a264b8299f5b4aac8c1e9c4a118a5d7d
+msgid "``KEY_PATH`` is the path to the registry key. |key_name resource registry_key hives|"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:21
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:21
+# 27445c7ccf6f47ecb7cf5fc28eee6a4b
+# a5b96e5546a44a4c832d0318ca2d1afd
+msgid "``{ :name => \"NAME\", :type => TYPE, :data => VALUE }`` is a hash that contains the name, type, and value of the registry setting"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:23
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:17
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:17
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:17
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:17
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:23
+# dfa518ed1fd743c78bab27da2428f778
+# 34c1430b51c24ecc8156111c9a152e0d
+# 0232ece9950f4a16ab50efc7268b4fb1
+# 557ee359c66c4e3b90b435ff1a712598
+# d366c8fd8d8b47319812cbf3d37d1d81
+# 23be12b55e514b7dbcd7d35fd02e37c0
+msgid "``ARCHITECTURE`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``. |architecture registry_key machine|"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst:25
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:19
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:19
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:25
+# 5722f3f2d121475990de83b335e64509
+# b4336bdc486e4a778e70b7b950c0867e
+# ec660239e81d44e49cf8be2947c7533e
+# 7c834b505f9d42c7a32d430f18cb2c32
+msgid "This method will return ``true`` or ``false``."
+msgstr ""
+
+#: ../source/windows.rst:635
+# 867bf15133724edc94dddde57341b075
+msgid "registry_get_subkeys"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:4
+# 386127f9da5242e7a5d7ee2a346ba718
+msgid "The ``registry_get_subkeys`` method can be used in a recipe to get a list of sub-keys that are present for a |windows| registry setting."
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:8
+# efb7408d9edf4ebcac1ccd2e7e01ee71
+msgid "The syntax for the ``registry_get_subkeys`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst:19
+# aa2188cd8905465b92a0b3e1b8179a68
+msgid "The results of ``registry_get_subkeys`` is an array of sub-keys."
+msgstr ""
+
+#: ../source/windows.rst:640
+# 1d1fb66c8ce54f3b8ff6395ecf308ff9
+msgid "registry_get_values"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:4
+# d55eb094f0c246e18b27dae769c7eefa
+msgid "The ``registry_get_values`` method can be used in a recipe to get the values (name, type, and data) for a |windows| registry key."
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:8
+# 9bbb88b76d294f92af853e6d814b1b73
+msgid "The syntax for the ``registry_get_values`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst:19
+# e7faf562783e4be3a9b060add84500ca
+msgid "The results of ``registry_get_values`` is an array of values."
+msgstr ""
+
+#: ../source/windows.rst:645
+# 81f5b59d29f24cf19cdb857f389ac106
+msgid "registry_has_subkeys?"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:4
+# 5ed2e431ce8c4739a85cda16d2a9325c
+msgid "The ``registry_has_subkeys?`` method can be used in a recipe to find out if a |windows| registry setting has sub-keys."
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst:8
+# 4808126545de43049a97ad233754ae7f
+msgid "The syntax for the ``registry_has_subkeys?`` method is as follows:"
+msgstr ""
+
+#: ../source/windows.rst:650
+# cfdf2c3e40774aa0bd8d20157050d811
+msgid "registry_key_exists?"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:4
+# a94c4363e6414d8b8cf8c8680a252c0c
+msgid "The ``registry_key_exists?`` method can be used to find out if a |windows| registry key exists."
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst:8
+# 4a8112d05ee04a49839f889fd027d92e
+msgid "The syntax for the ``registry_key_exists?`` method is as follows:"
+msgstr ""
+
+#: ../source/windows.rst:655
+# 676b1605d1804f9d969b446ffbd18c6b
+msgid "registry_value_exists?"
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:4
+# 26171411a677467d882f7038bb2672f1
+msgid "The ``registry_value_exists?`` method can be used in a recipe to find out if a |windows| registry key has values set (name, type, and data)."
+msgstr ""
+
+#: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst:8
+# dcffefec7f03430496d6b4213e3c403f
+msgid "The syntax for the ``registry_value_exists?`` method is as follows:"
+msgstr ""
+
+#: ../source/windows.rst:661
+# b4d986fd3c4d473e87b1fbef43f658d9
+msgid "|chef client_title|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:5
+# 433ffd9143ce4c539cba0def1f4d6bef
+msgid "A |chef client| is an agent that runs locally on every node that is under management by |chef|. When a |chef client| is run, it will perform all of the steps that are required to bring the node into the expected state, including:"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:7
+# 8fc0dfc7bbf84f77b59019ba7c369daa
+msgid "Registering and authenticating the node with the |chef server|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:8
+# eaaaba97744641c9a98da050405c99f2
+msgid "Building the node object"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:9
+# 1374e70229cf46198ff9353ff7c19eff
+msgid "Synchronizing cookbooks"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:10
+# c8b3058cb35540d9bd92d41aad00fdcb
+msgid "Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:11
+# 2198cf1f7cf54cdc9148daf9cc9540a7
+msgid "Taking the appropriate and required actions to configure the node"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:12
+# 8ba29adf6d48418f8bbeeed0a5b91760
+msgid "Looking for exceptions and notifications, handling each as required"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_options_windows.rst:6
+# ab4763b2d10b4c22b46fb8da73ea35fc
+msgid "This command has the following syntax::"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_options_windows.rst:10
+# 2cd2a4cca44e4cf9aeebaf9d6b1043a6
+msgid "This command has the following options specific to |windows|:"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_options_windows.rst:13
+# ee91d5f518e7438ab73bcbf346740b1b
+msgid "``-A``, ``--fatal-windows-admin-check``"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_options_windows.rst:13
+# cb69c92518234cd595694c3ab3a47b62
+msgid "|fatal_windows_admin_check|"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_options_windows.rst:22
+# bf1b284de5ca4bb88c7e8a6c4debd4dc
+msgid "``-d``, ``--daemonize``"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_options_windows.rst:16
+# bd677fe864ca4b2d87bd523b6a21c556
+msgid "|daemonize| This option is only available on machines that run in |unix| or |linux| environments. For machines that are running |windows| that require similar functionality, use the ``chef-client::service`` recipe in the |cookbook chef_client| cookbook: http://community.opscode.com/cookbooks/chef-client. This will install a |chef client| service under |windows| using the |windows service wrapper|."
+msgstr ""
+
+#: ../source/windows.rst:666
+# ecf78bfd2a9740eb9f0fbc15168633e2
+msgid "|chef solo| also uses the ``--daemonize`` setting for |windows|."
+msgstr ""
+
+#: ../source/windows.rst:669
+# 643c0642dc52492a95f62ec991a7bae9
+msgid "Run w/Elevated Privileges"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges.rst:5
+# adcd51cbf6154f6b879d3e642ddd400e
+msgid "The |chef client| may need to be run with elevated privileges in order to get a recipe to converge correctly. On |unix| and |unix|-like operating systems this can be done by running the command as root. On |windows| this can be done by running the command prompt as an administrator."
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst:5
+# 52dc283ad1214dfeb11373a1f4c46295
+msgid "On |windows|, running without elevated privileges (when they are necessary) is an issue that fails silently. It will appear that the |chef client| completed its run successfully, but the changes will not have been made. When this occurs, do one of the following to run the |chef client| as the administrator:"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst:7
+# 2b941f628d9642b492d23dc51aac3e4d
+msgid "Log in to the administrator account. (This is not the same as an account in the administrator's security group.)"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst:9
+# 5511d67572e04363af763406c60a6892
+msgid "Run the |chef client| process from the administrator account while being logged into another account. Run the following command:"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst:15
+# 02df1e8cbb9d43eb94bbc23e0c0849ff
+msgid "This will prompt for the administrator account password."
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst:17
+# 617f9b54c9bf449da5d9cd14b621d9d7
+msgid "Open a command prompt by right-clicking on the command prompt application, and then selecting **Run as administrator**. After the command window opens, the |chef client| can be run as the administrator"
+msgstr ""
+
+#: ../source/windows.rst:675
+# 0248a3958033464cbdd306ed422c2bf9
+msgid "|knife rb|"
+msgstr ""
+
+#: ../source/windows.rst:676
+# ff4c226017ca4d6d95b4aee78732b3d3
+msgid "|note knife rb windows path|"
+msgstr ""
+

@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-14 14:12-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/chef_client_security.rst:8
+# b219f728318f4fec98930350eb2890a9
+msgid "|chef client_title| Security"
+msgstr ""
+
+#: ../../includes_chef_auth/includes_chef_auth.rst:5
+# 8af08bb4c046418c8975cdb0da6cdb1a
+msgid "All communication with the |chef server| must be authenticated using the |api chef server|, which is a REST API that allows requests to made to the |chef server|. Only authenticated requests will be authorized. Most of the time, and especially when using |knife|, the |chef client|, or the |chef server| web interface, the use of the |api chef server| is transparent. In some cases, the use of the |api chef server| requires more detail, such as when making the request in |ruby| code, with a |knife| plugin, or when using |curl|."
+msgstr ""
+
+#: ../source/chef_client_security.rst:13
+# 53091a1954c5438cae3c0ff845b5075b
+msgid "Authentication"
+msgstr ""
+
+#: ../../includes_chef_auth/includes_chef_auth_authentication.rst:4
+# 6e932cbc4b2a40da83bcd0c229d7ed85
+msgid "The authentication process ensures the |chef server| responds only to requests made by trusted users. Public key encryption is used by the |chef server|. When a node and/or a workstation is configured to run the |chef client|, both public and private keys are created. The public key is stored on the |chef server|, while the private key is returned to the user for safe keeping. (The private key is a .pem file located in the ``.chef`` directory or in ``/etc/chef``.)"
+msgstr ""
+
+#: ../../includes_chef_auth/includes_chef_auth_authentication.rst:6
+# d4c28a3f441f46d583a6d4b8e1ba7716
+msgid "Both the |chef client| and |knife| use the |api chef server| when communicating with the |chef server|. The |chef validator| uses the |api chef server|, but only during the first |chef client| run on a node."
+msgstr ""
+
+#: ../../includes_chef_auth/includes_chef_auth_authentication.rst:8
+# aa0823892ba54e6d9fdbf245eb68af0e
+msgid "Each request to the |chef server| from those executables sign a special group of HTTP headers with the private key. The |chef server| then uses the public key to verify the headers and verify the contents."
+msgstr ""
+
+#: ../source/chef_client_security.rst:17
+# 98eea11d1e58477b97e1daaa0ea3c1fa
+msgid "|chef validator|"
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:5
+# 68c282afc338486fadb32c1c3f7d27c7
+msgid "Every request made by the |chef client| to the |chef server| must be an authenticated request using the |api chef server| and a private key. When the |chef client| makes a request to the |chef server|, the |chef client| authenticates each request using a private key located in ``/etc/chef/client.pem``."
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:7
+# c016e2d17bcb4b2d82b63eb4ac0ffde3
+msgid "However, during the first |chef client| run, this private key does not exist. Instead, the |chef client| will attempt to use the private key assigned to the |chef validator|, located in ``/etc/chef/validation.pem``. (If, for any reason, the |chef validator| is unable to make an authenticated request to the |chef server|, the initial |chef client| run will fail.)"
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:9
+# df30d1ccf3134186881cf02522cc7233
+msgid "During the initial |chef client| run, the |chef client| will register with the |chef server| using the private key assigned to the |chef validator|, after which the |chef client| will obtain a ``client.pem`` private key for all future authentication requests to the |chef server|."
+msgstr ""
+
+#: ../../includes_security/includes_security_chef_validator.rst:11
+# 7f246c0a136f4fc79b4109766d0dcbcb
+msgid "After the initial |chef client| run has completed successfully, the |chef validator| is no longer required and may be deleted from the node. Use the ``delete_validation`` recipe found in the ``chef-client`` cookbook (https://github.com/opscode-cookbooks/chef-client) to remove the |chef validator|."
+msgstr ""
+
+#: ../source/chef_client_security.rst:21
+# 70ecdfe9087244229439af5224f4ef28
+msgid "During a |chef client_title| Run"
+msgstr ""
+
+#: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst:5
+# 38d2ddb0c7c44a4f9cbe8eab79221ef8
+msgid "As part of `every chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_, the |chef client| authenticates to the |chef server| using an RSA private key and the |api chef server|."
+msgstr ""
+
+#: ../source/chef_client_security.rst:38
+# d8b00f33ebcb4a50906f2c9bc19182a0
+msgid "|chef client_title| SSL Settings"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:4
+# 3239d2c7f09d4806b6672fad77eb06c4
+msgid "The |client rb| file has the following settings for configuring |ssl| for |chef client| interation with the |chef server|:"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:10
+# 7385bd458e794a69b1fbe516d5efe8c2
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:11
+# 6c8af15c663449c4b2d45654d8fefbf5
+msgid "Description"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:12
+# 8052a03e4feb4d6289db8b495eeda2df
+msgid "``ssl_ca_file``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:13
+# cc8a54543f7c41a18853d6898248b639
+msgid "|ssl_ca_file|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:14
+# 1bc4d0ca1ec24fa580557421d2278601
+msgid "``ssl_ca_path``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:15
+# 593c8b1dfb2a4a25a2a97b7c349df067
+msgid "|ssl_ca_path|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:16
+# ce1c1031073c4944935e1dda96c059d0
+msgid "``ssl_client_cert``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:17
+# a03292bc4d674003a20660ce59e3a38d
+msgid "|ssl_client_cert| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:18
+# 37bed2820cb740e9bfc7e80c6d375fe7
+msgid "``ssl_client_key``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:19
+# 25a04d70720a452d996bcbe1ee1b33b8
+msgid "|ssl_client_key| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:20
+# a08b0ca86cc14124b32ba4f55509f9d0
+msgid "``ssl_verify_mode``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:21
+# 85f1bfeb040b4177b5a900aed4d95e03
+msgid "|ssl_verify_mode|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:23
+# e6ca7f977d7140a2aaf86d0cf77a6ad7
+msgid "|ssl_verify_mode_verify_none|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:24
+# 7cce6b9f6a63492692c13e606a5e4339
+msgid "|ssl_verify_mode_verify_peer| This is the recommended setting."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:26
+# d2e27a75117846719bdca4dcc591c56a
+msgid "Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:27
+# 31d8a0e8df654f8480aca78b2d04b73e
+msgid "``verify_api_cert``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_config_settings.rst:28
+# 6f6a6b801e9441d38fa59bd994a554ed
+msgid "|ssl_verify_mode_verify_api_cert| Default value: ``false``."
+msgstr ""
+
