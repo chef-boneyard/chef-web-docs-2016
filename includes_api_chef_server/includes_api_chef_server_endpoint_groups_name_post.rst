@@ -3,6 +3,8 @@
 
 The ``POST`` method is used to add groups to the |chef server|.
 
+.. note:: Users and actors are ignored if they are part of the request body when used with the ``POST`` method. Use the ``PUT`` method to add users and actors to a group on the |chef server|.
+
 This method has no parameters.
 
 **Request**
