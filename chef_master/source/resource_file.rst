@@ -81,3 +81,7 @@ Examples
 **Write a string to a file**
 
 .. include:: ../../step_resource/step_resource_file_content_add_string.rst
+
+**Create a file from a copy**
+
+.. include:: ../../step_resource/step_resource_file_copy.rst

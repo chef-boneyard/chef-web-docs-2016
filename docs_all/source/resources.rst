@@ -230,6 +230,9 @@ After the resource collection is built
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_common/includes_resources_common_compile_end.rst
 
+Atomic File Updates
+-----------------------------------------------------
+.. include:: ../../includes_resources_common/includes_resources_common_atomic_update.rst
 
 Windows File Security
 -----------------------------------------------------
@@ -615,6 +618,10 @@ cookbook_file
 
 .. include:: ../../includes_resources/includes_resource_cookbook_file_transfers.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
@@ -623,13 +630,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
 
+.. warning:: |warning selinux_file_based_resources|
+
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
 
 File Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1219,6 +1224,11 @@ Examples
 **Write a string to a file**
 
 .. include:: ../../step_resource/step_resource_file_content_add_string.rst
+
+**Create a file from a copy**
+
+.. include:: ../../step_resource/step_resource_file_copy.rst
+
 
 freebsd_package
 -----------------------------------------------------
