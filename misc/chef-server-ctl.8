@@ -197,19 +197,33 @@ $ chef\-server\-ctl help
 .sp
 The \fBinstall\fP subcommand is used to install premium features of the Chef server: Chef management console, Chef analytics, chef\-client run reporting, high availability configurations, Chef push jobs, and Chef server replication.
 .sp
+\fBSyntax\fP
+.sp
 This subcommand has the following syntax:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
-$ chef\-server\-ctl install name_of_premium_feature
+$ chef\-server\-ctl install name_of_premium_feature (options)
 .ft P
 .fi
 .UNINDENT
 .UNINDENT
 .sp
 where \fBname_of_premium_feature\fP represents the command line value associated with the premium feature:
+.sp
+\fBOptions\fP
+.sp
+This subcommand has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-path PATH\fP
+Use to specify the location of a package. This option is not required when packages are downloaded from \fI\%https://packagecloud.io/\fP\&.
+.UNINDENT
+.SS Use Downloads
+.sp
+The \fBinstall\fP subcommand downloads packages from \fI\%https://packagecloud.io/\fP by default. For systems that are not behind a firewall (and have connectivity to \fI\%https://packagecloud.io/\fP), these packages can be installed as described below.
 .TS
 center;
 |l|l|.
@@ -225,7 +239,7 @@ Chef Manage
 T}	T{
 Use Chef management console to manage data bags, attributes, run\-lists, roles, environments, and cookbooks from a web user interface.
 .sp
-Run:
+(Front end machines only.) Run:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -237,13 +251,25 @@ $ chef\-server\-ctl install opscode\-manage
 .UNINDENT
 .UNINDENT
 .sp
-and then:
+then:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
 $ opscode\-manage\-ctl reconfigure
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+and then:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl reconfigure
 .ft P
 .fi
 .UNINDENT
@@ -267,13 +293,25 @@ $ chef\-server\-ctl install opscode\-push\-jobs\-server
 .UNINDENT
 .UNINDENT
 .sp
-and then:
+then:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
 $ opscode\-push\-jobs\-server\-ctl reconfigure
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+and then:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl reconfigure
 .ft P
 .fi
 .UNINDENT
@@ -327,7 +365,7 @@ Reporting
 T}	T{
 Use Chef reporting to keep track of what happens during every chef\-client runs across all of the infrastructure being managed by Chef\&. Run Chef reporting with Chef management console to view reports from a web user interface.
 .sp
-Run:
+(Front end machines only.) Run:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -339,7 +377,7 @@ $ chef\-server\-ctl install opscode\-reporting
 .UNINDENT
 .UNINDENT
 .sp
-and then:
+then:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -350,9 +388,46 @@ $ opscode\-reporting\-ctl reconfigure
 .fi
 .UNINDENT
 .UNINDENT
+.sp
+and then:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl reconfigure
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 T}
 _
 .TE
+.SS Use Local Packages
+.sp
+The \fBinstall\fP subcommand downloads packages from \fI\%https://packagecloud.io/\fP by default. For systems that are behind a firewall (and do not have connectivity to \fI\%https://packagecloud.io/\fP), these packages can be installed manually. First download the package that is appropriate for the platform and save it to a local path. Then run the \fBinstall\fP command using the \fB\-\-path\fP option to specify the location for the package:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl install NAME_OF_PACKAGE \-\-path /path/to/package
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+For example:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl install opscode\-manage\-1.6.2\-1.el6.x86_64 \-\-path /home/vagrant
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH MASTER-RECOVER
 .sp
 The \fBmaster\-recover\fP subcommand is used to force the Chef server to attempt to become the master server. This command is typically run in tandem with the \fBbackup\-recover\fP subcommand on the back\-end peer, unless the back\-end peer is no longer available.
