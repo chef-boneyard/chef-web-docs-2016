@@ -273,23 +273,14 @@ org-show
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
 
-xxxxx
------------------------------------------------------
-xxxxx
-
-xxxxx
------------------------------------------------------
-xxxxx
-
 
 What's Fixed
 =====================================================
-The following bugs/issues were fixed.
+For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/opscode/opscode-omnibus/blob/master/CHANGELOG.md
 
-* [xxxxx] xxxxx
-* [xxxxx] xxxxx
 
-``private-chef-ctl stop``
------------------------------------------------------
-.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop_ubuntu12.rst
+
+
+
+
 
