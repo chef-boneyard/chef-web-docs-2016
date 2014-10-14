@@ -1,5 +1,5 @@
 =====================================================
-About Versions
+About Cookbook Versions
 =====================================================
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
