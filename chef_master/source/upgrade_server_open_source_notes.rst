@@ -134,11 +134,15 @@ Sometimes when uploading cookbooks, a race condition may occur that prevents one
    Response: internal service error
    Failed uploading transformed data to the Chef 12 server 
 
-If this error occurs, first try re-running the upgrade process. If this error persists, see the "Subcommand Reference" below and run each of the upgrade steps individually. When doing the upgrade step, be sure to specify the ``--upload-threads`` command and set its value to ``1``, which will ensure that only one cookbook is uploaded at a time. This approach will be slower, but will prevent a race condition from occuring. For example:
+If this error occurs, re-run the upgrade process, adding the ``--upload-threads`` option set to a value of ``1``:
 
 .. code-block:: bash
 
    $ chef-server-ctl upgrade --upload-threads 1
+
+This option will ensure that only one cookbook is uploaded at a time. This approach will be slower, but will prevent a race condition (and this error) from occuring.
+
+
 
 
 Manual Upgrades
