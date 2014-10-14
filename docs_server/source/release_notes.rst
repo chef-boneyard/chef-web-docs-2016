@@ -10,16 +10,21 @@ What's New
 =====================================================
 The following items are new for |chef server| 12:
 
-* **CouchDB removed** |couch db| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
-* **Solr has been upgraded to Solr 4** The search capabilities of the |chef server| now use |apache solr| 4.
+* **Upgrades from Open Source Chef and Enterprise Chef servers to Chef 12 server** Upgrades to |chef server| 12 are supported from |chef server oec| 11 high availability and standalone configurations and |chef server osc| 11 standalone configurations. View the topic :doc:`Upgrade to Chef Server 12 </upgrade_server>` for more information about these processes. 
 * **High availability using Amazon Web Services** |amazon aws| is a supported high availability configuration option for the |chef server|. Machines are stored as |amazon ebs| volumes. A passive node monitors the availabilty of the active node, and will take over if required.
 * **Chef server replication** |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
 * **New chef-server-ctl command line tool** The |chef server ctl| command line tool is an update of the |private chef ctl| command line tool, with a new syntax for the new |chef server|.
 * **New command for installing features of the |chef server|** The ``install`` subcommand may be used to install |chef manage|, |push jobs|, |chef replication|, and |reporting|.
-* **New commands for managing users** New subcommands for the |chef server ctl| command line tool: ``user-create``, ``user-delete``, ``user-edit``, ``user-list``, and ``user-show``.
 * **New commands for managing organizations** New subcommands for the |chef server ctl| command line tool: ``org-associate``, ``org-create``, ``org-delete``, ``org-disassociate``, ``org-list``, and ``org-show``.
-* **Upgrades from Open Source Chef and Enterprise Chef servers to Chef 12 server** Upgrades to |chef server| 12 are supported from |chef server oec| 11 high availability and standalone configurations and |chef server osc| 11 standalone configurations. View the topic :doc:`Upgrade to Chef Server 12 </upgrade_server>` for more information about these processes. 
+* **New commands for managing users** New subcommands for the |chef server ctl| command line tool: ``user-create``, ``user-delete``, ``user-edit``, ``user-list``, and ``user-show``.
+* **Solr has been upgraded to Solr 4** The search capabilities of the |chef server| now use |apache solr| 4.
+* **CouchDB removed** |couch db| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
 * **Services removed** The following services have been removed from the |chef server|: ``opscode-account``, ``opscode-certificate``, ``oc_authz_migrator``, ``opscode-org-creator``, ``orgmapper``, and ``opscode-webui``.
+
+
+Upgrade to |chef server| 12!
+-----------------------------------------------------
+Upgrades to |chef server| 12 are supported for both |chef server oec| and |chef server osc| users. See http://docs.getchef.com/server/upgrade_server.html for more information about upgrades. If you are upgrading from |chef server osc|, please see http://docs.getchef.com/server/upgrade_server_open_source_notes.html as well.
 
 HA using AWS
 -----------------------------------------------------
