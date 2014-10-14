@@ -54,6 +54,10 @@ File Specificity
 
 .. include:: ../../includes_file/includes_file_cookbook_specificity_example.rst
 
+**Host Notation**
+
+.. include:: ../../includes_file/includes_file_cookbook_specificity_host_notation.rst
+
 Examples
 =====================================================
 |generic resource statement|
