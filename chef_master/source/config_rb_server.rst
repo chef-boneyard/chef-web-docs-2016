@@ -8,138 +8,62 @@
 
 .. note:: This file was named |private chef rb| in previous versions of |chef server oec|. After an upgrade to |chef server| 12 from |chef server oec|, the |private chef rb| file is symlinked to |chef server rb|. The |private chef rb| file is deprecated, starting with |chef server| 12.
 
-Settings
+Use Conditions
 =====================================================
-The following sections describe the various settings that are available in the |chef server rb| file.
+.. include:: ../../step_config/step_config_add_condition.rst
 
-General
+Recommended Settings
+=====================================================
+.. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
+
+SSL Protocols
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_general.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_nginx.rst
+
+Optional Settings
+=====================================================
+The following settings are often used for performance tuning of the |chef server| in larger installations.
+
+.. note:: When changes are made to the |chef server rb| file the |chef server| must be reconfigured by running the ``chef-server-ctl reconfigure`` command.
+
+.. warning:: Review the full list of :doc:`optional settings </config_rb_server_optional_settings>` that can be added to the |chef server rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
 bookshelf
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_bookshelf.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
 
-.. include:: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst
-
-bootstrap
+opscode-account
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_bootstrap.rst
-
-dark_launch
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst
-
-.. 
-.. this has been moved to the chef-ha add-on? verify
-.. 
-.. drbd
-.. -----------------------------------------------------
-.. .. include:: ../../includes_config/includes_config_rb_server_settings_drbd.rst
-
-estatsd
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_estatsd.rst
-
-.. 
-.. this has been moved to the chef-ha add-on? verify
-.. 
-.. ha
-.. -----------------------------------------------------
-.. .. include:: ../../includes_config/includes_config_rb_server_settings_ha.rst
-
-jetty
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_jetty.rst
-
-keepalived
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_keepalived.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_keepalived.rst
-
-lb / lb_internal
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_lb.rst
-
-ldap
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_ldap.rst
-
-nginx
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_nginx.rst
-
-oc_bifrost
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_bifrost.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst
-
-oc_chef_authz
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_authz.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst
-
-oc-chef-pedant
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst
-
-oc-id
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_oc_id.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_oc_id.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_account.rst
 
 opscode-chef
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_chef.rst
-
-opscode-chef-mover
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_chef.rst
 
 opscode-erchef
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_erchef.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_erchef.rst
 
 opscode-expander
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_expander.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_expander.rst
 
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst
-
-opscode-solr4
+opscode-solr
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_solr4.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_solr.rst
 
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst
+Update Frequency
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst
+
+opscode-webui
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_webui.rst
 
 postgresql
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_postgresql.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_postgresql.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_postgresql.rst
 
 rabbitmq
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst
-
-redis_lb
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_redis.rst
-
-.. include:: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst
-
-upgrades
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_upgrades.rst
-
-user
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_user.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst
