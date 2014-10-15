@@ -20,6 +20,10 @@ Recommended Settings
 =====================================================
 .. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
 
+SSL Protocols
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_nginx.rst
+
 Optional Settings
 =====================================================
 The following settings are often used to for performance tuning of the |chef server| in larger installations.

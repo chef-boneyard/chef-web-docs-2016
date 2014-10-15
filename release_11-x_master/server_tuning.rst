@@ -35,6 +35,10 @@ The following settings are typically added to the |enterprise rb| file:
    * - ``notification_email``
      - Default value: ``info@example.com``.
 
+SSL Protocols
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_nginx.rst
+
 Optional Settings
 =====================================================
 The following settings are often used to for performance tuning of |chef server oec| in larger installations.

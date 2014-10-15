@@ -48,7 +48,7 @@ This configuration file has the following settings:
    * - ``nginx['ssl_certificate_key']``
      - |ssl_certificate key| Default value: ``nil``.
    * - ``nginx['ssl_ciphers']``
-     - The list of supported cipher suites that are used to establish a secure connection. Default value: varies.
+     - |ssl_ciphers| To favor AES256 with ECDHE forward security, use ``HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK``. Default value: varies.
    * - ``nginx['ssl_company_name']``
      - Default value: ``YouCorp``.
    * - ``nginx['ssl_country_name']``
@@ -62,7 +62,7 @@ This configuration file has the following settings:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - The protocol versions that are enabled. For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``. Default value: varies, depending on the configuration of the |chef server| topology.
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``. Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``

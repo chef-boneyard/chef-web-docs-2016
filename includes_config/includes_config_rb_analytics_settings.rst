@@ -19,10 +19,12 @@ The following settings are typically added to the |analytics rb| file:
      - The hipchat room to which notifications will be published.
    * - ``actions_consumer['hipchat_enabled']``
      - A list of organizations for which hipchat notifications will be published.
+   * - ``nginx['ssl_protocols']``
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
    * - ``ssl['certificate']``
      - |ssl_certificate|
    * - ``ssl['certificate_key']``
      - |ssl_certificate key|
-
-
+   * - ``ssl['sslprotocols']``
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
 
