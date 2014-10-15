@@ -30,6 +30,18 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst
 
+bootstrap windows winrm
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm_options.rst
+
 winrm
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm.rst

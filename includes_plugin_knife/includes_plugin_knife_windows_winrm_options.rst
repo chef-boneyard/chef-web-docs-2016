@@ -9,12 +9,12 @@ This argument has the following options:
    |attribute ssh| The default attribute is the |fqdn| of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
 ``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``
-   |ca_trust_file|
+   Optional. |ca_trust_file|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
-   |identity-file|
+   |keytab-file|
 
-``-i KEYTAB_FILE``, ``--keytab-file KEYTAB_FILE``
+``--keytab-file KEYTAB_FILE``
    |keytab-file|
 
 ``-m``, ``--manual-list``
@@ -27,13 +27,13 @@ This argument has the following options:
    |winrm_password|
 
 ``-R KERBEROS_REALM``, ``--kerberos-realm KERBEROS_REALM``
-   |kerberos-realm|
+   Optional. |kerberos-realm|
 
 ``--returns CODES``
    |returns|
 
 ``-S KERBEROS_SERVICE``, ``--kerberos-service KERBEROS_SERVICE``
-   |kerberos-service| 
+   Optional. |kerberos-service|
 
 ``SEARCH_QUERY``
    |search_query ssh|

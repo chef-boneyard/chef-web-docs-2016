@@ -5,6 +5,12 @@
 
 This argument has the following options:
 
+``--auth-timeout MINUTES``,
+   |timeout auth_windows| Default: ``2``.
+
+``--bootstrap-no-proxy NO_PROXY_URL_or_IP``
+   |bootstrap no_proxy|
+
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
 
@@ -14,8 +20,14 @@ This argument has the following options:
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
+``-G GATEWAY``, ``--ssh-gateway GATEWAY``
+   |ssh_gateway|
+
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
+
+``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
+   |json first_run_string|
 
 ``-N NAME``, ``--node-name NAME``
    |name node|
@@ -35,10 +47,10 @@ This argument has the following options:
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
-``-s SECRET``, ``--secret SECRET``
+``-s SECRET``, ``--secret``
    |secret|
 
-``--secret-file FILE``
+``--secret-file SECRET_FILE``
    |secret-file|
 
 ``--template-file TEMPLATE``
@@ -46,4 +58,16 @@ This argument has the following options:
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh_user|
+
+
+
+
+
+
+
+
+
+
+
+
 
