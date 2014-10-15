@@ -496,6 +496,7 @@ Cookbooks
    upgrade_server_standalone_notes
    windows
 
+   install_manager
    manage_server_open_source
    plugin_knife_pushy
    pushy
