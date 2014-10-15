@@ -50,7 +50,12 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['ssl_certificate_key']``
      - |ssl_certificate key| Default value: ``nil``.
    * - ``nginx['ssl_ciphers']``
-     - |ssl_ciphers| To favor AES256 with ECDHE forward security, use ``HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK``. Default value: varies.
+     - |ssl_ciphers| To favor AES256 with ECDHE forward security, drop the ``RC4-SHA:RC4-MD5:RC4:RSA`` prefix. For example:
+
+       .. code-block:: ruby
+
+          nginx['ssl_ciphers'] = HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK
+
    * - ``nginx['ssl_company_name']``
      - |nginx ssl_company_name| Default value: ``YouCorp``.
    * - ``nginx['ssl_country_name']``
@@ -64,7 +69,7 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``. Default value: ``SSLv3 TLSv1``.
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] = "TLSv1 TLSv1.1 TLSv1.2"``. Default value: ``SSLv3 TLSv1``.
    * - ``nginx['ssl_state_name']``
      - |nginx ssl_state_name| Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``

@@ -14,8 +14,12 @@ The following settings are often modified from the default as part of the tuning
 
        .. code-block:: ruby
 
-          ``nginx['ssl_ciphers'] "HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK"``
+          nginx['ssl_ciphers'] =  "HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK"
 
    * - ``nginx['ssl_protocols']``
-     - |version protocols_ssl| |ssl| 3.0 is supported by the |chef server|; however, |ssl| 3.0 is an obsolete and insecure protocol. Transport Layer Security (TLS)---TLS 1.0, TLS 1.1, and TLS 1.2---has effectively replaced |ssl| 3.0, which provides for authenticated version negotiation between the |chef client| and |chef server|, which ensures the latest version of the TLS protocol is used. For the highest possible security, it is recommended to disable |ssl| 3.0 and allow all versions of the TLS protocol: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
+     - |version protocols_ssl| |ssl| 3.0 is supported by the |chef server|; however, |ssl| 3.0 is an obsolete and insecure protocol. Transport Layer Security (TLS)---TLS 1.0, TLS 1.1, and TLS 1.2---has effectively replaced |ssl| 3.0, which provides for authenticated version negotiation between the |chef client| and |chef server|, which ensures the latest version of the TLS protocol is used. For the highest possible security, it is recommended to disable |ssl| 3.0 and allow all versions of the TLS protocol.  For example:
+
+       .. code-block:: ruby
+
+          nginx['ssl_protocols'] = "TLSv1 TLSv1.1 TLSv1.2"
 
