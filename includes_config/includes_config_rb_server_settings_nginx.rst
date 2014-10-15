@@ -64,7 +64,7 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - |version protocols_ssl| Default value: varies, depending on the configuration of the |chef server| topology.
+     - |version protocols_ssl| Default value: ``SSLv3 TLSv1``.
    * - ``nginx['ssl_state_name']``
      - |nginx ssl_state_name| Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``
