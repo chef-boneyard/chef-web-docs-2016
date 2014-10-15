@@ -18,7 +18,7 @@ This subcommand has the following options:
    |bootstrap install_sh| |bootstrap no_install_command|
 
 ``--bootstrap-no-proxy NO_PROXY_URL_or_IP``
-   |bootstrap no_proxy| 
+   |bootstrap no_proxy|
 
    .. note:: This option is used internally by |company_name| to help verify bootstrap operations during testing and should never be used during an actual bootstrap operation.
 
