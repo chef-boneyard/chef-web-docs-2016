@@ -122,6 +122,7 @@ This section contains links to topics about configuration files, command-line to
    config_rb_chef_server
    config_rb_chef_sync
    config_rb_server
+   config_rb_server_optional_settings
    config_rb_manage
    ctl_chef_sync
    ctl_chef_server
