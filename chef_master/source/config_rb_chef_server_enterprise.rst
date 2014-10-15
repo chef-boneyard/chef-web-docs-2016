@@ -22,6 +22,8 @@ The following settings are often used for performance tuning of |chef server oec
 
 .. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
 
+.. warning:: Review the full list of :doc:`optional settings </config_rb_chef_server_enterprise_optional_settings>` that can be added to the |enterprise rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
+
 bookshelf
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
@@ -61,8 +63,6 @@ postgresql
 rabbitmq
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst
-
-.. warning:: Review the full list of `optional settings <http://docs.opscode.com/config_rb_chef_server_enterprise_optional_settings.html>`_ that can be added to the |enterprise rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
 
 
