@@ -9,27 +9,59 @@ What's New
 The following items are new for |chef client| 12-0 and/or are changes from previous versions. The short version:
 
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
+* **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
 * **xxxxx** xxxxx
 
 bff_package Resource
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_package_bff.rst
+.. include:: ../../release_chef_12-0/includes_resource_package_bff.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_bff_syntax.rst
+.. include:: ../../release_chef_12-0/includes_resource_package_bff_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_bff_actions.rst
+.. include:: ../../release_chef_12-0/includes_resource_package_bff_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_bff_attributes.rst
+.. include:: ../../release_chef_12-0/includes_resource_package_bff_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
+
+homebrew_package Resource
+-----------------------------------------------------
+.. include:: ../../release_chef_12-0/includes_resource_package_homebrew.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Install a package**
+
+.. include:: ../../release_chef_12-0/step_resource_homebrew_package_install.rst
+
+**Specify the Homebrew user with a UUID**
+
+.. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+
+**Specify the Homebrew user with a string**
+
+.. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_string.rst
 
 Changelog
 =====================================================

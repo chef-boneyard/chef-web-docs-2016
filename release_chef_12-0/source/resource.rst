@@ -58,7 +58,7 @@ The following resources are "platform resources" (i.e. "resources that are built
    * - `batch <http://docs.getchef.com/release/12/resource_batch.html>`_
      - .. include:: ../../includes_resources/includes_resource_batch.rst
    * - `bff_package <http://docs.getchef.com/release/12/resource_bff_package.html>`_
-     - .. include:: ../../includes_resources/includes_resource_package_bff.rst
+     - .. include:: ../../release_chef_12-0/includes_resource_package_bff.rst
    * - `breakpoint <http://docs.getchef.com/release/12/resource_breakpoint.html>`_
      - .. include:: ../../includes_resources/includes_resource_breakpoint.rst
    * - `chef_gem <http://docs.getchef.com/release/12/resource_chef_gem.html>`_
@@ -95,6 +95,8 @@ The following resources are "platform resources" (i.e. "resources that are built
      - .. include:: ../../includes_resources/includes_resource_scm_git.rst
    * - `group <http://docs.getchef.com/release/12/resource_group.html>`_
      - .. include:: ../../includes_resources/includes_resource_group.rst
+   * - `homebrew_package <http://docs.getchef.com/release/12/resource_homebrew_package.html>`_
+     - .. include:: ../../release_chef_12-0/includes_resource_package_homebrew.rst
    * - `http_request <http://docs.getchef.com/release/12/resource_http_request.html>`_
      - .. include:: ../../includes_resources/includes_resource_http_request.rst
    * - `ifconfig <http://docs.getchef.com/release/12/resource_ifconfig.html>`_
