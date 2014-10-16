@@ -14,7 +14,7 @@ Disk Configuration
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_config_disk.rst
 
-Primary Backend
+Backend
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_primary.rst
 
