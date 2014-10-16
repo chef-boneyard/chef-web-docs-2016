@@ -32,6 +32,6 @@ This configuration file has the following general settings:
    * - ``notification_email``
      - |email chef_server| Default value: ``"pc-default@opscode.com"``.
    * - ``role``
-     - |role chef_server| Default value: ``"standalone"``.
+     - |role chef_server| Possible values: ``backend``, ``frontend``, or ``standalone``. Default value: ``"standalone"``.
    * - ``topology``
      - The topology of the |chef server|. Possible values: ``ha``, ``manual``, ``standalone``, and ``tier``. Default value: ``"standalone"``.
