@@ -1781,11 +1781,11 @@ Actions
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-16_package_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_providers.rst
+.. include:: ../../includes_resources/includes_resource_11-16_package_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
