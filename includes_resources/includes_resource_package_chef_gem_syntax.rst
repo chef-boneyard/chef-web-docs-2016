@@ -13,7 +13,7 @@ The syntax for using the |resource chef_gem| resource in a recipe is as follows:
 
 where 
 
-* ``chef_gem`` tells the |chef client| to use the ``Chef::Provider::Rubygems`` provider during the |chef client| run
+* ``chef_gem`` tells the |chef client| to use the ``Chef::Provider::Package::Rubygems`` provider during the |chef client| run
 * ``name`` is the name of the resource block; when the ``package_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the package
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state

@@ -13,7 +13,7 @@ The syntax for using the |resource package_smartos| resource in a recipe is as f
 
 where 
 
-* ``smartos_package`` tells the |chef client| to use the ``Chef::Provider::Smartos`` provider during the |chef client| run
+* ``smartos_package`` tells the |chef client| to use the ``Chef::Provider::Package::Smartos`` provider during the |chef client| run
 * ``name`` is the name of the resource block; when the ``package_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the package
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
