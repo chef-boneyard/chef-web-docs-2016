@@ -1,23 +1,40 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A definition has three components:
+A definition has four components:
 
 * A resource name
-* One (or more) arguments that are used to define a parameter and set its default value; if a default value is not specified, it is assumed to be ``nil``
-* A hash that is used within a definition to provide access to parameters and their values
+* Zero or more arguments that define parameters their default values; if a default value is not specified, it is assumed to be ``nil``
+* A hash that can be used within a definition's body to provide access to parameters and their values
+* The body of the definition
 
-The parameter values that are provided are used as the default values, in case a value is not provided when the resource is invoked.
+The basic syntax of a definition is:
 
-The basic syntax of a definition:
+.. code-block:: ruby
+
+   define :resource_name do
+     body
+   end
+
+More commonly, the usage incorporates arguments to the definition:
 
 .. code-block:: ruby
 
    define :resource_name, :parameter => :argument, :parameter => :argument do
-     params_hash
+     body (likely referencing the params hash)
    end
 
-For example, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable`` would look something like:
+The following simplistic example shows a definition with no arguments (a parameter-less macro in the truest sense): 
+
+.. code-block:: ruby
+
+   define :prime_myfile do
+     file "/etc/myfile" do
+       content "some content"
+     end
+   end
+
+An example showing the more common usage pattern, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable``, would look something like:
 
 .. code-block:: ruby
 
@@ -56,4 +73,3 @@ which is then used in a recipe like this:
    host_porter "www1" do
      port 4001
    end
-
