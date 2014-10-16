@@ -19,6 +19,8 @@ This resource has the following attributes:
        .. note:: |flush_cache yum_cache|
    * - ``gem_binary``
      - |gem_binary resource package|
+   * - ``homebrew_user``
+     - |resource package_homebrew| resource only. |name homebrew_user|
    * - ``options``
      - |command options|
    * - ``package_name``
