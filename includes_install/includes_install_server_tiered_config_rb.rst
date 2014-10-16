@@ -9,7 +9,7 @@ Add the following settings to the |chef server rb| file:
 
    .. code-block:: ruby
 
-      topology "tiered"
+      topology "tier"
 
 #. Define the backend server:
 

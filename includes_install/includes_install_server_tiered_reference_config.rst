@@ -30,7 +30,7 @@ Looks like this:
 
 .. code-block:: ruby
 
-   topology "tiered"
+   topology "tier"
    
    server "be1.example.com",
      :ipaddress => "192.168.4.1",
