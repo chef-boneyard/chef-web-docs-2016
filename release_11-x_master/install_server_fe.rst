@@ -86,13 +86,13 @@ For back-end servers in an |chef server| installation:
      - |drbd|
 
 
-|chef server rb|
+|private chef rb|
 -----------------------------------------------------
-Each machine in a |chef server| cluster has a single configuration file called |chef server rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |chef server rb|.
+Each machine in a |chef server| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |private chef rb|.
 
 Configure topology
 -----------------------------------------------------
-Add the following line to the |chef server rb| configuration file:
+Add the following line to the |private chef rb| configuration file:
 
 .. code-block:: ruby
 
@@ -102,7 +102,7 @@ This lets the |chef server| know that these servers will be in a horizontally sc
 
 Back-end entries
 -----------------------------------------------------
-For the server that will be used as a back-end servers, add the following to the |chef server rb| file:
+For the server that will be used as a back-end servers, add the following to the |private chef rb| file:
 
 .. code-block:: ruby
 
@@ -113,7 +113,7 @@ For the server that will be used as a back-end servers, add the following to the
 
 Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. The role is ``backend``, and you will be using this server to bootstrap the |chef server| installation.
 
-Additionally, this server is used exclusively for the back-end services. Let the |chef server| know by adding the following entry to |chef server rb|:
+Additionally, this server is used exclusively for the back-end services. Let the |chef server| know by adding the following entry to |private chef rb|:
 
 .. code-block:: ruby
 
@@ -124,7 +124,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Front-end entries
 -----------------------------------------------------
-For each front-end server, add the following to the |chef server rb| file:
+For each front-end server, add the following to the |private chef rb| file:
 
 .. code-block:: ruby
 
@@ -136,7 +136,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Set api_fqdn
 -----------------------------------------------------
-Add the following line to the |chef server rb| config file:
+Add the following line to the ||private chef rb| config file:
 
 .. code-block:: ruby
 
@@ -146,7 +146,7 @@ Replace ``FQDN`` with the |fqdn| of the load balanced VIP.
 
 Example
 -----------------------------------------------------
-A completed |chef server rb| configuration file for a four server |chef server| cluster, consisting of:
+A completed |private chef rb| configuration file for a four server |chef server| cluster, consisting of:
 
 .. list-table::
    :widths: 100 150 150
@@ -208,13 +208,13 @@ Configure Bootstrap
 =====================================================
 The following sections describe what is required to configure the bootstrap server.
 
-Add |chef server rb|
+Add |private chef rb|
 -----------------------------------------------------
-Copy the |chef server rb| file to ``/etc/opscode/private-chef.rb`` on the bootstrap server.
+Copy the |private chef rb| file to ``/etc/opscode/private-chef.rb`` on the bootstrap server.
 
 Install the |chef server_title|
 -----------------------------------------------------
-On the bootstrap server copy the |chef server rb| file to ``/etc/opscode/private-chef.rb``.
+On the bootstrap server copy the |private chef rb| file to ``/etc/opscode/private-chef.rb``.
 
 Configure 
 -----------------------------------------------------
