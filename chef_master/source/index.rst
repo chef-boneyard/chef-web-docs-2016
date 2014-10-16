@@ -276,6 +276,7 @@ Cookbooks
    install_server_pre
    install_server_scenario_vm
    install_server_standalone
+   install_server_tiered
    install_server_users
    install_windows
    install_workstation
