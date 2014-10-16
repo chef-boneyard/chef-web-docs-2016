@@ -23,3 +23,4 @@ The following settings are often modified from the default as part of the tuning
 
           nginx['ssl_protocols'] = "TLSv1 TLSv1.1 TLSv1.2"
 
+.. note:: See https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_Ciphersuite for more information about the values used with these settings.  
