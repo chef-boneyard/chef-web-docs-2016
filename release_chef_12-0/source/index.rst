@@ -151,6 +151,7 @@ Cookbooks
    resource_gem_package
    resource_git
    resource_group
+   resource_homebrew_package
    resource_http_request
    resource_ifconfig
    resource_ips_package
