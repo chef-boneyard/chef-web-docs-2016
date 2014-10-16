@@ -138,13 +138,13 @@ Hostnames, FQDNs
 -----------------------------------------------------
 The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
 
-|chef server rb|
+|private chef rb|
 =====================================================
-Each |chef server| cluster has a single configuration file: |chef server rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |chef server rb|.
+Each |chef server| cluster has a single configuration file: |private chef rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |private chef rb|.
 
 Set the topology
 -----------------------------------------------------
-Add the following line to the |chef server rb| configuration file:
+Add the following line to the |private chef rb| configuration file:
 
 .. code-block:: ruby
 
@@ -154,7 +154,7 @@ This lets the |chef server| know that these servers will be in a horizontally sc
 
 Back-end entries
 -----------------------------------------------------
-Nominate a back-end server as the bootstrap server. For that server, add the following to the |chef server rb| file:
+Nominate a back-end server as the bootstrap server. For that server, add the following to the |private chef rb| file:
 
 .. code-block:: ruby
 
@@ -189,7 +189,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Front-end entries
 -----------------------------------------------------
-For each front-end server in the |chef server rb| file, add the following:
+For each front-end server in the |private chef rb| file, add the following:
 
 .. code-block:: ruby
 
@@ -201,7 +201,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Set api_fqdn
 -----------------------------------------------------
-Add the following line to the |chef server rb| config file:
+Add the following line to the |private chef rb| config file:
 
 .. code-block:: ruby
 
@@ -211,7 +211,7 @@ Replace ``FQDN`` with the |fqdn| of the load balanced VIP.
 
 Example
 -----------------------------------------------------
-A completed |chef server rb| configuration file for a four server tiered |chef server| cluster, consisting of:
+A completed |private chef rb| configuration file for a four server tiered |chef server| cluster, consisting of:
 
 .. list-table::
    :widths: 100 150 150 100
@@ -292,9 +292,9 @@ Add Package to Servers
 Upload the package provided to the servers you wish to install on, and record its location on the file-system. The rest of this section will assume that it was uploaded to the ``/tmp`` directory on each system.
 
 
-Add |chef server rb| to /etc/opscode
+Add |private chef rb| to /etc/opscode
 =====================================================
-Copy the |chef server rb| file to ``/etc/opscode`` on the bootstrap server.
+Copy the |private chef rb| file to ``/etc/opscode`` on the bootstrap server.
 
 Install the |chef server| on backend
 =====================================================
@@ -544,7 +544,7 @@ Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end o
 
 The ``172.17.16.**`` network addresses used in the previous examples could be any unused reserved IP address space.
 
-Set the following in ``/etc/opscode/chef-server.rb``:
+Set the following in ``/etc/opscode/private-chef.rb``:
 
 .. code-block:: ruby
 
