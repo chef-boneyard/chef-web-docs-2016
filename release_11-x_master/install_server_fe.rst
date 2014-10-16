@@ -88,7 +88,7 @@ For back-end servers in an |chef server| installation:
 
 |private chef rb|
 -----------------------------------------------------
-Each machine in a |chef server| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |private chef rb|.
+Each machine in a |chef server| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode`` on each server. Using the text editor of your choice, create a file called |private chef rb|.
 
 Configure topology
 -----------------------------------------------------
