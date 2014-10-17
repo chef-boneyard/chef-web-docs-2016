@@ -26,10 +26,6 @@ The standalone installation of |chef server| creates a working installation on a
 To install |chef server| 12:
 
 #. Download the package from http://downloads.getchef.com/chef-server/.
-#. Review the system requirements:
-
-   .. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
-
 #. Upload the package to the machine that will run the |chef server|, and then record its location on the file system. The rest of these steps assume this location is in the ``/tmp`` directory.
 
 #. Install the |chef server| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
