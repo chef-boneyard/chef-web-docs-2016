@@ -88,7 +88,7 @@ For back-end servers in an |chef server| installation:
 
 |private chef rb|
 -----------------------------------------------------
-Each machine in a |chef server| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode`` on each server. Using the text editor of your choice, create a file called |private chef rb|.
+Each machine in a |chef server| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in |path chef server enterprise chef server rb| on each server. To change the defaults on a server, use the text editor of your choice to create a file called |private chef rb|.
 
 Configure topology
 -----------------------------------------------------
@@ -102,7 +102,7 @@ This lets the |chef server| know that these servers will be in a horizontally sc
 
 Back-end entries
 -----------------------------------------------------
-For the server that will be used as a back-end servers, add the following to the |private chef rb| file:
+For the server that will be used as a back-end server, add the following to the |private chef rb| file:
 
 .. code-block:: ruby
 
@@ -136,7 +136,7 @@ Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP ad
 
 Set api_fqdn
 -----------------------------------------------------
-Add the following line to the ||private chef rb| config file:
+Add the following line to the |private chef rb| config file:
 
 .. code-block:: ruby
 
@@ -146,7 +146,7 @@ Replace ``FQDN`` with the |fqdn| of the load balanced VIP.
 
 Example
 -----------------------------------------------------
-A completed |private chef rb| configuration file for a four server |chef server| cluster, consisting of:
+A completed |private chef rb| configuration file for a four server tiered |chef server| cluster, consisting of:
 
 .. list-table::
    :widths: 100 150 150
@@ -210,11 +210,10 @@ The following sections describe what is required to configure the bootstrap serv
 
 Add |private chef rb|
 -----------------------------------------------------
-Copy the |private chef rb| file to ``/etc/opscode/private-chef.rb`` on the bootstrap server.
+Copy the |private chef rb| file to |path chef server enterprise chef server rb| on the bootstrap server.
 
 Install the |chef server_title|
 -----------------------------------------------------
-On the bootstrap server copy the |private chef rb| file to ``/etc/opscode/private-chef.rb``.
 
 Configure 
 -----------------------------------------------------
@@ -232,9 +231,9 @@ This command may take several minutes to run, during which you will see the outp
 
 .. note:: |chef server| is composed of many different services, which work together to create a functioning system. One effect is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.
 
-Configure Front-end
+Configure Front-ends
 =====================================================
-The following sections describe what is required to configure the front-end server.
+The following sections describe what is required to configure the front-end servers.
 
 Copy /etc/opscode
 -----------------------------------------------------
@@ -260,16 +259,6 @@ Install the |chef server| package on |ubuntu|:
 
    $ dpkg -i /tmp/chef-server-core-<version>.deb
 
-
-Configure
------------------------------------------------------
-With the bootstrap complete, you can now populate ``/etc/opscode`` on the front-end servers with the files generated during the bootstrap process. Assuming you are logged in as root on your bootstrap server, something like:
-
-.. code-block:: bash
-
-   $ scp -r /etc/opscode FQDN:/etc
-
-This command will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install.
 
 Reconfigure the Server
 -----------------------------------------------------

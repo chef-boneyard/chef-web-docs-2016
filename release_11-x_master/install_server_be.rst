@@ -140,7 +140,7 @@ The hostname for the |chef server| must be a |fqdn|, including the domain suffix
 
 |private chef rb|
 =====================================================
-Each |chef server| cluster has a single configuration file: |private chef rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |private chef rb|.
+Each |chef server| cluster has a single configuration file: |private chef rb|. This file describes the topology of the entire cluster and lives in |path chef server enterprise chef server rb| on each server. In any text editor, create a file called |private chef rb|.
 
 Set the topology
 -----------------------------------------------------
@@ -211,7 +211,7 @@ Replace ``FQDN`` with the |fqdn| of the load balanced VIP.
 
 Example
 -----------------------------------------------------
-A completed |private chef rb| configuration file for a four server tiered |chef server| cluster, consisting of:
+A completed |private chef rb| configuration file for a four server HA |chef server| cluster, consisting of:
 
 .. list-table::
    :widths: 100 150 150 100
@@ -294,11 +294,11 @@ Upload the package provided to the servers you wish to install on, and record it
 
 Add |private chef rb| to /etc/opscode
 =====================================================
-Copy the |private chef rb| file to ``/etc/opscode`` on the bootstrap server.
+Copy the |private chef rb| file to |path chef server enterprise chef server rb| on the bootstrap server.
 
 Install the |chef server| on backend
 =====================================================
-Install tthe |chef server| package on both of the back-end servers. For |redhat| and |centos| 6:
+Install the |chef server| package on both of the back-end servers. For |redhat| and |centos| 6:
 
 .. code-block:: bash
 
@@ -479,9 +479,9 @@ Followed by:
    $ private-chef-ctl reconfigure
 
 
-Configure the front-end
+Configure the front-ends
 =====================================================
-The following sections describe what is required to configure the front-end server.
+The following sections describe what is required to configure the front-end servers.
 
 Copy /etc/opscode
 -----------------------------------------------------
