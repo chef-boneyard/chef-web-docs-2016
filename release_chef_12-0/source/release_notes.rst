@@ -10,6 +10,7 @@ The following items are new for |chef client| 12-0 and/or are changes from previ
 
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
+* **New windows_service resource** Use the |resource service_windows| resource to manage services on the |windows| platform.
 * **xxxxx** xxxxx
 
 bff_package Resource
@@ -62,6 +63,31 @@ Examples
 **Specify the Homebrew user with a string**
 
 .. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_string.rst
+
+windows_service
+-----------------------------------------------------
+.. include:: ../../release_chef_12-0/includes_resource_service_windows.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_service_windows_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_service_windows_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_service_windows_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Start a service manually**
+
+.. include:: ../../release_chef_12-0/step_resource_service_windows_manual_start.rst
+
+
 
 Changelog
 =====================================================
