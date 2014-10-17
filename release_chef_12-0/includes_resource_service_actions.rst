@@ -24,4 +24,4 @@ This resource has the following actions:
    * - ``:stop``
      - |resource action stop service|
 
-.. note:: To mange a |windows| service with a ``Manual`` startup type, use the |resource service_windows| resource.
+.. note:: To mange a |windows| service with a ``Manual`` startup type, the |resource service_windows| resource must be used.
