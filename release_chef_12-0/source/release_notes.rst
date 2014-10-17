@@ -8,6 +8,7 @@ What's New
 =====================================================
 The following items are new for |chef client| 12-0 and/or are changes from previous versions. The short version:
 
+* **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform.
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
 * **New windows_service resource** Use the |resource service_windows| resource to manage services on the |windows| platform.
