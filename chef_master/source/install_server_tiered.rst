@@ -56,7 +56,7 @@ Firewalls
 
 Backend
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst
 
 Frontend
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
