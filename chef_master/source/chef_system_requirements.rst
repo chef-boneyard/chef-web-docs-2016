@@ -58,8 +58,9 @@ The |chef client| can run on any node or workstation that runs one of the follow
 In addition:
 
 * The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB
+* The |chef client| caches to two directories during the |chef client| run: ``/opt/chef`` and ``/var/chef/cache``. The ``/opt/chef`` directory is static and requires a minimum of 200MB of disk space. The ``/var/chef/cache`` directory is the location in which downloaded cookbooks, packages required by those cookbooks, and other large files are stored. The ``/var/chef/cache`` directory requires enough space to save all of this data and should be generously sized. 5GB is a safe number, as a starting point, but tune the size of ``/var/chef/cache`` as necessary
 * Each node and workstation must have access to the |chef server| via HTTPS
-* |ruby| 1.8.7, 1.9.1, 1.9.2, and 1.9.3. In general, using the version of |ruby| that is installed by the |omnibus installer| is recommended. |ruby| 1.8.7 will be deprecated in an upcoming release of the |chef client|. |ruby| 2.0 has been tested with the |chef client| and should present no issues when running the |chef client|; however, |ruby| 2.0 is not an officially supported version of |ruby| for the |chef client| (yet), but will become one in an upcoming version of the |chef client|.
+* |ruby| 1.8.7, 1.9.1, 1.9.2, and 1.9.3. In general, using the version of |ruby| that is installed by the |omnibus installer| is recommended. |ruby| 1.8.7 will be deprecated in an upcoming release of the |chef client|. |ruby| 2.0 has been tested with the |chef client| and should present no issues when running the |chef client|; however, |ruby| 2.0 is not an officially supported version of |ruby| for the |chef client| (yet), but will become one in an upcoming version of the |chef client|
 * The hosted |chef server| is compatible with |chef client| version 0.10.0 and greater; older clients must be upgraded before they can connect to |chef hosted|
 
 .. * |rubygems| 1.6.2 or higher; on the |ubuntu| or |debian| platforms, |rubygems| should be installed from source
