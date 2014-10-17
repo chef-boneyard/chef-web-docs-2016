@@ -57,8 +57,6 @@ The |chef client| can run on any node or workstation that runs one of the follow
 
 In addition:
 
-The |chef client| caches . 
-
 * The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB
 * The |chef client| binaries are stored in the ``/opt/chef`` directory, which requires a minimum of 200MB of disk space
 * The |chef client| caches to ``/var/chef/cache`` during the |chef client| run. This is the location in which downloaded cookbooks, packages required by those cookbooks, and other large files are stored. This directory requires enough space to save all of this data and should be generously sized. 5GB is a safe number, as a starting point, but tune the size of ``/var/chef/cache`` as necessary
