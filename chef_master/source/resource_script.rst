@@ -20,11 +20,11 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_script_actions.rst
+.. include:: ../../includes_resources/includes_resource_11-16_script_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_script_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-16_script_attributes.rst
 
 Guards
 -----------------------------------------------------
@@ -60,7 +60,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../includes_resources/includes_resource_script_providers.rst
+.. include:: ../../includes_resources/includes_resource_11-16_script_providers.rst
 
 Examples
 =====================================================
