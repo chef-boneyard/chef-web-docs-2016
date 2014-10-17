@@ -18,15 +18,15 @@ The response will return details for a user, including their name, |chef| userna
 .. code-block:: ruby
 
    {
-     "username": "sethvargo",
-     "name": "Seth Vargo",
+     "username": "stevedanno",
+     "name": "Steve Danno",
      "company": "Chef Software, Inc",
      "github": [
-       "sethvargo"
+       "stevedanno"
      ],
-     "twitter": "sethvargo",
-     "irc": "sethvargo",
-     "jira": "sethvargo",
+     "twitter": "stevedanno",
+     "irc": "stevedanno",
+     "jira": "stevedanno",
      "cookbooks": {
        "owns": {
          "bacon": "https://supermarket.getchef/api/v1/cookbooks/bacon"
