@@ -458,6 +458,7 @@ Cookbooks
    resource_template
    resource_user
    resource_windows_package
+   resource_windows_service
    resource_yum
    runbook
    security_notes
