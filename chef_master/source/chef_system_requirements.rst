@@ -63,7 +63,7 @@ The |chef client| caches .
 * The |chef client| binaries are stored in the ``/opt/chef`` directory, which requires a minimum of 200MB of disk space
 * The |chef client| caches to ``/var/chef/cache`` during the |chef client| run. This is the location in which downloaded cookbooks, packages required by those cookbooks, and other large files are stored. This directory requires enough space to save all of this data and should be generously sized. 5GB is a safe number, as a starting point, but tune the size of ``/var/chef/cache`` as necessary
 * Each node and workstation must have access to the |chef server| via HTTPS
-* |ruby| 1.9.3 (or higher). In general, using the version of |ruby| that is installed by the |omnibus installer| is recommended. |ruby| 1.8.7 will be deprecated in an upcoming release of the |chef client|. |ruby| 2.0 has been tested with the |chef client| and should present no issues when running the |chef client|; however, |ruby| 2.0 is not an officially supported version of |ruby| for the |chef client| (yet), but will become one in an upcoming version of the |chef client|
+* |ruby| 1.9.3 (or higher). In general, using the version of |ruby| that is installed by the |omnibus installer| is recommended
 * The hosted |chef server| is compatible with |chef client| version 0.10.0 and greater; older clients must be upgraded before they can connect to |chef hosted|
 
 .. * |rubygems| 1.6.2 or higher; on the |ubuntu| or |debian| platforms, |rubygems| should be installed from source
