@@ -14,7 +14,7 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_service_actions.rst
+.. include:: ../../includes_resources/includes_resource_11-16_service_actions.rst
 
 Attributes
 =====================================================
