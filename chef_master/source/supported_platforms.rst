@@ -4,7 +4,6 @@ Supported Platforms
 
 The sections below list the supported platforms for the |chef client|, |ohai|, and the |chef server|.
 
-
 |chef client_title|, Tier 1
 =====================================================
 .. include:: ../../includes_supported_platforms/includes_supported_platforms_client_tier1.rst

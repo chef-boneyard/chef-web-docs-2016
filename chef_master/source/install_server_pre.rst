@@ -4,9 +4,19 @@ Prerequisites
 
 The following prerequisites apply to every installation of the |chef server|.
 
-Minimum Requirements
+Supported Platforms
 =====================================================
-.. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_server.rst
+
+Unsupported
+-----------------------------------------------------
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_server_not_supported.rst
+
+Hardware/Software
+-----------------------------------------------------
+.. include:: ../../includes_system_requirements/includes_system_requirements_server_hardware.rst
+
+.. include:: ../../includes_system_requirements/includes_system_requirements_server_etc.rst
 
 UIDs and GIDs
 =====================================================

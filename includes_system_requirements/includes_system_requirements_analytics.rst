@@ -16,11 +16,3 @@ When configured in |standalone| mode:
   
      api_fqdn = 'CHEF_SERVER_VIP'
 
-**Hardware Requirements**
-
-For a standalone deployment:
-
-* 4 total cores, 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
-* 4 GB of RAM
-* 5 GB of free disk space in /opt
-* 20 GB of free disk space in /var (The actions database is installed under /var)
