@@ -84,6 +84,9 @@ GET
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_users.rst
 
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_users_get.rst
 
 /tools
 -----------------------------------------------------
