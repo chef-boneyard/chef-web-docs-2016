@@ -9,8 +9,6 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:configure_startup``
-     - |resource action configure_startup|
    * - ``:disable``
      - |resource action disable service| |windows service_type_disabled|
    * - ``:enable``
@@ -26,4 +24,4 @@ This resource has the following actions:
    * - ``:stop``
      - |resource action stop service|
 
-
+.. note:: To mange a |windows| service with a ``Manual`` startup type, use the |resource service_windows| resource.
