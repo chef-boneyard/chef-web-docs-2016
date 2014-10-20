@@ -1,4 +1,52 @@
 .. THIS PAGE IS IDENTICAL TO docs.getchef.com/resource_git.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 12.0
 
-.. include:: ../../chef_master/source/resource_git.rst
+=====================================================
+git
+=====================================================
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_scm_git.rst
+
+.. note:: |note scm resource use with resource deploy|
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_scm_git_syntax.rst
+
+Actions
+=====================================================
+.. include:: ../../includes_resources/includes_resource_scm_git_actions.rst
+
+Attributes
+=====================================================
+.. include:: ../../release_chef_12-0/includes_resource_scm_git_attributes.rst
+
+Providers
+=====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_scm_git_providers.rst
+
+Examples
+=====================================================
+|generic resource statement|
+
+**Use the git mirror**
+
+.. include:: ../../step_resource/step_resource_scm_use_git_mirror.rst
+
+**Use different branches**
+
+.. include:: ../../step_resource/step_resource_scm_use_different_branches.rst
+
+**Install an application from git using bash**
+
+.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
+
+**Upgrade packages from git**
+
+.. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
