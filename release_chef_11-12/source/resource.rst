@@ -43,7 +43,7 @@ All resources share a set of common actions, attributes, conditional executions,
 
 Resources
 -----------------------------------------------------
-The following resources are "platform resources" (i.e. "resources that are built into the |chef client|"):
+.. include:: ../../includes_resources_common/includes_resources_common_platform_resources_intro.rst
 
 .. list-table::
    :widths: 150 450
