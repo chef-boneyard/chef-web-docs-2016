@@ -16,7 +16,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **xxxxx** xxxxx
 
 
-bff_package Resource
+bff_package
 -----------------------------------------------------
 .. include:: ../../release_chef_12-0/includes_resource_package_bff.rst
 
@@ -37,7 +37,7 @@ Examples
 None.
 
 
-homebrew_package Resource
+homebrew_package
 -----------------------------------------------------
 .. include:: ../../release_chef_12-0/includes_resource_package_homebrew.rst
 
