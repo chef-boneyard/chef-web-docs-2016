@@ -1,12 +1,12 @@
 =====================================================
-Release Notes: |chef client| 12-0
+Release Notes: |chef client| 12.0
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
 
 What's New
 =====================================================
-The following items are new for |chef client| 12-0 and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
 
 * **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform.
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
