@@ -11,8 +11,10 @@ The following items are new for |chef client| 12-0 and/or are changes from previ
 * **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform.
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
+* **New reboot resource** Use the |resource reboot| resource to reboot a node during or at the end of a |chef client| run.
 * **New windows_service resource** Use the |resource service_windows| resource to manage services on the |windows| platform.
 * **xxxxx** xxxxx
+
 
 bff_package Resource
 -----------------------------------------------------
@@ -33,6 +35,7 @@ Attributes
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
+
 
 homebrew_package Resource
 -----------------------------------------------------
@@ -64,6 +67,39 @@ Examples
 **Specify the Homebrew user with a string**
 
 .. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_string.rst
+
+
+reboot
+-----------------------------------------------------
+.. include:: ../../release_chef_12-0/includes_resource_service_reboot.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_service_reboot_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_service_reboot_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_resource_service_reboot_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Reboot a node immediately**
+
+.. .. include:: ../../release_chef_12-0/step_resource_service_reboot_immediately.rst
+
+**Reboot a node at the end of a |chef client| run**
+
+.. .. include:: ../../release_chef_12-0/step_resource_service_reboot_request.rst
+
+**Cancel a reboot**
+
+.. .. include:: ../../release_chef_12-0/step_resource_service_reboot_cancel.rst
+
 
 windows_service
 -----------------------------------------------------

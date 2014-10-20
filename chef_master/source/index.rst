@@ -442,6 +442,7 @@ Cookbooks
    resource_private_key
    resource_public_key
    resource_python
+   resource_reboot
    resource_registry_key
    resource_remote_directory
    resource_remote_file
