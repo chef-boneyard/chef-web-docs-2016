@@ -14,7 +14,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['authz_fanout']``
      - Default value: ``20``.
    * - ``opscode_erchef['authz_timeout']``
-     - Default value: ``1000``.
+     - |timeout bifrost| Default value: ``2000``.
    * - ``opscode_erchef['base_resource_url']``
      - |url chef_server_base| Default value: ``:host_header``.
    * - ``opscode_erchef['bulk_fetch_batch_size']``
