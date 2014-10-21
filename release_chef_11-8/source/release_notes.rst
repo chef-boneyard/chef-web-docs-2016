@@ -11,7 +11,8 @@ The following items are new for |chef client| 11.8 and/or are changes from previ
 
 * **Local mode for the chef-client** The |chef client| can now be run in local mode, which allows the |chef client| to run against the local |chef repo| as if it were running against a |chef server|.
 * **New configuration settings** Three configuration settings have been added to support the use of local mode: ``chef_zero[:enabled]``, ``chef_zero[:port]``, and ``local_mode``.
-* **New man pages for Knife** The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.getchef.com and are current as of the |chef client| 11.8.0 release. 
+* **New man pages for Knife** The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.getchef.com and are current as of the |chef client| 11.8.0 release.
+* **Timeout attribute added for source control management** The |resource deploy|, |resource scm_git|, and |resource scm_subversion| resources now support a ``timeout`` attribute. When this attribute is specified using the |resource deploy| resource, the value is passed to the |resource scm_git| and |resource scm_subversion| resources.
 
 |chef zero|
 -----------------------------------------------------
