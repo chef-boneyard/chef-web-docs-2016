@@ -20,7 +20,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-8_scm_git_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-6_scm_git_attributes.rst
 
 Providers
 =====================================================
