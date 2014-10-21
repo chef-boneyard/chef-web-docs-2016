@@ -55,6 +55,8 @@
      - |symlinks| Default value: ``{"system" => "public/system", "pids" => "tmp/pids", "log" => "log"}``.
    * - ``symlink_before_migrate``
      - |symlink_before_migrate| Default value: ``{"config/database.yml" => "config/database.yml"}``.
+   * - ``timeout``
+     - |timeout scm| |timeout scm_value_deploy|
    * - ``user``
      - |user checked_out_code|
 

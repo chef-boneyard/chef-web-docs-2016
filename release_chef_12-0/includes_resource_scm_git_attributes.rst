@@ -37,5 +37,7 @@
      - |revision| Default value: ``HEAD``.
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
+   * - ``timeout``
+     - |timeout scm| |timeout scm_value_git|
    * - ``user``
      - |user checked_out_code| Default value: the home directory of this user, as indicated by the ``HOME`` environment variable.

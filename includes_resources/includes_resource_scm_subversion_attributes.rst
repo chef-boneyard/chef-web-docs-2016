@@ -27,5 +27,7 @@
      - |svn_password resource|
    * - ``svn_username``
      - |svn_username resource|
+   * - ``timeout``
+     - |timeout scm| |timeout scm_value_subversion|
    * - ``user``
      - |user checked_out_code|
