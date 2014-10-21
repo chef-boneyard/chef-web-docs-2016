@@ -20,7 +20,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_scm_subversion_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-6_scm_subversion_attributes.rst
 
 Providers
 =====================================================
