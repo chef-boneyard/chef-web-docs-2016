@@ -14,6 +14,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New reboot resource** Use the |resource reboot| resource to reboot a node during or at the end of a |chef client| run.
 * **New windows_service resource** Use the |resource service_windows| resource to manage services on the |windows| platform.
 * **New --bootstrap-template option** Use the ``--bootstrap-template`` option to install the |chef client| with a bootstrap template. Specify the name of a template such as ``chef-full`` or specify the path to a custom bootstrap template. This option deprecates the ``--distro`` and ``--template-file`` options.
+* **New SSL options for bootstrap operations** The |subcommand knife bootstrap| subcommand has new options that support |ssl| with bootstrap operations. Use the ``--[no-]node-verify-api-cert`` option to to perform |ssl| validation of the connection to the |chef server|. Use the ``--node-ssl-verify-mode`` option to validate |ssl| certificates.
 * **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` attribute.
 
 * **xxxxx** xxxxx
