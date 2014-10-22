@@ -14,6 +14,10 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New reboot resource** Use the |resource reboot| resource to reboot a node during or at the end of a |chef client| run.
 * **New windows_service resource** Use the |resource service_windows| resource to manage services on the |windows| platform.
 * **New --bootstra-template option** Use the ``--bootstrap-template`` option to install the |chef client| with a bootstrap template. Specify the name of a template such as ``chef-full`` or specify the path to a custom bootstrap template. This option deprecates the ``--distro`` and ``--template-file`` options.
+* **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |soliaris| platform with the ``fsck_device`` attribute.
+
+
+
 * **xxxxx** xxxxx
 
 bff_package
@@ -145,6 +149,22 @@ The following options are new:
    |template bootstrap| Default value: ``chef-full``, which installs the |chef client| using the |omnibus installer| on all supported platforms.
 
    .. note:: The ``--distro`` and ``--template-file`` options are deprecated.
+
+
+
+|resource mount| Resource
+-----------------------------------------------------
+The following attribute is new:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``fsck_device``
+     - |fsck_device| Default value: ``-``.
+
 
 Changelog
 =====================================================
