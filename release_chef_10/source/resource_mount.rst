@@ -18,7 +18,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_mount_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-16_mount_attributes.rst
 
 Providers
 =====================================================
