@@ -23,6 +23,8 @@
      - |enable_submodules| Default value: ``false``.
    * - ``environment``
      - |environment variables|
+
+       .. note:: The |resource scm_git| provider automatically sets the ``ENV['HOME']`` and ``ENV['GIT_SSH']`` environment variables. To override this behavior and provide different values, add ``ENV['HOME']`` and/or ``ENV['GIT_SSH']`` to the ``environment`` |ruby hash|.
    * - ``group``
      - |group deploy|
    * - ``provider``
