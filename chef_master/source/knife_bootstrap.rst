@@ -75,9 +75,3 @@ The following examples show how to use this |knife| subcommand:
 **Specify a custom installation command sequence**
 
 .. include:: ../../step_knife/step_knife_bootstrap_custom_install_command_sequence.rst
-
-
-
-
-
-
