@@ -11,4 +11,4 @@
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_metadata_settings.rst
+.. include:: ../../includes_config/includes_config_rb_11-16_metadata_settings.rst
