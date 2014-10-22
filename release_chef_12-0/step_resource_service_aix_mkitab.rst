@@ -1,7 +1,11 @@
 .. This is an included how-to. 
 
 
-The |resource service| resource does not support using the ``:enable`` and ``:disable`` actions with resources that are managed using |ibm aix_src|. Instead, use the |resource execute| resource to invoke ``mkitab`` to enable or disable resources. The following example shows how to install a service:
+The |resource service| resource does not support using the ``:enable`` and ``:disable`` actions with resources that are managed using |ibm aix_src|. This is because |ibm aix_src| does not have a standard mechanism for enabling and disabling services on system boot.
+
+One approach for enabling or disabling services that are managed by |ibm aix_src| is to use the |resource execute| resource to invoke ``mkitab``, and then use that command to enable or disable the service.
+
+The following example shows how to install a service:
 
 .. code-block:: ruby
 
