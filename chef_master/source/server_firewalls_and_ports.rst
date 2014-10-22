@@ -23,3 +23,7 @@ Front End
 Back End
 -----------------------------------------------------
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
+
+Loopback Interface
+-----------------------------------------------------
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_loopback.rst
