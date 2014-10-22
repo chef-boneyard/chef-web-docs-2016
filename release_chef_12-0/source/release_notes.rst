@@ -15,6 +15,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New windows_service resource** Use the |resource service_windows| resource to manage services on the |windows| platform.
 * **New --bootstrap-template option** Use the ``--bootstrap-template`` option to install the |chef client| with a bootstrap template. Specify the name of a template such as ``chef-full`` or specify the path to a custom bootstrap template. This option deprecates the ``--distro`` and ``--template-file`` options.
 * **New SSL options for bootstrap operations** The |subcommand knife bootstrap| subcommand has new options that support |ssl| with bootstrap operations. Use the ``--[no-]node-verify-api-cert`` option to to perform |ssl| validation of the connection to the |chef server|. Use the ``--node-ssl-verify-mode`` option to validate |ssl| certificates.
+* **New format options for knife status** Use the ``--medium`` and ``--long`` options to include attributes in the output, and to format that output as |json|.
 * **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` attribute.
 
 * **xxxxx** xxxxx
@@ -22,10 +23,6 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 |ibm aix| Platform Support
 -----------------------------------------------------
 The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform. The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems.
-
-**Enable a service on AIX using the mkitab command**
-
-.. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
 
 **New provider**
 
@@ -42,6 +39,9 @@ The |resource service| resource has a new provider:
      - ``service``
      - The provider that is used with the |ibm aix| platforms. Use the ``service`` short name to start, stop, and restart services with |ibm aix_src|. Use the ``Chef::Provider::Service::AixInit`` long name to manage services with |berkeley os|-based init systems.
 
+**Enable a service on AIX using the mkitab command**
+
+.. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
 
 bff_package
 -----------------------------------------------------
@@ -172,6 +172,17 @@ The following options are new:
    |template bootstrap| Default value: ``chef-full``, which installs the |chef client| using the |omnibus installer| on all supported platforms.
 
    .. note:: The ``--distro`` and ``--template-file`` options are deprecated.
+
+
+``knife status`` Settings
+-----------------------------------------------------
+The following options are new:
+
+``-l``, ``--long``
+   |long|
+
+``-m``, ``--medium``
+   |medium|
 
 
 ``fsck_device`` Attribute
