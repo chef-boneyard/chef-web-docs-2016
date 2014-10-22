@@ -125,14 +125,26 @@ Examples
 .. include:: ../../release_chef_12-0/step_resource_service_windows_manual_start.rst
 
 
-``knife bootstrap``
+``knife bootstrap`` Settings
 -----------------------------------------------------
-A new option is added to the |subcommand knife bootstrap| subcommand:
+The following options are new:
+
+``--[no-]node-verify-api-cert``
+   |ssl_verify_mode_verify_api_cert| If this option is not specified, the setting for ``verify_api_cert`` in the configuration file is applied.
+
+``--node-ssl-verify-mode PEER_OR_NONE``
+   |ssl_verify_mode|
+ 
+   |ssl_verify_mode_verify_none|
+
+   |ssl_verify_mode_verify_peer| This is the recommended setting.
+
+   If this option is not specified, the setting for ``ssl_verify_mode`` in the configuration file is applied.
 
 ``-t TEMPLATE``, ``--bootstrap-template TEMPLATE``
    |template bootstrap| Default value: ``chef-full``, which installs the |chef client| using the |omnibus installer| on all supported platforms.
 
-.. note:: The ``--distro`` and ``--template-file`` options are deprecated.
+   .. note:: The ``--distro`` and ``--template-file`` options are deprecated.
 
 Changelog
 =====================================================

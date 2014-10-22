@@ -52,6 +52,18 @@ This subcommand has the following options:
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
+``--[no-]node-verify-api-cert``
+   |ssl_verify_mode_verify_api_cert| If this option is not specified, the setting for ``verify_api_cert`` in the configuration file is applied.
+
+``--node-ssl-verify-mode PEER_OR_NONE``
+   |ssl_verify_mode|
+ 
+   |ssl_verify_mode_verify_none|
+
+   |ssl_verify_mode_verify_peer| This is the recommended setting.
+
+   If this option is not specified, the setting for ``ssl_verify_mode`` in the configuration file is applied.
+
 ``-p PORT``, ``--ssh-port PORT``
    |ssh_port|
 
