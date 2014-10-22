@@ -50,3 +50,7 @@ Examples
 **Upgrade packages from git**
 
 .. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
+
+**Pass in environment variables**
+
+.. include:: ../../release_chef_12-0/step_resource_scm_git_environment_variables.rst
