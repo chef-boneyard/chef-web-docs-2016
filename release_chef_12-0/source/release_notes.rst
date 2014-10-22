@@ -8,6 +8,7 @@ What's New
 =====================================================
 The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
 
+* **Ruby 1.9.3 (or higher)** |ruby| versions 1.8.7, 1.9.1, and 1.9.2 are no longer supported.
 * **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform. The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems. 
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
