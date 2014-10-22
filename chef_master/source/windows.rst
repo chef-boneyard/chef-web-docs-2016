@@ -119,13 +119,7 @@ knife.rb Settings
 
 Custom Templates
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-A custom bootstrap template file (``template_filename.erb``) must be located in a ``bootstrap/`` directory. Use the ``--distro`` option with the ``knife bootstrap`` subcommand to specify the bootstrap template file. For example, a bootstrap template file named "british_sea_power.erb":
-
-.. code-block:: bash
-
-   $ knife bootstrap 123.456.7.8 -x username -P password --sudo --distro "british_sea_power.erb"
-
-The following examples show how a bootstrap template file can be customized for various platforms.
+.. include:: ../../includes_knife/includes_knife_bootstrap_template.rst
 
 Microsoft Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
