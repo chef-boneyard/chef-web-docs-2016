@@ -11,7 +11,7 @@ The syntax for using the |resource scm_subversion| resource in a recipe is as fo
      action :action # see actions section below
    end
 
-where 
+where
 
 * ``subversion`` tells the |chef client| to use the ``Chef::Provider::Subversion`` provider during the |chef client| run.
 * ``"name"`` is the location in which the source files will be placed and/or synchronized with the files under source control management
@@ -29,7 +29,3 @@ For example:
      action :sync
    end
 
-where
-
-* the name of the resource is ``CouchDB Edge``
-* the ``repository`` and ``reference`` nodes tell the |chef client| which repository and revision to use
