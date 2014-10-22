@@ -34,9 +34,7 @@ The Workstation
 
 .. **Plugins:** :doc:`About Plugins </plugin_knife>` | :doc:`Custom Knife Plugins </plugin_knife_custom>` | :doc:`Authenticated Requests </plugin_knife_authenticated_requests>`
 
-**Settings:** :doc:`knife.rb </config_rb_knife>`
-
-.. | :doc:`metadata.rb </config_rb_metadata>`
+**Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
 .. **Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
@@ -75,6 +73,7 @@ Cookbooks
    chef_overview
    config_rb_knife
    config_rb_knife_optional_settings
+   config_rb_metadata
    dsl_recipe
    dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
