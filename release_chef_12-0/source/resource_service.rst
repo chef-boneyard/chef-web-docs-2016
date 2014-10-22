@@ -95,4 +95,4 @@ Examples
 
 **Enable a service on AIX using the mkitab command**
 
-.. include:: ../../step_resource/step_resource_service_aix_mkitab.rst
+.. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
