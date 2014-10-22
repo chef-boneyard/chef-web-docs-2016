@@ -79,12 +79,6 @@ Review the list of `common options <http://docs.getchef.com/chef/knife.html#comm
 
 .. include:: ../../includes_knife/includes_knife_bootstrap_settings.rst
 
-Examples
------------------------------------------------------
-.. include:: ../../step_knife/step_knife_bootstrap_use_ssh_password.rst
-
-.. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
-
 Custom Templates
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_bootstrap_template.rst
@@ -105,6 +99,36 @@ Microsoft Windows
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_bootstrap_example_windows.rst
 
+Examples
+-----------------------------------------------------
+
+**Bootstrap a node**
+
+.. include:: ../../step_knife/step_knife_bootstrap_node.rst
+
+**Use an SSH password**
+
+.. include:: ../../step_knife/step_knife_bootstrap_use_ssh_password.rst
+
+**Use a file that contains a private key**
+
+.. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
+
+**Fetch and execute an installation script from a URL**
+
+.. include:: ../../step_knife/step_knife_bootstrap_fetch_install_script_from_url.rst
+
+**Specify options when using cURL**
+
+.. include:: ../../step_knife/step_knife_bootstrap_options_with_curl.rst
+
+**Specify options when using GNU Wget**
+
+.. include:: ../../step_knife/step_knife_bootstrap_options_with_gnu_wget.rst
+
+**Specify a custom installation command sequence**
+
+.. include:: ../../step_knife/step_knife_bootstrap_custom_install_command_sequence.rst
 
 
 
