@@ -17,6 +17,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New SSL options for bootstrap operations** The |subcommand knife bootstrap| subcommand has new options that support |ssl| with bootstrap operations. Use the ``--[no-]node-verify-api-cert`` option to to perform |ssl| validation of the connection to the |chef server|. Use the ``--node-ssl-verify-mode`` option to validate |ssl| certificates.
 * **New format options for knife status** Use the ``--medium`` and ``--long`` options to include attributes in the output, and to format that output as |json|.
 * **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` attribute.
+* **New settings for metadata.rb** The |metadata rb| file has two new settings: ``issues_url`` and ``source_url``. These are used to capture the source location and issues tracking location for a cookbook and are also used with |supermarket|.
 
 * **xxxxx** xxxxx
 
@@ -197,6 +198,30 @@ The following attribute is new for the |resource mount| resource:
      - Description
    * - ``fsck_device``
      - |fsck_device| Default value: ``-``.
+
+|metadata rb| Settings
+-----------------------------------------------------
+The following settings are new:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``issues_url``
+     - |url cookbook_issues| For example:
+
+       .. code-block:: ruby
+
+          source_url "https://github.com/opscode-cookbooks/chef-client/issues"
+
+   * - ``source_url``
+     - |url cookbook_source| For example:
+
+       .. code-block:: ruby
+
+          source_url "https://github.com/opscode-cookbooks/chef-client"
 
 
 Changelog
