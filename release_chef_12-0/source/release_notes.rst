@@ -45,6 +45,7 @@ The |resource service| resource has a new provider:
 
 .. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
 
+
 bff_package
 -----------------------------------------------------
 .. include:: ../../release_chef_12-0/includes_resource_package_bff.rst
