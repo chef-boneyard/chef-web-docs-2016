@@ -8,7 +8,7 @@ What's New
 =====================================================
 The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
 
-* **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform.
+* **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform. The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems. 
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
 * **New reboot resource** Use the |resource reboot| resource to reboot a node during or at the end of a |chef client| run.
@@ -16,9 +16,31 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New --bootstra-template option** Use the ``--bootstrap-template`` option to install the |chef client| with a bootstrap template. Specify the name of a template such as ``chef-full`` or specify the path to a custom bootstrap template. This option deprecates the ``--distro`` and ``--template-file`` options.
 * **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` attribute.
 
-
-
 * **xxxxx** xxxxx
+
+|ibm aix| Platform Support
+-----------------------------------------------------
+The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform. The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems.
+
+**Enable a service on AIX using the mkitab command**
+
+.. include:: ../../step_resource/step_resource_service_aix_mkitab.rst
+
+**New provider**
+
+The |resource service| resource has a new provider:
+
+.. list-table::
+   :widths: 150 80 320
+   :header-rows: 1
+
+   * - Long name
+     - Short name
+     - Notes
+   * - ``Chef::Provider::Service::AixInit``
+     - ``service``
+     - The provider that is used with the |ibm aix| platforms. Use the ``service`` short name to start, stop, and restart services with |ibm aix_src|. Use the ``Chef::Provider::Service::AixInit`` long name to manage services with |berkeley os|-based init systems.
+
 
 bff_package
 -----------------------------------------------------
@@ -94,15 +116,15 @@ Examples
 
 **Reboot a node immediately**
 
-.. .. include:: ../../release_chef_12-0/step_resource_service_reboot_immediately.rst
+.. include:: ../../release_chef_12-0/step_resource_service_reboot_immediately.rst
 
 **Reboot a node at the end of a |chef client| run**
 
-.. .. include:: ../../release_chef_12-0/step_resource_service_reboot_request.rst
+.. include:: ../../release_chef_12-0/step_resource_service_reboot_request.rst
 
 **Cancel a reboot**
 
-.. .. include:: ../../release_chef_12-0/step_resource_service_reboot_cancel.rst
+.. include:: ../../release_chef_12-0/step_resource_service_reboot_cancel.rst
 
 
 windows_service

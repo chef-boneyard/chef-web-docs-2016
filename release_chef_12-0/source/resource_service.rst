@@ -27,7 +27,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../includes_resources/includes_resource_service_providers.rst
+.. include:: ../../release_chef_12-0/includes_resource_service_providers.rst
 
 Examples
 =====================================================
@@ -92,3 +92,7 @@ Examples
 **Control a service using the execute resource**
 
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
+
+**Enable a service on AIX using the mkitab command**
+
+.. include:: ../../step_resource/step_resource_service_aix_mkitab.rst
