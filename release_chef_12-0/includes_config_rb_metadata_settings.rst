@@ -155,7 +155,7 @@ This configuration file has the following settings:
           maintainer_email 'adam@example.com'
 
    * - ``name``
-     - |name cookbook| This field is inferred unless specified. For example:
+     - Required. |name cookbook| For example:
 
        .. code-block:: ruby
 
