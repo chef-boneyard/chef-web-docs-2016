@@ -1,13 +1,20 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``value_for_platform_family`` method can be used in a recipe to use a |ruby hash| to select a particular value based on the ``node['platform_family']`` attribute that is detected by |ohai| during every |chef client| run. The syntax for the ``value_for_platform_family`` method is as follows:
+The ``value_for_platform_family`` method can be used in a recipe to use a |ruby hash| to select a particular value based on the ``node['platform_family']`` attribute that is detected by |ohai| during every |chef client| run. 
+
+The syntax for the ``value_for_platform_family`` method is as follows:
 
 .. code-block:: ruby
 
    value_for_platform_family( { platform_family => value } )
 
-where ``platform_family`` is a comma-separated list, each specifying a platform family, such as |fedora|, |suse|, or |redhat enterprise linux|, and ``value`` specifies the value that will be used if the node's platform family matches ``value_for_platform_family``. If each value only has a single platform family, then the syntax is like the following:
+where:
+
+* ``platform_family`` is a comma-separated list, each specifying a platform family, such as |fedora|, |suse|, or |redhat enterprise linux|
+* ``value`` specifies the value that will be used if the node's platform family matches ``value_for_platform_family``.
+
+When each value only has a single platform, the syntax as follows:
 
 .. code-block:: ruby
 
@@ -35,4 +42,3 @@ For example, for |redhat enterprise linux|, |fedora|, and |suse| platform famili
      ["rhel", "fedora", "suse"] => "httpd-devel",
       "debian" => "apache2-dev"
    )
-

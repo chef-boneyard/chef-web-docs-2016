@@ -1,13 +1,21 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``value_for_platform`` method can be used in a recipe to use a |ruby hash| to select a particular value based on the ``node['platform']`` and ``node['platform_version']`` attributes that are detected by |ohai| during every |chef client| run. The syntax for the ``value_for_platform`` method is as follows:
+The ``value_for_platform`` method can be used in a recipe to use a |ruby hash| to select a particular value based on the ``node['platform']`` and ``node['platform_version']`` attributes that are detected by |ohai| during every |chef client| run. 
+
+The syntax for the ``value_for_platform`` method is as follows:
 
 .. code-block:: ruby
 
    value_for_platform( ["platform"] => { ["version"] => value } )
 
-where ``"platform"`` can be a comma-separated list, each specifying a platform, such as |redhat|, |suse|, or |fedora|, ``version`` specifies the version of that platform, and ``value`` specifies the value that will be used if the node's platform matches the ``value_for_platform`` method. If each value only has a single platform, then the syntax is like the following:
+where:
+
+* ``"platform"`` can be a comma-separated list, each specifying a platform, such as |redhat|, |suse|, or |fedora|
+* ``version`` specifies the version of that platform
+* ``value`` specifies the value that will be used if the node's platform matches the ``value_for_platform`` method
+
+When each value only has a single platform, the syntax as follows:
 
 .. code-block:: ruby
 
@@ -52,6 +60,3 @@ The following example shows that a package will be set to "apache-couchdb" for |
      "gentoo" => { "default" => "dev-db/couchdb" },
      "default" => "couchdb"
    )
-
-
-

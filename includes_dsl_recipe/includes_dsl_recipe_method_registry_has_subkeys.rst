@@ -11,7 +11,7 @@ The syntax for the ``registry_has_subkeys?`` method is as follows:
 
    registry_has_subkeys?(KEY_PATH, ARCHITECTURE)
 
-where 
+where:
 
 * ``KEY_PATH`` is the path to the registry key. |key_name resource registry_key hives|
 * ``ARCHITECTURE`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``. |architecture registry_key machine|

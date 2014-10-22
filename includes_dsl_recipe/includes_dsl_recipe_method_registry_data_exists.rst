@@ -15,7 +15,7 @@ The syntax for the ``registry_data_exists?`` method is as follows:
      ARCHITECTURE
    )
 
-where 
+where:
 
 * ``KEY_PATH`` is the path to the registry key. |key_name resource registry_key hives|
 * ``{ :name => "NAME", :type => TYPE, :data => VALUE }`` is a hash that contains the name, type, and value of the registry setting
