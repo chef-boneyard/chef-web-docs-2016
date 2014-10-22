@@ -13,7 +13,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
 * **New reboot resource** Use the |resource reboot| resource to reboot a node during or at the end of a |chef client| run.
 * **New windows_service resource** Use the |resource service_windows| resource to manage services on the |windows| platform.
-* **New --bootstra-template option** Use the ``--bootstrap-template`` option to install the |chef client| with a bootstrap template. Specify the name of a template such as ``chef-full`` or specify the path to a custom bootstrap template. This option deprecates the ``--distro`` and ``--template-file`` options.
+* **New --bootstrap-template option** Use the ``--bootstrap-template`` option to install the |chef client| with a bootstrap template. Specify the name of a template such as ``chef-full`` or specify the path to a custom bootstrap template. This option deprecates the ``--distro`` and ``--template-file`` options.
 * **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` attribute.
 
 * **xxxxx** xxxxx
