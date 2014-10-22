@@ -24,17 +24,12 @@ This subcommand has the following options:
 
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
-
+   
 ``--bootstrap-version VERSION``
    |bootstrap version|
 
 ``--bootstrap-wget-options OPTIONS``
    |bootstrap wget_options| |bootstrap no_install_command|
-   
-``-d DISTRO``, ``--distro DISTRO``
-   |distro|
-
-   .. warning:: The default bootstrap operation uses the |omnibus installer|, which means the default template file (``chef-full``) should work on all supported platforms. It is recommended to use custom bootstrap templates only when the |omnibus installer| cannot be used. The ``.erb`` file extension is added automatically and should not be passed as part of the bootstrap command.
 
 ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
    |name environment| When this option is added to a command, the command will run only against the named environment.
@@ -78,8 +73,8 @@ This subcommand has the following options:
 ``--sudo``
    |sudo bootstrap|
 
-``--template-file TEMPLATE``
-   |path bootstrap_template|
+``-t TEMPLATE``, ``--bootstrap-template TEMPLATE``
+   |template bootstrap| Default value: ``chef-full``, which installs the |chef client| using the |omnibus installer| on all supported platforms.
 
 ``--use-sudo-password``
    |use sudo_password|
