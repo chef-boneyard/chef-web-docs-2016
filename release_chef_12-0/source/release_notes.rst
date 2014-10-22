@@ -174,10 +174,9 @@ The following options are new:
    .. note:: The ``--distro`` and ``--template-file`` options are deprecated.
 
 
-
-|resource mount| Resource
+``fsck_device`` Attribute
 -----------------------------------------------------
-The following attribute is new:
+The following attribute is new for the |resource mount| resource:
 
 .. list-table::
    :widths: 150 450
