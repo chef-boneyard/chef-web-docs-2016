@@ -23,6 +23,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New Recipe DSL methods** The |dsl recipe| has three new methods: ``shell_out``, ``shell_out!``, and ``shell_out_with_systems_locale``.
 * **File specificy updates** File specificity for the |resource template| and |resource cookbook_file| resources support using the ``source`` attribute to define an explicit lookup path as an array.
 * **Improved user password security for the user resource, Mac OS X platform** The |resource user| resource now supports salted password hashes for |mac os x| 10.7 or higher. Use the ``iterations`` and ``salt`` attributes to calculate SALTED-SHA512 password shadow hashes for |mac os x| version 10.7 and SALTED-SHA512-PBKDF2 password shadow hashes for version 10.8 (and higher).
+* **data_bag_item method in the Recipe DSL supports encrypted data bag items** Use ``data_bag_item(bag_name, item, secret)`` to specify the secret to use for an encrypted data bag item. If ``secret`` is not specified, the |chef client| will look for a secret at the path specified by the ``encrypted_data_bag_secret`` setting in the |client rb| file.
 
 * **xxxxx** xxxxx
 
@@ -276,6 +277,7 @@ Or:
    template '/test' do
      source ["#{node.chef_environment}.erb", 'default.erb']
    end
+
 
 |mac os x| User Passwords
 -----------------------------------------------------
