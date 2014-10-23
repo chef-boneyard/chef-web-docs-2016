@@ -21,6 +21,8 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New settings for metadata.rb** The |metadata rb| file has two new settings: ``issues_url`` and ``source_url``. These are used to capture the source location and issues tracking location for a cookbook and are also used with |supermarket|. In addition, the ``name`` setting is now **required**.
 * **Dropped query string for http_request GET and HEAD requests** |http_request query_string|
 * **New Recipe DSL methods** The |dsl recipe| has three new methods: ``shell_out``, ``shell_out!``, and ``shell_out_with_systems_locale``.
+* **File specificy updates** File specificity for the |resource template| and |resource cookbook_file| resources support using the ``source`` attribute to define an explicit lookup path as an array.
+
 
 * **xxxxx** xxxxx
 
@@ -249,6 +251,31 @@ The following methods have been added to the |dsl recipe|: ``shell_out``, ``shel
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_with_systems_locale.rst
 
+File Specificity
+-----------------------------------------------------
+The pattern for file specificity depends on two things: the lookup path and the source attribute. The first pattern that matches is used:
+
+#. /host-$fqdn/$source
+#. /$platform-$platform_version/$source
+#. /$platform/$source
+#. /default/$source
+#. /$source
+
+Use an array with the ``source`` attribute to define an explicit lookup path. For example:
+
+.. code-block:: ruby
+
+   file '/conf.py' do
+     source ["#{node.chef_environment}.py", 'conf.py']
+   end
+
+Or:
+
+.. code-block:: ruby
+
+   template '/test' do
+     source ["#{node.chef_environment}.erb", 'default.erb']
+   end
 
 
 Changelog
