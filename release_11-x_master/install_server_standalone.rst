@@ -13,11 +13,10 @@ A standalone installation scenario has the following system requirements:
 * 5 GB of free disk space in ``/opt``
 * 5 GB of free disk space in ``/var``
 
-Firewall Requirements
+Firewalls
 -----------------------------------------------------
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
 
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst
+.. include:: ../../release_11-x_master/server_firewalls_and_ports_standalone.rst
 
 Hostnames, FQDNs
 -----------------------------------------------------
