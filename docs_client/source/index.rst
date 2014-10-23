@@ -261,7 +261,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_attribute.html">attribute?</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_cookbook_name.html">cookbook_name</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_data_bag.html">data_bag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_data_bag.html">data_bag_item</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_data_bag_item.html">data_bag_item</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_platform.html">platform?</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/dsl_recipe_method_reboot_pending.html">reboot_pending?</a> </br>
@@ -310,6 +310,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    dsl_recipe_method_attribute
    dsl_recipe_method_cookbook_name
    dsl_recipe_method_data_bag
+   dsl_recipe_method_data_bag_item
    dsl_recipe_method_platform
    dsl_recipe_method_platform_family
    dsl_recipe_method_reboot_pending
