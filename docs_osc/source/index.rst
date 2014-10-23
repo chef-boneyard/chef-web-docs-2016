@@ -519,5 +519,4 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_yum
    server_components
    server_security
-   supported_platforms
    upgrade_server_open_source
