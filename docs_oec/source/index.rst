@@ -650,7 +650,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    server_services
    server_tuning
    server_users
-   supported_platforms
    upgrade_server_ha
    upgrade_server_ha_notes
    upgrade_server_standalone
