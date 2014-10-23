@@ -56,7 +56,7 @@ File Specificity
 -----------------------------------------------------
 .. include:: ../../includes_template/includes_template_specificity.rst
 
-.. include:: ../../includes_template/includes_template_specificity_pattern.rst
+.. include:: ../../includes_template/includes_template_11-16_specificity_pattern.rst
 
 .. include:: ../../includes_template/includes_template_specificity_example.rst
 
@@ -182,9 +182,3 @@ Examples
 **Get template settings from a local file**
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
-
-
-
-
-
-
