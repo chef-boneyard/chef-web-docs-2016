@@ -1,18 +1,18 @@
 .. THIS PAGE DOCUMENTS chef-client version 10.latest
 
 =====================================================
-data_bag, data_bag_item Methods
+data_bag_item Method
 =====================================================
 
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_11-16_method_data_bag_item.rst
 
 Examples
 =====================================================
-The following examples show how the ``data_bag`` and ``data_bag_item`` methods can be used in a recipe.
+The following examples show how the ``data_bag_item`` method can be used in a recipe.
 
-**Get the contents of a data bag**
+**Get a data bag, and then iterate through each data bag item**
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_data_bag.rst
 

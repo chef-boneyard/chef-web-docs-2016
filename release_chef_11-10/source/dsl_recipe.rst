@@ -58,8 +58,10 @@ Recipe DSL Methods
      - Use in a recipe to check for the presence of an attribute.
    * - :doc:`cookbook_name </dsl_recipe_method_cookbook_name>`
      - Use in a recipe to get the name of the cookbook in which a recipe is located.
-   * - :doc:`data_bag, data_bag_item </dsl_recipe_method_data_bag>`
-     - Use in a recipe to include a data bag or data bag item.
+   * - :doc:`data_bag </dsl_recipe_method_data_bag>`
+     - Use in a recipe to list the contents of a data bag.
+   * - :doc:`data_bag_item </dsl_recipe_method_data_bag_item>`
+     - Use in a recipe to get the contents of a data bag item.
    * - :doc:`platform? </dsl_recipe_method_platform>`
      - Use in a recipe to check for the platform.
    * - :doc:`platform_family? </dsl_recipe_method_platform_family>`
