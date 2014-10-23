@@ -16,7 +16,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_user_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-16_user_attributes.rst
 
 Supported Features
 =====================================================
