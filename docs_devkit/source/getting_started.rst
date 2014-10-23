@@ -766,7 +766,7 @@ Templates are used to generate files based on variables and logic contained with
 
 Manage Users, Groups
 -----------------------------------------------------
-Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See `group <http://docs.getchef.com/resource_user.html>`_ for more information about managing users and user passwords. The `group <http://docs.getchef.com/resource_group.html>`_ resource manges groups.
+Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See `group <http://docs.getchef.com/resource_user.html>`_ for more information about managing users and user passwords. The `group <http://docs.getchef.com/resource_group.html>`__ resource manges groups.
 
 Use Script Interpreters
 -----------------------------------------------------
