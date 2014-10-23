@@ -1,22 +1,4 @@
 .. THIS PAGE DOCUMENTS chef-client version 11.0
 
-=====================================================
-About Cookbook Metadata
-=====================================================
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
-
-Error Messages
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata_error_messages.rst
-
-metadata.rb
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
-
-.. include:: ../../includes_config/includes_config_rb_metadata.rst
-
-Settings
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_metadata_settings.rst
+.. include:: ../../release_11-x_master/essentials_cookbook_metadata.rst
 
