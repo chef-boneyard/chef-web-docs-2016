@@ -7,10 +7,6 @@ The |chef server osc| server may be installed in a standalone configuration. Thi
 
 To install the |chef server osc| server:
 
-#. Review the system requirements:
-
-   .. include:: ../../includes_system_requirements/includes_system_requirements_server.rst
-
 #. Upload the package provided to the server on which the |chef server| will be installed, and then record its location on the file system. The rest of this section assumes this location is in ``/tmp`` directory.
 
 #. Install the |chef server| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
