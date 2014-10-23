@@ -7,7 +7,7 @@ The syntax for the ``shell_out!`` method is as follows:
 
 .. code-block:: ruby
 
-   shell_out!(*command_args)
+   shell_out!command_args)
 
 where ``command_args`` is the command that is run against the node. This method will return ``true`` or ``false``.
 
