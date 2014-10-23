@@ -4,36 +4,33 @@
 For back-end servers in an |chef server| installation:
 
 .. list-table::
-   :widths: 60 420
+   :widths: 60 420 60
    :header-rows: 1
 
    * - Port
      - Service
-   * - 80
-     - |service nginx|
-   * - 443
-     - |service nginx|
-   * - 9463
-     - |service bifrost|
-   * - 9671
-     - |service nginx|
-   * - 9680
-     - |service nginx|
-   * - 9685
-     - |service nginx|
-   * - 9683
-     - |service nginx|
+     - External
+   * - 5984
+     - |service couchdb|
+     - yes
    * - 8983
-     - |service solr|
+     - |service solr| or |service solr4|
+     - yes
    * - 5432
      - |service postgresql|
+     - yes
    * - 5672
      - |service rabbitmq|
+     - yes
    * - 16379
      - |service redis_lb|
+     - yes
    * - 4321
      - |service bookshelf|
+     - yes
+   * - 4369
+     - |service orgcreator|
+     - no
    * - 7788-7799
      - |drbd| This port range must be open between all back end servers.
-   * - 8000
-     - |service erchef|
+     - no
