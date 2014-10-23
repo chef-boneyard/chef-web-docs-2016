@@ -72,6 +72,12 @@ Recipe DSL Methods
      - Use in a recipe to examine the resource collection.
    * - :doc:`search </dsl_recipe_method_search>`
      - Use in a recipe to include search results.
+   * - :doc:`shell_out </dsl_recipe_method_shell_out>`
+     - Use in a recipe to run a command against a node, and then display the results in the console output.
+   * - :doc:`shell_out! </dsl_recipe_method_shell_out_bang>`
+     - Use in a recipe to run a command against a node, display the results in the console output, and raise an error when the command returns false.
+   * - :doc:`shell_out_with_systems_locale </dsl_recipe_method_shell_out_with_systems_locale>`
+     - Use in a recipe to run a command along with the ``LC_ALL`` environment variable.
    * - :doc:`tag, tagged?, untag </dsl_recipe_method_tag>`
      - Use in a recipe to use and apply tags.
    * - :doc:`value_for_platform </dsl_recipe_method_value_for_platform>`
