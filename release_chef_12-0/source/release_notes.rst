@@ -22,7 +22,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Dropped query string for http_request GET and HEAD requests** |http_request query_string|
 * **New Recipe DSL methods** The |dsl recipe| has three new methods: ``shell_out``, ``shell_out!``, and ``shell_out_with_systems_locale``.
 * **File specificy updates** File specificity for the |resource template| and |resource cookbook_file| resources support using the ``source`` attribute to define an explicit lookup path as an array.
-
+* **Improved user password security for the user resource, Mac OS X platform** The |resource user| resource now supports salted password hashes for |mac os x| 10.7 or higher. Use the ``iterations`` and ``salt`` attributes to calculate SALTED-SHA512 password shadow hashes for |mac os x| version 10.7 and SALTED-SHA512-PBKDF2 password shadow hashes for version 10.8 (and higher).
 
 * **xxxxx** xxxxx
 
@@ -277,6 +277,28 @@ Or:
      source ["#{node.chef_environment}.erb", 'default.erb']
    end
 
+|mac os x| User Passwords
+-----------------------------------------------------
+The following attributes are new for the |resource user| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``iterations``
+     - |iterations|
+   * - ``salt``
+     - |salt| |mac os x| version 10.7 uses SALTED-SHA512 and version 10.8 (and higher) uses SALTED-SHA512-PBKDF2 to calculate password shadow hashes. 
+
+**Use SALTED-SHA512 passwords**
+
+.. include:: ../../release_chef_12-0/step_resource_user_password_shadow_hash_salted_sha512.rst
+
+**Use SALTED-SHA512-PBKDF2 passwords**
+
+.. include:: ../../release_chef_12-0/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst
 
 Changelog
 =====================================================
