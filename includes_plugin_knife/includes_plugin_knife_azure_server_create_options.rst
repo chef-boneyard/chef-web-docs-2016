@@ -47,6 +47,10 @@ This argument has the following options:
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
 
+   .. include:: ../../includes_ohai/includes_ohai_hints.rst
+
+   |hint_file| |hint_name| |hint_multiple|
+
 ``--host-name HOST_NAME``
    |azure_host_name|
 

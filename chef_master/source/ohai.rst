@@ -68,6 +68,10 @@ Shared Methods
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst
 
+Hints
+-----------------------------------------------------
+.. include:: ../../includes_ohai/includes_ohai_hints.rst
+
 Log Entries
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst

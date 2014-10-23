@@ -41,6 +41,10 @@ This argument has the following options:
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
 
+   .. include:: ../../includes_ohai/includes_ohai_hints.rst
+
+   |hint_file| |hint_name| |hint_multiple|
+
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
