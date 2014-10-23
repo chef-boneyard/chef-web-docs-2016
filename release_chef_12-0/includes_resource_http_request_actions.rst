@@ -9,17 +9,15 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:delete``
-     - |resource action delete http_request|
    * - ``:get``
      - Default. |resource action get http_request|
+   * - ``:put``
+     - |resource action put http_request|
+   * - ``:post``
+     - |resource action post http_request|
+   * - ``:delete``
+     - |resource action delete http_request|
    * - ``:head``
      - |resource action head http_request|
    * - ``:options``
      - |resource action options http_request|
-   * - ``:post``
-     - |resource action post http_request|
-   * - ``:put``
-     - |resource action put http_request|
-
-.. warning:: |http_request query_string|

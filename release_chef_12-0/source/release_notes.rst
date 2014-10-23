@@ -19,6 +19,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New format options for knife status** Use the ``--medium`` and ``--long`` options to include attributes in the output, and to format that output as |json|.
 * **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` attribute.
 * **New settings for metadata.rb** The |metadata rb| file has two new settings: ``issues_url`` and ``source_url``. These are used to capture the source location and issues tracking location for a cookbook and are also used with |supermarket|. In addition, the ``name`` setting is now **required**.
+* **Dropped query string for http_request GET and HEAD requests** |http_request query_string|
 
 * **xxxxx** xxxxx
 
@@ -226,6 +227,10 @@ The following settings are new:
           source_url "https://github.com/opscode-cookbooks/chef-client"
 
 .. warning:: The ``name`` attribute is now a required setting in the |metadata rb| file.
+
+http_request Actions
+-----------------------------------------------------
+|http_request query_string|
 
 Changelog
 =====================================================
