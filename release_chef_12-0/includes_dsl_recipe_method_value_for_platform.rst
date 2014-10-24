@@ -13,7 +13,7 @@ where:
 
 * ``"platform", ...`` is a comma-separated list of platforms, such as |redhat|, |suse|, or |fedora|
 * ``version`` specifies the version of that platform
-* Version constraints---``>``, ``<``, ``>=``, ``<=``, ``~>``---may be used with ``version``; an exception is raised if two version constraints match and an exact match will always take precedence
+* Version constraints---``>``, ``<``, ``>=``, ``<=``, ``~>``---may be used with ``version``; an exception is raised if two version constraints match; an exact match will always take precedence over a match made from a version constraint
 * ``value`` specifies the value that will be used if the node's platform matches the ``value_for_platform`` method
 
 When each value only has a single platform, use the following syntax:
