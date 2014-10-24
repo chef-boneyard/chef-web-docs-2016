@@ -5,7 +5,6 @@ The following example shows how the settings look when added to the configuratio
 
 .. code-block:: ruby
 
-
    # General settings
    analytics_fqdn 'chef-analytics.example.com'
    topology 'standalone'

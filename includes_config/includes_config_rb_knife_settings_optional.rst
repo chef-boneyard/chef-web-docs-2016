@@ -80,7 +80,7 @@ Some organizations choose to have all data bags use the same secret and secret f
    * - ``knife[:secret]``
      - |secret|
    * - ``knife[:secret_file]``
-     - |secret-file|
+     - |secret_file|
 
 Some settings are better left to |ohai|, which will get the value at the start of the |chef client| run:
 

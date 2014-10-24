@@ -10,5 +10,5 @@ The |service chef| service has the following settings:
    * - Setting
      - Description
    * - ``opscode_chef['checksum_path']``
-     -  Default value: ``"/var/opt/opscode/opscode-chef/checksum"``.
+     - Default value: ``"/var/opt/opscode/opscode-chef/checksum"``.
 

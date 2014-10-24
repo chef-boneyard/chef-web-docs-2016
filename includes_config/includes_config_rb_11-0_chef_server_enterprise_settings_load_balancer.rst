@@ -25,14 +25,17 @@ This configuration file has the following settings for load balancers:
      - Default value: ``127.0.0.1``.
    * - ``lb['upstream']``
      - Default value:
-       ::
 
-          {"opscode-chef"=>["127.0.0.1"],
+       .. code-block:: ruby
+
+          {
+           "opscode-chef"=>["127.0.0.1"],
            "opscode-erchef"=>["127.0.0.1"],
            "opscode-account"=>["127.0.0.1"],
            "opscode-webui"=>["127.0.0.1"],
            "opscode-authz"=>["127.0.0.1"],
-          "opscode-solr"=>["127.0.0.1"]}``
+           "opscode-solr"=>["127.0.0.1"]
+          }
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``lb['web_ui_fqdn']``

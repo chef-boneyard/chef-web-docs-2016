@@ -19,7 +19,8 @@ This configuration file has the following settings for |keepalived|:
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``keepalived['service_order']``
      - |service_order keepalived| |opscode_support| Default value:
-       ::
+
+       .. code-block:: ruby
 
           [{"key"=>"couchdb", "service_name"=>"couchdb"},
            {"key"=>"postgresql", "service_name"=>"postgres"},
@@ -38,7 +39,7 @@ This configuration file has the following settings for |keepalived|:
            {"key"=>"nagios", "service_name"=>"php-fpm"},
            {"key"=>"nagios", "service_name"=>"fcgiwrap"},
            {"key"=>"nagios", "service_name"=>"nagios"},
-           {"key"=>"nginx", "service_name"=>"nginx"}]``. 
+           {"key"=>"nginx", "service_name"=>"nginx"}]
 
    * - ``keepalived['smtp_connect_timeout']``
      - |timeout smtp_connect| Default value: ``"30"``.

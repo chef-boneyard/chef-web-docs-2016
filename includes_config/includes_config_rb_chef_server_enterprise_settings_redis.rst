@@ -41,11 +41,14 @@ The |service redis| service has the following settings:
      - |ip_address virtual| Default value: ``"127.0.0.1"``.
    * - ``redis['vm']``
      - Default value:
-       ::
 
-          {"enabled"=>"no",
-           "max_memory"=>"0",
-           "page_size"=>"32",
-           "pages"=>"134217728",
-           "max_threads"=>"4"}
+       .. code-block:: ruby
+
+          {
+            "enabled"=>"no",
+            "max_memory"=>"0",
+            "page_size"=>"32",
+            "pages"=>"134217728",
+            "max_threads"=>"4"
+          }
 

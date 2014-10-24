@@ -11,15 +11,17 @@
      - |path plugin_ohai|
    * - ``Ohai::Config[:disabled_plugins]``
      - |disable plugin_ohai| For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           Ohai::Config[:disabled_plugins] = [
 		       :MyPlugin
 			   ]
 
        or:
-       ::
- 
+
+       .. code-block:: ruby
+
           Ohai::Config[:disabled_plugins] = [
 		       :MyPlugin, 
 			   :MyPlugin, 
@@ -27,8 +29,9 @@
 			   ]
 
        or to disable both |ohai 6| and |ohai 7| versions:
-       ::
- 
+
+       .. code-block:: ruby
+
           Ohai::Config[:disabled_plugins] = [
 		       :MyPlugin, 
 			   :MyPlugin, 
@@ -36,9 +39,10 @@
 			   ]
 
        When a plugin is disabled, the |chef client| log file will contain entries similar to:
-       ::
- 
-		  [2014-06-13T23:49:12+00:00] DEBUG: Skipping disabled plugin MyPlugin 
+
+       .. code-block:: ruby
+
+          [2014-06-13T23:49:12+00:00] DEBUG: Skipping disabled plugin MyPlugin 
 
    * - ``Ohai::Config[:hints_path]``
      - |path hint_ohai|

@@ -18,7 +18,7 @@ This configuration file has the following settings for |drbd|:
    * - ``drbd['disk']``
      - The local LVM logical volume to use behind |drbd|. Default value: ``"/dev/opscode/drbd"``.
    * - ``drbd['enable']``
-     - Whether or not this server is using |drbd|. This is typically set by the ``role`` this server plays - it is enabled on ``backend`` servers in the ``ha`` topology. Default value: ``false``.
+     - Whether or not this server is using |drbd|. This is typically set by the ``role`` this server plays and is enabled on ``backend`` servers in the ``ha`` topology. Default value: ``false``.
    * - ``drbd['flexible_meta_disk']``
      - Where |drbd| meta-data is stored. Default value: ``"internal"``.
    * - ``drbd['primary']``

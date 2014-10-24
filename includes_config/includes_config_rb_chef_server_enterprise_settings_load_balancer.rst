@@ -39,14 +39,17 @@ This configuration file has the following settings for load balancers:
      - Default value: ``2000``.
    * - ``lb['upstream']``
      - Default value:
-       ::
 
-          {"oc_bifrost"=>["127.0.0.1"],
-           "opscode-account"=>["127.0.0.1"],
-           "opscode-authz"=>["127.0.0.1"],
-           "opscode-bookshelf"=>["127.0.0.1"],
-           "opscode-erchef"=>["127.0.0.1"],
-          "opscode-solr4"=>["127.0.0.1"]}``
+       .. code-block:: ruby
+
+          {
+            "oc_bifrost"=>["127.0.0.1"],
+            "opscode-account"=>["127.0.0.1"],
+            "opscode-authz"=>["127.0.0.1"],
+            "opscode-bookshelf"=>["127.0.0.1"],
+            "opscode-erchef"=>["127.0.0.1"],
+            "opscode-solr4"=>["127.0.0.1"]
+          }
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``lb['web_ui_fqdn']``
