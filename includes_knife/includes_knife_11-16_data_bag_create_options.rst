@@ -5,13 +5,14 @@
 
 This argument has the following options:
 
-``-a``, ``--all``
-   |all data bags|
+``DATA_BAG_ITEM``
+   |name data_bag_item|
 
 ``--secret SECRET``
    |secret|
 
 ``--secret-file FILE``
-   |secret-file|
+   |secret_file|
 
-.. note::  For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
+.. note:: For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
+

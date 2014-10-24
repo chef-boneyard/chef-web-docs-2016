@@ -12,4 +12,4 @@
    * - ``--secret SECRET``
      - |secret|
    * - ``--secret-file FILE``
-     - |secret-file|
+     - |secret_file|

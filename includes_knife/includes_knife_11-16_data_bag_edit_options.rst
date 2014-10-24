@@ -2,7 +2,6 @@
 .. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-
 This argument has the following options:
 
 ``DATA_BAG_ITEM``
@@ -12,7 +11,7 @@ This argument has the following options:
    |secret|
 
 ``--secret-file FILE``
-   |secret-file|
+   |secret_file|
 
-.. note:: For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
+.. note::  For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
 
