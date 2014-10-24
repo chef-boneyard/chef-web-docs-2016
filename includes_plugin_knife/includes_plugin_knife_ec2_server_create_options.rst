@@ -72,7 +72,7 @@ This argument has the following options:
 ``-I IMAGE``, ``--image IMAGE``
    |image|
 
-``--iam-profile``
+``--iam-profile NAME``
    |name iam_profile|
 
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``

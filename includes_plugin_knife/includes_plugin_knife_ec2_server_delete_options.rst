@@ -11,6 +11,9 @@ This argument has the following options:
 ``--aws-credential-file FILE``
    |credential_file amazon|
 
+``--iam-profile NAME``
+   |name iam_profile|
+
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
    |aws_access_key_secret|
 
@@ -23,6 +26,4 @@ This argument has the following options:
 ``--region REGION``
    |region amazon|
 
-``--use-iam-profile``
-   |use iam_profile| Default value: ``false``.
 
