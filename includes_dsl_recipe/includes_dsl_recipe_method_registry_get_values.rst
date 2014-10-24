@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``registry_get_values`` method can be used in a recipe to get the values (name, type, and data) for a |windows| registry key.
+Use the ``registry_get_values`` method to get the values (name, type, and data) for a |windows| registry key.
 
 .. note:: |note registry_key not_if only_if|
 

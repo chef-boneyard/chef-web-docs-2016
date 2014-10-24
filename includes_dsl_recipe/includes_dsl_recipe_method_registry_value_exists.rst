@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``registry_value_exists?`` method can be used in a recipe to find out if a |windows| registry key has values set (name, type, and data).  
+Use the ``registry_value_exists?`` method to find out if a |windows| registry key has values set (name, type, and data).  
 
 .. note:: |note registry_key not_if only_if|
 

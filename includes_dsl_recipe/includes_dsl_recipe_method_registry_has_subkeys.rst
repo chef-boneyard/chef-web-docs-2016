@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``registry_has_subkeys?`` method can be used in a recipe to find out if a |windows| registry setting has sub-keys. 
+Use the ``registry_has_subkeys?`` method to find out if a |windows| registry setting has sub-keys. 
 
 .. note:: |note registry_key not_if only_if|
 

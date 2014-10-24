@@ -1,20 +1,20 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``value_for_platform_family`` method can be used in a recipe to use a |ruby hash| to select a particular value based on the ``node['platform_family']`` attribute that is detected by |ohai| during every |chef client| run. 
+Use the ``value_for_platform_family`` method in a recipe to select a value based on the ``node['platform_family']`` attribute. This value is detected by |ohai| during every |chef client| run.
 
 The syntax for the ``value_for_platform_family`` method is as follows:
 
 .. code-block:: ruby
 
-   value_for_platform_family( { platform_family => value } )
+   value_for_platform_family( "platform_family" => { "version" => "value" }, ... )
 
 where:
 
-* ``platform_family`` is a comma-separated list, each specifying a platform family, such as |fedora|, |suse|, or |redhat enterprise linux|
-* ``value`` specifies the value that will be used if the node's platform family matches ``value_for_platform_family``.
+* ``"platform_family" => { "version" => "value" }, ...`` is a comma-separated list of platforms, such as |fedora|, |suse|, or |redhat enterprise linux|
+* ``value`` specifies the value that will be used if the node's platform family matches the ``value_for_platform_family`` method
 
-When each value only has a single platform, the syntax as follows:
+When each value only has a single platform, use the following syntax:
 
 .. code-block:: ruby
 
@@ -24,7 +24,7 @@ When each value only has a single platform, the syntax as follows:
      "platform_family" => "value"
    )
 
-but when each value has more than one platform_family, the syntax changes to:
+When each value has more than one platform, the syntax changes to:
 
 .. code-block:: ruby
 
@@ -34,7 +34,7 @@ but when each value has more than one platform_family, the syntax changes to:
      "default" => "value"
    )
 
-For example, for |redhat enterprise linux|, |fedora|, and |suse| platform families, the package will be "httpd-devel" and for the |debian| family the package will be "apache2-dev":
+The following example will set ``package`` to "httpd-devel" for the |redhat enterprise linux|, |fedora|, and |suse| platforms and to "apache2-dev" for the |debian| platform:
 
 .. code-block:: ruby
 

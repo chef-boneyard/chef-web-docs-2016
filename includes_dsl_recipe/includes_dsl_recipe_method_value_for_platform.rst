@@ -1,21 +1,21 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``value_for_platform`` method can be used in a recipe to use a |ruby hash| to select a particular value based on the ``node['platform']`` and ``node['platform_version']`` attributes that are detected by |ohai| during every |chef client| run. 
+Use the ``value_for_platform`` method in a recipe to select a value based on the ``node['platform']`` and ``node['platform_version']`` attributes. These values are detected by |ohai| during every |chef client| run.
 
 The syntax for the ``value_for_platform`` method is as follows:
 
 .. code-block:: ruby
 
-   value_for_platform( ["platform"] => { ["version"] => value } )
+   value_for_platform( ["platform", ...] => { "version" => value } )
 
 where:
 
-* ``"platform"`` can be a comma-separated list, each specifying a platform, such as |redhat|, |suse|, or |fedora|
+* ``"platform", ...`` is a comma-separated list of platforms, such as |redhat|, |suse|, or |fedora|
 * ``version`` specifies the version of that platform
 * ``value`` specifies the value that will be used if the node's platform matches the ``value_for_platform`` method
 
-When each value only has a single platform, the syntax as follows:
+When each value only has a single platform, use the following syntax:
 
 .. code-block:: ruby
 
@@ -25,20 +25,17 @@ When each value only has a single platform, the syntax as follows:
      "platform" => "value"
    )
 
-but when each value has more than one platform, the syntax changes to:
+When each value has more than one platform, the syntax changes to:
 
 .. code-block:: ruby
 
    value_for_platform(
-     ["platform", "platform", "platform", "platform" ] => {
+     ["platform", "platform", ... ] => {
       "version" => "value"
      },
-     ["platform", "platform"] => {
-      "version" => "value"
-     }
    )
 
-For example, the following will set the ``package_name`` |ruby| variable to "httpd" for the |redhat| family of distributions and to "apache2" for the |debian| family of distributions:
+The following example will set ``package_name`` to "httpd" for the |redhat| platform and to "apache2" for the |debian| platform:
 
 .. code-block:: ruby
 
@@ -51,7 +48,7 @@ For example, the following will set the ``package_name`` |ruby| variable to "htt
      }
    )
 
-The following example shows that a package will be set to "apache-couchdb" for |open bsd| platforms, will be set to "dev-db/couchdb" for |gentoo| platforms, and to "couchdb" for all other platforms:
+The following example will set ``package`` to "apache-couchdb" for |open bsd| platforms, "dev-db/couchdb" for |gentoo| platforms, and "couchdb" for all other platforms:
 
 .. code-block:: ruby
 
