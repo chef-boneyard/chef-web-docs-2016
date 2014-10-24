@@ -25,7 +25,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Improved user password security for the user resource, Mac OS X platform** The |resource user| resource now supports salted password hashes for |mac os x| 10.7 or higher. Use the ``iterations`` and ``salt`` attributes to calculate SALTED-SHA512 password shadow hashes for |mac os x| version 10.7 and SALTED-SHA512-PBKDF2 password shadow hashes for version 10.8 (and higher).
 * **data_bag_item method in the Recipe DSL supports encrypted data bag items** Use ``data_bag_item(bag_name, item, secret)`` to specify the secret to use for an encrypted data bag item. |secret_config|
 * **value_for_platform method in the Recipe DSL supports version constraints** Version constraints---``>``, ``<``, ``>=``, ``<=``, ``~>``---may be used when specifying a version. An exception is raised if two version constraints match. An exact match will always take precedence over a match made from a version constraint.
-* **knife cookbook site share supports --dry-run** |dry_run|
+* **knife cookbook site share supports --dry-run** Use the ``--dry-run`` option with the |subcommand knife site cookbook| to take no action and only print out results.
 
 * **xxxxx** xxxxx
 
