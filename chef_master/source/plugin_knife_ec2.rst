@@ -12,17 +12,17 @@ Install this plugin
 =====================================================
 .. include:: ../../step_plugin_knife/step_plugin_knife_ec2_install_rubygem.rst
 
-instance data
+flavor list
 =====================================================
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_flavor_list.rst
 
 Syntax
 -----------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data_syntax.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_flavor_list_syntax.rst
 
 Options
 -----------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data_options.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_flavor_list_options.rst
 
 server create
 =====================================================

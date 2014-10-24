@@ -29,11 +29,11 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap version|
 
-``-d DISTRO``, ``--distro DISTRO``
-   |distro|
-
 ``--dedicated_instance``
    |aws_dedicated_instance|
+
+``-d DISTRO``, ``--distro DISTRO``
+   |distro|
 
 ``--ebs-no-delete-on-term``
    |ebs_no_delete_on_term|
@@ -108,6 +108,9 @@ This argument has the following options:
 ``-S KEY``, ``--ssh-key KEY``
    |ssh_key amazon_ec2|
 
+``--s3-secret URL``
+   |url secret_amazon_s3|
+
 ``--secret-file FILE``
    |secret-file|
 
@@ -123,11 +126,14 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |path bootstrap_template|
 
-``--use-iam-profile``
-   |use iam_profile| Default value: ``false``.
-
 ``-u USER_DATA_FILE``, ``--user-data USER_DATA_FILE``
    |user data_file_ec2|
+
+``--use-iam-profile``
+   |use iam_profile|
+
+``--validation-key-url URL``
+   |url key_validation|
 
 ``-w GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh_gateway|
@@ -137,7 +143,6 @@ This argument has the following options:
 
 ``-Z ZONE``, ``--availability-zone ZONE``
    |availability_zone| Default: ``us-east-1b``.
-
 
 The following settings may be used when ``--bootstrap-protocol`` is set to ``ssh``:
 
@@ -178,5 +183,4 @@ The following settings may be used when ``--bootstrap-protocol`` is set to ``win
 
 ``-x USERNAME``, ``--winrm-user USERNAME``
    |winrm_user|
-
 

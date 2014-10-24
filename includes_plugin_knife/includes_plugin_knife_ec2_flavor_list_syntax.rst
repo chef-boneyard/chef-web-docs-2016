@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife ec2 instance data (options)
+   $ knife ec2 flavor list (options)
 
