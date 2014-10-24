@@ -84,7 +84,7 @@ This subcommand has the following options:
    |secret|
 
 ``--secret-file FILE``
-   |secret-file|
+   |secret_file|
 
 ``--sudo``
    |sudo bootstrap|
