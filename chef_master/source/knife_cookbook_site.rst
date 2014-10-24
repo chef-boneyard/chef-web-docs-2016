@@ -112,7 +112,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_site_cookbook_share_options.rst
+.. include:: ../../includes_knife/includes_knife_11-16_site_cookbook_share_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
