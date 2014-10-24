@@ -1,4 +1,7 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/dsl_recipe_method_value_for_platform.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.6
 
-.. include:: ../../chef_master/source/dsl_recipe_method_value_for_platform.rst
+=====================================================
+value_for_platform Method
+=====================================================
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_11-16_method_value_for_platform.rst
