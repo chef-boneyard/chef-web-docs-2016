@@ -112,7 +112,7 @@ This argument has the following options:
    |url secret_amazon_s3|
 
 ``--secret-file FILE``
-   |secret-file|
+   |secret_file|
 
 ``--ssh-gateway-identity IDENTITY_FILE``
    |ssh_gateway_identity|

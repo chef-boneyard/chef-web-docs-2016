@@ -36,7 +36,7 @@ This argument has the following options:
    |run-list|
 
 ``--secret-file PATH``
-   |secret-file|
+   |secret_file|
 
 ``--server-url URL``
    |url chef_server|

@@ -36,7 +36,7 @@ This argument has the following options:
    |secret|
 
 ``--secret-file SECRET_FILE``
-   |secret-file|
+   |secret_file|
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|

@@ -88,7 +88,7 @@ This argument has the following options:
    |secret|
 
 ``--secret-file FILE``
-   |secret-file|
+   |secret_file|
 
 ``-T TAG1,TAG2,TAG3``, ``--gce-tags TAG1,TAG2,TAG3``
    |google_compute_tags|
