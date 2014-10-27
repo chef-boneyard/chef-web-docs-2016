@@ -14,7 +14,7 @@
 
 Options
 =====================================================
-.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_11-16_client_options.rst
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_11-16_options.rst
 
 Run in Local Mode
 =====================================================
