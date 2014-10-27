@@ -39,18 +39,21 @@ The Workstation
 .. **Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
 
-.. The Nodes
-.. =====================================================
+The Nodes
+=====================================================
 .. **The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The chef-client Run </essentials_nodes_chef_run>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>`
 
 .. **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
 .. .. include:: ../../includes_chef/includes_chef_index_ohai.rst
 
-.. **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
+**Settings:** :doc:`client.rb </config_rb_client>`
 
-.. **Command-line Tools:** :doc:`chef-client (executable) </ctl_chef_client>` | :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-solo (executable) </ctl_chef_solo>`
+.. | :doc:`solo.rb </config_rb_solo>`
 
+**Command-line Tools:** :doc:`chef-client (executable) </ctl_chef_client>` | :doc:`chef-solo (executable) </ctl_chef_solo>`
+
+..  | :doc:`chef-shell (executable) </ctl_chef_shell>`
 
 Cookbooks
 =====================================================
@@ -71,9 +74,12 @@ Cookbooks
    :hidden:
 
    chef_overview
+   config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
    config_rb_metadata
+   ctl_chef_client
+   ctl_chef_solo
    dsl_recipe
    dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
