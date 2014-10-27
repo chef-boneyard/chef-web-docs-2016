@@ -51,18 +51,21 @@ Three new settings are available for the |knife rb| and |client rb| configuratio
      - Description
    * - ``chef_zero.enabled``
      - |chef_zero_enabled| This setting requires ``local_mode`` to be set to ``true``. Default value: ``false``. For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           chef_zero.enabled true
    * - ``chef_zero[:port]``
      - |chef_zero_port| Default value: ``8889``. For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           chef_zero[:port] 8889
    * - ``local_mode``
      - |local_mode| For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           local_mode true
    * - ``verify_api_cert``
      - |ssl_verify_mode_verify_api_cert| Default value: ``false``.

@@ -430,7 +430,7 @@ Miscellaneous
 
 * Locking is used to prevent simultaneous runs on |unix|-like systems
 * |subcommand knife search| assumes node search when the object type is omitted
-* |subcommand knife search| will search over roles, tags, |fqdn|, and IP addresses when the given query is not in |apache solr| format (does not contain a colon : character)
+* |subcommand knife search| will search over roles, tags, |fqdn|, and IP addresses when the given query is not in |apache solr| format (does not contain a colon ``:`` character)
 * |knife| essentials (|subcommand knife upload|, |subcommand knife download|, |subcommand knife diff|, and so on) have been merged into |chef 11-0|
 
 

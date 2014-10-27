@@ -154,8 +154,9 @@ New settings have been added to the |client rb| file:
      - Description
    * - ``local_key_generation``
      - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           local_key_generation false
    * - ``ssl_verify_mode``
      - |ssl_verify_mode|
@@ -233,18 +234,21 @@ Use the following setting to disable plugins:
      - Description
    * - ``Ohai::Config[:disabled_plugins]``
      - |disable plugin_ohai| For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           Ohai::Config[:disabled_plugins] = [:MyPlugin]
 
        or:
-       ::
- 
+
+       .. code-block:: ruby
+
           Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, :MyPlugin]
 
        or to disable both |ohai 6| and |ohai 7| versions:
-       ::
- 
+
+       .. code-block:: ruby
+
           Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, "my_ohai_6_plugin"]
 
 

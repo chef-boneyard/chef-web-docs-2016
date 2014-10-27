@@ -255,23 +255,27 @@ New settings have been added to the |client rb| file:
      - Description
    * - ``data_bag_decrypt_minimum_version``
      - |data_bag_decrypt_minimum_version| For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           data_bag_decrypt_minimum_version "2"
    * - ``enable_selinux_file_permission_fixup``
      - |enable_selinux_file_permission_fixup| For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           enable_selinux_file_permission_fixup true
    * - ``file_atomic_update``
      - |file atomic_update| For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           file_atomic_update true
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``false``. For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           no_lazy_load false
 
 |knife| Subcommands
@@ -405,8 +409,9 @@ New settings have been added to the |knife rb| file:
      - Description
    * - ``versioned_cookbooks``
      - |versioned_cookbooks| For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           versioned_cookbooks true
 
 |chef solo| Environments
@@ -427,8 +432,9 @@ A new setting has been added to the |solo rb| file:
      - Description
    * - ``environment_path``
      - |path environment|  Default value: ``/var/chef/environments``. For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           environment_path "/var/chef/environments"
 
 Force a Redeploy
