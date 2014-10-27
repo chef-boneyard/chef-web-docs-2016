@@ -40,7 +40,7 @@ This command has the following options:
    |help subcommand|
 
 ``-i SECONDS``, ``--interval SECONDS``
-   |interval|
+   |interval| |chef_client intervals_11-16|
 
 ``-j PATH``, ``--json-attributes PATH``
    |json attributes| Use this option to override ``normal`` attributes set elsewhere.
@@ -64,7 +64,7 @@ This command has the following options:
    |recipe_url|
 
 ``-s SECONDS``, ``--splay SECONDS``
-   |splay|
+   |splay| |chef_client intervals_11-16|
 
 ``-u USER``, ``--user USER``
    |user chef_client|

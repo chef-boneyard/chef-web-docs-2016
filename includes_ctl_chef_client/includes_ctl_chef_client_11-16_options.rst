@@ -1,25 +1,19 @@
 .. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef-solo.
+.. This file describes a command or a sub-command for chef-client.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
 This command has the following syntax::
 
-   chef-solo OPTION VALUE OPTION VALUE ...
+   chef-client OPTION VALUE OPTION VALUE ...
 
 This command has the following options:
 
-``-c CONFIG``, ``--config CONFIG``
-   |config chef-client|
+``-A``, ``--fatal-windows-admin-check``
+   |fatal_windows_admin_check|
 
-``-d``, ``--daemonize``
-   |daemonize| This option is only available on machines that run in |unix| or |linux| environments. For machines that are running |windows| that require similar functionality, use the ``chef-client::service`` recipe in the ``chef-client`` cookbook: http://community.opscode.com/cookbooks/chef-client. This will install a |chef client| service under |windows| using the |windows service wrapper|.
-
-``-E ENVIRONMENT_NAME``, ``--environment ENVIRONMENT_NAME``
-   |name environment|
-
-``-f``, ``--[no-]fork``
-   |fork_chef|
+``--chef-zero-port PORT``
+   |port chef_zero|
 
 ``-F FORMAT``, ``--format FORMAT``
    |format chef_ctls| 
@@ -43,16 +37,22 @@ This command has the following options:
    |help subcommand|
 
 ``-i SECONDS``, ``--interval SECONDS``
-   |interval|
+   |interval| |chef_client intervals_11-16| Default value: ``1800``.
 
 ``-j PATH``, ``--json-attributes PATH``
-   |json attributes| Use this option to override ``normal`` attributes set elsewhere.
+   |json attributes|
+
+``-k KEY_FILE``, ``--client_key KEY_FILE``
+   |client_key| Default value: ``/etc/chef/client.pem``.
+
+``-K KEY_FILE``, ``--validation_key KEY_FILE``
+   |validation_key| Default value: ``/etc/chef/validation.pem``.
 
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
 
 ``-L LOGLOCATION``, ``--logfile c``
-   |log_location| This is recommended when starting any executable as a daemon.
+   |log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``.
 
 ``--[no-]color``
    |color| Default setting: ``--color``.
@@ -63,14 +63,29 @@ This command has the following options:
 ``-o RUN_LIST_ITEM``, ``--override-runlist RUN_LIST_ITEM``
    |override_runlist|
 
-``-r RECIPE_URL``, ``--recipe-url RECIPE_URL``
-   |recipe_url|
+``--once``
+   |once|
+
+``-P PID_FILE``, ``--pid PID_FILE``
+   |path pid_file| Default value: ``/tmp/name-of-executable.pid``.
+
+``-r RUN_LIST_ITEM``, ``--runlist RUN_LIST_ITEM``
+   |runlist_items|
+
+``-R``, ``--enable-reporting``
+   |enable_reporting|
+
+``RECIPE_FILE``
+   |path recipe_file|
 
 ``--run-lock-timeout SECONDS``
    |run_lock_timeout| Default value: not set (indefinite). Set to ``0`` to cause a second |chef client| to exit immediately.
-   
+
 ``-s SECONDS``, ``--splay SECONDS``
-   |splay|
+   |splay| |chef_client intervals_11-16|
+
+``-S CHEF_SERVER_URL``, ``--server CHEF_SERVER_URL``
+   |url chef_server|
 
 ``-u USER``, ``--user USER``
    |user chef_client|
@@ -81,11 +96,7 @@ This command has the following options:
 ``-W``, ``--why-run``
    |whyrun_mode|
 
-
-
-
-
-
-
+``-z``, ``--local-mode``
+   |local_mode|
 
 

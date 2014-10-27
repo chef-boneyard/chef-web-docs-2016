@@ -46,7 +46,7 @@ This command has the following options:
    |help subcommand|
 
 ``-i SECONDS``, ``--interval SECONDS``
-   |interval| Default value: ``1800``.
+   |interval| |chef_client intervals_11-16| Default value: ``1800``.
 
 ``-j PATH``, ``--json-attributes PATH``
    |json attributes|
@@ -82,7 +82,7 @@ This command has the following options:
    |enable_reporting|
 
 ``-s SECONDS``, ``--splay SECONDS``
-   |splay|
+   |splay| |chef_client intervals_11-16|
 
 ``-S CHEF_SERVER_URL``, ``--server CHEF_SERVER_URL``
    |url chef_server|
