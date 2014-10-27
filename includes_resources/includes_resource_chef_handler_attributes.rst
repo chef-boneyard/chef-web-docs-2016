@@ -15,13 +15,15 @@
      - |path chef_handler|
    * - ``arguments``
      - |arguments chef_handler| Default value: ``[]``. For example:
-       ::
- 
+
+       .. code-block:: ruby
+
           arguments :key1 => 'val1'
 
        or:
-       ::
- 
+
+       .. code-block:: ruby
+
           arguments [:key1 => 'val1', :key2 => 'val2']
 
    * - ``supports``
