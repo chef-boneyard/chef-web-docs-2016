@@ -11,19 +11,22 @@ Domain-specific |ruby| attributes:
      - Description
    * - ``default_attributes``
      - |ruby dsl default attribute| For example, to specify that a node that has the attribute ``apache2`` should listen on ports 80 and 443 (unless ports are already specified):
-       ::
+
+       .. code-block:: ruby
 
           default_attributes "apache2" => { 
             "listen_ports" => [ "80", "443" ] 
           }
    * - ``description``
      - |ruby dsl description| For example:
-       ::
+
+       .. code-block:: ruby
 
           description 'The base role for systems that serve HTTP traffic'
    * - ``env_run_lists``
      - |ruby dsl environment run list| For example:
-       ::
+
+       .. code-block:: ruby
 
           env_run_lists "prod" => ["recipe[apache2]"], 
                         "staging" => ["recipe[apache2::staging]"
@@ -31,18 +34,22 @@ Domain-specific |ruby| attributes:
        .. warning:: Using ``env_run_lists`` with roles is discouraged as it can be difficult to maintain over time. Instead, consider using multiple roles to define the required behavior.
    * - ``name``
      - |ruby dsl name| For example:
-       ::
+
+       .. code-block:: ruby
 
           name 'dev01-24'
    * - ``override_attributes``
      - |ruby dsl override attribute| For example:
-       ::
+
+       .. code-block:: ruby
 
           override_attributes "apache2" => { 
             "max_children" => "50" 
           }
 
-       The parameters in a |ruby| file are |ruby| method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example::
+       The parameters in a |ruby| file are |ruby| method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example:
+
+       .. code-block:: ruby
 
           override_attributes(
             :apache2 => { 
@@ -50,7 +57,9 @@ Domain-specific |ruby| attributes:
             }
           )
 
-       Or::
+       Or:
+
+       .. code-block:: ruby
 
           override_attributes(
             :apache2 => {
@@ -61,8 +70,9 @@ Domain-specific |ruby| attributes:
             }
           )  
    * - ``run_list``
-     - |ruby dsl run list| For example, the following run list:
-       ::
+     - |ruby dsl run list| For example, the following run-list:
+
+       .. code-block:: ruby
 
           run_list "recipe[apache2]", 
                    "recipe[apache2::mod_ssl]", 
