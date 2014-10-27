@@ -26,6 +26,11 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **data_bag_item method in the Recipe DSL supports encrypted data bag items** Use ``data_bag_item(bag_name, item, secret)`` to specify the secret to use for an encrypted data bag item. |secret_config|
 * **value_for_platform method in the Recipe DSL supports version constraints** Version constraints---``>``, ``<``, ``>=``, ``<=``, ``~>``---may be used when specifying a version. An exception is raised if two version constraints match. An exact match will always take precedence over a match made from a version constraint.
 * **knife cookbook site share supports --dry-run** Use the ``--dry-run`` option with the |subcommand knife site cookbook| to take no action and only print out results.
+* **chef-client configuration setting updates** The |chef client| now supports running an override run-list (via the ``--override-runlist`` option) without clearing the cookbook cache on the node. In addition, the ``--chef-zero-port`` option allows specifying a range of ports.
+* **chef-solo does not allow unforked chef-client runs** The ``--[no-]fork`` option may no longer be used in the same command with the ``--daemonize`` and ``--interval`` options.
+* **Splay and interval values are applied before the chef-client run** The ``--interval`` and ``--splay`` values are applied before the |chef client| run when using the |chef client| and |chef solo| executables.
+* **All files and templates in a cookbook are synchronized at the start of the chef-client run** The ``no_lazy_load`` configuration setting in the |client rb| file now defaults to ``true``. This avoids issues where time-sensitive URLs in a cookbook manifest timeout before the |resource cookbook_file| or |resource template| resources converged.
+* **File staging now defaults to the destination directory by default** Staging into a system's temporary directory---typically ``/tmp`` or ``/var/tmp``---as opposed to the destination directory may cause issues with permissions, available space, or cross-device renames. Files are now staged to the destination directory by default.
 
 * **xxxxx** xxxxx
 
@@ -303,6 +308,31 @@ The following attributes are new for the |resource user| resource:
 **Use SALTED-SHA512-PBKDF2 passwords**
 
 .. include:: ../../release_chef_12-0/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst
+
+
+|chef client| Options
+-----------------------------------------------------
+The following options are updated for the |chef client| executable:
+
+``--chef-zero-port PORT``
+   |port chef_zero| If a port is not specified---individually or as range of ports from within the command---the |chef client| will scan for ports between 8889-9999 and will pick the first port that is available. This port or port range may also be specified using the ``chef_zero.port`` setting in the |client rb| file.
+
+``-o RUN_LIST_ITEM``, ``--override-runlist RUN_LIST_ITEM``
+   |override_runlist| This option will not clear the list of cookbooks (and related files) that is cached on the node.
+
+The following configuration settings are updated for the |client rb| file and now default to ``true``:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``no_lazy_load``
+     - |no_lazy_load| Default value: ``true``.
+   * - ``file_staging_uses_destdir``
+     - |file_staging_uses_destdir| Default value: ``true``.
+
 
 Changelog
 =====================================================
