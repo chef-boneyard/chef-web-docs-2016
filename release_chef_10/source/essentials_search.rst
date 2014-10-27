@@ -112,6 +112,8 @@ Operators
 =====================================================
 .. include:: ../../includes_search/includes_search_boolean_operators.rst
 
+.. include:: ../../includes_search/includes_search_boolean_operators_andnot.rst
+
 AND
 -----------------------------------------------------
 .. include:: ../../step_search/step_search_boolean_and.rst
