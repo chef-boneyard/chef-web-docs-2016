@@ -33,7 +33,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **File staging now defaults to the destination directory by default** Staging into a system's temporary directory---typically ``/tmp`` or ``/var/tmp``---as opposed to the destination directory may cause issues with permissions, available space, or cross-device renames. Files are now staged to the destination directory by default.
 * **Search queries using the search method in the Recipe DSL may filter results** Use ``:filter_result`` to build search results into a |ruby hash|.
 * **Client-side key generation is enabled by default** When a new |chef client| is created using the vaidation client account, the |chef server| allows the |client client| to generate a key-pair locally, and then send the public key to the |chef server|. This behavior is controlled by the ``local_key_generation`` attribute in the |client rb| file and now defaults to ``true``. 
-* **New interpreter defaults** The ``interpreter`` attribute has new defaults. The |resource batch| resource now defaults to ``:batch`` and the |resource powershell_script| resource now defaults to ``:powershell_script``.
+* **New guard_interpreter attribut defaults** The ``guard_interpreter`` attribute has new defaults. The ``guard_interpreter`` attribute defaults to ``:batch`` for the |resource batch| resource and ``:powershell_script`` for the |resource powershell_script| resource.
 
 
 * **xxxxx** xxxxx
