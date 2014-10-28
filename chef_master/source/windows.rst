@@ -369,7 +369,7 @@ Actions
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_batch_attributes.rst
+.. include:: ../../release_chef_12-0/includes_resource_11-16_batch_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -490,7 +490,7 @@ Actions
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
+.. include:: ../../release_chef_12-0/includes_resource_11-16_powershell_script_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
