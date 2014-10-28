@@ -83,8 +83,43 @@ Create a DNS entry for the load balanced virtual IP address, which will be used 
 
 Firewalls
 -----------------------------------------------------
+For back end servers in an |chef server oec| installation:
 
-.. include:: ../../release_11-x_master/server_firewalls_and_ports_be.rst
+.. list-table::
+   :widths: 60 420 60
+   :header-rows: 1
+
+   * - Port
+     - Service
+     - External
+   * - 5984
+     - |service couchdb|
+     - yes
+   * - 8983
+     - |service solr|
+     - yes
+   * - 5432
+     - |service postgresql|
+     - yes
+   * - 5672
+     - |service rabbitmq|
+     - yes
+   * - 16379
+     - |service redis_lb|
+     - yes
+   * - 4321
+     - |service bookshelf|
+     - yes
+   * - 4369
+     - |service orgcreator|
+     - no
+   * - 7788-7799
+     - |drbd| This port range must be open between all back end servers.
+     - no
+
+Loopback Interface
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+A single loopback interface should be configured using the ``127.0.0.1`` address. This ensures that all of the services are available to the |chef server|, in the event that the |chef server| attempts to contact itself from within a machine. For proper functioning, all of the ports listed should be accessible through the loopback interface.
 
 Hostnames, FQDNs
 -----------------------------------------------------
