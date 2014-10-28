@@ -9,7 +9,7 @@ search Method
 
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search.rst
 
-``:filter_result``
+:filter_result
 =====================================================
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
 
