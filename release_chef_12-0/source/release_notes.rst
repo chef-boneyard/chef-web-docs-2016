@@ -32,6 +32,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **All files and templates in a cookbook are synchronized at the start of the chef-client run** The ``no_lazy_load`` configuration setting in the |client rb| file now defaults to ``true``. This avoids issues where time-sensitive URLs in a cookbook manifest timeout before the |resource cookbook_file| or |resource template| resources converged.
 * **File staging now defaults to the destination directory by default** Staging into a system's temporary directory---typically ``/tmp`` or ``/var/tmp``---as opposed to the destination directory may cause issues with permissions, available space, or cross-device renames. Files are now staged to the destination directory by default.
 * **Search queries using the search method in the Recipe DSL may filter results** Use ``:filter_result`` to build search results into a |ruby hash|.
+* **Client-side key generation is enabled by default** When a new |chef client| is created using the vaidation client account, the |chef server| allows the |client client| to generate a key-pair locally, and then send the public key to the |chef server|. This behavior is controlled by the ``local_key_generation`` attribute in the |client rb| file and now defaults to ``true``. 
 
 * **xxxxx** xxxxx
 
@@ -333,6 +334,8 @@ The following configuration settings are updated for the |client rb| file and no
      - |no_lazy_load| Default value: ``true``.
    * - ``file_staging_uses_destdir``
      - |file_staging_uses_destdir| Default value: ``true``.
+   * - ``local_key_generation``
+     - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. Default value: ``true``.
 
 
 Filter Search Results
