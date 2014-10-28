@@ -31,6 +31,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Splay and interval values are applied before the chef-client run** The ``--interval`` and ``--splay`` values are applied before the |chef client| run when using the |chef client| and |chef solo| executables.
 * **All files and templates in a cookbook are synchronized at the start of the chef-client run** The ``no_lazy_load`` configuration setting in the |client rb| file now defaults to ``true``. This avoids issues where time-sensitive URLs in a cookbook manifest timeout before the |resource cookbook_file| or |resource template| resources converged.
 * **File staging now defaults to the destination directory by default** Staging into a system's temporary directory---typically ``/tmp`` or ``/var/tmp``---as opposed to the destination directory may cause issues with permissions, available space, or cross-device renames. Files are now staged to the destination directory by default.
+* **Search queries using the search method in the Recipe DSL may filter results** Use ``:filter_result`` to build search results into a |ruby hash|.
 
 * **xxxxx** xxxxx
 
@@ -332,6 +333,11 @@ The following configuration settings are updated for the |client rb| file and no
      - |no_lazy_load| Default value: ``true``.
    * - ``file_staging_uses_destdir``
      - |file_staging_uses_destdir| Default value: ``true``.
+
+
+Filter Search Results
+-----------------------------------------------------
+.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
 
 
 Changelog
