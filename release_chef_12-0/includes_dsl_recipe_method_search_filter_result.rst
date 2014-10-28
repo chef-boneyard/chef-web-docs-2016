@@ -21,7 +21,7 @@ The syntax for the ``search`` method is as follows:
 where:
 
 * ``:index`` is of name of the index on the |chef server| against which the search query will run: ``:client``, ``:data_bag_name``, ``:environment``, ``:node``, and ``:role``
-* ``"query"`` is a valid search query against an object on the |chef server| (see below for more information about how to build the query)
+* ``"query"`` is a valid search query against an object on the |chef server|
 * ``:filter_result`` defines the |ruby hash| of values to be returned
 
 For example:
