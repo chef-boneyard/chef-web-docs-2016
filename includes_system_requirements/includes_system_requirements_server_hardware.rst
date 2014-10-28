@@ -33,6 +33,6 @@ For a high availability deployment:
 * Two back-end servers; as many front-end servers as required.
 
 .. note:: Front end machines, when load balanced, may have fewer than 4 cores and 4 GB of RAM.
-.. warning:: Chef Server may under no circumstances have an NFS storage backend, whether virtualized or physical.
-  Chef Servers operate databases and write logs quickly, operations which have unpredictable behavior when run 
-  over a network filesystem, not to mention poorly defined locking and syncing characteristics.
+
+.. warning:: The |chef server| MUST NOT use a network file system of any type---virtual or physical---for backend storage. The |chef server| database operates quickly. The behavior of operations, such as the writing of log files, will be unpredictable when run over a network file system.
+
