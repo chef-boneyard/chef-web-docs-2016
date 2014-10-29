@@ -40,22 +40,6 @@ Guards
 
 .. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
 
-Guard Interpreter
------------------------------------------------------
-.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter.rst
-
-**Attributes**
-
-.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst
-
-**Inheritance**
-
-.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes_inherit.rst
-
-**Example**
-
-.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_example_default.rst
-
 Providers
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_provider.rst
