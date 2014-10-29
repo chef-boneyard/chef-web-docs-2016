@@ -34,9 +34,8 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Search queries using the search method in the Recipe DSL may filter results** Use ``:filter_result`` to build search results into a |ruby hash|.
 * **Client-side key generation is enabled by default** When a new |chef client| is created using the vaidation client account, the |chef server| allows the |client client| to generate a key-pair locally, and then send the public key to the |chef server|. This behavior is controlled by the ``local_key_generation`` attribute in the |client rb| file and now defaults to ``true``. 
 * **New guard_interpreter attribut defaults** The ``guard_interpreter`` attribute has new defaults. The ``guard_interpreter`` attribute defaults to ``:batch`` for the |resource batch| resource and ``:powershell_script`` for the |resource powershell_script| resource.
+* **Events are sent to the Application event log on the Windows platform by default** The ``disable_event_logger`` settings in the |client rb| file is set to ``true`` by default. This sends events for the start and end of a |chef client| run, plus an event if the |chef client| run fails, to the |windows| "Application" event log.
 
-
-* **xxxxx** xxxxx
 
 |ibm aix| Platform Support
 -----------------------------------------------------
@@ -332,6 +331,8 @@ The following configuration settings are updated for the |client rb| file and no
 
    * - Setting
      - Description
+   * - ``disable_event_logger``
+     - |disable event_logging_windows| Default value: ``true``.
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``file_staging_uses_destdir``

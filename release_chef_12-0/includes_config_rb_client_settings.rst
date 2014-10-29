@@ -45,6 +45,8 @@ This configuration file has the following settings:
      - |diff_filesize_threshold| Default value: ``10000000``.
    * - ``diff_output_threshold``
      - |diff_output_threshold| Default value: ``1000000``.
+   * - ``disable_event_logger``
+     - |disable event_logging_windows| Default value: ``true``.
    * - ``enable_reporting``
      - |enable reporting| 
    * - ``enable_reporting_url_fatals``
