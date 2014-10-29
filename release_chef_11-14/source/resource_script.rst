@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/resource_script.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.14
 
 =====================================================
@@ -47,11 +46,11 @@ Guard Interpreter
 
 **Attributes**
 
-.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_11-16_guard_interpreter_attributes.rst
 
 **Inheritance**
 
-.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes_inherit.rst
+.. include:: ../../includes_resources_common/includes_resources_common_11-16_guard_interpreter_attributes_inherit.rst
 
 **Example**
 

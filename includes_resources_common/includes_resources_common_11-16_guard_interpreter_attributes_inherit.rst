@@ -27,7 +27,7 @@ and requires adding the ``environment`` attribute to the ``not_if`` guard statem
 To inherit attributes, add the ``guard_attribute`` attribute to the resource block and set it to the appropriate value:
 
 * ``:bash`` for |resource script_bash|
-* ``:batch`` for |resource script_batch|
+* ``:batch`` for |resource batch|
 * ``:csh`` for |resource script_csh|
 * ``:perl`` for |resource script_perl|
 * ``:powershell_script`` for |resource powershell_script|
