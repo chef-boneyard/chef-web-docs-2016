@@ -40,7 +40,7 @@ Encryption Versions
 
 Knife Options
 -----------------------------------------------------
-.. include:: ../../includes_data_bag/includes_data_bag_encryption_knife_options.rst
+.. include:: ../../release_chef_12-0/includes_data_bag_encryption_knife_options.rst
 
 Secret Keys
 -----------------------------------------------------
