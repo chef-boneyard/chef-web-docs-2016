@@ -14,7 +14,7 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_http_request_actions.rst
+.. include:: ../../includes_resources/includes_resource_11-16_http_request_actions.rst
 
 Attributes
 =====================================================
@@ -38,7 +38,7 @@ Examples
 
 **Send a POST request**
 
-.. include:: ../../step_resource/step_resource_11-8_http_request_send_post.rst
+.. include:: ../../step_resource/step_resource_http_request_send_post.rst
 
 **Transfer a file only when the remote source changes**
 
