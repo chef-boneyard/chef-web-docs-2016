@@ -9,11 +9,15 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:acquire``
+   * - ``:allocate``
      - Use to xxxxx.
    * - ``:converge``
-     - Default. Use to xxxxx.
-   * - ``:delete``
+     - Use to xxxxx.
+   * - ``:converge_only``
+     - Use to xxxxx.
+   * - ``:destroy``
+     - Use to xxxxx.
+   * - ``:ready``
      - Use to xxxxx.
    * - ``:setup``
      - Use to xxxxx.
