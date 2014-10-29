@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-For example, a template named ``gemrc.erb`` is located in a cookbook's ``/templates`` directory:
+A template named ``gemrc.erb`` is located in a cookbook's ``/templates`` directory:
 
 .. code-block:: ruby
 
