@@ -6,6 +6,9 @@ Release Notes: |chef client| 12.0
 
 What's New
 =====================================================
+
+.. warning:: |chef client| 12.0 may be run with |chef server| 12, the hosted |chef server|, |chef server oec| version 11.2.4 (and higher), and |chef server osc| 11.1.6-1 (and higher).
+
 The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
 
 * **Ruby 1.9.3 (or higher)** |ruby| versions 1.8.7, 1.9.1, and 1.9.2 are no longer supported.
