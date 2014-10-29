@@ -289,7 +289,7 @@ Or:
    end
 
 
-|mac os x| User Passwords
+|mac os x|, Passwords
 -----------------------------------------------------
 The following attributes are new for the |resource user| resource:
 
