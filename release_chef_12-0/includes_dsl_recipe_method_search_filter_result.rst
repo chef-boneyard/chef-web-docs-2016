@@ -1,15 +1,15 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the ``:filter_result`` instead of an ``:index`` to perform a search query against the |chef server| from within a recipe, and then return that data in the form of the specified |ruby hash|.
+Use the ``:filter_result`` as part of a search query against the |chef server|, and then return that data in the form of the specified |ruby hash|.
 
-The syntax for the ``search`` method is as follows:
+The syntax for the ``search`` method that will filter search results is as follows:
 
 .. code-block:: ruby
 
    search(:index, "query",
      :filter_result => { 'foo' => [ 'abc' ],
-                         'bar'   => [ '123' ],
+                         'bar' => [ '123' ],
                          'baz' => [ 'sea', 'power' ]
                        }
          ).each do |result|
@@ -22,7 +22,7 @@ where:
 
 * ``:index`` is of name of the index on the |chef server| against which the search query will run: ``:client``, ``:data_bag_name``, ``:environment``, ``:node``, and ``:role``
 * ``"query"`` is a valid search query against an object on the |chef server|
-* ``:filter_result`` defines the |ruby hash| of values to be returned
+* ``:filter_result`` defines a |ruby hash| of values to be returned
 
 For example:
 
@@ -30,7 +30,7 @@ For example:
 
    search(:node, "role:web",
      :filter_result => { 'name' => [ 'name' ],
-                         'ip'   => [ 'ipaddress' ],
+                         'ip' => [ 'ipaddress' ],
                          'kernel_version' => [ 'kernel', 'version' ]
                        }
          ).each do |result|
