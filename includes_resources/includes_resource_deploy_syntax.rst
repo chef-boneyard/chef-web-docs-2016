@@ -36,11 +36,11 @@ For example, an application that is deployed to a folder named ``"/path/to/appli
      migrate false
      purge_before_symlink %w{one two folder/three}
      create_dirs_before_symlink []
-     symlinks(                       
+     symlinks{
        "one"   => "one",
        "two"   => "two",
        "three" => "folder/three"
-     )
+     }
      before_restart do
        # some Ruby code
      end
