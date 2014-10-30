@@ -45,9 +45,3 @@ To clear the default values for a layout modifier:
    end
 
 In general, use this approach carefully and only after it is determined that nil or empty values won't provide the expected result.
-
-
-
-
-
-
