@@ -48,7 +48,11 @@ This command has the following options:
    |interval| |chef_client intervals| This option may not be used in the same command with the ``--[no-]fork`` option.
 
 ``-j PATH``, ``--json-attributes PATH``
-   |json attributes| Use this option to override ``normal`` attributes set elsewhere.
+   |json attributes|
+
+   .. include:: ../../includes_node/includes_node_ctl_run_list.rst
+
+   .. include:: ../../includes_node/includes_node_ctl_attribute.rst
 
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
