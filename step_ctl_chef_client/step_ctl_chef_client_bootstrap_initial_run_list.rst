@@ -18,3 +18,5 @@ where ``file.json`` is similar to:
      },
      "run_list": [ "recipe[resolver]" ]
    }
+
+.. warning:: This option may be used to update ``normal`` attributes, but should never be used to update any other attribute type, as all attributes updated using this option are treated as ``normal`` attributes.
