@@ -4,7 +4,7 @@ Install the |chef dk_title|
 
 
 
-The |omnibus installer| is used to set up a workstation. The |omnibus installer| uses a single command to install the |chef dk| and all of its dependencies, including the |chef client| itself, an embedded version of |ruby|, |rubygems|, |open ssl|, key-value stores, parsers, libraries, command line utilities, and community tools such as |kitchen|, |berkshelf|, and |chef spec|. The |omnibus installer| puts everything into a unique directory (``opt/chefdk/``) so that these components will not interfere with other applications that may be running on the target machine. Once installed, the |chef client| requires a few more configuration steps before it can be run as a workstation.
+The |omnibus installer| is used to set up the |chef dk| on a workstation, including the |chef client| itself, an embedded version of |ruby|, |rubygems|, |open ssl|, key-value stores, parsers, libraries, command line utilities, and community tools such as |kitchen|, |berkshelf|, and |chef spec|. The |omnibus installer| puts everything into a unique directory (``opt/chefdk/``) so that these components will not interfere with other applications that may be running on the target machine. Once installed, the |chef client| requires a few more configuration steps before it can be run as a workstation.
 
 .. note:: The |omnibus installer| requires that an installation be done as a root user.
 
@@ -208,13 +208,16 @@ The |chef client| includes a stable version of |ruby| as part of the |omnibus in
 
 .. code-block:: bash
 
-   echo 'export PATH="/opt/chef/embedded/bin:$PATH"' >> ~/.configuration_file && source ~/.configuration_file
+   echo 'export PATH="/opt/chefdk/embedded/bin:$PATH"' >> ~/.configuration_file && source ~/.configuration_file
 
 where ``configuration_file`` is the name of the configuration file for the specific command shell. For example, if |bash| were the command shell and the configuration file were named ``bash_profile``, the command would look something like the following:
 
 .. code-block:: bash
 
-   echo 'export PATH="/opt/chef/embedded/bin:$PATH"' >> ~/.bash_profile && source ~/.bash_profile
+   echo 'export PATH="/opt/chefdk/embedded/bin:$PATH"' >> ~/.bash_profile && source ~/.bash_profile
+
+
+.. warning:: On |windows|, ``C:/opscode/chefdk/bin`` must be before ``C:/opscode/chefdk/embedded/bin`` in the ``PATH``.
 
 Verify Install
 -----------------------------------------------------
