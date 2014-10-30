@@ -32,6 +32,8 @@ The following handlers are available from the open source community:
      - A handler that collects exception handler data and sends it to |hipchat|, a hosted private chat service for companies and teams.
    * - `IRC Snitch <https://rubygems.org/gems/chef-irc-snitch>`_
      - A handler that notifies administrators (via |irc|) when a |chef client| run fails.
+   * - `Journald <https://github.com/marktheunissen/chef-handler-journald>`_
+     - A handler that logs an entry to the |systemd| journal with the |chef client| run status, exception details, configurable priority, and custom details.
    * - `Simple Email <https://rubygems.org/gems/chef-handler-mail>`_
      - A handler that collects exception and report handler data and then uses |pony| to send email reports that are based on |erubis| templates.
    * - `SNS <http://onddo.github.io/chef-handler-sns/>`_
