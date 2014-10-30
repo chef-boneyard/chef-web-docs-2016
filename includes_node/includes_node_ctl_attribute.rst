@@ -4,7 +4,7 @@
 
 Any other attribute type that is contained in this |json| file will be treated as a ``normal`` attribute. For example, attempting to update ``override`` attributes using the ``-j`` option:
 
-.. code-block:: javascript::
+.. code-block:: javascript
 
    { 
      "name": "dev-99",
@@ -19,7 +19,7 @@ Any other attribute type that is contained in this |json| file will be treated a
 
 will result in a node object similar to:
 
-.. code-block:: javascript::
+.. code-block:: javascript
 
    { 
      "name": "maybe-dev-99",
