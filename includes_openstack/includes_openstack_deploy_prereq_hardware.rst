@@ -4,6 +4,5 @@
 For best results, physical hardware is recommended. Detailed recommendations for hardware configuration using |openstack chef| can be found here:
 
 * http://docs.openstack.org/ops/
-* http://www.rackspace.com/knowledge_center/article/rackspace-private-cloud-installation-prerequisites-and-concepts#hardware-prereq
 
 |openstack chef| does not have any additional requirements.
