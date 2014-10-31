@@ -162,8 +162,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
+**Pass values from recipe to template**
 
-
-
-
-
+.. include:: ../../step_resource/step_resource_template_pass_values_to_template_from_recipe.rst
