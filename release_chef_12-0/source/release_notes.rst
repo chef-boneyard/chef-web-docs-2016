@@ -44,6 +44,13 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 -----------------------------------------------------
 The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform. The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems.
 
+**System Requirements**
+
+The |chef client| has the `same system requirements <http://docs.getchef.com/chef_system_requirements.html#chef-client>`_ on the |ibm aix| platform as any other platform, with the following notes:
+
+* Expand the file system on the |ibm aix| platform using ``chfs`` or by passing the ``-X`` flag to ``installp`` to automatically expand the logical partition (LPAR)
+* The EN_US (UTF-8) character set should be installed on the logical partition prior to installing the |chef client| (see below)
+ 
 **New provider**
 
 The |resource service| resource has a new provider:
@@ -62,6 +69,10 @@ The |resource service| resource has a new provider:
 **Enable a service on AIX using the mkitab command**
 
 .. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
+
+**Install the UTF-8 character set**
+
+.. include:: ../../release_chef_12-0/includes_install_chef_client_aix_en_us.rst
 
 
 bff_package
