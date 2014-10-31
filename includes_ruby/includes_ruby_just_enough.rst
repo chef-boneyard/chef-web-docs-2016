@@ -16,17 +16,31 @@ to return:
 
 Here is a quick rundown of some basic |ruby| commands.
 
+
+
+
+
 Anything after a ``#`` is a comment.
 
 .. code-block:: ruby
 
    # This is a comment.
 
+
+
+
+
+
 Assign a local variable:
     
 .. code-block:: ruby
 
    x = 1
+
+
+
+
+
 
 Do some basic arithmetic:
  
@@ -37,7 +51,12 @@ Do some basic arithmetic:
    5 / 2           # => 2   (because both arguments are whole numbers)
    5 / 2.0         # => 2.5 (because one of the numbers had a decimal place)
    1 + (2 * 3)     # => 7   (you can use parens to group expressions)
- 
+
+
+
+
+
+
 Work with strings:
 
 .. code-block:: ruby
@@ -46,7 +65,12 @@ Work with strings:
    "double quoted" # => "double quoted"
    'It\'s alive'   # => "It's alive!"
    "1 + 2 = 5"     # => "1 + 2 = 5" (numbers surrounded by quotes may exhibit string-like behavior)
- 
+
+
+
+
+
+
 Embed |ruby| in a string:
 
 .. code-block:: ruby
@@ -54,7 +78,12 @@ Embed |ruby| in a string:
    x = "Bob"
    "Hi, #{x}"      # => "Hi, Bob"
    'Hello, #{x}'   # => "Hello, \#{x}" Notice that single quotes don't work with #{}
- 
+
+
+
+
+
+
 Work with basic truths:
 
 .. code-block:: ruby
@@ -64,7 +93,12 @@ Work with basic truths:
    nil             # => nil
    1 == 1          # => true ( == tests for equality )
    1 == true       # => false ( == tests for equality )
- 
+
+
+
+
+
+
 Work with basic untruths (``!`` means not!):
 
 .. code-block:: ruby
@@ -74,7 +108,12 @@ Work with basic untruths (``!`` means not!):
    !nil            # => true
    1 != 2          # => true (1 is not equal to 2)
    1 != 1          # => false (1 is not not equal to itself)
- 
+
+
+
+
+
+
 Convert something to either true or false (``!!`` means not not!!):
 
 .. code-block:: ruby
@@ -83,7 +122,12 @@ Convert something to either true or false (``!!`` means not not!!):
    !!false         # => false
    !!nil           # => false (when pressed, nil is false)
    !!0             # => true (zero is NOT false).
- 
+
+
+
+
+
+
 Create lists using arrays:
 
 .. code-block:: ruby
@@ -96,7 +140,13 @@ Create lists using arrays:
    x                   # => ["a", "b", "c"] ( x is unchanged)
    x = x + ["d"]       # => ["a", "b", "c", "d"]
    x                   # => ["a", "b", "c", "d"]
- 
+
+
+
+
+
+
+
 A |ruby hash| is a list with keys and values. Sometimes they don't have a set order:
 
 .. code-block:: ruby
@@ -116,7 +166,12 @@ And sometimes they do. For example, first name then last name:
    h["age"] = 23
    h.keys              # => ["first_name", "age", "last_name"]
    h.values            # => ["Jones", "Bob", 23]
- 
+
+
+
+
+
+
 Use |perl|-style regular expressions:
 
 .. code-block:: ruby
@@ -126,7 +181,12 @@ Use |perl|-style regular expressions:
    "I am human" =~ /bacon/                   # => nil (no match - bacon comes from pigs)
    "I am human" !~ /bacon/                   # => true (correct, no bacon here)
    /give me a ([0-9]+)/ =~ "give me a 7"     # => 0 (matched)
- 
+
+
+
+
+
+
 Use conditions! For example, an ``if`` statement
 
 .. code-block:: ruby
@@ -138,7 +198,7 @@ Use conditions! For example, an ``if`` statement
    else
      # code here will run though
    end
- 
+
 or a ``case`` statement:
 
 .. code-block:: ruby
@@ -152,7 +212,11 @@ or a ``case`` statement:
    else
      # the else is an optional catch-all
    end
- 
+
+
+
+
+
 Define a method (or a function, if you like):
 
 .. code-block:: ruby
@@ -160,13 +224,15 @@ Define a method (or a function, if you like):
    def do_something_useless( first_argument, second_argument)
      puts "You gave me #{first_argument} and #{second_argument}"
    end
- 
+   
    do_something_useless( "apple", "banana")
    # => "You gave me apple and banana"
    do_something_useless 1, 2
    # => "You gave me 1 and 2"
    # see how the parens are optional if there's no confusion about what to do
- 
+
+
+
 Call a method on something with ``.method_name()``:
 
 .. code-block:: ruby
@@ -174,6 +240,7 @@ Call a method on something with ``.method_name()``:
    x = "My String"
    x.split(" ")            # => ["My", "String"]
    x.split(" ").join(", ") # => "My, String"
+
 
 
 Use the |ruby| ``File`` class in a recipe. Because |chef| has the |resource file| resource, use ``::File`` to use the |ruby| ``File`` class. For example:
@@ -186,6 +253,17 @@ Use the |ruby| ``File`` class in a recipe. Because |chef| has the |resource file
      only_if { apt_installed? }
      not_if { ::File.exist?('/var/lib/apt/periodic/update-success-stamp') }
    end
+
+
+
+Use ``:include`` to include another |ruby| class. For example:
+
+.. code-block:: ruby
+
+   ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
+
+In non-|chef| |ruby|, the syntax is ``include`` (without the ``:`` prefix), but without the ``:`` prefix the |chef client| will try to find a provider named ``include``. Using the ``:`` prefix tells the |chef client| to look for the specified class that follows.
+
 
 
 To learn more about |ruby|, see the following:
