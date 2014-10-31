@@ -23,6 +23,12 @@ The |chef server| uses organizations, groups, and users to define role-based acc
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_workflow.rst
 
+Multiple Organizations
+=====================================================
+.. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi.rst
+
+.. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst
+
 Permissions
 =====================================================
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions.rst
@@ -38,12 +44,6 @@ Global Permissions
 Default Groups
 =====================================================
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_default.rst
-
-Multiple Organizations
-=====================================================
-.. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi.rst
-
-.. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst
 
 |push jobs_title| Groups
 =====================================================
