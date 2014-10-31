@@ -12,7 +12,7 @@ The following table lists the Tier 1 supported platforms for the |chef client|:
      - Version
    * - |ibm aix|
      - ``ppc64``
-     - ``6.1``, ``7.1``
+     - ``6.1 TL6``, ``7.1 TL0 SP3``
    * - |centos|
      - ``i386``, ``x86_64``
      - ``5``, ``6``, ``7``
