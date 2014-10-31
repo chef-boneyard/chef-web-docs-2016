@@ -1575,6 +1575,9 @@ Examples
 
 .. include:: ../../step_resource/step_resource_log_add_message.rst
 
+**Use Chef::Log to create a log entry**
+
+.. include:: ../../step_resource/step_resource_log_class_chef_log.rst
 
 macports_package
 -----------------------------------------------------
