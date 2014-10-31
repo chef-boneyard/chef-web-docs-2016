@@ -2,25 +2,63 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-To run a resource at the start of the resource collection phase of the |chef client| run, set up a ``Chef::Resource`` object, and then call the method that runs the action.
-
-**Update a package cache**
-
-It is important to make sure that an operating system's package cache is up to date before installing packages, otherwise there may be references to versions that no longer exist. For example, on |debian| or |ubuntu| systems, the |apt| cache needs to be updated. Use code similar to the following:
+Use ``.run_action(:some_action)`` at the end of a resource block to run the specified action during the compile phase. For example:
 
 .. code-block:: ruby
 
-   e = execute "apt-get update" do
+   resource_name "foo" do
      action :nothing
+   end.run_action(:some_action)
+
+where ``action`` is set to ``:nothing`` to ensure the ``run_action`` is run during the compile phase and not later during the execution phase.
+
+The following examples show when (and when not) to use ``run_action``.
+
+**Update a package cache**
+
+Sometimes it is necessary to ensure that an operating system's package cache is up to date before installing packages. For example, on |debian| or |ubuntu| systems, the |apt| cache should be updated:
+
+.. code-block:: ruby
+
+   if node['apt']['compile_time_update'] && ( !::File.exist?('/var/lib/apt/periodic/update-success-stamp') || !::File.exist?(first_run_file) )
+     e = bash 'apt-get-update at compile time' do
+       code <<-EOH
+         apt-get update
+         touch #{first_run_file}
+       EOH
+       ignore_failure true
+       only_if { apt_installed? }
+       action :nothing
+     end
+     e.run_action(:run)
    end
-   
-   e.run_action(:run)
 
-where ``e`` is created as a ``Chef::Resource::Execute`` |ruby| object. The ``action`` attribute is set to ``:nothing`` so that the ``run_action`` method can be used to tell the |chef client| to run the specified command. The |cookbook apt| (for |debian| and |ubuntu|) and |cookbook pacman| (for |archlinux|) cookbooks can be used for this purpose. The preceding recipe can be placed at the top of a node's run list to ensure it is run before the |chef client| tries to install any packages.
+where ``e.run_action(:run)`` tells the |chef client| to run the ``apt-get update`` command during the compile phase. This example can be found in the ``default.rb`` recipe of the `apt cookbook <https://github.com/opscode-cookbooks/apt>`_ that is maintained by |company_name|.
 
-**An anti-pattern**
+**Use the chef_gem resource for Ruby gems**
 
-Unfortunately, resources that are executed when the resource collection is being built cannot notify any resource that has yet to be added to the resource collection. For example:
+A very common use case us to install a |gem| during the compile phase so that it will be available to the |chef client| during the execution phase. This is why the |resource chef_gem| exists. For example, this:
+
+.. code-block:: ruby
+
+   chef_gem "foo" do
+     action :install
+   end
+
+is effectively the same as
+
+.. code-block:: ruby
+
+   gem_package "foo" do
+     action :nothing
+   end.run_action(:install)
+   Gem.clear_paths
+
+but without needing to define a ``run_action``.
+
+**Notifications will not work**
+
+Resources that are executed during the compile phase cannot notify other resources. For example:
 
 .. code-block:: ruby
 
@@ -32,17 +70,5 @@ Unfortunately, resources that are executed when the resource collection is being
    end
    p.run_action(:install)
 
-In some cases, the better approach may be to install the package before the resource collection is built to ensure that it is available to other resources later on. Or, something like the following can be used:
-
-.. code-block:: ruby
-
-   p = package "foo" do
-     #parameters
-   end
-   p.run_action(:install)
-   
-   if p.updated_by_last_action?
-     #Call the resource that we want to "notify"  
-   end 
-
+A better approach in this type of situation is to install the package before the resource collection is built to ensure that it is available to other resources later on.
 

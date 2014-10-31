@@ -183,17 +183,14 @@ Examples
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
 
 
-Run from Resource Collection 
+Run in Compile Phase
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_compile.rst
 
-Before other Resources
+run_action
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_compile_begin.rst
 
-After Collection is Built
------------------------------------------------------
-.. include:: ../../includes_resources_common/includes_resources_common_compile_end.rst
 
 
 Windows File Security

@@ -218,17 +218,14 @@ Examples
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
 
 
-Run Resources from the Resource Collection
+Run in Compile Phase
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_compile.rst
 
-Before other resources
+run_action
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_common/includes_resources_common_compile_begin.rst
 
-After the resource collection is built
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_compile_end.rst
 
 Atomic File Updates
 -----------------------------------------------------
