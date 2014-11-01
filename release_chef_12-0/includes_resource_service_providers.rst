@@ -20,8 +20,8 @@ This resource has the following providers:
      - ``service``
      - Default on the |ibm aix| platform. The provider that is used to start, stop, and restart services with |ibm aix_src|.
    * - ``Chef::Provider::Service::AixInit``
-     - ``service``
-     - The provider that is used to manage services with |berkeley os|-based init systems on the |ibm aix| platform.
+     - 
+     - Use the long name---``Chef::Provider::Service::AixInit``---in a recipe to manage services with |berkeley os|-based init systems on the |ibm aix| platform.
    * - ``Chef::Provider::Service::Init::Debian``
      - ``service``
      - The provider that is used with the |debian| and |ubuntu| platforms.
