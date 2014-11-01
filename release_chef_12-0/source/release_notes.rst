@@ -50,7 +50,19 @@ The |chef client| has the `same system requirements <http://docs.getchef.com/che
 
 * Expand the file system on the |ibm aix| platform using ``chfs`` or by passing the ``-X`` flag to ``installp`` to automatically expand the logical partition (LPAR)
 * The EN_US (UTF-8) character set should be installed on the logical partition prior to installing the |chef client| (see below)
- 
+
+**Install the chef-client on the AIX platform**
+
+The |chef client| is distributed as a |ibm aix_bff| binary and is installed on the |ibm aix| platform using the following command run as a root user:
+
+.. code-block:: bash
+
+   $ installp -aYgd chef12.0.0.bff all
+
+**Install the UTF-8 character set**
+
+.. include:: ../../release_chef_12-0/includes_install_chef_client_aix_en_us.rst
+
 **New provider**
 
 The |resource service| resource has a new provider:
@@ -69,10 +81,6 @@ The |resource service| resource has a new provider:
 **Enable a service on AIX using the mkitab command**
 
 .. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
-
-**Install the UTF-8 character set**
-
-.. include:: ../../release_chef_12-0/includes_install_chef_client_aix_en_us.rst
 
 
 bff_package
