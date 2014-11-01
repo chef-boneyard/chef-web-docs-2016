@@ -16,9 +16,12 @@ This resource has the following providers:
    * - ``Chef::Provider::Service::Init``
      - ``service``
      - When this short name is used, the |chef client| will determine the correct provider during the |chef client| run.
+   * - ``Chef::Provider::Service::Aix``
+     - ``service``
+     - Default on the |ibm aix| platform. The provider that is used to start, stop, and restart services with |ibm aix_src|.
    * - ``Chef::Provider::Service::AixInit``
      - ``service``
-     - The provider that is used with the |ibm aix| platforms. Use the ``service`` short name to start, stop, and restart services with |ibm aix_src|. Use the ``Chef::Provider::Service::AixInit`` long name to manage services with |berkeley os|-based init systems.
+     - The provider that is used to manage services with |berkeley os|-based init systems on the |ibm aix| platform.
    * - ``Chef::Provider::Service::Init::Debian``
      - ``service``
      - The provider that is used with the |debian| and |ubuntu| platforms.
