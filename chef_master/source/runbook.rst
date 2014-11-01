@@ -373,15 +373,6 @@ Manage Organizations
 =====================================================
 The following commands are built-in to the |chef server ctl| command line tool:
 
-org-associate
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate_syntax.rst
-
-
 org-create
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
@@ -401,14 +392,6 @@ org-delete
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst
-
-org-disassociate
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate_syntax.rst
 
 org-list
 -----------------------------------------------------
@@ -431,6 +414,29 @@ org-show
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
 
 
+org-user-add
+-----------------------------------------------------
+.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the upcoming final release of |chef server| 12.
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst
+
+org-user-remove
+-----------------------------------------------------
+.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-disociate``. This is the same command, but renamed for the upcoming final release of |chef server| 12.
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst
 
 
 Manage Users

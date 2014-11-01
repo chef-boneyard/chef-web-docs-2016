@@ -3,8 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-disassociate ORG_NAME USER_NAME
+The ``org-user-remove`` subcommand is used to remove a user from an organization.

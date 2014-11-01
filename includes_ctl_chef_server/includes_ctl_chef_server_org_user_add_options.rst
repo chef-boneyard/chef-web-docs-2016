@@ -3,8 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This subcommand has the following syntax:
+This subcommand has the following options:
 
-.. code-block:: bash
-
-   $ chef-server-ctl org-associate ORG_NAME USER_NAME
+``--admin``
+   Use to add the user to the |webui group admins| group.

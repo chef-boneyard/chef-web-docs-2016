@@ -3,4 +3,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``org-associate`` subcommand is used to associate a user to an organization.
+This subcommand has the following syntax:
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-remove ORG_NAME USER_NAME

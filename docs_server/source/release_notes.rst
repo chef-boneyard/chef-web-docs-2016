@@ -15,7 +15,7 @@ The following items are new for |chef server| 12:
 * **Chef server replication** |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
 * **New chef-server-ctl command line tool** The |chef server ctl| command line tool is an update of the |private chef ctl| command line tool.
 * **New command for installing features of the |chef server|** The ``install`` subcommand may be used to install |chef manage|, |push jobs|, |chef replication|, and |reporting|.
-* **New commands for managing organizations** New subcommands for the |chef server ctl| command line tool: ``org-associate``, ``org-create``, ``org-delete``, ``org-disassociate``, ``org-list``, and ``org-show``.
+* **New commands for managing organizations** New subcommands for the |chef server ctl| command line tool: ``org-user-add``, ``org-create``, ``org-delete``, ``org-user-remove``, ``org-list``, and ``org-show``.
 * **New commands for managing users** New subcommands for the |chef server ctl| command line tool: ``user-create``, ``user-delete``, ``user-edit``, ``user-list``, and ``user-show``.
 * **Solr has been upgraded to Solr 4** The search capabilities of the |chef server| now use |apache solr| 4.
 * **CouchDB removed** |couch db| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
@@ -173,25 +173,6 @@ user-show
 -----------------------------------------------------
 The following subcommands can be used to manage organizations:
 
-org-associate
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate_syntax.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-associate prod john_smith
-
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-associate preprod testmaster
-
 org-create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
@@ -222,6 +203,8 @@ org-create
 
 org-delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the final release of |chef server| 12.
+
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
 
 **Syntax**
@@ -239,24 +222,6 @@ org-delete
       
    $ chef-server-ctl org-delete pedant-testing-org
 
-org-disassociate
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate_syntax.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-disassociate prod john_smith
-
-
-.. code-block:: bash
-
-      $ chef-server-ctl org-disassociate prod testmaster
 
 org-list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -277,6 +242,58 @@ org-show
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
+
+org-user-add
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the upcoming final release of |chef server| 12.
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add prod john_smith
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add preprod testmaster
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add dev grantmc --admin
+
+
+org-user-remove
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-disociate``. This is the same command, but renamed for the upcoming final release of |chef server| 12.
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-remove prod john_smith
+
+
+.. code-block:: bash
+
+      $ chef-server-ctl org-user-remove prod testmaster
+
+
 
 
 What's Fixed
