@@ -41,20 +41,22 @@ Global Permissions
 -----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst
 
-Default Groups
+Groups
 =====================================================
+.. include:: ../../includes_server_rbac/includes_server_rbac_groups.rst
+
+Default Groups
+-----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_default.rst
 
 |push jobs_title| Groups
-=====================================================
-
+-----------------------------------------------------
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst
 
 |reporting_title| Groups
-=====================================================
-
+-----------------------------------------------------
 .. include:: ../../includes_reporting/includes_reporting.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst
