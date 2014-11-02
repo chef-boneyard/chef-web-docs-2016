@@ -14,7 +14,7 @@ Syntax
 =====================================================
 .. include:: ../../includes_dsl_resource/includes_dsl_resource.rst
 
-action
+actions
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_action.rst
 
