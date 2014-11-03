@@ -69,16 +69,17 @@ org-create
 
    $ chef-server-ctl org-create prod Production
 
-
 .. code-block:: bash
 
    $ chef-server-ctl org-create staging Staging -a chef-admin
-
 
 .. code-block:: bash
 
    $ chef-server-ctl org-create dev Development -f /tmp/id-dev.key
 
+.. code-block:: bash
+
+   $ chef-server-ctl org-create dev Development --association_user grantmc
 
 org-delete
 =====================================================
@@ -94,11 +95,9 @@ org-delete
 
    $ chef-server-ctl org-delete infra-testing-20140909
 
-
 .. code-block:: bash
       
    $ chef-server-ctl org-delete pedant-testing-org
-
 
 org-list
 =====================================================
@@ -166,13 +165,9 @@ org-user-remove
 
    $ chef-server-ctl org-user-remove prod john_smith
 
-
 .. code-block:: bash
 
    $ chef-server-ctl org-user-remove prod testmaster
-
-
-
 
 
 password
@@ -221,13 +216,11 @@ user-create
 
 .. code-block:: bash
 
-   $ chef-server-ctl user-create john_smith John Smith john_smith@example.com insecure-passord
-
+   $ chef-server-ctl user-create john_smith John Smith john_smith@example.com p@s5w0rD!
 
 .. code-block:: bash
 
-   $ chef-server-ctl user-create jane_doe Jane Doe jane_doe@example.com PaSSword -f /tmp/jane_doe.key
-
+   $ chef-server-ctl user-create jane_doe Jane Doe jane_doe@example.com p@s5w0rD! -f /tmp/jane_doe.key
 
 .. code-block:: bash
 
@@ -248,7 +241,6 @@ user-delete
 
    $ chef-server-ctl user-delete john_smith
 
-
 .. code-block:: bash
 
    $ chef-server-ctl user-delete jane_doe
@@ -266,7 +258,6 @@ user-edit
 .. code-block:: bash
 
    $ chef-server-ctl user-edit john_smith
-
 
 .. code-block:: bash
 
