@@ -1,5 +1,3 @@
-.. THIS PAGE DOCUMENTS Enterprise Chef server version 11.2
-
 =====================================================
 Scaled Front and Back Ends
 =====================================================
