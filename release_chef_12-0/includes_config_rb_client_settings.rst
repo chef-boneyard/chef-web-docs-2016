@@ -20,7 +20,11 @@ This configuration file has the following settings:
    * - ``chef_repo_path``
      - The path to the |chef repo|.
    * - ``chef_server_url``
-     - |chef_server_url|
+     - |chef_server_url| For example:
+
+       .. code-block:: ruby
+
+          http://localhost:4000/organizations/ORG_NAME
    * - ``chef_zero.enabled``
      - |chef_zero_enabled| This setting requires ``local_mode`` to be set to ``true``. Default value: ``false``.
    * - ``chef_zero.port``
