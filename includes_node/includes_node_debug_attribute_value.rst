@@ -52,4 +52,4 @@ where
 * Each attribute value shown is the value that is set for that precedence level
 * ``:not_present`` is shown for any attribute precedence level that has no attributes
 
-A `blog post by Joshua Timberman <http://jtimberman.housepub.org/blog/2014/09/02/chef-node-dot-debug-value/>`_ provides a detailed example of using this method.
+A `blog post by Joshua Timberman <http://jtimberman.housepub.org/blog/2014/09/02/chef-node-dot-debug-value/>`_ provides another example of using this method.
