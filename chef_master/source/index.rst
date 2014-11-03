@@ -1,5 +1,5 @@
 =====================================================
-All about Chef ... 
+All about Chef ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -254,33 +254,19 @@ Cookbooks
    handlers
    images
    install
-   install_actions
    install_analytics
-   install_analytics_pre
    install_bootstrap
    install_dk
-   install_manage
    install_omnibus
    install_push_jobs
    install_reporting
    install_server
-   install_server_be
-   install_server_fe
-   install_server_febe
    install_server_ha_aws
    install_server_ha_drbd
-   install_server_hosted
-   install_server_ldap
-   install_server_oec
-   install_server_orgs
    install_server_post
    install_server_pre
-   install_server_scenario_vm
-   install_server_standalone
    install_server_tiered
-   install_server_users
    install_windows
-   install_workstation
    junos
    just_enough_ruby_for_chef
    kitchen
@@ -502,7 +488,3 @@ Cookbooks
    upgrade_server_standalone_notes
    windows
 
-   install_manager
-   manage_server_open_source
-   plugin_knife_pushy
-   pushy
