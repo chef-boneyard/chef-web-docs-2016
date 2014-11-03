@@ -36,6 +36,6 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_raw_delete_data_bag.rst
 
+**Manage org invites for Chef Server and hosted Chef Server**
 
-
-
+.. include:: ../../step_knife/step_knife_raw_manage_invites.rst
