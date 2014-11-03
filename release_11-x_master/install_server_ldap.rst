@@ -8,8 +8,6 @@ Configure LDAP
 =====================================================
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst
 
-.. include:: ../../includes_server_ldap//includes_server_ldap_configure.rst
-
 Reconfigure
 -----------------------------------------------------
 When this is done, run:
@@ -18,6 +16,12 @@ When this is done, run:
 
    $ private-chef-ctl reconfigure
 
+and then run:
+  
+.. code-block:: bash
+      
+   $ opscode-manage-ctl reconfigure
+	  
 At this point, all users will use their |windows ad| or |ldap| username and password to log in to |chef server oec|. The first time they log in, they can either create a new account linked to their |windows ad| credentials or link an existing |chef server oec| account to their |windows ad| credentials.
 
 Verify
