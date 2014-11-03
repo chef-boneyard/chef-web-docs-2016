@@ -1,0 +1,27 @@
+.. The contents of this file may be included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+The |chef server| supports using |windows ad| or |ldap| for any user that has an email address in the |ldap| directory. This allows those users to log in to the |chef server| by using their corporate credentials instead of having a separate username and password.
+
+To configure the |chef server| to use |windows ad| or |ldap| do the following:
+
+#. Install the |chef manage| (if it is not already).
+#. Specify the following settings:
+
+   .. include:: ../../includes_config/includes_config_rb_server_settings_ldap.rst
+
+   .. note:: If the |chef server rb| file does not exist, create a file called ``chef-server.rb`` and put it in the ``/etc/opscode/`` directory.
+
+#. Run the following command:
+  
+   .. code-block:: bash
+      
+      $ chef-server-ctl reconfigure
+
+#. Run the following command:
+  
+   .. code-block:: bash
+      
+      $ opscode-manage-ctl reconfigure
+
+At this point, all users should be able to use their |windows ad| or |ldap| usernames and passwords to log in to the |chef server|.

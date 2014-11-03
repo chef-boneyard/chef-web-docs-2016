@@ -19,6 +19,8 @@ This configuration file has the following settings for ``ldap``:
      - Use to specify the encryption method. Possible values: ``:none``, ``:start_tls``, or ``:simple_tls``. Default value: ``nil``.
    * - ``ldap['host']``
      - |ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``ldap-server-host``.
+   * - ``ldap['login_attribute']``
+     - Use to specify the |chef server| user name for an |ldap| user.
    * - ``ldap['port']``
      - |ldap port| The default value is an appropriate value for most configurations. Default value: ``636``.
    * - ``ldap['timeout']``
