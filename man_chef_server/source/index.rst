@@ -48,26 +48,6 @@ master-recover
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_master_recover.rst
 
-org-associate
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_associate_syntax.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-associate prod john_smith
-
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-associate preprod testmaster
-
-
 org-create
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
@@ -116,27 +96,6 @@ org-delete
       
    $ chef-server-ctl org-delete pedant-testing-org
 
-
-org-disassociate
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_disassociate_syntax.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-disassociate prod john_smith
-
-
-.. code-block:: bash
-
-      $ chef-server-ctl org-disassociate prod testmaster
-
-
 org-list
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
@@ -156,6 +115,51 @@ org-show
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
+
+org-user-add
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add prod john_smith
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add preprod testmaster
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add dev grantmc --admin
+
+
+org-user-remove
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-remove prod john_smith
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-remove prod testmaster
 
 password
 =====================================================
