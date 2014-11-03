@@ -443,45 +443,6 @@ $ chef\-server\-ctl master\-recover
 .fi
 .UNINDENT
 .UNINDENT
-.SH ORG-ASSOCIATE
-.sp
-The \fBorg\-associate\fP subcommand is used to associate a user to an organization.
-.sp
-\fBSyntax\fP
-.sp
-This subcommand has the following syntax:
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-$ chef\-server\-ctl org\-associate ORG_NAME USER_NAME
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
-.sp
-\fBExamples\fP
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-$ chef\-server\-ctl org\-associate prod john_smith
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-$ chef\-server\-ctl org\-associate preprod testmaster
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .SH ORG-CREATE
 .sp
 The \fBorg\-create\fP subcommand is used to create an organization. (The validation key for the organization is returned to \fBSTDOUT\fP when creating an organization using this command.)
@@ -582,45 +543,6 @@ $ chef\-server\-ctl org\-delete pedant\-testing\-org
 .fi
 .UNINDENT
 .UNINDENT
-.SH ORG-DISASSOCIATE
-.sp
-The \fBorg\-disassociate\fP subcommand is used to disassociate a user from an organization.
-.sp
-\fBSyntax\fP
-.sp
-This subcommand has the following syntax:
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-$ chef\-server\-ctl org\-disassociate ORG_NAME USER_NAME
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
-.sp
-\fBExamples\fP
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-$ chef\-server\-ctl org\-disassociate prod john_smith
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-$ chef\-server\-ctl org\-disassociate prod testmaster
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .SH ORG-LIST
 .sp
 The \fBorg\-list\fP subcommand is used to list all of the organizations currently present on the Chef server\&.
@@ -663,6 +585,103 @@ This subcommand has the following syntax:
 .nf
 .ft C
 $ chef\-server\-ctl org\-show ORG_NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH ORG-USER-ADD
+.sp
+The \fBorg\-user\-add\fP subcommand is used to add a user to an organization.
+.sp
+\fBSyntax\fP
+.sp
+This subcommand has the following syntax:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl org\-user\-add ORG_NAME USER_NAME (options)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+\fBOptions\fP
+.sp
+This subcommand has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-admin\fP
+Use to add the user to the \fBadmins\fP group.
+.UNINDENT
+.sp
+\fBExamples\fP
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl org\-user\-add prod john_smith
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl org\-user\-add preprod testmaster
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl org\-user\-add dev grantmc \-\-admin
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH ORG-USER-REMOVE
+.sp
+The \fBorg\-user\-remove\fP subcommand is used to remove a user from an organization.
+.sp
+\fBSyntax\fP
+.sp
+This subcommand has the following syntax:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl org\-user\-remove ORG_NAME USER_NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+\fBExamples\fP
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl org\-user\-remove prod john_smith
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ chef\-server\-ctl org\-user\-remove prod testmaster
 .ft P
 .fi
 .UNINDENT
