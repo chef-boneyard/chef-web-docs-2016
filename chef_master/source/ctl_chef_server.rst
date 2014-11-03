@@ -121,7 +121,7 @@ org-show
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
 
 
-org-associate
+org-user-add
 =====================================================
 .. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the upcoming final release of |chef server| 12.
 
@@ -150,7 +150,7 @@ org-associate
    $ chef-server-ctl org-user-add dev grantmc --admin
 
 
-org-disassociate
+org-user-remove
 =====================================================
 .. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-disociate``. This is the same command, but renamed for the upcoming final release of |chef server| 12.
 
@@ -169,7 +169,7 @@ org-disassociate
 
 .. code-block:: bash
 
-      $ chef-server-ctl org-user-remove prod testmaster
+   $ chef-server-ctl org-user-remove prod testmaster
 
 
 

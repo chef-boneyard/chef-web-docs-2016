@@ -102,7 +102,6 @@ user-create
 
    $ chef-server-ctl user-create jane_doe Jane Doe jane_doe@example.com PaSSword -f /tmp/jane_doe.key
 
-
 .. code-block:: bash
 
    $ chef-server-ctl user-create waldendude Henry David Thoreau waldendude@example.com excursions
@@ -121,7 +120,6 @@ user-delete
 
    $ chef-server-ctl user-delete john_smith
 
-
 .. code-block:: bash
 
    $ chef-server-ctl user-delete jane_doe
@@ -139,7 +137,6 @@ user-edit
 .. code-block:: bash
 
    $ chef-server-ctl user-edit john_smith
-
 
 .. code-block:: bash
 
@@ -191,11 +188,9 @@ org-create
 
    $ chef-server-ctl org-create prod Production
 
-
 .. code-block:: bash
 
    $ chef-server-ctl org-create staging Staging -a chef-admin
-
 
 .. code-block:: bash
 
@@ -291,7 +286,7 @@ org-user-remove
 
 .. code-block:: bash
 
-      $ chef-server-ctl org-user-remove prod testmaster
+   $ chef-server-ctl org-user-remove prod testmaster
 
 
 
