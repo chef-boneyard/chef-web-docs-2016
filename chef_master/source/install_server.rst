@@ -78,4 +78,6 @@ Tiered (Single Backend)
 =====================================================
 The following link describes how to configure the |chef server| with a single backend machine and multiple frontend machines:
 
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_tiered.html">Tiered</a> </br>
