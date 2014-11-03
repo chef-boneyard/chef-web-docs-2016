@@ -10,7 +10,7 @@
    * - Attribute
      - Description
    * - ``architecture``
-     - |architecture windows_process|
+     - |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
    * - ``code``
      - |code quoted_string|
    * - ``command``
