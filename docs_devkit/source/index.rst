@@ -14,7 +14,9 @@ Getting Started
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/install_dk.html">Install the Chef DK</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/devkit/getting_started.html">Getting Started with the Chef DK and Kitchen</a> </br>
 
-.. note:: The topic "Getting Started with the Chef DK and Kitchen" is a work in progress. It needs some editing, but you should be able to install the Chef DK and then configure Kitchen to build CentOS and Ubuntu instances, and then converge a node using the NTP cookbook. More sections are planned for future updates that will include more scenarios for Kitchen, new scenarios for ChefSpec, Berkshelf, and Chef policy. Feedback on the getting started page may be sent to docs @ getchef dot com.
+.. note:: See this blog post by Irving Popovetsky about running the Chef DK on Windows: https://www.getchef.com/blog/2014/11/04/the-chefdk-on-windows-survival-guide/.
+
+.. note:: The topic "Getting Started with the Chef DK and Kitchen" is a work in progress. It needs some editing, but you should be able to install the Chef DK and then configure Kitchen to build CentOS and Ubuntu instances, and then converge a node using the NTP cookbook. More sections are planned for future updates that will include more scenarios for Kitchen, new scenarios for ChefSpec, Berkshelf, and Chef policy. Feedback on the getting started page may be sent to docs@getchef.com.
 
 About Workflow
 -----------------------------------------------------
