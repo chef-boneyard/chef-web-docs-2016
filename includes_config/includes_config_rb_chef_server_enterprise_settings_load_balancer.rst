@@ -19,6 +19,9 @@ This configuration file has the following settings for load balancers:
      - Default value: ``false``.
    * - ``lb['chef_max_version']``
      - Default value: ``11``.
+
+       .. warning:: This setting is deprecated starting with |chef server oec| 11.2.5 to ensure that the |chef client| version 12 may communicate with the |chef server|. For older versions of |chef server oec|, add this setting to the |private chef rb| file and set the value to ``12``.
+
    * - ``lb['chef_min_version']``
      - Default value: ``10``.
    * - ``lb['chef_server_webui']``
