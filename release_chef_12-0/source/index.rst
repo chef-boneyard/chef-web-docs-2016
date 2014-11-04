@@ -45,21 +45,17 @@ The Nodes
 
 .. **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
-.. .. include:: ../../includes_chef/includes_chef_index_ohai.rst
+.. include:: ../../includes_chef/includes_chef_index_ohai.rst
 
-**Settings:** :doc:`client.rb </config_rb_client>`
+**Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
-.. | :doc:`solo.rb </config_rb_solo>`
-
-**Command-line Tools:** :doc:`chef-client (executable) </ctl_chef_client>` | :doc:`chef-solo (executable) </ctl_chef_solo>`
-
-..  | :doc:`chef-shell (executable) </ctl_chef_shell>`
+**Command-line Tools:** :doc:`chef-client (executable) </ctl_chef_client>` | :doc:`chef-solo (executable) </ctl_chef_solo>` | :doc:`chef-shell (executable) </ctl_chef_shell>`
 
 Cookbooks
 =====================================================
 .. **The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` |  :doc:`Handlers </handlers>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
 
-.. **LWRPs:** :doc:`About Custom LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
+**LWRPs:** :doc:`About Custom LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
 
 .. **Other Cookbook Components:** :doc:`About Definitions </essentials_cookbook_definitions>` | :doc:`About Files </essentials_cookbook_files>` | :doc:`About Libraries </essentials_cookbook_libraries>` | :doc:`About Cookbook Metadata </essentials_cookbook_metadata>` | :doc:`About Templates </essentials_cookbook_templates>` | :doc:`About Versions </essentials_cookbook_versions>`
 
@@ -78,7 +74,9 @@ Cookbooks
    config_rb_knife
    config_rb_knife_optional_settings
    config_rb_metadata
+   config_rb_solo
    ctl_chef_client
+   ctl_chef_shell
    ctl_chef_solo
    dsl_recipe
    dsl_recipe_helper_windows_platform
@@ -136,6 +134,12 @@ Cookbooks
    knife_user
    knife_using
    knife_xargs
+   lwrp
+   lwrp_custom
+   lwrp_custom_provider
+   lwrp_custom_provider_ruby
+   lwrp_custom_resource
+   lwrp_custom_resource_library
    plugin_knife
    plugin_knife_custom
    plugin_knife_authenticated_requests
