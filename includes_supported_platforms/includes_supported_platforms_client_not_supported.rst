@@ -3,5 +3,17 @@
 
 The following platforms are not supported:
 
-* |mac os x| ``10.8`` (and older), anything PPC-based
-* |windows| ``Vista``, ``XP``, ``2000``
+.. list-table::
+   :widths: 280 100 120
+   :header-rows: 1
+ 
+   * - Platform
+     - Architecture
+     - Version
+   * - |mac os x|
+     - 
+     - ``10.8`` (and older), anything PPC-based
+
+   * - |windows|
+     - 
+     - ``Vista``, ``XP``, ``2000``
