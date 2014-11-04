@@ -11,11 +11,12 @@ A validation parameter is used to add zero (or more) validation parameters to an
    * - Parameter
      - Description
    * - ``:callbacks``
-     - Use to define a collection of unique keys and values (a |ruby hash|) that should return true. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the |ruby proc| object does not return true. For example:
+     - Use to define a collection of unique keys and values (a |ruby hash|) for which the key is the error message and the value is a lambda to validate the parameter. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the |ruby proc| object does not return true. For example:
 
        .. code-block:: ruby
        
-          :callbacks => {callback}
+          :callbacks => {"should be a valid non-system port" => lambda { |p| p > 1024 && p < 65535 } }
+
    * - ``:default``
      - Use to specify the default value for an attribute. For example:
 
@@ -39,11 +40,15 @@ A validation parameter is used to add zero (or more) validation parameters to an
        
           :default => {}
    * - ``:equal_to``
-     - Use to match a value with ``==``. Use an array of values to match any of those values with ``==``. For example: ``:equal_to => [:true, :false]`` or ``:equal_to => [:value_one, :value_two]``. For example:
+     - Use to match a value with ``==``. Use an array of values to match any of those values with ``==``. For example:
+       .. code-block:: ruby
+
+          :equal_to => [true, false]
 
        .. code-block:: ruby
-       
-          :equal_to => :true
+          
+          :equal_to => ['php', 'perl']
+
    * - ``:kind_of``
      - Use to ensure a value is of a particular |ruby| class, such as ``TrueClass``, ``FalseClass``, ``NilClass``, ``String``, ``Array``, ``Hash``, and so on. Use an array of |ruby| classes to allow a value to be of more than one type. For example: ``:kind_of => String``, ``:kind_of => Array``, ``:kind_of => [TrueClass, FalseClass]`` and ``:kind_of => [Array, Hash]``. For example:
 
@@ -91,13 +96,13 @@ A validation parameter is used to add zero (or more) validation parameters to an
 
        .. code-block:: ruby
        
-          :required
+          :required => true
    * - ``:respond_to``
      - Use to ensure that a value has a given method. This can be a single method name or an array of method names. For example:
 
        .. code-block:: ruby
        
-          :respond_to
+          :respond_to => valid_encoding?
 
 Some examples of combining validation parameters:
 
