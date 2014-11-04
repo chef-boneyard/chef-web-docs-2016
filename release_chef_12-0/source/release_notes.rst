@@ -284,6 +284,21 @@ The following methods have been added to the |dsl recipe|: ``shell_out``, ``shel
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_with_systems_locale.rst
 
+``value_for_platform``
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The ``value_for_platform`` helper may use version constraints, such as ``>=`` and ``~>`` to help resolve situations where version numbers look like ``7.0.<buildnumber>``. For example:
+
+.. code-block:: ruby
+
+   value_for_platform(
+     "redhat" => {
+       "~> 7.0" => "version 7.x.y"
+       ">= 8.0" => "version 8.0.0 and greater"
+     }
+   }
+
+.. note:: When two version constraints match it is considered ambiguous and will raise an exception. An exact match, however, will always take precedence over a version constraint.
+
 File Specificity
 -----------------------------------------------------
 The pattern for file specificity depends on two things: the lookup path and the source attribute. The first pattern that matches is used:
