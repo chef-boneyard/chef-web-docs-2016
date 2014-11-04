@@ -136,6 +136,9 @@ Cookbooks
    knife_user
    knife_using
    knife_xargs
+   plugin_knife
+   plugin_knife_custom
+   plugin_knife_authenticated_requests
    release_notes
    resource
    resource_apt_package
