@@ -65,7 +65,7 @@ The |chef client| is distributed as a |ibm aix_bff| binary and is installed on t
 
 **New provider**
 
-The |resource service| resource has a new provider:
+The |resource service| resource has two new providers:
 
 .. list-table::
    :widths: 150 80 320
@@ -74,9 +74,12 @@ The |resource service| resource has a new provider:
    * - Long name
      - Short name
      - Notes
+   * - ``Chef::Provider::Service::Aix``
+     - ``service``
+     - The provider that is used with the |ibm aix| platforms. Use the ``service`` short name to start, stop, and restart services with |ibm aix_src|.
    * - ``Chef::Provider::Service::AixInit``
      - ``service``
-     - The provider that is used with the |ibm aix| platforms. Use the ``service`` short name to start, stop, and restart services with |ibm aix_src|. Use the ``Chef::Provider::Service::AixInit`` long name to manage services with |berkeley os|-based init systems.
+     -  The provider that is used to manage |berkeley os|-based init services on |ibm aix|.
 
 **Enable a service on AIX using the mkitab command**
 
