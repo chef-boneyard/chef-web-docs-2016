@@ -28,7 +28,7 @@ The following table lists the Tier 1 supported platforms for the |chef client|:
    * - |redhat enterprise linux|
      - ``i386``, ``x86_64``
      - ``5``, ``6``, ``7``
-   * - |redhat enterprise linux|
+   * - |solaris|
      - ``sparc``, ``x86``
      - ``9``, ``10``, ``11``
    * - |ubuntu|

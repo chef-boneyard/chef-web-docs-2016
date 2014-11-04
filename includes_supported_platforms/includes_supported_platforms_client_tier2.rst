@@ -22,12 +22,15 @@ The following table lists the Tier 2 supported platforms for the |chef client|:
    * - |freebsd|
      - ``amd64``
      - ``9``
+   * - |gentoo|
+     - 
+     - current version
    * - |omnios|
      - 
      - stable and LTS releases
    * - |opensuse|
      - 
-     - ``12.3`` (through EOL), ``13.1``
+     - ``13.1``
    * - |scientific linux|
      - ``i386``, ``x86-64``
      - ``5.x``, ``6.x``, ``7.x``
