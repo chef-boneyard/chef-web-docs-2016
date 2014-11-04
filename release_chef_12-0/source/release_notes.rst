@@ -12,7 +12,7 @@ What's New
 The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
 
 * **Ruby 1.9.3 (or higher)** |ruby| versions 1.8.7, 1.9.1, and 1.9.2 are no longer supported.
-* **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform, versions ``6.1 TL6`` and ``7.1 TL0 SP3``. The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems. 
+* **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform, versions ``6.1`` (TL6 or higher, recommended), ``7.1`` (TL0 SP3 or higher, recommended). The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems. 
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource replaces the |resource package_macports| resource as the default package installer.
 * **New reboot resource** Use the |resource reboot| resource to reboot a node during or at the end of a |chef client| run.
@@ -42,7 +42,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 
 |ibm aix| Platform Support
 -----------------------------------------------------
-The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform, versions ``6.1 TL6`` and ``7.1 TL0 SP3``. The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems.
+The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform, versions ``6.1`` (TL6 or higher, recommended), ``7.1`` (TL0 SP3 or higher, recommended). The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems.
 
 **System Requirements**
 
