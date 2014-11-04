@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
 
-The |chef client| 12 uses the EN_US (UTF-8) character set. By default, the |ibm aix| base operating system does not include the EN_US (UTF-8) character set and it must be installed prior to installing the |chef client|. The EN_US (UTF-8) character set may be installed from the first disc in the |ibm aix| media or may be copied from ``/installp/ppc/*EN_US*`` to a location on the logical partition (LPAR). This topic assumes this location to be ``/tmp/rte``. 
+The |chef client| uses the EN_US (UTF-8) character set. By default, the |ibm aix| base operating system does not include the EN_US (UTF-8) character set and it must be installed prior to installing the |chef client|. The EN_US (UTF-8) character set may be installed from the first disc in the |ibm aix| media or may be copied from ``/installp/ppc/*EN_US*`` to a location on the logical partition (LPAR). This topic assumes this location to be ``/tmp/rte``. 
 
 Use ``smit`` to install the EN_US (UTF-8) character set. This ensures that any workload partitions (WPARs) also have UTF-8 applied.
 
