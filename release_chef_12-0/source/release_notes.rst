@@ -63,7 +63,7 @@ The |chef client| is distributed as a |ibm aix_bff| binary and is installed on t
 
 .. include:: ../../release_chef_12-0/includes_install_chef_client_aix_en_us.rst
 
-**New provider**
+**New providers**
 
 The |resource service| resource has two new providers:
 
