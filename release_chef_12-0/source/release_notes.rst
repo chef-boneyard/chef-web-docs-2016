@@ -57,7 +57,7 @@ The |chef client| is distributed as a |ibm aix_bff| binary and is installed on t
 
 .. code-block:: bash
 
-   $ installp -aYgd chef12.0.0.bff all
+   # installp -aYgd chef12.0.0.bff all
 
 **Install the UTF-8 character set**
 

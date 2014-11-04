@@ -12,7 +12,7 @@ Remember to point ``INPUT device/directory`` to ``/tmp/rte`` when not installing
 
    .. code-block:: bash
 
-      $ smit lang 
+      # smit lang 
 
    A screen similar to the following is returned:
 
