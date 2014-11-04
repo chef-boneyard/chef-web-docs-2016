@@ -69,5 +69,3 @@ The following example shows using version constraints to specify a value based o
                 ">= 3.0" => "version 3.0",
                 "3.0.1" => "3.0.1 will always use this value" }
    )
-
-
