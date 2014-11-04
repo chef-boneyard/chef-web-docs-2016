@@ -8,14 +8,14 @@ Use the ``debug_value`` method to discover the location within the attribute pre
 
    $ chef-shell -z
 
-For example, the following files exist in a cookbook. In a role file:
+For example, the following attributes exist in a cookbook. Some are defined in a role file:
 
 .. code-block:: ruby
 
    default_attributes "test" => {"source" => "role default"}
    override_attributes "test" => {"source" => "role override"}
 
-In an attributes file:
+And others are defined in an attributes file:
 
 .. code-block:: ruby
 
@@ -23,7 +23,7 @@ In an attributes file:
    set[:test][:source]      = "attributes normal"
    override[:test][:source] = "attributes override"
 
-To debug the location from which the value of ``node[:test][:source]`` is being set, use |chef shell| and run a command similar to:
+To debug the location in which the value of ``node[:test][:source]`` is set, use |chef shell| and run a command similar to:
 
 .. code-block:: ruby
 
