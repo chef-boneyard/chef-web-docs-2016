@@ -2,7 +2,7 @@
 .. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef shell| is tool that allows |knife| to be run using an |ruby irb| session. |chef shell| currently supports recipe and attribute file syntax, as well as interactive debugging features. |chef shell| has three run modes:
+|chef shell| is tool that is run using an |ruby irb| session. |chef shell| currently supports recipe and attribute file syntax, as well as interactive debugging features. |chef shell| has three run modes:
 
 .. list-table::
    :widths: 200 300
@@ -11,7 +11,7 @@
    * - Mode
      - Description
    * - Standalone
-     - No cookbooks are loaded, and the run list is empty. This mode is the default.
+     - Default. No cookbooks are loaded, and the run list is empty.
    * - Solo
      - |chef shell| acts as a |chef solo| client. It attempts to load the |chef solo| configuration file and |json| attributes. If the |json| attributes set a run list, it will be honored. Cookbooks will be loaded in the same way that |chef solo| loads them. |chef solo| mode is activated with the ``-s`` or ``--solo`` command line option, and |json| attributes are specified in the same way as for |chef solo|, with ``-j /path/to/chef-solo.json``.
    * - Client
