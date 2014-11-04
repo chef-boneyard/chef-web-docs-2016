@@ -10,7 +10,7 @@ Remember to point ``INPUT device/directory`` to ``/tmp/rte`` when not installing
 
 #. From a root shell type:
 
-   .. code-block:: bash
+   .. code-block:: text
 
       # smit lang 
 

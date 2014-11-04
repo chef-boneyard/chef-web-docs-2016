@@ -52,7 +52,7 @@ The |chef client| has the `same system requirements <http://docs.getchef.com/che
 
 The |chef client| is distributed as a |ibm aix_bff| binary and is installed on the |ibm aix| platform using the following command run as a root user:
 
-.. code-block:: bash
+.. code-block:: text
 
    # installp -aYgd chef12.0.0.bff all
 
