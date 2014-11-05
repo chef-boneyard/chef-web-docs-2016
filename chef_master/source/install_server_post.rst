@@ -9,6 +9,10 @@ Active Directory and LDAP
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ldap.rst
 
+Testing LDAP Connectivity
+=====================================================
+.. include:: ../../includes_server_ldap/includes_test_server_ldap.rst
+
 
 GRE Tunnels
 =====================================================
