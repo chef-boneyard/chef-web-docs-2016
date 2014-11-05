@@ -11,7 +11,7 @@ Active Directory and LDAP
 
 Testing LDAP Connectivity
 =====================================================
-.. include:: ../../includes_server_ldap/includes_test_server_ldap.rst
+.. include:: ../../includes_server_ldap/includes_server_ldap_test.rst
 
 
 GRE Tunnels
