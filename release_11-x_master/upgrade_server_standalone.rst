@@ -1,5 +1,3 @@
-.. THIS PAGE DOCUMENTS Enterprise Chef server version 11.0
-
 =====================================================
 Upgrade to Enterprise Chef 11: Standalone 
 =====================================================
