@@ -64,3 +64,7 @@ Examples
 **Evaluate for true and/or false**
 
 .. include:: ../../step_resource/step_resource_powershell_convert_boolean_return.rst
+
+**Use the flags attribute**
+
+.. include:: ../../release_chef_12-0/step_resource_powershell_script_use_flag.rst
