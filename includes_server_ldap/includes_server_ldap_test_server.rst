@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-One can test the |chef server| ability to use |windows ad| or |ldap| by translating the ```ldap['']``` parameters into ldapsearch parameters using the following:
+One can test the |chef server| ability to use |windows ad| or |ldap| by translating the ``ldap['']`` parameters into ldapsearch parameters using the following:
 
 .. list-table::
    :widths: 100 100
