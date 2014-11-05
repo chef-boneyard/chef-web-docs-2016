@@ -38,7 +38,7 @@
           end
 
    * - ``flags``
-     - |flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``.
+     - |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
    * - ``interpreter``
      - |interpreter|
    * - ``provider``

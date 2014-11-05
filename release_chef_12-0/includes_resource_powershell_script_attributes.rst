@@ -38,7 +38,7 @@
           end
 
    * - ``flags``
-     - |flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``.
+     - |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
    * - ``guard_interpreter``
      - Default value: ``:powershell_script``. When this attribute is set to ``:powershell_script``, the 64-bit version of the |windows powershell| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` attributes. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
    * - ``interpreter``
