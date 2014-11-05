@@ -46,6 +46,12 @@ nginx
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_nginx.rst
 
+oc_chef_authz
+-----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_authz.rst
+
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_oc_chef_authz.rst
+
 oc_bifrost
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bifrost.rst
