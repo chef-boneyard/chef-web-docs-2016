@@ -11,10 +11,18 @@
      - Description
    * - ``chef_server``
      - |chef_server_url|
+   * - ``driver``
+     - Use to specify the driver to be used for provisioning.
+   * - ``files``
+     - 
+   * - ``from_recipe``
+     - 
+   * - ``machine_options``
+     - 
    * - ``machines``
-     - xxxxx
+     - 
    * - ``max_simultaneous``
-     - xxxxx
+     - 
 
 
 

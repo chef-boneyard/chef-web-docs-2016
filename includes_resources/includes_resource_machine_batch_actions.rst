@@ -10,16 +10,16 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:allocate``
-     - Use to xxxxx.
+     - 
    * - ``:converge``
-     - Use to xxxxx.
+     - Default.
    * - ``:converge_only``
-     - Use to xxxxx.
+     - 
    * - ``:destroy``
-     - Use to xxxxx.
+     - 
    * - ``:ready``
-     - Use to xxxxx.
+     - 
    * - ``:setup``
-     - Use to xxxxx.
+     - 
    * - ``:stop``
-     - Use to xxxxx.
+     - 

@@ -13,12 +13,14 @@
      - |chef_server_url|
    * - ``content``
      - |content file| The default behavior will not modify content.
+   * - ``driver``
+     - Use to specify the driver to be used for provisioning.
    * - ``group``
      - |windows group_identifier|
    * - ``local_path``
      - The local path to a file.
    * - ``machine``
-     - The chef-metal machine type.
+     - Use to specify the machine type.
    * - ``mode``
      - |mode resource_file|
        
@@ -34,8 +36,7 @@
      - |path file| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
-   * - ``provisioner``
-     - The provisioner used by chef-metal.
+
 
 
 

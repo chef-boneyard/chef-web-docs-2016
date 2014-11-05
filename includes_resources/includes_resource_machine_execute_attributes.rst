@@ -13,10 +13,11 @@
      - |chef_server_url|
    * - ``command``
      - |name command| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+   * - ``driver``
+     - Use to specify the driver to be used for provisioning.
    * - ``machine``
-     - The chef-metal machine type.
-   * - ``provisioner``
-     - The provisioner used by chef-metal.
+     - Use to specify the machine type.
+
 
 
 
