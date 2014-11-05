@@ -18,6 +18,6 @@
    * - ``response_file``
      - Optional. |response_file|
    * - ``source``
-     - Optional. |source resource package|
+     - Required. |source resource package|
    * - ``version``
      - |version package|
