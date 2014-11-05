@@ -24,6 +24,22 @@ The response will return something like the following:
      "upgrade_url": "http://www.getchef.com/contact/on-premises-simple"
    }
 
+When ``node_count`` is greater than ``node_license``, then ``limit_exceeded`` is ``true`` and the |chef manage| will display a notification about this status. The way to resolve this is to visit the upgrade URL, add the appropriate number of licenses, and then update the configuration settings appropriately.
+
+The |chef server rb| file contains settings that can be used to edit the number of nodes that are under license:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``license['nodes']``
+     - |license chef_server| Default value: ``25``.
+   * - ``license['upgrade_url']``
+     - |license url| Default value: ``"http://www.getchef.com/contact/on-premises-simple"``.
+
+
 **Response Codes**
 
 .. list-table::
