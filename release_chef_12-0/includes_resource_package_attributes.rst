@@ -31,5 +31,7 @@ This resource has the following attributes:
      - Optional. |response_file|
    * - ``source``
      - Optional. |source resource package|
+
+       .. note:: |source resource package aix|
    * - ``version``
      - |version package|

@@ -18,6 +18,6 @@
    * - ``response_file``
      - Optional. |response_file|
    * - ``source``
-     - Required. |source resource package|
+     - Required. |source resource package| |source resource package aix|
    * - ``version``
      - |version package|
