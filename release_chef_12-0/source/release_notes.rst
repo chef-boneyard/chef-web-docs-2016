@@ -385,7 +385,7 @@ Filter Search Results
 
 Changelog
 =====================================================
-https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
+https://github.com/opscode/chef/blob/12-stable/CHANGELOG.md
 
 .. What's Fixed
 .. =====================================================
