@@ -2,7 +2,7 @@
 
 .. To install a package:
 
-The |resource bff_package| resource is the default package provider on the |ibm aix| platform. The base |resource package| resource may be used, and then when the platform is |ibm aix|, the |chef client| will identify the correct provider. The following examples show how to install part of the |ibm aix compiler_c| compiler.
+The |resource package_bff| resource is the default package provider on the |ibm aix| platform. The base |resource package| resource may be used, and then when the platform is |ibm aix|, the |chef client| will identify the correct provider. The following examples show how to install part of the |ibm aix compiler_c| compiler.
 
 Using the base |resource package| resource:
 
@@ -13,7 +13,7 @@ Using the base |resource package| resource:
      action :install
    end
 
-Using the |resource bff_package| resource:
+Using the |resource package_bff| resource:
 
 .. code-block:: ruby
 
