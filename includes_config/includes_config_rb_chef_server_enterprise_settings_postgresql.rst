@@ -39,6 +39,11 @@ The |service postgresql| service has the following settings:
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/postgresql``.
+   * - ``postgresql['log_min_duration_statement']``
+     - |log_rotation min_duration| Possible values: ``-1`` (disabled, do not log any statements), ``0`` (log every statement), or an integer greater than zero. When the integer is greater than zero, this value is the amount of time (in milliseconds) that a query statement must have run before it is logged. Default value: ``-1``.
+
+       .. warning:: This setting is available in |chef server oec| 11.2.5 (or higher).
+
    * - ``postgresql['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``postgresql['max_connections']``

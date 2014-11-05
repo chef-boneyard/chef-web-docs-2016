@@ -39,6 +39,8 @@ This configuration file has the following settings for ``postgresql``:
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/postgresql/#{node['private_chef']['postgresql']['version']}``.
+   * - ``postgresql['log_min_duration_statement']``
+     - |log_rotation min_duration| Possible values: ``-1`` (disabled, do not log any statements), ``0`` (log every statement), or an integer greater than zero. When the integer is greater than zero, this value is the amount of time (in milliseconds) that a query statement must have run before it is logged. Default value: ``-1``.
    * - ``postgresql['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``postgresql['max_connections']``
