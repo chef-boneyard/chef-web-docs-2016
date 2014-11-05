@@ -14,8 +14,6 @@ Getting Started
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-**Try it out:** (1) `Get Chef <http://www.getchef.com/chef/choose-your-version/>`_, then (2) :doc:`Install the chef-client on a Workstation </install_dk>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
-
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
 

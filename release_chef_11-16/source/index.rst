@@ -14,8 +14,6 @@ Getting Started
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-.. include:: ../../includes_chef/includes_chef_11_index_getchef.rst
-
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
 
