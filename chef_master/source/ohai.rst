@@ -28,6 +28,10 @@ Whitelist Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_whitelist.rst
 
+Default Plugins
+=====================================================
+.. include:: ../../includes_ohai/includes_ohai_plugins_default.rst
+
 Custom Plugins
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst

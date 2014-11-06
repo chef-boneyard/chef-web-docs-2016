@@ -34,6 +34,10 @@ How |ohai| Saves Data
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_json.rst
 
+Default Plugins
+=====================================================
+.. include:: ../../includes_ohai/includes_ohai_plugins_default.rst
+
 Custom Plugins
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
