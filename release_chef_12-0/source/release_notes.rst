@@ -34,7 +34,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Partial search is available in the recipe DSL** Use ``:filter_result`` to build search results into a |ruby hash|. This replaces the previous functionality that was provided by the ``partial_search`` cookbook, albeit with a different API.
 * **Client-side key generation is enabled by default** When a new |chef client| is created using the vaidation client account, the |chef server| allows the |chef client| to generate a key-pair locally, and then send the public key to the |chef server|. This behavior is controlled by the ``local_key_generation`` attribute in the |client rb| file and now defaults to ``true``. 
 * **New guard_interpreter attribute defaults** The ``guard_interpreter`` attribute now defaults to ``:batch`` for the |resource batch| resource and ``:powershell_script`` for the |resource powershell_script| resource.
-* **Events are sent to the Application event log on the Windows platform by default** Events are sent to the |windows| "Application" event log at the start and end of a |chef client| run, and also if a |chef client| run fails. Set the ``disable_event_logger`` configuration setting in the |client rb| file to ``false`` to disable event logging. 
+* **Events are sent to the Application event log on the Windows platform by default** Events are sent to the |windows| "Application" event log at the start and end of a |chef client| run, and also if a |chef client| run fails. Set the ``disable_event_logger`` configuration setting in the |client rb| file to ``true`` to disable event logging. 
 
 
 |ibm aix| Platform Support
@@ -369,7 +369,7 @@ The following configuration settings are updated for the |client rb| file and no
    * - Setting
      - Description
    * - ``disable_event_logger``
-     - |disable event_logging_windows| Default value: ``true``.
+     - |disable event_logging_windows| Default value: ``false``.
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``file_staging_uses_destdir``
