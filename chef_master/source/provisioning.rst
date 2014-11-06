@@ -256,6 +256,36 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
 
+
+
+chef_organization
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_chef_organization.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_organization_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_organization_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_organization_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_organization_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+
+
+
 chef_role
 -----------------------------------------------------
 .. include:: ../../includes_role/includes_role.rst

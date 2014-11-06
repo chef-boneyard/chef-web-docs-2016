@@ -389,6 +389,7 @@ Cookbooks
    resource_chef_handler
    resource_chef_mirror
    resource_chef_node
+   resource_chef_organization
    resource_chef_role
    resource_chef_user
    resource_common
