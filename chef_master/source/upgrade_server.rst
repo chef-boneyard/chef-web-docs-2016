@@ -221,9 +221,9 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
    
 #. Before data can be uploaded, an organization must be created. When prompted, enter the organization name, and then a full organization name.
 
-   The organization name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``.
+   |name_rules org| For example: ``chef``.
 
-   The full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``.
+   |name_rules org_full| For example: ``Chef Software, Inc.``.
 
 #. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporary data that was created during the upgrade process.
 
