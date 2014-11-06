@@ -99,9 +99,12 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../release_chef_12-0/includes_resource_package_bff_attributes.rst
 
-Examples
+Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
+
+**Install a package**
+
+.. include:: ../../release_chef_12-0/step_resource_bff_package_install.rst
 
 
 homebrew_package
