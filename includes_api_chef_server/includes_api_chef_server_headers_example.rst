@@ -21,4 +21,4 @@ The following example shows an authentication request:
      X-Ops-Authorization-6: nodilAGMb166@haC/fttwlWQ2N1LasdqqGomRedtyhSqXA==
      Host: api.opscode.com:443
      X-Chef-Version: 11.4.0
-     User-Agent: Chef Knife/11.4.0 (ruby-1.9.2-p320; ohai-6.16.0; x86_64-darwin11.3.0; +http://opscode.com)
+     User-Agent: Chef Knife/11.4.0 (ruby-1.9.3-p320; ohai-7.0.0; x86_64-darwin11.3.0; +http://opscode.com)

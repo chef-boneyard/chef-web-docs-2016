@@ -8,13 +8,13 @@ The following example shows how to modify the default script for |ubuntu| 12.04.
 .. code-block:: bash
 
    % gem contents chef | grep ubuntu12.04-gems
-   /Users/jtimberman/.rvm/gems/ruby-1.9.2-p180/gems/chef-0.10.2/lib/chef/knife/bootstrap/ubuntu12.04-gems.erb
+   /Users/jtimberman/.rvm/gems/ruby-1.9.3-p180/gems/chef-0.10.2/lib/chef/knife/bootstrap/ubuntu12.04-gems.erb
 
 Copy the template to the |chef repo| in the ``.chef/bootstrap`` directory:
 
 .. code-block:: bash
 
-   % cp /Users/jtimberman/.rvm/gems/ruby-1.9.2-p180/gems/chef-0.10.2/
+   % cp /Users/jtimberman/.rvm/gems/ruby-1.9.3-p180/gems/chef-0.10.2/
       lib/chef/knife/bootstrap/ubuntu12.04-gems.erb ~/chef-repo/.chef/
       bootstrap/ubuntu12.04-gems-mine.erb
 
