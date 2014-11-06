@@ -380,6 +380,7 @@ Cookbooks
    resource_breakpoint
    resource_chef_acl
    resource_chef_client
+   resource_chef_container
    resource_chef_data_bag
    resource_chef_data_bag_item
    resource_chef_environment
