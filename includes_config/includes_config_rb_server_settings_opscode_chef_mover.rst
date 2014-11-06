@@ -22,7 +22,7 @@ This configuration file has the following settings for ``opscode-chef-mover``:
    * - ``opscode_chef_mover['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_chef_mover['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_chef_mover['ibrowse_max_pipeline_size']``
      - Default value: ``1``.
    * - ``opscode_chef_mover['ibrowse_max_sessions']``

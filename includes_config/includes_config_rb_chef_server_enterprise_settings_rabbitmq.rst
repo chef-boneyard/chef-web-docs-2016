@@ -26,7 +26,7 @@ The |service rabbitmq| service has the following settings:
    * - ``rabbitmq['enable']``
      - |enable service| Default value: ``true``.
    * - ``rabbitmq['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``rabbitmq['jobs_password']``
      - Default value: ``"workcomplete"``.
    * - ``rabbitmq['jobs_user']``

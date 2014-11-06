@@ -22,7 +22,7 @@ The |service webui| service has the following settings:
    * - ``opscode_webui['environment']``
      - Default value: ``privatechef``.
    * - ``opscode_webui['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_webui['listen']``
      - Default value: ``127.0.0.1:9462``.
    * - ``opscode_webui['log_directory']``

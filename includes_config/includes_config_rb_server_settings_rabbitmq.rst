@@ -26,7 +26,7 @@ This configuration file has the following settings for ``rabbitmq``:
    * - ``rabbitmq['enable']``
      - |enable service| Default value: ``true``.
    * - ``rabbitmq['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``rabbitmq['jobs_password']``
      - Default value: ``"workcomplete"``.
    * - ``rabbitmq['jobs_user']``

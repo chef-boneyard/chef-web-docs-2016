@@ -19,3 +19,7 @@ This configuration file has the following general settings:
      - Use to set the IP version: ``ipv4`` or ``ipv6``. When configuring for IPv6 in a high availability configuration, be sure to set the netmask on the IPv6 ``backend_vip`` attribute. Default value: ``ipv4``.
    * - ``notification_email``
      - Default value: ``info@example.com``.
+   * - ``role``
+     - |role chef_server| Possible values: ``backend``, ``frontend``, or ``standalone``. Default value: ``"standalone"``.
+   * - ``topology``
+     - The topology of the |chef server|. Possible values: ``ha``, ``manual``, ``standalone``, and ``tier``. Default value: ``"standalone"``.

@@ -36,7 +36,7 @@ The |service erchef| service has the following settings:
    * - ``opscode_erchef['enable_actionlog']``
      - Use to enable |chef actions|, an add-on for |chef server oec|. Default value: ``false``.
    * - ``opscode_erchef['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_erchef['ibrowse_max_pipeline_size']``
      - Default value: ``1``.
    * - ``opscode_erchef['ibrowse_max_sessions']``

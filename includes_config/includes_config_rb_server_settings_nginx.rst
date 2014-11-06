@@ -32,7 +32,7 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['gzip_types']``
      - |gzip types| Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
    * - ``nginx['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
      - |worker_max_keepalive| Default value: ``65``.
    * - ``nginx['log_directory']``

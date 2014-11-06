@@ -18,7 +18,7 @@ The |service account| service has the following settings:
    * - ``opscode_account['environment']``
      - Default value: ``"privatechef"``.
    * - ``opscode_account['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_account['listen']``
      - Default value: ``"127.0.0.1:9465"``.
    * - ``opscode_account['log_directory']``

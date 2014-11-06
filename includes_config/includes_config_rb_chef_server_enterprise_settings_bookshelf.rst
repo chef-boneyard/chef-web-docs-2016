@@ -20,7 +20,7 @@ The |service bookshelf| service has the following settings:
    * - ``bookshelf['external_url']``
      - The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
    * - ``bookshelf['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``bookshelf['listen']``
      - Default value: ``127.0.0.1``.
    * - ``bookshelf['log_directory']``

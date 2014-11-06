@@ -20,7 +20,7 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['enable']``
      - |enable service| Default value: ``true``.
    * - ``oc_id['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``oc_id['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``"/var/opt/opscode/oc_id"``.
    * - ``oc_id['log_rotation']``

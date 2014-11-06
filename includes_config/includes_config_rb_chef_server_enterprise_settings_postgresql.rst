@@ -26,7 +26,7 @@ The |service postgresql| service has the following settings:
    * - ``postgresql['enable']``
      - |enable service| Default value: ``true``.
    * - ``postgresql['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``postgresql['home']``
      - |directory postgresql_home| Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['keepalives_count']``

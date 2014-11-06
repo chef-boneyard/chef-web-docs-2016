@@ -18,7 +18,7 @@ The |service bifrost| service has the following settings:
    * - ``oc_bifrost['extended_perf_log']``
      - Default value: ``true``.
    * - ``oc_bifrost['ha']``
-     - |use ha|
+     - |use ha| |ha true|
    * - ``oc_bifrost['listen']``
      - Default value: ``'127.0.0.1'``.
    * - ``oc_bifrost['log_directory']``

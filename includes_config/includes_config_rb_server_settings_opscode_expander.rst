@@ -16,7 +16,7 @@ This configuration file has the following settings for ``opscode-expander``:
    * - ``opscode_expander['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_expander['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_expander['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-expander``.
    * - ``opscode_expander['log_rotation']``

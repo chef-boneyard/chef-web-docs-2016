@@ -14,7 +14,7 @@ The |service certificate| service has the following settings:
    * - ``opscode_certificate['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_certificate['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_certificate['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-certificate"``.
    * - ``opscode_certificate['log_rotation']``

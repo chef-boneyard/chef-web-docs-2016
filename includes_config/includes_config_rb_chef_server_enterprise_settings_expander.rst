@@ -16,7 +16,7 @@ The |service expander| service has the following settings:
    * - ``opscode_expander['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_expander['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_expander['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-expander``.
    * - ``opscode_expander['log_rotation']``

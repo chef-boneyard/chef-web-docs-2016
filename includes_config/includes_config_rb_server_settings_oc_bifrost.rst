@@ -18,7 +18,7 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['extended_perf_log']``
      - Default value: ``true``.
    * - ``oc_bifrost['ha']``
-     - |use ha|
+     - |use ha| |ha true|
    * - ``oc_bifrost['listen']``
      - |ip_address service| Default value: ``'127.0.0.1'``.
    * - ``oc_bifrost['log_directory']``

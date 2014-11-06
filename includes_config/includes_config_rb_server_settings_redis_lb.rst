@@ -30,7 +30,7 @@ This configuration file has the following settings for ``redis_lb``:
    * - ``redis_lb['enable']``
      - |enable service| Default value: ``true``.
    * - ``redis_lb['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``redis_lb['keepalive']``
      - |keepalive request_time| Default value: ``"60"``.
    * - ``redis_lb['log_directory']``

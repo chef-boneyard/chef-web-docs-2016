@@ -38,7 +38,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['enable_actionlog']``
      - Use to enable |chef actions|, a premium feature of the |chef server|. Default value: ``false``.
    * - ``opscode_erchef['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``opscode_erchef['ibrowse_max_pipeline_size']``
      - Default value: ``1``.
    * - ``opscode_erchef['ibrowse_max_sessions']``

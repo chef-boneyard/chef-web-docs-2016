@@ -12,6 +12,6 @@ This configuration file has the following settings for ``jetty``:
    * - ``jetty['enable']``
      - |enable service| Default value: ``"false"``. This value should not be modified.
    * - ``jetty['ha']``
-     - |use ha| Default value: ``"false"``.
+     - |use ha| |ha true| Default value: ``"false"``.
    * - ``jetty['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``"/var/opt/opscode/opscode-solr4/jetty/logs"``.

@@ -24,7 +24,7 @@ The |service couchdb| service has the following settings:
    * - ``couchdb['enable']``
      - |enable service| Default value: ``true``.
    * - ``couchdb['ha']``
-     - |use ha| This is typically managed by the topology of the cluster and the role this server plays in that topology. This setting (when ``true``) will set the |couch db| service to be down. Default value: ``false``.
+     - |use ha| |ha true| This is typically managed by the topology of the cluster and the role this server plays in that topology. This setting (when ``true``) will set the |couch db| service to be down. Default value: ``false``.
    * - ``couchdb['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/couchdb"``.
    * - ``couchdb['log_level']``

@@ -20,7 +20,7 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['external_url']``
      - |url external_bookshelf| Default value: ``:host_header``.
    * - ``bookshelf['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``bookshelf['listen']``
      - |ip_address service| Default value: ``127.0.0.1``.
    * - ``bookshelf['log_directory']``

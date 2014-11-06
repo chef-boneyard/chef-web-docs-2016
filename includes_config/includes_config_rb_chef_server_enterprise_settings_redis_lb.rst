@@ -30,7 +30,7 @@ The |service redis_lb| service has the following settings:
    * - ``redis_lb['enable']``
      - |enable service| Default value: ``true``.
    * - ``redis_lb['ha']``
-     - |use ha| Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``redis_lb['keepalive']``
      - |keepalive request_time| Default value: ``"60"``.
    * - ``redis_lb['log_directory']``
