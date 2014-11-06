@@ -95,6 +95,32 @@ Examples
 None.
 
 
+chef_data_bag
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag.rst
+
+.. include:: ../../includes_resources/includes_resource_chef_databag.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_databag_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_databag_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_databag_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_databag_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
 
 chef_data_bag_item
 -----------------------------------------------------
@@ -122,31 +148,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
 
-chef_data_bag
------------------------------------------------------
-.. include:: ../../includes_data_bag/includes_data_bag.rst
 
-.. include:: ../../includes_resources/includes_resource_chef_databag.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_chef_databag_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_chef_databag_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_chef_databag_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_chef_databag_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
 
 chef_environment
 -----------------------------------------------------
@@ -173,6 +175,33 @@ Providers
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
+
+
+chef_group
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_chef_group.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_group_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_group_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_group_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_group_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
 
 chef_node
 -----------------------------------------------------

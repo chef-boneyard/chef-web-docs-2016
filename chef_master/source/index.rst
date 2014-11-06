@@ -385,6 +385,7 @@ Cookbooks
    resource_chef_data_bag_item
    resource_chef_environment
    resource_chef_gem
+   resource_chef_group
    resource_chef_handler
    resource_chef_node
    resource_chef_role
