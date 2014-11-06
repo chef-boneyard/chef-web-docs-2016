@@ -10,7 +10,7 @@
    * - ``Ohai::Config[:directory]``
      - |path plugin_ohai|
    * - ``Ohai::Config[:disabled_plugins]``
-     - |disable plugin_ohai| For example:
+     - |disable plugin_ohai| The list of plugins included in |ohai| can be found in the ``ohai/lib/ohai/plugins`` directory. For example:
 
        .. code-block:: ruby
 
