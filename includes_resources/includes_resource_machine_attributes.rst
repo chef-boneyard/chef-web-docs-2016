@@ -101,5 +101,9 @@
      - The pass phrase for the private key. Use in conjunction with ``source_key``` and ``source_key_path``.
    * - ``source_key_path``
      - The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
+   * - ``tag``
+     - Use to add a tag.
+   * - ``tags``
+     - Use to add one (or more) tags. This will remove any tag currently associated with the machine. For example: ``tags :a, :b, :c``.
    * - ``validator``
      - Use to specify if the |chef client| is a |chef validator|.
