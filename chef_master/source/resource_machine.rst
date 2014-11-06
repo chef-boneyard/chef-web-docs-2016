@@ -51,3 +51,7 @@ Examples
 **Use a loop to build many machines**
 
 .. include:: ../../step_resource/step_resource_machines_use_a_loop_to_create_many_machines.rst
+
+**Converge multiple machine types, in-parallel**
+
+.. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
