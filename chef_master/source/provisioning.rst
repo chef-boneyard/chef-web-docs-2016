@@ -203,6 +203,33 @@ None.
 
 
 
+chef_mirror
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_chef_mirror.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_mirror_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_mirror_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_mirror_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_mirror_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+
+
 chef_node
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node.rst
