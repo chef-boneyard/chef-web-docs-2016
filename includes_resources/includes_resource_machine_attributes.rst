@@ -13,15 +13,17 @@
      - Use to specify whether the |chef client| is an API client.
    * - ``allow_overwrite_keys``
      - 
+   * - ``attributes``
+     - Use to specify a hash of attributes to be applied to the machine.
    * - ``converge``
      - Use to manage convergence when used with the ``:create`` action. Set to ``false`` to prevent convergence. Set to ``true`` to force it. Default value: ``true``.
    * - ``attributes``
      - Use to specify a hash of attributes to be applied to the machine.
-   * - ``chef_environment``		
-     - |name environment|		
-   * - ``chef_server``		
-     - |chef_server_url|		
-   * - ``complete``		
+   * - ``chef_environment``
+     - |name environment|
+   * - ``chef_server``
+     - |chef_server_url|
+   * - ``complete``
      - Use to specify if all of the attributes specified in ``attributes`` represent a complete specification for the machine. When true, any attributes not specified in ``attributes`` will be reset to their default values.
    * - ``driver``
      - Use to specify the driver to be used for provisioning.
@@ -59,29 +61,39 @@
      - Use to specify the format of a public key. Possible values: ``pem`` and ``der``. Default value: ``pem``.
    * - ``public_key_path``
      - The path to a public key.
-   * - ``raw_json``		
-     - The machine as |json| data. For example:		
+   * - ``raw_json``
+     - The machine as |json| data. For example:
        
-       .. code-block:: javascript		
+       .. code-block:: javascript
        
-          {		
+          {
        
-          }		
+          }
        
-   * - ``recipe``		
-     - Use to add a recipe to the run-list for the machine. Each ``recipe`` adds a single recipe to the run-list. The order in which ``recipe`` defines the run-list is the order in which |chef| will execute the run-list on the machine.		
-   * - ``remove_recipe``		
-     - Use to remove a recipe from the run-list for the machine.		
-   * - ``remove_role``		
-     - Use to remove a role from the run-list for the machine.		
-   * - ``role``		
-     - Use to add a role to the run-list for the machine.		
-   * - ``run_list``		
-     - Use to specify the run-list to be applied to the machine.		
+   * - ``recipe``
+     - Use to add a single recipe to the run-list for the machine; use it multiple times to add multiple recipes to a run-list. The order in which ``recipe`` is specified in the resource block defines the order in which the recipes are added to the machine, which determines the order by which they are executed during the |chef client| run. For example:
        
-       .. include:: ../../includes_node/includes_node_run_list.rst		
+       .. code-block:: ruby
        
-       .. include:: ../../includes_node/includes_node_run_list_format.rst		
+          recipe 'foo'
+          recipe 'bar'
+          recipe 'baz'
+
+       will add all three recipes, in that order. On a machine that already has the ``apache2`` recipe, the order of the updated run-list would be ``apache2``, ``foo``, ``bar``, and then ``baz``.
+   * - ``remove_recipe``
+     - Use to remove a recipe from the run-list for the machine.
+   * - ``remove_role``
+     - Use to remove a role from the run-list for the machine.
+   * - ``remove_tag``
+     - Use to remove a tag.
+   * - ``role``
+     - Use to add a role to the run-list for the machine.
+   * - ``run_list``
+     - Use to specify the run-list to be applied to the machine.
+       
+       .. include:: ../../includes_node/includes_node_run_list.rst
+       
+       .. include:: ../../includes_node/includes_node_run_list_format.rst
        
    * - ``source_key``
      - Use to copy a private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
