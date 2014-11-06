@@ -26,7 +26,7 @@
    * - ``output_key_path``
      - Use to specify the path to the location in which a public key will be written.
    * - ``raw_json``
-     - The |chef client| as |json| data. For example:
+     - The user as |json| data. For example:
        
        .. code-block:: javascript
        

@@ -29,15 +29,10 @@
        .. code-block:: javascript
        
           {
-          "clientname": "client_name",
-          "orgname": "org_name",
-          "validator": false,
-          "certificate": "-----BEGIN CERTIFICATE-----\n
-                          ...
-                          1234567890abcdefghijklmnopq\n
-                          ...
-                          -----END CERTIFICATE-----\n",
-          "name": "node_name"
+            "name"=>"chef",
+            "full_name"=>"Chef Software, Inc",
+            "guid"=>"f980d1asdfda0331235s00ff36862
+            ...
           }
    * - ``remove_members``
      - Use to remove the specified users from an organization. Invitations that have not been accepted will be cancelled.

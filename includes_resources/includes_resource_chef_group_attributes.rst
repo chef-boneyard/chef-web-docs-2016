@@ -20,20 +20,12 @@
    * - ``name``
      - 
    * - ``raw_json``
-     - The |chef client| as |json| data. For example:
+     - The group as |json| data. For example:
        
        .. code-block:: javascript
        
           {
-          "clientname": "client_name",
-          "orgname": "org_name",
-          "validator": false,
-          "certificate": "-----BEGIN CERTIFICATE-----\n
-                          ...
-                          1234567890abcdefghijklmnopq\n
-                          ...
-                          -----END CERTIFICATE-----\n",
-          "name": "node_name"
+	        :groupname => "chef"
           }
    * - ``remove_clients``
      - 

@@ -24,7 +24,7 @@
    * - ``override_attributes``
      - |attribute_type override| Default value: ``{}``.
    * - ``raw_json``
-     - The |chef client| as |json| data. For example:
+     - The environment as |json| data. For example:
        
        .. code-block:: javascript
        
