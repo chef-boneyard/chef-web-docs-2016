@@ -378,6 +378,7 @@ Cookbooks
    resource_batch
    resource_bff_package
    resource_breakpoint
+   resource_chef_acl
    resource_chef_client
    resource_chef_data_bag
    resource_chef_data_bag_item

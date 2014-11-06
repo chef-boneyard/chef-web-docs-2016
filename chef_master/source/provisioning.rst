@@ -14,6 +14,34 @@ Resources
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common.rst
 
+
+
+chef_acl
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_chef_acl.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_acl_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_acl_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_acl_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_acl_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+
 chef_client
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client.rst
@@ -196,11 +224,6 @@ None.
 
 load_balancer
 -----------------------------------------------------
-
-|warning provisioning|
-
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_load_balancer.rst
 
 Syntax
@@ -217,10 +240,6 @@ Attributes
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
-
-.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
-
 .. include:: ../../includes_resources/includes_resource_load_balancer_providers.rst
 
 Examples
