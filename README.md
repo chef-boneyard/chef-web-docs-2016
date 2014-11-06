@@ -69,6 +69,19 @@ This will also apply when you've run the `make clean` command, which effectively
 
 Subsequent runs of `make release` should be relatively fast (2-5 mins), and you can use subsets. For example: `master` for the main docs build, `server` for the Chef server, `client` for the chef-client, and so on. The full list is available at the top of the `makefile`.
 
+## Parallel Builds with Sphinx 1.2.x and up
+
+The docs build can be parallelized to some degree now with
+
+    make release PARALLEL_BUILD="-j X"
+
+X should be specified in terms of the number of cpus your system has available for the docs building task.
+
+If you have an 8 cpu machine, 6 might be a good number
+
+    make release PARALLEL_BUILD="-j 6"
+
+All current build types support the PARALLEL_BUILD option.
 
 ## About Docs Versions
 
