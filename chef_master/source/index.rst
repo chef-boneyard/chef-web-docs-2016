@@ -413,6 +413,7 @@ Cookbooks
    resource_ifconfig
    resource_ips_package
    resource_link
+   resource_load_balancer
    resource_log
    resource_machine
    resource_machine_batch
