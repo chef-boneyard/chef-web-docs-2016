@@ -11,8 +11,13 @@ and for example, a single primary |chef server| and multiple replicas:
 
 .. image:: ../../images/chef_server_replication_many.png
 
+|chef replication| use cases:
+
+* Distributing glocal policy across multiple datacenters, and distributing traffic across |chef servers|
+* Reducing wide-area network traffic by pointing clients to the nearest replica |chef server|
+* Daisy-chain policy distribution from master to replica, and from replica to another replica
+
 |chef replication| should not be used for:
 
-* Disaster recovery or backup/restore processes. The replication process is read-only and cannot be changed to read-write
-* Synchronizing a replica instance with another replica instance
+* Automated disaster recovery or backup/restore processes. The replication process is read-only and cannot be changed to read-write without manual intervention
 * Node re-registration. A node may be associated only with a single |chef server|
