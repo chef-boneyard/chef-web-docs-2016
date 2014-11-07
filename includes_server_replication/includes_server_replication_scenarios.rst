@@ -15,7 +15,8 @@ and for example, a single primary |chef server| and multiple replicas:
 
 * Distributing glocal policy across multiple datacenters, and distributing traffic across |chef servers|
 * Reducing wide-area network traffic by pointing clients to the nearest replica |chef server|
-* Daisy-chain policy distribution from master to replica, and from replica to another replica
+* Business continuity in the event of an unavailable primary data center (and its |chef server|)
+* Synchronizing a replica instance with another replica instance
 
 |chef replication| should not be used for:
 

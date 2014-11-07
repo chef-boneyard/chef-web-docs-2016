@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To configure replication of |chef server| data, first install |chef replication|, then configure the master |chef server|, then configure the replica |chef server|, and then start the synchronization process. 
+To configure replication of |chef server| data, first install |chef replication| on the master |chef server| and all replica |chef servers|, then configure the master |chef server|, then configure the replica |chef server|, and then start the synchronization process.
 
 #. To install |chef replication|, run the following on all machines in the |chef server| configuration. For |debian dpkg|:
 
