@@ -37,7 +37,7 @@ This configuration file has the following settings for load balancers:
    * - ``lb['redis_connection_pool_size']``
      - Default value: ``250``.
    * - ``lb['redis_connection_timeout']``
-     - Default value: ``60``.
+     - Default value: ``1000``.
    * - ``lb['redis_keepalive_timeout']``
      - Default value: ``2000``.
    * - ``lb['upstream']``
