@@ -9,4 +9,4 @@ This argument has the following options:
    |COOKBOOK_VERSION show|
 
 ``-m``, ``--supermarket-site``
-   Use to specify the URL at which the |supermarket| is located. Default value: ``https://supermarket.getchef.com``.
+   |url supermarket| Default value: ``https://supermarket.getchef.com``.

@@ -15,4 +15,4 @@ This argument has the following options:
    |force directory|
 
 ``-m``, ``--supermarket-site``
-   Use to specify the URL at which the |supermarket| is located. Default value: ``https://supermarket.getchef.com``.
+   |url supermarket| Default value: ``https://supermarket.getchef.com``.

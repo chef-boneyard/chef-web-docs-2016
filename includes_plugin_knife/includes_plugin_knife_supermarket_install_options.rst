@@ -18,7 +18,7 @@ This argument has the following options:
    |skip-dependencies|
 
 ``-m``, ``--supermarket-site``
-   Use to specify the URL at which the |supermarket| is located. Default value: ``https://supermarket.getchef.com``.
+   |url supermarket| Default value: ``https://supermarket.getchef.com``.
 
 ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
    |cookbook path|
