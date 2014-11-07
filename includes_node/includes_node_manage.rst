@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-There are several ways to manage nodes, including by using |knife|, the |chef manage| add-on for |chef server oec|, or by using command-line tools that are specific to |chef client|.
+There are several ways to manage nodes directly, including by using |knife|, the |chef manage| add-on for the |chef server|, or by using command-line tools that are specific to |chef client|.
 
 * |knife| can be used to create, edit, view, list, tag, and delete nodes.
 * |knife| plug-ins can be used to create, edit, and manage nodes that are located on cloud providers.
