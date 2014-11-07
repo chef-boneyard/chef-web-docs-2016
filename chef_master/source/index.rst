@@ -486,6 +486,7 @@ Cookbooks
    server_users
    server_webui_tasks
    style_guide
+   supermarket
    supported_platforms
    upgrade_server
    upgrade_server_ha
