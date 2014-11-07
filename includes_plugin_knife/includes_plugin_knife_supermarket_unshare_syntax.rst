@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife supermarket unshare COOKBOOK_NAME
+   $ knife supermarket unshare COOKBOOK_NAME (options)
 

@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife supermarket show COOKBOOK_NAME [COOKBOOK_VERSION]
+   $ knife supermarket show COOKBOOK_NAME [COOKBOOK_VERSION] (options)
 
