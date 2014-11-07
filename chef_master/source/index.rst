@@ -177,6 +177,7 @@ Cookbooks
    config_rb_server
    config_rb_server_optional_settings
    config_rb_solo
+   config_rb_supermarket
    config_yml_kitchen
    containers
    cookbooks
