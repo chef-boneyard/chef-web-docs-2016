@@ -34,9 +34,9 @@ This configuration file has the following settings for ``lb``:
    * - ``lb['redis_connection_pool_size']``
      - Default value: ``250``.
    * - ``lb['redis_connection_timeout']``
-     - Default value: ``1000``.
+     - |timeout ms| Default value: ``1000``.
    * - ``lb['redis_keepalive_timeout']``
-     - Default value: ``2000``.
+     - |timeout ms| Default value: ``2000``.
    * - ``lb['upstream']['bookshelf']``
      - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
    * - ``lb['upstream']['oc_bifrost']``
