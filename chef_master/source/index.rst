@@ -363,6 +363,7 @@ Cookbooks
    plugin_knife_push_jobs
    plugin_knife_rackspace
    plugin_knife_reporting
+   plugin_knife_supermarket
    plugin_knife_terremark
    plugin_knife_vcloud
    plugin_knife_windows
