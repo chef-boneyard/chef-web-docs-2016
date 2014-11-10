@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To delete multiple machines in-parallel:
+.. To delete all machines:
 
 .. code-block:: ruby
 
