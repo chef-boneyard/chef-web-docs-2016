@@ -184,12 +184,12 @@ The following examples show how the ``search`` method can be used in a recipe.
 
 .. include:: ../../step_resource/step_resource_execute_use_search_dsl_method.rst
 
-shell_out, shell_out!
+shell_out
 -----------------------------------------------------
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out.rst
 
-**shell_out!**
-
+shell_out!
+-----------------------------------------------------
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_bang.rst
 
 shell_out_with_systems_locale
