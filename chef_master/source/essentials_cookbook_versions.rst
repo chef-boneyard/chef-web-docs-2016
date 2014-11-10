@@ -12,6 +12,10 @@ Constraints
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_constraints.rst
 
+.. include:: ../../includes_cookbooks/includes_cookbooks_version_constraints_operators.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_version_constraints_examples.rst
+
 Metadata
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst

@@ -6,3 +6,7 @@ value_for_platform Method
 =====================================================
 
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_value_for_platform.rst
+
+Operators
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_version_constraints_operators.rst
