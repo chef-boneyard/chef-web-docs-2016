@@ -52,6 +52,10 @@ Examples
 
 .. include:: ../../step_resource/step_resource_machine_batch_destroy_n_machines.rst
 
+**Destroy all machines**
+
+.. include:: ../../step_resource/step_resource_machine_batch_destroy_all_machines.rst
+
 **Converge multiple machine types, in-parallel**
 
 .. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
