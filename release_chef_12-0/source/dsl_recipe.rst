@@ -188,8 +188,8 @@ shell_out, shell_out!
 -----------------------------------------------------
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out.rst
 
-shell_out!
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+**shell_out!**
+
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_bang.rst
 
 shell_out_with_systems_locale
