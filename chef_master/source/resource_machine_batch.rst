@@ -59,3 +59,7 @@ Examples
 **Converge multiple machine types, in-parallel**
 
 .. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
+
+**Set up primary and secondary machines for high availability**
+
+.. include:: ../../step_resource/step_resource_machine_batch_setup_primary_and_secondary.rst
