@@ -210,6 +210,10 @@ Operators
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_constraints_operators.rst
 
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_value_for_platform_examples.rst
+
 value_for_platform_family
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_family.rst
