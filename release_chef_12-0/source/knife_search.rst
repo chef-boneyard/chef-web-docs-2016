@@ -17,10 +17,6 @@ Query Syntax
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
-Filter Search Results
------------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
-
 About Keys
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_key.rst
