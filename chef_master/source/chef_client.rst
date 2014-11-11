@@ -43,4 +43,4 @@ Some important components of nodes include:
 
 The |chef client_title| Run
 =====================================================
-.. include:: ../../includes_chef_client/includes_chef_clien_run.rst
+.. include:: ../../includes_chef_client/includes_chef_client_run.rst
