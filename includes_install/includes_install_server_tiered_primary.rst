@@ -19,32 +19,6 @@ Use the following steps to set up the backend |chef server|:
 
 #. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required.
 
-#. Install |drbd|. For |redhat| and |centos| 6:
-
-   .. code-block:: bash
-      
-      $ rpm --import http://elrepo.org/RPM-GPG-KEY-elrepo.org
-
-   then:
-
-   .. code-block:: bash
-      
-      $ yum install -y http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
-
-   and then:
-
-   .. code-block:: bash
-      
-      $ yum install -y drbd84-utils kmod-drbd84
-
-   .. note:: The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland.
-
-   For |ubuntu|:
-
-   .. code-block:: bash
-      
-      $ apt-get install drbd8-utils
-
 #. Reconfigure the |chef server|:
 
    .. code-block:: bash
