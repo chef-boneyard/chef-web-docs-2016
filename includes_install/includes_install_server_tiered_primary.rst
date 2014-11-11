@@ -25,14 +25,3 @@ Use the following steps to set up the backend |chef server|:
       
       $ sudo chef-server-ctl reconfigure
 
-   This will configure |drbd|. The installer will pause and ask for confirmation that |drbd| has been set up. Confirm (``CTRL-C``), and then run the following commands:
-
-   .. code-block:: bash
-      
-      $ drbdadm create-md pc0
-
-   then:
-
-   .. code-block:: bash
-      
-      $ drbdadm up pc0
