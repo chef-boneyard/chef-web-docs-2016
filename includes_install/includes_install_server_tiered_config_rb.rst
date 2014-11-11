@@ -20,17 +20,7 @@ Add the following settings to the |chef server rb| file:
         :role => "backend",
         :bootstrap => true,
 
-   Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``"backend"``. If the backend machine is used to bootstrap the |chef server| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface that is used for cluster communications. For example, the same IP address that is used by |keepalived|. If the |chef server| is not used to bootstrap the |chef server| installation, exclude the ``:cluster_ipaddress`` entry.
-
-#. Define the backend virtual IP address:
-
-   .. code-block:: ruby
-
-      backend_vip "FQDN",
-        :ipaddress => "IP_ADDRESS",
-        :device => "eth0",
-
-   Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind. This is typically the public interface of the server.
+   Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``"backend"``.
 
 #. Define each frontend machine:
 

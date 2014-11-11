@@ -37,9 +37,6 @@ Looks like this:
      :role => "backend",
      :bootstrap => true
    
-   backend_vip "be1.example.com",
-     :ipaddress => "192.168.4.1"
-   
    server "fe1.example.com",
      :ipaddress => "192.168.4.2",
      :role => "frontend"
