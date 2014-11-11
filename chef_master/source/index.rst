@@ -315,7 +315,6 @@ Cookbooks
    ohai
    ohai_custom
    openstack
-   orgmapper
    page_not_found
    plugin_kitchen_vagrant
    plugin_knife
