@@ -17,10 +17,10 @@ This configuration file has the following settings for |ldap|:
           ldap['host'] = '1.2.3.4'
 
    * - ``ldap['port']``
-     - The port your LDAP server listens on.  The default value of ``389`` is good enough for most installs.Default value: ``389``. For example:
+     - The port your LDAP server listens on. The default value of ``389`` is good enough for most installs. This value is always an integer. Default value: ``389``. For example:
        ::
 
-          ldap['port'] = '389'
+          ldap['port'] = 389
 
    * - ``ldap['ssl_enabled']``
      - Indicates if Private Chef should make SSL-enabled conenctions to the LDAP server. Be sure SSL is enabled on your LDAP server and ``ldap['port']`` has been updated with the correct value (usually ``636``). Default value: ``false``. For example:
@@ -57,4 +57,3 @@ This configuration file has the following settings for |ldap|:
        ::
 
           ldap['system_adjective'] = 'corporate'
-
