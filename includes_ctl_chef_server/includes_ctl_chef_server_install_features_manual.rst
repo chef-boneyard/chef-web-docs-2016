@@ -13,4 +13,6 @@ For example:
 
 .. code-block:: bash
 
-   $ chef-server-ctl install opscode-manage-1.6.2-1.el6.x86_64 --path /home/vagrant
+   $ chef-server-ctl install opscode-manage --path /home/vagrant
+
+The ``chef-server-ctl`` command will install the first ``opscode-manage`` package found in the ``/home/vagrant`` directory.
