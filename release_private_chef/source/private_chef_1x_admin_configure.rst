@@ -135,7 +135,7 @@ backend_vip
 When operating in a Tiered or High Availability scenario, the ``backend_vip`` setting must be configured.
 
 * In the High Availability scenario, this setting should be set to the |fqdn| and IP address that will be shared among the back-end servers.
-* In a Tiered configuration, this setting should point directly to the back-end server. 
+* In a Tiered configuration, this setting should point directly to the back-end server.
 
 For example:
 
@@ -349,13 +349,13 @@ This configuration file has the following settings for |drbd|:
        ::
 
           drbd['flexible_meta_disk'] = "internal"
-  
+
    * - ``drbd['primary']``
      - The ``fqdn``, ``ip`` and ``port`` of the server we consider the |drbd| *primary*. This is typically set automatically from the ``server`` entries with the ``backend`` ``role`` when in an ``ha`` topology. Default value: ``{"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}``. For example:
        ::
 
           drbd['primary'] = {
-            "fqdn"=>"ubuntu.localdomain", 
+            "fqdn"=>"ubuntu.localdomain",
             "ip"=>"192.168.4.131", "port"=>7788
           }
 
@@ -364,7 +364,7 @@ This configuration file has the following settings for |drbd|:
        ::
 
           drbd['secondary'] = {
-            "fqdn"=>"ubuntu.localdomain", 
+            "fqdn"=>"ubuntu.localdomain",
             "ip"=>"192.168.4.131", "port"=>7788
           }
 
@@ -435,8 +435,8 @@ This configuration file has the following settings for |keepalived|:
            {"key"=>"nagios", "service_name"=>"php-fpm"},
            {"key"=>"nagios", "service_name"=>"fcgiwrap"},
            {"key"=>"nagios", "service_name"=>"nagios"},
-           {"key"=>"nginx", "service_name"=>"nginx"}]``. 
-       
+           {"key"=>"nginx", "service_name"=>"nginx"}]``.
+
        For example:
        ::
 
@@ -625,8 +625,8 @@ This configuration file has the following settings for load balancers:
            "opscode-account"=>["127.0.0.1"],
            "opscode-webui"=>["127.0.0.1"],
            "opscode-authz"=>["127.0.0.1"],
-          "opscode-solr"=>["127.0.0.1"]}``. 
-       
+          "opscode-solr"=>["127.0.0.1"]}``.
+
        For example:
        ::
 
@@ -666,10 +666,10 @@ This configuration file has the following settings for |ldap|:
           ldap['host'] = '1.2.3.4'
 
    * - ``ldap['port']``
-     - The port your LDAP server listens on.  The default value of ``389`` is good enough for most installs.Default value: ``389``. For example:
+     - The port your LDAP server listens on. The default value of ``389`` is good enough for most installs. This value is always an integer. Default value: ``389``. For example:
        ::
 
-          ldap['port'] = '389'
+          ldap['port'] = 389
 
    * - ``ldap['ssl_enabled']``
      - Indicates if Private Chef should make SSL-enabled conenctions to the LDAP server. Be sure SSL is enabled on your LDAP server and ``ldap['port']`` has been updated with the correct value (usually ``636``). Default value: ``false``. For example:
@@ -989,7 +989,7 @@ This configuration file has the following settings for |nagios|:
           {"check_interval"=>15,
            "retry_interval"=>15,
            "max_check_attempts"=>1,
-           "notification_interval"=>300}``. 
+           "notification_interval"=>300}``.
 
        For example:
        ::
@@ -1005,7 +1005,7 @@ This configuration file has the following settings for |nagios|:
           {"check_interval"=>60,
            "retry_interval"=>15,
            "max_check_attempts"=>3,
-           "notification_interval"=>1200}``. 
+           "notification_interval"=>1200}``.
 
        For example:
        ::
@@ -1191,7 +1191,7 @@ This configuration file has the following settings for the |service nginx| servi
            "text/xml",
            "application/xml",
            "application/xml+rss",
-           "text/javascript"]``. 
+           "text/javascript"]``.
 
        For example:
        ::
@@ -2012,7 +2012,7 @@ This configuration file has the following settings for the |service expander| se
      - Default value: ``"/var/log/opscode/opscode-expander-reindexer"``. For example:
        ::
 
-          opscode_expander['reindexer_log_directory'] = 
+          opscode_expander['reindexer_log_directory'] =
             "/var/log/opscode/opscode-expander-reindexer"
 
    * - ``opscode_expander['reindexer_svlogd_size']``
@@ -2083,7 +2083,7 @@ This configuration file has the following settings for the |service orgcreator| 
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-org-creator"``. For example:
        ::
 
-          opscode_org_creator['log_directory'] = 
+          opscode_org_creator['log_directory'] =
             "/var/log/opscode/opscode-org-creator"
 
    * - ``opscode_org_creator['max_workers']``
@@ -2801,4 +2801,3 @@ This configuration file has the following settings for users:
        ::
 
           user['username'] = "opscode"
-
