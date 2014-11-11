@@ -11,7 +11,7 @@ For example, the ``not_if`` guard statement in the following resource example **
    bash "javatooling" do
      environment {"JAVA_HOME" => "/usr/lib/java/jdk1.7/home"}
      code "java-based-daemon-ctl.sh -start"
-     not_if "java-based-daemon-ctl.sh -test-started
+     not_if "java-based-daemon-ctl.sh -test-started"
    end
 
 and requires adding the ``environment`` attribute to the ``not_if`` guard statement so that it may use the ``JAVA_HOME`` path as part of its evaluation:
