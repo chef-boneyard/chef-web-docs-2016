@@ -12,12 +12,12 @@ To configure your system to point at an |windows ad| or |ldap| login server, you
 
 The Host and Port
 -----------------------------------------------------
-The host and port of your |windows ad| or |ldap| server. The port defaults to ``389``, which is often the correct setting.
+The host and port of your |windows ad| or |ldap| server. The port defaults to ``389``, which is often the correct setting. This value is always an integer.
 
 .. code-block:: ruby
 
    ldap['host'] = '1.2.3.4'
-   ldap['port'] = '389'
+   ldap['port'] = 389
 
 The Bind User
 -----------------------------------------------------
@@ -81,5 +81,3 @@ Congratulations! You have now set up |chef private| to work with |windows ad| or
 At this point, all users will use their |windows ad| or |ldap| username and password to log in to |chef private|. The first time they log in, they can either create a new account linked to their |windows ad| credentials or link an existing |chef private| account to their |windows ad| credentials.
 
 You should now continue with the |windows ad| / |ldap| section of this guide.
-
-
