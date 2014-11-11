@@ -18,7 +18,7 @@ Add the following settings to the |chef server rb| file:
       server "FQDN",
         :ipaddress => "IP_ADDRESS",
         :role => "backend",
-        :bootstrap => true,
+        :bootstrap => true
 
    Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``"backend"``.
 
