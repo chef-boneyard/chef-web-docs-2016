@@ -127,7 +127,7 @@ The |chef client| is typically installed using a :doc:`bootstrap operation </ess
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/verify_packages.html">Verify Signed Packages</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/verify_packages.html">Verify Signed Packages</a> </br>
 
 
 Settings and Tools
@@ -453,4 +453,4 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_user
    resource_windows_package
    resource_yum
-
+   verify_packages
