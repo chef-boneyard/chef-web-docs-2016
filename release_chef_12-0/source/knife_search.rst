@@ -17,6 +17,10 @@ Query Syntax
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
+Filter Search Results
+-----------------------------------------------------
+.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
+
 About Keys
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_key.rst
@@ -97,7 +101,7 @@ Options
 =====================================================
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_search_options.rst
+.. include:: ../../release_chef_12-0/includes_knife_search_options.rst
 
 Examples
 =====================================================

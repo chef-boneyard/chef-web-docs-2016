@@ -11,6 +11,9 @@ This sub-command has the following options:
 ``-b ROW``, ``--start ROW``
    |start|
 
+``-f FILTER``, ``--filter-result FILTER``
+   Use to return only attributes that match the specified ``FILTER``. For example: ``\"ServerName=name, Kernel=kernel.version\``.
+
 ``-i``, ``--id-only``
    |id-only|
 

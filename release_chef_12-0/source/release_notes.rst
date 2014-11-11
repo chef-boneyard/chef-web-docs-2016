@@ -31,7 +31,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Splay and interval values are applied before the chef-client run** The ``--interval`` and ``--splay`` values are applied before the |chef client| run when using the |chef client| and |chef solo| executables.
 * **All files and templates in a cookbook are synchronized at the start of the chef-client run** The ``no_lazy_load`` configuration setting in the |client rb| file now defaults to ``true``. This avoids issues where time-sensitive URLs in a cookbook manifest timeout before the |resource cookbook_file| or |resource template| resources converged.
 * **File staging now defaults to the destination directory by default** Staging into a system's temporary directory---typically ``/tmp`` or ``/var/tmp``---as opposed to the destination directory may cause issues with permissions, available space, or cross-device renames. Files are now staged to the destination directory by default.
-* **Partial search is available in the recipe DSL** Use ``:filter_result`` to build search results into a |ruby hash|. This replaces the previous functionality that was provided by the ``partial_search`` cookbook, albeit with a different API.
+* **Partial search updates** Use ``:filter_result`` to build search results into a |ruby hash|. This replaces the previous functionality that was provided by the ``partial_search`` cookbook, albeit with a different API. Use the ``--filter-result`` option to return only attributes that match the specified filter. For example: ``\"ServerName=name, Kernel=kernel.version\``.
 * **Client-side key generation is enabled by default** When a new |chef client| is created using the vaidation client account, the |chef server| allows the |chef client| to generate a key-pair locally, and then send the public key to the |chef server|. This behavior is controlled by the ``local_key_generation`` attribute in the |client rb| file and now defaults to ``true``. 
 * **New guard_interpreter attribute defaults** The ``guard_interpreter`` attribute now defaults to ``:batch`` for the |resource batch| resource and ``:powershell_script`` for the |resource powershell_script| resource.
 * **Events are sent to the Application event log on the Windows platform by default** Events are sent to the |windows| "Application" event log at the start and end of a |chef client| run, and also if a |chef client| run fails. Set the ``disable_event_logger`` configuration setting in the |client rb| file to ``true`` to disable event logging. 
@@ -384,6 +384,13 @@ The following configuration settings are updated for the |client rb| file and no
 Filter Search Results
 -----------------------------------------------------
 .. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
+
+knife search
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The |subcommand knife search| subcommand allows filtering search results with a new option:
+
+``-f FILTER``, ``--filter-result FILTER``
+   Use to return only attributes that match the specified ``FILTER``. For example: ``\"ServerName=name, Kernel=kernel.version\``.
 
 
 Changelog
