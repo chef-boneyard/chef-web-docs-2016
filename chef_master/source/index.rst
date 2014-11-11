@@ -134,7 +134,6 @@ Cookbooks
    chef_client
    chef_client_security
    chef_cookbooks
-   chef_cookbooks_chef_handler
    chef_dk
    chef_metal
    chef_overview
