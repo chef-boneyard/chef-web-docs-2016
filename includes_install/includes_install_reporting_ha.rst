@@ -5,17 +5,11 @@
 
 To set up the |reporting| server for a high availability configuration:
 
-#. Install the package on every machine that is running |chef server|. For |redhat| and |centos| 6:
+#. Install the package on every machine that is running |chef server|:
 
    .. code-block:: bash
       
-      $ rpm -Uvh /tmp/opscode-reporting-<version>.rpm
-
-   For |ubuntu|:
-
-   .. code-block:: bash
-      
-      $ dpkg -i /tmp/opscode-reporting-<version>.deb
+      $ chef-server-ctl install opscode-reporting -Uvh /tmp/opscode-reporting-<version>.rpm
 
 #. Reconfigure the |chef server| on the back end primary server (bootstrap):
 
