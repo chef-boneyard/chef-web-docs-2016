@@ -78,7 +78,7 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
    * - |reporting_title|
      - Use |reporting| to keep track of what happens during every |chef client| runs across all of the infrastructure being managed by |chef|. Run |reporting| with |chef manage| to view reports from a web user interface.
 
-       (Front end machines only.) Run:
+       On each machine in the |chef server| configuration, run:
 
        .. code-block:: ruby
 
