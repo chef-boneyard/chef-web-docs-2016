@@ -22,7 +22,7 @@ The |enterprise rb| file contains the settings required to configure |ldap| or |
    * - ``ldap['login_attribute']``
      - |ldap login_attribute| For |windows ad|, this is typically ``sAMAccountName``. For |open ldap|, this is typically ``uid``. Default value: ``sAMAccountName``.
    * - ``ldap['port']``
-     - |ldap port| The default value is an appropriate value for most configurations. This value is always an integer. Default value: ``389``.
+     - |ldap port| The default value is an appropriate value for most configurations. Default value: ``389``.
    * - ``ldap['ssl_enabled']``
      - |ldap ssl_enabled| Be sure |ssl| is enabled on the |ldap| server and that the ``ldap['port']`` setting is updated with the correct value (often ``636``). Default value: ``false``.
    * - ``ldap['system_adjective']``

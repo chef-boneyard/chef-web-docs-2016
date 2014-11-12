@@ -25,7 +25,7 @@ This configuration file has the following settings for ``ldap``:
    * - ``ldap['login_attribute']``
      - Use to specify the |chef server| user name for an |ldap| user.
    * - ``ldap['port']``
-     - |ldap port| The default value is an appropriate value for most configurations. This value is always an integer. Default value: ``389``.
+     - |ldap port| The default value is an appropriate value for most configurations. Default value: ``389``.
    * - ``ldap['timeout']``
      - Default value: ``60000``.
 
