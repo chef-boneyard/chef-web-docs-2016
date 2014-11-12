@@ -12,31 +12,36 @@ This configuration file has the following settings for the internal load balance
      - Description
    * - ``lb_internal['account_port']``
      - Default value: ``9685``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb_internal['account_port'] = 9685
 
    * - ``lb_internal['authz_port']``
      - Default value: ``9683``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb_internal['authz_port'] = 9683
 
    * - ``lb_internal['chef_port']``
      - Default value: ``9680``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb_internal['chef_port'] = 9680
 
    * - ``lb_internal['enable']``
      - Default value: ``true``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb_internal['enable'] = true
 
    * - ``lb_internal['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb_internal['vip'] = "127.0.0.1"
 

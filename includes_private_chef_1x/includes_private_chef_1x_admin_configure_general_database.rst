@@ -12,6 +12,7 @@ This configuration file has the following settings for the type of database:
      - Description
    * - ``database_type``
      - The type of database we are using. Only ``postgresql`` is fully supported - while ``mysql`` can be used with |chef private|, it requires the end user to install and configure both the server itself and the |mysql| client libraries. Default value: ``postgresql``. For example:
-       ::
+
+       .. code-block:: ruby
 
           database_type "postgresql"

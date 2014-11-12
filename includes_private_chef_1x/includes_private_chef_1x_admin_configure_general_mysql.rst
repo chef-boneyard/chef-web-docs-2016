@@ -12,25 +12,29 @@ This configuration file has the following settings for |mysql|:
      - Description
    * - ``mysql['install_libs']``
      - Default value: ``true``. For example:
-       ::
+
+       .. code-block:: ruby
 
           mysql['install_libs'] = true
 
    * - ``mysql['sql_password']``
      - Default value: ``"snakepliskin"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           mysql['sql_password'] = "snakepliskin"
 
    * - ``mysql['sql_user']``
      - Default value: ``"opscode_chef"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           mysql['sql_user'] = "opscode_chef"
 
    * - ``mysql['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           mysql['vip'] = "127.0.0.1"
 

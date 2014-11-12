@@ -11,10 +11,9 @@ This configuration file has the following settings for log rotation:
    * - Setting
      - Description
    * - ``log_rotation``
-     - For configuring log rotation on files that are not managed by svlogd or rotated by the application itself.
+     - For configuring log rotation on files that are not managed by svlogd or rotated by the application itself. Default value:
 
-       Default value:
-       ::
+       .. code-block:: ruby
 
           log_rotation["/var/log/opscode/nginx/*.log"] = { "rotate" => 14 }
           log_rotation["/var/log/opscode/php-fpm/php-fpm.log"] = { "rotate" => 14 }
@@ -22,11 +21,11 @@ This configuration file has the following settings for log rotation:
           log_rotation["/var/log/opscode/nagios/nagios.log"] = { "rotate" => 14 }
 
        For example:
-       ::
+
+       .. code-block:: ruby
 
           log_rotation["/var/log/opscode/nginx/*.log"] = { "rotate" => 7 }
           log_rotation["/var/log/opscode/php-fpm/php-fpm.log"] = { "rotate" => 7 }
           log_rotation["/var/log/opscode/couchdb/couchdb.log"] = { "rotate" => 7, "owner"=>"opscode", "group"=>"opscode" }
           log_rotation["/var/log/opscode/nagios/nagios.log"] = { "rotate" => 7 }
-
 

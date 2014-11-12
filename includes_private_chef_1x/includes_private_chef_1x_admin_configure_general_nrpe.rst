@@ -12,48 +12,56 @@ This configuration file has the following settings for the |service nrpe| servic
      - Description
    * - ``nrpe['allowed_hosts']``
      - Default value: ``["127.0.0.1", "192.168.4.131"]``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['allowed_hosts'] = ["127.0.0.1", "192.168.4.131"]
 
    * - ``nrpe['dir']``
      - Default value: ``"/var/opt/opscode/nrpe"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['dir'] = "/var/opt/opscode/nrpe"
 
    * - ``nrpe['enable']``
      - |enable service| Default value: ``true``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['enable'] = true
 
    * - ``nrpe['listen']``
      - Default value: ``"192.168.4.131"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['listen'] = "192.168.4.131"
 
    * - ``nrpe['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/nrpe"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['log_directory'] = "/var/log/opscode/nrpe"
 
    * - ``nrpe['port']``
      - |port nrpe| Default value: ``9672``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['port'] = 9672
 
    * - ``nrpe['svlogd_num']``
      - |svlogd_num| Default value: ``10``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['svlogd_num'] = 10
 
    * - ``nrpe['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``. For example:
-       ::
+
+       .. code-block:: ruby
 
           nrpe['svlogd_size'] = 1000000

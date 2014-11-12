@@ -12,41 +12,47 @@ This configuration file has the following settings for load balancers:
      - Description
    * - ``lb['api_fqdn']``
      - Default value: ``"ubuntu.localdomain"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb['api_fqdn'] = "ubuntu.localdomain"
 
    * - ``lb['cache_cookbook_files']``
      - Default value: ``false``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb['cache_cookbook_files'] = false
 
    * - ``lb['debug']``
      - Default value: ``false``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb['debug'] = false
 
    * - ``lb['enable']``
      - Default value: ``true``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb['enable'] = true
 
    * - ``lb['upstream']``
      - Default value:
-       ::
+
+       .. code-block:: ruby
 
           {"opscode-chef"=>["127.0.0.1"],
            "opscode-erchef"=>["127.0.0.1"],
            "opscode-account"=>["127.0.0.1"],
            "opscode-webui"=>["127.0.0.1"],
            "opscode-authz"=>["127.0.0.1"],
-          "opscode-solr"=>["127.0.0.1"]}``. 
+           "opscode-solr"=>["127.0.0.1"]}
        
        For example:
-       ::
+
+       .. code-block:: ruby
 
           lb['upstream'] = {"opscode-chef"=>["127.0.0.1"],
                             "opscode-erchef"=>["127.0.0.1"],
@@ -57,13 +63,15 @@ This configuration file has the following settings for load balancers:
 
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb['vip'] = "127.0.0.1"
 
    * - ``lb['web_ui_fqdn']``
      - Default value: ``"ubuntu.localdomain"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           lb['web_ui_fqdn'] = "ubuntu.localdomain"
 

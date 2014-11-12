@@ -12,19 +12,22 @@ This configuration file has the following settings for users:
      - Description
    * - ``user['home']``
      - Default value: ``"/opt/opscode/embedded"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           user['home'] = "/opt/opscode/embedded"
 
    * - ``user['shell']``
      - Default value: ``"/bin/sh"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           user['shell'] = "/bin/sh"
 
    * - ``user['username']``
      - Default value: ``"opscode"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           user['username'] = "opscode"
 

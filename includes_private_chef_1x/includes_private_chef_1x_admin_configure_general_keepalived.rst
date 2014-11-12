@@ -12,25 +12,29 @@ This configuration file has the following settings for |keepalived|:
      - Description
    * - ``keepalived['dir']``
      - |directory keepalived| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['dir'] = "/var/opt/opscode/keepalived"
 
    * - ``keepalived['enable']``
      - |enable service| Backend servers in a high availability topology should have this setting enabled. Default value: ``false``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['enable'] = false
 
    * - ``keepalived['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['log_directory'] = "/var/log/opscode/keepalived"
 
    * - ``keepalived['service_order']``
      - |service_order keepalived| |opscode_support| Default value:
-       ::
+
+       .. code-block:: ruby
 
           [{"key"=>"couchdb", "service_name"=>"couchdb"},
            {"key"=>"postgresql", "service_name"=>"postgres"},
@@ -49,10 +53,11 @@ This configuration file has the following settings for |keepalived|:
            {"key"=>"nagios", "service_name"=>"php-fpm"},
            {"key"=>"nagios", "service_name"=>"fcgiwrap"},
            {"key"=>"nagios", "service_name"=>"nagios"},
-           {"key"=>"nginx", "service_name"=>"nginx"}]``. 
-       
+           {"key"=>"nginx", "service_name"=>"nginx"}]
+
        For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['service_order'] = [
             {"key"=>"couchdb", "service_name"=>"couchdb"},
@@ -77,82 +82,95 @@ This configuration file has the following settings for |keepalived|:
 
    * - ``keepalived['smtp_connect_timeout']``
      - |timeout smtp_connect| Default value: ``"30"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['smtp_connect_timeout'] = "30"
 
    * - ``keepalived['smtp_server']``
      - |smtp server| Default value: ``"127.0.0.1"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['smtp_server'] = "127.0.0.1"
 
    * - ``keepalived['svlogd_num']``
      - |svlogd_num| Default value: ``10``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['svlogd_num'] = 10
 
    * - ``keepalived['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['svlogd_size'] = 1000000
 
    * - ``keepalived['vrrp_instance_advert_int']``
      - |vrrp_instance_advert| Default value: ``"1"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_instance_advert_int'] = "1"
 
    * - ``keepalived['vrrp_instance_interface']``
      - |vrrp_instance_interface| Should be set to the name of the dedicated interface for |keepalived|. Default value: ``"eth0"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_instance_interface'] = "eth0"
 
    * - ``keepalived['vrrp_instance_ipaddress']``
      - |vrrp_instance_ipaddress| This is typically set by the ``backend_vip`` option. Default value: ``keepalived['vrrp_instance_ipaddress'] = "192.168.4.131"``.
 
-   * - keepalived['vrrp_instance_ipaddress_dev']``
+   * - ``keepalived['vrrp_instance_ipaddress_dev']``
      - |vrrp_instance_ipaddress_device| Default value: ``"eth0"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_instance_ipaddress_dev'] = "eth0"
 
    * - ``keepalived['vrrp_instance_password']``
      - |vrrp_instance_password| This value is generated randomly when the bootstrap server is installed and does not need to be set explicitly. Default value: ``"sneakybeaky"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_instance_password'] = "sneakybeaky"
 
    * - ``keepalived['vrrp_instance_priority']``
      - |vrrp_instance_priority| By default, all servers have equal priority. The server with the lowest value will have the highest priority. Default value: ``"100"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_instance_priority'] = "100"
 
    * - ``keepalived['vrrp_instance_state']``
      - |vrrp_instance_state| This value should be the same for both servers in the backend. Default value: ``"MASTER"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_instance_state'] = "MASTER"
 
    * - ``keepalived['vrrp_instance_virtual_router_id']``
      - |vrrp_instance_virtual_router_id| This value should be unique within the multicast domain used for |keepalived|. Default value: ``"1"``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_instance_virtual_router_id'] = "1"
 
    * - ``keepalived['vrrp_unicast_bind']``
      - |vrrp_unicast_bind| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``<ip address of cluster IP or eth0>``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_unicast_bind'] = nil
 
    * - ``keepalived['vrrp_unicast_peer']``
      - |vrrp_unicast_peer| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``<ip address of peer cluster IP or eth0>``. For example:
-       ::
+
+       .. code-block:: ruby
 
           keepalived['vrrp_unicast_peer'] = nil
 
