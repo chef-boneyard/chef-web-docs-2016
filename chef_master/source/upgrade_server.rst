@@ -229,6 +229,10 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
 #. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
 
+   **Update the Chef server URL**
+
+   .. include:: ../../includes_upgrade/includes_upgrade_url_chef_server.rst
+
    **Use Downloads**
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
