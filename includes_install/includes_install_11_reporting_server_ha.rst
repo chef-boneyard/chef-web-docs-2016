@@ -46,14 +46,15 @@ To set up the |reporting| server for a high availability configuration:
 
       $ opscode-reporting-ctl reconfigure
 
-.. #. Restart the |reporting| components:
-.. 
-..    .. code-block:: bash
-.. 
-..       $ private-chef-ctl restart opscode-reporting
-
 #. Verify the installation:
 
    .. code-block:: bash
 
       $ opscode-reporting-ctl test
+
+.. THIS USED TO BE STEP 7
+.. #. Restart the |reporting| components:
+.. 
+..    .. code-block:: bash
+.. 
+..       $ private-chef-ctl restart opscode-reporting
