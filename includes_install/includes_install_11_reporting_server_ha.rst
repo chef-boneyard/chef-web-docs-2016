@@ -4,7 +4,7 @@
 To set up the |reporting| server for a high availability configuration:
 
 #. Contact |company_name| and get the package that is appropriate for the |chef server| platform and operating system
-#. Install the package on the same machine that is running |chef server| 11.0.1 or higher. For example on |ubuntu|:
+#. Install the package on every machine that is running |chef server|. Every |chef server| machine must be running |chef server| version 11.0.1 or higher. For example on |ubuntu|:
 
    .. code-block:: bash
 
