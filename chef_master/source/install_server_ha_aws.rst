@@ -32,11 +32,15 @@ Enable Features
 
 **Use Downloads**
 
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst
 
 **Use Local Packages**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
+
+**Install Reporting**
+
+.. include:: ../../includes_install/includes_install_reporting_ha.rst
 
 Reference
 =====================================================
