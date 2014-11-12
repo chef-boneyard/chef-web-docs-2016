@@ -405,6 +405,10 @@ Examples
 
 .. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
 
+**Build a machine from a machine image**
+
+.. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
+
 machine_batch
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_machine_batch.rst
@@ -524,7 +528,10 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
+
+**Build a machine from a machine image**
+
+.. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
 
 
 

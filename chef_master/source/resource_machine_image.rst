@@ -30,4 +30,8 @@ Providers
 
 Examples
 =====================================================
-None.
+|generic resource statement|
+
+**Build a machine from a machine image**
+
+.. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
