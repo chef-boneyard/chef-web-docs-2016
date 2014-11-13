@@ -42,7 +42,7 @@ Add the following settings to the |chef server rb| file:
 
    Replace ``FQDN`` with the |fqdn| of the load balanced virtual IP address, which should be equal to the |fqdn| for the service URI that is used by the |chef server|.
 
-#. Run the following command on all machines:
+#. Run the following command:
 
    .. code-block:: bash
       

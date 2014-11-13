@@ -14,6 +14,10 @@ Primary Backend
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_aws_primary.rst
 
+|chef server rb|
+=====================================================
+.. include:: ../../includes_install/includes_install_server_ha_aws_config_rb.rst
+
 Secondary Backend
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_aws_secondary.rst
