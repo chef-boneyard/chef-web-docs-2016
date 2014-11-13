@@ -23,8 +23,6 @@ The response will return something like the following:
    
    }
 
-where xxxxx.
-
 **Response Codes**
 
 .. list-table::
