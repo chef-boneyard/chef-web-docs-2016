@@ -9,7 +9,7 @@ To set up the |reporting| server for a high availability configuration:
 
    .. code-block:: bash
       
-      $ chef-server-ctl install opscode-reporting -Uvh /tmp/opscode-reporting-<version>.rpm
+      $ chef-server-ctl install opscode-reporting
 
 #. Reconfigure the |chef server| on the back end primary server (bootstrap):
 
