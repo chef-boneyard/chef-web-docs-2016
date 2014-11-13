@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``POST`` method is used to authenticate a user. This endpoint is used by the Chef Identity Service to authenticate users of the |chef manage|, |supermarket|, and |chef analytics| to the |chef server|.
+The ``POST`` method is used to authenticate a user. This endpoint is used by the Chef Identity Service to authenticate users of |supermarket| and |chef analytics| to the |chef server|.
 
 This method has no parameters.
 
