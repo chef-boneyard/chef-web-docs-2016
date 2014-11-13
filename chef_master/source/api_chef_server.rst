@@ -192,8 +192,23 @@ GET
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_get.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_latest.rst
 
+/cookbooks/_latest
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_latest_get.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name_get.rst
+
+/cookbooks/_recipes
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_recipes.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_recipes_get.rst
 
 /cookbooks/NAME
 -----------------------------------------------------
