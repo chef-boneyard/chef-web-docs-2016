@@ -169,11 +169,11 @@ GET
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst
 
 Organization Endpoints
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoints.rst
 
 /reports/nodes/NODE/runs
-+++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs.rst
 
 GET
@@ -181,7 +181,7 @@ GET
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst
 
 /reports/nodes/NODE/runs/RUNID/RESID
-+++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid.rst
 
 GET
@@ -189,7 +189,7 @@ GET
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst
 
 /reports/nodes/NODE/runs/RUNID
-+++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid.rst
 
 GET
@@ -197,7 +197,7 @@ GET
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst
 
 /reports/org/runs
-+++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs.rst
 
 GET
@@ -205,7 +205,7 @@ GET
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst
 
 /reports/runs/counts
-+++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts.rst
 
 GET
@@ -213,7 +213,7 @@ GET
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst
 
 /reports/runs/durations
-+++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations.rst
 
 GET
