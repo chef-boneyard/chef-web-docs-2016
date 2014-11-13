@@ -139,6 +139,23 @@ Organization Endpoints
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst
 
 
+/association_requests
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_association_requests.rst
+
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_association_requests_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_association_requests_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_association_requests_post.rst
+
+
 /authenticate_user
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_authenticate_user.rst
