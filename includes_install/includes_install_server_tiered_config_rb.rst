@@ -41,3 +41,9 @@ Add the following settings to the |chef server rb| file:
       api_fqdn "FQDN"
 
    Replace ``FQDN`` with the |fqdn| of the load balanced virtual IP address, which should be equal to the |fqdn| for the service URI that is used by the |chef server|.
+
+#. Run the following command on all machines:
+
+   .. code-block:: bash
+      
+      $ sudo chef-server-ctl reconfigure
