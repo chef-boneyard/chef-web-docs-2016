@@ -139,6 +139,14 @@ Organization Endpoints
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoints.rst
 
 
+/authenticate_user
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_authenticate_user.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_authenticate_user_post.rst
+
 /clients
 -----------------------------------------------------
 |api chef server clients|
