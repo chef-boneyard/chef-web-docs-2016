@@ -6,6 +6,9 @@
 
 .. include:: ../../includes_supermarket/includes_supermarket.rst
 
+Install |supermarket|
+=====================================================
+[Coming soon ...]
 
 supermarket-ctl (executable)
 =====================================================
