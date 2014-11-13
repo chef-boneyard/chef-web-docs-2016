@@ -9,7 +9,9 @@
 
 supermarket-ctl (executable)
 =====================================================
-[coming soon ...]
+.. include:: ../../includes_ctl_supermarket/includes_ctl_supermarket.rst
+
+For more information about the |supermarket ctl| command line tool, see :doc:`supermarket-ctl </ctl_supermarket>`. 
 
 |supermarket rb|
 =====================================================

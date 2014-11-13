@@ -192,9 +192,10 @@ Cookbooks
    ctl_kitchen
    ctl_ohai
    ctl_opscode_expander
-   ctl_reporting
    ctl_private_chef
    ctl_push_jobs_client
+   ctl_reporting
+   ctl_supermarket
    debug
    dsl_recipe
    dsl_recipe_helper_windows_platform
