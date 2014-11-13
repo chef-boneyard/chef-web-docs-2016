@@ -39,7 +39,7 @@ The following authentication headers are required:
    * - ``X-Ops-Content-Hash``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst
    * - ``X-Ops-Reporting-Protocol-Version``
-     - .. include:: ../../includes_api_chef_server/includes_api_reporting_headers_x_ops_reporting_protocol_version.rst
+     - .. include:: ../../includes_api_reporting/includes_api_reporting_headers_x_ops_reporting_protocol_version.rst
    * - ``X-Ops-Sign``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst
    * - ``X-Ops-Timestamp``
