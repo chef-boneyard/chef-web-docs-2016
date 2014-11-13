@@ -81,11 +81,6 @@ GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst
 
-POST
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_post.rst
-
-
 
 /reports/nodes/NODE/runs/RUNID/RESID
 -----------------------------------------------------
@@ -104,10 +99,6 @@ GET
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst
-
-POST
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_post.rst
 
 
 
