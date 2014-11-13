@@ -38,3 +38,5 @@ where ``index`` is the |chef server| search index. If the system component is no
      - |response code 200 ok|
    * - ``404``
      - |response code 404 not found|
+   * - ``406``
+     - Invalid request. The protocol version is incorrect.

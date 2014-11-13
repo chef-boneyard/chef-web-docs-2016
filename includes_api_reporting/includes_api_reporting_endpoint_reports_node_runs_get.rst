@@ -37,3 +37,5 @@ The response will return something like the following:
      - |response code 200 ok|
    * - ``404``
      - |response code 404 not found|
+   * - ``406``
+     - Invalid request. The protocol version is incorrect.
