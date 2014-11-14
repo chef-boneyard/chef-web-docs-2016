@@ -26,13 +26,9 @@ Hostnames
 
 Install the Server
 =====================================================
-The |chef analytics| add-on can be installed in a standalone configuration or combined with |chef server oec| on a single node.
+|chef analytics| is installed on dedicated hardware in a standalone configuration, separately from the |chef server| configuration.
 
 Standalone
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_analytics_standalone.rst
-
-Combined
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_analytics_combined.rst
 

@@ -1,10 +1,12 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-In a standalone configuration, the |chef analytics| deployment is on a different machine from |chef server oec|. This allows you to scale |chef analytics| independantly from |chef server oec|. To set up |chef analytics| in a standalone configuration,  you should have an existing |chef server| deployment already running. First run the following steps on the |chef server| instances:
+In a standalone configuration, the |chef analytics| deployment is on a different machine from the |chef server|. This allows you to scale |chef analytics| independantly from the |chef server|. To set up |chef analytics| in a standalone configuration, an existing |chef server| deployment should already running. |chef analytics| is installed in two steps: configuring the |chef server| for |chef analytics|, and then installing |chef analytics|.
+
+On the |chef server| machines:
 
 #. Download the package from http://downloads.getchef.com/analytics/.
-#. Enable the |chef server| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/private-chef.rb``:
+#. Enable the |chef server| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/chef-server.rb``:
 
    .. code-block:: bash
 
@@ -16,7 +18,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
       $ chef-server-ctl stop
 	  
-#. Enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/private-chef.rb``:
+#. Enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/chef-server.rb``:
 
    .. code-block:: ruby
 
@@ -45,7 +47,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
       $ cp /etc/opscode/webui_priv.pem /etc/opscode-analytics
 
-Now run the following steps on your |chef analytics| standalone instance:
+On the dedicated, standalone machine:
 
 #. Install the |chef analytics| package on the standalone |chef analytics| machine. For example on |ubuntu|:
 
