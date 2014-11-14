@@ -18,7 +18,7 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - The |cookbook aws| cookbook is used to manage resources that are running in |amazon aws|.
    * - `bluepill <https://github.com/opscode-cookbooks/bluepill>`_
      - The |cookbook bluepill| cookbook is used to install |bluepill|, and then use it to manage services.
-   * - `chef_handler <http://docs.gethef.com/resource_chef_handler.html>`_
+   * - `chef_handler <http://docs.getchef.com/resource_chef_handler.html>`_
      - |cookbook name chef_handler|
    * - `cron <https://github.com/opscode-cookbooks/cron>`_
      - Use to install cron and start the crond service.
