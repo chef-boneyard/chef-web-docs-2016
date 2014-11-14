@@ -65,7 +65,7 @@ The |chef server_title|
 
 Server Essentials
 -----------------------------------------------------
-The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
+The server acts as a repository for all of the data that may be needed by the |chef client| while it configures a node:
 
 * A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
 * Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.getchef.com/essentials_node_object.html#attributes>`_
