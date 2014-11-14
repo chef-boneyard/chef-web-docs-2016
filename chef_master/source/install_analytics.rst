@@ -34,8 +34,12 @@ Standalone (version 1.0)
 
 Standalone (version 1.1)
 -----------------------------------------------------
+.. note:: |chef analytics| version 1.1 requires |chef server| version 12.
+
 .. include:: ../../includes_install/includes_install_analytics_standalone_11.rst
 
 Tiered (version 1.1 only)
 -----------------------------------------------------
+.. note:: |chef analytics| version 1.1 requires |chef server| version 12.
+
 .. include:: ../../includes_install/includes_install_analytics_tiered.rst
