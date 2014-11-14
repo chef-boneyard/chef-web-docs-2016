@@ -147,21 +147,3 @@ ohai-7:
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
 
-gettext:
-	$(BUILD_COMMAND_AND_ARGS) -b gettext docs_all/source build/locale-all
-	$(BUILD_COMMAND_AND_ARGS) -b gettext chef_master/source build/locale-master
-	@echo
-	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
-
-epub:
-	$(BUILD_COMMAND_AND_ARGS) -b epub docs_all/source build/epub-all
-	$(BUILD_COMMAND_AND_ARGS) -b epub chef_master/source build/epub-master
-	@echo
-	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
-
-
-text:
-	$(BUILD_COMMAND_AND_ARGS) -b text docs_all/source build/text-all
-	$(BUILD_COMMAND_AND_ARGS) -b text chef_master/source build/text-all
-	@echo
-	@echo "Build finished. The text files are in $(BUILDDIR)/text."
