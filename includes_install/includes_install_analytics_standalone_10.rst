@@ -53,7 +53,7 @@ On the dedicated, standalone machine:
 
    .. code-block:: bash
 
-      $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
+      $ dpkg -i opscode-analytics<version>.deb
 
 #. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the standalone |chef analytics| machine.
 
@@ -64,7 +64,7 @@ On the dedicated, standalone machine:
       analytics_fqdn "analytics.example.com"
       topology "standalone"
 
-#. Verify your configuration with the preflight check tool:
+#. Verify the configuration using the preflight check command:
 
    .. code-block:: bash
 

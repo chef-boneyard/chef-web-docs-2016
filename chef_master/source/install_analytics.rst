@@ -28,7 +28,14 @@ Install the Server
 =====================================================
 |chef analytics| is installed on dedicated hardware in a standalone configuration, separately from the |chef server| configuration.
 
-Standalone
+Standalone (version 1.0)
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_analytics_standalone.rst
+.. include:: ../../includes_install/includes_install_analytics_standalone_10.rst
 
+Standalone (version 1.1)
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_analytics_standalone_11.rst
+
+Tiered (version 1.1 only)
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_analytics_tiered.rst
