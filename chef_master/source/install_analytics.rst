@@ -8,6 +8,7 @@ Prerequisites
 =====================================================
 The |chef analytics| server shares the :doc:`same prerequisites </install_server_pre>` as the |chef server|:
 
+* |chef analytics| 11.1.8 (or higher)
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a FQDN or an IP address
 * A connection to |ntp| to prevent clock drift
