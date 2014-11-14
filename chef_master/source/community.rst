@@ -16,7 +16,7 @@ Here are some contributions from the community:
 
 **Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Report handlers </community_plugin_report_handler>` | 
 
-.. **Chef for OpenStack:** :doc:`Overview </openstack>` | `knife-openstack <https://docs.opscode.com/plugin_knife_openstack>`_
+**Chef for OpenStack:** :doc:`Overview </openstack>` | `knife-openstack <https://docs.opscode.com/plugin_knife_openstack>`_
 
 **Documentation:** `Contribute to this documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.opscode.com/style_guide.html>`_
 
