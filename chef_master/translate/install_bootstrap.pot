@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_bootstrap.rst:8
+# 09f4041d428746fcbb36f41b0d675da5
+msgid "Bootstrap a Node"
+msgstr ""
+
+#: ../source/install_bootstrap.rst:10
+# 286d4e8b758c4c4898a5e8f7890933e4
+msgid "A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|. There are two ways to install the |chef client| on a node so that it may be maintained by the |chef client|:"
+msgstr ""
+
+#: ../source/install_bootstrap.rst:12
+# 6e6930bb5fe9446e9349f7ed07f961f8
+msgid "Use the |subcommand knife bootstrap| subcommand to `bootstrap a node using the omnibus installer <http://docs.getchef.com/essentials_nodes_bootstrap.html>`_"
+msgstr ""
+
+#: ../source/install_bootstrap.rst:13
+# 0ac2adce0a5f4a6cb93b8f8af1001e96
+msgid "Use an unattended install to bootstrap a node from itself, without using |ssh| or |windows remote management|"
+msgstr ""
+
+#: ../source/install_bootstrap.rst:16
+# 14c197dd4b7a4e40bda8fa2c37883329
+msgid "``knife bootstrap``"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client.rst:4
+# fe09b790fff74428ac806fb4c0498f14
+msgid "The ``knife bootstrap`` command is a common way to install the |chef client| on a node. The default for this approach assumes that node can access the |company_name| website so that it may download the |chef client| package from that location."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client.rst:6
+# 0ef2b81e01a0462ca277e015f9ae1b71
+msgid "The |omnibus installer| will detect the version of the operating system, and then install the appropriate version of the |chef client| using a single command to install the |chef client| and all of its dependencies, including an embedded version of |ruby|, |rubygems|, |open ssl|, key-value stores, parsers, libraries, and command line utilities."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client.rst:8
+# 5117f8c341564fa3aa696288b55c43f8
+msgid "The |omnibus installer| puts everything into a unique directory (|path omnibus install_client|) so that the |chef client| will not interfere with other applications that may be running on the target machine. Once installed, the |chef client| requires a few more configuration steps before it can perform its first |chef client| run on a node."
+msgstr ""
+
+#: ../source/install_bootstrap.rst:19
+# 33b8d1e9dc2c475fbbe219f2f20b69d8
+msgid "**Run the bootstrap command**"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:4
+# 9744a41d214741628bf8afbcb8b7fee4
+msgid "The |subcommand knife bootstrap| subcommand is used to run a bootstrap operation that installs the |chef client| on the target node. The following steps describe how to bootstrap a node using |knife|."
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:6
+# 358f1c1f81684deab80bf50054de4b43
+msgid "Identify the |fqdn| or IP address of the target node. The ``knife bootstrap`` command requires the |fqdn| or the IP address for the node in order to complete the bootstrap operation."
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:8
+# 49e40b66ffb242009e8d1fe5dc86d824
+msgid "Once the workstation machine is configured, it can be used to install the |chef client| on one (or more) nodes across the organization using a |knife| bootstrap operation. The ``knife bootstrap`` command is used to |ssh| into the target machine, and then do what is needed to allow the |chef client| to run on the node. It will install the |chef client| executable (if necessary), generate keys, and register the node with the |chef server|. The bootstrap operation requires the IP address or |fqdn| of the target system, the |ssh| credentials (username, password or identity file) for an account that has root access to the node, and (if the operating system is not |ubuntu|, which is the default distribution used by ``knife bootstrap``) the operating system running on the target system."
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:10
+# 240c4a34ee1c4cd18f17bc6338778fa5
+msgid "In a command window, enter the following:"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:16
+# df3ab20a61a34bc38d6e4e6b07c16054
+msgid "where ``123.45.6.789`` is the IP address or the |fqdn| for the node. Use the ``--distro`` option to specify a non-default distribution. For more information about the options available to the |subcommand knife bootstrap| command for |ubuntu|- and |linux|-based platforms, see `knife bootstrap <http://docs.getchef.com/knife_bootstrap.html>`_. For |windows|, the |subcommand knife windows| plugin is required, see `knife windows <http://docs.getchef.com/plugin_knife_windows.html>`_."
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:18
+# 84562bbfa94745fbae22a70a5971f43f
+msgid "And then while the bootstrap operation is running, the command window will show something like the following:"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:53
+# 61b9ddb41fe94d99981abf50ce6ad898
+msgid "After the bootstrap operation has finished, verify that the node is recognized by the |chef server|. To show only the node that was just bootstrapped, run the following command:"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:59
+# 7125af66ee914e999c95f4b74b122f7f
+msgid "where ``name_of_node`` is the name of the node that was just bootstrapped. The |chef server| will return something similar to:"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:69
+# 885357a5341e4526b43e4abab6afe1ad
+msgid "and to show the full list of nodes (and workstations) that are registered with the |chef server|, run the following command:"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_install_chef_client.rst:75
+# 0d32503d0d584c3a952a3c86cc40d085
+msgid "The |chef server| will return something similar to:"
+msgstr ""
+
+#: ../source/install_bootstrap.rst:24
+# f1225211cbd5499e958db4b2ae133324
+msgid "Unattended Installs"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:4
+# c75df5933c914f4eb8581d952ba8d60e
+msgid "The |chef client| can be installed using an unattended bootstrap. This allows the |chef client| to be installed from itself, without using |ssh|. For example, machines are often created using environments like |amazon aws autoscaling|, |amazon aws cloudformation|, |rackspace autoscale|, and |pxe|. In this scenario, using tooling for attended, single-machine installs like ``knife bootstrap`` or ``knife CLOUD_PLUGIN create`` is not practical because the machines are created automatically and someone cannot always be on-hand to initiate the bootstrap process."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:6
+# 0a594e7c6e014fc9addfe7a082914629
+msgid "When the |chef client| is installed using an unattended bootstrap, remember that the |chef client|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:8
+# 79b996b77bbe4c6ca4ecd0a58a306420
+msgid "Must be able to authenticate to the |chef server|"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:9
+# def991831aa447e98bf4af804fd2229b
+msgid "Must be able to configure a run-list"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:10
+# e7f0a67b2e934fdbbf94a884e675c6b6
+msgid "May require custom attributes, depending on the cookbooks that are being used"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:11
+# f1bccb25d00b460db8876b7009172e56
+msgid "Must be able to access the |chef validator pem| so that it may create a new identity on the |chef server|"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:12
+# ef17f2be5e774543ad3691a5ee2c2db9
+msgid "Must have a unique node name; the |chef client| will use the |fqdn| for the host system by default"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:14
+# 6ed5f056af354f709bebd40e2a5cf479
+msgid "When the |chef client| is installed using an unattended bootstrap, it is typically built into an image that starts the |chef client| on boot. The type of image used depends on the platform on which the unattended bootstrap will take place."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst:16
+# 9d5cee43a6044dc4a89d65a2c82e9aa3
+msgid "Use settings in the `client.rb file <http://docs.getchef.com/config_rb_client.html>`_---``chef_server_url``, ``http_proxy``, and so on---to ensure that configuration details are built into the unattended bootstrap process."
+msgstr ""
+
+#: ../source/install_bootstrap.rst:27
+# 8ff797f852db48e3b3902abf46abfb49
+msgid "**Setting the initial run-list**"
+msgstr ""
+
+#: ../../step_ctl_chef_client/step_ctl_chef_client_bootstrap_initial_run_list.rst:4
+# a9794640eeee441181d7f59e5778ee39
+msgid "A node's initial run-list is specified using a |json| file on the host system. When running the |chef client| as an executable, use the ``-j`` option to tell the |chef client| which |json| file to use. For example:"
+msgstr ""
+
+#: ../../step_ctl_chef_client/step_ctl_chef_client_bootstrap_initial_run_list.rst:10
+# 68791ff3d2704869b100df4addedb9cf
+msgid "where ``file.json`` is similar to:"
+msgstr ""
+
+#: ../../step_ctl_chef_client/step_ctl_chef_client_bootstrap_initial_run_list.rst:22
+# 4550a723109e4606ab307ca293bfd158
+msgid "This option may be used to update ``normal`` attributes, but should never be used to update any other attribute type, as all attributes updated using this option are treated as ``normal`` attributes."
+msgstr ""
+

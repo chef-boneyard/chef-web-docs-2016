@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_ldap.rst:8
+# 3a8b1be620824ac19830f5829775f72c
+msgid "Active Directory and LDAP"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap.rst:4
+# 569b44625dcc4c50a81f5fa02e4a03c4
+msgid "The |chef server| supports |windows ad| and |ldap| authentication, which enables users to log in to the |chef server| using their corporate credentials."
+msgstr ""
+
+#: ../source/server_ldap.rst:13
+# 909b0f25bbd944debfe1515be28fcb87
+msgid "Configure LDAP"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:4
+# c8d19ade1ca84160bf247a2abda37a79
+msgid "The |chef server| supports using |windows ad| or |ldap| for any user that has an email address in the |ldap| directory. This allows those users to log in to the |chef server| by using their corporate credentials instead of having a separate username and password."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:6
+# 4379eaf7c53048299b98b087477cdff8
+msgid "To configure the |chef server| to use |windows ad| or |ldap| do the following:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:8
+# efe9a23000614a2fbdc864416afc7791
+msgid "Install the |chef manage| (if it is not already)."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:9
+# 3869bdea7f1c44c9841bd9b3f5b6fcfb
+msgid "Add the following settings to the |chef server rb| file. These settings must be added to each machine in the |chef server| deployment, including both front and back end machines in a high availability or tiered configuration:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:4
+# de3ecc4242194b758906a234ebdb05c4
+msgid "This configuration file has the following settings for ``ldap``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:10
+# e102f430877740c3910f1d6cd2a24d25
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:11
+# 0bd4fb17578b4fc0ac7d8efea83b1943
+msgid "Description"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:12
+# 5066efa6ba124028af7beea63f05adf8
+msgid "``ldap['base_dn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:13
+# cfdf819e12394dd8b7c1ed9f8b33c094
+msgid "|ldap base_dn| For |windows ad|, this is typically ``cn=users`` and then the domain. For example: ``'OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:14
+# a34e8fafa7b04031a6a0bd6cfc7a8220
+msgid "``ldap['bind_dn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:15
+# 41b93ca3c8f84951b1ccef1aba566aae
+msgid "|ldap bind_dn| This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. |chef server oec| must do an |ldap| search before any user can log in. Many |windows ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` setting blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to ``'CN=user_who_can_search,OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:16
+# ce23a096b0ce4b38aa233831ccfb4404
+msgid "``ldap['bind_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:17
+# 18f7535dc12a4ea19172f5a60a318d3f
+msgid "|ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:18
+# 4bacb3a844a14e5ba563f6d98e446139
+msgid "``ldap['encryption']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:19
+# 853bc969397f4db6b5aa6a59c066bf53
+msgid "Use to specify the encryption method. Possible values: ``:none``, ``:start_tls``, or ``:simple_tls``. Use ``:simple_tls`` to encrypt all communication with the |ldap| server via a secure connection (specified by ``ldap['port']``). Use ``:start_tls`` to encrypt communication with the |ldap| server when the port used for the connection allows unencrypted communication. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:21
+# 382adfc93fc9471db4b149caa3a80e8c
+msgid "|chef server| version 12 enables |ssl| encryption by default when ``ldap['encryption']`` is set to ``:simple_tls``. Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. The ``ldap['ssl_enabled']`` setting is deprecated."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:23
+# 05c80fdd331446eea717c1c7243c60ba
+msgid "``ldap['host']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:24
+# 4c3b529c9ded4f20a0026ec219134ad6
+msgid "|ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``ldap-server-host``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:25
+# 0b9e573ec84d4d34875d2f41adc50da9
+msgid "``ldap['login_attribute']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:26
+# 81ffb0b6280341b097544c6ed5f8858d
+msgid "Use to specify the |chef server| user name for an |ldap| user."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:27
+# a8fb11c76aea453fa4594b3f129eeb5c
+msgid "``ldap['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:28
+# a79e3da6fb664186981f0994229ba0c5
+msgid "|ldap port| The default value is an appropriate value for most configurations. Default value: ``389``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:29
+# d45de32491b3460bb59f7438a4d8536a
+msgid "``ldap['timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:30
+# 021b439a546c4a0faa03116bcce47f6e
+msgid "Default value: ``60000``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:13
+# fd502bb13733474da2d26350f2762288
+msgid "If the |chef server rb| file does not exist, create a file called ``chef-server.rb`` and put it in the ``/etc/opscode/`` directory."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:15
+#: ../../includes_install/includes_install_server_ldap.rst:21
+# 4c1d3b19e5f9414395b995ffe067f24b
+# 8f55b5bb6c2e4583a6954255477665b0
+msgid "Run the following command:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:27
+# 3e7c294befb6452bb115e21d4e8915cd
+msgid "At this point, all users should be able to use their |windows ad| or |ldap| usernames and passwords to log in to the |chef server|."
+msgstr ""
+

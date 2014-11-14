@@ -1,0 +1,587 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/cookbooks.rst:8
+# 09fd9ce79605459ca12a0fea1cfe19c6
+msgid "Cookbooks"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:4
+# cb46ff58a2f54241b7ed6010135ab46a
+msgid "A cookbook is the fundamental unit of configuration and policy distribution. Each cookbook defines a scenario, such as everything needed to install and configure |mysql|, and then it contains all of the components that are required to support that scenario, including:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:6
+# a514b54709ab4d3d96322bc8a4c51342
+msgid "Attribute values that are set on nodes"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:7
+# 08a4addb258c45459fa23dfa68ba178c
+msgid "Definitions that allow the creation of reusable collections of resources"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:8
+# bbe703a21e444ce9b819a1d3b7b51a35
+msgid "File distributions"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:9
+# a316d9c88b6f4a53af88d3a9ce9d2669
+msgid "Libraries that extend the |chef client| and/or provide helpers to |ruby| code"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:10
+# 50018676f6b3432c8b0605cb33fbf55c
+msgid "Recipes that specify which resources to manage and the order in which those resources will be applied"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:11
+# 82f7954f9dbb41da9e34729c342bf7d4
+msgid "Custom resources and providers"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:12
+# 1b1e527363d740c992c4cd6d990fbca8
+msgid "Templates"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:13
+# 0d8c56c82004441f869df06c908d48a6
+msgid "Versions"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks.rst:14
+# 6778be9e7ad84651a283b04aa3b0e84c
+msgid "Metadata about recipes (including dependencies), version constraints, supported platforms, and so on"
+msgstr ""
+
+#: ../source/cookbooks.rst:12
+# 00d2063169be42e0928f091439bc12b0
+msgid "This topic is a work in progress. It does not represent a suggested workflow or a recommended workflow. It attempts to recognize some high-level common ways people use cookbooks, put them in a single topic so that the concepts may be discussed, that is all."
+msgstr ""
+
+#: ../source/cookbooks.rst:15
+# 174218ff7ea34ca8b2b3f11bf97361ab
+msgid "Global Patterns"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:6
+# e74382342c634311b743189ddee334dc
+msgid "A primary goal of cookbook authoring is to create cookbooks that are reusable as building blocks, where each cookbook defines a specific configuration piece used by the organization. For example, say all servers across the organization will run |cron| and |ntp|, but only front-end servers in production will be load balanced. This building block approach relies on some basic guidelines:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:8
+# d92335597f974bbaaaa51817642f1539
+msgid "All cookbooks are kept in version source control"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:9
+# 4bbbb63cca584ff89b47e8fb33073fa6
+msgid "Cookbooks are never forked from their |github| repositories"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:10
+# 8df8291a128d42de9ed7b55a126a75dd
+msgid "Cookbooks may be kept in the |chef repo|, but are typically kept in their own dedicated repositories outside of the |chef repo|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:11
+# 94e3306e74ee437dbd49572cdfe094ba
+msgid "Cookbooks are kept as small as possible and are focused on specific configuration targets, with changes to cookbooks tracked as versions of that cookbook"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:12
+# d6daa865c54d4900884641878dc1a835
+msgid "Cookbooks are better when unit and integration testing is done against them, automatically"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:13
+# f75ed4092bd6480487a98a3fde9a1b7a
+msgid "When a cookbook is uploaded to the |chef server|, it is versioned and that version is frozen"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:14
+# a0ae1a13956648e1a05acb8880c6d336
+msgid "Community cookbooks are a great resource; often a community cookbook can be used wholesale (without changes), but sometimes a community cookbook needs a wrapper that is used to ensure specific organizational requirements are met"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern.rst:15
+# 56e4947646364711bae734280574724a
+msgid "Recipes in cookbooks should be modular, minimally prescriptive, and use custom resources to expose repeatable patterns that are needed to solve implementation-specific requirements"
+msgstr ""
+
+#: ../source/cookbooks.rst:18
+# f7ed38b96e164bbcb998da4f44bb35fc
+msgid "This topic uses the following terms: |cookbook type_app|, |cookbook type_base|, |cookbook type_wrapper|, and |cookbook type_policy| to represent different approaches for creating building blocks out of cookbooks. These terms aren't always used consistently within the larger |chef| community. That said, the most important takeaway from this topic isn't the terms themselves, but instead the following: 1) use community cookbooks as often as possible; modify community cookbooks using |cookbook type_wrapper| cookbooks (when necessary); all cookbooks should work together as building blocks that represent the various working configurations that your organization requires."
+msgstr ""
+
+#: ../source/cookbooks.rst:21
+# 9d32ab13f3544596b56c0c50663a6c3c
+msgid "Global Recipe Patterns"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst:5
+# 24e7fc4e90f7491aa83bf262f6f30702
+msgid "Recipes in cookbooks should follow some simple patterns:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst:7
+# 88742bd321524071a3e691bf12678cb4
+msgid "**Modular**  Recipes should be modular. This allows users who use them to be selective about the policies they choose to enforce. For example, rather than one large recipe that does everything, break recipes down into specific configuration options:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst:20
+# 77dc35488a5446bf8dd351401072ddc1
+msgid "This type of approach will make it easier to determine which recipes go into a run-list."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst:22
+# 74ce720cc2a2458ab21051f139ac0838
+msgid "**Minimally prescriptive**  Recipes should be small and focused and should only do what is needed to complete a specific task. For example:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst:32
+# f6c5e24482d04610bd68e7fb15d41f97
+msgid "This type of approach is simple: it starts and enables the named services while also ensuring that the recipe runs on multiple platforms."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst:34
+# c0674761dcb940acadf6e926e1ac3ebe
+msgid "**Extend cookbooks using custom resources**  Use custom resources to expose implementation-specific configurations. For example, the |cookbook apache2| cookbook contains the ``web_app`` custom resource, which manages a virtual host template for an |apache| web site:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_recipes.rst:46
+# 3ffca49c6f46432cb1841a614f13901f
+msgid "This type of approach is repeatable because it uses attributes to ensure that the implementation-specific configurations can be modified when needed, yet the resource itself is reusable."
+msgstr ""
+
+#: ../source/cookbooks.rst:25
+# 28ca9d2672904ac882d55626bf717ec1
+msgid "Pattern Types"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:5
+# 08b57268b65d46c08a66cc528ea4f8d3
+msgid "In addition to these basic guidelines, the cookbooks themselves should follow some general patterns. Keep the following cookbook pattern types in mind when deciding how to build reusable cookbooks for your organization:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:11
+# 336712d779394d9b8e0fe02a26ff2561
+msgid "Pattern"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:12
+# 9b9ef20af64548f79e25a72f59856670
+msgid "Description"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:14
+# 1df6255ae5674c069abdfcdc19845c92
+msgid "A |cookbook type_base| cookbook is a core cookbook that configures a specific part of a node, such as the platform itself---|centos|, |mac os x|, |redhat|, |ubuntu| or |windows|---but also other components like |runit|, |cron|, or |ntp|. Anything that is considered core to most (or even all) nodes in the organization is a good candidate to be managed using a |cookbook type_base| cookbook. A |cookbook type_base| cookbook is often a community cookbook used without modification, but is sometimes a cookbook that is build to address specific organizational requirements. Typically, this cookbook does not have dependencies on any other cookbook."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:16
+# 5603e52fa67a487a83cf23d370ff7b5d
+msgid "A |cookbook type_wrapper| cookbook makes specific changes to a |cookbook type_base| cookbook and/or extends that cookbook, effectivelly wrapping around the |cookbook type_base| cookbook a small set of specific changes. This is done (for the most part) to avoid forking a community cookbook, while still using the functionality built into that cookbook."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:18
+# bdb7557fe8f149bf86528c40a665eecf
+msgid "A |cookbook type_app| cookbook applies the configuration necessary to run applications on a node, such as |apache tomcat|, |postgresql|, or |sensu|. One (or more) |cookbook type_app| cookbooks can work together to define the full appllication stack. For example, a base |cookbook type_app| cookbook applies the underlying configuration, a data |cookbook type_app| cookbook sets up the data layer, and a webserver |cookbook type_app| cookbook sets up the node to run as a web server. Ideally, each |cookbook type_app| cookbook represents a repeatable configuration that is usable across many nodes."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:20
+# eeabe57b82bd47079813b7adcb8e3296
+msgid "A |cookbook type_policy| cookbook applies the policy settings defined on the |chef server| to groups of nodes."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:21
+# dfca529a969c46d9b5ad5d07fd99931d
+msgid "This pattern to be defined by an upcoming feature of |chef| called \"Policyfile\". Search the chef.lists for \"Policyfile\" to see various discusions around what this feature will look like."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_types.rst:23
+# de4de0ffa5244c67a5e11dc1074eeefe
+msgid "Think of these patterns as building blocks. Use them to help visualize how the cookbooks your organization uses fit together:"
+msgstr ""
+
+#: ../source/cookbooks.rst:29
+# 588464eb82f2441cb334a9ba722652b3
+msgid "Base Cookbooks"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:4
+# 374902a40d0b4beb929d5375b3da905e
+msgid "A |cookbook type_base| cookbook abstracts core component applications into reusable building blocks:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:6
+# c892b6f31ca346bc9229b4d4909d7812
+msgid "Operating systems, such as |centos| and |redhat|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:7
+# a9f86e86a99a4f09a8ff5c2f0d96f220
+msgid "Package managers, such as |yum| and |apt|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:8
+# b724827208bb4374a5859fad8052ab8e
+msgid "Core services, such as |ntp| and |cron|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:9
+# df236a7a0b7846db899119cac7c5733d
+msgid "Storage, such as |raid| and |lvm|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:10
+# f5b40a3729c4486fac6051fa2ee0f613
+msgid "Networking, such as host files, |dns|, firewalls, route tables, and ports"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:11
+# 0bfc53e40bb446868bdcfce94b6c30e0
+msgid "Programming languages, such as |php|, |perl|, |ruby|, and |java|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:12
+# 9db530f1d07a41ed89d6b22bc36734d2
+msgid "Common libraries, such as -- chef run-time (chef sugar, etc.) and/or system (make, gcc, etc.)"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:14
+# 8605151159c141e3b62607bd942a2bd5
+msgid "Some common charactistics of a |cookbook type_base| cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:16
+# 44a3d42b34474f51969a46c2195ab51f
+msgid "Defines the desired state for core components, i.e. \"creates building blocks that can be used anywhere\""
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:17
+# 32e618bbada845e7967f6eb5d338ee4e
+msgid "Is typically associated 1:1 with a core component"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:18
+# d74aa0affc584dd6ae2b1f349327968f
+msgid "Frequently uses libraries, definitions, attributes, and custom resources"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:19
+# 5249562788f94b7b84cff3559e772cf2
+msgid "Is often defined by a community cookbook"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:20
+# 3bd5c7592dd54d93a0020b02121c437b
+msgid "Is never forked from a |github| repository"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:21
+# bf1daba7e8e8433fa71dfdf02fadeb8d
+msgid "Typically does not have a dependency on another cookbook"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_base.rst:23
+# b7ccfc6a41c04b69ae7a007a2e13c11f
+msgid "See https://github.com/opscode-cookbooks for a good starting point for cookbooks that can be leveraged as |cookbook type_base| cookbooks. Some standouts include chef-splunk, nginx, apt, and homebrew."
+msgstr ""
+
+#: ../source/cookbooks.rst:33
+# e9725ca51bd54ddba9d0d5e630839f92
+msgid "Wrapper Cookbooks"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:4
+# 5e7ce2a85dac4fbaa82b640a21ede93c
+msgid "A |cookbook type_wrapper| cookbook modifies the behavior of a |cookbook type_base| cookbook."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:6
+# 9a4db9937a67493d88dc2aa234a4f88a
+msgid "Some common charactistics of a |cookbook type_wrapper| cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:8
+# cb550179f4594b818c8644790639f5cc
+msgid "Is often associated 1:1 with a |cookbook type_base| cookbook"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:9
+# 33e9138a47054d599e1b450898573273
+msgid "Is never a wrapper around a |cookbook type_wrapper| cookbook"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:10
+# 96ef439bfb06452f8141bfddbbfb2cac
+msgid "Is never based on a cookbook that has been forked from |github|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:11
+# bf4fe453ffdc4fb29ecf591854d8bd91
+msgid "Typically makes a small number of specific changes within the |cookbook type_wrapper| cookbook, but otherwise makes no changes to the |cookbook type_base| cookbook"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:12
+# 8da67435d43544269a9188bf994459ac
+msgid "Is often extended to meet organizational requirements, such as adding new recipes, attributes, or custom resources"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:13
+# 6fcf55dc9308425abb97c189e98d627e
+msgid "Is typically NOT used only to modify |cookbook type_base| cookbook attributes"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:14
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:13
+# 21831d6a95fe4d869cd76a259c1d027a
+# 2d1728ec38de418897134c1c76e1777d
+msgid "Is unique to an organization"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper.rst:15
+# 88a7f23b7b8243d58fcaf8d7253f18ee
+msgid "Should follow a naming pattern that includes both the name of the |cookbook type_base| cookbook on which the |cookbook type_wrapper| cookbook is based preceded by a |cookbook type_wrapper| name that is used globally across the organization for all |cookbook type_wrapper| cookbooks, e.g. ``organization_name-library_cookbook_name``"
+msgstr ""
+
+#: ../source/cookbooks.rst:36
+#: ../source/cookbooks.rst:44
+# 952e380aff604f7689d1be848ba4e221
+# b083e0a27a884b27815a059f82b45a87
+msgid "**Example**"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:5
+# 49d92c28ef1847a7adae9951ca7f229f
+msgid "An orgainzation named ``grantmc`` uses |splunk|. The |company_name| |cookbook chef_splunk| cookbook is a public cookbook in the |company_name| cookbook repository on |github|. This cookbook will be used as a |cookbook type_base| by the ``grantmc`` organization."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:7
+# 71d01199d5204871814cc2daf402b947
+msgid "The ``server.rb`` recipe in the |cookbook chef_splunk| cookbook installs a |splunk| server, configures it to run as a service, configures user authentication, and enables |ssl|. But the |cookbook chef_splunk| cookbook does not specify how large the database can get before it is frozen:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:36
+# 0ed2ef0eaf5142bc99b7bc38319512ff
+msgid "A |cookbook type_wrapper| cookbook can be created that adds the ``maxTotalDataSizeMB`` setting to the |splunk| configuration file. The first step is to create a wrapper cookbook::"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:45
+# c323aebd8ab64dedb38c167a60b2d7eb
+msgid "The |metadata rb| file is updated to depend on the |cookbook chef_splunk| cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:56
+# 25b88b54adae426c884572aa02b43a9c
+msgid "A template file named ``system-inputs.conf.erb`` is added to the ``/templates`` directory in the ``grantmc-chef-splunk`` cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:66
+# 7b099534c589441f9ea522c1eb8e5246
+msgid "A recipe named ``server.rb`` is added to the ``/recipes`` directory. This recipe uses the |resource template| resource to add the ``maxTotalDataSizeMB`` setting to the ``inputs.conf`` file:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:86
+# 274e07f75ea24a22a32e2f9b90ccfeda
+msgid "Now, instead of adding the ``server.rb`` recipe in the |cookbook chef_splunk| cookbook to the run-list, add the ``server.rb`` recipe in the wrapper cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_wrapper_example.rst:96
+# 8eeea7fa5bd249f39a4dca5d0a5285ff
+msgid "The |chef client| will load the |cookbook chef_splunk| cookbook first, and then will load the ``grantmc-chef-splunk`` cookbook, applying the additional setting."
+msgstr ""
+
+#: ../source/cookbooks.rst:41
+# f7f2306ed01044118bb23291ad76443c
+msgid "App Cookbooks"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:4
+# 43440f58c0c8469985a479040635b5c3
+msgid "An |cookbook type_app| cookbook defines the desired state for a working configuration. A working configuration could simply be the base configuration for a node. It may be everything to get a single application---a database **or** a web server---configured and running. It may be everything for the entire stack of applications that will run on a node---a database **and** a web server---configured and running."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:6
+# 4730f9ea8cf6445f9b2909a70198dcb5
+msgid "A |cookbook type_app| cookbook configures applications as reusable building blocks:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:8
+# 6c266c6185df4d4187a7ecaf98587e6b
+msgid "Execution runtimes, such as |apache tomcat|, |nodejs|, |ruby on rails|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:9
+# f03c354c88334299932ed4e43698d2ac
+msgid "Web servers, such as |apache 2|, |nginx|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:10
+# 9f435248290c4d3a97b75fa61849e4ea
+msgid "Databases, such as |apache cassandra|, |mysql|, |postgresql|, |riak|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:11
+# b31733d899fe40c5869e67139a50ad68
+msgid "Monitoring applications, such as |nagios|, |sensu|, |splunk|, |zabbix|"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:13
+# 4899c8211b9148df8b15c2a9593e4a40
+msgid "Some common charactistics of an |cookbook type_app| cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:15
+# 06f2e9fb08684327adc0d1ccc9a32d83
+msgid "Is associated 1:1 with a working configuration"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:16
+# 9470d14297cc45f08895cccd4d0507e8
+msgid "One (or more) |cookbook type_app| cookbooks define the desired state for the stack of applications"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:17
+# fc64a7cfa6a044bda0ce5c394837fbe9
+msgid "Is rarely based on a community cookbook, but often leverages |cookbook type_base| and |cookbook type_wrapper| cookbooks"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:18
+# 5d39033e53764582a8a9e94c4d85fe1d
+msgid "Often contains one (or more) dependencies on other cookbooks, typically these dependencies are on |cookbook type_base| and |cookbook type_wrapper| cookbooks, but not always"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:19
+# a030ccf3681c4f2983ed9be41a774061
+msgid "Uses recipes to define the parts of the application"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:20
+# ea556b83f6264b399578fb3e4ce7d3b7
+msgid "May add custom resources"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:21
+# b79cf791f29641fca502a24b459a617e
+msgid "Is typically unique to an organization, but often shareable across nodes within that organization"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app.rst:22
+# 69a049f7520f4af2b64a958568fc180b
+msgid "Is typically the easiest location from which to manage cookbook dependencies"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app_example.rst:4
+# b3f64304615a4b81b8cecb2178c07bdf
+msgid "The recipes in an |cookbook type_app| cookbook are typically based off of a default recipe which then includes the other recipes needed to build the working configuration. For example, an |cookbook type_app| cookbook named ``grantmc``, the ``default.rb`` recipe should use the ``include_recipe`` method to include the other recipes in the cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app_example.rst:11
+# e63e6da0c44b4fa99f8484a544c2aba4
+msgid "and then each of the other recipes should contain all of the configuration needed to build the desired working configuration. For ``database.rb`` includes recipes built into the |cookbook apache2| cookbook and also contains a mix of both custom resources (``mysql_connection_info``) and platform resources (``execute``):"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app_example.rst:31
+# 21baddbc7b3f493d8f72c539f5746973
+msgid "and then for ``webserver.rb`` includes recipes built into the |cookbook apache2| cookbook and also contains a mix of both custom resources (``apache_site``) and platform resources (``execute``, ``package``, and ``template``):"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_app_example.rst:59
+# c6fcc1f473b949c0816432a5fbf1fb7d
+msgid "The ``default.rb`` recipe is then added to the run-list for the node and the node will be configured to be"
+msgstr ""
+
+#: ../source/cookbooks.rst:49
+# 07455fbf4e7c42238654507eb2fd61f9
+msgid "|chef server_title| Policy"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:4
+# 30f951f5a2574ba2be0f5058c671bdca
+msgid "|chef server| policy---roles, environments, and cookbook versions---are typically managed as policy objects on the server itself. A |cookbook type_policy| cookbook applies the |chef server| policy to groups of nodes. Using a cookbook to manage |chef server| policy objects is not common and almost always only for the role policy object, and then cookbook versions are pinned to environments."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:6
+# dd7d07c0110a4e37babf0ce0e3892b4a
+msgid "This approach is often done using the policy objects themselves---the roles and environments on the |chef server|---by using the run-list to define the policy and by using attributes as needed to make specific settings changes."
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:8
+# 196232265224466cab573ff1f1961264
+msgid "Some common charactistics of a |cookbook type_policy| cookbook:"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:10
+# fc61d8e36a02472f9e6ea3f0560345c1
+msgid "Is typically associated 1:1 with a |chef server| policy object"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:11
+# 5eeaf8ab8be54571ac56c69ba3da684d
+msgid "Sometimes makes a small number of specific changes to |cookbook type_base|, |cookbook type_wrapper|, or |cookbook type_app| cookbooks"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:12
+# 711595e5cb3f4715b3b67f18eeeb72ce
+msgid "Is sometimes extended to meet organizational requirements"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:14
+# 1158143b94134f19b6048176f9218102
+msgid "Relies on cookbook versions to be frozen, and then pinned to specific |cookbook type_policy| cookbooks"
+msgstr ""
+
+#: ../../includes_cookbook/includes_cookbook_pattern_policy.rst:15
+# a4bbf3202a6f45448aafaaa450c5b3bd
+msgid "Should follow a naming pattern that is based preceded by a name that is used globally across the organization, e.g. ``organization_name-policy_name``"
+msgstr ""
+
+#: ../source/cookbooks.rst:53
+# ddbf6c560fdd4d4b9478ecfe756f15bd
+msgid "For more information ..."
+msgstr ""
+
+#: ../source/cookbooks.rst:54
+# 034f3411b25a47f2b179084c27d618b7
+msgid "For more information about |chef spec|:"
+msgstr ""
+
+#: ../source/cookbooks.rst:56
+# c565471bcf7045b0873e7b7da3ec553b
+msgid "`Blog post by Julian Dunn about wrapper cookbooks <http://www.getchef.com/blog/2013/12/03/doing-wrapper-cookbooks-right/>`_"
+msgstr ""
+
+#: ../source/cookbooks.rst:57
+# 02475caf510649ddac6b7f17ed0b2eec
+msgid "`Blog post by Doug Ireton about cookbook anti-patterns <http://dougireton.com/blog/2013/02/16/chef-cookbook-anti-patterns/>`_"
+msgstr ""
+
+#: ../source/cookbooks.rst:58
+# 7d7054660db34f67811dbf7680da09b7
+msgid "`Blog post by Julian Dunn about role cookbooks <http://www.getchef.com/blog/2013/11/19/chef-roles-arent-evil/>`_"
+msgstr ""
+
+#: ../source/cookbooks.rst:59
+# bcfa8846b2654cf79c50a2d09acf208b
+msgid "`Blog post by Joshua Timberman about the evolution of cookbook development <http://jtimberman.housepub.org/blog/2014/02/01/evolution-of-cookbook-development/>`_"
+msgstr ""
+

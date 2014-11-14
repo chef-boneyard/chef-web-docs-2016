@@ -1,0 +1,693 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_replication.rst:11
+# 7299d4adac87423da126811ece84476e
+msgid "|chef replication_title|"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication.rst:4
+# 91d2e82a20f04e3b8cf676b9f74a9b5f
+msgid "|chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|."
+msgstr ""
+
+#: ../source/server_replication.rst:14
+# 80cdca78741f471bb98599f254013d41
+msgid "|chef replication| requires |chef server| version 12."
+msgstr ""
+
+#: ../source/server_replication.rst:17
+# e584e22eeab6414d8e044d66d68ed969
+msgid "Scenarios"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_scenarios.rst:4
+# 1a3ef51a33534a87afaffa0a4941bb6c
+msgid "Replication is configured on a per-organization and also a per-replica basis. Each organization must be configured to synchronize with each replica instance. Each organization may be configured to synchronize with all, some, or none of the available replica instances."
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_scenarios.rst:6
+# 07c85cd11bc54bdca61edd4b99e2bb21
+msgid "For example, a single primary |chef server| and a single replica:"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_scenarios.rst:10
+# d1c226af3ea1449ea8a2de7e82fe1d63
+msgid "and for example, a single primary |chef server| and multiple replicas:"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_scenarios.rst:14
+# 05ea131e53e744b49106d1e474fedf94
+msgid "|chef replication| should not be used for:"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_scenarios.rst:16
+# e657196e5df641859ed7fe464424364c
+msgid "Disaster recovery or backup/restore processes. The replication process is read-only and cannot be changed to read-write"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_scenarios.rst:17
+# bf91100ec12348c994f541353303aad7
+msgid "Synchronizing a replica instance with another replica instance"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_scenarios.rst:18
+# 937ca061bee142648fd03d804376c07c
+msgid "Node re-registration. A node may be associated only with a single |chef server|"
+msgstr ""
+
+#: ../source/server_replication.rst:21
+# 61a89290dc6a408b846a51137d5f0572
+msgid "How Replication Works"
+msgstr ""
+
+#: ../../includes_server_replication/includes_server_replication_how_it_works.rst:4
+# c57e6d96ab1646fa8103891771d5f308
+msgid "A daemon named |service ecsyncd| runs on each of the replica instances of the |chef server| and periodically polls the primary |chef server| via the ``updated_since`` endpoint in the |api chef server|. The |service ecsyncd| daemon requests a list of objects that have been updated since the last successful synchronization time. If there are updates, the |service ecsyncd| daemon then pulls down the updated data from the primary |chef server| to the replica."
+msgstr ""
+
+#: ../source/server_replication.rst:25
+# f0ba304042954efe913e67f298a8d4d7
+msgid "Configure |chef replication_title|"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:4
+# 87517c65cbca493db6878feaba78db49
+msgid "To configure replication of |chef server| data, first install |chef replication|, then configure the master |chef server|, then configure the replica |chef server|, and then start the synchronization process."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:6
+# df8914f1e89b4908b84c7ba4eebebf12
+msgid "To install |chef replication|, run the following on all machines in the |chef server| configuration. For |debian dpkg|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:12
+# b5c7e14bbbaa49658d03b15525145b2e
+msgid "For |rpm|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:18
+# 2413853cc264437e9fc269ca9129dffc
+msgid "On the master |chef server|, create the |chef_sync rb| file in the ``/etc/chef-sync/`` directory, and then add the following setting:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:24
+#: ../../includes_install/includes_install_server_replication.rst:30
+#: ../../includes_install/includes_install_server_replication.rst:36
+# 92d1555ca91a48798f471c84cf2f7682
+# 1ef960b324ec4e4da9573bef3e506bab
+# 7fef2759c4da48c79067b2b5af9cd452
+msgid "On the master |chef server|, run the following command:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:42
+# 1ddee02d4607449b8e76fbc1a7b7edd1
+msgid "For each replica |chef server|, move the ``/etc/chef-sync/ec_sync_user.pem`` file from the master |chef server| to the ``/etc/chef-sync`` directory on the replica. (This file is created automatically on the master |chef server|.)"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:44
+# 9e80c96cf02a4bdca0e9a7774a045279
+msgid "For each replica |chef server|, create the |chef_sync rb| file in the ``/etc/chef-sync/`` directory, and then add the following setting:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:51
+# b4912bd08974467f96ff6874c4bdf985
+msgid "and then define the source and destination organizations:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:62
+# 7e9fd1a3bfeb483a9e431dd27a9f4b3d
+msgid "where ``DEST_ORG_NAME`` is an organization on the replica |chef server| and ``SOURCE_ORG_NAME`` is an organization on the master |chef server|. Both of these organizations must already exist."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_replication.rst:64
+#: ../../includes_install/includes_install_server_replication.rst:70
+#: ../../includes_install/includes_install_server_replication.rst:76
+# aa318b02dd9446fe90d24d67b1b5961c
+# 2041d0184212449d878ebf1f82cb42c9
+# 56c5518934594fc8a75410e9a468dcce
+msgid "For each replica |chef server|, run the following command:"
+msgstr ""
+
+#: ../source/server_replication.rst:29
+# e613a66fcef542f4823ca923ae1a5072
+msgid "|chef sync ctl| (executable)"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync.rst:5
+# 4e616c6ca0e1479d8cbe48b33b4ee4e9
+msgid "|chef sync ctl| is the command line tool for |chef replication|, which allows asynchronous replication of cookbook content across |chef server| organizations, including both standalone and high avaiability configurations."
+msgstr ""
+
+#: ../source/server_replication.rst:33
+# 5680d2b57bc44593ae64788115ccb59b
+msgid "manager-log"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_manager_log.rst:5
+# e960c31795eb4a02b7717a63b70aaecc
+msgid "Use to show the log file for the synchronization manager."
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_manager_log.rst:7
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_prepare_org.rst:7
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_log.rst:7
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_start.rst:7
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_status.rst:7
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_stop.rst:7
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_unsynced_objects.rst:7
+# 2f55235d267348cc8c7daa3e02369c31
+# c0cd0b646c6e45c0baa120aff8122608
+# 9d25f14ea6464d50821a4968d356ed9f
+# df90aac2e5164f90b5238e980ad7a1a9
+# 5c41d73cd9a747c390a23399d5c9bd40
+# 495d1f3647a0482db09e64f1183503c8
+# 060d5b8e10e04e86a93e1a4ec48b4813
+msgid "This option has the following syntax:"
+msgstr ""
+
+#: ../source/server_replication.rst:37
+# 321637e7ace0482b925ffc13a75bade8
+msgid "prepare-org"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_prepare_org.rst:5
+# 47dd385ca6cd47c5b139af18b2000a2e
+msgid "Use to prepare the specified organization for synchronization by associating the synchronizing user, and then making that user an administrator. This subcommand must be run on both the source and target organizations."
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_prepare_org.rst:13
+# e1ea7c7501fe435288ea2a74c0869007
+msgid "This option will compile a list of group names, organization names, and actors (users, clients, and groups)."
+msgstr ""
+
+#: ../source/server_replication.rst:41
+# 66ce4b942e8d41e980fdf43241f61f47
+msgid "sync-log"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_log.rst:5
+# a2d0b8fd2b134134b5729476a3218f19
+msgid "Use to show the log file for the specified organization."
+msgstr ""
+
+#: ../source/server_replication.rst:45
+# 13d09a804cfa4fa88332a9874ba2213d
+msgid "sync-start"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_start.rst:5
+# 154c5c7ba1da4d3e8824b8df990dd1ef
+msgid "Use to start synchronizing an organization."
+msgstr ""
+
+#: ../source/server_replication.rst:49
+# e8ada45671d947f8817707eb30d6a9be
+msgid "sync-status"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_status.rst:5
+# 180afa61e9a647a3b5078832ba52b6ed
+msgid "Use to show the current status of all organizations that are synchronizing."
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_status.rst:13
+# a06ee1ba9f694d2caecebf30ce8be131
+msgid "and will return a list that shows the organization name, its status, the last synchronization time, and the time at which the synchronization process will begin again."
+msgstr ""
+
+#: ../source/server_replication.rst:53
+# 062067e045d0434c8fc22ce3c6cc913c
+msgid "sync-stop"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_stop.rst:5
+# 123c0fef4daa48a2b8f1f8d632a52619
+msgid "Use to stop synchronizing an organization."
+msgstr ""
+
+#: ../source/server_replication.rst:57
+# 1cfb4bfcfb654f978bd92683f46a408d
+msgid "unsynced-objects"
+msgstr ""
+
+#: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_unsynced_objects.rst:5
+# 65329a5bbd1147799400a1305142cd7b
+msgid "Use to show unsynchronized objects for the specified organization."
+msgstr ""
+
+#: ../source/server_replication.rst:63
+# d4bb6dc4ddf84d05adbca0dc2fd21771
+msgid "|chef_sync rb|"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync.rst:4
+# 0e926bb47b524beabc84027cbe8d9294
+msgid "The |chef_sync rb| file is the default configuration file used by |chef replication|."
+msgstr ""
+
+#: ../source/server_replication.rst:67
+# d94b597b34f84f10ae20e7dd6810e51b
+msgid "Settings"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:4
+# 2a8dfcacb07c45d6af5a6e02dbcb4f58
+msgid "This configuration file has the following settings:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:10
+# 55623031f0de474292c63ddfe327a9c8
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:11
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:50
+# 3645849a09e64d15b93e43cad079c7c3
+# 2b3ec2a7697c444da14889515f0b7612
+msgid "Description"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:12
+# 90b4a3bfc9c84133914c1d3f1f38873e
+msgid "``bootstrap``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:13
+# a1522ee4e48049f696b765ce2158b5d4
+msgid "Indicates whether an attempt to bootstrap the |chef server| is made. Generally only enabled on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:14
+# 1bc143fe9c984d04b7e17f95a29c5cdc
+msgid "``chef_base_path``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:15
+# 1aab6a0dac874d2082b3327d69598d9c
+msgid "Default value: ``\"/opt/opscode\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:16
+# dd43cdfe9a284f14ba318a37d7984cce
+msgid "``ec_sync_client['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:17
+# 4f28e5f0b34a400aa2f3cb8ca76af7f4
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/chef-sync/ec_sync_client\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:18
+# 4bfb316f61b04d8bb65065cc9a205a85
+msgid "``ec_sync_client['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:19
+#: ../../includes_config/includes_config_rb_sync_settings.rst:45
+# c27593c9052c479c9f4047193f31c5da
+# 8918314975b64724a4400c08394c76fb
+msgid "|enable service| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:20
+# c379e3378e104687b13decd60c1e65a8
+msgid "``ec_sync_client['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:21
+#: ../../includes_config/includes_config_rb_sync_settings.rst:47
+# 59e20260c7d64543be7a2850f3caec55
+# f2836e8d9bb649e8b13fcb23e027ad87
+msgid "|use ha| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:22
+# 6649d97e88d94c87a34c01d0e0c67acf
+msgid "``ec_sync_client['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:23
+# ef7701f613b84ff8aa15ec461823eab2
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/chef-sync/client\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:24
+# 4f21bd4ed0fb411e822d8565c7056e32
+msgid "``ec_sync_client['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:25
+#: ../../includes_config/includes_config_rb_sync_settings.rst:53
+# 531d863821c94c6fb3765b6a535e62bc
+# 45fc778688c34f2a87516d2a9f26aff9
+msgid "|log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:26
+# e55bfdc0b2674795baa8cf6fe586faad
+msgid "``ec_sync_client['master']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:27
+#: ../../includes_config/includes_config_rb_sync_settings.rst:31
+# 54410acd15384beb944395ab4999a250
+# f9fda71ba0ce4ecfaa91372a45f36318
+msgid "Default value: ``'https://127.0.0.1'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:28
+# 2b439600fd2340a7b2f00bbdbfe314c7
+msgid "``ec_sync_client['organizations']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:29
+# 41e35f38fdc843129e137b506898f045
+msgid "Default value: ``[]``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:30
+# 4d6c0ea142064578ac4ead03bfcdb6a9
+msgid "``ec_sync_client['replica']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:32
+# dcecae152b3d49bb87600833ec4ca996
+msgid "``ec_sync_client['socket_path']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:33
+# 880b7d2101ae490c956de4e02c64c848
+msgid "Default value: ``\"/var/opt/chef-sync/ec_sync_client/ec_sync.sock\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:34
+# 3444a1dd571d472b821a3218b8859568
+msgid "``ec_sync_client['sync_key']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:35
+# e61ae605e12441eaa660ecceeda577e3
+msgid "Default value: ``'/etc/chef-sync/ec_sync_user.pem'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:36
+# d2997a5c5534493b848d5163e3393db4
+msgid "``ec_sync_client['sync_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:37
+# e9b887266a024565ac5e9e2e148e211e
+msgid "Default value: ``'ec_sync_user'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:38
+# 17848706d3354e7289615a4911e33c77
+msgid "``ec_sync_server['auth_skew']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:39
+# 00fae2499d274c6ba7b31443fbf7961a
+msgid "Default value: ``'900'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:40
+# 52fac56d1d584643abd955d629290483
+msgid "``ec_sync_server['db_pool_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:41
+# c9470c7fce8941db9fe969b634dd9efe
+msgid "|db_pool_size| Default value: ``10``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:42
+# 5bcf39eba6934bbf827a4e1d8328aa1b
+msgid "``ec_sync_server['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:43
+# 008269aa47e54b4ca1dc72131045c45f
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/chef-sync/ec_sync_server\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:44
+# 600a781c75b74e0ba330823c195fccb0
+msgid "``ec_sync_server['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:46
+# 1fc137ba407142e5978339fef3a5c17f
+msgid "``ec_sync_server['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:48
+# 076cf633fbfd456daaa381c61ad2bdd7
+msgid "``ec_sync_server['listen']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:49
+# ab48b624b783431d8aa829d2c77d13ac
+msgid "|ip_address service| Default value: ``'127.0.0.1'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:50
+# 97968f49ce814776bc63d8118550fcd3
+msgid "``ec_sync_server['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:51
+# 7ceb10d6daa34b5db2b0e39ee1b8b38c
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/chef-sync/server\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:52
+# bfd4ef6d1d384ad0a2ae6747703c030c
+msgid "``ec_sync_server['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:54
+# 422ab9fd32f9419db91033a94aad024d
+msgid "``ec_sync_server['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:55
+# 856f1661f1c045b99e8250c7aafb0a80
+msgid "|port service| Default value: ``9996``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:56
+# 8c40dd15fae6405d92acde25c5d0f4c6
+msgid "``ec_sync_server['vip']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:57
+# fd796523894746168d6bba090787babb
+msgid "|ip_address virtual| Default value: ``'127.0.0.1'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:58
+# 08b6523aa9984d7b9a6ecd3867c95249
+msgid "``install_path']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:59
+# 4462ed1000b8490abd6212c08bab8612
+msgid "Default value: ``\"/opt/chef-sync\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:60
+# a64105377f10463bbc4745a77e937b04
+msgid "``master``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:61
+# ae7786ab13eb4ef9891d32c63f8e0247
+msgid "Use to specify the root URL for the master |chef server|."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:62
+# 2bf808acc18f4e51aaac16fe61c93976
+msgid "``name``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:63
+# c1e8f032ce2f41b38916da4d6971a349
+msgid "Default value: ``'sync'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:64
+# 7ae5c03d3b4146539b464e8b0faf968a
+msgid "``organization``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:65
+# 173095843cd5414ea1e148e15a641d58
+msgid "An array that specifies the source and destination organization pairs for synchronization."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:66
+# f6737ab587af418b9d873bf18f7ec762
+msgid "``replica``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:67
+# 0061356eb80c4a19b1a32ebf941cf5d9
+msgid "Use to specify the root URL for the replica |chef server|."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:68
+# ea6932ecd4ee41a499bac02c5a04d6a4
+msgid "``role``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:69
+# 25e003f7e7fc436ca099c60481ab34cd
+msgid "Use to specify if ``chef-sync`` is installed as a master |chef server|, a replica |chef server|, or both. Possible values: ``:master``, ``:master_and_replica``, ``:replica``. Default value: ``:replica``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:70
+# d14512a2bf9646d98d272e85109c9cfd
+msgid "``user['home']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:71
+# 0f2b6caeb98d4f71bf67f83ca72a39ec
+msgid "The home directory for the user under which |chef server| services run. Default value: ``/opt/opscode/embedded``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:72
+# d56b1823ac1e43518d1a69be33bbc8ea
+msgid "``user['shell']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:73
+# 0b4c85018bf94d4a953ecc394390f643
+msgid "The shell for the user under which |chef server| services run. Default value: ``/bin/sh``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:74
+# 39ea9c95352845a29d5f55895828da00
+msgid "``user['username']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_sync_settings.rst:75
+# 7de675ec92844aa58602a9c5ad42ecd7
+msgid "The user name under which |chef server| services run. Default value: ``opscode``."
+msgstr ""
+
+#: ../source/server_replication.rst:73
+# 34cdb972188e45ce8eccdbb7ba502c1f
+msgid "|api chef server| Endpoint"
+msgstr ""
+
+#: ../source/server_replication.rst:74
+# 83eb06f8f0a44ed0826dacd82e555e04
+msgid "The following |api chef server| endpoint supports |chef replication|."
+msgstr ""
+
+#: ../source/server_replication.rst:77
+# d5463c26d8d74035a6c3bd4d83eb1f90
+msgid "/updated_since"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since.rst:4
+# 6fb02eb00b8f41f9a285d9ffebed0311
+msgid "The ``/updated_since`` endpoint ensures that replica instances of the |chef server| are able to synchronize with the primary |chef server|. The ``/ORGS/ORG_NAME/updated_since`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../source/server_replication.rst:81
+# f2de947f4bb5420288b80d57abdb9de5
+msgid "GET"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:4
+# f5de5e225a7e431b9eb4bff7fdfdfbc7
+msgid "The ``GET`` method is used to return the details of an organization as |json|."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:6
+# d48135b8291d4252b74c05c82f67224d
+msgid "**Request**"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:12
+# 624cf92319554a3d93eda5219ebf50c0
+msgid "where ``NUM`` is the largest integer previously returned as an identifier."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:14
+# 2fe2b395865d42d99b4ecc58a6ed7af8
+msgid "**Response**"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:16
+# 9eb5a572c9c44b92b3cdcbc3b0bd786d
+msgid "The response will return an array of paths for objects that have been created, updated, or deleted since ``NUM``, similar to:"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:43
+# 8bf553950ea64d52ad6857d36b772855
+msgid "**Response Codes**"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:49
+# ade85b3ae02f4cfaa33e08094fd2ee73
+msgid "Response Code"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:51
+# 77e76f71c5bb4e2f9fa53e08d679b51e
+msgid "``200``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:52
+# 4186db3af4cd4613b1f6d6894404f6d6
+msgid "|response code 200 ok|"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:53
+# 649d4acf7854412d985a5f0d69ed14db
+msgid "``401``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:54
+# 7718cfa57ece4cb886cf41e7e3763273
+msgid "|response code 401 unauthorized|"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:55
+# 292824d66f4541f49ccbd04a0740836a
+msgid "``403``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:56
+# 573f7e039c95401fa9927937212211bc
+msgid "|response code 403 forbidden|"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:57
+# afe8b5bd9cde4bcfbbaba68a66265b13
+msgid "``404``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst:58
+# 7751ec4509664bc1a114344ac8216e3b
+msgid "|response code 404 not found|"
+msgstr ""
+

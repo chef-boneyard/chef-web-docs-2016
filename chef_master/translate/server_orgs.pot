@@ -1,0 +1,668 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_orgs.rst:8
+# c6cf3db241034b0dbbb4040f32eb070a
+msgid "Organizations, Groups, and Users"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac.rst:4
+# d7078f957e714be6a2e6180a16247be8
+msgid "The |chef server| uses role-based access control (RBAC) to restrict access to objects---nodes, environments, roles, data bags, cookbooks, and so on. This ensures that only authorized user and/or |chef client| requests to the |chef server| are allowed. Access to objects on the |chef server| is fine-grained, allowing access to be defined by object type, object, group, user, and organization. The |chef server| uses permissions to define how a user may interact with an object, after they have been authorized to do so."
+msgstr ""
+
+#: ../source/server_orgs.rst:12
+# ca86219006e440b1b6c90553f5439777
+msgid "The |chef server| uses organizations, groups, and users to define role-based access control:"
+msgstr ""
+
+#: ../source/server_orgs.rst:18
+# 1189738496a942eaa43055dc078af73e
+msgid "Feature"
+msgstr ""
+
+#: ../source/server_orgs.rst:19
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:12
+#: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst:12
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:11
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:11
+#: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst:11
+# 3659f81846ef45899cf0cc6b7a1676fe
+# a11c1ae23b704cd69cffe23dd21b6627
+# 164a81f88e594a58b136178ecb91621e
+# b5bb8608213c4fa690f19dd45d831db7
+# c105b225803a457283938a7b0e3e4da9
+# ad14e02658094ed8bdb5974330e45584
+msgid "Description"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_orgs.rst:4
+# c9412878cd924297bc7da25abf35d0a5
+msgid "An organization is the top-level entity for role-based access control in the |chef server|. Each organization contains the default groups (|webui group admins|, |webui group clients|, and |webui group users|, plus |webui group billing| for the hosted |chef server|), at least one user and at least one node (on which the |chef client| is installed). The |chef server| supports multiple organizations. The |chef server| includes a single default organization that is defined during setup. Additional organizations can be created after the initial setup and configuration of the |chef server|."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups.rst:4
+#: ../../includes_server_rbac/includes_server_rbac_groups.rst:4
+# a5ddc3a5cd5744de8a828f54295c5f31
+# 653d1ee04ccc46d1a4a229a07d8ea855
+msgid "A group is used to define access to object types and objects in the |chef server| and also to assign permissions that determine what types of tasks are available to members of that group who are authorized to perform them. Groups are configured per-organization."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups.rst:6
+#: ../../includes_server_rbac/includes_server_rbac_groups.rst:6
+# 0fc37a74db5b4d7c8f2cff711cd4b2c5
+# c2dfd5cbc4e549d89b84a96a680332aa
+msgid "Individual users who are members of a group will inherit the permissions assigned to the group. The |chef server| includes the following default groups: |webui group admins|, |webui group clients|, and |webui group users|. For users of the hosted |chef server|, an additional default group is provided: |webui group billing|."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_users.rst:4
+# ab56668d530b4ed9a7785fd9a23730c2
+msgid "A user is any non-administrator human being who will manage data that is uploaded to the |chef server| from a workstation or who will log on to the |webui| web user interface. The |chef server| includes a single default user that is defined during setup and is automatically assigned to the |webui group admins| group."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_clients.rst:4
+# b3ca27e9c45f4d1db3917656376025ac
+msgid "A client is any agent that uses the |api chef server| to interact with the |chef server|. This is almost always (and often only) the |chef client|, which is an agent that runs locally on every node that is registered with the |chef server|. Every node on which a |chef client| is configured is automatically added to the |webui group clients| group."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_workflow.rst:5
+# 9752236e723c41b6b533f913876b1d78
+msgid "When a user makes a request to the |chef server| using the |api chef server|, permission to perform that action is determined by the following process:"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_workflow.rst:7
+# 2363ebbde76b492fa7cc96d874603a11
+msgid "Check if the user has permission to the object type"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_workflow.rst:8
+# 6ee957f6e37c44178e76685d96e1a622
+msgid "If no, recursively check if the user is a member of a security group that has permission to that object"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_workflow.rst:9
+# a87d065741f04f56a8a76169f6fe3933
+msgid "If yes, allow the user to perform the action"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_workflow.rst:11
+# b31456ec056c498ba9a5e233e4a58a86
+msgid "Permissions are managed using the |chef manage| add-on in the |chef server| web user interface."
+msgstr ""
+
+#: ../source/server_orgs.rst:32
+# a85817cb417e442b871e4ad1c2f4f502
+msgid "Multiple Organizations"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_orgs_multi.rst:4
+# e2c11314f23b482692b085ddffb41fee
+msgid "A single instance of the |chef server| can support many organizations. Each organization has a unique set of groups and users. Each organization manages a unique set of nodes, on which a |chef client| is installed and configured so that it may interact with a single organization on the |chef server|."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_orgs_multi.rst:8
+# 351ae3601f8e45b0b4dd0d7b2700d190
+msgid "A user may belong to multiple organizations under the following conditions: role-based access control is configured per-organization, for a single user to interact with the |chef server| using |knife| from the same |chef repo|, that user may need to edit their |knife rb| file prior to that interaction."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst:4
+# 7c11cb6a214d4ce98e09d78a3c568730
+msgid "Using multiple organizations within the |chef server| ensures that the same toolset, coding patterns and practices, physical hardware, and product support effort is being applied across the entire company, even when:"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst:6
+# 6d07dda8d0064d0e828cf980c0fa4357
+msgid "Multiple product groups must be supported---each product group can have its own security requirements, schedule, and goals"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst:7
+# c6f9f6b9b83642a6af76b1cc0ece3cae
+msgid "Updates occur on different schedules---the nodes in one organization are managed completely independently from the nodes in another"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst:8
+# 61d6d0eddb3b4ed7b0f55e45b575c633
+msgid "Individual teams have competing needs for object and object types---data bags, environments, roles, and cookbooks are unique to each organization, even if they share the same name"
+msgstr ""
+
+#: ../source/server_orgs.rst:38
+# 38df17918566444c88a90f664cb57b1e
+msgid "Permissions"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions.rst:5
+# 09ea9b95d3154fedac7ab922202a750a
+msgid "Permissions are used in the |chef server| to define how users and groups can interact with objects on the server. Permissions are configured per-organization."
+msgstr ""
+
+#: ../source/server_orgs.rst:42
+# bb166d72701749d58b1f987f1b2a44fd
+msgid "Object Permissions"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:5
+# 0134a722347e4e6990caf469aa19c33d
+msgid "The |chef server| includes the following object permissions:"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:11
+#: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst:11
+# fd3da7b4a26f4d7ba523de3392c2ce1b
+# 2d706c267f814b23b2afc42628da9c74
+msgid "Permission"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:13
+# 2cfb7c00d7f0416b9f8f7bfaf1954889
+msgid "|webui permission delete|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:14
+# d2f7b47b3b874a57bbe948c26cf3210a
+msgid "|permission delete| This permission is required for any user who uses the ``knife [object] delete [object_name]`` argument to interact with objects on the |chef server|."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:15
+# 1864488167bd4b158c06f5fcfd438cac
+msgid "|webui permission grant|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:16
+# e6a982629f4b49fd96644cdcec509c4b
+msgid "|permission grant| This permission is required for any user who configures permissions using the |webui admin| tab in the |webui| user interface."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:17
+# 70cf748c3b8e4b45a63a221660d1d18b
+msgid "|webui permission read|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:18
+# 5fe1987efbf54a25b654ac2bb9562ab9
+msgid "|permission read| This permission is required for any user who uses the ``knife [object] show [object_name]`` argument to interact with objects on the |chef server|."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:19
+# 714eacb49e9742cb86568dfc0f575e90
+msgid "|webui permission update|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst:20
+# fd629ac40b004a9b997b3913795d8e02
+msgid "|permission update| This permission is required for any user who uses the ``knife [object] edit [object_name]`` argument to interact with objects on the |chef server| and for any |chef client| to save node data to the |chef server| at the conclusion of a |chef client| run."
+msgstr ""
+
+#: ../source/server_orgs.rst:46
+# 91ffb478b21142a5a82286ecba3ecf0c
+msgid "Global Permissions"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst:5
+# 911e32af8a3e44a7a9e556aaabdff4db
+msgid "The |chef server| includes the following global permissions:"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst:13
+# 77baee924df44c2badc714a4a2c86f7c
+msgid "|webui permission create|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst:14
+# 3f1f871a6e534d6eb42da0c5e29f7ebd
+msgid "|permission create| This permission is required for any user who uses the ``knife [object] create`` argument to interact with objects on the |chef server|."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst:15
+# 35bf48a0e0fa4330b1df69fd714b94be
+msgid "|webui permission list|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst:16
+# d1f49c5806504dd68020d4591a391b83
+msgid "|permission list| This permission is required for any user who uses the ``knife [object] list`` argument to interact with objects on the |chef server|."
+msgstr ""
+
+#: ../source/server_orgs.rst:50
+# 086ef14f4742440bacfb6c2286d21b3f
+msgid "Groups"
+msgstr ""
+
+#: ../source/server_orgs.rst:54
+# 525ebbef7d3f4a38bffa36211a4e5f6a
+msgid "Default Groups"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:4
+# c2288a89cc864e37b8a040e69591ab1d
+msgid "The |chef server| includes the following default groups:"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:10
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:10
+#: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst:10
+# c5713889424946f6acf2ae5e56577306
+# b5830de35277429882fb10103ad0cef5
+# 4c01ba1395644292a32dab2c6e68e8f8
+msgid "Group"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:12
+# 5ec75b57e06643b9a5f863c03eda7acc
+msgid "|webui group admins|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:13
+# 9349c50c46ca44fdb5fa4f52c689c0d8
+msgid "|group default_admins|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:14
+# 15c06b9023f542be902870f409273d05
+msgid "|webui group billing|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:15
+# 5120ce35993642f498a6a3e70e386c8b
+msgid "|group default_billing_admins|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:16
+# 04fcf6545a4b47eca3a1f3a08c12c94e
+msgid "|webui group clients|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:17
+# 49ec6c91104d4a77b5236a1ead5d82ce
+msgid "|group default_clients|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:18
+# d1d5a4dfdb474fbdb8ab7cbb7dc93843
+msgid "|webui group users|"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_default.rst:19
+# 8c7a3b9bc7c84bd4ac6082e8cdbd1c2b
+msgid "|group default_users|"
+msgstr ""
+
+#: ../source/server_orgs.rst:58
+# bd84804f455c4d95a163ef2b44fde490
+msgid "|push jobs_title| Groups"
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs.rst:5
+# a5e116117930412fb10efb9ccdd47457
+msgid "|push jobs| is an extension of the |chef server| that allows jobs to be run against nodes independently of a |chef client| run. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is run are determined by the results of a search query made to the |chef server|."
+msgstr ""
+
+#: ../../includes_push_jobs/includes_push_jobs.rst:7
+# ee34b8a50ad243d2adc11b0e9bd5e660
+msgid "|push jobs| uses the |api chef server| and a |ruby| client to initiate all connections to the |chef server|. Connections use the same authentication and authorization model as any other request made to the |chef server|. A |knife| plugin is used to initiate job creation and job tracking."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:4
+# 14786edc6778440ab85fa6f6adc542be
+msgid "It is possible to initiate jobs from the |chef client|, such as from within a recipe based on an action to be determined as the recipe runs. For a |chef client| to be able to create, initiate, or read jobs, the |chef client| on which |push jobs| is configured must belong to one (or both) of the following groups:"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:12
+# afc63d8186d44fcb916254d1c663905f
+msgid "``pushy_job_readers``"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:13
+# 1868fdd1b4e34936ad41b6d0cb4469f7
+msgid "Use to view the status of jobs."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:14
+# 47c83fb54f1747ed9d93afeb6482f049
+msgid "``pushy_job_writers``"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:15
+# e58f9be51d3b4af5a3c36d0bbe48379b
+msgid "Use to create and initiate jobs."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst:17
+# 2f56e0b36e1845efb964402fcf24e97c
+msgid "These groups do not exist by default, even after |push jobs| has been installed to the |chef server|. If these groups are not created, only members of the ``admin`` security group will be able to create, initiate, and view jobs."
+msgstr ""
+
+#: ../source/server_orgs.rst:64
+# ab8c2bc2eb1c408ba4ee83bc2dbd4302
+msgid "|reporting_title| Groups"
+msgstr ""
+
+#: ../../includes_reporting/includes_reporting.rst:4
+# ebb479872ac14eadbab5367bf9b6f50f
+msgid "|reporting| is a premium feature of the |chef server| that is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure being managed by |chef|. Reports can be generated for the entire organization and they can be generated for specific nodes."
+msgstr ""
+
+#: ../../includes_reporting/includes_reporting.rst:6
+# 681efaffe8804b1e8269dc0947abd784
+msgid "|reporting| data is collected during the |chef client| run and the results are posted to the |chef server| at the end of the |chef client| run at the same time the node object is uploaded to the |chef server|."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst:4
+# 96fc8f36e4164748b20a18d92102490f
+msgid "A |chef client| on which |reporting| is configured always sends data to the |chef server|. Users of the |chef manage| web user interface must belong to the following group:"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst:12
+# 2d62df51823d4d7ab8d494fe4f49ea1c
+msgid "``reporting_readers``"
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst:13
+# fb71553fc88548eaa68646086f61ee15
+msgid "Use to view and configure reports."
+msgstr ""
+
+#: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst:15
+# 4fcc4425f03942ee83c00054f82df330
+msgid "This group does not exist by default, even after |reporting| has been installed to the |chef server|. If this group is not created, all members of the organization will be unable to view reports."
+msgstr ""
+
+#: ../source/server_orgs.rst:70
+# 9c5cf36349b84d22aea376483ab11b39
+msgid "Manage Organizations"
+msgstr ""
+
+#: ../source/server_orgs.rst:71
+#: ../source/server_orgs.rst:140
+# eb6a813e39f44d6c85b692bf02f8324c
+# a259d71a10694d6e8a14443f8901310e
+msgid "The following commands are built-in to the |chef server ctl| command line tool:"
+msgstr ""
+
+#: ../source/server_orgs.rst:74
+# 0bba79bb3bcd453d945b57d8d3614fc4
+msgid "org-create"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst:6
+# 201cd0b3578c439c8c41e986bba3c703
+msgid "The ``org-create`` subcommand is used to create an organization. (The validation key for the organization is returned to ``STDOUT`` when creating an organization using this command.)"
+msgstr ""
+
+#: ../source/server_orgs.rst:77
+#: ../source/server_orgs.rst:89
+#: ../source/server_orgs.rst:97
+#: ../source/server_orgs.rst:109
+#: ../source/server_orgs.rst:119
+#: ../source/server_orgs.rst:133
+#: ../source/server_orgs.rst:146
+#: ../source/server_orgs.rst:158
+#: ../source/server_orgs.rst:166
+#: ../source/server_orgs.rst:174
+#: ../source/server_orgs.rst:186
+# fa415ce725454f33937732560431218b
+# bff3003dcf1a416eb6d8cd93fcc0aca1
+# c457e94a1efa4791ad905731b7e6df08
+# 1cb6d2af3065496da6c2b1a057d4a1d1
+# b8c61e0955eb44feb26e631b9632016d
+# d5cfe1bc67be474682a8e46bfe7fe38e
+# 271e17f953e9456d8199603890eb3a9d
+# adb438877b30421cae2069f9e66127f0
+# 6ee5e5c6e127496fbe4777b68f0b40a1
+# 75248701174642ff8a5aab819fc1d088
+# 0d6ceeff9fa24504a6ceef6fb78950eb
+msgid "**Syntax**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_syntax.rst:6
+# a15f0001fa90497a976877ce69a70691
+# ccdc768911d742f880509bfe84a81560
+# 65963f0493b0459aa9902dcf27f66497
+# b3bd3e2c442c4b599453b988fde24deb
+# 0aa460bcc8d14052bbe6bfd9f34beb57
+# 0fcdd7e341d245c2acd20101dd9f4bff
+# 07fb2da55ca44d93b1121e3dc04177e3
+# 8384eb77293c41a38d4f7a7cc3a0feab
+# 35833951783346b2863e07e82347ff45
+# 31c183c90cbd4b9abad662dac982ebd4
+# a593c7bbfcfd4ef6a8541568db85d69a
+msgid "This subcommand has the following syntax:"
+msgstr ""
+
+#: ../source/server_orgs.rst:81
+#: ../source/server_orgs.rst:101
+#: ../source/server_orgs.rst:123
+#: ../source/server_orgs.rst:150
+#: ../source/server_orgs.rst:178
+#: ../source/server_orgs.rst:190
+# 041b060ee94e4f14891dcc066f33a3db
+# b6b6f7fafc9f47c3a5d7b510b0674be6
+# 2dbcd568754d4ec1b7e7adde953e96c5
+# 1f3bf46a63f749509b3598780816ab0d
+# bccd4874703f4ed7b97bb554899cec73
+# cd49d7f8f73f4302914ebc76ab737818
+msgid "**Options**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst:6
+# 254e92c5019d42628748eb186b9dd9f3
+# e0f19d54356344b6a87cafaa0a80e92f
+# 7f453541e80f46bda8525b78d6577812
+# fcf968e0c63143ef99782822369bb5ea
+# 7ba2c7b2148a45bf9178bf1719c45dd5
+# fa100b33f2ec425397ff40342ee5e27f
+msgid "This subcommand has the following options:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:9
+# 68ccf45336be4f81b0f6fd7086ceaa4e
+msgid "``-a USER_NAME``, ``--association_user USER_NAME``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:9
+# 5101877926d048bebf217664d0498968
+msgid "Use to associate a user with an organization and add them to the |webui group admins| and |webui group billing| security groups."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:13
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst:9
+# ef977d608aa2479db7322c20f0659a57
+# fe22403405ba444ba9332ec3b8825001
+msgid "``-f FILE_NAME``, ``--filename FILE_NAME``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst:9
+# a05ef8eb13d34402a109a84e810b8208
+# 2d5217345c104f1188227562b307b990
+msgid "Use to write the private key to a file instead of ``STDOUT``."
+msgstr ""
+
+#: ../source/server_orgs.rst:86
+# 62d3290b963249c6905b3a0e23380668
+msgid "org-delete"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst:6
+# f3c7746b59ef4e88a4eda9011bf544c1
+msgid "The ``org-delete`` subcommand is used to delete an organization."
+msgstr ""
+
+#: ../source/server_orgs.rst:94
+# fd926957603b466eb2782ceb05bc6b79
+msgid "org-list"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst:6
+# a5575d7d36434a699fa1f938e2fa046a
+msgid "The ``org-list`` subcommand is used to list all of the organizations currently present on the |chef server|."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:9
+# 3208a004dd864b8eb68b36d758792b8d
+msgid "``-a``, ``--all-orgs``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:9
+# 143a292a3105416d994e97a51f61782a
+msgid "Use to show all organizations."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst:9
+# e8c7f5261c29471a85e37e55389dd7a3
+# 119f5cecdb7044bc9c65fc1f52ad5d7d
+msgid "``-w``, ``--with-uri``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst:9
+# f4f3b8096a004c55843d8bd73aed18ba
+# 553cfdfd61a34d3aba92221e030f4ea9
+msgid "|with_uri|"
+msgstr ""
+
+#: ../source/server_orgs.rst:106
+# ea68989d9d8b449781e6ae943f8ce573
+msgid "org-show"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst:6
+# 6393761e97314e87a9d4ae7feeb8f037
+msgid "The ``org-show`` subcommand is used to show the details for an organization."
+msgstr ""
+
+#: ../source/server_orgs.rst:114
+# b93a6fc8d4a342669c3f1bc0635751ca
+msgid "org-user-add"
+msgstr ""
+
+#: ../source/server_orgs.rst:115
+# 05bf03717cdc4993a3164f898f651635
+msgid "Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the upcoming final release of |chef server| 12."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst:6
+# bb64b2f210d34304aa986d198e343b96
+msgid "The ``org-user-add`` subcommand is used to add a user to an organization."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst:9
+# a9812f4a3d6e4173a0fd99508a87d2ea
+msgid "``--admin``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst:9
+# a7cde5b7c4ff4c48859e28861c163855
+msgid "Use to add the user to the |webui group admins| group."
+msgstr ""
+
+#: ../source/server_orgs.rst:128
+# 643b44023aae40a5bdd6918bfdadb422
+msgid "org-user-remove"
+msgstr ""
+
+#: ../source/server_orgs.rst:129
+# d391e1db7d4d419993385457ded1ff90
+msgid "Early RC candidates for the |chef server| 12 release named this command ``org-disociate``. This is the same command, but renamed for the upcoming final release of |chef server| 12."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst:6
+# e8041dbd9be44a37adfb8fe2cecf5e29
+msgid "The ``org-user-remove`` subcommand is used to remove a user from an organization."
+msgstr ""
+
+#: ../source/server_orgs.rst:139
+# 243ca7d9fd0945aea1f17f042418063e
+msgid "Manage Users"
+msgstr ""
+
+#: ../source/server_orgs.rst:143
+# 0a3683c1db7c4e31afb535b7bf95d538
+msgid "user-create"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create.rst:6
+# cc62a2bdf37848f1bc5541f9baa2d51c
+msgid "The ``user-create`` subcommand is used to create a user."
+msgstr ""
+
+#: ../source/server_orgs.rst:155
+# 14db70ad979647c0a4ed874476348e3b
+msgid "user-delete"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete.rst:6
+# 74909028015d4f4b815fe95c786c0fb5
+msgid "The ``user-delete`` subcommand is used to delete a user."
+msgstr ""
+
+#: ../source/server_orgs.rst:163
+# 9dc4e56d351c4210a81e0dd8e66ebdba
+msgid "user-edit"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst:6
+# 0c70500f86db4610bc3789606645c3c2
+msgid "The ``user-edit`` subcommand is used to edit the details for a user. The data will be made available in the |chef editor| for editing."
+msgstr ""
+
+#: ../source/server_orgs.rst:171
+# 099617db48b045aebc0fb488211dd504
+msgid "user-list"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list.rst:6
+# 778d07b7e53e48aeb1045a65c2dd757d
+msgid "The ``user-list`` subcommand is used to view a list of users."
+msgstr ""
+
+#: ../source/server_orgs.rst:183
+# 857d401712484347a9b62ddcfcdddc31
+msgid "user-show"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show.rst:6
+# 975d827ec8f549b994f527619a0574a8
+msgid "The ``user-show`` subcommand is used to show the details for a user."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst:9
+# f0c40fb8012347f683c8f56a7241ca04
+msgid "``-l``, ``--with-orgs``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst:9
+# b867a54d1f944d04b72874a0a72c9a3f
+msgid "Use to show the corresponding organizations."
+msgstr ""
+

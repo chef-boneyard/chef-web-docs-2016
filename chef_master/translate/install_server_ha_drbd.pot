@@ -1,0 +1,1030 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_server_ha_drbd.rst:10
+# 9ece38421e3d45a68e42758939a807e1
+msgid "High Availability: DRBD"
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:12
+# 0d1508e7b20c472182ce2efb9bd39d0e
+msgid "This topic describes how to set up the |chef server| for high availability using physical machines and |drbd|."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:15
+# 03e03160389249249e8882078ef270fd
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_pre.rst:4
+# 7f0e67e58e6549d297bd654fd47dd13a
+msgid "Before installing the |chef server| software, perform the following steps:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_pre.rst:6
+# d0c285b60bf1450db34739f418f6bc6e
+msgid "Backend machines `should have a dedicated connection <http://www.drbd.org/users-guide/s-prepare-network.html>`_. This is required for replication between the two machines."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_pre.rst:7
+# df12e009aa094812a3627ac318a8191e
+msgid "Backend machines will share a virtual IP address that must also be accessible from each frontend server. This virtual IP address is created and managed by the |chef server|, but will also need to be added to the DNS so that all machines in the high availability configuration may access it."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_pre.rst:8
+# 86fc82ec37324edb9fe7aede6ff2ef1e
+msgid "Persistent data on backend machines of the |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_pre.rst:9
+# 03b70da6847148569cc1712242dd4d6d
+msgid "Load-balancing should be used with frontend machines, along with a DNS entry for the virtual IP address used for load balancing. This virtual IP address is added to the |chef server rb| file as the ``api_fqdn``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_pre.rst:10
+# 270c4dc66d964c0c862a793a24e91dd0
+msgid "All required ports must be open. See the Firewalls section (below) for the list of ports. All connections to and from the |chef server| are accomplished via TCP. Refer to the operating system's manual or your systems administrators for instructions on how to configure to ports, if necessary."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_pre.rst:11
+# e4d8ceecc6f74a218c3e3a3d2bf94fa7
+msgid "The hostname for the |chef server| must be an |fqdn|, including the domain suffix, and must be resolvable by the other backend and frontends. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames>`_ for more information."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:19
+# d8395a7b8bf44809a85dfcceba30bbff
+msgid "Disk Configuration"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:4
+# 353ff572b8204042b7021d6f981c95ad
+msgid "Persistent data on backend machines of the |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|. These disks should:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:6
+# 1cedfd13c6e443d39ac30e288285b78d
+msgid "Utilize hardware |raid|"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:7
+# cef33739e07c4e5da35dcc9359cc0c2f
+msgid "Be configured in either |raid1| or |raid5|"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:8
+# 065d9823e89641d79ebabb9dc8055fdb
+msgid "Be identical across both of your backend servers"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:10
+# 5b3fb2c060f14422a22326a2b873e0cf
+msgid "The recommended configuration utilizes the |linux| |lvm| as the backing store for |drbd|. This assumes that:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:12
+# 9daa55158d5948b995ef563727e125a2
+msgid "~300GB of raw, unpartitioned disk space is available"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:13
+# c5429825d3db4ecf95f9fd31b3a31484
+msgid "The disk space presents as a single device, ``/dev/sdb``"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:14
+# 64888f9ed129481bb207d03e24951c4c
+msgid "The storage is added to a volume group named ``opscode``"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:15
+# 93a9ccd08cde493ea5bb9cfe3d038624
+msgid "The storage is added in a logical volume group named ``drbd``"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:16
+# 95baf7e049934ec7bb9a5c5bb51fc9eb
+msgid "The volume group should have adequate space to enable |lvm| snapshots to be used for backups; this amount depends on many factors, including how much changes in-between snapshots, how long the snapshots will be kept, and the (eventual) size of the |chef server| database; a decent starting point when sizing |lvm| snapshots is ~10% of the raw, unpartitioned disk space"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:18
+# a086a8feb6f748d19589e5dbf8dca3cb
+msgid "The following commands would properly set up the back-end disk configuration for |drbd|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:24
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:30
+# ac9d9d32d64147f7a9e312d6f29a4edf
+# 6fd662583e004cf78bcc54a4f0524d07
+msgid "and:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst:36
+# 688a75c0241e44a8b0dbcf90d3ad8df6
+msgid "Talk with your systems administrators about disk configuration if you are at all uncertain of how to configure a new logical volume with |lvm|, as the operations can be destructive."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:23
+# 8e77480ccfdb42a287cda992ce069b53
+msgid "Primary Backend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:4
+# 969d6d28ff394f7b8cde6266464ca48f
+msgid "Use the following steps to set up the primary backend |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:6
+# 38f77fc1b80b4d17bf918c9dd49f11aa
+msgid "Download the packages from http://downloads.getchef.com/chef-server/."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:12
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:42
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:12
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:48
+#: ../../includes_install/includes_install_server_ha_drbd_frontend.rst:12
+# b3899582d0e84f98ab567c8ef0ed8816
+# 5f027bf9740d4c8cbd9897581db2094a
+# 4ae9bc18775c4fb49fe92fe3f0a37716
+# 33ece51a7ab0412ca0e72ce1e5b1db4f
+# 188fcc82c37446e6ae2695e0c1fda85e
+msgid "For |ubuntu|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:18
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:18
+#: ../../includes_install/includes_install_server_ha_drbd_frontend.rst:18
+# 72b74170ebc848ddaf850e0b8081ef65
+# e4883a20c7064f4b8dc575817251c547
+# 85b6f5c124884d99bcee98ff285f5560
+msgid "After a few minutes, the |chef server| will be installed."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:20
+# dd9046b7c6b44ee2bf689ea95e33a8b7
+msgid "Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:22
+# 8d1e3d40cc02476b82024eaaa88c49e6
+msgid "Install |drbd|. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:28
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:60
+#: ../../includes_install/includes_install_server_ha_drbd_secondary.rst:22
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:26
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:23
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:44
+# 592f011f2cc14f6d876991416347d271
+# 269c0939932240a5a3000381a7c9da42
+# 579628df5fac4e6fafd4dc6415d980df
+# 0742feba365641189daaf71e1bb5808c
+# 4cdca3b6e99240639e64a564eefacaba
+# 094d114725a9450b90af21d02fef9dcd
+msgid "then:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:34
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:32
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:29
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:50
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:66
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:72
+# 170bf36f46ae447093e09de0e019187c
+# 7dc174b37e40492fb5e6d3302106c67e
+# f7f09acf8ce14eeaa9298da87d065cd1
+# c31951ea3e8a4d9dbc2cc8b53af77841
+# 92ee9225dd0544ffa13f5ed5372abc33
+# 9906fa4de03a49ed8fc3c2d4ec2bc6c0
+msgid "and then:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:40
+# 2548e34b04574015bcbd52fc8f82d504
+msgid "The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:48
+#: ../../includes_install/includes_install_server_ha_drbd_secondary.rst:10
+# e104d924f0e1463694f6420a969cea9f
+# 8dc2457000e4463cbfd1d986fc27e4d6
+msgid "Reconfigure the |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_primary.rst:54
+#: ../../includes_install/includes_install_server_ha_drbd_secondary.rst:16
+# 992c49ef4d3141ed800ccb1f435a00da
+# 06d0d00d31c848f6b76cecd2b2f362af
+msgid "This will configure |drbd|. The installer will pause and ask for confirmation that |drbd| has been set up. Confirm (``CTRL-C``), and then run the following commands:"
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:27
+#: ../source/install_server_ha_drbd.rst:63
+# ec281874779b435189916dca93f99a6f
+# 4788927eae224f0081f5320edde3c58f
+msgid "|chef server rb|"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:4
+# e71f9006354e47e1bf5375ccd890dc2e
+msgid "Each |chef server| in a high availabilty configuration must have an identical |chef server rb| file that is located in the ``/etc/opscode/`` directory on each server. This file describes the topology of the high availability configuration. On the primary backend machine, create a file named |chef server rb| and save it in the ``/etc/opscode/`` directory."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:6
+# 2eaa3416afdd4490ac666db1133d87cb
+msgid "Add the following settings to the |chef server rb| file:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:8
+# 85a7f479632e43dcb93014020d6940d8
+msgid "Define the topology type:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:14
+# 53620686f60a494b803dfc41ae2411d3
+msgid "Define the primary backend server:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:24
+# 3d4803821b8b4f9fad1b602b4856cdf8
+msgid "Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``\"backend\"``. If the backend machine is used to bootstrap the |chef server| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface that is used for cluster communications. For example, the same IP address that is used by |keepalived| and |drbd|. If the |chef server| is not used to bootstrap the |chef server| installation, exclude the ``:cluster_ipaddress`` entry."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:26
+# b3f4877381c7405e8f1259480f9531ec
+msgid "Define the secondary backend server:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:35
+# 707ffbfa8ba34c189171e347743104b6
+msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server’s interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:37
+# 0e66b88605de45ebbe37d577af2a7d12
+msgid "Define the backend virtual IP address:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:45
+# 086d6c902130446598d1906672debdb7
+msgid "Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind. This is typically the public interface of the server."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:47
+# bbc978854f32460495c912e55f691308
+msgid "Define each frontend machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:55
+# 4ccd095e3b634bb98510beb1e8bc8a47
+msgid "Replace ``FQDN`` with the |fqdn| of the frontend machine. Replace ``IP_ADDRESS`` with the IP address of the frontend machine. Set ``:role`` to ``\"frontend\"``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:57
+# ed9f5ed6acc54f548cc7df23e7592cd5
+msgid "Add separate entry in the |chef server rb| file for each frontend machine."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:59
+# b9f398b64df64e79a314e0709ed1b491
+msgid "Define the API |fqdn|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:65
+# 8bc0a6cb43614b16be20173cfdb92b5b
+msgid "Replace ``FQDN`` with the |fqdn| of the load balanced virtual IP address, which should be equal to the |fqdn| for the service URI that is used by the |chef server|."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst:67
+#: ../../includes_install/includes_install_server_ha_drbd_frontend.rst:22
+# 22a7955b758a42f492a3266f341a9a7a
+# 4052a6d1f70145b085f435f204fadafd
+msgid "Run the following command:"
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:31
+# 8c142c57d0bd4e07b58e9b8e6e4f75da
+msgid "Secondary Backend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_secondary.rst:4
+# ce5272e2dac84c0da952b6a91604182f
+msgid "Use the following steps to set up the secondary backend |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_secondary.rst:6
+# 45e1cc522aa04a9993fed256d7b78152
+msgid "Repeat the same steps as described for the primary machine."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_secondary.rst:8
+#: ../../includes_install/includes_install_server_ha_drbd_frontend.rst:20
+# b2dce10f956848dfa844d04f40b6f0eb
+# 96b0f9b966a34587b58ea3a4377350a0
+msgid "Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:35
+# 871be5da1bc646c1b98862dcd5d76067
+msgid "Establish Failover"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:4
+# 6e518717a05b4b02b6673ce98249430e
+msgid "To establish failover between the two backend machines, do the following:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:6
+# 933f1cca933c401da90dad3ce98b5f42
+msgid "On the primary backend, define the server as the primary shared device. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:20
+# dfc329f5ed0543c59b34eec50a1e06cf
+msgid "On the primary backend, mount the file system. For example, a file system named ``ext4``:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:38
+# ed6ef89164f944a0a48f1fc1719d6927
+msgid "Synchronize |drbd|. This process **MUST** be allowed to complete to ensure that |drbd| is synchronized with all devices."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:40
+# 4564bfdec1cf4ea488ce2e581a60ad83
+msgid "Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization. This ensures that new data written to the shared device is also synchronized."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:42
+# 817f1b1b727642b0ba59ba968413208e
+msgid "|drbd| can be configured to utilize more bandwidth during the initial synchronization. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:54
+# a99f424aff5e44bfa5555635e5a12d28
+msgid "To observe the synchronization process, run the following:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:60
+# 3912a8f0cdd547daac9ce802190c09c3
+msgid "Output similar to the following will be shown:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:75
+# 28687c35f257465b9ce6a2bdbb5b836e
+msgid "Synchronization is complete hen the ``ds:`` section reads ``UpToDate/UpToDate``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:77
+# 04d01905ddc94a12be4c7bd5844d85aa
+msgid "When synchronization is complete, run the following command on the primary backend machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_establish_failover.rst:83
+# db08120b2bd14456be6fad14d34e7f08
+msgid "Reconfigure the primary |chef server|:"
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:39
+#: ../source/install_server_ha_drbd.rst:79
+# 9f1006d1ca2949ca8466d5cd87a3e15c
+# 83d29966dc8a4b53ada6fc2c86fdebd9
+msgid "Frontend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_frontend.rst:4
+# 85a662c7a3054d639a209b39b1051fce
+msgid "For each frontend machine, use the following steps to set up the |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_frontend.rst:6
+# 2d7514eaa8444850bc9492bacbd676d5
+msgid "Install the |chef server| package. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:4
+# 2ba1abadf85940518c31bd302c6ffad1
+msgid "Run the following command to create an administrator:"
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:10
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:16
+# b01b523c51b6420a9c56d6f644dd79a5
+# 7c6502bc598b4adf9b81926aa17c7fcc
+msgid "An RSA private key is generated automatically. This should be saved to a safe location. The ``--filename`` option will save the RSA private key to a specified path."
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:12
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:18
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:12
+# 7cf12ef90c934e5e9d198d5aab26acee
+# ae0247892a604ca1b0a1271db949f958
+# e57095e2b8dc48058aeea4c080d7654d
+msgid "For example:"
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:4
+# c2baaf514685457699454e37f0dce235
+msgid "Run the following command to create an organization:"
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:10
+# e02feb88e9e14258b0900dc8ed80f162
+msgid "|name_rules org| For example: ``chef``."
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:12
+# 269dcfa0d45a42408267613824b2fc27
+msgid "|name_rules org_full| For example: ``Chef Software, Inc.``."
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:14
+# 3dd06aa6f0c64e4b858d018fa045cfd7
+msgid "The ``--association_user`` option will associate the ``user_name`` with the |webui group admins| security group on the |chef server|."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:43
+# b9163a5717ec4399af57c2ca8c81059b
+msgid "Enable Features"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst:6
+# cd90fdc1cc44468d9f14f287383c76c3
+msgid "Enable additional features of the |chef server|! The packages may be downloaded directly as part of the installation process or they may be first downloaded to a local directory, and then installed."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:46
+# c9b15160f2494c18b1f4ef3f3ba563bb
+msgid "**Use Downloads**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:6
+# e5678ea6d84144b6a90641d631da13b3
+msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are not behind a firewall (and have connectivity to https://packagecloud.io/), these packages can be installed as described below."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:12
+# 384246504e1344d4a30ef881c74505ae
+msgid "Feature"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:13
+# 58901ddf6228403ca1d6bbdc076d0dee
+msgid "Command"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:14
+# 3c002726f4dd497f946f8cb053cf9c3b
+msgid "|chef manage_title|"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:15
+# 093d61d81c9a4d5e904f3745e8e6ac62
+msgid "Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:17
+# d36eb5ae7d85468698b806c3978bd043
+msgid "(Front end machines only.) Run:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:35
+# 5fc1925a0a0c4d0f9832d7a4b7f33cce
+msgid "|push jobs_title|"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:36
+# 8ce54dcdbd1e426bb820102b77449742
+msgid "Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:38
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:60
+# e49944537e124bceaaa9c120e8d584c0
+# 0ba6f02621084761a080912f2c39dab5
+msgid "Run:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:57
+# 976b2a559b2b40a1b777c6208383c1bf
+msgid "|chef replication_title|"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:58
+# d9e4ccbfe6444c679b6978eda6c15a41
+msgid "Use |chef replication| to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:50
+# 804d99c9607e40c9a9da1e17319ab09b
+msgid "**Use Local Packages**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:6
+# baf6c778650a41098001ed9a2bf2c647
+msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are behind a firewall (and do not have connectivity to https://packagecloud.io/), these packages can be installed manually. First download the package that is appropriate for the platform and save it to a local path. Then run the ``install`` command using the ``--path`` option to specify the location for the package:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:18
+# efe99a348aa54de6a61ad799aea74be5
+msgid "The ``chef-server-ctl`` command will install the first ``opscode-manage`` package found in the ``/home/vagrant`` directory."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:54
+# 2fb4188cab22465f89405d3bf710661b
+msgid "**Install Reporting**"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:6
+# bbe2d094437645599bbbb8dc7774666f
+msgid "To set up the |reporting| server for a high availability configuration:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:8
+# 39ec2071359e402fa0ded3f4af2634ce
+msgid "Install the package on every machine that is running |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:14
+# dcf6ea6b12144289a9d97c6bd663002f
+msgid "Reconfigure the |chef server| on the back end primary server (bootstrap):"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:20
+# c380c817b3374207af6056e0f169d6f3
+msgid "Reconfigure the |reporting| server on the back end primary server (bootstrap):"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:26
+# fdbcae77d6f14e3481ef537bac9f6bc2
+msgid "Copy the entire ``/etc/opscode-reporting`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:32
+# 0b779a77c52e47d7b5c3e952f5099eaa
+msgid "or from the back end primary machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:38
+# 33d1054273284bceace67d8567c37e05
+msgid "Reconfigure any |chef server| on which |reporting| services have been installed:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:44
+# 15324cd14f0a4103bb8a93da8e4f2447
+msgid "Reconfigure |reporting| services on each server:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:50
+# 35460092bd9f4d539f917f5f4ca9b7c4
+msgid "Verify the installation:"
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:59
+# 63ab81d063df4e85bf4cf042d3eee7ee
+msgid "Reference"
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:60
+# 8269017105984517b461f9a1092ed96d
+msgid "The following sections show an example |chef server rb| file and a list of the ports that are required by the |chef server|."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:4
+# b0b3073197b24822903be5167c973f92
+msgid "A completed |chef server rb| configuration file for a four server tiered |chef server| cluster, consisting of:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:10
+# 56cbdcbf6d1046019a3c9bc591db5be9
+msgid "FQDN"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:11
+# ff43fa2d868945b2865ab7442eeecb34
+msgid "Real IP Address"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:12
+# 0b0a809a9f7e449cb041f4d91bbc1124
+msgid "Cluster IP Address"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:13
+# 521e177ddedc4f2483d706ced00b7766
+msgid "Role"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:14
+# c4a6e345a13f4be693a5fe12caa0fc2e
+msgid "be1.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:15
+# b420fbdcda0a45f5b390a7cba711a0a6
+msgid "192.168.4.1"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:16
+# d4f4f8184e654081a6aa5884a4fe3383
+msgid "10.1.2.10"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:17
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:21
+# 2f6675a4da174ad297d7e492399017d8
+# 1e5763ee481c41f2838dea13d48a36ff
+msgid "backend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:18
+# f7d9aa04c29e422da56ebcf628858953
+msgid "be2.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:19
+# 912630cc029442869880e6c94117c17b
+msgid "192.168.4.6"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:20
+# ccdb9d3bd87a4bbd9ae71ec6311b06c9
+msgid "10.1.2.12"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:22
+# ec6f20f287b34c6387cd3da9db7c398d
+msgid "fe1.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:23
+# 4d0de98a1da6418d9012ae87dfb564ac
+msgid "192.168.4.2"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:25
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:29
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:33
+# d54e5e1607884ee9a3b7f6280d06e836
+# 4ac0a45dc057487bbdac6b8107a8f224
+# c1b43fe0af0b4b06893d3b6a8316e77f
+msgid "frontend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:26
+# a7cb0b6ba0e440fba8d21e477d26cad8
+msgid "fe2.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:27
+# 1614cced59554ae7abf4a961701d4c83
+msgid "192.168.4.3"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:30
+# f6479fa0669146789012214a77480d79
+msgid "fe3.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:31
+# 951e4b570af74337b10f5ad56fd5f249
+msgid "192.168.4.4"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:34
+# a8cac2ac9f9c459781e6295f1c6f512a
+msgid "chef.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:35
+# 1b7d8697c1874374a7018b8083033c9b
+msgid "192.168.4.5"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:37
+# f2856a48d6f4486db770c611bc54ac10
+msgid "load balanced frontend VIP"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:38
+# c4a2b35b5cb744b0a6930ade1ac93514
+msgid "be.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:39
+# 370be77e14dd4917b4cff281a1091133
+msgid "192.168.4.7"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:41
+# 6df940a03eac400c8e0dc868af3cc311
+msgid "load balanced backend VIP"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ha_drbd_reference_config.rst:43
+# 8c69438066d64fea83f788027774262b
+msgid "Looks like this:"
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:67
+# d5b2f39f57b648a7886372e4ee3bb36b
+msgid "Firewalls"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst:4
+# 6d217061dc9b45ff8397bda9d0af2763
+msgid "All of the ports used by the |chef server| are TCP ports. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary."
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_listening.rst:5
+# 125919a0fa1543a294469e93fc75bd7e
+msgid "All services must be listening on the appropriate ports. Most monitoring systems provide a means of testing whether a given port is accepting connections and service-specific tools may also be available. In addition, the generic system tool |telnet| can also be used to initiate the connection:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_loopback.rst:4
+# d91c747e981e4e0aafdbb1bc9cd38962
+msgid "A single loopback interface should be configured using the ``127.0.0.1`` address. This ensures that all of the services are available to the |chef server|, in the event that the |chef server| attempts to contact itself from within a front or back end machine. All ports should be accessible through the loopback interface of their respective hosts."
+msgstr ""
+
+#: ../source/install_server_ha_drbd.rst:75
+# c8fd63d3e4db45c4948380efda2a9976
+msgid "Backend"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:4
+# db59c046e793479c91efda24cd5b472b
+msgid "For back-end servers in an |chef server| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:10
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:10
+# 47c03411ab7d4ad583d2d129530fb13c
+# 0b7910fae9b748bd9ea06b2aa0514e24
+msgid "Port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:11
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:11
+# c05a1ac414be4c95bdf8c04cc699517c
+# de858d85cf114b3dbb743724658e2b13
+msgid "Service"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:12
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:12
+# 01fbeb5d12764dd4998b3d934d6406c5
+# d6c445c2582f42ae8c136d5f29b72524
+msgid "External"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:13
+# c66a460ac9d2487a916d9024b36e0cfd
+msgid "5984"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:14
+# 80aa19addf1e461eac5d35687337e7dc
+msgid "|service couchdb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:18
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:24
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:27
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:30
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:18
+# 7e451d39d15e4ad3a14d97ad6f492dda
+# 136319d2c6db46c484b27934ee0becad
+# 50be655f3a3b4a86949bcd2efa02c659
+# 60ae67cd7b6f4e6f83cdf94845469d9b
+# 40e48f6e98d14bd3a1624874dbb6f412
+# 14ef7063cfd649ba91ce31a146ff5817
+# 6acf285655564e9296b3afef653b4efe
+# 95fa44fc180c49ccaa2856d27bce7adf
+msgid "yes"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:16
+# 3e653195e40a48f6ad6243bca38937ab
+msgid "8983"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:17
+# b5566342591e47129222bd146178ee81
+msgid "|service solr|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:19
+# feb91c5f5af44d86b7e5355634af05fe
+msgid "5432"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:20
+# d99b727a71b54da8a9a30debb0e1844f
+msgid "|service postgresql|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:22
+# 0cc07bd37b824c9d927ab8f763fcd8eb
+msgid "5672"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:23
+# afd0c54974ab4b819c1bab6fc438aa3b
+msgid "|service rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:25
+# 6cc30278c9854d35b341038add4dc6b0
+msgid "16379"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:26
+# abff7817957f4f4982d8e5eb2c080355
+msgid "|service redis_lb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:28
+# 19a9f26e70dd421fa9a2fbd0b2f3241e
+msgid "4321"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:29
+# dc4a8b612eb140a481ef16decbeeac1f
+msgid "|service bookshelf|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:31
+# 97fdec1143214df992b7065342bd63d3
+msgid "4369"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:32
+# 2908d41b73464cea988be69c690841ea
+msgid "|service orgcreator|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:33
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:36
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:24
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:27
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:30
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:33
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:36
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:39
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:42
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:45
+# 7a001f5935d7427b9098969c872ff708
+# 7f8816042e24470c9462a82bda365377
+# 791bd125f4b9419bbd18caa6143d0d61
+# f812cae299bf4a678239766cd33dfce8
+# bbe6d2c3c4b84caa92ce6b7b1844a9fc
+# 93432fdea9784612b89960d0532650d0
+# c3e4fa56088748f3afe79ab80cbc0725
+# 14eaabcdc093490eaf02f88eb22871a0
+# 7770d3c34fcd4e49ab97ed814c999cc7
+# 1debc22410294609b4b99934cdbf82d0
+# bb2b0946688a451c925319c5fdbaa117
+msgid "no"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:34
+# 80184c341b2043c4842417cb2bc849cc
+msgid "7788-7799"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:35
+# b6baec9b30454251b8803e15a25e9f7d
+msgid "|drbd| This port range must be open between all back end servers."
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:4
+# cb239582d10c400c8ede0ada276fe868
+msgid "For front-end servers in an |chef server| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:13
+# c6fe5fd3b312437b995a8bc44254c146
+msgid "80"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:14
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:17
+# 508b98b24587418c99be3320d95dccc0
+# 08c326dad41e41cfa72ae622167b557d
+msgid "|service nginx|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:16
+# 6b47293b58424541834411df3632e1d6
+msgid "443"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:19
+# cde8ba8c278b4530a9b3037490221eef
+msgid "8000"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:20
+# e28c47820dcb4d9ca8c814dd4b941424
+msgid "|service erchef|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:22
+# ca8c04b330d9401fa23c83187635bae4
+msgid "5140"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:23
+# 8c76b5c399f245f5b255712dddb6bcf2
+msgid "|service certificate|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:25
+# fae19784bda44601af2a7654b10bbb7e
+msgid "9462"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:26
+# 7b946253835d4ad68e7acf138951038c
+msgid "|service webui|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:28
+# 99e0b112b2c24db297becf0de5250f34
+msgid "9090"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:29
+# d73a7ce2dd544b74964ed4b94946256c
+msgid "|service ocid|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:31
+# 05697d4a48fb47ccba87664a8d1f89d8
+msgid "9465"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:32
+# 34f34b092cb84382a4f028564bfac47e
+msgid "|service account|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:34
+# 804702d69746431e8e2d24ebe6d6953a
+msgid "9463"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:35
+# aebd9bcb06e94b73aa0e3804e15cd9d7
+msgid "|service bifrost|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:37
+# 50ff7dace3ef4b93827c3c7834c71e50
+msgid "9680"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:38
+# 90122b5852e0488ea36e6a8b2d95d379
+msgid "|api chef server| internal LB port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:40
+# 3215109cbcff47f3be5416d971d30afd
+msgid "9685"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:41
+# 559b32f6d9e14918a6d1dac8193dccb4
+msgid "|service account| internal LB port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:43
+# 55e54b5d1ee049c5b24a5bd0353558d1
+msgid "9683"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:44
+# 78423500b1644c6eaffa33fc4d372aae
+msgid "|service bifrost| internal LB port"
+msgstr ""
+

@@ -1,0 +1,860 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_cookbook_resources.rst:8
+# 734bc746dbac4bc8938ef1a9259d7765
+msgid "About Resources and Providers"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:5
+# a26d38563ff644c18b7a38cbe9352ce1
+msgid "A resource is a statement of configuration policy. It describes the desired state of an element of your infrastructure, along with the steps needed to bring that item to the desired state. Each resource statement in a |chef| recipe corresponds to a specific part of your infrastructure: a file, a template, a directory, a package, a service, a command to be executed, and so on. Each resource statement includes the resource type (such as ``template``, ``service`` or ``package``), its name, any attributes that specify additional details, and an action that tells the |chef client| how to implement the configuration policy."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:7
+# 65987134dc11423c886c8eb09e18ef6c
+msgid "Together, resources describe all the components in your network. Recipes group resources together and describe working configurations. Add recipes to a run-list to describe the desired state for every node to which that run-list is assigned. Cookbooks are collections of recipes and are stored on the |chef server|."
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:13
+# de56ff6d830843faa238de40d1023d50
+msgid "Resources Syntax"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_syntax.rst:4
+# 9a271b8b64ec4c0bb13c22d116c01099
+msgid "A resource is a |ruby| block with four components: a type, a name, one (or more) attributes (with values), and one (or more) actions. The syntax for a resource is like this:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_syntax.rst:13
+# 604700bea92b4048b1b864dceface8f4
+msgid "Every resource has its own set of actions and attributes. Most attributes have default values. Some attributes are available to all resources, for example those used to send notifications to other resources and guards that help ensure that some resources are idempotent."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_syntax.rst:15
+# e6fef8ed365c49b0982042c9d2dcfc91
+msgid "For example, a resource that is used to install a |tar gz| package for version 1.16.1 may look something like this:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_syntax.rst:24
+# ecaa6a60d3724c3bb4e9831057350856
+msgid "All actions have a default value. Only non-default behaviors of actions and attributes need to be specified. For example, the |resource package| resource's default action is ``:install`` and the name of the package defaults to the ``\"name\"`` of the resource. Therefore, it is possible to write a resource block that installs the latest |tar gz| package like this:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_syntax.rst:30
+# b471e8ea12f44c8faa17f4920b3990d4
+msgid "and a resource block that installs a |tar gz| package for version 1.6.1 like this:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_syntax.rst:38
+# dedd490558c74474a5c7519f50dd88b5
+msgid "In both cases, the |chef client| will use the default action (``:install``) to install the ``tar`` package."
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:17
+# 5838ed4cb7a646619d5e4898436887e6
+msgid "Platform Resources"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:4
+# 218e8c641ba94ffabe0efbb1874ffa70
+msgid "The following resources are platform resources (i.e. \"are available from the |chef client| directly and do not require a cookbook\"):"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:10
+# fd19df2ce3dd45fca6282684177a0110
+msgid "Resource"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:11
+#: ../source/essentials_cookbook_resources.rst:29
+# 61eb452e511d471b9925b7a89c6405f8
+# c583f4be24204c40a1cc45dc4f838bea
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:12
+# c01296ba51bd438bac4524d6de27873c
+msgid "`apt_package <http://docs.getchef.com/resource_apt_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_apt.rst:4
+# ec3d22054b59469982435ab6a7a243ca
+msgid "Use the |resource package_apt| resource to manage packages for the |debian| and |ubuntu| platforms."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:14
+# 84240a016f744138b2a6f2e2b7dacfaa
+msgid "`bash <http://docs.getchef.com/resource_bash.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_bash.rst:4
+# 425bcd9b9e3f40dfb5bc5dfc3a3d8044
+msgid "Use the |resource script_bash| resource to execute scripts using the |bash| interpreter. This resource may also use any of the actions and attributes that are available to the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_bash.rst:6
+# 73ee0efcd63b453ea02668c3e9ab0a34
+msgid "The |resource script_bash| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:16
+# 11ddf9ee038a4385a2e8654d35336d6f
+msgid "`batch <http://docs.getchef.com/resource_batch.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch.rst:4
+# 5ed9bd3ad1104eb2b48f3129a39f3113
+msgid "Use the |resource batch| resource to execute a batch script using the |windows cmd exe| interpreter. The |resource batch| resource creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource inherits actions (``:run`` and ``:nothing``) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:18
+# 8789c872d7ff4da4b893b63b9f062783
+msgid "`breakpoint <http://docs.getchef.com/resource_breakpoint.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint.rst:4
+# 38c1b76846a74c9b8f872c02b43f776f
+msgid "Use the |resource breakpoint| resource to add breakpoints to recipes. Run the |chef client| in |chef shell| mode, and then use those breakpoints to debug recipes. Breakpoints are ignored by the |chef client| during an actual |chef client| run. That said, breakpoints are typically used to debug recipes only when running them in a non-production environment, after which they are removed from those recipes before the parent cookbook is uploaded to the |chef server|."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:20
+# 6eb96806e01e4c60bde33b16288084d3
+msgid "`chef_gem <http://docs.getchef.com/resource_chef_gem.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:4
+# 04564ff8d65142b6a0355c6f51da41f4
+msgid "Use the |resource chef_gem| resource to install a |gem| only for the instance of |ruby| that is dedicated to the |chef client|. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:6
+# be035fbe7e0849949df9a2db4e1ae50e
+msgid "The |resource chef_gem| resource works with all of the same attributes and options as the |resource package_gem| resource, but does not accept the ``gem_binary`` attribute because it always uses the ``CurrentGemEnvironment`` under which the |chef client| is running. In addition to performing actions similar to the |resource package_gem| resource, the |resource chef_gem| resource does the following:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:8
+# 6dbedf9cea364320af8667443fbf419b
+msgid "Runs its actions immediately, before convergence, allowing a |gem| to be used in a recipe immediately after it is installed"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:9
+# 21958aee964c47d0a4b4d0226fc9424a
+msgid "Runs ``Gem.clear_paths`` after the action, ensuring that |gem| is aware of changes so that it can be required immediately after it is installed"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:22
+# 75e7ac7c92f04850a138c73f24d6f17b
+msgid "`cookbook_file <http://docs.getchef.com/resource_cookbook_file.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file.rst:4
+# 5776e09331404e868213b4637843a013
+msgid "Use the |resource cookbook_file| resource to transfer files from a sub-directory of ``COOKBOOK_NAME/files/`` to a specified path located on a host that is running the |chef client|. The file is selected according to file specificity, which allows different source files to be used based on the hostname, host platform (operating system, distro, or as appropriate), or platform version. Files that are located in the ``COOKBOOK_NAME/files/default`` sub-directory may be used on any platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:24
+# 741f60c6fae44f97a1000a5493bb9946
+msgid "`cron <http://docs.getchef.com/resource_cron.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cron.rst:4
+# 5c5cd22c90d84da6a9852a734c1add47
+msgid "Use the |resource cron| resource to manage |cron| entries for time-based job scheduling. Attributes for a schedule will default to ``*`` if not provided. The |resource cron| resource requires access to a |crontab| program, typically |cron|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cron.rst:6
+# 4c49becf24594387a590aa7fba1b9cf4
+msgid "The |resource cron| resource should only be used to modify an entry in a |crontab| file. Use the |resource cookbook_file| or |resource template| resources to add a |crontab| file to the |crond| directory. The ``cron_d`` lightweight resource (found in the `cron <https://github.com/opscode-cookbooks/cron>`__ cookbook) is another option for managing |crontab| files."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:26
+# 51b63071fbcb41f8b9edc63e5c61acdf
+msgid "`csh <http://docs.getchef.com/resource_csh.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_csh.rst:4
+# 456686565f634e2ab5292e6003609ef4
+msgid "Use the |resource script_csh| resource to execute scripts using the |csh| interpreter. This resource may also use any of the actions and attributes that are available to the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_csh.rst:6
+# 1ac84205e1f14868989819ddc2217e34
+msgid "The |resource script_csh| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:28
+# d070e7ce98524bb7bbd61611bdf2080f
+msgid "`deploy <http://docs.getchef.com/resource_deploy.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy.rst:4
+# 3cb8f4c6f4334ba081d327b098fc7454
+msgid "Use the |resource deploy| resource to manage and control deployments. This is a popular resource, but is also complex, having the most attributes, multiple providers, the added complexity of callbacks, plus four attributes that support layout modifications from within a recipe."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:30
+# 24eea1b67e3b46f59d756f2d3cd018be
+msgid "`directory <http://docs.getchef.com/resource_directory.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_directory.rst:4
+# 995ea091b6624222a4e4fab3a5bc6161
+msgid "Use the |resource directory| resource to manage a directory, which is a hierarchy of folders that comprises all of the information stored on a computer. The root directory is the top-level, under which the rest of the directory is organized. The |resource directory| resource uses the ``name`` attribute to specify the path to a location in a directory. Typically, permission to access that location in the directory is required."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:32
+# 0054e1077ac14e6eaf0d26795a48108a
+msgid "`dpkg_package <http://docs.getchef.com/resource_dpkg_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_dpkg.rst:4
+# f134fb37ed3d4bd387a705c308811683
+msgid "Use the |resource package_dpkg| resource to manage packages for the |debian dpkg| platform. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:34
+# 8f6737535c1645feb355ee2cc1547e29
+msgid "`dsc_script <http://docs.getchef.com/resource_dsc_script.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script.rst:5
+# ded257bbd29d4e02aea8f0adf414e4f6
+msgid "Many |windows powershell_dsc_short| resources are comparable to built-in |chef| resources. For example, both |windows powershell_dsc_short| and |chef| have |resource file|, |resource package|, and |resource service| resources. The |resource dsc_script| resource is most useful for those |windows powershell_dsc_short| resources that do not have a direct comparison to a resource in |chef|, such as the ``Archive`` resource, a custom |windows powershell_dsc_short| resource, an existing |windows powershell_dsc_short| script that performs an important task, and so on. Use the |resource dsc_script| resource to embed the code that defines a |windows powershell_dsc_short| configuration directly within a |chef| recipe."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:36
+# 8d668ec0642548db94d89d6aac9aa3bb
+msgid "`easy_install_package <http://docs.getchef.com/resource_easy_install_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_easy_install.rst:4
+# fab05c869a1b4d72b4b73600f0986afe
+msgid "Use the |resource package_easy_install| resource to manage packages for the |python| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:38
+# e3f3173f4a7f47ffaef0efa1454b8f9d
+msgid "`env <http://docs.getchef.com/resource_env.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env.rst:4
+# 0f2442013e9d4bdab7a23e8d71565742
+msgid "Use the |resource env| resource to manage environment keys in |windows|. After an environment key is set, |windows| must be restarted before the environment key will be available to the |windows task scheduler|."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:40
+# f36f7b50bd604b0c91fa6f6325aec5e4
+msgid "`erl_call <http://docs.getchef.com/resource_erlang_call.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_erlang_call.rst:4
+# fe73b3d7b3bd4a618b39f386ce3778e9
+msgid "Use the |resource erlang_call| resource to connect to a node located within a distributed |erlang| system. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:42
+# 8f052f063139400882c980b7fbace291
+msgid "`execute <http://docs.getchef.com/resource_execute.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_execute.rst:4
+# 8d414811c0a448258c7862c52d9f2c5f
+msgid "Use the |resource execute| resource to execute a command. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:44
+# d520de2fccff415781d4ff0a25e07882
+msgid "`file <http://docs.getchef.com/resource_file.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_file.rst:4
+# 9052721ec1f040febfb04ba6631b3019
+msgid "Use the |resource file| resource to manage files directly on a node."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:46
+# 2f61802af64d4dd5b8bca99cae516cdd
+msgid "`freebsd_package <http://docs.getchef.com/resource_freebsd_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_freebsd.rst:4
+# abc73df2892c4d5180e30a8231418b80
+msgid "Use the |resource package_freebsd| resource to manage packages for the |freebsd| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:48
+# 1af4622b3a8e4cbd845839997f2735da
+msgid "`gem_package <http://docs.getchef.com/resource_gem_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem.rst:4
+# 171ab53e1bc64ce696f6d2c6458bcfb8
+msgid "Use the |resource package_gem| resource to manage |gem| packages that are only included in recipes. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:50
+# a5956a6f2ff4456fa04d956489a4080d
+msgid "`git <http://docs.getchef.com/resource_git.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_scm_git.rst:4
+# cf8700818c9c42378398214638c6dcff
+msgid "Use the |resource scm_git| resource to manage source control resources that exist in a |git| repository. |git| version 1.6.5 (or higher) is required to use all of the functionality in the |resource scm_git| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:52
+# 634a4d57138942d2b79f4b56135ee333
+msgid "`group <http://docs.getchef.com/resource_group.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_group.rst:4
+# 71fed8a42de94892b37c37edea652d62
+msgid "Use the |resource group| resource to manage a local group."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:54
+# 86fc1dd6feb74fc7b3b7e8f652dc2364
+msgid "`http_request <http://docs.getchef.com/resource_http_request.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_http_request.rst:4
+# 54c6992ec7c94a589ee960f8a8a2e7b3
+msgid "Use the |resource http_request| resource to send an HTTP request (``GET``, ``PUT``, ``POST``, ``DELETE``, ``HEAD``, or ``OPTIONS``) with an arbitrary message. This resource is often useful when custom callbacks are necessary."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:56
+# 6972bc7618554cd893b941ef8582aceb
+msgid "`ifconfig <http://docs.getchef.com/resource_ifconfig.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_ifconfig.rst:4
+# bfc33627c40842ac83413ef65d96fdd1
+msgid "Use the |resource ifconfig| resource to manage interfaces."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:58
+# f6cb7bffba364ef4bc893ad074ecebaa
+msgid "`ips_package <http://docs.getchef.com/resource_ips_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_ips.rst:4
+# 245a386fc0344d4491c792893202e49e
+msgid "Use the |resource package_ips| resource to manage packages (using |solaris ips|) on the |solaris| 11 platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:60
+# baf3bf8e6a3a46dd81c8b1ec618a0ed7
+msgid "`link <http://docs.getchef.com/resource_link.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_link.rst:4
+# 63f5d9b6e1d64bb6b74632c63e843ac5
+msgid "Use the |resource link| resource to create symbolic or hard links."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:62
+# 2d439e8495c54e7384f1705b5b0f57e9
+msgid "`log <http://docs.getchef.com/resource_log.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log.rst:4
+# 96167d0d2cc04fbba0167064e74de22d
+msgid "Use the |resource log| resource to to create log entries from a recipe. The |resource log| resource behaves like any other resource: built into the resource collection during the compile phase, and then run during the execution phase. (Use ``Chef::Log`` to create a log entry that is not built into the resource collection.)"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:64
+# 7745d602dfa342739dcc38b68d05f46f
+msgid "`macports_package <http://docs.getchef.com/resource_macports_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_macports.rst:4
+# 9cfffcd6ea454914941d4a2a451fab42
+msgid "Use the |resource package_macports| resource to manage packages for the |mac os x| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:66
+# d9d98eef08c84ab1970735eda7b4b493
+msgid "`mdadm <http://docs.getchef.com/resource_mdadm.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_mdadm.rst:4
+# da37b43cef424caa83203c5ac75bd768
+msgid "Use the |resource mdadm| resource to manage |raid| devices in a |linux| environment using the |mdadm| utility. The |resource mdadm| provider will create and assemble an array, but it will not create the config file that is used to persist the array upon reboot. If the config file is required, it must be done by specifying a template with the correct array layout, and then by using the |resource mount| provider to create a file systems table (fstab) entry."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:68
+# c65e9ee76e16466c9a7d4ee8b528947e
+msgid "`mount <http://docs.getchef.com/resource_mount.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_mount.rst:4
+# 7bb00d2c00694c3891bd68f85e014b3b
+msgid "Use the |resource mount| resource to manage a mounted file system."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:70
+# cbc77aa1ce674e588e4d9c3949145c8b
+msgid "`ohai <http://docs.getchef.com/resource_ohai.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_ohai.rst:4
+# 5bda91ffd6f541a1a13039a11b398218
+msgid "Use the |resource ohai| resource to reload the |ohai| configuration on a node. This allows recipes that change system attributes (like a recipe that adds a user) to refer to those attributes later on during the |chef client| run."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:72
+# 921a4fc1e67e4c3a95a01218c27b42a2
+msgid "`package <http://docs.getchef.com/resource_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package.rst:4
+# 5db994b020ef406dba395404ae1a21ab
+msgid "Use the |resource package| resource to manage packages. When the package is installed from a local file (such as with |rubygems|, |debian dpkg|, or |rpm|), the file must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:74
+# 336e52df77444472aefc477c75e77753
+msgid "`pacman_package <http://docs.getchef.com/resource_pacman_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_pacman.rst:4
+# bd02dcb4226f42f299fae25759c6b0da
+msgid "Use the |resource package_pacman| resource to manage packages (using |archlinux pacman|) on the |archlinux| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:76
+# 126aa696fe6a497a816034275e5a4d40
+msgid "`perl <http://docs.getchef.com/resource_perl.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_perl.rst:4
+# 8cfddb7d16084db797e01b10da3c5fdd
+msgid "Use the |resource script_perl| resource to execute scripts using the |perl| interpreter. This resource may also use any of the actions and attributes that are available to the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_perl.rst:6
+# 86021e904ea24d2094066083e87220b8
+msgid "The |resource script_perl| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:78
+# c5eb5cc3f28f45c292e9344471f6ee9c
+msgid "`portage_package <http://docs.getchef.com/resource_portage_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_portage.rst:4
+# 7488fbbe834a482ea99e531ba12880f3
+msgid "Use the |resource package_portage| resource to manage packages for the |gentoo| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:80
+# 81dfdfb0a79247bbbbead7a7b365e3e7
+msgid "`powershell_script <http://docs.getchef.com/resource_powershell_script.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script.rst:4
+# 953ad1997d464c8b93607e6c63940205
+msgid "Use the |resource powershell_script| resource to execute a script using the |windows powershell| interpreter, much like how the |resource script| and |resource script|-based resources---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource script_python|, and |resource script_ruby|---are used. The |resource powershell_script| is specific to the |windows| platform and the |windows powershell| interpreter. This resource creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource includes actions (``:run`` and ``:nothing``; ) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) that are inherited from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:82
+# 776595c4e1394f0e962ba31d1ecf3c67
+msgid "`python <http://docs.getchef.com/resource_python.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_python.rst:4
+# 3c1332a7099a43ccafbbdbeb260c0a2c
+msgid "Use the |resource script_python| resource to execute scripts using the |python| interpreter. This resource may also use any of the actions and attributes that are available to the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_python.rst:6
+# 08ea0ad4c11b427582b12e544e986baf
+msgid "The |resource script_python| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:84
+# 8e9a4b71f2ae4707947f4d04403fa81a
+msgid "`registry_key <http://docs.getchef.com/resource_registry_key.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:4
+# 096c4e3a28814836a0c0f23db11387ec
+msgid "Use the |resource registry_key| resource to create and delete registry keys in |windows|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:6
+# 3571a145a4b7451f88e83a56e67c5341
+msgid "64-bit versions of |windows| have a 32-bit compatibility layer in the registry that reflects and redirects certain keys (and their sub-keys) into specific locations. By default, the registry functionality will default to the machine architecture of the system that is being configured. The |chef client| can access any reflected or redirected registry key. The |chef client| can write to any 64-bit registry location. (This behavior is not affected by the |chef client| running as a 32-bit application.) For more information, see: |url msdn_registry_key|."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:86
+# 3210118c24ae42cca251d500701578ce
+msgid "`remote_directory <http://docs.getchef.com/resource_remote_directory.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_remote_directory.rst:4
+# 51dece22fd324e1f9ff101ce8e8f0706
+msgid "Use the |resource remote_directory| resource to incrementally transfer a directory from a cookbook to a node. The directory that is copied from the cookbook should be located under ``COOKBOOK_NAME/files/default/REMOTE_DIRECTORY``. The |resource remote_directory| resource will obey file specificity."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:88
+# 00a49ec12b71469085fd84b3223c26b5
+msgid "`remote_file <http://docs.getchef.com/resource_remote_file.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_remote_file.rst:4
+# 649df3c8f7d8435ca4352d7fd96e02a1
+msgid "Use the |resource remote_file| resource to transfer a file from a remote location using file specificity. This resource is similar to the |resource file| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:90
+# 9360df1283e9408ebf91ae6b89788730
+msgid "`route <http://docs.getchef.com/resource_route.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_route.rst:4
+# 1446b6729eee4028aa649bba51fc17f2
+msgid "Use the |resource route| resource to manage the system routing table in a |linux| environment."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:92
+# 32b2863eb8dd4b15972fb1a8a817c2e9
+msgid "`rpm_package <http://docs.getchef.com/resource_rpm_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_rpm.rst:4
+# c04c7589a0a346c18240d4ca5e3eece4
+msgid "Use the |resource package_rpm| resource to manage packages for the |rpm| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:94
+# e8e8abb0e6db4ca991a6e2ed412490f8
+msgid "`ruby <http://docs.getchef.com/resource_ruby.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_ruby.rst:4
+# b4213415dade46ddb12b25b8a79cd7b3
+msgid "Use the |resource script_ruby| resource to execute scripts using the |ruby| interpreter. This resource may also use any of the actions and attributes that are available to the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_ruby.rst:6
+# 54bfb51288344263ae92a7b478b6e14d
+msgid "The |resource script_ruby| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:96
+# 45b4de988c644b48bb4ec4f946acbba8
+msgid "`ruby_block <http://docs.getchef.com/resource_ruby_block.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_ruby_block.rst:4
+# a143e97a16ee497180aafec5ca4c2991
+msgid "Use the |resource ruby_block| resource to execute |ruby| code during a |chef client| run. |ruby| code in the ``ruby_block`` resource is evaluated with other resources during convergence, whereas |ruby| code outside of a ``ruby_block`` resource is evaluated before other resources, as the recipe is compiled."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:98
+# 67620d399fdb4ee5b9eae0124532451f
+msgid "`script <http://docs.getchef.com/resource_script.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script.rst:4
+# 6e5532fb258f49c3802755df5ac29c4d
+msgid "Use the |resource script| resource to execute scripts using a specified interpreter, such as |bash|, |csh|, |perl|, |python|, or |ruby|. This resource may also use any of the actions and attributes that are available to the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use ``not_if`` and ``only_if`` to guard this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script.rst:6
+# 4ace381099d54b1aad50fae054128792
+msgid "The |resource script| resource is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:100
+# 5d3a47eb89de4cedbcba3f3eb90645e1
+msgid "`service <http://docs.getchef.com/resource_service.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_service.rst:4
+# f30f83c99951439f848181b771d08681
+msgid "Use the |resource service| resource to manage a service."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:102
+# 370187d632ca4bd8a1dd190f254c9428
+msgid "`smart_o_s_package <http://docs.getchef.com/resource_smartos_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_smartos.rst:4
+# 2782c7c8264a444db00398c4720766a4
+msgid "Use the |resource package_smartos| resource to manage packages for the |smartos| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:104
+# f797dc2857fa43c4b9c0c1b6a19ca359
+msgid "`solaris_package <http://docs.getchef.com/resource_solaris_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_solaris.rst:4
+# 897be5cd1b214832999f610ddbb3b7f6
+msgid "The |resource package_solaris| resource is used to manage packages for the |solaris| platform."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:106
+# de0896a8b8ab4b229832cff1d4b3107f
+msgid "`subversion <http://docs.getchef.com/resource_subversion.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_scm_subversion.rst:4
+# 87d82e05688e430880a60415292b8073
+msgid "Use the |resource scm_subversion| resource to manage source control resources that exist in a |svn| repository."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:108
+# 220a867fedb24de2896c80b2772d845c
+msgid "`template <http://docs.getchef.com/resource_template.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_template.rst:4
+# 601487d5b4b3425d9eb2a31c7a712f5e
+msgid "Use the |resource template| resource to manage the contents of a file using an |erb| template by transferring files from a sub-directory of ``COOKBOOK_NAME/templates/default`` to a specified path located on a host that is running the |chef client|. This resource includes actions and attributes from the |resource file| resource. Template files managed by the |resource template| resource follow the same file specificity rules as the |resource remote_file| and |resource file| resources."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:110
+# 8e2e61869fdc48af92e25fd5ac0f8e1a
+msgid "`user <http://docs.getchef.com/resource_user.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_user.rst:4
+# 1938033360ff41068a16fe5b3f71dca4
+msgid "Use the |resource user| resource to add users, update existing users, remove users, and to lock/unlock user passwords."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_user.rst:6
+# 9702f5e324774e1ca66c13f5d12ae6ff
+msgid "System attributes are collected by |ohai| at the start of every |chef client| run. By design, the actions available to the |resource user| resource are processed **after** the start of the |chef client| run. This means that attributes added or modified by the |resource user| resource during the |chef client| run must be reloaded before they can be available to the |chef client|. These attributes can be reloaded in two ways: by picking up the values at the start of the (next) |chef client| run or by using the `ohai resource <http://docs.getchef.com/resource_ohai.html>`_ to reload these attributes during the current |chef client| run."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:112
+# e750b6625048432c8b39b0aa3d522311
+msgid "`windows_package <http://docs.getchef.com/resource_windows_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows.rst:4
+# 27d6b924a3724fd5bdf7f97c6a6da3e0
+msgid "Use the |resource package_windows| resource to manage |microsoft installer package| packages for the |windows| platform."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_windows.rst:6
+# cc1205407cd049f1af31877476235dff
+msgid "This resource effectively replaces the ``windows_package`` resource found in the |cookbook windows| cookbook by moving that functionality into the |chef client|. The |cookbook windows| cookbook may still be used, but in that situation use the generic |resource package| resource instead of the |resource package_windows| resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:114
+# 912f046eb2684d5496f5ed3f779b63bd
+msgid "`yum_package <http://docs.getchef.com/resource_yum.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_yum.rst:4
+# c8d9ff1cbccc40b4951dab6a343f233e
+msgid "Use the |resource yum_package| resource to install, upgrade, and remove packages with |yum| for the |redhat| and |centos| platforms. The |resource yum_package| resource is able to resolve ``provides`` data for packages much like |yum| can do when it is run from the command line. This allows a variety of options for installing packages, like minimum versions, virtual provides, and library names."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_platform_resources.rst:117
+# 86eb92c2297e4b2193312762f31bb2db
+msgid "In addition, the `chef_handler <http://docs.getchef.com/resource_chef_handler.html>`_ resource is configured and run using the |cookbook chef_handler| cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (and as a \"lightweight resource\"), the |lwrp chef handler| resource should otherwise be considered a \"platform resource\"."
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:21
+# 11677fb43d3449328bfc42445c4f44ab
+msgid "Common Functionality"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:22
+# f18973a9eb724f809a56edf88074436b
+msgid "All resources share a set of common actions, attributes, conditional executions, notifications, and relative path options."
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:28
+# 38b14d5fcf4d47b8a185ee0cce748457
+msgid "Common Item"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:30
+# 48fa9533b2d14d2884ef017d35909369
+msgid "`Actions <http://docs.getchef.com/resource_common.html#actions>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:31
+# e14a36a962be44cca8d61bd884d10f09
+msgid "|resource short_actions|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:32
+# b1dff2428c0e473599d9622b85c50e26
+msgid "`Attributes <http://docs.getchef.com/resource_common.html#attributes>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:33
+# 08a83789179c42f6aa40c6a1015fb394
+msgid "|resource short_attributes|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:34
+# 7b0933b4acea4b56b5efe41f7157d839
+msgid "`Conditions <http://docs.getchef.com/resource_common.html#conditionals>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:35
+# 8df466b2cb504c0b9f6382eda9c8ae19
+msgid "|resource short_conditions|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:36
+# 002c45578fea4c138a6b0bdde210ecef
+msgid "`Notifications <http://docs.getchef.com/resource_common.html#notifications>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:37
+# b5450ef26756481384777f35cc345cf6
+msgid "|resource short_notifications|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:38
+# 479ddb3cf4aa478fa0716e8ad6f6eab7
+msgid "`Relative Paths <http://docs.getchef.com/resource_common.html#relative-paths>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:39
+# ad34fd0a619f42449a93d792064f6203
+msgid "|resource short_relative_paths|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:40
+# d0265e3ebdfa4049b474c8dca02df726
+msgid "`Windows File Security <http://docs.getchef.com/resource_common.html#windows-file-security>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:41
+# e2c34a22d0ab43caa7a0d4f762de4dd5
+msgid "|resource short_windows_file_security|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:42
+# 56a0883a9bb446ba86d10118c6eae1ab
+msgid "`Run a Resource during Resource Compilation <http://docs.getchef.com/resource_common.html#run-from-resource-collection>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:43
+# ea1a17bfef344d92bb0c2b7ed2bc795a
+msgid "|resource short_run_during_compile|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:46
+# ac0dc65bb41a4f6abcb72809f03e2933
+msgid "First-run Resources"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:7
+# a1ea3200f49547218f1f69f50e620f45
+msgid "Use sparingly. Most resources are idempotent by design and do not require using any of the approaches that are discussed below."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:9
+# 6c33edef4d6443db878eb982d76cd38e
+msgid "This page describes how to construct a first-run resource---a resource that only performs an action on the first |chef client| run---that does nothing on all subsequent |chef client| runs."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:11
+# 1397751a40ae463fa8abbf606094cdd3
+msgid "Some resources, by their nature, are not idempotent. For example, the |resource execute| and |resource script|-based resources are not idempotent because the commands that are executed by these resources are typically unique to the environment in which they are run. Most of the time, these resources can be made idempotent by `inspecting the state of the node using guards <http://docs.opscode.com/resource_common.html#guards>`_---``not_if`` and ``only_if``---and then defining the conditions necessary to ensure idempotence for that resource block."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:13
+# f8dd71da2df2400d9bdf40a897f6af80
+msgid "However, it may be difficult (or even impossible) to correctly inspect the state of the node. Or it may be that a command should not be run again, even if the state of the node is incorrect."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:15
+# 5d07e39b97164bd494372b2cd2e6401b
+msgid "One situation where a first-run resource is useful is to prevent a command from being run a second time. To create this type of first-run resource, set a node attribute after sucessfully completing a task, and then testing for the presence of that attribute. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:33
+# 69260bd78c0b47fcac5c560582a6231c
+msgid "where:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:35
+# f39a4d2f3cca4e4091a72dec53c96abf
+msgid "The ``command`` to be run (or not run) is defined by the |resource execute| resource"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:36
+# 79144788f1f34f2792b73f29c0063958
+msgid "The |resource ruby_block| resource is notified by the |resource execute| resource when it runs"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:37
+# d8fdb65ea92b4fe1a167d3c85f3fceb2
+msgid "The |resource ruby_block| resource sets an attribute (to ``true``) when it is notified"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:38
+# a31c5f7adc194a4b8b719f8534c28c6d
+msgid "The  ``not_if`` guard in the |resource execute| resource block tests for the presence of this attribute; when present, the |resource execute| resource block will not run"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:40
+# 9485eea5bc7a4c28ba4e2bef288d1496
+msgid "Some other benefits from this approach to defining first-run resources include searchable flags:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_first_run.rst:46
+# 5771719acf124af8ae65c2a16b265ec7
+msgid "which can then be unset later using |knife|:"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:50
+# 419d58db40ca433ebe9c4e42cf2d19ee
+msgid "Platform Providers"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider.rst:4
+# 04ee7fd1c9f443b6b7dc1504382763b2
+msgid "Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:4
+# 54ac3ec81e714a49bd7c8683985e0a0d
+msgid "The |chef client| will determine the correct provider based on configuration data collected by |ohai| at the start of the |chef client| run. This configuration data is then `mapped to a platform and an associated list of providers <https://github.com/opscode/chef/blob/master/lib/chef/platform/provider_mapping.rb>`_."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:6
+# 94f20597a93942e4a4c003dbf4923c1d
+msgid "Generally, it's best to let the |chef client| choose the provider and this is (by far) the most common approach. However, in some cases specifying a provider may be desirable. There are two approaches:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:8
+# f6beaff7dab7440c9c450ea8e7c5de0b
+msgid "Use a more specific short name---``yum_package \"foo\" do`` instead of ``package \"foo\" do``, ``script \"foo\" do`` instead of ``bash \"foo\" do``, and so on---when available"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:9
+# ca6689ece4624e708bf87917f69b4527
+msgid "Use the ``provider`` attribute to specify the long name as an attribute of a resource, e.g. ``provider Chef::Provider::Long::Name``"
+msgstr ""
+

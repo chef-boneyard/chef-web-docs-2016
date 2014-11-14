@@ -1,0 +1,3437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/provisioning.rst:8
+# 0f8fef37e8dd445682537f7de45e1807
+msgid "|chef provisioning|"
+msgstr ""
+
+#: ../source/provisioning.rst:10
+# c199d7a62062498eb22a9f3ef673943f
+msgid "|warning provisioning|"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning.rst:5
+# 61bf2ff57f3e4090914a49e78b44e501
+msgid "|chef provisioning| is a collection of resources that enable the creation of machines and machine infrastructures using the |chef client|. It has a plugin model that allows bootstrap operations to be done against any infrastructure, such as |virtualbox|, |digital ocean|, |amazon ec2|, |linux lxc|, bare metal, and more."
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning.rst:7
+# 48ecce84e29d4df18ba2f720918a5e57
+msgid "|chef provisioning| is built around two major components: the |resource machine| resource and drivers."
+msgstr ""
+
+#: ../source/provisioning.rst:15
+# 411c8bb5390d456bbcd0741306831e68
+msgid "In-Parallel Processing"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:5
+# 5aab9a0cab264027ba7281a7f763d94a
+msgid "In certain situations |chef provisioning| will run multiple |resource machine| processes in-parallel, as long as each of the individual |resource machine| resources have the same declared action. The |resource machine_batch| resource is used to run in-parallel processes."
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:7
+# 96efdf2570cd42e8a6db0251d638328b
+msgid "|chef provisioning| will processes resources in-parallel automatically, unless:"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:9
+# 542529ab44334f17beeb5633921731fa
+msgid "The recipe contains complex scripts, such as when a |resource file| resource sits in-between two |resource machine| resources in a single recipe. In this situation, the resources will be run sequentially"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:10
+# 4a739877f2534847a45a3d1740c13009
+msgid "The actions specified for each individual |resource machine| resource are not identical; for example, if resource A is set to ``:converge`` and resource B is set to ``:destroy``, then they may not be processed in-parallel"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:12
+# e2c692563fb24888af09db2a0c6db09e
+msgid "To disable in-parallel processing, add the ``auto_machine_batch`` setting to the |client rb| file, and then set it to ``false``."
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:14
+# f14a95cf02b748e1b0c726d1ed830e1f
+msgid "For example, a recipe that looks like:"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:22
+# 8a7e44c5189f467bb61bf5627f567691
+msgid "will show output similar to:"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:69
+# be948d38fbdd47dbb08a845fde36234e
+msgid "At the end, it shows ``1/1 resources updated``. The three |resource machine| resources are replaced with a single |resource machine_batch| resource, which then runs each of the individual |resource machine| processes in-parallel."
+msgstr ""
+
+#: ../source/provisioning.rst:19
+# 84e45a7dd5134d3587f54aea4c8ef9d9
+msgid "Resources"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:5
+# 24df8a08a24a4e2f9fe28ab1335dbadd
+msgid "A resource is a statement of configuration policy. It describes the desired state of an element of your infrastructure, along with the steps needed to bring that item to the desired state. Each resource statement in a |chef| recipe corresponds to a specific part of your infrastructure: a file, a template, a directory, a package, a service, a command to be executed, and so on. Each resource statement includes the resource type (such as ``template``, ``service`` or ``package``), its name, any attributes that specify additional details, and an action that tells the |chef client| how to implement the configuration policy."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:7
+# e89059a452f34c568b380ae6a2321b7e
+msgid "Together, resources describe all the components in your network. Recipes group resources together and describe working configurations. Add recipes to a run-list to describe the desired state for every node to which that run-list is assigned. Cookbooks are collections of recipes and are stored on the |chef server|."
+msgstr ""
+
+#: ../source/provisioning.rst:25
+# d6ac663e9fd24af0bd2b864da28fd8aa
+msgid "chef_acl"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl.rst:4
+# 30889edf7fc64d24a18c5ad383c6b039
+msgid "Use the |resource chef_acl| resource to interact with access control lists (ACLs) that exist on the |chef server|."
+msgstr ""
+
+#: ../source/provisioning.rst:29
+#: ../source/provisioning.rst:57
+#: ../source/provisioning.rst:83
+#: ../source/provisioning.rst:110
+#: ../source/provisioning.rst:137
+#: ../source/provisioning.rst:165
+#: ../source/provisioning.rst:190
+#: ../source/provisioning.rst:216
+#: ../source/provisioning.rst:245
+#: ../source/provisioning.rst:271
+#: ../source/provisioning.rst:301
+#: ../source/provisioning.rst:325
+#: ../source/provisioning.rst:349
+#: ../source/provisioning.rst:375
+#: ../source/provisioning.rst:422
+#: ../source/provisioning.rst:466
+#: ../source/provisioning.rst:490
+#: ../source/provisioning.rst:519
+#: ../source/provisioning.rst:548
+#: ../source/provisioning.rst:572
+# d704df3442dd4ede953fe865963930ed
+# 9bc8105c34044cbb8403c46da453d44f
+# f0c021fcc65f4672abb20e5b3f7a2e7d
+# 4099f7b7e228486dbd65c31f8c55742f
+# e15a8ba104ec4598b9353c1a136d5d9e
+# c18d551206f341298af0d4972cde42a8
+# 46646acd7d2d4ebb8fa3959ac1ac4704
+# c3776290b1fc45d2b6ea26d7a70e3b95
+# ba82fc2e21b14e09b5c4b015829ea756
+# 1ff179b1e30742f285ba681c401f59dd
+# 23ad646f5af74d318d14f84666efb9f2
+# 00cee0a77db0443da00a4e43de393439
+# a718c5d94c9f4811a1e05842ab361e13
+# 690aeeabddf147a699252127d5334cf8
+# 15a281a8ad9442ea8c3db4d597d95f94
+# b56aed5310e2403a9df116cb5c1e753f
+# 713f64ca669f4845a0fcd5b489775511
+# 67780401b29746ffb5ea99de043918b3
+# 1a31c2239bc5465a9477bf515b5504e5
+# 5d1f3ebb9ad445f3831e17e2051ba265
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_syntax.rst:4
+# dc5b9a12b6c348b9888cfc04e9e5c600
+msgid "The syntax for using the |resource chef_acl| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_client_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_container_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_databag_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_databagitem_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_environment_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_group_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_mirror_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_organization_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:14
+#: ../../includes_resources/includes_resource_chef_user_syntax.rst:13
+#: ../../includes_resources/includes_resource_load_balancer_syntax.rst:14
+#: ../../includes_resources/includes_resource_machine_syntax.rst:14
+#: ../../includes_resources/includes_resource_machine_batch_syntax.rst:14
+#: ../../includes_resources/includes_resource_machine_execute_syntax.rst:14
+#: ../../includes_resources/includes_resource_machine_file_syntax.rst:14
+#: ../../includes_resources/includes_resource_machine_image_syntax.rst:14
+#: ../../includes_resources/includes_resource_private_key_syntax.rst:14
+#: ../../includes_resources/includes_resource_public_key_syntax.rst:14
+# aa6bb0f63b7a448f9c6960c75e3eab61
+# 3ed2828b3b9048fb896ed202631ae9a3
+# 7197b382a65e4df492d2fcfcc471e5d4
+# 917788414c52465cbc367050f9132868
+# b8899a73bc904cf49cdeb2f9cb44232b
+# 21ebccca000947168855934d8310c0cf
+# 6e42a8d165c24d359a161b4d03f5f024
+# a4a46da74d94401bbf7051631fb3c385
+# a2c23b2db98346cb801bf40fe054b76f
+# dbf661d56fb345cd8ebc9087530b3e31
+# feebe40293e446c3bc15e097d7c4d63f
+# 49c1d4d13a6341eaafe5a10b6b64babe
+# d55c31a52cda4831a8d5126b9d5c0dd5
+# 97ab8169f8694faebcebfe1597abf3bd
+# 193a9dcdab7f4d5e8fd6ec166fe122f0
+# 96acc082d4c44940ab0fb78d7fe1cc3d
+# 9911764874914c00bc4942c94fa4b5a0
+# 3094a73f4aff4551b71b22863ce0bc0b
+# c55fbb1458654e30b42ecf79a23734dd
+# fc0e5d30899843e4978c8bcb5a0b363e
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_syntax.rst:16
+# 74c09f50500f4f1bb3858d21bfb402fd
+msgid "``chef_acl`` tells the |chef client| to use the ``Chef::Provider::ChefAcl`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_syntax.rst:17
+#: ../../includes_resources/includes_resource_chef_mirror_syntax.rst:17
+# e0023e28b60b4c0bbf65ad1c9cced796
+# 9d4b713e76af4fa2b53f934e07e2eed9
+msgid "``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the name of the |chef client|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_client_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_container_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_databag_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_databagitem_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_environment_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_group_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_mirror_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_organization_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:18
+#: ../../includes_resources/includes_resource_chef_user_syntax.rst:17
+#: ../../includes_resources/includes_resource_load_balancer_syntax.rst:18
+#: ../../includes_resources/includes_resource_machine_syntax.rst:18
+#: ../../includes_resources/includes_resource_machine_batch_syntax.rst:18
+#: ../../includes_resources/includes_resource_machine_execute_syntax.rst:18
+#: ../../includes_resources/includes_resource_machine_file_syntax.rst:18
+#: ../../includes_resources/includes_resource_machine_image_syntax.rst:18
+#: ../../includes_resources/includes_resource_private_key_syntax.rst:18
+#: ../../includes_resources/includes_resource_public_key_syntax.rst:18
+# c0e8fe4bf54742ada81d7189f51a5040
+# 002a2e96ec9f4faeaadeb4f09cf1c0e5
+# 0b13796f5f7f4366859fb483304fe719
+# 914519c6616c40f4a95c7fe1de44b824
+# bed20b1c16e54936893b0f74784aab01
+# 19ab9ceabb00478c91a6dfb1a32d8c46
+# 7273b3d82a834178b2fb99f4c072a28f
+# 6c2ac10df42d4654be7966b0c1cae4cd
+# 6c057edf184b419b9785b4dc0fba5be0
+# ef918c0e2d9a492e88c5adf9a66a390c
+# 3d6f696da0d24c69814d0975450f2576
+# 8ac7e8f1c83c4fa389f965b2424e6e58
+# 2054c71e373449bfb358c39fc47a9f6a
+# b5bf5d97df9d4f489b70df0dfc555f4d
+# 8b1095c7100545279b2c3ae05c9b061c
+# 044533ebfe7b4383a392a4b838d34792
+# d412910b270541d4b18774627de4c427
+# dd9bf9a109fe42eaa674f7f691c0ddd5
+# 8c14ff7cd8064da193d2a7f7913283f6
+# 9e7a804742db4fb08ecea53cfad709c4
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_client_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_container_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_databag_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_databagitem_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_environment_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_group_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_mirror_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_organization_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:19
+#: ../../includes_resources/includes_resource_chef_user_syntax.rst:18
+#: ../../includes_resources/includes_resource_load_balancer_syntax.rst:19
+#: ../../includes_resources/includes_resource_machine_syntax.rst:19
+#: ../../includes_resources/includes_resource_machine_batch_syntax.rst:19
+#: ../../includes_resources/includes_resource_machine_execute_syntax.rst:19
+#: ../../includes_resources/includes_resource_machine_file_syntax.rst:19
+#: ../../includes_resources/includes_resource_machine_image_syntax.rst:19
+#: ../../includes_resources/includes_resource_private_key_syntax.rst:19
+#: ../../includes_resources/includes_resource_public_key_syntax.rst:19
+# 792c4f30c89240c6b75f24ae5a80587a
+# b325765b9ec441978523be600761a6dd
+# 2bdb3a7d5bd147b5b39e2274ac16bb84
+# 2a81a5fa4ea44866858bdcba11536f92
+# 60c952d3467f44ad9e4ee83c67b99742
+# c30d20da1a34498186afd584e4c4b9df
+# 7e783d0273ee4f7f8b838c5a8de85ca2
+# c4bf58cfe407448791dcda5895fb9ba1
+# 3055681add5b436dbd752be9bf018182
+# f461385a683a4da4a008e64aa1d68ed1
+# 916fd26a05a749529031e211f9a9ebc8
+# 4318e344b89c4b15ad17062ef843dcf3
+# 66338b939d974319b98362c71f0923dd
+# 9245e797d2514042af63d31616f62071
+# 78df9e85faef40bc95a17e987efcaba7
+# 54933a1475ea4088a71e62a3642c875b
+# 5fd2260ee0964bb1975629e8b163a17d
+# a7fce1f5912e419693de602a9372c544
+# ed6066a609a5490ab25aa5176d41417d
+# dd3f6cf4b6e74d6fa2a3b4d107ec4b51
+msgid "``:action`` identifies which steps the |chef client| will take to bring the node into the desired state"
+msgstr ""
+
+#: ../source/provisioning.rst:33
+#: ../source/provisioning.rst:61
+#: ../source/provisioning.rst:87
+#: ../source/provisioning.rst:114
+#: ../source/provisioning.rst:141
+#: ../source/provisioning.rst:169
+#: ../source/provisioning.rst:194
+#: ../source/provisioning.rst:220
+#: ../source/provisioning.rst:249
+#: ../source/provisioning.rst:275
+#: ../source/provisioning.rst:305
+#: ../source/provisioning.rst:329
+#: ../source/provisioning.rst:353
+#: ../source/provisioning.rst:379
+#: ../source/provisioning.rst:426
+#: ../source/provisioning.rst:470
+#: ../source/provisioning.rst:494
+#: ../source/provisioning.rst:523
+#: ../source/provisioning.rst:552
+#: ../source/provisioning.rst:576
+# 6fc846a274c944158819261f66139743
+# b248e100801a405aa83239cbf191ce0b
+# 2e2dcfd95a14494ba2a86dcf7b1acb7b
+# d0b0b8484d224571b5cf221d7f8518f0
+# ac3522b2aad74f6e84a4187e16d7877c
+# 98edb0f61db94364a038b2537944dda8
+# 042a501d698c4b1993169591639ccef4
+# 7c21fbcb51f14ce0b8fe4b4a907c64c1
+# 9a73c24b76a74872a319a595539eb80f
+# 6d71400412aa4832b2b6b27ac3817e79
+# 2fccf137ec9e445fadbe75d48156d8d0
+# d939469425464f9cb5d1d851b4116672
+# 21b9f2e1bfe249a08414ebfc0019f653
+# d93886d3bafe4acd9cb87992ab451d46
+# 2506c295c7e14f10ab17cf3b2982ceb9
+# 9c0da3941ed742e9adac821d82bfe2af
+# cf7fae41e6b44402acca552ffbf1d3bb
+# 3a5e50fb08134c46b15d6a299324827b
+# 0577d7a0850b49f084357e1426572454
+# f16f7818dd7844d08ff99e513b06341e
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_container_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_databag_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_databagitem_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_environment_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_group_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_mirror_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_organization_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:4
+#: ../../includes_resources/includes_resource_chef_user_actions.rst:4
+#: ../../includes_resources/includes_resource_load_balancer_actions.rst:4
+#: ../../includes_resources/includes_resource_machine_actions.rst:4
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:4
+#: ../../includes_resources/includes_resource_machine_execute_actions.rst:4
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:4
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:4
+#: ../../includes_resources/includes_resource_private_key_actions.rst:4
+#: ../../includes_resources/includes_resource_public_key_actions.rst:4
+# 96af28f73cb343d3b16ae85062cd2e4f
+# 203ea032791c403f9b1a182b9419a3e8
+# 98b356a4e39e43c5afd7fc299f8ee497
+# a4f5ad95fa67484eb6ade1627d718ee5
+# 05d64975d3924a868d1027319ddb2c65
+# 66a88840d7f041a28efbd9e6c30c9a0d
+# f7679404677d4c94b7e95562dd904d24
+# f7ac36907e804bbeb04b37cda43ac285
+# 562a906c091e4933ae0c81cab5cf906c
+# 9110b06e904146ca96e0188919b750e8
+# 6220de173f3e4c2180fc5616f6d00f04
+# d5a06404bc3248dcabe05e3cd35735ad
+# c1a9c9028d1649baa560b2247ab143f0
+# 5908c36b89b949e2a0f507761b852798
+# 55c4a6bd7c58438b94d9b5c6692cdf5b
+# 78d2fd3428024cb1a7c00a539bcff554
+# ad16ccefacc04d35afcca65b106b292b
+# 3a45ea76878b45b18a0b4f7179fedefd
+# 6dc3e00d21134fa9b4721b823e826aa8
+# 8ffa287dc5e64ed3ba83a36779c61eed
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_container_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_databag_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_databagitem_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_environment_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_group_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_mirror_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_organization_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:10
+#: ../../includes_resources/includes_resource_chef_user_actions.rst:10
+#: ../../includes_resources/includes_resource_load_balancer_actions.rst:10
+#: ../../includes_resources/includes_resource_machine_actions.rst:10
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:10
+#: ../../includes_resources/includes_resource_machine_execute_actions.rst:10
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:10
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:10
+#: ../../includes_resources/includes_resource_private_key_actions.rst:10
+#: ../../includes_resources/includes_resource_public_key_actions.rst:10
+# 65571318ddc54073b8e99569f8df107e
+# 1b629c86cae8490b95dcb1fea8938728
+# d47fe4291ce847cf985569b20b224db2
+# a2e522ac15f54d2c8b1844daeaea6e66
+# 55deabc448f045689c90d8324fd38ee2
+# 42a86db094ed488d8126e6834e124e6c
+# 7d0e3050b3ea449897587ef2c5f3dfed
+# 433084495e854fe4954583d9da1473b0
+# 7cd187e59af449ea89286da84b87ac72
+# d24a1c01d5154382a54e5c482007884a
+# 579f10cd3c8b4753a87980dc06d53813
+# 5569af81f8c6418eb35cdb9c1f1fc34d
+# 8cf0a1cdc2f947a8abd2553142b1c0b6
+# 90406fe2bb3940e3b4859b259092e2ce
+# e83e67ee4f77430f87815c59754e6d3f
+# a0d0d0f7a3d34c7696cb9587017a5629
+# 7d60fa48142a4534b05b026f04e614e5
+# 3c570c770a3b43bcbba5b6f714a4365e
+# 91258bf92ac84b948fa871cca6d894d6
+# c21c0cfbca7a40559a6852afe9105e06
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_container_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_container_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_databag_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_databag_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_databagitem_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_environment_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_group_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_mirror_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_organization_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:11
+#: ../../includes_resources/includes_resource_chef_user_actions.rst:11
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:11
+#: ../../includes_resources/includes_resource_load_balancer_actions.rst:11
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:11
+#: ../../includes_resources/includes_resource_machine_actions.rst:11
+#: ../../includes_resources/includes_resource_machine_attributes.rst:11
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:11
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:11
+#: ../../includes_resources/includes_resource_machine_execute_actions.rst:11
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:11
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:11
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:11
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:11
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:11
+#: ../../includes_resources/includes_resource_private_key_actions.rst:11
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:11
+#: ../../includes_resources/includes_resource_public_key_actions.rst:11
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:11
+# edc26b37b60041448457fafdfe32ea3f
+# 1f4fc5994c4f4a209f6dfbfa7dd53b43
+# d55f14c8076940528b90a65be2b67e1d
+# f1c01dbb3d9b49539919621e4ccfd097
+# 055b084466da45369ae0d88a12bcaf73
+# 436b8ae9720b432ea475af3243f4f9ea
+# 78dbf001d8ab4368ae77ac0cc8423439
+# 9cef3395eeea4d4fb2876bd6f75e82a6
+# 1b23b9cf003a4244be54ae6361bef786
+# fa63b5df4c94481caa2a247e772940f4
+# 782f5a4eca204266993ed56bee6c36ec
+# 5838970a97884bbaa8b42c9a91e22350
+# 4f1124cdf80046a291ffc67899d4d5ec
+# 593e69c9dbfa4a2998bfe6452fca24cd
+# 705275c656604a85bcac0dbba1004f59
+# 830dbeaf4e5c4cfa80468053fc3a406e
+# 9a8194e0cc33467f900ea0d6fa18e099
+# b120c0df58fc4dcb8bbcb15c9784b17e
+# 51f489b7f4844e4cafbcdef081650d2b
+# 944f45a2366446ca8ec6f3f5390c49fc
+# f2922db1c9ef4276afa47f5f8ba09d4d
+# d561525b840a46568a29e19999aea197
+# ec54cb0f743249dea16444af5fff4bff
+# a8114f9f5bc84260b8bf611d99727b84
+# 71d6d9d4c52a4498990c1a6426308b4b
+# 7fef439082684691aad38b9a9085ae54
+# 592b43ffbf8741dbb93d9670e31dc896
+# ffff6d1087b34c85a79c73a081a148f2
+# 9b92fda82a8b461692b4f8d2aba3767c
+# 6d7805bf55764643b30b9fbf4250a9c5
+# 791aac73c0c64fdc9e0992c439c25c20
+# 1aaddd4a94fc48e6b9bea9860f632f3a
+# 8462e5281e28448f960bccf1f0a3cb9f
+# 640e2965e6684c31835c93e7f1ac8de0
+# 838fa418ee6142f4b14102da9962b506
+# 79dc13644f9749f78d3035afd4f43362
+# d6f302e0d29f408ea6da9f1374e0c949
+# eada7219c5f84cb5b16f94aefbcc4e61
+# 0dbd03c9ca98492a8389bdaa978676e9
+# 0221dd15ae984ad1890b12ddcf1d29a5
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_container_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_databag_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_databagitem_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_environment_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_group_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_organization_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:12
+#: ../../includes_resources/includes_resource_chef_user_actions.rst:12
+#: ../../includes_resources/includes_resource_load_balancer_actions.rst:12
+#: ../../includes_resources/includes_resource_machine_actions.rst:14
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:14
+#: ../../includes_resources/includes_resource_private_key_actions.rst:12
+#: ../../includes_resources/includes_resource_public_key_actions.rst:12
+# fb0739da09094e459d900f2dd4e090a7
+# 4de41f250fc94131add9a77c9de2e154
+# ac6e33d634c44680b02b6de7a525e3ba
+# c2dbccbeb6864db3bedf4ed526888cc3
+# 340defd40f9b40b9a2f5fc0c39b67a64
+# a080271079064a8b97d722d62b86d6d5
+# 8b6c1eee5a294f17a0d791fea9da1dfc
+# 4759607453ae4ddcb7dbb873986256dd
+# 89b9f5afb7af415c873eff8ee7dd05a7
+# 4596c593f3d74860b709ed58c6ed6d9e
+# 12ae2e4a276b4ca0a685401adfac5a27
+# 37873e57b02b43a5a93721c4216bea35
+# 5e1974e4302f4d50a182049a9fce8225
+# 8048599f965e4f7b91d797e18b0bb9b9
+# c7fc061f87a449a59e32114eb00c4034
+# 768a371b1a504363a3ef07d8df47a918
+msgid "``:create``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_actions.rst:13
+#: ../../includes_resources/includes_resource_chef_container_actions.rst:13
+#: ../../includes_resources/includes_resource_chef_group_actions.rst:13
+#: ../../includes_resources/includes_resource_chef_mirror_actions.rst:15
+#: ../../includes_resources/includes_resource_chef_organization_actions.rst:13
+#: ../../includes_resources/includes_resource_load_balancer_actions.rst:13
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:15
+# ed035030686046959ad2b26db3e35ca0
+# 57f614aa8dc74a90b3f67da6134e72b4
+# 1ea3d2a36654408d9f9a7d5de4aba650
+# 59146cb6838c4d1591a79b18a45abf64
+# 57161f20788a4f26b0ba672384fa2499
+# a8b1034c024049fc9f9f3e276de92aa0
+# f369d49261ce43d5a540f93aee1f4174
+msgid "Default."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_container_actions.rst:16
+#: ../../includes_resources/includes_resource_chef_group_actions.rst:16
+#: ../../includes_resources/includes_resource_chef_mirror_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_organization_actions.rst:16
+#: ../../includes_resources/includes_resource_machine_actions.rst:18
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:16
+# 210126abe8924a78a7890e92bfccabf1
+# 0ca1f86df993484cb48623deca3a5a7a
+# 84f1f4340c3c40c3a830996609a1a281
+# 6727bd431bae4c9ab87884d242b7c3a6
+# cfb328ee984a47bcb241dad00064f80e
+# 8074b5ed8606400cba649a5e18472f7d
+# cadf2658d11e485e9044eeb26441eb9f
+msgid "``:nothing``"
+msgstr ""
+
+#: ../source/provisioning.rst:37
+#: ../source/provisioning.rst:65
+#: ../source/provisioning.rst:91
+#: ../source/provisioning.rst:118
+#: ../source/provisioning.rst:145
+#: ../source/provisioning.rst:173
+#: ../source/provisioning.rst:198
+#: ../source/provisioning.rst:224
+#: ../source/provisioning.rst:253
+#: ../source/provisioning.rst:279
+#: ../source/provisioning.rst:309
+#: ../source/provisioning.rst:333
+#: ../source/provisioning.rst:357
+#: ../source/provisioning.rst:383
+#: ../source/provisioning.rst:430
+#: ../source/provisioning.rst:474
+#: ../source/provisioning.rst:498
+#: ../source/provisioning.rst:527
+#: ../source/provisioning.rst:556
+#: ../source/provisioning.rst:580
+# fc08fcbd172e4cb2ad9ca0c0df96043c
+# 0f217fab0c324fb18c0d19e528415a1f
+# 123bd1e52e5a4a11b0c897b1ef1c414d
+# def2d8b1be0c4913a58e6b2f679c4ac1
+# 9cf6c6d3e0cd4ae088c637eb4a6e96ac
+# 7a7a1426e04c4687ab9d042a4796194a
+# 3946b46186e544bf88fd7309426d4435
+# 680eeca63fe94bc8be12ab0f0cb08361
+# 47f0466f73ff423d900184f7c0c7a1e9
+# 4315f37e8e2e4b4398cbd5d2cd0e3ace
+# 7f7fc59a2f1042798e930ac589e38fb0
+# e73c3fe1e3144c0a9fc9f0fc73d56ba6
+# bc9a17387b7a4e86be0451d338485bdb
+# 78744d8b2cb84e978b2dd92b10b21a89
+# 913573bfc4d841ef87ff279ac46508ab
+# d3e3cd319bee4c8cbd09e64df80ba3ab
+# 537dc9d0e60a476198c3b83195923521
+# 04e54327a3d4419d9bde9ca6beac26a8
+# a000fdfa701d4e4599a1ff9c10b2b9ad
+# 6f1f5c285ea34afe923052149e4bc2d2
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_container_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_databag_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:4
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:4
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:4
+#: ../../includes_resources/includes_resource_machine_attributes.rst:4
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:4
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:4
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:4
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:4
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:4
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:4
+# 9df4649f18ec44bd916b007d142db203
+# 385b1f6d9fa6499bb96be03eb8226220
+# e64ef8858a1445a2bd5a98c715a2883c
+# 29d2feabca2e4efd80d893c81fb526ce
+# 93686cca9a4b4b51be2773d8a89e1e56
+# a470446e418e43919ee4f47c50dae35e
+# 1dc8fd74f9064d328c4497a6011d2249
+# 999450bd55614683b8ade9400f2a63fe
+# b13e2dea47974aa5960530aa0204e372
+# 65094a6618ff494d85d53fb7f823640f
+# 3dacb0e0e1c342d28de58cb6441a546d
+# ded8f0e907124a439fd544b6d0c0b405
+# d26ac9236568411783bcd82dc40c2210
+# aa0389e9e5e44c1489e35e8c9ec8dd13
+# 5b4c7d5c3adf4873b1fd8627004eca2e
+# 9be1818dde134e5aae4724abb4d34b86
+# 1ffca77c28ae48f2a3ab7c17b43c1df4
+# 02dc78aafe2446fe91616911d4a9bece
+# 157aa7750039442fb5d0f96b5a5f3a23
+# dcff8a5d7bcb4dadad7ceab3c50ccddd
+msgid "|description resource_attributes_intro|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_container_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_databag_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:10
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:10
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:10
+#: ../../includes_resources/includes_resource_machine_attributes.rst:10
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:10
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:10
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:10
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:10
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:10
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:10
+# 170dfa937dbc42569da168e3a917825e
+# 3494ebf1feed4bcf98a52574f8c52377
+# 5f58c40e28c541648cc03804c0db12bc
+# a6f73da5e19a4b779371e809b5a16180
+# 4b5cc0148b2b40889da663d07648f9c7
+# 383402d00dcd4152aa9409cdcf191cff
+# 0176257ce05b4c46b8e0f0ada1bbbc5d
+# 9c505db2b49e486cb516047ffdb51708
+# 6bfe8e2898a7490da50ae5798adaeedf
+# c0f19251e8d841728c97a2968f4219c3
+# a2dccfd215334623b0582455766cd155
+# 2ee32aee30b24c508241cd32b0cfbc9e
+# fa97288b563d41f2b8de0b97972634e5
+# 419cf73226a243e391c7ebd421f446bc
+# 783a9cdc9aea4f1ead4a7ee36281f4c0
+# ac508a77c9864ce6b65760c55fc64705
+# 4e2ea763cbe542f2b6e065a2b933b1ba
+# 7f60be9ca3f7477b8fb8c447a5a6af37
+# 07ba77e68b3e438498494562a03eace2
+# 423af6123b30495e996b2d073d9d8e9a
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_container_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_databag_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:16
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:16
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:14
+#: ../../includes_resources/includes_resource_machine_attributes.rst:24
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:12
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:12
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:12
+# 9f404465a5644c0787f9310a5709f0f6
+# f1705869fc1749a0899b5a2957d3fdda
+# b69057c084dd4deba2eccfa1dea06310
+# 0d0cda25cf8745ab9fee591799aaa725
+# 892b1381f3a14de28cc8af1121a36bea
+# eed2404cc7bf4a279a462f0a11072695
+# cf6d71b763dc47c0a5886fdc90a110eb
+# 41559cf2c46a462980889b218b97b561
+# ff0e7cbeed3b4f02bd352e2f155bdbeb
+# 963a226627be4fb79779b95b195ec333
+# fb33c59d154b42d090a211df30537edb
+# e3b4962797194528a42c6d53c9958565
+# 9bd1ff27fb4c43b38eab87201d094369
+# abaa28a8ec31437f840c68c8b4a84c67
+# de98c92b01e840b29dd8986b48e908ae
+# 1c286d89d4f34edab772f8b53b3f6df4
+msgid "``chef_server``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:15
+#: ../../includes_resources/includes_resource_chef_container_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_databag_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:15
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:17
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:17
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:15
+#: ../../includes_resources/includes_resource_machine_attributes.rst:25
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:13
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:13
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:13
+# 44ed815f3eac4b6aa7259bc17f96d2b9
+# 20e3d40cba66469889da97fd7f7fe8ae
+# 53345719240b40499d8c2d8b4e288d2f
+# f47fdbad33114978a013308bf65c4fe2
+# 823e38bc0b174212ba1806e551ed88b5
+# 1ba6ce2effee4b7f8f878765b499e2c4
+# 36ed9d1bfb7246d197cadc5c17c48e7f
+# 030dd3ea41dc406589527eb37290e136
+# 807110f8eaf44ec9ba9ccfa41b33c0aa
+# de6aacf21021407bbbd01c4645aa90d7
+# 83e67551af0143cd91375bc42d0d1d90
+# 7331776ea3fd48e886f40a79a6b177e9
+# c932decee8784f00b6de7020b33b3e0d
+# 9c0f9b2ca5794b369346f3c73879ac92
+# 735dc6296e774f88b31f1e22cf33cb91
+# 2d89230a334b4549b5e1b9579bee6093
+msgid "|chef_server_url|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:16
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:16
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:18
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:18
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:16
+#: ../../includes_resources/includes_resource_machine_attributes.rst:26
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:16
+# 4900bc9a60e04632ad65829ca808fd94
+# 2bf5d0fc4f494449a4e8f78235903d57
+# e1f3d876f9f648e0a1297eaa84be1fe1
+# efddc548d9274a05805d0f39e8c505a8
+# c1e96708201b483ea2aa563d18280016
+# c8fd64b0a04a44b4a1e05a477080794e
+# f2121c3e860d40c38a29dab198dc5abb
+# 839183da187146f0949b244aa27e279d
+# d8b86e95604840d09c912b7221ffdb37
+# d49f6582ae0446d18b201bda7104bd6c
+# bfec5a4de10648bb92027b8342d1d608
+msgid "``complete``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:15
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:17
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:17
+# 5c8aea2895a1438c82cfc125bf96cce6
+# 2bbae236999a46f4bd4e78db9cd6e1b7
+# 947e8e9237be4f3b9a94ae76f8825b12
+msgid "Use to specify if this resource defines a |chef client| completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:16
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:22
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:35
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:20
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:14
+# e494c9367b3b49c8a7b5a574f8cdd062
+# c4df7009b0514e8680e81f9263cc6449
+# 0f2165a4af734f2d95577375e4b8d7d4
+# 5d996de4220546e693c719ca65fd009a
+# 395c854cd4de4a3da1ad57b7b527c328
+msgid "``path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:17
+# 19ed1aa5369a4770b8fcd67208f41f03
+msgid "A path to a directory in the |chef repo| against which the ACL is applied. For example: ``nodes``, ``nodes/*``, ``nodes/my_node``, ``*/*``, ``**``, ``roles/base``, ``data/secrets``, ``cookbooks/apache2``, ``/users/*``, and so on."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:18
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:24
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:22
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:26
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:22
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:28
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:26
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:28
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:28
+#: ../../includes_resources/includes_resource_machine_attributes.rst:64
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:22
+# 7a8e799abe744495b6c41967c4e22596
+# c661d4c0db8d4858afe98462b810f628
+# 6b883527a197445db4c8c65b262e4afb
+# 96f795fbd2e44a9195ed1116211cf2bd
+# 259aac94d6fb4553aa40b17307efc0a5
+# e4e006742def4b94934649941e1267d4
+# 9d02b6e336fd49db9f94a500a52dc867
+# 763b81044667477fb2fea5ba20abcad2
+# e09de94af5a44fa49da3bd516b3b8e57
+# f8a4cca44f7048ea930782640e6daee2
+# 2953e2421b4842098afcf8494ee5b28d
+msgid "``raw_json``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:19
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:25
+# 8a951b80dc98470b881ef730e2bb2482
+# e3ffeee82d8e49219b37ea3d3d5d9782
+msgid "The |chef client| as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:34
+# dd182a348d5743fda59a4e4cd2deb359
+msgid "``recursive``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:35
+# 04be1d16fc514c54a74087e390fc0af5
+msgid "Use to apply changes to child objects. Use ``:on_change`` to apply changes to child objects only if the parent object changes. Set to ``true`` to apply changes even if the parent object does not change. Set to ``false`` to prevent any changes. Default value: ``:on_change``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:36
+# d53564974ce0494cb61600b7c4c97d52
+msgid "``remove_rights``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:37
+# aeb9a0ff1c0a491f82264ec2e1bdd19e
+msgid "Use to remove rights. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:43
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:49
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:62
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:68
+#: ../../includes_resources/includes_resource_machine_attributes.rst:39
+#: ../../includes_resources/includes_resource_machine_attributes.rst:45
+# c2cf1822cd354d0f9d3c5dc3a8ed8139
+# 0ceec9cbe6d241e786e1cbac678c5845
+# df3c9e7dd1e74436a2326b4afc23248f
+# 7eb05f95f911431b96f84868f38d6333
+# d69e38a161184c5ea8578f2c1bfd7e34
+# c4bbdab1fd5e4cb88bebb0f20f647df8
+msgid "or:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:55
+# c322668a3bb4492486881290134b7c19
+msgid "``rights``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_attributes.rst:56
+# 681dbe4ce2324e2e87123a214bd5e69a
+msgid "Use to add rights. Syntax: ``:right, :right => 'user', :groups => [ 'group', 'group']``. For example:"
+msgstr ""
+
+#: ../source/provisioning.rst:41
+#: ../source/provisioning.rst:69
+#: ../source/provisioning.rst:95
+#: ../source/provisioning.rst:122
+#: ../source/provisioning.rst:149
+#: ../source/provisioning.rst:177
+#: ../source/provisioning.rst:202
+#: ../source/provisioning.rst:228
+#: ../source/provisioning.rst:257
+#: ../source/provisioning.rst:283
+#: ../source/provisioning.rst:313
+#: ../source/provisioning.rst:337
+#: ../source/provisioning.rst:361
+#: ../source/provisioning.rst:387
+#: ../source/provisioning.rst:434
+#: ../source/provisioning.rst:478
+#: ../source/provisioning.rst:502
+#: ../source/provisioning.rst:531
+#: ../source/provisioning.rst:560
+#: ../source/provisioning.rst:584
+# 2b24d73cc4a04a919d1cc2afbbafc882
+# 9c83e3c23fbf492a920cb481c03687e0
+# 346551c30c6541378ec68b34458ed77f
+# 9df482b55be741c89ba70e777a035c64
+# a982c6767c9c4a3bb9d1a9b608c2e03f
+# 3ba1feb638bf425d912eed6552dc6d50
+# 5011b034a98c498c805bd55ec06bb6f6
+# 5a8f264b179d4a238dc05d6040616ac5
+# aef82b51e7e64f4a805f77c158076e0d
+# 8e525256de034afbbff6560127c330f3
+# ef51a95b64394d189953d33fe2201a48
+# 7ed3a96a6ef242d6acc904479e446962
+# 80ed15b824b64923bb48ada1af070f3d
+# 491eaddf307049d18bf6867d66b5404d
+# d2e67acecbc6439b8bf7d65e7aac9eb0
+# 708bfd8906a44e0f8ff752885aac17ba
+# 040baf1ab1994911a852db0ff302e55a
+# 263c036eb200411e9e000679b2e22a03
+# a43d5a40f5084bdd92590bda04fc50cc
+# e245692802004475973ec93a6a66da66
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_client_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_container_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_databag_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_databagitem_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_environment_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_group_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_mirror_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_organization_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:4
+#: ../../includes_resources/includes_resource_chef_user_providers.rst:4
+#: ../../includes_resources/includes_resource_load_balancer_providers.rst:4
+#: ../../includes_resources/includes_resource_machine_providers.rst:4
+#: ../../includes_resources/includes_resource_machine_batch_providers.rst:4
+#: ../../includes_resources/includes_resource_machine_execute_providers.rst:4
+#: ../../includes_resources/includes_resource_machine_file_providers.rst:4
+#: ../../includes_resources/includes_resource_machine_image_providers.rst:4
+#: ../../includes_resources/includes_resource_private_key_providers.rst:4
+#: ../../includes_resources/includes_resource_public_key_providers.rst:4
+# 96e0152cd69b491b8c4944c1312cba27
+# ce01fd50f3ba4108b8e671ab09678fb1
+# 454f24e9f7cb40d09dcd8fad8eacd0e4
+# 584eaecf1b1e4262b77ecc04be1e5e29
+# 324c8596b47e4e65ab9d5470c7fb9a18
+# dde795bb957b455494cf970f1df7636a
+# 3efaadc910bb4420a15f2ac9e4bbe36a
+# b6c306d11ea141c48383e80f93eb5ebe
+# f8ed6d65cf8d42f7ab0330ce8d75081b
+# 594b3689b8a54374a184b3311d42dad7
+# 90b123ff752040db981a6d10e1b66744
+# 026128c9643e427eb1fa8379702c4ba9
+# 14c838981cbb4ce6ae249caaa681f643
+# a8baff7982934015b63a15b93e7a0cfc
+# f03fc8d75bfd49ecb40bc7f380fd8dc7
+# 068d5045376a47c9a629d5486a3443e4
+# 52d2b627cf994584a36c35b523693148
+# aeb313acfc4841d8bbef659ab1b20c38
+# 6caa8ce9a7d548038b4a6920d2226f01
+# 23f50ddb136e480aa4fc53f8aedfca24
+msgid "This resource has the following providers:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_client_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_container_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_databag_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_databagitem_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_environment_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_group_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_mirror_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_organization_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:10
+#: ../../includes_resources/includes_resource_chef_user_providers.rst:10
+#: ../../includes_resources/includes_resource_load_balancer_providers.rst:10
+#: ../../includes_resources/includes_resource_machine_providers.rst:10
+#: ../../includes_resources/includes_resource_machine_batch_providers.rst:10
+#: ../../includes_resources/includes_resource_machine_execute_providers.rst:10
+#: ../../includes_resources/includes_resource_machine_file_providers.rst:10
+#: ../../includes_resources/includes_resource_machine_image_providers.rst:10
+#: ../../includes_resources/includes_resource_private_key_providers.rst:10
+#: ../../includes_resources/includes_resource_public_key_providers.rst:10
+# 21d6fdede0984b3b9b781e769ff8e292
+# e00feb8fa57c4018aa6b0fba854d8b36
+# 49b8d50f57dc41ecb58bb74a676d521b
+# f1aedfdae2b2403d9a27ccfc5968790f
+# e1fe735d794047dc980179aa14f418b3
+# 6ed6ccbc1e354191b573ff49f99922ab
+# 52bf596b53f34e658b6d3ebbad99e8a3
+# 8a220e4b71a244908fc1b62f7a8a6a05
+# 68dfe765d1db48adb967093adfdc0c83
+# 5a5a3acb8a9c401897d7a9fb4a768ac9
+# 4c052e6273c84631b24feb000708e599
+# 42e4926bed0843d2b735ee1291bdbeda
+# ad68dd8c850240579cd7f6e62fb8561f
+# ed89d9b648b7409b9f10a3d3bb271c84
+# 98fd32b6085e482289a652126e20ae82
+# c3d80d388437445a9765c8cc85f6cc1f
+# 89f7f4f920a1455fa932916e2e541e21
+# 2b2d39b3efcb4f989bbdb74260833a93
+# 7ec198fb00024b53a6e94d672408ee46
+# 823a5190216a4fa9a77ffb4c9777eee4
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_client_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_container_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_databag_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_databagitem_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_environment_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_group_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_mirror_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_organization_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:11
+#: ../../includes_resources/includes_resource_chef_user_providers.rst:11
+#: ../../includes_resources/includes_resource_load_balancer_providers.rst:11
+#: ../../includes_resources/includes_resource_machine_providers.rst:11
+#: ../../includes_resources/includes_resource_machine_batch_providers.rst:11
+#: ../../includes_resources/includes_resource_machine_execute_providers.rst:11
+#: ../../includes_resources/includes_resource_machine_file_providers.rst:11
+#: ../../includes_resources/includes_resource_machine_image_providers.rst:11
+#: ../../includes_resources/includes_resource_private_key_providers.rst:11
+#: ../../includes_resources/includes_resource_public_key_providers.rst:11
+# 0c42336cd108406083d489fd027d228f
+# f682c57ad5dc4078937c57c133e0ecdf
+# ea1ff25cbee949fcbb6bcfb1e8f06148
+# 4f5b95880d864c43a2800498d8c33d7c
+# 126375aadea04ca5b0634ea698c1cd78
+# 73c46f98c5ab47b9a20acd350ac79fad
+# 06c5c57de505481eafe91cca2e1c4f6b
+# de1ce8af0f83494887b7535786d5257d
+# 756a94cc014a44dcbd7d136da022a112
+# 8ebd5640a41446499305caf5f0d722a0
+# 9d73e6ee7bee42c3a8758a7385e54cc3
+# 6ca086c4445b4510b4efdb0e5c229a2c
+# 432800b42cd14f178bcc7f751549933d
+# 26dbb9b857244e66b403480bb9b4df63
+# 9060f37f024a4f4abea0ad983269d1bc
+# 70e1a83b6811490f8188e5f729026426
+# fe3ea496f8e94fbf9be69598dc431698
+# 4635934619c64d509a2731561005c4d5
+# 9e4b2d527e6445088ec9657e8c6af0dd
+# 01ab9821f5264395909db5aaaa1c3ffa
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_client_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_container_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_databag_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_databagitem_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_environment_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_group_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_mirror_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_organization_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:12
+#: ../../includes_resources/includes_resource_chef_user_providers.rst:12
+#: ../../includes_resources/includes_resource_load_balancer_providers.rst:12
+#: ../../includes_resources/includes_resource_machine_providers.rst:12
+#: ../../includes_resources/includes_resource_machine_batch_providers.rst:12
+#: ../../includes_resources/includes_resource_machine_execute_providers.rst:12
+#: ../../includes_resources/includes_resource_machine_file_providers.rst:12
+#: ../../includes_resources/includes_resource_machine_image_providers.rst:12
+#: ../../includes_resources/includes_resource_private_key_providers.rst:12
+#: ../../includes_resources/includes_resource_public_key_providers.rst:12
+# 5739dbe5618f4eb6b8cbf643718cb679
+# bb68bb656b574d3ba03fe8b4260711af
+# 0cbeb1a9bb09494ba6ced347a0681554
+# 803ef7a9d4df4a1c84fcaa0c2ed84d15
+# 8770f594da1a4b378f5384bbd57609a0
+# 0f5b4ba8be714d489b13653e2712fd24
+# 8ecbcb7a385743e9bf4b9606bbe9ace5
+# 5ba33562ad3e41ba9f1d4460357cd1ee
+# 4f6bf6e09a374875901e7cc611889b44
+# 974fe64b857447f4accf31ec12fb9933
+# d58fd6a413d747b7a54cf85683afb008
+# bdc9d2952b5443c59708c3451e2e1bff
+# eee8d51f5f2a402abbbd3eacc6035277
+# e750f60a35f4477cbf0ada967527ec98
+# 50846156d6ab478e9d3c709e1f4faed3
+# a43bf85dd1c64b0e85236a1518954bd7
+# 67bc1a91fb4e49a289e810090dc24464
+# 7fb28263c52d46919a5fb92ceddc4ec2
+# 6c140b2fbd22407aa5cfdef0372db0d1
+# 626579a22a1c427788f03240ff7b62e5
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_providers.rst:13
+# 14056ae180544c669503e46a2d8c9e5d
+msgid "``Chef::Provider::ChefAcl``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_providers.rst:14
+# 0becd7e7c29a44528a108256abc1c99f
+msgid "``chef_acl``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_acl_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_client_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_container_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_databag_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_databagitem_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_environment_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_group_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_mirror_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_organization_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:15
+#: ../../includes_resources/includes_resource_chef_user_providers.rst:15
+#: ../../includes_resources/includes_resource_load_balancer_providers.rst:15
+#: ../../includes_resources/includes_resource_machine_providers.rst:15
+#: ../../includes_resources/includes_resource_machine_batch_providers.rst:15
+#: ../../includes_resources/includes_resource_machine_execute_providers.rst:15
+#: ../../includes_resources/includes_resource_machine_file_providers.rst:15
+#: ../../includes_resources/includes_resource_machine_image_providers.rst:15
+#: ../../includes_resources/includes_resource_private_key_providers.rst:15
+#: ../../includes_resources/includes_resource_public_key_providers.rst:15
+# 20c77d0c21aa47a7ba4fe5161122b34b
+# 5b342ee593ec4282896d249938af91e3
+# 7ec25f77e90c4a409f85b95687503d35
+# 884d8e4c022a4d7992854154d219139a
+# 7e87c707bc5f40989100af4bedb06e7b
+# aed6bd90f1ea423083d3046781573537
+# 29cc8a4a69694f40be311f82a576f6df
+# 5ba6e8793a174fd3b2a3f759c126595a
+# 99404bde46b84d10b23da9f77a826075
+# bb61736cea3d472e8b468df089f978eb
+# 08dbf3c9a5874028b3ecc6b44a20e078
+# c940004f2e884aaf891a7d7c57cd78e8
+# bb582e0ba3d24ac68f9b47e087e84820
+# 641fae0ab92047d5b6a37fbc60421cdb
+# 9ef89655610248e09717ddc30e79258f
+# d765f574e1dc4699ae755781e527b27d
+# 2779d05c489a46e9ba8bb2f63ab87815
+# d79e01296be449628699f919556e7613
+# 499cd64cad8341b09816d7d02e14cec6
+# 3f5bc3b2ad0a4bc4b1826dda4a929077
+msgid "The default provider for all recipes."
+msgstr ""
+
+#: ../source/provisioning.rst:45
+#: ../source/provisioning.rst:73
+#: ../source/provisioning.rst:99
+#: ../source/provisioning.rst:126
+#: ../source/provisioning.rst:153
+#: ../source/provisioning.rst:181
+#: ../source/provisioning.rst:206
+#: ../source/provisioning.rst:232
+#: ../source/provisioning.rst:261
+#: ../source/provisioning.rst:287
+#: ../source/provisioning.rst:317
+#: ../source/provisioning.rst:341
+#: ../source/provisioning.rst:365
+#: ../source/provisioning.rst:391
+#: ../source/provisioning.rst:438
+#: ../source/provisioning.rst:482
+#: ../source/provisioning.rst:506
+#: ../source/provisioning.rst:535
+#: ../source/provisioning.rst:564
+#: ../source/provisioning.rst:588
+# d2d36422e9c34665b9de2a0d3f6013a7
+# 7bbf572e59004e85ba9fe567fdd8adf1
+# 7dc4819b71884c5ba2f9afa2bb76a841
+# f739f125f11044b89328ccd23a31786c
+# 589b63b5f6e645ec989f6d189fc32337
+# d832a6a503bc429297761b9f82ed9072
+# 46e0e1d658ef444a9c79f889f8ff9d32
+# 75d2c280f6a24004ab7ee020771f4447
+# 2f07ae5f30f1432c9b711adec7fc448f
+# 5b5f98f8cec64737ad5c382259e0fb29
+# 34d2c1254b6d48c6a5013e93b548b7ef
+# c52e88883b154e0da447ccac101fe806
+# 0193fa18ab0943388656eaebb389ff39
+# dafb29b7764846a5ac4ae60727762e2e
+# f58b6580e7f448d192a407266c06233e
+# 4e837e6b006c4ef094242fa43324507a
+# a61047f4944c45f1b017f971e9865c45
+# dd5e15fe325c48e58f4026396b1a85aa
+# 6eae0cf21fa246e895494cad5a9971ba
+# dfa506dffbf4431493ab57bf248b446e
+msgid "Examples"
+msgstr ""
+
+#: ../source/provisioning.rst:46
+#: ../source/provisioning.rst:74
+#: ../source/provisioning.rst:100
+#: ../source/provisioning.rst:127
+#: ../source/provisioning.rst:154
+#: ../source/provisioning.rst:182
+#: ../source/provisioning.rst:207
+#: ../source/provisioning.rst:233
+#: ../source/provisioning.rst:262
+#: ../source/provisioning.rst:288
+#: ../source/provisioning.rst:318
+#: ../source/provisioning.rst:342
+#: ../source/provisioning.rst:366
+#: ../source/provisioning.rst:483
+#: ../source/provisioning.rst:565
+#: ../source/provisioning.rst:589
+# f6fe12fa772647f1b0d8edbf96d04f85
+# a43eb735441e47f2bdedc88bb009a5be
+# a2da590145cf488ab9f6e5fb23c925fb
+# 5b1d8841de6c4a20b6e90c398539606a
+# 5582d4ae04bd47898f7d0517a15c4580
+# 530ecea7d79c40d4b39461e4e46f70b7
+# 806ab781856144a58ef3d41e053d47eb
+# 7881c51244f545608b76958450d72021
+# 3b781b4324454ac1ba6b95f17b03e1a5
+# 9f83e084a3f141b0bf5c7868dd3e8274
+# 78dde3c699304acfab4d09ce5e5da932
+# 70e1a63763df4b828b8f9ea210e8a08c
+# d040932e7e0542a793627d5ecbaf13f0
+# 8e18a98c02984141bbbf9913c54da450
+# e7bc29481625496aa381aaeabd346668
+# 0d004376984f47389948f373a333a1b3
+msgid "None."
+msgstr ""
+
+#: ../source/provisioning.rst:51
+# f2c7bad7ad324e92b97407fae920f3ea
+msgid "chef_client"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:5
+# 58252785a6034428b5ab778e9059f8fb
+msgid "A |chef client| is an agent that runs locally on every node that is under management by |chef|. When a |chef client| is run, it will perform all of the steps that are required to bring the node into the expected state, including:"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:7
+# 0fab793c53984a7fbe48f1149d3a3137
+msgid "Registering and authenticating the node with the |chef server|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:8
+# b467f32d6c2b490aa74a5829facb5297
+msgid "Building the node object"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:9
+# bcfca1d915aa466ab0c156baffae5a12
+msgid "Synchronizing cookbooks"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:10
+# 0d96a99dc26a4f2db2b602383efbbe40
+msgid "Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:11
+# 1080922ecb434ce1ba18660be48d9dab
+msgid "Taking the appropriate and required actions to configure the node"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client.rst:12
+# 289e2d14546b43deaf94706d929af4d5
+msgid "Looking for exceptions and notifications, handling each as required"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client.rst:4
+# 93883d9043fa4d64b0ca3f8eae9365e6
+msgid "Use the |resource chef_client| resource to manage clients."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_syntax.rst:4
+# 4645700dafad4f40b788a54f70cad906
+msgid "The syntax for using the |resource chef_client| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_syntax.rst:16
+# 8b917c982ce3441aac18eb24ebdef30d
+msgid "``chef_client`` tells the |chef client| to use the ``Chef::Provider::ChefClient`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_syntax.rst:17
+# 0d1af6c9c4ec440590d5600c957e73f3
+msgid "``name`` is the name of the resource block; when the ``name`` attribute is not specified as part of a recipe, ``name`` is also the name of the |chef client|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:13
+# cd92a7cfff114f6f9c25c0c1f9bc24c5
+msgid "Default. Use to create a |chef client|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_container_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_databag_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_databagitem_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_environment_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_group_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_organization_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:14
+#: ../../includes_resources/includes_resource_chef_user_actions.rst:14
+#: ../../includes_resources/includes_resource_machine_actions.rst:16
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:12
+#: ../../includes_resources/includes_resource_private_key_actions.rst:14
+#: ../../includes_resources/includes_resource_public_key_actions.rst:14
+# 3179460ec03f4ca680ad1642a68a0d01
+# 17139eaf20c240ff98bc26b730e9154e
+# 609f021b35a248c79b7a4c4b6499da74
+# 44638e02a1ad4e0c8648a663fc6d90b5
+# 9204c5b5e9bc4fe8a465aeaa8ac710b2
+# 6ee090d61ff44802915542fa47c758d4
+# 03baf7c67a83428a95553cf500197787
+# 47b8ad492e50490380401fb5535f4372
+# bfd087b5693e4e2bb6219b18caec5654
+# 586fee35e09c41d6b02266306f22c717
+# 7ab553dde7434ae4b00667faa46ac6a0
+# 1d12284770d945df858e06c2a280b247
+# eea0cbae3d6245c0852a48f69368d01b
+# 02f986a93fb2481891d7e6f73e9f4b17
+msgid "``:delete``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:15
+# 94c34002b39642a1a20f1f2fe54a6e30
+msgid "Use to delete a |chef client|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:16
+# 53ad2415423a43aba24c7a0634a7ed71
+msgid "``:regenerate_keys``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_actions.rst:17
+# 0a4750567be94b7d8de6521646d95c1c
+msgid "Use to regenerate the RSA public key for a |chef client|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:12
+#: ../../includes_resources/includes_resource_machine_attributes.rst:12
+# 9c6938cdf1d84467aa0b9573e997e430
+# cf39d23d635b44c183e7452f5deda827
+# bd59c00878fb4b89b0b235d9f29799c3
+msgid "``admin``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:13
+#: ../../includes_resources/includes_resource_machine_attributes.rst:13
+# 1e1d166bb50d4ff2b9d4055afadf06d6
+# 2ae1e626db8a4eda8971a7afb1a5abf3
+msgid "Use to specify whether the |chef client| is an API client."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:18
+#: ../../includes_resources/includes_resource_chef_container_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_databag_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:22
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:20
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:22
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:24
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:22
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:22
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:18
+#: ../../includes_resources/includes_resource_machine_attributes.rst:54
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:20
+# 4d3f79b5144842e0b884a8a3765d29a9
+# 2e380b0f6b3c4ae38cb03e21422e5b9d
+# 5507ab1e55b743838c10dcf446e633e2
+# 31717dfce1114521835affb128b79a6d
+# abf5c6ee22d54b64bb9cd70c6ae3fc55
+# adf8e7972e7d4cb9b5c49d12b9016190
+# 42815fe6fa2242d38400f33ce54294c5
+# 59d3e4986d2e4aa5a0d2cba6bc64eaea
+# f6d4d4be8919432d8ad9fee3b4e8dd74
+# cd0a3e8b57374dd88dc54779beaa71ec
+# 597d1e67179a4e42ad2e4bf0fa7dd577
+# c7fea93444c044fcb086ed2acc41bef3
+msgid "``name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:19
+# 38bc3013a2b34ad1accd079eb8278c1a
+msgid "The name of the |chef client|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:20
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:24
+# cac72af3ad434a1595cb7b4f84b12d7e
+# 11fe924f839f4b2c9ca8faaaf8bdaaff
+msgid "``output_key_format``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:21
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:25
+# 462b7ef4d7b34316a538cbc8c84d2745
+# 2ec9951565ad40689f619b152792067b
+msgid "Use to specify the format of a public key. Possible values: ``pem``, ``der``, or ``openssh``. Default value: ``openssh``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:22
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:26
+# 554a49315c1549058af52f31935d2912
+# 2d42c98d48d14c1fa106eb615f36633f
+msgid "``output_key_path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:23
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:27
+# 62499f95b907439aafcdaf1858769b6a
+# 5b65201766824e9a89563d1be595b372
+msgid "Use to specify the path to the location in which a public key will be written."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:40
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:38
+#: ../../includes_resources/includes_resource_machine_attributes.rst:98
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:30
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:16
+# 5a402cf3185d4831913ec02a56a3f685
+# efb6a5a66e544f19b96f42f270832b45
+# c4a68d7a1c4346829d5cb8b77047287d
+# 400b8e8cba2b44e585e0e4de54581b0b
+# f5c3ccce6c0544f1b6c728a077122e18
+msgid "``source_key``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:41
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:39
+# 70bb4530e4a248308f55e7616ecc2638
+# f934dfe1532742908f3c2806a56aa8a3
+msgid "Use to copy a public or private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:42
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:40
+#: ../../includes_resources/includes_resource_machine_attributes.rst:100
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:32
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:18
+# 9980e43a40b94fbf8106b7169e743a60
+# b334301e47204f34bef02eb0963d0fba
+# 89838712cd154e828f129a6c389e41b7
+# 1bfab5cac4024116a3f99e11a2a2170e
+# 388d90a5915a4ed09df8b3a2b53c5015
+msgid "``source_key_pass_phrase``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:43
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:41
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:19
+# f19fff2b69184e71875baef8f7247730
+# 923afbbb2b0849aeb76c8655da1190bf
+# ff02f7b1f7fe4fb0814e2396390bd9e5
+msgid "The pass phrase for the public key. Use in conjunction with ``source_key``` and ``source_key_path``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:44
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:42
+#: ../../includes_resources/includes_resource_machine_attributes.rst:102
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:34
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:20
+# 9d325fe313844dbba801c0b43b20682f
+# a0608875cdc8443394a454ffed50764e
+# 7314f561019146ba971cc04e2eac8ed1
+# 6b95de5b968d4593a9c7e76ddb8ab228
+# 3383c9733dd248af8427031246c1d5c7
+msgid "``source_key_path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:45
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:43
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:21
+# 5c0023e2b1c54441960ccbe19968c459
+# 88a3b3a5ab1a470dbdb76a000fff9b03
+# 8783b6f79ed7413dbeca44fb9715f0b0
+msgid "The path to the public key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:46
+#: ../../includes_resources/includes_resource_machine_attributes.rst:108
+# 8667823157f04162b63d73bfe074d451
+# 60901e020a1d46e98b728efdf70a7dfc
+msgid "``validator``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_attributes.rst:47
+#: ../../includes_resources/includes_resource_machine_attributes.rst:109
+# da3d5dabe75a46d18140957217dc05de
+# b910c70d9b594d99ac2d9c780bc59ca2
+msgid "Use to specify if the |chef client| is a |chef validator|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_providers.rst:13
+# f53254f2091f4500b32ce043136cd695
+msgid "``Chef::Provider::ChefClient``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_client_providers.rst:14
+# 9009e1a107574a1ba0a7a5088d8fcf56
+msgid "``chef_client``"
+msgstr ""
+
+#: ../source/provisioning.rst:79
+# b081c2e43c744cf9be61c96b90a068c8
+msgid "chef_container"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_container.rst:4
+# 90760f8b24a848a2b5f43e801356e2df
+msgid "Use the |resource chef_container| resource to interact with container objects that exist on the |chef server|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_container_syntax.rst:4
+# e3aac667ca874683aa21a35faa758dd4
+msgid "The syntax for using the |resource chef_container| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_container_syntax.rst:16
+# 707bb85b719e45c29b656f1e1021d319
+msgid "``chef_container`` tells the |chef client| to use the ``Chef::Provider::ChefContainer`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_container_syntax.rst:17
+#: ../../includes_resources/includes_resource_chef_group_syntax.rst:17
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:17
+#: ../../includes_resources/includes_resource_chef_organization_syntax.rst:17
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:17
+#: ../../includes_resources/includes_resource_load_balancer_syntax.rst:17
+#: ../../includes_resources/includes_resource_machine_batch_syntax.rst:17
+# c025a8d628d44469bfc7293346b3f2dd
+# b131087e2818424983b8c8fb36ebe3ad
+# 4a263bbe7bc24470891e21b75e5ae682
+# a05f39188f744c5898f6a8ce15890171
+# 74ad4023310745268c0e4416dc6bc7fe
+# b19cbe5003e14019a74938b2fd2eecc8
+# 98bbc404ed7141e1aac2c9989c1b6862
+msgid "``name`` is the name of the resource block"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_container_attributes.rst:15
+# d59bbe32249341cf81779435bda3f008
+msgid "The name of the container."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_container_providers.rst:13
+# 3e1d032caf664d0cbed29acd9f2b35ba
+msgid "``Chef::Provider::ChefContainer``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_container_providers.rst:14
+# 18b82504506841079545c3541360f72b
+msgid "``chef_container``"
+msgstr ""
+
+#: ../source/provisioning.rst:104
+# cc1bb185759342b6967d421f67185407
+msgid "chef_data_bag"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag.rst:5
+# aadd2182cec44c8d90584908f5f96dde
+msgid "A data bag is a global variable that is stored as |json| data and is accessible from a |chef server|. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag.rst:4
+# 3540858cee8f4acd85eca1190dd45740
+msgid "Use the |resource chef_data_bag| resource to manage data bags."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_syntax.rst:4
+# 2889f0cd054f4ae5a7d9734f4f5e3918
+msgid "The syntax for using the |resource chef_data_bag| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_syntax.rst:16
+# 5451ba26f4324fd388fd0e2e7e7efd03
+msgid "``chef_data_bag`` tells the |chef client| to use the ``Chef::Provider::ChefDataBag`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_syntax.rst:17
+# 2b2e622866d54b4893503bab47c9a164
+msgid "``name`` is the name of the resource block and also the name of the data bag"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_actions.rst:13
+# bcb577ae3d3548a3b3d60f02ce10ec94
+msgid "Default. Use to create a data bag."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_actions.rst:15
+# 0e76f0ebac304487aeedf518e8b37874
+msgid "Use to delete a data bag."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_attributes.rst:15
+# afaea3dd7ee0463a9fee40437aeba231
+msgid "|name data_bag|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_providers.rst:13
+# e09fc06c415a4141a50b54aa1a9d4428
+msgid "``Chef::Provider::ChefDataBag``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databag_providers.rst:14
+# 05f9d45828994656ab6467424369b561
+msgid "``chef_data_bag``"
+msgstr ""
+
+#: ../source/provisioning.rst:131
+# 0d8198bbf38947148b81b17923f69922
+msgid "chef_data_bag_item"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_item.rst:4
+# cadca5be4db846759580eec3ce37c1db
+msgid "A data bag is a container of related data bag items, where each individual data bag item is a |json| file. The only structural requirement of a data bag item is that it must have an ``id``:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_item.rst:13
+# 136fbf3af0e94c12bc9976018fdb70c6
+msgid "where ``key`` and ``value`` are the key:value pair for each additional attribute within the data bag item. |knife| can load a data bag item by specifying the name of the data bag to which the item belongs and then the filename of the data bag item."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem.rst:4
+# 42d25e8ad8694e1b9f8510dc807497af
+msgid "Use the |resource chef_data_bag_item| resource to manage data bag items."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_syntax.rst:4
+# 52ace1c1a92e461b8c5d3fa5ec98c833
+msgid "The syntax for using the |resource chef_data_bag_item| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_syntax.rst:16
+# 7725556aced0453fa208097c3e95a0a2
+msgid "``chef_data_bag_item`` tells the |chef client| to use the ``Chef::Provider::ChefDataBagItem`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_syntax.rst:17
+# 7f06f828b7b24b39825b23cc6b81afe9
+msgid "``name`` is the name of the resource block and also the name of the data bag item"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_actions.rst:13
+# b9e983c962714254aa17ba17c6f49725
+msgid "Default. Use to create a data bag item."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_actions.rst:15
+# c91c52aaeb38489cb41e57bd0b13e8ac
+msgid "Use to delete a data bag item."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:15
+# 0d28458122d042e9bee864081f0f9eab
+msgid "Use to specify if this resource defines a data bag item completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:16
+# cb38e0e0a58f437795a199763ef3a56c
+msgid "``encrypt``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:17
+# bf5470e3c651413ba2672a28f96d2eac
+msgid "Use to specify whether encryption is used for a data bag item."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:18
+# dcf970a6e5c94a53ae44dcf061bfbea8
+msgid "``encryption_version``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:19
+# 3ca5bc4a2fc94a3ba0f8816c2ce61b9d
+msgid "|data_bag_decrypt_minimum_version|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:20
+# 50c44ab5f61145a0a28b95ca0c7ee1cd
+msgid "``raw_data``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:21
+# ab2dd37b77954f3887f94fada7ace9ce
+msgid "Use to create a data bag from a local file from ``./data_bags/bag_name/file``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_attributes.rst:23
+# 07b9b84c4e34498d93d7df678b05c179
+msgid "The data bag item as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_providers.rst:13
+# e27d755336ce430aa423bd2733d6cd96
+msgid "``Chef::Provider::ChefDataBagItem``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_databagitem_providers.rst:14
+# ecaaee9a96b04e53a5f238fa2790b8c3
+msgid "``chef_data_bag_item``"
+msgstr ""
+
+#: ../source/provisioning.rst:159
+# dd76a9e9005448269e6cb6396e6046d4
+msgid "chef_environment"
+msgstr ""
+
+#: ../../includes_environment/includes_environment.rst:4
+# 149f0097e29e40b9b41e687320a8d34e
+msgid "An environment is a way to map an organization's real-life workflow to what can be configured and managed when using |chef server|. Every organization begins with a single environment called the ``_default`` environment, which cannot be modified (or deleted). Additional environments can be created to reflect each organization's patterns and workflow. For example, creating ``production``, ``staging``, ``testing``, and ``development`` environments. Generally, an environment is also associated with one (or more) cookbook versions."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment.rst:4
+# ba1af7f5d2d94600bde3b8bc3c2cd2e1
+msgid "Use the |resource chef_environment| resource to manage environments."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_syntax.rst:4
+# 760302aaab3a4988bf892b9b30471eba
+msgid "The syntax for using the |resource chef_environment| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_syntax.rst:16
+# 2b2fcfc7ff4e4bd6a44162a50706c12e
+msgid "``chef_environment`` tells the |chef client| to use the ``Chef::Provider::ChefEnvironment`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_syntax.rst:17
+# df5be00bb9d74689b0afa677b66f1b6a
+msgid "``name`` is the name of the resource block; when the ``name`` attribute is not specified as part of a recipe, ``name`` is also the name of the environment"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_actions.rst:13
+# 7bb7bcf854de41d087ee256c18c04375
+msgid "Default. Use to create an environment."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_actions.rst:15
+# 74d3f35d838e4dc6b37899de5eee94b2
+msgid "Use to delete an environment."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:15
+# 0f84ff229b6f44ec8e0fa810611817a5
+msgid "Use to specify if this resource defines an environment completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:16
+# 0ddd4e9a25644e6db32505b6c14d07b4
+msgid "``cookbook_versions``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:17
+# e953b6d3aeb54b40bd4c64fc67d7993e
+msgid "The cookbook versions used with the environment. Default value: ``{}``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:18
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:20
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:20
+# 6210d1860a8e45ecb9ebff9e99b16521
+# f878fa4750e8421788e3dd74a784a0cf
+# 78f47205e27e41e7b79653a7112c95d9
+msgid "``default_attributes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:19
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:21
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:21
+# 8c2b05e0846844008c30e4a4e52e7dce
+# 928a8984e928424baf72f8484ad6e646
+# 56f1fc9622014058be7b72c6908a58a0
+msgid "|attribute_type default| Default value: ``{}``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:20
+# 7615c19bac194d0fb44d46a32b5285ed
+msgid "``description``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:21
+# 41e8ded155b44c1e9de6565ae01c6435
+msgid "|description environment|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:23
+#: ../../includes_resources/includes_resource_machine_attributes.rst:23
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:15
+# 350d945d221c4c5c9ca5607cb5d455f2
+# bf24b4cc4dcd49d28d58a25c0d3dbd8e
+# 7f8b970ecd6c4e4a858fd5cbea426cc3
+msgid "|name environment|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:24
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:26
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:26
+# 2f0b3cb7440848e1a86c67603d751a72
+# 629c512295cc439eaee2e51daa19e7c6
+# 376a72b5e09940fd86fdea406193e0d2
+msgid "``override_attributes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:25
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:27
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:27
+# eebd8f17e542467d9ab1693f431777f4
+# 35b3d32df6f045c4a2d82f55637582a5
+# 9aacd5aa52cb41c1afa00917cd58e8d1
+msgid "|attribute_type override| Default value: ``{}``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_attributes.rst:27
+# 34574bd8b04045638dd4fd398cf9ba4c
+msgid "The environment as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_providers.rst:13
+# 46ee29c1ec394e00acce6e9136803d01
+msgid "``Chef::Provider::ChefEnvironment``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_environment_providers.rst:14
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:14
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:14
+#: ../../includes_resources/includes_resource_machine_attributes.rst:22
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:14
+# 5b32218cf05f438a80dba610fd48140d
+# ba447147fdd04d58a3dfc77fff911179
+# fe1d0743264444ea89c2208eb084cc2c
+# d615701d735e448cac4bda9e4e904e00
+# 59267e47755742bbbd44130a3fe1636e
+msgid "``chef_environment``"
+msgstr ""
+
+#: ../source/provisioning.rst:186
+# fb50f614ad544788b12b6978977c0372
+msgid "chef_group"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group.rst:4
+# 6484b4a1ebf64309871f47061d2bc41c
+msgid "Use the |resource chef_group| resource to interact with group objects that exist on the |chef server|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_syntax.rst:4
+# 00bf5c38678e49819349886a46a91de3
+msgid "The syntax for using the |resource chef_group| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_syntax.rst:16
+# 217837687df44416bffe6805a9a4e388
+msgid "``chef_group`` tells the |chef client| to use the ``Chef::Provider::ChefGroup`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:14
+# 194808185040449ba8e0374a3b2c3788
+msgid "``clients``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:18
+# afbeb883625b4accb6d3e6f91b67ffa7
+msgid "``groups``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:23
+# 7288ca1f5de74d3485750051fd18a9e2
+msgid "The group as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:30
+# 49d8976892254f988f02e6990fc636ba
+msgid "``remove_clients``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:32
+# 313c7027f99c43b28e6cd5a5ee607c0c
+msgid "``remove_groups``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:34
+# 0f813fd0e8c74a84bdc15ab558e57f5a
+msgid "``remove_users``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_attributes.rst:36
+# 0afb445043894a74a7950c4e9ec0764b
+msgid "``users``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_providers.rst:13
+# 911797c33aa2421db82cd052d82f1ffc
+msgid "``Chef::Provider::ChefGroup``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_group_providers.rst:14
+# 62000d786d2b4ee2a9ab4658e96edad7
+msgid "``chef_group``"
+msgstr ""
+
+#: ../source/provisioning.rst:212
+# 420b4273a29b40a482a9a517cead5244
+msgid "chef_mirror"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror.rst:4
+# 7f8e6276c5a749baa4763956bfdeaff5
+msgid "Use the |resource chef_mirror| resource to mirror objects in the |chef repo| to a specified location."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_syntax.rst:4
+# 805150053b7e4703874dd2df2074a543
+msgid "The syntax for using the |resource chef_mirror| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_syntax.rst:16
+# fa54ff98fe38454681f1fe9a4955140a
+msgid "``chef_mirror`` tells the |chef client| to use the ``Chef::Provider::ChefMirror`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_actions.rst:12
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:14
+# a5612a718e2b4d608bb3b7d41b93a090
+# 8a31c056eb1d42c494d1190978d44986
+msgid "``:download``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_actions.rst:16
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:18
+# fdf128a7598c4ccfb563db42f1da5382
+# 7748e8107c0d43169691db794333b1bd
+msgid "``:upload``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:12
+# 73cdd27909d549179bb73696bb59c3fe
+msgid "``chef_repo_path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:13
+# 8641c55ee55f433a96a337c96c08476d
+msgid "|path chef_repo|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:16
+# 7c256ab889d047288b2298cad7a9ce00
+msgid "``concurrency``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:17
+# bd27bf2faee6470fbe8a4ae2322423e6
+msgid "The number of threads to run in-parallel. Default value: ``10``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:18
+# 16d8d8e2b0424939b301145f91b7d8e9
+msgid "``freeze``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:19
+# ff69c7b98a4d4b29b99859d74abc2541
+msgid "Use to freeze cookbooks upon upload to the mirrored location. When ``true``, cookbooks are frozen."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:20
+# 78ca1c9b07d14397b2d5d2baf7aba933
+msgid "``no_diff``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:21
+# e19feb9087e249869146f7f6183fc728
+msgid "Use to upload only new files."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:23
+# 46b8412c44be4011bb398d5773487ade
+msgid "A path to a directory in the |chef repo| to be mirrored. For example: ``nodes``, ``nodes/*``, ``/nodes/my_node``, ``*/*``, ``roles/base``, ``data/secrets``, ``cookbooks/apache2``, and so on."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:24
+# 8bfaaed3ebb74732acf62fde463282da
+msgid "``purge``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:25
+# 4f69813bd2194988a251668c89ace25d
+msgid "Use to remove objects that have been deleted locally from the mirrored location. For example, when used with the ``:upload`` action, cookbooks that exist in the mirrored location, but do not exist locally, will be deleted."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:26
+# ba6c055012d049afbca042dfcab70924
+msgid "``versioned_cookbooks``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_attributes.rst:27
+# 0cc2762ca877482ba1d568ad42c60b46
+msgid "|versioned_cookbooks| Defaults to ``true`` when ``chef_repo_path`` is specified, but this attribute is not."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_providers.rst:13
+# 1d9874c0f5f3405984498878e1ceeaf3
+msgid "``Chef::Provider::ChefMirror``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_mirror_providers.rst:14
+# 84788ff68a744b0782a5d4a8a6a61657
+msgid "``chef_mirror``"
+msgstr ""
+
+#: ../source/provisioning.rst:239
+# f9170574fa074f5f9aa0035fe1da725d
+msgid "chef_node"
+msgstr ""
+
+#: ../../includes_node/includes_node.rst:5
+# f4ea2c1f7e6344ce92856ff75f88849a
+msgid "A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node.rst:4
+#: ../../includes_resources/includes_resource_chef_node.rst:4
+# 2254ad8ed3ad47c89894dd332c4cf546
+# d19bf25938b0492c904e4194b57dc9f2
+msgid "Use the |resource chef_node| resource to manage nodes."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:4
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:4
+# c9703855178147b7bcf02fcd42b788a7
+# d3c6f064c98e40c9a292c855c01821e5
+msgid "The syntax for using the |resource chef_node| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:16
+#: ../../includes_resources/includes_resource_chef_node_syntax.rst:16
+# c239e64b502148c996d708c7b32da0d1
+# 70ed831111454eb7a904f7929d188c78
+msgid "``chef_node`` tells the |chef client| to use the ``Chef::Provider::ChefNode`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:13
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:13
+# 7c09a21cca88426996c7b5c2fa6ba372
+# 7d0d79638abb46a09347a6430483be46
+msgid "Default. Use to create a node."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:15
+#: ../../includes_resources/includes_resource_chef_node_actions.rst:15
+# 3a6d60c3b88c4a6ebfc68736429ecde9
+# 1aa0455ba9b54e48811a41c384f2a229
+msgid "Use to delete a node."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:12
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:12
+# 049d77c739cd465b91d114ff4446d81e
+# 4c3a698e9050475a82913c51ce6a7936
+msgid "``automatic_attributes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:13
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:13
+# 3f8557c9631443f09b21393d34bb5c92
+# e4cc36e207254fbaa36ee4e58ebf9e20
+msgid "|attribute_type automatic| Default value: ``{}``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:15
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:15
+# b7f9a6216ffa4271b8f06b351f4f3ec7
+# 3864f58fa6204c02bbc549d86d5a5ff8
+msgid "The |chef server| environment in which this node should exist (or does exist)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:19
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:19
+# 5c73c75c95de4cb085cfd88b5bceefc9
+# 3e230bd756bd4817a7cb02ea1477ebb7
+msgid "Use to specify if this resource defines a node completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:23
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:23
+# 485e98a172524f3fbfa4bfa2a23a85c2
+# f65ff89eeee049159abdf1ba6133eda8
+msgid "The name of the node."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:24
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:24
+# fb23308631884491a589d0af9a025655
+# 1651117dcbcd490591833bde25b033c0
+msgid "``normal_attributes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:25
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:25
+# 8ebec79af2494520ab18342a0d6ac1d9
+# fdc6628a2196478e8168941f79976326
+msgid "|attribute_type normal| Default value: ``{}``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:29
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:29
+# 665c9f104d2440b58a64197232bfd033
+# cb0782231ac04c2292ba65574330179a
+msgid "The node as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:46
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:46
+#: ../../includes_resources/includes_resource_machine_attributes.rst:91
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:39
+# 8d28e574e6b7400fac310b812a25615d
+# 3129cfeac4294446a9e08a6cba130c3c
+# 770f9ca007bb4a37b2fd42cb595b9c8d
+# e556df70a1eb4f44857acccce398b64c
+msgid "``run_list``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:47
+#: ../../includes_resources/includes_resource_chef_node_attributes.rst:47
+# 666e44651629413cbbafed40ebd5680c
+# a60e59248b61456391efaa347c05b687
+msgid "|run-list| Default value: ``[]``. For example: ``[\"recipe[default]\",\"recipe[apache2]\"]``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:13
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:13
+# 795d44eacceb4ee39a3b8577d375774e
+# 04b7ae0b7e7e4f98b741e7d67cb41af5
+msgid "``Chef::Provider::ChefNode``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:14
+#: ../../includes_resources/includes_resource_chef_node_providers.rst:14
+# ab713d202b2d4578a79ec8e35f810831
+# e9e8ff15f8f64d45b102556d63ad516a
+msgid "``chef_node``"
+msgstr ""
+
+#: ../source/provisioning.rst:267
+# a022aa255702436ba7aee4c07a73fb6b
+msgid "chef_organization"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization.rst:4
+# 44c8f824c8214881a8fff508118e1b7b
+msgid "Use the |resource chef_organization| resource to interact with organization objects that exist on the |chef server|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_syntax.rst:4
+# 255996e8241e4381999b1f94321fd77a
+msgid "The syntax for using the |resource chef_organization| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_syntax.rst:16
+# a27743ee485b49fa9789307fea55bd7b
+msgid "``chef_organization`` tells the |chef client| to use the ``Chef::Provider::ChefOrganization`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:15
+# 3c7bb01fc552466e82182a1261925b8f
+msgid "Use to specify if this resource defines an organization completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:16
+# c9f012175dbd4d2b8f77d72cc9fc8d0d
+msgid "``full_name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:17
+# 1f4f9eba4b684d56800b7c436d7499b5
+msgid "|name_rules org_full| For example: ``Chef Software, Inc.``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:18
+# c60f7ae96c564ad2b5144031b7fa5fa6
+msgid "``invites``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:19
+# 2e818a005476449493e0588871c20c7f
+msgid "Use to specify a list of users to be invited to the organization. An invitation is sent to any user in this list who is not already a member of the organization."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:20
+# a98e48b1fbc441cd8144538d0eef516a
+msgid "``members``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:21
+# 47f6cd6b656c4faaa01fbad852c8680f
+msgid "Use to specify a list of users who MUST be members of the organization. These users will be added directly to the organization. The user who initiates this operation MUST also have permission to add users to the specified organization."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:22
+# 85628bdf4d00427ea53f26590ea8aa88
+msgid "``members_specified``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:23
+# ea6a90c4677b456ea7f29668d49cdae8
+msgid "Use to discover if a user is a member of an organization. Will return ``true`` if the user is a member."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:25
+# 14b32341f2934ff08e689370044365f5
+msgid "|name_rules org| For example: ``chef``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:27
+# 0aec2865bf4a4330a621ce301ec76c51
+msgid "The organization as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:37
+# 16f09f9dbea04e39ad1371a9c2c563dd
+msgid "``remove_members``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_attributes.rst:38
+# a909b6f7fcac4769bf8326acc8a2705a
+msgid "Use to remove the specified users from an organization. Invitations that have not been accepted will be cancelled."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_providers.rst:13
+# cca7aa4e1e3b433e890849d35c414c8b
+msgid "``Chef::Provider::ChefOrganization``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_organization_providers.rst:14
+# b95cb240aa874fe386227f0bb9a0dc8f
+msgid "``chef_organization``"
+msgstr ""
+
+#: ../source/provisioning.rst:295
+# 88e0bbae198a4748b941718a12e4ed84
+msgid "chef_role"
+msgstr ""
+
+#: ../../includes_role/includes_role.rst:5
+# 6d93d13f94e54b7db5fd5e0ace45e3fc
+msgid "A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function. Each role consists of zero (or more) attributes and a run-list. Each node can have zero (or more) roles assigned to it. When a role is run against a node, the configuration details of that node are compared against the attributes of the role, and then the contents of that role's run-list are applied to the node's configuration details. When a |chef client| runs, it merges its own attributes and run-lists with those contained within each assigned role."
+msgstr ""
+
+#: ../source/provisioning.rst:321
+# d5f9f5c15f604e9ab0bc27116be0091d
+msgid "chef_user"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user.rst:5
+# aedd076c177146558458c3852f423ae2
+msgid "Use the |resource chef_user| resource to manage users."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_syntax.rst:4
+# ff5320154296461bbc56dfeb1f9e734a
+msgid "The syntax for using the |resource chef_user| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_syntax.rst:15
+# 6c18bf77e1a34e16a1294acb079c2b0f
+msgid "``chef_user`` tells the |chef client| to use the ``Chef::Provider::ChefUser`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_syntax.rst:16
+# ff1b23f301be47f0943510ada839e118
+msgid "``name`` is the name of the resource block; when the ``name`` attribute is not specified as part of a recipe, ``name`` is also the name of the user"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_actions.rst:13
+# b01f828fbcff466e9b77d0fa5fa155c2
+msgid "Default. Use to create a user."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_actions.rst:15
+# 79e5bd9f776842e3aed26fbda659865f
+msgid "Use to delete a user."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:13
+# 791db9317f444adfb8d8536e77b56eec
+msgid "|admin client|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:17
+# 2bffec427a5344aea69c9ac8e78e40a5
+msgid "Use to specify if this resource defines a user completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:18
+# 76ca25fbab47425292e02325517e365f
+msgid "``email``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:19
+# 0d1b4fae858b4984aeb5e218985b52a7
+msgid "The email address for the user."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:20
+# 3585ce95a10248068df5a6f210daa2d2
+msgid "``external_authentication_uid``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:23
+# 6ac4b686d0004325b1ece521bd8c29bb
+msgid "The name of the user."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:29
+# 5167244604914cff9892241fbfebab42
+msgid "The user as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_attributes.rst:36
+# e7f57fafef3144c7942607ae5caf2f9a
+msgid "``recovery_authentication_enabled``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_providers.rst:13
+# 25756e6e03394ab9afeb820fb590043b
+msgid "``Chef::Provider::ChefUser``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_chef_user_providers.rst:14
+# 3411968882e84ac5b3ce9f252073d2cf
+msgid "``chef_user``"
+msgstr ""
+
+#: ../source/provisioning.rst:345
+# b3e4bb1f5ed541bc9131ce4aff8b617e
+msgid "load_balancer"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer.rst:4
+# 11708c416d6745a695b6af80f711f49d
+msgid "Use the |resource load_balancer| resource to create or destroy a load balancer."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_syntax.rst:4
+# 7e9d33149635491d929510cd5d2a7aaa
+msgid "The syntax for using the |resource load_balancer| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_syntax.rst:16
+# 394a6a2b221c404a9f184e1a18305f44
+msgid "``load_balancer`` tells the |chef client| to use the ``Chef::Provider::LoadBalancer`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_actions.rst:14
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:18
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:16
+# d527fbf711a94804ad8c2f12963ab3c4
+# 688b02cef07e48308f5b18a9e9f449df
+# c06f06a45548472c987352478735a68e
+msgid "``:destroy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:12
+#: ../../includes_resources/includes_resource_machine_attributes.rst:28
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:14
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:16
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:16
+# 2e17c283320b458cae39a52ab2d03b61
+# e131703ef73f4c24a99cddfc658d876a
+# 591f45b3869d48f8a290db792c0699fc
+# 99f4ed28f35946f1b3fa8cdca1d66502
+# 6f8bfca49ee14473bc79b49e4497a2db
+msgid "``driver``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:13
+#: ../../includes_resources/includes_resource_machine_attributes.rst:29
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:15
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:17
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:17
+# b7f6c758963c4c5f8fedb580fab7ba23
+# c06204a8ab814e5e9dbd6b2bba0891e0
+# 3e31cc8edeb54a519295754157e7ad6a
+# 07f1fca3f527414796c15683bf044f69
+# 6daaff7280074ee8922bb8ef4d196647
+msgid "Use to specify the driver to be used for provisioning."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:14
+# ec863abef5c8492da9ee67c770619c3e
+msgid "``load_balancer_options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_attributes.rst:16
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:22
+# 2fb53ebafea34f0080884990b35bb0a9
+# 79752035691f417290273ac66ba7c0af
+msgid "``machines``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_providers.rst:13
+# c68d89fc4d67435ea57f1bac88e96152
+msgid "``Chef::Provider::LoadBalancer``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_load_balancer_providers.rst:14
+# 646e37346b9144ac99919b80bb10721b
+msgid "``load_balancer``"
+msgstr ""
+
+#: ../source/provisioning.rst:371
+# 8cf3108a0dd242feb1448a3ad9e705c6
+msgid "machine"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine.rst:4
+# 488a382af1af450d8763b19ef445c815
+msgid "Use the |resource machine| resource to define one (or more) machines, and then converge entire clusters of machines. This allows clusters to be maintained in a version control system and to be defined using multi-machine orchestration scenarios. For example, spinning up small test clusters and using them for continuous integration and local testing, building clusters that auto-scale, moving a set of machines in one cluster to another, building images, and so on."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine.rst:6
+# 2b236b507436425f9f4048a4723b446f
+msgid "Each machine is declared as a separate application topology, defined using operating system- and provisioner-independent files. Recipes (defined in cookbooks) are used to manage them. The |chef client| is used to converge the individual nodes (machines) within the cluster."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:4
+# 94fe6de04c274823b69d841c55ee7953
+msgid "The syntax for using the |resource machine| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:16
+# 0e29a2f318f44856a37556416ea888f5
+msgid "``machine`` tells the |chef client| to use the ``Chef::Provider::Machine`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:17
+# 0722694661ba4905b6aa35c095edfc31
+msgid "``name`` is the name of the resource block and also the name of the machine"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:12
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:14
+# f125b65e81f947a6b9cf3a1d5b445707
+# 1570d23416e94b03bea60f37b339bf4c
+msgid "``:converge``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:13
+# 988b0f1bf8f648bf9f481e403770895e
+msgid "Use to converge a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:15
+# b7ea4eb4c73048d79dc9fcef9140a4f4
+msgid "Default. Use to create a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:17
+# c228888f43b341a7aa17f42348d99bba
+msgid "Use to delete a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:19
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:17
+# 97c6ce8b01a44b4e9d081996bd30f9fd
+# 9911e1a4926f47ab8188f6c35d9ea036
+msgid "Use to do nothing."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:20
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:24
+# f9ba20fc9dba4f40857c18e60dc0bb84
+# 4229233452414c73999a3d3b85c49494
+msgid "``:stop``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:21
+# 3f0853a96b33425b88eb5e9cba64d6c5
+msgid "Use to stop a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:14
+# 1b6490d5e503491aa183401e4edd7705
+msgid "``allow_overwrite_keys``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:16
+#: ../../includes_resources/includes_resource_machine_attributes.rst:20
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:12
+# 6af36a0e69fa4f4c8b8b4707fa5f6285
+# c3a736d0657147f681b1556ca3570c35
+# 4422b5a5508f41d0836a7209b4120225
+msgid "``attributes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:17
+#: ../../includes_resources/includes_resource_machine_attributes.rst:21
+# 2a9910767ca54eed8092e65d37c1f398
+# 4dd536e51924480ca8649ce1d55d1dbd
+msgid "Use to specify a hash of attributes to be applied to the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:18
+# 772099bc0c324e9da9028eb9bd04432a
+msgid "``converge``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:19
+# 3e29a4bd22c9490099130262e76e7602
+msgid "Use to manage convergence when used with the ``:create`` action. Set to ``false`` to prevent convergence. Set to ``true`` to force it. Default value: ``true``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:27
+# 876414ed6af8400d89603e354b76a278
+msgid "Use to specify if all of the attributes specified in ``attributes`` represent a complete specification for the machine. When true, any attributes not specified in ``attributes`` will be reset to their default values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:30
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:16
+# f9b995176e0841f197d2fac061af9c05
+# f80352bfd6d34228854e3b7b726d640c
+msgid "``files``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:31
+# 63fc1b0ce5e345479810e38f3c18a286
+msgid "A list of files to upload. Syntax: ``REMOTE_PATH => LOCAL_PATH_OR_HASH``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:33
+# 028fc9f478b945619b3c098b9bd7d1fd
+msgid "For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:50
+# c8f265971ca64d57b63cb8dc1cc70bb0
+msgid "``from_image``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:52
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:20
+# 08f5d1cd336a4526b0ffb898b1cabbc6
+# beea8947e9ca4086aed3fafd760bd66f
+msgid "``machine_options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:55
+# 128f38de606041b2a7a22e054b28d1a6
+msgid "The name of the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:56
+# e8920257db6d418d98275b28f96a7ce7
+msgid "``ohai_hints``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:57
+# b6a0765c658b40d29c658427b977fe4c
+msgid "|hint| For example: ``'ec2' => { 'a' => 'b' } creates file ec2.json with json contents { 'a': 'b' }``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:58
+# b40544c74d5343b3aade289834f5744d
+msgid "``private_key_options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:59
+# b95154aac4d84c9a8809c22bfc71c94a
+msgid "Use to generate a private key of the desired size, type, and so on."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:60
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:22
+# 4c74fa81d7274222b21c9caca4ed4003
+# c7e2c57dbcf04a3c91ee25a6f485e07a
+msgid "``public_key_format``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:61
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:13
+# 225f382f3f6844529a32e5ce52db60e1
+# de3b35e2c673425a9427f7b0aecbbc02
+msgid "Use to specify the format of a public key. Possible values: ``pem`` and ``der``. Default value: ``pem``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:62
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:24
+# 0d0e21f32d034c65b82bac64048d4505
+# 583e4278a02c40c78dfe3fc012d2f42a
+msgid "``public_key_path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:63
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:25
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:15
+# 2ffcf39a683f4d9d992447d180ffd181
+# 9fc8044c413642cabdc6b8b949f43835
+# 80a898725b0a469e86ea95f9074c93bf
+msgid "The path to a public key."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:65
+# 80d05ead54df44278cc097dfe4347a37
+msgid "The machine as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:73
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:31
+# 53e04ab1d9bd4c468639ad4543518636
+# f3381676c18a458a96cf07f97962e363
+msgid "``recipe``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:74
+# 3e57cf7ce3d94962ac0b5053fb3fc062
+msgid "Use to add a single recipe to the run-list for the machine; use it multiple times to add multiple recipes to a run-list. The order in which ``recipe`` is specified in the resource block defines the order in which the recipes are added to the machine, which determines the order by which they are executed during the |chef client| run. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:82
+# f35a52a9bdc140149ae0355e6658f9c2
+msgid "will add all three recipes, in that order. On a machine that already has the ``apache2`` recipe, the order of the updated run-list would be ``apache2``, ``foo``, ``bar``, and then ``baz``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:83
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:33
+# 7e6f05720b7940edae446c3d4fc0dd23
+# 35e544bff4c043c7be3c28d891ad4007
+msgid "``remove_recipe``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:84
+# a67b5da3c50845bd9f157d8fda61bae6
+msgid "Use to remove a recipe from the run-list for the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:85
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:35
+# d851a29f362d4ba88450d0a46c7fed8f
+# 05aa2ace132b4e3f89de27afabe3df79
+msgid "``remove_role``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:86
+# b40f5f3e9a054feaa608fbdac6acc100
+msgid "Use to remove a role from the run-list for the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:87
+# ee2678fb2494449ab5f2276f6e92346c
+msgid "``remove_tag``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:88
+# 459d9abd163c4aab8c5890d530a9d5a3
+msgid "Use to remove a tag."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:89
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:37
+# 3bb8d4b7203f4c558e174b36607e6b63
+# 41aeb5779b194fb28bfcec9eba71d4c0
+msgid "``role``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:90
+# 4303df8340844a478dad4811fb7ad466
+msgid "Use to add a role to the run-list for the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:92
+# d80f971ac85b4a98b93f858370611925
+msgid "Use to specify the run-list to be applied to the machine."
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list.rst:5
+#: ../../includes_node/includes_node_run_list.rst:5
+# 3d107ffdadb14befa4c2969d1293be15
+# c4f8b34eadee470899fb8d239e9869af
+msgid "A run-list defines all of the configuration settings that are necessary for a node that is under management by |chef| to be put into the desired state. A run-list is:"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list.rst:7
+#: ../../includes_node/includes_node_run_list.rst:7
+# 9bed3006e3fa42bb89c5cca1f27240ef
+# 7de0694841284850b60a9749cd5c336b
+msgid "An ordered list of roles and/or recipes that are run in an exact order; if a recipe appears more than once in the run-list, the |chef client| will never run that recipe twice"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list.rst:8
+#: ../../includes_node/includes_node_run_list.rst:8
+# 0a08ec437e75452c9f3a44a9738e3e90
+# 2aa82978944a48a6add513a5630b2305
+msgid "Always specific to the node on which it runs, though it is possible for many nodes to have run-lists that are similar or even identical"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list.rst:9
+#: ../../includes_node/includes_node_run_list.rst:9
+# fe976d17ecef4668bb1deb1e87938cf4
+# 6bf4a4bc9cb045f9993cf8ccb56f1638
+msgid "Stored as part of the node object on the |chef server|"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list.rst:10
+#: ../../includes_node/includes_node_run_list.rst:10
+# 67733551306a43d0a2f40ae366cb1ac5
+# d5732d1c5b4442349dbac338f12545c0
+msgid "Maintained using |knife| and uploaded to the |chef server| or via the |chef manage| user interface"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list_format.rst:5
+#: ../../includes_node/includes_node_run_list_format.rst:5
+# 0ac5660014ee4334889cd1a5e8f2226a
+# 14cf8e32f4804e289d3d9574cc60c200
+msgid "A run-list must be in one of the following formats: fully qualified, cookbook, or default. Both roles and recipes must be in quotes, for example:"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list_format.rst:11
+#: ../../includes_node/includes_node_run_list_format.rst:11
+# 6c4cfc437e3b47ecb7636e16195664df
+# 5e4d1b64ca714f858c719819b9bb8ec6
+msgid "or"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list_format.rst:17
+#: ../../includes_node/includes_node_run_list_format.rst:17
+# f95a8ccee15541dc984214a194e5adaa
+# d32b5671f175492c9353e32c04715f49
+msgid "Use a comma to separate roles and recipes when adding more than one item the run-list:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:99
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:31
+# 4decc39497f5427fad7396d176547604
+# e723ea64f1af431fae712ece8ba330e9
+msgid "Use to copy a private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:101
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:33
+# 44d039651dc441cc90937fafcf96eac6
+# 4f752f55555c4a37a93be2b71e3d6836
+msgid "The pass phrase for the private key. Use in conjunction with ``source_key``` and ``source_key_path``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:103
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:35
+# 2069524cf2c242028902ba92eafe2fbd
+# 146c893b7de845ac884aeac29d77830a
+msgid "The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:104
+# 401baf76d0b24dedb7d57578969c9496
+msgid "``tag``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:105
+# b1821b4f174146c78c62dac553ba15c9
+msgid "Use to add a tag."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:106
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:46
+# 384a0da408c4451c837ab90aa81422e5
+# 4795e996b6134bfc86a89258d8fa003f
+msgid "``tags``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:107
+# 16fcf53d80cf4ea995aab56b766749fc
+msgid "Use to add one (or more) tags. This will remove any tag currently associated with the machine. For example: ``tags :a, :b, :c``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_providers.rst:13
+# 422132c9850849bf9b0c5b42027b4b65
+msgid "``Chef::Provider::Machine``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_providers.rst:14
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:18
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:22
+# 6f204704128d4ffc81298de01a700091
+# 806323b273044e8d9aa262cd6ab9a284
+# d7c70f32f0cf4bbf8847af01b3672f22
+msgid "``machine``"
+msgstr ""
+
+#: ../source/provisioning.rst:393
+# 5f57368004dc42e7a1caf2c888f401fb
+msgid "**Build machines dynamically**"
+msgstr ""
+
+#: ../source/provisioning.rst:397
+#: ../source/provisioning.rst:508
+# 91dab9c503194fa885c05fa5fcaf634f
+# 9a34b5cf307145298d166f69c17d5244
+msgid "**Get a remote file onto a new machine**"
+msgstr ""
+
+#: ../../step_resource/step_resource_machine_file_get_remote_file.rst:4
+#: ../../step_resource/step_resource_machine_file_get_remote_file.rst:4
+# 0818471b3e8e4b9b9904b216eba6ac1b
+# 9b37354c6a054dc2baee8e3f6e0ee48b
+msgid "A deployment process requires more than just setting up machines. For example, files may need to be copied to machines from remote locations. The following example shows how to use the |resource remote_file| resource to grab a tarball from a URL, create a machine, copy that tarball to the machine, and then get that machine running by using a recipe that installs and configures that tarball on the machine:"
+msgstr ""
+
+#: ../source/provisioning.rst:401
+# f2b25cc4d2704e6e94a36805b27c0f8a
+msgid "**Build machines that depend on each other**"
+msgstr ""
+
+#: ../../step_resource/step_resource_machines_codependent_servers.rst:4
+# 2ae97ea8b77a4d5f97a7330be20f5e3d
+msgid "The following example shows how to create two identical machines, both of which cannot exist without the other. The first |resource machine| resource block creates the first machine by omitting the recipe that requires the other machine to be defined. The second resource block creates the second machine; because the first machine exists, both recipes can be run. The third resource block applies the second recipe to the first machine:"
+msgstr ""
+
+#: ../source/provisioning.rst:405
+# 93390368bca14f07b9dc216f6b0bce27
+msgid "**Use a loop to build many machines**"
+msgstr ""
+
+#: ../source/provisioning.rst:409
+#: ../source/provisioning.rst:456
+# 6e0dbd1a11fe475d81393f6390936a12
+# 531f5081ab074dd4b1f1de5d5bbc119d
+msgid "**Converge multiple machine types, in-parallel**"
+msgstr ""
+
+#: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst:4
+#: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst:4
+# f8c5e34c19b641d4bd777862ebf0c7de
+# c5b05798d3dc4c22b088a68f5bbf4f41
+msgid "The |resource machine_batch| resource can be used to converge multiple machine types, in-parallel, even if each machine type has different drivers. For example:"
+msgstr ""
+
+#: ../source/provisioning.rst:413
+#: ../source/provisioning.rst:537
+# 8e561d4f9cd849bca60eddae290d2cff
+# 8d6528bb255a4f46b913345966085876
+msgid "**Build a machine from a machine image**"
+msgstr ""
+
+#: ../source/provisioning.rst:418
+# 0a1a37dc011d455c8879f302705e2ba3
+msgid "machine_batch"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch.rst:4
+# 3f3a9898c9d54fa8988de6ed25234c21
+msgid "Use the |resource machine_batch| resource to explicitly declare a parallel process when building machines."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_syntax.rst:4
+# ced89c6140dd44088adb1522f4f167a9
+msgid "The syntax for using the |resource machine_batch| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_syntax.rst:16
+# 03aa7f5e772545cd99b1a55a677b6617
+msgid "``machine_batch`` tells the |chef client| to use the ``Chef::Provider::MachineBatch`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:12
+# 2ed6e1500c544611bab92643f4ae3e6f
+msgid "``:allocate``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:16
+# 3684a64e108d440680497bd66ec5f393
+msgid "``:converge_only``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:20
+# 5c85552601b24d17b5d6ddac20d21794
+msgid "``:ready``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_actions.rst:22
+# 1444d6a439b947b8a66e3d49beab8ed6
+msgid "``:setup``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:18
+# 7b98fc308c4c4979b23a4c6c7583f4a7
+msgid "``from_recipe``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_attributes.rst:24
+# 00249a9753f54193b1d6925af8088b86
+msgid "``max_simultaneous``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_providers.rst:13
+# 1b5c7451633a4701bc5a3fd3160d11b3
+msgid "``Chef::Provider::MachineBatch``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_batch_providers.rst:14
+# 829786921ae442fe9bf3390beea74c89
+msgid "``machine_batch``"
+msgstr ""
+
+#: ../source/provisioning.rst:440
+# 25c8765209604e07b20822a7251f44a8
+msgid "**Set up multiple machines, in-parallel**"
+msgstr ""
+
+#: ../source/provisioning.rst:444
+# f3a86002dc004eafb3e1d4c5a1d8f25f
+msgid "**Converge multiple machines, in-parallel**"
+msgstr ""
+
+#: ../source/provisioning.rst:448
+# cd5d65a2be644215be40eca2bcc7adf5
+msgid "**Stop multiple machines, in-parallel**"
+msgstr ""
+
+#: ../source/provisioning.rst:452
+# e59add510f2a4c3680feeebc085233d8
+msgid "**Destroy multiple machines, in-parallel**"
+msgstr ""
+
+#: ../source/provisioning.rst:462
+# 04059bb6e29443f3a212ba1b0a4cfe65
+msgid "machine_execute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute.rst:4
+# 9e65c4264ae24f798ab82a3b6075c0cb
+msgid "Use the |resource machine_execute| resource to run a command on a remote machine in much the same way the |resource execute| resource is used to run a command on a local machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_syntax.rst:4
+# 73076cbfe5cc45979c5639afe2ac4c52
+msgid "The syntax for using the |resource machine_execute| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_syntax.rst:16
+# d5a10c22f2054644b76529300392fe4e
+msgid "``machine_execute`` tells the |chef client| to use the ``Chef::Provider::MachineExecute`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_syntax.rst:17
+# 716088e766cd4958b3e310289a5b953d
+msgid "``name`` is the name of the resource block; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the command to be run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_actions.rst:12
+# 64a62179e86843c8b18d6159adb720e3
+msgid "``:run``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_actions.rst:13
+# e6f1dfb5aac64054890b77ed4a76d1e1
+msgid "Default. Use to run a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:14
+# 1c2bd83e0bb848168c742a66c7415c20
+msgid "``command``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:15
+# cc0af249eb1441c1871e86fb0a4c03e0
+msgid "|name command| Default value: the ``name`` of the resource block. (See \"Syntax\" section above for more information.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_attributes.rst:19
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:23
+# a0fe74c4c98446d8a4128e447dd50392
+# 25c1707052234d659f2bb854a2e365b4
+msgid "Use to specify the machine type."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_providers.rst:13
+# 689225be4099449ba6aaba9fb253299a
+msgid "``Chef::Provider::MachineExecute``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_execute_providers.rst:14
+# 3b1c717c911142d49a87151a62aa3ff5
+msgid "``machine_execute``"
+msgstr ""
+
+#: ../source/provisioning.rst:486
+# ce56f8c722b4428eb0efd45b7c4721ab
+msgid "machine_file"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file.rst:4
+# 55d779215a694dbcb94b8014d0ae3daa
+msgid "Use the |resource machine_file| resource to manage a file on a remote machine in much the same way the |resource file| resource is used to manage a file on a local machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_syntax.rst:4
+# 3feb36a7b8d24ab19cd505e8ebbb8c9d
+msgid "The syntax for using the |resource machine_file| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_syntax.rst:16
+# da5b2130d6b64a4cbe9f609a14671b15
+msgid "``machine_file`` tells the |chef client| to use the ``Chef::Provider::MachineFile`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_syntax.rst:17
+# 0ce9549e399a45c99d4d94e2d02b9c4b
+msgid "``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the path to a file"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:13
+# 9b1732435d884a9e833610741629daef
+msgid "Use to delete a file from a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:15
+# 326efc3fa9a94d5c879148a48203a993
+msgid "Use to download a file from a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_actions.rst:19
+# 41b7964e053a4ef7bfa13a05c4ef804d
+msgid "Default. Use to upload a file to a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:14
+# 9d6df565d8114090967104018428c903
+msgid "``content``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:15
+# 98d3e810082848de93b6ea81e9d809ea
+msgid "|content file| The default behavior will not modify content."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:18
+# 2a1a796f789b43fa81a1ecbf004bac99
+msgid "``group``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:19
+# 700ddc1cbf204069bb18b0293b291cdb
+msgid "|windows group_identifier|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:20
+# 61daf8e7b24a43b99674066f34a65129
+msgid "``local_path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:21
+# 11fb79b241f346c0a0f5a373fdfda8f9
+msgid "The local path to a file."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:24
+# cfd2e2506da64217aba53ea710fc462f
+msgid "``mode``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:25
+# 9cf73ca040d24ef99ecc2ade29b43f02
+msgid "|mode resource_file|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:27
+# 8c0581ddfb704ba1b05d834bcdd94af3
+msgid "The behavior is different depending on the platform."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:29
+# 339c3bc8e3724905a087507008eb08be
+msgid "|unix|- and |linux|-based systems: |mode *nix|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:31
+# 7aca68d548ff4bcf840798b058889af2
+msgid "|windows|: |mode windows security|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:33
+# b26c4701566a4ff7a1f18e8562a13ab5
+msgid "``owner``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:34
+# 541a3863beff47129214fdef7e7e0bc4
+msgid "|owner windows security|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:36
+# 1fde4707e4bb4f6bb7b3fb2402950126
+msgid "|path file| Default value: the ``name`` of the resource block. (See \"Syntax\" section above for more information.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_attributes.rst:38
+# d771c23b8af14098bdd0237b92783af4
+msgid "|windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_providers.rst:13
+# 280732c2d21f4cc78a00b85b483305e5
+msgid "``Chef::Provider::MachineFile``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_file_providers.rst:14
+# 5bbdea0a96f04c06a3c522221fe84654
+msgid "``machine_file``"
+msgstr ""
+
+#: ../source/provisioning.rst:515
+# 7a06d85b21ef4eb18b4235ed0da9a01b
+msgid "machine_image"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image.rst:4
+# c9797b51e29f472593a125fd9eff0887
+msgid "Use the |resource machine_image| resource to define a machine image. This image may then be used by the |resource machine| resource when building machines."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_syntax.rst:4
+# 85ec32813ad949c69d00734ce53ccc3f
+msgid "The syntax for using the |resource machine_image| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_syntax.rst:16
+# 0083988c9d1a42e59256d1ec4b82ff28
+msgid "``machine_image`` tells the |chef client| to use the ``Chef::Provider::MachineImage`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_syntax.rst:17
+# 3acf0431e2034247ad868709597fd883
+msgid "``name`` is the name of the resource block and also the name of the machine image"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:12
+# e2bf2fe5a0954efa99f1a44e9f665568
+msgid "``:archive``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:13
+# 2db2e4f506024543887862359fb883e5
+msgid "Use to archive a machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:15
+# 13a0b2e86bfe44eb9a977d2d114b4783
+msgid "Default. Use to create a machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_actions.rst:17
+# 94db908a41cc4cc289a66c16ee4706e6
+msgid "Use to destroy a machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:13
+# 221468f41e6849c3884e010051def381
+msgid "Use to specify a hash of attributes to be applied to the machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:17
+# afac71c3d8db4cdcb66e5dad55f82dae
+msgid "Use to specify if all of the attributes specified in ``attributes`` represent a complete specification for the machine image. When true, any attributes not specified in ``attributes`` will be reset to their default values."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:18
+# 295bd417df5645e0aca890850f4a32fd
+msgid "``image_options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:19
+# 6e21e0efbd8e447f989f2edce10c4f7f
+msgid "Use to specify options that are used with this machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:21
+# fc1915eb48684623b1a1daa4ca8be0dd
+msgid "The name of the machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:23
+# b1192bfd433346b7b877a43abbee845f
+msgid "The machine image as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:32
+# 2816cf4c98614996856d5aaaeb2edfb8
+msgid "Use to add a recipe to the run-list for the machine image. Each ``recipe`` adds a single recipe to the run-list. The order in which ``recipe`` defines the run-list is the order in which |chef| will execute the run-list on the machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:34
+# de31cf53cd08425fad4305b0d2dd0592
+msgid "Use to remove a recipe from the run-list for the machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:36
+# 3dd874ce21404bb396d977dace0e643c
+msgid "Use to remove a role from the run-list for the machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:38
+# 7366e46f91964842bc0f7e00560fb4a3
+msgid "Use to add a role to the run-list for the machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:40
+# 7182e0b2864544cd989d36385485fb23
+msgid "Use to specify the run-list to be applied to the machine image."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_attributes.rst:47
+# d521fb3777154f30b00bb73150bc51c5
+msgid "Use to specify the list of tags to be applied to the machine image. Any tag not specified in this list will be removed."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_providers.rst:13
+# 07bbca413cb54db3a39e026592e5d8bd
+msgid "``Chef::Provider::MachineImage``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_image_providers.rst:14
+# ede7d20e9ead46f794b8206e9ba771cd
+msgid "``machine_image``"
+msgstr ""
+
+#: ../source/provisioning.rst:544
+# 050c349dbf8643e88195c73d0f0be6be
+msgid "private_key"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key.rst:4
+# 5855b4396d394181b1657458dccf825a
+msgid "Use the |resource private_key| resource to create, delete, and regenerate private keys, including RSA, DSA, and .pem file keys."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_syntax.rst:4
+# 9bb0ad97d7954f4d8d6aff8979b6dfa1
+msgid "The syntax for using the |resource private_key| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_syntax.rst:16
+# c374f37a44bd489397082f3916395d4f
+msgid "``private_key`` tells the |chef client| to use the ``Chef::Provider::PrivateKey`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_syntax.rst:17
+# 881eec31176f49b3a6e5c1035eb3374c
+msgid "``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the name of the private key"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_actions.rst:13
+# f340531a714c452a891cdd41ce6c41e6
+msgid "Default. Use to create an RSA private key."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_actions.rst:15
+# cdaa3b5a7374485781189c1a44c2afce
+msgid "Use to delete an RSA private key."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_actions.rst:16
+# 33597a37d5334672a48ad9a5525e552a
+msgid "``:regenerate``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_actions.rst:17
+# b4b4425f7e3d42ac9c9c6e104c2580e0
+msgid "Use to regenerate an RSA private key."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:12
+# b81d2c4fe78d4f5aa17e28fb25ce251a
+msgid "``cipher``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:13
+# 6cabdcaa70534b80a8df26bb31e84971
+msgid "Use to specify the cipher for a .pem file. Default value: ``DES-EDE3-CBC``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:14
+# 7e55a0dd923848b386bb04a7e1eecc20
+msgid "``exponent``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:15
+# 6028dcf0687d4a279e36c39038b2d0c0
+msgid "Use to specify the exponent for an RSA private key. This is always an odd integer value, often a prime Fermat number, and typically ``5``, ``17``, ``257``, or ``65537``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:16
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:12
+# fb135057d7204dba8fd7dbbf565103af
+# 549648de3b9e45d5b837ffd97e4e2bf0
+msgid "``format``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:17
+# e0df6b5847d34477a59632380b9df722
+msgid "Use to specify the format of a private key. Possible values: ``pem`` and ``der``. Default value: ``pem``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:18
+# 90d5d58ae5ff4700b04e7d7a3a37fc49
+msgid "``pass_phrase``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:19
+# 0ba1a2bc335b4550ad5d49495eb0e213
+msgid "Use to specify the pass phrase for a .pem file."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:21
+# b72ced6756774d05acb8fbb4ddba25d1
+msgid "Use to specify the path to a private key. Set to ``none`` to create a private key in-memory and not on-disk. Default value: the ``name`` of the resource block. (See \"Syntax\" section above.)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:23
+# f35491283e27441287f6d9436f16ef14
+msgid "Use to specify the format of a public key. Possible values: ``der``, ``openssh``, and ``pem``. Default value: ``openssh``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:26
+# ab2237db552844859a984755fae5c1b9
+msgid "``regenerate_if_different``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:27
+# 98b07f860c8247e8962187f1068960bd
+msgid "Use to regenerate a private key if it does not have the desired size, type, and so on. Default value: ``false``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:28
+# 8d2e28179c9f4c47b8c6b761ce6a2971
+msgid "``size``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:29
+# 40539a6e82f84a328d513ab8d78b466b
+msgid "Use to specify the size of an RSA or DSA private key. Default value: ``2048``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:36
+# d7e92daa435d491583fbf6448f6e138e
+msgid "``type``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_attributes.rst:37
+# 3063b6150de146aab2ccd5f5d6061ed6
+msgid "Use to specify the type of private key. Possible values: ``dsa`` and ``rsa``. Default value: ``rsa``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_providers.rst:13
+# 5af2e4e7253d431e88a10f955030cc8a
+msgid "``Chef::Provider::PrivateKey``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_private_key_providers.rst:14
+# 2733c0f9056347a4a046c2d0f1a6d03f
+msgid "``private_key``"
+msgstr ""
+
+#: ../source/provisioning.rst:568
+# 891afa07848841baa6516296e132d456
+msgid "public_key"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key.rst:4
+# 2cab246140114899b1775f98a3bde369
+msgid "Use the |resource public_key| resource to create and delete public keys, including RSA, DSA, and .pem file keys."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_syntax.rst:4
+# 3c0b38acfdcd49d8855bd3810a8855da
+msgid "The syntax for using the |resource public_key| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_syntax.rst:16
+# 68ab1c8eacd747cc86ca14210f9a3420
+msgid "``public_key`` tells the |chef client| to use the ``Chef::Provider::PublicKey`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_syntax.rst:17
+# aeb273e69b5d4e1780739fa55cbac0ce
+msgid "``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the name of the public key"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_actions.rst:13
+# 5c8a4e4ce32d4271ae701552c7591bb0
+msgid "Default. Use to create an RSA public key."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_actions.rst:15
+# eed895a0595c4c1494a92fed36c448ec
+msgid "Use to delete an RSA public key."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_attributes.rst:17
+# f0a501b411c349509fbb3929359c812b
+msgid "Use to copy a public key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_providers.rst:13
+# 8a571fd8ab70481c815205e6b13e726a
+msgid "``Chef::Provider::PublicKey``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_public_key_providers.rst:14
+# a6ec5ee9b2fb4e40affe9df9a8975ba1
+msgid "``public_key``"
+msgstr ""
+

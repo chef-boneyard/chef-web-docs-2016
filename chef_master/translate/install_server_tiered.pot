@@ -1,0 +1,794 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-13 21:44-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_server_tiered.rst:10
+# 617340038043476eabd475084cb6e8b6
+msgid "Tiered"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered.rst:5
+# 99a31cf882994315a676230c1d14d881
+msgid "This topic describes how to set up the |chef server| with a single back end and multiple load-balanced front end machines."
+msgstr ""
+
+#: ../source/install_server_tiered.rst:15
+# b90d6fc504ab455aa3d8cd0ff87d7bf9
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_pre.rst:4
+# 41d9634e40634046966b9bb79a932b1c
+msgid "Before installing the |chef server| software, perform the following steps:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_pre.rst:6
+# 46009fd9140c4638a48c6ae93cf8d05d
+msgid "The backend machine must be accessible from each frontend server. A virtual IP address is created and managed by the |chef server|, but will also need to be added to the DNS so that all machines in the tiered configuration may access it."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_pre.rst:7
+# 7a327dface7d4edda1a78a5842bff18c
+msgid "Persistent data on the backend machine of the |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_pre.rst:8
+# d55cb35c17044e5db360764a942a25f2
+msgid "Load-balancing should be used with frontend machines, along with a DNS entry for the virtual IP address used for load balancing. This virtual IP address is added to the |chef server rb| file as the ``api_fqdn``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_pre.rst:9
+# 45ceb56a5e2549fd8f8f5f36ff1368b9
+msgid "All required ports must be open. See the Firewalls section (below) for the list of ports. All connections to and from the |chef server| are accomplished via TCP. Refer to the operating system's manual or your systems administrators for instructions on how to configure to ports, if necessary."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_pre.rst:10
+# b20c56af8ea04c50bda0dc5dd3b0d84a
+msgid "The hostname for the |chef server| must be an |fqdn|, including the domain suffix, and must be resolvable by the backend and frontend machines. See `Hostnames, FQDNs <http://docs.getchef.com/install_server_pre.html#hostnames>`_ for more information."
+msgstr ""
+
+#: ../source/install_server_tiered.rst:19
+# d019acf9aab94b60b3d4b5be4aa17f14
+msgid "Disk Configuration"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_disk.rst:4
+# 961cdc47918b4f30884254029d0156fe
+msgid "Persistent data on the backend machine of the |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|. These disks should:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_disk.rst:6
+# b7319fde915f4d03ac55c8ec634700df
+msgid "Utilize hardware |raid|"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_disk.rst:7
+# ad36113c14854210a998fd9dc200e46e
+msgid "Be configured in either |raid1| or |raid5|"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_disk.rst:9
+# f37f169c4fb14202b9f32f69bd079c5e
+msgid "This assumes that:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_disk.rst:11
+# edae8170c61e4a51925495c7fec55882
+msgid "~300GB of raw, unpartitioned disk space is available"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_disk.rst:12
+# a24fffba147c4a0887be55baf3d59eaf
+msgid "The disk space presents as a single device, ``/dev/sdb``"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_disk.rst:13
+# 024d65e54df246afb43f21bab9ce36dc
+msgid "The storage is added to a volume group named ``opscode``"
+msgstr ""
+
+#: ../source/install_server_tiered.rst:23
+#: ../source/install_server_tiered.rst:67
+# 45fbe5d7e2bd4a9f929707a4a2931061
+# 1e220674c4c64b5aace83535965f7306
+msgid "Backend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_primary.rst:4
+# d99597049c794e1f8567e08ee1716954
+msgid "Use the following steps to set up the backend |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_primary.rst:6
+# 79d5e175177449f3a413e88a7856afcb
+msgid "Download the packages from http://downloads.getchef.com/chef-server/."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_primary.rst:12
+#: ../../includes_install/includes_install_server_tiered_frontend.rst:12
+# a1134df063ea4425984bb661da607e21
+# 896baf06623d43b49077b85fff79a718
+msgid "For |ubuntu|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_primary.rst:18
+#: ../../includes_install/includes_install_server_tiered_frontend.rst:18
+# fa00cc12fad74f90a23de1b6c0dc52ff
+# 304839ff096049f28f810f6262a19356
+msgid "After a few minutes, the |chef server| will be installed."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_primary.rst:20
+# 40adf4c0d2a2437993abf319c22bbe4a
+msgid "Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_primary.rst:22
+# 74c97dd85c3e41f28329d886df40a73b
+msgid "Reconfigure the |chef server|:"
+msgstr ""
+
+#: ../source/install_server_tiered.rst:27
+#: ../source/install_server_tiered.rst:55
+# d66b91abab584c8db14b97880a63f58c
+# 08b1cd5e9c4e4e949089a76324c3d131
+msgid "|chef server rb|"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:4
+# c631b3ce8fe04c069cdc8c169286694b
+msgid "The |chef server rb| file that is located in the ``/etc/opscode/`` directory describes the topology of the tiered configuration. On the backend machine, create a file named |chef server rb| and save it in the ``/etc/opscode/`` directory."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:6
+# 5720f3e535ba4125bbdae9ebc5a2a59b
+msgid "Add the following settings to the |chef server rb| file:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:8
+# 4ca5b667f4dd479a9462a5ba53a3be74
+msgid "Define the topology type:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:14
+# 941040a7eeb04a38a4b34f983c653777
+msgid "Define the backend server:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:23
+# 03bfde6cb4af49f28b39ada3c4f64750
+msgid "Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``\"backend\"``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:25
+# cf31b60db9884dc382d4ee5579aa69ad
+msgid "Define each frontend machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:33
+# 6ed25d770f0c479388e2bcab3ae45694
+msgid "Replace ``FQDN`` with the |fqdn| of the frontend machine. Replace ``IP_ADDRESS`` with the IP address of the frontend machine. Set ``:role`` to ``\"frontend\"``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:35
+# 0cdb62a97a1247e99c1c876beb24c9d5
+msgid "Add separate entry in the |chef server rb| file for each frontend machine."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:37
+# dc7fb363e55644e3a6568768ccf6a415
+msgid "Define the API |fqdn|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:43
+# 317b68847d42460db8176cc86e67253a
+msgid "Replace ``FQDN`` with the |fqdn| of the load balanced virtual IP address, which should be equal to the |fqdn| for the service URI that is used by the |chef server|."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_config_rb.rst:45
+#: ../../includes_install/includes_install_server_tiered_frontend.rst:22
+# f7fc9d9077ed4e7eb1f20fa399b555b4
+# f85d2dc4414f440c98653e42be199079
+msgid "Run the following command:"
+msgstr ""
+
+#: ../source/install_server_tiered.rst:31
+#: ../source/install_server_tiered.rst:71
+# 9456af4918b04dd78db430cc19f40800
+# 224a74497f7f48d5a628c77909a352ea
+msgid "Frontend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_frontend.rst:4
+# 52c6189a678246eb8526d56a0fb5d376
+msgid "For each frontend machine, use the following steps to set up the |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_frontend.rst:6
+# 51fee19fff6a47a8ae63bc35e4df0c1f
+msgid "Install the |chef server| package. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_frontend.rst:20
+# 9d8df56eb39d4fa0912e3992da6816cf
+msgid "Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file."
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:4
+# e45351ef20084ff49826797c37baa023
+msgid "Run the following command to create an administrator:"
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:10
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:16
+# ff28e896403a427ab528e523dfe7d2dd
+# 63828cb1bd394bcdb7688a0ea5a76c57
+msgid "An RSA private key is generated automatically. This should be saved to a safe location. The ``--filename`` option will save the RSA private key to a specified path."
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:12
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:18
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:12
+# 740d34bd621643b195e95b765c5b3bea
+# 56ab53b9ae2d4c9d94cc3b8d8d92a396
+# 7d7bee0265f745919da1f8cad6b47930
+msgid "For example:"
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:4
+# 0a228ef6afc041e78d5909cf035ada22
+msgid "Run the following command to create an organization:"
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:10
+# 4b0f83e4f252433a9f88f11075473af8
+msgid "|name_rules org| For example: ``chef``."
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:12
+# dfb23300b547422c972656d189ebbb9c
+msgid "|name_rules org_full| For example: ``Chef Software, Inc.``."
+msgstr ""
+
+#: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:14
+# ca95073f1e244582a047786109e8e808
+msgid "The ``--association_user`` option will associate the ``user_name`` with the |webui group admins| security group on the |chef server|."
+msgstr ""
+
+#: ../source/install_server_tiered.rst:35
+# d5a9b266a2b047a09603077fb9e75424
+msgid "Enable Features"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst:6
+# 6f68884e7fb64e9d99caaccb730671f2
+msgid "Enable additional features of the |chef server|! The packages may be downloaded directly as part of the installation process or they may be first downloaded to a local directory, and then installed."
+msgstr ""
+
+#: ../source/install_server_tiered.rst:38
+# c4e15b5c32804028b8c7439a0cdfebc6
+msgid "**Use Downloads**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:6
+# d4a08536fad14954b21ad00e77ae3f60
+msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are not behind a firewall (and have connectivity to https://packagecloud.io/), these packages can be installed as described below."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:12
+# f2042cd4143040ea9c8e4c7355967da4
+msgid "Feature"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:13
+# 632ec70e85b844e79024c152df93eff3
+msgid "Command"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:14
+# 9310a24473b444b7b10f72cb52f17893
+msgid "|chef manage_title|"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:15
+# 9a8d1d5de6b74fa3b0dca3051c0e8a4f
+msgid "Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:17
+# 47abbd56135f44409f01f2335bdc7f86
+msgid "(Front end machines only.) Run:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:23
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:44
+# c2826ceae6a248f8bcad9f64009a08c1
+# 394246ebbd9b4ec2affc0e6860769ed5
+msgid "then:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:29
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:50
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:66
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:72
+# 48b409cf11eb47d3b973cf8cbd88d13b
+# 5b92b5997d694ac7a9ca8178f9c86621
+# 15ea3bd8695f401d8dc44773706e9072
+# 430bfb866a964e02a3daf93c0efc680c
+msgid "and then:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:35
+# fd772ff0dcdd41a3a4efce8b58661171
+msgid "|push jobs_title|"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:36
+# 62300556964a479ea1b74bf985ce37b6
+msgid "Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:38
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:60
+# 3fadc97ca91d48e380524cd66f8b2184
+# d31e9e5646544b8c925006dbd21e8ca4
+msgid "Run:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:57
+# 7d721893ecbd41f78015a351e4108d0d
+msgid "|chef replication_title|"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:58
+# e2e53ec87f844781b1f4a9acff76d8ab
+msgid "Use |chef replication| to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|."
+msgstr ""
+
+#: ../source/install_server_tiered.rst:42
+# c3e0f4d897bc42a1a1066a713b06ed5b
+msgid "**Use Local Packages**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:6
+# 79726347ead44757bfdbd6e8d053a875
+msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are behind a firewall (and do not have connectivity to https://packagecloud.io/), these packages can be installed manually. First download the package that is appropriate for the platform and save it to a local path. Then run the ``install`` command using the ``--path`` option to specify the location for the package:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:18
+# 02bdaf3b51e64a61abc357baeb972504
+msgid "The ``chef-server-ctl`` command will install the first ``opscode-manage`` package found in the ``/home/vagrant`` directory."
+msgstr ""
+
+#: ../source/install_server_tiered.rst:46
+# ff21d623e2c0445cb1bd08b0fddc680c
+msgid "**Install Reporting**"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:6
+# 2007b4332ceb4be7b5a770c41a2a9fd6
+msgid "To set up the |reporting| server for a high availability configuration:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:8
+# 8ce773fdbeb1405f80087ef97fa71ca1
+msgid "Install the package on every machine that is running |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:14
+# fa60eba97eed484296cd3b4d316e4a15
+msgid "Reconfigure the |chef server| on the back end primary server (bootstrap):"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:20
+# 6681a200fc1b4f9b88fd01b41cfc9746
+msgid "Reconfigure the |reporting| server on the back end primary server (bootstrap):"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:26
+# f22f1611a47b4ccd9307ddc4fbf3308a
+msgid "Copy the entire ``/etc/opscode-reporting`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:32
+# f13171c384fe4e0b899fb240c8419ff9
+msgid "or from the back end primary machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:38
+# 87bb02cebd8f4414abee8ad625eed9e6
+msgid "Reconfigure any |chef server| on which |reporting| services have been installed:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:44
+# 2da3e88a4c7345618f1faa005e1b44fe
+msgid "Reconfigure |reporting| services on each server:"
+msgstr ""
+
+#: ../../includes_install/includes_install_reporting_ha.rst:50
+# f11952fb8cd54f91ac05504ad359b462
+msgid "Verify the installation:"
+msgstr ""
+
+#: ../source/install_server_tiered.rst:51
+# f68fa38f83914560ab9fe0c105d945e4
+msgid "Reference"
+msgstr ""
+
+#: ../source/install_server_tiered.rst:52
+# d1925e14c7a044e986a79de2330a6461
+msgid "The following sections show an example |chef server rb| file and a list of the ports that are required by the |chef server|."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:4
+# 43e46e44a3804bbe9efc3029e99c8efa
+msgid "A completed |chef server rb| configuration file for a four server tiered |chef server| configuration, consisting of:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:10
+# 1525a149d6c840bdb2db3799b8375be4
+msgid "FQDN"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:11
+# b04eda83509b4f09bd4082522b5c4998
+msgid "Real IP Address"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:12
+# 163472e7966040aab4c3d9b044864e53
+msgid "Role"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:13
+# cc46f0f8a1cf40dd8afe49f3abc3a8f8
+msgid "be1.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:14
+# e45defaafb3f4fb785b31f8889da33e8
+msgid "192.168.4.1"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:15
+# f77debf415c341b492d57213de64f00e
+msgid "backend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:16
+# c6fd626ffca848dd89b47d484ab44801
+msgid "fe1.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:17
+# e101be8940094b9eb3cbd94c1bed7d33
+msgid "192.168.4.2"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:18
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:21
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:24
+# 9bb6825379564f52a01a9a1333754c1a
+# d16ec1b0e10e4c2c9598125db4a2d4fc
+# d7403f5cfe4e432585daeb78ae013d6a
+msgid "frontend"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:19
+# 16735ceccb334127a8b893707524469e
+msgid "fe2.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:20
+# eb6fc186fc5d49068a1349d25ea8b91e
+msgid "192.168.4.3"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:22
+# c060bda03b884d94aa3c7dba76d439b2
+msgid "fe3.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:23
+# 972e5dd0779740c1ab5dfdb20fb97f9b
+msgid "192.168.4.4"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:25
+# beec3efbf20b4df5bf11d19f3c0916a5
+msgid "chef.example.com"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:27
+# 97f5b1facd3a484fa1a4d79eea4de63c
+msgid "load balanced frontend VIP"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_tiered_reference_config.rst:29
+# 7e3d0ed523cf4ee5bae158ee05a67ec3
+msgid "Looks like this:"
+msgstr ""
+
+#: ../source/install_server_tiered.rst:59
+# 8145c30d2c3643619132a6a90a8803e7
+msgid "Firewalls"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst:4
+# e14e3180318d406a94b766fd24b48539
+msgid "All of the ports used by the |chef server| are TCP ports. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary."
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_listening.rst:5
+# 36f0f493acb94fdf9de4c8daa7335bfe
+msgid "All services must be listening on the appropriate ports. Most monitoring systems provide a means of testing whether a given port is accepting connections and service-specific tools may also be available. In addition, the generic system tool |telnet| can also be used to initiate the connection:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_loopback.rst:4
+# 7725ab39d875472c82d1e3246f9ff255
+msgid "A single loopback interface should be configured using the ``127.0.0.1`` address. This ensures that all of the services are available to the |chef server|, in the event that the |chef server| attempts to contact itself from within a front or back end machine. All ports should be accessible through the loopback interface of their respective hosts."
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:4
+# beafaa4cd5d84d1d8c82e243d9387337
+msgid "For back-end servers in an |chef server| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:10
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:10
+# c1e860e09a9143cd854b1d8a954af3bc
+# 32fab9b364a149dc8fabe09e8d939169
+msgid "Port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:11
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:11
+# be3ca8625783443e82626a2152cd9b33
+# a8a95e1237eb49078d19fa49565c66e6
+msgid "Service"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:12
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:13
+# 0a59711b8e97419f8addef6c4922fbd8
+# 7bd5de439e96487db9c2de43254d686d
+msgid "80"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:13
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:19
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:23
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:25
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:14
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:17
+# 7db74a6ce06945a790264ad2bff7bfcd
+# 1dd1a8fafc0b4097921c1571a5341923
+# 44990b0707ff454fbf685634bd3fe74c
+# 97d1c580c2614d85aa46c2a124f07ab3
+# c4338efd0b384a289e66a6be9a5ed7d2
+# 3250562574204b08abf5748740673913
+# 11e093f92c96406f80a1999b7b3874fb
+# 4d607be1327c42bfab9583dcda80acf3
+msgid "|service nginx|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:14
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:16
+# 27c3d4aa2669489d826ceaf47426e0b0
+# aea4f499fdcb4d21bb60f36fb054e8e3
+msgid "443"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:16
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:34
+# 1c942c30daba429f85a2af1a8a049f53
+# b707cec98222466f8c85cb21309f7714
+msgid "9463"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:17
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:35
+# 4724e5913766454780ef444b309948e8
+# 134f465005ff43768e097a089fefba5b
+msgid "|service bifrost|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:18
+# b590d770e9594c318b19153228774a12
+msgid "9671"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:20
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:37
+# 6a249292a747415f8b47cef69a7d054d
+# bcd2ab3013e84e50bc9b61b1d8ebf16f
+msgid "9680"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:22
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:40
+# ad956e4c6f30410c9a3862119254c018
+# 71cd16926a7e479cb256bcc47ed2ffbe
+msgid "9685"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:24
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:43
+# 16a6e678f0d04a3482e3543ef8e6c682
+# 6a7283ff98f943689062d1ac0dbf4af6
+msgid "9683"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:26
+# 814e4dfbea2348bfb8427a36428ea41d
+msgid "8983"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:27
+# 282c8da88cbc49f1aff9f2a4eb3fec12
+msgid "|service solr|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:28
+# 57f95b8cbffa45d4a796cd68cfd63d7b
+msgid "5432"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:29
+# 99b3947c03724a138ae6a0342e3a216a
+msgid "|service postgresql|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:30
+# 92534c3db0374d4b842070d351ec536c
+msgid "5672"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:31
+# 88714d0be7f5493691fb0d1deee5298c
+msgid "|service rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:32
+# d5ad8a3c6b27456ca488a48d6f88e661
+msgid "16379"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:33
+# e2dc4ff0142f4b5ca8883a6c9ce43152
+msgid "|service redis_lb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:34
+# 19c7a9ad8a9e40c991f45d9edc5038ca
+msgid "4321"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:35
+# f76e1174c2304bb9b35f06fc62fd7870
+msgid "|service bookshelf|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:36
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:19
+# 167a5f080e754d5f853101343573342e
+# 4f4c3c6d41ce4d19977553cf2fe141b2
+msgid "8000"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst:37
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:20
+# 36e4155e242f43baa184bd56cb50c24c
+# dfdb19a916ce463e8451c4d57798532d
+msgid "|service erchef|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:4
+# 74828574db174b4392c9762f81215ce9
+msgid "For front-end servers in an |chef server| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:12
+# e640397247aa43d1b83a248500fa43fe
+msgid "External"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:18
+# ead991e37f8e473a9b59a0851b2163ad
+# 4e268366f8a84a70a830c6231de3889e
+msgid "yes"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:24
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:27
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:30
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:33
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:36
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:39
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:42
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:45
+# 3f132dbe50c9417787e89ebdad8b6249
+# 5fcc779f5f844e1d9b6d87aca3f346a4
+# 2ab94e2d99404aab9f09472c010a4a53
+# aa21aa62ac22441c8145778e66b2da87
+# 891ec9da60054a4f8bcf8315b78b38b8
+# 19b50a987409497bbcbd149b9e2fff40
+# ab80758fdea6488580f0a91e28b1e815
+# 5d79ce2fef2248e8b65298516829b2ac
+# a4c6c2332b6c49a8be8d94b21566c630
+msgid "no"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:22
+# 8ab81ca8c4e940a69d1ed238a5ce3dc4
+msgid "5140"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:23
+# 6b3b679610c145c9959d5eea365b2671
+msgid "|service certificate|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:25
+# 76124cbdca034827a7903c29073cf36d
+msgid "9462"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:26
+# fda11d52cc854a36b0397af33da52986
+msgid "|service webui|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:28
+# fd11c8c842694d15b968ff5761882724
+msgid "9090"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:29
+# 36037afed0804cf2a1536e52bdf8ef7c
+msgid "|service ocid|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:31
+# 7c3ef79ad4ba433785083fc2e1b1d17b
+msgid "9465"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:32
+# ba9222ae0636462f85ced41eec18ee22
+msgid "|service account|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:38
+# e04514fa6ba042d493656cbec195d012
+msgid "|api chef server| internal LB port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:41
+# 5158180e3b314d61b9f1a40315efefb6
+msgid "|service account| internal LB port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:44
+# 501efb81135749f7aef554bf7deb18ca
+msgid "|service bifrost| internal LB port"
+msgstr ""
+
