@@ -17,8 +17,8 @@ This configuration file has the following general settings:
      - Default value: ``%w{opscode-reporting opscode-manage opscode-analytics opscode-push-jobs-server}``.
    * - ``api_version``
      - |version chef_server| Default value: ``"12.0.0"``.
-   * - ``default_orgname``
-     - The |api chef server| used by the |chef server osc| server does not have an ``/organizations/ORG_NAME`` endpoint. Use this setting to ensure that migrated |chef server osc| servers are able to connect to the |api chef server|. This value should be the same as the name of the organization that was created during the upgrade from |chef server osc| version 11 to |chef server| version 12, which means it will be identical to the ``ORG_NAME`` part of the ``/organizations`` endpoint in |chef server| version 12. Default value: the name of the organization specified during the upgrade process from |chef server osc| 11 to |chef server| 12.
+   * - ``default_org_name``
+     - |default_orgname|
    * - ``flavor``
      - Default value: ``"cs"``.
    * - ``install_path``
