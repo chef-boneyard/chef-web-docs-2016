@@ -10,17 +10,22 @@ What's New
 =====================================================
 The following items are new for |chef server| 12:
 
-* **Upgrades from Open Source Chef and Enterprise Chef servers to Chef 12 server** Upgrades to |chef server| 12 are supported from |chef server oec| 11 high availability and standalone configurations and |chef server osc| 11 standalone configurations. View the topic :doc:`Upgrade to Chef Server 12 </upgrade_server>` for more information about these processes. 
+* **Upgrades from Open Source Chef and Enterprise Chef servers to Chef 12 server** Upgrades to |chef server| 12 are supported from |chef server oec| 11 high availability and standalone configurations and |chef server osc| 11 standalone configurations. View the topic :doc:`Upgrade to Chef Server 12 </upgrade_server>` for more information about these processes.
+* **Pluggable high availability architecture** Support for high availability now provides alternatives to |drbd|, including using |amazon aws|.
 * **High availability using Amazon Web Services** |amazon aws| is a supported high availability configuration option for the |chef server|. Machines are stored as |amazon ebs| volumes. A passive node monitors the availabilty of the active node, and will take over if required.
 * **Chef server replication** |chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
-* **New chef-server-ctl command line tool** The |chef server ctl| command line tool is an update of the |private chef ctl| command line tool.
+* **New chef-server-ctl command line tool** The |chef server ctl| command line tool is an update of the |private chef ctl| command line tool. All of the previous functionality remains, with some new commands added that are specific to |chef server| version 12.
 * **New command for installing features of the |chef server|** The ``install`` subcommand may be used to install |chef manage|, |push jobs|, |chef replication|, and |reporting|.
 * **New commands for managing organizations** New subcommands for the |chef server ctl| command line tool: ``org-user-add``, ``org-create``, ``org-delete``, ``org-user-remove``, ``org-list``, and ``org-show``.
 * **New commands for managing users** New subcommands for the |chef server ctl| command line tool: ``user-create``, ``user-delete``, ``user-edit``, ``user-list``, and ``user-show``.
+* **New command for log files** Use the ``gather-logs`` command to create a tarball of important log files and system information.
 * **Solr has been upgraded to Solr 4** The search capabilities of the |chef server| now use |apache solr| 4.
 * **CouchDB removed** |couch db| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
-* **Services removed** The following services have been removed from the |chef server|: ``opscode-account``, ``opscode-certificate``, ``oc_authz_migrator``, ``opscode-org-creator``, ``orgmapper``, and ``opscode-webui``.
-
+* **Services removed** The following services have been removed from the |chef server|: ``opscode-account``, ``opscode-certificate``, ``oc_authz_migrator``, ``opscode-org-creator``, ``orgmapper``, and ``opscode-webui``. ``opscode-webui`` is replaced by the |chef manage|.
+* **private-chef.rb is now called chef-server.rb** The name of the configuration file used by the |chef server| has been changed. A symlink from |private chef rb| to |chef server rb| is created during upgrades from older versions of the |chef server|.
+* **New setting for the default organization name** Use the ``default_org_name`` to ensure compatibility with |chef server osc| version 11.
+* **New settings for oc_chef_authz** The |service authz| service handles authorization requests to the |chef server|.
+* **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created.
 
 Upgrade to |chef server| 12!
 -----------------------------------------------------
@@ -75,6 +80,10 @@ In addition, the ``install`` subcommand is added, plus two new subcommand groupi
 **Use Local Packages**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
+
+``gather-logs`` Command
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_gather_logs.rst
 
 ``user-*`` Commands
 -----------------------------------------------------
@@ -284,6 +293,70 @@ org-user-remove
 .. code-block:: bash
 
    $ chef-server-ctl org-user-remove prod testmaster
+
+
+Configuration Settings
+-----------------------------------------------------
+The name of the |chef server| configuration file is now |chef server rb|.
+
+The following configuration settings are new for |chef server| version 12:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``default_org_name``
+     - |default_orgname|
+   * - ``postgresql['log_min_duration_statement']``
+     - |log_rotation min_duration| Possible values: ``-1`` (disabled, do not log any statements), ``0`` (log every statement), or an integer greater than zero. When the integer is greater than zero, this value is the amount of time (in milliseconds) that a query statement must have run before it is logged. Default value: ``-1``.
+
+The following configuration settings have updated default values starting with |chef server| version 12:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``api_version``
+     - |version chef_server| Default value: ``"12.0.0"``.
+
+oc_chef_authz
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_services/includes_server_services_authz.rst
+
+.. include:: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst
+
+
+Data Bag Policy Changes
+-----------------------------------------------------
+In previous versions of the |chef server|, the default permissions allowed data bags to be updated by the |chef client| during a |chef client| run. Starting with |chef server| version 12, the |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created. Use the |chef manage| or the ``knife-acl`` plugin (https://github.com/opscode/knife-acl) to manage permissions to data bags as required. For example:
+
+.. code-block:: bash
+
+   $ knife acl add containers data update group clients
+
+For cookbooks that create or delete data bags:
+
+.. code-block:: bash
+
+   $ knife acl add containers data create group clients
+   
+   $ knife acl add containers data delete group clients
+
+For existing organizations that want to remove the |webui permission create|, |webui permission delete|, or |webui permission update| permissions from existing nodes:
+
+.. code-block:: bash
+
+   $ knife acl remove containers data update group clients
+   
+   $ knife acl remove containers data delete group clients
+   
+   $ knife acl remove containers data create group clients
+
+See this blog post for more information about the ``knife-acl`` plugin: https://www.getchef.com/blog/2014/11/10/security-update-hosted-chef/
 
 
 What's Fixed
