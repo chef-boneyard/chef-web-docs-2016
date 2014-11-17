@@ -8,5 +8,5 @@
      action :reboot_now
      reason "Cannot continue Chef run without a reboot."
      delay_mins 2
-     notifies :reboot_now, "reboot[now]", :immediate
+     notifies :reboot_now, "reboot[now]", :immediately
    end
