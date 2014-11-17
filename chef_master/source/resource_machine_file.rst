@@ -2,11 +2,12 @@
 machine_file
 =====================================================
 
-|warning provisioning|
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_machine_file.rst
+
+.. note:: |warning provisioning|
 
 Syntax
 =====================================================
