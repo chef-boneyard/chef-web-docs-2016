@@ -26,6 +26,7 @@ The following items are new for |chef server| 12:
 * **New setting for the default organization name** Use the ``default_org_name`` to ensure compatibility with |chef server osc| version 11.
 * **New settings for oc_chef_authz** The |service authz| service handles authorization requests to the |chef server|.
 * **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created.
+* **Administrators cannot be removed from organizations** The |chef server| requires that a member of an organization's |webui group admins| group cannot be removed from the organization without first being removed from the |webui group admins| group.
 
 Upgrade to |chef server| 12!
 -----------------------------------------------------
