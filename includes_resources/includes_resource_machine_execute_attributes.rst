@@ -17,7 +17,3 @@
      - Use to specify the driver to be used for provisioning.
    * - ``machine``
      - Use to specify the machine type.
-
-
-
-

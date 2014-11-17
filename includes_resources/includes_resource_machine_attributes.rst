@@ -24,12 +24,12 @@
      - |chef_server_url|
    * - ``complete``
      - Use to specify if all of the normal attributes specified by this resource represent a complete specification of normal attributes for a machine. When ``true``, any attributes not specified will be reset to their default values. For example, if a |resource machine| resource is empty and sets ``complete`` to ``true``, all existing attributes will be reset:
-       
+
        .. code-block:: ruby
-       
+
           machine "foo" do
-		    complete "true"
-		  end
+            complete "true"
+          end
    * - ``converge``
      - Use to manage convergence when used with the ``:create`` action. Set to ``false`` to prevent convergence. Set to ``true`` to force convergence. When ``nil``, the machine will converge only if something changes. Default value: ``nil``.
    * - ``driver``
