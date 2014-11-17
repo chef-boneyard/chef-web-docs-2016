@@ -23,7 +23,7 @@ The following items are new for |chef server| 12:
 * **CouchDB removed** |couch db| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
 * **Services removed** The following services have been removed from the |chef server|: ``opscode-account``, ``opscode-certificate``, ``oc_authz_migrator``, ``opscode-org-creator``, ``orgmapper``, and ``opscode-webui``. ``opscode-webui`` is replaced by the |chef manage|.
 * **private-chef.rb is now called chef-server.rb** The name of the configuration file used by the |chef server| has been changed. A symlink from |private chef rb| to |chef server rb| is created during upgrades from older versions of the |chef server|.
-* **New setting for the default organization name** Use the ``default_org_name`` to ensure compatibility with |chef server osc| version 11.
+* **New setting for the default organization name** Use the ``default_orgname`` setting to ensure compatibility with |chef server osc| version 11.
 * **New settings for oc_chef_authz** The |service authz| service handles authorization requests to the |chef server|.
 * **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created.
 * **Administrators cannot be removed from organizations** The |chef server| requires that a member of an organization's |webui group admins| group cannot be removed from the organization without first being removed from the |webui group admins| group.
@@ -308,7 +308,7 @@ The following configuration settings are new for |chef server| version 12:
 
    * - Setting
      - Description
-   * - ``default_org_name``
+   * - ``default_orgname``
      - |default_orgname|
    * - ``postgresql['log_min_duration_statement']``
      - |log_rotation min_duration| Possible values: ``-1`` (disabled, do not log any statements), ``0`` (log every statement), or an integer greater than zero. When the integer is greater than zero, this value is the amount of time (in milliseconds) that a query statement must have run before it is logged. Default value: ``-1``.

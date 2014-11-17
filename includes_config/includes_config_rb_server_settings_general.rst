@@ -17,7 +17,7 @@ This configuration file has the following general settings:
      - Default value: ``%w{opscode-reporting opscode-manage opscode-analytics opscode-push-jobs-server}``.
    * - ``api_version``
      - |version chef_server| Default value: ``"12.0.0"``.
-   * - ``default_org_name``
+   * - ``default_orgname``
      - |default_orgname|
    * - ``flavor``
      - Default value: ``"cs"``.
