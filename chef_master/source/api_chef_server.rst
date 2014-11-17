@@ -67,6 +67,8 @@ The |chef server| may contain multiple organizations.
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_orgs.rst
 
+.. warning:: This endpoint may only be accessed by the ``pivotal`` user, which is created as part of the installation process for |chef server| and is used to create the initial user and organization for the |chef server|.
+
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_orgs_get.rst
@@ -98,6 +100,8 @@ PUT
 .. include:: ../../includes_chef/includes_chef_user.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_users.rst
+
+.. warning:: This endpoint may only be accessed by the ``pivotal`` user, which is created as part of the installation process for |chef server| and is used to create the initial user and organization for the |chef server|.
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
