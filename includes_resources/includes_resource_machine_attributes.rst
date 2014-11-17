@@ -12,15 +12,18 @@
    * - ``admin``
      - Use to specify whether the |chef client| is an API client.
    * - ``allow_overwrite_keys``
-     - 
+     - Use to overwrite the key on a machine when it is different from the key specified by ``source_key``.
+   * - ``attribute``
+     - Use to specify a path to an attribute, and then modify that attribute with the specified value. Each modified attribute should be specified separately. This attribute should not be used in the same recipe as ``attributes``.
    * - ``attributes``
-     - Use to specify a hash of additional attributes to be applied to the machine.
+     - Use to specify a |ruby hash| that contains all of the attributes to be applied to a machine. This attribute should not be used in the same recipe as ``attribute``.
+	   SEE NOTES.
    * - ``chef_environment``
      - |name environment|
    * - ``chef_server``
      - |chef_server_url|
    * - ``complete``
-     - Use to specify if all of the attributes specified for this resource represent a complete specification for the machine. When ``true``, any attributes not specified will be reset to their default values. For example, if a |resource machine| resource is empty and sets ``complete`` to ``true``, all existing attributes will be reset:
+     - Use to specify if all of the normal attributes specified by this resource represent a complete specification of normal attributes for a machine. When ``true``, any attributes not specified will be reset to their default values. For example, if a |resource machine| resource is empty and sets ``complete`` to ``true``, all existing attributes will be reset:
        
        .. code-block:: ruby
        
@@ -28,9 +31,9 @@
 		    complete "true"
 		  end
    * - ``converge``
-     - Use to manage convergence when used with the ``:create`` action. Set to ``false`` to prevent convergence. Set to ``true`` to force it. Default value: ``true``.
+     - Use to manage convergence when used with the ``:create`` action. Set to ``false`` to prevent convergence. Set to ``true`` to force convergence. When ``nil``, the machine will converge only if something changes. Default value: ``nil``.
    * - ``driver``
-     - Use to specify the driver to be used for provisioning.
+     - Use to specify the URL for the driver to be used for provisioning.
    * - ``files``
      - A list of files to upload. Syntax: ``REMOTE_PATH => LOCAL_PATH_OR_HASH``.
        
@@ -52,9 +55,9 @@
        
           files '/remote/path.txt' => { :content => 'foo' }
    * - ``from_image``
-     - 
+     - Use to specify an image created by the |resource machine_image| resource.
    * - ``machine_options``
-     - 
+     - A |ruby hash| that is specifies driver options.
    * - ``name``
      - The name of the machine.
    * - ``ohai_hints``
@@ -70,20 +73,26 @@
        
        .. code-block:: javascript
        
-          {
-       
+		  {
+		    "name": "node1",
+		    "chef_environment": "_default",
+		    "json_class": "Chef::Node",
+		    "automatic": {
+		      "languages": {
+		        "ruby": {
+		          ...
+		        },
+				...
+          ...
           }
-       
    * - ``recipe``
-     - Use to add a single recipe to the run-list for the machine; use it multiple times to add multiple recipes to a run-list. The order in which ``recipe`` is specified in the resource block defines the order in which the recipes are added to the machine, which determines the order by which they are executed during the |chef client| run. For example:
+     - Use to add a recipe to the run-list for a machine. Use this attribute multiple times to add multiple recipes to a run-list. Use this attribute along with ``role`` to define a run-list. The order in which the ``recipe`` and ``role`` attributes are specified will determine the order in which they are added to the run-list. This attribute should not be used in the same recipe as ``run_list``. For example:
        
        .. code-block:: ruby
        
           recipe 'foo'
-          recipe 'bar'
+          role 'bar'
           recipe 'baz'
-
-       will add all three recipes, in that order. On a machine that already has the ``apache2`` recipe, the order of the updated run-list would be ``apache2``, ``foo``, ``bar``, and then ``baz``.
    * - ``remove_recipe``
      - Use to remove a recipe from the run-list for the machine.
    * - ``remove_role``
@@ -91,14 +100,20 @@
    * - ``remove_tag``
      - Use to remove a tag.
    * - ``role``
-     - Use to add a role to the run-list for the machine.
-   * - ``run_list``
-     - Use to specify the run-list to be applied to the machine.
+     - Use to add a role to the run-list for the machine. Use this attribute multiple times to add multiple roles to a run-list. Use this attribute along with ``recipe`` to define a run-list. The order in which the ``recipe`` and ``role`` attributes are specified will determine the order in which they are added to the run-list. This attribute should not be used in the same recipe as ``run_list``. For example:
+	 
+       .. code-block:: ruby
        
+          recipe 'foo'
+          role 'bar'
+          recipe 'baz'
+   * - ``run_list``
+     - Use to specify the run-list to be applied to the machine. This attribute should not be used in the same recipe as ``recipe`` and ``role``.
+
        .. include:: ../../includes_node/includes_node_run_list.rst
        
        .. include:: ../../includes_node/includes_node_run_list_format.rst
-       
+
    * - ``source_key``
      - Use to copy a private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
    * - ``source_key_pass_phrase``
