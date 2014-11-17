@@ -55,7 +55,7 @@ This configuration file has the following settings:
      - |port service| Default value: ``9996``.
    * - ``ec_sync_server['vip']``
      - |ip_address virtual| Default value: ``'127.0.0.1'``.
-   * - ``install_path']``
+   * - ``install_path'``
      - Default value: ``"/opt/chef-sync"``.
    * - ``master``
      - Use to specify the root URL for the master |chef server|.
