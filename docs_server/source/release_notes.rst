@@ -4,8 +4,6 @@ Release Notes: |chef server_title| 12
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-.. warning:: This topic is about an upcoming official release of the Chef server. (These features have been made available as release candidates previously.)
-
 What's New
 =====================================================
 The following items are new for |chef server| 12:
