@@ -9,10 +9,22 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
+   * - ``master``
+     - Use to specify the root URL for the master |chef server|.
+   * - ``name``
+     - Default value: ``'sync'``.
+   * - ``organization``
+     - An array that specifies the source and destination organization pairs for synchronization.
+   * - ``replica``
+     - Use to specify the root URL for the replica |chef server|.
+   * - ``role``
+     - Use to specify if ``chef-sync`` is installed as a master |chef server|, a replica |chef server|, or both. Possible values: ``:master``, ``:master_and_replica``, ``:replica``. Default value: ``:replica``.
    * - ``bootstrap``
      - Indicates whether an attempt to bootstrap the |chef server| is made. Generally only enabled on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``.
    * - ``chef_base_path``
      - Default value: ``"/opt/opscode"``.
+   * - ``install_path``
+     - Default value: ``"/opt/chef-sync"``.
    * - ``ec_sync_client['dir']``
      - |directory generic| |default_value_recommended| Default value: ``"/var/opt/chef-sync/ec_sync_client"``.
    * - ``ec_sync_client['enable']``
@@ -55,26 +67,9 @@ This configuration file has the following settings:
      - |port service| Default value: ``9996``.
    * - ``ec_sync_server['vip']``
      - |ip_address virtual| Default value: ``'127.0.0.1'``.
-   * - ``install_path']``
-     - Default value: ``"/opt/chef-sync"``.
-   * - ``master``
-     - Use to specify the root URL for the master |chef server|.
-   * - ``name``
-     - Default value: ``'sync'``.
-   * - ``organization``
-     - An array that specifies the source and destination organization pairs for synchronization.
-   * - ``replica``
-     - Use to specify the root URL for the replica |chef server|.
-   * - ``role``
-     - Use to specify if ``chef-sync`` is installed as a master |chef server|, a replica |chef server|, or both. Possible values: ``:master``, ``:master_and_replica``, ``:replica``. Default value: ``:replica``.
    * - ``user['home']``
      - The home directory for the user under which |chef server| services run. Default value: ``/opt/opscode/embedded``.
    * - ``user['shell']``
      - The shell for the user under which |chef server| services run. Default value: ``/bin/sh``.
    * - ``user['username']``
      - The user name under which |chef server| services run. Default value: ``opscode``.
-
-
-
-
-
