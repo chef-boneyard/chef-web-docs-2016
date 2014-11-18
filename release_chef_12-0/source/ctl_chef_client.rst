@@ -30,6 +30,10 @@ Use Encrypted Data Bags
 
 .. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted_local_mode.rst
 
+Run as a Service
+=====================================================
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_daemonized.rst
+
 Run with Elevated Privileges
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges.rst

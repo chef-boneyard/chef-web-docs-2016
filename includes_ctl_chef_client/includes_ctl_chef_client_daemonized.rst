@@ -3,10 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef client| can be run as a daemon by using recipes built in to the |cookbook chef_client| cookbook. The ``default`` recipe in this cookbook may be added to a node's run-list, after which the |chef client| will be run as a daemon whose behavior configured using the attributes defined by the cookbook. For the full list of attributes and configuration options, see the `chef-client cookbook repository on github <https://github.com/opscode-cookbooks/chef-client/>`_.
-
-* The attributes in this cookbook may be used to configure the behavior of the |chef client| when running as a service (via one of the service-based recipes) or in cron (via the ``cron`` recipe), or within recipes as scenarios dictate.
-* The recipes in this cookbook can be used to set up the |config rb| file (``config``), run the |chef client| as a service (``default``; for a specific service use ``chef-client::service_name``, where ``service_name`` is ``arch``, ``bluepill``, ``bsd``, ``daemontools``,``init``, ``launchd``, ``runit``, or ``upstart``, e.g. ``chef-client::daemontools``), to delete the SSL certificate (``delete_validation``), or to configure the |chef client| to run as a cron job (``cron``)
+The |chef client| can be run as a daemon. Use the |cookbook chef_client| cookbook to configure the |chef client| as a daemon. Add the ``default`` recipe to a node's run-list, and then use attributes in that cookbook to configure the behavior of the |chef client|. For more information about these configuration options, see the `chef-client cookbook repository on github <https://github.com/opscode-cookbooks/chef-client/>`_.
 
 When the |chef client| is run as a daemon, the following signals may be used:
 
