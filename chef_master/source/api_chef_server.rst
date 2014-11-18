@@ -357,7 +357,7 @@ PUT
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst
 
 
-/environments/n/cookbooks/n
+/environments/NAME/cookbooks/NAME
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name.rst
 
@@ -366,7 +366,7 @@ GET
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst
 
 
-/environments/n/cookbook_versions
+/environments/NAME/cookbook_versions
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version.rst
 
