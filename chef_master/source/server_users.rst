@@ -145,6 +145,10 @@ Remove User from Org
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_remove_from_org.rst
 
+Remove Admin User from Org
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_admin_users_remove_admin_from_org.rst
+
 Reset User Key
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_reset_key.rst
