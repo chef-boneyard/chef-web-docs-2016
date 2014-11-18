@@ -22,6 +22,16 @@ Add the following settings to the |chef server rb| file:
 
    Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``"backend"``.
 
+#. Define the backend virtual IP address:
+
+   .. code-block:: ruby
+
+      backend_vip "FQDN",
+        :ipaddress => "IP_ADDRESS",
+        :device => "eth0",
+
+   Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind. This is typically the public interface of the server.
+
 #. Define each frontend machine:
 
    .. code-block:: ruby

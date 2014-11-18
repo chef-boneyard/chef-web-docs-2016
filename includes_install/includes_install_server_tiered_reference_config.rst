@@ -25,6 +25,10 @@ A completed |chef server rb| configuration file for a four server tiered |chef s
    * - chef.example.com
      - 
      - load balanced frontend VIP
+   * - be.example.com
+     - 192.168.4.7
+     - 
+     - load balanced backend VIP
 
 Looks like this:
 
@@ -36,6 +40,10 @@ Looks like this:
      :ipaddress => "192.168.4.1",
      :role => "backend",
      :bootstrap => true
+   
+   backend_vip "be.example.com",
+     :ipaddress => "192.168.4.7",
+     :device => "eth0"
    
    server "fe1.example.com",
      :ipaddress => "192.168.4.2",
