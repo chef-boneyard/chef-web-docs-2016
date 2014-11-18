@@ -5,4 +5,4 @@
 
 The ``org-user-remove`` subcommand is used to remove a user from an organization.
 
-.. warning:: A member of the |webui group admins| group must be removed from the group before they may be removed from an organization. Use the |chef manage| to remove the user from the group.
+.. warning:: A member of the |webui group admins| group must be removed from the group before they may be removed from an organization.
