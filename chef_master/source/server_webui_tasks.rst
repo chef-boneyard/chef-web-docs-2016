@@ -165,6 +165,10 @@ Remove Recipe from Run-list
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_remove_role_or_recipe.rst
 
+Remove Admin from Org
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_users_remove_admin_from_org.rst
+
 Remove Role from Run-list
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_remove_role_or_recipe.rst
