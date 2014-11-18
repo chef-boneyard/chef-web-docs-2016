@@ -27,7 +27,6 @@ A completed |chef server rb| configuration file for a four server tiered |chef s
      - load balanced frontend VIP
    * - be.example.com
      - 192.168.4.7
-     - 
      - load balanced backend VIP
 
 Looks like this:
