@@ -19,7 +19,7 @@ Use the following steps to set up the primary backend |chef server|:
 
 #. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required.
 
-#. Install |drbd|. For |redhat| and |centos| 6:
+#. Install |drbd|. For |redhat| and |centos| 6.6:
 
    .. code-block:: bash
       
@@ -39,7 +39,7 @@ Use the following steps to set up the primary backend |chef server|:
 
    .. note:: The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland.
 
-   For |redhat| 6.5:
+   For |redhat| and |centos| 6.5:
 
    .. code-block:: bash
       
