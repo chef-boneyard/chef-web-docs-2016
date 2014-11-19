@@ -11,6 +11,8 @@ This resource has the following attributes:
      - Description
    * - ``installer_type``
      - |type package_11-16_string| Possible values: ``msi``.
+
+       .. note:: Starting with |chef client| version 12, this value is a symbol (``:msi``) and not a string.
    * - ``options``
      - |command options|
    * - ``provider``
