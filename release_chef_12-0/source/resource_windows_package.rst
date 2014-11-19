@@ -1,4 +1,38 @@
 .. THIS PAGE IS IDENTICAL TO docs.getchef.com/resource_windows_package.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 12.0
 
-.. include:: ../../chef_master/source/resource_windows_package.rst
+=====================================================
+windows_package
+=====================================================
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_windows.rst
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_windows_syntax.rst
+
+Actions
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_windows_actions.rst
+
+Attributes
+=====================================================
+.. include:: ../../release_chef_12-0/includes_resource_package_windows_attributes.rst
+
+Providers
+=====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_package_windows_providers.rst
+
+Examples
+=====================================================
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_windows_package_install.rst
