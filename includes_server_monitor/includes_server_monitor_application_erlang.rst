@@ -40,3 +40,9 @@ The output from the shell after the ``CTRL-g`` looks similar to:
    User switch command
 
 then enter ``q``, and then hit ``ENTER`` to exit the shell.
+
+Some commands should not be entered when interacting with a running service while using the command shell, including:
+
+* ``q()`` kills the |erlang| node
+* ``init:stop()``
+* ``exit`` or ``exit()`` does nothing
