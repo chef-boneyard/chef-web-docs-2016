@@ -16,10 +16,12 @@ When the |chef client| is run as a daemon, the following signals may be used:
    * - ``HUP``
      - Use to reconfigure the |chef client|.
    * - ``INT``
-     - Use to log a message, and then exit.
+     - Use to terminate immediately without waiting for the current |chef client| run to finish.
    * - ``QUIT``
-     - Use to dump a stack trace, and then exit.
+     - Use to dump a stack trace, and continue to run.
    * - ``TERM``
-     - Use to finish the current |chef client| run, and then exit.
+     - Use to terminate but wait for the current |chef client| run to finish, and then exit.
    * - ``USR1``
-     - Use to wake up the |chef client| daemon and converge the node.
+     - Use to wake up sleeping |chef client| and trigger node convergence.
+
+On Microsoft Windows, both the ``HUP`` and ``QUIT`` signals are not supported.
