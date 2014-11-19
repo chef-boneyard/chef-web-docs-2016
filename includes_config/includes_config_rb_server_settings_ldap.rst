@@ -16,7 +16,7 @@ This configuration file has the following settings for ``ldap``:
    * - ``ldap['bind_password']``
      - |ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``.
    * - ``ldap['encryption']``
-     - Use to specify the encryption method. Possible values: ``:none``, ``:start_tls``, or ``:simple_tls``. Use ``:simple_tls`` to encrypt all communication with the |ldap| server via a secure connection (specified by ``ldap['port']``). Use ``:start_tls`` to encrypt communication with the |ldap| server when the port used for the connection allows unencrypted communication. Default value: ``nil``.
+     - Use to specify the encryption method. Possible values: ``:none``, ``:start_tls``, or ``:simple_tls``. Use ``:simple_tls`` to encrypt communication with the |ldap| server via a secure |ssl| connection on a dedicated port (specified by ``ldap['port']``, by default ``636``). Use ``:start_tls`` to initiate a secure communication with the |ldap| server over the default |ldap| port ``389`` using ``STARTTLS`` to negotiate encrypted session on an existing connection. Default value: ``nil``.
 
        .. note:: |chef server| version 12 enables |ssl| encryption by default when ``ldap['encryption']`` is set to ``:simple_tls``. Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. The ``ldap['ssl_enabled']`` setting is deprecated.
 
@@ -25,7 +25,7 @@ This configuration file has the following settings for ``ldap``:
    * - ``ldap['login_attribute']``
      - Use to specify the |chef server| user name for an |ldap| user.
    * - ``ldap['port']``
-     - |ldap port| The default value is an appropriate value for most configurations. Default value: ``389``; ``636`` when ``ldap['encryption']`` is set to ``:simple_tls``.
+     - |ldap port| The default value is an appropriate value for most configurations. Default value: ``389`` or ``636`` when ``ldap['encryption']`` is set to ``:simple_tls``.
    * - ``ldap['timeout']``
      - Default value: ``60000``.
 
