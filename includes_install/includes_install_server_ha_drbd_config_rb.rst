@@ -40,7 +40,7 @@ Add the following settings to the |chef server rb| file:
 
       backend_vip "FQDN",
         :ipaddress => "IP_ADDRESS",
-        :device => "eth0",
+        :device => "eth0"
 
    Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind. This is typically the public interface of the server.
 
