@@ -11,8 +11,6 @@ reboot
 
 .. include:: ../../release_chef_12-0/includes_resource_service_reboot.rst
 
-.. note:: |note resource_based_on_package|
-
 Syntax
 =====================================================
 .. include:: ../../release_chef_12-0/includes_resource_service_reboot_syntax.rst
