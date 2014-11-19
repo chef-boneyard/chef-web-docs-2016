@@ -7,6 +7,16 @@ On the |chef server| machines:
 
 #. Download the package from http://downloads.getchef.com/analytics/.
 
+#. Add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``:
+
+   .. code-block:: bash
+
+	  oc_id['applications'] = { 
+	    'analytics' => { 
+	      'redirect_uri' => 'https://<analytics_fqdn>' 
+	    } 
+	  }
+
 #. Stop the |chef server|:
 
    .. code-block:: bash
