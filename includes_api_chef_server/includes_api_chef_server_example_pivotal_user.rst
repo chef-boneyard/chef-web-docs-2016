@@ -26,10 +26,12 @@ Run the following from a ``.chef`` directory that contains a ``pivotal.rb`` file
 
 An examle of a ``.chef/pivotal.rb`` file is shown below:
 
-current_dir = File.dirname(__FILE__)
-node_name "pivotal"
-chef_server_url "https://192.168.1.2:443"
-chef_server_root "https://192.168.1.2:443"
-client_key "#{current_dir}/pivotal.pem"
+.. code-block:: ruby
 
-.. note:: The ``pivotal.pem`` must exist in the specified location. The IP addresses must be correct for the |chef server|.
+   current_dir = File.dirname(__FILE__)
+   node_name "pivotal"
+   chef_server_url "https://192.168.1.2:443"
+   chef_server_root "https://192.168.1.2:443"
+   client_key "#{current_dir}/pivotal.pem"
+
+.. note:: The ``pivotal.pem`` file must exist in the specified location and the IP addresses must be correct for the |chef server|.
