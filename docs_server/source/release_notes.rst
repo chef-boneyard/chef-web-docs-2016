@@ -26,6 +26,7 @@ The following items are new for |chef server| 12:
 * **New settings for oc_chef_authz** The |service authz| service handles authorization requests to the |chef server|.
 * **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created.
 * **Administrators cannot be removed from organizations** The |chef server| requires that a member of an organization's |webui group admins| group cannot be removed from the organization without first being removed from the |webui group admins| group.
+* **New settings for managing LDAP encryption** New settings that manage LDAP encryption have been added, existing settings have been deprecated.
 
 Upgrade to |chef server| 12!
 -----------------------------------------------------
@@ -357,6 +358,23 @@ For existing organizations that want to remove the |webui permission create|, |w
    $ knife acl remove containers data create group clients
 
 See this blog post for more information about the ``knife-acl`` plugin: https://www.getchef.com/blog/2014/11/10/security-update-hosted-chef/
+
+New Settings for LDAP
+-----------------------------------------------------
+The following settings are new:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``ldap['enable_ssl']``
+     - Use to enable |ssl|. Default value: ``false``. Must be ``false`` when ``ldap['enable_tls']`` is ``true``.
+   * - ``ldap['enable_tls']``
+     - Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['enable_ssl']`` is ``true``.
+
+.. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
 
 
 What's Fixed

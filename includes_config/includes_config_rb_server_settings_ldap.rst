@@ -18,11 +18,11 @@ This configuration file has the following settings for ``ldap``:
    * - ``ldap['enable_ssl']``
      - Use to enable |ssl|. Default value: ``false``. Must be ``false`` when ``ldap['enable_tls']`` is ``true``.
 
-       .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. The ``ldap['ssl_enabled']`` and ``ldap['encryption']`` settings are deprecated.
+       .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
    * - ``ldap['enable_tls']``
      - Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['enable_ssl']`` is ``true``.
 
-       .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. The ``ldap['ssl_enabled']`` and ``ldap['encryption']`` settings are deprecated.
+       .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
    * - ``ldap['host']``
      - |ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``ldap-server-host``.
    * - ``ldap['login_attribute']``
