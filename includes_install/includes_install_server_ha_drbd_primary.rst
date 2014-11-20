@@ -29,7 +29,7 @@ Use the following steps to set up the primary backend |chef server|:
 
    .. code-block:: bash
       
-      $ yum install -y http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
+      $ rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
 
    and then **only for |redhat| and |centos| 6.6**:
 
