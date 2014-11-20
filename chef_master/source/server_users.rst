@@ -137,6 +137,10 @@ Invite a User
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_invite_user.rst
 
+Cancel invite for User
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_knife_admin_organization_cancel_invite_user.rst
+
 Leave Org
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_leave.rst
