@@ -369,10 +369,10 @@ The following settings are new:
 
    * - Setting
      - Description
-   * - ``ldap['enable_ssl']``
-     - Use to enable |ssl|. Default value: ``false``. Must be ``false`` when ``ldap['enable_tls']`` is ``true``.
-   * - ``ldap['enable_tls']``
-     - Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['enable_ssl']`` is ``true``.
+   * - ``ldap['ssl_enabled']``
+     - Use to enable |ssl|. Default value: ``false``. Must be ``false`` when ``ldap['tls_enabled']`` is ``true``.
+   * - ``ldap['tls_enabled']``
+     - Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['ssl_enabled']`` is ``true``.
 
 .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
 
