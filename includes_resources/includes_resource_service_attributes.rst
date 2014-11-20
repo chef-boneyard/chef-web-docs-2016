@@ -10,7 +10,16 @@
    * - Attribute
      - Description
    * - ``init_command``
-     - |command service_init| This is typically ``/etc/init.d/SERVICE_NAME``. The ``init_command`` attribute can be used to prevent the need to specify  overrides for the ``start_command``, ``stop_command``, and ``restart_command`` attributes. Default value: ``nil``.
+     - |command service_init| Use ``init_command`` to prevent the need to specify overrides for the ``start_command``, ``stop_command``, and ``restart_command`` attributes. When this attribute is not specified, the |chef client| will default to the following paths:
+	 
+       * ``"/etc/rc.d/init.d/#{@new_resource.service_name}"`` on the |ibm aix| platform
+       * ``"/etc/rc.d/#{@new_resource.service_name}"`` on the |archlinux| platform
+       * ``"/usr/sbin/invoke-rc.d #{@new_resource.service_name}"`` on the |debian| platform (if necessary)
+       * ``"/etc/rc.d/#{new_resource.service_name}"`` or ``"/usr/local/etc/rc.d/#{new_resource.service_name}"`` on the |freebsd| platform
+       * ``"/sbin/service #{@new_resource.service_name}"`` on the |redhat| platform
+       * ``"/usr/sbin/svcadm"`` on the |solaris| platform
+       * ``"/etc/init.d/#{@new_resource.service_name}"`` for all other platforms
+
    * - ``pattern``
      - |pattern process_table| Default value: ``service_name``.
    * - ``priority``
