@@ -8,19 +8,19 @@ chef_role
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_chef_node.rst
+.. include:: ../../includes_resources/includes_resource_chef_role.rst
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_chef_node_syntax.rst
+.. include:: ../../includes_resources/includes_resource_chef_role_syntax.rst
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_chef_node_actions.rst
+.. include:: ../../includes_resources/includes_resource_chef_role_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_chef_node_attributes.rst
+.. include:: ../../includes_resources/includes_resource_chef_role_attributes.rst
 
 Providers
 =====================================================
@@ -28,7 +28,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../includes_resources/includes_resource_chef_node_providers.rst
+.. include:: ../../includes_resources/includes_resource_chef_role_providers.rst
 
 Examples
 =====================================================
