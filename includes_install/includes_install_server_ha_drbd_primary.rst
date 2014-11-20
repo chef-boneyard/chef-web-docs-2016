@@ -39,7 +39,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ yum install -y drbd84-utils kmod-drbd84
 
-   For |redhat| and |centos| 6.x (that is not version 6.6):
+   For |redhat| and |centos| 6.x (that is not versions 6.5 or 6.6):
 
    .. code-block:: bash
       
