@@ -15,11 +15,14 @@ This configuration file has the following settings for ``ldap``:
      - |ldap bind_dn| This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. |chef server oec| must do an |ldap| search before any user can log in. Many |windows ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` setting blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to ``'CN=user_who_can_search,OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``.
    * - ``ldap['bind_password']``
      - |ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``.
-   * - ``ldap['encryption']``
-     - Use to specify the encryption method. Possible values: ``:none``, ``:start_tls``, or ``:simple_tls``. Use ``:simple_tls`` to encrypt communication with the |ldap| server via a secure |ssl| connection on a dedicated port (specified by ``ldap['port']``, by default ``636``). Use ``:start_tls`` to initiate a secure communication with the |ldap| server over the default |ldap| port ``389`` using ``STARTTLS`` to negotiate encrypted session on an existing connection. Default value: ``nil``.
+   * - ``ldap['enable_ssl']``
+     - Use to enable |ssl|. Default value: ``false``.
 
-       .. note:: |chef server| version 12 enables |ssl| encryption by default when ``ldap['encryption']`` is set to ``:simple_tls``. Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. The ``ldap['ssl_enabled']`` setting is deprecated.
+       .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. The ``ldap['ssl_enabled']`` and ``ldap['encryption']`` settings are deprecated.
+   * - ``ldap['enable_tls']``
+     - Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``.
 
+       .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. The ``ldap['ssl_enabled']`` and ``ldap['encryption']`` settings are deprecated.
    * - ``ldap['host']``
      - |ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``ldap-server-host``.
    * - ``ldap['login_attribute']``
