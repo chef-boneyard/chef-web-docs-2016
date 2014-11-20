@@ -19,7 +19,7 @@ Use the following steps to set up the primary backend |chef server|:
 
 #. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required.
 
-#. Install |drbd|. For |redhat| and |centos| 6.6:
+#. Install |drbd|. For |redhat| and |centos| 6.5 and 6.6:
 
    .. code-block:: bash
       
@@ -31,7 +31,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ yum install -y http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
 
-   and then:
+   and then **only for |redhat| and |centos| 6.6**:
 
    .. code-block:: bash
       
