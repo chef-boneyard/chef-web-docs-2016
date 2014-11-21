@@ -33,14 +33,6 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ private-chef-ctl stop keepalived
 
-#. Once failover is complete, stop the remaining services on the back end machines.
-
-   .. code-block:: bash
-      
-      $ private-chef-ctl stop
-
-   .. warning:: .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop_ubuntu12.rst
-
 #. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
 
    .. code-block:: bash
@@ -89,11 +81,13 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ chef-server-ctl upgrade
 
-#. Run the following command on all front end and back end machines:
+#. Run the following command on all front end and the primary back end machine:
 
    .. code-block:: bash
       
       $ chef-server-ctl start
+
+   .. note:: Do not run this command on the secondary back-end machine!
 
 #. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:
 
