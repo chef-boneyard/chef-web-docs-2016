@@ -35,7 +35,7 @@ The recipe will be similar to the following:
 
 .. code-block:: ruby
 
-   results = search(:node, "role:myapp_database_master AND environment:#{node.chef_environment}")
+   results = search(:node, "role:myapp_database_master AND chef_environment:#{node.chef_environment}")
    db_master = results[0]
    
    template "/srv/myapp/shared/database.yml" do
