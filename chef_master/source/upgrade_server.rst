@@ -81,7 +81,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ chef-server-ctl upgrade
 
-#. Run the following command on all front end and the primary back end machine:
+#. Run the following command on all front end machines and the primary back end machine:
 
    .. code-block:: bash
       
