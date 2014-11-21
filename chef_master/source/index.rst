@@ -12,7 +12,7 @@ Getting Started
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
-**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Chef Server <http://docs.getchef.com/server/>`_ | `Chef DK <http://docs.getchef.com/devkit/>`__ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release Notes for chef-client 11.16 </release_notes>` | :doc:`Previous Releases </releases>`
+**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Chef Server <http://docs.getchef.com/server/>`_ | `Chef DK <http://docs.getchef.com/devkit/>`__ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release notes for chef-client 11.16 </release_notes>` | `Release notes for Chef server 12 <http://docs.getchef.com/server/release_notes.html>`_ | :doc:`Previous Releases </releases>`
 
 
 The Community
