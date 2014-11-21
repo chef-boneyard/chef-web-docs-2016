@@ -20,5 +20,7 @@ For example:
 
 .. code-block:: java
 
-   rule(action) when true then
-   set(#foo, mustache_template('Organization = {{message.organization_name}}.'))
+   rule "test_rule" on action 
+     when true then
+       set(#foo, mustache_template('Organization = {{message.organization_name}}.'))
+     end
