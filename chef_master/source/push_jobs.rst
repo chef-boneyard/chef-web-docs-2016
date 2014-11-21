@@ -4,8 +4,6 @@
 
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst
 
-.. note:: |push jobs| is a premium feature for the |chef server| server.
-
 Install `Push Jobs <http://docs.getchef.com/install_push_jobs.html>`_ using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
 
 Requirements
