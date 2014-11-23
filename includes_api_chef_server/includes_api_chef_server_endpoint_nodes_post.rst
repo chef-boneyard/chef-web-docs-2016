@@ -31,7 +31,7 @@ where ``name`` is the name of the node. Other attributes are optional. The order
 
 **Response**
 
-The response will return something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

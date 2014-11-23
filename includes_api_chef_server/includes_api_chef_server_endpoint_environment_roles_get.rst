@@ -17,7 +17,7 @@ where the first instance of ``NAME`` is the name of the environment, and the sec
 
 **Response**
 
-The response will return something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

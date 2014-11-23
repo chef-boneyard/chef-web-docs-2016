@@ -23,7 +23,7 @@ where (in the example above) ``name`` is the key and "users" is the value.
 
 **Response**
 
-The response will return something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

@@ -13,7 +13,7 @@ This method has no parameters.
 
 **Response**
 
-The response will return the |json| for the environment that was deleted, something like the following:
+The response will return the |json| for the environment that was deleted, similar to:
 
 .. code-block:: javascript
 

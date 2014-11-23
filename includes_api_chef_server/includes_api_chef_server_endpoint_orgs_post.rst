@@ -29,7 +29,7 @@ where:
 
 **Response**
 
-The response will return something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

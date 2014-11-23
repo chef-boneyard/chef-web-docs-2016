@@ -40,7 +40,7 @@ This method has the following parameters:
 
    GET /organizations/ORG_NAME/search
 
-with a request body that looks something like:
+with a request body similar to:
 
 .. code-block:: javascript
 
@@ -52,7 +52,7 @@ with a request body that looks something like:
 
 **Response**
 
-The response will return something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

@@ -24,7 +24,7 @@ where ``name_of_API_client`` is the name of the |chef api client| to be created 
 
 **Response**
 
-The response will return something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

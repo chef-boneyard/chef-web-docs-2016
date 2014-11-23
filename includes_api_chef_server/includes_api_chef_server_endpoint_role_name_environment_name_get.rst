@@ -15,7 +15,7 @@ where the first ``NAME`` is the name of the role and the second is the name of t
 
 **Response**
 
-The response will return something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

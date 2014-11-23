@@ -33,7 +33,7 @@ where ``@x.x.x`` represents a constraint for a cookbook version.
 
 The response will return a list of cookbooks that are required by the ``run_list`` array contained in the request. The cookbooks that are returned are often the latest versions of each cookbook. Depending on any constraints present in the request or on dependencies a cookbook may have for specific cookbook versions, a request may not always return the latest cookbook version for each cookbook.
 
-A response looks something like the following:
+The response is similar to:
 
 .. code-block:: javascript
 

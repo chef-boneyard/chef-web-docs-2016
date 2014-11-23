@@ -28,7 +28,7 @@ This method has the following parameters:
 
 **Response**
 
-The response contains the total number of rows that match the request and will return something like the following:
+The response contains the total number of rows that match the request and is similar to:
 
 .. code-block:: javascript
 
