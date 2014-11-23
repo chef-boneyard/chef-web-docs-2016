@@ -28,7 +28,7 @@ with a request body that looks something like:
 
 **Response**
 
-The response will return something similar to:
+The response is similar to:
 
 .. code-block:: ruby
 
