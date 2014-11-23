@@ -58,11 +58,11 @@ GET
 
 /messages
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_messages.rst
 
 POST
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_messages_post.rst
 
 /organization/NAME
 -----------------------------------------------------
