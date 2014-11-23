@@ -11,7 +11,7 @@ This method has no parameters.
 
    POST /organizations/ORG_NAME/data
 
-with a request body that contains the key-value pair for the data bag and looks something like:
+with a request body that contains the key-value pair for the data bag and is similar to:
 
 .. code-block:: javascript
 

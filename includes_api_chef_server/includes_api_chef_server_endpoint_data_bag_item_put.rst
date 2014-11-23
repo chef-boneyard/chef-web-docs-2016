@@ -11,7 +11,7 @@ This method has no parameters.
 
    PUT /organizations/ORG_NAME/data/NAME/ITEM
 
-with a request body that looks something like:
+with a request body similar to:
 
 .. code-block:: javascript
 

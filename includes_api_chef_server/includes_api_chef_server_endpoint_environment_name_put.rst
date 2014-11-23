@@ -11,7 +11,7 @@ This method has no parameters.
 
    PUT /organizations/ORG_NAME/environments/NAME
 
-with a request body that contains the updated |json| for the environment and looks something like:
+with a request body that contains the updated |json| for the environment and is similar to:
 
 .. code-block:: javascript
 

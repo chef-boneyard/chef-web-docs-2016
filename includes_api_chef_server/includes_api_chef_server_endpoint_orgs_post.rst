@@ -11,7 +11,7 @@ This method has no parameters.
 
    POST /organizations
 
-with a request body that looks something like:
+with a request body similar to:
 
 .. code-block:: javascript
 

@@ -17,7 +17,7 @@ This method has no parameters.
 
    PUT /users/NAME
 
-with a request body that looks something like:
+with a request body similar to:
 
 .. code-block:: javascript
 
