@@ -34,11 +34,11 @@ GET
 
 /actions/ID/payload
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_payload.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_payload_get.rst
 
 /audits/ID/ID
 -----------------------------------------------------
