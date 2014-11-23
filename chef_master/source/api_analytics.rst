@@ -26,11 +26,11 @@ Endpoints
 
 /actions/ID
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_action_id.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_action_id_get.rst
 
 /actions/ID/payload
 -----------------------------------------------------
