@@ -16,7 +16,7 @@ This method has no parameters.
 
    POST /organizations/ORG_NAME/pushy/jobs
 
-with a request body that looks something like:
+with a request body similar to:
 
 .. code-block:: javascript
 
