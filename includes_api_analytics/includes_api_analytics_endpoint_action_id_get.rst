@@ -18,68 +18,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "$schema": "http://json-schema.org/draft-04/schema#",
-     "title": "ActionSchema",
-     "description": "Analytics - action schema",
-     "type": "object",
-     "properties": {
-       "id": {
-         "description": "Globally Unique ID for this message",
-         "type": "string",
-         "pattern": "...",
-         "format": "uuid"
-       },
-       "tags": {
-         "type": "array",
-           "items": {
-             "type": "string",
-           "format": "action-tags"
-           },
-           "uniqueItems": true
-         },
-         "type": {
-           ...
-         },
-         "recorded_at": {
-           "description": "It is the ISO timestamp when the action happened",
-           "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-5][0-9]:[0-9]{2}Z$",
-           "type": "string",
-           "format": "date-time"
-         },
-         "remote_hostname": {
-           "description": "The remote hostname which initiated the action",
-           "type": "string",
-           "oneOf": [
-             { "format": "hostname" },
-             { "format": "ipv4" },
-             { "format": "ipv6" }
-           ]
-         },
-         "remote_request_id": {
-           ...
-         },
-         "request_id": {
-           ...
-         },
-         "service_hostname": {
-           ...
-         },
-       ...
-     },
-     "required": [
-       "id",
-       "tags",
-       "recorded_at",
-       "remote_hostname",
-       "remote_request_id",
-       "request_id",
-       "service_hostname",
-       "task",
-       "endpoint",
-       "user_agent",
-       "requestable",
-       "entity"
-     ]
+     
    }
 
 **Response Codes**

@@ -18,18 +18,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "$schema": "http://json-schema.org/draft-04/schema",
-     "type": "object",
-     "properties": {
-       "result": {
-         "description": "The value of the result",
-         "enum": [ "unauth" ]
-       },
-       "msg": {
-         "type": "string"
-       }
-     },
-     "required": [ "result" ]
+     
    }
 
 **Response Codes**

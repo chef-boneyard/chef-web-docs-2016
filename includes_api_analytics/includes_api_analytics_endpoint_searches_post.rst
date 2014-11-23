@@ -53,21 +53,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "$schema": "http://json-schema.org/draft-04/schema",
-     "type": "object",
-     "properties": {
-       "description": {
-         "type": "string"
-       },
-       "id": {
-         "type": "integer",
-         "format": "uint"
-       },
-       "query": {
-         "type": "string",
-          "format": "search-query"
-       }
-     }
+     
    }
 
 **Response Codes**
