@@ -21,6 +21,11 @@ The ``GET`` method is used to get a listing of the available tools. Use the ``st
 .. code-block:: xml
 
    GET /tools?start=START&items=ITEMS
+
+or:
+
+.. code-block:: ruby
+
    GET /tools?order=recently_added
 
 **Response**

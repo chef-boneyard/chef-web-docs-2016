@@ -22,7 +22,7 @@ The ``GET`` method is used to get a list of tools that match a search query. Use
 
    GET /tools-search?q=SEARCH_QUERY
 
-Or:
+or:
 
 .. code-block:: ruby
 

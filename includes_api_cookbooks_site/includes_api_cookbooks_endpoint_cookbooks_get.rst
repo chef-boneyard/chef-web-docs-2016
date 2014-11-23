@@ -23,7 +23,15 @@ The ``GET`` method is used to get a listing of the available cookbooks. Use the 
 .. code-block:: xml
 
    GET /cookbooks?start=START&items=ITEMS
-   GET /cookbooks?order=recently_updated
+
+or:
+
+.. code-block:: ruby
+
+or:
+
+.. code-block:: ruby
+
    GET /cookbooks?user=smith
 
 **Response**

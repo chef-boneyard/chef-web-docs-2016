@@ -11,7 +11,7 @@ This method has no parameters.
 
    GET /cookbooks/COOKBOOK_NAME/versions/latest
 
-Or:
+or:
 
 .. code-block:: xml
 
