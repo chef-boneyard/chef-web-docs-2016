@@ -81,6 +81,78 @@ After the upgrade process, data related to the upgrade process will remain on th
 
 To remove this data, post-upgrade, simply delete these directories. The current, default behavior of the upgrade process is to leave this data, in case it's required later.
 
+Services, ``runsvdir``
+-----------------------------------------------------
+``runsvdir`` is the master process for the service supervisor in |runit|. For each service in the |chef server|, a child process is created in the ``runsvdir`` tree. After the upgrade process, services for the |chef server osc| server are stopped; however, the ``runsvdir`` tree is kept running for the following reasons:
+
+* A user may need to run the upgrade process from |chef server osc| 11 to |chef server| 12 more than once
+* A user may want to revert the upgrade process and resume using the |chef server osc| 11 server
+
+At the point where no more upgrades to |chef server| 12 are required **and** there is no need to be able to run |chef| using the |chef server osc| server, ``runsvdir`` should be stopped, and then deleted.
+
+
+**Shut down runsvdir**
+
+To shut down ``runsvdir`` in |chef server osc| 11:
+
+#. Run the following command to shut down |chef server| 12:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl uninstall
+
+#. Run the following command to shut down |chef server osc| 11:
+
+   .. code-block:: bash
+
+      $ /opt/chef-server/bin/chef-server-ctl uninstall 
+
+#. Reconfigure the |chef server| 12:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl reconfigure
+
+#. Start all services in |chef server| 12:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl start
+
+**Shut down runsvdir and remove files**
+
+To shut down ``runsvdir``, and then delete all associated files:
+
+#. Run the following command to shut down |chef server| 12:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl uninstall
+
+#. Run the following command to shut down |chef server osc| 11:
+
+   .. code-block:: bash
+
+      $ /opt/chef-server/bin/chef-server-ctl cleanse 
+
+#. Reconfigure the |chef server| 12:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl reconfigure
+
+#. Start all services in |chef server| 12:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl start
+
+#. Delete the remaining files:
+
+   .. code-block:: bash
+
+      $ rm -rf /opt/chef-server
+
 Multiple Upgrades
 -----------------------------------------------------
 The upgrade process may be run multiple times, as long as |chef server osc| 11 and |chef server| version 12 are installed on the system. Any subsequent upgrade process will re-create the temporary directories. Because the default behavior is to append a random string to the directory name, the number of temporary directories created is proportional to the number of upgrade processes run, unless identical directory names are specified using the ``--chef11-data-dir`` and ``--chef12-data-dir`` options during each upgrade.
