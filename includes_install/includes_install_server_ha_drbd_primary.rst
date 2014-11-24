@@ -19,7 +19,9 @@ Use the following steps to set up the primary backend |chef server|:
 
 #. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required.
 
-#. Install |drbd|. **For Ubuntu**:
+#. Install |drbd|. These steps vary, depending on the platform. 
+
+   **For Ubuntu**:
 
    .. code-block:: bash
       
