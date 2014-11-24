@@ -6,7 +6,7 @@ The syntax for a |chef analytics| rule is as follows:
 
 .. code-block:: java
 
-   rule(rule_type) when
+   rules "name" when
      json_attribute = "attribute_value"
 	 OPERATOR json_attribute = "attribute_value"
 	 OPERATOR (json_attribute = "attribute_value", OPERATOR attribute = "attribute_value")
@@ -34,7 +34,7 @@ For example:
 
 .. code-block:: java
 
-   rule(action) when
+   rules(action) when
      organization_name = "ponyville"
      and something_else = 'Hello, 世界'
      and (entity_type = 'foo' or entity_type = "bag")
