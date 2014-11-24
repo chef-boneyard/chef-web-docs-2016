@@ -152,6 +152,12 @@ To shut down ``runsvdir``, and then delete all associated files:
 
       $ dpkg --purge chef-server
 
+   or:
+
+   .. code-block:: bash
+
+      $ rpm -e chef-server
+
 #. Delete the remaining files:
 
    .. code-block:: bash
