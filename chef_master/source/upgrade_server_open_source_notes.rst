@@ -90,7 +90,7 @@ Services, ``runsvdir``
 
 At the point where no more upgrades to |chef server| 12 are required **and** there is no need to be able to run |chef| using the |chef server osc| server, ``runsvdir`` should be stopped and prevented from restarting. Optionally, ``runsvdir`` may be removed from the system entirely.
 
-**Shut down runsvdir, prevent restarts**
+**Shut down runsvdir, prevent restarts (on reboot of system)**
 
 To shut down ``runsvdir`` in |chef server osc| 11:
 
@@ -100,7 +100,7 @@ To shut down ``runsvdir`` in |chef server osc| 11:
 
       $ chef-server-ctl uninstall
 
-#. Run the following command to shut down |chef server osc| 11:
+#. Run the following command to shut down ``runsvdir``:
 
    .. code-block:: bash
 
@@ -128,7 +128,7 @@ To shut down ``runsvdir``, and then delete all associated files:
 
       $ chef-server-ctl uninstall
 
-#. Run the following command to shut down |chef server osc| 11:
+#. Run the following command to shut down ``runsvdir``:
 
    .. code-block:: bash
 
