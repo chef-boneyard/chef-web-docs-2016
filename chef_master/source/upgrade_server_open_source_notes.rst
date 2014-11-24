@@ -88,11 +88,9 @@ Services, ``runsvdir``
 * A user may need to run the upgrade process from |chef server osc| 11 to |chef server| 12 more than once
 * A user may want to revert the upgrade process and resume using the |chef server osc| 11 server
 
-At the point where no more upgrades to |chef server| 12 are required **and** there is no need to be able to run |chef| using the |chef server osc| server, ``runsvdir`` should be stopped and prevented from restarting. Optionally, ``runsvdir`` (and |chef server osc|) may be removed from the system entirely.
+At the point where no more upgrades to |chef server| 12 are required **and** there is no need to be able to run |chef| using the |chef server osc| server, ``runsvdir`` should be stopped and prevented from restarting. Optionally, |chef server osc| (along with ``runsvdir``) may be removed from the system entirely.
 
 **Shut down runsvdir, prevent restarts (on reboot of system)**
-
-To shut down ``runsvdir`` in |chef server osc| 11:
 
 #. Run the following command to shut down |chef server| 12:
 
@@ -118,9 +116,7 @@ To shut down ``runsvdir`` in |chef server osc| 11:
 
       $ chef-server-ctl start
 
-**Remove Open Source Chef 11**
-
-To shut down ``runsvdir``, and then delete all associated files:
+**Shut down runsvdir, and then remove Open Source Chef 11**
 
 #. Run the following command to shut down |chef server| 12:
 
