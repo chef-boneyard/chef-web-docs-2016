@@ -1,7 +1,7 @@
 .. THIS PAGE IS LOCATED AT THE /client/ PATH.
 
 =====================================================
-All about the |chef analytics_title| ... 
+All about |chef analytics_title| ... 
 =====================================================
 
 .. include:: ../../includes_analytics/includes_analytics.rst
