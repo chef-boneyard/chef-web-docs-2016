@@ -4,23 +4,26 @@
 
 .. include:: ../../includes_api_analytics/includes_api_analytics.rst
 
-.. 
-.. Requirements
-.. =====================================================
-.. [... TBD]
-.. 
-.. Authentication Headers
-.. =====================================================
-.. [... TBD]
-.. 
-.. Header Format
-.. -----------------------------------------------------
-.. [... TBD]
-.. 
-.. Required Headers
-.. -----------------------------------------------------
-.. [... TBD]
-.. 
+
+Encryption
+=====================================================
+All connections to |chef analytics| from any web browser, any API client, and any service uses HTTPS. HTTP access to the |chef analytics| platform is not allowed.
+ 
+Authentication
+=====================================================
+|chef analytics| uses token-based authentication to the |api analytics|.
+
+User Access
+-----------------------------------------------------
+Users authenticate to the |api analytics| using an |oauth| 2.0 token. |chef analytics| uses the |service ocid| service that is built into the |chef server| as the identity source. When a user access |chef analytics| from a web browser, the web browser completes the |oauth| negotiation with the |service ocid| service to ensure that the token is valid.
+
+Service Access
+-----------------------------------------------------
+Services authenticate to the |api analytics| as a privileged user using a keyed-hash message authentication code (HMAC) and is based on a similar mechanism used by |amazon aws| services.
+
+A request is authenticated by concatenating elements of the request to form a string. Then a private key calculates the request signature using the HMAC, which is then added to the request as a header.
+
+After a request is authenticated, it will fetch its copy of the private key, and then uses it to compute a signature, which is then compared against the signature in the header. If these signatures match, the service is authorized. If these signatures do not match, the system responds with an error message.
 
 Endpoints
 =====================================================
