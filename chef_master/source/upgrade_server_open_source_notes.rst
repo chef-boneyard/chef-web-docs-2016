@@ -96,7 +96,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
    .. code-block:: bash
 
-      $ chef-server-ctl stop
+      $ chef-server-ctl uninstall
 
 #. Run the following command to shut down ``runsvdir`` and prevent restarts:
 
@@ -122,7 +122,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
    .. code-block:: bash
 
-      $ chef-server-ctl stop
+      $ chef-server-ctl uninstall
 
 #. Run the following command to shut down ``runsvdir``, prevent restarts, and remove related directories:
 
