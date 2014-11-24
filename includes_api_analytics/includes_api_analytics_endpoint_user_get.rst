@@ -22,7 +22,7 @@ The response is similar to:
      "properties": {
        "avatar_url": "https://gravatar.com/avatar/0a5549591ec94521799d8d44b17d3432.png?d=mm",
        "email": "applejack@mylittlepony.com",
-       "gravatar_id": "0a5549591ec94521799d8d44b17d3432"
+       "gravatar_id": "0a5549591ec94543299d8d44b17d3432"
      },
      "endpoint": "/users/applejack",
      "organizations": [
@@ -31,16 +31,6 @@ The response is similar to:
          "endpoint": "/organizations/ponyville",
          "profile_url": "https://api.opscode.piab/organizations/ponyville/users/applejack"
        },
-       {
-         "name": "applejack",
-         "endpoint": "/organizations/applejack",
-         "profile_url": "https://api.opscode.piab/organizations/applejack/users/applejack"
-       },
-       {
-         "name": "login",
-         "endpoint": "/organizations/login",
-         "profile_url": "https://api.opscode.piab/organizations/login/users/applejack"
-       }
      ],
      "searches": []
    }
