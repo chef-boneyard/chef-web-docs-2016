@@ -100,7 +100,7 @@ To shut down ``runsvdir`` in |chef server osc| 11:
 
       $ chef-server-ctl uninstall
 
-#. Run the following command to shut down ``runsvdir``:
+#. Run the following command to shut down ``runsvdir`` and prevent restarts:
 
    .. code-block:: bash
 
@@ -128,7 +128,7 @@ To shut down ``runsvdir``, and then delete all associated files:
 
       $ chef-server-ctl uninstall
 
-#. Run the following command to shut down ``runsvdir``:
+#. Run the following command to shut down ``runsvdir``, prevent restarts, and remove related directories:
 
    .. code-block:: bash
 
