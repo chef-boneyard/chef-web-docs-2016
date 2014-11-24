@@ -19,13 +19,27 @@ Use the following steps to set up the primary backend |chef server|:
 
 #. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required.
 
-#. Install |drbd|. For |redhat| and |centos| 6.5 and 6.6:
+#. Install |drbd|. **For |ubuntu|**:
+
+   .. code-block:: bash
+      
+      $ apt-get install drbd8-utils
+
+   **For |redhat| and |centos| (all versions)**, first check for the ``xen`` kernel:
+
+   .. code-block:: bash
+      
+      $ rpm -qa kernel\* | grep -ci xen
+
+   If anything other than ``0`` is returned, the machine is running the ``xen`` kernel. 
+
+   **For |redhat| and |centos| 6.6**, install |elrepo|:
 
    .. code-block:: bash
       
       $ rpm --import http://elrepo.org/RPM-GPG-KEY-elrepo.org
 
-   then:
+   and then:
 
    .. code-block:: bash
       
@@ -33,23 +47,70 @@ Use the following steps to set up the primary backend |chef server|:
 
    .. note:: The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland.
 
-   For **only** |redhat| and |centos| 6.6:
+   If the machine returned ``0`` for the ``xen`` kernel, run:
 
    .. code-block:: bash
       
       $ yum install -y drbd84-utils kmod-drbd84
 
-   For |redhat| and |centos| 6.x (that is not versions 6.5 or 6.6):
+   If the machine returned something other than ``0``, run:
+
+   .. code-block:: bash
+      
+      $ yum install -y drbd84-utils kmod-drbd84-xen
+
+   **For |redhat| and |centos| 6.5**, install |elrepo|:
+
+   .. code-block:: bash
+      
+      $ rpm --import http://elrepo.org/RPM-GPG-KEY-elrepo.org
+
+   and then:
+
+   .. code-block:: bash
+      
+      $ rpm -Uvh http://elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
+
+   .. note:: The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland.
+
+   If the machine returned ``0`` for the ``xen`` kernel, run:
 
    .. code-block:: bash
       
       $ yum install -y drbd84-utils kmod-drbd84-8.4.5-1.el6.elrepo
-   
-   For |ubuntu|:
+
+   If the machine returned something other than ``0``, run:
 
    .. code-block:: bash
       
-      $ apt-get install drbd8-utils
+      $ yum install -y drbd84-utils kmod-drbd84-xen-8.4.5-1.el6.elrepo
+
+   **For |redhat| and |centos| 5.11**, install |elrepo|:
+
+   .. code-block:: bash
+      
+      $ rpm --import http://elrepo.org/RPM-GPG-KEY-elrepo.org
+
+   and then:
+
+   .. code-block:: bash
+      
+      $ rpm -Uvh http://www.elrepo.org/elrepo-release-5-5.el5.elrepo.noarch.rpm
+
+   .. note:: The |elrepo| provides updated drivers for the |linux| family of enterprise distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland.
+
+   If the machine returned ``0`` for the ``xen`` kernel, run:
+
+   .. code-block:: bash
+      
+      $yum install -y drbd84-utils kmod-drbd84
+
+   If the machine returned something other than ``0``, run:
+
+   .. code-block:: bash
+      
+      $ yum install -y drbd84-utils kmod-drbd84-xen
+
 
 #. Reconfigure the |chef server|:
 
