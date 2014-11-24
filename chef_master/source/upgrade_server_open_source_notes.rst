@@ -92,7 +92,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
 **Shut down runsvdir, prevent restarts (on reboot of system)**
 
-#. Run the following command to shut down |chef server| 12:
+#. Run the following command to stop all |chef server| 12 processes and remove the ``inittab`` or ``upstart`` configuration files:
 
    .. code-block:: bash
 
@@ -110,7 +110,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
       $ chef-server-ctl reconfigure
 
-#. Start all services in |chef server| 12:
+#. Start all services in |chef server| 12, including replacing the ``inittab`` or ``upstart`` configuration files, starting the |chef server| 12 ``runsvdir`` tree, and all related processes:
 
    .. code-block:: bash
 
@@ -118,7 +118,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
 **Shut down runsvdir, and then remove Open Source Chef 11**
 
-#. Run the following command to shut down |chef server| 12:
+#. Run the following command to stop all |chef server| 12 processes and remove the ``inittab`` or ``upstart`` configuration files:
 
    .. code-block:: bash
 
@@ -136,7 +136,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
       $ chef-server-ctl reconfigure
 
-#. Start all services in |chef server| 12:
+#. Start all services in |chef server| 12, including replacing the ``inittab`` or ``upstart`` configuration files, starting the |chef server| 12 ``runsvdir`` tree, and all related processes:
 
    .. code-block:: bash
 
