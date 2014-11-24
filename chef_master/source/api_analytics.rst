@@ -126,11 +126,11 @@ GET
 
 /actions/export
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_actions_export.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_actions_export_get.rst
 
 /aliases
 -----------------------------------------------------
