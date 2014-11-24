@@ -32,6 +32,6 @@ The response is similar to:
    * - ``200``
      - |response code 200 ok|
    * - ``403``
-     -Unauthorized.
+     - Unauthorized.
    * - ``500``
      - Internal error.
