@@ -104,13 +104,13 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
       $ /opt/chef-server/bin/chef-server-ctl uninstall 
 
-#. Reconfigure the |chef server| 12. This will recreate the ``inittab`` or ``upstart`` configuration files:
+#. Reconfigure |chef server| 12 (and recreate the ``inittab`` or ``upstart`` configuration files):
 
    .. code-block:: bash
 
       $ chef-server-ctl reconfigure
 
-#. Start all services in |chef server| 12. This will start the |chef server| 12 ``runsvdir`` tree and all related processes:
+#. Start the |chef server| 12 ``runsvdir`` tree and all related processes:
 
    .. code-block:: bash
 
@@ -130,13 +130,13 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
       $ /opt/chef-server/bin/chef-server-ctl cleanse 
 
-#. Reconfigure the |chef server| 12. This will recreate the ``inittab`` or ``upstart`` configuration files:
+#. Reconfigure |chef server| 12 (and recreate the ``inittab`` or ``upstart`` configuration files):
 
    .. code-block:: bash
 
       $ chef-server-ctl reconfigure
 
-#. Start all services in |chef server| 12. This will start the |chef server| 12 ``runsvdir`` tree and all related processes:
+#. Start the |chef server| 12 ``runsvdir`` tree and all related processes:
 
    .. code-block:: bash
 
