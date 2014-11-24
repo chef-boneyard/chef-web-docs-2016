@@ -20,7 +20,7 @@
    * - ``env_run_lists``
      - The environment-specific run-list for a role. Default value: ``[]``. For example: ``["env_run_lists[webserver]"]``
    * - ``name``
-     - |name role|
+     - The name of the role.
    * - ``override_attributes``
      - |attribute_type override| Default value: ``{}``.
    * - ``raw_json``
