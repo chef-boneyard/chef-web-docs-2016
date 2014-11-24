@@ -170,11 +170,11 @@ GET
 
 /autocomplete
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_autocomplete.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_autocomplete_get.rst
 
 /rules
 -----------------------------------------------------
