@@ -90,7 +90,6 @@ Services, ``runsvdir``
 
 At the point where no more upgrades to |chef server| 12 are required **and** there is no need to be able to run |chef| using the |chef server osc| server, ``runsvdir`` should be stopped, and then deleted.
 
-
 **Shut down runsvdir**
 
 To shut down ``runsvdir`` in |chef server osc| 11:
