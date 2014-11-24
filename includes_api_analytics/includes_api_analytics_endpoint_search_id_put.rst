@@ -34,13 +34,7 @@ with a request body similar to:
    
 **Response**
 
-The response is similar to:
-
-.. code-block:: javascript
-
-   {
-     
-   }
+The response will return the |json| for the updated search item.
 
 **Response Codes**
 
