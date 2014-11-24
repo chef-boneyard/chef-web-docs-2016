@@ -146,7 +146,11 @@ To shut down ``runsvdir``, and then delete all associated files:
 
       $ chef-server-ctl start
 
-#. Remove |chef server osc| 11 using the appropriate package manager.
+#. Remove |chef server osc| 11 using the appropriate package manager. For example:
+
+   .. code-block:: bash
+
+      $ dpkg --purge chef-server
 
 #. Delete the remaining files:
 
