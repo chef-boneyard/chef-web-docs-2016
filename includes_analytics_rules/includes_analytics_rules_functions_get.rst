@@ -2,18 +2,18 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``get`` to xxxxx.
+Use ``get`` to identify missing fields.
 
 The syntax for this function:
 
 .. code-block:: java
 
-   get(xxxxx)
+   get(xxxxx, xxxxx)
 
 where:
 
-* ``xxxxx`` is xxxxx
-* ``xxxxx`` is xxxxx
+* ``xxxxx`` specifies the field to look for
+* ``xxxxx`` specifies the value to return if that field is missing
 
 For example:
 
