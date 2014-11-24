@@ -13,9 +13,9 @@ This method has the following parameters:
    * - Parameter
      - Description
    * - ``from``
-     - Optional. Use to specify the start time before which node data will not be returned. Use with ``until`` to define a range.
+     - Optional. Use to specify the time before which node data will not be returned. Use with ``until`` to define a range.
    * - ``until``
-     - Optional. Use to specify the start time after which node data will not be returned. Use with ``until`` to define a range.
+     - Optional. Use to specify the time after which node data will not be returned. Use with ``until`` to define a range.
 
 **Request**
 

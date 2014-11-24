@@ -13,7 +13,7 @@ This method has the following parameters:
    * - Parameter
      - Description
    * - ``from``
-     - Optional. Use to specify the start time before which node data will not be returned. Use with ``until`` to define a range.
+     - Optional. Use to specify the time before which node data will not be returned. Use with ``until`` to define a range.
    * - ``rows``
      - Optional. The number of resources to return. Default value: ``10``.
    * - ``start``
@@ -21,7 +21,7 @@ This method has the following parameters:
    * - ``status``
      - Optional. Use to specify a status code. When a status code is provided, only nodes with that status will be returned. When a status code is not provided, all nodes will be returned. Possible values: ``aborted``, ``failure``, or ``success``.
    * - ``until``
-     - Optional. Use to specify the start time after which node data will not be returned. Use with ``until`` to define a range.
+     - Optional. Use to specify the time after which node data will not be returned. Use with ``until`` to define a range.
 
 **Request**
 
