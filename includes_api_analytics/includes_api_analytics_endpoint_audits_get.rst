@@ -20,7 +20,7 @@ This method has the following parameters:
    * - ``since``
      - The time after which audit data is returned. For example: ``2014-11-14T18:40:09.155Z``.
    * - ``type``
-     - The types of events that trigger audits: ``action``, ``control``, ``control_group``, ``run``, ``run_converge``, ``run_resource``, or ``run_start``. Use a comma to separate multiple types. For example: ``run_converge`` or ``action, run``.
+     - The types of events that trigger audits: ``action``, ``run_control``, ``run_control_group``, ``run_converge``, ``run_resource``, or ``run_start``. Use a comma to separate multiple types. For example: ``run_converge`` or ``action, run_start``.
 
 **Request**
 
@@ -75,7 +75,7 @@ A response for ``action`` is similar to:
      }
    }
 
-A response for ``control`` is similar to:
+A response for ``run_control`` is similar to:
 
 .. code-block:: javascript
 
@@ -100,7 +100,7 @@ A response for ``control`` is similar to:
      }
    }
 
-A response for ``control_group`` is similar to:
+A response for ``run_control_group`` is similar to:
 
 .. code-block:: javascript
 
