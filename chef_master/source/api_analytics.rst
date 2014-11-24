@@ -146,19 +146,19 @@ POST
 
 /aliases/ID
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_alias_id.rst
 
 DELETE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_alias_id_delete.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_alias_id_get.rst
 
 PUT
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_alias_id_put.rst
 
 /audits
 -----------------------------------------------------
