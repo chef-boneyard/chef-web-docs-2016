@@ -110,7 +110,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
       $ chef-server-ctl reconfigure
 
-#. Start all services in |chef server| 12, including replacing the ``inittab`` or ``upstart`` configuration files, starting the |chef server| 12 ``runsvdir`` tree, and all related processes:
+#. Start all services in |chef server| 12, including replacing the ``inittab`` or ``upstart`` configuration files, starting the |chef server| 12 ``runsvdir`` tree, and starting all related processes:
 
    .. code-block:: bash
 
@@ -136,7 +136,7 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
       $ chef-server-ctl reconfigure
 
-#. Start all services in |chef server| 12, including replacing the ``inittab`` or ``upstart`` configuration files, starting the |chef server| 12 ``runsvdir`` tree, and all related processes:
+#. Start all services in |chef server| 12, including replacing the ``inittab`` or ``upstart`` configuration files, starting the |chef server| 12 ``runsvdir`` tree, and starting all related processes:
 
    .. code-block:: bash
 
