@@ -3,7 +3,6 @@
 
 The |api chef server| has the following requirements:
 
-* Access to a |chef server| running version 0.10.x or above
 * The ``Accept`` header must be set to ``application/json``
 * For ``PUT`` and ``POST`` requests, the ``Content-Type`` header must be set to ``application/json``
 * The ``X-Chef-Version`` header must be set to the version of the |api chef server| that is being used
