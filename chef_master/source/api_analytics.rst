@@ -42,13 +42,13 @@ GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_payload_get.rst
 
-/audits/ID/ID
+/audits/ID
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_audit_id.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_audit_id_get.rst
 
 /authentication-configuration
 -----------------------------------------------------
