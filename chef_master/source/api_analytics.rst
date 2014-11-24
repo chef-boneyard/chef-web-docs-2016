@@ -118,11 +118,11 @@ The following endpoints are available per-organization. ``/organizations/NAME`` 
 
 /actions
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_actions.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_actions_get.rst
 
 /actions/export
 -----------------------------------------------------
