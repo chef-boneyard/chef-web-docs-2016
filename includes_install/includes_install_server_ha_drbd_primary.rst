@@ -105,7 +105,7 @@ Use the following steps to set up the primary backend |chef server|:
 
    .. code-block:: bash
       
-      $yum install -y drbd84-utils kmod-drbd84
+      $ yum install -y drbd84-utils kmod-drbd84
 
    If the machine returned something other than ``0``, run:
 
