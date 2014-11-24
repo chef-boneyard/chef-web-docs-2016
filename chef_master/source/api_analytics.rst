@@ -162,11 +162,11 @@ PUT
 
 /audits
 -----------------------------------------------------
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_audits.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-[... TBD]
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_audits_get.rst
 
 /autocomplete
 -----------------------------------------------------
