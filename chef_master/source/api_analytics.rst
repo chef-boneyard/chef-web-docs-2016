@@ -116,7 +116,7 @@ GET
 
 Organization Endpoints
 =====================================================
-The following endpoints are available per-organization. ``/organizations/NAME`` must be specified as part of the request.
+.. include:: ../../includes_api_analytics/includes_api_analytics_endpoints.rst
 
 /actions
 -----------------------------------------------------
