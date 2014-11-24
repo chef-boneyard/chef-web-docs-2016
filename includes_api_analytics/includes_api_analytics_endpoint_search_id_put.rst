@@ -16,7 +16,6 @@ with a request body similar to:
 .. code-block:: javascript
 
    {
-     "$schema": "http://json-schema.org/draft-04/schema",
      "type": "object",
      "properties": {
        "description": {
