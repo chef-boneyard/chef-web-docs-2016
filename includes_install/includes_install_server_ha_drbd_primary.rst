@@ -19,13 +19,13 @@ Use the following steps to set up the primary backend |chef server|:
 
 #. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required.
 
-#. Install |drbd|. **For |ubuntu|**:
+#. Install |drbd|. **For Ubuntu**:
 
    .. code-block:: bash
       
       $ apt-get install drbd8-utils
 
-   **For |redhat| and |centos| (all versions)**, first check for the ``xen`` kernel:
+   **For RedHat and CentOS (all versions)**, first check for the ``xen`` kernel:
 
    .. code-block:: bash
       
@@ -33,7 +33,7 @@ Use the following steps to set up the primary backend |chef server|:
 
    If anything other than ``0`` is returned, the machine is running the ``xen`` kernel. 
 
-   **For |redhat| and |centos| 6.6**, install |elrepo|:
+   **For RedHat and CentOS 6.6**, install |elrepo|:
 
    .. code-block:: bash
       
@@ -59,7 +59,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ yum install -y drbd84-utils kmod-drbd84-xen
 
-   **For |redhat| and |centos| 6.5**, install |elrepo|:
+   **For RedHat and CentOS 6.5**, install |elrepo|:
 
    .. code-block:: bash
       
@@ -85,7 +85,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ yum install -y drbd84-utils kmod-drbd84-xen-8.4.5-1.el6.elrepo
 
-   **For |redhat| and |centos| 5.11**, install |elrepo|:
+   **For RedHat and CentOS 5.11**, install |elrepo|:
 
    .. code-block:: bash
       
