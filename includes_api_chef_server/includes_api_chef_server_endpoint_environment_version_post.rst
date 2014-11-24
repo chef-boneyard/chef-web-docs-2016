@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /organizations/ORG_NAME/environments/NAME/cookbook_versions
+   POST /organizations/NAME/environments/NAME/cookbook_versions
 
 with a request body similar to:
 

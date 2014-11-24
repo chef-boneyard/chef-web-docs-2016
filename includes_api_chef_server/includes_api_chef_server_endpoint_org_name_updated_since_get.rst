@@ -7,7 +7,7 @@ The ``GET`` method is used to return the details of an organization as |json|.
 
 .. code-block:: xml
 
-   GET /organizations/ORG_NAME/objects_since?seq=NUM
+   GET /organizations/NAME/objects_since?seq=NUM
 
 where ``NUM`` is the largest integer previously returned as an identifier.
 

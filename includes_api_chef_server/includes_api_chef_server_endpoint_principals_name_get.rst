@@ -9,11 +9,11 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/ORG_NAME/principals/NAME
+   GET /organizations/NAME/principals/NAME
 
 **Response**
 
-The response will return something like the following for a user:
+For a user, the response is similar to:
 
 .. code-block:: javascript
 
@@ -28,7 +28,7 @@ The response will return something like the following for a user:
                    -----END PUBLIC KEY-----"
    }
 
-or something like the following for a client:
+and for a client, similar to:
 
 .. code-block:: javascript
 

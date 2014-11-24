@@ -11,7 +11,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /organizations/ORG_NAME/group/GROUP_NAME
+   POST /organizations/NAME/group/GROUP_NAME
 
 with a request body similar to:
 

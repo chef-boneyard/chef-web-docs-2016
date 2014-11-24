@@ -18,7 +18,7 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   GET /organizations/ORG_NAME/environments/NAME/cookbooks
+   GET /organizations/NAME/environments/NAME/cookbooks
 
 **Response**
 

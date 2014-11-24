@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/ORG_NAME/cookbooks/NAME/VERSION
+   GET /organizations/NAME/cookbooks/NAME/VERSION
 
 where ``VERSION`` can be ``_latest`` in order to float to head.
 

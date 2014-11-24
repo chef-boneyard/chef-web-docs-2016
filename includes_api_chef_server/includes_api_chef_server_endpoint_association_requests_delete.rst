@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   DELETE /organizations/ORG_NAME/association_requests/ID
+   DELETE /organizations/NAME/association_requests/ID
 
 This method has no request body.
 

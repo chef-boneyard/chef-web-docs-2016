@@ -11,7 +11,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /organizations/ORG_NAME/sandboxes/ID/CHECKSUM
+   PUT /organizations/NAME/sandboxes/ID/CHECKSUM
 
 where ``CHECKSUM`` is the file in which a checksum is located.
 

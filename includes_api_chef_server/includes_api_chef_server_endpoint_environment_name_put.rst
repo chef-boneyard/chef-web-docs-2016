@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /organizations/ORG_NAME/environments/NAME
+   PUT /organizations/NAME/environments/NAME
 
 with a request body that contains the updated |json| for the environment and is similar to:
 

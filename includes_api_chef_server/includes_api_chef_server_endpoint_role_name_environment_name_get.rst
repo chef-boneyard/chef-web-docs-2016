@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/ORG_NAME/roles/NAME/environments/NAME
+   GET /organizations/NAME/roles/NAME/environments/NAME
 
 where the first ``NAME`` is the name of the role and the second is the name of the environment.
 

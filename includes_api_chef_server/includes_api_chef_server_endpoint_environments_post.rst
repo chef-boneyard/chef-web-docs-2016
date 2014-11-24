@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /organizations/ORG_NAME/environments
+   POST /organizations/NAME/environments
 
 with a request body similar to:
 

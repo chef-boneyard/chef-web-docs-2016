@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/ORG_NAME/cookbooks/_recipes
+   GET /organizations/NAME/cookbooks/_recipes
 
 **Response**
 

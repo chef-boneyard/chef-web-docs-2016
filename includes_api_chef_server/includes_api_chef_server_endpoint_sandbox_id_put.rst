@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /organizations/ORG_NAME/sandboxes/ID
+   PUT /organizations/NAME/sandboxes/ID
 
 with a request body similar to:
 

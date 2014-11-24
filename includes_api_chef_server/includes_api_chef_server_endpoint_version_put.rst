@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /organizations/ORG_NAME/cookbooks/NAME/VERSION
+   PUT /organizations/NAME/cookbooks/NAME/VERSION
 
 with a request body similar to:
 

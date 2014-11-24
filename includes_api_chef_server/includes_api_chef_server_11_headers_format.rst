@@ -15,7 +15,7 @@ All hashing is done using |sha1| and encoded in |base64|. |base64| encoding shou
 where:
 
 * ``HTTP_METHOD`` is the method used in the API request (``GET``, ``POST``, and so on)
-* ``HASHED_PATH`` is the path of the request (``/name_of_endpoint`` for the open source |chef server| and ``/organizations/organization_name/name_of_endpoint`` for |chef server oec|). The ``HASHED_PATH`` must be hashed using |sha1| and encoded using |base64|, must not have repeated forward slashes (``/``), must not end in a forward slash (unless the path is ``/``), and must not include a query string.
+* ``HASHED_PATH`` is the path of the request (``/name_of_endpoint`` for the open source |chef server| and ``/organizations/NAME/name_of_endpoint`` for |chef server oec|). The ``HASHED_PATH`` must be hashed using |sha1| and encoded using |base64|, must not have repeated forward slashes (``/``), must not end in a forward slash (unless the path is ``/``), and must not include a query string.
 * The private key must be an RSA key in the SSL .pem file format. This signature is then broken into character strings (of not more than 60 characters per line) and placed in the header.
 
 

@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/ORG_NAME/groups/GROUP_NAME
+   GET /organizations/NAME/groups/GROUP_NAME
 
 **Response**
 

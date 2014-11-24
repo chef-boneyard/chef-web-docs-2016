@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /organizations/ORG_NAME/data
+   POST /organizations/NAME/data
 
 with a request body that contains the key-value pair for the data bag and is similar to:
 

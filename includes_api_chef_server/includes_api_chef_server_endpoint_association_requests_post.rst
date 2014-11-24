@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /organizations/ORG_NAME/association_requests
+   POST /organizations/NAME/association_requests
 
 **Response**
 

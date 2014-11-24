@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /organizations/ORG_NAME/authenticate_user
+   POST /organizations/NAME/authenticate_user
 
 with a request body similar to:
 
