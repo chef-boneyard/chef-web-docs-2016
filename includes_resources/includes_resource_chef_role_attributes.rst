@@ -28,17 +28,18 @@
        
        .. code-block:: javascript
        
-       {
-         "name": "webserver",
-         "chef_type": "role",
-         "json_class": "Chef::Role",
-         "default_attributes": {},
-         "description": "A webserver",
-         "run_list": [
-           "recipe[apache2]"
-         ],
-         "override_attributes": {}
-       }
+         {
+           "name": "webserver",
+           "chef_type": "role",
+           "json_class": "Chef::Role",
+           "default_attributes": {},
+           "description": "A webserver",
+           "run_list": [
+             "recipe[apache2]"
+           ],
+           "override_attributes": {}
+         }
+
    * - ``run_list``
      - |run-list| Default value: ``[]``. For example: ``["recipe[default]","recipe[apache2]"]``
 
