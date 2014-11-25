@@ -5,7 +5,7 @@
 Use ``when`` to define an expression. Multiple expressions may be joined using ``and`` and ``or``. Expressions may be grouped using parentheses (``( )``). Expressions may use nested function calls on either side of the expression. The following operators may be used:
 
 .. list-table::
-   :widths: 200 300
+   :widths: 20 400
    :header-rows: 1
 
    * - Operator
