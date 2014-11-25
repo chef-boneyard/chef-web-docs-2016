@@ -81,7 +81,7 @@ After the upgrade process, data related to the upgrade process will remain on th
 
 To remove this data, post-upgrade, simply delete these directories. The current, default behavior of the upgrade process is to leave this data, in case it's required later.
 
-Services, ``runsvdir``
+Services, ``runsvdir``, and Cleanup
 -----------------------------------------------------
 ``runsvdir`` is the master process for the service supervisor in |runit|. For each service in the |chef server|, a child process is created in the ``runsvdir`` tree. After the upgrade process, services for the |chef server osc| server are stopped; however, the ``runsvdir`` tree is kept running for the following reasons:
 
