@@ -10,6 +10,7 @@ All about |chef analytics_title| ...
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/analytics/install_analytics.html">Install Analytics</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/analytics/actions.html">Actions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/analytics/analytics_rules.html">Rules</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/analytics/api_analytics.html">Analytics API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/analytics/config_rb_analytics.html">opscode-analytics.rb</a> </br>
