@@ -2,22 +2,16 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``get`` to identify missing fields.
+Use ``get`` to identify a field, and then identify an associated value.
 
 The syntax for this function:
 
 .. code-block:: java
 
-   get(xxxxx, xxxxx)
+   get(variableToGet, valueToSet OR defaultIfMissing)
 
 where:
 
-* ``xxxxx`` specifies the field to look for
-* ``xxxxx`` specifies the value to return if that field is missing
-
-For example:
-
-.. code-block:: java
-
-   xxxxx
-
+* ``variableToGet`` specifies the field to look for
+* ``valueToSet`` specifies the value to use
+* ``defaultIfMissing`` specifies to use the default value if there is no user-defined value
