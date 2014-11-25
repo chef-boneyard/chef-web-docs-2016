@@ -463,12 +463,9 @@ Cookbooks
    supermarket
    supported_platforms
    upgrade_server
-   upgrade_server_ha
    upgrade_server_ha_notes
    upgrade_server_open_source
    upgrade_server_open_source_notes
-   upgrade_server_standalone
-   upgrade_server_standalone_notes
    verify_packages
    windows
 
