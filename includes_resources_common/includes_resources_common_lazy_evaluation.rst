@@ -30,6 +30,18 @@ and a resource that is doing lazy evaluation:
 
 In the previous examples, the first resource uses the value ``/foo/bar`` and the second resource uses the value provided by the code block, as long as the contents of that code block are a valid resource attribute.
 
+The following example shows how to use lazy evaluation with template variables:
+
+.. code-block:: ruby
+
+   template '/tmp/canvey_island.txt' do
+     source 'canvey_island.txt.erb'
+     variables(
+       lazy {
+         {:canvey_island => node.run_state['sea_power']}
+       }
+     )
+   end
 
 
 
