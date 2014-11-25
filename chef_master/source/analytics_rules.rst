@@ -10,6 +10,22 @@ Syntax
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst
 
+with priority
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_priority.rst
+
+when Statements
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst
+
+then Statements
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst
+
+otherwise Statements
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_otherwise.rst
+
 Rule Types
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst
