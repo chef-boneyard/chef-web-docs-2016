@@ -4,11 +4,11 @@ Upgrade to Enterprise Chef 11: High Availability
 
 This topic describes the upgrade process from |chef private| to |chef server oec|. The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |debian dpkg| or |rpm|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
 
-Please :doc:`view the notes </upgrade_server_ha_notes>` about the high availability |chef server oec| upgrade for any changes that may exist for your upgrade process.
+Please `view the notes <http://docs.getchef.com/upgrade_server_ha_notes.html>`_ about the high availability |chef server oec| upgrade for any changes that may exist for your upgrade process.
 
 To upgrade to |chef server oec|, do the following:
 
-#. Run the following on all machines to make sure all services are in a sane state.
+#. Run the following command on all machines to make sure all services are in a sane state.
 
    .. code-block:: bash
       
@@ -91,4 +91,3 @@ To upgrade to |chef server oec|, do the following:
    This process will remove old services, old data, messages about old services not running, and so on.
 
    .. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
-
