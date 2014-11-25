@@ -6,53 +6,52 @@ The syntax for a |chef analytics| rule is as follows:
 
 .. code-block:: java
 
-   rules "name" when
-     json_attribute = "attribute_value"
-	 OPERATOR json_attribute = "attribute_value"
-	 OPERATOR (json_attribute = "attribute_value", OPERATOR attribute = "attribute_value")
-     ...
-   then
-     FUNCTION
-     ...
-	 log("log_entry")
-   otherwise
-     FUNCTION
-     ...
-	 log("log_entry")
-     
-where 
+   rules "name"
+     with priority=n
+     rule "name" on message_type
+     when
+       // comment
+       function()
+     then
+       // comment
+       function()
+     otherwise
+       // comment
+       function()
+     end
+   end
 
-* ``rule_type`` is one of ``action``, ``run start``, ``run end``, ``run resource``, or ``control``
-* The ``when`` block is used to group expressions, which are a series of evaluations that result in ``true`` or ``false``
-* ``json_attribute = "attribute_value"`` is an expression that specifies the data that will be tested by the rule
-* ``OPERATOR`` may be ``and`` or ``or``; use operators to separate expressions
-* The ``then`` and ``otherwise`` blocks are used to group statements that test the data specified by expressions
-* ``FUNCTION`` is a statement that tests the value of a ``json_attribute`` against the rule; functions may be one of ``set``, ``notify``, ``log``, ``array:contains``, ``groovy:eval``, ``groovy:exec``, ``datetime``, or ``mustache_template``. (See "Functions" subsections below for more information.)
-* ``log("log_entry")`` is the log entry that is created for statement in the ``then`` or ``otherwise`` blocks
+where:
+
+* ``rules`` defines a rules group which is comprised of individual rules (``rule``)
+* ``with priority=n`` is a positive or negative integer that defines the relative priority of a rules group as compared to all other rules groups
+* ``"name"`` is name of the rule group and/or the name of the rule
+* ``message_type`` is one of the following audit message types: ``action``, ``run_control``, ``run_control_group``, ``run_converge``, ``run_resource``, or ``run_start``
+* ``when`` is a series of evaluations that result in ``true`` or ``false``
+* ``then`` is a comma-separated group of statements that are used to test data
+* ``otherwise`` is a comma-separated group of statements that are used to test data
+* ``function()`` is a statement that tests a value in the |json| object; functions may be one of ``array:contains()``, ``audit:<level>()``, ``datetime:component()``, ``get()``, ``log()``, or ``mustache_template()``. (See "Functions" below for more information about the individual functions.)
 
 For example:
 
 .. code-block:: java
 
-   rules(action) when
-     organization_name = "ponyville"
-     and something_else = 'Hello, 世界'
-     and (entity_type = 'foo' or entity_type = "bag")
-     and remote_hostname ~= "33\.3[0-9].*"
-   then
-     set(#foo, "100")
-     set(#xyz, 'te\'st')
-     set(#baz, 99)
-     notify("hipchat")
-     log("Added rule for org <obj.organization_name>")
-  
-or:
-
-.. code-block:: java
-
-   rule(action) when
-     organization_name = "ponyville"
-   then
-     set(#foo, "100")
-   otherwise
-     set(#foo, "200")
+   rules "Check deploy day of week"
+     with priority=-100
+     rule "my rule" on action
+     when
+       // DAY_OF_WEEK uses 1 -> 7 for Monday -> Sunday
+       datetime:component(recorded_at, "DAY_OF_WEEK") >= 5
+     then
+       // set a user defined value
+       set(#alert, 'can\'t deploy on Friday, Saturday, Sunday'), 
+       // notify a configured alias
+       notify("weekend_deploys"), 
+       // record an audit warning
+       audit:warn("deploy_error") 
+     otherwise
+       // set a user defined value if the rule doesn't match
+       // reach into the 'data' json object and pull out it's 'name'
+       set(#some_value, data.name)  
+     end
+   end

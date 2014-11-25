@@ -10,25 +10,9 @@ Syntax
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst
 
-Message Types
+Rule Types
 =====================================================
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_types.rst
-
-action
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst
-
-run end
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_end.rst
-
-run resource
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_resource.rst
-
-run start
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_types_run_start.rst
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst
 
 Functions
 =====================================================
@@ -58,34 +42,10 @@ mustache_template()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst
 
-.. 
-.. 
-.. notify()
-.. -----------------------------------------------------
-.. .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst
-.. 
-.. 
-
 set()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst
 
 Examples
 =====================================================
-xxxxx
-
-**xxxxx**
-
-xxxxx
-
-.. code-block:: ruby
-
-   xxxxx
-
-**xxxxx**
-
-xxxxx
-
-.. code-block:: ruby
-
-   xxxxx
+None.
