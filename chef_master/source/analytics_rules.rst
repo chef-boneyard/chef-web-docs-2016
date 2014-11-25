@@ -14,15 +14,15 @@ with priority
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_priority.rst
 
-when Statements
+when
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst
 
-then Statements
+then
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst
 
-otherwise Statements
+otherwise
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_otherwise.rst
 
