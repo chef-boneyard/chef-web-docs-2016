@@ -13,6 +13,8 @@ This section describes the upgrade process from a high availability |chef server
 
 To upgrade to |chef server| 12 from a high availability |chef server oec| server, do the following:
 
+#. Verify that the ``make`` command is available on the primary backend |chef server oec| machine. If it is not available, install the ``make`` command.
+
 #. Run the following on all machines to make sure all services are in a sane state.
 
    .. code-block:: bash
@@ -112,6 +114,8 @@ Standalone
 This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
 
 To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:
+
+#. Verify that the ``make`` command is available on the |chef server oec| machine. If it is not available, install the ``make`` command.
 
 #. Run the following command to make sure all services are in a sane state.
 
