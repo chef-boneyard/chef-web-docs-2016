@@ -6,7 +6,7 @@ Use ``get()`` to identify a field, and then identify an associated value.
 
 The syntax for this function:
 
-.. code-block:: java
+.. code-block:: ruby
 
    get(variableToGet, valueToSet OR defaultIfMissing)
 

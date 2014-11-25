@@ -6,7 +6,7 @@ Use ``array:contains()`` to look for an attribute in the |json| object, and then
 
 The syntax for this function:
 
-.. code-block:: java
+.. code-block:: ruby
 
    array:contains(field, valueToFind)
 
@@ -17,6 +17,6 @@ where:
 
 For example:
 
-.. code-block:: java
+.. code-block:: ruby
 
    array:contains(organization_name = "ponyville")

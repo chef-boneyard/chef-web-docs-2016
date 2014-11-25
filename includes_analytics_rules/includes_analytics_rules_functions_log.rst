@@ -6,7 +6,7 @@ Use ``log()`` to generate a message using the configured logger as a string.
 
 The syntax for this function:
 
-.. code-block:: java
+.. code-block:: ruby
 
    log(messageToLog)
 
@@ -16,7 +16,7 @@ where:
 
 For example:
 
-.. code-block:: java
+.. code-block:: ruby
 
    log("Added rule for org <obj.organization_name>")
 

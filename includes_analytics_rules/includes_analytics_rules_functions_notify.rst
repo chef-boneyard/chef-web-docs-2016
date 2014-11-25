@@ -6,7 +6,7 @@
 .. 
 .. The syntax for this function:
 .. 
-.. .. code-block:: java
+.. .. code-block:: ruby
 .. 
 ..    notify(notificationType, notificationAlias, stringTemplate)
 .. 
@@ -18,7 +18,7 @@
 .. 
 .. For example:
 .. 
-.. .. code-block:: java
+.. .. code-block:: ruby
 .. 
 ..    rule(action) when
 ..      organization_name = "ponyville"
@@ -31,7 +31,7 @@
 .. 
 .. And:
 .. 
-.. .. code-block:: java
+.. .. code-block:: ruby
 .. 
 ..    xxxxx
 .. 

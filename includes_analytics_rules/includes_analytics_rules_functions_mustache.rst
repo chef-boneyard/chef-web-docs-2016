@@ -6,7 +6,7 @@ Use ``mustache_template()`` to render an expression that is defined in a |mustac
 
 The syntax for this function:
 
-.. code-block:: java
+.. code-block:: ruby
 
    mustache_template('message_type = {{message.json_attribute}})
 
@@ -18,9 +18,11 @@ where:
 
 For example:
 
-.. code-block:: java
+.. code-block:: ruby
 
    rule "test_rule" on action 
-     when true then
+     when
+	   true
+	 then
        set(#foo, mustache_template('Organization = {{message.organization_name}}.'))
-     end
+   end

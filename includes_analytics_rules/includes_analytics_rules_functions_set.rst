@@ -6,7 +6,7 @@ Use ``set()`` to set a user-defined value in the |json| object. A user-defined v
 
 The syntax for this function:
 
-.. code-block:: java
+.. code-block:: ruby
 
    set(#variableToSet, valueToSet)
 
@@ -17,6 +17,6 @@ where:
 
 For example:
 
-.. code-block:: java
+.. code-block:: ruby
 
    set(#organization_name = "ponyville")

@@ -6,7 +6,7 @@ Use ``audit:<level>()`` to generate an audit.
 
 The syntax for this function:
 
-.. code-block:: java
+.. code-block:: ruby
 
    audit:<level>(description)
 

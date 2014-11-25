@@ -6,7 +6,7 @@ Use ``datetime:component()`` to specify the date and time at which a rule is app
 
 The syntax for this function:
 
-.. code-block:: java
+.. code-block:: ruby
 
    datetime:component(field, "dateTimeComponent")
 
@@ -17,6 +17,6 @@ where:
 
 For example:
 
-.. code-block:: java
+.. code-block:: ruby
 
    datetime:component(adate, "era")
