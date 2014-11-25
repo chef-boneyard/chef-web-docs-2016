@@ -19,11 +19,16 @@ The syntax for a |chef analytics| rule is as follows:
        // comment
        function()
      end
+	 rule ...
+	   ...
+	 end
+	 ...
    end
 
 where:
 
 * ``rules`` defines a rules group which is comprised of individual rules (``rule``)
+* ``rule`` defines an individual rule; each rule must be contained in its own ``rule`` block
 * ``with priority=n`` is a positive or negative integer that defines the relative priority of a rules group as compared to all other rules groups
 * ``"name"`` is name of the rule group and/or the name of the rule
 * ``message_type`` is one of the following audit message types: ``action``, ``run_control``, ``run_control_group``, ``run_converge``, ``run_resource``, or ``run_start``
