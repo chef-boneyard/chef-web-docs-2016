@@ -5,23 +5,24 @@ BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 
-release: private_chef
+release: master server 12-0 client devkit analytics 
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 #
 # all
-# 
-#  master server 12-0 client devkit 10 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 ohai-7 ohai-6 enterprise oec_11-2 oec_11-0 oec_11-1 open_source osc_11-0 osc_11-1 analytics
+# 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16
+# ohai-7 ohai-6
+# enterprise oec_11-0 oec_11-1 oec_11-2
+# open_source osc_11-0 osc_11-1
 #
+# ARCHIVED: do not build unless required
 # 
-# 
+# 10
 #
-# 
-# archived, do not build these unless required
-# 
-# 
-# 
+# RETIRED: located in chef-docs-misc
+#
+# private_chef
 #
 
 #
