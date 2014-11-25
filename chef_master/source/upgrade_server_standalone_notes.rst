@@ -2,4 +2,4 @@
 Notes for Standalone |chef server oec| Upgrades
 =====================================================
 
-None at this time.
+.. warning:: This topic has been moved to http://docs.getchef.com/enterprise/upgrade_server_standalone_notes.html.
