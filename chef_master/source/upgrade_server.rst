@@ -145,17 +145,17 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ chef-server-ctl upgrade
 
-#. After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl cleanup
-
 #. Start |chef server| 12:
 
    .. code-block:: bash
       
       $ chef-server-ctl start
+
+#. After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl cleanup
 
 #. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
 
