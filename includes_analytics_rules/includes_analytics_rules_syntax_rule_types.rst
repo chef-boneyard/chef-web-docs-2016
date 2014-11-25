@@ -63,3 +63,15 @@ and a named rule:
    then
      set(#foo, "100")  
    end
+
+A rule can be configured to always fire for a message type:
+
+.. code-block:: ruby
+
+   rule "test_rule" on action when
+     true
+   then
+      notify("some_alias")
+   end
+
+in the previous example, every ``action`` will notify ``"some_alias"``.
