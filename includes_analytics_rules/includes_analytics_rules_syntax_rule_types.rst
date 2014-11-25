@@ -20,23 +20,46 @@ The syntax for a ``rule`` is:
      function()
    end
    
-where ``message_type`` is one of the following audit message types:
+where:
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
+* ``"name"`` is the (optional) name of the ``rule`` block
+* ``message_type`` is one of the following audit message types:
 
-   * - Message Type
-     - Description
-   * - ``action``
-     - Use to build rules for messages about actions that occur on the |chef server|.
-   * - ``run_control``
-     - Use to build rules for a group of audits to be evaluated.
-   * - ``run_control_group``
-     - Use to build rules for a group of audits to be evaluated.
-   * - ``run_converge``
-     - Use to build rules for messages that are sent at the end of a |chef client| run.
-   * - ``run_resource``
-     - Use to build rules for messages that are sent as each resource is converged during a |chef client| run.
-   * - ``run_start``
-     - Use to build rules for messages that are sent at the start of a |chef client| run.
+  .. list-table::
+     :widths: 60 420
+     :header-rows: 1
+  
+     * - Message Type
+       - Description
+     * - ``action``
+       - Use to build rules for messages about actions that occur on the |chef server|.
+     * - ``run_control``
+       - Use to build rules for a group of audits to be evaluated.
+     * - ``run_control_group``
+       - Use to build rules for a group of audits to be evaluated.
+     * - ``run_converge``
+       - Use to build rules for messages that are sent at the end of a |chef client| run.
+     * - ``run_resource``
+       - Use to build rules for messages that are sent as each resource is converged during a |chef client| run.
+     * - ``run_start``
+       - Use to build rules for messages that are sent at the start of a |chef client| run.
+
+For example, an unnamed rule:
+
+.. code-block:: ruby
+
+   rule on action when
+     data.name="app1"
+   then
+     set(#foo, "100")  
+   end
+
+and a named rule:
+
+.. code-block:: ruby
+
+   rule "name" on action when
+     organization_name = "ponyville"
+   then
+     set(#foo, "100")  
+   end
