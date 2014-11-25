@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``get`` to identify a field, and then identify an associated value.
+Use ``get()`` to identify a field, and then identify an associated value.
 
 The syntax for this function:
 

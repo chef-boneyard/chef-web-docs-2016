@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``set`` to specify an attribute that exists in the |json| object, and then get its value.
+Use ``set()`` to set a user-defined value in the |json| object. A user-defined value always begins with ``#``. Values that are not user-defined may not be modified.
 
 The syntax for this function:
 
@@ -12,12 +12,11 @@ The syntax for this function:
 
 where:
 
-* ``variableToSet`` is an attribute in the |json| oject
-* ``valueToSet`` is the value for that attribute
+* ``variableToSet`` is the location of a user-defined value
+* ``valueToSet`` is the value
 
 For example:
 
 .. code-block:: java
 
    set(#organization_name = "ponyville")
-

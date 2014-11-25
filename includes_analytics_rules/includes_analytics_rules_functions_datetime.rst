@@ -2,13 +2,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``datetime:component`` to specify the date and time at which a rule is applied.
+Use ``datetime:component()`` to specify the date and time at which a rule is applied.
 
 The syntax for this function:
 
 .. code-block:: java
 
-   datetime:component(field, dateTimeComponent)
+   datetime:component(field, "dateTimeComponent")
 
 where:
 

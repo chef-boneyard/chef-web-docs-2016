@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``log`` to log a message via the configured logger as a string.
+Use ``log()`` to generate a message using the configured logger as a string.
 
 The syntax for this function:
 

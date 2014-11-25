@@ -2,22 +2,15 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``get`` to xxxxx.
+Use ``audit:<level>()`` to generate an audit.
 
 The syntax for this function:
 
 .. code-block:: java
 
-   get(xxxxx)
+   audit:<level>(description)
 
 where:
 
-* ``xxxxx`` is xxxxx
-* ``xxxxx`` is xxxxx
-
-For example:
-
-.. code-block:: java
-
-   xxxxx
-
+* ``<level>`` is the audit level: ``error``, ``info``, or ``warn``
+* ``description`` is a user-defined value (and may be a |mustache| template)
