@@ -38,9 +38,17 @@ array:contains()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst
 
+audit:<level>()
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst
+
 datetime:component()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst
+
+get()
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst
 
 log()
 -----------------------------------------------------
@@ -50,9 +58,13 @@ mustache_template()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst
 
-notify()
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst
+.. 
+.. 
+.. notify()
+.. -----------------------------------------------------
+.. .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst
+.. 
+.. 
 
 set()
 -----------------------------------------------------
