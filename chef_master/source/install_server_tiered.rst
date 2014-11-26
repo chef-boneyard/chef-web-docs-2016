@@ -22,6 +22,10 @@ Backend
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_config_rb.rst
 
+Mount Storage Device
+=====================================================
+.. include:: ../../includes_install/includes_install_server_tiered_mount.rst
+
 Frontend
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_frontend.rst
