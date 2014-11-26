@@ -1,4 +1,4 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/essentials_cookbook_recipes.html BY DESIGN
+.. THIS PAGE IS IDENTICAL TO docs.getchef.com/recipes.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/essentials_cookbook_recipes.rst
+.. include:: ../../chef_master/source/recipes.rst

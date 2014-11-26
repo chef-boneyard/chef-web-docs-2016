@@ -251,6 +251,7 @@ The following resources are platform resources with built-in providers:
 * apt_package (based on the package resource)
 * bash
 * batch
+* bff_package (based on the package resource)
 * breakpoint
 * chef_gem (based on the package resource)
 * chef_handler (available from the chef_handler cookbook)
@@ -270,6 +271,7 @@ The following resources are platform resources with built-in providers:
 * gem_package (based on the package resource)
 * git
 * group
+* homebrew_package (based on the package resource)
 * http_request
 * ifconfig
 * ips_package (based on the package resource)
@@ -285,6 +287,7 @@ The following resources are platform resources with built-in providers:
 * portage_package (based on the package resource)
 * powershell_script
 * python
+* reboot
 * registry_key
 * remote_directory
 * remote_file
@@ -300,6 +303,7 @@ The following resources are platform resources with built-in providers:
 * template
 * user
 * windows_package
+* windows_service
 * yum (based on the package resource)
 
 See below for more information about each of these resources, their related actions and attributes, the providers they rely on, and examples of how these resources can be used in recipes.
@@ -425,6 +429,37 @@ Examples
 **Unzip a file, and then move it**
 
 .. include:: ../../step_resource/step_resource_batch_unzip_file_and_move.rst
+
+
+bff_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_package_bff.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_bff_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_bff_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_bff_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_bff_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_bff_package_install.rst
+
+
 
 
 breakpoint
@@ -1397,6 +1432,48 @@ Examples
 .. include:: ../../step_resource/step_resource_group_append_user.rst
 
 
+
+homebrew_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_package_homebrew.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_homebrew_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_homebrew_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_homebrew_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_install.rst
+
+**Specify the Homebrew user with a UUID**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+
+**Specify the Homebrew user with a string**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_string.rst
+
+
+
+
 http_request
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_http_request.rst
@@ -2088,6 +2165,46 @@ Providers
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
+
+
+
+
+reboot
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_service_reboot.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_reboot_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_reboot_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
+
+Examples
+=====================================================
+|generic resource statement|
+
+**Reboot a node immediately**
+
+.. include:: ../../step_resource/step_resource_service_reboot_immediately.rst
+
+**Reboot a node at the end of a chef-client run**
+
+.. include:: ../../step_resource/step_resource_service_reboot_request.rst
+
+**Cancel a reboot**
+
+.. include:: ../../step_resource/step_resource_service_reboot_cancel.rst
+
 
 
 
@@ -2823,6 +2940,39 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_windows_package_install.rst
+
+
+
+windows_service
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_service_windows.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Start a service manually**
+
+.. include:: ../../step_resource/step_resource_service_windows_manual_start.rst
+
+
+
 
 
 
