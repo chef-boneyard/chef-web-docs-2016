@@ -53,15 +53,15 @@ Each type of |chef server| provides the following features:
      - Description
    * - :doc:`Chef Server API </api_chef_server>`
      - The |api chef server| is used to provide access to objects on the |chef server|.
-   * - :doc:`Data Bags </essentials_data_bags>`
+   * - :doc:`Data Bags </data_bags>`
      - A data bag is a global variable that is stored as |json| data and is accessible from a |chef server|. 
-   * - :doc:`Environments </essentials_environments>`
+   * - :doc:`Environments </environments>`
      - An environment is a way to map an organization’s real-life workflow to what can be configured and managed when using |chef server|.
-   * - :doc:`Node Objects </essentials_node_object>`
+   * - :doc:`Node Objects </nodes>`
      - The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef client| run and places an updated copy on the |chef server| at the end of each |chef client| run.
-   * - :doc:`Roles </essentials_roles>`
+   * - :doc:`Roles </roles>`
      - A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function. 
-   * - :doc:`Search </essentials_search>`
+   * - :doc:`Search </chef_search>`
      - Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles.
    * - |supermarket|
      - |supermarket| is the new community site for |chef|, located at |url opscode_community|.

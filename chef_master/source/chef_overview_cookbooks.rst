@@ -33,19 +33,19 @@ In addition to attributes, recipes, and versions, the following items are also p
 
    * - Components
      - Description
-   * - :doc:`Definitions </essentials_cookbook_definitions>`
+   * - :doc:`Definitions </definitions>`
      - A definition is used to create new resources by stringing together one (or more) existing resources.
-   * - :doc:`Files </essentials_cookbook_files>`
+   * - :doc:`Files </files>`
      - A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
-   * - :doc:`Libraries </essentials_cookbook_libraries>`
+   * - :doc:`Libraries </libraries>`
      - A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
    * - :doc:`Lightweight Resources </lwrp>`
      - A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters.
-   * - :doc:`Metadata </essentials_cookbook_metadata>`
+   * - :doc:`Metadata </cookbook_repo>`
      - A metadata file is used to ensure that each cookbook is correctly deployed to each node.\
    * - :doc:`Resources and Providers </resource>`
      - A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. The |chef client| includes default providers that cover all of the most common scenarios.
-   * - :doc:`Templates </essentials_cookbook_templates>`
+   * - :doc:`Templates </templates>`
      - A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
 
 Community Cookbooks
