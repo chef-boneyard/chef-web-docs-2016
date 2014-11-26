@@ -35,3 +35,4 @@ Examples
 **Start a service manually**
 
 .. include:: ../../step_resource/step_resource_service_windows_manual_start.rst
+

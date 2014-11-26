@@ -16,7 +16,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-16_user_attributes.rst
+.. include:: ../../includes_resources/includes_resource_user_attributes.rst
 
 Supported Features
 =====================================================
@@ -49,3 +49,11 @@ Examples
 **Create a system user with a variable**
 
 .. include:: ../../step_resource/step_resource_user_create_system_user_with_variable.rst
+
+**Use SALTED-SHA512 passwords**
+
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512.rst
+
+**Use SALTED-SHA512-PBKDF2 passwords**
+
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst

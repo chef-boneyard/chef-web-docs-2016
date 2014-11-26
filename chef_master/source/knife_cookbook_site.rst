@@ -112,7 +112,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_11-16_site_cookbook_share_options.rst
+.. include:: ../../includes_knife/includes_knife_site_cookbook_share_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -173,5 +173,3 @@ The following examples show how to use this |knife| subcommand:
 **Unshare a cookbook**
 
 .. include:: ../../step_knife/step_knife_site_cookbook_unshare.rst
-
-

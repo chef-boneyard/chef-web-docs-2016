@@ -7,7 +7,7 @@
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_11-16_client_settings.rst
+.. include:: ../../includes_config/includes_config_rb_client_settings.rst
 
 Automatic Proxy Config
 -----------------------------------------------------

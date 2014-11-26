@@ -18,7 +18,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-16_scm_git_attributes.rst
+.. include:: ../../includes_resources/includes_resource_scm_git_attributes.rst
 
 Providers
 =====================================================
@@ -47,3 +47,7 @@ Examples
 **Upgrade packages from git**
 
 .. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
+
+**Pass in environment variables**
+
+.. include:: ../../step_resource/step_resource_scm_git_environment_variables.rst

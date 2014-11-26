@@ -9,11 +9,13 @@ package
 This resource is the base resource for several other resources used for package management on specific platforms. While it is possible to use each of these specific resources, it is recommended to use the |resource package| resource as often as possible. For more information about specific resources for specific platforms, see the following topics:
 
 * :doc:`apt_package </resource_apt_package>`
+* :doc:`bff_package </resource_bff_package>`
 * :doc:`chef_gem </resource_chef_gem>`
 * :doc:`dpkg_package </resource_dpkg_package>`
 * :doc:`easy_install_package </resource_easy_install_package>`
 * :doc:`freebsd_package </resource_freebsd_package>`
 * :doc:`gem_package </resource_gem_package>`
+* :doc:`homebrew_package </resource_homebrew_package>`
 * :doc:`ips_package </resource_ips_package>`
 * :doc:`macports_package </resource_macports_package>`
 * :doc:`pacman_package </resource_pacman_package>`
@@ -64,7 +66,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-16_package_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_attributes.rst
 
 Providers
 =====================================================
@@ -72,7 +74,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../includes_resources/includes_resource_11-16_package_providers.rst
+.. include:: ../../includes_resources/includes_resource_package_providers.rst
 
 Examples
 =====================================================
@@ -153,3 +155,11 @@ Examples
 **Use a whitespace array to simplify a recipe**
 
 .. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst
+
+**Specify the Homebrew user with a UUID**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+
+**Specify the Homebrew user with a string**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_string.rst

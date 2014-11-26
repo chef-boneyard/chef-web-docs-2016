@@ -24,17 +24,17 @@ The following methods can be used to interact with |windows| registry keys.
 
    * - Methods
      - Description
-   * - :doc:`registry_data_exists? </dsl_recipe_method_registry_data_exists>`
+   * - `registry_data_exists? <http://docs.getchef.com/release/12-0/dsl_recipe.html#registry-data-exists>`_
      - Find out if a registry key contains data.
-   * - :doc:`registry_get_subkeys </dsl_recipe_method_registry_get_subkeys>`
+   * - `registry_get_subkeys <http://docs.getchef.com/release/12-0/dsl_recipe.html#registry-get-subkeys>`_
      - Get a list of sub-keys for a registry setting.
-   * - :doc:`registry_get_values </dsl_recipe_method_registry_get_values>`
+   * - `registry_get_values <http://docs.getchef.com/release/12-0/dsl_recipe.html#registry-get-values>`_
      - Get values (name, type, and data) for a given registry key.
-   * - :doc:`registry_has_subkeys? </dsl_recipe_method_registry_has_subkeys>`
+   * - `registry_has_subkeys? <http://docs.getchef.com/release/12-0/dsl_recipe.html#registry-has-subkeys>`_
      - Find out if a registry key has one (or more) sub-keys.
-   * - :doc:`registry_key_exists? </dsl_recipe_method_registry_key_exists>`
+   * - `registry_key_exists? <http://docs.getchef.com/release/12-0/dsl_recipe.html#registry-key-exists>`_
      - Find out if a registry key exists.
-   * - :doc:`registry_value_exists? </dsl_recipe_method_registry_value_exists>`
+   * - `registry_value_exists? <http://docs.getchef.com/release/12-0/dsl_recipe.html#registry-value-exists>`
      - Find out if a registry key has values set (name, type, and data).
 
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.

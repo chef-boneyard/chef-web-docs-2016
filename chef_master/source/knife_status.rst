@@ -12,7 +12,7 @@ Options
 =====================================================
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-16_status_options.rst
+.. include:: ../../includes_knife/includes_knife_status_options.rst
 
 knife.rb Settings
 -----------------------------------------------------
@@ -39,5 +39,4 @@ The following examples show how to use this |knife| subcommand:
 **View status for all nodes**
 
 .. include:: ../../step_knife/step_knife_status_view_for_all_nodes.rst
-
 

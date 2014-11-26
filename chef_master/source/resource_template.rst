@@ -56,7 +56,7 @@ File Specificity
 -----------------------------------------------------
 .. include:: ../../includes_template/includes_template_specificity.rst
 
-.. include:: ../../includes_template/includes_template_11-16_specificity_pattern.rst
+.. include:: ../../includes_template/includes_template_specificity_pattern.rst
 
 .. include:: ../../includes_template/includes_template_specificity_example.rst
 

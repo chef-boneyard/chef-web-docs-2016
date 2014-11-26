@@ -12,7 +12,7 @@
 
 Options
 =====================================================
-.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_11-16_options.rst
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_options.rst
 
 Run in Local Mode
 =====================================================
@@ -29,6 +29,10 @@ Use Encrypted Data Bags
 **Create an encrypted data bag for use with chef-client local mode**
 
 .. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted_local_mode.rst
+
+Run as a Service
+=====================================================
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_daemonized.rst
 
 Run with Elevated Privileges
 =====================================================

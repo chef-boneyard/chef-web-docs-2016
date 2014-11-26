@@ -50,7 +50,7 @@ File Specificity
 =====================================================
 .. include:: ../../includes_file/includes_file_cookbook_specificity.rst
 
-.. include:: ../../includes_file/includes_file_11-16_cookbook_specificity_pattern.rst
+.. include:: ../../includes_file/includes_file_cookbook_specificity_pattern.rst
 
 .. include:: ../../includes_file/includes_file_cookbook_specificity_example.rst
 
@@ -81,4 +81,3 @@ Examples
 **Manage dotfiles**
 
 .. include:: ../../step_resource/step_resource_directory_manage_dotfiles.rst
-

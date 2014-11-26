@@ -94,11 +94,11 @@ Guard Interpreters
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources_common/includes_resources_common_11-16_guard_interpreter_attributes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst
 
 Inheritance
 -----------------------------------------------------
-.. include:: ../../includes_resources_common/includes_resources_common_11-16_guard_interpreter_attributes_inherit.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes_inherit.rst
 
 Examples
 -----------------------------------------------------
@@ -196,7 +196,6 @@ Examples
 -----------------------------------------------------
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
 
-
 Run in Compile Phase
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_compile.rst
@@ -204,7 +203,6 @@ Run in Compile Phase
 run_action
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_compile_begin.rst
-
 
 Windows File Security
 =====================================================
