@@ -35,3 +35,5 @@
      - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``rights``
      - |windows| only. |rights windows security|
+   * - ``sensitive``
+     - |sensitive| Default value: ``false``.
