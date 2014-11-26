@@ -178,6 +178,10 @@ show-config
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show_config.rst
 
+show-versions
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show-versions.rst
+
 uninstall
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_uninstall.rst
