@@ -4,7 +4,7 @@ search Method
 
 .. include:: ../../includes_search/includes_search.rst
 
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_search.rst
 
 Query Syntax
 =====================================================
