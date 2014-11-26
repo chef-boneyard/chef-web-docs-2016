@@ -15,7 +15,11 @@ A validation parameter is used to add zero (or more) validation parameters to an
 
        .. code-block:: ruby
        
-          :callbacks => {"should be a valid non-system port" => lambda { |p| p > 1024 && p < 65535 } }
+          :callbacks => {
+		    "should be a valid non-system port" => lambda { 
+		      |p| p > 1024 && p < 65535 
+		      }
+		    }
 
    * - ``:default``
      - Use to specify the default value for an attribute. For example:
