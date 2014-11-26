@@ -208,8 +208,6 @@ org-create
 
 org-delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the final release of |chef server| 12.
-
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
 
 **Syntax**
