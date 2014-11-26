@@ -10,11 +10,11 @@ About Policy
 
    * - Policy Type
      - Description
-   * - :doc:`Data Bags </essentials_data_bags>`
+   * - :doc:`Data Bags </data_bags>`
      - .. include:: ../../includes_data_bag/includes_data_bag.rst
-   * - :doc:`Environments </essentials_environments>`
+   * - :doc:`Environments </environments>`
      - .. include:: ../../includes_environment/includes_environment.rst
-   * - :doc:`Roles </essentials_roles>`
+   * - :doc:`Roles </roles>`
      - .. include:: ../../includes_role/includes_role.rst
 
 Policyfile
