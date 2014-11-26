@@ -30,4 +30,4 @@ and:
 
 .. code-block:: bash
 
-   $ lvcreate -l 80%VG -n drbd opscode
+   $ lvcreate -l 80%VG -n tiered opscode
