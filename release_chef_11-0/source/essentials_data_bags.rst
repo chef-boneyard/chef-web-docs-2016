@@ -48,7 +48,7 @@ Secret Keys
 
 Encrypt
 -----------------------------------------------------
-.. include:: ../../includes_data_bag/includes_data_bag_encryption_encrypt.rst
+.. include:: ../../includes_data_bag/includes_data_bag_11-16_encryption_knife_options.rst
 
 Verify encryption
 -----------------------------------------------------
