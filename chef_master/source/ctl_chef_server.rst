@@ -180,6 +180,8 @@ show-config
 
 show-versions
 =====================================================
+.. warning:: This command will be added to the |chef server| in an upcoming release.
+
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show-versions.rst
 
 uninstall
