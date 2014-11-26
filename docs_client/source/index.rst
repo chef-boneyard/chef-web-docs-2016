@@ -10,7 +10,7 @@ Getting Started
 =====================================================
 If you are new to the |chef client|, familiarize yourself with :doc:`all of the components the chef-client will interact with </chef_overview>` as it configures your infrastructure.
 
-Cookbooks are the fundamental unit of configuration and policy distribution. Cookbooks are authored using a programming language called |ruby|. Being an expert in |ruby| is not a requirement, but knowing some basic |ruby| will help you a lot. If you're new to |ruby|, :doc:`familiarize yourself with the basics </just_enough_ruby_for_chef>`.
+Cookbooks are the fundamental unit of configuration and policy distribution. Cookbooks are authored using a programming language called |ruby|. Being an expert in |ruby| is not a requirement, but knowing some basic |ruby| will help you a lot. If you're new to |ruby|, :doc:`familiarize yourself with the basics </ruby>`.
 
 If you want to try out |chef server osc|, use the hosted |chef server|. After you have access to a |chef server|, then :doc:`install the chef-client on a workstation </install_workstation>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
 
@@ -60,7 +60,6 @@ The following |knife| subcommands are built-in:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/knife_edit.html">knife edit</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/knife_environment.html">knife environment</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/knife_exec.html">knife exec</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/knife_index_rebuild.html">knife index rebuild</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/knife_list.html">knife list</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/knife_node.html">knife node</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/knife_raw.html">knife raw</a> </br>
@@ -306,7 +305,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    config_rb_metadata
    config_rb_solo
    cookbook_repo
-   cookbook_version
+   cookbook_versions
    cookbooks
    ctl_chef_apply
    ctl_chef_client
