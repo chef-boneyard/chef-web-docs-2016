@@ -2,7 +2,7 @@
 About Files
 =====================================================
 
-.. warning:: This topic has been moved! See the following links for information about the resources used to manage file:
+Files are managed using the following resources:
 
    * Use the `cookbook_file <http://docs.getchef.com/resource_cookbook_file.html>`_ resource to manage files that are added to nodes based on files that are located in the ``/files`` directory in a cookbook.
    * Use the `file <http://docs.getchef.com/resource_file.html>`_ resource to manage files directly on a node.
