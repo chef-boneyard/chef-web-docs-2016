@@ -5,7 +5,7 @@ BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 
-release: 12-0 server 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 oec_11-0 oec_11-1 oec_11-2
+release: 12-0 server 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 oec_11-0 oec_11-1 oec_11-2 osc_11-0 osc_11-1
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -14,7 +14,7 @@ release: 12-0 server 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 oec_11-0 o
 # 
 # ohai-7 ohai-6
 # enterprise
-# open_source osc_11-0 osc_11-1
+# open_source
 #
 # ARCHIVED: do not build unless required
 # 
