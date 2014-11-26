@@ -111,6 +111,7 @@ Cookbooks
 
 **Community Resources (LWRPs):** :doc:`About LWRPs </lwrp>` | `Chef-maintained Cookbooks <https://github.com/opscode-cookbooks/>`__ | `Supermarket <https://supermarket.getchef.com>`__
 
+**Essentials:** :doc:`essentials_chef_client </essentials_chef_client>` | :doc:`essentials_cookbook_attribute_files </essentials_cookbook_attribute_files>` | :doc:`essentials_cookbook_definitions </essentials_cookbook_definitions>` | :doc:`essentials_cookbook_directory </essentials_cookbook_directory>` | :doc:`essentials_cookbook_files </essentials_cookbook_files>` | :doc:`essentials_cookbook_libraries </essentials_cookbook_libraries>` | :doc:`essentials_cookbook_metadata </essentials_cookbook_metadata>` | :doc:`essentials_cookbook_recipes </essentials_cookbook_recipes>` | :doc:`essentials_cookbook_resources </essentials_cookbook_resources>` | :doc:`essentials_cookbook_templates </essentials_cookbook_templates>` | :doc:`essentials_cookbook_versions </essentials_cookbook_versions>` | :doc:`essentials_cookbooks </essentials_cookbooks>` | :doc:`essentials_data_bags </essentials_data_bags>` | :doc:`essentials_environment_variables </essentials_environment_variables>` | :doc:`essentials_environments </essentials_environments>` | :doc:`essentials_handlers </essentials_handlers>` | :doc:`essentials_knife </essentials_knife>` | :doc:`essentials_node_object_deep_merge </essentials_node_object_deep_merge>` | :doc:`essentials_node_object_run_lists </essentials_node_object_run_lists>` | :doc:`essentials_node_object </essentials_node_object>` | :doc:`essentials_nodes_bootstrap </essentials_nodes_bootstrap>` | :doc:`essentials_nodes_chef_run </essentials_nodes_chef_run>` | :doc:`essentials_nodes_why_run </essentials_nodes_why_run>` | :doc:`essentials_nodes </essentials_nodes>` | :doc:`essentials_policy </essentials_policy>` | :doc:`essentials_repository_create </essentials_repository_create>` | :doc:`essentials_repository </essentials_repository>` | :doc:`essentials_roles </essentials_roles>` | :doc:`essentials_search </essentials_search>`
 
 .. Hide the TOC from this file.
 
@@ -455,3 +456,32 @@ Cookbooks
    verify_packages
    windows
    workstation
+   essentials_chef_client
+   essentials_cookbook_attribute_files
+   essentials_cookbook_definitions
+   essentials_cookbook_directory
+   essentials_cookbook_files
+   essentials_cookbook_libraries
+   essentials_cookbook_metadata
+   essentials_cookbook_recipes
+   essentials_cookbook_resources
+   essentials_cookbook_templates
+   essentials_cookbook_versions
+   essentials_cookbooks
+   essentials_data_bags
+   essentials_environment_variables
+   essentials_environments
+   essentials_handlers
+   essentials_knife
+   essentials_node_object_deep_merge
+   essentials_node_object_run_lists
+   essentials_node_object
+   essentials_nodes_bootstrap
+   essentials_nodes_chef_run
+   essentials_nodes_why_run
+   essentials_nodes
+   essentials_policy
+   essentials_repository_create
+   essentials_repository
+   essentials_roles
+   essentials_search
