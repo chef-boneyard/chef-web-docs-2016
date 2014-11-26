@@ -21,12 +21,12 @@ The Workstation
 =====================================================
 The workstation is the location from which most users will do most of their work. This work includes:
 
-* Developing `cookbooks <http://docs.getchef.com/client/essentials_cookbooks.html>`_ and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
-* Synchronizing the :doc:`chef-repo </essentials_repository>` with version source control like |git| or |svn|
+* Developing `cookbooks <http://docs.getchef.com/client/cookbooks.html>`_ and :doc:`recipes </recipes>` (and authoring them using :doc:`using Ruby </ruby>`), including :doc:`debugging recipes </chef_shell>`
+* Synchronizing the :doc:`chef-repo </chef_repo>` with version source control like |git| or |svn|
 * Using |knife| to upload items from the |chef repo| to the |chef server|
-* Configuring :doc:`organizational policy </essentials_policy>`
-* :doc:`Defining roles </essentials_roles>` and :doc:`environments </essentials_environments>`
-* Ensuring that critical data is stored in :doc:`data bags </essentials_data_bags>`
+* Configuring :doc:`organizational policy </policy>`
+* :doc:`Defining roles </roles>` and :doc:`environments </environments>`
+* Ensuring that critical data is stored in :doc:`data bags </data_bags>`
 * Interacting with nodes, such as performing a :doc:`bootstrap operation </install_bootstrap>` or running the :doc:`chef-client </ctl_chef_client>` remotely
 
 Set up a Workstation
@@ -35,7 +35,7 @@ A workstation must be configured with a |chef client|, must have access to a |ch
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_repository_create.html">Create and Sync the chef-repo</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/chef_repo.html">Create and Sync the chef-repo</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/install_workstation.html">Set up a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/install_bootstrap.html">Bootstrap a Node</a> </br>
 
@@ -115,13 +115,13 @@ The Nodes
 
 About the |chef client_title|
 -----------------------------------------------------
-The |chef client| does the actual configuration on :doc:`the nodes </essentials_nodes>`. The |chef client| receives its instructions from cookbooks (:doc:`recipes </essentials_cookbook_recipes>`, mostly). The process of configuring a node is called :doc:`the chef-client run </essentials_nodes_chef_run>`. At the beginning of each run, the |chef client| :doc:`validates to the server </essentials_chef_client>`, :doc:`collects important data about that node </ohai>`, and then configures the node. At the end of each run, the |chef client| :doc:`reports the successes and failures that may have occurred </handlers>`.
+The |chef client| does the actual configuration on :doc:`the nodes </nodes>`. The |chef client| receives its instructions from cookbooks (:doc:`recipes </recipes>`, mostly). The process of configuring a node is called :doc:`the chef-client run </chef_client>`. At the beginning of each run, the |chef client| :doc:`validates to the server </chef_client>`, :doc:`collects important data about that node </ohai>`, and then configures the node. At the end of each run, the |chef client| :doc:`reports the successes and failures that may have occurred </handlers>`.
 
-Be sure to :doc:`test and debug your recipes </chef_shell>` before running them in production! Run the |chef client| in :doc:`why-run mode </essentials_nodes_why_run>` to simulate what should happen during the |chef client| run, but without configuring anything.
+Be sure to :doc:`test and debug your recipes </chef_shell>` before running them in production! Run the |chef client| in :doc:`why-run mode </chef_client>` to simulate what should happen during the |chef client| run, but without configuring anything.
 
 Install the |chef client_title|
 -----------------------------------------------------
-The |chef client| is typically installed using a :doc:`bootstrap operation </essentials_nodes_bootstrap>`. This is done by running the :doc:`knife bootstrap </knife_bootstrap>` subcommand from a workstation. Alternately, the |chef client| can be downloaded to a node directly using the |api omnitruck|.
+The |chef client| is typically installed using a :doc:`bootstrap operation </chef_client>`. This is done by running the :doc:`knife bootstrap </knife_bootstrap>` subcommand from a workstation. Alternately, the |chef client| can be downloaded to a node directly using the |api omnitruck|.
 
 .. raw:: html
 
@@ -167,16 +167,16 @@ A cookbook is made up of the following components: attribute files, definitions,
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_definitions.html">Definitions</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_files.html">Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/attributes.html">Attribute Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/definitions.html">Definitions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/files.html">Files</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/handlers.html">Handlers</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_libraries.html">Libraries</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_metadata.html">Metadata</a> (and <a href="http://docs.getchef.com/client/config_rb_metadata.html">/cookbook directory settings</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_recipes.html">Recipes</a> (and the <a href="http://docs.getchef.com/client/dsl_recipe.html">Recipe DSL</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_resources.html">Resources and Providers</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_templates.html">Templates</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/essentials_cookbook_versions.html">Versions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/libraries.html">Libraries</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/cookbook_repo.html">Metadata</a> (and <a href="http://docs.getchef.com/client/config_rb_metadata.html">/cookbook directory settings</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/recipes.html">Recipes</a> (and the <a href="http://docs.getchef.com/client/dsl_recipe.html">Recipe DSL</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/resources.html">Resources and Providers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/templates.html">Templates</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/client/cookbook_versions.html">Versions</a> </br>
 
 Resources
 -----------------------------------------------------
@@ -290,10 +290,14 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
 
    api_chef_server
    api_omnitruck
+   attributes
    auth_authentication
    auth_authorization
    chef_client
    chef_overview
+   chef_repo
+   chef_search
+   chef_server
    chef_shell
    chef_solo
    config_rb_client
@@ -301,63 +305,24 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    config_rb_knife_optional_settings
    config_rb_metadata
    config_rb_solo
+   cookbook_repo
+   cookbook_version
+   cookbooks
    ctl_chef_apply
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
    ctl_ohai
+   data_bags
+   definitions
    dsl_recipe
-   dsl_recipe_helper_windows_platform
-   dsl_recipe_method_attribute
-   dsl_recipe_method_cookbook_name
-   dsl_recipe_method_data_bag
-   dsl_recipe_method_data_bag_item
-   dsl_recipe_method_platform
-   dsl_recipe_method_platform_family
-   dsl_recipe_method_reboot_pending
-   dsl_recipe_method_recipe_name
-   dsl_recipe_method_registry_data_exists
-   dsl_recipe_method_registry_get_subkeys
-   dsl_recipe_method_registry_get_values
-   dsl_recipe_method_registry_has_subkeys
-   dsl_recipe_method_registry_key_exists
-   dsl_recipe_method_registry_value_exists
-   dsl_recipe_method_resources
-   dsl_recipe_method_search
-   dsl_recipe_method_tag
-   dsl_recipe_method_value_for_platform
-   dsl_recipe_method_value_for_platform_family
-   essentials_chef_client
-   essentials_cookbook_attribute_files
-   essentials_cookbook_definitions
-   essentials_cookbook_directory
-   essentials_cookbook_files
-   essentials_cookbook_libraries
-   essentials_cookbook_metadata
-   essentials_cookbook_recipes
-   essentials_cookbook_resources
-   essentials_cookbook_templates
-   essentials_cookbook_versions
-   essentials_cookbooks
-   essentials_data_bags
-   essentials_environments
-   essentials_node_object
-   essentials_node_object_run_lists
-   essentials_nodes
-   essentials_nodes_bootstrap
-   essentials_nodes_chef_run
-   essentials_nodes_why_run
-   essentials_policy
-   essentials_repository
-   essentials_repository_create
-   essentials_roles
-   essentials_search
+   environments
+   files
    handlers
    install
    install_bootstrap
    install_windows
    install_workstation
-   just_enough_ruby_for_chef
    knife_bootstrap
    knife_client
    knife_common_options
@@ -389,15 +354,19 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    knife_user
    knife_using
    knife_xargs
+   libraries
    lwrp
    lwrp_custom
    lwrp_custom_provider
    lwrp_custom_provider_ruby
    lwrp_custom_resource
    lwrp_custom_resource_library
+   nodes
    ohai
    plugin_knife_authenticated_requests
    plugin_knife_custom
+   policy
+   recipes
    resource
    resource_apt_package
    resource_bash
@@ -453,4 +422,9 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_user
    resource_windows_package
    resource_yum
+   resources
+   roles
+   ruby
+   templates
    verify_packages
+   workstation
