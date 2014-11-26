@@ -18,7 +18,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_11-16_batch_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-16_batch_attributes.rst
 
 Guards
 -----------------------------------------------------
