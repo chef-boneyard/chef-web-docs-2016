@@ -465,6 +465,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_apt_package
    resource_bash
    resource_batch
+   resource_bff_package
    resource_breakpoint
    resource_chef_gem
    resource_chef_handler
@@ -484,6 +485,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_gem_package
    resource_git
    resource_group
+   resource_homebrew_package
    resource_http_request
    resource_ifconfig
    resource_ips_package
@@ -499,6 +501,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_portage_package
    resource_powershell_script
    resource_python
+   resource_reboot
    resource_registry_key
    resource_remote_directory
    resource_remote_file
@@ -514,6 +517,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_template
    resource_user
    resource_windows_package
+   resource_windows_service
    resource_yum
    server_components
    server_security
