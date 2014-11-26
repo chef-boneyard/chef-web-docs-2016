@@ -2,8 +2,6 @@
 reboot
 =====================================================
 
-.. warning:: This resource will be available in an upcoming |chef| release.
-
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_service_reboot.rst
