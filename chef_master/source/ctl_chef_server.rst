@@ -122,8 +122,6 @@ org-show
 
 org-user-add
 =====================================================
-.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the upcoming final release of |chef server| 12.
-
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst
 
 **Syntax**
@@ -151,8 +149,6 @@ org-user-add
 
 org-user-remove
 =====================================================
-.. warning:: Early RC candidates for the |chef server| 12 release named this command ``org-disociate``. This is the same command, but renamed for the upcoming final release of |chef server| 12.
-
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
 
 **Syntax**
