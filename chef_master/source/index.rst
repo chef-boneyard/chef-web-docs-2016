@@ -269,7 +269,6 @@ Cookbooks
    knife_edit
    knife_environment
    knife_exec
-   knife_index_rebuild
    knife_list
    knife_node
    knife_raw
