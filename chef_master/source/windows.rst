@@ -109,7 +109,7 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst
+.. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
 
 knife.rb Settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -369,7 +369,7 @@ Actions
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_11-16_batch_attributes.rst
+.. include:: ../../includes_resources/includes_resource_batch_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -490,7 +490,7 @@ Actions
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_11-16_powershell_script_attributes.rst
+.. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -578,7 +578,7 @@ Actions
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_11-16_package_windows_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -591,6 +591,38 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_windows_package_install.rst
+
+
+
+
+
+windows_service
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_service_windows.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Start a service manually**
+
+.. include:: ../../step_resource/step_resource_service_windows_manual_start.rst
+
 
 
 
