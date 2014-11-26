@@ -437,13 +437,11 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    knife_using
    knife_xargs
    lwrp
-   lwrp_chef_handler
    lwrp_custom
    lwrp_custom_provider_ruby
    lwrp_custom_provider
    lwrp_custom_resource
    lwrp_custom_resource_library
-   lwrp_yum
    manage
    osc_overview
    ohai
