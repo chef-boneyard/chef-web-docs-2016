@@ -100,9 +100,9 @@ Automatic Proxy Config
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_client_automatic_proxy.rst
 
-Updated Resource Attribute
+sensitive Attribute
 -----------------------------------------------------
-The following attribute may now be used with any resource (prior releases only supported using this attribute with the |resource template| and |resource file| resources):
+The following attribute may now be used with the |resource execute| resource (prior releases only supported using this attribute with the |resource template| and |resource file| resources):
 
 .. list-table::
    :widths: 60 420

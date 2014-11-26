@@ -25,8 +25,6 @@
      - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
-   * - ``sensitive``
-     - |sensitive| Default value: ``false``.
    * - ``timeout``
      - |timeout command| Default value: ``3600``.
    * - ``user``

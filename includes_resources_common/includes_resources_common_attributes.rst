@@ -18,6 +18,6 @@ The following attributes are common to every resource:
    * - ``retry_delay``
      - |retry_delay| Default value: ``2``.
    * - ``sensitive``
-     - |sensitive| Default value: ``false``.
+     - |sensitive| Default value: ``false``. This setting only applies to the |resource execute|, |resource file| and |resource template| resources.
    * - ``supports``
      - Use to specify a hash of options that contains hints about the capabilities of a resource. The |chef client| may use these hints to help identify the correct provider. This attribute is only used by a small number of providers, including ``User`` and ``Service``.
