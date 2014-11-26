@@ -1,1 +1,47 @@
-.. include:: ../../release_chef_12-0/source/resource_homebrew_package.rst
+=====================================================
+homebrew_package
+=====================================================
+
+.. warning:: This resource will be available in an upcoming |chef| release.
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_homebrew.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_homebrew_syntax.rst
+
+Actions
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_homebrew_actions.rst
+
+Attributes
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
+
+Providers
+=====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_package_homebrew_providers.rst
+
+Examples
+=====================================================
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_install.rst
+
+**Specify the Homebrew user with a UUID**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+
+**Specify the Homebrew user with a string**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_string.rst
