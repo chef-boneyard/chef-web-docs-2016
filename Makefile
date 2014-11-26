@@ -5,7 +5,7 @@ BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 
-release: 12-0 server
+release: 12-0 server 10
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -18,7 +18,7 @@ release: 12-0 server
 #
 # ARCHIVED: do not build unless required
 # 
-# 10
+#
 #
 # RETIRED: located in chef-docs-misc
 #
