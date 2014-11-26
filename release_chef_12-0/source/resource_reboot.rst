@@ -9,19 +9,19 @@ reboot
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot.rst
 
 Syntax
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot_syntax.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot_syntax.rst
 
 Actions
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot_actions.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot_attributes.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
 Providers
 =====================================================
@@ -29,7 +29,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot_providers.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
 
 Examples
 =====================================================
@@ -37,12 +37,12 @@ Examples
 
 **Reboot a node immediately**
 
-.. include:: ../../release_chef_12-0/step_resource_service_reboot_immediately.rst
+.. include:: ../../step_resource/step_resource_service_reboot_immediately.rst
 
 **Reboot a node at the end of a chef-client run**
 
-.. include:: ../../release_chef_12-0/step_resource_service_reboot_request.rst
+.. include:: ../../step_resource/step_resource_service_reboot_request.rst
 
 **Cancel a reboot**
 
-.. include:: ../../release_chef_12-0/step_resource_service_reboot_cancel.rst
+.. include:: ../../step_resource/step_resource_service_reboot_cancel.rst

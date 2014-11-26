@@ -15,7 +15,7 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_service_actions.rst
+.. include:: ../../includes_resources/includes_resource_service_actions.rst
 
 Attributes
 =====================================================
@@ -27,7 +27,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../release_chef_12-0/includes_resource_service_providers.rst
+.. include:: ../../includes_resources/includes_resource_service_providers.rst
 
 Examples
 =====================================================
@@ -95,4 +95,4 @@ Examples
 
 **Enable a service on AIX using the mkitab command**
 
-.. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
+.. include:: ../../step_resource/step_resource_service_aix_mkitab.rst

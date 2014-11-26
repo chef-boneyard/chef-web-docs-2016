@@ -52,7 +52,7 @@ File Specificity
 =====================================================
 .. include:: ../../includes_file/includes_file_cookbook_specificity.rst
 
-.. include:: ../../release_chef_12-0/includes_file_cookbook_specificity_pattern.rst
+.. include:: ../../includes_file/includes_file_cookbook_specificity_pattern.rst
 
 .. include:: ../../includes_file/includes_file_cookbook_specificity_example.rst
 

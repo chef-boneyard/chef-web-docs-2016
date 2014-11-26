@@ -19,7 +19,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_package_windows_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
 
 Providers
 =====================================================

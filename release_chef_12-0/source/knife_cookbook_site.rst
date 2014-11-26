@@ -115,7 +115,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_knife_site_cookbook_share_options.rst
+.. include:: ../../includes_knife/includes_knife_site_cookbook_share_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

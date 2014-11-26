@@ -7,7 +7,7 @@
 Settings
 ==========================================================================
 
-.. include:: ../../release_chef_12-0/includes_config_rb_client_settings.rst
+.. include:: ../../includes_config/includes_config_rb_client_settings.rst
 
 Automatic Proxy Config
 -----------------------------------------------------

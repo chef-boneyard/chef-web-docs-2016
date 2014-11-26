@@ -58,7 +58,7 @@ Resources
    * - `batch <http://docs.getchef.com/release/12/resource_batch.html>`_
      - .. include:: ../../includes_resources/includes_resource_batch.rst
    * - `bff_package <http://docs.getchef.com/release/12/resource_bff_package.html>`_
-     - .. include:: ../../release_chef_12-0/includes_resource_package_bff.rst
+     - .. include:: ../../includes_resources/includes_resource_package_bff.rst
    * - `breakpoint <http://docs.getchef.com/release/12/resource_breakpoint.html>`_
      - .. include:: ../../includes_resources/includes_resource_breakpoint.rst
    * - `chef_gem <http://docs.getchef.com/release/12/resource_chef_gem.html>`_
@@ -96,7 +96,7 @@ Resources
    * - `group <http://docs.getchef.com/release/12/resource_group.html>`_
      - .. include:: ../../includes_resources/includes_resource_group.rst
    * - `homebrew_package <http://docs.getchef.com/release/12/resource_homebrew_package.html>`_
-     - .. include:: ../../release_chef_12-0/includes_resource_package_homebrew.rst
+     - .. include:: ../../includes_resources/includes_resource_package_homebrew.rst
    * - `http_request <http://docs.getchef.com/release/12/resource_http_request.html>`_
      - .. include:: ../../includes_resources/includes_resource_http_request.rst
    * - `ifconfig <http://docs.getchef.com/release/12/resource_ifconfig.html>`_
@@ -127,6 +127,8 @@ Resources
      - .. include:: ../../includes_resources/includes_resource_powershell_script.rst
    * - `python <http://docs.getchef.com/release/12/resource_python.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_python.rst
+   * - `reboot <http://docs.getchef.com/release/12/resource_reboot.html>`_
+     - .. include:: ../../includes_resources/includes_resource_service_reboot.rst
    * - `registry_key <http://docs.getchef.com/release/12/resource_registry_key.html>`_
      - .. include:: ../../includes_resources/includes_resource_registry_key.rst
    * - `remote_directory <http://docs.getchef.com/release/12/resource_remote_directory.html>`_
@@ -145,7 +147,7 @@ Resources
      - .. include:: ../../includes_resources/includes_resource_script.rst
    * - `service <http://docs.getchef.com/release/12/resource_service.html>`_
      - .. include:: ../../includes_resources/includes_resource_service.rst
-   * - `smart_o_s_package <http://docs.getchef.com/release/12/resource_smartos_package.html>`_
+   * - `smart_os_package <http://docs.getchef.com/release/12/resource_smartos_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_smartos.rst
    * - `solaris_package <http://docs.getchef.com/release/12/resource_solaris_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_solaris.rst
@@ -157,6 +159,8 @@ Resources
      - .. include:: ../../includes_resources/includes_resource_user.rst
    * - `windows_package <http://docs.getchef.com/release/12/resource_windows_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_windows.rst
+   * - `windows_service <http://docs.getchef.com/release/12/resource_windows_service.html>`_
+     - .. include:: ../../includes_resources/includes_resource_service_windows.rst
    * - `yum_package <http://docs.getchef.com/release/12/resource_yum.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
 

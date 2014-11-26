@@ -4,6 +4,7 @@
 =====================================================
 About Attributes
 =====================================================
+
 .. include:: ../../includes_node/includes_node_attribute.rst
 
 The |chef client| uses six types of attributes to determine the value that is applied to a node during the |chef client| run. In addition, the |chef client| sources attribute values from up to five locations. The combination of attribute types and sources allows for up to 15 different competing values to be available to the |chef client| during the |chef client| run.

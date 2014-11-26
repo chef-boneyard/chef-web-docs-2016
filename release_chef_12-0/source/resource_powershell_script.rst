@@ -19,7 +19,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_powershell_script_attributes.rst
+.. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
 Guards
 -----------------------------------------------------
@@ -67,4 +67,4 @@ Examples
 
 **Use the flags attribute**
 
-.. include:: ../../release_chef_12-0/step_resource_powershell_script_use_flag.rst
+.. include:: ../../step_resource/step_resource_powershell_script_use_flag.rst

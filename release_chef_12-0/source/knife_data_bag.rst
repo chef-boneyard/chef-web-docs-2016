@@ -23,7 +23,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_knife_data_bag_create_options.rst
+.. include:: ../../includes_knife/includes_knife_data_bag_create_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -73,7 +73,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_knife_data_bag_edit_options.rst
+.. include:: ../../includes_knife/includes_knife_data_bag_edit_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -103,7 +103,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_knife_data_bag_from_file_options.rst
+.. include:: ../../includes_knife/includes_knife_data_bag_from_file_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -157,7 +157,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_knife_data_bag_show_options.rst
+.. include:: ../../includes_knife/includes_knife_data_bag_show_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

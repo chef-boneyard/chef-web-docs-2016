@@ -47,11 +47,11 @@ Guard Interpreter
 
 **Attributes**
 
-.. include:: ../../release_chef_12-0/includes_resources_common_guard_interpreter_attributes.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes.rst
 
 **Inheritance**
 
-.. include:: ../../release_chef_12-0/includes_resources_common_guard_interpreter_attributes_inherit.rst
+.. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_attributes_inherit.rst
 
 **Example**
 

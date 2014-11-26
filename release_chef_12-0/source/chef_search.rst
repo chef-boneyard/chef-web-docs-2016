@@ -61,7 +61,7 @@ Query Syntax
 
 Filter Search Results
 =====================================================
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_search_filter_result.rst
 
 Keys
 =====================================================

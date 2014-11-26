@@ -72,7 +72,7 @@ data_bag_item
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_data_bag_item.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_data_bag_item.rst
 
 **Examples**
 
@@ -130,11 +130,11 @@ search
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search.rst
 
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_search.rst
 
 :filter_result
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_search_filter_result.rst
 
 Query Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -186,15 +186,15 @@ The following examples show how the ``search`` method can be used in a recipe.
 
 shell_out
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out.rst
 
 shell_out!
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_bang.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out_bang.rst
 
 shell_out_with_systems_locale
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_with_systems_locale.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out_with_systems_locale.rst
 
 tag, tagged?, untag
 -----------------------------------------------------
@@ -204,7 +204,7 @@ tag, tagged?, untag
 
 value_for_platform
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_value_for_platform.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform.rst
 
 Operators
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -212,7 +212,7 @@ Operators
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_value_for_platform_examples.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_examples.rst
 
 value_for_platform_family
 -----------------------------------------------------

@@ -59,7 +59,7 @@ The |chef client| is distributed as a |ibm aix_bff| binary and is installed on t
 
 **Install the UTF-8 character set**
 
-.. include:: ../../release_chef_12-0/includes_install_chef_client_aix_en_us.rst
+.. include:: ../../includes_install/includes_install_chef_client_aix_en_us.rst
 
 **New providers**
 
@@ -81,119 +81,119 @@ The |resource service| resource has two new providers:
 
 **Enable a service on AIX using the mkitab command**
 
-.. include:: ../../release_chef_12-0/step_resource_service_aix_mkitab.rst
+.. include:: ../../step_resource/step_resource_service_aix_mkitab.rst
 
 
 bff_package
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_resource_package_bff.rst
+.. include:: ../../includes_resources/includes_resource_package_bff.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_package_bff_syntax.rst
+.. include:: ../../includes_resources/includes_resource_package_bff_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_package_bff_actions.rst
+.. include:: ../../includes_resources/includes_resource_package_bff_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_package_bff_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_bff_attributes.rst
 
 Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Install a package**
 
-.. include:: ../../release_chef_12-0/step_resource_bff_package_install.rst
+.. include:: ../../step_resource/step_resource_bff_package_install.rst
 
 
 homebrew_package
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_syntax.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_actions.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Install a package**
 
-.. include:: ../../release_chef_12-0/step_resource_homebrew_package_install.rst
+.. include:: ../../step_resource/step_resource_homebrew_package_install.rst
 
 **Specify the Homebrew user with a UUID**
 
-.. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_uuid.rst
 
 **Specify the Homebrew user with a string**
 
-.. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_string.rst
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_string.rst
 
 
 reboot
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot_syntax.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot_actions.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_service_reboot_attributes.rst
+.. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Reboot a node immediately**
 
-.. include:: ../../release_chef_12-0/step_resource_service_reboot_immediately.rst
+.. include:: ../../step_resource/step_resource_service_reboot_immediately.rst
 
 **Reboot a node at the end of a |chef client| run**
 
-.. include:: ../../release_chef_12-0/step_resource_service_reboot_request.rst
+.. include:: ../../step_resource/step_resource_service_reboot_request.rst
 
 **Cancel a reboot**
 
-.. include:: ../../release_chef_12-0/step_resource_service_reboot_cancel.rst
+.. include:: ../../step_resource/step_resource_service_reboot_cancel.rst
 
 
 windows_service
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_resource_service_windows.rst
+.. include:: ../../includes_resources/includes_resource_service_windows.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_service_windows_syntax.rst
+.. include:: ../../includes_resources/includes_resource_service_windows_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_service_windows_actions.rst
+.. include:: ../../includes_resources/includes_resource_service_windows_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_resource_service_windows_attributes.rst
+.. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Start a service manually**
 
-.. include:: ../../release_chef_12-0/step_resource_service_windows_manual_start.rst
+.. include:: ../../step_resource/step_resource_service_windows_manual_start.rst
 
 
 ``knife bootstrap`` Settings
@@ -278,15 +278,15 @@ The following methods have been added to the |dsl recipe|: ``shell_out``, ``shel
 
 ``shell_out``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out.rst
 
 ``shell_out!``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_bang.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out_bang.rst
 
 ``shell_out_with_systems_locale``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_shell_out_with_systems_locale.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out_with_systems_locale.rst
 
 ``value_for_platform``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -321,7 +321,7 @@ Use an array with the ``source`` attribute to define an explicit lookup path. Fo
      source ["#{node.chef_environment}.py", 'conf.py']
    end
 
-Or:
+or:
 
 .. code-block:: ruby
 
@@ -347,11 +347,11 @@ The following attributes are new for the |resource user| resource:
 
 **Use SALTED-SHA512 passwords**
 
-.. include:: ../../release_chef_12-0/step_resource_user_password_shadow_hash_salted_sha512.rst
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512.rst
 
 **Use SALTED-SHA512-PBKDF2 passwords**
 
-.. include:: ../../release_chef_12-0/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst
 
 
 |chef client| Options
@@ -384,7 +384,7 @@ The following configuration settings are updated for the |client rb| file and no
 
 Filter Search Results
 -----------------------------------------------------
-.. include:: ../../release_chef_12-0/includes_dsl_recipe_method_search_filter_result.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_search_filter_result.rst
 
 knife search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

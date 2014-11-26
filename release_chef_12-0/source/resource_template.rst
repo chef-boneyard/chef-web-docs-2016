@@ -59,7 +59,7 @@ File Specificity
 -----------------------------------------------------
 .. include:: ../../includes_template/includes_template_specificity.rst
 
-.. include:: ../../release_chef_12-0/includes_template_specificity_pattern.rst
+.. include:: ../../includes_template/includes_template_specificity_pattern.rst
 
 .. include:: ../../includes_template/includes_template_specificity_example.rst
 

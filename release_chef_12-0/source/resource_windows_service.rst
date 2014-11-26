@@ -6,19 +6,19 @@ windows_service
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
-.. include:: ../../release_chef_12-0/includes_resource_service_windows.rst
+.. include:: ../../includes_resources/includes_resource_service_windows.rst
 
 Syntax
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_service_windows_syntax.rst
+.. include:: ../../includes_resources/includes_resource_service_windows_syntax.rst
 
 Actions
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_service_windows_actions.rst
+.. include:: ../../includes_resources/includes_resource_service_windows_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_service_windows_attributes.rst
+.. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
 Providers
 =====================================================
@@ -26,7 +26,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../release_chef_12-0/includes_resource_service_windows_providers.rst
+.. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
 
 Examples
 =====================================================
@@ -34,4 +34,4 @@ Examples
 
 **Start a service manually**
 
-.. include:: ../../release_chef_12-0/step_resource_service_windows_manual_start.rst
+.. include:: ../../step_resource/step_resource_service_windows_manual_start.rst

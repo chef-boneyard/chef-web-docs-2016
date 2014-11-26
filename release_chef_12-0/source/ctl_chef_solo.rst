@@ -10,7 +10,7 @@
 
 Options
 =====================================================
-.. include:: ../../release_chef_12-0/includes_ctl_chef_solo_options.rst
+.. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst
 
 Run as Non-root User
 =====================================================

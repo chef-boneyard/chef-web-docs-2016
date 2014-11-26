@@ -15,7 +15,7 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_http_request_actions.rst
+.. include:: ../../includes_resources/includes_resource_http_request_actions.rst
 
 Attributes
 =====================================================

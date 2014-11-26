@@ -19,7 +19,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_user_attributes.rst
+.. include:: ../../includes_resources/includes_resource_user_attributes.rst
 
 Supported Features
 =====================================================
@@ -55,8 +55,8 @@ Examples
 
 **Use SALTED-SHA512 passwords**
 
-.. include:: ../../release_chef_12-0/step_resource_user_password_shadow_hash_salted_sha512.rst
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512.rst
 
 **Use SALTED-SHA512-PBKDF2 passwords**
 
-.. include:: ../../release_chef_12-0/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst

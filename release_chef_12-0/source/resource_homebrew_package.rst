@@ -9,21 +9,21 @@ homebrew_package
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew.rst
 
 .. note:: |note resource_based_on_package|
 
 Syntax
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_syntax.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew_syntax.rst
 
 Actions
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_actions.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
 
 Providers
 =====================================================
@@ -31,7 +31,7 @@ Providers
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
 
-.. include:: ../../release_chef_12-0/includes_resource_package_homebrew_providers.rst
+.. include:: ../../includes_resources/includes_resource_package_homebrew_providers.rst
 
 Examples
 =====================================================
@@ -39,12 +39,12 @@ Examples
 
 **Install a package**
 
-.. include:: ../../release_chef_12-0/step_resource_homebrew_package_install.rst
+.. include:: ../../step_resource/step_resource_homebrew_package_install.rst
 
 **Specify the Homebrew user with a UUID**
 
-.. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_uuid.rst
 
 **Specify the Homebrew user with a string**
 
-.. include:: ../../release_chef_12-0/step_resource_homebrew_package_homebrew_user_as_string.rst
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_string.rst

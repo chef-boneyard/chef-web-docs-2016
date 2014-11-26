@@ -21,7 +21,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../release_chef_12-0/includes_resource_scm_git_attributes.rst
+.. include:: ../../includes_resources/includes_resource_scm_git_attributes.rst
 
 Providers
 =====================================================
@@ -53,4 +53,4 @@ Examples
 
 **Pass in environment variables**
 
-.. include:: ../../release_chef_12-0/step_resource_scm_git_environment_variables.rst
+.. include:: ../../step_resource/step_resource_scm_git_environment_variables.rst
