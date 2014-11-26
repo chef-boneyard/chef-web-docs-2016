@@ -1,29 +1,28 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To mount the storage device on the backend machine, do the following:
+To build and mount the storage device on the backend machine, do the following:
 
-#. Mount the file system. For example, a file system named ``ext4``:
+#. Create the file system. For example, an ``ext4`` type named tiered:
 
-   .. code-block:: bash
+  .. code-block:: bash
       
-      $ mkfs.ext4 /dev/drbd0
+      $ mkfs.ext4 /dev/opscode/tiered
 
-   then:
+  then:
 
-   .. code-block:: bash
+  .. code-block:: bash
       
-      $ mkdir -p /var/opt/opscode/drbd/data
+      $ mkdir -p /var/opt/opscode
 
-   and then:
+  and then:
 
-   .. code-block:: bash
+  .. code-block:: bash
       
-      $ mount /dev/drbd0 /var/opt/opscode/drbd/data
+      $ mount /dev/opscode/tiered /var/opt/opscode
 
 #. Reconfigure the backend machine:
 
-   .. code-block:: bash
+  .. code-block:: bash
       
       $ sudo chef-server-ctl reconfigure
-
