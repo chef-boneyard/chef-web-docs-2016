@@ -2,17 +2,4 @@
 About Policy
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_policy.rst
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
-
-   * - Policy Type
-     - Description
-   * - :doc:`Data Bags </essentials_data_bags>`
-     - .. include:: ../../includes_data_bag/includes_data_bag.rst
-   * - :doc:`Environments </essentials_environments>`
-     - .. include:: ../../includes_environment/includes_environment.rst
-   * - :doc:`Roles </essentials_roles>`
-     - .. include:: ../../includes_role/includes_role.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/policy.html.

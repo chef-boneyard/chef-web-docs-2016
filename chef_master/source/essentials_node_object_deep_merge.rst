@@ -2,14 +2,4 @@
 About Deep Merge
 =====================================================
 
-.. include:: ../../includes_node/includes_node_attribute_deep_merge.rst
-
-The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
-
-Substitution
-=====================================================
-.. include:: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst
-
-Addition
-=====================================================
-.. include:: ../../includes_node/includes_node_attribute_deep_merge_add.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/attributes.html.

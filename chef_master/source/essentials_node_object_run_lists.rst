@@ -2,8 +2,4 @@
 About Run-lists
 =====================================================
 
-.. include:: ../../includes_node/includes_node_run_list.rst
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
-
-.. include:: ../../includes_role/includes_role.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/nodes.html.

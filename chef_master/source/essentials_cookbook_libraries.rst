@@ -2,32 +2,6 @@
 About Libraries
 =====================================================
 
-.. include:: ../../includes_libraries/includes_libraries.rst
-
-.. include:: ../../includes_libraries/includes_libraries_common_uses.rst
-
-Syntax
-=====================================================
-.. include:: ../../includes_libraries/includes_libraries_syntax.rst
-
-Examples
-=====================================================
-The following examples show how to use cookbook libraries.
-
-Create a Namespace
------------------------------------------------------
-.. include:: ../../includes_libraries/includes_libraries_example_create_namespace.rst
-
-Extend a Recipe
------------------------------------------------------
-.. include:: ../../includes_libraries/includes_libraries_example_store_attributes_in_file.rst
-
-Loop Over a Record
------------------------------------------------------
-.. include:: ../../includes_libraries/includes_libraries_example_loop_over_records.rst
-
-Template Helper Modules
------------------------------------------------------
-.. include:: ../../step_resource/step_resource_template_library_module.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/libraries.html.
 
 

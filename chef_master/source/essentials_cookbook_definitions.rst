@@ -2,28 +2,4 @@
 About Definitions
 =====================================================
 
-.. include:: ../../includes_definition/includes_definition.rst
-
-Syntax
-=====================================================
-.. include:: ../../includes_definition/includes_definition_syntax.rst
-
-Examples
-=====================================================
-The following examples show how to use cookbook definitions.
-
-Simplify Repeating Patterns
------------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_scenario_common_install.rst
-
-Create a Resource
------------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_scenario_create_resource.rst
-
-Many Recipes, One Definition
------------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_scenario_many_recipes_one_definition.rst
-
-Virtual Hosts
------------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_scenario_virtaul_hosts.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/definitions.html.

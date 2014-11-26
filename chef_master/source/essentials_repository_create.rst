@@ -2,12 +2,4 @@
 Create the |chef repo|
 =====================================================
 
-.. include:: ../../includes_repository/includes_repository_11-all_create.rst
-
-Clone
-=====================================================
-.. include:: ../../step_repository/step_repository_create_clone.rst
-
-Download
-=====================================================
-.. include:: ../../step_repository/step_repository_create_download.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/chef_repo.html.

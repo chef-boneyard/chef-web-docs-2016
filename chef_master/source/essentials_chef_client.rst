@@ -2,16 +2,4 @@
 About the |chef client_title|
 =====================================================
 
-.. include:: ../../includes_chef_client/includes_chef_client.rst
-
-|chef validator|
-=====================================================
-.. include:: ../../includes_security/includes_security_chef_validator.rst
-
-SSL Certificates
-=====================================================
-.. include:: ../../includes_node/includes_node_certificate.rst
-
-Signed Header Authentication
------------------------------------------------------
-.. include:: ../../includes_security/includes_security_signed_header_authentication.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been deprecated in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/chef_client.html.

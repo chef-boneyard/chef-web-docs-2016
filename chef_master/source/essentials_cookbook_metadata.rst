@@ -2,19 +2,5 @@
 About Cookbook Metadata
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
-
-Error Messages
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata_error_messages.rst
-
-metadata.rb
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
-
-.. include:: ../../includes_config/includes_config_rb_metadata.rst
-
-Settings
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_11-16_metadata_settings.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/cookbook_repo.html.
 

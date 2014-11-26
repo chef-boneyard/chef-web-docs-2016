@@ -2,4 +2,4 @@
 About the |chef client_title| Run
 =====================================================
 
-.. include:: ../../includes_chef_client/includes_chef_client_run.rst
+.. warning:: This topic has been moved! The "essentials_" naming pattern has been dropped in favor of shorter names staring with the |chef| 12 release. This information is now located at http://docs.getchef.com/chef_client.html.
