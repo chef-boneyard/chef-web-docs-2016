@@ -2,7 +2,7 @@
 Notes for |chef server osc| Upgrades 
 =====================================================
 
-The following sections contain more information about the upgrade process from |chef server osc| to |chef server| version 12, including steps for a manual upgrade. Please consult with |company_name| support about any of these situations.
+The following sections contain more information about the upgrade process from |chef server osc| to |chef server| version 12, including steps for a manual upgrade. Please consult with |company_name| support about any of these situations if needed.
 
 Background
 =====================================================
