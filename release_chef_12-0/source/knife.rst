@@ -53,8 +53,6 @@ About Knife
      - .. include:: ../../includes_knife/includes_knife_environment.rst
    * - :doc:`knife_exec`
      - .. include:: ../../includes_knife/includes_knife_exec.rst
-   * - :doc:`knife_index_rebuild`
-     - .. include:: ../../includes_knife/includes_knife_index_rebuild.rst
    * - :doc:`knife_list`
      - .. include:: ../../includes_knife/includes_knife_list.rst
    * - :doc:`knife_node`
