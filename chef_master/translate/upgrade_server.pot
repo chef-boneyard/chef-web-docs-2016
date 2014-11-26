@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-17 09:47-0800\n"
+"POT-Creation-Date: 2014-11-26 13:41-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,214 +17,214 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/upgrade_server.rst:8
-# 8ed4a28854584578814bb062032448fb
+# 2614ceb7666f4ccc8cca91fee30679a5
 msgid "Upgrade to |chef server_title| 12"
 msgstr ""
 
 #: ../source/upgrade_server.rst:9
-# c6e5e671d33742a0974cc80765bc807a
+# a6596645b5d04f6ca927edad81a5a20a
 msgid "The following sections describe the upgrade process for |chef server| 12."
 msgstr ""
 
 #: ../source/upgrade_server.rst:12
-# a9ed80f626f4492986de52e2dbcb1287
+# c30e183320f64b4cb94dd7e018ae23d3
 msgid "From |chef server oec|"
 msgstr ""
 
 #: ../source/upgrade_server.rst:13
-# d2360787d288453c91371436990f9054
+# 22ada4bfb06c4b4ba5888d8673feceb1
 msgid "There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: high availability and standalone."
 msgstr ""
 
 #: ../source/upgrade_server.rst:16
-# 139b054d40bb44e595ff6b4a3444d555
+# bd6dc7300c284a92b938e45da07949b6
 msgid "High Availability"
 msgstr ""
 
 #: ../source/upgrade_server.rst:17
-# dd387e60ebe24d4d87b70a9fecbf3819
+# dce44c1e63c04e4284f4028e162ac03d
 msgid "This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete."
 msgstr ""
 
 #: ../source/upgrade_server.rst:19
-# b5b2f085572e41e480878f26dd15ab1b
+# 3c5242ed36d44bacaeeaaa7f7d975437
 msgid "To upgrade to |chef server| 12 from a high availability |chef server oec| server, do the following:"
 msgstr ""
 
 #: ../source/upgrade_server.rst:21
-# c7822a2cf121430b94245f9af9a456f8
+# af7a1a1bffba4603ba2d622189dbc52c
+msgid "Verify that the ``make`` command is available on the primary backend |chef server oec| machine. If it is not available, install the ``make`` command."
+msgstr ""
+
+#: ../source/upgrade_server.rst:23
+# d3883423a1e64c3a9c17ca84ab6be227
 msgid "Run the following on all machines to make sure all services are in a sane state."
 msgstr ""
 
-#: ../source/upgrade_server.rst:27
-# 095d44509bf94582ae7f01565547a628
+#: ../source/upgrade_server.rst:29
+# 3658a81e206d44d4bc82e02b4d2f03e4
 msgid "Stop all of the front end machines:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:33
-# a2a6a5c69d3b4ce280fa6e70be056d8b
+#: ../source/upgrade_server.rst:35
+# 8cce94485f5647c39ee744b6a36b16e9
 msgid "Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``."
 msgstr ""
 
-#: ../source/upgrade_server.rst:35
-# 6c5b8aa7353c4adfbe104f48fc0992d6
+#: ../source/upgrade_server.rst:37
+# 428129845bfa4f9b81202250a38c166d
 msgid "Stop |keepalived| on the original non-bootstrap backend machine. This will ensure that the bootstrap back end machine is the active machine. This action may trigger a failover."
 msgstr ""
 
-#: ../source/upgrade_server.rst:41
-# b63947b219fb4c369a3e6cba157ba71a
-msgid "Once failover is complete, stop the remaining services on the back end machines."
-msgstr ""
-
-#: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop_ubuntu12.rst:6
-# 39f2697d607344a1bdc06a4a44a654d3
-msgid "The ``private-chef-ctl stop`` subcommand should not be run when the |chef server| 11.x server is instaled on |ubuntu| 12 in a high availability configuration. This will stop |keepalived|, and then trigger a |drbd| failover. Instead, stop each service individually (e.g. ``private-chef-ctl stop name_of_service``), as described below. This behavior has been fixed in the |chef server| 12 release."
-msgstr ""
-
-#: ../source/upgrade_server.rst:49
-# c3c50c8c31324d52a44dbf37329f7dc7
+#: ../source/upgrade_server.rst:43
+# 75714a537b05402f9c33dd5525593bf2
 msgid "Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:55
-#: ../source/upgrade_server.rst:145
-#: ../source/upgrade_server.rst:207
-# cc430bcabf874c16b4e9110f3e1435ec
-# 9d65d49d9bf14992a5d521219617ad4d
-# 46100c3fd78b4d4f899e4e469ca609ab
+#: ../source/upgrade_server.rst:49
+#: ../source/upgrade_server.rst:143
+#: ../source/upgrade_server.rst:205
+# 4b956c4b97fe4df29fca3ac59235a727
+# c95d0fe3de4f4a3ba57c7e58a23d1447
+# 8ce906efa4d94eaeb574f212703bf080
 msgid "where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option."
 msgstr ""
 
-#: ../source/upgrade_server.rst:57
-#: ../source/upgrade_server.rst:147
-#: ../source/upgrade_server.rst:209
-# f5c4684590b549a6b852dcfab328074b
-# 08b62b4b4d554dc2948703dc686f2cbe
-# d6a04051eefd4cda9e0eccf3f6768d16
+#: ../source/upgrade_server.rst:51
+#: ../source/upgrade_server.rst:145
+#: ../source/upgrade_server.rst:207
+# 58c294c97c5a455fba629b5923432866
+# 9a9565e15cfc4df9b0cfa775aff23377
+# c65303bb609e408eb7991d45bef8fab8
 msgid "For |rpm|:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:63
-# a9dfde21f7664a499ae3f7ae9312d8a9
+#: ../source/upgrade_server.rst:57
+# 97aa005f489449d8b18c61ae5d4b9216
 msgid "Upgrade the back end primary machine with the following command:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:69
-# 1b2363dfb3cd483b84295253ac523c8c
+#: ../source/upgrade_server.rst:63
+# ae062ed5dbfa4d628a793af94d835ec1
 msgid "If the upgrade process times out, re-run the command until it finishes successfully."
 msgstr ""
 
-#: ../source/upgrade_server.rst:71
-# bdc92ebfbaa24d62b4e0fbe9295efedc
+#: ../source/upgrade_server.rst:65
+# 722e714b34a44104b27439b8b6707bb5
 msgid "Copy the entire /etc/opscode directory from the back end primary machine to all front and back end nodes. For example, from each server run:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:77
-# 4ea33172bbda4a3289c651f6d92d8eca
+#: ../source/upgrade_server.rst:71
+# c7073f0afbbf4c83b00603fa9cc36bf5
 msgid "or from the back end primary machine:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:83
-# 6f6c46079c0f4d51a2ace87e1176832e
+#: ../source/upgrade_server.rst:77
+# 15e92c0f893e4e608eafdd39c4a2b826
 msgid "Upgrade the back end secondary machine with the following command:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:89
-# ce4cd4e9fd914554a10d1b642e3eb7fb
+#: ../source/upgrade_server.rst:83
+# 80eb63b925284f56a162ffc2e16e864e
 msgid "In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine."
 msgstr ""
 
-#: ../source/upgrade_server.rst:91
-# 57bedc07449349669d47ceec5756cfc0
+#: ../source/upgrade_server.rst:85
+# 913b178b1fc24fe7b246334e71cd72ce
 msgid "Upgrade all front end machines with the following commands:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:97
-# 1a0fc048a0ca41e5b1788dd6cf7a4e83
-msgid "Run the following command on all front end and back end machines:"
+#: ../source/upgrade_server.rst:91
+# c151e782591b4560a567c7152e51d7e3
+msgid "Run the following command on all front end machines and the primary back end machine:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:103
-# 009e3e06711547d2ba9c061f7cc3b6eb
+#: ../source/upgrade_server.rst:97
+# a84d70205487426284a6159f8ea10630
+msgid "Do not run this command on the secondary back-end machine!"
+msgstr ""
+
+#: ../source/upgrade_server.rst:99
+# 416af839eff64291b814194077688d66
 msgid "After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:109
-# 20eb95aa10b8400c88374322dc02a752
+#: ../source/upgrade_server.rst:105
+# fba0eeba96094d04aa2d2f1bb857bb59
 msgid "The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst:6
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst:6
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst:6
-# 6744f1a6cdd64720a67ecccc571bea4f
-# 0abc1c66573343bbb9b8c182d6e94d0c
-# 5da8e2d7a5f041c39191d75a1a76934a
+# c6cda2336c0e45489d17ce126fdcf3e5
+# 26f007dffb9548c8afe454f7629a36fc
+# d498c146b2cd4ab28682ae2aecb071ec
 msgid "Enable additional features of the |chef server|! The packages may be downloaded directly as part of the installation process or they may be first downloaded to a local directory, and then installed."
 msgstr ""
 
-#: ../source/upgrade_server.rst:113
-#: ../source/upgrade_server.rst:173
-#: ../source/upgrade_server.rst:241
-# 440c6cc3f4ca44f3a1e57d19365d67c9
-# d7e6d4bbfae545ce9eeb19251968692a
-# 9765c7e7e8324493811626d0941d115f
+#: ../source/upgrade_server.rst:109
+#: ../source/upgrade_server.rst:171
+#: ../source/upgrade_server.rst:239
+# 8571e7577aa94120b26a58fdf293f064
+# 7bf41455346f49feb5f89079ed19eb96
+# 6f7c63891fd0430facdc22276156f3c4
 msgid "**Use Downloads**"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:6
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:6
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:6
-# e6a565900b2445c3a3f8e13df16bcdd4
-# 6b238567b36247d0aeed120309f9c8d8
-# ed0003eaecf34aae9c9ba465155f333d
+# ec86192407ee40d5ba0341a47a62318d
+# 8df3d96deb374cf9a18c30a9bf88b009
+# f73e7451b9ad49ab91a6a00d78722cf8
 msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are not behind a firewall (and have connectivity to https://packagecloud.io/), these packages can be installed as described below."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:12
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:12
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:12
-# 7a37998b3e5a4a8aaa07666c70554ee8
-# 3991c9b46e1a4f979acf98ac14f57273
-# 2ccd6b2f75874faca7d662b35117cd21
+# 447b5cb259a54822a6ce4163ee89ab9b
+# aee7ded26aab49feb38f4b144faaa256
+# 4f3b597b705148708f7d7f321494e78e
 msgid "Feature"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:13
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:13
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:13
-# b60ee74b79974f9da4a1a3aaf38f5f73
-# b2425ccad74943359899f3f995d605ad
-# 1288f7e3fa2043fc9b3407bfed2613d1
+# c875f83309a04beaab00f5d619e55e84
+# 3c1390b2a808493989b31dbec373f89e
+# 06f340d4a9c24cba99630b39600424a5
 msgid "Command"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:14
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:14
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:14
-#: ../source/upgrade_server.rst:252
-# d00aaf3101de4db4ba32c03029dec5fb
-# 6a29fb665003470f9b3e1c73c3a35e93
-# 8335a817250d46ee9bca37ddf03d109f
-# f1866f99fe6b41a284e2e33eff277996
+#: ../source/upgrade_server.rst:250
+# 32da5952c58c4790b5de76c2b1317293
+# e754a8a14ec847f5a4286ec0451723dd
+# b93dd3041a0c48efb90b7e12e8b46b12
+# 701eb8312c944c2e808a141da7a31c8a
 msgid "|chef manage_title|"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:15
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:15
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:15
-# e4f6c8076c50480487c45024ea817d28
-# 95c9cc9a7dc840dbbfed90b52def2ebf
-# 04c0f88493ef43ac9760c4bb4b2ad379
+# 4ee50af3f3c14e8ab235c28012d2c64a
+# 7b82aff632aa4f1188724c20424f180d
+# 9a71580582924a29ac15df61c6f64d75
 msgid "Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:17
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:17
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:17
-# a0a244570f7f45fb8f6900b1fc40874d
-# 45706df728d94e8582fae9467f5d279d
-# 46b86d5e4e084932bb75d8763d85c8ec
+# 924f3460193f471392274870e1c66c2d
+# 5efee8eb0d5a418694d54a44929fa426
+# a588c7b6bb8148a3b4c9a65547985faf
 msgid "(Front end machines only.) Run:"
 msgstr ""
 
@@ -237,15 +237,15 @@ msgstr ""
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:23
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:44
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:87
-# e5c0ee2c53d24abb92b80cf347d36055
-# 8f180e75b1d84dc1bfbe03ac038a3e4c
-# 2df30e2c5a474824850deaa78b0cd3dd
-# 617fbcc378614a1384ffafc71ac96912
-# 9eb025224e1643b89210de1c65e164a8
-# 73a5055b002d439a83c74fa4a5021fe9
-# 0555c839fa1a446fa5e3bea61e0c6ddf
-# 1cf9622704e24cd1be5bd98f001e4370
-# fe9c13b85b7144a585aa183c72029756
+# 1c28d18c695e4eb7ab969c14b8ef7ac1
+# 8ca74fbdd6254e6e8850c969d58035c9
+# a5ea505a26de44f3b7bde8565e8e1c8a
+# e98360a86fb74d9d99da6da38645a560
+# 2e1d3b04c2c74b92ab1ac4118317b15f
+# c76309623d604d3197efa696783e6105
+# 33ff9bcf08dd4649814e6ffbbf627d82
+# b0eb2dec4029466faff65ab03da6c348
+# 0f47e7afc80543d0ba45c3248f663a61
 msgid "then:"
 msgstr ""
 
@@ -264,41 +264,41 @@ msgstr ""
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:66
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:72
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:93
-# f608b109ff484a18bc0a9425146a0f86
-# cfc45bf9ce4b4fddbbde3aa5e08f42ac
-# dd2c8ad7d4404584a25a8ad93fb2e695
-# 26053e640c6a41a5891ef1c3fade73bb
-# 55a325d41a9643bb94899218c7641590
-# 4da62c54dd0240bbb4f1f688fec97065
-# 05aa36708e2a48a0880b26fdb873d6cc
-# fd814ea0a78e4d47bc0ade4d310fd056
-# 5fad2bb9a8d4462b9b021b3208acc28a
-# 7283fa4872824f0388afe8c0e1237094
-# 53b82306d3094778b687649c55006069
-# 14755b01148c41359b6e7cff9b67996d
-# 571679ab1b5c4b25a6b23a79013651f8
-# ad65723f3a3d44b18a62452bcc86ad8d
-# b91fec649aad4f5bb4f56559c50ad83c
+# e8ea9d0433ac4a38b854f78f1f8c87ca
+# 8583e6ff37c14901bd2b03d29145c65a
+# 64dab3c7cd994ea0a6b3713e6c9d7ddf
+# 9ae4490c744d43e4bd76096c529e4a05
+# cdbbcd8c974545f091430b1c8b137a39
+# 469876209d1c45e2ad041dde601fb93c
+# b4fa0b56e0284519b4f8f2639882fa04
+# 86c757f88f874563a013831ed60794f5
+# 05046a2bcf1b4b5fa11f1f8d2654be37
+# b34583c1c1884244b4a8cba814391561
+# bfb9016ba31849f9862ee1938ba7e697
+# 1ee1331bfb4c49258c398e776bfa8a51
+# ef328438f27b40bb9e9155bfa34a533b
+# de5752a2cc214f3aa91bd7d4cd0f6d52
+# 1094cd15739a476f90dfb98daed6a75d
 msgid "and then:"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:35
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:35
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:35
-#: ../source/upgrade_server.rst:268
-# 1427fc5ad7fe4f65a49cdc749a78851d
-# 8eb22dde3718487e85efce02d0c9b5ee
-# e8dcf4db688741119d52d205b95acab7
-# 3c7e8462654d46a7a06b11514f2a513d
+#: ../source/upgrade_server.rst:266
+# fd4c59fa6062421e958f9c79523d3465
+# d76cea66df2e478e8718b9d6fc7c9d04
+# 9fe7682495c94fd9a843dcd41d214145
+# 4630cc6d1ae04982bc8e920b28ee8671
 msgid "|push jobs_title|"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:36
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:36
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:36
-# 0cca56bd2e784d56b23852035fc5329e
-# 085c6887998c4ef5be7e1a99ed323795
-# eaaa449321b54bb1a8cc00d44f3195f9
+# e62ee9493c1447fdadfc5715d51f836d
+# b911db30e70443cb84c4124e8a93d928
+# ed61e42c05764c599db879039508676f
 msgid "Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run."
 msgstr ""
 
@@ -308,285 +308,290 @@ msgstr ""
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:60
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:38
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:60
-# dcc89f2546f243d081b5abf9d6cb0a80
-# 990200cf6757468ba9d44d0bb35842d8
-# a3767e10ab54443198df6ef1513f9cda
-# 4a5cf5a4120e4baba6744890c05ac24d
-# 220eb763022d4b408f9b44217fd653f4
-# 9e0c429b86534708923a0d2dd37b8ee2
+# 5ffac139ecf84be0bf29d69dc254be19
+# e8b1bf89d1c240758f7736673c53179c
+# 27558d1cec644de9b6c50b43bc8c99c5
+# 036ededcf74f4200ba4693d622cb2043
+# cd5c040049a0491dab63d70c5b4f1415
+# c0af815720f547e5a8f47ee00dd12d7f
 msgid "Run:"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:57
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:57
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:57
-# b413b39f37634a33b3605bc1d861e1b8
-# ec5fbce9443240d3bde8b727e5b48036
-# 0394144b7a7748c289aff6d64fe7f2d3
+# 0e62ca78feb04dedb67073269b880c99
+# c5673dd103a44af6ba29a1c93b7418a9
+# 6bfc0de75f334d28bb20576ecbe4b1c2
 msgid "|chef replication_title|"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:58
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:58
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:58
-# 5bee12a32d9744abaa6a0593ae3ace21
-# 03a309a813e848268620bcde8d9ff58a
-# 2392a70b89c549a1b172fc191317b005
+# 521af447863048c0b2e09c9f44525dde
+# cc1dcde342ed471cb1f538bcf93821f5
+# 2b53fdb3fb1d425aa33dbafe9cea420c
 msgid "Use |chef replication| to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:78
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:78
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:78
-# 55d1adcba04141d688dee4c856c0e9f2
-# 733ac03f6a0d4e2f9d656340c05cce42
-# b023a69d8c5e4d478be6447da48c86aa
+# ef588d3abaa14a68baf401f7229f18de
+# 36ef2090e2ed4eb8adfe6b59b1212cb4
+# 25134cc02ff244879770b087888db63a
 msgid "|reporting_title|"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:79
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:79
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:79
-# 64c2db6cd4f647a493937e40900ff611
-# 1e48bc55b54645ce8db35beda8b2829d
-# b5ef883f14a948aab37b40491d192d26
+# 436e6f7e2c234883a0dd8ed7ab9e8441
+# 51f482cc50994eab8c4e642185f486fb
+# 527e470f5cf747f084ca4dfe007c0653
 msgid "Use |reporting| to keep track of what happens during every |chef client| runs across all of the infrastructure being managed by |chef|. Run |reporting| with |chef manage| to view reports from a web user interface."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:81
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:81
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst:81
-# 415f59d4d347463caa14a0de83cefa71
-# 347573b4f381449891b8a4e7ba157ec5
-# 1b6c48e5697b4030a948335072c0a8e4
+# c0d4fc8a40904e15b7eafd538ef0490b
+# ea90925bbb0145fba2f57bf129253131
+# 80e5b3fd91ad4631bcca2672547b4311
 msgid "On each machine in the |chef server| configuration, run:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:117
-#: ../source/upgrade_server.rst:177
-#: ../source/upgrade_server.rst:245
-# 2059993284124cc08a98a93b49bfac98
-# d6c0afe825af4a3eb871fea9046a4cf9
-# 100422c5e8f141db94ffb8db7352a84c
+#: ../source/upgrade_server.rst:113
+#: ../source/upgrade_server.rst:175
+#: ../source/upgrade_server.rst:243
+# 14d37d03e9a545199d5ce3aeca2ead8d
+# f18f73a7be9b4292af65fc73ee4625a7
+# 3474d936ba0b4c60a9ab7c708e4cec7e
 msgid "**Use Local Packages**"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:6
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:6
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:6
-# 70ca8bb0032646c394c54998e16e2c5e
-# df4829f747824adf8b40d67372851e82
-# 904c6be5d0c34ee182e6b8872e364ad8
+# d7d5bd6a0c9940dba5116ada1751974c
+# 3df0f32b8a1e4f0394558d77d5ddacc7
+# fdbc7bda34744a4fa5270c1c615ff27a
 msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are behind a firewall (and do not have connectivity to https://packagecloud.io/), these packages can be installed manually. First download the package that is appropriate for the platform and save it to a local path. Then run the ``install`` command using the ``--path`` option to specify the location for the package:"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:12
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:12
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:12
-# 33153603322248f0bed9e888c44bea0d
-# 83adde16c73d461c9af78d14fb001b23
-# 6ef4e4e612c44f11b919c2cee4e35252
+# 8864918b2f7a452ab5e5b6b677fef748
+# 19f8b10243594fb484c3f83d240a7366
+# 0d3cfab4fc0849c5be026ecd96ad6081
 msgid "For example:"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:18
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:18
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:18
-# b79ee9f19b8b47519c5a6f8a6b3f9927
-# f4329098c5324b8ab6d129c1e61f3b59
-# 2304808d7dd5459b93b7374b1c094880
+# 76ff556652cb4c139f7160626083b129
+# 0906f8b571a14a30bd1351e483096812
+# c7c726e9aa414dd6a71be1ec25c8af2d
 msgid "The ``chef-server-ctl`` command will install the first ``opscode-manage`` package found in the ``/home/vagrant`` directory."
 msgstr ""
 
-#: ../source/upgrade_server.rst:122
-# 61b989c218324db6a2b488137bb51163
+#: ../source/upgrade_server.rst:118
+# da58cc7ca0e54e79b349e7f046b53623
 msgid "Standalone"
 msgstr ""
 
-#: ../source/upgrade_server.rst:123
-# 89527c05a2d845358a218935f0257674
+#: ../source/upgrade_server.rst:119
+# 3c0a5c82b948411fa03c3213b109431a
 msgid "This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete."
 msgstr ""
 
-#: ../source/upgrade_server.rst:125
-# 0d6bf52393404c6aa599faeff788972d
+#: ../source/upgrade_server.rst:121
+# 3bb1ae0b93074b879b1986611a960ed1
 msgid "To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:127
-# 21384436747d463291cc4850ff66de17
+#: ../source/upgrade_server.rst:123
+# d42782498c0b4cf7a3226eec39d7462e
+msgid "Verify that the ``make`` command is available on the |chef server oec| machine. If it is not available, install the ``make`` command."
+msgstr ""
+
+#: ../source/upgrade_server.rst:125
+# 09e2b9601b8e4dc392d5ea18b4567b67
 msgid "Run the following command to make sure all services are in a sane state."
 msgstr ""
 
-#: ../source/upgrade_server.rst:133
-# edade0c25c514a43bc22cb601394a87d
+#: ../source/upgrade_server.rst:131
+# 2c07ee306fa143cbbfba9baf748ad07b
 msgid "Stop the machine:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:139
-# bc6896f1a1134d1f9c4bf0ac911895a5
+#: ../source/upgrade_server.rst:137
+# 4e6a02befef24e489fd63e391c443e3c
 msgid "Run |debian dpkg| or |rpm|. For |debian dpkg|:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:153
-#: ../source/upgrade_server.rst:217
-# cfb715163ab74defad821f87bca02b91
-# 21daaa2bcfde4d2396e54cd044e9aa8d
+#: ../source/upgrade_server.rst:151
+#: ../source/upgrade_server.rst:215
+# 289e2a0d25024c548e5265e961ec4f45
+# 26a967e5b6dd48558bfb5868fc3ba7d1
 msgid "Upgrade the machine with the following command:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:159
-# a110a80c4db9444a8dce43f9d9d20e60
-msgid "After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:"
-msgstr ""
-
-#: ../source/upgrade_server.rst:165
-# 0eb4651d736c42c2bad144151053e8d1
+#: ../source/upgrade_server.rst:157
+# 00cd2a3cf9554c2da06516a0460181e8
 msgid "Start |chef server| 12:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:182
-# 7e0ce74bd2ae4f818799fb9a1b520b3a
+#: ../source/upgrade_server.rst:163
+# 526817100d0e4e4d9955d677e7989ad5
+msgid "After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:180
+# 27f0766a69f740fbade8ed3ff2225060
 msgid "From |chef server osc|"
 msgstr ""
 
-#: ../source/upgrade_server.rst:183
-# 0a13cf9823d44ae0a0b592159ae4e94f
+#: ../source/upgrade_server.rst:181
+# 0dd9996083384db8a8650e7944c88cd6
 msgid "This section describes the upgrade process from a standalone configuration of |chef server osc| 11.1.0 (or higher) to a standalone configuration of |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine."
 msgstr ""
 
-#: ../source/upgrade_server.rst:185
-# 2584755cbf324738ae1c97ac6d91771c
+#: ../source/upgrade_server.rst:183
+# 13d6ac2d875b4c69875ed74fe92032c9
 msgid "Please :doc:`view the notes </upgrade_server_open_source_notes>` for more background on the upgrade process from |chef server osc| 11 to |chef server| 12."
 msgstr ""
 
-#: ../source/upgrade_server.rst:187
-# f906a4fa96304e3985fbf0bdce0950e4
+#: ../source/upgrade_server.rst:185
+# d64fcf0fa6f94f7f8a65337ecc15f47c
 msgid "To upgrade to |chef server| 12 from the |chef server osc| server, do the following:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:189
-# 2b0e1e2ffbdc48cfb1537ee079f994ef
+#: ../source/upgrade_server.rst:187
+# c556b8a3ca104e428575816ddafccf60
 msgid "Run the following to make sure all services are in a sane state."
 msgstr ""
 
-#: ../source/upgrade_server.rst:195
-# 689594138ecb4226a5b56ec7d64f5063
+#: ../source/upgrade_server.rst:193
+# 2dc2a27cc0144458ac44c04629f7de1b
 msgid "Stop the |chef server osc| server:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:201
-# e5ddc71b11ae4783bfa1e10a57dd5d3d
+#: ../source/upgrade_server.rst:199
+# 2cbe54ad3ed94f0486b67253532486d7
 msgid "Run |debian dpkg| or |rpm| on the machine to install |chef server| 12. For |debian dpkg|:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:215
-# 177c1d1b0cbb403285ceb7a035b4c9f9
+#: ../source/upgrade_server.rst:213
+# a5239b6258a44c8d98e76b98def6aed2
 msgid "|chef server| 12 is installed to ``/opt/opscode``. (The existing |chef server osc| remains at ``/opt/chef-server``.) From this point, the ``chef-server-ctl`` commands are running against the ``/opt/opscode`` location."
 msgstr ""
 
-#: ../source/upgrade_server.rst:223
-# 12542ad5f8ea41eebc3b830a61fe80ee
+#: ../source/upgrade_server.rst:221
+# fc3ecc8f3b1d4cb5b369b80d0e16ae3a
 msgid "The upgrade process will automatically detect the presence of |chef server osc| 11, and will step through the migration process, prompting for organization name details along the way."
 msgstr ""
 
-#: ../source/upgrade_server.rst:225
-# 5762a450a7a94d2e9a2eff71c9bb9cd4
+#: ../source/upgrade_server.rst:223
+# e86ba15d62fc4db7aa443c84368cff80
 msgid "The migration process will first download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| 12, and then upload that data to the server."
 msgstr ""
 
-#: ../source/upgrade_server.rst:227
-# 5bda5f1491eb4380b75c0909e59eca56
+#: ../source/upgrade_server.rst:225
+# 85e4b786fec246a3b755d7adfade4e1e
 msgid "Before data can be uploaded, an organization must be created. When prompted, enter the organization name, and then a full organization name."
 msgstr ""
 
-#: ../source/upgrade_server.rst:229
-# bf23fd30f7bd45db97e5cfaae6e54d0c
+#: ../source/upgrade_server.rst:227
+# b5ea182b40674048a324f0d27a956845
 msgid "|name_rules org| For example: ``chef``."
 msgstr ""
 
-#: ../source/upgrade_server.rst:231
-# cb7c64ba01da47d68fa51c79df242b24
+#: ../source/upgrade_server.rst:229
+# 711416dd35db4a8e9d540fa9ef9fbf06
 msgid "|name_rules org_full| For example: ``Chef Software, Inc.``."
 msgstr ""
 
-#: ../source/upgrade_server.rst:233
-# b56bde3a0d8b44b8b91bb87343267f4b
+#: ../source/upgrade_server.rst:231
+# 704c9169065b4d7eaa766f974a0f919c
 msgid "The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporary data that was created during the upgrade process."
 msgstr ""
 
-#: ../source/upgrade_server.rst:237
-# 688e96da5a4e49bd90fcb9e01d8c479e
+#: ../source/upgrade_server.rst:235
+# 8486ed66aa714ffeb435b28227c28502
 msgid "**Update the Chef server URL**"
 msgstr ""
 
 #: ../../includes_upgrade/includes_upgrade_url_chef_server.rst:4
-# bcdc9aabee8647c381e36f287f823b3b
+# 0b239d983c4c4c67876d37965ed1fdd5
 msgid "The URL for the |chef server| needs to be updated on all nodes and workstations. In the |client rb| file on each node and in the |knife rb| file on each workstation, update the following setting:"
 msgstr ""
 
 #: ../../includes_upgrade/includes_upgrade_url_chef_server.rst:10
-# 60a47dc98ebd42a6a06c4d902817a77d
+# 7261b65ef4f241d0ac97a265e0c56ed6
 msgid "Any node that is bootstrapped from a workstation with the updated URL will automatically be assigned the new URL for the |chef server|. Only existing nodes prior to the upgrade require the URL update."
 msgstr ""
 
-#: ../source/upgrade_server.rst:253
-# 9a0b7c3ede7e4070ac3970e7a4fde4b6
+#: ../source/upgrade_server.rst:251
+# cd85fac4e3f045799d2e7c07ade1cc31
 msgid "|chef manage| can be upgraded as part of a standalone or high availability configuration:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:255
-# 76098286f6d64773a280fe82d259bdc6
+#: ../source/upgrade_server.rst:253
+# 4a7fd5753f4e440996367983c19b7e59
 msgid "After upgrading the |chef server|, run the following command on each of the front end servers:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:261
-# 96d6f787828649a8becef819d1fdb602
+#: ../source/upgrade_server.rst:259
+# 770900079f114a28888c30bac3dc8838
 msgid "Reconfigure each of the front end servers:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:269
-# 9b5a806a48394dfa96a02d19edc88e9b
+#: ../source/upgrade_server.rst:267
+# 53d81d476f1a47649c0e14ce5cf2fef3
 msgid "|push jobs| can be upgraded as part of a standalone or high availability configuration:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:271
-# a62ca5b12b2a4621bd9c72330122b5b2
+#: ../source/upgrade_server.rst:269
+# 063bd20199df41a1b8db9dc60628df13
 msgid "After upgrading the |chef server|, run the following command on all front and back end servers:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:277
-# 275486bf67e2409d803ebd224b6f7e30
+#: ../source/upgrade_server.rst:275
+# 75d27e90e6004f80a717b37072a9e129
 msgid "TCP protocol ports 10000-10003 must be open. This allows the |push jobs| clients to communicate with the |push jobs| server. In a configuration with both front and back ends, these ports only need to be open on the back end servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client)."
 msgstr ""
 
-#: ../source/upgrade_server.rst:279
-# c26b6797a7d34c928424949a46ebb9de
+#: ../source/upgrade_server.rst:277
+# e30c6192a59441549d23dd88420a3dce
 msgid "Reconfigure the |push jobs| servers:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:285
-# 489a352a6c42481e8ad36aa457a66495
+#: ../source/upgrade_server.rst:283
+# 03bb0341170149218b5172c800fc89d0
 msgid "Run the following command on each of the back end servers:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:291
-# ee2b9c4cb075412c81ba047ffa07e859
+#: ../source/upgrade_server.rst:289
+# 9970befcda73445a88b28a0ca33eb91c
 msgid "This ensures that the |keepalived| scripts are regenerated so they are aware of |push jobs|."
 msgstr ""
 
-#: ../source/upgrade_server.rst:293
-# e85e714d62754ea0836d7d6b42e75d90
+#: ../source/upgrade_server.rst:291
+# b2a4b038becb48d380747943fdcd0769
 msgid "Restart the |push jobs| components:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:299
-# d7fbfdb9bc884883bcd70a37b3e63032
+#: ../source/upgrade_server.rst:297
+# e0aa1c80e741430b82eb29892c2061d6
 msgid "Verify the installation:"
 msgstr ""
 
-#: ../source/upgrade_server.rst:305
-# 5afe8c2f16ee44c1b1c9fec0371b897d
+#: ../source/upgrade_server.rst:303
+# e282bc17f6144c9ca220bd6cf9375ebe
 msgid "Install the |push jobs| client on all nodes using the |cookbook push jobs| cookbook, as needed."
 msgstr ""
 

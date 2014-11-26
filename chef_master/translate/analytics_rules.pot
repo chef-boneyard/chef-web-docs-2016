@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-17 09:47-0800\n"
+"POT-Creation-Date: 2014-11-26 13:41-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,358 +17,559 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/analytics_rules.rst:8
-# 1ba640194a204d0a9b02e9804370c3a4
+# 6445192a46ab4686bff891bcf43efd0d
 msgid "|chef analytics_title| Rules"
 msgstr ""
 
 #: ../source/analytics_rules.rst:10
-# 85bfad4e9985414d9015b07512949cc4
+# e789ed8b2b764dad9a9e1a5fbba7ecc6
 msgid "This topic is a preview of upcoming functionality that will be part of the |chef analytics| platform."
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules.rst:5
-# f213554f6ff949a7bf3a3ff9f6ad0728
-msgid "|chef analytics| rules enable the tracking of detailed events as they occur on the |chef server|, at the start and end of |chef client| runs, and as resources are converged on nodes during |chef client| runs."
+# 5c35a155af2c4f6c9e4dde458e065d15
+msgid "|chef analytics| rules enable the tracking of detailed events that occur during a |chef client| run and the tracking of detailed events that describe the expected state of the system."
 msgstr ""
 
 #: ../source/analytics_rules.rst:15
-# 109089e039124d589e5fb11cdd7c99c1
+# 1b8c766de60d469081bfb593e1186cb2
 msgid "Syntax"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:5
-# af75132cc40d420281fc76def4372a4a
+# 3412ba0ae6c64a3a83da4a9cbb29f982
 msgid "The syntax for a |chef analytics| rule is as follows:"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:23
-# 8a15ca7d7b6a4353953f8db65138f454
-msgid "where"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:25
-# 2e11f27731614e85a75f41efc17d84e7
-msgid "``rule_type`` is one of ``action``, ``run start``, ``run end``, ``run resource``, or ``control``"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:26
-# 6f8d0480edf544a9b7a8a73c5338f1b1
-msgid "The ``when`` block is used to group expressions, which are a series of evaluations that result in ``true`` or ``false``"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:27
-# a286da679699430283e5ee838307ee83
-msgid "``json_attribute = \"attribute_value\"`` is an expression that specifies the data that will be tested by the rule"
-msgstr ""
-
 #: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:28
-# cf2e0eb814e34c1fb38aaedb86c02a0c
-msgid "``OPERATOR`` may be ``and`` or ``or``; use operators to separate expressions"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:29
-# 458fd3cef8f447d3806695027c58b53f
-msgid "The ``then`` and ``otherwise`` blocks are used to group statements that test the data specified by expressions"
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:23
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst:13
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:13
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst:13
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:13
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_log.rst:13
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:13
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst:13
+# 638ed26f92d44678a8cf4765142adacf
+# 57fc596a02674214a3c98478cc350787
+# 76546653bff64ae2a54a12c9171f6618
+# 18a67d945a644892aa2368323d03e1bd
+# a35e03d822214f6fbb6251c4657ae1c4
+# 4461aa25ca194957bda49ae4a021c0e2
+# a6d9593ffd004d89a1fc8b1483d1f146
+# 20720a4d8b3f4aaab60de4808136fbc7
+# 1b8c48a778034ef7b73899a94ad010e6
+msgid "where:"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:30
-# f04c37eca35047e5a89bbc0802efb52b
-msgid "``FUNCTION`` is a statement that tests the value of a ``json_attribute`` against the rule; functions may be one of ``set``, ``notify``, ``log``, ``array:contains``, ``groovy:eval``, ``groovy:exec``, ``datetime``, or ``mustache_template``. (See \"Functions\" subsections below for more information.)"
+# c74d1e763af24480a06a7910a97c0cbf
+msgid "``rules`` defines a rules group which is comprised of individual rules (``rule``)"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:31
-# 7a11005957424f8ba67b3b6b5349d8f4
-msgid "``log(\"log_entry\")`` is the log entry that is created for statement in the ``then`` or ``otherwise`` blocks"
+# df24fe412b684147a281ff80a23f4e85
+msgid "``rule`` defines an individual rule; each rule must be contained in its own ``rule`` block"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:32
+# fb2c3d24d611448c8f9439ef68182b8c
+msgid "``with priority=n`` is a positive or negative integer that defines the relative priority of a rules group as compared to all other rules groups"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:33
+# 56d533c939dd41ae83da75e43e48f46b
+msgid "``\"name\"`` is name of the rule group and/or the name of the rule; required for ``rules``, optional for each ``rule``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:34
+# aeac2880859d456aa8bc6a48f3d7e4e7
+msgid "``message_type`` is one of the following audit message types: ``action``, ``run_control``, ``run_control_group``, ``run_converge``, ``run_resource``, or ``run_start``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:35
+# c9936c946f1a4cc9a61674c7cf3599e5
+msgid "``when`` is a series of evaluations that result in ``true`` or ``false``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:36
+# 175393c416ae443694ef8d6383d5562b
+msgid "``then`` is a comma-separated group of statements that are used to test data"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:37
+# 15ff91ada0fb4da5aa7b2a87d2e24a9b
+msgid "``otherwise`` is a comma-separated group of statements that are used to test data"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:38
+# 05837647c7f644069049ce0d3937964e
+msgid "``function()`` is a statement that tests a value in the |json| object; functions may be one of ``array:contains()``, ``audit:<level>()``, ``datetime:component()``, ``get()``, ``log()``, or ``mustache_template()``. (See \"Functions\" below for more information about the individual functions.)"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:40
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:30
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:79
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst:18
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:19
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst:18
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:19
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_log.rst:17
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:19
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:19
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst:18
-# 4b3cdea78e8541a795e7477761328214
-# babf9763b9a34d84bedd2d7d8bf6177a
-# 0861de4180454ee9a76235bc16c308c8
-# 4190984ef0f642c084dd13813618f68a
-# 07b9246edcf644d888b84ef80663e7e6
-# 379f254c0d324dbb87b91168f57ebe8d
-# ab4be055a7864ec88c2ff016427eed52
+# f8522ce3fe81482e8248e1b5171ee2a5
+# 282bcd34921b4d9289676075af41e812
+# d371d14370b24f999aa4113d6a000bc2
+# ed518d2ba60e4f699a844ccaff8272aa
+# 9ce43797273f49ae9d4a59215dd4b635
+# a711d84a3f1e44e3bc9991323ffa07b9
+# a411b52bca35462f966a68b41140a6a1
+# ab60c6fc502143e9b5326ee91330b9c6
+# 9f06105f330f452eae2a77de9ecf5ddd
+# 7c04151ceddb451a91ab02065147e284
 msgid "For example:"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst:49
-# 1ff39b7380ad41b39250893016219bb0
-msgid "or:"
-msgstr ""
-
 #: ../source/analytics_rules.rst:19
-# 8683d6e5d9794a12a6023625f85d2eb6
-msgid "Message Types"
+# a296af27fe3a4577b223a82ecc8153d0
+msgid "with priority"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types.rst:5
-# 2eee5d7b31e44f3da842672d9197028c
-msgid "Messages are sent to |chef analytics| based on rules that keep track of every action that occurs on the |chef server|, reporting statistics that are tracked at the start, during, and end of every |chef client| run. Each rule may be configured to send notifications."
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_priority.rst:5
+# 5b9e29477d024df2bc77641a1f3a1284
+msgid "Use the ``with priority`` statement to specify a positive or negative integer that defines the relative priority of a rules group as compared to all other rules groups. For example:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_priority.rst:15
+# cf3be81b784b45779aaa8a0ff415d26d
+msgid "A rules group with a higher integer value will have priority over any rules groups with lower integer values."
 msgstr ""
 
 #: ../source/analytics_rules.rst:23
-# 78b2fefd908c404d9c23cd1e1b18ac3f
-msgid "action"
+# be3f7b62a8214eb9804632e42b2cc27b
+msgid "when"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst:5
-# 4175caf62a9c496e9338c77859aa2478
-msgid "Use the ``action`` message type to build rules for messages about any action that occurs on the |chef server|."
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:5
+# 70a59622d6834abc92f8eb88f4651c80
+msgid "Use ``when`` to define an expression. Multiple expressions may be joined using ``and`` and ``or``. Expressions may be grouped using parentheses (``( )``). Expressions may use nested function calls on either side of the expression. The following operators may be used:"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst:7
-#: ../../includes_analytics_rules/includes_analytics_rules_types_run_end.rst:7
-#: ../../includes_analytics_rules/includes_analytics_rules_types_run_resource.rst:7
-#: ../../includes_analytics_rules/includes_analytics_rules_types_run_start.rst:7
-# 97cd54236e12411e98944c8c5ed90e99
-# 521c435670464f7d8901b5407fa839c1
-# 01aa89272d2e4b718a2a8bac0794e601
-# 1c0b12c74c334f92bc131501abebea4a
-msgid "The syntax for this message type:"
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:11
+# 22026a59b8574db2aaa7bb32f8cbb518
+msgid "Operator"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst:18
-# 6a764e2b84d049c5a372bcb874671f93
-msgid "For example, a rule that always fires:"
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:12
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:33
+# 6f68d1b78e064181b4ea6d6cce507af3
+# bb03cb2d3d004b4eb8cceb695472c334
+msgid "Description"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst:27
-# d47d4b8ecd6042338d0cf348ffc77ea7
-msgid "A rule that always calls its ``otherwise`` section:"
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:13
+# 40417d4ad575485c88417704becbe716
+msgid "``=``"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst:38
-# 130d4c47e8db4d248e5afe0c3b5fe3aa
-msgid "A rule that contains nested fields:"
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:14
+# 423dbd96b3a04057863663693ac949c8
+msgid "|ruby equal|"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_action.rst:46
-# ff18370e253940289a79cb5f174f9a95
-msgid "Fields that don't exist simply return ``false`` for that part of the predicate."
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:15
+# dfd3eefc17ea4c908ecd1e1c6f0501a3
+msgid "``!=``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:16
+# 393b5073efaa4241b8302f1ebcdb9de3
+msgid "not equal to"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:17
+# 9caa78a0ab3d4da9beeca73d4f47f39f
+msgid "``>``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:18
+# 5a6a775c031b43a4bb02565588677cb7
+msgid "|ruby greater|"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:19
+# fe4be4ea4fcc4739bb18cf9d78734f9f
+msgid "``<``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:20
+# 8dfa9c8c9d8a486abcdb16f1037b6590
+msgid "|ruby less|"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:21
+# a300e765c9f84a26aba4b4f1d5ec1b7b
+msgid "``>=``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:22
+# 579d008514724c0585308bc45e144f3f
+msgid "|ruby greater_optimistic|"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:23
+# 7938551db24b44bc8878593e9c5e2446
+msgid "``<=``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:24
+# 76419cb2d0aa49fa99b05026dd7d4bd3
+msgid "|ruby less_or_equal|"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:25
+# 8a9c349bbb224e63aefc8fe9be8a71e5
+msgid "``~>``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:26
+# b5e6ae495c954519945913d7196b77eb
+msgid "a regular expression"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:27
+# bda80e8315f54189955a3b58c3f91e63
+msgid "``not``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:28
+# d6524d53aa8d47f49efd54a60ad993b8
+msgid "negates the expression"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst:40
+# 78d3b054b27e42599aaeb4ea4db570c6
+msgid "or:"
 msgstr ""
 
 #: ../source/analytics_rules.rst:27
-# b308dc30965148fba1b0ab6b16ed6b84
-msgid "run end"
+# e4346735322b468d9c5b6265a2f00e30
+msgid "then"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_run_end.rst:5
-# 2b8e39f717814f36ba9fec7fd142ee6c
-msgid "Use the ``run end`` message type to build rules for messages that are sent by |reporting| at the end of a |chef client| run."
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst:5
+# 94c8ac1b8b2046f7b2cb8fe45913769b
+msgid "Use the ``then`` statement to specify what to do when a rule in the ``when`` statement is matched. For example:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst:15
+# 7207e4f659de4ebb8cffdda80cb8cff3
+msgid "When the name matches ``app1``, ``#foo`` will be set to ``100``."
 msgstr ""
 
 #: ../source/analytics_rules.rst:31
-# 2864231f1eb9475e9d7ab29b2b30bd7a
-msgid "run resource"
+# c37493377be24ba685d6f9359021b91f
+msgid "otherwise"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_run_resource.rst:5
-# efe068702ca246b3aaef9f68160ce4e6
-msgid "Use the ``run resource`` message type to build rules for messages that are sent by |reporting| as each resource is converged during a |chef client| run."
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_otherwise.rst:4
+# 11d1f5d907af4809bc0f21e4ad0fb63c
+msgid "Use the ``otherwise`` statement to specify what to do when a rule in the ``when`` statement is matched, but is not handled by the ``then`` statement. For example:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_otherwise.rst:16
+# c2aca6e711c04b70bc4c3f960d974c80
+msgid "When the name matches ``app1``, ``#foo`` will be set to ``100`` and if the name does not match ``app1``, ``#foo`` will be set to ``200``."
 msgstr ""
 
 #: ../source/analytics_rules.rst:35
-# 52315f5ac05a4939bdc09619b8af3f3f
-msgid "run start"
+# 8c181d661db040a9a5b4f49cb77c5192
+msgid "Rule Types"
 msgstr ""
 
-#: ../../includes_analytics_rules/includes_analytics_rules_types_run_start.rst:5
-# 0f9b93ffe5c445898b7dabfbc5edf6c5
-msgid "Use the ``run start`` message type to build rules for messages that are sent by |reporting| at the start of a |chef client| run."
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:5
+# c207d8cf044849f18f031e209e7e89b0
+msgid "Each individual ``rule`` must be associated with a specific audit message type. As a rule is triggered during the |chef client| run, a message is sent to the |chef analytics| server. A rule may be configured to send notifications about a message to recipients that are located outside of the |chef analytics| server."
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:7
+# 24ac8ae6bfda4151974ce683ab35056e
+msgid "The syntax for a ``rule`` is:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:25
+# 7c690902763a44eea0799065af1718d7
+msgid "``\"name\"`` is the (optional) name of the ``rule`` block"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:26
+# c14ecaa2044a4c5abd9ccaccc8c8ce96
+msgid "``message_type`` is one of the following audit message types:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:32
+# 05476ccebac341e59cf47f0898307d70
+msgid "Message Type"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:34
+# ef444da772684caeb39e28fe3d310463
+msgid "``action``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:35
+# d675c6aa76ee4b108c6043d5d4b431a4
+msgid "Use to build rules for messages about actions that occur on the |chef server|."
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:36
+# b7632aaa9fe149ba92a92e305dccdd25
+msgid "``run_control``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:37
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:39
+# 87755bf527364b11b8ba40eba25ac10a
+# 8ed67e60fb434279a5e22b429cdc5200
+msgid "Use to build rules for a group of audits to be evaluated."
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:38
+# 47f5187388eb469397ccb5f3b0f287ba
+msgid "``run_control_group``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:40
+# dd7f4066a1694d899604cdb605e9d66f
+msgid "``run_converge``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:41
+# 355680b5b6bf4db69c68dbd2c8eaceb9
+msgid "Use to build rules for messages that are sent at the end of a |chef client| run."
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:42
+# 2d45947fae95460bbb513c8cbc960143
+msgid "``run_resource``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:43
+# fa4ca635c82b475a93f32c3f709a18c4
+msgid "Use to build rules for messages that are sent as each resource is converged during a |chef client| run."
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:44
+# 85bdafe5ef3145d9a33992cad6ef1cc5
+msgid "``run_start``"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:45
+# 43d80a6652d7462e9f80b881e2ce96f2
+msgid "Use to build rules for messages that are sent at the start of a |chef client| run."
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:47
+# a072cfdc904d4578aaf4affc40a81cda
+msgid "For example, an unnamed rule:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:57
+# dadcaafe201344a597ef8e1760ef2e6e
+msgid "and a named rule:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:67
+# 3de33b7eeed14b92afb1951ed7bbf93d
+msgid "A rule can be configured to always fire for a message type:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst:77
+# e163c07a676345638dc1dfc0dbfe478b
+msgid "in the previous example, every ``action`` will notify ``\"some_alias\"``."
 msgstr ""
 
 #: ../source/analytics_rules.rst:39
-# b5621544cc6c4f759085ff656e090d4a
+# 1e1ecc02bc10482986f681239e099b43
 msgid "Functions"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions.rst:5
-# 5a0a85e415a449c0940c9e05da2757dc
-msgid "placeholder"
+# 94007f9e4fe1488caabaf500b7d11970
+msgid "Use a function to help specify how rules are applied. A function may be used in ``when``, ``then``, and ``otherwise`` sections in rules. A function has the following syntax:"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_functions.rst:11
+# f95e3c9df89b4874967e5d1b3f897225
+msgid "A function that is defined in the ``when`` section of a rule MUST return a Boolean value, or it will fail."
 msgstr ""
 
 #: ../source/analytics_rules.rst:43
-# 7b2829b484b1452f9bef9eafbef98cff
+# 4173cf803bf54b06a334ccda01523310
 msgid "array:contains()"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst:5
-# 13528323a92746f59c9d89ec3c1d715f
-msgid "Use ``array:contains`` to look for an attribute in the |json| object, and then determine its value."
+# 799ea378cce94875ac6df7240f2aee98
+msgid "Use ``array:contains()`` to look for an attribute in the |json| object, and then determine its value."
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst:7
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:7
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst:7
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:7
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_log.rst:7
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:7
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:7
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst:7
-# 624fc8f342224693853b170f666a774a
-# 6cb6a68fcda648498d64fdd9c30ef2d0
-# 9ce8aca26c2746c4904db2efbcaf9ede
-# c968c5c9e3a14ae9ace82db79ee21717
-# 8045e7ac07724638b8a3d9db2215c75a
-# 812177d4027d4ddfbff7568763fe4865
+# d12d03f9bd9444fd91f30a5bdaf6257e
+# a554717f9a7c4a50b4e3632d2badd0b6
+# 10403b4a21894804852c49323dce9216
+# 332ee2c02d5741ad92d50972044a61b2
+# d81b73d3cbd44cfba969f968fc5fc939
+# 92b4e51686f346f7ac0cc760fba8c91e
+# a95fe39daf6740f98ae909189c003f8a
 msgid "The syntax for this function:"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst:13
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst:13
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_log.rst:13
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:13
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:13
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst:13
-# 6c80a0273a6b492fac07ad9e81d37fb7
-# ae3732c7035d4be0a1b3a8bac42e2efe
-# 40c7fc52a5e749e4a82f0aa0ddf13279
-# 89b8b7b0ae1d4f938e6b42d11cae32de
-# 05388018ef0d4ea4b27913bdf800a792
-# c4d8031c84db4819b8c6fdae1aeffaf6
-msgid "where:"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst:15
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst:15
-# 0a7815d7ecb643e79bab76e43310b79f
-# 5ea35986eee5477299ec908284454f0a
+# 923f953f82ed4ad7bd31d3bf482702e9
+# a437cd578f4947d8bde3bbeec1238708
 msgid "``field`` is an attribute in the |json| oject"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst:16
-# 6724b87c73c749f0a1ecd1a5aeb6d497
+# 4a1ba2781fce48dd9e6355c5534ed193
 msgid "``valueToFind`` is the value for that attribute"
 msgstr ""
 
 #: ../source/analytics_rules.rst:47
-# 4910e0db633840449470831e5293ffd1
+# 106b2c7227ef4fdba353a43f25ab27c0
+msgid "audit:<level>()"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:5
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:5
+# ed2be3a19eb64d9fb69850841f6651cf
+# 92f2b6db41d94f98905700ff9b4a85af
+msgid "Use ``get()`` to identify a field, and then identify an associated value."
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:15
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:15
+# 1cb9fc1611cd4bf2b32d9ecbc7988b1f
+# c80e3b63cfae49588371ebc089af4f47
+msgid "``variableToGet`` specifies the field to look for"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:16
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:16
+# a62f4f4e358a4fc6968be6b1c70a2ab0
+# accd7c7663e749fe8d91db5484d08339
+msgid "``valueToSet`` specifies the value to use"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:17
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:17
+# 639dbfb21dcd4fca8b5e6b4b66bfe179
+# 4444ee90e6e74e9abf90557c2f3cda18
+msgid "``defaultIfMissing`` specifies to use the default value if there is no user-defined value"
+msgstr ""
+
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:29
+#: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst:29
+# 3aa5a3f349864d1bae410c3dd88d050d
+# bb44f3099f424543b3faf07809154a54
+msgid "will pass if ``foo`` is missing in the |json| object."
+msgstr ""
+
+#: ../source/analytics_rules.rst:51
+# 1f7575cecfef4e27866c2eaa0716d7ab
 msgid "datetime:component()"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst:5
-# 503b91fdafdc4c4fae6ea49a22c83df9
-msgid "Use ``datetime:component`` to specify the date and time at which a rule is applied."
+# 173e03fb8f1a488e8036df5fe11780d9
+msgid "Use ``datetime:component()`` to specify the date and time at which a rule is applied."
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_datetime.rst:16
-# e3285b6502df4cd29c180c0e0460c432
+# 9b083fad199e4ac4a601b68159f9ca03
 msgid "``dateTimeComponent`` must be one of the following (lower or uppercase) as a quoted string: ``era``, ``year_of_era``, ``century_of_era``, ``year_of_century``, ``year``, ``day_of_year``, ``month_of_year``, ``day_of_month``, ``weekyear_of_century``, ``weekyear``, ``week_of_weekyear``, ``day_of_week``, ``halfday_of_day``, ``hour_of_halfday``, ``clockhour_of_halfday``, ``clockhour_of_day``, ``hour_of_day``, ``minute_of_day``, ``minute_of_hour``, ``second_of_day``, ``second_of_minute``, ``millis_of_day``, or ``millis_of_second``"
 msgstr ""
 
-#: ../source/analytics_rules.rst:51
-# 1c6b3906c8b747da80ae2b22410ab3b7
+#: ../source/analytics_rules.rst:55
+# 00dc3dee7a2d4a7a99d69e56b4b8879a
+msgid "get()"
+msgstr ""
+
+#: ../source/analytics_rules.rst:59
+# 9a3d3d7734214f39b914ecdee6728ac8
 msgid "log()"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_log.rst:5
-# c7ae74e88062487a802449a8ff7f749f
-msgid "Use ``log`` to log a message via the configured logger as a string."
+# 4bd507112f974cce8e3361d633a3193c
+msgid "Use ``log()`` to generate a message using the configured logger as a string."
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_log.rst:15
-# 30f13f0b9ae34da293309e3e5609fa94
+# 86e37f05452a426fa13b4bb7b7b60c01
 msgid "``messageToLog`` is the message that is added to the log"
 msgstr ""
 
-#: ../source/analytics_rules.rst:55
-# 2707213440ff4fbc9b9b42fffca681ef
+#: ../source/analytics_rules.rst:63
+# 14a9374b325c40f6aa72e1563b29db8e
 msgid "mustache_template()"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:5
-# ee932a02d3a845668f53cd926503c3b6
-msgid "Use ``mustache_template`` to render an expression that is defined in a |mustache| template. If the |mustache| template is invalid, an error is logged and the expression will return an empty, non-null string."
+# a2c1c9603f80422db9c8f174b01d09bc
+msgid "Use ``mustache_template()`` to render an expression that is defined in a |mustache| template. If the |mustache| template is invalid, an error is logged and the expression will return an empty, non-null string."
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:15
-# 38796a4af2014316bcc6badd08db3a07
+# 9136a98763084aea80676c0034261f5a
 msgid "``message_type`` is a string that represents the message type"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:16
-# 1840cf030e0a49309b395a8201176384
+# 251b1bf9b7474b15a54208eeb59a1983
 msgid "``message`` is the |json| message to be passed in"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst:17
-# c2203542401b4c88b61156f3d1435536
+# db81593d8bff4b40964fe5caf8c0af98
 msgid "``json_attribute`` is a user-defined value in the |json| object"
 msgstr ""
 
-#: ../source/analytics_rules.rst:59
-# b666f1e473cc4365ae84137c195adbd7
-msgid "notify()"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:5
-# ea22b5d58d344cb88d32f4b5959ee4eb
-msgid "Use ``notify`` to configure notifications for a rule. Notifications may be sent using HTTP or |hipchat|."
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:15
-# 74aaa8c3e0264aa0940740886d7fcc5c
-msgid "``notificationType`` xxxxx"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:16
-# 2636c3ca917b4dc4bd0cf34e72d0b96b
-msgid "``notificationAlias`` xxxxx"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:17
-# 86829d147b064115af3ab5ef6a63f8a5
-msgid "``stringTemplate`` xxxxx"
-msgstr ""
-
-#: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst:32
-# 04758053100344f8af13b63c9c92414f
-msgid "And:"
-msgstr ""
-
-#: ../source/analytics_rules.rst:63
-# f38b38fd3f7d4930b0c3cadf49161b9c
+#: ../source/analytics_rules.rst:67
+# e98e633c2eb548b58965ba97f3050f98
 msgid "set()"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst:5
-# 636f17879aaf47e1a79648287a462e44
-msgid "Use ``set`` to specify an attribute that exists in the |json| object, and then get its value."
+# d6a8e27f988c4a8eb876f87d0dcff2e1
+msgid "Use ``set()`` to set a user-defined value in the |json| object. A user-defined value always begins with ``#``. Values that are not user-defined may not be modified."
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst:15
-# 9f556c7fc9d4432ab0bfa17134fb74a8
-msgid "``variableToSet`` is an attribute in the |json| oject"
+# f2e847bfe3904a7285f1d571560f8b5e
+msgid "``variableToSet`` is the location of a user-defined value"
 msgstr ""
 
 #: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst:16
-# bea5a471d204478085891f5fdfe17fad
-msgid "``valueToSet`` is the value for that attribute"
+# a6a961f135ff4ebd992033ea6fe268c8
+msgid "``valueToSet`` is the value"
 msgstr ""
 
-#: ../source/analytics_rules.rst:67
-# 0d4f606ea0f34b1ea473a0ebb20a2c37
+#: ../source/analytics_rules.rst:71
+# 10ecd68057164716bf994b9a84a98a08
 msgid "Examples"
 msgstr ""
 
-#: ../source/analytics_rules.rst:68
 #: ../source/analytics_rules.rst:72
-#: ../source/analytics_rules.rst:80
-# bf124eacfd1441acb4f413f3907a6a07
-# 0f1156aa90884c02a6e20051bfe13f88
-# 8b8a7c152ba346519c08696ec7dcd258
-msgid "xxxxx"
-msgstr ""
-
-#: ../source/analytics_rules.rst:70
-#: ../source/analytics_rules.rst:78
-# 1f43dad5a17c4ed9b419ea050c5f6edc
-# eb9380e64ca4457d9645626bef4dddad
-msgid "**xxxxx**"
+# 680e2e199ef84393bfcbedb3c901a669
+msgid "None."
 msgstr ""
 
