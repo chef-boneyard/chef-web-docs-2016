@@ -132,7 +132,6 @@ Cookbooks
    auth_authorization
    azure_portal
    berkshelf
-   breaking_changes_chef_11
    chef_client
    chef_client_security
    chef_cookbooks
