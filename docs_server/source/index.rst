@@ -142,36 +142,6 @@ This section contains links to topics about configuration files, command-line to
    install_server_post
    install_server_pre
    manage
-   private_chef_1x
-   private_chef_1x_engage
-   private_chef_1x_engage_acceptance
-   private_chef_1x_engage_how_consulting_works
-   private_chef_1x_engage_onsite
-   private_chef_1x_engage_preinstall
-   private_chef_1x_architecture
-   private_chef_1x_architecture_ha
-   private_chef_1x_architecture_modifications
-   private_chef_1x_architecture_standalone
-   private_chef_1x_architecture_tiered
-   private_chef_1x_install
-   private_chef_1x_install_ad_ldap
-   private_chef_1x_install_create_organization
-   private_chef_1x_install_create_users
-   private_chef_1x_install_ha
-   private_chef_1x_install_prerequisites
-   private_chef_1x_install_standalone
-   private_chef_1x_install_tiered
-   private_chef_1x_admin
-   private_chef_1x_admin_ad_ldap
-   private_chef_1x_admin_configure
-   private_chef_1x_admin_ha
-   private_chef_1x_admin_logs
-   private_chef_1x_admin_orgmapper
-   private_chef_1x_admin_private_chef_ctl
-   private_chef_1x_admin_ssl
-   private_chef_1x_admin_upgrade
-   private_chef_1x_admin_user_management
-   private_chef_1x_support
    push_jobs
    release_notes
    reporting
