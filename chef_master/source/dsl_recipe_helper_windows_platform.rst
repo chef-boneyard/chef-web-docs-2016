@@ -2,13 +2,5 @@
 Windows Platform Helper Methods
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform.rst
-
-Helper Methods
-=====================================================
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform_helpers.rst
-
-Example
-=====================================================
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_helper_windows_platform.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#helpers.
 

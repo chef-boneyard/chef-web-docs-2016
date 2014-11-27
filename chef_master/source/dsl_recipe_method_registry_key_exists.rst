@@ -2,4 +2,4 @@
 registry_key_exists? Method
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#registry-key-exists.

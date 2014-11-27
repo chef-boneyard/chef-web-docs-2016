@@ -2,4 +2,4 @@
 recipe_name Method
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_recipe_name.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#recipe-name.

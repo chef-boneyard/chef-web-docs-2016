@@ -2,4 +2,4 @@
 reboot_pending? Method
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_reboot_pending.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#reboot-pending.

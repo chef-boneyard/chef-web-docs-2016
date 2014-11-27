@@ -2,4 +2,4 @@
 resources Method
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_resources.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#resources.

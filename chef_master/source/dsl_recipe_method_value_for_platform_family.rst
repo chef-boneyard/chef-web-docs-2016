@@ -2,4 +2,4 @@
 value_for_platform_family Method
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_family.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#value-for-platform-family.

@@ -2,6 +2,4 @@
 tag, tagged?, and untag Methods
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_tags.rst
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#tag-tagged-untag.

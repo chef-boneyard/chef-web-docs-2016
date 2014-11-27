@@ -2,4 +2,4 @@
 registry_has_subkeys? Method
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#registry-has-subkeys.

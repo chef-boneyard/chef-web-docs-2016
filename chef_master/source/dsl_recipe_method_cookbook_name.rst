@@ -2,4 +2,4 @@
 cookbook_name Method
 =====================================================
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_cookbook_name.rst
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#cookbook-name.

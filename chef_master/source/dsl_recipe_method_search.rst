@@ -1,1 +1,5 @@
-.. include:: ../../release_11-x_master/dsl_recipe_method_search.rst
+=====================================================
+search Method
+=====================================================
+
+.. warning:: This topic is now located at http://docs.getchef.com/dsl_recipe.html#search.
