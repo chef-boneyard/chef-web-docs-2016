@@ -390,32 +390,7 @@ See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository f
 
 The Recipe DSL
 -----------------------------------------------------
-The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The |chef client| relies on recipes to know what action(s) to take as it is configuring a node. The |dsl recipe| contains the following methods:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_attribute.html">attribute?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_cookbook_name.html">cookbook_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_data_bag.html">data_bag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_data_bag.html">data_bag_item</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_platform.html">platform?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_reboot_pending.html">reboot_pending?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_recipe_name.html">recipe_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_registry_data_exists.html">registry_data_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_registry_get_subkeys.html">registry_get_subkeys</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_registry_get_values.html">registry_get_values</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_registry_has_subkeys.html">registry_has_subkeys?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_registry_key_exists.html">registry_key_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_registry_value_exists.html">registry_value_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_resources.html">resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_search.html">search</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_tag.html">tag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_tag.html">tagged?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_tag.html">untag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/enterprise/dsl_recipe_helper_windows_platform.html">Microsoft Windows Platform Helpers</a> </br>
+The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The |chef client| relies on recipes to know what action(s) to take as it is configuring a node.
 
 
 .. Hide the TOC from this file.
@@ -449,25 +424,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    ctl_private_chef
    ctl_push_jobs_client
    dsl_recipe
-   dsl_recipe_helper_windows_platform
-   dsl_recipe_method_attribute
-   dsl_recipe_method_cookbook_name
-   dsl_recipe_method_data_bag
-   dsl_recipe_method_platform
-   dsl_recipe_method_platform_family
-   dsl_recipe_method_reboot_pending
-   dsl_recipe_method_recipe_name
-   dsl_recipe_method_registry_data_exists
-   dsl_recipe_method_registry_get_subkeys
-   dsl_recipe_method_registry_get_values
-   dsl_recipe_method_registry_has_subkeys
-   dsl_recipe_method_registry_key_exists
-   dsl_recipe_method_registry_value_exists
-   dsl_recipe_method_resources
-   dsl_recipe_method_search
-   dsl_recipe_method_tag
-   dsl_recipe_method_value_for_platform
-   dsl_recipe_method_value_for_platform_family
    essentials_chef_client
    essentials_cookbook_attribute_files
    essentials_cookbook_definitions
