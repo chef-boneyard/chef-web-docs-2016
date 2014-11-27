@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/chef_overview_server.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.10
 
-.. include:: ../../chef_master/source/chef_overview_server.rst
+.. include:: ../../release_11-x_master/chef_overview_server.rst

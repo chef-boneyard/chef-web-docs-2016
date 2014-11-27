@@ -6,9 +6,9 @@ All about Chef ...
 
 Getting Started
 =====================================================
-**From the beginning:** :doc:`An Overview of Chef </chef_overview>` | :doc:`About Workstations </chef_overview_workstation>` | :doc:`About the Chef Server </chef_overview_server>` | :doc:`About Nodes </chef_overview_nodes>` | :doc:`About Cookbooks </chef_overview_cookbooks>` | :doc:`About Attributes </chef_overview_attributes>` | :doc:`About Resources and Providers </resource>` | :doc:`About LWRPs (Custom Resources) </lwrp_custom>` | :doc:`About Knife </knife>` | :doc:`About Chef for Windows </windows>`
+**From the beginning:** :doc:`An Overview of Chef </chef_overview>` | :doc:`About Workstations </workstation>` | :doc:`About the Chef Server </chef_server>` | :doc:`About Nodes </nodes>` | :doc:`About Cookbooks </cookbooks>` | :doc:`About Attributes </attributes>` | :doc:`About Resources and Providers </resources>` | :doc:`About LWRPs (Custom Resources) </lwrp_custom>` | :doc:`About Knife </knife>` | :doc:`About Chef for Windows </windows>`
 
-**Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
+**Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
@@ -21,7 +21,7 @@ The Community
 
 The Workstation
 =====================================================
-**The Basics:** :doc:`About the Workstation </chef_overview_workstation>` | :doc:`The chef-repo </chef_repo>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
+**The Basics:** :doc:`About the Workstation </workstation>` | :doc:`The chef-repo </chef_repo>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
 
 **Install:** :doc:`Install the chef-client on a Workstation </install_dk>` | :doc:`Bootstrap a Node </install_bootstrap>` | :doc:`Create and Sync the chef-repo </chef_repo>`
 
@@ -138,11 +138,6 @@ Cookbooks
    chef_dk
    chef_metal
    chef_overview
-   chef_overview_attributes
-   chef_overview_cookbooks
-   chef_overview_nodes
-   chef_overview_server
-   chef_overview_workstation
    chef_private_keys
    chef_quick_overview
    chef_repo
