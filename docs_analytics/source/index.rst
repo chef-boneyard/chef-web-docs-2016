@@ -30,3 +30,4 @@ All about |chef analytics_title| ...
    config_rb_analytics
    ctl_analytics
    install_analytics
+   install_server_pre
