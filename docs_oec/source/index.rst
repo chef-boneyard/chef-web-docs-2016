@@ -449,25 +449,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    ctl_private_chef
    ctl_push_jobs_client
    dsl_recipe
-   dsl_recipe_helper_windows_platform
-   dsl_recipe_method_attribute
-   dsl_recipe_method_cookbook_name
-   dsl_recipe_method_data_bag
-   dsl_recipe_method_platform
-   dsl_recipe_method_platform_family
-   dsl_recipe_method_reboot_pending
-   dsl_recipe_method_recipe_name
-   dsl_recipe_method_registry_data_exists
-   dsl_recipe_method_registry_get_subkeys
-   dsl_recipe_method_registry_get_values
-   dsl_recipe_method_registry_has_subkeys
-   dsl_recipe_method_registry_key_exists
-   dsl_recipe_method_registry_value_exists
-   dsl_recipe_method_resources
-   dsl_recipe_method_search
-   dsl_recipe_method_tag
-   dsl_recipe_method_value_for_platform
-   dsl_recipe_method_value_for_platform_family
    essentials_chef_client
    essentials_cookbook_attribute_files
    essentials_cookbook_definitions
