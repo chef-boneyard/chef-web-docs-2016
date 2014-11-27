@@ -90,7 +90,7 @@ The Nodes
 =====================================================
 **The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | `The chef-client Run <http://docs.getchef.com/chef_client.html#the-chef-client-title-run>`_ | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>` | :doc:`Chef for Containers </containers>` | :doc:`Chef for Junos OS </junos>`
 
-**Install:** `About Bootstrap <http://docs.getchef.com/chef_client.html#xxxxx>`_ | :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
+**Install:** `About Bootstrap <http://docs.getchef.com/chef_client.html#about-bootstrap-operations>`_ | :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
 **Ohai:** :doc:`About Ohai 7 </ohai>` | :doc:`Custom Ohai 7 Plugins </ohai_custom>` | `Ohai 6 <http://docs.getchef.com/release/ohai-6/>`_
 
