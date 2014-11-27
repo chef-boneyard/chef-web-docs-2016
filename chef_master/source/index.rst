@@ -12,7 +12,7 @@ Getting Started
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
-**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Chef Server <http://docs.getchef.com/server/>`_ | `Chef DK <http://docs.getchef.com/devkit/>`__ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release notes for chef-client 11.16 </release_notes>` | `Release notes for Chef server 12 <http://docs.getchef.com/server/release_notes.html>`_ | :doc:`Previous Releases </releases>`
+**Docs for Current Versions:** `chef-client <http://docs.getchef.com/client/>`__ | `Chef Server <http://docs.getchef.com/server/>`_ | `Chef DK <http://docs.getchef.com/devkit/>`__ | `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ | :doc:`Release notes for chef-client 12.0 </release_notes>` | `Release notes for Chef server 12 <http://docs.getchef.com/server/release_notes.html>`_ | :doc:`Previous Releases </releases>`
 
 
 The Community
@@ -77,7 +77,9 @@ The server acts as a repository for all of the data that may be needed by the |c
 
 |chef analytics_title|
 -----------------------------------------------------
-:doc:`Chef Analytics </analytics>` is an add-on for the |chef server| that provides visibility into what is happening on the server. It runs on separate hardware from the |chef server| and consists of several components, initially built around :doc:`Chef Actions </actions>`.
+:doc:`Chef Analytics </analytics>` is an add-on for the |chef server| that provides visibility into what is happening on the server. It runs on separate hardware from the |chef server| and consists of several components, initially built around :doc:`Chef Actions </actions>`. 
+
+:doc:`Rules </analytics_rules>` enable the tracking of detailed events that occur during a |chef client| run and of events that describe the expected state of the system.
 
 **Install Chef Analytics:** :doc:`Install Chef Analytics </install_analytics>`
 
