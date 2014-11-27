@@ -5,7 +5,7 @@ BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 
-release: 12-0 serverdevkit master analytics ohai-7 ohai-6 all client
+release: master 12-0 server devkit analytics ohai-7 ohai-6 all client
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
