@@ -178,11 +178,17 @@ show-config
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show_config.rst
 
-show-versions
-=====================================================
-.. warning:: This command will be added to the |chef server| in an upcoming release.
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show-versions.rst
+.. 
+.. 
+.. Uncomment when https://github.com/opscode/chef-server/issues/35 is available.
+.. 
+.. show-versions
+.. =====================================================
+.. .. warning:: This command will be added to the |chef server| in an upcoming release.
+.. 
+.. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show-versions.rst
+.. 
+.. 
 
 uninstall
 =====================================================
