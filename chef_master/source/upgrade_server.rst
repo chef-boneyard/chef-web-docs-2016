@@ -7,6 +7,8 @@ From |chef server oec|
 =====================================================
 There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: high availability and standalone.
 
+Please :doc:`view the notes </upgrade_server_notes>` for more background on the upgrade process from |chef server oec| 11 to |chef server| 12.
+
 High Availability
 -----------------------------------------------------
 This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
