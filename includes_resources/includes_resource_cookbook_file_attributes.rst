@@ -34,7 +34,7 @@
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path file_cookbook| |path_fully_qualified|
+     - |path full_path_to_file| For example: ``/path/to/file.txt``.
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``
