@@ -4,7 +4,6 @@
 
 .. code-block:: ruby
 
-   cookbook_file "/tmp/testfile" do
-     source "testfile"
+   cookbook_file "file.txt" do
      mode '0644'
    end
