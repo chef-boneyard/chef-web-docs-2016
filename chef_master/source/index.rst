@@ -427,7 +427,6 @@ Cookbooks
    templates
    upgrade_server
    upgrade_server_notes
-   upgrade_server_ha_notes
    upgrade_server_open_source_notes
    verify_packages
    windows
