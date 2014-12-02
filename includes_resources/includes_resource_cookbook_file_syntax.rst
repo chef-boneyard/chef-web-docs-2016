@@ -14,7 +14,7 @@ The syntax for using the |resource cookbook_file| resource in a recipe is as fol
 where 
 
 * ``cookbook_file`` tells the |chef client| to use the ``Chef::Provider::CookbookFile`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``source`` attribute is not specified as part of a recipe, ``name`` is also the path to the ``/files`` directory in a cookbook
+* ``name`` is the name of the resource block; when the ``source`` attribute is not specified as part of a recipe, ``name`` is also the name of a file (and its extension) that exists in ``COOKBOOK_NAME/files/default`` directory
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
 
@@ -22,7 +22,7 @@ The following is an example of how the |resource cookbook_file| resource can wor
 
 .. code-block:: ruby
 
-   cookbook_file "cookbook_test_file" do
-     path "/tmp/test_file"
+   cookbook_file "file.txt" do
+     path "/tmp/file.txt"
      action :create_if_missing
    end
