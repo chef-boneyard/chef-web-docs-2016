@@ -126,7 +126,7 @@ To clone the |chef repo|:
          environments/
          roles/
 
-
+.. note:: For more information about how to use the ``git`` command, see http://git-scm.com/docs.
 
 **Create .chef Directory**
 
