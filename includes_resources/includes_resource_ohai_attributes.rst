@@ -10,8 +10,8 @@
    * - Attribute
      - Description
    * - ``name``
-     -  Always the same value as the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     -  Always the same value as the ``name`` of the resource block. |see syntax|
    * - ``plugin``
      - Optional. The attribute to be reloaded. The |chef client| will identify the correct plugin.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|

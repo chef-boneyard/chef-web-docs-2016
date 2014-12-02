@@ -16,11 +16,11 @@ This resource has the following attributes:
    * - ``options``
      - |command options|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``returns``
      - |returns| This code signals a successful ``:install`` action. Default value: ``0``.
    * - ``source``
-     - Optional. |source resource package| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - Optional. |source resource package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``timeout``
      - |timeout| Default value: ``600`` (seconds).
 

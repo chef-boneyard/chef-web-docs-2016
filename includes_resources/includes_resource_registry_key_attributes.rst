@@ -16,11 +16,10 @@
 
        .. note:: |note registry_key architecture|
    * - ``key``
-     - |key_name resource registry_key| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
-
+     - |key_name resource registry_key| Default value: the ``name`` of the resource block. |see syntax|
        |key_name resource registry_key hives|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``recursive``
      - |recursive registry_key|
 

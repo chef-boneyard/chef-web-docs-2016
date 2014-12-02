@@ -24,9 +24,9 @@
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``recursive``
      - |recursive directory| Default value: ``false``.
    * - ``rights``

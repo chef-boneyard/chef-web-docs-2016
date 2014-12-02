@@ -14,11 +14,11 @@
    * - ``code``
      - |code quoted_string|
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name command| Default value: the ``name`` of the resource block. |see syntax|
    * - ``flags``
      - |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
    * - ``interpreter``
      - |interpreter|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
 

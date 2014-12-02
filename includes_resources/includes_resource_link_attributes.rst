@@ -16,9 +16,9 @@
    * - ``owner``
      - |owner resource link|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``target_file``
-     - |name_link| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name_link| Default value: the ``name`` of the resource block. |see syntax|
    * - ``to``
      - |to resource link|
 

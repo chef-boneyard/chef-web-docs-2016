@@ -34,15 +34,15 @@
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path full_path_to_file| For example: ``/path/to/file.txt``.
+     - |path cookbook_file| For example: ``file.txt``.
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source cookbook_file| Can be used to distribute specific files to specific platforms. (See "File Specificity" below for more information.) Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
 

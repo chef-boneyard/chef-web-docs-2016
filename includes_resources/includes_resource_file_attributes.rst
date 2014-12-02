@@ -36,11 +36,11 @@
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. |see syntax|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``sensitive``

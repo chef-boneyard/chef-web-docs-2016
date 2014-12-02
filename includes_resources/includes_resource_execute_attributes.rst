@@ -10,7 +10,7 @@
    * - Attribute
      - Description
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name command| Default value: the ``name`` of the resource block. |see syntax|
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``
@@ -22,7 +22,7 @@
    * - ``path``
      - |path resource execute| The default value uses the system path.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``sensitive``

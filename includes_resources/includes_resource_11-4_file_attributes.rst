@@ -30,9 +30,9 @@
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path file| |path_fully_qualified| Default value: ``name``.
+     - |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``sensitive``

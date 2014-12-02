@@ -22,9 +22,9 @@ This resource has the following attributes:
    * - ``options``
      - |command options|
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``response_file``
      - Optional. |response_file|
    * - ``source``

@@ -14,7 +14,7 @@
    * - ``code``
      - |code quoted_string|
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name command| Default value: the ``name`` of the resource block. |see syntax|
    * - ``convert_boolean_return``
      - |convert_boolean_return| Default value: ``false``.
        
@@ -44,5 +44,5 @@
    * - ``interpreter``
      - |interpreter|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
 

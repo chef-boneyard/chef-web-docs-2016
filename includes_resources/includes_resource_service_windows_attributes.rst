@@ -14,13 +14,13 @@
    * - ``pattern``
      - |pattern process_table| Default value: ``service_name``.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``reload_command``
      - |command service_reload|
    * - ``restart_command``
      - |command service_restart|
    * - ``service_name``
-     - |name service| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name service| Default value: the ``name`` of the resource block. |see syntax|
    * - ``start_command``
      - |command service_start|
    * - ``startup_type``

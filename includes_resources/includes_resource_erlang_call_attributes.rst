@@ -20,4 +20,4 @@
    * - ``node_name``
      - |node_hostname| Default value: ``chef@localhost``.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|

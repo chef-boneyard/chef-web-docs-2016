@@ -18,7 +18,7 @@
    * - ``password``
      - |password shadow_hash|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``shell``
      - |shell|
    * - ``supports``
@@ -28,4 +28,4 @@
    * - ``uid``
      - |user uid|
    * - ``username``
-     - |name user| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name user| Default value: the ``name`` of the resource block. |see syntax|

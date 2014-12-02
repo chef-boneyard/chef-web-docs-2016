@@ -10,11 +10,11 @@
    * - Attribute
      - Description
    * - ``destination``
-     - |destination resource scm| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
    * - ``group``
      - |group deploy|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``repository``
      - |uri repository_svn|
    * - ``revision``

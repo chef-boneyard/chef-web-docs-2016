@@ -50,7 +50,7 @@
    * - ``path``
      - |environment set_path|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``shell``
      - |environment set_shell|
    * - ``user``

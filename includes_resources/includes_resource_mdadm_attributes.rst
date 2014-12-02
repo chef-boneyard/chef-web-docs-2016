@@ -22,9 +22,9 @@
    * - ``metadata``
      - The superblock type for RAID metadata. Default value: ``0.90``.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``raid_device``
-     - |raid_device mdadm| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |raid_device mdadm| Default value: the ``name`` of the resource block. |see syntax|
 
 
 

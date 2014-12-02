@@ -24,7 +24,7 @@
    * - ``fstype``
      - Required. |fstype|
    * - ``mount_point``
-     - |mount_point| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |mount_point| Default value: the ``name`` of the resource block. |see syntax|
    * - ``mounted``
      - Use to specify if a file system is already mounted. Default value: ``false``.
    * - ``options``
@@ -34,7 +34,7 @@
    * - ``password``
      - |windows| only. Use to specify the password for ``username``.
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``supports``
      - |supports mount| Default value: ``{ :remount => false }``.
    * - ``username``

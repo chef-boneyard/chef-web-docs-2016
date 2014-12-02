@@ -12,7 +12,7 @@
    * - ``chef_server``
      - |chef_server_url|
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name command| Default value: the ``name`` of the resource block. |see syntax|
    * - ``driver``
      - Use to specify the driver to be used for provisioning.
    * - ``machine``

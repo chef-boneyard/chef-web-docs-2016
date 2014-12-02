@@ -28,7 +28,7 @@
    * - ``interpreter``
      - |interpreter|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``timeout``

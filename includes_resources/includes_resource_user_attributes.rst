@@ -20,7 +20,7 @@
    * - ``password``
      - |password shadow_hash|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``salt``
      - |mac os x| platform only, 10.7 or higher. |salt| |mac os x| version 10.7 uses SALTED-SHA512 and version 10.8 (and higher) uses SALTED-SHA512-PBKDF2 to calculate password shadow hashes. 
    * - ``shell``
@@ -32,4 +32,4 @@
    * - ``uid``
      - |user uid|
    * - ``username``
-     - |name user| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |name user| Default value: the ``name`` of the resource block. |see syntax|

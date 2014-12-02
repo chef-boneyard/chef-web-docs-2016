@@ -22,7 +22,7 @@
    * - ``create_dirs_before_symlink``
      - |create_dirs_before_symlink| Default value: ``%w{tmp public config}`` (or the same as ``["tmp", "public", "config"]``).
    * - ``deploy_to``
-     - |deploy_to| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - |deploy_to| Default value: the ``name`` of the resource block. |see syntax|
    * - ``environment``
      - |environment variables|
    * - ``group``
@@ -34,7 +34,7 @@
    * - ``migration_command``
      - |migration command_string|
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - Optional. |provider resource_parameter| |see providers|
    * - ``purge_before_symlink``
      - |purge_before_symlink| Default value: ``%w{log tmp/pids public/system}`` (or the same as ``["log", "tmp/pids", "public/system"]``.
    * - ``repo``
