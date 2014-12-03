@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The syntax for an |ohai 6| plugin is as follows:
+The syntax for an |ohai| 6 plugin is as follows:
 
 .. code-block:: ruby
 
@@ -17,11 +17,11 @@ The syntax for an |ohai 6| plugin is as follows:
 
 where 
 
-* ``require_plugin`` is used to extend one (or more) existing |ohai 6| plugins; an often-used value for ``require_plugin`` is ``"#{os}::hostname"``
+* ``require_plugin`` is used to extend one (or more) existing |ohai| 6 plugins; an often-used value for ``require_plugin`` is ``"#{os}::hostname"``
 * Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This attribute will become an automatic attribute (i.e. ``node[:attribute]``) after it is collected by |ohai| at the start of the |chef client| run. An attribute can also be defined using an ``attribute/subattribute`` pattern
 * ``my_data`` is  string (``a string value``) or an empty mash (``{ :setting_a => "value_a", :setting_b" => "value_b" }``). This is used to define the data that should be collected by the plugin
 
-For example, an |ohai 6| plugin could be built to add additional ``ipaddrtype_iface`` network attributes to help make it semantically easier to retrieve addresses:
+For example, an |ohai| 6 plugin could be built to add additional ``ipaddrtype_iface`` network attributes to help make it semantically easier to retrieve addresses:
 
 .. code-block:: ruby
 

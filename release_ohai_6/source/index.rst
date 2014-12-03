@@ -1,12 +1,12 @@
 =====================================================
-Docs for |ohai 6|  
+Docs for |ohai| 6  
 =====================================================
 
 .. include:: ../../includes_ohai/includes_ohai.rst
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
-View the :doc:`release notes </release_notes>` for |ohai 6|.
+View the :doc:`release notes </release_notes>` for |ohai| 6.
 
 .. warning:: `Ohai 7 <http://docs.getchef.com/release/ohai-7/>`_ is planned to be fully integrated into the |chef client| starting with the 11.12.0 release (~April 2014).
 
@@ -28,10 +28,10 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-Custom |ohai 6| Plugins
+Custom |ohai| 6 Plugins
 =====================================================
 
-.. warning:: Custom plugins change significantly in |ohai 7| (see the `release notes <http://docs.getchef.com/release/ohai-7/release_notes.html>`_). While |company_name| has worked to ensure backwards compatibility for all |ohai| plugins, all plugins that were built for |ohai 6| should be updated, tested, and then verified for |ohai 7|.
+.. warning:: Custom plugins change significantly in |ohai| 7 (see the `release notes <http://docs.getchef.com/release/ohai-7/release_notes.html>`_). While |company_name| has worked to ensure backwards compatibility for all |ohai| plugins, all plugins that were built for |ohai| 6 should be updated, tested, and then verified for |ohai| 7.
 
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
 
@@ -47,7 +47,7 @@ Hints
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_hints.rst
 
-|ohai 6| vs. |ohai 7| Plugins
+|ohai| 6 vs. |ohai| 7 Plugins
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_migrate_plugins_6_to_7.rst
 

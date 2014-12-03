@@ -1,5 +1,5 @@
 =====================================================
-Release Notes: |ohai 6|
+Release Notes: |ohai| 6
 =====================================================
 
 .. include:: ../../includes_ohai/includes_ohai.rst

@@ -1,12 +1,12 @@
 =====================================================
-Docs for |ohai 7|  
+Docs for |ohai| 7  
 =====================================================
 
 .. include:: ../../includes_ohai/includes_ohai.rst
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
-View the :doc:`release notes </release_notes>` for |ohai 7|.
+View the :doc:`release notes </release_notes>` for |ohai| 7.
 
 Automatic Attributes
 =====================================================
@@ -104,7 +104,7 @@ Get Kernel Values
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst
 
-|ohai 6| vs. |ohai 7| Plugins
+|ohai| 6 vs. |ohai| 7 Plugins
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_migrate_plugins_6_to_7.rst
 
