@@ -38,7 +38,7 @@ Custom Plugins
 
 .. note:: See https://github.com/rackerlabs/ohai-plugins/tree/master/plugins for some great examples of custom |ohai| plugins.
 
-.. warning:: The syntax for custom plugins changes significantly between |ohai 6| and |ohai 7|. This page is about |ohai 7| plugins and `this page is about Ohai 6 plugins <http://docs.opscode.com/release/ohai-6/>`_). While |company_name| has worked to ensure backwards compatibility for all plugins in |ohai 7|, a plan should be put in place to update the syntax for all |ohai 6| plugins so they are using the |ohai 7| pattern. Once updated, please test and verify those plugins before running them in a production environment.
+.. warning:: The syntax for custom plugins changes significantly between |ohai| 6 and newer versions of |ohai|. This page is about newer plugins and `this page is about Ohai 6 plugins <http://docs.opscode.com/release/ohai-6/>`_). While |company_name| has worked to ensure backwards compatibility for all |ohai 6| plugins, a plan should be put in place to update the syntax for all |ohai| 6 plugins so they are usable with the new pattern. Once updated, please test and verify those plugins before running them in a production environment.
 
 Syntax
 -----------------------------------------------------
@@ -100,7 +100,7 @@ Get Kernel Values
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst
 
-|ohai 6| vs. |ohai 7| Plugins
+|ohai| 6 vs. Newer Plugins
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_migrate_plugins_6_to_7.rst
 
