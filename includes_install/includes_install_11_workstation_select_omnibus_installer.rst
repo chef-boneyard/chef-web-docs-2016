@@ -5,7 +5,7 @@ The bits for the |chef client| |omnibus installer| are available as a download f
 
 To download the |omnibus installer| for the |chef client|:
 
-#. Go to: |url opscode_chef_install|.
+#. Go to: |url chef_install|.
 
 #. Select the operating system, version, and architecture appropriate for your environment.
 
