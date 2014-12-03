@@ -2,9 +2,9 @@
 Cookbook Directories and Metadata
 =====================================================
 
-.. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
+.. include:: ../../includes_chef_repo/includes_chef_repo_directory_cookbooks.rst
 
-.. include:: ../../step_repository/step_repository_cookbooks_configure_settings.rst
+.. include:: ../../step_chef_repo/step_chef_repo_cookbooks_configure_settings.rst
 
 .. include:: ../../step_knife/step_knife_cookbook_create.rst
 
