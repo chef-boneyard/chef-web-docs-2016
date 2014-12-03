@@ -10,7 +10,7 @@
    * - ``Ohai::Config[:directory]``
      - |path plugin_ohai|
    * - ``Ohai::Config[:disabled_plugins]``
-     - |disable plugin_ohai| The list of plugins included in |ohai| can be found in the ``ohai/lib/ohai/plugins`` directory. For example:
+     - |disable plugin_ohai| The list of plugins included in |ohai| can be found in the ``ohai/lib/ohai/plugins`` directory. For example, disabling a single plugin:
 
        .. code-block:: ruby
 
@@ -18,7 +18,7 @@
 		       :MyPlugin
 			   ]
 
-       or:
+       or disabling multiple plugins:
 
        .. code-block:: ruby
 
@@ -28,7 +28,7 @@
 			   :MyPlugin
 			   ]
 
-       or to disable both |ohai 6| and |ohai 7| versions:
+       and to disable multiple plugins, including |ohai| 6 plugins:
 
        .. code-block:: ruby
 
