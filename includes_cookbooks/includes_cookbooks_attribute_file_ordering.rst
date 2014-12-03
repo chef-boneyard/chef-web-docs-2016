@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-.. note:: This approach, as of |chef 11-0|, is no longer the recommended way to define attribute dependencies. Starting with |chef 11-0|, attribute dependencies should be defined using a cookbook's |metadata rb| file.
+.. note:: This approach, as of |chef| 11-0, is no longer the recommended way to define attribute dependencies. Starting with |chef| 11-0, attribute dependencies should be defined using a cookbook's |metadata rb| file.
 
 When the |chef client| loads cookbook attribute files, the |chef client| first identifies all of the cookbook dependencies, then identifies all of the attributes defined in those cookbooks, and then evaluates these attributes based on the order defined in the run-list. If one attribute file must be loaded before another, use the ``include_attribute`` method.
 
