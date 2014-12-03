@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To only view data about "templates", enter:
+To only view data about templates, enter:
 
 .. code-block:: bash
 

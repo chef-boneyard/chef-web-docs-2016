@@ -11,6 +11,6 @@ to return something like:
 
 .. code-block:: bash
 
-   Downloading getting-started from the cookbooks site at version 0.3.0 to
-     /Users/sdanna/opscodesupport/getting-started-0.3.0.tar.gz
-   Cookbook saved: /Users/sdanna/opscodesupport/getting-started-0.3.0.tar.gz
+   Downloading getting-started from the cookbooks site at version 1.2.3 to
+     /Users/grantmc/chef-support/getting-started-1.2.3.tar.gz
+   Cookbook saved: /Users/grantmc/chef-support/getting-started-1.2.3.tar.gz

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To get the list of available versions of a cookbook named "getting-started", enter:
+To get the list of available versions of a cookbook named ``getting-started``, enter:
 
 .. code-block:: bash
 

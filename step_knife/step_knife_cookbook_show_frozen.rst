@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To see if a cookbook named "redis" with a version number of "0.1.6" is frozen, enter:
+To see if a cookbook named ``redis`` with a version number of ``0.1.6`` is frozen, enter:
 
 .. code-block:: bash
 
