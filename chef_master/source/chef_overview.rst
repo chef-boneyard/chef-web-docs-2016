@@ -79,7 +79,7 @@ Some important components of workstations include:
    * - .. image:: ../../images/icon_policy.png
      - Policy defines how business and operational requirements, processes, and production workflows map to objects that are stored on the |chef server|. Policy objects on the |chef server| include roles, environments, and cookbook versions.
    * - .. image:: ../../images/icon_repository.png
-     - .. include:: ../../includes_repository/includes_repository.rst
+     - .. include:: ../../includes_chef_repo/includes_chef_repo.rst
 
 While |chef| includes tooling like the |chef dk|, encourages integration and unit testing, and defines workflow around cookbook authoring and policy, it's important to note that you know best about how your infrastructure should be put together. Therefore, |chef| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed. While |chef| encourages the use of the tooling packaged in the |chef dk|, none of these tools should be seen as a requirement or pre-requisite for being successful using |chef|.
 
