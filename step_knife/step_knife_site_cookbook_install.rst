@@ -11,17 +11,17 @@ to return something like:
 
 .. code-block:: bash
 
-   Installing getting-started to /Users/sdanna/opscodesupport/.chef/../cookbooks
+   Installing getting-started to /Users/grantmc/chef-support/.chef/../cookbooks
    Checking out the master branch.
    Creating pristine copy branch chef-vendor-getting-started
-   Downloading getting-started from the cookbooks site at version 0.3.0 to
-     /Users/sdanna/opscodesupport/.chef/../cookbooks/getting-started.tar.gz
-   Cookbook saved: /Users/sdanna/opscodesupport/.chef/../cookbooks/getting-started.tar.gz
+   Downloading getting-started from the cookbooks site at version 1.2.3 to
+     /Users/grantmc/chef-support/.chef/../cookbooks/getting-started.tar.gz
+   Cookbook saved: /Users/grantmc/chef-support/.chef/../cookbooks/getting-started.tar.gz
    Removing pre-existing version.
-   Uncompressing getting-started version /Users/sdanna/opscodesupport/.chef/../cookbooks.
+   Uncompressing getting-started version /Users/grantmc/chef-support/.chef/../cookbooks.
    removing downloaded tarball
    1 files updated, committing changes
-   Creating tag cookbook-site-imported-getting-started-0.3.0
+   Creating tag cookbook-site-imported-getting-started-1.2.3
    Checking out the master branch.
    Updating 4d44b5b..b4c32f2
    Fast-forward
@@ -38,4 +38,4 @@ to return something like:
     create mode 100644 cookbooks/getting-started/metadata.rb
     create mode 100644 cookbooks/getting-started/recipes/default.rb
     create mode 100644 cookbooks/getting-started/templates/default/chef-getting-started.txt.erb
-   Cookbook getting-started version 0.3.0 successfully installed 
+   Cookbook getting-started version 1.2.3 successfully installed 

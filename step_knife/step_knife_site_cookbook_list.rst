@@ -1,13 +1,15 @@
 .. This is an included how-to. 
 
 
-To view a list of cookbooks at |url opscode_community_cookbooks| server, enter:
+To view a list of cookbooks at |url community_cookbooks| server, enter:
 
 .. code-block:: bash
 
    $ knife cookbook site list
 
-to return::
+to return a list similar to:
+
+.. code-block:: bash
 
    1password             homesick              rabbitmq
    7-zip                 hostname              rabbitmq-management

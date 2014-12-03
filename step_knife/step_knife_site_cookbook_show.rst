@@ -16,15 +16,15 @@ to return something like:
    created_at:      2009-10-25T23:51:07Z
    description:     Installs and configures haproxy
    external_url:
-   latest_version:  http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_3
+   latest_version:  https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/1_0_3
    maintainer:      opscode
    name:            haproxy
    updated_at:      2011-06-30T21:53:25Z
    versions:
-      http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_3
-      http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_2
-      http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_1
-      http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_0
-      http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_8_1
-      http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_8_0
-      http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_7_0 
+     https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/1_0_3
+     https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/1_0_2
+     https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/1_0_1
+     https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/1_0_0
+     https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/0_8_1
+     https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/0_8_0
+     https://supermarket.chef.io/api/v1/cookbooks/haproxy/versions/0_7_0 
