@@ -196,7 +196,7 @@ Install
 
 knife-openstack
 =====================================================
-See http://docs.getchef.com/plugin_knife_openstack.html.
+See http://docs.chef.io/plugin_knife_openstack.html.
 
 
 

@@ -46,12 +46,12 @@ Syntax
 
 Many Users, Same Repo
 -----------------------------------------------------
-.. include:: ../../includes_repository/includes_repository_many_users_same_repo.rst
+.. include:: ../../includes_chef_repo/includes_chef_repo_many_users_same_repo.rst
 
 
 Common Options
 =====================================================
-.. include:: ../../includes_knife/includes_knife_11-12_common_options.rst
+.. include:: ../../includes_knife/includes_knife_common_options.rst
 
 
 bootstrap
@@ -61,7 +61,7 @@ bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.getchef.com/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
 
 Syntax
 -----------------------------------------------------
@@ -69,13 +69,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-12_bootstrap_options.rst
+.. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_bootstrap_settings.rst
 
@@ -139,7 +139,7 @@ client
 
 .. include:: ../../includes_knife/includes_knife_client.rst
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
    
 bulk delete
 -----------------------------------------------------
@@ -171,7 +171,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
@@ -245,7 +245,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_client_reregister_settings.rst
 
@@ -285,13 +285,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_configure_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_configure_settings.rst
 
@@ -309,7 +309,7 @@ cookbook
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 bulk delete
 -----------------------------------------------------
@@ -325,7 +325,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_settings.rst
 
@@ -348,7 +348,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_create_settings.rst
 
@@ -371,7 +371,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_delete_settings.rst
 
@@ -394,7 +394,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_download_settings.rst
 
@@ -417,7 +417,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_list_settings.rst
 
@@ -440,7 +440,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_settings.rst
 
@@ -480,7 +480,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_show_settings.rst
 
@@ -509,7 +509,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_test_settings.rst
 
@@ -532,7 +532,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_upload_settings.rst
 
@@ -553,7 +553,7 @@ cookbook site
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook.rst
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 download
 -----------------------------------------------------
@@ -569,7 +569,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook_download_settings.rst
 
@@ -591,7 +591,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook_install_settings.rst
 
@@ -645,7 +645,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook_share.rst
 
@@ -701,7 +701,7 @@ data bag
 
 .. include:: ../../includes_knife/includes_knife_data_bag.rst
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -717,7 +717,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_data_bag_create_settings.rst
 
@@ -757,7 +757,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_data_bag_edit_settings.rst
 
@@ -781,7 +781,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_data_bag_from_file_settings.rst
 
@@ -822,7 +822,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_data_bag_show_settings.rst
 
@@ -851,13 +851,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_delete_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_delete_settings.rst
 
@@ -879,13 +879,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_deps_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_deps_settings.rst
 
@@ -922,13 +922,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_diff_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_diff_settings.rst
 
@@ -953,13 +953,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_download_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_download_settings.rst
 
@@ -990,13 +990,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_edit_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_edit_settings.rst
 
@@ -1016,7 +1016,7 @@ environment
 
 .. include:: ../../includes_knife/includes_knife_environment.rst
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -1032,7 +1032,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_environment_create_settings.rst
 
@@ -1089,7 +1089,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_environment_from_file_settings.rst
 
@@ -1155,13 +1155,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_exec_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_exec_settings.rst
 
@@ -1189,13 +1189,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_list_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_list_settings.rst
 
@@ -1216,7 +1216,7 @@ node
 
 .. include:: ../../includes_knife/includes_knife_node.rst
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 bulk delete
 -----------------------------------------------------
@@ -1296,7 +1296,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_node_from_file_settings.rst
 
@@ -1318,7 +1318,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_node_list_settings.rst
 
@@ -1344,7 +1344,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_settings.rst
 
@@ -1374,7 +1374,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove_settings.rst
 
@@ -1427,13 +1427,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_raw_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_raw_settings.rst
 
@@ -1456,7 +1456,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 |no_options|
 
@@ -1473,9 +1473,9 @@ role
 
 .. include:: ../../includes_knife/includes_knife_role.rst
 
-.. note:: To add a role to a node and then build out the run-list for that node, use the `knife node <http://docs.getchef.com/knife_node>`_ sub-command and its ``run_list add`` argument.
+.. note:: To add a role to a node and then build out the run-list for that node, use the `knife node <http://docs.chef.io/knife_node>`_ sub-command and its ``run_list add`` argument.
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 bulk delete
 -----------------------------------------------------
@@ -1507,7 +1507,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_role_create_settings.rst
 
@@ -1561,7 +1561,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_role_from_file_settings.rst
 
@@ -1599,7 +1599,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_role_show_settings.rst
 
@@ -1628,7 +1628,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_search_options.rst
 
@@ -1702,7 +1702,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_show_options.rst
 
@@ -1726,13 +1726,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_ssh_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_ssh_settings.rst
 
@@ -1823,13 +1823,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_status_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_status_settings.rst
 
@@ -1853,7 +1853,7 @@ tag
 
 .. include:: ../../includes_knife/includes_knife_tag.rst
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -1916,13 +1916,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_upload_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_upload_settings.rst
 
@@ -1950,7 +1950,7 @@ user
 
 .. note:: This subcommand ONLY works when run against the open source |chef server| and will not run against |chef server oec| (including hosted |chef server oec|), or |chef private|.
 
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -1966,7 +1966,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_user_create_settings.rst
 
@@ -2036,7 +2036,7 @@ Options
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_user_reregister_settings.rst
 
@@ -2075,13 +2075,13 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://docs.getchef.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_xargs_options.rst
 
 **knife.rb Settings**
 
-.. note:: See `knife.rb <http://docs.getchef.com/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
+.. note:: See `knife.rb <http://docs.chef.io/config_rb_knife.html>`_ for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_xargs_settings.rst
 
