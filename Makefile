@@ -5,11 +5,11 @@ BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 
-release: master
+release: master ohai-8
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
-# 12-0 server devkit analytics ohai-7 ohai-6 all client
+# 12-0 server devkit analytics ohai-8 ohai-7 ohai-6 all client
 # 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16
 # 
 # enterprise oec_11-0 oec_11-1 oec_11-2
@@ -136,13 +136,17 @@ open_source:
 	mkdir -p $(BUILDDIR)/open_source/
 	$(BUILD_COMMAND_AND_ARGS) docs_osc/source $(BUILDDIR)/open_source/
 
-ohai-6:
-	mkdir -p $(BUILDDIR)/release/ohai-6/
-	$(BUILD_COMMAND_AND_ARGS) release_ohai_6/source $(BUILDDIR)/release/ohai-6/
+ohai-8:
+	mkdir -p $(BUILDDIR)/release/ohai-8/
+	$(BUILD_COMMAND_AND_ARGS) release_ohai_8/source $(BUILDDIR)/release/ohai-8/
 
 ohai-7:
 	mkdir -p $(BUILDDIR)/release/ohai-7/
 	$(BUILD_COMMAND_AND_ARGS) release_ohai_7/source $(BUILDDIR)/release/ohai-7/
+
+ohai-6:
+	mkdir -p $(BUILDDIR)/release/ohai-6/
+	$(BUILD_COMMAND_AND_ARGS) release_ohai_6/source $(BUILDDIR)/release/ohai-6/
 
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
