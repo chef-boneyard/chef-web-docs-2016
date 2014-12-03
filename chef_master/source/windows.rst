@@ -6,7 +6,7 @@
 
 The |chef client| has specific components that are designed to support unique aspects of the |windows| platform, including |windows powershell|, |microsoft iis|, and |microsoft sqlserver|.
 
-* The |chef client| is `installed on a machine <http://docs.opscode.com/windows.html#install-the-chef-client-on-windows>`_ running |windows| by using a |microsoft installer package|
+* The |chef client| is `installed on a machine <http://chef.io/windows.html#install-the-chef-client-on-windows>`_ running |windows| by using a |microsoft installer package|
 * Six resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource dsc_script|, |resource env|, |resource powershell_script|, |resource registry_key|, and |resource package_windows|
 * A resource named |resource dsc_resource| is in development---available for preview via the https://github.com/opscode-cookbooks/dsc cookbook---that adds the ability to use Powershell DSC resources in Chef!
 * Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
@@ -99,7 +99,7 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.opscode.com/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -130,7 +130,7 @@ knife azure
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
 
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -227,7 +227,7 @@ knife windows
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
-.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

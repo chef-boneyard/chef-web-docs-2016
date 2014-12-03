@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst
 
-Install `Push Jobs <http://docs.getchef.com/install_push_jobs.html>`_ using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
+Install `Push Jobs <http://docs.chef.io/install_push_jobs.html>`_ using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
 
 Requirements
 =====================================================

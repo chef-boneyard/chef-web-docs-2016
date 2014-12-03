@@ -20,7 +20,7 @@ Actions
 -----------------------------------------------------
 The following steps should be taken:
 
-#. Upgrade to the latest version of the |chef server|; click `here <http://www.getchef.com/blog/2014/06/06/chef-server-11-1-1-release/>`__ for |chef server osc|, `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-server-11-1-6-release/>`__ for |chef server oec|, and `here <http://www.getchef.com/blog/2014/06/06/enterprise-chef-1-4-11-release/>`__ for |chef private|.
+#. Upgrade to the latest version of the |chef server|; click `here <http://www.chef.io/blog/2014/06/06/chef-server-11-1-1-release/>`__ for |chef server osc|, `here <http://www.chef.io/blog/2014/06/06/enterprise-chef-server-11-1-6-release/>`__ for |chef server oec|, and `here <http://www.chef.io/blog/2014/06/06/enterprise-chef-1-4-11-release/>`__ for |chef private|.
    
    .. note:: Add-ons for |chef server oec|---|reporting|, |push jobs|, and |chef manage|---are also vulnerable; however, they use the same HTTP proxy as |chef server oec|, so after the |chef server oec| server itself is patched, the add-ons will no longer be vulnerable.
 
@@ -30,13 +30,13 @@ The following steps should be taken:
    
    .. code-block:: bash
    
-      curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 11.12.8
+      curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 11.12.8
    
    For version 10, run the following:
    
    .. code-block:: bash
    
-      curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 10.32.2
+      curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 10.32.2
 
 #. After the |chef server| and every |chef client| is patched, you should change user passwords, encryption for data bags, and/or take additional steps to protect other sensitive data.
 
@@ -65,7 +65,7 @@ Actions
 -----------------------------------------------------
 The following steps should be taken:
 
-#. Upgrade to the latest version of the |chef server|; click `here <http://www.getchef.com/blog/2014/04/09/chef-server-11-0-12-release/>`__ for |chef server osc|, `here <http://www.getchef.com/blog/2014/04/09/enterprise-chef-11-1-3-release/>`__ for |chef server oec|, and `here <http://www.getchef.com/blog/2014/04/09/enterprise-chef-1-4-9-release/>`__ for |chef private|.
+#. Upgrade to the latest version of the |chef server|; click `here <http://www.chef.io/blog/2014/04/09/chef-server-11-0-12-release/>`__ for |chef server osc|, `here <http://www.chef.io/blog/2014/04/09/enterprise-chef-11-1-3-release/>`__ for |chef server oec|, and `here <http://www.chef.io/blog/2014/04/09/enterprise-chef-1-4-9-release/>`__ for |chef private|.
 
    .. note:: Add-ons for |chef server oec|---|reporting|, |push jobs|, and |chef manage|---are also vulnerable; however, they use the same HTTP proxy as |chef server oec|, so after the |chef server oec| server itself is patched, the add-ons will no longer be vulnerable.
 
@@ -77,13 +77,13 @@ The following steps should be taken:
 
    .. code-block:: bash
    
-     curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 11.12.0
+     curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 11.12.0
    
    For version 10, download the release from `here <https://opscode-omnibus-packages.s3.amazonaws.com/windows/2008r2/x86_64/chef-client-10.32.2-1.windows.msi/>`__ or run the following:
    
    .. code-block:: bash
    
-     curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 10.32.2
+     curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 10.32.2
 
 #. After the |chef server| and every |chef client| is patched, it's still possible that arbitrary data was compromised during the patching process. Depending on your organization's comfort level with the defense around your |chef| installation, you may want to change user passwords and/or take additional steps to protect other sensitive data.
 
@@ -94,7 +94,7 @@ More Information
 -----------------------------------------------------
 Please also review the following blog posts:
 
-* http://www.getchef.com/blog/2014/04/09/enterprise-chef-11-1-3-release/
-* http://www.getchef.com/blog/2014/04/09/chef-server-heartbleed-cve-2014-0160-releases/
-* http://www.getchef.com/blog/2014/04/08/release-chef-client-11-12-0-10-32-2/
-* http://www.getchef.com/blog/2014/04/10/update-on-heartbleed-and-chef-keys/
+* http://www.chef.io/blog/2014/04/09/enterprise-chef-11-1-3-release/
+* http://www.chef.io/blog/2014/04/09/chef-server-heartbleed-cve-2014-0160-releases/
+* http://www.chef.io/blog/2014/04/08/release-chef-client-11-12-0-10-32-2/
+* http://www.chef.io/blog/2014/04/10/update-on-heartbleed-and-chef-keys/

@@ -6,7 +6,7 @@ knife cookbook site
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook.rst
 
-.. warning:: Please consider managing community cookbooks using the version of |berkshelf| that ships with the |chef dk|. For more information about the |chef dk|, see http://docs.opscode.com/devkit/.
+.. warning:: Please consider managing community cookbooks using the version of |berkshelf| that ships with the |chef dk|. For more information about the |chef dk|, see http://docs.chef.io/devkit/.
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 

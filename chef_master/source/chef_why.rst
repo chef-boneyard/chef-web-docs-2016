@@ -27,11 +27,11 @@ Why was |chef| created?
 
 How can I help?
 -----------------------------------------------------
-`Join the community <http://docs.opscode.com/#the-community>`_, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |company_name| open source project. For more information about participating in the community, see 
+`Join the community <http://docs.chef.io/#the-community>`_, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |company_name| open source project. For more information about participating in the community, see 
 
 Do I really need to know |ruby|?
 -----------------------------------------------------
-It helps, but its not required. Many recipes are just structure and patterns that use |ruby| as the definition language. Having actual |ruby| coding skills? Helpful, but not required, especially to get started. You can learn :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`.
+It helps, but its not required. Many recipes are just structure and patterns that use |ruby| as the definition language. Having actual |ruby| coding skills? Helpful, but not required, especially to get started. You can learn :doc:`Just Enough Ruby for Chef </ruby>`.
 
 Can I trust |chef|?
 -----------------------------------------------------
@@ -39,7 +39,7 @@ Yes, absolutely. The |chef client| will not do anything to your system that isn'
 
 Who uses |chef|?
 =====================================================
-Lots of companies, ranging from `small startups to the largest companies on the planet <http://www.getchef.com/customers/>`_.
+Lots of companies, ranging from `small startups to the largest companies on the planet <http://www.chef.io/customers/>`_.
 
 Why the |apache| license?
 =====================================================

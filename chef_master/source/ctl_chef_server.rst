@@ -1,6 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/ctl_private_chef.html BY DESIGN
-.. THIS PAGE IS LOCATED AT THE /server/ PATH.
-
 =====================================================
 |chef server ctl| (executable)
 =====================================================

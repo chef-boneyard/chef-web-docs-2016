@@ -35,8 +35,8 @@ For more information ...
 For more information about |azure| and how to use it with |chef|:
 
 * `Microsoft Azure Documentation <http://www.windowsazure.com/en-us/documentation/services/virtual-machines/>`_
-* `Chef Documentation <https://docs.opscode.com>`_
-* `knife azure Plugin <https://docs.opscode.com/plugin_knife_azure.html>`_
+* `Chef Documentation <https://docs.chef.io>`_
+* `knife azure Plugin <https://docs.chef.io/plugin_knife_azure.html>`_
 * `azure-cookbook <https://github.com/chef-partners/azure-cookbook>`_
 
 

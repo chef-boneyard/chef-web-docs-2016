@@ -11,7 +11,7 @@
 
 .. include:: ../../includes_actions/includes_actions_long.rst
 
-Install |chef actions| by installing the `Analytics <http://docs.getchef.com/install_analytics.html>`_ premium feature of the |chef server|.
+Install |chef actions| by installing the `Analytics <http://docs.chef.io/install_analytics.html>`_ premium feature of the |chef server|.
 
 Architecture
 -----------------------------------------------------

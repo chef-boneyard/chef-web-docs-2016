@@ -63,11 +63,3 @@ Use a ``mixin`` Library
 Get Kernel Values
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst
-
-
-
-
-
-
-
-

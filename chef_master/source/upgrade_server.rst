@@ -59,7 +59,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    If the upgrade process times out, re-run the command until it finishes successfully.
 
-#. Copy the entire /etc/opscode directory from the back end primary machine to all front and back end nodes. For example, from each server run:
+#. Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
 
    .. code-block:: bash
       

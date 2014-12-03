@@ -13,7 +13,7 @@ Settings
    
    .. code-block:: ruby
    
-      chef_documentation_url 'http://docs.opscode.com'
+      chef_documentation_url 'http://docs.chef.io'
 
 .. include:: ../../includes_config/includes_config_rb_manage_settings.rst
 

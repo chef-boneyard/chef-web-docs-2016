@@ -19,7 +19,7 @@ About Policy
 
 Policyfile
 =====================================================
-.. warning:: Policy is a new (and expiremental) feature released in the 0.3.0 version of the |chef dk|. Policy will make improvements to how the code that is used to manage your infrastructure is authored, tested, and distributed. Policy is configured using a policy file.
+.. warning:: Policy is a new (and expiremental) feature released in the the |chef dk|. Policy will make improvements to how the code that is used to manage your infrastructure is authored, tested, and distributed. Policy is configured using a policy file.
 
 Policy defines the cookbook revisions, environments, and roles that should be applied by the |chef client|.
 

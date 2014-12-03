@@ -25,7 +25,7 @@ The standalone installation of |chef server| creates a working installation on a
 
 To install |chef server| 12:
 
-#. Download the package from http://downloads.getchef.com/chef-server/.
+#. Download the package from http://downloads.chef.io/chef-server/.
 #. Upload the package to the machine that will run the |chef server|, and then record its location on the file system. The rest of these steps assume this location is in the ``/tmp`` directory.
 
 #. Install the |chef server| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
@@ -71,8 +71,8 @@ The following links describe how to configure the |chef server| for high availab
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_ha_aws.html">High Availability using Amazon Web Services</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_ha_drbd.html">High Availability using DRBD</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/install_server_ha_aws.html">High Availability using Amazon Web Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/install_server_ha_drbd.html">High Availability using DRBD</a> </br>
 
 Tiered (Single Backend)
 =====================================================
@@ -80,4 +80,4 @@ The following link describes how to configure the |chef server| with a single ba
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.getchef.com/install_server_tiered.html">Tiered</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/install_server_tiered.html">Tiered</a> </br>

@@ -6,7 +6,7 @@ The following sections describe how to troubleshoot some common errors and probl
 
 401 Unauthorized
 =====================================================
-There are multiple causes of the Chef 401 "Unauthorized" error, so please use the sections below to find the error message that most closely matches your output. If you are unable to find a matching error, or if the provided steps are unhelpful, please `file a help ticket <http://www.opscode.com/support/tickets>`_.
+There are multiple causes of the Chef 401 "Unauthorized" error, so please use the sections below to find the error message that most closely matches your output. If you are unable to find a matching error, or if the provided steps are unhelpful, please `file a help ticket <https://getchef.zendesk.com/hc/en-us>`_.
 
 Failed to authenticate as ORGANIZATION-validator
 -----------------------------------------------------
@@ -216,7 +216,7 @@ If the problematic service is a |ruby|-based service and the frontend machines h
 
 Workflow Problems
 =====================================================
-In working with |chef|, you'll most likely encounter issues in your regular workflow. This page is a collection of common errors our users have reported while working with |chef|. Please use the accordion below to select the error message that most closely matches your output. If you are unable to find a matching error, or if the provided steps are unhelpful, please `file a help ticket <http://www.opscode.com/support/tickets>`_.
+In working with |chef|, you'll most likely encounter issues in your regular workflow. This page is a collection of common errors our users have reported while working with |chef|. Please use the accordion below to select the error message that most closely matches your output. If you are unable to find a matching error, or if the provided steps are unhelpful, please `file a help ticket <https://getchef.zendesk.com/hc/en-us>`_.
 
 No such file or directory
 -----------------------------------------------------

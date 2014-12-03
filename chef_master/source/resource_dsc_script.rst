@@ -47,7 +47,11 @@ Examples
 
 **Use custom configuration data**
 
-Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
+Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways:
+
+* By using the ``configuration_data`` attribute
+* By using the ``configuration_data_script`` attribute
+* By specifying the path to a valid |windows powershell| data file
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
 

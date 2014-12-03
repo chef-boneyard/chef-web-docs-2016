@@ -1,4 +1,5 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/chef_overview.html BY DESIGN
-.. THIS PAGE IS LOCATED AT THE /server/ PATH.
+=====================================================
+Server Types
+=====================================================
 
-.. include:: ../../chef_master/source/chef_overview.rst
+.. warning:: This topic has been moved and is now located at http://docs.chef.io/chef_overview.html.

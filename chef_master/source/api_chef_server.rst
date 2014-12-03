@@ -576,6 +576,8 @@ _status
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since.rst
 
+.. warning:: This update is available after |chef replication| is installed on the |chef server|.
+
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst
