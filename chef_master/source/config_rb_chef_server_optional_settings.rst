@@ -1,3 +1,5 @@
-.. THIS PAGE IS LOCATED AT THE docs.getchef.com ROOT PATH.
+=====================================================
+|chef server rb| Optional Settings
+=====================================================
 
-.. include:: ../../release_11-x_master/config_rb_chef_server_optional_settings.rst
+.. warning:: This topic has been moved to http://docs.chef.io/open_source/config_rb_chef_server_optional_settings.html.

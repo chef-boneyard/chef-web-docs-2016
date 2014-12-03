@@ -1,3 +1,5 @@
-.. THIS PAGE IS LOCATED AT THE docs.getchef.com ROOT PATH.
+=====================================================
+|chef server rb| Settings
+=====================================================
 
-.. include:: ../../release_11-x_master/config_rb_chef_server.rst
+.. warning:: This topic has been moved to http://docs.chef.io/open_source/config_rb_chef_server.html.
