@@ -225,6 +225,8 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    |name_rules org_full| For example: ``Chef Software, Inc.``.
 
+   Update the `default_orgname setting <http://docs.chef.io/client/>`__  in the |chef server rb| file.
+   
 #. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporary data that was created during the upgrade process.
 
 #. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
