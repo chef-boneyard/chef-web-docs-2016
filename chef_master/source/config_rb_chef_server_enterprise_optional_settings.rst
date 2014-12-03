@@ -1,3 +1,5 @@
-.. THIS PAGE IS LOCATED AT THE docs.getchef.com ROOT PATH.
+=====================================================
+|enterprise rb| Optional Settings
+=====================================================
 
-.. include:: ../../release_11-x_master/config_rb_chef_server_enterprise_optional_settings.rst
+.. warning:: This topic has been moved to http://docs.getchef.com/enterprise/config_rb_chef_server_enterprise_optional_settings.html.
