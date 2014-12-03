@@ -20,5 +20,5 @@ Optional Settings
 
 Many Users, Same Repo
 =====================================================
-.. include:: ../../includes_repository/includes_repository_many_users_same_repo.rst
+.. include:: ../../includes_chef_repo/includes_chef_repo_many_users_same_repo.rst
 

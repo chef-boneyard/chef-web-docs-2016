@@ -1,21 +1,21 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-In |chef 10|, it is often difficult to ensure that configuration parameters are applied in the correct order. Configuration parameters should be applied in the following order:
+In |chef client| 10, it is often difficult to ensure that configuration parameters are applied in the correct order. Configuration parameters should be applied in the following order:
 
 #. Default values
 #. Values set in |knife rb|
 #. Values passed by command line option
 
-Because of the way the ``mixlib-cli`` library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. |chef 11| takes advantage of a new mode for ``mixlib-cli`` that keeps default values separate from user-supplied values. In the configuration process, |knife| automatically applies configuration parameters in the following order:
+Because of the way the ``mixlib-cli`` library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. |chef client| 11 takes advantage of a new mode for ``mixlib-cli`` that keeps default values separate from user-supplied values. In the configuration process, |knife| automatically applies configuration parameters in the following order:
 
 #. Default values set in the ``mixlib-cli`` DSL
 #. Configuration settings under ``Chef::Config[:knife]``
 #. User supplied values parsed by ``mixlib-cli``
 
-Depending on how authors of custom |knife| plugins have worked around the older behavior, it's possible that this change will lead to incorrect values being used. The |company_name|-maintained cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|.
+Depending on how authors of custom |knife| plugins have worked around the older behavior, it's possible that this change will lead to incorrect values being used. The |company_name|-maintained cloud plugins have been reviewed and should work correctly on both |chef client| 10 and |chef client| 11.
 
-When writing |knife| plugins for |chef 11|, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, similar to:
+When writing |knife| plugins for |chef client| 11, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, similar to:
 
 .. code-block:: ruby
 
@@ -32,7 +32,7 @@ and then access the configurable values using the ``config`` hash with symbols, 
    # The local variable isn't necessary, it's just here to clarify the example:
    ssh_user_name = config[:ssh_user]
 
-If compatibility with |chef 10| is required, accessing configuration parameters using a helper function like this will work correctly, but only if the default values are NOT set using the ``mixlib-cli`` DSL. For example:
+If compatibility with |chef client| 10 is required, accessing configuration parameters using a helper function like this will work correctly, but only if the default values are NOT set using the ``mixlib-cli`` DSL. For example:
 
 .. code-block:: ruby
 
@@ -41,7 +41,7 @@ If compatibility with |chef 10| is required, accessing configuration parameters 
      config[key] || Chef::Config[:knife][key]
    end
 
-Default values must be managed manually until support for |chef 10| is removed, for example, like this:
+Default values must be managed manually until support for |chef client| 10 is removed, for example, like this:
 
 .. code-block:: ruby
 

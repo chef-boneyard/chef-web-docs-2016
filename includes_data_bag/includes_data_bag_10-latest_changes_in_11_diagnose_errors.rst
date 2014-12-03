@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-When trying to decrypt a |chef 11| format data bag item with |chef 10-16| or lower, you will see an error like this:
+When trying to decrypt a |chef client| 11 format data bag item with |chef client| 10-16 (and earlier), you will see an error like this:
 
 .. code-block:: bash
 

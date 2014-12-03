@@ -71,7 +71,7 @@ Some important components of workstations include:
        
        .. include:: ../../includes_security/includes_security_key_pairs_knife.rst
    * - .. image:: ../../images/icon_repository.png
-     - .. include:: ../../includes_repository/includes_repository.rst
+     - .. include:: ../../includes_chef_repo/includes_chef_repo.rst
 
 System administrators and developers know best about how their infrastructure should be put together. Therefore, the |chef client| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.
 
