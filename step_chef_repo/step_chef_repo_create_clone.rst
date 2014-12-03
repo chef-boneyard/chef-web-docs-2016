@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The |chef repo| is available on |github|: |url opscode_chef_repo|.
+The |chef repo| is available on |github|: |url chef_repo|.
 
 To clone the |chef repo| from |github|:
 
