@@ -161,10 +161,6 @@ Cookbooks
    community_plugin_report_handler
    config
    config_rb_analytics
-   config_rb_chef_server
-   config_rb_chef_server_optional_settings
-   config_rb_chef_server_enterprise
-   config_rb_chef_server_enterprise_optional_settings
    config_rb_chef_sync
    config_rb_client
    config_rb_knife
@@ -195,7 +191,6 @@ Cookbooks
    ctl_kitchen
    ctl_ohai
    ctl_opscode_expander
-   ctl_private_chef
    ctl_push_jobs_client
    ctl_reporting
    ctl_supermarket
@@ -271,7 +266,7 @@ Cookbooks
    lwrp_custom_resource_library
    lwrp_windows
    manage
-   migrate_to_enterprise
+   migrate_to_hosted
    nodes
    ohai
    ohai_custom
