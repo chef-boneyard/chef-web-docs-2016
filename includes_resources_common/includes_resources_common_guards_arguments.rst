@@ -28,7 +28,9 @@ The following arguments can be used with the ``not_if`` or ``only_if`` guard att
 
        .. code-block:: ruby
 
-          not_if "grep adam /etc/passwd", :environment => { 'HOME' => "/home/adam" }
+          not_if "grep adam /etc/passwd", :environment => { 
+            'HOME' => "/home/adam" 
+          }
 
    * - ``:cwd``
      - Use to set the current working directory before running a command. For example:
