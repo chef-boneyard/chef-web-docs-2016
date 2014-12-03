@@ -11,9 +11,9 @@ The sub-directories in the |chef repo| are:
    * - Directory
      - Description
    * - ``.chef/``
-     - A hidden directory that is used to store .pem files and the |knife rb| file.
+     - A hidden directory that is used to store validation key files and the |knife rb| file.
    * - ``cookbooks/``
-     - Contains cookbooks that have been downloaded from the |url opscode_community_cookbooks| or created locally.
+     - Contains cookbooks that have been downloaded from the |url community| or created locally.
    * - ``data_bags/``
      - Stores data bags (and data bag items) in |json| (.json).
    * - ``environments/``
