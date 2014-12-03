@@ -413,7 +413,6 @@ Cookbooks
    server_security
    server_services
    server_tuning
-   server_types
    server_users
    server_webui_tasks
    style_guide
