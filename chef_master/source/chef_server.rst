@@ -64,7 +64,7 @@ Each type of |chef server| provides the following features:
    * - :doc:`Search </chef_search>`
      - Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles.
    * - |supermarket|
-     - |supermarket| is the new community site for |chef|, located at |url opscode_community|.
+     - |supermarket| is the new community site for |chef|, located at |url community|.
 
 Premium Features
 =====================================================
