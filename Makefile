@@ -5,7 +5,7 @@ BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 
-release: master all server analytics client 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 devkit enterprise ohai-8 ohai-7 ohai-6 12-0 oec_11-0 oec_11-1 oec_11-2 open_source osc_11-0 osc_11-1
+release: master all server analytics client 12-0 12-2 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 devkit enterprise ohai-8 ohai-7 ohai-6 oec_11-0 oec_11-1 oec_11-2 open_source osc_11-0 osc_11-1
  
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -90,6 +90,10 @@ server:
 12-0:
 	mkdir -p $(BUILDDIR)/release/12-0/
 	$(BUILD_COMMAND_AND_ARGS) release_chef_12-0/source $(BUILDDIR)/release/12-0/
+
+12-0:
+	mkdir -p $(BUILDDIR)/release/12-2/
+	$(BUILD_COMMAND_AND_ARGS) release_chef_12-2/source $(BUILDDIR)/release/12-2/
 
 oec_11-0:
 	mkdir -p $(BUILDDIR)/release/oec_11-0/
