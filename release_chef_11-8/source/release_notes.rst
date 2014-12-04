@@ -11,7 +11,7 @@ The following items are new for |chef client| 11.8 and/or are changes from previ
 
 * **Local mode for the chef-client** The |chef client| can now be run in local mode, which allows the |chef client| to run against the local |chef repo| as if it were running against a |chef server|.
 * **New configuration settings** Three configuration settings have been added to support the use of local mode: ``chef_zero[:enabled]``, ``chef_zero[:port]``, and ``local_mode``.
-* **New man pages for Knife** The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.getchef.com and are current as of the |chef client| 11.8.0 release.
+* **New man pages for Knife** The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from |url docs| and are current as of the |chef client| 11.8 release.
 * **Timeout attribute added for source control management** The |resource deploy|, |resource scm_git|, and |resource scm_subversion| resources now support a ``timeout`` attribute. When this attribute is specified using the |resource deploy| resource, the value is passed to the |resource scm_git| and |resource scm_subversion| resources.
 
 |chef zero|
@@ -73,14 +73,14 @@ Three new settings are available for the |knife rb| and |client rb| configuratio
 
 New Man Pages
 -----------------------------------------------------
-The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.getchef.com and are current as of the |chef client| 11.8.0 release. The man pages and online topics are published using the same process, which means that the information published to each format is identical. That said, the docs.getchef.com pages are updated more frequently than man pages will be; changes made to the topics on docs.getchef.com after this release will be included in future updates of the |chef client|.
+The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from |url docs| and are current as of the |chef client| 11.8 release. The man pages and online topics are published using the same process, which means that the information published to each format is identical. That said, the |url docs| pages are updated more frequently than man pages will be; changes made to the topics on |url docs| after this release will be included in future updates of the |chef client|.
 
 
 |resource http_request| resource, |json| messages
 -----------------------------------------------------
 The approach for using the |resource http_request| resource to send a ``POST`` request that has a |json| message body has changed. Specifically, the ``message`` must be converted to |json| using ``to_json`` and the content-type header must be specified within the header.
 
-For releases prior to |chef 11-8|, ``POST`` requests with a |json| message body looked like:
+For releases prior to |chef client| 11.8, ``POST`` requests with a |json| message body looked like:
 
 .. code-block:: ruby
 
@@ -91,7 +91,7 @@ For releases prior to |chef 11-8|, ``POST`` requests with a |json| message body 
      headers({"AUTHORIZATION" => "Basic #{Base64.encode64("username:password")}"})
    end
 
-And starting with |chef 11-8|, they should be like:
+And starting with |chef client| 11.8, they should be like:
 
 .. code-block:: ruby
 
