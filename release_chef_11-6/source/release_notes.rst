@@ -37,7 +37,7 @@ The following items are new for |chef client| 11.6 and/or are changes from previ
 
 Required Updates
 -----------------------------------------------------
-.. warning:: The following updates must also be made at the same time as any upgrade to |chef 11-6|.
+.. warning:: The following updates must also be made at the same time as any upgrade to |chef client| 11.6.
 
 * If the |cookbook partial_search| cookbook is being used, it must be upgraded to version 1.0.2 (or higher)
 * If the |cookbook sudo| cookbook is being used, it must be upgraded to version 2.1.4 (or higher)
@@ -52,7 +52,7 @@ Lazy Attribute Evaluation
 
 |resource file|-based Resources
 -----------------------------------------------------
-Prior to |chef 11-6|, the |chef client| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource.
+Prior to |chef client| 11.6, the |chef client| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource.
 
 * File-based providers now create all files with the same default permissions. This default is determined by operating system, file system type, and umask settings.
 * When an |ssh| configuration file is created using the |resource cookbook_file| or |resource template| resources and the file mode for that |ssh| configuration file is not specified, it is possible for incorrect permissions to be applied. In previous versions, the |chef client| would attempt to create the file with ``0600`` permissions if the file mode was not specified. For example:
@@ -64,7 +64,7 @@ Prior to |chef 11-6|, the |chef client| relied on the underlying |ruby| implemen
         group "bob"
       end
 
-   In |chef 11-6|, the |chef client| may create files with other permissions---such as ``0644``---when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, and subsequent |ssh| operations could fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example:
+   In |chef client| 11.6, the |chef client| may create files with other permissions---such as ``0644``---when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, and subsequent |ssh| operations could fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example:
 
    .. code-block:: ruby
 
@@ -76,7 +76,7 @@ Prior to |chef 11-6|, the |chef client| relied on the underlying |ruby| implemen
 
 
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
-* Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
+* Many methods that were present in the file-based providers prior to |chef client| 11.6 have been deprecated. If a custom provider has been authored that subclasses the pre-|chef client| 11.6 file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef client| 11.6 to verify all of the desired behaviors.
 
 .. warning:: For a machine on which |selinux| is enabled, the |chef client| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
 
@@ -439,7 +439,7 @@ A new setting has been added to the |solo rb| file:
 
 Force a Redeploy
 -----------------------------------------------------
-Previous versions required the cache file to be deleted to force a redeploy. In |chef 11-6|, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy.
+Previous versions required the cache file to be deleted to force a redeploy. In |chef client| 11.6, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy.
 
 
 What's Fixed
