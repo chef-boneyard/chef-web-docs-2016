@@ -36,9 +36,9 @@ Workstations
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_storage_workstation.rst
 
-.. include:: ../../includes_repository/includes_repository_11-all.rst
+.. include:: ../../includes_chef_repo/includes_chef_repo_11-all.rst
 
-.. include:: ../../includes_repository/includes_repository_11-all_directory_chef.rst
+.. include:: ../../includes_chef_repo/includes_chef_repo_11-all_directory_chef.rst
 
 Generating Keys
 =====================================================
