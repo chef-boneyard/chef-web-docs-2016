@@ -2190,7 +2190,7 @@ Providers
 .. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
 
 Examples
-=====================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
 **Reboot a node immediately**
