@@ -361,6 +361,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    lwrp_custom_resource_library
    nodes
    ohai
+   ohai_custom
    plugin_knife_authenticated_requests
    plugin_knife_custom
    policy
