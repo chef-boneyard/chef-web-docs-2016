@@ -4,7 +4,7 @@ Chef Server Components
 
 The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions. The |chef client| then does as much of the configuration work as possible on the nodes themselves (and not on the |chef server|). This scalable approach distributes the configuration effort throughout the organization.
 
-Starting with the release of |chef 11|, the front-end for the |chef server| is written using `Erlang <http://www.erlang.org/>`_, which is a programming language that `first appeared in 1986 <http://en.wikipedia.org/wiki/Erlang_%28programming_language%29>`_, was open sourced in 1998, and is excellent with critical enterprise concerns like concurrency, fault-tolerance, and distributed environments. The |chef server| can scale to the size of any enterprise and is sometimes referred to as |erchef|.
+Starting with the release of |chef server| 11, the front-end for the |chef server| is written using `Erlang <http://www.erlang.org/>`_, which is a programming language that `first appeared in 1986 <http://en.wikipedia.org/wiki/Erlang_%28programming_language%29>`_, was open sourced in 1998, and is excellent with critical enterprise concerns like concurrency, fault-tolerance, and distributed environments. The |chef server| can scale to the size of any enterprise and is sometimes referred to as |erchef|.
 
 The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another.
 
