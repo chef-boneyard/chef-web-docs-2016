@@ -1,9 +1,9 @@
 .. This is an included how-to. 
 
 
-To install |chef server 11| on a virtual machine:
+To install |chef server| 11 on a virtual machine:
 
-#. Go to http://www.getchef.com/chef/install. Select a platform, version, and architecture, and then choose the version of the |chef server| to be downloaded. The name of the package will be displayed after the version is selected. Right-click the name of the package and copy the link location.
+#. Go to http://www.chef.io/chef/install. Select a platform, version, and architecture, and then choose the version of the |chef server| to be downloaded. The name of the package will be displayed after the version is selected. Right-click the name of the package and copy the link location.
 
    .. image:: ../../images/step_install_server_open_download_page.png
 
