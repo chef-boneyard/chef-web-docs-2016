@@ -9,10 +9,23 @@ In a tiered configuration, the |chef analytics| deployment is on different machi
 * Installing |chef analytics| on the back end
 * Installing |chef analytics| on the front ends
 
-On the |chef server| machines:
+To install |chef analytics|:
 
-#. Download the package from http://downloads.getchef.com/analytics/.
-#. Add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``:
+#. Download the package from http://downloads.getchef.com/analytics/ to the machines that will be used for the |chef analytics| deployment. For |redhat| and |centos| 6:
+
+   .. code-block:: bash
+      
+      $ rpm -Uvh /tmp/opscode-analytics-<version>.rpm
+
+   For |ubuntu|:
+
+   .. code-block:: bash
+      
+      $ dpkg -i /tmp/opscode-analytics-<version>.deb
+
+   After a few minutes, |chef analytics| will be installed.
+
+#. On each of the |chef analytics| machines, add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``:
 
    .. code-block:: bash
 
@@ -22,13 +35,13 @@ On the |chef server| machines:
 	    } 
 	  }
 
-#. Stop the |chef server|:
+#. On the |chef server| backend, stop the |chef server|:
 
    .. code-block:: bash
 
       $ chef-server-ctl stop
 	  
-#. Enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/chef-server.rb``:
+#. On the |chef server| backend, enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/chef-server.rb``:
 
    .. code-block:: ruby
 
@@ -39,30 +52,27 @@ On the |chef server| machines:
 
    .. note:: |analytics rabbitmq_settings| 
 
-#. Reconfigure the |chef server|:
+#. Reconfigure the |chef server| backend:
 
    .. code-block:: bash
 
       $ chef-server-ctl reconfigure
 
-#. Restart the |chef server|:
+#. Restart the |chef server| backend:
    
    .. code-block:: bash
 
       $ chef-server-ctl start
 
-
-On the back end machine:
-
-#. Install the |chef analytics| package on the back end |chef analytics| machine. For example on |ubuntu|:
+#. On the backend |chef analytics| machine, install the |chef analytics| package on the backend |chef analytics| machine. For example on |ubuntu|:
 
    .. code-block:: bash
 
       $ dpkg -i opscode-analytics<version>.deb
 
-#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the back end |chef analytics| machine.
+#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine.
 
-#. Edit the ``opscode-analytics.rb`` file:
+#. Edit the ``opscode-analytics.rb`` file on the backend |chef analytics| machine:
 
    .. code-block:: bash
 
@@ -78,7 +88,7 @@ On the back end machine:
       backend_vip "<be_fqdn>",
         :ipaddress => "<be_ip>"
 
-#. Verify the configuration using the preflight check command:
+#. On the backend |chef analytics| machine, verify the configuration using the preflight check command:
 
    .. code-block:: bash
 
@@ -86,7 +96,7 @@ On the back end machine:
 
    If there are any errors in the preflight check, correct them before carrying on to the next step.
 
-#. Reconfigure the |chef server|:
+#. Reconfigure the |chef server| backend:
 
    .. code-block:: bash
       
@@ -94,15 +104,15 @@ On the back end machine:
 
 
 
-For each front end machine:
+For each frontend machine:
 
-#. Install the |chef analytics| package on the front end |chef analytics| machine. For example on |ubuntu|:
+#. Install the |chef analytics| package on the frontend |chef analytics| machine. For example on |ubuntu|:
 
    .. code-block:: bash
 
       $ dpkg -i opscode-analytics<version>.deb
 
-#. Copy over the ``actions-source.json``, ``webui_priv.pem``, and ``opscode-analytics-secrets.json`` files from  directory from the |chef analytics| back end machine to the front end |chef analytics| machine.
+#. Copy over the ``actions-source.json``, ``webui_priv.pem``, and ``opscode-analytics-secrets.json`` files from  directory from the |chef analytics| backend machine to the frontend |chef analytics| machine.
 
 #. Edit the ``opscode-analytics.rb`` file:
 

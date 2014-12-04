@@ -3,9 +3,21 @@
 
 In a standalone configuration, the |chef analytics| deployment is on a different machine from the |chef server|. This allows you to scale |chef analytics| independantly from the |chef server|. To set up |chef analytics| in a standalone configuration, an existing |chef server| deployment should already running. |chef analytics| is installed in two steps: configuring the |chef server| for |chef analytics|, and then installing |chef analytics|.
 
-On the |chef server| machines:
+To install |chef analytics|:
 
-#. Download the package from http://downloads.getchef.com/analytics/.
+#. Download the package from http://downloads.getchef.com/analytics/. For |redhat| and |centos| 6:
+
+   .. code-block:: bash
+      
+      $ rpm -Uvh /tmp/opscode-analytics-<version>.rpm
+
+   For |ubuntu|:
+
+   .. code-block:: bash
+      
+      $ dpkg -i /tmp/opscode-analytics-<version>.deb
+
+   After a few minutes, |chef analytics| will be installed.
 
 #. Add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``:
 
