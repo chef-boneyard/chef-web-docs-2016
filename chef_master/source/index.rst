@@ -266,7 +266,6 @@ Cookbooks
    lwrp_custom_resource_library
    lwrp_windows
    manage
-   migrate_to_hosted
    nodes
    ohai
    ohai_custom
