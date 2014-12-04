@@ -19,8 +19,7 @@ Optional Settings
 =====================================================
 The following settings are often used for performance tuning of |chef analytics| in larger installations.
 
-.. note:: When changes are made to the |analytics rb| file the |chef analytics| must be reconfigured by
-   running the ``opscode-analytics-ctl reconfigure`` command.
+.. note:: When changes are made to the |analytics rb| file the |chef analytics| must be reconfigured by running the ``opscode-analytics-ctl reconfigure`` command.
 
 actions
 -----------------------------------------------------
