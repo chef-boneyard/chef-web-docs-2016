@@ -45,15 +45,15 @@ All about |chef| ...
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/essentials_repository.html">Repository</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/auth.html">Authentication and Authorization</a> </br>
 
-**Install and Migrate**
+**Install and Upgrade**
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/install_server.html">Install Chef Server 11.x</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/install_server.html">Install Chef Server 12</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/install_workstation.html">Install the chef-client on a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/install_windows.html">Install the chef-client on a Machine Running Microsoft Windows</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/install_bootstrap.html">Bootstrap a Node</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/migrate_to_enterprise.html">Migrate to Enterprise Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/chef/upgrade_server.html">Upgrade to Chef Server 12</a> </br>
 
 **Configuration Files** 
 
@@ -95,11 +95,12 @@ All about |chef| ...
 .. toctree::
    :hidden:
 
-   chef_client
-   chef_overview
    api_chef_server
    api_cookbooks_site
    api_omnitruck
+   auth
+   chef_client
+   chef_overview
    client_rb
    dsl_recipe
    essentials_chef_client
@@ -131,13 +132,11 @@ All about |chef| ...
    lwrps
    lwrps_custom
    metadata_rb
-   migrate_to_enterprise
    ohai
    openstack
    resources
    solo_rb
-   auth
-
+   upgrade_server
 
 
 
