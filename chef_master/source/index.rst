@@ -92,7 +92,7 @@ The Nodes
 
 **Install:** `About Bootstrap <http://docs.chef.io/chef_client.html#about-bootstrap-operations>`_ | :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
-**Ohai:** :doc:`About Ohai 7 </ohai>` | :doc:`Custom Ohai 7 Plugins </ohai_custom>` | `Ohai 6 <http://docs.chef.io/release/ohai-6/>`_
+**Ohai:** :doc:`About Ohai 8 </ohai>` | :doc:`Custom Ohai 8 Plugins </ohai_custom>` | `Ohai 7 <http://docs.chef.io/release/ohai-7/>`_ | `Ohai 6 <http://docs.chef.io/release/ohai-6/>`_
 
 **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
