@@ -19,6 +19,8 @@
      - |environment variables|
    * - ``group``
      - |group command|
+   * - ``path``
+     - .. warning:: Deprecated. Use the ``environment`` attribute instead.
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
    * - ``returns``
