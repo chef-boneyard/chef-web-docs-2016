@@ -4,75 +4,125 @@
 Copy/pasted from HERE: https://wiki.opscode.com/display/chef/Working+with+git
 
 
-Initial setup of development repository
+**Set up the development repository**
 
-#. Setup a github account.
-#. Fork the repositories.
-#. Clone the repositories locally:
+Use the following steps to set up a development repository for |chef|:
+
+#. Setup a |github| account.
+#. Fork the https://github.com/opscode/chef repository to your |github| account.
+#. Clone the https://github.com/opscode/chef repository:
 
    .. code-block:: bash
       
       $ git clone git@github.com:yourgithubusername/chef.git
 
-#. Enter the chef directory and add a remote named opscode:
+#. From the command line, browse to the ``chef/`` directory:
 
    .. code-block:: bash
       
       $ cd chef/
+
+#. From the ``chef/`` directory, add a remote named ``opscode``:
+
+   .. code-block:: bash
+
       $ git remote add opscode git://github.com/opscode/chef.git
 
-#. You'll be able to see if this is successful with git config:
+#. Verify:
 
    .. code-block:: bash
       
       $ git config --get-regexp "^remote\.opscode"
+
+   which should return something like:
+
+   .. code-block:: bash
+
       remote.opscode.url git://github.com/opscode/chef.git
       remote.opscode.fetch +refs/heads/*:refs/remotes/opscode/*
 
-#. Adjust your branch to track the opscode master remote branch, by default it'll track your origin remote's master:
+#. Adjust your branch to track the ``opscode master`` remote branch:
 
    .. code-block:: bash
-      
+
       $ git config --get-regexp "^branch\.master"
+
+   which should return something like:
+
+   .. code-block:: bash
+
       branch.master.remote origin
       branch.master.merge refs/heads/master
 
-#. Change it with the following:
+   and then change it:
 
    .. code-block:: bash
-      
+
       $ git config branch.master.remote opscode
 
 
-Keeping your 'master' up-to-date!
 
-Once all this is done, you'll be able to keep your local master up to date with the simple command:
+**Keep the master branch up to date**
 
-.. code-block:: bash
-      
-   $ git checkout master
-   $ git pull --rebase
+Use the following steps to keep the master branch up to date. 
 
-Alternatively, you can synchronise your master from any branch with the full fetch/rebase syntax:
+#. Run:
+    
+   .. code-block:: bash
 
-.. code-block:: bash
-      
-   $ git fetch opscode
-   $ git rebase opscode/master master
+      $ git checkout master
 
-Using rebase pull will do a rebase instead of a merge, which will keep a linear history with no unecessary merge commits. It'll also rewind, apply and then reapply your commits at the HEAD.
+#. And then run:
 
-Use this Rakefile to update chef, ohai and cookbooks repos (edit as needed).
+   .. code-block:: bash
+
+      $ git pull --rebase
+   
+The following ``rakefile`` can be used to update |chef|, |ohai|, and cookbooks. Edit as necessary:
+
+.. code-block:: ruby
+
+   projects = %w[chef cookbooks ohai]
+   opscode = "#{ENV['HOME']}/projects/opscode"
+
+   desc "Update local repositories from upstream"
+   task :update do
+     projects.each do |p|
+       Dir.chdir("#{opscode}/#{p}") do
+         sh "git fetch opscode"
+         sh "git rebase opscode/master master"
+       end
+     end
+   end
 
 
 
-Working on topic branches
+**Synchronize the master branch from any branch**
 
-So you want to do some work? Don't put your commits directly in your master branch! It is important to use a 'topic branch' when working on a large project like Chef. The key to this concept is that each topic branch solves a single and unique problem and should usually be logically organized in the same was as a ticket on the issue tracker. A good example is a branch that adds support for a new init system, or resolves a bug when running under a specific version of CentOS. We prefer that topic branches be named after the bug that they solve so that someone with the same issue can easily find your commits in the 'git log'.
+Use the following steps to synchronize the master branch. 
 
-If your topic branch solves multiple bugs, reconsider if your branch is perhaps too broad. What if the person merging the contribution finds an issue with part of the branch but not another? Sometimes when you refactor a large piece of the code-base, you resolve multiple bugs and it is better to put individual issue numbers in the commit messages. One solution doesn't fit all, so use your best judgement.
+#. Run:
+    
+   .. code-block:: bash
 
-#. If (and only if) you are working on a brand new clone of the chef repo and have only just configured it as above, you will need to fetch from your newly established upstream remote named 'opscode':
+      $ git fetch opscode
+
+#. And then run:
+
+   .. code-block:: bash
+
+      $ git rebase opscode/master master
+
+   .. note:: Use ``rebase`` instead of ``merge`` to ensure that a linear history is maintained that does not include unnecessary merge commits. ``rebase`` will also rewind, apply, and then reapply commits to the ``master`` branch.
+
+
+**Work on topic branches**
+
+Commits to the |chef| repositories should never be made agains the master branch. Use a topic branch instead. A topic branch solves a single and unique problem and often maps closely to an issue being tracked in the repository. For example, a topic branch to add support for a new init system or a topic branch to resolve a bug that occurs in a specific version of |centos|. Ideally, a topic branch is named in a way that associates it closely with the issue it is attempting to resolve. This helps ensure that others may easily find it.
+
+Use the following steps to create a topic branch:
+
+#. For a brand new clone of the |chef| repository (that was created using the steps listed earlier), fetch the ``opscode`` remote:
 
    .. code-block:: bash
       
@@ -84,60 +134,69 @@ If your topic branch solves multiple bugs, reconsider if your branch is perhaps 
       
       $ git checkout --track -b CHEF-XX opscode/master
 
-Setting a topic branch up to track opscode/master allows you to easily rebase your commits in preperation for merge.
+   Set up a topic branch to track ``opscode/master``. This allows commits to be easily rebased prior to merging.
 
-#. Do work:
-
-   .. code-block:: bash
-      
-      hack
-      hack
-
-#. Commit (see step two if more work remains):
+#. Make your changes, and then commit them:
 
    .. code-block:: bash
       
       $ git status
+
+#. And then run:
+
+   .. code-block:: bash
+
       $ git commit <filespec>
 
-#. Rebase your commits against opscode/master. After your work is finished in the local topic branch, you should rebase you commits against the upstream master. This will temporarily remove your local commits, update the branch from upstream, and then reapply your local commits. You can either do this manually with 'fetch' then 'rebase', or use the 'pull --rebase' shortcut.
+#. Rebase the commits against ``opscode/master``. After work in the topic branch is finished, rebase these commits against the upstream master. Do this manually with ``git fetch`` followed by a ``git rebase`` or use ``git pull --rebase``.
 
-   If there are any problems doing so, git will let you know and stop. This is important because it ensures that those that will merge your contribution into the upstream master won't have to resolve differences between your changes and the current branch to include your contribution. If you encounter merge conflicts, you should fix the files as directed and then mark as fixed with 'git add', and then continue rebasing with 'git rebase --continue'. At any stage, you can abort the rebase with 'git rebase --abort'. 
-
-   Option 1: Rebase your commits with fetch + rebase:
-
+   |git| will let you know if there are any problems. In the event of problems, fix them as directed, and then mark as fixed with a ``git add``, and then continue the rebase process using ``git rebase --continue``.
+   
+   For example:
+   
    .. code-block:: bash
       
       $ git fetch opscode
+
+   followed by:
+   
+   .. code-block:: bash
+      
       $ git rebase opscode/master CHEF-XX
 
-   Option 2: Rebase your commits with the tracking-branch shortcuts:
+   Or:
 
    .. code-block:: bash
       
       $ git pull --rebase
 
-#. Push your local topic branch to Github:
+#. Push the local topic branch to |github|:
 
    .. code-block:: bash
       
       $ git push origin CHEF-XX
 
-#. Don't forget to send a Github pull request for your changes and update the Opscode ticket with the number and link of the pull request.
+#. Send a |github| pull request for the changes, and then update the |chef| ticket with the appropriate information.
 
 
-Job's done!
 
-Once your work has been merged by the branch maintainer, it is no longer be necessary to keep the local branch or remote branch, so you can remove them if you'd like to clean up.
+**Delete a topic branch**
 
-#. Sync your local master up:
+After work has been merged by the branch maintainer, the topic branch is no longer necessary and should be removed.
+
+#. Synchronize the local master:
 
    .. code-block:: bash
       
       $ git checkout master
+
+   followed by:
+   
+   .. code-block:: bash
+      
       $ git pull --rebase
 
-   Remove your local branch using -d to ensure that it has been merged by upstream. Branch -d will not delete a branch that is not an ancestor of your current head. From the git man page:
+#. Remove the local branch using ``-d`` to ensure that it has been merged by upstream. This option will not delete a branch that is not an ancestor of the current ``HEAD``. From the |git| man page:
 
    .. code-block:: bash
       
@@ -146,13 +205,13 @@ Once your work has been merged by the branch maintainer, it is no longer be nece
       -D
         Delete a branch irrespective of its merged status.
 
-#. Remove your local branch:
+#. Remove the local branch:
 
    .. code-block:: bash
       
       $ git branch -d CHEF-XX
 
-   Remove your remote branch by using the full syntax to 'push', and omitting a source branch:
+   Or remove the remote branch by using the full syntax to ``push`` and by omitting a source branch:
 
    .. code-block:: bash
       
