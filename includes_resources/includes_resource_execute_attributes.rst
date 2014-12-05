@@ -20,7 +20,13 @@
    * - ``group``
      - |group command|
    * - ``path``
-     - .. warning:: Deprecated. Use the ``environment`` attribute instead.
+     - .. warning:: Deprecated. Use the ``environment`` attribute instead.  For example:
+
+          .. code-block:: ruby
+
+             execute "mycommand" do
+               environment "PATH" => "/my/path/to/bin:#{ENV["PATH"]}"
+             end
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
    * - ``returns``
