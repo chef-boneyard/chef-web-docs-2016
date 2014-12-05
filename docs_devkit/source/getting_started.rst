@@ -113,7 +113,7 @@ As the |chef client| adds the file to your system, output similar to the followi
 
 That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``.
 
-# We'll come back to working with |chef| later on, but the next step is to familiarize yourself with resources and cookbooks.
+We'll come back to working with |chef| later on. Let's set up |kitchen| so that we can use it to build a virtual machine against which we can run |chef|.
 
 |kitchen_title| Setup
 =====================================================
