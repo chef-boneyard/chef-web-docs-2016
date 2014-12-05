@@ -66,5 +66,26 @@ Download
 -----------------------------------------------------
 .. include:: ../../step_chef_repo/step_chef_repo_create_download.rst
 
+Use |git|
+=====================================================
+.. include:: ../../includes_chef_repo/includes_chef_repo_git.rst
 
+Set Up Repo
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_master_setup.rst
 
+Keep Master Current
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_master_keep_current.rst
+
+Sync Master
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_master_sync.rst
+
+Use Branch
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_branch.rst
+
+Delete Branch
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_branch_delete.rst
