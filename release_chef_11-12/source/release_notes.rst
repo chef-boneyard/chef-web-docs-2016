@@ -8,7 +8,7 @@ What's New
 =====================================================
 The following items are new for |chef client| 11.12 and/or are changes from previous versions. The short version:
 
-* **Ohai 7.0** |ohai 7| is part of the |chef client| 11-12 install
+* **Ohai 7.0** |ohai| 7 is part of the |chef client| 11-12 install
 * **New windows_package resource** Use the |resource package_windows| resource to manage packages on the |windows| platform.
 * **New guard_interpreter attribute** Use the ``guard_interpreter`` attribute to specify a |resource script|-based resource---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, and |resource script_ruby|---that will be used to evaluate a string command.
 * **New reboot_pending? Recipe DSL method** Use the ``reboot_pending?`` method to test if a |windows| node requires a reboot.
@@ -24,7 +24,7 @@ The following items are new for |chef client| 11.12 and/or are changes from prev
 * **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute with the |resource template| and |resource file| resources to ensure that sensitive data is not logged by the |chef client|.
 * **cron resource accepts symbols for weekday attribute** Symbols---``:sunday``, ``:monday``, ``:tuesday``, ``:wednesday``, ``:thursday``, ``:friday``, ``:saturday``---may be used with the ``weekday`` attribute and the |resource cron| resource.
 
-|ohai 7|
+|ohai| 7
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai.rst
 
@@ -245,7 +245,7 @@ Use the following setting to disable plugins:
 
           Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, :MyPlugin]
 
-       or to disable both |ohai 6| and |ohai 7| versions:
+       or to disable both |ohai| 6 and |ohai| 7 versions:
 
        .. code-block:: ruby
 
