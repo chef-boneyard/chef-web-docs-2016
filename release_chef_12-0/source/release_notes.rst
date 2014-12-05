@@ -36,7 +36,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New guard_interpreter attribute defaults** The ``guard_interpreter`` attribute now defaults to ``:batch`` for the |resource batch| resource and ``:powershell_script`` for the |resource powershell_script| resource.
 * **Events are sent to the Application event log on the Windows platform by default** Events are sent to the |windows| "Application" event log at the start and end of a |chef client| run, and also if a |chef client| run fails. Set the ``disable_event_logger`` configuration setting in the |client rb| file to ``true`` to disable event logging.
 * **The installer_type attribute for the windows_package resource uses a symbol instead of a string** Previous versions of the |chef client| (starting with version 11.8) used a string.
-* **The path attribute is removed from the execute resource** The |resource execute| resource no longer supports the ``path`` attribute.
+* **The path attribute is deprecated for the execute resource** Use the ``environment`` attribute instead.
 
 |ibm aix| Platform Support
 -----------------------------------------------------
