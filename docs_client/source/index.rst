@@ -6,6 +6,8 @@ All about the |chef client_title| ...
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
+View the :doc:`release notes </release_notes>` for the current version of the |chef client|.
+
 Getting Started
 =====================================================
 If you are new to the |chef client|, familiarize yourself with :doc:`all of the components the chef-client will interact with </chef_overview>` as it configures your infrastructure.
@@ -366,6 +368,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    plugin_knife_custom
    policy
    recipes
+   release_notes
    resource
    resource_apt_package
    resource_bash
