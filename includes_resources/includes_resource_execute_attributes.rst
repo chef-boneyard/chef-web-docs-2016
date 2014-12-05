@@ -19,8 +19,6 @@
      - |environment variables|
    * - ``group``
      - |group command|
-   * - ``path``
-     - |path resource execute| The default value uses the system path.
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
    * - ``returns``
