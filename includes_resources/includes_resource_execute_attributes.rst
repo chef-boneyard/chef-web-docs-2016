@@ -20,7 +20,7 @@
    * - ``group``
      - |group command|
    * - ``path``
-     - .. warning:: Deprecated. Use the ``environment`` attribute instead.  For example:
+     - .. warning:: This attribute is deprecated starting in |chef client| 12.0. Use the ``environment`` attribute instead. For example:
 
           .. code-block:: ruby
 
