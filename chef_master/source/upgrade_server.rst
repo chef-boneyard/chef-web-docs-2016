@@ -7,7 +7,7 @@ From |chef server oec|
 =====================================================
 There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: high availability and standalone.
 
-Please `view the notes <http://docs.chef.io/upgrade_server_notes>`__ for more background on the upgrade process from |chef server oec| 11 to |chef server| 12.
+Please `view the notes <http://docs.chef.io/upgrade_server_notes.html>`__ for more background on the upgrade process from |chef server oec| 11 to |chef server| 12.
 
 High Availability
 -----------------------------------------------------
@@ -177,7 +177,7 @@ From |chef server osc|
 =====================================================
 This section describes the upgrade process from a standalone configuration of |chef server osc| 11.1.0 (or higher) to a standalone configuration of |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
 
-Please `view the notes <http://docs.chef.io/upgrade_server_open_source_notes>`__ for more background on the upgrade process from |chef server osc| 11 to |chef server| 12.
+Please `view the notes <http://docs.chef.io/upgrade_server_open_source_notes.html>`__ for more background on the upgrade process from |chef server osc| 11 to |chef server| 12.
 
 To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
 
