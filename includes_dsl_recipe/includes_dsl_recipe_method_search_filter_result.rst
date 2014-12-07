@@ -1,9 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the ``:filter_result`` as part of a search query against the |chef server|, and then return that data in the form of the specified |ruby hash|.
+Use ``:filter_result`` as part of a search query against the |chef server| to return data in the form of the specified |ruby hash|.
 
-The syntax for the ``search`` method that will filter search results is as follows:
+The syntax for the ``search`` method that uses ``:filter_result`` is as follows:
 
 .. code-block:: ruby
 
