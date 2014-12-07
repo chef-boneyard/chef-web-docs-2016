@@ -373,7 +373,7 @@ The following configuration settings are updated for the |client rb| file and no
    * - Setting
      - Description
    * - ``disable_event_logger``
-     - |disable event_logging_windows| Default value: ``false``.
+     - |disable event_logging_windows| Default value: ``true``.
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``file_staging_uses_destdir``
