@@ -2,7 +2,7 @@
 All about |chef server osc| ...  
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_index_osc.rst
+.. include:: ../../includes_chef/includes_chef_11_index_osc.rst
 
 
 Getting Started

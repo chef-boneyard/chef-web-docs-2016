@@ -2,7 +2,7 @@
 All about |chef server oec| ...
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_index_oec.rst
+.. include:: ../../includes_chef/includes_chef_11_index_oec.rst
 
 
 Getting Started

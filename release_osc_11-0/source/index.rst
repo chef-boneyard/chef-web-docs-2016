@@ -2,7 +2,7 @@
 Docs for |chef server osc| 11.0 ... 
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_index_osc.rst
+.. include:: ../../includes_chef/includes_chef_11_index_osc.rst
 
 The |chef server osc| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 

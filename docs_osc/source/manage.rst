@@ -4,7 +4,7 @@
 Manage the Open Source Chef Server
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_open_source.rst
+.. include:: ../../includes_chef/includes_chef_11_open_source.rst
 
 .. include:: ../../includes_manage_server_open_source/includes_manage_server_open_source.rst
 
