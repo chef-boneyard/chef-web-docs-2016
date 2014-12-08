@@ -22,9 +22,9 @@ Organization Names
 -----------------------------------------------------
 The |chef server osc| server does not have the concept of organizations. The |chef server| version 12 upgrade process will require an organization to be created.
 
-After an upgrade, the organization is an endpoint in the |api chef server|. The |api chef server| used by the |chef server osc| server does not contain this endpoint. Needless to say, API requests made to the |chef server| by the |chef client|, |knife|, and so on will fail until the ``/organizations/NAME`` endpoint isn't defined.
+After an upgrade, the organization is an endpoint in the |api chef server|. The |api chef server| used by the |chef server osc| server does not contain this endpoint. Needless to say, API requests made to the |chef server| by the |chef client| and |knife| will fail if the ``/organizations/NAME`` endpoint isn't defined.
 
-To resolve this API request issue, add the following setting to the |chef server rb| file:
+To following setting is added to the |chef server rb| file:
 
 .. list-table::
    :widths: 200 300
