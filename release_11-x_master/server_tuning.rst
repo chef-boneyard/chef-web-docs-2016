@@ -65,7 +65,7 @@ opscode-expander
 
 opscode-solr
 -----------------------------------------------------
-.. include:: ../../includes_server_tuning/includes_server_tuning_solr.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_11_solr.rst
 
 Update Frequency
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
