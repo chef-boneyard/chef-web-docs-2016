@@ -37,6 +37,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Events are sent to the Application event log on the Windows platform by default** Events are sent to the |windows| "Application" event log at the start and end of a |chef client| run, and also if a |chef client| run fails. Set the ``disable_event_logger`` configuration setting in the |client rb| file to ``true`` to disable event logging.
 * **The installer_type attribute for the windows_package resource uses a symbol instead of a string** Previous versions of the |chef client| (starting with version 11.8) used a string.
 * **The path attribute is deprecated for the execute resource** Use the ``environment`` attribute instead.
+* **Attribute behavior changes** Please see RFC-23 for important changes to attributs in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. 
 
 |ibm aix| Platform Support
 -----------------------------------------------------
