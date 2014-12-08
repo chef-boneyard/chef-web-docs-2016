@@ -5,4 +5,3 @@ A user is an individual account that is created to allow access to the |chef ser
 
 * A hosted |chef server| account
 * The user that operates the workstation from which a |chef server| will be managed
-

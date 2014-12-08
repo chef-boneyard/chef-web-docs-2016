@@ -12,7 +12,7 @@ About Cookbooks
      - Description
    * - `Cookbooks Maintained by Chef <https://github.com/opscode-cookbooks>`_
      - |company_name| maintains a collection of cookbooks that are important and are widely used by the community.
-   * - `Community-authored Cookbooks <https://supermarket.getchef.com/cookbooks>`_
+   * - `Community-authored Cookbooks <https://supermarket.chef.io/cookbooks>`_
      - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations, to cookbooks that are used by nearly everyone.
    * - :doc:`Recipes </essentials_cookbook_recipes>`
      - A recipe is the most fundamental configuration element.

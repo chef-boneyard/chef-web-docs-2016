@@ -3,7 +3,7 @@
 
 To install |chef server oec| on-premises, do the following:
 
-#. Go to http://downloads.getchef.com/enterprise-chef/.
+#. Go to http://downloads.chef.io/enterprise-chef/.
 #. Choose your platform.
 #. Download the package.
 #. Review the `prerequisites <http://docs.chef.io/enterprise/install_server_pre.html>`_.

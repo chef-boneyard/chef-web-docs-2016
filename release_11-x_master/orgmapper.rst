@@ -4,7 +4,7 @@ orgmapper
 
 |orgmapper desc|
 
-.. warning:: This tool is, effectively, deprecated.
+.. warning:: This tool is deprecated.
 
 Examples
 =====================================================
