@@ -6,15 +6,15 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Workflow:**  `Berkshelf <http://berkshelf.com/>`_ | `Librarian <https://github.com/applicationsonline/librarian>`_ | `Spiceweasel <https://github.com/mattray/spiceweasel>`_
 
-**Development tools:**  `Kitchen <https://github.com/test-kitchen/test-kitchen>`_ | `Foodcritic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `ChefSpec <https://github.com/acrmp/chefspec>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Supermarket <https://supermarket.getchef.com/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_ | `chef-zero <https://github.com/opscode/chef-zero>`_
+**Development tools:**  `Kitchen <https://github.com/test-kitchen/test-kitchen>`_ | `Foodcritic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `ChefSpec <https://github.com/acrmp/chefspec>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Supermarket <https://supermarket.chef.io/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_
 
-**Discussion:** `Guidelines <http://docs.getchef.com/community_guidelines.html>`_ | `lists.opscode.com <http://docs.getchef.com/community_lists.html>`_ | `Food Fight Show <http://foodfightshow.org/>`_
+**Discussion:** `Guidelines <http://docs.chef.io/community_guidelines.html>`_ | `lists.opscode.com <http://docs.chef.io/community_lists.html>`_ | `Food Fight Show <http://foodfightshow.org/>`_
 
 **Books about Chef:** `Test-Driven Infrastructure with Chef, 2nd Edition <http://shop.oreilly.com/product/0636920030973.do>`_ | `Instant Chef Starter <http://www.packtpub.com/chef-starter/book>`_ | `Chef Infrastructure Automation Cookbook <http://www.packtpub.com/chef-infrastructure-automation-cookbook/book>`_ | `Learning Chef (A Guide to Configuration Management and Automation) [O'Reilly] <http://shop.oreilly.com/product/0636920032397.do>`_ | `Customizing Chef (Getting the Most Out of Your Infrastructure Automation) <http://shop.oreilly.com/product/0636920032984.do>`_ | `Learning Chef [Packt Publishing] <https://www.packtpub.com/networking-and-servers/learning-chef>`_ | `Chef Essentials <https://www.packtpub.com/chef-essentials/book>`_ | `Managing Windows Servers with Chef <https://www.packtpub.com/networking-and-servers/managing-windows-servers-chef>`_
 
-**Plugins:** `chef-client <http://docs.getchef.com/community_plugin_chef.html>`_ | `Knife <http://docs.getchef.com/community_plugin_knife.html>`_ | `Ohai <http://docs.getchef.com/community_plugin_ohai.html>`_ | `Handlers <http://docs.getchef.com/community_plugin_report_handler.html>`_ | `Ridley <https://github.com/reset/ridley>`_
+**Plugins:** `chef-client <http://docs.chef.io/community_plugin_chef.html>`_ | `Knife <http://docs.chef.io/community_plugin_knife.html>`_ | `Ohai <http://docs.chef.io/community_plugin_ohai.html>`_ | `Handlers <http://docs.chef.io/community_plugin_report_handler.html>`_ | `Ridley <https://github.com/reset/ridley>`_
 
-**Chef for OpenStack:** `Overview <http://docs.getchef.com/openstack.html>`_ | `knife-openstack <http://docs.getchef.com/plugin_knife_openstack.html>`_
+**Chef for OpenStack:** `Overview <http://docs.chef.io/openstack.html>`_ | `knife-openstack <http://docs.chef.io/plugin_knife_openstack.html>`_
 
-**Contributions:** `Contribute to Chef <http://docs.getchef.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Send Feedback to chef-docs <http://docs.getchef.com/feedback.html>`_ | `Style Guide <http://docs.getchef.com/style_guide.html>`_
+**Contributions:** `Contribute to Chef <http://docs.chef.io/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Send Feedback to chef-docs <http://docs.chef.io/feedback.html>`_ | `Style Guide <http://docs.chef.io/style_guide.html>`_
 
