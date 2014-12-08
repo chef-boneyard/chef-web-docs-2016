@@ -418,6 +418,7 @@ Cookbooks
    supermarket
    supported_platforms
    templates
+   upgrade_client_notes
    upgrade_server
    upgrade_server_notes
    upgrade_server_open_source_notes
