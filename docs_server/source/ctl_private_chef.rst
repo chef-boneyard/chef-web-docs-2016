@@ -5,4 +5,4 @@
 |private chef ctl| (executable)
 =====================================================
 
-.. warning:: This command has been renamed to |chef server ctl|. See http://docs.getchef.com/server/ctl_chef_server.html.
+.. warning:: This command has been renamed to |chef server ctl|. See http://docs.chef.io/server/ctl_chef_server.html.

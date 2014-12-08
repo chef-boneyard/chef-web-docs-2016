@@ -30,7 +30,7 @@ The following items are new for |chef server| 12:
 
 Upgrade to |chef server| 12!
 -----------------------------------------------------
-Upgrades to |chef server| 12 are supported for both |chef server oec| and |chef server osc| users. See http://docs.getchef.com/server/upgrade_server.html for more information about upgrades. If you are upgrading from |chef server osc|, please see http://docs.getchef.com/server/upgrade_server_open_source_notes.html as well.
+Upgrades to |chef server| 12 are supported for both |chef server oec| and |chef server osc| users. See http://docs.chef.io/server/upgrade_server.html for more information about upgrades. If you are upgrading from |chef server osc|, please see http://docs.chef.io/server/upgrade_server_open_source_notes.html as well.
 
 HA using AWS
 -----------------------------------------------------
@@ -355,7 +355,7 @@ For existing organizations that want to remove the |webui permission create|, |w
    
    $ knife acl remove containers data create group clients
 
-See this blog post for more information about the ``knife-acl`` plugin: https://www.getchef.com/blog/2014/11/10/security-update-hosted-chef/
+See this blog post for more information about the ``knife-acl`` plugin: https://www.chef.io/blog/2014/11/10/security-update-hosted-chef/
 
 New Settings for LDAP
 -----------------------------------------------------
