@@ -6,13 +6,13 @@ The ``/metadata`` and/or ``/download`` endpoints can be used to download the |ch
 
 .. code-block:: xml
 
-   http://www.getchef.com/chef/download?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=false
+   http://www.chef.io/chef/download?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=false
 
 or:
 
 .. code-block:: xml
 
-   http://www.getchef.com/chef/metadata?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=false
+   http://www.chef.io/chef/metadata?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=false
 
 where:
 
