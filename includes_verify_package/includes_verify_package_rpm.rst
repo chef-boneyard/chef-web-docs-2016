@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |company_name| package built for |rpm| can be verified using the key located at http://downloads.getchef.com/chef.gpg.key.
+A |company_name| package built for |rpm| can be verified using the key located at http://downloads.chef.io/chef.gpg.key.
 
 To verify any |company_name| package built for RPM:
 
@@ -10,7 +10,7 @@ To verify any |company_name| package built for RPM:
 
    .. code-block:: bash
       
-      $ rpm --import http://downloads.getchef.com/chef.gpg.key
+      $ rpm --import http://downloads.chef.io/chef.gpg.key
 
 #. Verify the signature. For example, the |chef dk|:
 

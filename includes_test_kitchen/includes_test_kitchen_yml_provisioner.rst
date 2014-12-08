@@ -11,7 +11,7 @@
    * - Setting
      - Description
    * - ``chef_omnibus_url``
-     - The URL for an ``install.sh`` script that will install |chef client| on the machine under test. Default value: ``https://www.getchef.com/chef/install.sh``.
+     - The URL for an ``install.sh`` script that will install |chef client| on the machine under test. Default value: ``https://www.chef.io/chef/install.sh``.
    * - ``clients_path``
      - The relative path to the directory in which client data is located. This data must be defined as |json|.
    * - ``cookbook_files_glob``

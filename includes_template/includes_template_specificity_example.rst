@@ -1,9 +1,11 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A cookbook may have a ``/templates`` directory structure like this::
+A cookbook may have a ``/templates`` directory structure like this:
 
-   templates/
+.. code-block:: ruby
+
+   /templates/
      windows-6.2
      windows-6.1
      windows-6.0

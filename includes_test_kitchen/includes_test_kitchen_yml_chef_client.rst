@@ -9,7 +9,7 @@ A |kitchen yml| file may define |chef client|-specific settings, such as whether
    provisioner:
      name: chef_zero *or* chef_solo
      require_chef_omnibus: true
-     chef_omnibus_url: https://www.getchef.com/chef/install.sh
+     chef_omnibus_url: https://www.chef.io/chef/install.sh
    
    ...
    
