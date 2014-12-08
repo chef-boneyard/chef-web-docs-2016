@@ -8,7 +8,7 @@ The steps below describe the process for installing |chef server oec|.
 
 Steps
 =====================================================
-.. include:: ../../includes_install/includes_install_11_server_oec_hosted.rst
+.. include:: ../../includes_install/includes_install_11_server_oec.rst
 
 About the Hostname
 =====================================================
