@@ -4,7 +4,7 @@ To use |curl| to return only the SHA for the installer, enter the following:
 
 .. code-block:: bash
 
-   $ curl -s 'https://www.getchef.com/chef/metadata-server?p=ubuntu&pv=12.04&m=x86_64' | awk '$1 == "sha256" { print $2 }'
+   $ curl -s 'https://www.chef.io/chef/metadata-server?p=ubuntu&pv=12.04&m=x86_64' | awk '$1 == "sha256" { print $2 }'
 
 to return something like:
 
