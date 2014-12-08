@@ -46,7 +46,7 @@ opscode-expander
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_expander.rst
 
-opscode-solr
+opscode-solr4
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_solr.rst
 
