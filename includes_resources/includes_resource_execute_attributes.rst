@@ -20,13 +20,9 @@
    * - ``group``
      - |group command|
    * - ``path``
-     - .. warning:: This attribute is deprecated starting in |chef client| 12.0. Use the ``environment`` attribute instead. For example:
+     - |path resource execute| The default value uses the system path.
 
-          .. code-block:: ruby
-
-             execute "mycommand" do
-               environment "PATH" => "/my/path/to/bin:#{ENV["PATH"]}"
-             end
+       .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
    * - ``returns``
