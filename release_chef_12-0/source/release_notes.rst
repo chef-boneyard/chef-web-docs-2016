@@ -398,6 +398,9 @@ The |subcommand knife search| subcommand allows filtering search results with a 
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
 
+Chef::Provider, Custom Resources
+-----------------------------------------------------
+.. include:: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst
 
 Changelog
 =====================================================
