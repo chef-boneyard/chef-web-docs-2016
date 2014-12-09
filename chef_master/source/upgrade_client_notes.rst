@@ -6,7 +6,7 @@ The following sections contain more information about the upgrade process from e
 
 Notes About Cookbooks
 =====================================================
-The following cookbooks require updates before they are fully compatible with |chef client| 12:
+The following cookbooks are being updated by |company_name| to ensure compatibility with |chef client| 12:
 
 * ``minitest-chef-handler``
 * ``windows``
