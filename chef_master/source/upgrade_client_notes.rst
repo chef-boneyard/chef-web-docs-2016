@@ -8,11 +8,11 @@ The following sections contain more information about the upgrade process from e
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
 
-Chef::Provider, Custom Resources
+``Chef::Provider`` Changes
 =====================================================
 .. include:: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst
 
-node.default! => force_default
+``node.default!``  Changes
 =====================================================
 In previous versions of the |chef client|, ``node.default!`` was an alias of ``node.force_default!``. Starting with |chef client| 12, ``node.force_default`` is changed from an accessor to a setter. Cookbooks that use ``node.default!`` must be updated for the correct attribute precedence type and must drop the exclamation point. For example:
 
@@ -26,7 +26,7 @@ must be updated to:
 
    node.force_default[:foo] = 'bar'
 
-node.override! => force_override
+``node.override!`` Changes
 =====================================================
 In previous versions of the |chef client|, ``node.override!`` was an alias of ``node.force_override``. Starting with |chef client| 12, ``node.force_override`` is changed from an accessor to a setter. Cookbooks that use ``node.override!`` must be updated for the correct attribute precedence type and must drop the exclamation point. For example:
 
