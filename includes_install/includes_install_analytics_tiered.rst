@@ -31,7 +31,7 @@ To install |chef analytics|:
 
 	  oc_id['applications'] = { 
 	    'analytics' => { 
-	      'redirect_uri' => 'https://<analytics_fqdn>' 
+	      'redirect_uri' => 'https://<analytics_fe_fqdn>' 
 	    } 
 	  }
 
