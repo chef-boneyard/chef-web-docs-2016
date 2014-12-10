@@ -60,6 +60,26 @@ The |chef client| is distributed as a |ibm aix_bff| binary and is installed on t
 
    # installp -aYgd chef-12.0.0-1.powerpc.bff all
 
+**Increase system process limits**
+
+The out-of-the-box system process limits for a logical partition (LPAR) is typically too low to run the |chef client|. When the system process limits are too low, the |chef client| will not be able to create threads. To increase the system process limits:
+
+#. Validate that the system process limits have not already been increased.
+#. If they have not been increased, run the following commands as a root user:
+
+   .. code-block:: bash
+
+      $ chsec -f /etc/security/limits -s default -a "rss=-1"
+
+   and then:
+
+   .. code-block:: bash
+
+      $ chsec -f /etc/security/limits -s default -a "nofiles=50000"
+
+#. Reboot the logical partition (LPAR) to apply the updated system process limits.
+
+ 
 **Install the UTF-8 character set**
 
 .. include:: ../../includes_install/includes_install_chef_client_aix_en_us.rst
