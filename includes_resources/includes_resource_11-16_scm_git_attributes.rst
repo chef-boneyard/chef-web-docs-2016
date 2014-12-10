@@ -18,7 +18,7 @@
    * - ``destination``
      - |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
    * - ``enable_checkout``
-     - |enable_checkout git| Default value: ``true``.
+     - |enable_git_checkout| Default value: ``true``.
    * - ``enable_submodules``
      - |enable_submodules| Default value: ``false``.
    * - ``group``
