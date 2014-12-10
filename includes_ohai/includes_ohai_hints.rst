@@ -14,9 +14,9 @@ If the hint file contains |json| content, it will be returned as a hash from the
 
 .. code-block:: ruby
 
-   arctic_hint = hint?('antartica')
-   if arctic_hint['snow']
-     "There are #{arctic_hint['penguins']} penguins here." 
+   antartica_hint = hint?('antartica')
+   if antartica_hint['snow']
+     "There are #{antartica_hint['penguins']} penguins here." 
    else
      "There is no snow here, and penguins like snow."
    end
