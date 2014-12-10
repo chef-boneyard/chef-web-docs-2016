@@ -103,6 +103,14 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_bff_attributes.rst
 
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_package_bff_providers.rst
+
 Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -126,6 +134,14 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_package_homebrew_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -159,6 +175,14 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
+
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -190,6 +214,14 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
