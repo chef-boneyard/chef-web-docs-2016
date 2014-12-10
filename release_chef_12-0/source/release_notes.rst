@@ -103,6 +103,10 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_bff_attributes.rst
 
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_bff_providers.rst
+
 Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -127,7 +131,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
 
-Examples
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_homebrew_providers.rst
+
+Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Install a package**
@@ -159,7 +167,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
-Examples
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
+
+Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Reboot a node immediately**
@@ -191,7 +203,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
-Examples
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
+
+Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Start a service manually**
