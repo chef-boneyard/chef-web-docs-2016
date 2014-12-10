@@ -14,5 +14,5 @@ This resource has the following providers:
      - ``package``
      - When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run.
    * - ``Chef::Provider::Package::Aix``
-     - ``package_bff``
+     - ``bff_package``
      - The provider that is used with the |ibm aix| platform. Can be used with the ``options`` attribute.
