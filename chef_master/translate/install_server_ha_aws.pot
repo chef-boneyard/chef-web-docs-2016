@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-04 13:15-0800\n"
+"POT-Creation-Date: 2014-12-09 21:45-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,81 +17,81 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/install_server_ha_aws.rst:10
-# b3951ef5aaba4f1fa07c02f3f03efbfa
+# 45ed14c7a663427191479952534575fc
 msgid "High Availability: AWS"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws.rst:4
-# f1c527b3aafd4235a91d64482af1e28d
+# c1382c5b80854db6b93cbf83984cbef7
 msgid "This topic describes how to set up the |chef server| for high availability in |amazon aws|."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:15
-# 75bf5014b7b249cf81835e7ec4c3d4bf
+# 2a8b181cd581425fb05a3e834ea0a4ce
 msgid "Prerequisites"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_pre.rst:4
-# c3711417ecbb430a882b6dbe237c1933
+# 0b1ae7a05f8d442c8eb5869cfb5c7228
 msgid "Before installing the |chef server| software, perform the following steps:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_pre.rst:6
-# ad2d7f7ea2f94afeab6299eb556d5663
+# 4cac00b17a734048a81ea2315adb4e48
 msgid "Use an |amazon vpc|. |amazon ec2_classic| is not supported."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_pre.rst:7
-# 6176bb17d62f4796a067578ee20df665
+# c8059be753034b1ea17bb53422d6a205
 msgid "Create appropriate security groups to contain the backend instances. The only requirement for the |chef server| is that |icmp| is permitted between the two backend instances; |keepalived| requires it for communication and heartbeat."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_pre.rst:8
-# 5e0cd1d2d9ab4890b455716b2cd3144f
+# 4d717c4bf44642c0815cc265362fe546
 msgid "Launch two servers, one for the primary backend |chef server| and the other for the secondary backend |chef server|. Use the same |amazon ami| so that both backend servers have identical platform and versions. The servers must be in the same |amazon zones|."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_pre.rst:9
-# af4ce5904b284982a2696e2af744852e
+# d29773a0963b480ab61175b444c0256e
 msgid "Create an |amazon ebs| volume to store the |chef server|'s data. It is recommended that you use an |amazon ebs_volume_provisioned| volume type, with the maximum IOPS ratio for the size of volume."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_pre.rst:10
-# 7054305ba0a14d729cd4b139a0506a92
+# 93f262b9f6b742fd9867f4a2b92cf039
 msgid "Decide on what IP address the backend virtual IP (VIP) will be. It must reside in the same network segment as the backend machines. It will be specified in the |chef server rb| file; during installation, the high-availability plugin will automatically assign the VIP to the |amazon eni| for the primary instance."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_pre.rst:11
-# ce491ce4f5394ad490a088ce61372d87
+# d6f5911e0dd446deb94fdebc0df6fa32
 msgid "Create an |amazon iam| user with at least the permissions documented in the reference section. Record this user's access and secret keys; these will be used in the |chef server rb| configuration file."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:19
-# c855090bf0f6495093ed1250f0d58969
+# e5c8c12bc3574141a5ea33b217376084
 msgid "Primary Backend"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:4
-# 365406e2390f4393b7b107d1c82b6248
+# abaf50f13981475bbc8d22d9fa3de335
 msgid "Use the following steps to set up the primary backend |chef server|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:6
-# 5404fbb6825649909126d47ff8b955ef
+# 5af212b330e64134956b2bdffb9d85b5
 msgid "Create an |amazon ebs| volume and attach it to the primary backend."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:7
-# 488194e926844f09bba04d2ba2900487
+# de4fddf7cb9848b1b3cb6ef3e03a0c58
 msgid "Download the packages from http://downloads.getchef.com/chef-server/ and http://downloads.getchef.com/chef-ha/."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:8
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:6
 #: ../../includes_install/includes_install_server_ha_aws_frontend.rst:6
-# 4ee65f5969b64fc494cb9310ebdbe94b
-# e5d1a58be48c424f8058d7c7690f2495
-# 3544920f923f4bd6918dd7811296ba3e
+# 4c1af3ee8cb14a0e92ac495e8f14e3de
+# d45eb7311c984f2a8f89d5e868d78224
+# 3195f1410cef407e8b7a5e414a09d26d
 msgid "Install the ``chef-server-core`` package. For |redhat| and |centos| 6:"
 msgstr ""
 
@@ -102,44 +102,44 @@ msgstr ""
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:25
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:37
 #: ../../includes_install/includes_install_server_ha_aws_frontend.rst:12
-# e06b5129fc264762af14b6bef41482f8
-# 16071229db8e4e5c836d7cfc5256ef37
-# 47567f90e1a14efb868f8617dfd57e3d
-# 46ca20e7d90f472b89cbd16b77201d46
-# bbfab0081b8c4c7893a15226a3718051
-# 28f83270f7b74b28822924ed37648a70
-# 6d490a33436b40f49b90114e20d0d91e
+# 54d987d90e4d4bc3a0ae5555119024d7
+# 542a68b71371438bb14342603db97128
+# b4bb4ab766494224992361ddc2a1132f
+# b217c6417a7f42dfb7efbddd0f726bf5
+# 67d628fa8c3f4e1887b03dd83d4e6cd1
+# d86f46c4c8c74832a34808a39190b4cc
+# 62fc13c5b5fa4b1386fb69b1eda3f008
 msgid "For |ubuntu|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:20
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:18
-# eff8ac8bb89e4d498723ef0bffc73dfe
-# 512aa79484b64c65919099d6723a1ce3
+# 72075c5a0b9b496083db7fd117c83d3b
+# c698bc2e75ed4bdca7a128769b05658c
 msgid "After a few minutes, the |chef server| will be installed."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:21
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:19
-# d70c8a7366e84cef92a64160d0585353
-# 4ffd5871878f4d7d9e43e3c2264d0350
+# 5469055c29184f4b8a9d35e43c9be722
+# 7b32a6b2d4794549b6b59da3ce4e49eb
 msgid "Install ``chef-ha`` package. For |redhat| and |centos| 6:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:33
-# 20e583effccf4210a56e00f195c15c95
+# 9a2f88033ced46f88b571cbb35843eac
 msgid "Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required. The ``ha['ebs_device']`` setting must specify the actual ``/dev`` device name that is reported by the machine's kernel, which may not be the same value that is reported by |amazon aws|. For example, |amazon aws| may refer to a volume as ``/dev/sdf`` through the management console, but to the |linux| kernel on the instance, it may appear as ``/dev/xvdf``."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:35
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:31
-# 7df415029a9246969ef066025066247e
-# 6eca57d3f6e94690b444f1a23ae3ad9f
+# 187f26c07a2c48ed8b875b36669a95d3
+# 73f4dc387a884720bf5b6529caacce11
 msgid "Install |lvm| tools. For |redhat| and |centos| 6:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:47
-# a830a1ac5db84c99bf0dd68a6855d426
+# 29a6fdb15897463cabe42ef1d84e35ac
 msgid "Create a physical volume, volume group, and logical volume with the following series of commands. The volume group and logical volume names must be ``data`` and ``chef``, respectively."
 msgstr ""
 
@@ -148,16 +148,16 @@ msgstr ""
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:71
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:23
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:44
-# e114d0377a674bdc8e75d01b87d6d9ba
-# 6afb21eaf84641f5b5ec9a591859ac81
-# 5697516e6c464a4bb1b616587256c2eb
-# a1397008f0f348749ddc147abe29ddc2
-# cc927880c39e425283e6806834135604
+# 66fcb8e816ef4183b675be2826ea39f7
+# 65ca95eaeb4c4ce4aaa8425e70f1b5bc
+# 00286a6440454c67b572ba99ab1cf66e
+# e43c0546eb654aab9042dd2791ba5293
+# a1ff26a3256b4455b53210430400a937
 msgid "then:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:65
-# 59d4972fa06549398f2afe5d23eb800b
+# d813db292a83441c94d9f3eff450d85e
 msgid "Format and mount the new volume with the following series of commands:"
 msgstr ""
 
@@ -166,420 +166,420 @@ msgstr ""
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:50
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:66
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:72
-# 6bb9b41525b04f5b8f1cccf90643c14a
-# ada53c03b47949618e3d7214c4ace6b9
-# 663b0072da704d2ea1123288e503059a
-# a556eec3fc2e4c7fa5012e6b7930f5b3
-# 45db52c204cb47658a892c660ba18557
+# 527322e5ae4f40428b78a9a3396a2e20
+# a4da5a5f409e42d8b2644089eb00b122
+# 260a7c87296547e9bbae17a76833b1fc
+# bbfcc784d5c041bf813b00521646aead
+# 18c969c906d147f883861d054ed5beb8
 msgid "and then:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:83
-# 41faa34ac74d4c278f456b520f914a3d
+# c7e92d3e642148c1ab7ecb2716fed47a
 msgid "Run the following command to configure |chef server|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:89
-# 290febef9b1f40b3a0354f29e3ac2595
+# e625e53c7fde4775bd0d25721007ed89
 msgid "This will reconfigure the |chef server|, start |keepalived|, assign the VIP IP address as a secondary address on the |amazon eni|, and then configure the machine as the primary backend server."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:91
-# abdd99df51a944a0b9ff4b430a481355
+# b8c13c3faecc4d1680cf214d4381cbe6
 msgid "Verify the machine is the primary backend server:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:97
-# c6a65387d09d4ef2b02612cee9b0c504
+# 6266bd11d0b84fb3b2b65e4ea5228339
 msgid "This should display a screen of output indicating that the server is ``PRIMARY`` and that all services are running."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:99
-# 3017aa94c5204926a2fc7c62d724a458
+# 22cd25a660e14cf3bc021952b0ba72d6
 msgid "Additionally, you may run the following command to verify that the VIP IP address is configured on the Ethernet interface:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_primary.rst:105
-# be47236ecc7245af8d10f8d16bc208b5
+# 0d3b11a5f3c3492bb60f1c65dd46d540
 msgid "Do *not* use the ``ifconfig`` command as it will not show all aliases."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:23
 #: ../source/install_server_ha_aws.rst:59
-# 16af8c251f9e4bee95bf3985923d325d
-# e6e0c873c43e4faeb96edcc76ee25330
+# fbfc7ea84bf245509bd9cd9856b848fa
+# 0a981aa9ead04f75af75b454012f44f6
 msgid "|chef server rb|"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:4
-# 490b1a02e4844b12a0204ebcd59d26a4
+# b4bf0c3f2c1b4f2f8c271dc52e590c8e
 msgid "Each |chef server| in a high availabilty configuration must have an identical |chef server rb| file that is located in the ``/etc/opscode/`` directory on each server. This file describes the topology of the high availability configuration. On the primary backend machine, create a file named |chef server rb| and save it in the ``/etc/opscode/`` directory."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:6
-# 4a6a20aa4b0f4fee813e429e7465412d
+# 7ebde6fe9f084b2aa89a8c2121170244
 msgid "Add the following settings to the |chef server rb| file:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:8
-# 05c19e53dea24d70a27fc8bdf184570b
+# fe00bd4b04f64d1da65c12106794617c
 msgid "Define the topology type:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:14
-# a0cf4ddfc8f54ff0a54faa60e7490fc3
+# fff9fa1161a048f8b0a9ecdc1645da0f
 msgid "Define the primary backend server:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:24
-# d4792b669dbb4da6a8df43b3dd13f70a
+# bd6ca3fdaca3453b9f0633b96247cadc
 msgid "Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``\"backend\"``. If the backend machine is used to bootstrap the |chef server| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface that is used for cluster communications. For example, the same IP address that is used by |keepalived| and |drbd|. If the |chef server| is not used to bootstrap the |chef server| installation, exclude the ``:cluster_ipaddress`` entry."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:26
-# d3929eb059b6484ebd028534f1182670
+# 123020a9742c4cf7ad524797bcd74daf
 msgid "Define the secondary backend server:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:35
-# 70dfff86bf684bc0ad95e3db586f50d0
+# caabc61bc11a470ebf15bac329860ab7
 msgid "Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server’s interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:37
-# a026550d6c4148f8b808b93acc2f3d6c
+# 03d4bc99df084f538441ce7ce4cac957
 msgid "Define the backend virtual IP address:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:45
-# 58efe2a89507436bbfd4a1ffad0ddcf5
+# 4c5935d2e97c4fbabb93c3934332f54a
 msgid "Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind. This is typically the public interface of the server."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:47
-# ab49a2271f05403cae5b4279a7b3c147
+# 619232ae1cd64addb4e7ab448903559e
 msgid "Define each frontend machine:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:55
-# 5e0fa5779d0749adafbe27b26ce81186
+# bbb471ddbf4449c692ef27c08ca3a4bd
 msgid "Replace ``FQDN`` with the |fqdn| of the frontend machine. Replace ``IP_ADDRESS`` with the IP address of the frontend machine. Set ``:role`` to ``\"frontend\"``."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:57
-# aeab8da1f3bf4564bf3e325b8870b35f
+# 5c4b2358280143aba8c6f36a10b6779b
 msgid "Add separate entry in the |chef server rb| file for each frontend machine."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:59
-# 5fd2909b758a42f2b24d9b29f7105597
+# a397a12fdd78433f807e9da04801affd
 msgid "Define the API |fqdn|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:65
-# 58c819014ebb4690a94dc00466e9ad7c
+# fd50060d0b7f4f50b8ee53fbf85a2d50
 msgid "Replace ``FQDN`` with the |fqdn| of the load balanced virtual IP address, which should be equal to the |fqdn| for the service URI that is used by the |chef server|."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_config_rb.rst:67
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:45
 #: ../../includes_install/includes_install_server_ha_aws_frontend.rst:26
-# 82c6767a4fcb48fc8c336e8398aec5c3
-# e7c62b71874c481787c20f4879182531
-# 81d62e1c622443629983d77a5572755c
+# 424289a89b3748fbb83ff256d13a736c
+# 76e30fac2a62422cb2d03cf43d408113
+# 79dbed9976754a138e1fcc7b91eb0151
 msgid "Run the following command:"
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:27
-# af426a8d0ccd46328d165ff3eb5e62d7
+# db8b82414882452a86a7fb96baa007e6
 msgid "Secondary Backend"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:4
-# 0226f9b5ecc74ce9aba3d02daa9e510e
+# 594f053eb3324395a78a895a294d8d55
 msgid "Use the following steps to set up the secondary backend |chef server|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:43
-# 60c41bac34544fa899617a7896fe18c9
+# 1196d0fb8be64314abab63806f3fa3e8
 msgid "Create the ``/etc/opscode/`` directory, and then copy the contents of the entire ``/etc/opscode`` directory from the primary server, including all certificates and the |chef server rb|."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:51
-# 6a030e8aa96843a3af0b18294bf4780e
+# ded15a546ee04a5784ba0d8f36c41643
 msgid "This will reconfigure the |chef server|, start |keepalived|, and configure the machine as the secondary backend server."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:53
-# 06238f8daa19484aa665994a21ff70d1
+# 0d29f41c980c46729bdced3f23bfe04b
 msgid "Verify the machine is the secondary backend server:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_secondary.rst:59
-# 867f0791c5cc48ee8a5216cc17e0cafe
+# 6f4031aec23b4568b77ae194cff04a52
 msgid "This should indicate that the server is ``BACKUP``."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:31
-# 0ee63dbb58434342826b4ea44c619989
+# 0646d0adc40041dbb388c2f334456ecc
 msgid "Verify Failover"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_verify.rst:4
-# 1483da148e6d4a669770d59f4ea310fc
+# 3c14e72149d242a9be922f523d0ac8d9
 msgid "To verify that failover is working, stop |keepalived| on the primary machine."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_verify.rst:6
-# 3330e2529cf24acaa91f0492f49770b7
+# aafa63115fac4c62b4db7df6befe2c4a
 msgid "To watch the failover occur as it happens, run the following command in terminal windows on both the primary and secondary backend servers prior to stopping |keepalived|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_verify.rst:12
-# 94a295a663d44f68b1c07a128a90047d
+# d923a73806ca422db482951421445d30
 msgid "Stop |keepalived| on the primary backend machine:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_verify.rst:18
-# eb4c4a643f0d40a5b3333117fda814b1
+# fa7291815de34aeea52787c8e0114ec9
 msgid "A cluster failover should occur."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_verify.rst:20
-# 7bb0f5be85934d21ae66deff0e139851
+# 692c19f679f14003838d16dfa0ff0ede
 msgid "After a successful failover, restart |keepalived| on the primary backend machine:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_verify.rst:26
-# fdbef95845ff4e119b700367c4689620
+# ebc3e0e7ae6a45aebd5843907e2dc206
 msgid "The primary has now become the secondary, and vice-versa. If you wish to fail back to the original primary, repeat these using the new primary."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:35
-# 85b2cdd69b2f48ac94b2d0832f85a4a3
+# a9ea259bc7e94584b6243fc38fa128d8
 msgid "Frontend Installation"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_frontend.rst:4
-# 2ce91c4bdca546fbaea3df6a830866dd
+# 422da5e5503042858b6eefde9c59bf94
 msgid "Use the following steps to set up each frontend |chef server|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_frontend.rst:18
-# 35cae6553528491190c4a7ff0847c0b7
+# 8f4309a3c5f440ea8b4edcd83a6503a6
 msgid "After a few minutes, the |chef server| will be installed. The |chef ha| package is **not** required on front end machines."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_frontend.rst:20
-# 5a492ef4b3404b9181a504412edf11ff
+# 61703bb499974357a9b3b385e1d574da
 msgid "Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file."
 msgstr ""
 
 #: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:4
-# 25f21db2d5f64cca9b5463aaef2ee095
+# f158e898b9ef4a5bb19d487ec69eb4e3
 msgid "Run the following command to create an administrator:"
 msgstr ""
 
 #: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:10
 #: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:16
-# fa2e54908583417295bcea6ac5c7d557
-# f041b7093f1545a0bd419da5c7f860d7
+# 91fdd92ae95946afb61ebca933bce842
+# 6f2639905452489ca7c19878c8ae3dd5
 msgid "An RSA private key is generated automatically. This should be saved to a safe location. The ``--filename`` option will save the RSA private key to a specified path."
 msgstr ""
 
 #: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst:12
 #: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:18
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:12
-# a358719a7aed400b9bef7f73a9de6c0d
-# 70c801b52bd34a0089da85cb56754911
-# ef6ff6ea79424385b568b8b0d8905ce0
+# 47e725ced1a240009ff0aa9332f89097
+# 19a225f0f02f4912b6c363b343b572ec
+# e85fe5fddbc141ce9e97ef9fe5adae33
 msgid "For example:"
 msgstr ""
 
 #: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:4
-# abc8cb3eaa04471ca3774e704362823a
+# 01b2f550652a41e68c987f32a2fdd099
 msgid "Run the following command to create an organization:"
 msgstr ""
 
 #: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:10
-# 9c59a6b863fb4e2bb03a7429ac061867
+# a5fbd72fc6d444b1adbbb3cbe26a8e70
 msgid "|name_rules org| For example: ``chef``."
 msgstr ""
 
 #: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:12
-# d3f396bb4c7f4bd9accbc9d67f1e22c6
+# 1fd234e1f81247deb66f57f850edf5eb
 msgid "|name_rules org_full| For example: ``Chef Software, Inc.``."
 msgstr ""
 
 #: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst:14
-# 51f086c67c7a4484911b08c5c2f83f6b
+# a649f41eda9540f794c6179c4f3a6964
 msgid "The ``--association_user`` option will associate the ``user_name`` with the |webui group admins| security group on the |chef server|."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:39
-# d5ccd1b8f76f4184b141217c88f12b11
+# c08b18e204c0445da4f369f3a1d74e91
 msgid "Enable Features"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst:6
-# 055f675d28504eebb765fc8e46ddc6ad
+# 45d23752a85842bd921c35cc53b4f53a
 msgid "Enable additional features of the |chef server|! The packages may be downloaded directly as part of the installation process or they may be first downloaded to a local directory, and then installed."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:42
-# 4774069bef644e3683679ed903413c92
+# 90bae3893de441b1948431977bf6dd0c
 msgid "**Use Downloads**"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:6
-# 9c70625b8c7b4405960e895700dd2ed3
+# 9f7ab7bc9d6344cea70dd639c601229d
 msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are not behind a firewall (and have connectivity to https://packagecloud.io/), these packages can be installed as described below."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:12
-# 4a8e1b8ac4c2452fa9640e2bebe6d04d
+# 003778bdd6fc462985b4da1db0cf4d13
 msgid "Feature"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:13
-# 521959b3dab7478480f76ff3a622838d
+# df4395042b6748ee83e810e76c476c4c
 msgid "Command"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:14
-# 6996bf1132094c42aac85652a954216f
+# 38b51c6940a34686ac0109d1165bca5b
 msgid "|chef manage_title|"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:15
-# a4d370e9bbb642a78ecb836e47b5b2ef
+# 0aaf3143f51f481a94283658dc06080a
 msgid "Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:17
-# f062b7d343774b0489fb4631254f286f
+# 327ac3f172cd40c3804496476300d65b
 msgid "(Front end machines only.) Run:"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:35
-# f0a82280ca234376b4ff31cf93c363de
+# effdab3568144508a2c27d26f6680f91
 msgid "|push jobs_title|"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:36
-# af97be9e4b784cd780dd4ab726a85697
+# ba3cc2f923e2452dbf45b060f18ffa86
 msgid "Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run."
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:38
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:60
-# 0104d59c79074677bb9214e5ae63daaf
-# 11d5ae5041664ce5a6d816fa713ff408
+# ad0eda95f5964a0d803bca79ccfb4cd4
+# 67883e57508a4f74ae62d82b80cdd411
 msgid "Run:"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:57
-# 5330f9eef9cf49388a2ba2eb08f8bb76
+# af9ca8ff97954aac8324745e2055c6cd
 msgid "|chef replication_title|"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download_ha.rst:58
-# 9c81405f605146cb8fee02064bcc0a5c
+# c4ff6bb9208842769f38138449947094
 msgid "Use |chef replication| to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:46
-# 04561fcd807c4d6086e9c76712bad082
+# b5a4d9258bf54e1da2ce8741212f9939
 msgid "**Use Local Packages**"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:6
-# b7e743ada1f844b5a909e5bb9b8f6b54
+# fd8645f0c9e8435abb269242db9f8d1e
 msgid "The ``install`` subcommand downloads packages from https://packagecloud.io/ by default. For systems that are behind a firewall (and do not have connectivity to https://packagecloud.io/), these packages can be installed manually. First download the package that is appropriate for the platform and save it to a local path. Then run the ``install`` command using the ``--path`` option to specify the location for the package:"
 msgstr ""
 
 #: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst:18
-# 5c5b9fdc333446b7acffda35ac33cbc2
+# beb6a35604ab4262acee7d385a7e67e6
 msgid "The ``chef-server-ctl`` command will install the first ``opscode-manage`` package found in the ``/home/vagrant`` directory."
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:50
-# e1023ab54bcb44f0ac5447bd0862d443
+# c20439937bec4367b66f3f75457de35b
 msgid "**Install Reporting**"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:6
-# 3b1fb41e814d4b9c97867cf51fcb2219
+# 79c2e5b2475e48528ab1a4d7911763e2
 msgid "To set up the |reporting| server for a high availability configuration:"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:8
-# 6bb4fe8a9c7943cb9fc892fac8097b7f
+# cc31850f40f14ca1a8d3cf11a562c26b
 msgid "Install the package on every machine that is running |chef server|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:14
-# 5312a051fef7482ea5d85b35be5122e2
+# 7592965f97e14674be45403379354de7
 msgid "Reconfigure the |chef server| on the back end primary server (bootstrap):"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:20
-# 9b9757784169490ca7b5bed91cf10b17
+# 9216305a52ff4100a4d12e90de3fcbc9
 msgid "Reconfigure the |reporting| server on the back end primary server (bootstrap):"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:26
-# a014ba02012147519e3c13fdef153773
+# aa0f00bf12ba44299a437c64f39100ee
 msgid "Copy the entire ``/etc/opscode-reporting`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:32
-# d2d45da139d04503aa519340a3e6567b
+# 4f11e239a0794dd48fc184c7648a7474
 msgid "or from the back end primary machine:"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:38
-# c3adae1b8c144f8cb6386741520f827b
+# 0ce41013764d4770bac22d276d5cffdb
 msgid "Reconfigure any |chef server| on which |reporting| services have been installed:"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:44
-# f69f07082a66481a961890b6f2059cbd
+# a1a18b5b0d544ad49c3c283255316d1d
 msgid "Reconfigure |reporting| services on each server:"
 msgstr ""
 
 #: ../../includes_install/includes_install_reporting_ha.rst:50
-# 3e1c4d6d04714e43ba0a88ffc48fd1d9
+# ef2444c109dc407eb6fcddf8312e8f29
 msgid "Verify the installation:"
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:55
-# c3e5e42811e34caca8c26e9182b8a758
+# 8dac01b63ddc49ff901bba3e209ea15b
 msgid "Reference"
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:56
-# 2b6ddddc1b2b4d58b6b31958d771472e
+# d0e0a3524b654f1b80bfffe61b5258a9
 msgid "The following sections show the |chef ha| settings as they appear in a |chef server rb| file and required permissions of the user in |amazon iam|."
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_reference_config.rst:4
-# 50a05bde788b4983bcd47bef74a55ccf
+# e12fe5ef76b944ee93bcfe7f766215c3
 msgid "The following example shows a |chef server rb| file:"
 msgstr ""
 
 #: ../source/install_server_ha_aws.rst:63
-# 864c72f8b2a44a2ea77b3dabdb383551
+# f50f070c8bf34eeebaadd7493d833886
 msgid "|amazon iam|"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_reference_iam.rst:4
-# 8848ee3a41dd43d7b1dd1641ad22483f
+# 78cf0a6ec9c94c569f5f336196e8c031
 msgid "The following example shows |amazon iam| access management settings that are required for |chef ha|:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_ha_aws_reference_iam.rst:27
-# c4fdb7980cc547d6b15c608d576ba71e
+# dd928723663b4dc9a7b95591741d4af2
 msgid "It is possible to further restrict access using a more sophisticated policy document, for example, administrators may choose to permit the |amazon iam| user only to attach/detach the volume ID associated with the |chef server| data volume, and not all volumes."
 msgstr ""
 

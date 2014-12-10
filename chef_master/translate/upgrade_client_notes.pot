@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-09 21:45-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/upgrade_client_notes.rst:8
+# 55e67ee8a69c4cc4bea5aec33e4c4c57
+msgid "Notes for |chef client| Upgrades"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:10
+# 2646efbebc694bf89240129ced3cce22
+msgid "The following sections contain more information about the upgrade process from earlier versions of the |chef client| to the |chef client| 12 release."
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:13
+# 8ff97442c2b44d69bba81eb3931564c3
+msgid "Notes About Cookbooks"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:14
+# 7297bb35b6654c47b9e295c135b3048b
+msgid "The following cookbooks are being updated by |company_name| to ensure compatibility with |chef client| 12:"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:16
+# 5b1cc8c1caa1431589c35c94c24b7e2d
+msgid "``minitest-chef-handler``"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:17
+# 7a31721e7cb44580837b1776f2d52b4c
+msgid "``windows``"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:18
+# 4fd6418d6da647659de2fe29b922e87c
+msgid "``knife-windows``"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:21
+# 887f06fa01e94de0a39f4141489b7ef5
+msgid "|resource execute| Resource, ``path`` Attribute"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst:4
+# c739c5ddb27b4f02be9052f76f3b7b1f
+msgid "The ``path`` attribute is not implemented by any provider in any version of the |chef client|. Starting with |chef client| 12, using the ``path`` attribute will return a warning. Starting with |chef client| 13, ``path`` is deprecated and using it will return an exception. Cookbooks that currently use the ``path`` attribute should be updated to use the ``environment`` attribute instead. For example:"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:25
+# dd31945b70884565971226e00c627ffd
+msgid "``Chef::Provider`` Changes"
+msgstr ""
+
+#: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst:4
+# 2f5cd0aa9d7247068279ca3e6683c6ee
+msgid "If a custom resource was created in the ``/libraries`` directory of a cookbook that also uses a core resource from the |chef client| within the custom resource, the base class that is associated with that custom resource must be updated. In previous versions of the |chef client|, the ``Chef::Provider`` class was all that was necessary because the |dsl recipe| was included in the ``Chef::Provider`` base class."
+msgstr ""
+
+#: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst:6
+# ec9dbf92519f4c9993248f6fab69c455
+msgid "For example, the ``lvm_logical_volume`` custom resource from the `lvm cookbook <https://github.com/opscode-cookbooks/lvm/blob/master/libraries/provider_lvm_logical_volume.rb>`_ uses the |resource directory| and |resource mount| resources:"
+msgstr ""
+
+#: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst:49
+# f0d5940c4c814a688b35ac9c746c5036
+msgid "Starting with |chef client| 12, the |dsl recipe| is removed from the ``Chef::Provider`` base class and is only available by using ``LWRPBase``. Cookbooks that contain custom resources in the ``/libraries`` directory of a cookbook should:"
+msgstr ""
+
+#: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst:51
+# a594ea86d169495db30b6b6de1d3a7aa
+msgid "Be inspected for instances of a) the ``Chef::Provider`` base class, and then b) for the presence of any core resources from the |chef client|"
+msgstr ""
+
+#: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst:52
+# da80324842e34ae69677446d1085042e
+msgid "Be updated to use the ``LWRPBase`` base class"
+msgstr ""
+
+#: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst:54
+# 47ac571395cd4fdaba65e396ae49b11c
+msgid "For example, the same custom resource as shown above, but updated to use the ``LWRPBase`` class:"
+msgstr ""
+
+#: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst:97
+# f72a1ebd113549478b8aa9a13fadb01a
+msgid "No other changes are required."
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:29
+# f8f383430f924d2f8075a6535e98d31b
+msgid "``node.default!``  Changes"
+msgstr ""
+
+#: ../../includes_attributes/includes_attributes_type_force_default.rst:4
+# 9af45b97838f469d89838bb3caa86af2
+msgid "In previous versions of the |chef client|, ``node.default!`` was an alias of ``node.force_default!``. Starting with |chef client| 12, ``node.force_default`` is changed from an accessor to a setter. Cookbooks that use ``node.default!`` must be updated for the correct attribute precedence type and must drop the exclamation point. For example:"
+msgstr ""
+
+#: ../../includes_attributes/includes_attributes_type_force_default.rst:10
+#: ../../includes_attributes/includes_attributes_type_force_override.rst:10
+# 6e2ce078211d4900bbfd94040bd3fe8a
+# bb8db1b5174347608c27037e7caff3dd
+msgid "must be updated to:"
+msgstr ""
+
+#: ../source/upgrade_client_notes.rst:33
+# f38d3702178544b6bd2d3d07b25d0549
+msgid "``node.override!`` Changes"
+msgstr ""
+
+#: ../../includes_attributes/includes_attributes_type_force_override.rst:4
+# 477498dbdea04ec1bf984600304ee67a
+msgid "In previous versions of the |chef client|, ``node.override!`` was an alias of ``node.force_override``. Starting with |chef client| 12, ``node.force_override`` is changed from an accessor to a setter. Cookbooks that use ``node.override!`` must be updated for the correct attribute precedence type and must drop the exclamation point. For example:"
+msgstr ""
+
