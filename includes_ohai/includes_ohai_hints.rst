@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|ohai| hints are used to tell |ohai| something about the system that it is running on that it would not be able to discover itself. An |ohai| hint exists if a |json| file exists in the hint directory with the same name as the hint. For example, calling ``hint?('antartica')`` in an |ohai| plugin would return an empty hash if the file ``antartica.json`` existed in the hints directory, and return nil if the file does not exist.
+|ohai| hints are used to tell |ohai| something about the system that it is running on that it would not be able to discover itself. An |ohai| hint exists if a |json| file exists in the hint directory with the same name as the hint. For example, calling ``hint?('antarctica')`` in an |ohai| plugin would return an empty hash if the file ``antarctica.json`` existed in the hints directory, and return nil if the file does not exist.
 
 If the hint file contains |json| content, it will be returned as a hash from the call to ``hint?``.
 
@@ -14,9 +14,9 @@ If the hint file contains |json| content, it will be returned as a hash from the
 
 .. code-block:: ruby
 
-   antartica_hint = hint?('antartica')
-   if antartica_hint['snow']
-     "There are #{antartica_hint['penguins']} penguins here." 
+   antarctica_hint = hint?('antarctica')
+   if antarctica_hint['snow']
+     "There are #{antarctica_hint['penguins']} penguins here."
    else
      "There is no snow here, and penguins like snow."
    end
