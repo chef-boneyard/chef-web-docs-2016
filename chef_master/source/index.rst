@@ -425,4 +425,3 @@ Cookbooks
    verify_packages
    windows
    workstation
-   lwrp_common_inline_compile
