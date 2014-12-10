@@ -62,7 +62,7 @@ The |chef client| is distributed as a |ibm aix_bff| binary and is installed on t
 
 **Increase system process limits**
 
-The out-of-the-box system process limits for a logical partition (LPAR) are typically too low to run the |chef client|. When the system process limits are too low, the |chef client| will not be able to create threads. To increase the system process limits:
+The out-of-the-box system process limits for maximum process memory size (RSS) and number of open files are typically too low to run the |chef client| on a logical partition (LPAR). When the system process limits are too low, the |chef client| will not be able to create threads. To increase the system process limits:
 
 #. Validate that the system process limits have not already been increased.
 #. If they have not been increased, run the following commands as a root user:
