@@ -12,6 +12,6 @@
    * - ``name``
      -  Always the same value as the ``name`` of the resource block. |see syntax|
    * - ``plugin``
-     - Optional. The attribute to be reloaded. The |chef client| will identify the correct plugin.
+     - Optional. The name of an |ohai| plugin to be reloaded. If this attribute is not specified, the |chef client| will reload all plugins.
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
