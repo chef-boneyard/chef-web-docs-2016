@@ -13,7 +13,6 @@ The |api cookbooks site| has the following endpoints.
 
 /cookbooks
 -----------------------------------------------------
-
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks.rst
@@ -29,7 +28,6 @@ GET
 
 /cookbooks/NAME
 -----------------------------------------------------
-
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name.rst
 
 DELETE
@@ -43,7 +41,6 @@ GET
 
 /cookbooks/VERSION
 -----------------------------------------------------
-
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_version.rst
 
 DELETE
@@ -67,9 +64,35 @@ GET
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_search_get.rst
 
 
+/tools
+-----------------------------------------------------
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_get.rst
+
+
+/tools-search
+-----------------------------------------------------
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_search.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_search_get.rst
+
+
+/tools/SLUG
+-----------------------------------------------------
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tool_slug.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tool_slug_get.rst
+
+
 /universe
 -----------------------------------------------------
-
 .. include:: ../../includes_berkshelf/includes_berkshelf_universe.rst
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_universe.rst
@@ -81,36 +104,8 @@ GET
 
 /users/USERNAME
 -----------------------------------------------------
-
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_users.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_users_get.rst
-
-/tools
------------------------------------------------------
-
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools.rst
-
-GET
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_get.rst
-
-/tools-search
------------------------------------------------------
-
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_search.rst
-
-GET
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tools_search_get.rst
-
-/tools/SLUG
------------------------------------------------------
-
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tool_slug.rst
-
-GET
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_tool_slug_get.rst
