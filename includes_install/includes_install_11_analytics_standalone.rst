@@ -3,7 +3,7 @@
 
 In a standalone configuration, the |chef analytics| deployment is on a different machine from |chef server oec|. This allows you to scale |chef analytics| independantly from |chef server oec|. To set up |chef analytics| in a standalone configuration,  you should have an existing |chef server| deployment already running. First run the following steps on the |chef server| instances:
 
-#. Download the package from http://downloads.getchef.com/analytics/.
+#. Download the package from http://downloads.chef.io/analytics/.
 #. Enable the |chef server| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/private-chef.rb``:
 
    .. code-block:: bash

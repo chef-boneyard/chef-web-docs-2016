@@ -345,7 +345,7 @@ The first time you run this, it'll have to download the |chef client| and will s
           Removing non-cookbook files before transfer
           Preparing nodes
    -----> Installing Chef Omnibus (true)
-          downloading https://www.getchef.com/chef/install.sh
+          downloading https://www.chef.io/chef/install.sh
             to file /tmp/install.sh
           ...
           Downloading Chef ...
@@ -403,7 +403,7 @@ Like |centos|, the |chef client| will need to be downloaded:
           Removing non-cookbook files before transfer
           Preparing nodes
    -----> Installing Chef Omnibus (true)
-          downloading https://www.getchef.com/chef/install.sh
+          downloading https://www.chef.io/chef/install.sh
             to file /tmp/install.sh
           ...
           Downloading Chef ...
@@ -738,7 +738,7 @@ More About Resources
 =====================================================
 The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
 
-The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.getchef.com>`_.
+The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <http://docs.chef.io/resource.html#resources>`_. You can also `create your own resources <http://docs.chef.io/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
 
 Execute Commands
 -----------------------------------------------------

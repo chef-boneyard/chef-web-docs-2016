@@ -15,4 +15,4 @@ Use the ``--include-credentials`` option with the ``docker init`` subcommand to 
 
     $ knife container docker init example/apache2 -r 'recipe[apache2]' --include-credentials
 
-You will need to define the ``container_service`` for the services defined by the ``apache2`` recipe. These will be managed by the |runit| init scheme that comes with |chef container|. For more information about ``container_service``, see http://docs.getchef.com/containers.html#container-services.
+You will need to define the ``container_service`` for the services defined by the ``apache2`` recipe. These will be managed by the |runit| init scheme that comes with |chef container|. For more information about ``container_service``, see http://docs.chef.io/containers.html#container-services.

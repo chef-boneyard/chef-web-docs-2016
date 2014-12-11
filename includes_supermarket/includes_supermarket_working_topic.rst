@@ -4,4 +4,4 @@
 
 STUFF_GOES_HERE
 
-See docs.getchef.com/style_guide.html if any formatting issues come up. Most of what goes on in chef-docs is the most very basic stuff. RST has a list-table directive which makes building tables similar to building a bulleted list. Other than that, really basic.
+See docs.chef.io/style_guide.html if any formatting issues come up. Most of what goes on in chef-docs is the most very basic stuff. RST has a list-table directive which makes building tables similar to building a bulleted list. Other than that, really basic.

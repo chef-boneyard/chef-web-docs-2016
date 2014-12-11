@@ -1,4 +1,4 @@
-.. THIS PAGE IS IDENTICAL TO docs.getchef.com/resource_route.html BY DESIGN
+.. THIS PAGE IS IDENTICAL TO docs.chef.io/resource_route.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.2
 
 .. include:: ../../chef_master/source/resource_route.rst

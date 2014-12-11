@@ -46,7 +46,7 @@ The bits for the |chef client| |omnibus installer| are available as a download f
 
 To download the |omnibus installer| for the |chef client|:
 
-#. Go to: http://downloads.getchef.com/chef-dk/.
+#. Go to: http://downloads.chef.io/chef-dk/.
 
 #. Select the operating system, version, and architecture appropriate for your environment.
 

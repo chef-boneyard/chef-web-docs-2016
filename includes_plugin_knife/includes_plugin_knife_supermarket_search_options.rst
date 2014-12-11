@@ -6,4 +6,4 @@
 This argument has the following options:
 
 ``-m``, ``--supermarket-site``
-   |url supermarket| Default value: ``https://supermarket.getchef.com``.
+   |url supermarket| Default value: ``https://supermarket.chef.io``.

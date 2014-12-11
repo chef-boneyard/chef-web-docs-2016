@@ -5,7 +5,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
 To install |chef analytics|:
 
-#. Download the package from http://downloads.getchef.com/analytics/. For |redhat| and |centos| 6:
+#. Download the package from http://downloads.chef.io/analytics/. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       

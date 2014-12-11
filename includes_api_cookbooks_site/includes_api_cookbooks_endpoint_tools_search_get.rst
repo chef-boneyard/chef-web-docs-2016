@@ -44,7 +44,7 @@ The response will return a list of tools that match the search query. Each retur
           "tool_source_url": "https://github.com/sethvargo/knife-spec",
           "tool_description": "knife-spec is a knife plugin that automatically generates Chef cookbook specs (tests) stubs for use with ChefSpec.",
           "tool_owner": "sethvargo",
-          "tool": "https://supermarket.getchef.com/api/v1/tools/knife-spec"
+          "tool": "https://supermarket.chef.io/api/v1/tools/knife-spec"
         },
         {
           "tool_name": "knife-rhn",
@@ -52,7 +52,7 @@ The response will return a list of tools that match the search query. Each retur
           "tool_source_url": "https://github.com/bflad/knife-rhn",
           "tool_description": "Knife Plugin for Red Hat Network (RHN)",
           "tool_owner": "bflad",
-          "tool": "https://supermarket.getchef.com/api/v1/tools/knife-rhn"
+          "tool": "https://supermarket.chef.io/api/v1/tools/knife-rhn"
         }
       ]
     }

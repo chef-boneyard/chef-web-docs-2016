@@ -10,11 +10,11 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``chef_documentation_url``
-     - The URL at which documentation for |chef| is located. Default value: ``http://docs.getchef.com``.
+     - The URL at which documentation for |chef| is located. Default value: ``http://docs.chef.io``.
    * - ``disable_sign_up``
      - Use to disable sign-up and only allow sign-in. Default value: ``false``.
    * - ``email_from_address``
-     - The email address from which |chef server| notifications are sent. Default value: ``'Chef Notifications <notifications@getchef.com>'``.
+     - The email address from which |chef server| notifications are sent. Default value: ``'Chef Notifications <notifications@chef.io>'``.
    * - ``events.port``
      - The port on which the events services run. Default value: ``11001``.
    * - ``logging.chef_log_level``
@@ -46,11 +46,11 @@ This configuration file has the following settings:
    * - ``services['opscode-manage-worker'].enable``
      - Use to enable the ``opscode-manage-worker`` service. Default value: ``true``.
    * - ``support_email_address``
-     - The email address used to send feedback. Default value: ``support@getchef.com``.
+     - The email address used to send feedback. Default value: ``support@chef.io``.
    * - ``support_site_url``
-     - The URL at which links to |company_name| support are located. Default value: ``http://getchef.com/support``.
+     - The URL at which links to |company_name| support are located. Default value: ``http://chef.io/support``.
    * - ``support_tickets_url``
-     - The URL at which |company_name| support tickets are created. Default value: ``https://getchef.com/support/tickets``.
+     - The URL at which |company_name| support tickets are created. Default value: ``https://chef.io/support/tickets``.
    * - ``webapp.backlog``
      - The size of the backlog. Default value: ``1024``.
    * - ``webapp.listen``

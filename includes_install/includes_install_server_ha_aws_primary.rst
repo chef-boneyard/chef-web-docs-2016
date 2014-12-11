@@ -4,7 +4,7 @@
 Use the following steps to set up the primary backend |chef server|:
 
 #. Create an |amazon ebs| volume and attach it to the primary backend.
-#. Download the packages from http://downloads.getchef.com/chef-server/ and http://downloads.getchef.com/chef-ha/.
+#. Download the packages from http://downloads.chef.io/chef-server/ and http://downloads.chef.io/chef-ha/.
 #. Install the ``chef-server-core`` package. For |redhat| and |centos| 6:
 
    .. code-block:: bash

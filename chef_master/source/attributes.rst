@@ -28,7 +28,7 @@ Attributes are provided to the |chef client| from the following locations:
 * Environments
 * Roles
 
-If we go back to the `overview of Chef <http://docs.opscode.com/chef_overview.html>`_, but then focus only on where attributes are located, it looks something like this:
+If we go back to the `overview of Chef <http://docs.chef.io/chef_overview.html>`_, but then focus only on where attributes are located, it looks something like this:
 
 .. image:: ../../images/overview_chef_attributes.png
 

@@ -12,7 +12,7 @@ By adding the following lines of |ruby| code to either the |client rb| file or t
    report_handlers << Chef::Handler::ErrorReport.new()
    exception_handlers << Chef::Handler::ErrorReport.new()
 
-By using the `chef_handler <https://docs.getchef.com/resource_chef_handler.html>`_ resource in a recipe, similar to the following:
+By using the `chef_handler <https://docs.chef.io/resource_chef_handler.html>`_ resource in a recipe, similar to the following:
 
 .. code-block:: ruby
 

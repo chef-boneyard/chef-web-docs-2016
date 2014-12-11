@@ -20,11 +20,11 @@ where
 * ``url`` is the URL that will precede ``?message=`` in the HTTP request
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
 
-For example, send a ``DELETE`` request to "http://www.getchef.com/some_page?message=please_delete_me".
+For example, send a ``DELETE`` request to "http://www.chef.io/some_page?message=please_delete_me".
 
 .. code-block:: ruby
 
    http_request "please_delete_me" do
-     url "http://www.getchef.com/some_page"
+     url "http://www.chef.io/some_page"
      action :delete
    end

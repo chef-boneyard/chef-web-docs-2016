@@ -19,7 +19,7 @@ The following items are new for |chef client| 11.10 and/or are changes from prev
 
 |chef client| Options
 -----------------------------------------------------
-A recipe can be specified when `running the chef-client <http://docs.getchef.com/ctl_chef_client.html>`_, typically when running the |chef client| in local mode:
+A recipe can be specified when `running the chef-client <http://docs.chef.io/ctl_chef_client.html>`_, typically when running the |chef client| in local mode:
 
 ``RECIPE_FILE``
    |path recipe_file|
@@ -58,7 +58,7 @@ The following attributes have been added to the |resource scm_git| resource:
    * - ``checkout_branch``
      - |checkout_branch git| Default value: ``deploy``.
    * - ``enable_checkout``
-     - |enable_checkout git| Default value: ``true``.
+     - |enable_git_checkout| Default value: ``true``.
 
 knife environment compare
 -----------------------------------------------------

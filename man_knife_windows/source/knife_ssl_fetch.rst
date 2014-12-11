@@ -38,4 +38,4 @@ for example:
 
 .. code-block:: bash
 
-   $ knife ssl fetch https://www.getchef.com
+   $ knife ssl fetch https://www.chef.io

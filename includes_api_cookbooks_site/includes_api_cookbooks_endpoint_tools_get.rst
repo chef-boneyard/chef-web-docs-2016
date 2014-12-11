@@ -44,7 +44,7 @@ The response will return the name of the tool, a type, description, owner, sourc
           "tool_source_url": "https://github.com/reset/berkflow",
           "tool_description": "A Cookbook-Centric Deployment workflow tool",
           "tool_owner": "reset",
-          "tool": "https://supermarket.getchef.com/api/v1/tools/berkflow"
+          "tool": "https://supermarket.chef.io/api/v1/tools/berkflow"
         },
         {
           "tool_name": "Berkshelf",
@@ -52,7 +52,7 @@ The response will return the name of the tool, a type, description, owner, sourc
           "tool_source_url": "https://github.com/berkshelf/berkshelf",
           "tool_description": "A Chef Cookbook manager",
           "tool_owner": "reset",
-          "tool": "https://supermarket.getchef.com/api/v1/tools/berkshelf"
+          "tool": "https://supermarket.chef.io/api/v1/tools/berkshelf"
         },
         {
           "tool_name": "Berkshelf-API",
@@ -60,7 +60,7 @@ The response will return the name of the tool, a type, description, owner, sourc
           "tool_source_url": "https://github.com/berkshelf/berkshelf-api",
           "tool_description": "Berkshelf dependency API server",
           "tool_owner": "reset",
-          "tool": "https://supermarket.getchef.com/api/v1/tools/berkshelf-api"
+          "tool": "https://supermarket.chef.io/api/v1/tools/berkshelf-api"
         },
         {
           "tool_name": "ChefAPI",
@@ -68,7 +68,7 @@ The response will return the name of the tool, a type, description, owner, sourc
           "tool_source_url": "https://github.com/sethvargo/chef-api",
           "tool_description": "ChefAPI is a dependency-minimal Ruby client for interacting with a Chef Server. It adopts many patterns and principles from Rails",
           "tool_owner": "sethvargo",
-          "tool": "https://supermarket.getchef.com/api/v1/tools/chef-api"
+          "tool": "https://supermarket.chef.io/api/v1/tools/chef-api"
         }
       ]
     }

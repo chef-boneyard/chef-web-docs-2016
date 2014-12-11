@@ -46,7 +46,7 @@ We are a community of developers, deployers and integrators who make working wit
    * - |twitter|
      - `@chefopenstack <http://twitter.com/chefopenstack>`_
 
-If you have questions or concerns outside the mailing list, please email jj@getchef.com.
+If you have questions or concerns outside the mailing list, please email jj@gchef.io.
 
 .. toctree::
    :hidden:

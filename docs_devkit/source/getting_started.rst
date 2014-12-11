@@ -345,7 +345,7 @@ The first time you run this, it'll have to download the |chef client| and will s
           Removing non-cookbook files before transfer
           Preparing nodes
    -----> Installing Chef Omnibus (true)
-          downloading https://www.getchef.com/chef/install.sh
+          downloading https://www.chef.io/chef/install.sh
             to file /tmp/install.sh
           ...
           Downloading Chef ...
@@ -403,7 +403,7 @@ Like |centos|, the |chef client| will need to be downloaded:
           Removing non-cookbook files before transfer
           Preparing nodes
    -----> Installing Chef Omnibus (true)
-          downloading https://www.getchef.com/chef/install.sh
+          downloading https://www.chef.io/chef/install.sh
             to file /tmp/install.sh
           ...
           Downloading Chef ...
@@ -738,43 +738,43 @@ More About Resources
 =====================================================
 The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
 
-The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.getchef.com>`_.
+The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
 
 Execute Commands
 -----------------------------------------------------
-Commands are executed using the |resource execute| resource using an attribute to specify the actual command to run. See `execute <http://docs.getchef.com/resource_execute.html>`_ for more information about executing commands.
+Commands are executed using the |resource execute| resource using an attribute to specify the actual command to run. See `execute <http://docs.chef.io/resource_execute.html>`_ for more information about executing commands.
 
 Manage Directories
 -----------------------------------------------------
-Directories are hierarchies of folders that comprise all the information stored on a computer. There are two ways to manage directories. The first is via the |resource directory| resource, which manages directories starting from the root directory. And the second is the |resource remote_directory|, which transfers directory structures defined in cookbooks to nodes. See `directory <http://docs.getchef.com/resource_directory.html>`_ for more information about managing directories. If the directory is defined in a cookbook, use `remote_directory <http://docs.getchef.com/resource_remote_directory.html>`_ instead.
+Directories are hierarchies of folders that comprise all the information stored on a computer. There are two ways to manage directories. The first is via the |resource directory| resource, which manages directories starting from the root directory. And the second is the |resource remote_directory|, which transfers directory structures defined in cookbooks to nodes. See `directory <http://docs.chef.io/resource_directory.html>`_ for more information about managing directories. If the directory is defined in a cookbook, use `remote_directory <http://docs.chef.io/resource_remote_directory.html>`_ instead.
 
 Manage Packages
 -----------------------------------------------------
-Packages are collections of files that comprise software applications or some part of an operating system. Use the package resource to manage these packages, unless they are sourced via |rubygems| and installed directly from within recipes or are sourced from a cookbook. See `package <http://docs.getchef.com/resource_package.html>`_ for more information about managing packages. There are quite a few platform-specific package resources as well, though most of the time simply using the |resource package| is all that's necessary. For packages that are located in cookobooks, use `chef_gem <http://docs.getchef.com/resource_chef_gem.html>`_. And for packages that are only included via recipes, use `gem_package <http://docs.getchef.com/resource_gem_package.html>`_.
+Packages are collections of files that comprise software applications or some part of an operating system. Use the package resource to manage these packages, unless they are sourced via |rubygems| and installed directly from within recipes or are sourced from a cookbook. See `package <http://docs.chef.io/resource_package.html>`_ for more information about managing packages. There are quite a few platform-specific package resources as well, though most of the time simply using the |resource package| is all that's necessary. For packages that are located in cookobooks, use `chef_gem <http://docs.chef.io/resource_chef_gem.html>`_. And for packages that are only included via recipes, use `gem_package <http://docs.chef.io/resource_gem_package.html>`_.
 
 Manage Services
 -----------------------------------------------------
-Services can be started, stopped, enabled, disabled, reloaded, and restarted. See `service <http://docs.getchef.com/resource_service.html>`_ for more information about managing services.
+Services can be started, stopped, enabled, disabled, reloaded, and restarted. See `service <http://docs.chef.io/resource_service.html>`_ for more information about managing services.
 
 Manage Files
 -----------------------------------------------------
-Files are managed in several ways. The |resource file| resource manages files that are already present on a node. Files are transferred to nodes from cookbooks using the |resource cookbook_file| resource and are transferred to nodes from remote locations using the |resource remote_file| resource. See `file <http://docs.getchef.com/resource_file.html>`_ for more information about managing files, `remote_file <http://docs.getchef.com/resource_remote_file.html>`_ for transferring files from remote locations, and `cookbook_file <http://docs.getchef.com/resource_cookbook_file.html>`_ for transferring files that are located in cookbooks.
+Files are managed in several ways. The |resource file| resource manages files that are already present on a node. Files are transferred to nodes from cookbooks using the |resource cookbook_file| resource and are transferred to nodes from remote locations using the |resource remote_file| resource. See `file <http://docs.chef.io/resource_file.html>`_ for more information about managing files, `remote_file <http://docs.chef.io/resource_remote_file.html>`_ for transferring files from remote locations, and `cookbook_file <http://docs.chef.io/resource_cookbook_file.html>`_ for transferring files that are located in cookbooks.
 
 Manage Templates
 -----------------------------------------------------
-Templates are used to generate files based on variables and logic contained within the template file. |chef| uses |erb| templates and |ruby| expressions and statements to define the template file. Template source files must be located within cookbooks. See `template <http://docs.getchef.com/resource_template.html>`_ for more information about managing files using |erb| templates.
+Templates are used to generate files based on variables and logic contained within the template file. |chef| uses |erb| templates and |ruby| expressions and statements to define the template file. Template source files must be located within cookbooks. See `template <http://docs.chef.io/resource_template.html>`_ for more information about managing files using |erb| templates.
 
 Manage Users, Groups
 -----------------------------------------------------
-Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See `group <http://docs.getchef.com/resource_user.html>`_ for more information about managing users and user passwords. The `group <http://docs.getchef.com/resource_group.html>`__ resource manges groups.
+Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See `group <http://docs.chef.io/resource_user.html>`_ for more information about managing users and user passwords. The `group <http://docs.chef.io/resource_group.html>`__ resource manges groups.
 
 Use Script Interpreters
 -----------------------------------------------------
-Script interpreters execute scripts on a node, similar to the |resource execute| resource, and with the ability to specify the interpreter that the |chef client| should use. See `script <http://docs.getchef.com/resource_script.html>`_ for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with `bash <http://docs.getchef.com/resource_bash.html>`_ being the most popular. Also available: `csh <http://docs.getchef.com/resource_csh.html>`_, `perl <http://docs.getchef.com/resource_perl.html>`_, `powershell_script <http://docs.getchef.com/resource_powershell_script.html>`__, `python <http://docs.getchef.com/resource_python.html>`_, and `ruby <http://docs.getchef.com/resource_ruby.html>`_. Two |windows|-specific resources are also available: `batch <http://docs.getchef.com/resource_batch.html>`_ and `powershell_script <http://docs.getchef.com/resource_powershell_script.html>`__.
+Script interpreters execute scripts on a node, similar to the |resource execute| resource, and with the ability to specify the interpreter that the |chef client| should use. See `script <http://docs.chef.io/resource_script.html>`_ for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with `bash <http://docs.chef.io/resource_bash.html>`_ being the most popular. Also available: `csh <http://docs.chef.io/resource_csh.html>`_, `perl <http://docs.chef.io/resource_perl.html>`_, `powershell_script <http://docs.chef.io/resource_powershell_script.html>`__, `python <http://docs.chef.io/resource_python.html>`_, and `ruby <http://docs.chef.io/resource_ruby.html>`_. Two |windows|-specific resources are also available: `batch <http://docs.chef.io/resource_batch.html>`_ and `powershell_script <http://docs.chef.io/resource_powershell_script.html>`__.
 
 Use Source Control
 -----------------------------------------------------
-Most users of |chef| keep their code in some type of version source control. |chef| can interact with this code from recipes. |git| is a very popular choice. The `git <http://docs.getchef.com/resource_git.html>`_ resource is used to manage files that exist in a |git| repository. There is also a resource for `subversion <http://docs.getchef.com/resource_subversion.html>`_, another popular version source control tool.
+Most users of |chef| keep their code in some type of version source control. |chef| can interact with this code from recipes. |git| is a very popular choice. The `git <http://docs.chef.io/resource_git.html>`_ resource is used to manage files that exist in a |git| repository. There is also a resource for `subversion <http://docs.chef.io/resource_subversion.html>`_, another popular version source control tool.
 
 
 About Cookbooks

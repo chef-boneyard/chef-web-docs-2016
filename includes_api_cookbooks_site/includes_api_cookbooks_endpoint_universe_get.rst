@@ -20,7 +20,7 @@ The response will return an embedded hash, with the name of each cookbook as a t
    {
      "ffmpeg": {
        "0.1.0": {
-         "location_path": "http://supermarket.getchef.com/api/v1/cookbooks/ffmpeg/0.1.0/download"
+         "location_path": "http://supermarket.chef.io/api/v1/cookbooks/ffmpeg/0.1.0/download"
          "location_type": "supermarket",
          "dependencies": {
            "git": ">= 0.0.0",
@@ -30,7 +30,7 @@ The response will return an embedded hash, with the name of each cookbook as a t
          },
        },
        "0.1.1": {
-         "location_path": "http://supermarket.getchef.com/api/v1/cookbooks/ffmpeg/0.1.1/download"
+         "location_path": "http://supermarket.chef.io/api/v1/cookbooks/ffmpeg/0.1.1/download"
          "location_type": "supermarket",
          "dependencies": {
            "git": ">= 0.0.0",
@@ -41,7 +41,7 @@ The response will return an embedded hash, with the name of each cookbook as a t
        },
       "pssh": {
        "0.1.0": {
-         "location_path": "http://supermarket.getchef.com/api/v1/cookbooks/pssh.1.0/download"
+         "location_path": "http://supermarket.chef.io/api/v1/cookbooks/pssh.1.0/download"
          "location_type": "supermarket",
          "dependencies": {},
        }

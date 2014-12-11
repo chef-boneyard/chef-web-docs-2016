@@ -52,7 +52,7 @@ Any physical violence or intimidation, threatened or acted on, is a serious offe
 
 Roles
 =====================================================
-* The **Decider** has final say on community guidelines and final authority on punitive actions and appeals. As per the `Chef RFC process <https://github.com/opscode/chef-rfc/blob/master/rfc000-rfc-process.md>`__, the top-level decider is Adam Jacob (adam @ getchef.com).
+* The **Decider** has final say on community guidelines and final authority on punitive actions and appeals. As per the `Chef RFC process <https://github.com/opscode/chef-rfc/blob/master/rfc000-rfc-process.md>`__, the top-level decider is Adam Jacob (adam @ chef.io).
 * The **Community Ombudsperson** guides and meets regularly with community advocates, helps enforce punitive actions, hears appeals, is responsible for maintaining a list of incidents, and ensures pertinent information is shared with necessary parties. The community ombudsperson is appointed by the decider.
 * **Community Advocates** may be assigned for each area where the community convenes online (IRC, email list, |github|, etc.). Advocates are responsible for helping enforce the community guidelines.
 * A **Community Member** is anyone who participates with the community whether in-person or via online channels. Community members are responsible for following the community guidelines, suggesting updates to the guidelines when warranted, and helping enforce community guidelines.
@@ -74,9 +74,9 @@ The |chef| community advocates are well informed on how to deal with incidents. 
    * - Role
      - Advocates
    * - Decider
-     - Adam Jacob - adam @ getchef.com; IRC - holoway
+     - Adam Jacob - adam @ chef.io; IRC - holoway
    * - Ombudsperson
-     - Nathen Harvey - nharvey @ getchef.com; phone - +1 202-368-7264; IRC - nathenharvey
+     - Nathen Harvey - nharvey @ chef.io; phone - +1 202-368-7264; IRC - nathenharvey
    * - Advocates
      - The `list of advocates <https://github.com/opscode/chef-rfc/blob/master/rfc020-community-guidelines.md>`__ for the various locations in which |chef| community discussions take place is maintained in the RFC.
 

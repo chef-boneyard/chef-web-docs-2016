@@ -28,7 +28,7 @@ For example, weekly cookbook reports:
      hour '0'
      weekday '1'
      user "getchef"
-     mailto "nharvey@getchef.com"
+     mailto "nharvey@chef.io"
      home "/srv/supermarket/shared/system"
      command %Q{
        cd /srv/supermarket/current &&

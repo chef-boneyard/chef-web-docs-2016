@@ -88,11 +88,11 @@ There are three types of servers:
    * - Server
      - Description
    * - Enterprise Chef
-     - .. include:: ../../includes_chef/includes_chef_private.rst
+     - .. include:: ../../includes_chef/includes_chef_11_private.rst
    * - Hosted Enterprise Chef
      - .. include:: ../../includes_chef/includes_chef_hosted.rst
    * - Open Source Chef
-     - .. include:: ../../includes_chef/includes_chef_open_source.rst
+     - .. include:: ../../includes_chef/includes_chef_11_open_source.rst
 
 .. include:: ../../includes_chef/includes_chef_api_client.rst
 

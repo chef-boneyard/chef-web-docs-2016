@@ -23,7 +23,7 @@ to return something like:
    
    Waiting for sshd..done
    Bootstrapping Chef on 15.185.114.127
-   15.185.114.127 --2012-03-09 18:18:17--  http://getchef.com/chef/install.sh
+   15.185.114.127 --2012-03-09 18:18:17--  http://chef.io/chef/install.sh
    ............
    
    ............

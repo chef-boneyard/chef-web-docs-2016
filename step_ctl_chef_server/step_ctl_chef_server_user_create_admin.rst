@@ -13,4 +13,4 @@ For example:
 
 .. code-block:: bash
 
-   $ chef-server-ctl user-create stevedanno Steve Danno steved@getchef.com abc123 --filename /path/to/file.key
+   $ chef-server-ctl user-create stevedanno Steve Danno steved@chef.io abc123 --filename /path/to/file.key

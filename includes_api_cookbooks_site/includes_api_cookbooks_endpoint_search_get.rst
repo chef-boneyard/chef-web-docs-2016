@@ -41,13 +41,13 @@ The response will return a list of cookbooks by name and description and will re
        {
          "cookbook_name": "apache",
          "cookbook_description": "installs a web server.",
-         "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/apache",
+         "cookbook": "http://supermarket.chef.io/api/v1/cookbooks/apache",
          "cookbook_maintainer": "jtimberman"
        },
        {
          "cookbook_name": "webserver",
          "cookbook_description": "installs apache.",
-         "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/webserver",
+         "cookbook": "http://supermarket.chef.io/api/v1/cookbooks/webserver",
          "cookbook_maintainer": "raxmus"
        }
      ]

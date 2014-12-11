@@ -22,7 +22,7 @@ The response is similar to:
      "maintainer": "opscode",
      "description": "Configures apt and apt services and LWRPs for managing apt repositories and preferences",
      "category": "Package Management",
-     "latest_version": "http://supermarket.getchef.com/api/v1/cookbooks/apt/versions/2_4_0",
+     "latest_version": "http://supermarket.chef.io/api/v1/cookbooks/apt/versions/2_4_0",
      "external_url": "http://github.com/opscode-cookbooks/apt",
      "average_rating": null,
      "created_at": "2009-10-25T23:48:48.000Z",

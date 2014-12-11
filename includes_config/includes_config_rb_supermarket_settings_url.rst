@@ -16,7 +16,7 @@ This configuration file has the following settings for URLs:
    * - ``supermarket['chef_downloads_url']``
      - Default value: ``"https://downloads.#{node['supermarket']['chef_domain']}"``.
    * - ``supermarket['chef_domain']``
-     - Default value: ``'getchef.com'``.
+     - Default value: ``'chef.io'``.
    * - ``supermarket['chef_identity_url']``
      - Default value: ``"#{node['supermarket']['chef_server_url']}/id"``.
    * - ``supermarket['chef_manage_url']``

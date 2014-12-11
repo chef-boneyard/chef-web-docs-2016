@@ -2,7 +2,7 @@
 Install the |chef dk_title|, Windows
 =====================================================
 
-.. warning:: This topic is a work in progress, currently capturing issues known to Windows users of the chef-dk, which is also a work in progress. The issues are captured based on the assumption that the http://docs.getchef.com/install_dk.html topic is accurate for Windows users, as a starting point for installing the chef-dk, but also with the following exceptions and caveats.
+.. warning:: This topic is a work in progress, currently capturing issues known to Windows users of the chef-dk, which is also a work in progress. The issues are captured based on the assumption that the http://docs.chef.io/install_dk.html topic is accurate for Windows users, as a starting point for installing the chef-dk, but also with the following exceptions and caveats.
 
 Spaces and Directories
 =====================================================
@@ -12,7 +12,7 @@ A different issue exists with the |knife| command line tool that is also related
 
 Set the System |ruby|
 =====================================================
-The http://docs.getchef.com/install_dk.html#set-the-system-ruby topic is accurate, but requires the following manual edits to the ``chef shell-init bash`` output:
+The http://docs.chef.io/install_dk.html#set-the-system-ruby topic is accurate, but requires the following manual edits to the ``chef shell-init bash`` output:
 
 * Add quotes around the variable assignment strings
 * Convert ``C:/`` to ``/c/``

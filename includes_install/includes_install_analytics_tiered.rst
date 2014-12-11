@@ -11,7 +11,7 @@ In a tiered configuration, the |chef analytics| deployment is on different machi
 
 To install |chef analytics|:
 
-#. Download the package from http://downloads.getchef.com/analytics/ to the machines that will be used for the |chef analytics| deployment. For |redhat| and |centos| 6:
+#. Download the package from http://downloads.chef.io/analytics/ to the machines that will be used for the |chef analytics| deployment. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       

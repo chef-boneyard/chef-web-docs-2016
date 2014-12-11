@@ -45,7 +45,7 @@ The |chef client| can be used to manage machines that run on the following versi
 
 (The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB. Each node and workstation must have access to the |chef server| via HTTPS. |ruby| version 1.9.1 or |ruby| version 1.9.2 with |ssl| bindings is required.)
 
-The |microsoft installer package| for |windows| is available at http://www.opscode.com/chef/install/. From the drop-downs, select the operating system (``Windows``), then the version, and then the architecture.
+The |microsoft installer package| for |windows| is available at http://www.chef.io/chef/install/. From the drop-downs, select the operating system (``Windows``), then the version, and then the architecture.
 
 After the |chef client| is installed, it is located at ``C:\chef``. The main configuration file for the |chef client| is located at ``C:\chef\client.rb``.
 

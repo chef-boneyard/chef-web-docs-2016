@@ -5,7 +5,7 @@ The following example shows how the settings look when added to the configuratio
 
 .. code-block:: ruby
 
-   chef_documentation_url "http://docs.getchef.com"
+   chef_documentation_url "http://docs.chef.io"
    disable_sign_up false
    events.port 11001
    logging.chef_log_level "info"
@@ -22,9 +22,9 @@ The following example shows how the settings look when added to the configuratio
    services['opscode-manage-events'].enable true
    services['opscode-manage-webapp'].enable true
    services['opscode-manage-worker'].enable true
-   support_email_address "support@getchef.com"
-   support_site_url "http://getchef.com/support"
-   support_tickets_url "https://getchef.com/support/tickets"
+   support_email_address "support@chef.io"
+   support_site_url "http://chef.io/support"
+   support_tickets_url "https://chef.io/support/tickets"
    webapp.backlog 1024
    # webapp.listen derived from webapp.port
    webapp.port 9462

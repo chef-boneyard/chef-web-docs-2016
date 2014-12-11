@@ -59,7 +59,7 @@ Another scenario in which the Heartbleed bug could potentially expose the client
 
 **Key Regeneration**
 
-Depending on your comfort level with the defense around your |chef server|, you may want to regenerate your client private keys. We’ve published the `client-rekey cookbook <http://community.opscode.com/cookbooks/client-rekey/>`_ that automates the regeneration of the private keys for the |chef client|. You can find it on the community site. Alternatively, you can perform this action via the web user interface (for both |chef server osc| and |chef server oec|) for each individual client.
+Depending on your comfort level with the defense around your |chef server|, you may want to regenerate your client private keys. We’ve published the `client-rekey cookbook <https://supermarket.chef.io/cookbooks/client-rekey/>`_ that automates the regeneration of the private keys for the |chef client|. You can find it on the community site. Alternatively, you can perform this action via the web user interface (for both |chef server osc| and |chef server oec|) for each individual client.
 
 Actions
 -----------------------------------------------------
@@ -69,7 +69,7 @@ The following steps should be taken:
 
    .. note:: Add-ons for |chef server oec|---|reporting|, |push jobs|, and |chef manage|---are also vulnerable; however, they use the same HTTP proxy as |chef server oec|, so after the |chef server oec| server itself is patched, the add-ons will no longer be vulnerable.
 
-#. Regenerate the |ssl| certificates for the |chef server|; for more information about how to regenerate these keys, click `here <http://docs.opscode.com/open_source/server_security.html#regenerate-ssl-certificates>`__ for |chef server osc| and `here <http://docs.opscode.com/enterprise/server_security.html#regenerate-ssl-certificates>`__ for |chef server oec|; for |chef private|, `replace the contents <http://docs.opscode.com/server/private_chef_1x_admin_ssl.html/>`__ at ``/var/opt/opscode/nginx/ca/FQDN.cert`` and ``/var/opt/opscode/nginx/ca/FQDN.pem`` with certificates that have been regenerated using the same certifying authority that was used to generate the original |ssl| certificates.
+#. Regenerate the |ssl| certificates for the |chef server|; for more information about how to regenerate these keys, click `here <http://docs.chef.io/open_source/server_security.html#regenerate-ssl-certificates>`__ for |chef server osc| and `here <http://docs.chef.io/enterprise/server_security.html#regenerate-ssl-certificates>`__ for |chef server oec|; for |chef private|, `replace the contents <http://docs.chef.io/server/private_chef_1x_admin_ssl.html/>`__ at ``/var/opt/opscode/nginx/ca/FQDN.cert`` and ``/var/opt/opscode/nginx/ca/FQDN.pem`` with certificates that have been regenerated using the same certifying authority that was used to generate the original |ssl| certificates.
 
 #. Update the |chef client|.
   
@@ -87,7 +87,7 @@ The following steps should be taken:
 
 #. After the |chef server| and every |chef client| is patched, it's still possible that arbitrary data was compromised during the patching process. Depending on your organization's comfort level with the defense around your |chef| installation, you may want to change user passwords and/or take additional steps to protect other sensitive data.
 
-   .. note:: The credentials for the |chef client| do not need to be regenerated because the |chef server| `signs each request during the authentication and authorization process <http://docs.opscode.com/chef_private_keys.html#chef-client>`__. This prevents a node from accessing any data it shouldn't.
+   .. note:: The credentials for the |chef client| do not need to be regenerated because the |chef server| `signs each request during the authentication and authorization process <http://docs.chef.io/chef_private_keys.html#chef-client>`__. This prevents a node from accessing any data it shouldn't.
 
 
 More Information

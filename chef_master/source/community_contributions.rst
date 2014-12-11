@@ -77,7 +77,7 @@ Whenever you invoke the "obvious fix" rule, please say so in your commit message
 
    ------------------------------------------------------------------------
    commit 370adb3f82d55d912b0cf9c1d1e99b132a8ed3b5 
-   Author: danielsdeleo <dan@opscode.com> 
+   Author: danielsdeleo <dan@chef.io> 
    Date:   Wed Sep 18 11:44:40 2013 -0700      
    
      Fix typo in config file docs.          

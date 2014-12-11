@@ -9,4 +9,4 @@ for example:
 
 .. code-block:: bash
 
-   $ knife ssl check https://www.getchef.com
+   $ knife ssl check https://www.chef.io

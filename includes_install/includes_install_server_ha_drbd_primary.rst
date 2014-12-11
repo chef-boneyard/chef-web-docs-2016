@@ -3,7 +3,7 @@
 
 Use the following steps to set up the primary backend |chef server|:
 
-#. Download the packages from http://downloads.getchef.com/chef-server/. For |redhat| and |centos| 6:
+#. Download the packages from http://downloads.chef.io/chef-server/. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       

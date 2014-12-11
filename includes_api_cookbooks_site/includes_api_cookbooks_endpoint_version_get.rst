@@ -28,8 +28,8 @@ The response will return details for a cookbook version, including the license u
     "tarball_file_size": 18553,
     "version": "2.4.0",
     "average_rating": null,
-    "cookbook": "http://supermarket.getchef.com/api/v1/cookbooks/apt",
-    "file": "http://supermarket.getchef.com/api/v1/cookbooks/apt/versions/2_4_0/download",
+    "cookbook": "http://supermarket.chef.io/api/v1/cookbooks/apt",
+    "file": "http://supermarket.chef.io/api/v1/cookbooks/apt/versions/2_4_0/download",
     "dependencies": {},
     "platforms": {
       "debian": ">= 0.0.0",

@@ -5,7 +5,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
 On the |chef server| machines:
 
-#. Download the package from http://downloads.getchef.com/analytics/.
+#. Download the package from http://downloads.chef.io/analytics/.
 #. Enable the |chef server| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/chef-server.rb``:
 
    .. code-block:: bash

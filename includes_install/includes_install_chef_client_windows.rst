@@ -3,7 +3,7 @@
 
 To install the |chef client| on |windows|, do the following:
 
-#. Go to http://www.getchef.com/chef/install.
+#. Go to http://www.chef.io/chef/install.
 
 #. Click the **Chef Client** tab.
 

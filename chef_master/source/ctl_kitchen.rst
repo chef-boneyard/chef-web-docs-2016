@@ -215,7 +215,7 @@ and will track information about provisioners:
      default-ubuntu-1404
        provisioner:
          attributes: {}
-         chef_omnibus_url: https://www.getchef.com/chef/install.sh
+         chef_omnibus_url: https://www.chef.io/chef/install.sh
          clients_path: 
          name: chef_zero
 
@@ -464,7 +464,7 @@ to return something similar to:
    -----> Converging <default-ubuntu-10.04>...
    ...
    -----> Installing Chef Omnibus (true)
-   downloading https://www.opscode.com/chef/install.sh
+   downloading https://www.chef.io/chef/install.sh
    ...
    Installing Chef
    ...
