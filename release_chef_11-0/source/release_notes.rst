@@ -31,7 +31,7 @@ Previously, in Chef 10, one could do the following in a recipe:
    require 'win32/registry'
    registry = Win32::Registry::HKEY_LOCAL_MACHINE
 
-In Chef 11 you must add "::" to the beginning to avoid the automatic addition of a "Chef::" qualifier.
+In |chef client| 11 you must add "::" to the beginning to avoid the automatic addition of a "Chef::" qualifier.
 
 .. code-block:: ruby
 

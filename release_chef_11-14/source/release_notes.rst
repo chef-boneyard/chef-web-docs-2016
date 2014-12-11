@@ -6,7 +6,7 @@ Release Notes: |chef client| 11.14
 
 What's New
 =====================================================
-The following items are new for |chef 11-14| and/or are changes from previous versions. The short version:
+The following items are new for |chef client| 11.14 and/or are changes from previous versions. The short version:
 
 * **New knife serve subcommand** Use |subcommand knife serve| to run |chef zero| on the local machine.
 * **New argument for knife node** The |subcommand knife node| subcommand has a new argument: ``environment set``. Use it to set the environment for a node, but without the need to edit the node object.
