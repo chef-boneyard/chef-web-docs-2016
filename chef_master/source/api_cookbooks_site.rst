@@ -108,4 +108,4 @@ GET
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_userss_get.rst
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_users_get.rst
