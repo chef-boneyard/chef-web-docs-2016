@@ -29,16 +29,16 @@ The response will return details for a user, including their name, |chef| userna
      "jira": "stevedanno",
      "cookbooks": {
        "owns": {
-         "bacon": "https://supermarket.getchef/api/v1/cookbooks/bacon"
-         "chef-sugar": "https://supermarket.getchef/api/v1/cookbooks/chef-sugar"
+         "bacon": "https://supermarket.chef.io/api/v1/cookbooks/bacon"
+         "chef-sugar": "https://supermarket.chef.io/api/v1/cookbooks/chef-sugar"
        },
        "collaborates": {
-         "build-essential": "https://supermarket.getchef/api/v1/cookbooks/build-essential"
-         "jenkins": "https://supermarket.getchef/api/v1/cookbooks/jenkin"
+         "build-essential": "https://supermarket.chef.io/api/v1/cookbooks/build-essential"
+         "jenkins": "https://supermarket.chef.io/api/v1/cookbooks/jenkin"
        },
        "follows": {
-         "bacon": "https://supermarket.getchef/api/v1/cookbooks/bacon"
-         "chef-sugar": "https://supermarket.getchef/api/v1/cookbooks/chef-sugar"
+         "bacon": "https://supermarket.chef.io/api/v1/cookbooks/bacon"
+         "chef-sugar": "https://supermarket.chef.io/api/v1/cookbooks/chef-sugar"
        }
      }
    }
