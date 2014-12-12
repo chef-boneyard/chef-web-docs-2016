@@ -30,7 +30,7 @@ is similar to:
    TO FIX THIS ERROR:
    
    If the server you are connecting to uses a self-signed certificate,
-   you must configure chef to trust that server's certificate.
+   you must configure chef to trust that certificate.
    
    By default, the certificate is stored in the following location on the
    host where your chef-server runs:
@@ -42,5 +42,5 @@ is similar to:
      /Users/grantmc/Downloads/chef-repo/.chef/trusted_certs)
    
    using SSH/SCP or some other secure method, then re-run this command to
-   confirm that the server's certificate is now trusted.
+   confirm that the certificate is now trusted.
 
