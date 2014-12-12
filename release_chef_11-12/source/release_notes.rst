@@ -103,6 +103,10 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_ssl_check_syntax.rst
 
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_ssl_check_options.rst
+
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 

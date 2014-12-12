@@ -1762,7 +1762,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-|no_options|
+.. include:: ../../includes_knife/includes_knife_ssl_check_options.rst
 
 Examples
 -----------------------------------------------------
