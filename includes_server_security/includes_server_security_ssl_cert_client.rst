@@ -3,7 +3,7 @@
 
 |chef server| 12 enables |ssl| verification by default for all requests made to the server, such as those made by |knife| and the |chef client|. The certificate that is generated during the installation of the |chef server| is self-signed, which means there isn't a signing |ca| to verify. In addition, this certificate must be downloaded to any machine from which |knife| and/or the |chef client| will make requests to the |chef server|.
 
-For example, without downloading the |ssl| certificate, and then running the following |knife| command:
+For example, without downloading the |ssl| certificate, the following |knife| command:
 
 .. code-block:: bash
 
