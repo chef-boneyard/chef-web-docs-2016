@@ -39,28 +39,38 @@ SSL Certificates
 
 .. warning:: The following information does not apply to hosted |chef server| 12, only to on-premises |chef server| 12.
 
-|chef server| 12 enables |ssl| verification by default for all requests. The certificate that is generated during the installation of the on-premises |chef server| is self-signed, which means there isn't a signing |ca| to verify. For example, running |knife| from a workstation that has |chef client| 12 installed:
+|chef server| 12 enables |ssl| verification by default for all requests made to the server, such as those made by |knife| and the |chef client|. The certificate that is generated during the installation of the |chef server| is self-signed, which means there isn't a signing |ca| to verify. In addition, this certificate must be downloaded to any machine from which |knife| and/or the |chef client| will make requests to the |chef server|.
+
+For example, without downloading the |ssl| certificate, and then running the following |knife| command:
 
 .. code-block:: bash
 
    $ knife client list
 
-The response is similar to:
+responds with an error similar to:
 
 .. code-block:: bash
 
    ERROR: SSL Validation failure connecting to host: chef-server.example.com ...
    ERROR: OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state=SSLv3 ...
 
-This is by design and will occur when the |knife| command is unable to verify the certificate and complete the request to the |chef server|. The |chef client| includes two |knife| commands: |subcommand knife ssl_check| and |subcommand knife ssl_fetch|.
+This is by design and will occur until a verifiable certificate is added to the machine from which the request is sent. 
 
-* Use |subcommand knife ssl_check| to troubleshoot SSL certificate issues.
+|path trusted_certs|
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_directory_trusted_certs.rst
+
+|knife_title| Subcommands
+-----------------------------------------------------
+The |chef client| includes two |knife| commands: |subcommand knife ssl_check| and |subcommand knife ssl_fetch|.
+
+* Use |subcommand knife ssl_check| to troubleshoot SSL certificate issues
 * Use |subcommand knife ssl_fetch| to pull down a certificate from the |chef server| to the |path trusted_certs| directory on the workstation.
 
 After the workstation has the correct |ssl| certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation.
 
 knife ssl check
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Run the |subcommand knife ssl_check| command to verify the state of the |ssl| certificate, and then use the reponse to help troubleshoot issues that may be present.
 
 **Verified**
@@ -72,47 +82,12 @@ Run the |subcommand knife ssl_check| command to verify the state of the |ssl| ce
 .. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
 
 knife ssl fetch
------------------------------------------------------
-Run the |subcommand knife ssl_fetch| to pull the self-signed certificate down from the |chef server| to the workstation. For example:
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Run the |subcommand knife ssl_fetch| to download the self-signed certificate from the |chef server| to the |path trusted_certs| directory on a workstation. For example:
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
 
-   $ knife ssl fetch
+**Verify Checksums**
 
-with a response similar to:
+.. include:: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst
 
-.. code-block:: bash
-
-   WARNING: Certificates from chef-server.example.com will be fetched and placed in your 
-   trusted_cert directory (/Users/jtimberman/Downloads/chef-repo/.chef/trusted_certs).
-   
-   Knife has no means to verify these are the correct certificates. You should verify 
-   the authenticity of these certificates after downloading.
-   
-   Adding certificate for chef-server.example.com in /path/to/.chef/trusted_certs/chef-server.example.com.crt
-
-The |ssl| certificate just downloaded should be verified to ensure that it is, in fact, the same as the certificate on the |chef server|. Compare the |sha256| checksums. First view the checksum on the |chef server|:
-
-.. code-block:: bash
-
-   $ ssh ubuntu@chef-server.example.com sudo sha256sum /var/opt/opscode/nginx/ca/chef-server.example.com.crt
-
-with a response similar to:
-
-.. code-block:: bash
-
-   <ABC123checksum>  /var/opt/opscode/nginx/ca/chef-server.example.com.crt
-
-And then view the checksum on the workstation:
-
-.. code-block:: bash
-
-   $ gsha256sum .chef/trusted_certs/chef-server.example.com.crt
-
-with a response similar to:
-
-.. code-block:: bash
-
-   <ABC123checksum>  .chef/trusted_certs/chef-server.example.com.crt
-
-The checksum values should be identical.

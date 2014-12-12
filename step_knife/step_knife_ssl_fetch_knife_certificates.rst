@@ -5,7 +5,7 @@
 
    $ knife ssl fetch
 
-The command will return something similar to:
+The response is similar to:
 
 .. code-block:: bash
 

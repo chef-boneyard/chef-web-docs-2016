@@ -3,9 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This subcommand has the following syntax:
+This subcommand has the following options:
 
-.. code-block:: bash
-
-   $ knife ssl fetch (options)
-
+``URL_or_URI``
+   The URL or URI for the location from which the |ssl| certificate is downloaded. Default value: the URL for the |chef server|, as defined in the |knife rb| file.
