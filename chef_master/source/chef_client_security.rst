@@ -45,7 +45,7 @@ SSL Certificates
 
    $ knife client list
 
-will return something similar to:
+The response is similar to:
 
 .. code-block:: bash
 
@@ -59,24 +59,19 @@ This is by design and will occur when the |knife| command is unable to verify th
 
 After the workstation has the correct |ssl| certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation.
 
-knife ssl_check
+|subcommand knife ssl_fetch|
 -----------------------------------------------------
-Run the |subcommand knife ssl_check| command to verify the state of the |ssl| certificate. Use this command to troubleshoot issues with the |ssl| certificate. For example:
+Run the |subcommand knife ssl_check| command to verify the state of the |ssl| certificate, and then use the reponse to help troubleshoot issues that may be present.
 
-.. code-block:: bash
+**Verified**
 
-   $ knife ssl check
+.. include:: ../../step_knife/step_knife_ssl_check_verify_server_config.rst
+
+**Unverified**
 
 .. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
 
-And if it can be verified:
-
-.. code-block:: bash
-
-   Connecting to host api.opscode.com:443
-   Successfully verified certificates from `chef-server.example.com` 
-
-knife ssl_fetch
+|subcommand knife ssl_fetch|
 -----------------------------------------------------
 Run the |subcommand knife ssl_fetch| to pull the self-signed certificate down from the |chef server| to the workstation. For example:
 
@@ -84,7 +79,7 @@ Run the |subcommand knife ssl_fetch| to pull the self-signed certificate down fr
 
    $ knife ssl fetch
 
-The command will return something similar to:
+with a response similar to:
 
 .. code-block:: bash
 
@@ -102,7 +97,7 @@ The |ssl| certificate just downloaded should be verified to ensure that it is, i
 
    $ ssh ubuntu@chef-server.example.com sudo sha256sum /var/opt/opscode/nginx/ca/chef-server.example.com.crt
 
-The command will return something similar to:
+with a response similar to:
 
 .. code-block:: bash
 
@@ -114,7 +109,7 @@ And then view the checksum on the workstation:
 
    $ gsha256sum .chef/trusted_certs/chef-server.example.com.crt
 
-The command will return something similar to:
+with a response similar to:
 
 .. code-block:: bash
 
