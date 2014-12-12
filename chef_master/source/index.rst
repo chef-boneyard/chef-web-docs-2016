@@ -127,6 +127,7 @@ Cookbooks
    api_cookbooks_site
    api_omnitruck
    api_push_jobs
+   api_pushy
    api_reporting
    attributes
    auth
