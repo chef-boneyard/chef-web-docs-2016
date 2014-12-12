@@ -15,5 +15,5 @@ The response is similar to:
    Knife has no means to verify these are the correct certificates. You should
    verify the authenticity of these certificates after downloading.
    
-   Adding certificate for *.example.com in /Users/grantmc/chef-repo/.chef/trusted_certs/grantmc.crt
+   Adding certificate for <chef_server_url> in /Users/grantmc/chef-repo/.chef/trusted_certs/grantmc.crt
    Adding certificate for DigiCert Secure Server CA in /Users/grantmc/chef-repo/.chef/trusted_certs/DigiCert_Secure_Server_CA.crt
