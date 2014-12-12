@@ -42,12 +42,6 @@ Hostnames
 =====================================================
 .. include:: ../../includes_install/includes_install_common_hostname.rst
 
-|chef analytics_title|
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_analytics_hostname.rst
-
-.. warning:: The |fqdn| for the |chef analytics| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef analytics| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef analytics| server is longer than 64 characters, the ``chef-server-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
-
 Configure Hostnames
 -----------------------------------------------------
 Use the following sections to verify the hostnames that is used by the |chef server|.
@@ -67,6 +61,12 @@ Use the following sections to verify the hostnames that is used by the |chef ser
 **To add a hostname to /etc/hosts**
 
 .. include:: ../../includes_install/includes_install_common_hostname_add_to_etc_hosts.rst
+
+|chef analytics_title|
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_analytics_hostname.rst
+
+.. warning:: The |fqdn| for the |chef analytics| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef analytics| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef analytics| server is longer than 64 characters, the ``chef-server-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
 
 Mail Relay
 =====================================================
