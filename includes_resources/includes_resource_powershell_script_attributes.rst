@@ -37,12 +37,25 @@
             not_if 'test -e ~/data/nodes.bak'
           end
 
+   * - ``creates``
+     - Inherited from |resource execute| resource. |creates file_exists|
+   * - ``cwd``
+     - Inherited from |resource execute| resource. |cwd run_command|
+   * - ``environment``
+     - Inherited from |resource execute| resource. |environment variables|
    * - ``flags``
      - |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
+   * - ``group``
+     - Inherited from |resource execute| resource. |group command|
    * - ``guard_interpreter``
      - Default value: ``:powershell_script``. When this attribute is set to ``:powershell_script``, the 64-bit version of the |windows powershell| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` attributes. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
    * - ``interpreter``
      - |interpreter|
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
-
+   * - ``returns``
+     - Inherited from |resource execute| resource. |return_value cmd| Default value: ``0``.
+   * - ``timeout``
+     - Inherited from |resource execute| resource. |timeout command| Default value: ``3600``.
+   * - ``user``
+     - Inherited from |resource execute| resource. |user command|
