@@ -55,9 +55,9 @@ will return something similar to:
 This is by design and will occur when the |knife| command is unable to verify the certificate and complete the request to the |chef server|. The |chef client| includes two |knife| commands: |subcommand knife ssl_check| and |subcommand knife ssl_fetch|.
 
 * Use |subcommand knife ssl_check| to troubleshoot SSL certificate issues.
-* Use |subcommand knife ssl_fetch| to pull down a certificate from the |chef server| to the ``/trusted_certs`` directory on the workstation.
+* Use |subcommand knife ssl_fetch| to pull down a certificate from the |chef server| to the |path trusted_certs| directory on the workstation.
 
-After the workstation has the correct SSL certificate, bootstrap operations from that workstation will use the certificate in the ``/trusted_certs`` directory during the bootstrap operation.
+After the workstation has the correct SSL certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation.
 
 knife ssl_check
 -----------------------------------------------------
@@ -67,42 +67,7 @@ Run the |subcommand knife ssl_check| command to verify the state of the SSL cert
 
    $ knife ssl check
 
-If the certificate cannot be verified, the command will return something similar to:
-
-.. code-block:: bash
-
-   Connecting to host chef-server.example.com:443
-   ERROR: The SSL certificate of chef-server.example.com could not be verified
-   Certificate issuer data:
-     /C=US/ST=WA/L=S/O=Corp/OU=Ops/CN=chef-server.example.com/emailAddress=you@example.com
-   
-   Configuration Info:
-   
-   OpenSSL Configuration:
-   * Version: OpenSSL 1.0.1j 15 Oct 2014
-   * Certificate file: /opt/chefdk/embedded/ssl/cert.pem
-   * Certificate directory: /opt/chefdk/embedded/ssl/certs
-   Chef SSL Configuration:
-   * ssl_ca_path: nil
-   * ssl_ca_file: nil
-   * trusted_certs_dir: "/Users/jtimberman/Downloads/chef-repo/.chef/trusted_certs"
-   
-   TO FIX THIS ERROR:
-   
-   If the server you are connecting to uses a self-signed certificate,
-   you must configure chef to trust that server's certificate.
-   
-   By default, the certificate is stored in the following location on the
-   host where your chef-server runs:
-   
-     /var/opt/opscode/chef-server/nginx/ca/SERVER_HOSTNAME.crt
-   
-   Copy that file to your trusted_certs_dir (currently:
-   
-     /Users/jtimberman/Downloads/chef-repo/.chef/trusted_certs)
-   
-   using SSH/SCP or some other secure method, then re-run this command to
-   confirm that the server's certificate is now trusted.
+.. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
 
 And if it can be verified:
 
