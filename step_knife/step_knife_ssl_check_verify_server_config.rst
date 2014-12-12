@@ -11,5 +11,5 @@ is similar to:
 
 .. code-block:: bash
 
-   Connecting to host api.chef.io:443
+   Connecting to host chef-server.example.com:443
    Successfully verified certificates from 'chef-server.example.com' 
