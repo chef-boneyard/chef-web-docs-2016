@@ -245,9 +245,9 @@ The following options are new:
 ``--node-ssl-verify-mode PEER_OR_NONE``
    |ssl_verify_mode|
  
-   Use ``none`` to do no validation of SSL certificates.
+   |ssl_verify_bootstrap_none|
 
-   Use ``peer`` to do validation of all SSL certificates, including the |chef server| connections, S3 connections, and any HTTPS |resource remote_file| resource URLs used in the |chef client| run. This is the recommended setting.
+   |ssl_verify_bootstrap_peer| This is the recommended setting.
 
 ``-t TEMPLATE``, ``--bootstrap-template TEMPLATE``
    |template bootstrap| Default value: ``chef-full``, which installs the |chef client| using the |omnibus installer| on all supported platforms.

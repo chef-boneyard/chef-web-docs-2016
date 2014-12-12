@@ -62,9 +62,9 @@ This subcommand has the following options:
 ``--node-ssl-verify-mode PEER_OR_NONE``
    |ssl_verify_mode|
  
-   Use ``none`` to do no validation of SSL certificates.
+   |ssl_verify_bootstrap_none|
 
-   Use ``peer`` to do validation of all SSL certificates, including the |chef server| connections, S3 connections, and any HTTPS |resource remote_file| resource URLs used in the |chef client| run. This is the recommended setting.
+   |ssl_verify_bootstrap_peer| This is the recommended setting.
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh_port|
