@@ -104,6 +104,8 @@ The SSL certificate just downloaded should be verified to ensure that it is, in 
 
 The command will return something similar to:
 
+.. code-block:: bash
+
    <ABC123checksum>  /var/opt/opscode/nginx/ca/chef-server.example.com.crt
 
 And then view the checksum on the workstation:
@@ -113,6 +115,8 @@ And then view the checksum on the workstation:
    $ gsha256sum .chef/trusted_certs/chef-server.example.com.crt
 
 The command will return something similar to:
+
+.. code-block:: bash
 
    <ABC123checksum>  .chef/trusted_certs/chef-server.example.com.crt
 
