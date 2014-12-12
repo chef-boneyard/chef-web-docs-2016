@@ -16,9 +16,13 @@ Examples
 =====================================================
 The following examples show how to use this |knife| subcommand:
 
-**Verify the SSL configuration for the Chef server**
+**SSL certificate has valid X.509 properties**
 
 .. include:: ../../step_knife/step_knife_ssl_check_verify_server_config.rst
+
+**SSL certificate has invalid X.509 properties**
+
+.. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
 
 **Verify the SSL configuration for the chef-client**
 
@@ -28,6 +32,4 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_ssl_check_verify_external_server.rst
 
-**SSL certificate has invalid X509 properties**
 
-.. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst

@@ -110,9 +110,13 @@ Options
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-**Verify the SSL configuration for the Chef server**
+**SSL certificate has valid X.509 properties**
 
 .. include:: ../../step_knife/step_knife_ssl_check_verify_server_config.rst
+
+**SSL certificate has invalid X.509 properties**
+
+.. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
 
 **Verify the SSL configuration for the chef-client**
 
