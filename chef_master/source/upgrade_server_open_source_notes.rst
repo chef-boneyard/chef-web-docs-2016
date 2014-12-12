@@ -296,16 +296,6 @@ Subcommand Reference
 -----------------------------------------------------
 The following subcommands are used **only** during a manual upgrade and **only** when upgrading from the |chef server osc| server to the |chef server| version 12.
 
-Transform Data
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform.rst
-
-**Options**
-
-.. note:: Options for the ``chef12-upgrade-data-transform`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst
-
 Download Data
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download.rst
@@ -315,6 +305,16 @@ Download Data
 .. note:: Options for the ``chef12-upgrade-download`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst
+
+Transform Data
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform.rst
+
+**Options**
+
+.. note:: Options for the ``chef12-upgrade-data-transform`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst
 
 Upload Data
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
