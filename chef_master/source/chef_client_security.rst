@@ -45,9 +45,9 @@ SSL Certificates
 
 |knife_title| Subcommands
 -----------------------------------------------------
-The |chef client| includes two |knife| commands: |subcommand knife ssl_check| and |subcommand knife ssl_fetch|.
+The |chef client| includes two |knife| commands for managing |ssl| certificates:
 
-* Use |subcommand knife ssl_check| to troubleshoot SSL certificate issues
+* Use |subcommand knife ssl_check| to troubleshoot |ssl| certificate issues
 * Use |subcommand knife ssl_fetch| to pull down a certificate from the |chef server| to the |path trusted_certs| directory on the workstation.
 
 After the workstation has the correct |ssl| certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation.
