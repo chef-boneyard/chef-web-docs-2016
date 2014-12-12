@@ -68,7 +68,7 @@ knife ssl fetch
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Run the |subcommand knife ssl_fetch| to download the self-signed certificate from the |chef server| to the |path trusted_certs| directory on a workstation. For example:
 
-.. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
+.. include:: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst
 
 **Verify Checksums**
 
