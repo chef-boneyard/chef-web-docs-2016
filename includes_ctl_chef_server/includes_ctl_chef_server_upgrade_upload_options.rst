@@ -11,6 +11,19 @@ This subcommand has the following options:
 ``-h``, ``--help``
    Use to show help for the ``chef-server-ctl upgrade`` subcommand.
 
+``-o NAME``, ``--org-name NAME``
+   Use to specify the name of the |chef server| organization.
+
+   |name_rules org| For example: ``chef``.
+
+   |name_rules org_full| For example: ``Chef Software, Inc.``.
+
+``-S``, ``--setup-only``
+   Use to start |chef server| 12 in preparation for uploading data. This option does not upload data to the |chef server|.
+
+``-u``, ``--upload-only``
+   Use to upload data to |chef server| 12. This option requires |chef server| 12 to be running.
+
 ``-t NUMBER``, ``--upload-threads NUMBER``
    The number of threads to use when migrating cookbooks. Default value: ``10``.
 
