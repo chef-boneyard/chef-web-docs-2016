@@ -35,8 +35,6 @@ During a |chef client_title| Run
 
 SSL Certificates
 =====================================================
-.. warning:: The following content is a draft version.
-
 .. warning:: The following information does not apply to hosted |chef server| 12, only to on-premises |chef server| 12.
 
 .. include:: ../../includes_server_security/includes_server_security_ssl_cert_client.rst
