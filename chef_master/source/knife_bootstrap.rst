@@ -6,7 +6,7 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: Starting with |chef client| 12.0, use the `knife ssl_fetch <http://docs.chef.io/knife_ssl_fetch.html>`_ command to pull down the SSL certificates from the |chef server|, and then use those certificates during the |knife| bootstrap operation.
+.. note:: Starting with |chef client| 12.0, use the `knife ssl_fetch <http://docs.chef.io/knife_ssl_fetch.html>`_ command to pull down the SSL certificates from the on-premises |chef server| and add them to the ``/trusted_certs_dir`` on the workstation. This certificates is used during a |knife| bootstrap operation.
 
 .. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
 
