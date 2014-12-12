@@ -12,6 +12,10 @@ The following cookbooks are being updated by |company_name| to ensure compatibil
 * ``windows``
 * ``knife-windows``
 
+SSL Certificates
+=====================================================
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_client.rst
+
 |resource execute| Resource, ``path`` Attribute
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
