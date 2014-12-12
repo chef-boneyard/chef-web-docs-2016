@@ -59,7 +59,7 @@ This is by design and will occur when the |knife| command is unable to verify th
 
 After the workstation has the correct |ssl| certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation.
 
-|subcommand knife ssl_fetch|
+knife ssl check
 -----------------------------------------------------
 Run the |subcommand knife ssl_check| command to verify the state of the |ssl| certificate, and then use the reponse to help troubleshoot issues that may be present.
 
@@ -71,7 +71,7 @@ Run the |subcommand knife ssl_check| command to verify the state of the |ssl| ce
 
 .. include:: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst
 
-|subcommand knife ssl_fetch|
+knife ssl fetch
 -----------------------------------------------------
 Run the |subcommand knife ssl_fetch| to pull the self-signed certificate down from the |chef server| to the workstation. For example:
 
