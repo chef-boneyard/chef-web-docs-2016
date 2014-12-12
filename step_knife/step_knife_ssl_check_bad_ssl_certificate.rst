@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-If the SSL certificate cannot be verified, the command will return something similar to:
+If the |ssl| certificate cannot be verified, the command will return something similar to:
 
 .. code-block:: bash
 

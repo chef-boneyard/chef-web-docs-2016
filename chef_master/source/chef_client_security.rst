@@ -39,7 +39,7 @@ SSL Certificates
 
 .. warning:: The following information does not apply to hosted |chef server| 12, only to on-premises |chef server| 12.
 
-|chef server| 12 enables SSL verification by default for all requests. The certificate that is generated during the installation of the on-premises |chef server| is self-signed, which means there isn't a signing certificate authority (CA) to verify. For example, running |knife| from a workstation that has |chef client| 12 installed:
+|chef server| 12 enables |ssl| verification by default for all requests. The certificate that is generated during the installation of the on-premises |chef server| is self-signed, which means there isn't a signing |ca| to verify. For example, running |knife| from a workstation that has |chef client| 12 installed:
 
 .. code-block:: bash
 
@@ -57,11 +57,11 @@ This is by design and will occur when the |knife| command is unable to verify th
 * Use |subcommand knife ssl_check| to troubleshoot SSL certificate issues.
 * Use |subcommand knife ssl_fetch| to pull down a certificate from the |chef server| to the |path trusted_certs| directory on the workstation.
 
-After the workstation has the correct SSL certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation.
+After the workstation has the correct |ssl| certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation.
 
 knife ssl_check
 -----------------------------------------------------
-Run the |subcommand knife ssl_check| command to verify the state of the SSL certificate. Use this command to troubleshoot issues with the SSL certificate. For example:
+Run the |subcommand knife ssl_check| command to verify the state of the |ssl| certificate. Use this command to troubleshoot issues with the |ssl| certificate. For example:
 
 .. code-block:: bash
 
@@ -96,7 +96,7 @@ The command will return something similar to:
    
    Adding certificate for chef-server.example.com in /path/to/.chef/trusted_certs/chef-server.example.com.crt
 
-The SSL certificate just downloaded should be verified to ensure that it is, in fact, the same as the certificate on the |chef server|. Compare the SHA256 checksums. First view the checksum on the |chef server|:
+The |ssl| certificate just downloaded should be verified to ensure that it is, in fact, the same as the certificate on the |chef server|. Compare the |sha256| checksums. First view the checksum on the |chef server|:
 
 .. code-block:: bash
 
