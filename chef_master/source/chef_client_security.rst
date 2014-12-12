@@ -39,22 +39,7 @@ SSL Certificates
 
 .. warning:: The following information does not apply to hosted |chef server| 12, only to on-premises |chef server| 12.
 
-|chef server| 12 enables |ssl| verification by default for all requests made to the server, such as those made by |knife| and the |chef client|. The certificate that is generated during the installation of the |chef server| is self-signed, which means there isn't a signing |ca| to verify. In addition, this certificate must be downloaded to any machine from which |knife| and/or the |chef client| will make requests to the |chef server|.
-
-For example, without downloading the |ssl| certificate, and then running the following |knife| command:
-
-.. code-block:: bash
-
-   $ knife client list
-
-responds with an error similar to:
-
-.. code-block:: bash
-
-   ERROR: SSL Validation failure connecting to host: chef-server.example.com ...
-   ERROR: OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state=SSLv3 ...
-
-This is by design and will occur until a verifiable certificate is added to the machine from which the request is sent. 
+.. include:: ../../includes_server_security/includes_server_security_ssl_cert_client.rst
 
 |path trusted_certs|
 -----------------------------------------------------
