@@ -24,8 +24,7 @@ where ``value`` may require quotation marks (" ") if that value is a string. For
 .. code-block:: ruby
 
    knife[:ssh_port] = 22
-   knife[:distro] = "ubuntu10.04-gems"
-   knife[:template_file] = ""
+   knife[:bootstrap_template] = "ubuntu14.04-gems"
    knife[:bootstrap_version] = ""
    knife[:bootstrap_proxy] = ""
 
@@ -39,18 +38,16 @@ Some of the optional |knife rb| settings are used often, such as the template fi
      - Description
    * - ``knife[:bootstrap_proxy]``
      - |bootstrap proxy|
+   * - ``knife[:bootstrap_template]``
+     - |path bootstrap_template|
    * - ``knife[:bootstrap_version]``
      - |bootstrap version|
-   * - ``knife[:distro]``
-     - |distro|
    * - ``knife[:editor]``
      - |editor|
    * - ``knife[:ssh_gateway]``
      - |ssh_gateway| Adding this setting can be helpful when a user cannot |ssh| directly into a host.
    * - ``knife[:ssh_port]``
      - |ssh_port|
-   * - ``knife[:template_file]``
-     - |path bootstrap_template|
 
 Other |ssh|-related settings that are sometimes helpful when added to the |knife rb| file:
 
