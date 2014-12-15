@@ -16,5 +16,5 @@ Use the ``--distro`` option with the ``knife bootstrap`` subcommand to specify t
    * - ``knife[:distro]``
      - |distro|
    * - ``knife[:template_file]``
-     - |path bootstrap_template|
+     - |path bootstrap_template| Do not use the ``--distro`` option when ``--template-file`` is specified.
 
