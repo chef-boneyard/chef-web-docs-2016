@@ -72,10 +72,6 @@ opscode-certificate
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_certificate.rst
 
-opscode-chef
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_chef.rst
-
 opscode-erchef
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_erchef.rst

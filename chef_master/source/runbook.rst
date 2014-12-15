@@ -314,10 +314,6 @@ bookshelf
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
 
-opscode-chef
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_tuning/includes_server_tuning_chef.rst
-
 opscode-erchef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_tuning/includes_server_tuning_erchef.rst
