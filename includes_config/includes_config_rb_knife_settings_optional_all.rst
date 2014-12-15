@@ -31,7 +31,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:bootstrap_version]``
      - |bootstrap version|
    * - ``knife[:bootstrap_template]``
-     - 
+     - |path bootstrap_template|
    * - ``knife[:chef_repo_path]``
      - |path chef_repo|
    * - ``knife[:concurrency]``
@@ -44,8 +44,6 @@ The following list describes all of the optional settings that can be added to t
      - The description for an environment and/or a role.
    * - ``knife[:disable_editing]``
      - |no_editor|
-   * - ``knife[:distro]``
-     - |distro|
    * - ``knife[:download_directory]``
      - |directory cookbooks|
    * - ``knife[:editor]``
@@ -126,8 +124,6 @@ The following list describes all of the optional settings that can be added to t
      - |ssh_port|
    * - ``knife[:ssh_user]``
      - |ssh_user|
-   * - ``knife[:template_file]``
-     - |path bootstrap_template|
    * - ``knife[:use current_branch]``
      - |use current_branch|
    * - ``knife[:use_sudo]``
