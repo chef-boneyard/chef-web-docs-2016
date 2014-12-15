@@ -41,15 +41,15 @@ The following example shows how to modify the default script for |windows| and |
    :install
    @rem Install Chef using chef-client MSI installer
    
-   <% url="http://reposerver.example.com/chef-client-11.6.0.rc.1-1.windows.msi" -%>
+   <% url="http://reposerver.example.com/chef-client-12.0.2.windows.msi" -%>
    @set "REMOTE_SOURCE_MSI_URL=<%= url %>"
    @set "LOCAL_DESTINATION_MSI_PATH=<%= local_download_path %>"
    
    @powershell -ExecutionPolicy Unrestricted -NoProfile -NonInteractive "& '<%= bootstrap_directory %>\wget.ps1' '%REMOTE_SOURCE_MSI_URL%' '%LOCAL_DESTINATION_MSI_PATH%'"
    
-   @REM Replace install_chef from knife-windows Gem with one that has extra flags to turn on Chef service feature -- only available in Chef >= 11.6.x
+   @REM Replace install_chef from knife-windows Gem with one that has extra flags to turn on Chef service feature -- only available in Chef >= 12.0.x
    @REM <%= install_chef %>
-   @echo Installing Chef Client 11.6.0.rc1 with msiexec
+   @echo Installing Chef Client 12.0.2 with msiexec
    @msiexec /q /i "%LOCAL_DESTINATION_MSI_PATH%" ADDLOCAL="ChefClientFeature,ChefServiceFeature"
    @endlocal
    
@@ -76,10 +76,3 @@ The following example shows how to modify the default script for |windows| and |
    )
    
    <%= start_chef %>
-
-
-
-
-
-
-

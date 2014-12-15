@@ -9,7 +9,7 @@ The following example shows how to use the |subcommand knife bootstrap| sub-comm
 
    log_level        :info
    log_location     STDOUT
-   chef_server_url  'https://api.opscode.com/organizations/ORGNAME'
+   chef_server_url  'https://api.opscode.com/organizations/NAME'
    validation_client_name 'ORGNAME-validator'
 
 The |subcommand knife bootstrap| sub-command will look in three locations for the template that is used during the bootstrap operation. The locations are:
@@ -23,7 +23,7 @@ If, in the example above, the second location was used, then create the ``.chef/
 .. code-block:: bash
 
    mkdir ~/.chef/bootstrap
-   vi ~/.chef/bootstrap/debian5.0-apt.erb
+   vi ~/.chef/bootstrap/debian6.0-apt.erb
 
 When finished creating the directory and the |erb| template file, edit the template to run the |ssh| commands. Then set up the validation certificate and the client configuration file.
 
@@ -31,6 +31,4 @@ Finally, run the |chef client| on the node using a |subcommand knife bootstrap| 
 
 .. code-block:: bash
 
-   $ knife bootstrap mynode.example.com -r 'role[webserver]','role[production]' --distro debian5.0-apt
-
-
+   $ knife bootstrap mynode.example.com -r 'role[webserver]','role[production]' --bootstrap-template debian6.0-apt
