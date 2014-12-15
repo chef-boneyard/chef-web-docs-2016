@@ -28,23 +28,23 @@ knife.rb Settings
 
 Custom Templates
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bootstrap_template.rst
+.. include:: ../../includes_knife/includes_knife_11-16_bootstrap_template.rst
 
 Template Locations
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bootstrap_template_location.rst
+.. include:: ../../includes_knife/includes_knife_11-16_bootstrap_template_location.rst
 
 Ubuntu 12.04
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bootstrap_example_ubuntu.rst
+.. include:: ../../includes_knife/includes_knife_11-16_bootstrap_example_ubuntu.rst
 
 Debian and Apt
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bootstrap_example_debian.rst
+.. include:: ../../includes_knife/includes_knife_11-16_bootstrap_example_debian.rst
 
 Microsoft Windows
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bootstrap_example_windows.rst
+.. include:: ../../includes_knife/includes_knife_11-16_bootstrap_example_windows.rst
 
 Examples
 =====================================================
