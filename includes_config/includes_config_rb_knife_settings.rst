@@ -10,6 +10,8 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
+   * - ``bootstrap_template``
+     - |path bootstrap_template|
    * - ``chef_server_url``
      - |chef_server_url| For example:
 
