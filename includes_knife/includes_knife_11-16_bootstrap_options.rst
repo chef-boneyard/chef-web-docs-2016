@@ -83,7 +83,7 @@ This subcommand has the following options:
    |sudo bootstrap|
 
 ``--template-file TEMPLATE``
-   |path bootstrap_template|
+   |path bootstrap_template| Do not use the ``--distro`` option when ``--template-file`` is specified.
 
 ``--use-sudo-password``
    |use sudo_password|
