@@ -41,7 +41,7 @@ New common options have been added:
 
 New Config Settings
 -----------------------------------------------------
-Three new settings are available for the |knife rb| and |client rb| configuration files:
+The following new settings are available for the |knife rb| and |client rb| configuration files:
 
 .. list-table::
    :widths: 200 300
