@@ -26,4 +26,4 @@ SSL Protocols
 
 |chef client_title| Settings
 =====================================================
-.. include:: ../../includes_server_security/includes_server_security_ssl_config_settings.rst
+.. include:: ../../includes_server_security/includes_server_security_11_ssl_config_settings.rst
