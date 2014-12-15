@@ -92,10 +92,6 @@ oc-id
 
 .. include:: ../../includes_config/includes_config_rb_server_settings_oc_id.rst
 
-opscode-chef
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_opscode_chef.rst
-
 opscode-chef-mover
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst
