@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/config_rb_knife_optional_settings.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 11.12
 
-.. include:: ../../chef_master/source/config_rb_knife_optional_settings.rst
+.. include:: ../../release_11-x_master/config_rb_knife_optional_settings.rst
