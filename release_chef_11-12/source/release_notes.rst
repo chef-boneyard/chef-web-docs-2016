@@ -164,7 +164,7 @@ New settings have been added to the |client rb| file:
    * - Setting
      - Description
    * - ``local_key_generation``
-     - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. For example:
+     - |generate local_keys| For example:
 
        .. code-block:: ruby
 
