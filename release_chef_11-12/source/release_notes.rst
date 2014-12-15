@@ -43,7 +43,7 @@ The following items are new for |chef client| 11.12 and/or are changes from prev
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_example.rst
 
 
-|resource package_windows| Resource
+|resource package_windows|
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_windows.rst
 
@@ -59,7 +59,7 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
 
-``guard_interpreter`` Attribute
+``guard_interpreter``
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter.rst
 
@@ -71,7 +71,7 @@ Inheritance
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_common/includes_resources_common_11-16_guard_interpreter_attributes_inherit.rst
 
-Examples
+Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_example_default.rst
 
@@ -218,7 +218,7 @@ New options have been added to the |chef client|:
    |runlist_items|
 
 
-New Resource Attribute
+``sensitive`` Attribute
 -----------------------------------------------------
 A new common resource attribute has been added:
 
