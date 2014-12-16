@@ -426,4 +426,3 @@ Cookbooks
    verify_packages
    windows
    workstation
-   opscode_cookbooks_python
