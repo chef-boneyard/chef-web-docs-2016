@@ -1,10 +1,10 @@
 .. This is an included how-to. 
 
-.. To disable a registry key:
+.. To set the "(Default)" name of a registry key:
 
 .. code-block:: ruby
 
-   registry_key "Set the default value" do
+   registry_key "Set (Default) value" do
      action :create
      key "HKLM\\Software\\Test\\Key\\Path"
      values [
@@ -12,4 +12,4 @@
      ]
    end
 
-where ``:name => ''`` contains the empty string that ensures the default value is set for the registry key.
+where ``:name => ''`` contains an empty string, which will set the name of the registry key to ``"(Default)"``.

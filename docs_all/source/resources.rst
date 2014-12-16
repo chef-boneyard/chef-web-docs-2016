@@ -2257,6 +2257,9 @@ Examples
 
 .. include:: ../../step_resource/step_resource_registry_key_set_proxy_settings_to_same_as_chef_client.rst
 
+**Set the name of a registry key to "(Default)"**
+
+.. include:: ../../step_resource/step_resource_registry_key_set_default.rst
 
 remote_directory
 -----------------------------------------------------
