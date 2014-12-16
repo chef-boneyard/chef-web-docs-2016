@@ -22,7 +22,7 @@ To install the |chef client| using the |omnibus installer|:
       100 23.9M  100 23.9M     0     0    944k       0   0:00:26  0:00:26  --:--:--   838k
       Installing Chef
 
-In addition to the default install behavior, the Omnibus Installer has the following options:
+In addition to the default install behavior, the |omnibus installer| has the following options:
 
 .. list-table::
    :widths: 150 450
@@ -30,6 +30,10 @@ In addition to the default install behavior, the Omnibus Installer has the follo
 
    * - Option
      - Description
+   * - ``-d``
+     - Use to specify the directory into which a package is downloaded. When a package already exists in this directory and the checksum matches, the package is not re-downloaded. When ``-d`` and ``-f`` are not specified, a package is downloaded to a temporary directory.
+   * - ``-f``
+     - Use to specify the name of the file and the path at which that file is located. When a filename already exists at this path and the checksum matches, the package is not re-downloaded. When ``-d`` and ``-f`` are not specified, a package is downloaded to a temporary directory.
    * - ``-p``
      - Install a pre-release version. Requires that ``-s`` be passed as part of the command.
    * - ``-s``
@@ -41,15 +45,15 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -LO https://www.chef.io/chef/install.sh && sudo bash ./install.sh -v 10.26.0 && rm install.sh
+   $ curl -LO https://www.chef.io/chef/install.sh && sudo bash ./install.sh -v 12.0.2 && rm install.sh
 
 and
 
 .. code-block:: bash
 
-   $ curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 10.26.0
+   $ curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 12.0.2
 
-will both install the |chef client|, version 10.26.0.
+will both install the |chef client|, version 12.0.2.
 
 
 
