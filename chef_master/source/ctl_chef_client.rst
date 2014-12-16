@@ -12,7 +12,7 @@
 
 Options
 =====================================================
-.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_options.rst
+.. include:: ../../release_chef_12-2/includes_ctl_chef_client_12-0_options.rst
 
 Run in Local Mode
 =====================================================
