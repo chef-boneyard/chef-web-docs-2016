@@ -25,7 +25,6 @@ Use following |client rb| settings to manage |ssl| certificate preferences:
        * |ssl_verify_mode_verify_none|
        * |ssl_verify_mode_verify_peer| This is the recommended setting.
        
-       Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
+       Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified. Default value: ``:verify_peer``.
    * - ``verify_api_cert``
-     - |ssl_verify_mode_verify_api_cert| Default value: ``true``.
-
+     - |ssl_verify_mode_verify_api_cert| Default value: ``false``.
