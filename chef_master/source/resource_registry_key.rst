@@ -24,17 +24,17 @@ The following methods can be used to interact with |windows| registry keys.
 
    * - Methods
      - Description
-   * - `registry_data_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-data-exists>`_
+   * - `registry_data_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-data-exists>`__
      - Find out if a registry key contains data.
-   * - `registry_get_subkeys <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-subkeys>`_
+   * - `registry_get_subkeys <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-subkeys>`__
      - Get a list of sub-keys for a registry setting.
-   * - `registry_get_values <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-values>`_
+   * - `registry_get_values <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-values>`__
      - Get values (name, type, and data) for a given registry key.
-   * - `registry_has_subkeys? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-has-subkeys>`_
+   * - `registry_has_subkeys? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-has-subkeys>`__
      - Find out if a registry key has one (or more) sub-keys.
-   * - `registry_key_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-key-exists>`_
+   * - `registry_key_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-key-exists>`__
      - Find out if a registry key exists.
-   * - `registry_value_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-value-exists>`
+   * - `registry_value_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-value-exists>`__
      - Find out if a registry key has values set (name, type, and data).
 
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
