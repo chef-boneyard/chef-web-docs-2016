@@ -198,7 +198,7 @@ Example
 
 .. include:: ../../step_resource/step_resource_service_reboot_immediately.rst
 
-**Reboot a node at the end of a |chef client| run**
+**Reboot a node at the end of a chef-client run**
 
 .. include:: ../../step_resource/step_resource_service_reboot_request.rst
 
