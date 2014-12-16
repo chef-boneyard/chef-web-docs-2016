@@ -24,7 +24,7 @@ SSL Certificates
 
 Changes Prior to |chef| 12
 -----------------------------------------------------
-.. include:: ../../includes_server_security/includes_chef_client_11-to-12_ssl_changes.rst
+.. include:: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst
 
 |path trusted_certs|
 -----------------------------------------------------
