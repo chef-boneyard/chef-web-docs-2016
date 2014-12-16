@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``password`` subcommand is used to change a user's password. When |microsoft ad| or |ldap| is enabled, this command enables (or disables) the system recovery password for that user. For example:
+The ``password`` subcommand is used to change a user's password. When |windows ad| or |ldap| is enabled, this command enables (or disables) the system recovery password for that user. For example:
 
 This subcommand has the following syntax:
 
