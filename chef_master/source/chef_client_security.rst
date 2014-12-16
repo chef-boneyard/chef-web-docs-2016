@@ -16,19 +16,6 @@ During a |chef client_title| Run
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst
 
-.. SSL Certificates
-.. =====================================================
-.. <placeholder>
-.. 
-.. Add Custom SSL Certificates
-.. =====================================================
-.. .. include:: ../../step_server_security/step_server_security_ssl_custom_certificates.rst
-.. 
-.. Regenerate SSL Certificates
-.. =====================================================
-.. .. include:: ../../step_server_security/step_server_security_ssl_regenerate_certificates.rst
-.. 
-
 SSL Certificates
 =====================================================
 .. warning:: The following information does not apply to hosted |chef server| 12, only to on-premises |chef server| 12.
@@ -37,13 +24,7 @@ SSL Certificates
 
 Changes Prior to |chef| 12
 -----------------------------------------------------
-The following changes were made during certain |chef client| release prior to the |chef client| 12 release:
-
-* In the |chef client| 11.8 release, the ``verify_api_cert`` setting was added to the |client rb| file with a default value of ``false``. 
-* In the |chef client| 11.12 release, the ``local_key_generation`` and ``ssl_verify_mode`` settings were added to the |client rb| file. Two |knife| commands---|subcommand knife ssl_check| and |subcommand knife ssl_fetch| were added. A new directory in the |chef repo|---|path trusted_certs|---was added. These new settings and tools enabled users who wanted to use stronger |ssl| settings to generate the private/public key pair from the |chef client|, verify HTTPS requests, verify |ssl| certificates, and pull the |ssl| certificate from the |chef server| down to the |path trusted_certs| directory.
-* In the |chef client| 12 release, the default value for ``local_key_generation`` was changed to ``true``.
-
-Starting with |chef client| 12, |ssl| certificate validation is enabled by default and the |subcommand knife ssl_fetch| becomes `part of the setup process <http://docs.chef.io/install_dk.html#get-ssl-certificates>`__ for every workstation.
+.. include:: ../../includes_server_security/includes_chef_client_11-to-12_ssl_changes.rst
 
 |path trusted_certs|
 -----------------------------------------------------
