@@ -51,6 +51,15 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ rpm -Uvh --nopostun /path/to/chef-server-core-<version>.rpm
 
+#. On the primary back end machine, stop all services except |keepalived|. With |chef server| 12, the |keepalived| service will not be stopped with the following command:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl stop
+
+   If the upgrade process times out, re-run the command until it finishes successfully.
+
+
 #. Upgrade the back end primary machine with the following command:
 
    .. code-block:: bash
