@@ -7,7 +7,7 @@ machine_image
 
 .. include:: ../../includes_resources/includes_resource_machine_image.rst
 
-.. note:: |warning provisioning|
+.. warning:: |warning provisioning|
 
 Syntax
 =====================================================

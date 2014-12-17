@@ -7,7 +7,7 @@ machine_batch
 
 .. include:: ../../includes_resources/includes_resource_machine_batch.rst
 
-.. note:: |warning provisioning|
+.. warning:: |warning provisioning|
 
 
 Syntax
