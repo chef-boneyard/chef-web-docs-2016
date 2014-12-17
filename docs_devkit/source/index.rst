@@ -38,6 +38,18 @@ The following tools are available only in the |chef dk|:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/policy.html">Policy</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/config_rb_policyfile.html">Policyfile.rb</a> </br>
 
+|chef provisioning_title|
+-----------------------------------------------------
+The following resources are part of |chef provisioning| and are now available in the |chef dk|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/resource_machine.html">machine</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/resource_machine_batch.html">machine_batch</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/resource_machine_execute.html">machine_execute</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/resource_machine_file.html">machine_file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/resource_machine_image.html">machine_image</a> </br>
+   
 Community Tools
 -----------------------------------------------------
 The following tools have been developed by members of the |chef| community. These tools are considered to be a useful part of the |chef| workflow and have been packaged as part of the |chef dk|. (They are all available independently of the |chef dk|, as well.) The use of these tools as part of your workflow is recommended, but at the same time is completely optional. Use them in the way that makes sense for your organization:
