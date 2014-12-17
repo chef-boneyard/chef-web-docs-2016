@@ -6,7 +6,7 @@ The following sections address critical security issues related to |chef|. It is
 
 CSRF, Doorkeeper (CVE-2014-8144)
 =====================================================
-(December 17, 2014) |company_name| released patched versions of |chef server oec| 11 and |chef server| 12 to address the `CSRF vulnerability in Doorkeeper <http://seclists.org/oss-sec/2014/q4/1076>`_.
+(December 17, 2014) |company_name| released patched versions of |chef server oec|---11.2.6---and |chef server|--12.0.1---to address the `CSRF vulnerability in Doorkeeper <http://seclists.org/oss-sec/2014/q4/1076>`_.
 
 Background
 -----------------------------------------------------
@@ -17,7 +17,7 @@ Actions
 The following steps should be taken:
 
 #. Upgrade to the latest version of the |chef server|.
-#. Click `here <https://downloads.chef.io/chef-server/>`__ for |chef server| 12, `here <https://downloads.chef.io/enterprise-chef/>`__ for |chef server oec| 11.
+#. Click `here <https://downloads.chef.io/chef-server/>`__ for |chef server| 12.0.1, `here <https://downloads.chef.io/enterprise-chef/>`__ for |chef server oec| 11.2.6.
 
 
 OpenSSL and SSL/TLS MITM (CVE-2014-0224)
