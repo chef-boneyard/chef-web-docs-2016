@@ -3,7 +3,7 @@ Upgrade to |chef server_title| 12
 =====================================================
 The following sections describe the upgrade process for |chef server| 12.
 
-From |chef server| 12
+From |chef server_title| 12
 =====================================================
 There are two upgrade scenarios for upgrades from earlier versions of |chef server| 12 to newer versions of |chef server| 12: high availability and standalone. The steps for each scenario are identical to the steps for upgrades from |chef server oec|. See the appropriate sections below and follow the same steps.
 
