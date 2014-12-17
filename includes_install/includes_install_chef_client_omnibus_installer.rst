@@ -36,8 +36,6 @@ In addition to the default install behavior, the |omnibus installer| has the fol
      - Use to specify the name of the file and the path at which that file is located. When a filename already exists at this path and the checksum matches, the package is not re-downloaded. When ``-d`` and ``-f`` are not specified, a package is downloaded to a temporary directory.
    * - ``-p``
      - Install a pre-release version. Requires that ``-s`` be passed as part of the command.
-   * - ``-s``
-     - Indicates that the ``-p`` and/or ``-v`` options will be passed as part of the command.
    * - ``-v``
      - The version of the |chef client| to be installed. A version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions. A two-part version (x.y) is also allowed. For more information about application versioning, see http://semver.org/.
 
