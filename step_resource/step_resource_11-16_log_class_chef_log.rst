@@ -1,4 +1,4 @@
-.. This is an included how-to. 
+.. This is an included how-to.
 
 The following example shows two log entries, one created using ``Chef::Log`` and the other using the |resource log| resource. Only the log entry created by the |resource log| resource is built into the resource collection.
 
@@ -17,5 +17,3 @@ The following example shows two log entries, one created using ``Chef::Log`` and
    end
    
    ...
-
-This example can be found in the ``winsw_service.rb`` recipe of the `chef-client cookbook <https://github.com/opscode-cookbooks/chef-client>`_ that is maintained by |company_name|.
