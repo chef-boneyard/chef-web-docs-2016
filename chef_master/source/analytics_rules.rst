@@ -62,4 +62,28 @@ set()
 
 Examples
 =====================================================
-None.
+The following examples show how to define |chef analytics| rules.
+
+Raise Audit
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_raise_audit.rst
+
+Regular Expressions
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_regular_expression.rst
+
+User-defined Values
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_user_defined_values.rst
+
+Verify Dates
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_verify_dates.rst
+
+Verify Resource Updates
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_verify_resource_updates.rst
+
+Verify Run-lists
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_verify_run_lists.rst
