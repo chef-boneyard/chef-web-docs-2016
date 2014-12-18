@@ -83,12 +83,12 @@ When the system process limits are too low, an error is returned similar to:
 
 .. code-block:: ruby
 
-   ESC[31mError Syncing Cookbooks:ESC[0m
-   ==================================================================ESC[0m
+   Error Syncing Cookbooks:
+   ==================================================================
    
-   ESC[0mUnexpected Error:ESC[0m
-   -----------------ESC[0m
-   ThreadError: can't create Thread: Resource temporarily unavailableESC[0m
+   Unexpected Error:
+   -----------------
+   ThreadError: can't create Thread: Resource temporarily unavailable
 
 
 **Install the UTF-8 character set**
