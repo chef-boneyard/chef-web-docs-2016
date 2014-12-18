@@ -79,7 +79,18 @@ The out-of-the-box system process limits for maximum process memory size (RSS) a
 
 #. Reboot the logical partition (LPAR) to apply the updated system process limits.
 
- 
+When the system process limits are too low, an error is returned similar to:
+
+.. code-block:: ruby
+
+   ESC[31mError Syncing Cookbooks:ESC[0m
+   ==================================================================ESC[0m
+   
+   ESC[0mUnexpected Error:ESC[0m
+   -----------------ESC[0m
+   ThreadError: can't create Thread: Resource temporarily unavailableESC[0m
+
+
 **Install the UTF-8 character set**
 
 .. include:: ../../includes_install/includes_install_chef_client_aix_en_us.rst
