@@ -73,17 +73,17 @@
        
        .. code-block:: javascript
        
-		  {
-		    "name": "node1",
-		    "chef_environment": "_default",
-		    "json_class": "Chef::Node",
-		    "automatic": {
-		      "languages": {
-		        "ruby": {
-		          ...
-		        },
-				...
-          ...
+          {
+            "name": "node1",
+            "chef_environment": "_default",
+            "json_class": "Chef::Node",
+            "automatic": {
+              "languages": {
+                "ruby": {
+                  ...
+                },
+              ...
+            ...
           }
    * - ``recipe``
      - Use to add a recipe to the run-list for a machine. Use this attribute multiple times to add multiple recipes to a run-list. Use this attribute along with ``role`` to define a run-list. The order in which the ``recipe`` and ``role`` attributes are specified will determine the order in which they are added to the run-list. This attribute should not be used in the same recipe as ``run_list``. For example:
