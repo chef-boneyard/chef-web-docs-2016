@@ -47,7 +47,9 @@
        
        .. code-block:: ruby
        
-          files '/remote/path.txt' => { :local_path => '/local/path.txt' }
+          files '/remote/path.txt' => {
+            :local_path => '/local/path.txt'
+          }
        
        or:
        
