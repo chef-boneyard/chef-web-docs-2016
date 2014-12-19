@@ -6,16 +6,16 @@ A run-list must be in one of the following formats: fully qualified, cookbook, o
 
 .. code-block:: ruby
 
-   'role[ROLE_NAME]'
+   'role[NAME]'
 
 or 
 
 .. code-block:: ruby
 
-   'recipe[COOKBOOK::RECIPE_NAME]'
+   'recipe[COOKBOOK::RECIPE]'
 
 Use a comma to separate roles and recipes when adding more than one item the run-list: 
 
 .. code-block:: ruby
 
-   'recipe[COOKBOOK::RECIPE_NAME],COOKBOOK::RECIPE_NAME,role[ROLE_NAME]'
+   'recipe[COOKBOOK::RECIPE],COOKBOOK::RECIPE,role[NAME]'
