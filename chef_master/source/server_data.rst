@@ -1,5 +1,5 @@
 =====================================================
-Server Data
+Server Data Storage
 =====================================================
 
 .. include:: ../../includes_server_storage/includes_server_storage.rst
