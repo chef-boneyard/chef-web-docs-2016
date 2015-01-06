@@ -341,6 +341,14 @@ rabbitmq
 
 
 
+Online Storage Resizing
+=====================================================
+.. include:: ../../includes_server_storage/includes_server_online_resize.rst
+
+
+
+
+
 Backup and Restore
 =====================================================
 .. include:: ../../includes_server_backup_restore/includes_server_backup_restore.rst
