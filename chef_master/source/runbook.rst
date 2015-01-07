@@ -345,27 +345,27 @@ Resize |drbd|
 =====================================================
 .. include:: ../../includes_server_storage/includes_server_storage_drbd.rst
 
-Resize Device
+Devices
 -----------------------------------------------------
 .. include:: ../../includes_server_storage/includes_server_storage_drbd_resize_device.rst
 
-Resize Volume Group
+Volume Groups
 -----------------------------------------------------
 .. include:: ../../includes_server_storage/includes_server_storage_drbd_resize_vg.rst
 
-Resize Logical Volume
+Logical Volumes
 -----------------------------------------------------
 .. include:: ../../includes_server_storage/includes_server_storage_drbd_resize_lv.rst
 
-Resize Primary Backend
+Primary Backend
 -----------------------------------------------------
 .. include:: ../../includes_server_storage/includes_server_storage_drbd_resize_primary_backend.rst
 
-Resize Primary File System
+Primary File System
 -----------------------------------------------------
 .. include:: ../../includes_server_storage/includes_server_storage_drbd_resize_primary_filesystem.rst
 
-Verify
+Verify Resize
 -----------------------------------------------------
 .. include:: ../../includes_server_storage/includes_server_storage_drbd_verify.rst
 
