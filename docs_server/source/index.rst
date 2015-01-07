@@ -58,6 +58,7 @@ The |chef server| can be managed in the following ways:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/server/runbook.html">Runbook</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/server/server_backup_restore.html">Backup / Restore</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/server/server_data.html">Data</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/server/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/server/server_high_availability.html">High Availability</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/server/server_logs.html">Log Files</a> </br>
