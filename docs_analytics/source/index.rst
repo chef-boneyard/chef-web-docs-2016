@@ -37,5 +37,6 @@ Some features of |chef analytics| depend on functionality that exists in either 
    api_analytics
    config_rb_analytics
    ctl_analytics
+   dsl_recipe
    install_analytics
    install_server_pre
