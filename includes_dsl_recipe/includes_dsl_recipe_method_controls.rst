@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the ``controls`` method to define an audit. Each ``controls`` object may contain a ``control`` or a ``describe`` block that defines the tests within the audit. 
+Use the ``controls`` method to define an audit. Each ``controls`` object contains one (or more) ``control`` blocks that define the tests within the audit. 
 
 The syntax for the ``controls`` method is as follows:
 
@@ -16,10 +16,10 @@ The syntax for the ``controls`` method is as follows:
 
 where:
 
-* ``controls`` defines the block of code for the audit to be performed during the |chef client| run. The ``controls`` block is part of the |chef| |dsl recipe|. All of the code that appears inside the ``controls`` block is defined using |rspec|, which is a testing tool for the |ruby| programming language
+* ``controls`` defines the block of code for the audit to be performed during the |chef client| run. The ``controls`` block is part of the |chef| |dsl recipe|
 * ``control`` defines each individual audit. Ideally, each ``control`` block maps to a specific audit. There is no limit to the number of ``control`` blocks that may defined within ``controls``
 * Each ``control`` block must define at least one validation to perform. Validations are contained within an ``it`` block. Each ``it`` block is processed as an individual statement during the |chef client| run's audit mode phase and is shown individually in the output
-* An ``expect(something).to be_something`` statement defines each test individual used to validate the ``control`` block; use as many ``expect`` statements as necessary. For example, a test that expects the |postgresql| pacakge to not be installed would be similar to ``expect(package("postgresql")).to_not be_installed``
+* An ``expect(something).to be_something`` represents a statement that defines each individual test. These statements are defined using patterns similar to |rspec| matchers. For example, ``to``, ``to_not``, ``be``, and so on. For example, a test that expects the |postgresql| pacakge to not be installed would be similar to ``expect(package("postgresql")).to_not be_installed``
 
 For example:
 
