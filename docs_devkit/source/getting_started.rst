@@ -731,8 +731,8 @@ To verify if both instances have been converged, run the following command:
 .. code-block:: bash
 
    Instance             Driver   Provisioner  Last Action
-   default-ubuntu-1204  Vagrant  ChefSolo     Converged
-   default-centos-64    Vagrant  ChefSolo     Converged
+   default-ubuntu-1204  Vagrant  ChefZero     Converged
+   default-centos-64    Vagrant  ChefZero     Converged
 
 More About Resources
 =====================================================
