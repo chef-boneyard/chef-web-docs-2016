@@ -15,8 +15,6 @@ To establish failover between the two backend machines, do the following:
       
       $ drbdadm -- --overwrite-data-of-peer primary pc0
 
-   After a few minutes, the |chef server| will be installed.
-
 #. On the primary backend, mount the file system. For example, a file system named ``ext4``:
 
    .. code-block:: bash
