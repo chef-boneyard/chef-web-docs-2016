@@ -48,11 +48,11 @@ attribute?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_attribute.rst
 
-controls
+control_group
 -----------------------------------------------------
 .. warning:: This method requires |chef analytics|.
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_controls.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_groups.rst
 
 cookbook_name
 -----------------------------------------------------
