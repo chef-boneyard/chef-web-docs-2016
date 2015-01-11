@@ -10,4 +10,13 @@ A data bag is a container of related data bag items, where each individual data 
      "key": "value"
    }
 
-where ``key`` and ``value`` are the key:value pair for each additional attribute within the data bag item. |knife| can load a data bag item by specifying the name of the data bag to which the item belongs and then the filename of the data bag item.
+where ``key`` and ``value`` are the ``key:value`` pair for each additional attribute within the data bag item. |knife| can load a data bag item by specifying the name of the data bag to which the item belongs and then the filename of the data bag item. The Chef implementation of data bag items also supports comments:
+
+.. code-block:: javascript
+
+   {
+     /* This is a supported comment style */
+     // This style is also supported
+     "id": "ITEM_NAME",
+     "key": "value"
+   }
