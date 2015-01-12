@@ -17,7 +17,7 @@ A data bag that is storing a top-level key for an environment might look somethi
      }
    }
 
-When using the data bag in a recipe, that data can be accessed from a recipe using code similar to::
+When using the data bag in a recipe, that data can be accessed from a recipe using code similar to:
 
 .. code-block:: ruby
 
