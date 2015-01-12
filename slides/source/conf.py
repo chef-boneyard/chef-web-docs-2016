@@ -98,7 +98,7 @@ rst_prolog = """
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'revealjs'
+html_theme = 'slides'
 #html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -106,16 +106,40 @@ html_theme = 'revealjs'
 # documentation.
 #html_theme_options = {}
 html_theme_options = {
-    'theme': 'default'
-    
+ "lang": "en",
+ "width": 960,
+ "height": 700,
+ "margin": 0.3,
+ "controls": True,
+ "progress": False,
+ "history": False,
+ "keyboard": True,
+ "overview": False,
+ "center": False,
+ "touch": True,
+ "loop": False,
+ "rtl": False,
+ "fragments": False,
+ "auto_slide": 0,
+ "mouse_wheel": False,
+ "rolling_links": True,
+ "preview_links": False,
+ "theme": "default",
+ "transition": "default",
+ "transition_speed": "default",
+ "background_transition": "default",
+ "slide_number": False,
+ "embedded": False,
+ "auto_slide_stoppable": True,
+ "hide_address_bar": True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = ['../../_themes/']
+html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = "Slide Deck"
+html_title = "Slide Deck"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
