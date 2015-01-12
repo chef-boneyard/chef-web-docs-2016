@@ -48,11 +48,33 @@ attribute?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_attribute.rst
 
+control
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
+
+Matchers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher.rst
+
+directory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_directory.rst
+
+file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_file.rst
+
+package
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_package.rst
+
+service
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_service.rst
+
 control_group
 -----------------------------------------------------
-.. warning:: This method requires |chef analytics|.
-
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_groups.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
 
 cookbook_name
 -----------------------------------------------------

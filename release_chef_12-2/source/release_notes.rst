@@ -10,12 +10,37 @@ What's New
 =====================================================
 The following items are new for |chef client| 12.2 and/or are changes from previous versions. The short version:
 
-* **chef-client may be run in audit-mode** xxxxx
-* **control_group method added to Recipe DSL** Use the ``control_group`` method to define a block of code used for auditing.
+* **chef-client may be run in audit-mode** Use |chef client_audit| to run audit tests against a node. The |chef client| may be run in |chef client_audit| as part of the |chef client| run and also independently of the |chef client| run.
+* **control method added to Recipe DSL** Use the ``control`` method to define audit tests that match files, packages, and services.
+* **control_group method added to Recipe DSL** Use the ``control_group`` method to controls into a single audit.
 
-``control_group``
+control
 -----------------------------------------------------
-.. include:: ../..//includes_dsl_recipe/includes_dsl_recipe_method_control_groups.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
+
+Matchers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher.rst
+
+directory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_directory.rst
+
+file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_file.rst
+
+package
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_package.rst
+
+service
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_service.rst
+
+control_group
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
 
 |chef client| Options
 -----------------------------------------------------

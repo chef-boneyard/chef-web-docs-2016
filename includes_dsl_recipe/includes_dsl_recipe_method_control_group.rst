@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the ``control_group`` method to define an audit. Each ``control_group`` object contains one (or more) ``control`` blocks that define the tests within the audit. 
+Use the ``control_group`` method to define a group of ``control`` methods that comprise a single audit. Each ``control_group`` object contains one (or more) ``control`` blocks. 
 
 The syntax for the ``control_group`` method is as follows:
 
@@ -12,14 +12,13 @@ The syntax for the ``control_group`` method is as follows:
        it "should do something" do
          expect(something).to/.to_not be_something
      end
+	 control ...
    end
 
 where:
 
-* ``control_group`` defines the block of code for the audit to be performed during the |chef client| run. The ``control_group`` block is part of the |chef| |dsl recipe|
-* ``control`` defines each individual audit. Ideally, each ``control`` block maps to a specific audit. There is no limit to the number of ``control`` blocks that may defined within ``control_group``
-* Each ``control`` block must define at least one validation to perform. Validations are contained within an ``it`` block. Each ``it`` block is processed as an individual statement during the |chef client| run's audit mode phase and is shown individually in the output
-* An ``expect(something).to/.to_not be_something`` represents a statement that defines each individual test. These statements are defined using patterns similar to |rspec| matchers. For example, ``to``, ``to_not``, ``be``, and so on. For example, a test that expects the |postgresql| pacakge to not be installed would be similar to ``expect(package("postgresql")).to_not be_installed`` and a test that ensures a service is enabled would be similar to ``expect(service("init")).to be_enabled``. For more information about the types of statements that may be built, see XXXXXX.
+* ``control_group`` groups one (or more) ``control`` blocks
+* ``control`` defines each individual audit within the ``control_group`` block. There is no limit to the number of ``control`` blocks that may defined within a ``control_group`` block
 
 For example:
 
@@ -73,9 +72,7 @@ For example:
    
    end
 
-When the |chef client| runs the ``control_group`` block is processed during the audit phase.
-
-If the audit was successful, the |chef client| will return output similar to:
+The ``control_group`` block is processed when the |chef client| run is run in |chef client_audit|. If the audit was successful, the |chef client| will return output similar to:
 
 .. code-block:: bash
 
