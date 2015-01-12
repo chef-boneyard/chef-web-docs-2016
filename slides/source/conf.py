@@ -38,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Ohai 8 Documentation'
+project = u'Slide Deck'
 copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -105,13 +105,17 @@ html_theme = 'revealjs'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
+html_theme_options = {
+    'theme': 'default'
+    
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = "Ohai 8 Documentation"
+#html_title = "Slide Deck"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -136,7 +140,7 @@ html_theme = 'revealjs'
 # hack that achieved the desired behavior. Plus, there's 0% chance that we'll
 # ever want to insert a datetime stamp in the docs.
 
-#html_last_updated_fmt = 'Ohai, version 8'
+#html_last_updated_fmt = 'Slide Deck'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -182,5 +186,5 @@ html_use_index = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-#htmlhelp_basename = 'Ohai 8 Documentation'
+#htmlhelp_basename = 'Slide Deck'
 
