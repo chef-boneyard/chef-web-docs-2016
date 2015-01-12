@@ -18,24 +18,20 @@ control
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
 
-Matchers
+directory Matcher
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher.rst
-
-directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_directory.rst
 
-file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+file Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_file.rst
 
-package
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+package Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_package.rst
 
-service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+service Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_service.rst
 
 control_group
