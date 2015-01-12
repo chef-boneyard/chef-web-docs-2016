@@ -21,7 +21,7 @@ The |json| format for roles maps directly to the domain-specific |ruby| format: 
      "run_list": [
        "recipe[apache2]",
        "recipe[apache2::mod_ssl]",
-       "role[montior]"
+       "role[monitor]"
      ],
      "env_run_lists" : {
        "production" : [],
