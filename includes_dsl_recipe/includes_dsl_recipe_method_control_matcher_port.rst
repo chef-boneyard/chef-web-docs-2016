@@ -18,7 +18,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to be_listening
           end
 
-       or to test if the named port is not listening:
+       For a named port that is not listening:
 
        .. code-block:: ruby
        
@@ -26,7 +26,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening
           end
 
-       To test for a specific port types use ``.with("port_type")``. For example, UDP:
+       For a specific port type use ``.with("port_type")``. For example, UDP:
 
        .. code-block:: ruby
        
@@ -34,7 +34,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening.with("udp")
           end
 
-       and UDP6:
+       For UDP6:
 
        .. code-block:: ruby
        
@@ -42,7 +42,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening.with("udp6")
           end
 
-       and TCP:
+       For |tcpip|:
 
        .. code-block:: ruby
        
@@ -50,7 +50,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening.with("tcp")
           end
 
-       and TCP6:
+       For |tcpip|, version 6:
 
        .. code-block:: ruby
        

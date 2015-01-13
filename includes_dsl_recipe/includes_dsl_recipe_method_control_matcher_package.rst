@@ -18,7 +18,7 @@ Matchers are available for packages and may be used to define audits that test i
             expect(package("httpd")).to be_installed
           end
 
-       and to test for a specific package version:
+       For a specific package version:
 
        .. code-block:: ruby
        

@@ -18,7 +18,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_executable
           end
 
-       or writable by owner:
+       For a file that is executable by its owner:
 
        .. code-block:: ruby
        
@@ -26,7 +26,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_executable.by("owner")
           end
 
-       or writable by group:
+       For a file that is executable by a group:
 
        .. code-block:: ruby
        
@@ -34,7 +34,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_executable.by("group")
           end
 
-       or writable by a specific user:
+       For a file that is executable by a specific user:
 
        .. code-block:: ruby
        
@@ -90,7 +90,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_readable
           end
 
-       or writable by owner:
+       For a file that is readable by its owner:
 
        .. code-block:: ruby
        
@@ -98,7 +98,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_readable.by("owner")
           end
 
-       or writable by group:
+       For a file that is readable by a group:
 
        .. code-block:: ruby
        
@@ -106,7 +106,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_readable.by("group")
           end
 
-       or writable by a specific user:
+       For a file that is readable by a specific user:
 
        .. code-block:: ruby
        
@@ -146,7 +146,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_writable
           end
 
-       or writable by owner:
+       For a file that is writable by its owner:
 
        .. code-block:: ruby
        
@@ -154,7 +154,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_writable.by("owner")
           end
 
-       or writable by group:
+       For a file that is writable by a group:
 
        .. code-block:: ruby
        
@@ -162,7 +162,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_writable.by("group")
           end
 
-       or writable by a specific user:
+       For a file that is writable by a specific user:
 
        .. code-block:: ruby
        

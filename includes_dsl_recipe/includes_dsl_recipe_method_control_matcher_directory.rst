@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Matchers are available for files and directories. Use this matcher to define audits for directories that test if the directory exists, is mounted, and linked to. The directory matcher uses the same matching syntax (``expect(file("foo"))`` as the file matcher. The following matchers are available for directories:
+Matchers are available for directories. Use this matcher to define audits for directories that test if the directory exists, is mounted, and if it is linked to. This matcher uses the same matching syntax---``expect(file("foo"))``---as the files. The following matchers are available for directories:
 
 .. list-table::
    :widths: 60 420
@@ -34,7 +34,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/")).to be_mounted
           end
 
-       and for directories with a single attribute that requires testing:
+       For directories with a single attribute that requires testing:
 
        .. code-block:: ruby
        
@@ -42,7 +42,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/")).to be_mounted.with( :type => 'ext4' )
           end
 
-       and for directories with multiple attributes that require testing:
+       For directories with multiple attributes that require testing:
 
        .. code-block:: ruby
        

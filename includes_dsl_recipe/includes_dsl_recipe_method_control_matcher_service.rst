@@ -18,7 +18,7 @@ Matchers are available for services and may be used to define audits that test f
             expect(service("ntpd")).to be_enabled
           end
 
-       and to test if a service is enabled at a given run level:
+       For a service that is enabled at a given run level:
 
        .. code-block:: ruby
        
@@ -42,7 +42,7 @@ Matchers are available for services and may be used to define audits that test f
             expect(service("ntpd")).to be_running
           end
 
-       To test if a service is running under |supervisor|:
+       For a service that is running under |supervisor|:
 
        .. code-block:: ruby
        
