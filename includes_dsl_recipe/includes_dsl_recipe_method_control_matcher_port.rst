@@ -26,7 +26,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening
           end
 
-       For a specific port type use ``.with("port_type")``. For example, UDP:
+       For a specific port type use ``.with("port_type")``. For example, |udp|:
 
        .. code-block:: ruby
        
@@ -34,7 +34,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening.with("udp")
           end
 
-       For UDP6:
+       For |udp|, version 6:
 
        .. code-block:: ruby
        
