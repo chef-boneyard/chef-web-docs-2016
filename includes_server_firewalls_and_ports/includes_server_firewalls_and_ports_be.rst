@@ -10,9 +10,6 @@ For back-end servers in an |chef server| installation:
    * - Port
      - Service
      - External
-   * - 5984
-     - |service couchdb|
-     - yes
    * - 8983
      - |service solr4|
      - yes
