@@ -1,4 +1,4 @@
-.. revealjs:: First Slide!
+.. revealjs:: First Slide!      
 
    .. include:: ../../includes_slides/includes_slides.rst
 
@@ -9,7 +9,7 @@
 .. revealjs:: Ordered Lists
 
    .. include:: ../../includes_slides/includes_slides_lists_ordered.rst
-
+ 
 .. revealjs:: Unordered Lists
 
    .. include:: ../../includes_slides/includes_slides_lists_unordered.rst

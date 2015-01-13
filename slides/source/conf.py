@@ -124,7 +124,7 @@ html_theme_options = {
  "mouse_wheel": False,
  "rolling_links": True,
  "preview_links": False,
- "theme": "default",
+ "theme": "chef_slides",
  "transition": "default",
  "transition_speed": "default",
  "background_transition": "default",
