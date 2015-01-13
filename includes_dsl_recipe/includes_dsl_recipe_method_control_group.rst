@@ -12,7 +12,10 @@ The syntax for the ``control_group`` method is as follows:
        it "should do something" do
          expect(something).to/.to_not be_something
      end
-	 control ...
+     control "name" do
+       ...
+     end
+     ...
    end
 
 where:
