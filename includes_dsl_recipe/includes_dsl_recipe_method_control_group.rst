@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the ``control_group`` method to define a group of ``control`` methods that comprise a single audit. Each ``control_group`` object contains one (or more) ``control`` blocks. 
+Use the ``control_group`` method to define a group of ``control`` methods that comprise a single audit. 
 
 The syntax for the ``control_group`` method is as follows:
 
@@ -75,7 +75,7 @@ For example:
    
    end
 
-The ``control_group`` block is processed when the |chef client| run is run in |chef client_audit|. If the audit was successful, the |chef client| will return output similar to:
+The ``control_group`` block is processed when the |chef client| is run in |chef client_audit|. If the |chef client| run was successful, the |chef client| will return output similar to:
 
 .. code-block:: bash
 
@@ -93,7 +93,6 @@ The ``control_group`` block is processed when the |chef client| run is run in |c
      mysql config file
        should exist with correct permissions
        should contain required configuration
-
 
 If an audit was unsuccessful, the |chef client| will return output similar to:
 

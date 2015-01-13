@@ -14,11 +14,22 @@ The syntax for the ``control`` method is as follows:
 
 where:
 
-* ``control`` defines each individual audit. Ideally, each ``control`` block maps to a specific audit
-* Each ``control`` block must define at least one validation to perform. Validations are contained within an ``it`` block. Each ``it`` block is processed as an individual statement during the |chef client| run's audit mode phase and is shown individually in the output
-* An ``expect(something).to/.to_not be_something`` represents a statement that defines each individual test. These statements are defined using patterns similar to |rspec| matchers. For example, ``to``, ``to_not``, ``be``, and so on. For example, a test that expects the |postgresql| pacakge to not be installed would be similar to ``expect(package("postgresql")).to_not be_installed`` and a test that ensures a service is enabled would be similar to ``expect(service("init")).to be_enabled``. For more information about the types of statements that may be built, see the sections below for more information about file, package, and service matchers
+* ``control`` defines an audit
+* Each ``control`` block must define at least one validation
+* Each ``it`` statement defines a single validation. ``it`` statements are processed individually when the |chef client| is run in |chef client_audit|
+* An ``expect(something).to/.to_not be_something`` is a statement that represents the individual test. In other words, this statement tests if something is expected to be (or not be) something. For example, a test that expects the |postgresql| pacakge to not be installed would be similar to ``expect(package("postgresql")).to_not be_installed`` and a test that ensures a service is enabled would be similar to ``expect(service("init")).to be_enabled``
 
-For example:
+For example, a package is installed:
+
+.. code-block:: ruby
+   
+   control "mysql package" do
+     it "should be installed" do
+       expect(package("mysql")).to be_installed
+     end
+   end
+
+A package that is installed with a specific version:
 
 .. code-block:: ruby
    
@@ -28,7 +39,7 @@ For example:
      end
    end
 
-or:
+A package that is not installed:
 
 .. code-block:: ruby
    
@@ -38,7 +49,7 @@ or:
      end
    end
    
-or:
+A service that is enabled and running:
 
 .. code-block:: ruby
    
@@ -59,25 +70,6 @@ The ``control_group`` block is processed when the |chef client| run is run in |c
    Audit Mode
      mysql package
        should be installed
-
-or: 
-
-.. code-block:: bash
-
-   Audit Mode
-     postgres package
-       should not be installed
-
-or:
-
-.. code-block:: bash
-
-   Audit Mode
-     mysql service
-       should be enabled
-       should be running
-
-
 
 If an audit was unsuccessful, the |chef client| will return output similar to:
 
@@ -102,48 +94,3 @@ If an audit was unsuccessful, the |chef client| will return output similar to:
    Failed examples:
    
    rspec /var/chef/cache/cookbooks/grantmc/recipes/default.rb:21 # Audit Mode mysql package should be installed
-
-or:
-
-.. code-block:: bash
-
-   Starting audit phase
-   
-   Audit Mode
-     postgres package
-     should not be installed
-
-   2) Audit Mode mysql service should be enabled
-     Failure/Error: expect(mysql_service).to be_enabled
-       expected Service "mysql" to be enabled
-     # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:35:in 'block (3 levels) in from_file'
-
-   Finished in 0.5745 seconds (files took 0.46481 seconds to load)
-   8 examples, 7 failures
-   
-   Failed examples:
-
-   rspec /var/chef/cache/cookbooks/grantmc/recipes/default.rb:34 # Audit Mode mysql service should be enabled
-
-or:
-
-.. code-block:: bash
-
-   Starting audit phase
-   
-   Audit Mode
-     mysql service
-     should be enabled (FAILED - 2)
-     should be running (FAILED - 3)
-   
-   3) Audit Mode mysql service should be running
-      Failure/Error: expect(mysql_service).to be_running
-       expected Service "mysql" to be running
-     # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:38:in 'block (3 levels) in from_file'   
-   
-   Finished in 0.5745 seconds (files took 0.46481 seconds to load)
-   8 examples, 7 failures
-   
-   Failed examples:
-   
-   rspec /var/chef/cache/cookbooks/grantmc/recipes/default.rb:37 # Audit Mode mysql service should be running
