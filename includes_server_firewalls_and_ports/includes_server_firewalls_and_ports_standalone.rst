@@ -19,20 +19,8 @@ For a standalone |chef server| installation, and if host-based firewalls (iptabl
    * - 8000
      - |service erchef|
      - no
-   * - 5140
-     - |service certificate|
-     - no
-   * - 4369
-     - |service orgcreator|
-     - no
-   * - 9462
-     - |service webui|
-     - no
    * - 9090
      - |service ocid|
-     - no
-   * - 9465
-     - |service account|
      - no
    * - 9463
      - |service bifrost|

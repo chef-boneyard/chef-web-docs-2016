@@ -28,9 +28,6 @@ For back-end servers in an |chef server| installation:
    * - 4321
      - |service bookshelf|
      - yes
-   * - 4369
-     - |service orgcreator|
-     - no
    * - 7788-7799
      - |drbd| This port range must be open between all back end servers.
      - no

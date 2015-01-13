@@ -19,17 +19,8 @@ For front-end servers in an |chef server| installation:
    * - 8000
      - |service erchef|
      - no
-   * - 5140
-     - |service certificate|
-     - no
-   * - 9462
-     - |service webui|
-     - no
    * - 9090
      - |service ocid|
-     - no
-   * - 9465
-     - |service account|
      - no
    * - 9463
      - |service bifrost|
