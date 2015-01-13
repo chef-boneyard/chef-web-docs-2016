@@ -64,6 +64,10 @@ package Matcher
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_package.rst
 
+port Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_port.rst
+
 service Matcher
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_service.rst
