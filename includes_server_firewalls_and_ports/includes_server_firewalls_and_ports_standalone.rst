@@ -28,9 +28,6 @@ For a standalone |chef server| installation, and if host-based firewalls (iptabl
    * - 9680
      - |api chef server| internal LB port
      - no
-   * - 9685
-     - |service account| internal LB port
-     - no
    * - 9683
      - |service bifrost| internal LB port
      - no
@@ -38,7 +35,7 @@ For a standalone |chef server| installation, and if host-based firewalls (iptabl
      - |service couchdb|
      - no
    * - 8983
-     - |service solr|
+     - |service solr4|
      - no
    * - 5432
      - |service postgresql|

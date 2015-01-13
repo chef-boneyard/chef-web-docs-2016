@@ -24,7 +24,7 @@ For back-end servers in an |chef server| installation:
    * - 9683
      - |service nginx|
    * - 8983
-     - |service solr|
+     - |service solr4|
    * - 5432
      - |service postgresql|
    * - 5672

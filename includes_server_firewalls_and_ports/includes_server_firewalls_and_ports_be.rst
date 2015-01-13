@@ -14,7 +14,7 @@ For back-end servers in an |chef server| installation:
      - |service couchdb|
      - yes
    * - 8983
-     - |service solr|
+     - |service solr4|
      - yes
    * - 5432
      - |service postgresql|

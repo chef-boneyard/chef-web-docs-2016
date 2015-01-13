@@ -28,9 +28,6 @@ For front-end servers in an |chef server| installation:
    * - 9680
      - |api chef server| internal LB port
      - no
-   * - 9685
-     - |service account| internal LB port
-     - no
    * - 9683
      - |service bifrost| internal LB port
      - no
