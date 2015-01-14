@@ -1,4 +1,8 @@
-.. revealjs:: First Slide!      
+============
+Slide Deck 
+============
+
+.. revealjs:: First Slide!     
 
    .. include:: ../../includes_slides/includes_slides.rst
 
