@@ -6,6 +6,8 @@ High Availability: AWS
 
 .. include:: ../../includes_install/includes_install_server_ha_aws.rst
 
+.. image:: ../../images/chef_server_ha_aws.png
+
 Prerequisites
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_aws_pre.rst
