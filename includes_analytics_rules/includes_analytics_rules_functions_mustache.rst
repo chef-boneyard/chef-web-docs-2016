@@ -22,7 +22,7 @@ For example:
 
    rule "test_rule" on action 
      when
-	   true
-	 then
+       true
+     then
        set(#foo, mustache_template('Organization = {{message.organization_name}}.'))
    end

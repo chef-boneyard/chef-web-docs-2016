@@ -19,7 +19,7 @@ The syntax for a |chef analytics| rule is as follows:
        // comment
        function()
      end
-   	 
+   
      rule ...
        ...
      end

@@ -12,4 +12,4 @@ Use the ``then`` statement to specify what to do when a rule in the ``when`` sta
      set(#foo, "100")  
    end
 
-When the name matches ``app1``, ``#foo`` will be set to ``100``. 
+When the name matches ``app1``, ``#foo`` will be set to ``100``.
