@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title align="left">Slide Deck &mdash; Slide Deck</title>
+
+    
+
+    
+<link rel="stylesheet" href="_static/css/reveal.min.css">
+<link rel="stylesheet" href="_static/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="_static/lib/css/zenburn.css">
+<link rel="stylesheet" href="_static/revealjs.css" type="text/css" />
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if(window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '_static/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="_static/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides" align="left">
+        
+  <div class="section" id="slide-deck">
+<h1>Slide Deck<a class="headerlink" href="#slide-deck" title="Permalink to this headline">¶</a></h1>
+<section>
+<h2>First Slide!</h2>
+This is the main slide. Notice that the title of the slide isn&#8217;t in the actual slide itself, i.e. it&#8217;s not here, it&#8217;s in the slide map file.</section>
+<section>
+<h2>Text</h2>
+<p class="first">A paragraph is a series of sentences. You can <em>emphasize</em> strings, <strong>bold them</strong>, apply <tt class="docutils literal"><span class="pre">code</span> <span class="pre">5tr!ng+</span></tt>.</p>
+<p class="last">You can use whitespace within the slide to have more than one paragraph on a slide.</p>
+</section>
+<section>
+<h2>Ordered Lists</h2>
+<p class="first">This is an ordered list:</p>
+<ol class="last arabic simple">
+<li>first item</li>
+<li>second item</li>
+<li>third item</li>
+</ol>
+</section>
+<section>
+<h2>Unordered Lists</h2>
+<p class="first">This is an unordered list:</p>
+<ul class="last simple">
+<li>first item</li>
+<li>second item</li>
+<li>third item</li>
+</ul>
+</section>
+<section>
+<h2>Links</h2>
+<p class="first">There are two types of links:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">`linkName</span> <span class="pre">&lt;http://docs.chef.io/&gt;`__</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">:doc:`pageTitle</span> <span class="pre">&lt;/filename&gt;`</span></tt></li>
+</ul>
+<p class="last">The second one you probably don&#8217;t use too often, but in theory it will hyperlink to another slide in the slide deck.</p>
+</section>
+<section>
+<h2>Tables</h2>
+<table border="1" class="first last docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>thing 1</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
+</tr>
+<tr class="row-even"><td>thing 2</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
+</tr>
+<tr class="row-odd"><td>thing 3</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Code Blocks</h2>
+<p class="first">A code block shows a block of code (obviously). If Pygments is enabled for Sphinx, use the code-block directive to show colors applied. Use a double colon (<tt class="docutils literal"><span class="pre">::</span></tt>) to introduce the default code block. For example, Ruby code:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s2">&quot;foo&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and the same without the directive:</p>
+<div class="last highlight-python"><div class="highlight"><pre>package &quot;foo&quot; do
+  action :install
+end
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Images</h2>
+<p class="first">Still playing around with the images.</p>
+<img alt="_images/chef_overview.png" class="last" src="_images/chef_overview.png" />
+</section>
+<section>
+<h2>Pulling in some chef-docs</h2>
+<p class="first">The next series of slides are just pulling in random chef-docs topics. Mostly to see what they might look like and also to just show that it&#8217;s super-easy to reuse the chef-docs library in slide decks.</p>
+<ul class="simple">
+<li>Ohai resource</li>
+<li>chef-client command options</li>
+<li>examples of using resources (straight from chef-docs)</li>
+</ul>
+<p class="last">There are likely some formatting issues. But let&#8217;s identify them and then figure out how to make them go away in the places where reusability is extra important. For example, to reuse the command options, the entire approach had to be refactored, but once done 100% reuse.</p>
+</section>
+<section>
+<section class="first">
+<h2>Ohai Resource</h2>
+Use the <strong>ohai</strong> resource to reload the Ohai configuration on a node. This allows recipes that change system attributes (like a recipe that adds a user) to refer to those attributes later on during the chef-client run.</section>
+<section>
+<h2>Syntax</h2>
+<p class="first">The syntax for using the <strong>ohai</strong> resource in a recipe is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">ohai</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+  <span class="n">attribute</span> <span class="s2">&quot;value&quot;</span> <span class="c1"># see attributes section below</span>
+  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="n">action</span> <span class="ss">:action</span> <span class="c1"># see actions section below</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="last simple">
+<li><tt class="docutils literal"><span class="pre">ohai</span></tt> tells the chef-client to use the <tt class="docutils literal"><span class="pre">Chef::Provider::Ohai</span></tt> provider during the chef-client run</li>
+<li><tt class="docutils literal"><span class="pre">&quot;name&quot;</span></tt> is a friendly name for the action that is defined in the recipe</li>
+<li><tt class="docutils literal"><span class="pre">attribute</span></tt> is zero (or more) of the attributes that are available for this resource</li>
+<li><tt class="docutils literal"><span class="pre">:action</span></tt> identifies which steps the chef-client will take to bring the node into the desired state</li>
+</ul>
+</section>
+<section>
+<h2>Actions</h2>
+<p class="first">This resource has the following actions:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:reload</span></tt></td>
+<td>Default. Use to reload the Ohai configuration on a node.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Attributes</h2>
+<p class="first">This resource has the following attributes:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">name</span></tt></td>
+<td>Always the same value as the <tt class="docutils literal"><span class="pre">name</span></tt> of the resource block. (See &#8220;Syntax&#8221; section above for more information.)</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">plugin</span></tt></td>
+<td>Optional. The name of an Ohai plugin to be reloaded. If this attribute is not specified, the chef-client will reload all plugins.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">provider</span></tt></td>
+<td>Optional. Use to explicitly specify a provider. (See &#8220;Providers&#8221; section below for more information.)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="last">
+<h2>Examples</h2>
+<p class="first"><strong>Reload Ohai</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">ohai</span> <span class="s2">&quot;reload&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:reload</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Reload Ohai after a new user is created</strong></p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">ohai</span> <span class="s2">&quot;reload_passwd&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+  <span class="n">plugin</span> <span class="s2">&quot;etc&quot;</span>
+<span class="k">end</span>
+
+<span class="n">user</span> <span class="s2">&quot;daemonuser&quot;</span> <span class="k">do</span>
+  <span class="n">home</span> <span class="s2">&quot;/dev/null&quot;</span>
+  <span class="n">shell</span> <span class="s2">&quot;/sbin/nologin&quot;</span>
+  <span class="nb">system</span> <span class="kp">true</span>
+  <span class="n">notifies</span> <span class="ss">:reload</span><span class="p">,</span> <span class="s2">&quot;ohai[reload_passwd]&quot;</span><span class="p">,</span> <span class="ss">:immediately</span>
+<span class="k">end</span>
+
+<span class="n">ruby_block</span> <span class="s2">&quot;just an example&quot;</span> <span class="k">do</span>
+  <span class="n">block</span> <span class="k">do</span>
+    <span class="c1"># These variables will now have the new values</span>
+    <span class="nb">puts</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;etc&#39;</span><span class="o">][</span><span class="s1">&#39;passwd&#39;</span><span class="o">][</span><span class="s1">&#39;daemonuser&#39;</span><span class="o">][</span><span class="s1">&#39;uid&#39;</span><span class="o">]</span>
+    <span class="nb">puts</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;etc&#39;</span><span class="o">][</span><span class="s1">&#39;passwd&#39;</span><span class="o">][</span><span class="s1">&#39;daemonuser&#39;</span><span class="o">][</span><span class="s1">&#39;gid&#39;</span><span class="o">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section>
+<h2>Reusing chef-client options</h2>
+<p class="first">This command has the following syntax:</p>
+<div class="highlight-python"><div class="highlight"><pre>chef-client OPTION VALUE OPTION VALUE ...
+</pre></div>
+</div>
+<p>This command has the following options:</p>
+<dl class="last docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span></tt>, <tt class="docutils literal"><span class="pre">--fatal-windows-admin-check</span></tt></dt>
+<dd>Use to cause a chef-client run to fail when the chef-client does not have administrator privileges in Microsoft Windows.</dd>
+<dt><tt class="docutils literal"><span class="pre">--audit-mode</span> <span class="pre">MODE</span></tt></dt>
+<dd>Use to enable audit-mode. Set to <tt class="docutils literal"><span class="pre">audit-only</span></tt> to skip the converge phase of the chef-client run and only perform audits. Possible values: <tt class="docutils literal"><span class="pre">audit-only</span></tt>, <tt class="docutils literal"><span class="pre">disabled</span></tt>, and <tt class="docutils literal"><span class="pre">enabled</span></tt>. Default value: <tt class="docutils literal"><span class="pre">disabled</span></tt>.</dd>
+</dl>
+</section>
+<section>
+<h2>Example: package</h2>
+<p class="first">To install a package:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s2">&quot;tar&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Example: template</h2>
+<p class="first">A template helper module can be defined in a library. This is useful when extensions need to be reused across recipes or to make it easier to manage code that would otherwise be defined inline on a per-recipe basis.</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/path/to/template.erb&quot;</span> <span class="k">do</span>
+  <span class="n">helpers</span><span class="p">(</span><span class="no">MyHelperModule</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Example: service</h2>
+<div class="first last highlight-ruby"><div class="highlight"><pre><span class="n">service</span> <span class="s2">&quot;some_service&quot;</span> <span class="k">do</span>
+  <span class="n">provider</span> <span class="ss">Chef</span><span class="p">:</span><span class="ss">:Provider</span><span class="o">::</span><span class="ss">Service</span><span class="p">:</span><span class="ss">:Upstart</span>
+  <span class="n">supports</span> <span class="ss">:status</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">:restart</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">:reload</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+  <span class="n">action</span> <span class="o">[</span> <span class="ss">:enable</span><span class="p">,</span> <span class="ss">:start</span> <span class="o">]</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</section>
+</div>
+
+
+      </div>
+    </div>
+    
+<script src="_static/js/jquery.min.js"></script>
+<script src="_static/lib/js/head.min.js"></script>
+<script src="_static/js/reveal.min.js"></script>
+    <script>
+
+      // change DOM for reveal.js
+      $("div.section h1").remove();
+      var content = $("div.section").html();
+      $("div.section").remove();
+      $("div.slides").html(content);
+
+      Reveal.initialize({
+        width: 960,
+        height: 700,
+
+        margin: 0.3,
+
+        minScale: 0.2,
+        maxScale: 1.0,
+
+        controls: true,
+        progress: false,
+        history: false,
+        center: false,
+
+        keyboard : true,
+        overview: false,
+        touch: true,
+        loop: false,
+        rtl: false,
+        fragments: false,
+
+        autoSlide: 0,
+        mouseWheel: false,
+        rollingLinks: true,
+        previewLinks: false,
+
+        transitionSpeed: "default",
+        backgroundTransition: "default",
+
+        slideNumber: false,
+        embedded: false,
+        autoSlideStoppable: true,
+        hideAddressBar: true,
+
+        parallaxBackgroundImage: "",
+        parallaxBackgroundSize: "",
+
+        focusBodyOnPageVisiblityChange: true,
+
+        viewDistance: 3,
+
+        theme: Reveal.getQueryHash().theme || "chef_slides",
+        transition: Reveal.getQueryHash().transition || "default",
+
+        
+
+        dependencies: [
+           { src: '_static/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+           { src: '_static/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: '_static/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: '_static/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+           { src: '_static/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+           { src: '_static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+    
+  </body>
+</html>
