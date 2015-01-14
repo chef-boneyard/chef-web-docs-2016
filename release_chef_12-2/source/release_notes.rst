@@ -11,8 +11,8 @@ What's New
 The following items are new for |chef client| 12.2 and/or are changes from previous versions. The short version:
 
 * **chef-client may be run in audit-mode** Use |chef client_audit| to run audit tests against a node.
-* **control method added to Recipe DSL** Use the ``control`` method to define specific audits that match directories, files, packages, ports, and services.
-* **control_group method added to Recipe DSL** Use the ``control_group`` method to group multiple ``control`` methods into a single audit.
+* **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
+* **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
 
 control
 -----------------------------------------------------

@@ -1,20 +1,23 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the ``control`` method to define an audit.
+Use the ``control`` method to define a specific series of tests that comprise an individual audit. A ``control`` method must be contained within a ``control_group`` block. A ``control_group`` block may contain multiple ``control`` methods.
 
 The syntax for the ``control`` method is as follows:
 
 .. code-block:: ruby
 
-   control "name" do
-     it "should do something" do
-       expect(something).to/.to_not be_something
+   control_group "audit name" do
+     control "name" do
+       it "should do something" do
+         expect(something).to/.to_not be_something
+       end
      end
    end
 
 where:
 
+* ``control_group`` groups one (or more) ``control`` blocks
 * ``control`` defines an audit
 * Each ``control`` block must define at least one validation
 * Each ``it`` statement defines a single validation. ``it`` statements are processed individually when the |chef client| is run in |chef client_audit|
@@ -23,44 +26,52 @@ where:
 For example, a package is installed:
 
 .. code-block:: ruby
-   
-   control "mysql package" do
-     it "should be installed" do
-       expect(package("mysql")).to be_installed
+
+   control_group "audit name" do
+     control "mysql package" do
+       it "should be installed" do
+         expect(package("mysql")).to be_installed
+       end
      end
    end
 
 A package that is installed with a specific version:
 
 .. code-block:: ruby
-   
-   control "mysql package" do
-     it "should be installed" do
-       expect(package("mysql")).to be_installed.with_version("5.6")
+
+   control_group "audit name" do
+     control "mysql package" do
+       it "should be installed" do
+         expect(package("mysql")).to be_installed.with_version("5.6")
+       end
      end
    end
 
 A package that is not installed:
 
 .. code-block:: ruby
-   
-   control "postgres package" do
-     it "should not be installed" do
-       expect(package("postgresql")).to_not be_installed
+
+   control_group "audit name" do
+     control "postgres package" do
+       it "should not be installed" do
+         expect(package("postgresql")).to_not be_installed
+       end
      end
    end
-   
+
 A service that is enabled and running:
 
 .. code-block:: ruby
-   
-   control "mysql service" do
-     let(:mysql_service) { service("mysql") }
-     it "should be enabled" do
-       expect(mysql_service).to be_enabled
-     end
-     it "should be running" do
-       expect(mysql_service).to be_running
+
+   control_group "audit name" do
+     control "mysql service" do
+       let(:mysql_service) { service("mysql") }
+       it "should be enabled" do
+         expect(mysql_service).to be_enabled
+       end
+       it "should be running" do
+         expect(mysql_service).to be_running
+       end
      end
    end
 
