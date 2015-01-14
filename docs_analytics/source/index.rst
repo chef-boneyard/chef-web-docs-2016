@@ -21,9 +21,9 @@ Some features of |chef analytics| depend on functionality that exists in either 
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/12-2/dsl_recipe.html#controls">controls method in Recipe DSL</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/dsl_recipe.html">Audit methods in Recipe DSL</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/api_chef_server.html#authenticate-user">authenticate_user endpoint in Chef Server API</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/12-2/ctl_chef_client.html#options">Audit Mode for chef-client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/12-1/ctl_chef_client.html#options">Audit Mode for chef-client</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#rabbitmq">Three RabbitMQ settings in chef-server.rb</a> </br>   
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#oc-id">The oc-id service, which enables OAuth 2.0 authentication to the Chef server</a> </br>    
    
