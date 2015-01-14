@@ -130,7 +130,7 @@ Matchers are available for files and directories. Use this matcher to define aud
             expect(file("/etc/file")).to be_symlink
           end
    * - ``be_version``
-     - Use to test if a file is the specified version. For example:
+     - |windows| only. Use to test if a file is the specified version. For example:
        
        .. code-block:: ruby
        
