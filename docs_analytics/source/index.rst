@@ -19,6 +19,8 @@ All about |chef analytics_title| ...
 
 Some features of |chef analytics| depend on functionality that exists in either the |chef server| or the |chef client|. For now, these are links to pages about this functionality. Eventually, this content will be integrated into the |chef analytics| documentation:
 
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/12-2/dsl_recipe.html#controls">controls method in Recipe DSL</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/api_chef_server.html#authenticate-user">authenticate_user endpoint in Chef Server API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/12-2/ctl_chef_client.html#options">Audit Mode for chef-client</a> </br>
