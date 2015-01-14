@@ -39,7 +39,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **The path attribute is deprecated for the execute resource** Use the ``environment`` attribute instead.
 * **Attribute behavior changes** Please `see RFC-23 for important changes to attributes <https://github.com/opscode/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_ in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. In addition, ``node.default!`` is now ``node.force_default`` and ``node.override!`` is now ``node.force_override``.
 * **SSL certificate validation improvements** The default settings for |ssl| certificate validation now default in favor of validation. In addition, using the |subcommand knife ssl_fetch| command is now an important part of setting up your workstation.
-
+* **New attribute for git resource** The |resource git| resource has a new attribute: ``environment``, which takes a |ruby hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``.
 
 |ibm aix| Platform Support
 -----------------------------------------------------
@@ -444,6 +444,15 @@ The |subcommand knife search| subcommand allows filtering search results with a 
 |resource execute| Resource, ``path`` Attribute
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
+
+|resource git| Attributes
+-----------------------------------------------------
+The following attribute is new for the |resource git| resource:
+
+   * - ``environment``
+     - |environment variables|
+
+       .. note:: The |resource scm_git| provider automatically sets the ``ENV['HOME']`` and ``ENV['GIT_SSH']`` environment variables. To override this behavior and provide different values, add ``ENV['HOME']`` and/or ``ENV['GIT_SSH']`` to the ``environment`` |ruby hash|.
 
 Chef::Provider, Custom Resources
 -----------------------------------------------------
