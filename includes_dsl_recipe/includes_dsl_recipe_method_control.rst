@@ -90,7 +90,7 @@ If an audit was unsuccessful, the |chef client| will return output similar to:
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:22:in 'block (3 levels) in from_file'
    
    Finished in 0.5745 seconds (files took 0.46481 seconds to load)
-   8 examples, 7 failures
+   1 examples, 1 failures
    
    Failed examples:
    
