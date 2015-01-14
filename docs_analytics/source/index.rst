@@ -12,7 +12,7 @@ All about |chef analytics_title| ...
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/actions.html">Actions</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_rules.html">Rules</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_rules.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/dsl_recipe.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/api_analytics.html">Analytics API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/config_rb_analytics.html">opscode-analytics.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/ctl_analytics.html">opscode-analytics-ctl</a> </br> 
