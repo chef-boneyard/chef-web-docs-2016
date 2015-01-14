@@ -11,6 +11,7 @@ The syntax for the ``control_group`` method is as follows:
      control "name" do
        it "should do something" do
          expect(something).to/.to_not be_something
+       end
      end
      control "name" do
        ...
