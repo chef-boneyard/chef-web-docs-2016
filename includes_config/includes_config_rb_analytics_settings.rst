@@ -21,6 +21,8 @@ The following settings are typically added to the |analytics rb| file:
      - A list of organizations for which hipchat notifications will be published.
    * - ``nginx['ssl_protocols']``
      - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
+   * - ``ssl['cacert_file_path']``
+     - Use to specify the path to the ``cacert.pem`` file. Default value: ``"/opt/opscode-analytics/embedded/ssl/certs/cacert.pem"``.
    * - ``ssl['certificate']``
      - |ssl_certificate|
    * - ``ssl['certificate_key']``
