@@ -16,7 +16,7 @@ The following rule shows using a regular expression:
      rule on action
      when
        // match if the user_agent starts with the string "Chef Manage"
-       user_agent ~= "Chef Manage.*"
+       user_agent =~ "Chef Manage.*"
      then
        // if #useragent has been set before
        // this command will overwrite it's value
@@ -26,7 +26,7 @@ The following rule shows using a regular expression:
      rule on action
      when
        // match if the user_agent starts with the string "Chef Client"
-       user_agent ~= "Chef Client.*"
+       user_agent =~ "Chef Client.*"
      then
        set(#useragent, "Chef Client")
      end

@@ -23,7 +23,7 @@
 ..    rule(action) when
 ..      organization_name = "ponyville"
 ..      and (entity_type = "foo" or entity_type = "bar")
-..      and remote_hostname ~= "33\.3[0-9].*"
+..      and remote_hostname =~ "33\.3[0-9].*"
 ..    then
 ..      set value #foo = "100"
 ..      set value #xyz = "test"
