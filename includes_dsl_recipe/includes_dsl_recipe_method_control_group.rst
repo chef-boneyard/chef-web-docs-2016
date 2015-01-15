@@ -22,5 +22,5 @@ The syntax for the ``control_group`` method is as follows:
 where:
 
 * ``control_group`` groups one (or more) ``control`` blocks
-* ``"name"`` is the unique name for the ``control_group``
+* ``"name"`` is the unique name for the ``control_group``; the |chef client| will raise an exception if duplicate ``control_group`` names are present
 * ``control`` defines each individual audit within the ``control_group`` block. There is no limit to the number of ``control`` blocks that may defined within a ``control_group`` block
