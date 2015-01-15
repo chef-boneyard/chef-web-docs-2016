@@ -2,15 +2,26 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-When backing up |chef server| data, be sure that the system is shut down (or otherwise quiet) at the time of the backup. As the ``opscode-pgsql`` user, run the following command:
+When backing up |chef server| data, be sure that the system is shut down (or otherwise quiet) at the time of the backup.
+Perform all activities as root unless otherwise directed.
 
-.. code-block:: bash
+#. Make a postgres export using the following commands:
 
-   $ /opt/opscode/embedded/bin/pg_dumpall | gzip --fast > postgresql-dump.gz
+    .. code-block:: bash
+    
+      export THEDATE=`date '+%Y-%m-%d-%H-%M-%S'`
+      sudo -E -u opscode-pgsql bash
+      /opt/opscode/embedded/bin/pg_dumpall -c | gzip --fast > /tmp/postgresql-dump-$THEDATE.gz
+      Ctrl-d
 
-and then synchronize to make sure that all of the data is present on-disk:
+#. Synchronize to make sure that all of the data is present on-disk:
 
-.. code-block:: bash
+    .. code-block:: bash
 
-   $ sync
+      sync
 
+#. Backup the /etc/opscode and /var/opt/opscode directories and include the postgres export file as root
+
+    .. code-block:: bash
+
+      tar cvfzp var-opt-opscode-$THEDATE.tar.gz /etc/opscode /var/opt/opscode /tmp/postgresql-dump-$THEDATE.gz
