@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following rule sets, then uses a user-defined value:
+The following rule sets, and then uses a user-defined value:
 
 .. code-block:: java
 
@@ -24,6 +24,6 @@ The following rule sets, then uses a user-defined value:
        // test
        get(#foo, false) != false
      then
-       audit:info(#foo)
+       alert:info(#foo)
      end
    end

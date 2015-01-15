@@ -32,13 +32,13 @@ Functions
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions.rst
 
+alert:<level>()
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst
+
 array:contains()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_array.rst
-
-audit:<level>()
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst
 
 datetime:component()
 -----------------------------------------------------

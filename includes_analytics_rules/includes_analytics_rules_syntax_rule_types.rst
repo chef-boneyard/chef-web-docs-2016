@@ -88,7 +88,7 @@ For example:
        resource_name = '23'
        status != 'success'
      then
-       audit:error("PCI 2.3 - Encrypt all non-console administrative access such as browser/Web-based management tools.")
+       alert:error("PCI 2.3 - Encrypt all non-console administrative access such as browser/Web-based management tools.")
        notify("security-team@financialcore.com", "A machine is listening for connections on port 23!")
      end
    end

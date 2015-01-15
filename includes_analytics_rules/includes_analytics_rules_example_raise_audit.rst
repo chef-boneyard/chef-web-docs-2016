@@ -10,7 +10,7 @@ The following rule raises an audit when ``run_converge`` or ``run_control_group`
      when
        true
      then
-       audit:info("Run converge detected at {{ message.end_time }} ")
+       alert:info("Run converge detected at {{ message.end_time }} ")
      end
    
      rule on run_control_group
@@ -18,6 +18,6 @@ The following rule raises an audit when ``run_converge`` or ``run_control_group`
        true
      then
        // the run_control_group name will appear in double quotes
-       audit:info("Run control group \"{{ message.name }}\" detected")
+       alert:info("Run control group \"{{ message.name }}\" detected")
      end
    end

@@ -11,6 +11,6 @@ The following rule verifies if resources have been updated on a ``run_converge``
        total_resource_count > 1 and 
        updated_resource_count > 0
      then
-       audit:info("Run converge detected at {{ message.end_time }} ")
+       alert:info("Run converge detected at {{ message.end_time }} ")
      end
    end

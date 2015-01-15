@@ -2,13 +2,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``audit:<level>()`` to generate an audit.
+Use ``alert:<level>()`` to generate an audit.
 
 The syntax for this function:
 
 .. code-block:: ruby
 
-   audit:<level>(description)
+   alert:<level>(description)
 
 where:
 

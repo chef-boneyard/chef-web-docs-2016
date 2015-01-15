@@ -35,6 +35,6 @@ The following rule shows using a regular expression:
      when
        get(#useragent, false) != false
      then
-       audit:info("User agent {{#user_defined_values}} {{ #useragent }} {{/user_defined_values}} <--")
+       alert:info("User agent {{#user_defined_values}} {{ #useragent }} {{/user_defined_values}} <--")
      end
    end

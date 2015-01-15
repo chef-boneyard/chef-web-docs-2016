@@ -10,6 +10,6 @@ The following rule verfies if a specific role appears in a run-list:
      when
        array:contains(run_list, 'role[opscode-reporting]')
      then
-       audit:info("run_list contains role[opscode-reporting]")
+       alert:info("run_list contains role[opscode-reporting]")
      end
    end

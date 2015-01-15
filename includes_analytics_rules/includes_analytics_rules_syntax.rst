@@ -37,7 +37,7 @@ where:
 * ``when`` is a series of evaluations that result in ``true`` or ``false``
 * ``then`` is a comma-separated group of statements that are used to test data
 * ``otherwise`` is a comma-separated group of statements that are used to test data
-* ``function()`` is a statement that tests a value in the |json| object; functions may be one of ``array:contains()``, ``audit:<level>()``, ``datetime:component()``, ``get()``, ``log()``, or ``mustache_template()``. (See "Functions" below for more information about the individual functions.)
+* ``function()`` is a statement that tests a value in the |json| object; functions may be one of ``array:contains()``, ``alert:<level>()``, ``datetime:component()``, ``get()``, ``log()``, or ``mustache_template()``. (See "Functions" below for more information about the individual functions.)
 
 For example:
 
@@ -54,8 +54,8 @@ For example:
        set(#alert, 'can\'t deploy on Friday, Saturday, Sunday'), 
        // notify a configured alias
        notify("weekend_deploys"), 
-       // record an audit warning
-       audit:warn("deploy_error") 
+       // record an alert warning
+       alert:warn("deploy_error") 
      otherwise
        // set a user defined value if the rule doesn't match
        // reach into the 'data' json object and pull out it's 'name'
