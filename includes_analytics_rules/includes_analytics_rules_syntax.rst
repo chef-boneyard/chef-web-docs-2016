@@ -33,7 +33,7 @@ where:
 * ``rule`` defines an individual rule; each rule must be contained in its own ``rule`` block
 * ``with priority=n`` is a positive or negative integer that defines the relative priority of a rules group as compared to all other rules groups
 * ``"name"`` is name of the rule group and/or the name of the rule; required for ``rules``, optional for each ``rule``
-* ``message_type`` is one of the following audit message types: ``action``, ``run_control``, ``run_control_group``, ``run_converge``, ``run_resource``, or ``run_start``
+* ``message_type`` is one of the following: ``action``, ``run_control``, ``run_control_group``, ``run_converge``, ``run_resource``, or ``run_start``
 * ``when`` is a series of evaluations that result in ``true`` or ``false``
 * ``then`` is a comma-separated group of statements that are used to test data
 * ``otherwise`` is a comma-separated group of statements that are used to test data
