@@ -99,9 +99,16 @@ control_group
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
 
-**Examples**
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**control_group block with multiple control blocks**
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_many_controls.rst
+
+**Duplicate control_group names**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
 cookbook_name
 -----------------------------------------------------
