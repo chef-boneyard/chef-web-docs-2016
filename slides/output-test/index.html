@@ -43,7 +43,7 @@
 This is the main slide. Notice that the title of the slide isn&#8217;t in the actual slide itself, i.e. it&#8217;s not here, it&#8217;s in the slide map file.</section>
 <section>
 <h2>Text</h2>
-<p class="first">A paragraph is a series of sentences. You can <em>emphasize</em> strings, <strong>bold them</strong>, apply <tt class="docutils literal"><span class="pre">code</span> <span class="pre">5tr!ng+</span></tt>.</p>
+<p class="first">A paragraph is a series of sentences. You can <em>emphasize</em> strings, <strong>bold them</strong>, apply code <tt class="docutils literal"><span class="pre">5tr!ng+</span></tt>.</p>
 <p class="last">You can use whitespace within the slide to have more than one paragraph on a slide.</p>
 </section>
 <section>
@@ -66,12 +66,13 @@ This is the main slide. Notice that the title of the slide isn&#8217;t in the ac
 </section>
 <section>
 <h2>Links</h2>
-<p class="first">There are two types of links:</p>
+<p class="first">There are three types of links:</p>
 <ul class="simple">
+<li>Hardcoded, i.e. <a class="reference external" href="http://ampledata.org/splunk_storm_chef_handler.html">http://ampledata.org/splunk_storm_chef_handler.html</a></li>
 <li><tt class="docutils literal"><span class="pre">`linkName</span> <span class="pre">&lt;http://docs.chef.io/&gt;`__</span></tt></li>
 <li><tt class="docutils literal"><span class="pre">:doc:`pageTitle</span> <span class="pre">&lt;/filename&gt;`</span></tt></li>
 </ul>
-<p class="last">The second one you probably don&#8217;t use too often, but in theory it will hyperlink to another slide in the slide deck.</p>
+<p class="last">The hardcoded link is useful because viewers can write it down and/or print it out. The second one hides the actual URL and is good for inline linking in HTML files, which is good if the slides are available to everyone online. The third one probably isn&#8217;t used too often, if at all. But in theory it will hyperlink to another slide in the slide deck.</p>
 </section>
 <section>
 <h2>Tables</h2>
@@ -121,7 +122,7 @@ end
 <li>chef-client command options</li>
 <li>examples of using resources (straight from chef-docs)</li>
 </ul>
-<p class="last">There are likely some formatting issues. But let&#8217;s identify them and then figure out how to make them go away in the places where reusability is extra important. For example, to reuse the command options, the entire approach had to be refactored, but once done 100% reuse.</p>
+<p class="last">There are likely some formatting issues. But let&#8217;s identify them and then figure out how to make them go away in the places where reusability is extra important. For example, to reuse the command options, the entire approach had to be refactored to work as HTML and command output, but once done 100% reuse.</p>
 </section>
 <section>
 <section class="first">
@@ -264,6 +265,341 @@ Use the <strong>ohai</strong> resource to reload the Ohai configuration on a nod
 <span class="k">end</span>
 </pre></div>
 </div>
+</section>
+<section>
+<h2>Example Lessons</h2>
+The next series of slides that begins on the next horizontal slide shows a series of slides from the existing handlers intermediate training. These will go vertically and are just the first cut at seeing what they might look like in a slide deck.</section>
+<section>
+<section class="first">
+<h2>Lesson Objectives (Handlers)</h2>
+<p class="first">After completing this lesson, you will be able to</p>
+<ul class="last simple">
+<li>Describe Chef handlers</li>
+<li>Write custom report handlers</li>
+<li>Distribute handlers to nodes</li>
+<li>Configure Chef to use custom handlers</li>
+</ul>
+</section>
+<section>
+<h2>Handlers</h2>
+<p class="first">Handlers run at the start or end of a chef-client run</p>
+<p>They are Ruby programs that can read the status information of your chef-client run</p>
+<p>There are three types of handlers:</p>
+<ul class="last simple">
+<li>Report</li>
+<li>Exception</li>
+<li>Start</li>
+</ul>
+</section>
+<section>
+<h2>Report Handlers</h2>
+<p class="first">Report handlers are used when the chef-client run succeeds</p>
+<p>Runs when <tt class="docutils literal"><span class="pre">run_status.success?</span></tt> is true</p>
+<p>Community Examples:</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://ampledata.org/splunk_storm_chef_handler.html">http://ampledata.org/splunk_storm_chef_handler.html</a></li>
+<li><a class="reference external" href="http://onddo.github.io/chef-handler-zookeeper/">http://onddo.github.io/chef-handler-zookeeper/</a></li>
+<li><a class="reference external" href="https://github.com/realityforge/chef-graphite_handler">https://github.com/realityforge/chef-graphite_handler</a></li>
+</ul>
+</section>
+<section>
+<h2>Exception Handlers</h2>
+<p class="first">Exception handlers are used when the chef-client run fails</p>
+<p>Runs when <tt class="docutils literal"><span class="pre">run_status.failed?</span></tt> is true</p>
+<p>Community Examples:</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://github.com/morgoth/airbrake_handler">https://github.com/morgoth/airbrake_handler</a></li>
+<li><a class="reference external" href="https://github.com/jblaine/syslog_handler">https://github.com/jblaine/syslog_handler</a></li>
+<li><a class="reference external" href="http://onddo.github.io/chef-handler-sns/">http://onddo.github.io/chef-handler-sns/</a></li>
+</ul>
+</section>
+<section>
+<h2>Start Handlers</h2>
+<p class="first">Start handlers are used to run events at the beginning of the chef-client run</p>
+<p>Does not load the <strong>chef_handler</strong> resource</p>
+<p>Install start handlers using the <strong>chef_gem</strong> resource or add the <tt class="docutils literal"><span class="pre">start_handlers</span></tt> setting to the client.rb file.</p>
+<p class="last"><a class="reference external" href="https://github.com/opscode/chef-reporting">https://github.com/opscode/chef-reporting</a></p>
+</section>
+<section>
+<h2>Writing Custom Handlers</h2>
+<ul class="first last simple">
+<li>Use any ruby gem or library</li>
+<li>Distribute to nodes with the chef_handler or chef-client cookbooks</li>
+<li>Optionally configure through client.rb settings</li>
+</ul>
+</section>
+<section>
+<h2>Exercise: Download the chef_handler cookbook</h2>
+<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook site download chef_handler 1.1.6
+</pre></div>
+</div>
+<div class="last highlight-bash"><div class="highlight"><pre>Downloading chef_handler from the cookbooks site at version 1.1.6 to /Users/YOU/chef-repo/chef_handler-1.1.6.tar.gz
+
+Cookbook saved: /Users/YOU/chef-repo/chef_handler-1.1.6.tar.gz
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Exercise: Download the chef-client cookbook</h2>
+<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tar -zxvf chef_handler-1.1.6.tar.gz -C cookbooks/
+</pre></div>
+</div>
+<div class="last highlight-bash"><div class="highlight"><pre>x chef_handler/
+x chef_handler/CHANGELOG.md
+x chef_handler/README.md
+x chef_handler/attributes
+x chef_handler/attributes/default.rb
+x chef_handler/files
+x chef_handler/files/default
+x chef_handler/files/default/handlers
+x chef_handler/files/default/handlers/README
+x chef_handler/libraries
+x chef_handler/libraries/matchers.rb
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Exercise: Upload the chef_handler cookbook</h2>
+<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload chef_handler
+</pre></div>
+</div>
+<div class="last highlight-bash"><div class="highlight"><pre>Uploading chef_handler         <span class="o">[</span>1.1.6<span class="o">]</span>
+Uploaded 1 cookbook.
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Let’s Write a Handler</h2>
+<p class="first">We’re going to write a new handler that will email us when chef-client runs</p>
+<p>It will send us all of the resources that changed during the chef-client run</p>
+<p class="last"><a class="reference external" href="http://docs.chef.io/handlers.html">http://docs.chef.io/handlers.html</a></p>
+</section>
+<section>
+<h2>Library Cookbook Pattern</h2>
+<p class="first">We could modify the chef_handler cookbook to add a recipe for the email handler</p>
+<p>However, we&#8217;d basically be &#8220;forking&#8221; an upstream cookbook</p>
+<p>Instead, let&#8217;s create our own cookbook and use chef_handler as a &#8220;library&#8221;</p>
+<p class="last">Code reusability!</p>
+</section>
+<section>
+<h2>Exercise: Create a cookbook named ‘email_handler’</h2>
+<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook create email_handler
+</pre></div>
+</div>
+<div class="last highlight-bash"><div class="highlight"><pre>** Creating cookbook email_handler
+** Creating README <span class="k">for </span>cookbook: email_handler
+** Creating CHANGELOG <span class="k">for </span>cookbook: email_handler
+** Creating metadata <span class="k">for </span>cookbook: email_handler
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Exercise: Edit the default recipe</h2>
+<ol class="first last arabic">
+<li><p class="first">Open cookbooks/email_handler/recipes/default.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">chef_gem</span> <span class="s2">&quot;pony&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+
+<span class="n">include_recipe</span> <span class="s2">&quot;chef_handler&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+</section>
+<section>
+<h2>The chef_handler Resource</h2>
+<p class="first">chef_handler is a resource packaged with the chef_handler cookbook</p>
+<p>It has two actions: :enable and :disable</p>
+<p>It has three arguments:</p>
+<ul class="simple">
+<li>source - the file containing the handler code</li>
+<li>arguments - any pieces of information needed to initialize the handler</li>
+<li>supports - :report, :exception</li>
+</ul>
+<p>Defaults:</p>
+<ul class="last simple">
+<li>:enable</li>
+<li>:report =&gt; true, :exception =&gt; true</li>
+</ul>
+</section>
+<section>
+<h2>Exercise: Setup the handler</h2>
+<ol class="first last arabic">
+<li><p class="first">Open cookbooks/email_handler/recipes/default.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">cookbook_file</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;chef_handler&#39;</span><span class="o">][</span><span class="s1">&#39;handler_path&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/email_handler.rb&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;handlers/email_handler.rb&quot;</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="s2">&quot;0644&quot;</span>
+<span class="k">end</span>
+
+<span class="n">chef_handler</span> <span class="s2">&quot;MyCompany::EmailMe&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;chef_handler&#39;</span><span class="o">][</span><span class="s1">&#39;handler_path&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/email_handler.rb&quot;</span>
+  <span class="n">arguments</span> <span class="o">[</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;email_handler&#39;</span><span class="o">][</span><span class="s1">&#39;from_address&#39;</span><span class="o">]</span><span class="p">,</span>
+             <span class="n">node</span><span class="o">[</span><span class="s1">&#39;email_handler&#39;</span><span class="o">][</span><span class="s1">&#39;to_address&#39;</span><span class="o">]]</span>
+  <span class="n">action</span> <span class="ss">:enable</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+</section>
+<section>
+<h2>Exercise: Set the attributes</h2>
+<ol class="first last arabic">
+<li><p class="first">Open cookbooks/email_handler/attributes/default.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">[</span><span class="s1">&#39;email_handler&#39;</span><span class="o">][</span><span class="s1">&#39;from_address&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;chef@localhost&quot;</span>
+<span class="n">default</span><span class="o">[</span><span class="s1">&#39;email_handler&#39;</span><span class="o">][</span><span class="s1">&#39;to_address&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;chef@localhost&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+</section>
+<section>
+<h2>Exercise: Write the handler</h2>
+<ol class="first arabic">
+<li><p class="first">Open ../email_handler/files/default/handlers/email_handler.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;pony&#39;</span>
+
+<span class="k">module</span> <span class="nn">MyCompany</span>
+  <span class="k">class</span> <span class="nc">EmailMe</span> <span class="o">&lt;</span> <span class="ss">Chef</span><span class="p">:</span><span class="ss">:Handler</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+<ul class="last simple">
+<li>All custom exception and report handlers are defined using Ruby and must be a subclass of the Chef::Handler class.</li>
+<li>The module and class match what we defined as the name of the chef_handler in the recipe</li>
+</ul>
+</section>
+<section>
+<h2>The initialize Method</h2>
+<ol class="first arabic">
+<li><p class="first">Open ../email_handler/files/default/handlers/email_handler.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">class</span> <span class="nc">EmailMe</span> <span class="o">&lt;</span> <span class="ss">Chef</span><span class="p">:</span><span class="ss">:Handler</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">from_address</span><span class="p">,</span> <span class="n">to_address</span><span class="p">)</span>
+    <span class="vi">@from_address</span> <span class="o">=</span> <span class="n">from_address</span>
+    <span class="vi">@to_address</span> <span class="o">=</span> <span class="n">to_address</span>
+  <span class="k">end</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+<ul class="last simple">
+<li>Initialize the handler with the arguments we passed in the definition</li>
+<li>You can create the method with any args you need to meet your requirements</li>
+</ul>
+</section>
+<section>
+<h2>The report Method</h2>
+<ol class="first arabic">
+<li><p class="first">Open ../email_handler/files/default/handlers/email_handler.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="vi">@to_address</span> <span class="o">=</span> <span class="n">to_address</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">report</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">success?</span> <span class="p">?</span> <span class="s2">&quot;Successful&quot;</span> <span class="p">:</span> <span class="s2">&quot;Failed&quot;</span>
+    <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">status</span><span class="si">}</span><span class="s2"> Chef run report from </span><span class="si">#{</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="n">report_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+<ul class="last simple">
+<li>The report interface is used to define how a handler will behave and is a required part of any custom handler</li>
+</ul>
+</section>
+<section>
+<h2>The updated_resources Hash</h2>
+<ol class="first arabic">
+<li><p class="first">Open ../email_handler/files/default/handlers/email_handler.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># report on changed resources</span>
+<span class="k">if</span> <span class="o">!</span> <span class="n">run_status</span><span class="o">.</span><span class="n">updated_resources</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="c1"># get some info about all the changed resources!</span>
+  <span class="n">run_status</span><span class="o">.</span><span class="n">updated_resources</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">r</span><span class="o">|</span>
+    <span class="n">report_string</span> <span class="o">+=</span> <span class="s2">&quot;The resource </span><span class="si">#{</span><span class="n">r</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> was changed in cookbook</span>
+<span class="s2">                      </span><span class="si">#{</span><span class="n">r</span><span class="o">.</span><span class="n">cookbook_name</span><span class="si">}</span><span class="s2"> at </span><span class="si">#{</span><span class="n">r</span><span class="o">.</span><span class="n">source_line</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+  <span class="k">else</span>
+    <span class="n">report_string</span> <span class="o">+=</span> <span class="s2">&quot;No resources changed by chef-client</span><span class="se">\n</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+<ul class="last simple">
+<li>updated_resources records information about all the resources changed during a chef-client run</li>
+<li>read through this hash with .each, pull interesting information out about each resource</li>
+</ul>
+</section>
+<section>
+<h2>Exercise: Finish email_handler.rb</h2>
+<ol class="first arabic">
+<li><p class="first">Open ../email_handler/files/default/handlers/email_handler.rb</p>
+</li>
+<li><p class="first">Add:</p>
+<div class="highlight-ruby"><div class="highlight"><pre>    <span class="n">report_string</span> <span class="o">+=</span> <span class="s2">&quot;No resources changed by chef-client</span><span class="se">\n</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+
+      <span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span><span class="ss">:to</span> <span class="o">=&gt;</span> <span class="vi">@to_address</span><span class="p">,</span>
+                <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="vi">@from_address</span><span class="p">,</span>
+                <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="n">subject</span><span class="p">,</span>
+                <span class="ss">:body</span> <span class="o">=&gt;</span> <span class="n">report_string</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file.</p>
+</li>
+</ol>
+<ul class="last simple">
+<li>Use Pony.mail to send a message containing info on changed resources</li>
+</ul>
+</section>
+<section class="last">
+<h2>Other Dependencies</h2>
+<ul class="first last simple">
+<li>Make sure all necessary functions are available!</li>
+<li>Some sort of mail transfer agent (MTA)</li>
+<li>Some sort of email reader (MUA)</li>
+<li>These are distinct functional pieces</li>
+<li>May have uses other than the handler</li>
+<li>Get to be their own cookbooks!</li>
+</ul>
+</section>
 </section>
 </div>
 
