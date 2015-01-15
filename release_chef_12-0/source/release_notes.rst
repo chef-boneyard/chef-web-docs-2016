@@ -445,9 +445,9 @@ The |subcommand knife search| subcommand allows filtering search results with a 
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
 
-|resource git| Attributes
+|resource scm_git| Attributes
 -----------------------------------------------------
-The following attribute is new for the |resource git| resource:
+The following attribute is new for the |resource scm_git| resource:
 
    * - ``environment``
      - |environment variables|
