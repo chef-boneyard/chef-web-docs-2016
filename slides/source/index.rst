@@ -42,7 +42,7 @@ Slide Deck
    * chef-client command options
    * examples of using resources (straight from chef-docs)
    
-   There are likely some formatting issues. But let's identify them and then figure out how to make them go away in the places where reusability is extra important. For example, to reuse the command options, the entire approach had to be refactored, but once done 100% reuse.
+   There are likely some formatting issues. But let's identify them and then figure out how to make them go away in the places where reusability is extra important. For example, to reuse the command options, the entire approach had to be refactored to work as HTML and command output, but once done 100% reuse.
 
 .. revealjs::
 
