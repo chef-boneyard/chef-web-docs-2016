@@ -6,7 +6,7 @@ When backing up |chef server| data, be sure that the system is shut down (or oth
 
 .. code-block:: bash
 
-   $ /opt/opscode/embedded/bin/pg_dumpall -c | gzip --fast > postgresql-dump.gz
+   $ /opt/opscode/embedded/bin/pg_dumpall | gzip --fast > postgresql-dump.gz
 
 and then synchronize to make sure that all of the data is present on-disk:
 
