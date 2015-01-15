@@ -13,8 +13,8 @@ This resource has the following actions:
      - Use to converge a machine.
    * - ``:create``
      - Default. Use to create a machine.
-   * - ``:delete``
-     - Use to delete a machine.
+   * - ``:destroy``
+     - Use to destroy a machine.
    * - ``:nothing``
      - Use to do nothing.
    * - ``:stop``
