@@ -34,7 +34,7 @@ Functions
 
 alert:<level>()
 -----------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_get.rst
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_audit.rst
 
 array:contains()
 -----------------------------------------------------
