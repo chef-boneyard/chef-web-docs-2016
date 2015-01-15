@@ -92,7 +92,7 @@ Slide Deck
 
 .. revealjs:: Example Lessons
 
-   The next series of slides that begins on the next horizontal slide shows a series of slides from the existing handlers intermediate training. These will go vertically and are just the first cut at seeing what they might look like in a slide deck.
+   The next series of slides that begins on the next horizontal slide shows a series of slides from the existing handlers intermediate training. These will go vertically and are just the first cut at seeing what they might look like in a slide deck. 
 
 .. revealjs::
 
