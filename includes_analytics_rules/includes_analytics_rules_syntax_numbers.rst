@@ -53,23 +53,15 @@ or:
 
    -999999.000123
 
+For example:
 
-Examples are:
+.. code-block:: bash
 
-
-
-
-
-Here's an example rule group containing an integer:
-
-rules "Match control groups with failures"
-  rule on run control group
-  when
-    name = 'mysql audit' and number_failed > 0
-  then
-     audit:error('Control group failures detected')
-  end
-end
-Numbers can be compared with the following operators:
-
-
+   rules "Match control groups with failures"
+     rule on run control group
+       when
+         name = 'mysql audit' and number_failed > 0
+       then
+         audit:error('Control group failures detected')
+     end
+   end
