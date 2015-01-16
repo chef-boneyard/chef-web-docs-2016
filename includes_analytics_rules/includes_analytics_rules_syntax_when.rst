@@ -22,7 +22,7 @@ Use ``when`` to define an expression. Multiple expressions may be joined using `
      - |ruby greater_optimistic|
    * - ``<=``
      - |ruby less_or_equal|
-   * - ``~>``
+   * - ``=~``
      - a regular expression
    * - ``not``
      - negates the expression

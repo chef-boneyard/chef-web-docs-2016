@@ -38,6 +38,9 @@ where:
 * ``then`` is a comma-separated group of statements that are used to test data
 * ``otherwise`` is a comma-separated group of statements that are used to test data
 * ``function()`` is a statement that tests a value in the |json| object; functions may be one of ``array:contains()``, ``alert:<level>()``, ``datetime:component()``, ``get()``, ``log()``, or ``mustache_template()``. (See "Functions" below for more information about the individual functions.)
+* A comment starts with two forward slashes--``//``---and continues to the end of the line on which the comment begins
+* Whitespace is ignored by the rules parser unless it contained within single- or double-quoted strings. For example, the parser will preserve the white space in ``'white space'`` and ``"white space"``
+
 
 For example:
 
