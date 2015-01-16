@@ -98,7 +98,7 @@ Some more complex ways to debug issues with a |chef client| run include:
 * Using the ``ignore_failure`` method in a recipe to force the |chef client| to move past an error to see what else is going on in the recipe, outside of a known failure
 * Using |chef solo| to run targeted |chef client| runs for specific scenarios
 
-chef_hander
+chef_handler
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler.rst
 
