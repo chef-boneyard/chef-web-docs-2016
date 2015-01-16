@@ -8,6 +8,30 @@ Syntax
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst
 
+Comments
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_comments.rst
+
+Whitespace
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_whitespace.rst
+
+Strings
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_strings.rst
+
+Numbers
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_numbers.rst
+
+Regular Expressions
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_regex.rst
+
+Nested Fields, Arrays
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_nested.rst
+
 with priority
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_priority.rst
