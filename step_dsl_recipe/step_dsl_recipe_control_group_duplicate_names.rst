@@ -12,6 +12,7 @@ If two ``control_group`` blocks have the same name, the |chef client| will raise
    end
 
 .. code-block:: ruby
+
    control_group "basic control group" do
      it "should pass" do
        expect(3 - 2).to eq(1)
