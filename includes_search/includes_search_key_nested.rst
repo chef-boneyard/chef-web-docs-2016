@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A nested key is a key that appears deeper in the |json| data structure. For example, information about a network interface might be several layers deep: ``node[:network][:interfaces][:en1]``. When nested keys are present in a |json| structure, the |chef client| will extract those nested fields to the top-level, flattening them into compound keys that support wildcard search patterns.
+A nested field appears deeper in the |json| data structure. For example, information about a network interface might be several layers deep: ``node[:network][:interfaces][:en1]``. When nested fields are present in a |json| structure, the |chef client| will extract those nested fields to the top-level, flattening them into compound fields that support wildcard search patterns.
 
 By combining wildcards with range-matching patterns and wildcard queries, it is possible to perform very powerful searches, such as using the vendor part of the MAC address to find every node that has a network card made by the specified vendor.
 
@@ -88,7 +88,7 @@ or:
 
    $ knife search node "flags:UP"
 
-This data is also flattened into various compound keys, which follow the same pattern as the |json| hierarchy and use underscores (``_``) to separate the levels of data, similar to:
+This data is also flattened into various compound fields, which follow the same pattern as the |json| hierarchy and use underscores (``_``) to separate the levels of data, similar to:
 
 .. code-block:: javascript
 
@@ -104,7 +104,7 @@ which allows searches like the following to find data that is present in this no
 
    $ knife search node "network_interfaces_en1_addresses:192.168.0.195"
 
-This flattened data structure also supports using wildcard compound keys, which allow searches to omit levels within the |json| data structure that are not important to the search query. In the following example, an asterisk (``*``) is used to show where the wildcard can exist when searching for nested key:
+This flattened data structure also supports using wildcard compound fields, which allow searches to omit levels within the |json| data structure that are not important to the search query. In the following example, an asterisk (``*``) is used to show where the wildcard can exist when searching for a nested field:
 
 .. code-block:: ruby
 
