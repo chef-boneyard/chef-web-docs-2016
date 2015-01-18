@@ -62,7 +62,7 @@ This command has the following options:
    |validation_key| Default value: ``/etc/chef/validation.pem``.
 
 ``-l LEVEL``, ``--log-level LEVEL``
-   |log_level|
+   |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. Default value: ``warn`` (when a terminal is available) or ``info`` (when a terminal is not available).
 
 ``-L LOGLOCATION``, ``--logfile c``
    |log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``.

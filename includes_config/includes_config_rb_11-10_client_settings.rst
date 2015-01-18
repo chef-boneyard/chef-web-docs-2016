@@ -251,7 +251,7 @@ This configuration file has the following settings:
 
           lockfile nil
    * - ``log_level``
-     - |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. For example:
+     - |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. Default value: ``warn`` (when a terminal is available) or ``info`` (when a terminal is not available). For example:
 
        .. code-block:: ruby
 

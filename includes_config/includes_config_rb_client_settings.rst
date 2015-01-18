@@ -106,7 +106,7 @@ This configuration file has the following settings:
    * - ``lockfile``
      - |lockfile|
    * - ``log_level``
-     - |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``.
+     - |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. Default value: ``warn`` (when a terminal is available) or ``info`` (when a terminal is not available).
    * - ``log_location``
      - |log_location| Default value: ``STDOUT``.
    * - ``no_lazy_load``
