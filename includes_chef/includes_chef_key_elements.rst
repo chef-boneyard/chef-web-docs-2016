@@ -19,7 +19,7 @@
    * - .. image:: ../../images/icon_big_chef_manager.png
      - The |chef manage| is used to manage objects that are stored on the |chef server|, including data bags, attributes, run-lists, roles, environments, and cookbooks. Additionally, reports are views into what happened during every |chef client| run that has occurred across all of the nodes that are under management by |chef|.
    * - .. image:: ../../images/icon_big_chef_analytics.png
-     - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Details are tracked by the |che client| during the |chef client| run, routed through the |chef server|, and are made visible by reports and |chef analytics|.
+     - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Details are tracked by the |chef client| during the |chef client| run, routed through the |chef server|, and are made visible by reports and |chef analytics|.
    * - .. image:: ../../images/icon_big_chef_ha.png
      - Availability supports out-of-the-box and custom high availability scenarios, plus server replication from a |chef server| master to any number of replica instances of the |chef server|.
    * - .. image:: ../../images/icon_big_chef_supermarket.png
