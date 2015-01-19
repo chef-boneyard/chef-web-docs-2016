@@ -8,3 +8,8 @@ This subcommand has the following syntax:
 .. code-block:: bash
 
    $ chef-server-ctl org-create ORG_NAME ORG_FULL_NAME (options)
+
+where:
+
+* |name_rules org| For example: ``chef``.
+* |name_rules org_full| For example: ``Chef Software, Inc.``.
