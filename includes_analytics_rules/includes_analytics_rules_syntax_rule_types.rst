@@ -34,7 +34,7 @@ where:
      * - ``action``
        - Use to build rules for messages about actions that occur on the |chef server|.
      * - ``run_control``
-       - Use to build rules for a group of audits to be evaluated.
+       - Use to build rules for a single audit to be evaluated.
      * - ``run_control_group``
        - Use to build rules for a group of audits to be evaluated.
      * - ``run_converge``
