@@ -8,6 +8,8 @@ The following methods are `part of the Recipe DSL <http://docs.chef.io/dsl_recip
 
 control
 =====================================================
+.. include:: ../../includes_analytics/includes_analytics_controls.rst
+
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
 
 directory Matcher

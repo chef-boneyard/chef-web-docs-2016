@@ -16,6 +16,8 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 
 control
 -----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_controls.rst
+
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
 
 directory Matcher
