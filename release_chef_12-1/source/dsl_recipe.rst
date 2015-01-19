@@ -1,4 +1,4 @@
-.. THIS PAGE DOCUMENTS chef-client version 12.2
+.. THIS PAGE DOCUMENTS chef-client version 12.1
 
 =====================================================
 About the Recipe DSL
