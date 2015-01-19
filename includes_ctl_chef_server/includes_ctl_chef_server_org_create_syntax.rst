@@ -12,4 +12,4 @@ This subcommand has the following syntax:
 where:
 
 * |name_rules org| For example: ``chef``.
-* |name_rules org_full| For example: ``Chef Software, Inc.``.
+* |name_rules org_full| For example: ``"Chef Software, Inc."``.

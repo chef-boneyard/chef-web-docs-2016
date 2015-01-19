@@ -236,7 +236,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    |name_rules org| For example: ``chef``.
 
-   |name_rules org_full| For example: ``Chef Software, Inc.``.
+   |name_rules org_full| For example: ``"Chef Software, Inc."``.
 
    .. note:: The upgrade process will automatically assign the organization name to the ``default_orgname`` setting in the |chef server rb| file. This setting ensures the new organization name is available for |api chef server| requests, such as those made by the |chef client| and by |knife|.
 
