@@ -14,7 +14,16 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
 
-control
+|chef client|, |chef client_audit|
+-----------------------------------------------------
+.. include:: ../../includes_chef_client/includes_chef_client_audit_mode.rst
+
+Use following option to run the |chef client| in |chef client_audit| mode:
+
+``--audit-mode MODE``
+   |audit_mode| Default value: ``disabled``.
+
+``control``
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_controls.rst
 
@@ -63,7 +72,7 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_sshd_configuration.rst
 
-control_group
+``control_group``
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
 
@@ -78,12 +87,6 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
-|chef client| Options
------------------------------------------------------
-The following options are added to the |chef client| executable:
-
-``--audit-mode MODE``
-   |audit_mode| Default value: ``disabled``.
 
 Changelog
 =====================================================
