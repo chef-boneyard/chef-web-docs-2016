@@ -17,12 +17,37 @@ The following diagram shows the relationships between the various elements of |c
 
    * - Feature
      - Description
+   * - Controls
+     - .. include:: ../../includes_analytics/includes_analytics_controls.rst
+   * - Audit Mode
+     - .. include:: ../../includes_chef_client/includes_chef_client_audit_mode.rst
    * - |chef actions_title|
      - .. include:: ../../includes_actions/includes_actions.rst
    * - |reporting_title|
      - .. include:: ../../includes_reporting/includes_reporting.rst
    * - |rules_analytics_title|
      - .. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
-   * - Controls
-     - .. include:: ../../includes_analytics/includes_analytics_controls.rst
+
+The following sections discuss these elements (and their various components) in more detail.
+
+
+Controls
+=====================================================
+.. include:: ../../includes_analytics/includes_analytics_controls.rst
+
+Audit Mode
+=====================================================
+.. include:: ../../includes_chef_client/includes_chef_client_audit_mode.rst
+
+|reporting_title|
+=====================================================
+.. include:: ../../includes_reporting/includes_reporting.rst
+
+|rules_analytics_title|
+=====================================================
+.. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
+
+|chef actions_title|
+=====================================================
+.. include:: ../../includes_actions/includes_actions.rst
 
