@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|chef| is comprised of the following:
+|chef| has the following major components:
 
 .. list-table::
    :widths: 100 400
