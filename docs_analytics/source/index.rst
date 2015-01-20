@@ -4,29 +4,51 @@
 All about |chef analytics_title| ... 
 =====================================================
 
+.. include:: ../../includes_chef/includes_chef_index.rst
+
 .. include:: ../../includes_analytics/includes_analytics.rst
+
+View the :doc:`release notes </release_notes>` for the current version of |chef analytics|.
+
+Getting Started
+=====================================================
+The :doc:`Chef analytics platform </analytics>` provides real-time visibility into what is happening on the |chef server|, including :doc:`what's changing </dsl_recipe>`, :doc:`who made those changes </actions>`, and :doc:`when they occurred </reporting>`. Individuals may be :doc:`notified of these changes in real-time </analytics_rules>`. Use this visibility to verify compliance against internal controls.
+
+If you are new to |chef|, familiarize yourself with the other core components: :doc:`the server, workstations, and nodes </chef_overview>`. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.chef.io/client/>`_. For more information about the server, see `documentation for the Chef server <http://docs.chef.io/server/>`_
+
+Install, Upgrade
+=====================================================
+The |chef server| can be installed on new hardware. Existing |chef server oec| and |chef server osc| configurations may be upgraded to |chef server| 12.
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/install_analytics.html">Install Analytics</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/install_analytics.html#standalone-version-1-1">Install Analytics 1.1 as Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/install_analytics.html#tiered-version-1-1-only">Install Analytics 1.1 as Tiered</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/upgrade_analytics.html">Upgrade from Analytics 1.0.4</a> </br>
+
+Features
+=====================================================
+The following features are part of the |chef analytics| platform:
+
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/actions.html">Actions</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_rules.html">Rules</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/dsl_recipe.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/reporting.html">Reporting</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
+
+Reference
+=====================================================
+This section contains links to topics about configuration files, command-line tools, and APIs that are used by the |chef analytics| platform.
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/api_analytics.html">Analytics API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/config_rb_analytics.html">opscode-analytics.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/ctl_analytics.html">opscode-analytics-ctl</a> </br> 
-
-Some features of |chef analytics| depend on functionality that exists in either the |chef server| or the |chef client|. For now, these are links to pages about this functionality. Eventually, this content will be integrated into the |chef analytics| documentation:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/dsl_recipe.html">Audit methods in Recipe DSL</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/api_chef_server.html#authenticate-user">authenticate_user endpoint in Chef Server API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/12-1/ctl_chef_client.html#options">Audit Mode for chef-client</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#rabbitmq">Three RabbitMQ settings in chef-server.rb</a> </br>   
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#oc-id">The oc-id service, which enables OAuth 2.0 authentication to the Chef server</a> </br>    
-   
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#rabbitmq">RabbitMQ settings in chef-server.rb</a> </br>   
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#oc-id">OAuth 2.0 authentication to the Chef server</a> </br>    
 
 .. Hide the TOC from this file.
 
@@ -44,3 +66,5 @@ Some features of |chef analytics| depend on functionality that exists in either 
    install_analytics
    install_server_pre
    release_notes
+   reporting
+   upgrade_analytics
