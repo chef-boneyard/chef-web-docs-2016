@@ -12,9 +12,10 @@ The following items are new for |chef analytics| 1.1 and/or are changes from pre
 
 * **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
 * **Actions** Use |chef actions| to view changes made to each node object, the run history for all nodes, the history of every cookbook (and cookbook version), how and where policy settings---roles, environments, and data bags---are applied, and which users made which changes.
+* **Reporting 1.2.2** |reporting| should be upgraded to version 1.2.2 for full funcationality with the |chef analytics| 1.1 release.
 * **oc-id service** The |service ocid| service enables |oauth| 2.0 authentication to the |chef server| by |chef analytics|.
 
-In addition, the following functionality is available in |chef client| 12.1 to support building audit tests and running the |chef client| in |chef client_audit|:
+In addition, the following functionality is available in |chef client| 12.2.0.alpha.0 to support building audit tests and running the |chef client| in |chef client_audit|:
 
 * **chef-client may be run in audit-mode** Use |chef client_audit| to run audit tests against a node.
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
