@@ -42,6 +42,8 @@ Reference
 =====================================================
 This section contains links to topics about configuration files, command-line tools, and APIs that are used by the |chef analytics| platform.
 
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/api_analytics.html">Analytics API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/config_rb_analytics.html">opscode-analytics.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/ctl_analytics.html">opscode-analytics-ctl</a> </br> 
