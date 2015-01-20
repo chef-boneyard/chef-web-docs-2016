@@ -74,7 +74,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          source_url "https://github.com/opscode-cookbooks/chef-client/issues"
+          issues_url "https://github.com/opscode-cookbooks/chef-client/issues"
 
    * - ``license``
      - |license metadata_rb| For example:
