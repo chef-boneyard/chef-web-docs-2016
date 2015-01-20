@@ -14,7 +14,7 @@ As events occur on the |chef server|, the following happens:
 
    * - Stages
      - Description
-   * - **Erchef**
+   * - **Chef Server**
      - |chef actions| tracks all interactions from users (via |knife| and/or the |chef manage| web user interface), the |chef client| (via API calls to the |chef server| during the |chef client| run), cookbooks that are uploaded to the server, downloaded to individual nodes, the actions the |chef client| takes on each node during the |chef client| run).
    * - **WebUI**
      - The web user interface for |chef actions|. It provides visibility into every action tracked by |chef actions|, allows searching of the actions data store, and can be used to generate reports (CSV files, send emails, and so on).
