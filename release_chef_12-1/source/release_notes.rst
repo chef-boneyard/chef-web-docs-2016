@@ -29,6 +29,8 @@ Use following option to run the |chef client| in |chef client_audit| mode:
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
 
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_syntax.rst
+
 directory Matcher
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_directory.rst
@@ -75,6 +77,8 @@ Examples
 ``control_group``
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group_syntax.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
