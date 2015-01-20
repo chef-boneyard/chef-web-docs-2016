@@ -8,6 +8,8 @@ The |chef server_title|
 
 .. note:: |chef server| 12 is the new |chef server|! The documentation for `Open Source Chef <http://docs.chef.io/open_source/>`_ and `Enterprise Chef <http://docs.chef.io/enterprise/>`_ is still available.
 
+View the :doc:`release notes </release_notes>` for the current version of the |chef server|.
+
 Getting Started
 =====================================================
 If you are new to |chef|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes </chef_overview>`. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.chef.io/client/>`_.
