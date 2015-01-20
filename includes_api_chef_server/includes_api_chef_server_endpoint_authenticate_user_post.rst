@@ -17,7 +17,7 @@ with a request body similar to:
 
    {
      "username" : "grantmc"
-	 "password" : "p@ssw0rd"
+     "password" : "p@ssw0rd"
    }
 
 **Response**
