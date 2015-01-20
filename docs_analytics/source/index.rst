@@ -14,7 +14,7 @@ Getting Started
 =====================================================
 The :doc:`Chef analytics platform </analytics>` provides real-time visibility into what is happening on the |chef server|, including :doc:`what's changing </dsl_recipe>`, :doc:`who made those changes </actions>`, and :doc:`when they occurred </reporting>`. Individuals may be :doc:`notified of these changes in real-time </analytics_rules>`. Use this visibility to verify compliance against internal controls.
 
-If you are new to |chef|, familiarize yourself with the other core components: :doc:`the server, workstations, and nodes </chef_overview>`. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.chef.io/client/>`_. For more information about the server, see `documentation for the Chef server <http://docs.chef.io/server/>`_
+If you are new to |chef|, familiarize yourself with the other core components: `the server, workstations, and nodes <http://docs.chef.io/chef_overview.html>`_. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.chef.io/client/>`_. For more information about the server, see `documentation for the Chef server <http://docs.chef.io/server/>`_
 
 Install, Upgrade
 =====================================================
