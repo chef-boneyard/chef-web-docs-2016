@@ -76,15 +76,14 @@ The server acts as a repository for all of the data that may be needed by the |c
 * The |chef server| provides :doc:`powerful search </chef_search>` functionality
 
 |chef analytics_title|
------------------------------------------------------
-:doc:`Chef Analytics </analytics>` is an add-on for the |chef server| that provides visibility into what is happening on the server. It runs on separate hardware from the |chef server| and consists of several components, initially built around :doc:`Chef Actions </actions>`. 
+=====================================================
+:doc:`Chef Analytics </analytics>` is an analytics platform that provides visibility into what is happening on the server. It runs on separate hardware from the |chef server| and consists of several components:
 
-:doc:`Rules </analytics_rules>` enable the tracking of detailed events that occur during a |chef client| run and of events that describe the expected state of the system.
+**Components:** :doc:`Chef Actions </actions>` | :doc:`Rules </analytics_rules>` | `Controls <http://docs.chef.io/analytics/dsl_recipe.html>`_
 
-**Install Chef Analytics:** :doc:`Install Chef Analytics </install_analytics>`
+**Install Chef Analytics:** :doc:`Install </install_analytics>` | :doc:`Upgrade </upgrade_analytics>`
 
-**Settings and Tools:** :doc:`Web user interface </analytics_webui_tasks>` | :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>`
-
+**Settings and Tools:** :doc:`Web user interface </analytics_webui_tasks>` | :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>` | :doc:`Analytics API </api_analytics>`
 
 The Nodes
 =====================================================
