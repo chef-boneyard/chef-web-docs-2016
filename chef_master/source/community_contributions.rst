@@ -114,4 +114,21 @@ Things that would still require signing a CLA before submitting would likely inc
 * A translation;
 * Extensive or creative comments.
 
+|chef| Repositories
+=====================================================
+Issues and pull requests may be created for |chef|, including the |chef client|, the |chef server|, the |chef analytics| platform, and the |chef manage|. Use the following repositories to create issues and pull requests:
 
+.. list-table::
+   :widths: 100 400
+   :header-rows: 1
+
+   * - Repo
+     - URL
+   * - |chef client|
+     - https://github.com/opscode/chef
+   * - |chef server_title|
+     - https://github.com/opscode/chef-server
+   * - |chef analytics_title|
+     - https://github.com/opscode/chef-analytics
+   * - |chef manage_title|
+     - https://github.com/opscode/chef-manage-issues
