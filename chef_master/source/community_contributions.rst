@@ -114,7 +114,7 @@ Things that would still require signing a CLA before submitting would likely inc
 * A translation;
 * Extensive or creative comments.
 
-|chef| Repositories
+Issues and Bug Reports
 =====================================================
 Issues and bug reports may be created for |chef|, including the |chef client|, the |chef server|, the |chef analytics| platform, and the |chef manage|. The following repositories the preferred locations for the creation of issues and bug reports:
 
