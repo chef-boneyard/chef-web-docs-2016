@@ -40,28 +40,3 @@ where:
 * ``function()`` is a statement that tests a value in the |json| object; functions may be one of ``array:contains()``, ``alert:<level>()``, ``datetime:component()``, ``get()``, ``log()``, or ``mustache_template()``. (See "Functions" below for more information about the individual functions.)
 * A comment starts with two forward slashes--``//``---and continues to the end of the line on which the comment begins
 * Whitespace is ignored by the rules parser unless it contained within single- or double-quoted strings. For example, the parser will preserve the white space in ``'white space'`` and ``"white space"``
-
-
-For example:
-
-.. code-block:: java
-
-   rules "Check deploy day of week"
-     with priority=-100
-     rule "my rule" on action
-     when
-       // DAY_OF_WEEK uses 1 -> 7 for Monday -> Sunday
-       datetime:component(recorded_at, "DAY_OF_WEEK") >= 5
-     then
-       // set a user defined value
-       set(#alert, 'can\'t deploy on Friday, Saturday, Sunday'), 
-       // notify a configured alias
-       notify("weekend_deploys"), 
-       // record an alert warning
-       alert:warn("deploy_error") 
-     otherwise
-       // set a user defined value if the rule doesn't match
-       // reach into the 'data' json object and pull out it's 'name'
-       set(#some_value, data.name)  
-     end
-   end
