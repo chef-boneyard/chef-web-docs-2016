@@ -12,15 +12,17 @@
      - Description
    * - .. image:: ../../images/icon_big_chef_client.png
      - A |chef client| is installed on every node that is under management by |chef|. The |chef client| performs all of the configuration tasks that are specified by the run-list and will pull down any required configuration data from the |chef server| as it is needed during the |chef client| run.
-   * - .. image:: ../../images/icon_big_chef_dk.png
-     - One (or more) workstations are configured to allow users to author, test, and maintain cookbooks. Cookbooks are uploaded to the |chef server| from the workstation. Some cookbooks are custom to the organization and others are based on community cookbooks available from the |supermarket|. The |chef dk| is packaged by |chef| and provides an optional (but recommended) set of tooling, including the |chef ctl| command line tool, |kitchen|, |chef spec|, |berkshelf|, and more.
+   * - .. image:: ../../images/icon_big_workstation.png
+     - One (or more) workstations are configured to allow users to author, test, and maintain cookbooks. Cookbooks are uploaded to the |chef server| from the workstation. Some cookbooks are custom to the organization and others are based on community cookbooks available from the |supermarket|.
+       
+       Often, a workstation is configured to use the |chef dk| as the development toolkit. The |chef dk| is a package from |chef| that provides an optional (but recommended) set of tooling, including |chef| itself, the |chef ctl| command line tool, |kitchen|, |chef spec|, |berkshelf|, and more.
    * - .. image:: ../../images/icon_big_chef_server.png
-     - The |chef server| acts as a hub of information. Cookbooks and policy settings are uploaded to the |chef server| by users from workstations. (Policy settings may also be maintained from the |chef server| itself, via the |chef manage| web user interface.) The |chef client| accesses the |chef server| from the node on which it's installed to get configuration data, perform searches of historical |chef client| run data, and then pulls down the necessary configuration data. After the |chef client| run is finished, the |chef client| uploads updated |chef client| run data to the node object and generates reporting data about that |chef client| run.
-   * - .. image:: ../../images/icon_big_chef_manager.png
-     - The |chef manage| is used to manage objects that are stored on the |chef server|, including data bags, attributes, run-lists, roles, environments, and cookbooks. Additionally, reports are views into what happened during every |chef client| run that has occurred across all of the nodes that are under management by |chef|.
+     - The |chef server| acts as a hub of information. Cookbooks and policy settings are uploaded to the |chef server| by users from workstations. (Policy settings may also be maintained from the |chef server| itself, via the |chef manage| web user interface.)
+       
+       The |chef client| accesses the |chef server| from the node on which it's installed to get configuration data, perform searches of historical |chef client| run data, and then pulls down the necessary configuration data. After the |chef client| run is finished, the |chef client| uploads updated |chef client| run data to the node object, uploads |chef client_audit| data (for rules processing by |chef analytics), and generates reporting data.
+       
+       |chef manage| is the user interface for the |chef server|. It is used to manage data bags, attributes, run-lists, roles, environments, and cookbooks, and also to configure role-based access for users and groups.
    * - .. image:: ../../images/icon_big_chef_analytics.png
-     - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Details are tracked by the |chef client| during the |chef client| run, routed through the |chef server|, and are made visible by reports and |chef analytics|.
-   * - .. image:: ../../images/icon_big_chef_ha.png
-     - Availability supports out-of-the-box and custom high availability scenarios, plus server replication from a |chef server| master to any number of replica instances of the |chef server|.
+     - |chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Details are tracked by the |chef client| during the |chef client| run. These details are uploaded to the |chef server| at the end of the |chef client| run. This data is used to build reports, run rules against the output of |chef client_audit|, generate notifications based on the results of auditing, and visibility into messages that were generated during the |chef client| run.
    * - .. image:: ../../images/icon_big_chef_supermarket.png
      - |supermarket| is the location in which community cookbooks are authored and maintained. Cookbooks that are part of the |supermarket| may be used by any |chef| user. How community cookbooks are used varies from organization to organization.
