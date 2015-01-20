@@ -10,7 +10,7 @@ What's New
 =====================================================
 The following items are new for |chef analytics| x.x and/or are changes from previous versions. The short version:
 
-* **xxxxx** Use xxxxx.
+* **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
 * **xxxxx** Use xxxxx.
 * **xxxxx** Use xxxxx.
 
@@ -20,9 +20,38 @@ In addition, the following functionality is available in |chef client| 12.1 to s
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
 
-xxxxx
+|rules_analytics_title|
 -----------------------------------------------------
-xxxxx
+.. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
+
+.. note:: For more information about building rules for |chef analytics|, including the full rules syntax, see :doc:`Chef Analytics Rules </analytics_rules>`.
+
+Rule Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst
+
+Message Types
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_message_types.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Raise audits**
+
+.. include:: ../../step_analytics_rules/step_analytics_rules_raise_audit.rst
+
+**Use regular expressions**
+
+.. include:: ../../step_analytics_rules/step_analytics_rules_regular_expression.rst
+
+**Verify resource updates**
+
+.. include:: ../../step_analytics_rules/step_analytics_rules_verify_resource_updates.rst
+
+**Verify run-lists**
+
+.. include:: ../../step_analytics_rules/step_analytics_rules_verify_run_lists.rst
 
 xxxxx
 -----------------------------------------------------
