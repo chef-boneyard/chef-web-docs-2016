@@ -43,3 +43,4 @@ Some features of |chef analytics| depend on functionality that exists in either 
    dsl_recipe
    install_analytics
    install_server_pre
+   release_notes
