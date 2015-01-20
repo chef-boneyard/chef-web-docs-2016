@@ -12,6 +12,7 @@ The following items are new for |chef analytics| 1.1 and/or are changes from pre
 
 * **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
 * **Actions** Use |chef actions| to view changes made to each node object, the run history for all nodes, the history of every cookbook (and cookbook version), how and where policy settings---roles, environments, and data bags---are applied, and which users made which changes.
+* **oc-id service** The |service ocid| service enables |oauth| 2.0 authentication to the |chef server| by |chef analytics|.
 
 In addition, the following functionality is available in |chef client| 12.1 to support building audit tests and running the |chef client| in |chef client_audit|:
 
@@ -67,6 +68,13 @@ Architecture
 User Interface
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_analytics/includes_analytics_ui.rst
+
+|service ocid| Service 
+-----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_oc_id.rst
+
+These settings are configured in the 
+`chef-server.rb <http://docs.chef.io/config_rb_server_optional_settings.html#oc-id>`_ file.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
