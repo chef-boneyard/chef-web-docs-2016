@@ -73,3 +73,15 @@ Rule Types
 |chef actions_title|
 =====================================================
 .. include:: ../../includes_actions/includes_actions.rst
+
+Architecture
+-----------------------------------------------------
+.. include:: ../../includes_actions/includes_actions_architecture.rst
+
+Data Tracking
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_actions/includes_actions_tracked_data.rst
+
+User Interface
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_ui.rst

@@ -11,7 +11,7 @@ What's New
 The following items are new for |chef analytics| 1.1 and/or are changes from previous versions. The short version:
 
 * **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
-* **xxxxx** Use xxxxx.
+* **Actions** Use xxxxx.
 * **xxxxx** Use xxxxx.
 
 In addition, the following functionality is available in |chef client| 12.1 to support building audit tests and running the |chef client| in |chef client_audit|:
@@ -53,13 +53,21 @@ Examples
 
 .. include:: ../../step_analytics_rules/step_analytics_rules_verify_run_lists.rst
 
-xxxxx
+|chef actions_title|
 -----------------------------------------------------
-xxxxx
+.. include:: ../../includes_actions/includes_actions.rst
 
-xxxxx
------------------------------------------------------
-xxxxx
+Architecture
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_actions/includes_actions_architecture.rst
+
+**Data Tracking**
+
+.. include:: ../../includes_actions/includes_actions_tracked_data.rst
+
+User Interface
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_analytics/includes_analytics_ui.rst
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
