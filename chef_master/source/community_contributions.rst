@@ -128,7 +128,8 @@ Issues and pull requests may be created for |chef|, including the |chef client|,
      - https://github.com/opscode/chef
    * - |chef server_title|
      - https://github.com/opscode/chef-server
-   * - |chef analytics_title|
-     - https://github.com/opscode/chef-analytics
    * - |chef manage_title|
      - https://github.com/opscode/chef-manage-issues
+
+..   * - |chef analytics_title|
+..     - https://github.com/opscode/chef-analytics
