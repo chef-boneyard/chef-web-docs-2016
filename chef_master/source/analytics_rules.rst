@@ -4,9 +4,29 @@
 
 .. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
 
-Syntax
+Rule Syntax
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst
+
+Message Types
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_message_types.rst
+
+when
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst
+
+then
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst
+
+otherwise
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_otherwise.rst
+
+with priority
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_priority.rst
 
 Comments
 -----------------------------------------------------
@@ -31,26 +51,6 @@ Regular Expressions
 Nested Fields, Arrays
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_nested.rst
-
-with priority
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_priority.rst
-
-when
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst
-
-then
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst
-
-otherwise
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_otherwise.rst
-
-Rule Types
-=====================================================
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_rule_types.rst
 
 Functions
 =====================================================
@@ -88,26 +88,34 @@ Examples
 =====================================================
 The following examples show how to define |chef analytics| rules.
 
+Always Run a Rule
+-----------------------------------------------------
+.. include:: ../../step_analytics_rules/step_analytics_rules_types_always_run.rst
+
 Raise Audit
 -----------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_raise_audit.rst
+.. include:: ../../step_analytics_rules/step_analytics_rules_raise_audit.rst
 
 Regular Expressions
 -----------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_regular_expression.rst
+.. include:: ../../step_analytics_rules/step_analytics_rules_regular_expression.rst
+
+Notify if Machine Listens on Port 23
+-----------------------------------------------------
+.. include:: ../../step_analytics_rules/step_analytics_rules_listen_on_port.rst
 
 User-defined Values
 -----------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_user_defined_values.rst
+.. include:: ../../step_analytics_rules/step_analytics_rules_user_defined_values.rst
 
 Verify Dates
 -----------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_verify_dates.rst
+.. include:: ../../step_analytics_rules/step_analytics_rules_verify_dates.rst
 
 Verify Resource Updates
 -----------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_verify_resource_updates.rst
+.. include:: ../../step_analytics_rules/step_analytics_rules_verify_resource_updates.rst
 
 Verify Run-lists
 -----------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_example_verify_run_lists.rst
+.. include:: ../../step_analytics_rules/step_analytics_rules_verify_run_lists.rst
