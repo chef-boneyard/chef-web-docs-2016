@@ -1,5 +1,5 @@
 =====================================================
-Release Notes: |chef analytics_title| x.x
+Release Notes: |chef analytics_title| 1.1
 =====================================================
 
 .. include:: ../../includes_analytics/includes_analytics.rst
@@ -8,7 +8,7 @@ Release Notes: |chef analytics_title| x.x
 
 What's New
 =====================================================
-The following items are new for |chef analytics| x.x and/or are changes from previous versions. The short version:
+The following items are new for |chef analytics| 1.1 and/or are changes from previous versions. The short version:
 
 * **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
 * **xxxxx** Use xxxxx.
