@@ -4,7 +4,6 @@
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
-
 |chef analytics_title| Components
 =====================================================
 The following diagram shows the relationships between the various elements of |chef analytics|, including how information is routed from various nodes to the |chef analytics| server (through the |chef server|) nodes, where reports about |chef client| run outcomes may be viewed, where rules are processed, and where |chef analytics| data may be viewed.
@@ -17,21 +16,18 @@ The following diagram shows the relationships between the various elements of |c
 
    * - Feature
      - Description
-   * - Controls
+   * - **Controls**
      - .. include:: ../../includes_analytics/includes_analytics_controls.rst
-   * - Audit Mode
+   * - **Audit Mode**
      - .. include:: ../../includes_chef_client/includes_chef_client_audit_mode.rst
-   * - Messages
-     - Messages are created for events such as the start of the |chef client| run, the end of the |chef client| run, each resource that is converged during the |chef client| run, and the presence of ``control`` and ``control_group`` audits.
-       
-       .. include:: ../../includes_actions/includes_actions.rst
-   * - |reporting_title|
+   * - **Chef Actions**
+     - .. include:: ../../includes_actions/includes_actions.rst
+   * - **Reporting**
      - .. include:: ../../includes_reporting/includes_reporting.rst
-   * - |rules_analytics_title|
+   * - **Rules**
      - .. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
 
 The following sections discuss these elements (and their various components) in more detail.
-
 
 Controls
 =====================================================
@@ -77,4 +73,3 @@ Rule Types
 |chef actions_title|
 =====================================================
 .. include:: ../../includes_actions/includes_actions.rst
-
