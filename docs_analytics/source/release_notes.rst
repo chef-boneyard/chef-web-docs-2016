@@ -11,8 +11,7 @@ What's New
 The following items are new for |chef analytics| 1.1 and/or are changes from previous versions. The short version:
 
 * **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
-* **Actions** Use xxxxx.
-* **xxxxx** Use xxxxx.
+* **Actions** Use |chef actions| to view changes made to each node object, the run history for all nodes, the history of every cookbook (and cookbook version), how and where policy settings---roles, environments, and data bags---are applied, and which users made which changes.
 
 In addition, the following functionality is available in |chef client| 12.1 to support building audit tests and running the |chef client| in |chef client_audit|:
 
@@ -147,7 +146,7 @@ Examples
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
 
-Changelog
-=====================================================
-xxxxx
+.. Changelog
+.. =====================================================
+.. xxxxx
 
