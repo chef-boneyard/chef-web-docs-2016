@@ -273,6 +273,7 @@ Cookbooks
    page_not_found
    plugin_kitchen_vagrant
    plugin_knife
+   plugin_knife_analytics
    plugin_knife_authenticated_requests
    plugin_knife_azure
    plugin_knife_bluebox

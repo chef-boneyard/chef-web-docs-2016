@@ -45,6 +45,7 @@ This section contains links to topics about configuration files, command-line to
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/api_analytics.html">Analytics API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/plugin_knife_analytics.html">knife-analytics (Knife plugin)</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/config_rb_analytics.html">opscode-analytics.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/ctl_analytics.html">opscode-analytics-ctl</a> </br> 
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/api_chef_server.html#authenticate-user">authenticate_user endpoint in Chef Server API</a> </br>
@@ -67,6 +68,7 @@ This section contains links to topics about configuration files, command-line to
    dsl_recipe
    install_analytics
    install_server_pre
+   plugin_knife_analytics
    release_notes
    reporting
    upgrade_analytics
