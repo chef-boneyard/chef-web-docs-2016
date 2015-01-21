@@ -130,8 +130,9 @@ Issues and bug reports may be created for |chef|, including the |chef client|, t
      - https://github.com/opscode/chef-server
    * - |chef manage_title|
      - https://github.com/opscode/chef-manage-issues
+   * - |chef analytics_title|
+     - https://github.com/opscode/chef-analytics
 
 For additional support about |chef|, including documentation, learning, and opening tickets with the support team, see https://www.chef.io/support/.
 
-..   * - |chef analytics_title|
-..     - https://github.com/opscode/chef-analytics
+
