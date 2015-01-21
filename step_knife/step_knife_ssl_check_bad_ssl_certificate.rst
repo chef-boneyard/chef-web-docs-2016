@@ -35,7 +35,7 @@ is similar to:
    By default, the certificate is stored in the following location on the
    host where your chef-server runs:
    
-     /var/opt/opscode/chef-server/nginx/ca/SERVER_HOSTNAME.crt
+     /var/opt/opscode/nginx/ca/SERVER_HOSTNAME.crt
    
    Copy that file to your trusted_certs_dir (currently:
    
