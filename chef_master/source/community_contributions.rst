@@ -135,4 +135,4 @@ Issues and bug reports may be created for |chef|, including the |chef client|, t
 
 For additional support about |chef|, including documentation, learning, and opening tickets with the support team, see https://www.chef.io/support/.
 
-
+.. warning:: If you require a response from |company_name| per the terms of a support level agreement (SLA), please contact support directly.
