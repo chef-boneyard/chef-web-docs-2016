@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``delete`` argument is used to delete a node from the |chef server|.
+Use the ``delete`` argument to delete a node from the |chef server|.
 
 .. note:: Deleting a node will not delete any corresponding API clients.
 

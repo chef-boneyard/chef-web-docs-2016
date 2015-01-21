@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``images list`` argument is used to view a list of images that are running on servers that are hosted by |bluelock|, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the |chef server|.
+Use the ``images list`` argument to view a list of images that are running on servers that are hosted by |bluelock|, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the |chef server|.
 

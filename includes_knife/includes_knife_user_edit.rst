@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``edit`` argument is used to edit the details of a user. When this argument is run, |knife| will open |chef editor|. When finished, |knife| will update the |chef server| with those changes.
+Use the ``edit`` argument to edit the details of a user. When this argument is run, |knife| will open |chef editor|. When finished, |knife| will update the |chef server| with those changes.
 

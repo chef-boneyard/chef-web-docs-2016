@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``environment set`` argument is used to set the environment for a node without editing the node object.
+Use the ``environment set`` argument to set the environment for a node without editing the node object.
 

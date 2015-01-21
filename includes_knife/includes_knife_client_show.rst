@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``show`` argument is used to show the details of an |chef api client|.
+Use the ``show`` argument to show the details of an |chef api client|.
 

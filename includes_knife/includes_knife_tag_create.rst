@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``create`` argument is used to add one or more tags to a node.
+Use the ``create`` argument to add one or more tags to a node.
 

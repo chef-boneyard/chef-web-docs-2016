@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``from file`` argument is used to:
+Use the ``from file`` argument to:
 
 * Add a data bag item to a data bag
 * Update the contents of an existing data bag item 

@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``create`` argument is used to create a new cookbook directory on the local machine, including the following directories and files:
+Use the ``create`` argument to create a new cookbook directory on the local machine, including the following directories and files:
 
   * cookbook/attributes
   * cookbook/CHANGELOG.md

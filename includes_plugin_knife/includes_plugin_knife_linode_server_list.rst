@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``server list`` argument is used to find instances that are associated with a |linode| account. The results may show instances that are not currently managed by the |chef server|.
+Use the ``server list`` argument to find instances that are associated with a |linode| account. The results may show instances that are not currently managed by the |chef server|.
 

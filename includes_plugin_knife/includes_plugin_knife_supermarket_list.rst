@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``list`` argument is used to view a list of cookbooks that are currently available at |supermarket|.
+Use the ``list`` argument to view a list of cookbooks that are currently available at |supermarket|.
 

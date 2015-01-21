@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``create`` argument is used to add a role to the |chef server|. Role data is saved as |json| on the |chef server|.
+Use the ``create`` argument to add a role to the |chef server|. Role data is saved as |json| on the |chef server|.
 

@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``install`` argument is used to install a cookbook that has been downloaded from |supermarket| to a local |git| repository . This action uses the |git| version control system in conjunction with |supermarket| site to install community-contributed cookbooks to the local |chef repo|. Using this argument does the following:
+Use the ``install`` argument to install a cookbook that has been downloaded from |supermarket| to a local |git| repository . This action uses the |git| version control system in conjunction with |supermarket| site to install community-contributed cookbooks to the local |chef repo|. Using this argument does the following:
 
   #. A new "pristine copy" branch is created in |git| for tracking the upstream.
   #. All existing versions of a cookbook are removed from the branch.

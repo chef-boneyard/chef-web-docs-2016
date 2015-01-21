@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``region list`` argument is used to view a list of regions that are hosted by |google compute engine|.
+Use the ``region list`` argument to view a list of regions that are hosted by |google compute engine|.

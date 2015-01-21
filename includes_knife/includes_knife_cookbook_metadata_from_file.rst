@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``metadata from file`` argument is used to load the metadata for a cookbook from a file.
+Use the ``metadata from file`` argument to load the metadata for a cookbook from a file.
 

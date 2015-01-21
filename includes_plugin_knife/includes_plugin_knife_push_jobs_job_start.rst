@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``job start`` argument is used to start a |push jobs| job.
+Use the ``job start`` argument to start a |push jobs| job.
 

@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand knife ssh| subcommand is used to invoke |ssh| commands (in parallel) on a subset of nodes within an organization, based on the results of a `search query <http://docs.opscode.com/essentials_search.html>`_ made to the |chef server|.
+Use the |subcommand knife ssh| subcommand to invoke |ssh| commands (in parallel) on a subset of nodes within an organization, based on the results of a `search query <http://docs.opscode.com/essentials_search.html>`_ made to the |chef server|.
 
 
 

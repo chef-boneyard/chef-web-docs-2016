@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``delete`` argument is used to delete an environment from a |chef server|.
+Use the ``delete`` argument to delete an environment from a |chef server|.
 

@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``unshare`` argument is used to stop the sharing of a cookbook located at |supermarket|. Only the maintainer of a cookbook may perform this action.
+Use the ``unshare`` argument to stop the sharing of a cookbook located at |supermarket|. Only the maintainer of a cookbook may perform this action.
 

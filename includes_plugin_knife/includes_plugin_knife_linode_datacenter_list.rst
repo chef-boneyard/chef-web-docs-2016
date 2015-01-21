@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``datacenter list`` argument is used to view a list of available data centers, listed by data center ID and location.
+Use the ``datacenter list`` argument to view a list of available data centers, listed by data center ID and location.
 

@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand knife ssl_check| subcommand is used to verify the |ssl| configuration for the |chef server| or a location specified by a URL or URI. Invalid certificates will not be used by |open ssl|.
+Use the |subcommand knife ssl_check| subcommand to verify the |ssl| configuration for the |chef server| or a location specified by a URL or URI. Invalid certificates will not be used by |open ssl|.
 
 When this command is run, the certificate files (``*.crt`` and/or ``*.pem``) that are located in the |path trusted_certs| directory are checked to see if they have valid |x509| certificate properties. A warning is returned when certificates do not have valid |x509| certificate properties or if the |path trusted_certs| directory does not contain any certificates.
 

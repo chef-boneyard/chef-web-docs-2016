@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``server create`` argument is used to create a new |openstack| cloud instance.
+Use the ``server create`` argument to create a new |openstack| cloud instance.
 

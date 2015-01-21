@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``show`` argument is used to view information about a cookbook on |url community_cookbooks|.
+Use the ``show`` argument to view information about a cookbook on |url community_cookbooks|.
 

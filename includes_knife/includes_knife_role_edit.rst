@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``edit`` argument is used to edit role details on the |chef server|.
+Use the ``edit`` argument to edit role details on the |chef server|.
 

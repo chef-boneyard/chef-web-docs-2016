@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``server create`` argument is used to create a new |bluelock| cloud instance. A comma-separated run-list of roles and/or recipes must be specified.
+Use the ``server create`` argument to create a new |bluelock| cloud instance. A comma-separated run-list of roles and/or recipes must be specified.
 

@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``server reboot`` argument is used to reboot all of the servers in a |linode| environment.
+Use the ``server reboot`` argument to reboot all of the servers in a |linode| environment.
 

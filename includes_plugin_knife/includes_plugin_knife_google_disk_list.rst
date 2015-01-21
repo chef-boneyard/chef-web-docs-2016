@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``disk list`` argument is used to view a list of disks that are hosted by |google compute engine|.
+Use the ``disk list`` argument to view a list of disks that are hosted by |google compute engine|.

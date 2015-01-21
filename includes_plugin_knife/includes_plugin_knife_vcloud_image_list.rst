@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``image list`` argument is used to list of images from the |vcloud| environment, listed by ID and name.
+Use the ``image list`` argument to list of images from the |vcloud| environment, listed by ID and name.
 

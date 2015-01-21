@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``runs list`` argument is used to return a list of |chef client| runs by organization or by node.
+Use the ``runs list`` argument to return a list of |chef client| runs by organization or by node.
 
