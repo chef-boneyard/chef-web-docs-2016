@@ -52,11 +52,11 @@ To install |chef analytics|:
 
    .. note:: |analytics rabbitmq_settings| 
 
-#. Reconfigure the |chef server| backend:
+#. Reconfigure the |chef analytics| machine:
 
    .. code-block:: bash
 
-      $ chef-server-ctl reconfigure
+      $ opscode-analytics-ctl reconfigure
 
 #. Restart the |chef server| backend:
    
@@ -96,11 +96,11 @@ To install |chef analytics|:
 
    If there are any errors in the preflight check, correct them before carrying on to the next step.
 
-#. Reconfigure the |chef server| backend:
+#. Reconfigure the |chef analytics| machine:
 
    .. code-block:: bash
-      
-      $ sudo chef-server-ctl reconfigure
+
+      $ opscode-analytics-ctl reconfigure
 
 
 
