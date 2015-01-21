@@ -82,6 +82,7 @@ s3 = AWS::S3.new
 bucket = s3.buckets[MyConfig.bucket]
 File.foreach(MyConfig.redirects_file) do |line|
   next if line.start_with?("#")
+  next if line.chomp.empty?
   from_path, to_path = line.chomp.split(nil, 2)
   update_redirect(bucket, from_path, to_path)
 end
