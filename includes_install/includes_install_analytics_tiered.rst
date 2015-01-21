@@ -112,7 +112,7 @@ For each frontend machine:
 
       $ dpkg -i opscode-analytics<version>.deb
 
-#. Copy over the ``actions-source.json``, ``webui_priv.pem``, and ``opscode-analytics-secrets.json`` files from  directory from the |chef analytics| backend machine to the frontend |chef analytics| machine.
+#. Copy over the ``actions-source.json``, ``webui_priv.pem``, and ``opscode-analytics-secrets.json`` files from the |chef analytics| backend machine to the ``/etc/opscode-analytics/`` directory on the frontend |chef analytics| machine.
 
 #. Edit the ``opscode-analytics.rb`` file:
 
