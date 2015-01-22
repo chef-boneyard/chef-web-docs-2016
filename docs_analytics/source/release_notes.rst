@@ -159,7 +159,7 @@ Examples
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
 
-.. Changelog
-.. =====================================================
-.. xxxxx
+Changelog
+=====================================================
+https://github.com/chef/chef-analytics/blob/master/CHANGELOG.md
 
