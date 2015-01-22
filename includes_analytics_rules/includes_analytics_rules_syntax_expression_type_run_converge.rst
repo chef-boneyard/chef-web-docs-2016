@@ -25,13 +25,13 @@ The following fields are available for the ``run_converge`` message type:
        
           "error": {
             "class": "#<TypeError: user[iusechef] (/var/manage.rb line 87) had an error",
-            "message": "user[iusechef] (/var/manage.rb line 87) had an error: TypeError: can't convert Array into String",
-            "backtrace": "[\"/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.6.0/lib/chef/unix.rb:103 \"]",
+            "message": "user[iusechef] (/var/manage.rb line 87) had an error",
+            "backtrace": "[\"/opt/chef/embedded/.../chef/unix.rb:103 \"]",
             "description": {
               "title": "Errorexecutingaction`create`onresource'user[iusechef]'",
               "sections": [
                 { "TypeError": "can'tconvertArrayintoString" },
-                { "CookbookTrace: ": "/var/chef/cache/cookbooks/smartos/libraries/useradd.rb: 11: action: create\n" }
+                { "CookbookTrace: ": "/var/chef/.../useradd.rb: 11: action: create\n" }
               ]
             }
           }
