@@ -79,7 +79,7 @@ The server acts as a repository for all of the data that may be needed by the |c
 =====================================================
 :doc:`Chef Analytics </analytics>` is an analytics platform that provides visibility into what is happening on the server. It runs on separate hardware from the |chef server| and consists of several components:
 
-**Components:** :doc:`Chef Actions </actions>` | :doc:`Rules </analytics_rules>` | `Controls <http://docs.chef.io/analytics/dsl_recipe.html>`_
+**Components:** :doc:`Chef Actions </actions>` | :doc:`Rules </analytics_rules>` | `Controls <http://docs.chef.io/analytics/dsl_recipe.html>`_ | `chef-client audit-mode <http://docs.chef.io/analytics/chef_client.html>`_
 
 **Install Chef Analytics:** :doc:`Install </install_analytics>` | :doc:`Upgrade </upgrade_analytics>`
 
