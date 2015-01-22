@@ -8,7 +8,9 @@ Prerequisites
 =====================================================
 The |chef analytics| server shares the :doc:`same prerequisites </install_server_pre>` as the |chef server|:
 
-* |chef server| 11.1.8 (or higher) is required; |chef server| version 12 is required for tiered configurations
+* |chef server| 11.1.8 (or higher) is required for |chef analytics| 1.0 versions
+* |chef server| version 12 is required |chef analytics| 1.1 versions
+* |chef client| vesion 12.0.0.alpha is required for |chef client_audit| and using ``control_group`` and ``control`` |dsl_recipe| methods
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a FQDN or an IP address
 * A connection to |ntp| to prevent clock drift
@@ -29,10 +31,6 @@ Install the Server
 =====================================================
 |chef analytics| is installed on dedicated hardware in a standalone configuration, separately from the |chef server| configuration.
 
-Standalone (version 1.0)
------------------------------------------------------
-.. include:: ../../includes_install/includes_install_analytics_standalone_10.rst
-
 Standalone (version 1.1)
 -----------------------------------------------------
 .. note:: |chef analytics| version 1.1 requires |chef server| version 12.
@@ -44,3 +42,7 @@ Tiered (version 1.1 only)
 .. note:: |chef analytics| version 1.1 requires |chef server| version 12.
 
 .. include:: ../../includes_install/includes_install_analytics_tiered.rst
+
+Standalone (version 1.0)
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_analytics_standalone_10.rst
