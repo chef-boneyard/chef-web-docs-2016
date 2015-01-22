@@ -70,6 +70,8 @@ User Interface
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_analytics/includes_analytics_ui.rst
 
+.. include:: ../../includes_analytics/includes_analytics_ui_diffs.rst
+
 |service ocid| Service 
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_oc_id.rst

@@ -20,6 +20,8 @@ User Interface
 =====================================================
 .. include:: ../../includes_analytics/includes_analytics_ui.rst
 
+.. include:: ../../includes_analytics/includes_analytics_ui_diffs.rst
+
 Enable Auto-Refresh
 -----------------------------------------------------
 .. include:: ../../step_actions_webui/step_actions_webui_enable_auto_refresh_mode.rst
