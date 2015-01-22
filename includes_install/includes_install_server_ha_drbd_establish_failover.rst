@@ -84,3 +84,15 @@ To establish failover between the two backend machines, do the following:
       
       $ sudo chef-server-ctl reconfigure
 
+#. Run the following command on the secondary backend machine:
+
+   .. code-block:: bash
+
+      $ touch /var/opt/opscode/drbd/drbd_ready
+
+#. Reconfigure the secondary |chef server|:
+
+   .. code-block:: bash
+
+      $ sudo chef-server-ctl reconfigure
+
