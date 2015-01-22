@@ -16,13 +16,13 @@ Disk Configuration
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_drbd_config_disk.rst
 
-Primary Backend
-=====================================================
-.. include:: ../../includes_install/includes_install_server_ha_drbd_primary.rst
-
 |chef server rb|
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_drbd_config_rb.rst
+
+Primary Backend
+=====================================================
+.. include:: ../../includes_install/includes_install_server_ha_drbd_primary.rst
 
 Secondary Backend
 =====================================================
