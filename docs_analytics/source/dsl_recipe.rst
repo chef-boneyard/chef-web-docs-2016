@@ -57,6 +57,11 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_sshd_configuration.rst
 
+**A file contains desired permissions and contents**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_permissions.rst
+
+
 control_group
 =====================================================
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
