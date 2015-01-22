@@ -24,4 +24,4 @@ The following example shows |amazon iam| access management settings that are req
      ]
    }
 
-It is possible to further restrict access using a more sophisticated policy document, for example, administrators may choose to permit the |amazon iam| user only to attach/detach the volume ID associated with the |chef server| data volume, and not all volumes.
+It is possible to further restrict access using a more sophisticated policy document. For example, administrators may choose to permit the |amazon iam| user only to attach/detach the volume ID associated with the |chef server| data volume, and not all volumes.

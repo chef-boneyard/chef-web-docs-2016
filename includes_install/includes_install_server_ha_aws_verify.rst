@@ -9,6 +9,8 @@ To verify that failover is working, stop |keepalived| on the primary machine.
 
       $ watch -n1 sudo chef-server-ctl ha-status
 
+   in terminal windows on both the primary and secondary machines prior to stopping |keepalived|.
+
 #. Stop |keepalived| on the primary backend machine:
 
    .. code-block:: bash
