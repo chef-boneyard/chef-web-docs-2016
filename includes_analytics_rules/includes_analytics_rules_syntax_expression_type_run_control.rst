@@ -37,19 +37,19 @@ The following fields are available for the ``run_control`` message type:
      - Details about the control object.
    * - ``id``
      - type
-     - The globaly-unique identifier for this message.
+     - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.
    * - ``message_type``
      - string
-     - The message type.
+     - The message type. For example: ``"run_control"``.
    * - ``message_version``
      - string
-     - The message version.
+     - The message version. For example: ``"0.1.0"``.
    * - ``name``
      - string
      - The name of the control object.
    * - ``organization_name``
      - string
-     - The name of the organization to which the node belongs.
+     - The short name of the organization to which the node belongs. For example: ``"chef"``.
    * - ``resource_name``
      - ["string", "null"]
      - The name of the resource in which the control object is present.
@@ -61,19 +61,19 @@ The following fields are available for the ``run_control`` message type:
      - 
    * - ``run.chef_server_fqdn``
      - string
-     - The |fqdn| for the |chef server| against which the instance is running.
+     - The |fqdn| for the |chef server| against which the instance is running. For example: ``"api.chef.io"``.
    * - ``run.end_time``
      - string
-     - The ISO timestamp at which the |chef client| run finished.
+     - The ISO timestamp at which the |chef client| run finished. For example: ``"2014-06-05T10:39:43Z"``.
    * - ``run.node_name``
      - string
-     - The name of the node on which the |chef client| run occurred.
+     - The name of the node on which the |chef client| run occurred. For example: ``"grantmc01-abc"``.
    * - ``run.run_id``
      - string
-     - The identifier for the |chef client| run.
+     - The internal message identifier for the |chef client| run. For example: ``"12345678-9012-3456-7890-12345678901211"``.
    * - ``run.start_time``
      - string
-     - The ISO timestamp at which the |chef client| run started.
+     - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
    * - ``sequence_number``
      - integer
      - The sequence number at which the resource converged.
