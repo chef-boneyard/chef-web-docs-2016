@@ -13,4 +13,4 @@ An expression defines a specific test in a rule and uses fields within the expre
 
    array:contains(run_list, 'role[opscode-reporting]')
 
-where both ``total_resource_count``, ``updated_resource_count``, and ``run_list`` are the message type-specific fields. See the following sections for the fields that are available for each message type.
+where both ``total_resource_count``, ``updated_resource_count``, and ``run_list`` are the fields specific to a message type.

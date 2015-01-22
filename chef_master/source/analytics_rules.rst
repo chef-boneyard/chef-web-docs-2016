@@ -16,6 +16,36 @@ when
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_when.rst
 
+Expressions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression.rst
+
+The following sections describe the fields that may be used for each of the specific message types.
+
+actions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_action.rst
+
+run_control
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control.rst
+
+run_control_group
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control_group.rst
+
+run_converge
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_converge.rst
+
+run_resource
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_resource.rst
+
+run_start
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_start.rst
+
 then
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst
@@ -119,31 +149,3 @@ Verify Resource Updates
 Verify Run-lists
 -----------------------------------------------------
 .. include:: ../../step_analytics_rules/step_analytics_rules_verify_run_lists.rst
-
-Test Section
-=====================================================
-.. warning:: This will be moved shortly. Testing for now!
-
-actions
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_action.rst
-
-run_control
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control.rst
-
-run_control_group
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control_group.rst
-
-run_converge
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_converge.rst
-
-run_resource
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_resource.rst
-
-run_start
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_start.rst
