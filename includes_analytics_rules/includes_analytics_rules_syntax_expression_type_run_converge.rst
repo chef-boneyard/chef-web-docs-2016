@@ -39,12 +39,6 @@ The following fields are available for the ``run_converge`` message type:
    * - ``id``
      - string
      - The internal message identifier for the |chef client| run. For example: ``"12345678-9012-3456-7890-12345678901211"``.
-   * - ``message_type``
-     - string
-     - The message type. For example: ``"run_converge"``.
-   * - ``message_version``
-     - string
-     - The message version. For example: ``"0.1.0"``.
    * - ``node_name``
      - string
      - The name of the node on which the |chef client| run occurred. For example: ``"grantmc01-abc"``.

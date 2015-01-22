@@ -38,12 +38,6 @@ The following fields are available for the ``run_control`` message type:
    * - ``id``
      - type
      - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.
-   * - ``message_type``
-     - string
-     - The message type. For example: ``"run_control"``.
-   * - ``message_version``
-     - string
-     - The message version. For example: ``"0.1.0"``.
    * - ``name``
      - string
      - The name of the control object.

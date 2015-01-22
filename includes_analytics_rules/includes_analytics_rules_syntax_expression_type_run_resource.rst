@@ -75,12 +75,6 @@ The following fields are available for the ``run_resource`` message type:
    * - ``initial_state``
      - object
      - A |json| object that contains the initial state of the resource, including a checksum, owner, group, and mode.
-   * - ``message_type``
-     - string
-     - The message type. For example: ``"run_resource"``.
-   * - ``message_version``
-     - string
-     - The message version. For example: ``"0.1.0"``.
    * - ``resource_id``
      - string
      - The resource identifier. For example: ``"/var/cache/mod_auth_openid/mod_auth_openid.db"``.

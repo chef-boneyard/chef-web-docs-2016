@@ -20,12 +20,6 @@ The following fields are available for the ``action`` message type:
    * - ``id``
      - string
      - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.
-   * - ``message_type``
-     - string
-     - The message type. For example: ``"action"``.
-   * - ``message_version``
-     - string
-     - The message version. For example: ``"0.1.0"``.
    * - ``organization_name``
      - string
      - The short name of the organization to which the node belongs. For example: ``"chef"``.
