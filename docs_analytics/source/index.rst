@@ -69,6 +69,7 @@ This section contains links to topics about configuration files, command-line to
    ctl_analytics
    dsl_recipe
    install_analytics
+   install_reporting
    install_server_pre
    plugin_knife_analytics
    release_notes
