@@ -83,7 +83,7 @@ The server acts as a repository for all of the data that may be needed by the |c
 
 **Install Chef Analytics:** :doc:`Install </install_analytics>` | :doc:`Upgrade </upgrade_analytics>`
 
-**Settings and Tools:** :doc:`Web user interface </analytics_webui_tasks>` | :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>` | :doc:`Analytics API </api_analytics>`
+**Settings and Tools:** :doc:`Web user interface </analytics_webui_tasks>` | :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>` | :doc:`Analytics API </api_analytics>` | :doc:`knife-analytics (plugin) </plugin_knife_analytics>`
 
 The Nodes
 =====================================================

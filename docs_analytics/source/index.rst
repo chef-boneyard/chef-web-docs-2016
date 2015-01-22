@@ -35,6 +35,7 @@ The following features are part of the |chef analytics| platform:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/actions.html">Actions</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_rules.html">Rules</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/dsl_recipe.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/chef_client.html">chef-client, audit-mode</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/reporting.html">Reporting</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
 
@@ -63,6 +64,7 @@ This section contains links to topics about configuration files, command-line to
    analytics_webui_tasks
    analytics
    api_analytics
+   chef_client
    config_rb_analytics
    ctl_analytics
    dsl_recipe
