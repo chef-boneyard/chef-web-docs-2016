@@ -56,7 +56,7 @@ The following fields are available for the ``run_resource`` message type:
           @@ -3,7 +3,7 @@\n
           Chef-Client - jenkins\n
           Hostname: jenkins.int.housepub.org\n
-          Chef Server: https://api.opscode.com/organizations/housepub\n
+          Chef Server: https://api.chef.io/orgs/org\n
           -Last Run: 2013-06-30 17:41:31 -0600\n
           +Last Run:2013-06-30 18:11:54 -0600\n
           \n
