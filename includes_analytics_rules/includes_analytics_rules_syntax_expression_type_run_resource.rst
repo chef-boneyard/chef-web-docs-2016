@@ -52,7 +52,7 @@ The following fields are available for the ``run_resource`` message type:
        
           --- /etc/motd.tail
           2013-06-30 17:41:31.667050237 -0600\n
-          +++ /tmp/chef-rendered-template20130630-26786-16y7uld 2013-06-30 18:11:54.761690569 -0600\n
+          +++ /tmp/chef-rendered-template 18:11:54.7 -0600\n
           @@ -3,7 +3,7 @@\n
           Chef-Client - jenkins\n
           Hostname: jenkins.int.housepub.org\n
