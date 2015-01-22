@@ -15,3 +15,13 @@ A service that is enabled and running:
        end
      end
    end
+
+If the audit was successful, the |chef client| will return output similar to:
+
+.. code-block:: bash
+
+   Audit Mode
+     mysql service audit
+       mysql service
+         is enabled
+         is running

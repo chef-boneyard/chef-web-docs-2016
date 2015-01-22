@@ -11,3 +11,12 @@ A package that is not installed:
        end
      end
    end
+
+If the audit was successful, the |chef client| will return output similar to:
+
+.. code-block:: bash
+
+   Audit Mode
+     postgres audit
+       postgres package
+         is not installed
