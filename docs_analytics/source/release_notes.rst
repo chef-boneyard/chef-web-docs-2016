@@ -86,6 +86,10 @@ Use following option to run the |chef client| in |chef client_audit| mode:
 ``--audit-mode MODE``
    |audit_mode| Default value: ``disabled``.
 
+The Audit Run
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_chef_client/includes_chef_client_audit_mode_run.rst
+
 ``control``
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_controls.rst
