@@ -4,8 +4,6 @@ Release Notes: |chef analytics_title| 1.1
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
-.. warning:: This is a placeholder for an upcoming release of |chef analytics|.
-
 What's New
 =====================================================
 The following items are new for |chef analytics| 1.1 and/or are changes from previous versions. The short version:
