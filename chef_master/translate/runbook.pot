@@ -1,0 +1,3018 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 15:49-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/runbook.rst:8
+# 459181aaca164870b074750b5d4d6019
+msgid "Runbook"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server.rst:4
+# ddd6e5351606466f84e7845aabca42a3
+msgid "The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions. The |chef client| then does as much of the configuration work as possible on the nodes themselves (and not on the |chef server|). This scalable approach distributes the configuration effort throughout the organization."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst:4
+# 5f390aa881e5435e8377b4fa49905d46
+msgid "Starting with the release of |chef server| 11, the front-end for the |chef server| is written using `Erlang <http://www.erlang.org/>`_, which is a programming language that `first appeared in 1986 <http://en.wikipedia.org/wiki/Erlang_%28programming_language%29>`_, was open sourced in 1998, and is excellent with critical enterprise concerns like concurrency, fault-tolerance, and distributed environments. The |chef server| can scale to the size of any enterprise and is sometimes referred to as |erchef|."
+msgstr ""
+
+#: ../source/runbook.rst:14
+# c13e753b1ff843809c140f4dff099b1d
+msgid "The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another."
+msgstr ""
+
+#: ../source/runbook.rst:22
+# da3448fde5b6415599575f7e16980b8e
+msgid "Component"
+msgstr ""
+
+#: ../source/runbook.rst:23
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:11
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:38
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:11
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_erchef.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_expander.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:15
+#: ../../includes_server_tuning/includes_server_tuning_postgresql.rst:11
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:11
+# f184aec2686249f3b7510ae24f3fe226
+# 2a8f016fd1394e2498729ff00fb4f803
+# 982cfe9cc5554f77afaaee0ba4cd8b98
+# 932416d5e8964122946b3d2806923b5d
+# 43ad2d9db5744371a6c8dd1b9d03e854
+# 45114ab9fa104e6fb14c54dff0d9f679
+# 1a3dfdb37d964923bfa1cd65e90e6984
+# 486c5adf4202472a82fb3247bb9dc0a4
+# 6a0b1e34aaf541c1a130eb4b6c5ef6ba
+# cd520dfb10f74409bd855bcd8909644d
+# c2efac122aaf40ce88f5c9af831852ae
+# 57fba16e16e64314a52b71a228c33471
+# 9430bcb6e575434d841d698fac662ddc
+# f61d1c4f5fc84620be91eee8dd5c46c7
+# b885ed024db2403dbe1bda7c4a8f748b
+msgid "Description"
+msgstr ""
+
+#: ../source/runbook.rst:24
+# 1d2c5e2e855c4f56bbc40817c42ecab7
+msgid "Bookshelf"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst:4
+# fe13551bd3644594a5f0d656a5415588
+msgid "|chef bookshelf| is used to store cookbook content---files, templates, and so on---that have been uploaded to the |chef server| as part of a cookbook version. Cookbook content is stored by content checksum. If two different cookbooks or different versions of the same cookbook include the same file or template, |chef bookshelf| will store that file only once. The cookbook content managed by |chef bookshelf| is stored in flat files and is separated from the |chef server| and search index repositories."
+msgstr ""
+
+#: ../source/runbook.rst:27
+# 4e6ccd51d77c4c63a954cd0e81174f53
+msgid "All cookbooks are stored in a dedicated repository."
+msgstr ""
+
+#: ../source/runbook.rst:28
+# 6cb15f991bde435c8e8292837fc08ab9
+msgid "WebUI"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_webui.rst:4
+# 313b5296162742a5b16a510c5d5c9767
+msgid "|chef server webui| is a |ruby on rails| 3.0 application that hosts the web interface for the |chef server|."
+msgstr ""
+
+#: ../source/runbook.rst:30
+# e4977fb7f11b43f4b2eed13dffef4880
+msgid "Erchef"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef.rst:4
+# 952284f987464786a51df4d4ea76312a
+msgid "|erchef| is a complete rewrite of the core API for the |chef server|, which allows it to be faster and more scalable than previous versions. The API itself is still compatible with the original |ruby|-based |chef server|, which means that cookbooks and recipes that were authored for the |ruby|-based |chef server| will continue to work on the |erlang|-based |chef server|. The |chef client| is still written in |ruby|."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef.rst:6
+# e1750c542fbf45aa8e68e577d33696b9
+msgid "Even though the |chef server| is authored in |erlang|, writing code in |erlang| is NOT a requirement for using |chef|."
+msgstr ""
+
+#: ../source/runbook.rst:32
+# fe04b85247404dfd86d8137d4000216f
+msgid "Message Queues"
+msgstr ""
+
+#: ../source/runbook.rst:33
+# 9876c13cc7504205bd748ee3c36baae8
+msgid "Messages are sent to the Search Index using the following components:"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst:4
+# a3d2b978559241f39094516d9701c180
+msgid "|rabbitmq| is used as the message queue for the |chef server|. All items that will be added to the search index repository are first added to a queue."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_expander.rst:4
+# 832802a236594d6890e6af606175bfe1
+msgid "|chef expander| is used to pull messages from the |rabbitmq| queue, process them into the required format, and then post them to |chef solr| for indexing."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_solr.rst:4
+# 860197250eb8482d86ebd52409c7e5d4
+msgid "|chef solr| wraps |apache solr| and exposes its REST API for indexing and search."
+msgstr ""
+
+#: ../source/runbook.rst:39
+# 8dfae649d5684852879c39f33e55cfe6
+msgid "All messages are added to a dedicated search index repository."
+msgstr ""
+
+#: ../source/runbook.rst:40
+# 95d5932a1e7a49779baf87303d11b59e
+msgid "Nginx"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_nginx.rst:4
+# 5effc396658547c08e33df303caebba5
+msgid "|nginx| is an open-source HTTP and reverse proxy server that is used as the front-end load balancer for the |chef server|. All requests to the |api chef server| are routed through |nginx|."
+msgstr ""
+
+#: ../source/runbook.rst:42
+# d0725fe29018443a9bf3c5829f2de8ec
+msgid "PostgreSQL"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_postgresql.rst:4
+# b93de0d13dbc4fc0adbd059584085c72
+msgid "|postgresql| is the data storage repository for the |chef server|."
+msgstr ""
+
+#: ../source/runbook.rst:45
+# 5c5e21ab3eb349e4a83a4c3196d31d94
+msgid "The following sections detail how to monitor the server, manage log files, manage services, manage firewalls and ports, configure SSL, tune server configuration settings, and backup and restore data."
+msgstr ""
+
+#: ../source/runbook.rst:49
+# 43f48f0ed0854fd9ac71f5900446fe9e
+msgid "Monitoring"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor.rst:4
+# e66bab78b8b048e49f95360cfef88720
+msgid "Monitoring the |chef server| involves two types of checks: application and system. In addition monitoring the HTTP requests that workstations and nodes are making to the |chef server| and per-disk data storage volumes is recommended."
+msgstr ""
+
+#: ../source/runbook.rst:53
+# 98bb6072bb394b388de1772f1547d552
+msgid "Application Checks"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application.rst:4
+# 50cc284c22ab4be4badb225b66b9df61
+msgid "Application-level checks should be done periodically to ensure that there is enough disk space, enough memory, and that the front-end and back-end services are communicating."
+msgstr ""
+
+#: ../source/runbook.rst:57
+# 38b0ccb33eaf443c816a673b6cf488e6
+msgid "|drbd|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_drbd.rst:5
+# 983a4830144e4780a87ac232a46787ff
+msgid "|drbdadm| is the management tool for |drbd|. It can be used to obtain status information and to alter the state of the |drbd| cluster. For more information about |drbdadm|, see http://www.drbd.org/users-guide/re-drbdadm.html."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_drbd.rst:7
+# 01fd046c06cd4909bf1e6647cc45a733
+msgid "``/proc/drbd`` is a virtual file that displays real-time status information about all currently-configured |drbd| resources. Use the following command to view the contents of this virtual file:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_drbd.rst:13
+# 062c712128ae400890cfea972319ae37
+msgid "Use ``chef-server-ctl ha-status`` along with ``/proc/drbd`` to help evaluate the current state of the cluster. Follow the split-brain recovery procedures for |drbd| if the cluster becomes two unconnected pieces."
+msgstr ""
+
+#: ../source/runbook.rst:61
+# a574fca864874ad49ca1a4227f6e3b51
+msgid "|erlang|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:5
+# 89631d98f51f4863b657bd2cf6204b60
+msgid "Many components of the |chef server| are written using |erlang| and run on the |beam| virtual machine. One feature of |erlang| and |beam| is the ability to interact with the running service using a command shell. For example:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:13
+# 624787c751fd430792a3013bc67537fc
+msgid "where ``service_name`` is ``bifrost`` or ``erchef``. This command will then open a shell that is connected to the |erchef| processes:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:19
+# 352f7448ab4b4b69be372d0c7e3f3217
+msgid "Connecting to the |erlang| processes should only be done when directed by |company_name| support services."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:21
+# c08a905cb7504bb1a4e107dedae208fa
+msgid "To connect to the |service bifrost| service, use the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:27
+# e5063dbcba0440669f38dbfce80b58d4
+msgid "To connect to the |service erchef| service, use the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:33
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:29
+# 0f6e4bf30a1a43f2bedcbcaad0165881
+# b01194a0a5224ef48986a750bc8dd9a7
+msgid "To disconnect from the shell, use the following key sequence ``CTRL-g``, ``q``, and then ``ENTER``."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:35
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:31
+# a6112af7f40d4a5fae7e0f7f4f8bdd7c
+# 0b25cc810c124d37b185fd988ad6e065
+msgid "The output from the shell after the ``CTRL-g`` looks similar to:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:42
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:38
+# fcef0374b3d445e68a5fbd977d5961f3
+# 7e9b3f125da04b7b85f980b876c1bfb4
+msgid "then enter ``q``, and then hit ``ENTER`` to exit the shell."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:44
+# 2df52ca54cc4428294f96e1fd377e57b
+msgid "Some commands should not be entered when interacting with a running service while using the command shell, including:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:46
+# 6dac0cad51a94c26a83237b4beddff0f
+msgid "``q()`` kills the |erlang| node"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:47
+# 813ad56abeed491b91a408d8b0e94d2d
+msgid "``init:stop()``"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:48
+# 5574df778b154c458745a7d53ed4c9a6
+msgid "``exit`` or ``exit()`` does nothing"
+msgstr ""
+
+#: ../source/runbook.rst:65
+# 6e88b915a9154e68b920546341d06b71
+msgid "``eper`` tools"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:4
+# 6e9e083f46dc4d0fbd3952fa90938129
+msgid "As root on the |chef server|, point to the bundled ``eper`` package of debugging tools. Replace the 2nd and 5th path entries and the ``X.XX.X`` value in the following path with the items that occur on the system."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:10
+# 8bb3c92e9a8942439dd65e5e17af7112
+msgid "Open an |erlang| command shell to begin diagnosing service issues on the |chef server|:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:17
+# 7fd65d41b3454312ba76d1cdfec2afb7
+msgid "The ``dtop`` tool presents a view on the |erlang| virtual machine that is similar to the ``linuxdagnostic`` command. The period at the end of the dtop command is required for the command to take effect."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:23
+# d0d468640115448ebd75ff2937993b31
+msgid "To stop the ``dtop`` command, run:"
+msgstr ""
+
+#: ../source/runbook.rst:69
+# 38f03487ab6a4b0abb1ec91f130fc45d
+msgid "|nginx|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst:5
+# 5c6e6f9774cb43f48b139585696c1b56
+msgid "Use |nginx| to monitor for services that may be returning 504 errors. Use the following command on a front-end machine:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst:11
+# 676b818de6f842b096f87e7cde7058ff
+msgid "and then extract the URLs and sort them by ``uniq`` count:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst:17
+# d4fd2daadfd743b8a4b60a2ef3c4a9b9
+msgid "In a large installation, restricting these results to a subset of results may be necessary:"
+msgstr ""
+
+#: ../source/runbook.rst:73
+# 46df429ab4c74336ab216e02202f0491
+msgid "|postgresql|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_postgresql.rst:5
+# 447098b0b2cc467880a999242b609a51
+msgid "|postgresql ctl| is the management tool for |postgresql|. It can be used to obtain information about data stored in |postgresql|. For more information about |postgresql ctl|, see http://www.postgresql.org/docs/manuals/, and then the doc set appropriate for the version of |postgresql| being used."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_postgresql.rst:7
+# f85740615e8d4a08bc067873b4d8fdd7
+msgid "To connect to the |postgresql| database, run the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_postgresql.rst:15
+# 588c94b074404c09996a1b8f78dc0620
+msgid "Connecting to the |postgresql| database should only be done when directed by |company_name| support services."
+msgstr ""
+
+#: ../source/runbook.rst:77
+# 4b0bb797adee4d3f9b07836fcca29a6e
+msgid "|rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_rabbitmq.rst:5
+# e300422496c04e0e84d03330e58768a5
+msgid "|rabbitmq ctl| is the management tool for |rabbitmq|. It can be used to obtain status information and to ensure that message queuing is running properly. For more information about |rabbitmq ctl|, see https://www.rabbitmq.com/man/rabbitmqctl.1.man.html."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_rabbitmq.rst:7
+# 86a6462329c048978d95171851581bdc
+msgid "To obtain status information for message queues, run the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_rabbitmq.rst:15
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_example.rst:13
+# 12cf8e74779240a5b886430994a49e1e
+# ec7c0a2eec644ed2ae58d0ee56c2e428
+msgid "to return something similar to:"
+msgstr ""
+
+#: ../source/runbook.rst:81
+# cbbbb166a73f49bba84d4fea097114f4
+msgid "|redis|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:5
+# 766e17ab4b8b4f1f988a2699f86083b7
+msgid "|redis cli| is the management tool for |redis|. It can be used to obtain information about keys that are being used with the |chef server|. For more information about |redis cli|, see http://redis.io/commands."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:7
+# 05b76496af994da5b6ea453e37708daf
+msgid "To verify that the connection to |redis| is alive, run the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:15
+# c5c40f0c2caa4ad58dc96029406d8070
+msgid "to return:"
+msgstr ""
+
+#: ../source/runbook.rst:85
+# a48ddd2c9bba48b7b1750bc71b49ef56
+msgid "System Checks"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system.rst:4
+# 74f2cd698ae14bf49410cc68d6fda7ea
+msgid "System-level checks should be done for the following components: ports, services (|service erchef| and |service expander|), and high availability status."
+msgstr ""
+
+#: ../source/runbook.rst:89
+# a3793434e7bb4eec800b3460c325d3b3
+msgid "ha-status"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:6
+# f03fdc1735724cf39bcd1d18f4f9d9a9
+# 964db06e490b43cc86faed0fee4a9b97
+msgid "On back-end servers in a |ha| topology, |keepalived| is used by the clustering service to determine whether a service should be running. If the ``status`` subcommand is run against any of these nodes, a few things change:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:8
+# 9e011be5121a4e50876b9fc3fbeef934
+# 6279f534d7114421aed00ea0b48135fb
+msgid "On the back-end node that is currently the backup server, it is normal to see only one running process: |keepalived|"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:9
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:9
+# ecfd21f45e4f46acb1f6a62feac8a867
+# 4e36b881a9d94ed2b8d544129ce10a12
+msgid "On the back-end node that is currently the master server, it is normal to see all services running. It is also normal to see some services in a down state if the server, on reboot, did not attempt to start the services because |keepalived| determines which services are restarted based on the state of the cluster"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:11
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_ha.rst:11
+# 1b8ca883f5b247a99ed9f463be6e3dd5
+# e55f8510525d418d91efa70b5c509d09
+msgid "A sample status line for a service that is running on the master server in a |ha| topology:"
+msgstr ""
+
+#: ../source/runbook.rst:93
+# 57e5ca10a0fa4e2ea7b444c52ad1d3dc
+msgid "opscode-authz"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_authz.rst:5
+# 05aeff36b817498799a1f37f063d6259
+msgid "The authz API provides a high-level view of the health of the |service authz| service with a simple endpoint: ``_ping``. This endpoint can be accessed using |curl| and |gnu wget|. For example:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_authz.rst:11
+# 5c30977428bd4a508a11ed7c53eb13bc
+msgid "This command typically prints a lot of information. Use |python| to use pretty-print output:"
+msgstr ""
+
+#: ../source/runbook.rst:97
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:11
+#: ../source/runbook.rst:323
+# fddf329c92074020bd642888afaf7f01
+# 5b6a19e2564445ad9a53ba3d80b2fafe
+# 60aafed0fd7b4425808db2983b963ddb
+msgid "opscode-erchef"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:5
+# 2edaf018dab34db7a98a75de9350311d
+msgid "The status API provides a high-level view of the health of the system with a simple endpoint: ``_status``. This endpoint can be accessed using |curl| and |gnu wget|. For example:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:11
+# 6f46ab7285ff4be48cee18c8debce27d
+msgid "which will return something similar to:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:20
+# b3a22a96116046ae9caa3521d1f43ee9
+msgid "For each of the upstream services, ``pong`` or ``fail`` is returned. The possible upstream names are:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:22
+# 9425cd8b7aba43a5aada3e0363546384
+msgid "``chef_solr`` (for the |service solr| service)"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:23
+# e5de2096daf34203b51a431914f41299
+msgid "``chef_sql`` (for the |service postgresql| service)"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:24
+# 18fc80b5f81a4b349d959c7364f2a035
+msgid "``oc_chef_authz`` (for the |service authz| service)"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:26
+# 48fcae38134c4745927dca8e1147c528
+msgid "If any of the status values return ``fail``, this typically means the |chef server| is unavailable for that service."
+msgstr ""
+
+#: ../source/runbook.rst:101
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:12
+#: ../source/runbook.rst:327
+# ac1c8708d5dc4aa9b6cb8d8a5183a298
+# 90efdb3b988943e18422ada52dc4bbda
+# bdd5473d50c64607a4e851befa24aaf2
+msgid "opscode-expander"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander.rst:4
+# 4ab9cbe1edf5440396159792662ad637
+msgid "As the queue depth increases it may take longer for updates posted to the |chef server| by each |chef client| to be added to the search indexes on the |chef server|. The depth of this queue should be monitored using the following command:"
+msgstr ""
+
+#: ../source/runbook.rst:104
+# 28f50841feb34093bda769d687390924
+msgid "**Search Indexes**"
+msgstr ""
+
+#: ../../includes_search/includes_search.rst:4
+# 856c76c907654e29ac6010725b8aedcd
+msgid "Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. A defined query syntax is used to support search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the ``search`` subcommand in |knife|, the ``search`` method in the |dsl recipe|, and by using the ``/search`` or ``/search/INDEX`` endpoints in the |api chef server|. The search engine is based on |apache solr| and is run from the |chef server|."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:5
+# 074cd5bceed54fb4b19b55957332eba3
+msgid "If the search indexes are not being updated properly, first ensure that the |service expander| service is running on the backend machine:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:11
+# 43b73a0b6820492292c949072785f2db
+msgid "and then (if it is not running), start the service:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:17
+# 816f38c22b7f42d8a7732fa5597da994
+msgid "If the |service expander| does not start correctly, then take a look at the ``/var/log/opscode/opscode-expander/current`` log file for error messages."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:19
+# 6280b8a6d8e0429eb332077bfb315fc4
+msgid "If the |service expander| is running, check the queue length:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:25
+# 6b18f9eee64f45509c376da217329935
+msgid "If the number of total messages continues to increase, increase the number of workers available to the |service expander| service."
+msgstr ""
+
+#: ../source/runbook.rst:110
+# b2fba7ed70b14c06afc44adc594a76a7
+msgid "**opscode-expanderctl**"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander.rst:5
+# 5a0bf68652354a71831feb503d303274
+msgid "The |opscode expander ctl| executable can be used to generate status information for the |service expander| service. The |opscode expander ctl| executable is run as a command-line tool from the master backend machine."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:6
+# 34da774b38f642f9a483707cfb83dc8b
+msgid "This tool has the following syntax::"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:10
+# e81c4309c07545b88b6aaab0e4a2c808
+msgid "This tool has the following options:"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:13
+# ae191072be95440ea40503d4b13d9fb1
+msgid "``log-level``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:13
+# 29ab3e818e6c4e95bfea939f38639f59
+msgid "Use to show the log level for all nodes in the cluster."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:16
+# bff8b2a3146845ab966ac60293787809
+msgid "``node-status``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:16
+# d82aad766f984cbc9606deca8b35f45a
+msgid "Use to show the status for all nodes in the cluster."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:19
+# 0ce0785330b44106ac4b8758a9fed567
+msgid "``queue-depth``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:19
+# 816cbbc7e6de4cdfb3cc63d7220c83ae
+msgid "Use to display the aggregate queue backlog."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:23
+# 30de60bd123341bcbe53d1cd903b8801
+msgid "``queue-status``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:22
+# 75bb50cb2fb446c2882079e134645783
+msgid "Use to show the backlog and consumer counts for each vnode queue."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_example.rst:5
+# 05285d024168451a94b9ea363a595a63
+msgid "For example, to view the aggregate queue backlog, enter the following:"
+msgstr ""
+
+#: ../source/runbook.rst:119
+# 21ee4e52a19e4c7698513df32a832955
+msgid "Nodes, Workstations"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_client.rst:5
+# 85b053038fed4823b147b7103e7b6bb1
+msgid "If a client makes an HTTP request to the server that returns a non-specific error message, this is typically an issue with the |service chef| or |service erchef| services. View the full error message for these services in their respective log files. The error is most often a stacktrace from the application error. In some cases, the error message will clearly indicate a problem with another service, which can then be investigated further. For non-obvious errors, please contact |company_name| support services."
+msgstr ""
+
+#: ../source/runbook.rst:123
+# 50acaa9fe4154e658f01249237d6216d
+msgid "Disks"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:5
+# 08f5bd480eca4b39ab45f085d8e25f2f
+msgid "Over time, and with enough data, disks will fill up or exceed the per-disk quotas that may have been set for them and they will not be able to write data. A disk that is not able to write data will not be able to support certain components of the |chef server|, such as |postgresql|, |rabbitmq|, service log files, and deleted file handles. Monitoring disk usage is the best way to ensure that disks don't fill up or exceed their quota."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:7
+# 652e8b50fda0490b893e0b67684204da
+msgid "The following components should be monitored for signs that disks may be rapidly filling up:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:9
+# 9d1b8f50cad14113b0d05f09ac5eeefd
+msgid "**PostgreSQL** |postgresql| is the data store for the |chef server|."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:10
+# 09d9c9e948f941e49b43f240d1a7fec3
+msgid "**RabbitMQ** The |rabbitmq| data folder can fill up if the |service expander| service is not able to keep up with the data being moved into the search database by |rabbitmq|. When the |service expander| service falls behind, |rabbitmq| will start storing the individual messages on-disk while it waits for the |service expander| service to catch up. If the |rabbitmq| disk fills up completely, |rabbitmq| will need to be restarted to free up the disk space and any data that was stored on-disk will be lost."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:11
+# 7c51dbfd6c364cf984606d18489cef32
+msgid "**Log files** If ``/var/log/opscode`` is taking up a lot of disk space, ensure that the |chef server| log rotation cron job is running without errors. These errors can be found in ``/var/log/messages``, ``/var/log/syslog`` and/or the root user's local mail."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:12
+# 00ac9b949e164807a425ca9b44214da4
+msgid "**Deleted file handles** Running processes with file handles associated with one (or more) deleted files will prevent the disk space being used by the deleted files from being reclaimed. Use the ``sudo lsof | grep '(deleted)'`` command to find all deleted file handles."
+msgstr ""
+
+#: ../source/runbook.rst:132
+#: ../source/runbook.rst:247
+# 52237737d19c46299665e9121a22164d
+# 26eee6fcabae40639564401e58a2f977
+msgid "Log Files"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs.rst:4
+# 84a0a086969f4a338207664c61887818
+msgid "All logs generated by the |chef server| can be found in ``/var/log/chef-server``. Each service enabled on the system also has a sub-directory in which service-specific logs are located, typically found in ``/var/log/chef-server/service_name``."
+msgstr ""
+
+#: ../source/runbook.rst:137
+# 122ff33fb40b4fe5b365edbf8b70370b
+msgid "View Log Files"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_view.rst:4
+# 952d7b5c52664dd29bd0377bf3ce809a
+msgid "The |chef server| has built-in support for easily tailing the logs that are generated. To view all the logs being generated on the |chef server|, enter the following command:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_view.rst:10
+# ff65f77cf4e242bab18af5bd42f35cc8
+msgid "To view logs for a specific service:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_view.rst:16
+# 07549f2d6c5a45b7bc182771b64c70c3
+msgid "where ``SERVICENAME`` should be replaced with name of the service for which log files will be viewed."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_view.rst:18
+# f45341d6b9e04c3d8be1c215c6564bb3
+msgid "Another way to view log files is to use the system utility tail:"
+msgstr ""
+
+#: ../source/runbook.rst:141
+# d1a6cf715a8241cf94883dd826b31cb8
+msgid "tail Log Files"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst:6
+# 1fed3ea06d3f4554a3746f8715bc2d0b
+# 982047b930234d51aa04187ee63599af
+msgid "The ``tail`` subcommand is used to follow all of the |chef server| logs for all services. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_hup.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_int.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_kill.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_once.rst:10
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_restart.rst:10
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_service_list.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_start.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_stop.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_term.rst:8
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_syntax.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_syntax.rst:6
+# 8641ec35079d49a1816d7f54e12fece9
+# d07d3eb304d24684bf8f71f47315da65
+# fa78edfb1be740c2b36525da6df34635
+# 45d7ff4c421a4c2fa49b406844b1909a
+# c42ed478b64b4ff7a4a9838b429d1150
+# 3ea4a47e8b9c48f0886150c827a42176
+# 4adc0a2af9064569b0988471849b4574
+# c2c561ff6ec74af5a011f263e57e2262
+# 39c3546224e04f568dcb2fe6a378e726
+# d8430db008824e218014096d7d50b9ef
+# 3f2c7a5d13114582add6ea59ac277ba0
+# 299f169f947c498bbd23738696411ecb
+# 06cd3b25b5a64628ac644745b6ca0ef5
+# d88183beda62400f955fe310a59a8ef5
+# 3b0563e80b64448b8037dac567a8e855
+# 864939d2f8e64074a2f1437e6b13e219
+# f371532f6fc841c5a190ff2b2029cbe4
+# c7f0f188e0cf42d29c391152c4749fa2
+# 9d6fd0a323b4460ea32477396959bfbf
+# a9238558cf7c4a13b96b13982fcd4d7a
+# 84f492c30f83436698daf52126116174
+# dc7af6e88833454389b35055fd0a9feb
+msgid "This subcommand has the following syntax:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst:14
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_hup.rst:14
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_int.rst:14
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_kill.rst:14
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_once.rst:16
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:18
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_tail.rst:14
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_term.rst:14
+# 115cbc71ba7248b6bde74b80046358b4
+# 95591188142645a3b73708b53ec76686
+# aed47b4d108b4cf597f58e7521ad0237
+# b883697a8371460887e2cd01365d0622
+# 8965051a715e494884028ed1a631f498
+# 21d6823d7515475fa2fd0d154e571d3f
+# 04a1f5e8f37b408a90adea2720af655e
+# c5f392851b1b413a8f14f3fd793565d8
+msgid "where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand."
+msgstr ""
+
+#: ../../step_server_services/step_server_services_general_tail.rst:4
+# c693ec49050c4b8a9d9c4b16b4e116e1
+msgid "Another common approach to tailing the log files for a service is to use the system utility ``tail``. For example:"
+msgstr ""
+
+#: ../source/runbook.rst:147
+# 4185c0e411414697ae16561f3c77bd85
+msgid "Supervisor"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:4
+# 7548771757574719a8fbb64a5796dab7
+msgid "Supervisor logs are created and managed directly by the service supervisor, and are automatically rotated when a the current log file reaches 1,000,000 bytes. 10 log files are kept. The latest supervisor log is always located in ``/var/log/chef-server/service_name/current`` and rotated logs have a filename starting with ``@`` followed by a precise ``tai64n`` timestamp based on when the file was rotated."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:6
+# 64ca9ab4eaca4f8ca98768888c48eb8b
+msgid "Supervisor logs are available for the following services:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:8
+# 134f8e57d5bb4bf79f95bcd6d34f4829
+msgid "bifrost"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:9
+#: ../source/runbook.rst:319
+# 47c8de2a47be4942a63882cee95ee52b
+# 2de2acb252f74259a74b6a5a72c45128
+msgid "bookshelf"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:10
+#: ../source/runbook.rst:167
+# 57e7d70bf76f4d4496becca777d0df48
+# ba8929dab1934857bbb6f6aa044770bb
+msgid "nginx"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:13
+# c109ce33953349a6a15bd7cfa54e50e1
+msgid "opscode-expander-reindexer"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:14
+# 0faaa89ceda846a69f921ec6baf7f6ab
+msgid "opscode-solr4"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:15
+#: ../source/runbook.rst:339
+# 9107a4fdea5c41248b127a379e58ff02
+# fae2c8cf3b7845808d92eb7c233db092
+msgid "postgresql"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:16
+#: ../source/runbook.rst:343
+# e48a3bea68b94c09bd26c559386846c1
+# f1805cb366d648cba00c3ab83e91342f
+msgid "rabbitmq"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_supervisor.rst:17
+# a5c7b2b9bf864e2aaa07db0fab1f9185
+msgid "redis"
+msgstr ""
+
+#: ../source/runbook.rst:151
+# 1bf07452b00f46cab665321ea81b96e2
+msgid "nginx, access"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:4
+# 39fe3c0f9f614f99b33137d187ae9704
+msgid "|nginx| is an important entry point for data on the |chef server|, which means that debugging efforts frequently start with analyzing the |service nginx| service's ``access.log`` file. This log contains every HTTP request made to the front-end machine and can be very useful when investigating request rates and usage patterns. The following is an example log entry:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:15
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:16
+# 1c509f3119714ce5851c843f22f48173
+# 78742d8f0e7547a1b58c83add96a8c05
+msgid "where important fields in this log include:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:17
+# 6efb6dffcfae414085cd560bbfe12d99
+msgid "The HTTP status code (``200``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:18
+# d0ea795348bf42ddb795d6fd679c1eb5
+msgid "The IP address of the requesting client (``175.185.9.6``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:19
+# 04743e61fefd4784863c08dc72902e76
+msgid "The timestamp (``[12/Jul/2013:15:56:54 +0000]``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:20
+# 8ad921eb8ffe45e6a218bb855045e532
+msgid "The total request time (``\"0.850\"``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:21
+# a42d3b987a514273816b39f3bfd250c2
+msgid "The request method (``GET``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_log_access.rst:22
+# 4ebeadc2dbb74c879f73d79959b718e9
+msgid "The request URL (``/organizations/exampleorg/data/firewall/nova_api``)"
+msgstr ""
+
+#: ../source/runbook.rst:155
+# 333bfa2910414ba293b6d24971c00f08
+msgid "opscode-erchef, current"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_current.rst:4
+# b7367378864e47428c4e147645f9a9c7
+msgid "The |service erchef| service's ``current.log`` file contains a history of stack traces from major application crashes."
+msgstr ""
+
+#: ../source/runbook.rst:159
+# de4b2e10ffa444d49d2530ecd92f1983
+msgid "opscode-erchef, erchef"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:4
+# 1eaffff0a5124e2584e059a3ee9e8e12
+msgid "The |service erchef| service's ``erchef.log`` file contains a history of API requests that have been processed by |erchef|. These logs can be rotated quickly, therefore it is generally best to sort them by date, and then find the most recently updated log file:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:10
+# ffc07f68e9ef40cb9c86c7a080864fad
+msgid "The following is an example log entry:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:18
+# d08fcf4df72944f49fbe3923898e11d6
+msgid "The HTTP method (``POST``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:19
+# 7e4a67f4f8f14b9eb8b45f9b885efe47
+msgid "The HTTP path (``/organizations/srwjedoqqoypgmvafmoi/environments``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:20
+# b272f58c763e432cadbbe77e6425fe51
+msgid "The message (``{created,<<”_default”>>}``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:21
+# 69db5ab7add64cc88fcd636800bc6764
+msgid "The organization name (``org_name=srwjedoqqoypgmvafmoi``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:22
+# be6589cd1aff4d6eb683707aa75a8a42
+msgid "The timestamp (``2013-08-06T08:54:32Z``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:23
+# 9ef118495bfd4a159440afce2c96c3c4
+msgid "The name of the user and/or |chef client| which made the request (``pivotal``)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:25
+# 7f24f024d282442ebc75421e23cdce31
+msgid "In addition, the log file may contain additional entries that detail the amounts of time spent interacting with other services:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:27
+# b34876957bf14ced9eb2ba1b746b7a2e
+msgid "``rdbms_time`` (the time spent talking to the |service postgresql| service)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:28
+# 2c3b67c8707d4e97bcb6df57315206be
+msgid "``req_time`` (the request time)"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_erchef_log_erchef.rst:29
+# 31ed2120da054ed8b541305a6c5ecbc1
+msgid "``solr_time`` (the time spent talking to the |service solr| service)"
+msgstr ""
+
+#: ../source/runbook.rst:163
+# 756e3091ff7346f5a17ef1d1d7155595
+msgid "Application"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_type_application.rst:4
+# 7b2669aaa1384b5da4de8b1c3e929fa7
+msgid "Application logs are created by the services directly, and may require log rotation policies to be applied based on organizational goals and the platform(s) on which the services are running."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:4
+# 6e1978966e8f46cb980163f82d763f4d
+msgid "The ``nginx`` service creates both supervisor and administrator logs. The administrator logs contain both access and error logs for each virtual host utilized by the |chef server|. Each of the following logs require external log rotation."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:10
+# 911f506a8fc5444e837ec2638225a3bd
+msgid "Logs"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:12
+# 327392ea3f4c4c039cad7f285d96a28f
+msgid "``/var/log/opscode/nginx/access.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:13
+# 7bf34fd2851642c989c4ce801f1446f9
+msgid "The Web UI and API HTTP access logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:14
+# 1c531df09c0e4eafad2edeeb4274319b
+msgid "``/var/log/opscode/nginx/error.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:15
+# 500591547de44a26a336d536c940d0b1
+msgid "The Web UI and API HTTP error logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:16
+# 26fe8c9d86834ead9b06a9aa79555e40
+msgid "``/var/log/opscode/nginx/internal-account.access.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:17
+# c567ec155556420397053c6f5e6dcad1
+msgid "The ``opscode-account`` internal load-balancer access logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:18
+# 1393f3f677db4fba9e1d10a5b5474de2
+msgid "``/var/log/opscode/nginx/internal-account.error.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:19
+# 0f91d97027bb443f95ed492f93a5670d
+msgid "The ``opscode-account`` internal load-balancer error logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:20
+# fd94bafb5f0149fcbf493f7af24f9be6
+msgid "``/var/log/opscode/nginx/internal-authz.access.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:21
+# 145b8767a2c148659805cd4ccfcb8c28
+msgid "The ``opscode-authz`` internal load-balancer access logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:22
+# 620ef47323f64e0eb91352da56c5f6d9
+msgid "``/var/log/opscode/nginx/internal-authz.error.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:23
+# 2879316dd6234225bb0126fa9c63ee03
+msgid "The ``opscode-authz`` internal load-balancer error logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:24
+# e83d31c21bf740658968e2865c065777
+msgid "``/var/log/opscode/nginx/internal-chef.access.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:25
+# dbfcdd2c49f74ed88eaa1795ad43bd90
+msgid "The ``opscode-chef`` and ``opscode-erchef`` internal load-balancer access logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:26
+# 2786e962cb2149edbf90317801f2ab9d
+msgid "``/var/log/opscode/nginx/internal-chef.error.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:27
+# fab25a25924640aa94b0032644e5379e
+msgid "The ``opscode-chef`` and ``opscode-erchef`` internal load-balancer error logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:28
+# 9beb113788cd4025839aba190e6a2e71
+msgid "``/var/log/opscode/nginx/nagios.access.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:29
+# 65ea89711c154c9c9a74f4bb973ebf6c
+msgid "The ``nagios`` access logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:30
+# 8b2b938ce501460aae1c660f895ae0e6
+msgid "``/var/log/opscode/nginx/nagios.error.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:31
+# af48f629d1fe438b85ab6c1f5c6d28b3
+msgid "The ``nagios`` error logs."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:32
+# 77cbab502765471caa98e5e64ab75282
+msgid "``/var/log/opscode/nginx/rewrite-port-80.log``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx.rst:33
+# aa2afd3fb4f54ebf83f904cf9d1ef350
+msgid "The rewrite logs for traffic that uses HTTP instead of HTTPS."
+msgstr ""
+
+#: ../../step_server_services/step_server_services_nginx_tail.rst:4
+# ffcdcdc3cbf040d1bfeee4d92c5d5150
+msgid "To follow the logs for the service:"
+msgstr ""
+
+#: ../source/runbook.rst:172
+# d8488b2c1d584d33ac66a4908459292d
+msgid "**Read Log Files**"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:4
+# a28506f9091b4bdfbb7ea853d04901eb
+msgid "The |service nginx| access log format is as follows:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:15
+# 42a8c429b01343d180adad7ac6457682
+msgid "A sample log line:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:31
+# 42be44bd278a41b2becc086ad2475720
+msgid "Field descriptions:"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:37
+# 3639d8e78c6f429fa48545c17b8dc2d3
+msgid "Field"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:39
+# 017b7badbf234c498c9fb92e2713aff8
+msgid "``$remote_addr``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:40
+# 376bf65fa8064c6c9908d09a15bf1056
+msgid "The IP address of the client who made this request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:41
+# 93f1ae61a895413cbe39d0fceb97c8f3
+msgid "``$remote_user``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:42
+# 7a18d77f778e4f5195e5ba3067d74221
+msgid "The HTTP basic auth user name of this request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:43
+# 11d7bee878ad40fb9cb326acb8f4d858
+msgid "``$time_local``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:44
+# 2ce5a9e85b6c42aba7ba6464ef6d5855
+msgid "The local time of the request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:45
+# ffe55a1fcec34bc698d8fbb554008c9a
+msgid "``$request``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:46
+# 5e8ab63fea4f4ae18828114de234473a
+msgid "The HTTP request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:47
+# ca246d893fcd47edb333ff24c03dc609
+msgid "``$status``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:48
+# 382a3f4a2e5b48f7a54b130e30d3db93
+msgid "The HTTP status code."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:49
+# 9d0f6644f5494ff8801a48c71e96faf3
+msgid "``$request_time``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:50
+# a2807d8a209b4e8388795dcc4206872e
+msgid "The time it took to service the request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:51
+# 3566cddcf3234a8788c6a7692441df98
+msgid "``$body_bytes_sent``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:52
+# 604b0f3677534912bbb2a78f1a7ae6f1
+msgid "The number of bytes in the HTTP response body."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:53
+# 241fec14a23f4469b3c747cf5680d251
+msgid "``$http_referrer``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:54
+# 27b219ac21004c40bad88debbe7dcc79
+msgid "The HTTP referrer."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:55
+# d54dc044798e43ec8bc954c4007ce346
+msgid "``$http_user_agent``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:56
+# 94d8f5f8e5b04f33a3bc8c9d5450a010
+msgid "The user agent of the requesting client."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:57
+# 13977ce894014df5a4f62ac4e0572ea0
+msgid "``$upstream_addr``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:58
+# e703db22cfd542919bcea1ea683b8b5d
+msgid "The upstream reverse proxy used to service this request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:59
+# 520c4a93de8e45ef96c6ad93ceae539f
+msgid "``$upstream_status``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:60
+# 1072a4ef826d4d24ba3e317a5a8c31d6
+msgid "The upstream reverse proxy response status code."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:61
+# 1c624bdfc88c4ad6aa6e85b3ea42ceb0
+msgid "``$upstream_response_time``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:62
+# b4521dd31c694686b01c8be1984c1461
+msgid "The upstream reverse proxy response time."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:63
+# d7fc0f6aba1e4e96ad8459c5d2f9954e
+msgid "``$http_x_chef_version``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:64
+# 284203cb829c46dc83743c826b2aa1e3
+msgid "The version of |chef| used to make this request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:65
+# 78255e09591d494f9ddacdcc207f1164
+msgid "``$http_x_ops_sign``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:66
+# e4b416db669b452ca1dc802f1b6849f1
+msgid "The version of the authentication protocol."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:67
+# 718175c8786e43a3b9ec3871ec62ad3c
+msgid "``$http_x_ops_userid``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:68
+# 54682bd96e224e028c7e42e7d3c5c526
+msgid "The client name that was used to sign this request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:69
+# 9058c2fec459488e9a9a9be3fa0dcce5
+msgid "``$http_x_ops_timestamp``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:70
+# 49c723d798554c7ea2b601170635bbf6
+msgid "The timestamp from when this request was signed."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:71
+# 3ec72fb607004b93a5a19af9905f4d66
+msgid "``$http_x_ops_content_hash``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:72
+# 803d6151480f4bdc87b3804ed36b9b84
+msgid "The hash of the contents of this request."
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:73
+# 1a5ebfa702594d23b27f0ae4e70d13e9
+msgid "``$request_length``"
+msgstr ""
+
+#: ../../includes_server_logs/includes_server_logs_nginx_read_logs.rst:74
+# 3f7c4feec2c440eda36c0e7ffcf9d11d
+msgid "The length of this request."
+msgstr ""
+
+#: ../source/runbook.rst:183
+# e13e7108976c479c9cbca4f4e52256b1
+msgid "Firewalls and Ports"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst:4
+# d0ac6979901745698736a807ee9fb034
+msgid "All of the ports used by the |chef server| are TCP ports. Refer to the operating system's manual or site systems administrators for instructions on how to enable changes to ports, if necessary."
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_listening.rst:5
+# 71be4f050902407d9ce1100e9fdbdea6
+msgid "All services must be listening on the appropriate ports. Most monitoring systems provide a means of testing whether a given port is accepting connections and service-specific tools may also be available. In addition, the generic system tool |telnet| can also be used to initiate the connection:"
+msgstr ""
+
+#: ../source/runbook.rst:190
+# 732c4247c88f460488f35f0edba26559
+msgid "Standalone"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:4
+# f7469064631c435baebb5fa4322cf324
+msgid "For a standalone |chef server| installation, and if host-based firewalls (iptables, ufw, etc.) are being used, ensure that the following ports are open:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:10
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:10
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:10
+# 4a0be94a8e514539a7d34b7ecc905b8a
+# 44041df0c365453e95f4084f1ebda382
+# 889e0299e6564a8bb14134178f5cef9e
+msgid "Port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:11
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:11
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:11
+# 1d11405ba6904d12b6c2b4565461005a
+# 5257b7947da046279e7ba06be992042c
+# 4007cfe84cd84371866750e5e1cba61b
+msgid "Service"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:12
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:12
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:12
+# 17d3bf0c51fd4e41897dce4774971377
+# b43ece6536084bf099c15df4e47f9f0e
+# 72af7cc64c5b4c20b89395ecd0b60fd8
+msgid "External"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:13
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:13
+# 2854c10f8e70412eabec179498556531
+# 7d5300a494c0422cbbec9781743af827
+msgid "80"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:14
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:17
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:14
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:17
+# f6ffaa7e45df4db2aec3b725e3b0c215
+# a49c3bc785114ad1af0eb1c3593b1de9
+# f6ef6d17f65c4ab2b94385b95a05f0ce
+# c09148ca061e4c61a710c21f5034d81a
+msgid "|service nginx|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:18
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:18
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:15
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:18
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:24
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:27
+# f64f21b1517945ff9d2e45ab8f3cdddd
+# fcb2bff849c342f38146649bdd9bd2a3
+# 7376f123b2354a839a80070046fb5d9f
+# a8c9c5e4b0e94b2e947c269ccedb2060
+# b10a8da8c7174a1b9347871b6aad3de2
+# 9d5c3e6e3c4940aebb4cbf4348021f22
+# bcb7cc5a5461439d8cf666435f0a393d
+# 4b6c0f17d37e4883ac515f6eb006f07c
+# b7c4a3bd94f6473285ac3a7f8c3a1081
+msgid "yes"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:16
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:16
+# 612f64c5c8af4b1ba3b0cc5d6833a40f
+# b0989b8c7ce44a8ab1481d237decab25
+msgid "443"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:19
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:19
+# a577d16556414e57b6cbcd17fd7e416d
+# e993e49eeb48434b9b8312e661e96f82
+msgid "8000"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:20
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:20
+# 6c4956984aea454090129dd4a1b3555e
+# 4f5ea7c0cad348cfae029ae2cdee8c66
+msgid "|service erchef|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:24
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:27
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:30
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:33
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:36
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:39
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:42
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:45
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:48
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:51
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:21
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:24
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:27
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:30
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:33
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:30
+# 455145844c5e4a839cc908b35e4e2467
+# ea6621c277144469a677619d0dbadb7e
+# fe02c7d772b94555954d09dd32e7ad89
+# 7fee4c2bb9a84e43b58ee2b447ba68ce
+# 46d41fd33e0d4a21a75d1fb6fbbf27a2
+# 8bb56134248d4fcdaf79d41fe3cdb500
+# c41cd7b4158845ca9434ad23bb7ec393
+# 0f6bc6645191465b9ce21105b26686f2
+# 74f804471f1d4e14ab8237a9d81df10c
+# 7fe3bb9aeeb14d5c9f940d5f69683225
+# 1c2ce602acf947afb2b003676ce4f77e
+# a29c9713b6de4e1db05e58d8a3bb4840
+# c0f8307cf512456991388fe2ad30e91b
+# a060ef2c6a294b428abe3cf8b86c94db
+# a58bd9b51174432ea2cce0196e337269
+# 71fd1557ebea42dc86766108b03bfe5c
+# 1bda82145a614d86be86b2829a6a3b71
+msgid "no"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:22
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:22
+# 178bb13c42784887886b3f5b0b1fe128
+# 77a99c3459a04c82ad00dddf31123b7f
+msgid "9090"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:23
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:23
+# 72e3540b21b74a7d9a147060ade5e971
+# 8221bb650dc3430dbf8148dcd5cca979
+msgid "|service ocid|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:25
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:25
+# 12e470a6d18445f39ed9d1bb65fa90a7
+# dc2b5a97dd0e4e6789932210033bfb73
+msgid "9463"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:26
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:26
+# d1823479e4d74c2897734b090d713b1f
+# 8dc163d249fe41ba99fc0ef88024ec3c
+msgid "|service bifrost|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:28
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:28
+# da9f67d32dd34b82a3c2bd785ef4dfbe
+# 1216652198494ca1b28dfae39c559fba
+msgid "9680"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:29
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:29
+# eabde38335b047bfaa7b44c604a7d367
+# f7d585306c354d6dacbb594d795e9514
+msgid "|api chef server| internal LB port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:31
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:31
+# c7ed689f585c45cb8f305af40890cd33
+# adb371370a94445c9fd1dcad6c629ee8
+msgid "9683"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:32
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:32
+# c97aa9a8a5b04ab288110b9809b44dd8
+# be80027661d94ec1b2ae7ccab2a28d11
+msgid "|service bifrost| internal LB port"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:34
+# f0bec8169c034c978aa7d9a382d43b9a
+msgid "5984"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:35
+# 4af30367ec734837bce45d8b288df96a
+msgid "|service couchdb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:37
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:13
+# c9d28da0a4cc44a09b139e74c67ae622
+# 1fb94482006e453faf9933b2dfec3862
+msgid "8983"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:38
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:14
+# 4c39fb36d24a4832a464e04455285cc0
+# 1f3ac5e9dc5442a68050a693d807e11b
+msgid "|service solr4|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:40
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:16
+# d2b7c85da197494c95fdeb161e4c3b88
+# db892d0465454e59b58d551408a2ac2b
+msgid "5432"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:41
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:17
+# 37c7b7095f6b4f13be0543ba5bc50d57
+# 07ab5a85f6444e23bf5545bdf5f565e2
+msgid "|service postgresql|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:43
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:19
+# a6a98bbc0bbe475092812afb69dbb3d1
+# c52f823f9ca94721983e4f5db8133abb
+msgid "5672"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:44
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:20
+# f4e3aed0b8fd4e1fa8d409d068a4f9b6
+# 8df989f38c254b28934eaa98902be136
+msgid "|service rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:46
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:22
+# c5f3d3b1743946a09811e6b8ccc20f45
+# c799b259b4a64e6bbb58ddf25e665b6c
+msgid "16379"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:47
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:23
+# cdebeda6d10e4eaa8b23be2b8a7a0401
+# 000628d7940d458c8d579898d94799fa
+msgid "|service redis_lb|"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:49
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:25
+# 9a827633b68d4f15b2e6ca110d27e0f3
+# da078d89908a4769b10b095f3f20beaa
+msgid "4321"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst:50
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:26
+# 7cf056299bfd4c6289965d020e9405fe
+# 95da95c28e3246f09f2fd379d48daf17
+msgid "|service bookshelf|"
+msgstr ""
+
+#: ../source/runbook.rst:194
+# e1af410e05e148aa8f3f970173bb3e41
+msgid "Front End"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst:4
+# 57c475a6a13f49a3a21b36ee1acf8972
+msgid "For front-end servers in an |chef server| installation:"
+msgstr ""
+
+#: ../source/runbook.rst:198
+# 90e537875411490798983884f39d755a
+msgid "Back End"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:4
+# 6a61284a622c4e48853882d70d1a5ccc
+msgid "For back-end servers in an |chef server| installation:"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:28
+# 8d8d23357c424d2e9b77698f938a2725
+msgid "7788-7799"
+msgstr ""
+
+#: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst:29
+# fa54352c569e4210a057f79523efa3a0
+msgid "|drbd| This port range must be open between all back end servers."
+msgstr ""
+
+#: ../source/runbook.rst:207
+# 926066bf2f004c719f2ab51a7683aa89
+msgid "Services"
+msgstr ""
+
+#: ../source/runbook.rst:208
+# 8af35b3b53104a27b6930285b1d777e7
+msgid "The following subcommands are built into the |chef server ctl| command line tool."
+msgstr ""
+
+#: ../source/runbook.rst:211
+# af0435f298854e9f952fcec9b2e74883
+msgid "hup"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_hup.rst:6
+# 0c38b71718244c5aa116045b55fbc21a
+msgid "The ``hup`` subcommand is used to send a ``SIGHUP`` to all services. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../source/runbook.rst:215
+# 65db2ab73eb04aca83c77efc5604394d
+msgid "int"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_int.rst:6
+# 055387498bc646ffb433c45046a5886b
+msgid "The ``int`` subcommand is used to send a ``SIGINT`` to all services. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../source/runbook.rst:219
+# eee5309dedfa423fbc080648f8bd855e
+msgid "kill"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_kill.rst:6
+# cb9802d138bd41b195f9326ba496f65d
+msgid "The ``kill`` subcommand is used to send a ``SIGKILL`` to all services. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../source/runbook.rst:223
+# fd63362b0beb4f68a8c8e65da508e6f7
+msgid "once"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_once.rst:6
+# 8da72811437640aa8ba47f59c7b48a38
+msgid "The supervisor for the |chef server| is configured to restart any service that fails, unless that service has been asked to change its state. The ``once`` subcommand is used to tell the supervisor to not attempt to restart any service that fails."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_once.rst:8
+# ca2875d383e84f92bb06c41a9570c29b
+msgid "This command is useful when troubleshooting configuration errors that prevent a service from starting. Run the ``once`` subcommand followed by the ``status`` subcommand to look for services in a down state and/or to identify which services are in trouble. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../source/runbook.rst:227
+# 15041a631c27418cafc8688904feca01
+msgid "restart"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_restart.rst:6
+# 5e470fd7411e4c1a988c5a40f870fb15
+msgid "The ``restart`` subcommand is used to restart all services enabled on the |chef server| or to restart an individual service by specifying the name of that service in the command."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_restart.rst:8
+# 217977084419483785094b81442a019a
+msgid "When running the |chef server| in a high availability configuration, restarting all services may trigger failover."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_restart.rst:16
+# 92b1e7f9059b4e5884c857008f9b70b7
+msgid "where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. When a service is successfully restarted the output should be similar to:"
+msgstr ""
+
+#: ../source/runbook.rst:231
+# 26b6896d9bc74eb08d51e55b979cc159
+msgid "service-list"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_service_list.rst:6
+# e3eaa1bfdb284251a0c42399b82713cc
+msgid "The ``service-list`` subcommand is used to display a list of all available services. A service that is enabled is labeled with an asterisk (*)."
+msgstr ""
+
+#: ../source/runbook.rst:235
+# 47a2bcdd13514381ba859600777d654e
+msgid "start"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_start.rst:6
+# 89a16862774a4e1bbb080bf2480f6691
+msgid "The ``start`` subcommand is used to start all services that are enabled in the |chef server|. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_start.rst:14
+# efd80ae465c84efd9d3a7ed79f0f3fa9
+msgid "where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. When a service is successfully started the output should be similar to:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_start.rst:20
+# eab3d3bf89fa45eaa091bd95c88db781
+msgid "The supervisor for the |chef server| is configured to wait seven seconds for a service to respond to a command from the supervisor. If you see output that references a timeout, it means that a signal has been sent to the process, but that the process has yet to actually comply. In general, processes that have timed out are not a big concern, unless they are failing to respond to the signals at all. If a process is not responding, use a command like the ``kill`` subcommand to stop the process, investigate the cause (if required), and then use the ``start`` subcommand to re-enable it."
+msgstr ""
+
+#: ../source/runbook.rst:239
+# f9f56381a2e6426388daffac34bf0cab
+msgid "status"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:6
+# 51ca2c6656b54fd4ba6a5dd9d5d8ee29
+msgid "The ``status`` subcommand is used to show the status of all services available to the |chef server|. The results will vary based on the configuration of a given server. This subcommand has the following syntax:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:12
+# 6178c07da09f409db37da9ddb2136f82
+msgid "and will return the status for all services. Status can be returned for individual services by specifying the name of the service as part of the command:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:20
+# badcbf2d2c224d1ebfcdf633d87487f1
+msgid "When service status is requested, the output should be similar to:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:26
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:25
+# 32cb0a1bf6564bf7a5b58a71314f2721
+# 37f32841bcf8475baf876921c2ecc211
+msgid "where"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:28
+# 4ba45e5db2144d12b252220c5150f734
+msgid "``run:`` is the state of the service (``run:`` or ``down:``)"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:29
+# 9c70c05b045d435a8467d4c174fe2185
+msgid "``service_name:`` is the name of the service for which status is returned"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:30
+# 1f230a2c8ebc4159b7e9df21a886b66d
+msgid "``(pid 12345)`` is the process identifier"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:31
+# 56c94837181a4ea6bfc20a2ce3411924
+msgid "``12345s`` is the uptime of the service, in seconds"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:33
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_stop.rst:20
+# c98ae11cf8c747dc96eec72a804a63eb
+# f4bc00e4a4754cca9cbbf555bb33e517
+msgid "For example:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status.rst:39
+# 3bab78622ce941108f746f132115ccff
+msgid "By default, |runit| will restart services automatically when the services fail. Therefore, |runit| may report the status of a service as ``run:`` even when there is an issue with that service. When investigating why a particular service is not running as it should be, look for the services with the shortest uptimes. For example, the list below indicates that the |service erchef| should be investigated further:"
+msgstr ""
+
+#: ../source/runbook.rst:243
+#: ../source/runbook.rst:383
+# 139db95c6b7242b5bd4da2d81e4be320
+# e5484ff9d1ee4df1a1eb106e23a8b078
+msgid "High Availability"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:6
+# aaabec380e054a7fb750657d3bb13027
+msgid "A typical status line for a service that is running any of the |chef server| front-end services is similar to the following:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst:12
+# a3ee95e9e23b45a5a7d9e00c446f636b
+# c2c0f153dacb4d0a8dac9f708c86297a
+msgid "where:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:14
+# 4c0967c8523544f6a6c30fd87c2f0e32
+msgid "``run`` describes the state in which the supervisor attempts to keep processes. This state is either ``run`` or ``down``. If a service is in a ``down`` state, it should be stopped"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:15
+# 505f382cf4394f448c7167932b7c59aa
+msgid "``name_of_service`` is the service name, for example: ``opscode-solr4``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:16
+# 1303b1d8db5b403b9b30db4a9f4b15fb
+msgid "``(pid 1486) 7819s;`` is the process identifier followed by the amount of time (in seconds) the service has been running"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:17
+# 5c4d270e11424d05b02e125d9123ad37
+msgid "``run: log: (pid 1485) 7819s`` is the log process. It is typical for a log process to have a longer run time than a service; this is because the supervisor does not need to restart the log process in order to connect the supervised process"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:19
+# 1595179ff07341e6a4618462415c7063
+msgid "If the service is down, the status line will appear similar to the following:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:27
+# a59ade903990486f9b18aced0d3f15ab
+msgid "``down`` indicates that the service is in a down state"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_status_logs.rst:28
+# 9c5b687db3be4dccb2e5c4f0041fbc14
+msgid "``3s, normally up;`` indicates that the service is normally in a run state and that the supervisor would attempt to restart this service after a reboot"
+msgstr ""
+
+#: ../source/runbook.rst:251
+# bc2b1d7705c1475c9cf0ba4fe0dab044
+msgid "stop"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_stop.rst:6
+# 4aa733bcd1fd46748a91f6cd48ce2a08
+msgid "The ``stop`` subcommand is used to stop all services enabled on the |chef server|. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_stop.rst:14
+# 24cd536c0e5f4a1bbeb90b6042e40e7b
+msgid "where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. When a service is successfully stopped the output should be similar to:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_stop.rst:26
+# fcd36c956fe04da3ada7a6a98292cda6
+msgid "will return something similar to:"
+msgstr ""
+
+#: ../source/runbook.rst:255
+# c9c1a0f45851468fba3c2d73f9c66464
+msgid "tail"
+msgstr ""
+
+#: ../source/runbook.rst:259
+# ee47f0bc180045d18bbb845b78436ef4
+msgid "term"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_term.rst:6
+# d9cdc9cdc0d84b5fa7d7560fadcd5251
+msgid "The ``term`` subcommand is used to send a ``SIGTERM`` to all services. This command can also be run for an individual service by specifying the name of the service in the command."
+msgstr ""
+
+#: ../source/runbook.rst:263
+# 6eda3ee598174bb1bcfbcdbe2e228bf2
+msgid "SSL Configuration"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl.rst:4
+# 2bdd91a9a39942ed9b74d5ea65eed202
+msgid "Configuration of |ssl| for the |chef server| using certificate authority-verified certificates is done by placing the certificate and private key file obtained from the certifying authority in the correct files after the initial configuration of |chef server|."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl.rst:6
+# 2656a82fc9314d079a9f50f674d6e76c
+msgid "Initial configuration of the |chef server| is done automatically using a self-signed certificate to create the certificate and private key files for |nginx|."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl.rst:8
+# 8c08fff9fd5c46118597983d4e146171
+msgid "The locations of the certificate and private key files are"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl.rst:10
+# 38f3fb389e3a40188a94f81b53f81019
+msgid "``/var/opt/opscode/nginx/ca/FQDN.cert``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl.rst:11
+# 3b14e48b4c214297b3db5622e437e1d8
+msgid "``/var/opt/opscode/nginx/ca/FQDN.pem``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl.rst:13
+# ff7f6a85d44a4ce9a9df54f44cd13722
+msgid "As the |fqdn| will have already been configured previously, simply replace the contents of these two files with the certifying authority's files."
+msgstr ""
+
+#: ../source/runbook.rst:267
+# 60983561f00542c0808e37e3a5bc853e
+msgid "The |fqdn| for the |chef server| should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters."
+msgstr ""
+
+#: ../source/runbook.rst:269
+# b5bdc4fab8d4414c9627d84120a48995
+msgid "By default, the |chef server| uses the |fqdn| to determine the common name (``CN``). If the |fqdn| of the |chef server| is longer than 64 characters, the ``reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty."
+msgstr ""
+
+#: ../source/runbook.rst:272
+# 9481693283a14531b4550f239ecc8f6f
+msgid "SSL Certificates"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:4
+# dced0e7dd3034eff808761fad988b40f
+msgid "The |chef server| can be configured to use |ssl| certificates by adding the following settings to the server configuration file:"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:10
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_erchef.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_expander.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:14
+#: ../../includes_server_tuning/includes_server_tuning_postgresql.rst:10
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:10
+# 75a8fce1ed41466382a79af9e36c8a44
+# fbad4cb07c1d4bb683d892206ae05328
+# 596547f42dc84698a18df334d4ed13aa
+# fba7a7422a8b44f18c8746ba6be38629
+# 0b58dc02e6e44738bde7deef2561ca22
+# e0cb3c488f4046c0895ffd950a0e04c4
+# e58c15a1ce944e709f3b7d7e8a05a0bb
+# 225d94cb4f6448a88a7f26286aa5f0b3
+# 7e3af9ed342248f78c2653f7adb6992f
+# 179615097bed45709f71afa407382418
+# 7e06a7d7210748e6812ee9a5973c5c12
+# d1e9e6f5e2e2445d9fe4d4849b049473
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:12
+# 8d629c64ae6246f880d288545d811f0e
+msgid "``nginx['ssl_certificate']``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:13
+# 36c6cbe77fc34984a3610b0c21991a39
+msgid "|ssl_certificate|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:14
+# 1e22163e2db941b2976dd62f354e0e3c
+msgid "``nginx['ssl_certificate_key']``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:15
+# 61ea62e498d14a19a3965f017e2917d5
+msgid "|ssl_certificate key|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:17
+# b36ea32c69624e8680e6887dfce937e5
+msgid "and then setting their values to define the paths to the certificate and key."
+msgstr ""
+
+#: ../source/runbook.rst:276
+# b0251308892f4cd0a49ceb7c2743b82d
+msgid "Regenerate Certificates"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:4
+# d61e82a617b04b408c215b52b230d7e5
+msgid "|ssl| certificates should be regenerated periodically. This is an important part of protecting the |chef server| from vulnerabilities and helps to prevent the information stored on the |chef server| from being compromised."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:6
+# 8b57cd78d4a042e8a800dc81292e8ce4
+msgid "To regenerate |ssl| certificates:"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:8
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:30
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_device.rst:18
+# 2720de75d88b4ebd9795f46d40c08c24
+# 8ea608152bc3416089d0c23587df5b40
+# 9c23f990cae7451f8b31cc726081dac5
+msgid "Run the following command:"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:14
+# d441e3245a3a4b1ca3ffb7a6b7105404
+msgid "The |chef server| can regenerate them. These certificates will be located in ``/var/opt/opscode/nginx/ca/`` and will be named after the |fqdn| for the |chef server|. To determine the |fqdn| for the server, run the following command:"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:20
+# 9f8b132df92b4198b6755f6229da1d0c
+msgid "Please delete the files found in the ca directory with names like this ``$FQDN.crt`` and ``$FQDN.key``."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:22
+# 6bfc22afd1984a1e98bc6f9e7548cb67
+msgid "If your organization has provided custom |ssl| certificates to the |chef server|, they are located in ``/etc/opscode/chef-server.rb`` as values for the ``nginx[‘ssl_certificate’]`` and ``nginx[‘ssl_certificate_key’]`` settings. Delete these files and regenerate new keys using the same authority."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_regenerate.rst:24
+# 01ec29c85bb64953bed683a1b955ec43
+msgid "Run the following command, |chef server|-generated |ssl| certificates will automatically be created if necessary:"
+msgstr ""
+
+#: ../source/runbook.rst:280
+#: ../source/runbook.rst:309
+# 47d21fc6f4df4bd79d5aa92510b4f83e
+# 3719eab38ad1408f95621b8015cb3614
+msgid "SSL Protocols"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:4
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:4
+# bb6a033ba78046a68a4ca2e8050c7449
+# 604a498eadce4480995920ceae999959
+msgid "The following settings are often modified from the default as part of the tuning effort for the |service nginx| service:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:12
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:12
+# a986558df37c41ecb625d7113bf50ab9
+# 99793e69936d48b289d0df627a287812
+msgid "``nginx['ssl_ciphers']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:13
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:13
+# 57c4d790439f4140b10e67f189233d81
+# 839b38c848fc45a59fd82a04608ca3eb
+msgid "|ssl_ciphers| To favor AES256 with ECDHE forward security, drop the ``RC4-SHA:RC4-MD5:RC4:RSA`` prefix. For example:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:19
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:19
+# 16d6b26df1ae4b5a979af852060fa615
+# 0731b56701e146fe85fe667d0209a26d
+msgid "``nginx['ssl_protocols']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:20
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:20
+# 13be74d090d74ea1a64837320eefdb2a
+# f25954559cbc43a2a38b3eb1722c148e
+msgid "|version protocols_ssl| |ssl| 3.0 is supported by the |chef server|; however, |ssl| 3.0 is an obsolete and insecure protocol. Transport Layer Security (TLS)---TLS 1.0, TLS 1.1, and TLS 1.2---has effectively replaced |ssl| 3.0, which provides for authenticated version negotiation between the |chef client| and |chef server|, which ensures the latest version of the TLS protocol is used. For the highest possible security, it is recommended to disable |ssl| 3.0 and allow all versions of the TLS protocol.  For example:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:26
+#: ../../includes_server_tuning/includes_server_tuning_nginx.rst:26
+# da91bb0f069b44d7b73d0ac70150f3ca
+# 032fb476e03f4c31bdbc7ae8a5969938
+msgid "See https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_Ciphersuite for more information about the values used with these settings."
+msgstr ""
+
+#: ../source/runbook.rst:284
+# 04f848eb24024dce9d117addfe69c4ec
+msgid "|chef client| Settings"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:4
+# c037a3d559f94129b538b26aa3dddea3
+msgid "Use following |client rb| settings to manage |ssl| certificate preferences:"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:12
+# 7e49338aa6dc474ea7222afd48c00bf2
+msgid "``local_key_generation``"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:13
+# 232d80674f5f4120818db0a5748e19ec
+msgid "|generate local_keys| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:14
+# 9eef502094f54273b1af7b8881836412
+msgid "``ssl_ca_file``"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:15
+# efa5296ce081400a87ca4202b2cbb2c2
+msgid "|ssl_ca_file|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:16
+# 24a930af57dd46be8d0942b9ff90e7f5
+msgid "``ssl_ca_path``"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:17
+# 9c563aecc8de4b08b2be20097e0afef5
+msgid "|ssl_ca_path|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:18
+# 6a2848cd08484591b32ecec5592576b8
+msgid "``ssl_client_cert``"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:19
+# 1fd07c0a1bb84db1b7c9a25bdcd45a3c
+msgid "|ssl_client_cert| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:20
+# b3cf261884af4003a6be074d5c252687
+msgid "``ssl_client_key``"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:21
+# 95e43d864d14406a8f8e8ee663f37bc3
+msgid "|ssl_client_key| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:22
+# 19900b172d3741f8a202e213b07dda97
+msgid "``ssl_verify_mode``"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:23
+# 8220df87e57040dea2d846e94b1e8173
+msgid "|ssl_verify_mode|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:25
+# 28d0813ac1b74d3eadcbdcf2fc25822f
+msgid "|ssl_verify_mode_verify_none|"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:26
+# 89f4e6e801cb4d96a9cbc71c03c00956
+msgid "|ssl_verify_mode_verify_peer| This is the recommended setting."
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:28
+# 57a7f2f3866943c3bf8a04505b405b82
+msgid "Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified. Default value: ``:verify_peer``."
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:29
+# c151cb0381bc47a2b50910bd3557f90d
+msgid "``verify_api_cert``"
+msgstr ""
+
+#: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:30
+# b896dcf7646d46748d6e0b72835a12cd
+msgid "|ssl_verify_mode_verify_api_cert| Default value: ``false``."
+msgstr ""
+
+#: ../source/runbook.rst:288
+# 3c93daa8f4b44279a876d3013fe34b46
+msgid "Server Tuning"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning.rst:4
+# 15b2c09c95934286b83e4efb68a55b76
+msgid "The server configuration file contains a list of all the configuration options available for the |chef server|. Some of these values should be modified for large-scale installations."
+msgstr ""
+
+#: ../source/runbook.rst:292
+# 2f3aa33894c94afb93d9a193799fe276
+msgid "|note enterprise_chef_tuning|"
+msgstr ""
+
+#: ../source/runbook.rst:296
+# 1aebb6f656c9495ba855be3b5370e140
+msgid "Customize the Config File"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server.rst:4
+# 854f69324fc94d97b8fee7f9a2870547
+msgid "The |chef server rb| file contains all of the non-default configuration settings used by the |chef server|. (The default settings are built-in to the |chef server| configuration and should only be added to the |chef server rb| file to apply non-default values.) These configuration settings are processed when the ``chef-server-ctl reconfigure`` command is run, such as immediately after setting up the |chef server| or after making a change to the underlying configuration settings after the server has been deployed. The |chef server rb| file is a |ruby| file, which means that conditional statements can be used in the configuration file."
+msgstr ""
+
+#: ../source/runbook.rst:300
+# 39f9561d528445f7bffc520773b3e5ca
+msgid "Use Conditions"
+msgstr ""
+
+#: ../../step_config/step_config_add_condition.rst:4
+# 742ed72ab4d948a3aef73c940575a209
+msgid "Use a ``case`` statement to apply different values based on whether the setting exists on the front-end or back-end servers. Add code to the server configuration file similar to the following:"
+msgstr ""
+
+#: ../source/runbook.rst:305
+# bd242b129a7445b3b9bd25b5d9d452de
+msgid "Recommended Settings"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:4
+# 0757e3cac92d4946977d4ae922a3e6c2
+msgid "The following settings are typically added to the server configuration file:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:12
+# 5e45c13fa25b45fca089de7c482c4f38
+msgid "``api_fqdn``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:13
+# 09980fee6d5b4fb68180b2d558f761f0
+msgid "The |fqdn| for the |chef server|. This setting is not in the server configuration file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. Then configure the same value for the ``bookshelf['vip']`` setting prior to installing the |chef server|. For example: ``api_fqdn \"chef.example.com\"``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:14
+#: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst:12
+# 970bb5988b634f45af0f7a0607867880
+# 15c1de3b74ee40d0965dd6ac8ece8328
+msgid "``bookshelf['vip']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:15
+# f2f37e5dc2974027967615555972252c
+msgid "|ip_address virtual| Default value: ``node['fqdn']``. (This setting is related to the |service bookshelf| service.)"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:16
+# e0b0e4943d454030b2eb81ad8643ac9e
+msgid "``bootstrap``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:17
+# 1c24c26d615e41a397895a501c78f727
+msgid "Default value: ``true``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:18
+# f96815ae2b54485b978b9520c13a2ab6
+msgid "``ip_version``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:19
+# e1bfba9b197b4d7891a3bbe9224a84a1
+msgid "Use to set the IP version: ``\"ipv4\"`` or ``\"ipv6\"``. When set to ``\"ipv6\"``, the API listens on IPv6 and front end and back end services communicate via IPv6 when a high availability configuration is used. When configuring for IPv6 in a high availability configuration, be sure to set the netmask on the IPv6 ``backend_vip`` attribute. Default value: ``\"ipv4\"``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:20
+# 26e96d7bc25044f2b8cd423759c72009
+msgid "``notification_email``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_general.rst:21
+# 388a081292d34923a36650475e1a6b37
+msgid "Default value: ``info@example.com``."
+msgstr ""
+
+#: ../source/runbook.rst:313
+# da07575c36a34cffbd1cafba46260d3c
+msgid "Optional Settings"
+msgstr ""
+
+#: ../source/runbook.rst:314
+# ef10b9bcbbaa447987c091435782d8b5
+msgid "The following settings are often used to for performance tuning of the |chef server| in larger installations."
+msgstr ""
+
+#: ../source/runbook.rst:316
+# 20e417bbec7649dd8dfe86a280debf68
+msgid "When changes are made to the |chef server rb| file, the |chef server| must be reconfigured by running the ``chef-server-ctl reconfigure`` command."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst:4
+# 3d79c6d162844f70bcf30e7f370916c2
+msgid "The following setting is often modified from the default as part of the tuning effort for the |service bookshelf| service:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst:13
+# 4b7dd3ed4d9543ca87809d49eba58e12
+msgid "|ip_address virtual| Default value: ``node['fqdn']``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_erchef.rst:4
+# e9c5965562214bcaa3be61cad832c3ad
+msgid "The following settings are often modified from the default as part of the tuning effort for the |service erchef| service:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_erchef.rst:12
+# a862cec23a5e4bf395f0f93bdba19fa0
+msgid "``opscode_erchef['db_pool_size']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_erchef.rst:13
+# d8ec4c607b464c4483ef2d89dbb5b1a4
+msgid "|db_pool_size| If failures indicate that the |service erchef| service ran out of connections, try increasing the ``postgresql['max_connections']`` setting. If failures persist, then increase this value and also increase the value for ``postgresql['max_connections']``. Default value: ``20``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_erchef.rst:14
+# 13163d28742d4a5b8b4a72c03eeb973e
+msgid "``opscode_erchef['s3_url_ttl']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_erchef.rst:15
+# 6b26670936b545a98932097e82728005
+msgid "|s3_url_ttl| If |chef client| runs are timing out, increase this setting to ``3600``, and then adjust again if necessary. Default value: ``900``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_expander.rst:4
+# bd39efd707c14dd5a50c9192f074386b
+msgid "The following setting is often modified from the default as part of the tuning effort for the |service expander| service:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_expander.rst:12
+# 7be6b366c4b647a28af175dc915d2ead
+msgid "``opscode_expander['nodes']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_expander.rst:13
+# 6ed839208aa940daa88062d8e7fbcce8
+msgid "|worker_processes| The |service expander| service runs on the back-end and feeds data to the |service solr| service, which creates and maintains search data used by the |chef server|. Additional memory may be required by these worker processes depending on the frequency and volume of |chef client| runs across the organization, but only if the back-end machines have available CPU and RAM. Default value: ``2``."
+msgstr ""
+
+#: ../source/runbook.rst:331
+# 55a1799718b944e2a7e2e5f02d25ece0
+msgid "opscode-solr"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:4
+# 8b846b66e1464695ba61aa5a78e10a38
+msgid "The following settings are often modified from the default as part of the tuning effort for the |service solr4| service:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:12
+# 161e44310fd442a7be104520452f7a26
+msgid "``opscode_solr['heap_size']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:13
+# 57d9d49554774c00a24c6ec5d5fc69f6
+msgid "|heap_size solr|"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:15
+# bb491fdf3c174a9ea9eebe45428097bf
+msgid "If |apache solr| is running out of memory, the ``/var/log/opscode/opscode-solr/current`` log file will contain ``SEVERE: java.lang.OutOfMemoryError: Java heap space``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:17
+# 7de46fb881cc4792af63e14aba94ee7a
+msgid "The default value should work for many organizations with fewer than 25 nodes. Suggested value: ``256`` per every 25 nodes. For example, an organization with 300 nodes, this value should be set to ``3072``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:18
+# 537dc53617564a468b85cefb48ff247c
+msgid "``opscode_solr['max_field_length']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr.rst:19
+# 2983f793be3c451bb6d4f84161852a48
+msgid "|solr_max_field_length| Default value: ``100000`` (increased from the |apache solr| default value of ``10000``)."
+msgstr ""
+
+#: ../source/runbook.rst:334
+# 27cbdf0c0e6848098076ec09b8b1ea57
+msgid "**Update Frequency**"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:4
+# dbc9e83a19ce45058c925acd5a5d2c97
+msgid "At the end of every |chef client| run, the node object is saved to the |chef server|. From the |chef server|, each node object is then added to the ``SOLR`` search index. This process is asynchronous. By default, node objects are committed to the search index every 60 seconds or per 1000 node objects, whichever occurs first."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:6
+# cc348b3b9cbf45cb9c2b2ac0eb1a36c9
+msgid "|solr_update_frequency_caveat|"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:8
+# 2396e06dee524e6f85d0772ee05be002
+msgid "For |chef server|, these settings are configurable:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:16
+# bebed4cc3a9a4ece832386b562c07aa7
+msgid "``opscode_solr['commit_interval']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:17
+# 7e8fb743d8004ae0acb587a660478a61
+msgid "|solr_commit_interval| Default value: ``60000`` (every 60 seconds)."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:18
+# 6d57c673b34145698b67dbaca095d7ce
+msgid "``opscode_solr['max_commit_docs']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst:19
+# 8f3a5042262b43e8b7832bc4c508e1ba
+msgid "|solr_max_commit_docs| Default value: ``1000`` (every 1000 documents)."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql.rst:4
+# 2b82aaca80844b15b44d3220e48302d4
+msgid "The following setting is often modified from the default as part of the tuning effort for the |service postgresql| service:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql.rst:12
+# 2e721bb688a14910ad4e82af13dc522c
+msgid "``postgresql['max_connections']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql.rst:13
+# 38678ffc1ab040feae71cd5f78a1416c
+msgid "|max_connections| This value should only be tuned when the ``erchef['db_pool_size']`` value used by the |service erchef| service is modified. Default value: ``350``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql_connection_pool.rst:4
+# 846d682184d049d58e0b30247d80a290
+msgid "If there are more than two front end machines in a cluster, the ``postgresql['max_connections']`` setting should be increased. The increased value depends on the number of machines in the front end, but also the number of services that are running on each of these machines."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql_connection_pool.rst:6
+# 8ca8f774b1ef4ef092469e2f45c96172
+msgid "Each front end machine always runs the |service bifrost| and |service erchef| services."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql_connection_pool.rst:7
+# f1cee7f6d43e4a148586b94ffd505d05
+msgid "The |reporting| add-on adds the |service reporting| service."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql_connection_pool.rst:8
+# 668bf466bfd44ed297f8e76bf6fd6961
+msgid "The |push jobs| service adds the |service push_jobs| service."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql_connection_pool.rst:10
+# 089b7a7e217448429dd6c8447b2a2af9
+msgid "Each of these services requires 25 connections, above the default value."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql_connection_pool.rst:12
+# 0fff455feb8143da94f8f231350ab6a8
+msgid "Use the following formula to help determine what the increased value should be:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_postgresql_connection_pool.rst:20
+# 77ddc9eea3c744a7895526e234bdb4ba
+msgid "For example, if the current value is 350, there are four front end machines, and all add-ons are installed, then the formula looks like:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:4
+# 391e5e5f82e54546986ac8a13418cd9f
+msgid "The following settings must be modified when the |chef analytics| server is configured as a standalone server:"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:12
+# 723fb05a08df43e487e2ea0ab72f6328
+msgid "``rabbitmq['node_ip_address']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:13
+# c32942f7b18140edb10f27dff04f67a8
+msgid "|ip_address rabbitmq| Default value: ``\"127.0.0.1\"``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:15
+# 5784a5c6f925456d8caccbeb523607b2
+msgid "|analytics rabbitmq_settings| When the |chef analytics| server is configured as a standalone server, change this value to ``0.0.0.0``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:16
+# 825943d4259842e7b3537e3b05d81595
+msgid "``rabbitmq['vip']``"
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:17
+# 0bffc1febbcd457b896baed4c2042824
+msgid "|ip_address virtual| Default value: ``\"127.0.0.1\"``."
+msgstr ""
+
+#: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst:19
+# 157551f993784d5da6bb6a5f1e556738
+msgid "|analytics rabbitmq_settings| When the |chef analytics| server is configured as a standalone server, change this value to the backend VIP address for the |chef server|."
+msgstr ""
+
+#: ../source/runbook.rst:350
+# ab945ec6a4594708b04cc192ebf68a41
+msgid "Resize |drbd|"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd.rst:4
+# 816de04d782340d3b2d7b7f3faad01d8
+msgid "|drbd| may be resized. First, make a backup of the |chef server| data."
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd.rst:6
+# ff37a779bc0748a9ba9d79077d5ab2ba
+msgid "The mounted filesystem on the primary backend server is ``ext4``"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd.rst:7
+# 209dad8f0ec94d4d820cbc547b5eb097
+msgid "The backing device for the mounted ``ext4`` filesystem is an LVM2 volume named ``/dev/opscode/drbd``"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd.rst:9
+# be452d080cc9446ebd393b9762c0b262
+msgid "For more information about |lvm|, see http://www.tldp.org/HOWTO/LVM-HOWTO/. For more information about |drbd|, see http://drbd.linbit.com/users-guide/s-resizing.html."
+msgstr ""
+
+#: ../source/runbook.rst:354
+# ad3c178aa41f47e58c909ea303fb47c5
+msgid "Devices"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_device.rst:4
+# d733bdaa3b3b4db087f5546d57215af8
+msgid "After backing up the |chef server| data, make a note of the current size of the ``/dev/opscode/drbd`` logical volume and mountpoint. Run the following commands:"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_device.rst:10
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_vg.rst:10
+#: ../../includes_server_storage/includes_server_storage_drbd_verify.rst:10
+# 0b6d3e53c8654246a90ad62ddce2034b
+# fff8885fa7e04492b35d74c2e195aa04
+# fa43ea4e599b46e0b0071ff5da550818
+msgid "and then:"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_device.rst:16
+# 292f9b05d25e40d9b88ec57fefa242ee
+msgid "Verify that |drbd| is in good shape on both backend machines. Both the primary and secondary machines should show states similar to ``Primary/Secondary UpToDate/UpToDate``."
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_device.rst:24
+# ec85811e48a44b4eb93a1ab8135c3dad
+msgid "Save these results to compare them to the same data post-resize."
+msgstr ""
+
+#: ../source/runbook.rst:358
+# c493dcf8806c46b3bc2d6a968e60876a
+msgid "Volume Groups"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_vg.rst:4
+# e01559c693804675938c186df40d1788
+msgid "Resize the volume group on both backend systems. Run the following commands and replace ``sdb1`` for the correct device name:"
+msgstr ""
+
+#: ../source/runbook.rst:362
+# 5361dcd5dfe044d2bc51f56a42640a39
+msgid "Logical Volumes"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_lv.rst:4
+# 4f0645dd043b4de3810edfd16e178145
+msgid "Resize the logical volumes identically on both backend machines. Due to differences in the space available for logical volumes on the primary and secondary backend machines (which is typically caused by existing snapshots), the size of the logical volume should be specified in absolute terms on both sides of the |drbd| link, rathern than in percentages. Be sure to leave about 20% of the total available space free on both sides of the |drbd| link, minus any existing snapshots. Run the following command and replace ``SIZE`` with a value similar to ``10GiB``:"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_lv.rst:10
+# c2c2208f3cdd4d0894044235cdf5532c
+msgid "For example, if the volume group has 10GB total, only 8GB should be allocated to the logical volume, which leaves 20% of the volume group available:"
+msgstr ""
+
+#: ../source/runbook.rst:366
+# b00020e4b6514eb4aebf6b0a6cda649a
+msgid "Primary Backend"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_primary_backend.rst:4
+# 4ce8ea7ea6cf4b899d54f11781343869
+msgid "Resize |drbd| on the current primary backend to extend the size of the |drbd| device. Run the following command:"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_primary_backend.rst:10
+# 7eb91def9f3048c8ac80d78331d88321
+msgid "The size of the ``/dev/drbd0`` backing device's mountpoint should grow. This change may take some time to complete, as |drbd| may want to synchronize the changes across the network, even though they are empty blocks."
+msgstr ""
+
+#: ../source/runbook.rst:370
+# 791573a629d144128dfafbf69742921b
+msgid "Primary File System"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_resize_primary_filesystem.rst:4
+# 012082fac70643e6a19a5baa13d97b07
+msgid "Resize the file system only on the current primary backend. Run the following command:"
+msgstr ""
+
+#: ../source/runbook.rst:374
+# 71160642a77445f880f40fe03c2da65d
+msgid "Verify Resize"
+msgstr ""
+
+#: ../../includes_server_storage/includes_server_storage_drbd_verify.rst:4
+# 366bed1133fe40da9a06c29e22f1c6c6
+msgid "To verify the results of resizing |drbd|, run the following commands and compare the results to the same data that was collected prior to resizing |drbd|:"
+msgstr ""
+
+#: ../source/runbook.rst:379
+# acb6f656267b440c9522035d1055e134
+msgid "Backup and Restore"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore.rst:4
+# 8322873ddf044801aa9a43567130d788
+msgid "Periodic backups of |chef server| data are an essential part of managing and maintaining a healthy configuration and to help ensure that important data can be restored, if required."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:4
+# b16a35ccdf3a49529c381bc7d9730471
+msgid "To configure backups on the backend servers in a |ha| configuration, set a |cron| job in ``/etc/cron.d/opc_snapshot`` similar to the following:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:15
+# 03082c7115bb4da4bcfe7c5c93492050
+msgid "A |cron| job similar to the previous example will mount a new snapshot logical volume named::"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:19
+# 3e523f75b9b940a28dab65083d7e8b3e
+msgid "where ``{+%Y-%m-%d-%H-%M-%S}`` is a format string for year, month, day, so on."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:21
+# 361ace393f824e85afd0995914636e75
+msgid "After the |cron| job has run successfully, the ``mount`` command will show the new logical volume mounted on the ``/var/opt/opscode/drbd-backups`` mount point. The backup script will create a snapshot logical volume in unused space in the ``/opscode`` volume group. After the snapshot is created, the backup script will attempt to mount the snapshot logical volume, after which the snapshot will stay mounted for 24 hours. Upon the next |cron| job run, the backup script will attempt to unmount, destroy the snapshot, and then repeat the sequence."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:23
+# b2befd8e1a464dcfb626dae1d6442182
+msgid "The ``drbd-backups`` script with default settings requires at least 40 GB free space in the ``/opscode`` volume group on the backend servers."
+msgstr ""
+
+#: ../source/runbook.rst:387
+# 1309236128074729ad1e514613727288
+msgid "Required Directories"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:4
+# 74b1fb99e34f47cc964479f80f13b998
+msgid "Data stored in the following directories should be backed up periodically:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:6
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:11
+# 193ebc27c42e4616a783318ae2b60b74
+# cd88fad5474043d0be7a232c8e917e7e
+msgid "/etc/opscode"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:7
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:12
+# 6aebd12e19ec451388c6539b80d22da3
+# 321ccf0801f34cb686cbfb806ab3bf0e
+msgid "/var/opt/opscode"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:9
+# 30917a030565465a89a083fd638caede
+msgid "This data is also essential when any type of backup and restore operation is done for the |chef server|."
+msgstr ""
+
+#: ../source/runbook.rst:391
+# 722be8a362fb450aaa2d8a438e8ceecf
+msgid "Backup"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:5
+# 66c63b3f2ae04ed19a904e59fe0989f5
+msgid "When backing up |chef server| data, be sure that the system is shut down (or otherwise quiet) at the time of the backup. Perform all activities as root unless otherwise directed."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:8
+# cbb8e901452f4a8c9b2036e9b1b30054
+msgid "Make a postgres export using the following commands:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:17
+# e6dbf157f5274973b0eb8be14e99bf56
+msgid "Synchronize to make sure that all of the data is present on-disk:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:23
+# b53b28d8cd074a8682d6ea2686c280cc
+msgid "Backup the /etc/opscode and /var/opt/opscode directories and include the postgres export file as root"
+msgstr ""
+
+#: ../source/runbook.rst:395
+# 11b0edd96caf4b859b76b1ce42072138
+msgid "Restore"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:4
+# 31efd547c66b43e1b3e02e86e57b33ba
+msgid "When restoring |chef server|  data, the previously backed-up files will be required, along with the |chef server| running only the |service postgresql| service. Perform all activities as root unless otherwise directed."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:7
+# e9c90cc2a7124510bcc553794f93aa1c
+msgid "Stop all Chef Server services."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:9
+# 03190887110243a9b0ab8019d54f36bd
+msgid "and then restore the previously backed-up files to the following locations using this command to exclude postgres files:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:18
+# 5c0a401ba03b4380872d98a062f924df
+msgid "Start PostgreSQL service."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:19
+# 5145f8b085ba438ea88dc4f2d08591e3
+msgid "Restore PostgreSQL DB:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:25
+# bdebb00cb8b84771aaa4b332ce5f8e88
+msgid "This process has only 2 ERRORs and these can be ignored:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:27
+# c58cd242306b47edb5bede7376da76bb
+msgid "ERROR: current user cannot be dropped"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:29
+# 638417f38b424cd9a76a156ca96833bd
+msgid "ERROR: role \"opscode-pgsql\" already exists"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:31
+# 4f283c247b6d46d395eba1a7022104b4
+msgid "Start all Chef Server services."
+msgstr ""
+
+#: ../source/runbook.rst:403
+# 7657aaf6485d469197fbc343bbf5ba37
+msgid "Manage Organizations"
+msgstr ""
+
+#: ../source/runbook.rst:404
+#: ../source/runbook.rst:474
+# 2b4b12944a9241ffba7f2413b25de61d
+# e5ab17fd04d84c18924cab44bad30beb
+msgid "The following commands are built-in to the |chef server ctl| command line tool:"
+msgstr ""
+
+#: ../source/runbook.rst:407
+# 6b46f5e169cf4d38b23377b809fcae68
+msgid "org-create"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst:6
+# 99514ae9835b4408acf58f942327b341
+msgid "The ``org-create`` subcommand is used to create an organization. (The validation key for the organization is returned to ``STDOUT`` when creating an organization using this command.)"
+msgstr ""
+
+#: ../source/runbook.rst:410
+#: ../source/runbook.rst:422
+#: ../source/runbook.rst:430
+#: ../source/runbook.rst:442
+#: ../source/runbook.rst:453
+#: ../source/runbook.rst:467
+#: ../source/runbook.rst:480
+#: ../source/runbook.rst:492
+#: ../source/runbook.rst:500
+#: ../source/runbook.rst:508
+#: ../source/runbook.rst:520
+# 5a1c07a3b1c240e8b969b0ecbb1fd9ac
+# 670fd17143b04bd299572b27d01334c7
+# de392c8e197045cf8aee82b5ad20b06d
+# 10a7f6ae55af42acb105a4ae9047dfd9
+# 12aaa4cccd94415a9fd66e49c4d07a8e
+# 0a6ce3401e3b48c3a0314ef888eb3720
+# b7c93e988d524b9f9457485b8dea0f57
+# e0df5224ac674cc697a65cdd13cdbf29
+# 2bcccb621abf40abb61d4d026a366470
+# 3615495cb7b24932971dc00719cf3467
+# 4c51d83ea19d4945bb616c6f4f1a7dab
+msgid "**Syntax**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst:14
+# e4f8492e4429469b86ce6f0344e13566
+msgid "|name_rules org| For example: ``chef``."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst:15
+# ac5c5654fcea4176ad1348a551ae30d9
+msgid "|name_rules org_full| For example: ``\"Chef Software, Inc.\"``."
+msgstr ""
+
+#: ../source/runbook.rst:414
+#: ../source/runbook.rst:434
+#: ../source/runbook.rst:457
+#: ../source/runbook.rst:484
+#: ../source/runbook.rst:512
+#: ../source/runbook.rst:524
+# 1cf1a652f6304af591fa28213993f53d
+# 3827f265c6b9457c8fc8e26513cc030b
+# a945bcd9160c43fdaad85f4f19aec85d
+# 3eb62c0c99164635b71718be71957d01
+# 88e680774b7747a591d7b0cd866e188f
+# ae3459aac68441968139adc32874d7fa
+msgid "**Options**"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst:6
+# 1e3ef9b9c6aa4522bd9447875ab9e991
+# f613c06982bd45a1a70c7fe48c36f648
+# acd82a553b94466aaf771a41bf5044d7
+# 6d30d348116549b7a4d50893f31e16c5
+# 41cfc40f99d2493ab7ac7bdde37908a9
+# ed40ad1c30db433a8d45a916dad7bcf6
+msgid "This subcommand has the following options:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:9
+# f001b8754b4244f18be0b66556416e9a
+msgid "``-a USER_NAME``, ``--association_user USER_NAME``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:9
+# efafbf2625be4a6aaf8ce46ac20873a1
+msgid "Use to associate a user with an organization and add them to the |webui group admins| and |webui group billing| security groups."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:13
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst:9
+# ca4921db00eb4bdeb06fd1d952a5c050
+# a0decf19b3214dce90ac90f65e08e3ad
+msgid "``-f FILE_NAME``, ``--filename FILE_NAME``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create_options.rst:9
+# 6d9be01d33354b849fbfa16288aaf1ef
+# 3e3e26e51d9c469cabad4d95955e8656
+msgid "Use to write the private key to a file instead of ``STDOUT``."
+msgstr ""
+
+#: ../source/runbook.rst:419
+# 8d26138badc84973834013666490b541
+msgid "org-delete"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst:6
+# e2de4287cbc34dfd987c2cf8af5b7669
+msgid "The ``org-delete`` subcommand is used to delete an organization."
+msgstr ""
+
+#: ../source/runbook.rst:427
+# 7289aa28aa004c59ba3d2ed79d1e0984
+msgid "org-list"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst:6
+# e9e78180b43e45aa9ea41ad25e45a52b
+msgid "The ``org-list`` subcommand is used to list all of the organizations currently present on the |chef server|."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:9
+# b8ed56e4cd3e4eb5a28aab68a35a3414
+msgid "``-a``, ``--all-orgs``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:9
+# 8ce04366dfd44bff82b8a9b7d76440b0
+msgid "Use to show all organizations."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst:9
+# 1ca4befcac484df8a5bf7eb2e30d59ae
+# f58970510f3d4db09d6e1b4e4c015e13
+msgid "``-w``, ``--with-uri``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst:9
+# 236d81db72a74fb79d9a2db437224d2b
+# 16d0006a00504d20904ae97b7253037e
+msgid "|with_uri|"
+msgstr ""
+
+#: ../source/runbook.rst:439
+# 689ba42ca3734303960f6ea670639b2d
+msgid "org-show"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst:6
+# 6a8468d03d1e43bebaf628fad7c14990
+msgid "The ``org-show`` subcommand is used to show the details for an organization."
+msgstr ""
+
+#: ../source/runbook.rst:448
+# eb3bd57f9b3f410ba29f82ed045ed65f
+msgid "org-user-add"
+msgstr ""
+
+#: ../source/runbook.rst:449
+# 3e0a172f8baf4558a8780991e63994c4
+msgid "Early RC candidates for the |chef server| 12 release named this command ``org-associate``. This is the same command, with the exception of the ``--admin`` flag, which is added to the command (along with the rename) for the upcoming final release of |chef server| 12."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst:6
+# 343ee0e9668e4f178ebd446fd19e6000
+msgid "The ``org-user-add`` subcommand is used to add a user to an organization."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst:9
+# 44fe06fffaec4da388aa6335193a898d
+msgid "``--admin``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst:9
+# 120cb151d9a9485f8bc6adff110bc4a9
+msgid "Use to add the user to the |webui group admins| group."
+msgstr ""
+
+#: ../source/runbook.rst:462
+# 7fa38f72f42946568e43bc0b61752054
+msgid "org-user-remove"
+msgstr ""
+
+#: ../source/runbook.rst:463
+# 002644d0d5d144bcb665c1dd3cebe733
+msgid "Early RC candidates for the |chef server| 12 release named this command ``org-disociate``. This is the same command, but renamed for the upcoming final release of |chef server| 12."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst:6
+# 60eeac1943e4458c920d5766387473c1
+msgid "The ``org-user-remove`` subcommand is used to remove a user from an organization."
+msgstr ""
+
+#: ../../step_knife/step_knife_edit_admin_users.rst:3
+# d6a214db7e6e40b39f40579b71e8e810
+msgid "A user who belongs to the |webui group admins| group must be removed from the group before they may be removed from an organization. To remove a user from the |webui group admins| group, run the following:"
+msgstr ""
+
+#: ../../step_knife/step_knife_edit_admin_users.rst:9
+# 9603941d3e364ef2bde52ef7d0080f5d
+msgid "make the required changes, and then save the file."
+msgstr ""
+
+#: ../source/runbook.rst:473
+# 217b66f2e2ef4c4baaf9871ec78d4249
+msgid "Manage Users"
+msgstr ""
+
+#: ../source/runbook.rst:477
+# 7340f108606749c6920799e0b8081604
+msgid "user-create"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create.rst:6
+# 359401db7fde43c78b0be3c6e5c6f1c8
+msgid "The ``user-create`` subcommand is used to create a user."
+msgstr ""
+
+#: ../source/runbook.rst:489
+# 13ec3dde7dce4fa694bacc9eb60c05f6
+msgid "user-delete"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete.rst:6
+# cdf1bb180d9f4c18b8a793f62f72cf73
+msgid "The ``user-delete`` subcommand is used to delete a user."
+msgstr ""
+
+#: ../source/runbook.rst:497
+# e96db122f6e9447da657f75d8480cfdf
+msgid "user-edit"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst:6
+# a43ec4457c3c42d1a8ddf00f48fd9552
+msgid "The ``user-edit`` subcommand is used to edit the details for a user. The data will be made available in the |chef editor| for editing."
+msgstr ""
+
+#: ../source/runbook.rst:505
+# cdedf82b2ecf40bf9cbef5c99432b2ad
+msgid "user-list"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list.rst:6
+# 42a2b2642920467f8ae84ee1075130b1
+msgid "The ``user-list`` subcommand is used to view a list of users."
+msgstr ""
+
+#: ../source/runbook.rst:517
+# 7e5aebb51ea447d09d3d88e1bb0c800e
+msgid "user-show"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show.rst:6
+# 054d74e6d9d34c76874b095f95278cf3
+msgid "The ``user-show`` subcommand is used to show the details for a user."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst:9
+# 15f9783111c44ff78c5814d6b72ef890
+msgid "``-l``, ``--with-orgs``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst:9
+# cd043803bee140a890ec2dd0c3e44271
+msgid "Use to show the corresponding organizations."
+msgstr ""
+

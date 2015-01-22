@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 15:49-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_registry_key.rst:8
+# 930ac513f3b946d08490b30d4a0d86ca
+msgid "registry_key"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_generic.rst:5
+# c233abe98eb04f2aac2a93f9b5b77e12
+msgid "A `resource <http://docs.chef.io/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.chef.io/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:4
+# 6f1d4e17d2d9409c8c353a33efd4275a
+msgid "Use the |resource registry_key| resource to create and delete registry keys in |windows|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:6
+# 9808c3c0658f421aad259ed8f424d600
+msgid "64-bit versions of |windows| have a 32-bit compatibility layer in the registry that reflects and redirects certain keys (and their sub-keys) into specific locations. By default, the registry functionality will default to the machine architecture of the system that is being configured. The |chef client| can access any reflected or redirected registry key. The |chef client| can write to any 64-bit registry location. (This behavior is not affected by the |chef client| running as a 32-bit application.) For more information, see: |url msdn_registry_key|."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:15
+# b10e7422887644b58b44eec66d153dd3
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:4
+# 11aebd86b2314b098b659ef6b58ed042
+msgid "The syntax for using the |resource registry_key| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:26
+# ad0eb6d35e0540799c29448e2b836934
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:28
+# 1071792adc4d46dabc26e54493ecd849
+msgid "``registry_key`` tells the |chef client| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:29
+# 6dd8ce634b0a42d49579f5c7f0624571
+msgid "``name`` is the name of the resource block; when the ``key`` attribute is not specified as part of a recipe, ``name`` is also path to the location in which a registry key is created or from which a registry key is deleted"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:30
+# 7efb5660d45840ba813fbdd22544c348
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:31
+# edaf3cfc724e4cf99800e8db2ad1a7e4
+msgid "``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:32
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:30
+# cc691cf15238490e81feec995c96550e
+# 3d0d774a2b014bea972b6716da35c47c
+msgid "|values resource registry_key types|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:34
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:32
+# 837f0e5419a849ba9e8a6267534e233f
+# 72577d53ecee4497a32a5ee4a8ff4a3d
+msgid "|values resource registry_key multi_string|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:36
+# 9695a82d2199401ab47184a3bbf1715c
+msgid "``:action`` identifies which steps the |chef client| will take to bring the node into the desired state"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:38
+# a7160076c2f3425198f87ed68795af26
+msgid "For example, a |windows| registry key named \"System\" will get a new value called \"NewRegistryKeyValue\" and a multi-string value named \"foo bar\":"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_syntax.rst:51
+# 65418f18f85047b4a26eeabc73d1410a
+msgid "Or, using multiple registry key entries to configure a single resource block with key values based on node attributes:"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:19
+# 1e3a7bdb7ecd41238b0ef372ae472922
+msgid "Registry Key Path Separators"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:5
+# fc98ef0448124657a1ba60f1f7d9fb68
+msgid "A |windows| registry key can be used as a string in |ruby| code, such as when a registry key is used as the name of a recipe. In |ruby|, when a registry key is enclosed in a double-quoted string (``\" \"``), the same backslash character (``\\``) that is used to define the registry key path separator is also used in |ruby| to define an escape character. Therefore, the registry key path separators must be escaped. For example, the following registry key:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:11
+# 4f7bc4c5864b4ad28283e12f05bfd85e
+msgid "will not work when it is defined like this:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_registry_key_path_separators.rst:20
+# 66250881e2ed4c659a55dacf39691d69
+msgid "but will work when the path separators are escaped properly:"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:23
+# c3bc8e80099a46ecb80b7d279b8512cd
+msgid "Recipe DSL Methods"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:24
+# 63bdff7439214661a38f30209131844f
+msgid "The following methods can be used to interact with |windows| registry keys."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:30
+# 000f930973294ee4950dc897c0f3e52d
+msgid "Methods"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:31
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:11
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:11
+# ee1b41039f524decb815caa88d39a08b
+# 852b4f7e015f47d8a5646fc71feb351e
+# f7419075b3174c47ba8c2886597ac46b
+msgid "Description"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:32
+# 19221d854e0a489c8cb3a3de5078979a
+msgid "`registry_data_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-data-exists>`__"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:33
+# 3ca85f24b48b44f88cd531aca0ee7697
+msgid "Find out if a registry key contains data."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:34
+# 07f41b143b434aed972e8bb6a55520fe
+msgid "`registry_get_subkeys <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-subkeys>`__"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:35
+# 7c8977046fd94d23905e0335caf403aa
+msgid "Get a list of sub-keys for a registry setting."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:36
+# ec88c17c9dfd4d20ab9473af87918389
+msgid "`registry_get_values <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-values>`__"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:37
+# 4a5759db1d0843df959d82abd44211c1
+msgid "Get values (name, type, and data) for a given registry key."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:38
+# 41432cca6d6b49d1b04b61b77c7643de
+msgid "`registry_has_subkeys? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-has-subkeys>`__"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:39
+# b593bf9c4f1940da956e031d83c91fb9
+msgid "Find out if a registry key has one (or more) sub-keys."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:40
+# 15d0d39151c34c27a2f251d671d7ab94
+msgid "`registry_key_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-key-exists>`__"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:41
+# 3e60eb119c3a40c4af09d8f705299714
+msgid "Find out if a registry key exists."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:42
+# b48baa71c22c4530be554e571de5a28e
+msgid "`registry_value_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-value-exists>`__"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:43
+# f8b6e9cb28374bfaac13847b7ad402cf
+msgid "Find out if a registry key has values set (name, type, and data)."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:45
+# a0aa77f720ab424db9a4727e57408678
+msgid "The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:48
+# b0034bbd06d044cc969e95f2702d6f1f
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:4
+# 11637c711e7a449390f7728e82143646
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:10
+# dc120fff253146cba50e678f850ca62d
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:12
+# c1f3ca92ce1d4b6e8da0c1a06a89c33f
+msgid "``:create``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:13
+# 6fb4a1a702f14df78c316d02a8cf775b
+msgid "Default. |resource action create registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:14
+# b636486465d749cfb4186f935d4f5007
+msgid "``:create_if_missing``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:15
+# c90a2b907eba46d387c20eeacafdb7fa
+msgid "|resource action create_if_missing registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:16
+# 3a99d7ea6c0b40209198a1aec7a93fb4
+msgid "``:delete``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:17
+# 6152608b3a99427dbc75f3a8596b9f1c
+msgid "|resource action delete registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:18
+# 7438ee78e1384370a4e4b01221b97c2b
+msgid "``:delete_key``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:19
+# 974e92c6b96544cb996abe23e0a340b1
+msgid "|resource action delete key registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_actions.rst:21
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:26
+#: ../../step_resource/step_resource_registry_key_delete_recursively.rst:12
+# 6284f4e50b20413d874e6e9613cd19ff
+# c6c0f6a525f34def82b599ba2b24a21e
+# dbf2d986d38744c488fa1c3c2ebbc17f
+msgid "|note registry_key resource recursive|"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:52
+# fe2fc911feb44b57b81822cd3927ce39
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:4
+# df5592555ddd42179a7def4e6612896c
+msgid "|description resource_attributes_intro|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:10
+# b3141d6b5bbe4896a3ee5e118711de22
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:12
+# 4ad9257ab9e946ef837a35df6af57ca6
+msgid "``architecture``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:13
+# dcd7f6a4849d42eeb23478ad6329d120
+msgid "|architecture registry_key| Default value: ``:machine``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:15
+# 994d782b2bc145c89dc9782311c34a67
+msgid "|architecture registry_key machine|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:17
+# 6c26c28af1074d8688571ee6e958509d
+msgid "|note registry_key architecture|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:18
+# 26fcc6f502ee44ffa8ed07225623a8a3
+msgid "``key``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:19
+# 339c626fdbe84e19930e2b42f51f6306
+msgid "|key_name resource registry_key| Default value: the ``name`` of the resource block. |see syntax| |key_name resource registry_key hives|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:21
+# 91602dc21a734e3eb1901c01ec08d8e0
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:22
+# 1cbcda8b9f064f28998f8e4b225d27e7
+msgid "Optional. |provider resource_parameter| |see providers|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:23
+# d9b295c282f3406a9b0c5642cfde75ce
+msgid "``recursive``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:24
+# 8963a85fef8c4447a15ba09dbad5f92e
+msgid "|recursive registry_key|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:27
+# 84484eaa312a488b9146dc70ff505fc3
+msgid "``values``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_attributes.rst:28
+# 516e491dc58f4cb1a51e539030f34abe
+msgid "|values resource registry_key|"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:56
+# cdac6db258624586bcdb2f4b1260b335
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider.rst:4
+# b45ac269c210474e976262292fb2ee27
+msgid "Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:4
+# 397a485ffaeb4d66831a2abcfe916514
+msgid "The |chef client| will determine the correct provider based on configuration data collected by |ohai| at the start of the |chef client| run. This configuration data is then `mapped to a platform and an associated list of providers <https://github.com/opscode/chef/blob/master/lib/chef/platform/provider_mapping.rb>`_."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:6
+# 9727bfdba24c45629626d559c4b1df09
+msgid "Generally, it's best to let the |chef client| choose the provider and this is (by far) the most common approach. However, in some cases specifying a provider may be desirable. There are two approaches:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:8
+# 7b0eaea0a3cb4368a997601a45dc9f83
+msgid "Use a more specific short name---``yum_package \"foo\" do`` instead of ``package \"foo\" do``, ``script \"foo\" do`` instead of ``bash \"foo\" do``, and so on---when available"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:9
+# 7db6a654bd884b48a7f961541c7256ed
+msgid "Use the ``provider`` attribute to specify the long name as an attribute of a resource, e.g. ``provider Chef::Provider::Long::Name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:4
+# 5e2581e0541146ea9052e4269073a4f9
+msgid "This resource has the following providers:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:10
+# dc9d815d2de84c33a8ecfb205422ce84
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:11
+# 35946e219d51426cb68828fc763d2475
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:12
+# 96ae1e84950b4c1dba37028606ecba42
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:13
+# e697b3e26fde44b595940f8cda58b00a
+msgid "``Chef::Provider::Windows::Registry``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:14
+# a73897031791403eb8c3d65494cd5082
+msgid "``registry_key``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key_providers.rst:15
+# 19ffb4e09cb54445933f0fe920b1fb2d
+msgid "The default provider for the |windows| platform."
+msgstr ""
+
+#: ../source/resource_registry_key.rst:64
+# 8ddd2e3e05184b24b813591778e967c7
+msgid "Examples"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:65
+# 405c99bd19c7455481a3c85129cdebb6
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:67
+# a85f388ea9a740578a7d8f89e427203f
+msgid "**Create a registry key**"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:71
+# d5459e38a5ea4e77a419a0053a455878
+msgid "**Delete a registry key value**"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:75
+# 5b71b1445a244d008104317026197a3c
+msgid "**Delete a registry key and its subkeys, recursively**"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:79
+# fb459753a1024a5aa052d1e3de3cafc7
+msgid "**Use re-directed keys**"
+msgstr ""
+
+#: ../../step_resource/step_resource_registry_key_redirect.rst:3
+# a28813afeffb40079edfc31907dd5645
+msgid "In 64-bit versions of |windows|, ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Example`` is a re-directed key. In the following examples, because ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Example`` is a 32-bit key, the output will be \"Found 32-bit key\" if they are run on a version of |windows| that is 64-bit:"
+msgstr ""
+
+#: ../../step_resource/step_resource_registry_key_redirect.rst:13
+#: ../../step_resource/step_resource_registry_key_redirect.rst:23
+#: ../../step_resource/step_resource_registry_key_redirect.rst:34
+# d8224a92ba0947a49a665c01d9cc3e7c
+# 40ed5c08545843ca8917e5fe21ab69fb
+# a159785bbc6540109fc2193807404745
+msgid "or:"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:83
+# 9de444bde0674eef9446802660957e67
+msgid "**Set proxy settings to be the same as those used by the chef-client**"
+msgstr ""
+
+#: ../source/resource_registry_key.rst:87
+# de0ea64a5fc84d24afd7bedc19899109
+msgid "**Set the name of a registry key to \"(Default)\"**"
+msgstr ""
+
+#: ../../step_resource/step_resource_registry_key_set_default.rst:15
+# d8bf050edc0446fcaa75798a8f255c9b
+msgid "where ``:name => ''`` contains an empty string, which will set the name of the registry key to ``\"(Default)\"``."
+msgstr ""
+

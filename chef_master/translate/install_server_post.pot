@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 15:49-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_server_post.rst:8
+# 8196862a0b5e40d7a7b3d70f5340243e
+msgid "Post-Config Options"
+msgstr ""
+
+#: ../source/install_server_post.rst:10
+# 178bfa7f54c64102add52369aa55b835
+msgid "The following sections describe configuration steps that should be done after the |chef server| is installed."
+msgstr ""
+
+#: ../source/install_server_post.rst:14
+# 013f4885b6fc420f8041ee8713b5f316
+msgid "Active Directory and LDAP"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:4
+# f7865fb157264430a0716ad4b92a5e64
+msgid "The |chef server| supports using |windows ad| or |ldap| for any user that has an email address in the |ldap| directory. This allows those users to log in to the |chef server| by using their corporate credentials instead of having a separate username and password."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:6
+# f98bf697c5104dca9bfe648880815144
+msgid "To configure the |chef server| to use |windows ad| or |ldap| do the following:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:8
+# 83e7fdee42464839a7f76a77f34b3c83
+msgid "Install the |chef manage| (if it is not already)."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:9
+# de6d0c4dbf9442779fcff2a91666f1a3
+msgid "Add the following settings to the |chef server rb| file. These settings must be added to each machine in the |chef server| deployment, including both front and back end machines in a high availability or tiered configuration:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:4
+# 363677a707f24ed0bf1841e9e4a0c519
+msgid "This configuration file has the following settings for ``ldap``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:10
+# 77fe29055198458f9f1a3f2294b00fc8
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:11
+# d67bcd1147484d9eb4220b97a0b6aba1
+msgid "Description"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:12
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:18
+# 36f33ee794c546f89f062dd37c77b7b6
+# 0c67366cc102414ea18a841f8fe5ed77
+msgid "``ldap['base_dn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:13
+# ba630d604ad04faab6f52ea59673886c
+msgid "|ldap base_dn| For |windows ad|, this is typically ``cn=users`` and then the domain. For example: ``'OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:14
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:14
+# 04aa76d33227440d8f39cdd30b192b29
+# 7a2ea746801948f18921236c0bd69640
+msgid "``ldap['bind_dn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:15
+# 6487cb542c4e4d5b9be5a64e76ef9319
+msgid "|ldap bind_dn| This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. |chef server oec| must do an |ldap| search before any user can log in. Many |windows ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` setting blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to ``'CN=user_who_can_search,OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:16
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:16
+# a7ff6741ab334bbc88de4c863f069ece
+# 92b9ef8f683b4c498c9fcc384331b787
+msgid "``ldap['bind_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:17
+# ead32ee5f53741edafdf4bc4029955eb
+msgid "|ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:18
+# b748142e415f4f5089ae308bbb9cb010
+msgid "``ldap['host']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:19
+# 22ce26ac28bd4459b4c43e9dac1b0c4b
+msgid "|ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``ldap-server-host``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:20
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:20
+# 01e44cc9c0d74d6e982b6b563bf714ec
+# c7da99dfa52042dc8d656972c166c9fa
+msgid "``ldap['login_attribute']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:21
+# 0b2fce20056c4eba9dfd37ba33d8b18a
+msgid "Use to specify the |chef server| user name for an |ldap| user. Default value: ``sAMAccountName``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:22
+# 1960ef82dc3d4306946a3688b172d715
+msgid "``ldap['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:23
+# 0c73e9958b0b466f8e255b38fd8b8ad6
+msgid "|ldap port| The default value is an appropriate value for most configurations. Default value: ``389`` or ``636`` when ``ldap['encryption']`` is set to ``:simple_tls``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:24
+# f89ed4abcf4f4b76afa9aca5f0993dc9
+msgid "``ldap['ssl_enabled']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:25
+# 5321cc5e96ad4bceb1160133c13ac4d1
+msgid "Use to enable |ssl|. Default value: ``false``. Must be ``false`` when ``ldap['tls_enabled']`` is ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:27
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:33
+# cee8d020499e4930b6c296ae335c8de3
+# 1adbdc3652204bb7ab97f4b7a542b2ce
+msgid "Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:28
+# 0be3de2a573f4b0aabb3f9d34eb7e98c
+msgid "``ldap['timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:29
+# 6a32f702a55b482eb28bc5540010a705
+msgid "Default value: ``60000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:30
+# 322d48986ebc4c90a637ffecec911a6b
+msgid "``ldap['tls_enabled']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:31
+# e3b7dc7711c04bea92266197ce173db7
+msgid "Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['ssl_enabled']`` is ``true``."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:13
+# 7c7c53985b0d46ff9c629311357c6be9
+msgid "If the |chef server rb| file does not exist, create a file called ``chef-server.rb`` and put it in the ``/etc/opscode/`` directory."
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:15
+#: ../../includes_install/includes_install_server_ldap.rst:21
+# 133523660ba945e2a8952a2918820f2e
+# e47384b957834ffaac802102a7341ac2
+msgid "Run the following command:"
+msgstr ""
+
+#: ../../includes_install/includes_install_server_ldap.rst:27
+# 80acf977639c4817bd1f442f195937a3
+msgid "At this point, all users should be able to use their |windows ad| or |ldap| usernames and passwords to log in to the |chef server|."
+msgstr ""
+
+#: ../source/install_server_post.rst:18
+# c7405e4304f34518991679cb94289566
+msgid "Testing LDAP Connectivity"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:4
+# e98cd6505bf944a896f3280820cb6ed6
+msgid "Use ``ldapsearch`` to test the ability of the |chef server| to use |windows ad| or |ldap|. First, translate the |chef server| |ldap| settings into ``ldapsearch`` parameters:"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:10
+# 0713a1729b814557b9f4b1689b37b5d3
+msgid "|chef server_title| Setting"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:11
+# bf261e6513a44c5194bc38ac0dc79c6b
+msgid "``ldapsearch`` Parameter"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:12
+# a3c224ab78184ac0aec46f7d283bb86b
+msgid "``ldap['host']`` and ``ldap['port']``"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:13
+# c67a767a44694d4d92ff53310db85cc2
+msgid "``-H [HOST:PORT]``"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:15
+# a9b6d3b61a8c419ea1ba8b7a151a2452
+msgid "``-D [BIND_DN]``"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:17
+# 3140d79d6f9c4e8992ba6442dd34e532
+msgid "``-W``; ``ldapsearch`` will prompt for this parameter"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:19
+# 48363821f8404d369afe286f984f4c79
+msgid "``-b [BASE_DN]``"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:21
+# bbd5cba05d924f51b9908dfe31472cef
+msgid "Defaults to ``SAMAccountName``"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:23
+# 89250ef154684712a4f531dbc4e8714c
+msgid "And then from a front end machine (in a high availability or tiered configuration) or from the |chef server| in a standalone configuration, run the following command. Be sure to replace the uppercase placeholders with the values for your organization:"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:29
+# 0926873073fa4f0abde3fb1695952d5e
+msgid "For example:"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:35
+# 70c7eecafa2a43b5bb5ea6988c0e250e
+msgid "Output similar to the following is returned:"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_test.rst:54
+# 49f6e83c0dfb4a578efb87b9bc752b46
+msgid "The ``ldapsearch`` command may need to be installed on the platform. It is not included as part of the |chef server| package."
+msgstr ""
+
+#: ../source/install_server_post.rst:23
+# 4f33d23a00654a5688c1c8310ce680d3
+msgid "GRE Tunnels"
+msgstr ""
+
+#: ../source/install_server_post.rst:25
+# d1bd9e073ec64b6ea928283db9c45b7c
+msgid "This option is sometimes necessary when the |chef server| is configured for high availability using |drbd|."
+msgstr ""
+
+#: ../source/install_server_post.rst:27
+# afca02f788634340930bd95e5de81011
+msgid "Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the back-end server that will be used for bootstrapping:"
+msgstr ""
+
+#: ../source/install_server_post.rst:37
+# 771d36ece51f4630a1ee10565381edb4
+msgid "Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end of the tunnel, and ``MY_IP`` with the IP address of the server on which the script will be located."
+msgstr ""
+
+#: ../source/install_server_post.rst:39
+# 4d93eec569934d5099054498c66216f6
+msgid "The ``172.17.16.**`` network addresses used in the previous examples could be any unused reserved IP address space."
+msgstr ""
+
+#: ../source/install_server_post.rst:41
+# 16b5d8efad9542aa981b79fc2974010a
+msgid "Set the following in ``/etc/opscode/chef-server.rb``:"
+msgstr ""
+
+#: ../source/install_server_post.rst:49
+# f5603c8af1104f229754f6b55b2dfb94
+msgid "And set the |keepalived| unicast addresses to the GRE tunnel addresses."
+msgstr ""
+

@@ -1,0 +1,722 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 15:49-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/upgrade_server_open_source_notes.rst:8
+# 7cb5f9b9fad045da857271b110239c42
+msgid "Notes for |chef server osc| Upgrades"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:10
+# 07e78e8ffdf046fa8624ff62e7662689
+msgid "The following sections contain more information about the upgrade process from |chef server osc| to |chef server| version 12, including steps for a manual upgrade. Please consult with |company_name| support about any of these situations if needed."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:13
+# 238d8844af8f45e2a1950be0a7cd621c
+msgid "Background"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:14
+# b35a1d1dfd424227a87f31735e22a4eb
+msgid "The following assumptions are made about all upgrades from |chef server osc| version 11.0.0 (or higher) to |chef server| version 12."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:16
+# f5f85f6163084437a0c14f8f0a76e876
+msgid "An organization must be created. Add the organization name as the vaue for the ``default_orgname`` setting in the ``chef-server.rb`` file. This will ensure that API requests made to the server prior to the upgrade process can still be made after."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:19
+# f10f48d9fc7547548a88e0fbdd99a017
+msgid "Standalone>>Standalone"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:20
+# 7b0877d1aec34212a1940c258a9dd483
+msgid "The only supported upgrade path for a |chef server osc| server to |chef server| version 12 is from a standalone configuration to a standalone configuration."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:23
+# a2b2683c22824c2883197a1120594f80
+msgid "Backup Server Data"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:24
+# ecf8a1a0c21e410693d93807b9e03942
+msgid "Like any migration or upgrade, it's strongly recommended to back up your data before doing any of the migration or upgrade steps. While we don't anticipate any issues with the upgrade process itself, it's better to be safe."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:27
+# 92041ec853f64e2280a28d3750f83f4f
+msgid "Organization Names"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:28
+#: ../source/upgrade_server_open_source_notes.rst:45
+# 9073b27eaa554878b17c65d70be796c8
+# a387a9025c414d3a9e1b0ff321973467
+msgid "The |chef server osc| server does not have the concept of organizations. The |chef server| version 12 upgrade process will require an organization to be created."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:30
+# 16b084ede6d740bc878015ae8d44d4fb
+msgid "After an upgrade, the organization is an endpoint in the |api chef server|. The |api chef server| used by the |chef server osc| server does not contain this endpoint. Needless to say, API requests made to the |chef server| by the |chef client| and |knife| will fail if the ``/organizations/NAME`` endpoint isn't defined."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:32
+# 9fc2a118a62f435bbfe92f57c06b1849
+msgid "To following setting is added to the |chef server rb| file:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:38
+#: ../source/upgrade_server_open_source_notes.rst:53
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:10
+# fc32520dff6f470a91a7f6a66bced5c9
+# 12afd0f359cf489e9a893a70b2688134
+# 60ce373c10f645869afb0a3807570b2d
+msgid "Setting"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:39
+#: ../source/upgrade_server_open_source_notes.rst:54
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:11
+# 0508f2bb0b5547a4a853d7e4cb16efb8
+# dce265e8b8bc416e87127318359d61c6
+# 1dcf74f85f5e470eb330be62fa18bd23
+msgid "Description"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:40
+# dcdeef168605421b80627b1094c38dcf
+msgid "``default_orgname``"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:41
+# 4ca65dfcb04844cfb067cc39f82d7205
+msgid "The |api chef server| used by the |chef server osc| server does not have an ``/organizations/NAME`` endpoint. Use this setting to ensure that migrated |chef server osc| servers are able to connect to the |api chef server|. This value should be the same as the name of the organization that was created during the upgrade from |chef server osc| version 11 to |chef server| version 12, which means it will be identical to the ``NAME`` part of the ``/organizations`` endpoint in |chef server| version 12. Default value: the name of the organization specified during the upgrade process from |chef server osc| 11 to |chef server| 12."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:44
+# eec438a6baf1417f84bb148ae258bfdd
+msgid "Validation Keys"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:47
+# 5c8d77ea35844eefabe321199a6efd05
+msgid "The |chef server osc| uses a validation key and validation client name to ensure that clients can validate to the |chef server osc| server. In |chef server osc|, this is a generic validation client and key. These two settings in the the |client rb| and/or |knife rb| files specifiy the generic client and key:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:55
+# d11c57adc2ca4cf283dd114a5b7dd1cc
+msgid "``validation_client_name``"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:56
+# 030ce688cbed47ce99ef665044111c75
+msgid "|validation_client_name|"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:57
+# c39d4bd5a7e04bd4bb51abf6aa09fde3
+msgid "``validation_key``"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:58
+# 855e77d1a3784b39bd1493a4017d500d
+msgid "|validation_key| Default value: ``/etc/chef/validation.pem``."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:60
+# 37fe533376e44fddb78e319657437a8c
+msgid "In |chef server| version 12, the server supports multiple organizations and each organization has a unique validation client and key. The upgrade process will create a new validation client and key and will associate their names with the newly-created organization."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:62
+# bfd214ff30a8493cb0c489f736b7216a
+msgid "The ``default_orgname`` setting will ensure that the existing generic validation client and key will work with the newly-created organization. Post-upgrate, there will be TWO validation clients and validation keys. The organization-specific client and key is not required; in some cases, it may be necessary to reset that validation key through the |chef manage| web user interface."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:64
+# fe47967eff324d12be4eb051abd2b20d
+msgid "The |chef manage| web user interface will not be able to reset the generic validation client and key that was migrated from |chef server osc|."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:67
+# 2cba2e488e8e4ba2802acb8747ddd921
+msgid "SSL Certificates"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:4
+# cea2c435d8104b87975c455d7b5b88a2
+msgid "The |chef server| can be configured to use |ssl| certificates by adding the following settings to the server configuration file:"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:12
+# c0585da9df3b4db494af566dc2f19921
+msgid "``nginx['ssl_certificate']``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:13
+# feb426f4bfed4635aba3dfff125d0001
+msgid "|ssl_certificate|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:14
+# 8101d8a46b6e491bbca40a79df36755f
+msgid "``nginx['ssl_certificate_key']``"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:15
+# 4117b110c0454c16a41cd99eeec59f71
+msgid "|ssl_certificate key|"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst:17
+# 21e924cd12c845ae8ad2ef414cd63107
+msgid "and then setting their values to define the paths to the certificate and key."
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade.rst:4
+# d3345a8c08434264a34a05fa83672133
+msgid "After an upgrade to |chef server| 12 from |chef server osc|, you may continue using the |ssl| certificates that were used with |chef server osc| with |chef server| 12. There are two options: move the |ssl| certificates to a new directory in |chef server| 12 or adding two settings to the |chef server rb| file, and then specifying the paths to the directory in which the |ssl| certificate files are located."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:72
+# 9c52cc1afad34a16aa2e60568043b5c5
+msgid "**Move the SSL certificates**"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade_move.rst:4
+# a4c350f7eb21448db8c01119895c0b0c
+msgid "To copy the certificates, move the certificate files located in ``/var/opt/chef-server/nginx/ca`` to ``/var/opt/opscode/nginx/ca``, and then restart the |service nginx| service:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:76
+# a5ed0e8d1e914c27bae9a84c30039deb
+msgid "**Add settings to chef-server.rb**"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade_config.rst:4
+# 4765da4b1b8c429fa91356a905d35d1b
+msgid "To specify the directory in which the |ssl| certificates are located, add the following settings and values to the |chef server rb| file:"
+msgstr ""
+
+#: ../../includes_server_security/includes_server_security_ssl_cert_custom_set_value_osc_upgrade_config.rst:11
+# d561d8bb17ba4457a2d8edc940f999df
+msgid "Save the file, and then run the following command:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:81
+# e682583584b14bf8b8e11b00ff3957b4
+msgid "Server Data on Disk"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:82
+# 268b2bd66eeb4c01b36ddb1e0eb0e7d8
+msgid "After the upgrade process, data related to the upgrade process will remain on the system:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:84
+# 816b395225554cffbda086d8f3b15457
+msgid "The data for the |chef server osc| server will be located in a temporary directory that was created as part of the upgrade process. This directory will be located at ``/tmp/chef11-server-data[some_random_string]``, unless the ``--chef11-data-dir`` option is used as part of the ``chef-server-ctl upgrade`` command."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:85
+# 934ee27b1f5c498baac71c3271ecd2b6
+msgid "The data that was transformed by the upgrade process to the |chef server| version 12 format will be located in a temporary directory that was created during the upgrade process. This directory will be located at ``/tmp/chef12-server-data[some_random_string]``, unless the ``--chef12-data-dir`` option is used as part of the ``chef-server-ctl upgrade`` command."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:87
+# e0deb5200ca04df4b1ae19c0c952db4e
+msgid "To remove this data, post-upgrade, simply delete these directories. The current, default behavior of the upgrade process is to leave this data, in case it's required later."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:90
+# 66937a89365a431aa37fea0583465f06
+msgid "runsvdir and Services"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:91
+# a727403deb8b4e8eb7c4296aae4e05d9
+msgid "``runsvdir`` is the master process for the service supervisor in |runit|. For each service in the |chef server|, a child process is created in the ``runsvdir`` tree. After the upgrade process, services for the |chef server osc| server are stopped; however, the ``runsvdir`` tree is kept running for the following reasons:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:93
+# 5fe80dae53b34e81810014323c51e0cb
+msgid "A user may need to run the upgrade process from |chef server osc| 11 to |chef server| 12 more than once"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:94
+# 4bb4b1eb77b64b1e8defdaebae8ed624
+msgid "A user may want to revert the upgrade process and resume using the |chef server osc| 11 server"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:96
+# 3c64ad885e8f4c9699889af5bb7b954f
+msgid "At the point where no more upgrades to |chef server| 12 are required **and** there is no need to be able to run |chef| using the |chef server osc| server, ``runsvdir`` should be stopped and prevented from restarting. Optionally, |chef server osc| (along with ``runsvdir``) may be removed from the system entirely."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:98
+# 736f5138175f4256a7df6b7aca5c9380
+msgid "**Shut down runsvdir, prevent restarts (on reboot of system)**"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:100
+#: ../source/upgrade_server_open_source_notes.rst:126
+# b82f1072d1a7434b81d5feab35209d0f
+# f0b4ff73ff164662a0abffc2997f9418
+msgid "To prevent |chef server osc| from leaving orphaned |chef server| 12 processes, run the following command to stop all |chef server| 12 processes and remove the ``inittab`` or ``upstart`` configuration files:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:106
+# 6cbd352d740c443f9a88607517d7827c
+msgid "Run the following command to shut down ``runsvdir`` and prevent restarts:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:112
+#: ../source/upgrade_server_open_source_notes.rst:138
+# d71b20011cc84909bf6e9371259ad70e
+# 4850d51c18024eb5b85092574cdb37a8
+msgid "Reconfigure |chef server| 12 (and recreate the ``inittab`` or ``upstart`` configuration files):"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:118
+#: ../source/upgrade_server_open_source_notes.rst:144
+# 08d69c1e17b24cff8b7a044961a011dd
+# e26f4167632a44fbbf67067dd6ac8798
+msgid "Start the |chef server| 12 ``runsvdir`` tree and all related processes:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:124
+# 681cd2230e6a4e88a5e13a719baa8d17
+msgid "**Shut down runsvdir, and then remove Open Source Chef 11**"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:132
+# 57fe9dc87c9449e08a608e2894d307a1
+msgid "Run the following command to shut down ``runsvdir``, prevent restarts, and remove related directories:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:150
+# e71fbba7319a4f76a209938c9a2aa0d4
+msgid "Remove |chef server osc| 11 using the appropriate package manager. For example:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:156
+# 664ec7dd3f3d4823905fa9181fe7c1ec
+msgid "or:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:162
+# 81b08e39430342ae84423a4af8bb42bb
+msgid "Delete the remaining files:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:169
+# dfc4a99910c642ebbd63464e1faedaa6
+msgid "Multiple Upgrades"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:170
+# 409535546cc44fc3b9283751493ad91a
+msgid "The upgrade process may be run multiple times, as long as |chef server osc| 11 and |chef server| version 12 are installed on the system. Any subsequent upgrade process will re-create the temporary directories. Because the default behavior is to append a random string to the directory name, the number of temporary directories created is proportional to the number of upgrade processes run, unless identical directory names are specified using the ``--chef11-data-dir`` and ``--chef12-data-dir`` options during each upgrade."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:173
+# 934f44340cc24b91bce69cc315724144
+msgid "Email Address"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:174
+# ec2b94172a974a1889523434243bc1d4
+msgid "The |chef server| version 12 server requires that all users provide an email address. During the upgrade process, a default email address (``username@example.com``) is created, where ``username`` is the same user that was specified during the upgrade process. This email address may be changed later, post upgrade via the ``knife user edit`` subcommand or via the |chef manage| web user interface."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:177
+# a1dbcd67d94246079873ee72718ee925
+msgid "Cookbook Uploads"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:178
+# ca6e821f32664482a2b0e27df16ba8c0
+msgid "Sometimes when uploading cookbooks, a race condition may occur that prevents one (or more) cookbooks from finishing the upload process. For example:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:221
+# 65ebfe9c63a94ceb8bc018ffb73bd559
+msgid "If this error occurs, re-run the upgrade process, adding the ``--upload-threads`` option set to a value of ``1``:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:227
+# e468e90341064cb0a94865e02df4f725
+msgid "This option will ensure that only one cookbook is uploaded at a time. This approach will be slower, but will prevent a race condition (and this error) from occuring. It may also be helpful to run each stage of the upgrade process separately. See the section \"Subcommands Reference\" below for more information about the individual commands."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:230
+# 53499f0374234350892591d6cda40c5c
+msgid "Manual Upgrades"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:231
+# 3cba03b43f8042938fcd036341d715b8
+msgid "The migration process occurs in three steps: download the existing data from the |chef server osc| server, transform that data into the format required for |chef server| version 12, and then upload that data to the server."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:233
+# 35527c34e4c94b39bf3e9a9e0bb7aab0
+msgid "The ``chef-server-ctl upgrade`` command will handle all three of these steps. Each of these three steps may be done individually, if required."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:235
+# 99e4f96e773146509845c8e6dd11fb56
+msgid "To upgrade to |chef server| 12 from the |chef server osc| server, do the following:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:237
+# 60eba705b412434a9323fc152f191f9c
+msgid "Run the following to make sure all services are in a sane state."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:243
+# b21a64bdef21453f9c684c94f9ef007f
+msgid "Stop the |chef server osc| server:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:249
+# 71da545aea1c4b97a0b205d368b6f9da
+msgid "Run |debian dpkg| or |rpm| on the machine to install |chef server| version 12. For |debian dpkg|:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:255
+# 26970dd249174f20b0d14ece8b1a1624
+msgid "where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:257
+# c50bbb1e1a484d3dbb0cc415bca7ce41
+msgid "For |rpm|:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:263
+# 42d73143036e47339b7f1244567eb8b2
+msgid "|chef server| 12 is installed to ``/opt/opscode``. (The existing |chef server osc| remains at ``/opt/chef-server``.) From this point, the ``chef-server-ctl`` commands are running against the ``/opt/opscode`` location."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:266
+#: ../source/upgrade_server_open_source_notes.rst:276
+#: ../source/upgrade_server_open_source_notes.rst:284
+# 7a915b9414e94336a35c5324b320046e
+# 4615ff32e6a847db9f0b7ee3cdc8db41
+# 9ee67378320e42ae98e639a2b8fba691
+msgid "Upgrade the machine with the following command:"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:272
+# 003493c1551b469b8e441f67516f39d4
+msgid "When prompted, confirm that the upgrade process should take place."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:274
+# 162c30a5f7f4470d81047e1bac869ba6
+msgid "This command will download data from the |chef server osc| server and place it into a temporary directory. See the \"Subcommand Reference\" section below for information about options that may be used with this command."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:282
+# ed3da285cc2447db9008a687240f5ac4
+msgid "This command will create a temporary directory in which |chef server osc| data is transformed into the |chef server| version 12 format. See the \"Subcommand Reference\" section below for information about options that may be used with this command."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:290
+# 23b20d676a97413c83ae695a206b404d
+msgid "See the \"Subcommand Reference\" section below for information about options that may be used with this command."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:292
+# 462b5ce1ecd14a258b3ab663a764a900
+msgid "Before data can be uploaded, an organization must be created. When prompted, enter the organization name, and then a full organization name."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:294
+# ce2342f90faa482aa833a91ad32c52cb
+msgid "|name_rules org| For example: ``chef``."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:296
+# 9a8d7ac28d094d619b6b036ffd7b7844
+msgid "|name_rules org_full| For example: ``\"Chef Software, Inc.\"``."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:298
+# 7945913059964619ae7e84ac98cf4093
+msgid "The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporarily data that was created during the upgrade process."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:301
+# acf5775374e64e3282aa8da1bd2116d9
+msgid "Subcommand Reference"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:302
+# b3eb2797302a450f9bc65fb1c5d20081
+msgid "The following subcommands are used **only** during a manual upgrade and **only** when upgrading from the |chef server osc| server to the |chef server| version 12."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:305
+# 1c59e52a17d44d2b810369fe959edcc3
+msgid "Download Data"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download.rst:6
+# c33b1b0fa34648348862ac310f78b3d8
+msgid "The ``chef12-upgrade-download`` subcommand is used to download data from the |chef server osc| server that was created by the ``upgrade`` subcommand. The downloaded data is placed in a randomly created temporary directory."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:308
+#: ../source/upgrade_server_open_source_notes.rst:318
+#: ../source/upgrade_server_open_source_notes.rst:328
+# 5dbc7737a66e4c9f883302108dcd8f01
+# ba266872edd343e1b3f2e86d71f0773a
+# e7026864e739461fb1ccd422e78b441b
+msgid "**Options**"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:310
+# bfe72216e6a84de8a03f50e3a6a5d569
+msgid "Options for the ``chef12-upgrade-download`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:6
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:6
+# 2dd908e6066c4b10bf43cd2ca3b63f7c
+# 53db9cb32e3843aa8666f38c1d5eca6d
+# afc8962d5c3f451d85c56888b762be64
+msgid "This subcommand has the following options:"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:9
+# a878b2e64abf45ad9095ed58c58a279f
+msgid "``-c``, ``--cleanup-only``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:9
+# b6bfa7759362453db3c45bab8e060670
+msgid "Use to stop the |chef server osc| server. This option does not download data to or start the |chef server osc| server."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:14
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:9
+# ee1a9113b6274d67a6dfebe46be0f24e
+# 11bb6d1cb43046b592739e6dc40c9413
+msgid "``-d DIRECTORY``, ``--chef11-data-dir DIRECTORY``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:12
+# 8bf66c675c2c4383a23a5b7df12b2464
+msgid "The directory in which |chef server osc| 11 data is located. Default value: a temporary directory."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:14
+# 7c31186b8ccb470aba1b25a8b5826723
+msgid "The short name for this command is a duplicate short name and should not be used. Use the ``--chef11-data-dir`` long name instead."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:17
+# 93d67184661f43578b4618bd800d4e57
+msgid "``-d``, ``--download-only``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:17
+# 7e7e07ee0ebe4117b6e2fa9cb0cb6442
+msgid "Use to download data to |chef server| 12, and then create the public key file. This option does not start or stop the |chef server osc| server."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:20
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:18
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:12
+# 35b340b1f4ee44b2912bc8cf90cbdc71
+# 620af612d62e4347a00743fbd6689c54
+# 4362d348c19a4674b5d1ac122f442527
+msgid "``-h``, ``--help``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:20
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:18
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:12
+# d578fbfe5cde41fa892a9a7b2b9a05c1
+# e95d498f4f1b428dab51e05412b17364
+# 4dff2053c575472f83994769e557d4c7
+msgid "Use to show help for the ``chef-server-ctl upgrade`` subcommand."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:23
+# b60823c2b6f44b1b8617909f9b5b8c0a
+msgid "``-k KEY``, ``--key KEY``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:23
+# 5a608d8224284937ae056e408ad7f0d9
+msgid "|file public_key| Default value: ``/etc/chef-server/admin.pem``."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:26
+# d618855c0a624648b497a363615c97fb
+msgid "``-s URL``, ``--chef11-server-url URL``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:26
+# da5f8af8ffba462fb3fa3c4d17f23a75
+msgid "The URL for the |chef server osc| or |chef server oec| server, version 11. Default value: ``https://localhost``."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:29
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:18
+# 38c8436e1c1a42ff8788fffedefc3291
+# 3aa8748939d84de6b4e37081137d8398
+msgid "``-S``, ``--setup-only``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:29
+# b8b2d24bb8a444d68db0c7822b476e39
+msgid "Use to stop |chef server| 12, and then start the |chef server osc| server in preparation for downloading data. This option does not download data to or stop the |chef server osc| server."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:32
+# 787e44ba979544b2859b2d448e352b17
+msgid "``-u USER``, ``--user``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_download_options.rst:32
+# 73ce5a73be8a4aefa2384d694bb78b5a
+msgid "|admin client|"
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:315
+# 0652697d8cc24689877248ca0978984d
+msgid "Transform Data"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform.rst:6
+# a627a8c914ef4775898b127b9357e642
+msgid "The ``chef12-upgrade-data-transform`` subcommand is used to prepare a directory that contains |chef server osc| 11 data for upload to |chef server| version 12. The transformed data is stored in a randomly created temporary directory."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:320
+# 8232a9caa6c5490985115b264e292ced
+msgid "Options for the ``chef12-upgrade-data-transform`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:9
+# 149540b277564d6b9b8f0b817f6b48e5
+msgid "The directory in which Open Source Chef server 11 data is located. Default value: a temporary directory."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:12
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:9
+# 7179d04b2ba44bf9864824bf044e690b
+# 29e6e3beb8d34fa790fbf6cfe73da0f1
+msgid "``-e DIRECTORY``, ``--chef12-data-dir DIRECTORY``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:12
+# 528c0632fdee43ac8f098b7764e52e1b
+msgid "The directory in which Chef server 12 data is located. Default value: a temporary directory."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:15
+# 739e2b1e30ef4d26a6514745d4d05739
+msgid "``-f FULL_NAME``, ``--full-org-name FULL_NAME``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:15
+# b163caaf872842978a4e8866e80dfd3d
+msgid "The full name of the |chef server| organization. A full organization name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``Chef Software, Inc.``. If this option is not specified, the ``upgrade`` command will prompt for it."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:21
+# a0c2b7eac21642f490109383c287402e
+msgid "``-o ORG_NAME``, ``--org-name ORG_NAME``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_data_transform_options.rst:21
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:15
+# 4f58264777ba405b84f01c7eed66ff56
+# 5c864ee855d745fe9095448a41c2e0f5
+msgid "The name of the |chef server| organization. An organization name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``. If this option is not specified, the ``upgrade`` command will prompt for it."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:325
+# 3a12d15c24cd45c1bbbed3b4f34e2bc3
+msgid "Upload Data"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload.rst:6
+# 64a7e67cc65e42cf924d9d000e3f6f07
+msgid "The ``chef12-upgrade-upload`` subcommand is used to upload data to |chef server| version 12."
+msgstr ""
+
+#: ../source/upgrade_server_open_source_notes.rst:330
+# f9d9339ed6a44b01aa3b6cd35be86a7c
+msgid "Options for the ``chef12-upgrade-upload`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:9
+# 306224a2793d4c5f97cdfa4c812a9121
+msgid "The directory in which |chef server| version 12 data is located. Default value: a temporary directory."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:15
+# e089d8ecda5a48a782cca7be01345672
+msgid "``-o NAME``, ``--org-name NAME``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:18
+# d73491ba63a64643b70464b96b76ffc9
+msgid "Use to start |chef server| 12 in preparation for uploading data. This option does not upload data to the |chef server|."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:21
+# 1364ed6fbbbc4bf584654ef4eadfb4e6
+msgid "``-u``, ``--upload-only``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:21
+# feee4f984327485db26450e807649818
+msgid "Use to upload data to |chef server| 12. This option requires |chef server| 12 to be running."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:24
+# 264c9d4a675147e68bc30de216982338
+msgid "``-t NUMBER``, ``--upload-threads NUMBER``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:24
+# 9a3d4e0ecffc4992a154ec78433f7736
+msgid "The number of threads to use when migrating cookbooks. Default value: ``10``."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:27
+# c410337687b14f6b9c3d9f8a711812df
+msgid "``-x URL``, ``--chef12-server-url URL``"
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_upload_options.rst:27
+# 66d970b5202c408e985bd94bbf5e6b1f
+msgid "The URL for the |chef server| version 12. Default value: ``https://localhost``."
+msgstr ""
+
