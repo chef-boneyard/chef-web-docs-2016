@@ -66,11 +66,7 @@ Configure the |chef server|:
 
       $ chef-server-ctl start
 
-#. On the backend |chef analytics| machine, install the |chef analytics| package on the backend |chef analytics| machine. For example on |ubuntu|:
-
-   .. code-block:: bash
-
-      $ dpkg -i opscode-analytics<version>.deb
+Configure the |chef analytics| backend machine:
 
 #. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine.
 
