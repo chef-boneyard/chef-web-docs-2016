@@ -9,7 +9,7 @@ In a tiered configuration, the |chef analytics| deployment is on different machi
 * Installing |chef analytics| on the back end
 * Installing |chef analytics| on the front ends
 
-**Install |chef analytics| on the backend machine:**
+Install |chef analytics| on the backend machine:
 
 #. Download the package from http://downloads.chef.io/analytics/ to the machines that will be used for the |chef analytics| deployment. For |redhat| and |centos| 6:
 
@@ -25,7 +25,7 @@ In a tiered configuration, the |chef analytics| deployment is on different machi
 
    After a few minutes, |chef analytics| will be installed.
 
-**Configure the |chef server|:**
+Configure the |chef server|:
 
 #. On each of the |chef server| machines, add the |fqdn| for the |chef analytics| frontend server to ``/etc/opscode/chef-server.rb``:
 
@@ -106,7 +106,7 @@ In a tiered configuration, the |chef analytics| deployment is on different machi
 
 
 
-**Install |chef analytics| on frontend machines:**
+Install |chef analytics| on frontend machines:
 
 #. For each frontend machine, install the |chef analytics| package. For example on |ubuntu|:
 
