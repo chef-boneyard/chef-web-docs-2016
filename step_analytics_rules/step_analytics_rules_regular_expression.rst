@@ -8,9 +8,9 @@ The following rule shows using a regular expression:
    rules "user-agent matching"
      rule on action
      when
-       get(#useragent, false) != false
+       get(#user_agent, false) != false
      then
-       log("Something else set #useragent")
+       log("Something else set #user_agent")
      end
    
      rule on action
@@ -18,9 +18,9 @@ The following rule shows using a regular expression:
        // match if the user_agent starts with the string "Chef Manage"
        user_agent =~ "Chef Manage.*"
      then
-       // if #useragent has been set before
+       // if #user_agent has been set before
        // this command will overwrite it's value
-     set(#useragent, "Chef Manage")
+     set(#user_agent, "Chef Manage")
      end
    
      rule on action
@@ -28,13 +28,13 @@ The following rule shows using a regular expression:
        // match if the user_agent starts with the string "Chef Client"
        user_agent =~ "Chef Client.*"
      then
-       set(#useragent, "Chef Client")
+       set(#user_agent, "Chef Client")
      end
    
      rule on action
      when
-       get(#useragent, false) != false
+       get(#user_agent, false) != false
      then
-       alert:info("User agent {{#user_defined_values}} {{ #useragent }} {{/user_defined_values}} <--")
+       alert:info("User agent {{#user_defined_values}} {{ #user_agent }} {{/user_defined_values}} <--")
      end
    end
