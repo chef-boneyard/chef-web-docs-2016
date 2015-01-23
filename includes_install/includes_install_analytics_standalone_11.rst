@@ -19,7 +19,7 @@ To install |chef analytics|:
 
    After a few minutes, |chef analytics| will be installed.
 
-#. Add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``:
+#. On the |chef server|, add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``:
 
    .. code-block:: bash
 
