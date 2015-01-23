@@ -10,9 +10,7 @@ The following settings are typically added to the server configuration file:
    * - Setting
      - Description
    * - ``api_fqdn``
-     - The |fqdn| for the |chef server|. This setting is not in the server configuration file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. Then configure the same value for the ``bookshelf['vip']`` setting prior to installing the |chef server|. For example: ``api_fqdn "chef.example.com"``.
-   * - ``bookshelf['vip']``
-     - |ip_address virtual| Default value: ``node['fqdn']``. (This setting is related to the |service bookshelf| service.)
+     - The |fqdn| for the |chef server|. This setting is not in the server configuration file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. For example: ``api_fqdn "chef.example.com"``.
    * - ``bootstrap``
      - Default value: ``true``.
    * - ``ip_version``
