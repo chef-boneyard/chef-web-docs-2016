@@ -61,13 +61,16 @@ GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_authentication_configuration_get.rst
 
-/messages
------------------------------------------------------
-.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_messages.rst
-
-POST
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_messages_post.rst
+.. internal API used by webhooks
+.. 
+.. /messages
+.. -----------------------------------------------------
+.. .. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_messages.rst
+.. 
+.. POST
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_api_analytics/includes_api_analytics_endpoint_messages_post.rst
+.. 
 
 /organization/NAME
 -----------------------------------------------------
