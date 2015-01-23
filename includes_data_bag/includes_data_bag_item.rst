@@ -13,5 +13,6 @@ A data bag is a container of related data bag items, where each individual data 
    }
 
 where
+
 * ``key`` and ``value`` are the ``key:value`` pair for each additional attribute within the data bag item
 * ``/* ... */`` and ``// ...`` show two ways to add comments to the data bag item
