@@ -24,14 +24,14 @@ The following fields are available for the ``run_converge`` message type:
        .. code-block:: javascript
        
           "error": {
-            "class": "#<TypeError: user[iusechef] (/var/manage.rb line 87) had an error",
-            "message": "user[iusechef] (/var/manage.rb line 87) had an error",
+            "class": "#<TypeError: user[chef] (/var/file.rb line 87) has error",
+            "message": "user[chef] (/var/file.rb line 87) has error",
             "backtrace": "[\"/opt/chef/embedded/.../chef/unix.rb:103 \"]",
             "description": {
-              "title": "Errorexecutingaction`create`onresource'user[iusechef]'",
+              "title": "Errorexecutingaction`create`onresource'user[chef]'",
               "sections": [
                 { "TypeError": "can'tconvertArrayintoString" },
-                { "CookbookTrace: ": "/var/chef/.../useradd.rb: 11: action: create\n" }
+                { "CookbookTrace: ": "/var/chef/file.rb: 11: action: create\n" }
               ]
             }
           }

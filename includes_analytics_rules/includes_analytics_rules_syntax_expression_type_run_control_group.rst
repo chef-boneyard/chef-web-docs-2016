@@ -13,25 +13,41 @@ The following fields are available for the ``run_control_group`` message type:
      - Description
    * - ``error``
      - string
-     - The error reported by the |chef client|.
+     - The error reported by the |chef client|. For example:
+
+       .. code-block:: javascript
+       
+          "error": {
+            "class": "#<TypeError: user[chef] (/var/file.rb line 56) has error",
+            "message": "user[chef] (/var/file.rb line 87) has error",
+            "backtrace": "[\"/opt/chef/embedded/.../chef/unix.rb:103 \"]",
+            "description": {
+              "title": "Errorexecutingaction`create`onresource'user[chef]'",
+              "sections": [
+                { "TypeError": "can'tconvertArrayintoString" },
+                { "CookbookTrace: ": "/var/chef/file.rb: 11: action: create\n" }
+              ]
+            }
+          }
+
    * - ``id``
      - string
      - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.
    * - ``name``
      - string
-     - The name of the control group object.
+     - The name of the control group object. For example: ``"mysql audit"``.
    * - ``number_failed``
      - integer
-     - The number of tests within the control group that failed.
+     - The number of tests within the control group that failed. For example: ``"7"``.
    * - ``number_succeeded``
      - integer
-     - The number of tests within the control group that passed.
+     - The number of tests within the control group that passed. For example: ``"4"``.
    * - ``organization_name``
      - string
      - The short name of the organization to which the node belongs. For example: ``"chef"``.
    * - ``run``
      - object
-     - 
+     - A |json| object that contains run data, including the |chef client| run identifier, the |fqdn| for the |chef server|, the name of the node, and the times at which the |chef client| started and finished.
    * - ``run.chef_server_fqdn``
      - string
      - The |fqdn| for the |chef server| against which the instance is running. For example: ``"api.chef.io"``.
@@ -49,5 +65,5 @@ The following fields are available for the ``run_control_group`` message type:
      - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
    * - ``status``
      - string
-     - The status of the control object.
+     - The status of the control object. For example: ``"failure"``.
 

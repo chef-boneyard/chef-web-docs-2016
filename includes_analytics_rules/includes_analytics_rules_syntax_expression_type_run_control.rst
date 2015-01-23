@@ -16,22 +16,22 @@ The following fields are available for the ``run_control`` message type:
      - 
    * - ``control_group``
      - object
-     - 
+     - A |json| object that contains the control group identifier, the name of the control group, the number of tests that passed and failed, and its final status.
    * - ``control_group.control_group_id``
      - string
-     - The identifier of the control group object.
+     - The identifier of the control group object. For example: ``"12345678-9012-3456-7890-12345678901211"``.
    * - ``control_group.name``
      - string
-     - The name of the control group.
+     - The name of the control group. For example: ``"mysql audit"``.
    * - ``control_group.number_failed``
      - integer
-     - The number of tests within the control group that failed.
+     - The number of tests within the control group that failed. For example: ``"7"``.
    * - ``control_group.number_succeeded``
      - integer
-     - The number of tests within the control group that passed.
+     - The number of tests within the control group that passed. For example: ``"4"``.
    * - ``control_group.status``
      - string
-     - The status of the control group.
+     - The status of the control group. For example: ``success``.
    * - ``details``
      - ["string", "null"] 
      - Details about the control object.
@@ -40,19 +40,19 @@ The following fields are available for the ``run_control`` message type:
      - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.
    * - ``name``
      - string
-     - The name of the control object.
+     - The name of the control object. For example: ``"should be installed"``.
    * - ``organization_name``
      - string
      - The short name of the organization to which the node belongs. For example: ``"chef"``.
    * - ``resource_name``
      - ["string", "null"]
-     - The name of the resource in which the control object is present.
+     - The name of the resource in which the control object is present. For example: ``"mysql"``.
    * - ``resource_type``
      - ["string", "null"]
-     - The resource type for the control object.
+     - The resource type for the control object. For example: ``"Package"``.
    * - ``run``
      - object
-     - 
+     - A |json| object that contains run data, including the |chef client| run identifier, the |fqdn| for the |chef server|, the name of the node, and the times at which the |chef client| started and finished.
    * - ``run.chef_server_fqdn``
      - string
      - The |fqdn| for the |chef server| against which the instance is running. For example: ``"api.chef.io"``.
@@ -70,7 +70,7 @@ The following fields are available for the ``run_control`` message type:
      - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
    * - ``sequence_number``
      - integer
-     - The sequence number at which the resource converged.
+     - The sequence number at which the resource converged. For example: ``"2"``.
    * - ``status``
      - string
-     - The status of the control object.
+     - The status of the control object. For example: ``"success"``.

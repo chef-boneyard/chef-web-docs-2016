@@ -89,7 +89,7 @@ The following fields are available for the ``run_resource`` message type:
      - The resource type. For example: ``"file"``.
    * - ``run``
      - object
-     - A |json| object that contains run data, including the |chef client| run identifier, the |fqdn| for the |chef server|, the name of the node, the times at which the |chef client| started and finished.
+     - A |json| object that contains run data, including the |chef client| run identifier, the |fqdn| for the |chef server|, the name of the node, and the times at which the |chef client| started and finished.
    * - ``run.chef_server_fqdn``
      - string
      - The |fqdn| for the |chef server| against which the instance is running. For example: ``"api.chef.io"``.
