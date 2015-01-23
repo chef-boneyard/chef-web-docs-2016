@@ -3,8 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This argument has the following syntax:
-
-.. code-block:: bash
-
-   $ knife analytics audit show ID
+Use the ``alert show`` argument to view the specified alert.

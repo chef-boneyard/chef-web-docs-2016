@@ -34,29 +34,29 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_action_show_options.rst
 
-audit list
+alert list
 =====================================================
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_list.rst
 
 Syntax
 -----------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_list_syntax.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_list_syntax.rst
 
 Options
 -----------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_list_options.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_list_options.rst
 
-audit show
+alert show
 =====================================================
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_show.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_show.rst
 
 Syntax
 -----------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_show_syntax.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_show_syntax.rst
 
 Options
 -----------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_show_options.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_show_options.rst
 
 notification list
 =====================================================

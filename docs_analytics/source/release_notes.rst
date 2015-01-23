@@ -12,7 +12,7 @@ The following items are new for |chef analytics| 1.1 and/or are changes from pre
 * **Actions** Use |chef actions| to view changes made to each node object, the run history for all nodes, the history of every cookbook (and cookbook version), how and where policy settings---roles, environments, and data bags---are applied, and which users made which changes.
 * **Reporting 1.2.2** |reporting| should be upgraded to version 1.2.2 for full funcationality with the |chef analytics| 1.1 release.
 * **oc-id service** The |service ocid| service enables |oauth| 2.0 authentication to the |chef server| by |chef analytics|.
-* **knife-analytics plugin** Use the |subcommand knife analytics| subcommand to view information about actions, audits, notifications, and rules that are managed by |chef analytics|.
+* **knife-analytics plugin** Use the |subcommand knife analytics| subcommand to view information about actions, alerts, notifications, and rules that are managed by |chef analytics|.
 
 In addition, the following functionality is available in |chef client| 12.2.0.alpha.0 to support building audit tests and running the |chef client| in |chef client_audit|:
 
@@ -107,29 +107,29 @@ action show
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_action_show_options.rst
 
-audit list
+alert list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_list.rst
 
 **Syntax**
 
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_list_syntax.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_list_syntax.rst
 
 **Options**
 
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_list_options.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_list_options.rst
 
-audit show
+alert show
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_show.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_show.rst
 
 **Syntax**
 
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_show_syntax.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_show_syntax.rst
 
 **Options**
 
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_audit_show_options.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_show_options.rst
 
 notification list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

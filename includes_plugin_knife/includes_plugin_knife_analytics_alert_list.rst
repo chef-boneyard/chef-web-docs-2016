@@ -3,4 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``audit show`` argument to view the specified audit.
+Use the ``alert list`` argument to view a list of alerts on the |chef analytics| server for the specified dates and times.
+

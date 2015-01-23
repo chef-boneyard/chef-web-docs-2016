@@ -3,5 +3,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``audit list`` argument to view a list of audits on the |chef analytics| server for the specified dates and times.
+This argument has the following syntax:
 
+.. code-block:: bash
+
+   $ knife analytics alert show ID
