@@ -25,7 +25,7 @@ The following fields are available for the ``run_resource`` message type:
      - The name of the organization to which the node belongs. For example: ``"chef"``.
    * - ``converge.run_list``
      - array
-     - The run-list used during the |chef client| run. For example: ``"[ "role[opscode-reporting]" ]"``.
+     - The run-list used during the |chef client| run. For example: ``[ "role[opscode-reporting]" ]``.
    * - ``converge.start_time``
      - string
      - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
@@ -34,10 +34,10 @@ The following fields are available for the ``run_resource`` message type:
      - The status of the |chef client| run. For example: ``"success"``.
    * - ``converge.total_resource_count``
      - integer
-     - The total number of resources that were converged during the |chef client| run. For example: ``"4"``.
+     - The total number of resources that were converged during the |chef client| run. For example: ``4``.
    * - ``converge.updated_resource_count``
      - integer
-     - The total number of resources that were updated during the |chef client| run. For example: ``"2"``.
+     - The total number of resources that were updated during the |chef client| run. For example: ``2``.
    * - ``cookbook_name``
      - string
      - The name of the cookbook that initiated the changes made by this |chef client| run. For example: ``"chef_handler"``.
@@ -107,4 +107,4 @@ The following fields are available for the ``run_resource`` message type:
      - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
    * - ``sequence_number``
      - integer
-     - The sequence number at which the resource converged. For example: ``"0"``.
+     - The sequence number at which the resource converged. For example: ``0``.

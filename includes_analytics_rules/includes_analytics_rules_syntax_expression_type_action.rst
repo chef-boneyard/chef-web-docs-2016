@@ -13,10 +13,10 @@ The following fields are available for the ``action`` message type:
      - Description
    * - ``entity_name``
      - string
-     - The name of the entity. For example: ``app1``.
+     - The name of the entity. For example: ``"app1"``.
    * - ``entity_type``
      - string
-     - The type of entity. For example: ``node``.
+     - The type of entity. For example: ``"node"``.
    * - ``id``
      - string
      - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.

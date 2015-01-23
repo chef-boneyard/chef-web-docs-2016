@@ -38,10 +38,10 @@ The following fields are available for the ``run_control_group`` message type:
      - The name of the control group object. For example: ``"mysql audit"``.
    * - ``number_failed``
      - integer
-     - The number of tests within the control group that failed. For example: ``"7"``.
+     - The number of tests within the control group that failed. For example: ``7``.
    * - ``number_succeeded``
      - integer
-     - The number of tests within the control group that passed. For example: ``"4"``.
+     - The number of tests within the control group that passed. For example: ``4``.
    * - ``organization_name``
      - string
      - The short name of the organization to which the node belongs. For example: ``"chef"``.

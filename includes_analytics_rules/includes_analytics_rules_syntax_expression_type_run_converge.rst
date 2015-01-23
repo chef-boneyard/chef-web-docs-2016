@@ -53,7 +53,7 @@ The following fields are available for the ``run_converge`` message type:
      - The identifier for the |chef client| run. For example: ``"67890123-4567-8901-2345-67890123456789"``.
    * - ``run_list``
      - array
-     - The run-list used during the |chef client| run. For example: ``"[ "role[opscode-reporting]" ]"``.
+     - The run-list used during the |chef client| run. For example: ``[ "role[opscode-reporting]" ]``.
    * - ``start_time``
      - string
      - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
@@ -62,7 +62,7 @@ The following fields are available for the ``run_converge`` message type:
      - The status of the |chef client| run. For example: ``"success"``.
    * - ``total_resource_count``
      - integer
-     - The total number of resources in the resource collection for the |chef client| run. For example: ``"4"``.
+     - The total number of resources in the resource collection for the |chef client| run. For example: ``4``.
    * - ``updated_resource_count``
      - integer
-     - The total number of resources that were updated during the |chef client| run. For example: ``"2"``.
+     - The total number of resources that were updated during the |chef client| run. For example: ``2``.

@@ -25,18 +25,18 @@ The following fields are available for the ``run_control`` message type:
      - The name of the control group. For example: ``"mysql audit"``.
    * - ``control_group.number_failed``
      - integer
-     - The number of tests within the control group that failed. For example: ``"7"``.
+     - The number of tests within the control group that failed. For example: ``7``.
    * - ``control_group.number_succeeded``
      - integer
-     - The number of tests within the control group that passed. For example: ``"4"``.
+     - The number of tests within the control group that passed. For example: ``4``.
    * - ``control_group.status``
      - string
-     - The status of the control group. For example: ``success``.
+     - The status of the control group. For example: ``"success"``.
    * - ``details``
      - ["string", "null"] 
      - Details about the control object.
    * - ``id``
-     - type
+     - string
      - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.
    * - ``name``
      - string
@@ -70,7 +70,7 @@ The following fields are available for the ``run_control`` message type:
      - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
    * - ``sequence_number``
      - integer
-     - The sequence number at which the resource converged. For example: ``"2"``.
+     - The sequence number at which the resource converged. For example: ``2``.
    * - ``status``
      - string
      - The status of the control object. For example: ``"success"``.
