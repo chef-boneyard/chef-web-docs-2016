@@ -54,17 +54,23 @@ Configure the |chef server|:
 
    .. note:: |analytics rabbitmq_settings| 
 
-#. Reconfigure the |chef analytics| machine:
+#. Reconfigure the |chef server|:
 
    .. code-block:: bash
 
-      $ opscode-analytics-ctl reconfigure
+      $ chef-server-ctl reconfigure
 
 #. Restart the |chef server| backend:
    
    .. code-block:: bash
 
       $ chef-server-ctl start
+
+
+
+
+
+
 
 Configure the |chef analytics| backend machine:
 
