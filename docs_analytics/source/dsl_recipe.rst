@@ -6,6 +6,8 @@ About the Recipe DSL
 
 The following methods are `part of the Recipe DSL <http://docs.chef.io/dsl_recipe.html>`_ and are specific to the |chef analytics| platform. Use them to define audit rules within a recipe. The audit rules are processed when the |chef client| is run in |chef client_audit|.
 
+.. warning:: These methods require |chef client| version 12.0.0.alpha.0.
+
 control
 =====================================================
 .. include:: ../../includes_analytics/includes_analytics_controls.rst
