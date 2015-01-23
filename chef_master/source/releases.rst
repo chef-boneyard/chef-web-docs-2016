@@ -11,6 +11,9 @@ The following documentation sets are available:
    * - Application
      - Home Page
      - Release Notes
+   * - |chef client_title| 12.1 (preview)
+     - `http://docs.chef.io/release/12-1/ <http://docs.chef.io/release/12-1/>`__
+     - `Release Notes <http://docs.chef.io/release/12-1/release_notes.html>`__
    * - |chef client_title| 12.0
      - `http://docs.chef.io/release/12-0/ <http://docs.chef.io/release/12-0/>`__
      - `Release Notes <http://docs.chef.io/release/12-0/release_notes.html>`__
@@ -62,6 +65,9 @@ The following documentation sets are available:
    * - |chef server osc| Server 11.0
      - `http://docs.chef.io/release/osc_11-0/ <http://docs.chef.io/release/osc_11-0/>`__
      - 
+   * - |chef analytics_title| 1.1
+     - `http://docs.chef.io/analytics/ <http://docs.chef.io/analytics/>`__
+     - `Release Notes <http://docs.chef.io/analytics/release_notes.html>`__
    * - |ohai| 8
      - `http://docs.chef.io/release/ohai-8/ <http://docs.chef.io/release/ohai-8/>`__
      - `Release Notes <http://docs.chef.io/release/ohai-8/release_notes.html>`__
