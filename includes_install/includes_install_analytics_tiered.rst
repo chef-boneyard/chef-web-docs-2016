@@ -60,6 +60,8 @@ Configure the |chef server|:
 
       $ chef-server-ctl reconfigure
 
+   This updates the |chef server| for all of the files that are required by |chef analytics| and puts them in the ``/etc/opscode-analytics`` directory.
+
 #. Restart the |chef server| backend:
    
    .. code-block:: bash
