@@ -20,6 +20,7 @@ In addition, the following functionality is available in |chef client| 12.2.0.al
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
 
+
 |rules_analytics_title|
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
@@ -53,6 +54,7 @@ Examples
 
 .. include:: ../../step_analytics_rules/step_analytics_rules_verify_run_lists.rst
 
+
 |chef actions_title|
 -----------------------------------------------------
 .. include:: ../../includes_actions/includes_actions.rst
@@ -70,6 +72,93 @@ User Interface
 .. include:: ../../includes_analytics/includes_analytics_ui.rst
 
 .. include:: ../../includes_analytics/includes_analytics_ui_diffs.rst
+
+
+|chef client|, |chef client_audit|
+-----------------------------------------------------
+.. include:: ../../includes_chef_client/includes_chef_client_audit_mode.rst
+
+Use following option to run the |chef client| in |chef client_audit| mode:
+
+``--audit-mode MODE``
+   |audit_mode| Default value: ``disabled``.
+
+The Audit Run
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_chef_client/includes_chef_client_audit_mode_run.rst
+
+``control``
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_controls.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_syntax.rst
+
+directory Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_directory.rst
+
+file Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_file.rst
+
+package Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_package.rst
+
+port Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_port.rst
+
+service Matcher
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_service.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**A package is installed**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_package_installed.rst
+
+**A package version is installed**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_package_installed_version.rst
+
+**A package is not installed**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_package_not_installed.rst
+
+**A service is enabled**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_service_enabled.rst
+
+**A configuration file contains specific settings**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_sshd_configuration.rst
+
+**A file contains desired permissions and contents**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_permissions.rst
+
+``control_group``
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group_syntax.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**control_group block with multiple control blocks**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_many_controls.rst
+
+**Duplicate control_group names**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
+
 
 |service ocid| Service 
 -----------------------------------------------------
@@ -178,94 +267,6 @@ rule show
 **Options**
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_rule_show_options.rst
-
-
-
-
-|chef client|, |chef client_audit|
------------------------------------------------------
-.. include:: ../../includes_chef_client/includes_chef_client_audit_mode.rst
-
-Use following option to run the |chef client| in |chef client_audit| mode:
-
-``--audit-mode MODE``
-   |audit_mode| Default value: ``disabled``.
-
-The Audit Run
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_chef_client/includes_chef_client_audit_mode_run.rst
-
-``control``
------------------------------------------------------
-.. include:: ../../includes_analytics/includes_analytics_controls.rst
-
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
-
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_syntax.rst
-
-directory Matcher
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_directory.rst
-
-file Matcher
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_file.rst
-
-package Matcher
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_package.rst
-
-port Matcher
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_port.rst
-
-service Matcher
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_service.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**A package is installed**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_package_installed.rst
-
-**A package version is installed**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_package_installed_version.rst
-
-**A package is not installed**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_package_not_installed.rst
-
-**A service is enabled**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_service_enabled.rst
-
-**A configuration file contains specific settings**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_sshd_configuration.rst
-
-**A file contains desired permissions and contents**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_permissions.rst
-
-``control_group``
------------------------------------------------------
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
-
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group_syntax.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**control_group block with multiple control blocks**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_many_controls.rst
-
-**Duplicate control_group names**
-
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
 
 Changelog
