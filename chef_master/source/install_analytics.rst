@@ -11,6 +11,7 @@ The |chef analytics| server shares the :doc:`same prerequisites </install_server
 * |chef server| 11.1.8 (or higher) is required for |chef analytics| 1.0 versions
 * |chef server| version 12 is required |chef analytics| 1.1 versions
 * |chef client| vesion 12.0.0.alpha is required for |chef client_audit| and using ``control_group`` and ``control`` |dsl recipe| methods
+* |reporting| is installed on the |chef server|. |reporting| version 1.2.3 is required to view the results of |chef client_audit|; earlier versions of |reporting| may be used, but will not show these results
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a FQDN or an IP address
 * A connection to |ntp| to prevent clock drift
