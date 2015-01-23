@@ -50,7 +50,6 @@ This section contains links to topics about configuration files, command-line to
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/config_rb_analytics.html">opscode-analytics.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/ctl_analytics.html">opscode-analytics-ctl</a> </br> 
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/api_chef_server.html#authenticate-user">authenticate_user endpoint in Chef Server API</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/12-1/ctl_chef_client.html#options">Audit Mode for chef-client</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#rabbitmq">RabbitMQ settings in chef-server.rb</a> </br>   
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#oc-id">OAuth 2.0 authentication to the Chef server</a> </br>    
 
