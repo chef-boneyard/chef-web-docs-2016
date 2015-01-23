@@ -6,13 +6,13 @@ The following rule shows how to define a rule that sends a notification when a m
 
 .. code-block:: ruby
 
-   rules 'pci check telnet port'
+   rules "pci check telnet port"
      rule on run_control
      when
-       name = 'should be listening'
-       resource_type = 'port'
-       resource_name = '23'
-       status != 'success'
+       name = "should be listening"
+       resource_type = "port"
+       resource_name = 23
+       status != "success"
      then
        alert:error("Encrypt all non-console administrative access such as browser/Web-based management tools.")
        notify("security-team@financialcore.com", "A machine is listening for connections on port 23!")

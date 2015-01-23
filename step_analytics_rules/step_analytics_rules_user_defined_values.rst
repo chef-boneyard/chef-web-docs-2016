@@ -8,7 +8,7 @@ The following rule sets, and then uses a user-defined value:
    rules "user-agent matching"
      rule on action
      when
-       entity_name='app1'
+       entity_name = "app1"
      then
        set(#foo, requestor_name)
      otherwise

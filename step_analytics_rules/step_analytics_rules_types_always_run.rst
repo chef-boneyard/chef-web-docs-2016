@@ -5,7 +5,8 @@ A rule that always fire for the specified message type:
 
 .. code-block:: ruby
 
-   rule "test_rule" on action when
+   rule "test_rule" on action
+   when
      true
    then
      notify("some_alias")
