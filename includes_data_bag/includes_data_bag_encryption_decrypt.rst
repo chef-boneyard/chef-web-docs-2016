@@ -14,5 +14,5 @@ that will return |json| output similar to:
    {
      "id": "mysql",
      "pass": "thesecret123",
-      "user": "fred"
+     "user": "fred"
    }
