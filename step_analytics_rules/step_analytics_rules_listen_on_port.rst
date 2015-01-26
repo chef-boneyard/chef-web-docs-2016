@@ -9,9 +9,9 @@ The following rule shows how to define a rule that sends a notification when a m
    rules "pci check telnet port"
      rule on run_control
      when
-       name = "should be listening"
-       resource_type = "port"
-       resource_name = 23
+       name = "should be listening" and
+       resource_type = "port" and
+       resource_name = 23 and
        status != "success"
      then
        alert:error("Encrypt all non-console administrative access such as browser/Web-based management tools.")
