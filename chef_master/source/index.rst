@@ -1,5 +1,5 @@
 =====================================================
-All about Chef ...
+All about |chef| ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
