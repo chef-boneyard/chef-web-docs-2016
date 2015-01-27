@@ -136,3 +136,28 @@ Issues and bug reports may be created for |chef|, including the |chef client|, t
 For additional support about |chef|, including documentation, learning, and opening tickets with the support team, see https://www.chef.io/support/.
 
 .. warning:: If you require a response from |company_name| per the terms of a support level agreement (SLA), please contact support directly.
+
+
+Use |git|
+=====================================================
+.. include:: ../../includes_chef_repo/includes_chef_repo_git.rst
+
+Set Up Repo
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_master_setup.rst
+
+Keep Master Current
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_master_keep_current.rst
+
+Sync Master
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_master_sync.rst
+
+Use Branch
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_branch.rst
+
+Delete Branch
+-----------------------------------------------------
+.. include:: ../../includes_chef_repo/includes_chef_repo_git_branch_delete.rst
