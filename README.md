@@ -16,9 +16,9 @@ Chef currently builds HTML outputs from this docs collection for all versions of
 
 Sphinx is the authoring tool: http://sphinx-doc.org/
 
-reStructuredText (RST) is the authoring format. Only a subset of the formatting options are used, plus there are some specific approaches to what type of formatting goes where, so please review the style guide: http://docs.chef.io//style_guide.html
+reStructuredText (RST) is the authoring format. Only a subset of the formatting options are used, plus there are some specific approaches to what type of formatting goes where, so please review the style guide: http://docs.chef.io/style_guide.html
 
-There are several ways to provide feedback about the Chef documentation. See http://docs.chef.io//feedback.html or read [CONTRIBUTING](CONTRIBUTING).
+There are several ways to provide feedback about the Chef documentation. See http://docs.chef.io/feedback.html or read [CONTRIBUTING](CONTRIBUTING).
 
 
 
