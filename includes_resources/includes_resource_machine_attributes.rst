@@ -110,12 +110,11 @@
           role 'bar'
           recipe 'baz'
    * - ``run_list``
-     - Use to specify the run-list to be applied to the machine. This attribute should not be used in the same recipe as ``recipe`` and ``role``.
+     - An array of strings that specifies the run-list to apply to a machine. This attribute should not be used in the same recipe as ``recipe`` and ``role``. For example:
 
-       .. include:: ../../includes_node/includes_node_run_list.rst
+       .. code-block:: ruby
        
-       .. include:: ../../includes_node/includes_node_run_list_format.rst
-
+          [ 'recipe[COOKBOOK::RECIPE]','COOKBOOK::RECIPE','role[NAME]' ]
    * - ``source_key``
      - Use to copy a private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
    * - ``source_key_pass_phrase``
