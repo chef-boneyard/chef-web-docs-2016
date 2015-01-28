@@ -14,10 +14,24 @@
    * - ``allow_overwrite_keys``
      - Use to overwrite the key on a machine when it is different from the key specified by ``source_key``.
    * - ``attribute``
-     - Use to specify a path to an attribute, and then modify that attribute with the specified value. Each modified attribute should be specified separately. This attribute should not be used in the same recipe as ``attributes``.
+     - Use to specify an attribute, and then modify that attribute with the specified value. The following patterns may be used to specify the value:
+	 
+       .. code-block:: ruby
+
+          attribute <name>, <value>
+          
+          attribute [<path>], <value>
+          
+          attribute 'a', 'b'                         # set attribute "a" to "b"
+          
+		  attribute %w[a b c], 'd'                   # set attribute node['a']['b']['c'] to 'd'
+                                                     # ignore attributes a.b.x, a.b.y, etc.
+          
+          attribute 'a', { 'b' => { 'c' => 'd' } }   # similar to attribute %w[a b c], 'd'
+
+       Each modified attribute should be specified individually. This attribute should not be used in the same recipe as ``attributes``.
    * - ``attributes``
-     - Use to specify a |ruby hash| that contains all of the attributes to be applied to a machine. This attribute should not be used in the same recipe as ``attribute``.
-	   SEE NOTES.
+     - Use to specify a |ruby hash| that contains all of the normal attributes to be applied to a machine. This attribute should not be used in the same recipe as ``attribute``.
    * - ``chef_environment``
      - |name environment|
    * - ``chef_server``
