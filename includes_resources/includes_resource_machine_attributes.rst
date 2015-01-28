@@ -24,8 +24,8 @@
           
           attribute 'a', 'b'                         # set attribute "a" to "b"
           
-		  attribute %w[a b c], 'd'                   # set attribute node['a']['b']['c'] to 'd'
-                                                     # ignore attributes a.b.x, a.b.y, etc.
+          attribute %w[a b c], 'd'                   # set attribute node['a']['b']['c'] to 'd'
+                                                     # will ignore attributes a.b.x, a.b.y, etc.
           
           attribute 'a', { 'b' => { 'c' => 'd' } }   # similar to attribute %w[a b c], 'd'
 
