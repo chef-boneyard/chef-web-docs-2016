@@ -40,7 +40,7 @@
 <h1>Slide Deck<a class="headerlink" href="#slide-deck" title="Permalink to this headline">¶</a></h1>
 <section>
 <h2>First Slide!</h2>
-<p class="first">The first slide in the deck should be splashy, and with a better image than this one.</p>
+<p class="first">The first slide in the deck should be splashy:</p>
 <img alt="_images/chef_run_landscape_300dpi.png" class="last align-center" src="_images/chef_run_landscape_300dpi.png" />
 </section>
 <section>
@@ -74,20 +74,12 @@
 <section>
 <h2>Ordered Lists</h2>
 <p class="first">This is an ordered list:</p>
-<ol class="arabic simple">
+<ol class="last arabic simple">
 <li>first item</li>
 <li>second item</li>
 <li>third item third item third item third item third item third item third item third item third item third item third item third item</li>
 <li>fourth item</li>
 </ol>
-<p>Here&#8217;s the code:</p>
-<div class="last highlight-ruby"><div class="highlight"><pre><span class="no">This</span> <span class="n">is</span> <span class="n">an</span> <span class="n">ordered</span> <span class="ss">list</span><span class="p">:</span>
-
-<span class="c1">#. first item</span>
-<span class="c1">#. second item</span>
-<span class="c1">#. third item ...</span>
-</pre></div>
-</div>
 </section>
 <section>
 <h2>Unordered Lists</h2>
@@ -196,7 +188,7 @@ end
 <section>
 <section class="first">
 <h2>First Slide!</h2>
-<p class="first">The first slide in the deck should be splashy, and with a better image than this one.</p>
+<p class="first">The first slide in the deck should be splashy:</p>
 <img alt="_images/chef_run_landscape_300dpi.png" class="last align-center" src="_images/chef_run_landscape_300dpi.png" />
 </section>
 <section>
@@ -230,20 +222,12 @@ end
 <section>
 <h2>Ordered Lists</h2>
 <p class="first">This is an ordered list:</p>
-<ol class="arabic simple">
+<ol class="last arabic simple">
 <li>first item</li>
 <li>second item</li>
 <li>third item third item third item third item third item third item third item third item third item third item third item third item</li>
 <li>fourth item</li>
 </ol>
-<p>Here&#8217;s the code:</p>
-<div class="last highlight-ruby"><div class="highlight"><pre><span class="no">This</span> <span class="n">is</span> <span class="n">an</span> <span class="n">ordered</span> <span class="ss">list</span><span class="p">:</span>
-
-<span class="c1">#. first item</span>
-<span class="c1">#. second item</span>
-<span class="c1">#. third item ...</span>
-</pre></div>
-</div>
 </section>
 <section>
 <h2>Unordered Lists</h2>
@@ -699,14 +683,93 @@ Uploaded 1 cookbook.
 </section>
 <section>
 <section class="first">
-<h2>Package Resource</h2>
-Use the <strong>package</strong> resource to manage packages. When the package is installed from a local file (such as with RubyGems, dpkg, or RPM Package Manager), the file must be added to the node using the <strong>remote_file</strong> or <strong>cookbook_file</strong> resources.</section>
+<h2>Reboot Resource (pulled from chef-docs)</h2>
+<p class="first">Use the <strong>reboot</strong> resource to reboot a node, a necessary step with some installations on certain platforms. This resource is supported for use on the Microsoft Windows, Mac OS X, and Linux platforms.</p>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The <strong>reboot</strong> must use the <tt class="docutils literal"><span class="pre">:immediately</span></tt> notification timer with any notification.</p>
+</div>
+</section>
 <section>
-<h2>Github Branching (part 1)</h2>
-Use the <strong>package</strong> resource to manage packages. When the package is installed from a local file (such as with RubyGems, dpkg, or RPM Package Manager), the file must be added to the node using the <strong>remote_file</strong> or <strong>cookbook_file</strong> resources.</section>
+<h2>Actions (pulled from chef-docs)</h2>
+<p class="first">This resource has the following actions:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:cancel</span></tt></td>
+<td>Use to cancel a reboot request.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:reboot_now</span></tt></td>
+<td>Use to reboot a node so that the chef-client may continue the installation process.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:request_reboot</span></tt></td>
+<td>Use to reboot a node at the end of a chef-client run.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Attributes (pulled from chef-docs)</h2>
+<p class="first">This resource has the following attributes:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">delay_mins</span></tt></td>
+<td>The amount of time (in minutes) to delay a reboot request.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">reason</span></tt></td>
+<td>A string that describes the reboot action.</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section class="last">
-<h2>Github Branching (part 2)</h2>
-Use the <strong>package</strong> resource to manage packages. When the package is installed from a local file (such as with RubyGems, dpkg, or RPM Package Manager), the file must be added to the node using the <strong>remote_file</strong> or <strong>cookbook_file</strong> resources.</section>
+<h2>Examples (pulled from chef-docs via local file)</h2>
+<p class="first"><strong>Request Reboot (pulled from chef-docs)</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">reboot</span> <span class="s2">&quot;app_requires_reboot&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:request_reboot</span>
+  <span class="n">reason</span> <span class="s2">&quot;Need to reboot when the run completes successfully.&quot;</span>
+  <span class="n">delay_mins</span> <span class="mi">5</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Reboot Immediately (pulled from chef-docs)</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">reboot</span> <span class="s2">&quot;now&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+  <span class="n">reason</span> <span class="s2">&quot;Cannot continue Chef run without a reboot.&quot;</span>
+  <span class="n">delay_mins</span> <span class="mi">2</span>
+<span class="k">end</span>
+
+<span class="n">execute</span> <span class="s1">&#39;foo&#39;</span> <span class="k">do</span>
+  <span class="n">command</span> <span class="s1">&#39;...&#39;</span>
+  <span class="n">notifies</span> <span class="ss">:reboot_now</span><span class="p">,</span> <span class="s1">&#39;reboot[now]&#39;</span><span class="p">,</span> <span class="ss">:immediately</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Cancel Reboot (pulled from chef-docs)</strong></p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">reboot</span> <span class="s2">&quot;cancel_reboot_request&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:cancel</span>
+  <span class="n">reason</span> <span class="s2">&quot;Cancel a previous end-of-run reboot request.&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</section>
 </section>
 </div>
 
