@@ -41,19 +41,7 @@ The following items are prerequisites for installing the |chef client| on a work
 * Access to a |chef server|: a hosted |chef server| account or an on-premises |chef server|
 * Access to a machine (physical or virtual) that can be used as the first node; the |fqdn| or IP address for a machine is required by the |subcommand knife bootstrap| command during a bootstrap operation
 
-Select a Package
------------------------------------------------------
-The bits for the |chef client| |omnibus installer| are available as a download from |company_name|.
-
-To download the |omnibus installer| for the |chef client|:
-
-#. Go to: http://downloads.chef.io/chef-dk/.
-
-#. Select the operating system, version, and architecture appropriate for your environment.
-
-#. Click **Download**.
-
-Run the Installer
+Get Package, Run Installer
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_chef_dk.rst
 
