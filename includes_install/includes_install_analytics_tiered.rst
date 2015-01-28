@@ -60,7 +60,7 @@ Configure the |chef server|:
 
       $ chef-server-ctl reconfigure
 
-   This updates the |chef server| for all of the files that are required by |chef analytics| and puts these files in the ``/etc/opscode-analytics`` directory on the |chef server|.
+   This updates the |chef server| for all of the files that are required by |chef analytics| and puts them files in the ``/etc/opscode-analytics`` directory on the |chef server|.
 
 #. Restart the |chef server| backend:
    
@@ -76,7 +76,7 @@ Configure the |chef server|:
 
 Configure the |chef analytics| backend machine:
 
-#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine.
+#. Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine.
 
 #. Edit the ``opscode-analytics.rb`` file on the backend |chef analytics| machine:
 

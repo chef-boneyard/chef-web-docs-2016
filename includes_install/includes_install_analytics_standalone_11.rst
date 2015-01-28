@@ -54,7 +54,7 @@ Configure the |chef server|:
 
       $ chef-server-ctl reconfigure
 
-   This updates the |chef server| for all of the files that are required by |chef analytics| and puts these files in the ``/etc/opscode-analytics`` directory on the |chef server|.
+   This updates the |chef server| for all of the files that are required by |chef analytics| and puts them in the ``/etc/opscode-analytics`` directory on the |chef server|.
 
 #. Restart the |chef server|:
    
@@ -65,7 +65,7 @@ Configure the |chef server|:
 
 Configure the |chef analytics| standalone machine:
 
-#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the standalone |chef analytics| machine.
+#. Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| machine to the standalone |chef analytics| machine.
 
 #. Configure the |chef analytics| server by setting the ``analytics_fqdn`` in ``/etc/opscode-analytics/opscode-analytics.rb``. This is the |fqdn| for the |chef analytics| web application. For example:
 
