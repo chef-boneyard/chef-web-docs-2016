@@ -118,7 +118,7 @@ Install |chef analytics| on frontend machines:
 
       $ dpkg -i opscode-analytics<version>.deb
 
-#. Copy over the ``actions-source.json`` and ``opscode-analytics-secrets.json`` files from the |chef analytics| backend machine to the ``/etc/opscode-analytics/`` directory on the frontend |chef analytics| machine.
+#. Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine.
 
 #. Edit the ``opscode-analytics.rb`` file:
 
