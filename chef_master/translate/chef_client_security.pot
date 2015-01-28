@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-22 16:15-0800\n"
+"POT-Creation-Date: 2015-01-28 12:43-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,358 +17,358 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/chef_client_security.rst:8
-# b966feefb2f549fd97dac7242706a6c1
+# 30dce6ab25e1473eb79cfe95fb016c67
 msgid "|chef client_title| Security"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth.rst:5
-# 44d0db7816a445ef9f3a950549a5e784
+# 415d633ec16d4ba3b9a46879157bec0b
 msgid "All communication with the |chef server| must be authenticated using the |api chef server|, which is a REST API that allows requests to made to the |chef server|. Only authenticated requests will be authorized. Most of the time, and especially when using |knife|, the |chef client|, or the |chef server| web interface, the use of the |api chef server| is transparent. In some cases, the use of the |api chef server| requires more detail, such as when making the request in |ruby| code, with a |knife| plugin, or when using |curl|."
 msgstr ""
 
 #: ../source/chef_client_security.rst:13
-# 0022608ae72a48cb9af3dd3772a9cde7
+# 14dc005763ca4800b78d2f5d59de9a15
 msgid "Authentication"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:4
-# bdfbdfac10694a9db647906ff9e7980e
+# 7e5aca0c27704b6e8655042290ef8ceb
 msgid "The authentication process ensures the |chef server| responds only to requests made by trusted users. Public key encryption is used by the |chef server|. When a node and/or a workstation is configured to run the |chef client|, both public and private keys are created. The public key is stored on the |chef server|, while the private key is returned to the user for safe keeping. (The private key is a .pem file located in the ``.chef`` directory or in ``/etc/chef``.)"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:6
-# 43a06ca216fb4114a2d1153cdf373e0a
+# fd52bf61d99046ed9182a08819715c42
 msgid "Both the |chef client| and |knife| use the |api chef server| when communicating with the |chef server|. The |chef validator| uses the |api chef server|, but only during the first |chef client| run on a node."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:8
-# e335696cd05a4425a0ef3d06d9671e73
+# 2e8fdb031ab0490d8df1ba7047c72fdf
 msgid "Each request to the |chef server| from those executables sign a special group of HTTP headers with the private key. The |chef server| then uses the public key to verify the headers and verify the contents."
 msgstr ""
 
 #: ../source/chef_client_security.rst:17
-# e07faa9696a4426997019cfe13f704b0
+# 0ac94d203b1544f8b542feb68ed60aba
 msgid "|chef validator|"
 msgstr ""
 
 #: ../../includes_security/includes_security_chef_validator.rst:5
-# 356138a273144e45a09b323aaacf4a3a
+# 14865556e7a343a585806c88ef2c4190
 msgid "Every request made by the |chef client| to the |chef server| must be an authenticated request using the |api chef server| and a private key. When the |chef client| makes a request to the |chef server|, the |chef client| authenticates each request using a private key located in ``/etc/chef/client.pem``."
 msgstr ""
 
 #: ../../includes_security/includes_security_chef_validator.rst:7
-# e3d6713b09f1499bbd308b538a4671ba
+# 16c3025af4fb4c8d8674819ef3cc63dd
 msgid "However, during the first |chef client| run, this private key does not exist. Instead, the |chef client| will attempt to use the private key assigned to the |chef validator|, located in ``/etc/chef/validation.pem``. (If, for any reason, the |chef validator| is unable to make an authenticated request to the |chef server|, the initial |chef client| run will fail.)"
 msgstr ""
 
 #: ../../includes_security/includes_security_chef_validator.rst:9
-# a8e9cdb1a8e04132b50849e4cf53a53f
+# 605acb4522184fd3847ee5666f4d87b0
 msgid "During the initial |chef client| run, the |chef client| will register with the |chef server| using the private key assigned to the |chef validator|, after which the |chef client| will obtain a ``client.pem`` private key for all future authentication requests to the |chef server|."
 msgstr ""
 
 #: ../../includes_security/includes_security_chef_validator.rst:11
-# 94918d037819439dae350ad01cf7525b
+# ece1d5ae20ac45ecbddf39bf8fefdd18
 msgid "After the initial |chef client| run has completed successfully, the |chef validator| is no longer required and may be deleted from the node. Use the ``delete_validation`` recipe found in the ``chef-client`` cookbook (https://github.com/opscode-cookbooks/chef-client) to remove the |chef validator|."
 msgstr ""
 
 #: ../source/chef_client_security.rst:21
-# d2e7597da0434366b5621c579e4464b9
+# 5f1c8bca8e0d4d88b5b38c9b2466691f
 msgid "During a |chef client_title| Run"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst:5
-# 9a5bb81a534a4834b0aa16f8a3716687
+# 514e91816838420886c7393cae665338
 msgid "As part of `every chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_, the |chef client| authenticates to the |chef server| using an RSA private key and the |api chef server|."
 msgstr ""
 
 #: ../source/chef_client_security.rst:25
-# c5acb02e365340f2bde97958f991f851
+# 91e3fd72c7c14b5ba968bd06e68252ad
 msgid "SSL Certificates"
 msgstr ""
 
 #: ../source/chef_client_security.rst:26
-# 12d3f31f40f8416590e2d1fde928faa6
+# f766bb30cc23488b8d37fe955147f9a4
 msgid "The following information does not apply to hosted |chef server| 12, only to on-premises |chef server| 12."
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl_cert_client.rst:4
-# 5fb379ec77194e6c922f5621e9216aba
+# ed6b0200b25c4cd6a53f68a5e1bd5c1d
 msgid "|chef server| 12 enables |ssl| verification by default for all requests made to the server, such as those made by |knife| and the |chef client|. The certificate that is generated during the installation of the |chef server| is self-signed, which means the certificate is not signed by a trusted |ca| that ships with the |chef client|. The certificate generated by the |chef server| must be downloaded to any machine from which |knife| and/or the |chef client| will make requests to the |chef server|."
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl_cert_client.rst:6
-# 3fbc6d3838a14c2ea80505c76465feb2
+# 338ae8ca88a8448aaaab827daaf6dcac
 msgid "For example, without downloading the |ssl| certificate, the following |knife| command:"
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl_cert_client.rst:12
-# 72a343018dae451cbba94da39666318d
+# 785816a073ce42a7879e25f60a059f9b
 msgid "responds with an error similar to:"
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl_cert_client.rst:19
-# b58aa74fbaad4da5ac70a951f2eb4aad
+# c58e3417b20b41278620933fd8ccf721
 msgid "This is by design and will occur until a verifiable certificate is added to the machine from which the request is sent."
 msgstr ""
 
 #: ../source/chef_client_security.rst:31
-# fa7d52469304474396f687a2a2fa1d6c
+# 67b5d0e6988d41a685d26f67cf07b60f
 msgid "Changes Prior to |chef| 12"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:5
-# d4ea21d25a0a442b95ba489bc562bb28
+# c28bd8b46fd04a9c9a8d1ceb32adfe5b
 msgid "The following changes were made during certain |chef client| release prior to the |chef client| 12 release:"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:7
-# 75d43bdd46744dfaa4b835a940adeb48
+# 0c0c25dfe98446ed9c2ff1a99d6df13d
 msgid "In the |chef client| 11.8 release, the ``verify_api_cert`` setting was added to the |client rb| file with a default value of ``false``."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:8
-# 9f117afb68bb4fc8bb1d96cb903c7e0c
+# a86ab32b3cea4c0490a70cd0fc4a4bc0
 msgid "In the |chef client| 11.12 release, the ``local_key_generation`` setting was added to the |client rb| file."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:10
-# dde7c2324fe34366aa20767131dc7ff9
+# 32bb0aab62834ce49abcc8437c321887
 msgid "The ``ssl_verify_mode`` continued to default to ``:verify_none``, but now returned a warning: ``SSL validation of HTTPS requests is disabled...``, followed by steps for how to configure |ssl| certificate validation for the |chef client|."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:12
-# 862aff142d874e6697d6264963539fb7
+# d9687c4d07ce492cbea10b1a48df71dc
 msgid "Two |knife| commands---|subcommand knife ssl_check| and |subcommand knife ssl_fetch| were added."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:14
-# 39cd8d00698f4f72a90e4f8c3c20836f
+# 94d57113d6a3427b9d65600dccd7bb6b
 msgid "A new directory in the |chef repo|---|path trusted_certs|---was added."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:16
-# c6964e70147f4b539aee12e723c50c05
+# dc5aec96ba374ec78fe984a7bfee691b
 msgid "These new settings and tools enabled users who wanted to use stronger |ssl| settings to generate the private/public key pair from the |chef client|, verify HTTPS requests, verify |ssl| certificates, and pull the |ssl| certificate from the |chef server| down to the |path trusted_certs| directory."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:17
-# cda2595c8daa427ea5d34108b2ee7de5
+# f9c1c02b22bb4365a86a05e68802e954
 msgid "In the |chef client| 12 release, the default value for ``local_key_generation`` was changed to ``true`` and the default value for ``ssl_verify_mode`` was changed to ``:verify_peer``."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_11-to-12_ssl_changes.rst:19
-# 39ea87950850468a99ae850a13262388
+# 25b52073e90a408d9f7f080501fc2cf3
 msgid "Starting with |chef client| 12, |ssl| certificate validation is enabled by default and the |subcommand knife ssl_fetch| is a necessary `part of the setup process <http://docs.chef.io/install_dk.html#get-ssl-certificates>`__ for every workstation."
 msgstr ""
 
 #: ../source/chef_client_security.rst:35
-# ca161e0f668f46a7848f0d367b93477f
+# 0bb75a158300470cabce15af1c59fcbb
 msgid "|path trusted_certs|"
 msgstr ""
 
 #: ../../includes_chef_repo/includes_chef_repo_directory_trusted_certs.rst:5
-# fe9293cafc45447b9554c9ee98161451
+# d806b3a363e24389930b7a86c9b4f040
 msgid "The |path trusted_certs| directory stores trusted |ssl| certificates used to access the |chef server|:"
 msgstr ""
 
 #: ../../includes_chef_repo/includes_chef_repo_directory_trusted_certs.rst:7
-# 04bedaa8b76244bd8b590627e2bd0974
+# f3ff5c32d6114a6f8ce5345b3eec4564
 msgid "On each workstation, this directory is the location into which |ssl| certificates are placed after they are downloaded from the |chef server| using the |subcommand knife ssl_fetch| command"
 msgstr ""
 
 #: ../../includes_chef_repo/includes_chef_repo_directory_trusted_certs.rst:8
-# c316ff142f5b4bc8ab944480746d2a36
+# 8a039e6c36dc4b139f92fe5a55df5a03
 msgid "On every node, this directory is the location into which |ssl| certificates are placed when  node has been bootstrapped with the |chef client| from a workstation"
 msgstr ""
 
 #: ../source/chef_client_security.rst:39
-# e754ebfa741d4090ba8770d6973b7ea6
+# 22e3d31521674aed81668e94e8acc822
 msgid "|client rb| Settings"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:4
-# 5c5915578e3744e5be0c92ad907c54f6
+# 10550ac034434cbba340a9f768a359d6
 msgid "Use following |client rb| settings to manage |ssl| certificate preferences:"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:10
-# 234d37984daa4cf981445c50047776b0
+# d090bb2f38ea47c79c9154efb41c548c
 msgid "Setting"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:11
-# f7eb18c1956b47d9baf2f14477104533
+# bb42ddbe51f3458da2c4df0f097d0ffb
 msgid "Description"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:12
-# d11c610eef884daea26167bd0ff0b513
+# aa0567a669f04081a349a5bef048ca77
 msgid "``local_key_generation``"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:13
-# f070477c92924242aa747ecc279f0d44
+# e20ab8a9d66c49fba2885ff463967bc1
 msgid "|generate local_keys| Default value: ``true``."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:14
-# 86a5bdb72d484efeaee752589348a378
+# 5343aa44493c41cbaf95f46b0c1095aa
 msgid "``ssl_ca_file``"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:15
-# ac3a38cc6f294a0f85fe69fd48bc582f
+# 058275526c9a4046bafb71797099bf0d
 msgid "|ssl_ca_file|"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:16
-# 244bc1cb28974aaea304f097788d4a01
+# 94df6a5bfe4e45c39794c8bffc74c2ad
 msgid "``ssl_ca_path``"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:17
-# c862f54203e24109bbcb1156bd664b72
+# 74fa2ec60a88440a8a8563c84978131d
 msgid "|ssl_ca_path|"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:18
-# 0e9a97aa157742efa6cd7b47e189db06
+# f39cae4664334071a2b08f65a71df15b
 msgid "``ssl_client_cert``"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:19
-# 7e5ce42299a5437bb0c491d797b761dc
+# b53ae7f7cd6544c38c50154d374f280d
 msgid "|ssl_client_cert| Default value: ``nil``."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:20
-# d197d12f50d34da783eb07b2d1dd1b54
+# 46414709350344f196db11445da457d6
 msgid "``ssl_client_key``"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:21
-# 3e2a643a640043e792b6f20b55104f26
+# bff538d5d6e543cbaf66b4baae1660fb
 msgid "|ssl_client_key| Default value: ``nil``."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:22
-# 25d23a8db0ab407380fd4436e5072a74
+# 025fa2e2c7634bf7b38f2eb57ceacd1f
 msgid "``ssl_verify_mode``"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:23
-# df33e1a7655c4b9fbc67c5aa89c16b94
+# efcd4cad65044eeebf4a60e1bd4c143b
 msgid "|ssl_verify_mode|"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:25
-# 58a317113fd7447bbe1c77aa3e09b891
+# aef13ac93875483cb431922c67916c31
 msgid "|ssl_verify_mode_verify_none|"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:26
-# d1c4e9b78b8345298a64f186c36db7f9
+# 69a1d745793b4bbbb26e14a1ff7d9818
 msgid "|ssl_verify_mode_verify_peer| This is the recommended setting."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:28
-# 76938327ac37427d88c3346a7c7cae96
+# 018d3cffc8a44d529e43dd89a0cf263f
 msgid "Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified. Default value: ``:verify_peer``."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:29
-# 67c30fe69daf4db4af63e4b143f02fed
+# c283e961b5464bd99bc2f96b7c81f85e
 msgid "``verify_api_cert``"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst:30
-# fb18c0495f594b898a78268626201a52
+# 8246a8afdd8a457ba4115aa9f08920f2
 msgid "|ssl_verify_mode_verify_api_cert| Default value: ``false``."
 msgstr ""
 
 #: ../source/chef_client_security.rst:43
-# 0b32a497f76047b99e0dc3599b673296
+# 32ae8f9190c84b548a88af7b58997707
 msgid "|knife_title| Subcommands"
 msgstr ""
 
 #: ../source/chef_client_security.rst:44
-# 420b72a83dcc41db90668ab4e7398ac7
+# 29aa1991d31c4a6e817b095f854c1889
 msgid "The |chef client| includes two |knife| commands for managing |ssl| certificates:"
 msgstr ""
 
 #: ../source/chef_client_security.rst:46
-# 21ec123ba56d40e7ba0c7e5420bb1c32
+# c9f05dbb6e914257b1225428a820ecfd
 msgid "Use `knife ssl check <http://docs.chef.io/knife_ssl_check>`__ to troubleshoot |ssl| certificate issues"
 msgstr ""
 
 #: ../source/chef_client_security.rst:47
-# ef8df9159c8d4b56a4c7053a4ec47380
+# 50c55a5754814ebea48e137c7fc6f781
 msgid "Use `knife ssl fetch <http://docs.chef.io/knife_ssl_fetch>`__ to pull down a certificate from the |chef server| to the |path trusted_certs| directory on the workstation."
 msgstr ""
 
 #: ../source/chef_client_security.rst:49
-# 4e81cac792c54306808199f869a2197e
+# 42d4d2b2d4e542ec9b5bdd8b250216db
 msgid "After the workstation has the correct |ssl| certificate, bootstrap operations from that workstation will use the certificate in the |path trusted_certs| directory during the bootstrap operation."
 msgstr ""
 
 #: ../source/chef_client_security.rst:52
-# 73e4e11af8c640a596f16b60952ff443
+# 51cc7d4e90514d36bde2a56de4737235
 msgid "knife ssl check"
 msgstr ""
 
 #: ../source/chef_client_security.rst:53
-# bb65f506dfb2427a93155a79ac128f84
+# 7ed79b4325df457e95b59ca1c54a12f0
 msgid "Run the |subcommand knife ssl_check| command to verify the state of the |ssl| certificate, and then use the reponse to help troubleshoot issues that may be present."
 msgstr ""
 
 #: ../source/chef_client_security.rst:55
-# 9b46aa6c44d8483780b96e79994d9145
+# 7929cf23bded43ea9724fd63b32843d7
 msgid "**Verified**"
 msgstr ""
 
 #: ../../step_knife/step_knife_ssl_check_verify_server_config.rst:4
-# 47e2ea006d5349f2bac7ec17fe370a63
+# 2e93b52d0437417585d0e75f127d49b3
 msgid "If the |ssl| certificate can be verified, the response to"
 msgstr ""
 
 #: ../../step_knife/step_knife_ssl_check_verify_server_config.rst:10
 #: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst:10
-# 72e003e45eb84813a307f54712b7a860
-# a5762ec4e23c4f9aa9fc63039d07342f
+# 549ca1f8e5a340f8b312dcb4d65b39ff
+# 4ca56f77a7744a77b2c01779ec035143
 msgid "is similar to:"
 msgstr ""
 
 #: ../source/chef_client_security.rst:59
-# a42035797b264c1eb39c9cb8db99298c
+# 5a395b6b6bb146179ed4d82003b2acc9
 msgid "**Unverified**"
 msgstr ""
 
 #: ../../step_knife/step_knife_ssl_check_bad_ssl_certificate.rst:4
-# 0915b6fe39fc4b78b32ac95533f07152
+# a842daeab3b44b2580c5c854a588f929
 msgid "If the |ssl| certificate cannot be verified, the response to"
 msgstr ""
 
 #: ../source/chef_client_security.rst:64
-# 2164596768bd4e749dce3272ccfc6e55
+# f27ca44fadc543818747fe11e9116e92
 msgid "knife ssl fetch"
 msgstr ""
 
 #: ../source/chef_client_security.rst:65
-# 6c2f6bb2b3eb423b9a3a189f283b2819
+# 1e2db0d2dd5d427e8ee4db9212ddf295
 msgid "Run the |subcommand knife ssl_fetch| to download the self-signed certificate from the |chef server| to the |path trusted_certs| directory on a workstation. For example:"
 msgstr ""
 
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:4
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:4
-# 6b04caffe02a4de99d2fc467b4868a02
-# 86b36e133eb348b4857b112b0f5e288f
+# 34f7a73c0e924beab07c316077e1ab4e
+# 6a5a1a5bdcaf4fc1bbf8e16aa9b2379b
 msgid "The |ssl| certificate that is downloaded to the |path trusted_certs| directory should be verified to ensure that it is, in fact, the same certificate as the one located on the |chef server|. This can be done by comparing the |sha256| checksums."
 msgstr ""
 
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:6
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:6
-# 2b7b2ae013ea42579dd766ff7db83449
-# 14cb51bf35aa402490f408c2a0e78422
+# 590e8d0e7a5b4636bcae3fcf188c986e
+# 19555b6f1fa54c37b27a8600c16c182e
 msgid "View the checksum on the |chef server|:"
 msgstr ""
 
@@ -376,29 +376,29 @@ msgstr ""
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:24
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:12
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:24
-# a87bc2b9dc8e4a49b8f6b773ab632576
-# 0adde8bf538d4f1a8af1265d84d37dc6
-# 82543ff73c394cc2b1bdfe6337503bcc
-# e6b041dbaa8d4ec6a3f3cbbe69f977d2
+# b6e96ac0d9f74f2c8684c63d242262b2
+# 1e15bf849b4b425d92d2f237a5fa3db3
+# 1409886761ed46cea0c7f50e5e4c16a5
+# dc55cb28a53a4fb3a12d01f697bb5a52
 msgid "The response is similar to:"
 msgstr ""
 
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:18
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:18
-# 8afdb61cd800453e9da72789632c147d
-# a015082c07214cc4a68628d79de07965
+# 16840561a6ce4d8d82c817bfacc9f63b
+# c493628a42474f9c916ee2fd5037cbbc
 msgid "View the checksum on the workstation:"
 msgstr ""
 
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:30
 #: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst:30
-# 8150876105d74960842bf09552af1986
-# 463de8dd87b0418bb8dccd0dfeb9fb43
+# 8b06d2bab80a4d288105ee64d5c79b6e
+# f8fe4e492c024268981812c8a069a688
 msgid "Verify that the checksum values are identical."
 msgstr ""
 
 #: ../source/chef_client_security.rst:69
-# 834b4c21cd534dc181f854109e1477e3
+# 9c5eb7a39b3a41bba613eb99deb9ea6c
 msgid "**Verify Checksums**"
 msgstr ""
 
