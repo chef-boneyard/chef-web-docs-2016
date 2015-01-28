@@ -40,20 +40,54 @@
 <h1>Slide Deck<a class="headerlink" href="#slide-deck" title="Permalink to this headline">¶</a></h1>
 <section>
 <h2>First Slide!</h2>
-This is the main slide. Notice that the title of the slide isn&#8217;t in the actual slide itself, i.e. it&#8217;s not here, it&#8217;s in the slide map file.</section>
+<p class="first">The first slide in the deck should be splashy, and with a better image than this one.</p>
+<img alt="_images/chef_run_landscape_300dpi.png" class="last align-center" src="_images/chef_run_landscape_300dpi.png" />
+</section>
+<section>
+<h2>Introductions</h2>
+<p class="first">Use this slide to introduce a section of slides. A simple, concise statement that is followed by a few short bullets is all that is necessary. For example, chef-slides uses a very small subset of the Sphinx directive set, including:</p>
+<ul class="last simple">
+<li>Paragraphs, including bold, italics, and code.</li>
+<li>Ordered and unordered lists.</li>
+<li>Fully qualified URLs, e.g. <a class="reference external" href="http://chef.io">http://chef.io</a>.</li>
+<li>Code blocks, both by themselves and within ordered lists.</li>
+<li>Images. Used well, images are terrific! Used poorly, well ...</li>
+<li>List-tables, which are tables built using an unordered list and whitespace.</li>
+</ul>
+</section>
 <section>
 <h2>Text</h2>
-<p class="first">A paragraph is a series of sentences. You can <em>emphasize</em> strings, <strong>bold them</strong>, apply code <tt class="docutils literal"><span class="pre">5tr!ng+</span></tt>.</p>
-<p class="last">You can use whitespace within the slide to have more than one paragraph on a slide.</p>
+<p class="first">A paragraph is a series of sentences. You can add <em>emphasis</em> to words, make them <strong>bolder</strong> if necessary, and also highlight code <tt class="docutils literal"><span class="pre">5tr!ng+</span></tt> that may need to appear in paragraphs.</p>
+<p>If a bulleted or numbered list doesn&#8217;t work, use additional paragraphs in the slide to help display the information.</p>
+<p>Obviously, text can contain ordered and unordered lists.</p>
+<ul class="simple">
+<li>foo</li>
+<li>bar</li>
+</ul>
+<p>and</p>
+<ol class="arabic simple">
+<li>foo</li>
+<li>bar</li>
+</ol>
+<p class="last">Just use the white space in the source slide to ensure readability.</p>
 </section>
 <section>
 <h2>Ordered Lists</h2>
 <p class="first">This is an ordered list:</p>
-<ol class="last arabic simple">
+<ol class="arabic simple">
 <li>first item</li>
 <li>second item</li>
-<li>third item</li>
+<li>third item third item third item third item third item third item third item third item third item third item third item third item</li>
+<li>fourth item</li>
 </ol>
+<p>Here&#8217;s the code:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="no">This</span> <span class="n">is</span> <span class="n">an</span> <span class="n">ordered</span> <span class="ss">list</span><span class="p">:</span>
+
+<span class="c1">#. first item</span>
+<span class="c1">#. second item</span>
+<span class="c1">#. third item ...</span>
+</pre></div>
+</div>
 </section>
 <section>
 <h2>Unordered Lists</h2>
@@ -72,23 +106,30 @@ This is the main slide. Notice that the title of the slide isn&#8217;t in the ac
 <li><tt class="docutils literal"><span class="pre">`linkName</span> <span class="pre">&lt;http://docs.chef.io/&gt;`__</span></tt></li>
 <li><tt class="docutils literal"><span class="pre">:doc:`pageTitle</span> <span class="pre">&lt;/filename&gt;`</span></tt></li>
 </ul>
-<p class="last">The hardcoded link is useful because viewers can write it down and/or print it out. The second one hides the actual URL and is good for inline linking in HTML files, which is good if the slides are available to everyone online. The third one probably isn&#8217;t used too often, if at all. But in theory it will hyperlink to another slide in the slide deck.</p>
+<p>The hardcoded link is preferable here because the source files are used in both HTML and PDF output. PDF output requires that URLs be fully disclosed so that computering folks can type them in later.</p>
+<p class="last">The other link styles are shown because they are used in chef-docs and you might run into them. That said, there isn&#8217;t a good scenario for using these in chef-slides.</p>
 </section>
 <section>
-<h2>Tables</h2>
-<table border="1" class="first last docutils">
+<h2>Tables w/Headers</h2>
+<p class="first">This is a table with table headers:</p>
+<table border="1" class="last docutils">
 <colgroup>
-<col width="13%" />
-<col width="88%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Things</th>
+<th class="head">Description</th>
+</tr>
+</thead>
 <tbody valign="top">
-<tr class="row-odd"><td>thing 1</td>
+<tr class="row-even"><td>thing 1</td>
 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
 </tr>
-<tr class="row-even"><td>thing 2</td>
+<tr class="row-odd"><td>thing 2</td>
 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
 </tr>
-<tr class="row-odd"><td>thing 3</td>
+<tr class="row-even"><td>thing 3</td>
 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
 </tr>
 </tbody>
@@ -110,165 +151,212 @@ end
 </div>
 </section>
 <section>
-<h2>Images</h2>
-<p class="first">Still playing around with the images.</p>
-<img alt="_images/chef_overview.png" class="last" src="_images/chef_overview.png" />
-</section>
-<section>
-<h2>Pulling in some chef-docs</h2>
-<p class="first">The next series of slides are just pulling in random chef-docs topics. Mostly to see what they might look like and also to just show that it&#8217;s super-easy to reuse the chef-docs library in slide decks.</p>
-<ul class="simple">
-<li>Ohai resource</li>
-<li>chef-client command options</li>
-<li>examples of using resources (straight from chef-docs)</li>
-</ul>
-<p class="last">There are likely some formatting issues. But let&#8217;s identify them and then figure out how to make them go away in the places where reusability is extra important. For example, to reuse the command options, the entire approach had to be refactored to work as HTML and command output, but once done 100% reuse.</p>
-</section>
-<section>
-<section class="first">
-<h2>Ohai Resource</h2>
-Use the <strong>ohai</strong> resource to reload the Ohai configuration on a node. This allows recipes that change system attributes (like a recipe that adds a user) to refer to those attributes later on during the chef-client run.</section>
-<section>
-<h2>Syntax</h2>
-<p class="first">The syntax for using the <strong>ohai</strong> resource in a recipe is as follows:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="n">ohai</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
-  <span class="n">attribute</span> <span class="s2">&quot;value&quot;</span> <span class="c1"># see attributes section below</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-  <span class="n">action</span> <span class="ss">:action</span> <span class="c1"># see actions section below</span>
-<span class="k">end</span>
+<h2>Command Line Options</h2>
+<p class="first">This command has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>chef-client OPTION VALUE OPTION VALUE ...
 </pre></div>
 </div>
-<p>where</p>
-<ul class="last simple">
-<li><tt class="docutils literal"><span class="pre">ohai</span></tt> tells the chef-client to use the <tt class="docutils literal"><span class="pre">Chef::Provider::Ohai</span></tt> provider during the chef-client run</li>
-<li><tt class="docutils literal"><span class="pre">&quot;name&quot;</span></tt> is a friendly name for the action that is defined in the recipe</li>
-<li><tt class="docutils literal"><span class="pre">attribute</span></tt> is zero (or more) of the attributes that are available for this resource</li>
-<li><tt class="docutils literal"><span class="pre">:action</span></tt> identifies which steps the chef-client will take to bring the node into the desired state</li>
-</ul>
-</section>
-<section>
-<h2>Actions</h2>
-<p class="first">This resource has the following actions:</p>
 <table border="1" class="last docutils">
 <colgroup>
-<col width="25%" />
-<col width="75%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Action</th>
+<tr class="row-odd"><th class="head">Option</th>
 <th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:reload</span></tt></td>
-<td>Default. Use to reload the Ohai configuration on a node.</td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-A</span></tt>, <tt class="docutils literal"><span class="pre">--long</span></tt></td>
+<td>Use to do something. It&#8217;ll wrap because it&#8217;s in a table! It&#8217;ll wrap because it&#8217;s in a table! It&#8217;ll wrap because it&#8217;s in a table! It&#8217;ll wrap because it&#8217;s in a table!</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-B</span></tt>, <tt class="docutils literal"><span class="pre">--longer</span></tt></td>
+<td><p class="first">Use to do something else.</p>
+<p class="last">Adding paragraphs in tables is a whitespace thing in RST.</p>
+</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section>
-<h2>Attributes</h2>
-<p class="first">This resource has the following attributes:</p>
+<h2>Images</h2>
+<p class="first">Images should be 300dpi so they look good in presentation mode and horizontally focused.</p>
+<img alt="_images/attributes_table_300dpi.png" class="last" src="_images/attributes_table_300dpi.png" />
+</section>
+<section>
+<h2>Structural Examples</h2>
+<p class="first">The following sections show more ways to structure revealjs slide decks, including:</p>
+<ul class="simple">
+<li>The same exact slides we&#8217;ve just looked at, but vertically!</li>
+<li>Some images, including a pair that share the same design footprint</li>
+<li>Part of an actual lesson from actual Chef training</li>
+</ul>
+<p class="last">Each of these sections are accessed horizontally, but then after the first slide, the rest of the section is presented vertically.</p>
+</section>
+<section>
+<section class="first">
+<h2>First Slide!</h2>
+<p class="first">The first slide in the deck should be splashy, and with a better image than this one.</p>
+<img alt="_images/chef_run_landscape_300dpi.png" class="last align-center" src="_images/chef_run_landscape_300dpi.png" />
+</section>
+<section>
+<h2>Introductions</h2>
+<p class="first">Use this slide to introduce a section of slides. A simple, concise statement that is followed by a few short bullets is all that is necessary. For example, chef-slides uses a very small subset of the Sphinx directive set, including:</p>
+<ul class="last simple">
+<li>Paragraphs, including bold, italics, and code.</li>
+<li>Ordered and unordered lists.</li>
+<li>Fully qualified URLs, e.g. <a class="reference external" href="http://chef.io">http://chef.io</a>.</li>
+<li>Code blocks, both by themselves and within ordered lists.</li>
+<li>Images. Used well, images are terrific! Used poorly, well ...</li>
+<li>List-tables, which are tables built using an unordered list and whitespace.</li>
+</ul>
+</section>
+<section>
+<h2>Text</h2>
+<p class="first">A paragraph is a series of sentences. You can add <em>emphasis</em> to words, make them <strong>bolder</strong> if necessary, and also highlight code <tt class="docutils literal"><span class="pre">5tr!ng+</span></tt> that may need to appear in paragraphs.</p>
+<p>If a bulleted or numbered list doesn&#8217;t work, use additional paragraphs in the slide to help display the information.</p>
+<p>Obviously, text can contain ordered and unordered lists.</p>
+<ul class="simple">
+<li>foo</li>
+<li>bar</li>
+</ul>
+<p>and</p>
+<ol class="arabic simple">
+<li>foo</li>
+<li>bar</li>
+</ol>
+<p class="last">Just use the white space in the source slide to ensure readability.</p>
+</section>
+<section>
+<h2>Ordered Lists</h2>
+<p class="first">This is an ordered list:</p>
+<ol class="arabic simple">
+<li>first item</li>
+<li>second item</li>
+<li>third item third item third item third item third item third item third item third item third item third item third item third item</li>
+<li>fourth item</li>
+</ol>
+<p>Here&#8217;s the code:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="no">This</span> <span class="n">is</span> <span class="n">an</span> <span class="n">ordered</span> <span class="ss">list</span><span class="p">:</span>
+
+<span class="c1">#. first item</span>
+<span class="c1">#. second item</span>
+<span class="c1">#. third item ...</span>
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Unordered Lists</h2>
+<p class="first">This is an unordered list:</p>
+<ul class="last simple">
+<li>first item</li>
+<li>second item</li>
+<li>third item</li>
+</ul>
+</section>
+<section>
+<h2>Links</h2>
+<p class="first">There are three types of links:</p>
+<ul class="simple">
+<li>Hardcoded, i.e. <a class="reference external" href="http://ampledata.org/splunk_storm_chef_handler.html">http://ampledata.org/splunk_storm_chef_handler.html</a></li>
+<li><tt class="docutils literal"><span class="pre">`linkName</span> <span class="pre">&lt;http://docs.chef.io/&gt;`__</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">:doc:`pageTitle</span> <span class="pre">&lt;/filename&gt;`</span></tt></li>
+</ul>
+<p>The hardcoded link is preferable here because the source files are used in both HTML and PDF output. PDF output requires that URLs be fully disclosed so that computering folks can type them in later.</p>
+<p class="last">The other link styles are shown because they are used in chef-docs and you might run into them. That said, there isn&#8217;t a good scenario for using these in chef-slides.</p>
+</section>
+<section>
+<h2>Tables w/Headers</h2>
+<p class="first">This is a table with table headers:</p>
 <table border="1" class="last docutils">
 <colgroup>
-<col width="25%" />
-<col width="75%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Attribute</th>
+<tr class="row-odd"><th class="head">Things</th>
 <th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">name</span></tt></td>
-<td>Always the same value as the <tt class="docutils literal"><span class="pre">name</span></tt> of the resource block. (See &#8220;Syntax&#8221; section above for more information.)</td>
+<tr class="row-even"><td>thing 1</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">plugin</span></tt></td>
-<td>Optional. The name of an Ohai plugin to be reloaded. If this attribute is not specified, the chef-client will reload all plugins.</td>
+<tr class="row-odd"><td>thing 2</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">provider</span></tt></td>
-<td>Optional. Use to explicitly specify a provider. (See &#8220;Providers&#8221; section below for more information.)</td>
+<tr class="row-even"><td>thing 3</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum lobortis orci non suscipit. Mauris sodales justo eu metus dignissim bibendum.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Code Blocks</h2>
+<p class="first">A code block shows a block of code (obviously). If Pygments is enabled for Sphinx, use the code-block directive to show colors applied. Use a double colon (<tt class="docutils literal"><span class="pre">::</span></tt>) to introduce the default code block. For example, Ruby code:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s2">&quot;foo&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and the same without the directive:</p>
+<div class="last highlight-python"><div class="highlight"><pre>package &quot;foo&quot; do
+  action :install
+end
+</pre></div>
+</div>
+</section>
+<section>
+<h2>Command Line Options</h2>
+<p class="first">This command has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>chef-client OPTION VALUE OPTION VALUE ...
+</pre></div>
+</div>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-A</span></tt>, <tt class="docutils literal"><span class="pre">--long</span></tt></td>
+<td>Use to do something. It&#8217;ll wrap because it&#8217;s in a table! It&#8217;ll wrap because it&#8217;s in a table! It&#8217;ll wrap because it&#8217;s in a table! It&#8217;ll wrap because it&#8217;s in a table!</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-B</span></tt>, <tt class="docutils literal"><span class="pre">--longer</span></tt></td>
+<td><p class="first">Use to do something else.</p>
+<p class="last">Adding paragraphs in tables is a whitespace thing in RST.</p>
+</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section class="last">
-<h2>Examples</h2>
-<p class="first"><strong>Reload Ohai</strong></p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="n">ohai</span> <span class="s2">&quot;reload&quot;</span> <span class="k">do</span>
-  <span class="n">action</span> <span class="ss">:reload</span>
-<span class="k">end</span>
-</pre></div>
-</div>
-<p><strong>Reload Ohai after a new user is created</strong></p>
-<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">ohai</span> <span class="s2">&quot;reload_passwd&quot;</span> <span class="k">do</span>
-  <span class="n">action</span> <span class="ss">:nothing</span>
-  <span class="n">plugin</span> <span class="s2">&quot;etc&quot;</span>
-<span class="k">end</span>
-
-<span class="n">user</span> <span class="s2">&quot;daemonuser&quot;</span> <span class="k">do</span>
-  <span class="n">home</span> <span class="s2">&quot;/dev/null&quot;</span>
-  <span class="n">shell</span> <span class="s2">&quot;/sbin/nologin&quot;</span>
-  <span class="nb">system</span> <span class="kp">true</span>
-  <span class="n">notifies</span> <span class="ss">:reload</span><span class="p">,</span> <span class="s2">&quot;ohai[reload_passwd]&quot;</span><span class="p">,</span> <span class="ss">:immediately</span>
-<span class="k">end</span>
-
-<span class="n">ruby_block</span> <span class="s2">&quot;just an example&quot;</span> <span class="k">do</span>
-  <span class="n">block</span> <span class="k">do</span>
-    <span class="c1"># These variables will now have the new values</span>
-    <span class="nb">puts</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;etc&#39;</span><span class="o">][</span><span class="s1">&#39;passwd&#39;</span><span class="o">][</span><span class="s1">&#39;daemonuser&#39;</span><span class="o">][</span><span class="s1">&#39;uid&#39;</span><span class="o">]</span>
-    <span class="nb">puts</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;etc&#39;</span><span class="o">][</span><span class="s1">&#39;passwd&#39;</span><span class="o">][</span><span class="s1">&#39;daemonuser&#39;</span><span class="o">][</span><span class="s1">&#39;gid&#39;</span><span class="o">]</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</pre></div>
-</div>
+<h2>Images</h2>
+<p class="first">Images should be 300dpi so they look good in presentation mode and horizontally focused.</p>
+<img alt="_images/attributes_table_300dpi.png" class="last" src="_images/attributes_table_300dpi.png" />
 </section>
 </section>
 <section>
-<h2>Reusing chef-client options</h2>
-<p class="first">This command has the following syntax:</p>
-<div class="highlight-python"><div class="highlight"><pre>chef-client OPTION VALUE OPTION VALUE ...
-</pre></div>
-</div>
-<p>This command has the following options:</p>
-<dl class="last docutils">
-<dt><tt class="docutils literal"><span class="pre">-A</span></tt>, <tt class="docutils literal"><span class="pre">--fatal-windows-admin-check</span></tt></dt>
-<dd>Use to cause a chef-client run to fail when the chef-client does not have administrator privileges in Microsoft Windows.</dd>
-<dt><tt class="docutils literal"><span class="pre">--audit-mode</span> <span class="pre">MODE</span></tt></dt>
-<dd>Use to enable audit-mode. Set to <tt class="docutils literal"><span class="pre">audit-only</span></tt> to skip the converge phase of the chef-client run and only perform audits. Possible values: <tt class="docutils literal"><span class="pre">audit-only</span></tt>, <tt class="docutils literal"><span class="pre">disabled</span></tt>, and <tt class="docutils literal"><span class="pre">enabled</span></tt>. Default value: <tt class="docutils literal"><span class="pre">disabled</span></tt>.</dd>
-</dl>
+<section class="first">
+<h2>chef-client Run</h2>
+<p class="first">This is an image about the chef-client run!</p>
+<img alt="_images/chef_run_landscape_300dpi.png" class="last" src="_images/chef_run_landscape_300dpi.png" />
 </section>
 <section>
-<h2>Example: package</h2>
-<p class="first">To install a package:</p>
-<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s2">&quot;tar&quot;</span> <span class="k">do</span>
-  <span class="n">action</span> <span class="ss">:install</span>
-<span class="k">end</span>
-</pre></div>
-</div>
+<h2>Github Branching (part 1)</h2>
+<p class="first">Github branching!</p>
+<img alt="_images/gitbranch_300dpi.png" class="last" src="_images/gitbranch_300dpi.png" />
 </section>
-<section>
-<h2>Example: template</h2>
-<p class="first">A template helper module can be defined in a library. This is useful when extensions need to be reused across recipes or to make it easier to manage code that would otherwise be defined inline on a per-recipe basis.</p>
-<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/path/to/template.erb&quot;</span> <span class="k">do</span>
-  <span class="n">helpers</span><span class="p">(</span><span class="no">MyHelperModule</span><span class="p">)</span>
-<span class="k">end</span>
-</pre></div>
-</div>
+<section class="last">
+<h2>Github Branching (part 2)</h2>
+<p class="first">More github branching!</p>
+<img alt="_images/gitbranch_inline_300dpi.png" class="last" src="_images/gitbranch_inline_300dpi.png" />
 </section>
-<section>
-<h2>Example: service</h2>
-<div class="first last highlight-ruby"><div class="highlight"><pre><span class="n">service</span> <span class="s2">&quot;some_service&quot;</span> <span class="k">do</span>
-  <span class="n">provider</span> <span class="ss">Chef</span><span class="p">:</span><span class="ss">:Provider</span><span class="o">::</span><span class="ss">Service</span><span class="p">:</span><span class="ss">:Upstart</span>
-  <span class="n">supports</span> <span class="ss">:status</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">:restart</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">:reload</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-  <span class="n">action</span> <span class="o">[</span> <span class="ss">:enable</span><span class="p">,</span> <span class="ss">:start</span> <span class="o">]</span>
-<span class="k">end</span>
-</pre></div>
-</div>
 </section>
-<section>
-<h2>Example Lessons</h2>
-The next series of slides that begins on the next horizontal slide shows a series of slides from the existing handlers intermediate training. These will go vertically and are just the first cut at seeing what they might look like in a slide deck.</section>
 <section>
 <section class="first">
 <h2>Lesson Objectives (Handlers)</h2>
@@ -316,8 +404,8 @@ The next series of slides that begins on the next horizontal slide shows a serie
 <section>
 <h2>Start Handlers</h2>
 <p class="first">Start handlers are used to run events at the beginning of the chef-client run</p>
-<p>Does not load the <strong>chef_handler</strong> resource</p>
-<p>Install start handlers using the <strong>chef_gem</strong> resource or add the <tt class="docutils literal"><span class="pre">start_handlers</span></tt> setting to the client.rb file.</p>
+<p>Does not load the chef_handler resource</p>
+<p>Install start handlers using the chef_gem resource or add the <tt class="docutils literal"><span class="pre">start_handlers</span></tt> setting to the client.rb file.</p>
 <p class="last"><a class="reference external" href="https://github.com/opscode/chef-reporting">https://github.com/opscode/chef-reporting</a></p>
 </section>
 <section>
@@ -330,9 +418,11 @@ The next series of slides that begins on the next horizontal slide shows a serie
 </section>
 <section>
 <h2>Exercise: Download the chef_handler cookbook</h2>
-<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook site download chef_handler 1.1.6
+<p class="first">Download the chef_handler cookbook:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook site download chef_handler 1.1.6
 </pre></div>
 </div>
+<p>Returns:</p>
 <div class="last highlight-bash"><div class="highlight"><pre>Downloading chef_handler from the cookbooks site at version 1.1.6 to /Users/YOU/chef-repo/chef_handler-1.1.6.tar.gz
 
 Cookbook saved: /Users/YOU/chef-repo/chef_handler-1.1.6.tar.gz
@@ -341,9 +431,11 @@ Cookbook saved: /Users/YOU/chef-repo/chef_handler-1.1.6.tar.gz
 </section>
 <section>
 <h2>Exercise: Download the chef-client cookbook</h2>
-<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tar -zxvf chef_handler-1.1.6.tar.gz -C cookbooks/
+<p class="first">Download the chef_handler cookbook:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tar -zxvf chef_handler-1.1.6.tar.gz -C cookbooks/
 </pre></div>
 </div>
+<p>Returns:</p>
 <div class="last highlight-bash"><div class="highlight"><pre>x chef_handler/
 x chef_handler/CHANGELOG.md
 x chef_handler/README.md
@@ -360,9 +452,11 @@ x chef_handler/libraries/matchers.rb
 </section>
 <section>
 <h2>Exercise: Upload the chef_handler cookbook</h2>
-<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload chef_handler
+<p class="first">Use Knife to upload the chef_handler cookbook:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload chef_handler
 </pre></div>
 </div>
+<p>Returns:</p>
 <div class="last highlight-bash"><div class="highlight"><pre>Uploading chef_handler         <span class="o">[</span>1.1.6<span class="o">]</span>
 Uploaded 1 cookbook.
 </pre></div>
@@ -383,9 +477,11 @@ Uploaded 1 cookbook.
 </section>
 <section>
 <h2>Exercise: Create a cookbook named ‘email_handler’</h2>
-<div class="first highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook create email_handler
+<p class="first">Use Knife to create the email_handler cookbook:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook create email_handler
 </pre></div>
 </div>
+<p>Returns:</p>
 <div class="last highlight-bash"><div class="highlight"><pre>** Creating cookbook email_handler
 ** Creating README <span class="k">for </span>cookbook: email_handler
 ** Creating CHANGELOG <span class="k">for </span>cookbook: email_handler
@@ -601,6 +697,17 @@ Uploaded 1 cookbook.
 </ul>
 </section>
 </section>
+<section>
+<section class="first">
+<h2>Package Resource</h2>
+Use the <strong>package</strong> resource to manage packages. When the package is installed from a local file (such as with RubyGems, dpkg, or RPM Package Manager), the file must be added to the node using the <strong>remote_file</strong> or <strong>cookbook_file</strong> resources.</section>
+<section>
+<h2>Github Branching (part 1)</h2>
+Use the <strong>package</strong> resource to manage packages. When the package is installed from a local file (such as with RubyGems, dpkg, or RPM Package Manager), the file must be added to the node using the <strong>remote_file</strong> or <strong>cookbook_file</strong> resources.</section>
+<section class="last">
+<h2>Github Branching (part 2)</h2>
+Use the <strong>package</strong> resource to manage packages. When the package is installed from a local file (such as with RubyGems, dpkg, or RPM Package Manager), the file must be added to the node using the <strong>remote_file</strong> or <strong>cookbook_file</strong> resources.</section>
+</section>
 </div>
 
 
@@ -619,8 +726,8 @@ Uploaded 1 cookbook.
       $("div.slides").html(content);
 
       Reveal.initialize({
-        width: 960,
-        height: 700,
+        width: 1440,
+        height: 900,
 
         margin: 0.3,
 
