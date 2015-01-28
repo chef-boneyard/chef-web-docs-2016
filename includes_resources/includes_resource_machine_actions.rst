@@ -9,13 +9,17 @@ This resource has the following actions:
 
    * - Action
      - Description
+   * - ``:allocate``
+     - Use to allocate a machine.
    * - ``:converge``
+     - Default. Use to converge a machine, including the full and complete |chef client| run.
+   * - ``:converge_only``
      - Use to converge a machine.
-   * - ``:create``
-     - Default. Use to create a machine.
    * - ``:destroy``
      - Use to destroy a machine.
-   * - ``:nothing``
-     - Use to do nothing.
+   * - ``:ready``
+     - Use to ready a machine.
+   * - ``:setup``
+     - Use to set up a machine, including uploading files that are needed to converge the machine, and then stopping (without converging the machine).
    * - ``:stop``
      - Use to stop a machine.
