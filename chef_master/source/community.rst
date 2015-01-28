@@ -18,5 +18,5 @@ Here are some contributions from the community:
 
 **Chef for OpenStack:** :doc:`Overview </openstack>` | `knife-openstack <https://docs.chef.io/plugin_knife_openstack>`_
 
-**Documentation:** `Contribute to this documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.chef.io/style_guide.html>`_
+**Documentation:** `Contribute to this documentation <https://github.com/chef/chef-docs>`_ | `Style Guide <http://docs.chef.io/style_guide.html>`_
 

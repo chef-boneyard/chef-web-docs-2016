@@ -6,11 +6,11 @@ We are glad you want to contribute to Chef! Here's how:
 
 #. Review the `Become a contributor <https://supermarket.chef.io/become-a-contributor>`_ page on |supermarket| and follow the steps described there for signing the contributor license agreement; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.chef.io/community_contributions.html#the-obvious-fix-rule>`_
 #. Create a |github| pull request
-#. Do a `code review <https://github.com/opscode/chef/blob/master/CONTRIBUTING.md#cr>`_ with the |company_name| team and/or core committers on the pull request
+#. Do a `code review <https://github.com/chef/chef/blob/master/CONTRIBUTING.md#cr>`_ with the |company_name| team and/or core committers on the pull request
 
 |company_name| regularly reviews contributions and will get back to you if we have any suggestions or concerns.
 
-|company_name|-managed open source projects are located here: https://github.com/opscode. See https://github.com/opscode/chef/blob/master/CONTRIBUTING.md for more information about the contribution process itself. See below for more information about CLAs, the |apache| license, and the obvious fix rule.
+|company_name|-managed open source projects are located here: https://github.com/chef. See https://github.com/chef/chef/blob/master/CONTRIBUTING.md for more information about the contribution process itself. See below for more information about CLAs, the |apache| license, and the obvious fix rule.
 
 
 About CLAs and CCLAs
@@ -33,7 +33,7 @@ The CLA is beneficial to our contributors and users because:
 * It makes clear what is required of our contributors.
 * The most important thing about the CLA is that it doesn't give |company_name| any special rights - it just makes things more explicit.
 
-|company_name| does not merge any pull requests made against an |company_name|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/opscode/chef-docs).
+|company_name| does not merge any pull requests made against an |company_name|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/chef/chef-docs).
 
 About the |apache| License
 =====================================================
@@ -125,13 +125,13 @@ Issues and bug reports may be created for |chef|, including the |chef client|, t
    * - Repo
      - URL
    * - |chef client|
-     - https://github.com/opscode/chef
+     - https://github.com/chef/chef
    * - |chef server_title|
-     - https://github.com/opscode/chef-server
+     - https://github.com/chef/chef-server
    * - |chef manage_title|
-     - https://github.com/opscode/chef-manage-issues
+     - https://github.com/chef/chef-manage-issues
    * - |chef analytics_title|
-     - https://github.com/opscode/chef-analytics
+     - https://github.com/chef/chef-analytics
 
 For additional support about |chef|, including documentation, learning, and opening tickets with the support team, see https://www.chef.io/support/.
 
