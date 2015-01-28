@@ -8,13 +8,14 @@ Welcome to |chef|!
 
 .. note:: This topic is a work in progress. It needs some editing, but you should be able to install the Chef DK and then configure Kitchen to build CentOS and Ubuntu instances, and then converge a node using the NTP cookbook. More sections are planned for future updates that will include more scenarios for Kitchen, new scenarios for ChefSpec, Berkshelf, and Chef policy. Feedback on the getting started page may be sent to docs @ getchef dot com.
 
-About Resources
-=====================================================
-.. include:: ../../includes_resources_common/includes_resources_common.rst
-
-The |chef client| includes many built-in resources that handle just about any situation. Three of these resources are an essential part of any |chef| workflow: |resource package|, |resource template|, and |resource service|. Use the |resource package| resource to install a package, the |resource template| resource to generate a file on the node that applies configuration settings for that package, and then use the |resource service| resource to start (or restart) the service associated with that package. This is a combination of resources that you will use often with |chef|.
-
-The next step is to install |chef|, configure your workstation, and then configure |kitchen| to run virtual instances locally on that workstation. After that is finished, we'll revisit the |resource package|, |resource template|, and |resource service| resources and use them with |kitchen| to converge |ntp| into a virtual instance that is spun up and managed by |kitchen|.
+.. About Resources
+.. =====================================================
+.. .. include:: ../../includes_resources_common/includes_resources_common.rst
+.. 
+.. The |chef client| includes many built-in resources that handle just about any situation. Three of these resources are an essential part of any |chef| workflow: |resource package|, |resource template|, and |resource service|. Use the |resource package| resource to install a package, the |resource template| resource to generate a file on the node that applies configuration settings for that package, and then use the |resource service| resource to start (or restart) the service associated with that package. This is a combination of resources that you will use often with |chef|.
+.. 
+.. The next step is to install |chef|, configure your workstation, and then configure |kitchen| to run virtual instances locally on that workstation. After that is finished, we'll revisit the |resource package|, |resource template|, and |resource service| resources and use them with |kitchen| to converge |ntp| into a virtual instance that is spun up and managed by |kitchen|.
+.. 
 
 Workstation Setup
 =====================================================
@@ -734,66 +735,69 @@ To verify if both instances have been converged, run the following command:
    default-ubuntu-1204  Vagrant  ChefZero     Converged
    default-centos-64    Vagrant  ChefZero     Converged
 
-More About Resources
-=====================================================
-The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
-
-The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
-
-Execute Commands
------------------------------------------------------
-Commands are executed using the |resource execute| resource using an attribute to specify the actual command to run. See `execute <http://docs.chef.io/resource_execute.html>`_ for more information about executing commands.
-
-Manage Directories
------------------------------------------------------
-Directories are hierarchies of folders that comprise all the information stored on a computer. There are two ways to manage directories. The first is via the |resource directory| resource, which manages directories starting from the root directory. And the second is the |resource remote_directory|, which transfers directory structures defined in cookbooks to nodes. See `directory <http://docs.chef.io/resource_directory.html>`_ for more information about managing directories. If the directory is defined in a cookbook, use `remote_directory <http://docs.chef.io/resource_remote_directory.html>`_ instead.
-
-Manage Packages
------------------------------------------------------
-Packages are collections of files that comprise software applications or some part of an operating system. Use the package resource to manage these packages, unless they are sourced via |rubygems| and installed directly from within recipes or are sourced from a cookbook. See `package <http://docs.chef.io/resource_package.html>`_ for more information about managing packages. There are quite a few platform-specific package resources as well, though most of the time simply using the |resource package| is all that's necessary. For packages that are located in cookobooks, use `chef_gem <http://docs.chef.io/resource_chef_gem.html>`_. And for packages that are only included via recipes, use `gem_package <http://docs.chef.io/resource_gem_package.html>`_.
-
-Manage Services
------------------------------------------------------
-Services can be started, stopped, enabled, disabled, reloaded, and restarted. See `service <http://docs.chef.io/resource_service.html>`_ for more information about managing services.
-
-Manage Files
------------------------------------------------------
-Files are managed in several ways. The |resource file| resource manages files that are already present on a node. Files are transferred to nodes from cookbooks using the |resource cookbook_file| resource and are transferred to nodes from remote locations using the |resource remote_file| resource. See `file <http://docs.chef.io/resource_file.html>`_ for more information about managing files, `remote_file <http://docs.chef.io/resource_remote_file.html>`_ for transferring files from remote locations, and `cookbook_file <http://docs.chef.io/resource_cookbook_file.html>`_ for transferring files that are located in cookbooks.
-
-Manage Templates
------------------------------------------------------
-Templates are used to generate files based on variables and logic contained within the template file. |chef| uses |erb| templates and |ruby| expressions and statements to define the template file. Template source files must be located within cookbooks. See `template <http://docs.chef.io/resource_template.html>`_ for more information about managing files using |erb| templates.
-
-Manage Users, Groups
------------------------------------------------------
-Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See `group <http://docs.chef.io/resource_user.html>`_ for more information about managing users and user passwords. The `group <http://docs.chef.io/resource_group.html>`__ resource manges groups.
-
-Use Script Interpreters
------------------------------------------------------
-Script interpreters execute scripts on a node, similar to the |resource execute| resource, and with the ability to specify the interpreter that the |chef client| should use. See `script <http://docs.chef.io/resource_script.html>`_ for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with `bash <http://docs.chef.io/resource_bash.html>`_ being the most popular. Also available: `csh <http://docs.chef.io/resource_csh.html>`_, `perl <http://docs.chef.io/resource_perl.html>`_, `powershell_script <http://docs.chef.io/resource_powershell_script.html>`__, `python <http://docs.chef.io/resource_python.html>`_, and `ruby <http://docs.chef.io/resource_ruby.html>`_. Two |windows|-specific resources are also available: `batch <http://docs.chef.io/resource_batch.html>`_ and `powershell_script <http://docs.chef.io/resource_powershell_script.html>`__.
-
-Use Source Control
------------------------------------------------------
-Most users of |chef| keep their code in some type of version source control. |chef| can interact with this code from recipes. |git| is a very popular choice. The `git <http://docs.chef.io/resource_git.html>`_ resource is used to manage files that exist in a |git| repository. There is also a resource for `subversion <http://docs.chef.io/resource_subversion.html>`_, another popular version source control tool.
-
-
-About Cookbooks
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks.rst
-
-Every cookbook follows a defined structure, but individiaul cookbooks can take on many different styles depending on how your organization wants to manage its code, who authored them, and how they are intended to be used. Some cookbooks contain only a single, default recipe. Others may contain only a library file. Some may contain only a few attributes. And other cookbooks may contain several custom resources along with many attributes and templates, and so on.
-
-Some cookbooks you will build yourself. Some cookbooks will be provided by the community. Most community cookbooks will be managed using |berkshelf|, which is a dependency manager included in the |chef dk|. Occasionally, a community cookbook will be forked, but more often a wrapper cookbook is created to handle your organization-specific requirements while still allowing use of the community cookbook.
-
-The most important thing to know about cookbooks is that there are lots of ways to build good ones. There are patterns to follow, there are guidelines. There are recomended ways of dealing with attributes. There are recommended ways of creating custom resources. But ultimately, a good cookbook is the one that works for your organization. Ideally, this cookbook works across your infrastructure. Most organizations have a mix of private (internal) and public (community) cookbooks in use in their organization.
-
-Cookbook Patterns
------------------------------------------------------
-.. include:: ../../includes_cookbook/includes_cookbook_pattern.rst
-
-About |ruby|
-=====================================================
-.. include:: ../../includes_ruby/includes_ruby.rst
+.. More About Resources
+.. =====================================================
+.. The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
+.. 
+.. The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
+.. 
+.. Execute Commands
+.. -----------------------------------------------------
+.. Commands are executed using the |resource execute| resource using an attribute to specify the actual command to run. See `execute <http://docs.chef.io/resource_execute.html>`_ for more information about executing commands.
+.. 
+.. Manage Directories
+.. -----------------------------------------------------
+.. Directories are hierarchies of folders that comprise all the information stored on a computer. There are two ways to manage directories. The first is via the |resource directory| resource, which manages directories starting from the root directory. And the second is the |resource remote_directory|, which transfers directory structures defined in cookbooks to nodes. See `directory <http://docs.chef.io/resource_directory.html>`_ for more information about managing directories. If the directory is defined in a cookbook, use `remote_directory <http://docs.chef.io/resource_remote_directory.html>`_ instead.
+.. 
+.. Manage Packages
+.. -----------------------------------------------------
+.. Packages are collections of files that comprise software applications or some part of an operating system. Use the package resource to manage these packages, unless they are sourced via |rubygems| and installed directly from within recipes or are sourced from a cookbook. See `package <http://docs.chef.io/resource_package.html>`_ for more information about managing packages. There are quite a few platform-specific package resources as well, though most of the time simply using the |resource package| is all that's necessary. For packages that are located in cookobooks, use `chef_gem <http://docs.chef.io/resource_chef_gem.html>`_. And for packages that are only included via recipes, use `gem_package <http://docs.chef.io/resource_gem_package.html>`_.
+.. 
+.. Manage Services
+.. -----------------------------------------------------
+.. Services can be started, stopped, enabled, disabled, reloaded, and restarted. See `service <http://docs.chef.io/resource_service.html>`_ for more information about managing services.
+.. 
+.. Manage Files
+.. -----------------------------------------------------
+.. Files are managed in several ways. The |resource file| resource manages files that are already present on a node. Files are transferred to nodes from cookbooks using the |resource cookbook_file| resource and are transferred to nodes from remote locations using the |resource remote_file| resource. See `file <http://docs.chef.io/resource_file.html>`_ for more information about managing files, `remote_file <http://docs.chef.io/resource_remote_file.html>`_ for transferring files from remote locations, and `cookbook_file <http://docs.chef.io/resource_cookbook_file.html>`_ for transferring files that are located in cookbooks.
+.. 
+.. Manage Templates
+.. -----------------------------------------------------
+.. Templates are used to generate files based on variables and logic contained within the template file. |chef| uses |erb| templates and |ruby| expressions and statements to define the template file. Template source files must be located within cookbooks. See `template <http://docs.chef.io/resource_template.html>`_ for more information about managing files using |erb| templates.
+.. 
+.. Manage Users, Groups
+.. -----------------------------------------------------
+.. Users and groups can be added, updated, removed. User passwords can be locked and unlocked. See `group <http://docs.chef.io/resource_user.html>`_ for more information about managing users and user passwords. The `group <http://docs.chef.io/resource_group.html>`__ resource manges groups.
+.. 
+.. Use Script Interpreters
+.. -----------------------------------------------------
+.. Script interpreters execute scripts on a node, similar to the |resource execute| resource, and with the ability to specify the interpreter that the |chef client| should use. See `script <http://docs.chef.io/resource_script.html>`_ for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with `bash <http://docs.chef.io/resource_bash.html>`_ being the most popular. Also available: `csh <http://docs.chef.io/resource_csh.html>`_, `perl <http://docs.chef.io/resource_perl.html>`_, `powershell_script <http://docs.chef.io/resource_powershell_script.html>`__, `python <http://docs.chef.io/resource_python.html>`_, and `ruby <http://docs.chef.io/resource_ruby.html>`_. Two |windows|-specific resources are also available: `batch <http://docs.chef.io/resource_batch.html>`_ and `powershell_script <http://docs.chef.io/resource_powershell_script.html>`__.
+.. 
+.. Use Source Control
+.. -----------------------------------------------------
+.. Most users of |chef| keep their code in some type of version source control. |chef| can interact with this code from recipes. |git| is a very popular choice. The `git <http://docs.chef.io/resource_git.html>`_ resource is used to manage files that exist in a |git| repository. There is also a resource for `subversion <http://docs.chef.io/resource_subversion.html>`_, another popular version source control tool.
+.. 
+.. 
+.. About Cookbooks
+.. =====================================================
+.. .. include:: ../../includes_cookbooks/includes_cookbooks.rst
+.. 
+.. Every cookbook follows a defined structure, but individiaul cookbooks can take on many different styles depending on how your organization wants to manage its code, who authored them, and how they are intended to be used. Some cookbooks contain only a single, default recipe. Others may contain only a library file. Some may contain only a few attributes. And other cookbooks may contain several custom resources along with many attributes and templates, and so on.
+.. 
+.. Some cookbooks you will build yourself. Some cookbooks will be provided by the community. Most community cookbooks will be managed using |berkshelf|, which is a dependency manager included in the |chef dk|. Occasionally, a community cookbook will be forked, but more often a wrapper cookbook is created to handle your organization-specific requirements while still allowing use of the community cookbook.
+.. 
+.. The most important thing to know about cookbooks is that there are lots of ways to build good ones. There are patterns to follow, there are guidelines. There are recomended ways of dealing with attributes. There are recommended ways of creating custom resources. But ultimately, a good cookbook is the one that works for your organization. Ideally, this cookbook works across your infrastructure. Most organizations have a mix of private (internal) and public (community) cookbooks in use in their organization.
+.. 
+.. 
+.. Cookbook Patterns
+.. -----------------------------------------------------
+.. .. include:: ../../includes_cookbook/includes_cookbook_pattern.rst
+.. 
+.. 
+.. About |ruby|
+.. =====================================================
+.. .. include:: ../../includes_ruby/includes_ruby.rst
+.. 
 
 Conclusion
 =====================================================
