@@ -54,7 +54,7 @@ Configure the |chef server|:
 
       $ chef-server-ctl reconfigure
 
-   This updates the |chef server| for all of the files that are required by |chef analytics| and puts them in the ``/etc/opscode-analytics`` directory on the |chef server|.
+   This updates the |chef server| and creates the ``actions-source.json`` file, which is required by |chef analytics|, and adds it to the ``/etc/opscode-analytics`` directory on the |chef server|.
 
 #. Restart the |chef server|:
    
