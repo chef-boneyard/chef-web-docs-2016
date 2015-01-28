@@ -63,4 +63,4 @@ This creates additional network cards and networks for the |vagrant| virtual mac
      end
    end
 
-|vagrant| is configured to use the chef_client provisioner with the ``vagrant`` environment and the ``allinone-compute`` role for the ``run_list``. The |virtualbox| images used are provided by the Bento project (https://github.com/opscode/bento).
+|vagrant| is configured to use the chef_client provisioner with the ``vagrant`` environment and the ``allinone-compute`` role for the ``run_list``. The |virtualbox| images used are provided by the Bento project (https://github.com/chef/bento).

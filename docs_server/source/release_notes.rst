@@ -331,7 +331,7 @@ oc_chef_authz
 
 Data Bag Policy Changes
 -----------------------------------------------------
-In previous versions of the |chef server|, the default permissions allowed data bags to be updated by the |chef client| during a |chef client| run. Starting with |chef server| version 12, the |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created. Use the |chef manage| or the ``knife-acl`` plugin (https://github.com/opscode/knife-acl) to manage permissions to data bags as required. For example:
+In previous versions of the |chef server|, the default permissions allowed data bags to be updated by the |chef client| during a |chef client| run. Starting with |chef server| version 12, the |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created. Use the |chef manage| or the ``knife-acl`` plugin (https://github.com/chef/knife-acl) to manage permissions to data bags as required. For example:
 
 .. code-block:: bash
 
@@ -377,7 +377,7 @@ The following settings are new:
 
 What's Fixed
 =====================================================
-For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/opscode/opscode-omnibus/blob/master/CHANGELOG.md
+For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/chef/opscode-omnibus/blob/master/CHANGELOG.md
 
 
 

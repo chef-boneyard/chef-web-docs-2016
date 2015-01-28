@@ -33,4 +33,4 @@ For example:
    cookbook "jenkins", "~> 2.1"
    cookbook "mysql", github: "opscode-cookbooks/mysql", branch: "master"
 
-For more information about policy and the configuration file used to manage and maintain policy---policyfile.rb---please see this topic on Github: https://github.com/opscode/chef-dk/blob/master/POLICYFILE_README.md.
+For more information about policy and the configuration file used to manage and maintain policy---policyfile.rb---please see this topic on Github: https://github.com/chef/chef-dk/blob/master/POLICYFILE_README.md.

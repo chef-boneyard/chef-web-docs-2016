@@ -115,4 +115,4 @@ The following attribute may now be used with the |resource execute| resource (pr
 	 
 What's Fixed
 =====================================================
-For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
+For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/chef/chef/blob/11-stable/CHANGELOG.md

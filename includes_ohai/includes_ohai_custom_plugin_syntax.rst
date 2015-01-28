@@ -99,4 +99,4 @@ where
 * ``provides`` defines the ``cloud`` attribute, which is then turned into an object using the ``create_objects`` shared method, which then generates a hash based on public or private IP addresses
 * if the cloud provider is |google compute engine|, then based on the IP address for the node, the ``cloud`` attribute data is populated into a hash
 
-To see the rest of the code in this plugin, go to : https://github.com/opscode/ohai/blob/master/lib/ohai/plugins/cloud.rb.
+To see the rest of the code in this plugin, go to : https://github.com/chef/ohai/blob/master/lib/ohai/plugins/cloud.rb.

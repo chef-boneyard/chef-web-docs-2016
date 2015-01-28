@@ -12,7 +12,7 @@ The ``report`` interface is used to define how a handler will behave and is a re
 
 The |ruby| code used to define a custom handler will vary significantly from handler to handler. The |chef client| includes two default handlers: ``error_report`` and ``json_file``. Their use of the ``report`` interface is shown below.
 
-The `error_report <https://github.com/opscode/chef/blob/master/lib/chef/handler/error_report.rb>`_ handler:
+The `error_report <https://github.com/chef/chef/blob/master/lib/chef/handler/error_report.rb>`_ handler:
 
 .. code-block:: ruby
 
@@ -30,7 +30,7 @@ The `error_report <https://github.com/opscode/chef/blob/master/lib/chef/handler/
     end
    end
 
-The `json_file <https://github.com/opscode/chef/blob/master/lib/chef/handler/json_file.rb>`_ handler:
+The `json_file <https://github.com/chef/chef/blob/master/lib/chef/handler/json_file.rb>`_ handler:
 
 .. code-block:: ruby
 

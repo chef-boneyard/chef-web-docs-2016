@@ -24,7 +24,7 @@ Modify the template with any editor, then specify it using the ``--distro`` opti
 
    $ knife bootstrap 192.168.1.100 -r 'role[webserver]' -distro ubuntu12.04-gems-mine
 
-Alternatively, an example bootstrap template can be found in the |git| source for the |chef repo|: https://github.com/opscode/chef/tree/master/lib/chef/knife/bootstrap. Copy the template to ``~/.chef-repo/.chef/bootstrap/ubuntu12.04-apt.erb`` and modify the template appropriately.
+Alternatively, an example bootstrap template can be found in the |git| source for the |chef repo|: https://github.com/chef/chef/tree/master/lib/chef/knife/bootstrap. Copy the template to ``~/.chef-repo/.chef/bootstrap/ubuntu12.04-apt.erb`` and modify the template appropriately.
 
 
 

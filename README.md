@@ -27,7 +27,7 @@ There are several ways to provide feedback about the Chef documentation. See htt
 
 Fork and clone the chef-docs repo to your own account://
 
-    git clone https://github.com/opscode/chef-docs.git
+    git clone https://github.com/chef/chef-docs.git
     # will take a while, repo is ~800MB
 
 You may wish to use [virtualenv](http://www.virtualenv.org/) & [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/) (similar to rvm or rbenv), to isolate this Python environment from others, so start out like so:
@@ -150,10 +150,10 @@ Chef builds the following docs collections on a daily basis:
 
 chef_master
 docs_all
+docs_analytics
 docs_client
 docs_devkit
 docs_server
-release_ohai-7
 release_[current_version]
 
 Chef builds the following docs collections as needed, by request, or based on specific feedback:
@@ -163,12 +163,13 @@ release_11-0
 release_11-2
 release_11-4
 release_11-...
+release_12-...
 release_oec_11-...
 release_osc_11-...
 release_private_chef
 release_ohai-6
-
-Note that Ohai 7 documents are also included in the chef_master doc collection (so those topics get rebuilt every day for the root collection).
+release_ohai-7
+release_ohai-8
 
 ## Versioning strategy
 
@@ -272,4 +273,4 @@ Once pushed, visit your repo on GitHub, and open a Pull Request against `opscode
 
 ## Questions?
 
-Open an [Issue](https://github.com/opscode/chef-docs/issues) and ask. Or send email to docs@chef.io.
+Open an [Issue](https://github.com/chef/chef-docs/issues) and ask. Or send email to docs@chef.io.

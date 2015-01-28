@@ -108,6 +108,6 @@ The following example shows part of a |knife| plugin named ``knife windows``:
      end
    end
 
-Take a look at all of the code for this plugin on |github|: https://github.com/opscode/knife-windows/blob/master/lib/chef/knife/winrm.rb.
+Take a look at all of the code for this plugin on |github|: https://github.com/chef/knife-windows/blob/master/lib/chef/knife/winrm.rb.
 
 

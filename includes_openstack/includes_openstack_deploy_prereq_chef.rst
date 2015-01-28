@@ -18,5 +18,5 @@ Guidelines for |openstack chef|:
 * `Tailor <https://github.com/turboladen/tailor>`_ is used to validate |ruby| code style
 * `Foodcritic <http://acrmp.github.io/foodcritic/>`_ is used for lint-checking the cookbooks
 * `ChefSpec <https://github.com/acrmp/chefspec>`_ is used for basic unit acceptance tests
-* `test-kitchen <https://github.com/opscode/test-kitchen>`_ is used for single-node testing (after the point at which test-kitchen is a 1.0 release)
+* `test-kitchen <https://github.com/chef/test-kitchen>`_ is used for single-node testing (after the point at which test-kitchen is a 1.0 release)
 * `Vagabond <https://github.com/chrisroberts/vagabond>`_ may be used for multi-node testing (currently being investigated for this purpose)

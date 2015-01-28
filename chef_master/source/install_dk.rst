@@ -105,7 +105,7 @@ To clone the |chef repo|:
 
    .. code-block:: bash
 
-      $ git clone git://github.com/opscode/chef-repo.git
+      $ git clone git://github.com/chef/chef-repo.git
 
 #. While the |chef repo| is being cloned on the local machine, the command window will show something like the following:
 
@@ -225,7 +225,7 @@ To clone the |chef repo|:
 
    .. code-block:: bash
 
-      $ git clone git://github.com/opscode/chef-repo.git
+      $ git clone git://github.com/chef/chef-repo.git
 
 #. While the |chef repo| is being cloned on the local machine, the command window will show something like the following:
 

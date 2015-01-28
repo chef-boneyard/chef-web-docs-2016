@@ -265,7 +265,7 @@ Use the following setting to disable plugins:
 
 Changelog
 =====================================================
-https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
+https://github.com/chef/chef/blob/11-stable/CHANGELOG.md
 
 .. What's Fixed
 .. =====================================================

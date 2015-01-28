@@ -177,7 +177,7 @@ show-config
 
 .. 
 .. 
-.. Uncomment when https://github.com/opscode/chef-server/issues/35 is available.
+.. Uncomment when https://github.com/chef/chef-server/issues/35 is available.
 .. 
 .. show-versions
 .. =====================================================

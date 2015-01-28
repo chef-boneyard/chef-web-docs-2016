@@ -69,7 +69,7 @@ Configuration data in |windows powershell_dsc_short| scripts may be customized f
 
 Changelog
 =====================================================
-https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
+https://github.com/chef/chef/blob/11-stable/CHANGELOG.md
 
 .. What's Fixed
 .. =====================================================

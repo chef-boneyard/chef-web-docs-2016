@@ -7,4 +7,4 @@ Does not load the |lwrp chef handler| resource
 
 Install start handlers using the |resource chef_gem| resource or add the ``start_handlers`` setting to the |client rb| file.
 
-`https://github.com/opscode/chef-reporting <https://github.com/opscode/chef-reporting>`__
+`https://github.com/chef/chef-reporting <https://github.com/chef/chef-reporting>`__

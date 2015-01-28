@@ -16,5 +16,5 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Chef for OpenStack:** `Overview <http://docs.chef.io/openstack.html>`_ | `knife-openstack <http://docs.chef.io/plugin_knife_openstack.html>`_
 
-**Contributions:** `Contribute to Chef <http://docs.chef.io/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Send Feedback to chef-docs <http://docs.chef.io/feedback.html>`_ | `Style Guide <http://docs.chef.io/style_guide.html>`_
+**Contributions:** `Contribute to Chef <http://docs.chef.io/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/chef/chef-docs>`_ | `Send Feedback to chef-docs <http://docs.chef.io/feedback.html>`_ | `Style Guide <http://docs.chef.io/style_guide.html>`_
 

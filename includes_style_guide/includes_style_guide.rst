@@ -480,13 +480,13 @@ chef-docs
 -----------------------------------------------------
 All of the documentation for Chef can be found here:
 
-https://github.com/opscode/chef-docs
+https://github.com/chef/chef-docs
 
 quick-reference
 -----------------------------------------------------
 The quick-reference repository contains large PNG images that can be printed (front and back), plus smaller single-page images. It can be found here:
 
-https://github.com/opscode/quick-reference
+https://github.com/chef/quick-reference
 
 
 Official Names
@@ -498,7 +498,7 @@ Official names are listed in the ``/swaps/swap_names.rst`` file, including both 
 * ``|chef server|`` for the |chef| server
 * ``|chef client|`` for the |chef client|
 
-For the full list of official names used in the documentation, see https://github.com/opscode/chef-docs/blob/master/swaps/swap_names.txt.
+For the full list of official names used in the documentation, see https://github.com/chef/chef-docs/blob/master/swaps/swap_names.txt.
 
 
 Localization
