@@ -3,7 +3,7 @@
 
 To install the |chef dk|:
 
-#. Visit this page: http://www.chef.io/downloads/chef-dk/ and pick your platform. The |chef dk| supports |mac os x|, |redhat enterprise linux|, |ubuntu|, and |windows|.
+#. Visit this page: http://downloads.chef.io/chef-dk/. The |chef dk| supports |mac os x|, |redhat enterprise linux|, |ubuntu|, and |windows|.
 #. Select a platform, and then a package. (|chef docs| uses the |mac os x| setup within the documentation.)
 #. Click the download button.
 #. Follow the steps in the installer and install the |chef dk| to your machine. The |chef dk| is installed to ``/opt/chefdk/`` on |unix| and |linux| systems. 
