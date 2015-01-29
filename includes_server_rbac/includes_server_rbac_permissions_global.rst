@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef server| includes the following global permissions:
+The |chef server| includes the following container permissions:
 
 .. list-table::
    :widths: 60 420
@@ -14,3 +14,5 @@ The |chef server| includes the following global permissions:
      - |permission create| This permission is required for any user who uses the ``knife [object] create`` argument to interact with objects on the |chef server|.
    * - |webui permission list|
      - |permission list| This permission is required for any user who uses the ``knife [object] list`` argument to interact with objects on the |chef server|.
+
+These permissions set the default permissions for the following |chef server| object types: clients, cookbooks, data bags, environments, groups, nodes, roles, and sandboxes.
