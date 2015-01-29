@@ -15,14 +15,35 @@ The most important tools included in the |chef dk| are:
      - A workflow tool for |chef|.
    * - |chef client|
      - The agent that runs |chef|.
-   * - |chef dk|
+   * - |chef dk_title|
      - The |chef dk| omnibus package.
    * - |chef spec|
      - A unit testing framework that tests resources locally.
+   * - |fauxhai|
+     - A gem for mocking |ohai| data.
    * - |foodcritic|
      - A lint tool for static analysis of recipe code.
-   * - |ruby|
-     - The reference language for |chef|.
    * - |kitchen|
      - An integration testing framework tool that tests cookbooks across platforms.
+   * - |kitchen_vagrant|
+     - A |kitchen| driver for |vagrant|.
+   * - |knife spork|
+     - A workflow plugin for |knife| that helps groups of people work together in the same |chef repo| and |chef server|.
+   * - |ruby|
+     - The reference language for |chef|.
+   * - |rubocop|
+     - A static code analyzer for |ruby|.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
