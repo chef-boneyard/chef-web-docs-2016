@@ -12,5 +12,4 @@ or from anywhere in the |chef repo|, enter:
 
    $ knife upload /name_of_directory
 
-where ``name_of_directory`` is the name of a directory in the |chef repo|, such as ``roles``, ``environments``, or ``cookbooks``.
-
+where ``name_of_directory`` is the name of a directory in the |chef repo|, such as ``roles``, ``environments``, or ``cookbooks``. (Roles and environments stored as |ruby| data will not be uploaded.)

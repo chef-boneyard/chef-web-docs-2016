@@ -12,3 +12,4 @@ or from anywhere in the |chef repo|, enter:
 
    $ knife upload /
 
+to upload all cookbooks and data bags, plus all roles and enviroments that are stored as |json| data. (Roles and environments stored as |ruby| data will not be uploaded.)

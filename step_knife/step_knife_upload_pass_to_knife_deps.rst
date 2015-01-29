@@ -5,4 +5,3 @@
 .. code-block:: bash
 
    $ knife upload `knife deps nodes/*.json`
-

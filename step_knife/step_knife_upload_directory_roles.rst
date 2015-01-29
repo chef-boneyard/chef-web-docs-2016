@@ -12,3 +12,4 @@ or from anywhere in the |chef repo|, enter:
 
    $ knife upload /roles
 
+to upload all roles that are stored as |json| data. (Roles stored as |ruby| data will not be uploaded.)

@@ -12,4 +12,4 @@ or from anywhere in the |chef repo|, enter:
 
    $ knife upload /environments
 
-
+to upload all enviroments that are stored as |json| data. (Environments stored as |ruby| data will not be uploaded.)

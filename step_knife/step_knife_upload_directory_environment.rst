@@ -11,5 +11,3 @@ or from the ``environments/`` directory, enter:
 .. code-block:: bash
 
    $ knife upload production.json
-
-
