@@ -4,7 +4,7 @@ Browse to the top level of the |chef repo| and enter:
 
 .. code-block:: bash
 
-   $ knife upload
+   $ knife upload .
 
 or from anywhere in the |chef repo|, enter:
 
