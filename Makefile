@@ -1,9 +1,11 @@
 BUILDDIR = build
 S3BUCKET = chef-docs
-S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: max-age=900"
+S3OPTIONS = --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: max-age=900"
 BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
+REDIRECT_SCRIPT = redirects/update_redirects.rb
+REDIRECT_OPTIONS = -c redirects/config.rb.jenkins -y
 
 release: master devkit analytics all server client
 
@@ -152,6 +154,7 @@ ohai-6:
 
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
+	$(REDIRECT_SCRIPT) $(REDIRECT_OPTIONS)
 
 # OLD BUILDS DO NOT BUILD
 # 
