@@ -426,3 +426,11 @@ Cookbooks
    verify_packages
    windows
    workstation
+   chef_metal
+   chef_overview_attributes
+   chef_overview_cookbooks
+   chef_overview_nodes
+   chef_overview_server
+   chef_overview_workstation
+
+
