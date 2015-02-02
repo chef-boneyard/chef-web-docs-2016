@@ -205,6 +205,7 @@ Cookbooks
    foodcritic
    getting_started
    getting_started_with_chef
+   glossary
    handlers
    images
    install
