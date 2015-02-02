@@ -20,6 +20,9 @@ Glossary
 **chef-repo**
    The repository structure in which cookbooks are authored, tested, and maintained.
 
+**Chef server**
+   The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions.
+
 **chef-zero**
    A very lightweight |chef server| that runs in-memory on the local machine during the |chef client| run. Also known as local mode.
 
@@ -37,6 +40,9 @@ Glossary
 
 **kitchen**
    |kitchen| is an integration framework that is used to automatically test cookbook data across any combination of platforms and test suites. |kitchen| is packaged in the |chef dk|.
+
+**knife**
+   A command-line tool that provides an interface between a local |chef repo| and the |chef server|. Use it to manage nodes, cookbooks, recipes, roles, data bags, environments, bootstrapping nodes, searching the |chef server|, and more.
 
 **library**
    A library allows arbitrary |ruby| code to be included in a cookbook, either as a way of extending the classes that are built-in to the |chef client| or by implementing entirely new functionality,
