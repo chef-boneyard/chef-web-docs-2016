@@ -4,6 +4,8 @@ Release Notes: |chef client| 12.0
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+Please `view the notes <http://docs.chef.io/upgrade_client_notes.html>`__ for more background on the upgrade process from |chef client| 11 to |chef client| 12.
+
 What's New
 =====================================================
 The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
