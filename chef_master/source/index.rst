@@ -427,15 +427,6 @@ Cookbooks
    windows
    workstation
    chef_metal
-   chef_overview_attributes
-   chef_overview_cookbooks
-   chef_overview_nodes
-   chef_overview_server
-   chef_overview_workstation
-   config_rb_chef_server_enterprise_optional_settings
-   config_rb_chef_server_enterprise
-   config_rb_chef_server_optional_settings
-   config_rb_chef_server
    dsc_mof
    dsl_recipe_method_search
    essentials_chef_client
