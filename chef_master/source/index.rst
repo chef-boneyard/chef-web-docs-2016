@@ -1,5 +1,5 @@
 =====================================================
-All about |chef| ...
+All about |chef| ... 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -428,41 +428,5 @@ Cookbooks
    windows
    workstation
    chef_metal
-   dsc_mof
-   dsl_recipe_method_search
-   essentials_chef_client
-   essentials_cookbook_definitions
-   essentials_cookbook_directory
-   essentials_cookbook_files
-   essentials_cookbook_libraries
-   essentials_cookbook_recipes
-   essentials_cookbook_resources
-   essentials_cookbook_templates
-   essentials_cookbook_versions
-   essentials_cookbooks
-   essentials_data_bags
-   essentials_environment_variables
-   essentials_environments
-   essentials_handlers
-   essentials_knife
-   essentials_node_object_deep_merge
-   essentials_node_object
-   essentials_nodes_bootstrap
-   essentials_nodes_chef_run
-   essentials_nodes_why_run
-   essentials_nodes
-   essentials_policy
-   essentials_repository_create
-   essentials_roles
-   essentials_search
-   migrate_to_enterprise
-   migrate_to_hosted
-   plugin_knife_pushy
-   pushy
-   server_types
-   upgrade_server_ha_notes
-   upgrade_server_ha
-   upgrade_server_open_source
-   upgrade_server_standalone_notes
-   upgrade_server_standalone
+
 
