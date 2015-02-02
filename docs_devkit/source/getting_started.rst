@@ -35,6 +35,8 @@ Set the System |ruby|
 -----------------------------------------------------
 .. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby.rst
 
+.. note:: You may need to restart your shell for this change to be visible.
+
 Your First Cookbook
 -----------------------------------------------------
 
