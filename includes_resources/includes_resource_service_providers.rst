@@ -37,6 +37,9 @@ This resource has the following providers:
    * - ``Chef::Provider::Service::Init::Redhat``
      - ``service``
      - The provider that is used with the |redhat| and |centos| platforms.
+   * - ``Chef::Provider::Service::Simple``
+     - 
+     - A provider that is used to create custom service providers by defining the custom provider as a sub-class of this provider. This provider should not be used in recipes as a value of the ``provider`` attribute.
    * - ``Chef::Provider::Service::Solaris``
      - ``service``
      - The provider that is used with the |solaris| platform.
