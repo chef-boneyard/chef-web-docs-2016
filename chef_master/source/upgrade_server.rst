@@ -248,6 +248,8 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    .. include:: ../../includes_upgrade/includes_upgrade_url_chef_server.rst
 
+   .. note:: Any |chef client| or |knife| user that tries to access the |chef server| after the upgrade will be able to do so as long as the ``default_orgname`` is set and is part of the default organization on the upgraded |chef server|.
+
    **Use Downloads**
 
    .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
