@@ -1,6 +1,7 @@
 =====================================================
 Upgrade to |chef analytics_title| 1.1
 =====================================================
+
 The following sections describe the upgrade process from |chef analytics| 1.0.4 to |chef analytics| 1.1.
 
 Standalone

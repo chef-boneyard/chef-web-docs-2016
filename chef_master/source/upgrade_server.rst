@@ -1,6 +1,7 @@
 =====================================================
 Upgrade to |chef server_title| 12
 =====================================================
+
 The following sections describe the upgrade process for |chef server| 12.
 
 From |chef server_title| 12
