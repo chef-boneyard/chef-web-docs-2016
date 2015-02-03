@@ -38,7 +38,7 @@ The following table lists the supported platforms for the |chef client|:
    * - |mac os x|
      - ``mac_os_x``
      - ``x86_64``
-     - ``10.6``, ``10.7``, ``10.8``, ``10.9``
+     - ``10.6``, ``10.7``, ``10.8``, ``10.9``, ``10.10``
    * - |solaris|
      - ``solaris2``
      - ``i386``

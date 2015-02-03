@@ -15,7 +15,7 @@ The following table lists the Tier 1 supported platforms for the |chef client|:
      - current non-EOL releases
    * - |mac os x|
      - 
-     - ``10.8``, ``10.9``
+     - ``10.8``, ``10.9``, ``10.10``
    * - |redhat enterprise linux|
      - 
      - ``6.x``
