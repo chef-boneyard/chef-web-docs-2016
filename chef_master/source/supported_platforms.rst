@@ -4,6 +4,8 @@ Supported Platforms
 
 The sections below list the supported platforms for the |chef client|, |ohai|, and the |chef server|.
 
+.. warning:: This topic is based on RFC-021: https://github.com/chef/chef-rfc/blob/master/rfc021-platform-support-policy.md
+
 |chef client_title|, Tier 1
 =====================================================
 .. include:: ../../includes_supported_platforms/includes_supported_platforms_client_tier1.rst
