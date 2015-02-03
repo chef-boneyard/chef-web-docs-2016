@@ -420,6 +420,7 @@ Cookbooks
    supported_platforms
    templates
    upgrade_analytics
+   upgrade_client
    upgrade_client_notes
    upgrade_server
    upgrade_server_notes
