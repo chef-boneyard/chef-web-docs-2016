@@ -60,10 +60,10 @@ Glossary
    Policy settings can be used to map business and operational requirements, such as process and workflow, to settings and objects stored on the |chef server|. See roles, environments, and data bags.
 
 **recipe**
-   A recipe tells the |chef client| how to configure a node.
+   A recipe is a collection of resources that tells the |chef client| how to configure a node.
 
 **resource**
-   A resource is a statement of configuration policy that describes the desired state of an element of your infrastructure, along with the steps needed to bring that item to the desired state.
+   A resource is a statement of configuration policy that describes the desired state of an piece within your infrastructure, along with the steps needed to bring that item to the desired state.
 
 **role**
    A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function.
