@@ -114,7 +114,7 @@ Custom Rules
 The following rules for |foodcritic| have been developed by the |chef| community:
 
 * `/customink-webops/foodcritic-rules <https://github.com/customink-webops/foodcritic-rules>`_
-* `/etsy/foodcritic-rules <Etsy https://github.com/etsy/foodcritic-rules>`_
+* `/etsy/foodcritic-rules <https://github.com/etsy/foodcritic-rules>`_
 
 |foodcritic| CLI
 =====================================================
