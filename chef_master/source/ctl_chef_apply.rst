@@ -11,8 +11,18 @@ Options
 Examples
 =====================================================
 
-To use |chef apply| to run a recipe named ``machinations.rb``, enter the following:
+**Run a recipe**
 
-.. code-block:: bash
+.. include:: ../../step_ctl_chef_apply/step_ctl_chef_apply_run_recipe.rst
 
-   $ chef-apply machinations.rb
+**Install Emacs**
+
+.. include:: ../../step_ctl_chef_apply/step_ctl_chef_apply_install_emacs.rst
+
+**Install nano**
+
+.. include:: ../../step_ctl_chef_apply/step_ctl_chef_apply_install_nano.rst
+
+**Install vim**
+
+.. include:: ../../step_ctl_chef_apply/step_ctl_chef_apply_install_vim.rst
