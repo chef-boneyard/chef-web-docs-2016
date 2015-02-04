@@ -428,6 +428,5 @@ Cookbooks
    verify_packages
    windows
    workstation
-   chef_metal
-   install_workstation
+
 
