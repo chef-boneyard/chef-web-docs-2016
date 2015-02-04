@@ -27,7 +27,7 @@ The following items are new for |chef server| 12:
 * **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created.
 * **Administrators cannot be removed from organizations** The |chef server| requires that a member of an organization's |webui group admins| group cannot be removed from the organization without first being removed from the |webui group admins| group.
 * **New settings for managing LDAP encryption** New settings that manage LDAP encryption have been added, existing settings have been deprecated.
-* **New commands for managing keys** The following commands are new: ``add-client-key``, ``add-user-key``, ``delete-client-key``, ``delete-user-key``, ``list-client-keys``, and ``list-user-keys``. (New as-of the |chef server| 12.0.3 release.)
+* **New commands for managing keys** The following commands are new: ``add-client-key``, ``add-user-key``, ``delete-client-key``, ``delete-user-key``, ``list-client-keys``, and ``list-user-keys``. (These are preview commands, new as-of the |chef server| 12.0.3 release.)
 
 Upgrade to |chef server| 12!
 -----------------------------------------------------
@@ -380,6 +380,8 @@ add-client-key
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key.rst
 
+.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
+
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_syntax.rst
@@ -391,6 +393,8 @@ add-client-key
 add-user-key
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key.rst
+
+.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
 
 **Syntax**
 
@@ -405,6 +409,8 @@ delete-client-key
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key.rst
 
+.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
+
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_syntax.rst
@@ -416,6 +422,8 @@ delete-client-key
 delete-user-key
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key.rst
+
+.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
 
 **Syntax**
 
@@ -429,6 +437,8 @@ list-client-key
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys.rst
 
+.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
+
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_syntax.rst
@@ -440,6 +450,8 @@ list-client-key
 list-user-key
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys.rst
+
+.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
 
 **Syntax**
 
