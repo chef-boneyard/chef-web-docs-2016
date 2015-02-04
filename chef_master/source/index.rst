@@ -428,5 +428,5 @@ Cookbooks
    verify_packages
    windows
    workstation
-
+   install_manager
 
