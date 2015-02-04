@@ -4,6 +4,30 @@
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server.rst
 
+add-client-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_options.rst
+
+add-user-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_options.rst
+
 backup-recover
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup_recover.rst
@@ -11,6 +35,30 @@ backup-recover
 cleanse
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse.rst
+
+delete-client-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_options.rst
+
+delete-user-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_options.rst
 
 gather-logs
 =====================================================
@@ -43,6 +91,69 @@ Use Downloads
 Use Local Packages
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
+
+list-client-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_options.rst
+
+list-user-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_options.rst
+
+**Example**
+
+.. code-block:: bash
+
+   $ chef-server-ctl list-user-keys applejack
+
+Returns:
+
+.. code-block:: bash
+
+   2 total key(s) found for user applejack
+   
+   key_name: test-key
+   expires_at: Infinity
+   public_key:
+   -----BEGIN PUBLIC KEY-----
+   MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4q9Dh+bwJSjhU/VI4Y8s
+   9WsbIPfpmBpoZoZVPL7V6JDfIaPUkdcSdZpynhRLhQwv9ScTFh65JwxC7wNhVspB
+   4bKZeW6vugNGwCyBIemMfxMlpKZQDOc5dnBiRMMOgXSIimeiFtL+NmMXnGBBHDaE
+   b+XXI8oCZRx5MTnzEs90mkaCRSIUlWxOUFzZvnv4jBrhWsd/yBM/h7YmVfmwVAjL
+   VST0QG4MnbCjNtbzToMj55NAGwSdKHCzvvpWYkd62ZOquY9f2UZKxYCX0bFPNVQM
+   EvBQGdNG39XYSEeF4LneYQKPHEZDdqe7TZdVE8ooU/syxlZgADtvkqEoc4zp1Im3
+   2wIDAQAB
+   -----END PUBLIC KEY-----
+   
+   key_name: default
+   expires_at: Infinity
+   public_key:
+   -----BEGIN PUBLIC KEY-----
+   MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4q9Dh+bwJSjhU/VI4Y8s
+   9WsbIPfpmBpoZoZVPL7V6JDfIaPUkdcSdZpynhRLhQwv9ScTFh65JwxC7wNhVspB
+   4bKZeW6vugNGwCyBIemMfxMlpKZQDOc5dnBiRMMOgXSIimeiFtL+NmMXnGBBHDaE
+   b+XXI8oCZRx5MTnzEs90mkaCRSIUlWxOUFzZvnv4jBrhWsd/yBM/h7YmVfmwVAjL
+   VST0QG4MnbCjNtbzToMj55NAGwSdKHCzvvpWYkd62ZOquY9f2UZKxYCX0bFPNVQM
+   EvBQGdNG39XYSEeF4LneYQKPHEZDdqe7TZdVE8ooU/syxlZgADtvkqEoc4zp1Im3
+   2wIDAQAB
+   -----END PUBLIC KEY-----
+
 
 master-recover
 =====================================================
