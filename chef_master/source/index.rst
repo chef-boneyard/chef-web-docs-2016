@@ -429,4 +429,4 @@ Cookbooks
    windows
    workstation
    install_manager
-
+   manager
