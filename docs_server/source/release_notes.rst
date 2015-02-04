@@ -27,6 +27,7 @@ The following items are new for |chef server| 12:
 * **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created.
 * **Administrators cannot be removed from organizations** The |chef server| requires that a member of an organization's |webui group admins| group cannot be removed from the organization without first being removed from the |webui group admins| group.
 * **New settings for managing LDAP encryption** New settings that manage LDAP encryption have been added, existing settings have been deprecated.
+* **New commands for managing keys** The following commands are new: ``add-client-key``, ``add-user-key``, ``delete-client-key``, ``delete-user-key``, ``list-client-keys``, and ``list-user-keys``. (New as-of the |chef server| 12.0.3 release.)
 
 Upgrade to |chef server| 12!
 -----------------------------------------------------
@@ -373,6 +374,118 @@ The following settings are new:
      - Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['ssl_enabled']`` is ``true``.
 
 .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
+
+
+add-client-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_options.rst
+
+add-user-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_options.rst
+
+
+delete-client-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_options.rst
+
+delete-user-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_options.rst
+
+list-client-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_options.rst
+
+list-user-key
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_options.rst
+
+**Example**
+
+.. code-block:: bash
+
+   $ chef-server-ctl list-user-keys applejack
+
+Returns:
+
+.. code-block:: bash
+
+   2 total key(s) found for user applejack
+   
+   key_name: test-key
+   expires_at: Infinity
+   public_key:
+   -----BEGIN PUBLIC KEY-----
+   MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4q9Dh+bwJSjhU/VI4Y8s
+   9WsbIPfpmBpoZoZVPL7V6JDfIaPUkdcSdZpynhRLhQwv9ScTFh65JwxC7wNhVspB
+   4bKZeW6vugNGwCyBIemMfxMlpKZQDOc5dnBiRMMOgXSIimeiFtL+NmMXnGBBHDaE
+   b+XXI8oCZRx5MTnzEs90mkaCRSIUlWxOUFzZvnv4jBrhWsd/yBM/h7YmVfmwVAjL
+   VST0QG4MnbCjNtbzToMj55NAGwSdKHCzvvpWYkd62ZOquY9f2UZKxYCX0bFPNVQM
+   EvBQGdNG39XYSEeF4LneYQKPHEZDdqe7TZdVE8ooU/syxlZgADtvkqEoc4zp1Im3
+   2wIDAQAB
+   -----END PUBLIC KEY-----
+   
+   key_name: default
+   expires_at: Infinity
+   public_key:
+   -----BEGIN PUBLIC KEY-----
+   MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4q9Dh+bwJSjhU/VI4Y8s
+   9WsbIPfpmBpoZoZVPL7V6JDfIaPUkdcSdZpynhRLhQwv9ScTFh65JwxC7wNhVspB
+   4bKZeW6vugNGwCyBIemMfxMlpKZQDOc5dnBiRMMOgXSIimeiFtL+NmMXnGBBHDaE
+   b+XXI8oCZRx5MTnzEs90mkaCRSIUlWxOUFzZvnv4jBrhWsd/yBM/h7YmVfmwVAjL
+   VST0QG4MnbCjNtbzToMj55NAGwSdKHCzvvpWYkd62ZOquY9f2UZKxYCX0bFPNVQM
+   EvBQGdNG39XYSEeF4LneYQKPHEZDdqe7TZdVE8ooU/syxlZgADtvkqEoc4zp1Im3
+   2wIDAQAB
+   -----END PUBLIC KEY-----
 
 
 What's Fixed
