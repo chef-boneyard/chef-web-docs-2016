@@ -429,5 +429,5 @@ Cookbooks
    windows
    workstation
    chef_metal
-
+   install_workstation
 
