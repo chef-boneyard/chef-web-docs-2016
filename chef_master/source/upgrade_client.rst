@@ -14,7 +14,7 @@ To upgrade the |chef client| on a node via the command line, run the  following 
 
    curl -L https://chef.sh | sudo bash
 
-The |subcommand knife ssh| is one way of doing this.
+Using the |subcommand knife ssh| subcommand is one way to do this.
 
 Upgrade via Cookbook
 =====================================================
