@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master devkit analytics all server client
+release: master devkit analytics all server client private_chef
 
 
 #
