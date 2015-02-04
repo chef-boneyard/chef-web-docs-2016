@@ -141,6 +141,10 @@ open_source:
 	mkdir -p $(BUILDDIR)/open_source/
 	$(BUILD_COMMAND_AND_ARGS) docs_osc/source $(BUILDDIR)/open_source/
 
+private_chef:
+	mkdir -p $(BUILDDIR)/release/private_chef/
+	$(BUILD_COMMAND_AND_ARGS) release_private_chef/source $(BUILDDIR)/release/private_chef/
+
 ohai-8:
 	mkdir -p $(BUILDDIR)/release/ohai-8/
 	$(BUILD_COMMAND_AND_ARGS) release_ohai_8/source $(BUILDDIR)/release/ohai-8/
@@ -155,6 +159,7 @@ ohai-6:
 
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
+
 
 # OLD BUILDS DO NOT BUILD
 # 
