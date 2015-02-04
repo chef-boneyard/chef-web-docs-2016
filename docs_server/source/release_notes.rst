@@ -376,8 +376,12 @@ The following settings are new:
 .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
 
 
-add-client-key
+Key Rotation
 =====================================================
+Use the following commands to manage public and private key rotation for users and clients.
+
+add-client-key
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key.rst
 
 .. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
@@ -391,7 +395,7 @@ add-client-key
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_options.rst
 
 add-user-key
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key.rst
 
 .. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
@@ -404,9 +408,8 @@ add-user-key
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_options.rst
 
-
 delete-client-key
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key.rst
 
 .. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
@@ -420,7 +423,7 @@ delete-client-key
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_options.rst
 
 delete-user-key
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key.rst
 
 .. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
@@ -434,7 +437,7 @@ delete-user-key
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_options.rst
 
 list-client-key
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys.rst
 
 .. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
@@ -448,7 +451,7 @@ list-client-key
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_options.rst
 
 list-user-key
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys.rst
 
 .. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
