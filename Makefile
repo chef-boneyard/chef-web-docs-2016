@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master devkit analytics all server client private_chef
+release: master devkit analytics all server client private_chef 10
 
 
 #
@@ -140,6 +140,10 @@ enterprise:
 open_source:
 	mkdir -p $(BUILDDIR)/open_source/
 	$(BUILD_COMMAND_AND_ARGS) docs_osc/source $(BUILDDIR)/open_source/
+
+10:
+	mkdir -p $(BUILDDIR)/release/10/
+	$(BUILD_COMMAND_AND_ARGS) release_chef_10/source $(BUILDDIR)/release/10/
 
 private_chef:
 	mkdir -p $(BUILDDIR)/release/private_chef/

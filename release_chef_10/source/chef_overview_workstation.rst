@@ -19,7 +19,7 @@ Some important components of workstations include:
    * - :doc:`Knife Plugins </plugin_knife>`
      - .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
    * - :doc:`The chef-repo </essentials_repository>`
-     - .. include:: ../../includes_repository/includes_repository.rst
+     - .. include:: ../../includes_chef_repo/includes_chef_repo.rst
    * - :doc:`knife.rb </config_rb_knife>`
      - The |knife rb| file is used to specify the repository-specific configuration details for |knife|.
    * - :doc:`metadata.rb </config_rb_metadata>`

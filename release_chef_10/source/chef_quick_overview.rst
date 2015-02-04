@@ -30,7 +30,7 @@ Knife
 
 Repository
 -----------------------------------------------------
-.. include:: ../../includes_repository/includes_repository.rst
+.. include:: ../../includes_chef_repo/includes_chef_repo.rst
 
 |git| is the most commonly-used location to store a |chef repo| that is used with a hosted |chef server oec| account, but |git| is not required.
 

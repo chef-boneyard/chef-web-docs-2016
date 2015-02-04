@@ -44,7 +44,7 @@ Node attributes may no longer be set without specifying which precedence level t
    node[:my_attribute] = "value"
    node.my_attribute_2 = "value"
 
-When a precedence level was not specified, ``normal`` was assumed. For |chef 11|, the following example replaces the previous example:
+When a precedence level was not specified, ``normal`` was assumed. For |chef| 11, the following example replaces the previous example:
 
 .. code-block:: ruby
 
@@ -69,7 +69,7 @@ The following example replaces the previous example:
 
 |knife| Output Changes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Previously, |knife| was adding the ID field to search results for node attributes. With |chef 11|, |knife| groups search results by the name of the node. For example, the old output looks something like:
+Previously, |knife| was adding the ID field to search results for node attributes. With |chef| 11, |knife| groups search results by the name of the node. For example, the old output looks something like:
 
 .. code-block:: bash
 
@@ -111,7 +111,7 @@ and the new output looks something like:
      ]
    }
 
-This may require that search queries be updated for |chef 11|.
+This may require that search queries be updated for |chef| 11.
 
 This change also affects |ohai| plugin output.For example, the old output looks something like:
 
@@ -162,11 +162,11 @@ and the new output looks something like:
 
 Role and Environment Attribute Changes
 -----------------------------------------------------
-Role and environment default and override attributes are visible in attributes files. In |chef 11|, several changes have been made to attributes to enable you to include more complex logic in your attributes files. Though you should still try to keep your attributes files simple, you can effectively generate attributes composed of other attributes or based on a node's platform in attribute files now.
+Role and environment default and override attributes are visible in attributes files. In |chef| 11, several changes have been made to attributes to enable you to include more complex logic in your attributes files. Though you should still try to keep your attributes files simple, you can effectively generate attributes composed of other attributes or based on a node's platform in attribute files now.
 
 Computing attributes from attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-In |chef 10| and lower, code like the following will not work if you intend to modify the "source" attributes from roles or environments:
+In |chef| 10 and lower, code like the following will not work if you intend to modify the "source" attributes from roles or environments:
 
 .. code-block:: ruby
 
@@ -179,11 +179,11 @@ In |chef 10| and lower, code like the following will not work if you intend to m
    # In Chef 11, it works correctly with role attributes.
    node.default[:app][:database] ="#{node.app.name}_#{node.app.env}"
 
-In |chef 10| and lower, default and override attributes are stored as a single nested hash, and role and environment attributes are applied to the node after attribute files are evaluated so that role and environment attributes can overwrite attributes from attributes files. In |chef 11|, the above code will work as you expect, because role and environment attributes are stored separately from attributes from cookbooks, and are applied when the run_list is expanded (before any cookbook code is run).
+In |chef| 10 and lower, default and override attributes are stored as a single nested hash, and role and environment attributes are applied to the node after attribute files are evaluated so that role and environment attributes can overwrite attributes from attributes files. In |chef| 11, the above code will work as you expect, because role and environment attributes are stored separately from attributes from cookbooks, and are applied when the run_list is expanded (before any cookbook code is run).
 
 Setting attributes by platform
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-In |chef 11|, ``Chef::Node`` now includes the platform introspection mixin, so you can use the following methods in attributes files:
+In |chef| 11, ``Chef::Node`` now includes the platform introspection mixin, so you can use the following methods in attributes files:
 
 .. code-block:: ruby
 
@@ -194,7 +194,7 @@ In |chef 11|, ``Chef::Node`` now includes the platform introspection mixin, so y
 
 Behavioral changes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-In |chef 10|, you can set a default or override attribute in a recipe, and it will overwrite the default/override value from any role/environment/attribute file. In |chef 11|, node.default always sets a cookbook-level default, and node.override always sets a cookbook-level override. Since cookbook-level attributes have lower precedence than role or environment attributes, a default or override attribute set in a recipe will not overwrite a value set by a role or environment.
+In |chef| 10, you can set a default or override attribute in a recipe, and it will overwrite the default/override value from any role/environment/attribute file. In |chef| 11, node.default always sets a cookbook-level default, and node.override always sets a cookbook-level override. Since cookbook-level attributes have lower precedence than role or environment attributes, a default or override attribute set in a recipe will not overwrite a value set by a role or environment.
 
 For example, given code like this:
 
@@ -206,13 +206,13 @@ For example, given code like this:
    # In a recipe file:
    node.default["app_name"] = "from-recipe"
 
-In |chef 10|, the value of node"app_name" will be "from-recipe" and in |chef 11|, the value will be "from-role" (assuming there are no competing normal or override attributes).
+In |chef| 10, the value of node"app_name" will be "from-recipe" and in |chef| 11, the value will be "from-role" (assuming there are no competing normal or override attributes).
 
 Likewise, if you take any action based on the value of attributes when evaluating attributes files, be aware that attributes from roles and environments will now be used to compute the attribute value.
 
 node.run_state Replaced
 -----------------------------------------------------
-In |chef 10| and lower, you could see which recipes had been evaluated by looking at ``node.run_state[:seen_recipes]``. ``Chef::Node`` was not the correct place to track this information, and the previous implementation resulted in bugs where a recipe like ``nginx::default`` could be loaded after ``nginx``, even though they are the same recipe.
+In |chef| 10 and lower, you could see which recipes had been evaluated by looking at ``node.run_state[:seen_recipes]``. ``Chef::Node`` was not the correct place to track this information, and the previous implementation resulted in bugs where a recipe like ``nginx::default`` could be loaded after ``nginx``, even though they are the same recipe.
 
 In the new implementation, this is tracked by ``Chef::RunContext``. The following example is no longer valid:
 
@@ -233,9 +233,9 @@ Use the following approach instead:
 
 Subtractive Merge Removed
 -----------------------------------------------------
-In |chef 10| and previous, you could use special "knockout prefix" attribute values beginning with ``!merge`` to make the deep merge algorithm remove values from arrays. This feature was very seldom used, confusing, and greatly increased the time and space complexity of the deep merge implementation. This feature is removed in |chef 11|, and attributes containing the "knockout prefix" will trigger an error upon merge.
+In |chef| 10 and previous, you could use special "knockout prefix" attribute values beginning with ``!merge`` to make the deep merge algorithm remove values from arrays. This feature was very seldom used, confusing, and greatly increased the time and space complexity of the deep merge implementation. This feature is removed in |chef| 11, and attributes containing the "knockout prefix" will trigger an error upon merge.
 
-If you need to selectively remove elements from arrays in your attributes, you should place this logic in a cookbook. Combined with other fixes to attributes in |chef 11|, you can put this logic in an attributes file, which is the most natural place for it.
+If you need to selectively remove elements from arrays in your attributes, you should place this logic in a cookbook. Combined with other fixes to attributes in |chef| 11, you can put this logic in an attributes file, which is the most natural place for it.
 
 Chef::REST#run_request Removed
 -----------------------------------------------------
@@ -244,7 +244,7 @@ The ``Chef::REST#run_request`` method is removed. Use ``api_request`` or ``strea
 
 Delayed Notifications Changes
 -----------------------------------------------------
-In |chef 10| and lower, delayed notifications are lost when Chef does not converge successfully.
+In |chef| 10 and lower, delayed notifications are lost when Chef does not converge successfully.
 
 This fixes addresses the following scenario:
 
@@ -253,7 +253,7 @@ This fixes addresses the following scenario:
 #. An unrelated resource fails and halts the |chef client| run
 #. Subsequent |chef client| runs don't restart the service because it hasn't been reconfigured during that run.
 
-In |chef 11|, delayed notifications will run after the |chef client| run fails, and will be executed even if other delayed notifications fail. Conversely, if the |chef client| fails to configure a service and a restart action has been queued for that service, the service will be restarted and will probably be broken.
+In |chef| 11, delayed notifications will run after the |chef client| run fails, and will be executed even if other delayed notifications fail. Conversely, if the |chef client| fails to configure a service and a restart action has been queued for that service, the service will be restarted and will probably be broken.
 
 Single Notifies for Notification
 -----------------------------------------------------
@@ -277,20 +277,20 @@ Instead of the above, just put multiple calls to notifies in your resource decla
 
 Changes for Data Bag Encryption
 -----------------------------------------------------
-In |chef 10|, objects in encrypted data bag items are serialized to |yaml| before being encrypted. Unfortunately, discrepancies between |yaml| engines in different versions of |ruby| (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the |chef server| is untouched and can be correctly deserialized with the same |ruby| version that was used to create it, however).
+In |chef| 10, objects in encrypted data bag items are serialized to |yaml| before being encrypted. Unfortunately, discrepancies between |yaml| engines in different versions of |ruby| (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the |chef server| is untouched and can be correctly deserialized with the same |ruby| version that was used to create it, however).
 
 Because the corruption is silent, there is no way for the |chef client| to detect it; furthermore, all workaround possibilities we've investigated have severe limitations. Additionally, we wanted to modify the encrypted data bag item format to support using a random initialization vector each time a value is encrypted, which provides protection against some forms of cryptanalysis. In order to solve these issues, we've implemented a new encrypted data bag item format:
 
 * The user interface to encrypted data bags is unchanged. This change only affects the format of the encrypted values.
-* |chef 11| clients will be able to read encrypted data bags created with either |chef 10| or |chef 11|.
-* |chef 10| clients |chef 10-18| and above will be able to read encrypted data bags created with either |chef 10| or |chef 11|
-* |chef 10| clients version |chef 10-16| and lower cannot read encrypted data bags created with |chef 11|
-* |chef 11| knife commands will only create data bags in the new format.
-* |chef 10| knife commands will only create data bags in the old format.
+* |chef| 11 clients will be able to read encrypted data bags created with either |chef| 10 or |chef| 11.
+* |chef| 10 clients |chef| 10-18 and above will be able to read encrypted data bags created with either |chef| 10 or |chef| 11
+* |chef| 10 clients version |chef| 10-16 and lower cannot read encrypted data bags created with |chef| 11
+* |chef| 11 knife commands will only create data bags in the new format.
+* |chef| 10 knife commands will only create data bags in the old format.
 
 Diagnosing Compatibility Errors
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-When trying to decrypt a |chef 11| format data bag item with |chef 10-16| or lower, you will see an error like this:
+When trying to decrypt a |chef| 11 format data bag item with |chef| 10-16 or lower, you will see an error like this:
 
 .. code-block:: bash
 
@@ -304,24 +304,24 @@ The above error output is from |knife|; the |chef client| will fail with a simil
 
 How to Upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Before upgrading on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version |chef 10-18| or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on).
+Before upgrading on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version |chef| 10-18 or above. Once your |chef client| fleet is upgraded, you can start using |chef| 11 on your workstation (the box you create/update encrypted data bag items on).
 
-In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of |chef client|. To migrate your data bag items, simply edit them with ``knife data bag edit`` or upload them with ``knife data bag from file``, whichever you normally do. |chef 11| will automatically upload your data bag items in the new format.
+In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of |chef client|. To migrate your data bag items, simply edit them with ``knife data bag edit`` or upload them with ``knife data bag from file``, whichever you normally do. |chef| 11 will automatically upload your data bag items in the new format.
 
 Server Versions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Because encrypted data bag items are implemented as a client-side layer on top of regular data bag items, the format change is transparent to the server. You can begin using |chef 11| data bags even if your server is version |chef 10|.
+Because encrypted data bag items are implemented as a client-side layer on top of regular data bag items, the format change is transparent to the server. You can begin using |chef| 11 data bags even if your server is version |chef| 10.
 
 
 Non-recipe File Evaluation Includes Dependencies
 ---------------------------------------------------------------
-In |chef 10| and lower, library, attribute, lightweight resource, and resource definition files are loaded in undefined order (based on the order given by the |ruby| Hash implementation, which differs based on version and vendor patching). In |chef 11|, these files are loaded according to the following logic:
+In |chef| 10 and lower, library, attribute, lightweight resource, and resource definition files are loaded in undefined order (based on the order given by the |ruby| Hash implementation, which differs based on version and vendor patching). In |chef| 11, these files are loaded according to the following logic:
 
 * The expanded run_list is converted into a list of cookbooks in the same order
 * Each cookbook's dependencies are inserted into the cookbook list before the cookbook that depends on them.
 * Duplicates are removed
 
-For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10|, all non-recipe files from all cookbooks in the cookbook path were loaded). Additionally, |chef solo| users will now see ``CookbookNotFound`` errors when a cookbook is listed as a dependency in the metadata but not present on disk. The error message will look like this:
+For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef| 10, all non-recipe files from all cookbooks in the cookbook path were loaded). Additionally, |chef solo| users will now see ``CookbookNotFound`` errors when a cookbook is listed as a dependency in the metadata but not present on disk. The error message will look like this:
 
 .. code-block:: bash
 
@@ -331,21 +331,21 @@ For |chef client| users, there should be no negative impacts from this change, a
 
 |knife| Configuration Parameter Changes
 -----------------------------------------------------
-In |chef 10|, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:
+In |chef| 10, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:
 
 #. Default values
 #. Values set in |knife rb|
 #. Values passed by command line option
 
-Because of the way the the ``mixlib-cli`` library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. |chef 11| takes advantage of a new mode for ``mixlib-cli`` that keeps default values separate from user-supplied values. In the configuration process, |knife| automatically applies config:
+Because of the way the the ``mixlib-cli`` library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. |chef| 11 takes advantage of a new mode for ``mixlib-cli`` that keeps default values separate from user-supplied values. In the configuration process, |knife| automatically applies config:
 
 #. Default values set in the mixlib-cli DSL
 #. Configuration settings under Chef::Config[:knife]
 #. User supplied values parsed by mixlib-cli
 
-Depending on how |knife| plugin authors have worked around the |chef 10| behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |company_name|-maintained cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|.
+Depending on how |knife| plugin authors have worked around the |chef| 10 behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |company_name|-maintained cloud plugins have been reviewed and should work correctly on both |chef| 10 and |chef| 11.
 
-When writing |knife| plugins for |chef 11|, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, like this:
+When writing |knife| plugins for |chef| 11, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, like this:
 
 .. code-block:: ruby
 
@@ -362,7 +362,7 @@ and access configurable values via the config hash with symbols, like this:
    # The local variable isn't necessary, it's just here to clarify the example:
    ssh_user_name = config[:ssh_user]
 
-If compatibility with |chef 10| is required, accessing configuration via a helper function like this will work correctly, but only if default values are NOT set with the ``mixlib-cli`` DSL.
+If compatibility with |chef| 10 is required, accessing configuration via a helper function like this will work correctly, but only if default values are NOT set with the ``mixlib-cli`` DSL.
 
 .. code-block:: ruby
 
@@ -371,7 +371,7 @@ If compatibility with |chef 10| is required, accessing configuration via a helpe
      config[key] || Chef::Config[:knife][key]
    end
 
-Default values must be managed manually until support for |chef 10| is removed, for example, like this:
+Default values must be managed manually until support for |chef| 10 is removed, for example, like this:
 
 .. code-block:: ruby
 
@@ -382,7 +382,7 @@ Further information is available in the ticket: CHEF-3497 - Allow |knife rb| to 
 
 Remote File Mirror Support May Break Subclasses	
 ---------------------------------------------------------------
-In |chef 11|, |resource remote_file| now supports fetching files from a list of mirrors. As a result, the ``source`` parameter of the |resource remote_file| resource is internally stored as an array. This change is transparent to users of the |resource remote_file| resource; however, any library code that subclasses the |resource remote_file| resource---for example, to provide |amazon s3| support---will likely need to be updated to support and/or work around this change. 
+In |chef| 11, |resource remote_file| now supports fetching files from a list of mirrors. As a result, the ``source`` parameter of the |resource remote_file| resource is internally stored as an array. This change is transparent to users of the |resource remote_file| resource; however, any library code that subclasses the |resource remote_file| resource---for example, to provide |amazon s3| support---will likely need to be updated to support and/or work around this change. 
 
 To effectively revert the change so that the ``source`` parameter is a string, add code like this to your resource:
 	
@@ -400,19 +400,19 @@ Alternatively, you can update the provider to handle the case that the ``source`
 
 The Server
 =====================================================
-The following items are new for |chef 11| server and/or are changes from |chef 10|.
+The following items are new for |chef| 11 server and/or are changes from |chef| 10.
 
 The /clients endpoint returns |json| with a |json| class for edit (PUT) operations
 ----------------------------------------------------------------------------------
-In |chef 8|-|chef 10|, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
+In |chef| 8-|chef| 10, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
 
-This change breaks the ``knife client reregister`` command in |chef 10-16| and earlier. Forward compatibility is introduced in |chef 10-18|.
+This change breaks the ``knife client reregister`` command in |chef| 10-16 and earlier. Forward compatibility is introduced in |chef| 10-18.
 
 The admin and validator flags are exclusive
 -----------------------------------------------------
-In |chef 11|, clients may not be both admins and validators at the same time. In the current alpha release, you can set the admin flag on the validator but it has no effect. In a future release, you may receive an error when attempting to set the validator flag on a client, or when attempting to create a client with both flags set.
+In |chef| 11, clients may not be both admins and validators at the same time. In the current alpha release, you can set the admin flag on the validator but it has no effect. In a future release, you may receive an error when attempting to set the validator flag on a client, or when attempting to create a client with both flags set.
 
-.. note:: Exact behavior may change before release or in a minor version release after |chef 11|.
+.. note:: Exact behavior may change before release or in a minor version release after |chef| 11.
 
 Strict checking of top-level |json| keys
 -----------------------------------------------------
@@ -428,13 +428,13 @@ As part of the move to |erchef|, error messages have been made more consistent. 
 
 Some error codes have changes
 -----------------------------------------------------
-In a number of cases, |erchef| returns a more specific error status than the |chef 10| server. For example, returning 400 instead of 500 for some bad request data situations.
+In a number of cases, |erchef| returns a more specific error status than the |chef| 10 server. For example, returning 400 instead of 500 for some bad request data situations.
 
 The ``chef-server`` cookbook has been completely rewritten to support an omnibus |chef server| install
 
-knife reindex is not supported in |chef server 11|
+knife reindex is not supported in |chef server| 11
 -----------------------------------------------------
-You can trigger a reindex of object data using ``chef-server-ctl reindex`` while logged into the |chef server|. The |knife| command is still present in the |chef 11| |chef client| for use with a |chef 10| server.
+You can trigger a reindex of object data using ``chef-server-ctl reindex`` while logged into the |chef server|. The |knife| command is still present in the |chef| 11 |chef client| for use with a |chef| 10 server.
 
 OpenId support has been removed
 -----------------------------------------------------
@@ -445,9 +445,9 @@ The Ruby server code has been removed
 -----------------------------------------------------
 As part of the move to Erchef, the Ruby API server code along with classes not needed by the client-side have been removed from the main |chef repo|.
 
-knife cookbook delete --purge is ignored by |chef server 11|
+knife cookbook delete --purge is ignored by |chef server| 11
 ------------------------------------------------------------
-In |chef 11|, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the |chef 11| server.
+In |chef| 11, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the |chef| 11 server.
 
 
 Other Notable Changes
@@ -456,7 +456,7 @@ Changes that are not expected to be breaking, but are notable improvements.
 
 Output Formatters are the Default Output when Running in the Console
 ---------------------------------------------------------------------
-In |chef 11|, when output is to a TTY, the |chef client| will automatically use output formatters to display information about what it's doing. To accommodate this, the default log level is now ``auto``, which evaluates to ``warn`` when running with a TTY (so log messages will not obscure the output formatter output), and ``info`` when running without a TTY (so you get important information about changes being made to the system when output formatters are not active).
+In |chef| 11, when output is to a TTY, the |chef client| will automatically use output formatters to display information about what it's doing. To accommodate this, the default log level is now ``auto``, which evaluates to ``warn`` when running with a TTY (so log messages will not obscure the output formatter output), and ``info`` when running without a TTY (so you get important information about changes being made to the system when output formatters are not active).
 
 If you prefer one type of output over the other, you can force the |chef client| to use output formatters or logger output with ``--force-formatter`` or ``--force-logger``.
 
@@ -464,7 +464,7 @@ If you prefer one type of output over the other, you can force the |chef client|
 
 Inline Compile Mode for Lightweight Resources
 -----------------------------------------------------
-In |chef 11|, there is an optional "inline compilation" mode for lightweight resources, which is intended to make notifications work correctly for lightweight resources.
+In |chef| 11, there is an optional "inline compilation" mode for lightweight resources, which is intended to make notifications work correctly for lightweight resources.
 
 Without Inline Compilation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -490,7 +490,7 @@ Inline compilation is enabled by calling ``use_inline_resources`` at the top of 
 
 LWRP Class Hierarchy Changes
 -----------------------------------------------------
-In |chef 11|, lightweight resources resources now inherit from a ``LWRPBase`` resource instead of directly inheriting from ``Chef::Resource``. Likewise, lightweight resources providers inherit from a ``LWRPBase`` provider instead of ``Chef::Provider``. This should not impact existing code for lightweight resources.
+In |chef| 11, lightweight resources resources now inherit from a ``LWRPBase`` resource instead of directly inheriting from ``Chef::Resource``. Likewise, lightweight resources providers inherit from a ``LWRPBase`` provider instead of ``Chef::Provider``. This should not impact existing code for lightweight resources.
 
 Partial Support in Templates
 -----------------------------------------------------

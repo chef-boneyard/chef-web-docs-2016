@@ -6,21 +6,6 @@ About the Server
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-There are three types of servers:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Server
-     - Description
-   * - Enterprise Chef
-     - .. include:: ../../includes_chef/includes_chef_private.rst
-   * - Hosted Enterprise Chef
-     - .. include:: ../../includes_chef/includes_chef_hosted.rst
-   * - Open Source Chef
-     - .. include:: ../../includes_chef/includes_chef_open_source.rst
-
 Components
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst
