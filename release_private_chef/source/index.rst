@@ -1,5 +1,5 @@
 =====================================================
-|chef private| 1.4.x 
+|chef private| 1.4.x
 =====================================================
 
 .. warning:: This documentation is about |chef private|, an older version of the |chef server|. For documentation about the current version of the |chef server|, see http://docs.getchef.com/server/.
