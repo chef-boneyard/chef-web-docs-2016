@@ -8,8 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master devkit analytics all server client private_chef 10
-
+release: master devkit analytics all server client
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -140,14 +139,6 @@ enterprise:
 open_source:
 	mkdir -p $(BUILDDIR)/open_source/
 	$(BUILD_COMMAND_AND_ARGS) docs_osc/source $(BUILDDIR)/open_source/
-
-10:
-	mkdir -p $(BUILDDIR)/release/10/
-	$(BUILD_COMMAND_AND_ARGS) release_chef_10/source $(BUILDDIR)/release/10/
-
-private_chef:
-	mkdir -p $(BUILDDIR)/release/private_chef/
-	$(BUILD_COMMAND_AND_ARGS) release_private_chef/source $(BUILDDIR)/release/private_chef/
 
 ohai-8:
 	mkdir -p $(BUILDDIR)/release/ohai-8/
