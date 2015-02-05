@@ -12,7 +12,7 @@ To upgrade the |chef client| on a node via the command line, run the  following 
 
 .. code-block:: bash
 
-   curl -L https://chef.sh | sudo bash
+   curl -L https://chef.io/chef/install.sh | sudo bash
 
 Using the |subcommand knife ssh| subcommand is one way to do this.
 
