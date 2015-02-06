@@ -30,7 +30,7 @@ The following table lists the Tier 1 supported platforms for the |chef client|:
      - ``5``, ``6``, ``7``
    * - |solaris|
      - ``sparc``, ``x86``
-     - ``10``, ``11``
+     - ``9``, ``10``, ``11``
    * - |ubuntu|
      - ``x86``, ``x86_64``
      - ``10.04``, ``12.04``, ``14.04``

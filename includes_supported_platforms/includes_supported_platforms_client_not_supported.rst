@@ -46,7 +46,7 @@ The following platforms are not supported:
      - ``4.x`` (or older)
    * - |solaris|
      - 
-     - ``8``, ``9``
+     - ``8``
    * - |windows|
      - 
      - ``2000``, ``2003``
