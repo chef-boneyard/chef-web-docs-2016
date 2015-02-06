@@ -15,6 +15,6 @@ The following rule shows how to define a rule that sends a notification when a m
        status != "success"
      then
        alert:error("Encrypt all non-console administrative access such as browser/Web-based management tools.")
-       notify("security-team@financialcore.com", "A machine is listening for connections on port 23!")
+       notify("some_alias", "A machine is listening for connections on port 23!")
      end
    end
