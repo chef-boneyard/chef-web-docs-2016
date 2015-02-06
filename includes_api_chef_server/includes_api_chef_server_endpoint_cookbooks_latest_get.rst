@@ -13,13 +13,14 @@ This method has no parameters.
 
 **Response**
 
-The response is similar to:
+For example, if cookbooks ``foo`` and ``bar`` both exist on the |chef server| and both with versions ``0.1.0`` and ``0.2.0``, thhe response is similar to:
 
 .. code-block:: javascript
 
-   {
-   
-   }
+  {
+    "foo": "http://localhost:4000/cookbooks/foo/0.2.0",
+    "bar": "http://localhost:4000/cookbooks/bar/0.2.0"
+  }
 
 **Response Codes**
 
