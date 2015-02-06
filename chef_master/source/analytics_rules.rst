@@ -110,6 +110,10 @@ mustache_template()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst
 
+notify()
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst
+
 set()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_set.rst
