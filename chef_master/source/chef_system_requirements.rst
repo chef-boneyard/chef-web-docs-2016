@@ -34,9 +34,6 @@ The |chef client| can run on the following systems:
      - 12.1
      - i686, x86_64
    * - Solaris
-     - 5.9
-     - sparc
-   * - 
      - 5.10. 5.11
      - i386, sparc
    * - SUSE Enterprise
@@ -48,7 +45,7 @@ The |chef client| can run on the following systems:
    * - Windows
      - 2003 R2, 2008
      - i686, x86_64
-   * - 
+   * -
      - 2008 R2, 2012
      - x86_64
 
@@ -146,6 +143,3 @@ The open source |chef server| can run on the following systems:
    * - Ubuntu
      - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
      - i686, x86_64
-
-
-
