@@ -46,7 +46,7 @@ The following table lists the supported platforms for the |chef client|:
    * - 
      - 
      - ``sparc``
-     - ``5.9``, ``5.10``, ``5.11``
+     - ``5.10``, ``5.11``
    * - |suse|
      - ``suse``
      - ``x86_64``
