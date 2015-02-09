@@ -21,13 +21,13 @@ Install |chef analytics|:
 
 Configure the |chef server|:
 
-#. On the |chef server|, add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``:
+#. On the |chef server|, add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``. The ending slash is meaningful:
 
    .. code-block:: bash
 
 	  oc_id['applications'] = { 
 	    'analytics' => { 
-	      'redirect_uri' => 'https://<analytics_fqdn>' 
+	      'redirect_uri' => 'https://<analytics_fqdn>/' 
 	    } 
 	  }
 
