@@ -27,7 +27,7 @@ Install |chef analytics| on the backend machine:
 
 Configure the |chef server|:
 
-#. On each of the |chef server| machines, add the |fqdn| for the |chef analytics| frontend server to ``/etc/opscode/chef-server.rb``. The ending slash is meaningful:
+#. On each of the |chef server| machines, add the |fqdn| for the |chef analytics| frontend server to ``/etc/opscode/chef-server.rb``. The ending slash is required:
 
    .. code-block:: bash
 

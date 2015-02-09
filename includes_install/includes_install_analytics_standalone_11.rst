@@ -21,7 +21,7 @@ Install |chef analytics|:
 
 Configure the |chef server|:
 
-#. On the |chef server|, add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``. The ending slash is meaningful:
+#. On the |chef server|, add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``. The ending slash is required:
 
    .. code-block:: bash
 
