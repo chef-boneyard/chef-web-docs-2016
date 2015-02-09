@@ -221,15 +221,15 @@ GET
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_latest.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_get.rst
 
 /cookbooks/_latest
 -----------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_latest_get.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_latest.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name_get.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_latest_get.rst
 
 /cookbooks/_recipes
 -----------------------------------------------------
