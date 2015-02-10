@@ -1,0 +1,3651 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-10 09:43-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/config_rb_server_optional_settings.rst:8
+# aaa8b7f4de5a4728a59b56d480c962de
+msgid "|chef server rb| Optional Settings"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server.rst:4
+# 98c0b736e2474c15ae75e7a511d2ede6
+msgid "The |chef server rb| file contains all of the non-default configuration settings used by the |chef server|. (The default settings are built-in to the |chef server| configuration and should only be added to the |chef server rb| file to apply non-default values.) These configuration settings are processed when the ``chef-server-ctl reconfigure`` command is run, such as immediately after setting up the |chef server| or after making a change to the underlying configuration settings after the server has been deployed. The |chef server rb| file is a |ruby| file, which means that conditional statements can be used in the configuration file."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:12
+# c42119da105e41feb53328f7dce401cd
+msgid "The |chef server rb| file does not exist by default. To modify the settings for the |chef server|, create a file named ``chef-server.rb`` in the ``/etc/opscode/`` directory."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:14
+# fa173360d23d435a90268fa64c980202
+msgid "This file was named |private chef rb| in previous versions of |chef server oec|. After an upgrade to |chef server| 12 from |chef server oec|, the |private chef rb| file is symlinked to |chef server rb|. The |private chef rb| file is deprecated, starting with |chef server| 12."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:17
+# 7f028a7f59ad4aa6922282eac698d8e8
+msgid "Settings"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:18
+# 3956d6f6a5f34419affa2cc2a0de5286
+msgid "The following sections describe the various settings that are available in the |chef server rb| file."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:21
+# d3dca07d3d3e44a7a24a1881c325294a
+msgid "General"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:4
+# 32062e06498c4d78a25294f00ef743d5
+msgid "This configuration file has the following general settings:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_bootstrap.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:73
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_upgrades.rst:10
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:10
+# 6e930ca9f27947488effd7ef9b4128cc
+# 765998455d1e40b9b9c6c3440889b24c
+# 4d6f2ad48eed4af382d06203f80a3bf6
+# b8817d514d2b49bf8d3dfa144691a310
+# 167dfe4fa1674dba881a704b6da770a6
+# a0285346412e4398a74f35ba5fcfcd40
+# bd04ccd12bf14d1da98d6b1273757336
+# 1aacda4ff3e44804ac7bd5c40d459a8d
+# 059d84fbd9f044d6a74a3fac4323a392
+# bdabcdc6ec2c47dbac01950c142b2881
+# a1011522ff124bc1adfcfc2056616ef5
+# 07287c338eb1406cb80f71e7f7c8bbf2
+# e4fee372aee74f11b6e9967f1a4095bf
+# 4b35de492a5347ef9b2b99f364f34b32
+# af3d15851f3749c0b59c5ee62c3be9cb
+# c85a529be74f4441980e76f6979a19d4
+# 1d616bd44d484aea90f5ed977ce8bc71
+# aeb7a20225ea4bcba62a6357021ca25d
+# 9eb26a3fadde42e59445170f620b9666
+# 672c7df4e8cc4b86966f45b18d474c4d
+# 6b9b0c73efeb4e049f9948e9c88632cd
+# 37cab190a5d94fcf95973c59a55edebd
+# 4c14dc7049434a4fa6f171cb09e5d731
+# 10b48e97cedd4a388703a96957a9674c
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_bootstrap.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:74
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_upgrades.rst:11
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:11
+# 8704ff932129459da4aa91b4fbea76b1
+# 4dff06119153445aa62c372aaae79ae6
+# 1b7c077dcf354745b75138e858152b61
+# b67515638364445db2713fa51a2487d9
+# 77012b604c5c4acaa75f41a2f788b164
+# 6300b92dcdee462488feab07fd4fa192
+# d77f269e871f4b10a7bfcb4f685a57aa
+# 7db8d64f60d74b37a0e96c1ca17efa47
+# 77117408069740f5a4f6411ebb11786c
+# e04cd837fff2473982f0f13b7479022d
+# 2c8d4e9d151843b9a2bce588a73c1848
+# 6fd1f839377c44fdbee4f81c296910d2
+# 03d327648c8e40b3baad47e443458682
+# ba0043f07aaf43b0979d3fbdec547a33
+# 6804b887824d4c12a44cba7e5823ff18
+# 468f25f70e5c4c0eafe0a3631339ec36
+# 77346e7f5a6944198731de1f1946bcbc
+# 8bfd8671e2da4d828e41d469a7d917a4
+# e3b77d1fe2044c18882f56fd4adadced
+# a46a92ad2e0a4e01ad6e88c4e4da2f31
+# 2a9ece575a674f9881d1f796c342fbd1
+# 00126e2909e94fb7b15df24a42d223f0
+# deb13fadfeae4d0c852aebe0b234c333
+# 16fff24f634d4373907dd10515c72d69
+msgid "Description"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:12
+# 143537a42381427da64443114b7eb80b
+msgid "``addons['install']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:13
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:21
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:19
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:27
+# 21d671f04cdb4ed39777579b5501b48f
+# 7b63664bcbba4fc19f5609376149e92f
+# f8f548471d7445fe936f9813e2fd6041
+# d7381a37715b4437ad93cc0d210a8fd0
+msgid "Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:14
+# e39a30da210b4b368213078add1092b0
+msgid "``addons['path']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:15
+# 6938ff7c43144b71bf78c9e25c79c9e3
+msgid "Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:16
+# 3fb5d1bda45e4fbe999aa812af8ff446
+msgid "``addons['packages']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:17
+# 577329b4de8540fa97eb02f93bc56685
+msgid "Default value: ``%w{opscode-reporting opscode-manage opscode-analytics opscode-push-jobs-server}``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:18
+# 156a7788c6334904ac30a89f0005bda6
+msgid "``api_version``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:19
+# 48f302a0e1724111b2d3b480711037f4
+msgid "|version chef_server| Default value: ``\"12.0.0\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:20
+# a102b57465ca4d7d9dde3e8f4d52a565
+msgid "``default_orgname``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:21
+# 3f2c4e7485a149a08944b56209119bb4
+msgid "|default_orgname|"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:22
+# 0f5af16211d84a56a49025b945098531
+msgid "``flavor``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:23
+# 98df335940ad4df1a7ad2009cc9df56f
+msgid "Default value: ``\"cs\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:24
+# 493239038f224318968fe11fe4f4e9d0
+msgid "``install_path``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:25
+# ca29dd19d8e14c91b028aee597284a7e
+msgid "|directory chef_server| Default value: ``\"/opt/opscode\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:26
+# 757e9eecb22946cca3abe9d293bd790e
+msgid "``from_email``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:27
+# 77e4516daf6448c39913d52d71484cff
+msgid "Default value: ``'\"Opscode\" <donotreply@opscode.com>'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:28
+# 6c28945416274ee7870a3b4bb91ee64d
+msgid "``license['nodes']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:29
+# 211cc2070a8f42b399ce5a3476e0b966
+msgid "|license chef_server| Default value: ``25``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:30
+# 5b0cc2bed92046408c48fe2a2a071d1e
+msgid "``license['upgrade_url']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:31
+# bf2c4ba062d94b349b72e671a49cb66e
+msgid "|license url| Default value: ``\"http://www.chef.io/contact/on-premises-simple\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:32
+# b7308d8f913344fe940ee92ed6d0744b
+msgid "``notification_email``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:33
+# 2e94c1388cfd42808237ba21eefcfa59
+msgid "|email chef_server| Default value: ``\"pc-default@opscode.com\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:34
+# ef09185d465f40ec8944f6ca7d13b908
+msgid "``role``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:35
+# 22207cf7f91a4875a3babe47d8eb2d41
+msgid "|role chef_server| Possible values: ``backend``, ``frontend``, or ``standalone``. Default value: ``\"standalone\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:36
+# 10122719d46746469f77bac612ebe0b2
+msgid "``topology``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_general.rst:37
+# 4da25087eae844e6a850bcc814d637e1
+msgid "The topology of the |chef server|. Possible values: ``ha``, ``manual``, ``standalone``, and ``tier``. Default value: ``\"standalone\"``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:25
+# 6965c3f502ee42c6b51ede63e56412cc
+msgid "bookshelf"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_bookshelf.rst:4
+# b977bdd5ad974caf917c740812ed057b
+msgid "The |service bookshelf| service is used to store cookbooks, including all of the files---recipes, templates, and so on---that are associated with each cookbook."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:4
+# 9bb3bec6578b4502be67ba8d4d659738
+msgid "This configuration file has the following settings for ``bookshelf``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:12
+# e188e36ae3594720ae1d5800a1c638bf
+msgid "``bookshelf['access_key_id']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:13
+# e61a8213b72546b7b1e7fb860c586a07
+msgid "|bookshelf id_access_key_s3| (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. |cookbook external_storage_settings| Default value: generated by default."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:14
+# abb386af779f4b52b53aaf30afbdfd3f
+msgid "``bookshelf['data_dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:15
+# e6e31390c8a0440bb3b119697c9158ef
+msgid "|directory generic_data| |default_value_recommended| Default value: ``/var/opt/opscode/bookshelf/data``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:16
+# e6f859bf51f1445587441b0208236068
+msgid "``bookshelf['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:17
+# f38f876f783842269d2f47d08bdf3860
+msgid "|directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/bookshelf``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:18
+# b6bf6401ed224feebfd8766994f31572
+msgid "``bookshelf['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:19
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:15
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:29
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:19
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:17
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:32
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:23
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:37
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:17
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:21
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:27
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:27
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:31
+# 5cec48dc2e4f4964804deab1ac24c360
+# 61d3705b8ce74312816b9e845f860cbc
+# 55f7678cc3c14533b2279e8bdb78e3a2
+# 36bc4e1f2a1c452d9684a44ba2d817cb
+# e2a6f560675d4d15b0dfbe3b2594112b
+# ae462c0574cb4fcabb7a713faabf5f43
+# 3d55caa51620410fb04bc998ae8c35f1
+# a96fad8f4fc4449e8e7e2013c7a66d6b
+# 6a64142a525f419d9956c90f73206b86
+# 62658439d5504a2cb8a0e3ba5b85bb43
+# a576aa37ad0e4610a7ace3d2de1c2ee5
+# 5b40bd75923c4ce89c792198614b1342
+# 4476b94a040a420b865940958c0291d8
+msgid "|enable service| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:20
+# 65acf705717c45e09617ef388169c719
+msgid "``bookshelf['external_url']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:21
+# e75d6e7dd84d4e07bc71d39c78e870fe
+msgid "|url external_bookshelf| Default value: ``:host_header``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:22
+# 995102abed924b93b2f76ded661ef3e5
+msgid "``bookshelf['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:23
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:35
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:34
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:25
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:41
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:19
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:23
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:29
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:29
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:33
+# d24c3fae400b4e8184c541f08284c5c5
+# 759b279c702d417e91ee7774648e3283
+# 9777e56c6e6b4da1a85a7976684ea1e3
+# 58ecd3c753b34e0bb1f289db8db04f6e
+# fc55023c1bb04f66bbba75904ae23a72
+# 8c077e5d32ea40ce96e3de8577cc1366
+# 0ce16f03815e4af4bb51e884f834654f
+# 387008fe511a4eda9b64bb64786fe940
+# 005bae9b9106496eb07dd4be1005fe21
+# 29e7dbde76604305907f4f6effc26469
+msgid "|use ha| |ha true| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:24
+# 97cc85d6dec84510b86dc96b3be4ec1d
+msgid "``bookshelf['listen']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:25
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:47
+# a6efc2592428404d85b618ca982e6a4d
+# 5d6673739f9049c294d9193b7cda3092
+msgid "|ip_address service| Default value: ``127.0.0.1``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:26
+# 984515db75bd48f39818aefaa7559ff5
+msgid "``bookshelf['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:27
+# bd01bcb1381a4d54a6dfd6390ca67258
+msgid "|directory logs| |default_value_recommended| Default value: ``/var/log/opscode/bookshelf``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:28
+# c8f0cb96ef50499e9ba767074b76fddc
+msgid "``bookshelf['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:29
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:21
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:41
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:27
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:21
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:38
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:33
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:51
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:23
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:33
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:45
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:39
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:39
+# 429618ddff4e4d6499bcb5fb0458d4a6
+# 4a9546af0bfe490ba4a57931d3243cca
+# 38bd7600b17349a8a373ef6dfeb45fef
+# c3a5494d5c7e449bbfbf5a6ce7f3a6c0
+# 0f1894a9ad354daf8dffd2fa3513ada7
+# 6be5e3e609db4543be49a562e2a9aae6
+# afd2541e729a4c93a841e311e6cdcd74
+# 9ba00fbee44040fa894896289e00476f
+# 7b91b0bf28334cc5b5c4bab3740eae17
+# 3618dea69364471b926dfca4070fd809
+# 03c2330a9a03464aa8514048290ca69b
+# 3e10814b816740918471adfc3456d358
+# 3d1e47a92f214ca1913472ad69f925f7
+msgid "|log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:30
+# bcd6aaa5d09d4843874cfec7da88f7e1
+msgid "``bookshelf['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:31
+# 3c8ea857df2f488ca3cb6a1ca05aaa52
+msgid "|port service| Default value: ``4321``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:32
+# 55494e1bd02f4b679c77acf01be78158
+msgid "``bookshelf['secret_access_key']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:33
+# b87d9888cf304b9092d44f8e49587276
+msgid "|bookshelf id_secret_key_s3| (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. |cookbook external_storage_settings| Default value: generated by default."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:34
+# 0b70671484d849cb8365d8a4c33def81
+msgid "``bookshelf['stream_download']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst:35
+# 1d9f8ffd10644f6b8d98a45af6aa7a48
+msgid "|cookbook stream_download| Default value: ``true``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:31
+# 62d9c35ea371493a9a4307d6976f0fb9
+msgid "bootstrap"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bootstrap.rst:4
+# 33f1751babe04192b150fb287c23b6bb
+msgid "This configuration file has the following settings for ``bootstrap``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bootstrap.rst:12
+# 581f74f67cd04d99b9a71fcd4e8b038e
+msgid "``bootstrap['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_bootstrap.rst:13
+# 787edc9e97394903a11bc58d30ede044
+msgid "Indicates whether an attempt to bootstrap the |chef server| is made. Generally only enabled on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:35
+# 40e929e6b86f4f7b80d1c4b4d92af487
+msgid "dark_launch"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:4
+# ae3134f3ec8246429a0ea41badeab7f8
+msgid "This configuration file has the following settings for ``dark_launch``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:12
+# dd49787e48a143d490cccaf03a78584c
+msgid "``dark_launch['actions']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:13
+# a61b6e6a1385417ca43e7988c8337f5f
+msgid "|enable actions| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:14
+# 4d7b83bb9cae4f668405484a40c2c8fb
+msgid "``dark_launch['add_type_and_bag_to_items']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:15
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:17
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:19
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:25
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:80
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:19
+# 5231b0dac317442aa42d5434bcd4ce4d
+# c29037acf9f34223a7cebf8891a42c32
+# f0d59881aea84469bddc83698f25c9dc
+# ce11377a90b94309b92b971175882a06
+# 32d0675b9b8144aba242ff48f4a5f5a9
+# cada817629a6443680d0419fa2fb673e
+msgid "Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:16
+# c5b0f308d0ee4d9ba8badd0c4819c31e
+msgid "``dark_launch['new_theme']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:18
+# 14f320f7e81f4789b4b7e0639eb73569
+msgid "``dark_launch['private-chef']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:20
+# 918fc77e41e14da697585439952fffe1
+msgid "``dark_launch['quick_start']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:22
+# 7109cf363fee4238a1694d29c157821e
+msgid "``dark_launch['reporting']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:23
+# bfc5c3e44d40437eaf8a05ada7cac4b9
+msgid "|enable_reporting| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_dark_launch.rst:24
+# 12185f8c1f2049f8a5a7bf07f5188072
+msgid "``dark_launch['sql_users']``"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:46
+# 1eb632093dd44ac0820325dbb87c311b
+msgid "estatsd"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:4
+# 927f47bcd23f4716980afca90ac8b776
+msgid "This configuration file has the following settings for ``estatsd``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:12
+# 8f5606f522274ca59e27f237082b76d6
+msgid "``estatsd['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:13
+# 2cb65323d34d4d78b49e9c7898d250a9
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/opscode/estatsd\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:14
+# a3db3598129b4687817f93045e23d73f
+msgid "``estatsd['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:16
+# 262627468b874d369651d60e05b248a7
+msgid "``estatsd['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:17
+# 80d6584986664e059973a35dbb2a10fd
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/estatsd\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:18
+# 564b56bc11204c90af1797d3af16fcd5
+msgid "``estatsd['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:19
+# 7d9b9aa341f94a32baee95e72caf20d3
+msgid "|port service| Default value: ``9466``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:20
+# 9bada16320264476b60861e0a7979c6c
+msgid "``estatsd['vip']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_estatsd.rst:21
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:84
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:50
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:57
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:53
+# 15a1ea58c8974685b991da42736c5932
+# cd6a9acd11d64dceb71f97297a412146
+# af4b97898a62472fb72c6e5275488e9d
+# 39f29a1563b64f52872803967fe144b1
+# 92b3f6d77649402c8c1901db24548737
+msgid "|ip_address virtual| Default value: ``\"127.0.0.1\"``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:57
+# af3f513e8c6f4ee7a205f697d124f03b
+msgid "jetty"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:4
+# 6caae6f610b249deaeae6c3e1d2e78b6
+msgid "This configuration file has the following settings for ``jetty``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:12
+# f1c41c07e36e4a99acc976636aac7636
+msgid "``jetty['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:13
+# 5ca0f7a256334d1688a3ea41f9a07769
+msgid "|enable service| Default value: ``\"false\"``. This value should not be modified."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:14
+# 9303cd58f9714979bb469a4ca7a6bc72
+msgid "``jetty['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:15
+# 48da94f5005e49ab8f396614ae23eb0e
+msgid "|use ha| |ha true| Default value: ``\"false\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:16
+# e69b4f5d68314c61abaa83d4ec69fb6d
+msgid "``jetty['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_jetty.rst:17
+# e827b06b02e04646bd5148f90b358212
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/opt/opscode/opscode-solr4/jetty/logs\"``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:61
+# 46a81780eaab42dfa4f507f2a5798253
+msgid "keepalived"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_keepalived.rst:4
+# e876d3828c4244d29c19b9453c79cb4d
+msgid "The |service keepalived| service is used to for load balancing between machines in a high availability installation."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:4
+# bf9d0af6a2714d88b40e5647990f4b48
+msgid "This configuration file has the following settings for ``keepalived``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:12
+# 7956f5e258cd427b91671205d1d52ce2
+msgid "``keepalived['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:13
+# 23e1304dcb3c44a2b5fa408e8d8ec2e9
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/opscode/keepalived\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:14
+# 41b0a3820f424bd8a3d670f8b6578714
+msgid "``keepalived['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:15
+# 1bb9524893e34a08bb3c7ce03126c2ec
+msgid "|enable service| |ha backend| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:16
+# 5b066e141a5a4539831befbc440c057c
+msgid "``keepalived['ipv6_on']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:17
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:21
+# bb67aa43956049c09a0dd8b6358f8f86
+# 1b9563264d854dd98685206d67f1a0ae
+msgid "|enable ipv6| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:18
+# 9d87a32d6408473b8563485f56657265
+msgid "``keepalived['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:19
+# 3bb7eb5bb94344a88f51f05a332b3dbb
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/keepalived\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:20
+# a125afcd45aa4be3842fb30253b36d36
+msgid "``keepalived['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:22
+# 388379dfb4264e749a7d0e3069b37ca3
+msgid "``keepalived['service_posthooks']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:23
+# 759164630119408a884c1037853c12b8
+msgid "|directory keepalive_post_hooks| Default value: ``\"{ \"rabbitmq\" => \"/opt/opscode/bin/wait-for-rabbit\" }\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:24
+# 36edad7b42f9434c9d9eaf6e13a63472
+msgid "``keepalived['smtp_connect_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:25
+# 0aa5ac59b48243cda78b191129ffd6c1
+msgid "|timeout smtp_connect| Default value: ``\"30\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:26
+# 1da7a023aafe4353ad15966d5373aeac
+msgid "``keepalived['smtp_server']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:27
+# 116d7bc0305b4fb2af48aa97c494ff65
+msgid "|smtp server| Default value: ``\"127.0.0.1\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:28
+# 301e2bcc60c94222845fe22521566b76
+msgid "``keepalived['vrrp_instance_advert_int']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:29
+# 61322580bc624bc2afe2dfe907f70381
+msgid "|vrrp_instance_advert| Default value: ``\"1\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:30
+# c362ab3e623947d1a22e2ccdb24b0a47
+msgid "``keepalived['vrrp_instance_interface']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:31
+# 1b94f9dcb38f4a6cb5512f26ee9a719c
+msgid "|vrrp_instance_interface| Should be set to the name of the dedicated interface for |keepalived|. Default value: ``\"eth0\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:32
+# a75b64761e5d476e85b2abdd313c80a8
+msgid "``keepalived['vrrp_instance_ipaddress']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:33
+# 0f7b21f1b01f49818226bb8a65b5693d
+msgid "|vrrp_instance_ipaddress| This is typically set by the ``backend_vip`` option. Default value: ``node['ipaddress']``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:34
+# 39e35cd05c5c4ea988fce34a5f426046
+msgid "``keepalived['vrrp_instance_ipaddress_dev']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:35
+# 092c2779984149efb9074b07537374b2
+msgid "|vrrp_instance_ipaddress_device| Default value: ``\"eth0\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:36
+# 953cfb72a4a143479d168767bb5c377a
+msgid "``keepalived['vrrp_instance_nopreempt']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:37
+# ac70c66c3086484aa4927892515f64f8
+msgid "|vrrp_instance_nopreempt| (This setting configures the ``noprempt`` value in |vrrp|.) Default value: ``\"true\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:38
+# 70965015e3c746bcbca833b7ad139aab
+msgid "``keepalived['vrrp_instance_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:39
+# 4c839f3be6be429b8da23e313bb8c824
+msgid "|vrrp_instance_password| This value is generated randomly when the bootstrap server is installed and does not need to be set explicitly. Default value: ``\"sneakybeaky\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:40
+# d06d44ff51d5415dbb4078df6820077f
+msgid "``keepalived['vrrp_instance_preempt_delay']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:41
+# 81792cb2aed34db5bf394470b4018150
+msgid "|vrrp_instance_prempt_delay| Default value: ``\"30\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:42
+# 7cea289bdf3e43199e150dce97e9d4ff
+msgid "``keepalived['vrrp_instance_priority']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:43
+# 3f7c78988ec648f3a3daec88105e0999
+msgid "|vrrp_instance_priority| By default, all servers have equal priority. The server with the lowest value will have the highest priority. Default value: ``\"100\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:44
+# a62c8ed6d40b400e959eecdc03d37889
+msgid "``keepalived['vrrp_instance_state']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:45
+# 1aba0b574da741bebbe2bb2514fc90b5
+msgid "|vrrp_instance_state| This value should be the same for both servers in the backend. Default value: ``\"BACKUP\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:46
+# 01e904845ddc44699efcd75c7cf14571
+msgid "``keepalived['vrrp_instance_virtual_router_id']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:47
+# e6a38a437bef4d80bb72c455f8f26825
+msgid "|vrrp_instance_virtual_router_id| This value should be unique within the multicast domain used for |keepalived|. Default value: ``\"1\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:48
+# 5bd7a85a41cf4a608919b3a485d8aaf9
+msgid "``keepalived['vrrp_sync_group']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:49
+# 4eaf22fdfd05407999ea54009d338881
+msgid "|name vrrp_sync_group| Default value: ``\"PC_GROUP\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:50
+# 4a0517e27f0f4fa8966d7531629d65c9
+msgid "``keepalived['vrrp_sync_instance']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:51
+# ca6e2d44b2854838ba58abbbb6986b2a
+msgid "|name vrrp_sync_instance| Default value: ``\"PC_VI\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:52
+# 0f21e2e7a9a94b28a1f42e62c96163a8
+msgid "``keepalived['vrrp_unicast_bind']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:53
+# 5e2d95d0bd2a456399df7679e0fd41fc
+msgid "|vrrp_unicast_bind| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``node['ipaddress']``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:54
+# eba86adbeda446da83d0d47864c3485b
+msgid "``keepalived['vrrp_unicast_peer']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_keepalived.rst:55
+# f8a063c7b4774ba8960130279429e371
+msgid "|vrrp_unicast_peer| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``nil``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:67
+# 8a3cc5960a9a42569c5e4521c5c6387e
+msgid "lb / lb_internal"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:4
+# ec3da64caa964b6e849602de0612e17f
+msgid "This configuration file has the following settings for ``lb``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:12
+# 8bbc51affb504e7daf5ccdc75dc90872
+msgid "``lb['api_fqdn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:13
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:51
+# 62a5d0ddef6949d39d7bcb3e4d8d347b
+# 71555f06e539448f84c794fd7019034c
+msgid "Default value: ``node['fqdn']``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:14
+# dce4bff8b4bd4a54bd1673283fef7e82
+msgid "``lb['ban_refresh_interval']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:15
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:33
+# 15e9f50847be47af97009f98046c3db4
+# 088ed157d3fd4159ac296e59b86467d6
+msgid "Default value: ``600``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:16
+# 03a2dcfc8e16402cbe95d5eba7536ea6
+msgid "``lb['bookshelf']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:17
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:25
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:31
+# e258f0c2cfe2460c9f3696136249029b
+# ea1bc80fbe334e9dbad0a541cd3f81a1
+# 4bdce4ea169f4822844e1a2c78605ca3
+msgid "Default value: ``127.0.0.1``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:18
+# 36b8ebaf2df54e3e9af6dd9efc670b82
+msgid "``lb['cache_cookbook_files']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:20
+# d678ed7cf4394f168d2f7e8d5097688a
+msgid "``lb['chef_max_version']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:21
+# cd921b858ad94052be1b79f52a1d1299
+msgid "|version chef_max| Default value: ``11``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:22
+# d70ccc6c082f47dd993a70ef53caa834
+msgid "``lb['chef_min_version']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:23
+# 1d4fb489ea3a4dfaa80fdb82ff80d08b
+msgid "|version chef_min| Default value: ``10``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:24
+# 036f3bfb5de64fdaa3c101b2aaad93c8
+msgid "``lb['chef_server_webui']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:26
+# 34501eec21f143f29bd65ac610b51a8a
+msgid "``lb['debug']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:28
+# 01b9b42843eb4fb5b842ba1f7d6f38b0
+msgid "``lb['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:30
+# 89c3a1194b9645c48f139fb26cfaf0fa
+msgid "``lb['erchef']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:32
+# 31ffe0c2f2604c7a843d25abd74867e7
+msgid "``lb['maint_refresh_interval']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:34
+# 7568363d52834107aa880d6c38a991a2
+msgid "``lb['redis_connection_pool_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:35
+# d0e772fc178b43539683d7f9199deb35
+msgid "Default value: ``250``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:36
+# bc6d6e01ac7f4e3a9240d14f5023336b
+msgid "``lb['redis_connection_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:37
+# 6f73a153a4c0451db5003584a56b6d36
+msgid "|timeout ms| Default value: ``1000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:38
+# 10b383dd35f1409e9d8fdcac77c75c04
+msgid "``lb['redis_keepalive_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:39
+# f5bf19ef9bab47febc5d8112b1070b39
+msgid "|timeout ms| Default value: ``2000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:40
+# 76f627ffdf404f75b6118e1ed84bc8bc
+msgid "``lb['upstream']['bookshelf']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:41
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:43
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:45
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:47
+# 2c3e2a9510c34ed3b036d62a46a2aec2
+# 5451f44a23774f19ad8cc3da5946943b
+# c6d0878558124d5083a7ab38944661b7
+# 6c3204958d23440ca44b8663070994d0
+msgid "|default_value_recommended| Default value: ``[ \"127.0.0.1\" ]``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:42
+# a000f8ae8a944ffebe51ee93919616e8
+msgid "``lb['upstream']['oc_bifrost']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:44
+# 189985cf751f42008f6a160f0d6149c8
+msgid "``lb['upstream']['opscode_erchef']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:46
+# 1a7636dc5c1648df97ea76234f11cdbe
+msgid "``lb['upstream']['opscode_solr4']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:48
+# deb91f754a1b42aa8fdd609b128b89b6
+msgid "``lb['vip']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:49
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:75
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:53
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:77
+# 42ebc70006214f3fba948c6e3c0ddc3f
+# 9cdf5c6b3ee7461a981d429677da8915
+# e8fb60a2789849abbe884a5feddfad38
+# 66deaa26bb674b11b4a9588a9021147c
+msgid "|ip_address virtual| Default value: ``127.0.0.1``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:50
+# 420457b592564d61af364118572e8c68
+msgid "``lb['web_ui_fqdn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:52
+# 5165a5798eb24c17a49df202ef7f3378
+msgid "``lb['xdl_defaults']['503_mode']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:53
+# 08a952a4e8e746f88563bce9620a23d1
+msgid "|default_value_recommended| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:54
+# 847beec1cfcf45b8b639bc171cc4477a
+msgid "``lb['xdl_defaults']['couchdb_acls']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:55
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:57
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:59
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:61
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:63
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:65
+# 0e32b79583e0453682aa12cae8f6b902
+# 9d6a213254904afbaac526b51d1154a7
+# 7e7edb1d70974ff3973a1f47d7b1115b
+# 1047379a086b40f59657f8be5c06ce10
+# 79e257d5620b427f9d2762d83ff09d8d
+# 44d90b8cb2a74beb82eaa2ff3b568119
+msgid "|default_value_recommended| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:56
+# 0dd3781ac5de4022907bc8b8f9ac0c65
+msgid "``lb['xdl_defaults']['couchdb_association_requests']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:58
+# a5ff9b22df1a48908aee84b95ae32ccb
+msgid "``lb['xdl_defaults']['couchdb_associations']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:60
+# 95c5928b9c614d7a9a9f9637655d4c0a
+msgid "``lb['xdl_defaults']['couchdb_containers']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:62
+# 0faa585044324f5faf619ec0f8ae01b6
+msgid "``lb['xdl_defaults']['couchdb_groups']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:64
+# af35b1ba814349bd97ae88beabefc373
+msgid "``lb['xdl_defaults']['couchdb_organizations']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:67
+# 3035e4cf3f5f40f59883a6bfe660f1b0
+msgid "And for the internal load balancers:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:75
+# ec6f444055904fffb784f5559d58004b
+msgid "``lb_internal['account_port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:76
+# 1c457621361f419da6fc0ea5fc06ef13
+msgid "Default value: ``9685``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:77
+# 35411672045a4ffe834b0ae0b22468e2
+msgid "``lb_internal['chef_port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:78
+# b0405cd8c53646ae952a8129cd369caa
+msgid "Default value: ``9680``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:79
+# 49361c85afc84a9092bb017e98c5dca5
+msgid "``lb_internal['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:81
+# f7ec7f1bfe81424887c07e7a75fd23cb
+msgid "``lb_internal['oc_bifrost_port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:82
+# 7f927b69b22b41baaf3f3909605bc2f9
+msgid "Default value: ``9683``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_lb.rst:83
+# 990bf41f3f454fdd9c066c36e8816099
+msgid "``lb_internal['vip']``"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:71
+# 139176a01c224c0cb1c665a5f51725b5
+msgid "ldap"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:4
+# ebe0a3b47eb749769e1fc073e1c701d2
+msgid "This configuration file has the following settings for ``ldap``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:12
+# 95b3eca9019945e292fa599ffa5f4255
+msgid "``ldap['base_dn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:13
+# 14e99e93bb364fb5a0097e00f3f81b2c
+msgid "|ldap base_dn| For |windows ad|, this is typically ``cn=users`` and then the domain. For example: ``'OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:14
+# 74a46383ac4e4cf9b268449ee072b10e
+msgid "``ldap['bind_dn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:15
+# a05278bf8b324bb8ac2b4784c94c530e
+msgid "|ldap bind_dn| This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. |chef server oec| must do an |ldap| search before any user can log in. Many |windows ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` setting blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to ``'CN=user_who_can_search,OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:16
+# 93829e394830411eb58016739ad33051
+msgid "``ldap['bind_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:17
+# e4fd3908fffb439b8c074ce6fbb91414
+msgid "|ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:18
+# ef573ed343544e23b78414f1368e8b09
+msgid "``ldap['host']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:19
+# 68ae6093d0b04e6999d7232537af581a
+msgid "|ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``ldap-server-host``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:20
+# 2f2a259ba7fd4bad9ad4162adaebe394
+msgid "``ldap['login_attribute']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:21
+# 2505999dd31b49a9b8ddf48ce513f664
+msgid "Use to specify the |chef server| user name for an |ldap| user. Default value: ``sAMAccountName``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:22
+# 5384e256f1c44d33b559fe8a5d0274e9
+msgid "``ldap['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:23
+# f54c410dfeb54968adb4648948070d51
+msgid "|ldap port| The default value is an appropriate value for most configurations. Default value: ``389`` or ``636`` when ``ldap['encryption']`` is set to ``:simple_tls``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:24
+# 0e43afe26de14096be0110437dd427a9
+msgid "``ldap['ssl_enabled']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:25
+# 201a4f5b0e78431dac9ba20096cad46c
+msgid "Use to enable |ssl|. Default value: ``false``. Must be ``false`` when ``ldap['tls_enabled']`` is ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:27
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:33
+# 83516e79de6a44f19576c7f237a5f86c
+# 4115d595959641c3b7bec51a0d57293e
+msgid "Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:28
+# 8c8d95dbbdd1469ea0eb89dd644b5547
+msgid "``ldap['timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:29
+# cdae28e8113d4ac4920cc2d9807dc053
+msgid "Default value: ``60000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:30
+# e2f97b874e6f4f85b61e347232a275f0
+msgid "``ldap['tls_enabled']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_ldap.rst:31
+# 26c4815196a740b29d30ab42ae0678ff
+msgid "Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['ssl_enabled']`` is ``true``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:75
+# 522be4206a3d4bcc85ba8d75d77feaf7
+msgid "nginx"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:4
+# aa86b91d10e749f0a73084e09c695826
+msgid "This configuration file has the following settings for ``nginx``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:12
+# 96a3bed0f60b44948f1c39011bb55e8f
+msgid "``nginx['cache_max_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:13
+# aef127cf96764a8eba69b77ca2b9ff92
+msgid "|nginx cache_max_size| Default value: ``5000m``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:14
+# eb1ee6cad3824386b1646e6354adb3e8
+msgid "``nginx['client_max_body_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:15
+# ba21a6f9a8ba483aa891786d927a5b38
+msgid "|nginx client_max_body_size| Default value: ``250m``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:16
+# c346d6085a0243178e88917e6c36df84
+msgid "``nginx['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:17
+# 106b1776f2a1443281f192d8101c3e46
+msgid "|directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/nginx``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:18
+# e4c49ba28c8a46be9f9f76bdc52776a5
+msgid "``nginx['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:20
+# af3850856d9d42bbb5c4254311ba4d11
+msgid "``nginx['enable_ipv6']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:22
+# fe9069352b584e73b04f88566929452a
+msgid "``nginx['enable_non_ssl']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:23
+# d4eec6a6273d48c8a678aa4da30fb642
+msgid "|enable non_ssl| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:24
+# ada06861b58d465f9bcad91a670ffa08
+msgid "``nginx['gzip']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:25
+# 8318e7d93a3649979b34f6854db4140d
+msgid "|enable gzip| Default value: ``on``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:26
+# 6b9f860a4432463c8743ae48fa4f6eaa
+msgid "``nginx['gzip_comp_level']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:27
+# a7672be9f5214194955cab7f2602b654
+msgid "|gzip compression_level| Default value: ``2``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:28
+# ece045d18a5842dd91f8dbf94d156998
+msgid "``nginx['gzip_http_version']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:29
+# 13c083bd44b1424b9b72a53f1ec7a25c
+msgid "|gzip http_version| Default value: ``1.0``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:30
+# cacb3053771b4e66ab9d77edc9df77ad
+msgid "``nginx['gzip_proxied']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:31
+# 7e1df78620374a3f9c78d4619d3a801f
+msgid "|gzip proxied| Default value: ``any``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:32
+# 0dd654850b2f449e9461aba274eb82d9
+msgid "``nginx['gzip_types']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:33
+# bfdff85499564073919f6536a96fa9cd
+msgid "|gzip types| Default value: ``[ \"text/plain\", \"text/css\", \"application/x-javascript\", \"text/xml\", \"application/xml\", \"application/xml+rss\", \"text/javascript\", \"application/json\" ]``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:34
+# 384531b8534c46d19322156ec74801cf
+msgid "``nginx['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:36
+# b7397854c25b499f9ee46c20128de780
+msgid "``nginx['keepalive_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:37
+# e0ae90221b3a4f509250b027ecc28a97
+msgid "|worker_max_keepalive| Default value: ``65``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:38
+# c5b97d6e50b642dba81ca9a2a73245e0
+msgid "``nginx['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:39
+# ed756682a63a4529800e19265e03b8c0
+msgid "|directory logs| |default_value_recommended| Default value: ``/var/log/opscode/nginx``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:40
+# 65aa5d2c16f041a7bf28d865e207b1ee
+msgid "``nginx['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:42
+# a3c8fb91b2bd4814b842c9904f2032a7
+msgid "``nginx['non_ssl_port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:43
+# 850a9d9df5d64175bf5a2e59fc15d8fa
+msgid "|port non_ssl_nginx| Default value: ``80``. Use ``nginx['enable_non_ssl']`` to enable or disable |ssl| redirects on this port number. Set to ``false`` to disable non-SSL connections."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:44
+# b25df1a0c7374dbdbf570f81a7999861
+msgid "``nginx['sendfile']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:45
+# 39621422e684459991801c3ca44c9d17
+msgid "|use sendfile| Default value: ``on``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:46
+# becba610a619475bb5e19e0566feff58
+msgid "``nginx['server_name']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:47
+# 708ed65f150d49eebdae6e158fc85806
+msgid "|server_fqdn| Default value: ``node['fqdn']``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:48
+# be465c6d957747f19dffab54cfa3218a
+msgid "``nginx['ssl_certificate']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:49
+# 569c55ac3569422fb9b22aa94a69b519
+msgid "|ssl_certificate| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:50
+# f9c328ca2e444f44a5e9ea98bc941b0e
+msgid "``nginx['ssl_certificate_key']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:51
+# d85d4c0eebd946c9a98feafd33fc2697
+msgid "|ssl_certificate key| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:52
+# 82a6b53671fc4586b88f16f475e8230e
+msgid "``nginx['ssl_ciphers']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:53
+# 96f32b1354ca441bace9b5d6351fadf7
+msgid "|ssl_ciphers| To favor AES256 with ECDHE forward security, drop the ``RC4-SHA:RC4-MD5:RC4:RSA`` prefix. See https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_Ciphersuite for more information. For example:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:59
+# 97fd7efbb0fe41d4b971e33584aef806
+msgid "``nginx['ssl_company_name']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:60
+# 5cd7dcd25f974defa0a91c869f53e479
+msgid "|nginx ssl_company_name| Default value: ``YouCorp``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:61
+# 3f707e4cb6ba42718b5db14f765e5784
+msgid "``nginx['ssl_country_name']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:62
+# 18133d62f82145a18dd51806314e0dee
+msgid "|nginx ssl_country_name| Default value: ``US``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:63
+# 0d75cafb25294485b881ad2366d06705
+msgid "``nginx['ssl_email_address']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:64
+# f1c646a3e7874109a982712485bd5094
+msgid "|nginx ssl_email_address| Default value: ``you@example.com``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:65
+# ff2853b25e254e52a2ee1b1ed6363a1c
+msgid "``nginx['ssl_locality_name']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:66
+# cd2e2ab856274a5f9fe711cb78ac0904
+msgid "|nginx ssl_locality_name| Default value: ``Seattle``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:67
+# 4452049297b244119025954c0013cfdd
+msgid "``nginx['ssl_organizational_unit_name']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:68
+# 6777f27d6f3f42c682a3b01cd4181313
+msgid "|nginx ssl_organizational_unit_name| Default value: ``Operations``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:69
+# 68335b9d62ed4265905ca03a77755cf6
+msgid "``nginx['ssl_port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:70
+# a8fe8d04979142acbd50ae8ae7493338
+msgid "Default value: ``443``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:71
+# 54da87982ba24b73a30570e42c15d34c
+msgid "``nginx['ssl_protocols']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:72
+# b43f8bc64e4040dc831eafc6f5e56b8e
+msgid "|version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] = \"TLSv1 TLSv1.1 TLSv1.2\"``. Default value: ``SSLv3 TLSv1``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:73
+# 83cc10e286784b4aa741fdf790eef958
+msgid "``nginx['ssl_state_name']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:74
+# 323d8d92c8d94a369cf1808066a5d537
+msgid "|nginx ssl_state_name| Default value: ``WA``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:75
+# 327ef82a062744fab139a58f0a1c26e1
+msgid "``nginx['tcp_nodelay']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:76
+# cc52af67cc9140b08c008d9bab6a8d5b
+msgid "|use nagle| Default value: ``on``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:77
+# 8d71cd9b3ba544f0ba6a397b3defdc0c
+msgid "``nginx['tcp_nopush']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:78
+# 11c91542ad32497a92621da31317e091
+msgid "|use tcpip| Default value: ``on``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:79
+# b3b570af592c4f2d9951db0e456d1b59
+msgid "``nginx['url']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:80
+# babd82b64f9047a9b1251f63f7a3c1e6
+msgid "Default value: ``https://#{node['fqdn']}``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:81
+# f443facc8659406096bdb573c31af49c
+msgid "``nginx['worker_connections']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:82
+# 5f1d5a652006444e8262665d4de90703
+msgid "|worker_connections| Use with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:83
+# 9568bb3b5a81435ab21759add971f98d
+msgid "``nginx['worker_processes']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:84
+# f32a1fdc549e4737ac43a596421a017a
+msgid "|worker_processes| Use with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:85
+# 378a121694104f4ab84e6533debe20d2
+msgid "``nginx['x_forwarded_proto']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_nginx.rst:86
+# cac8aa8f265242a89fc3fbd5f07aa89c
+msgid "|x_forwarded_proto| This is the protocol used to connect to the |chef server| by a |chef client| or a workstation. Default value: ``\"https\"``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:79
+# a18240d6f8694510b3bc6480d3064aa2
+msgid "oc_bifrost"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_bifrost.rst:4
+# 0fa9a8f5be634f8bad6b840430b718a2
+msgid "The |service bifrost| service ensures that every request to view or manage objects stored on the |chef server| is authorized."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:4
+# 074c8c920cef43e8941bfc165ec94419
+msgid "This configuration file has the following settings for ``oc_bifrost``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:12
+# 2aa86e55a5674afe8c75b7d3047dbb54
+msgid "``oc_bifrost['db_pool_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:13
+# 017b3b50e1d042518d5689cd88aceb5e
+msgid "|db_pool_size| This value should be increased if failures indicate that the |service bifrost| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:14
+# d711a5e9b77540ff89b94b504983816c
+msgid "``oc_bifrost['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:15
+# faf7d047bf054dd791dea826360788fb
+msgid "|directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/oc_bifrost``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:16
+# bd6486eff7374e6b9bd059775ffa3889
+msgid "``oc_bifrost['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:18
+# 098426f4c81f4dc79c93a7b36e10fbb3
+msgid "``oc_bifrost['extended_perf_log']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:20
+# 29d6c638a4d04624b7d24bc3ad919055
+msgid "``oc_bifrost['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:21
+# 054028b041c7469da68f90045f42f118
+msgid "|use ha| |ha true|"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:22
+# 113149d195b04ceaa3c2a7cc084d3c1f
+msgid "``oc_bifrost['listen']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:23
+# 5e2e7fbad9324b0989734bbe6f648e0e
+msgid "|ip_address service| Default value: ``'127.0.0.1'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:24
+# 050a3fdd71814240af0995e13a878abe
+msgid "``oc_bifrost['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:25
+# b59184255bf0422c8c5519ab294498b5
+msgid "|directory logs| |default_value_recommended| Default value: ``/var/log/opscode/oc_bifrost``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:26
+# 8ae3d197774e48c88090250f5ce1d067
+msgid "``oc_bifrost['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:28
+# 8a204dfd3eb7471d86b0ae8b4beefaf0
+msgid "``oc_bifrost['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:29
+# 0eb3bf75c8aa43d5b97b9f3458f5cd05
+msgid "|port service| Default value: ``9463``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:30
+# 88743154680440c5a5ab3dc340e2ae56
+msgid "``oc_bifrost['sql_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:31
+# 53d3fb875c104ec0a9f564ed84281d5e
+msgid "|password sql_user| Default value: ``\"challengeaccepted\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:32
+# 016bcbc517be495e9d9626e947a8875f
+msgid "``oc_bifrost['sql_ro_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:33
+# 5c1cb3911fc848fabef3605af9b6e782
+msgid "|password sql_ro_user| Default value: ``\"foreveralone\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:34
+# 2faf86adc8434463841224f3fa2705f4
+msgid "``oc_bifrost['sql_ro_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:35
+# a32540266d364b999161ffca00f35560
+msgid "Default value: ``\"bifrost_ro\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:36
+# 328a1b9db63b456bbaf1cf6c46c63af3
+msgid "``oc_bifrost['sql_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:37
+# 294d711ad0ef4f7aa248193844b3bff8
+msgid "|user bifrost| Default value: ``\"bifrost\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:38
+# 69b2650a8d8c489b9dd09b1e44d5fe7b
+msgid "``oc_bifrost['superuser_id']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:39
+# b4f7d4ec9b754613a64bdd6221401fd3
+msgid "Default value: ``'5ca1ab1ef005ba111abe11eddecafbad'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:40
+# 95096083a75c4ffcb531f11c19de919e
+msgid "``oc_bifrost['vip']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_bifrost.rst:41
+# c4eea9290d904289be685fc75ee75150
+msgid "|ip_address virtual| Default value: ``'127.0.0.1'``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:85
+# 6254104988024cff8f5d86dab1fe53e7
+msgid "oc_chef_authz"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_authz.rst:4
+# 05f3523a312f412b9c2d5adb043c1192
+msgid "The |service authz| service is used to handle authorization requests to the |chef server|."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:4
+# 47b2f60da0d8422e88e893cd0ca506c1
+msgid "This configuration file has the following settings for ``oc_chef_authz``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:12
+# 7d5f31e40b8e4c5b982535ab558c0d02
+msgid "``oc_chef_authz['http_cull_interval']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:13
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:37
+# faaf50df06a1432387a88d5f31dc4912
+# db752d830ee5432a9069e5b14387d413
+msgid "Default value: ``\"{1, min}\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:14
+# da460c633c7c4f97b41ce21968a2def3
+msgid "``oc_chef_authz['http_init_count']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:15
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:39
+# 4755ab9b92164cbdbd27c559c90db9ab
+# 6cd076340beb4d64a0c714472c39ea96
+msgid "Default value: ``25``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:16
+# d9eaa79f0749494d9e3334564957c84a
+msgid "``oc_chef_authz['http_max_age']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:17
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:19
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:41
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:43
+# fb1fe2c81f8c4c2d96fe3509cd6e6272
+# 29185cfbae2c4bf2b478c306b03d0656
+# 61079902d4124b8f9c48f89440eba92a
+# a018aaa408e84dd888d69879ff58467d
+msgid "Default value: ``\"{70, sec}\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:18
+# ae30b50c87404a5aa5f5969bef6aeab7
+msgid "``oc_chef_authz['http_max_connection_duration']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:20
+# 5252b60565b2437bbc562eeda32fd472
+msgid "``oc_chef_authz['http_max_count']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:21
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:45
+# 4f9d9621316c4dd694bcb9b39d98f50e
+# 95460c72823b42a8b84c70277a1df103
+msgid "Default value: ``100``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:22
+# 34aaa147b5694665af75bc9f0c6dca7b
+msgid "``oc_chef_authz['ibrowse_options']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_authz.rst:23
+# 9a9e252879f84b588760ec9f2a3e810c
+msgid "|timeout authz| Default value: ``\"[{connect_timeout, 5000}]\"``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:91
+# 74011cc68b8e42c1a0d24f15907ab5e4
+msgid "oc-chef-pedant"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:4
+# 4de511bbcb814a45ae36de4b40d596d7
+msgid "This configuration file has the following settings for ``oc-chef-pedant``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:12
+# 4ba945c9ffe34f80b8b773aa8027458c
+msgid "``oc_chef_pedant['debug_org_creation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:13
+# 041e5859ce014926b4d80ef2798e4415
+msgid "|pedant debug_org_creation| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:14
+# 1318563373dc4dc6a85729a2fa0405fb
+msgid "``oc_chef_pedant['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:15
+# 8860b3180a554d16b0a874ee39773196
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/opscode/oc-chef-pedant\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:16
+# d164972332cb41759391f3e623a4f08a
+msgid "``oc_chef_pedant['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:17
+# 0dbc39904ca24eb9a71da7b6bd288724
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/oc-chef-pedant\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:18
+# 66fd03121a4b4362b54a74506cfb0e9c
+msgid "``oc_chef_pedant['log_http_requests']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:19
+# 2c87fbce8b6742b9a30c52061e36f7b2
+msgid "|pedant log_http_requests| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_chef_pedant.rst:20
+# 3263e8d062964b4f9230ae7fb9ab6b18
+msgid "``oc_chef_pedant['log_rotation']``"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:95
+# 9710b35a77204a27868273058de80160
+msgid "oc-id"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_oc_id.rst:4
+# 11237044e37649aa91fc461f49ea094f
+msgid "The |service ocid| service enables |oauth| 2.0 authentication to the |chef server| by external applications, including |supermarket| and |chef analytics|. |oauth| 2.0 uses token-based authentication, where external applications use tokens that are issued by the |service ocid| provider. No special credentials---``webui_priv.pem`` or privileged keys---are stored on the external application."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:4
+# f300fd2faad348a9a60751e24b13585a
+msgid "This configuration file has the following settings for ``oc-id``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:12
+# 0d5ceb48d1424fe482269054c3353351
+msgid "``oc_id['administrators']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:13
+# 89686c824ac843b4a82d14f0bbe0b428
+msgid "|user ocid_admins| For example, ``[\"user1\", \"user2\"]``. Default value: ``[ ]``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:14
+# ef58607f23f941f3bcce891036354e91
+msgid "``oc_id['applications']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:15
+# 074f0dd0fe9f4b1ebdec67e0f1c04b92
+msgid "|application ocid| Default value: ``{ }``. For example:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:27
+# ab7de213dd4f47e18ae97bf4d3b108ba
+msgid "``oc_id['db_pool_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:28
+# 5ba852a29983423aa47d3f27ba136812
+msgid "|db_pool_size| Default value: ``'20'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:29
+# 2724c60a21254f6085d7807cb8314402
+msgid "``oc_id['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:30
+# f2b23e46750f4eb3bc951b1ca2a4c816
+msgid "|directory generic| |default_value_recommended| Default value: none."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:31
+# b1eff303bd764275a81adef0f93bc5e5
+msgid "``oc_id['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:33
+# 03687c55d50647dd8e5e793f127523ff
+msgid "``oc_id['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:35
+# eaedc24b42da4b79a5334b3a85ad7e9c
+msgid "``oc_id['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:36
+# 72cc955827da4742bd383973bd8fcf96
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/opt/opscode/oc_id\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:37
+# b543456e37814176a1a670c4066713ac
+msgid "``oc_id['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:39
+# 87b787ea88ab4d0caeffff3c3150ec13
+msgid "``oc_id['num_to_keep']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:40
+# 35324077bd304c4b9c38bc85285621bd
+msgid "|num_to_keep| Default value: ``10``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:41
+# 4a77947d754d4f99b149a52d9832f912
+msgid "``oc_id['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:42
+# 3787456365c94665af480a8330ae8bf6
+msgid "|port service| Default value: ``9090``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:43
+# febd97fab2ff46e4a4ee91cee44cdb17
+msgid "``oc_id['sql_database']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:44
+# 1ad6b4911afe433086cb384263a13519
+msgid "|name db_ocid| Default value: ``oc_id``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:45
+# 0505913f7666461b95b08619190755af
+msgid "``oc_id['sql_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:46
+# 7eb5abf0d0854dd7863466586af97103
+msgid "|password sql_user| Default value: ``snakepliskin``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:47
+# a6f0e8ef72fd46719102a23bb9ad0dd2
+msgid "``oc_id['sql_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:48
+# 2df3d4f42b1e4019bf3f80e546a15d11
+msgid "|user ocid| Default value: ``oc_id``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_oc_id.rst:49
+# d024037fa0ba46788d7c9f5d7fe5565d
+msgid "``oc_id['vip']``"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:101
+# da343d6e3990408daafd66eddb35ccc8
+msgid "opscode-chef-mover"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:4
+# b996942e005b416ca412ffd123b1c83a
+msgid "This configuration file has the following settings for ``opscode-chef-mover``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:12
+# b821bcd78b8241608a3b4c9cc31b6380
+msgid "``opscode_chef_mover['bulk_fetch_batch_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:13
+# 875aba0a21544509bb9c7594cb9a065e
+msgid "Default value: ``'5'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:14
+# 01e4efccf15c4efbb0a5e61933cf406e
+msgid "``opscode_chef_mover['cache_ttl']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:15
+# 1906b1b3b3f448039462e673a11edf78
+msgid "Default value: ``'3600'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:16
+# 154ac29da87149d399345ec14910e2d6
+msgid "``opscode_chef_mover['db_pool_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:17
+# 8382d824c2a147a997d18382ee125477
+msgid "|db_pool_size| Default value: ``'5'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:18
+# 93c33fe02763470dae45f346953ca886
+msgid "``opscode_chef_mover['data_dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:19
+# d79146141cc64a70bda08f4240b041d0
+msgid "|directory generic_data| |default_value_recommended| Default value: ``\"/var/opt/opscode/opscode-chef-mover/data\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:20
+# 686c50f25774429db5d3a628b262bd3a
+msgid "``opscode_chef_mover['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:21
+# 006ed71cf3064ff4b2214b48782bc21a
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/opscode/opscode-chef-mover\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:22
+# 1e54f5e52fde4b8a8032d281116dc905
+msgid "``opscode_chef_mover['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:24
+# 07fe6db9ff904634ad632a36632f24c4
+msgid "``opscode_chef_mover['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:26
+# 01ad27f5a4444599ad34f3e7bc2d4c9b
+msgid "``opscode_chef_mover['ibrowse_max_pipeline_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:27
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:43
+# 253110044f4f4158a69fcef1df24cbee
+# 945d1786d3b847b292ac8f5937462cc9
+msgid "Default value: ``1``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:28
+# f76de1fb85b1479a92f6ed8fa6892430
+msgid "``opscode_chef_mover['ibrowse_max_sessions']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:29
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:45
+# 660c77c96c9a4ba6ba1d76b88c923506
+# ef4eef8c864b4cf4b3dd39f3795572ef
+msgid "Default value: ``256``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:30
+# 515f8dc406be4ce0b7d233c4b94f8f84
+msgid "``opscode_chef_mover['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:31
+# 3a23e3bc062f4c97b25d26c2700c9ffd
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/opscode-chef-mover\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:32
+# b2617bc435094ace965de2f953c6631b
+msgid "``opscode_chef_mover['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:34
+# 2103f93384654f55b98befecbb80955e
+msgid "``opscode_chef_mover['max_cache_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:35
+# b1ad2a723b7e48958c48e162884a8460
+msgid "Default value: ``'10000'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:36
+# 9eba0bfe8daf427d94887ab1dceb7079
+msgid "``opscode_chef_mover['solr_http_cull_interval']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:38
+# ce5cf0832c25401ea8ece06ac06bc411
+msgid "``opscode_chef_mover['solr_http_init_count']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:40
+# 76ff8273352248639d631f8dfd4486e7
+msgid "``opscode_chef_mover['solr_http_max_age']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:42
+# fd2ab0de4149430a8af0bad474b8489e
+msgid "``opscode_chef_mover['solr_http_max_connection_duration']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:44
+# 448ea86603504b92b4897bfee48a8acf
+msgid "``opscode_chef_mover['solr_http_max_count']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:46
+# 093146b8adb24801812b95e2f2f02ee1
+msgid "``opscode_chef_mover['solr_ibrowse_options']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:47
+# afc7b60d6c7f46c3bfffc1984aef8a81
+msgid "Default value: ``\"[{connect_timeout, 10000}]\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:48
+# 01f62a0a105d40c9b07d9289a90b6da8
+msgid "``opscode_chef_mover['solr_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_chef_mover.rst:49
+# 70cbb9b2ae5d43f8987b015fc3285e7f
+msgid "Default value: ``30000``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:105
+# 0a6654596ae0465394b908dfe70a08e3
+msgid "opscode-erchef"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_erchef.rst:4
+# 0405ba15fff04df689d8e62100496862
+msgid "The |service erchef| service is an |erlang|-based service that is used to handle |api chef server| requests to the following areas within |chef server oec|:"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_erchef.rst:6
+# a937f479771e4f06aeeb68c63703df6c
+msgid "Nodes"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_erchef.rst:7
+# 04bd0585d41b4427aa88664b7768677f
+msgid "Search"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:4
+# fb2ec4113e744b54bd5e8715ee288cb9
+msgid "This configuration file has the following settings for ``opscode-erchef``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:12
+# b1a9812f85da4e93b1635e642d3b2dc9
+msgid "``opscode_erchef['auth_skew']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:13
+# 363789d00e154d2da23935a8a80c9277
+msgid "Default value: ``900``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:14
+# 02c21df0df6749edaa0c2ca65f84c254
+msgid "``opscode_erchef['authz_fanout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:15
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:63
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:69
+# 87e0ec8117c046fdb07a05efb9f26d41
+# 16f6be886a49492da839eb0065abcbb9
+# 31b6e9d0975f4177b3d674e0bb4adc53
+msgid "Default value: ``20``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:16
+# 1c4a5e5f243f4d51a5cb45203e400d93
+msgid "``opscode_erchef['authz_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:17
+# 0b7b51115e1f4b0393af9e43eec8de73
+msgid "|timeout bifrost| Default value: ``2000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:18
+# 626ac00749f54881b7f9d2372b0af265
+msgid "``opscode_erchef['base_resource_url']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:19
+# 908e6884bcb741dfaea522a46f191685
+msgid "|url chef_server_base| Default value: ``:host_header``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:20
+# b3cc528a6dc44ffba4d2af6461ebb364
+msgid "``opscode_erchef['bulk_fetch_batch_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:21
+# 5822b35ec7a04ae596e0cb88c1f5d839
+msgid "|batch_size bulk_fetch| |default_value_recommended| Default value: ``5``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:22
+# 3b4b9a5d61c941ab801a276598031668
+msgid "``opscode_erchef['cache_ttl']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:23
+# 5440f07ff8574a3bb8e2a83393531be0
+msgid "Default value: ``3600``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:24
+# 0780577dfb4142eca1f71fd9f0bd00e1
+msgid "``opscode_erchef['cleanup_batch_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:25
+# a11e145aed0848dca7f818d73acba6df
+msgid "Default value: ``0``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:26
+# 2cd777ebfd19435ea872a9d76e5ecc85
+msgid "``opscode_erchef['couchdb_max_conn']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:27
+# 3b0c8cd1368145ecabf7719a37e8b5de
+msgid "Default value: ``\"100\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:28
+# 910fdea3e6b1471d9c4feccb54e2faba
+msgid "``opscode_erchef['db_pool_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:29
+# 22b267000d07486cb053b89c9dab5898
+msgid "|db_pool_size| Default value: ``20``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:30
+# ba6daacf7a9f47a492dea54f650d6ce5
+msgid "``opscode_erchef['depsolver_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:31
+# 543fa308d1ef477da946e176076c5bde
+msgid "|timeout depsolver| Default value: ``\"5000\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:32
+# 233234cbeb7b4e628e8ecf1e53ab8519
+msgid "``opscode_erchef['depsolver_worker_count']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:33
+# 269d67979468479ab1d77d75440d6f0c
+msgid "|worker_processes depsolver| Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. If you are seeing 503 service unavailable errors, increase this value. Default value: ``\"5\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:34
+# 93c944380f2441aa8ed310434514aafe
+msgid "``opscode_erchef['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:35
+# 08d272aa4bbd494cb3efd99daaa82d58
+msgid "|directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-erchef``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:36
+# 65d88932ee9645e3a8fdd6cb1f6fc0fe
+msgid "``opscode_erchef['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:38
+# ba69949847df429d8bcfc5527d9a9150
+msgid "``opscode_erchef['enable_actionlog']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:39
+# 7f7eadb681fb4210a3d5fcd23a6e55ee
+msgid "Use to enable |chef actions|, a premium feature of the |chef server|. Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:40
+# a746a8508e244f3aa565ad60c5bd4df7
+msgid "``opscode_erchef['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:42
+# bd386fce10104c699d0b5b4f8674ed27
+msgid "``opscode_erchef['ibrowse_max_pipeline_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:44
+# b9faa472ed7c4fe4b35e91f3528e122d
+msgid "``opscode_erchef['ibrowse_max_sessions']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:46
+# 5e0c35780a3f4d4bae6638c27a3c89dc
+msgid "``opscode_erchef['listen']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:48
+# 7e5cc9e0feb642298e0031f2ba4a2db2
+msgid "``opscode_erchef['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:49
+# 744b590b7dba49bdae05fc9c5ecad927
+msgid "|directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-erchef``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:50
+# 41c3e388f175456fa8f17f245b299ce8
+msgid "``opscode_erchef['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:52
+# 0d2c2ad2a249402694f98861c17411fa
+msgid "``opscode_erchef['max_cache_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:53
+# 1be437a4ef254547b264b519d087dff6
+msgid "Default value: ``10000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:54
+# 93ffea492d5340259380799c7305c447
+msgid "``opscode_erchef['max_request_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:55
+# d134cbf409de40bfa03d35067bc0a223
+msgid "Default value: ``1000000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:56
+# a380cbe48ebd453089512746bb73e4ff
+msgid "``opscode_erchef['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:57
+# 3ed4156f5df149c99bba632992994d07
+msgid "|port service| Default value: ``8000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:58
+# e5ad4f169d994a13a091333556f028b3
+msgid "``opscode_erchef['root_metric_key']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:59
+# 55b0c20618fe4a68aa243014d2ef65b1
+msgid "Default value: ``chefAPI``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:60
+# 0e8091bfd8594fa8afc022ccbc533342
+msgid "``opscode_erchef['s3_bucket']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:61
+# ae9d999ad07744639d9675b1b4b77e11
+msgid "|name s3_bucket| (This is configurable and may be pointed at external storage locations, such as |amazon ec2|. |cookbook external_storage_settings| Default value: ``bookshelf``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:62
+# 3e67d9c72213440fac9541013934fdeb
+msgid "``opscode_erchef['s3_parallel_ops_fanout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:64
+# a63637bd2d96438bba9327fd5da63308
+msgid "``opscode_erchef['s3_parallel_ops_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:65
+# ad2f7a43670f4b1994c5f50dee9c9d78
+msgid "Default value: ``5000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:66
+# e92835fb261d4bd8bac1e8ea5663a0ce
+msgid "``opscode_erchef['s3_url_ttl']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:67
+# ae5191fa2d5f4d66a2ba7ce275a5a2dd
+msgid "|s3_url_ttl| If node bootstraps are timing out, increase this setting. Default value: ``28800``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:68
+# 888e54d3e66c4ef3bea9ea324d8ffe2d
+msgid "``opscode_erchef['udp_socket_pool_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:70
+# a7d1d8f52c53469d85ddf4fa93087231
+msgid "``opscode_erchef['umask']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:71
+# 12e34fde181049e1b9341c09f73d0dab
+msgid "Default value: ``0022``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:72
+# 6346498a1f8a4fe1a8367693864346c8
+msgid "``opscode_erchef['validation_client_name']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:73
+# 2ba0169034e74882978a1e86d3ed642a
+msgid "Default value: ``chef-validator``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_erchef.rst:74
+# cd68f4db01bf486bbea81667de270d6a
+msgid "``opscode_erchef['vip']``"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:111
+# 05569421e6374ea4b9ac1d648be09381
+msgid "opscode-expander"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_expander.rst:4
+# d2eb9338edb64126a95dc974b0fe4044
+msgid "The |service expander| service is used to process data (pulled from the |service rabbitmq| service's message queue) so that it can be properly indexed for search."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:4
+# 43c6deb126b849058c0c45fdddb4c9ea
+msgid "This configuration file has the following settings for ``opscode-expander``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:12
+# 98424f3680cf4bdc9e7fa71fa33aa766
+msgid "``opscode_expander['consumer_id']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:13
+# d9ba3ebe48c24680b84223df7b6dcd3a
+msgid "|id consumer| Default value: ``default``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:14
+# 10eda51882f14a7f9825feee1ffa1363
+msgid "``opscode_expander['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:15
+# 76b4106880a34563b883e3199cd1ac59
+msgid "|directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-expander``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:16
+# e49aec5aa9544d4fbfbf9de0332b1ba3
+msgid "``opscode_expander['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:18
+# f418457059074810a5e1ed4b049d1091
+msgid "``opscode_expander['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:20
+# 116a00391e464518bf37d6a923d16ad8
+msgid "``opscode_expander['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:21
+# 378a7c7731514f7f9ad7ebb5f8edb816
+msgid "|directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-expander``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:22
+# 4dedb13c050e4a068cddd264389a2928
+msgid "``opscode_expander['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:24
+# 32b89068559b48a6b6bd484ca2d14494
+msgid "``opscode_expander['nodes']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:25
+# fda0876328874f108ca289cf711527b8
+msgid "|worker_processes| Default value: ``2``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:26
+# 57b959f5824c4300bb098d8615c7d462
+msgid "``opscode_expander['reindexer_log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_expander.rst:27
+# 024b99de89354e1e9ebf3f5c1955b04b
+msgid "|directory expander_reindexer| Default value: ``/var/log/opscode/opscode-expander-reindexer``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:117
+# 916fce5651d04e65b16476c8b256b7e7
+msgid "opscode-solr4"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_solr4.rst:4
+# 21c69226123746909ae99a15113d0f7b
+msgid "The |service solr| service is used to create the search indexes."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:4
+# f09a5397a5794e518534292dc9c54554
+msgid "This configuration file has the following settings for ``opscode-solr4``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:12
+# 55ceaa42ee2c4526a513475ed5594b76
+msgid "``opscode_solr4['auto_soft_commit']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:13
+# 492f672a619d44ef82799120b2e252ca
+msgid "|solr_auto_soft_commit| Default value: ``1000``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:14
+# 48feee7e81cd4447bb3e1f3ab51e5b1e
+msgid "``opscode_solr4['commit_interval']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:15
+# 46c941290fa348c08662a354b8e6484d
+msgid "|solr_commit_interval| This value should be tuned carefully. |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds)."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:16
+# 66184a49e65944b9b59c8883fa994c57
+msgid "``opscode_solr4['data_dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:17
+# ff9f979c07404e238c75cf7eb31ce2ef
+msgid "|directory generic_data| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-solr4/data``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:18
+# c81ac5ed73fc4f04bc6ae0387788da86
+msgid "``opscode_solr4['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:19
+# aa33191fc33549e68b778f535398e707
+msgid "|directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-solr4``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:20
+# 7dff3a7bd18a4f51a23a14f1e9acbdcd
+msgid "``opscode_solr4['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:22
+# 484a74ffd997424c9ee8330acd74ff8b
+msgid "``opscode_solr4['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:24
+# 3d9472b6a1584598b35e0b3633ad03ca
+msgid "``opscode_solr4['heap_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:25
+# 47fcde3caece4b979bc22c99eea52195
+msgid "|heap_size solr| The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``, which is equivalent to 25% of the system memory or 1024 (MB, but this setting is specified as an integer number of MB in EC11), whichever is smaller."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:26
+# 47a789cf71194e83ab384fc26b205aae
+msgid "``opscode_solr4['ip_address']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:27
+# 28d7ffa5594c47eb8833d5a0f5fb63b5
+msgid "|solr_ip_address| Default value: ``127.0.0.1``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:28
+# 9ece171d356d412da5ba054ead82c728
+msgid "``opscode_solr4['java_opts']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:29
+# 4a3a9973bf914566ab587eb8b687b9ed
+msgid "|solr_java_opts| (``-XX:NewSize`` is configured using the ``new_size`` setting.) Default value: ``\" \"`` (empty)."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:30
+# 0f28c3f9425d4ea893427887e91bfd2b
+msgid "``opscode_solr4['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:31
+# a7128a918b0b4c6e81980003683dbf11
+msgid "|directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-solr4``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:32
+# 645d51f218c247d79ddac55c6c60dd44
+msgid "``opscode_solr4['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:34
+# cf22fe76ecb649458c83e91feeaf4c6f
+msgid "``opscode_solr4['max_commit_docs']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:35
+# 190fa91a0f7646d29bf4653123ce702b
+msgid "|solr_max_commit_docs| This value should be tuned carefully.  |solr_update_frequency_caveat| Default value: ``1000`` (every 1000 documents)."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:36
+# 0bbad2beb4634e58bed9affee02efd7c
+msgid "``opscode_solr4['max_field_length']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:37
+# cdfea59a499a4907831e55dccaf29c0d
+msgid "|solr_max_field_length| Default value: ``100000`` (increased from the |apache solr| default value of ``10000``)."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:38
+# 35671c1e1d0b42f582cd43765ffc324f
+msgid "``opscode_solr4['max_merge_docs']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:39
+# d91fd3a2ea0e41088d9b8410bbec3e6a
+msgid "|solr_max_merge_docs| Default value: ``2147483647``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:40
+# c2978ef1b47041238b4e2c2d3fd82103
+msgid "``opscode_solr4['merge_factor']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:41
+# 00a47289bf83436986aeef60c04c1a82
+msgid "|solr_merge_factor| Default value: ``15``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:42
+# b14386df83104e03a63a672e907bec95
+msgid "``opscode_solr4['new_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:43
+# 603ef85b2ca240bfad9e3685426bfbfe
+msgid "|solr_new_size| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:44
+# 8b58da4107e14339af3a3c2e038839ae
+msgid "``opscode_solr4['poll_seconds']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:45
+# 7fb43e44bf0d416a827399fe2d332a47
+msgid "|solr_poll_seconds| Default value: ``20``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:46
+# 2c189e57b22c4d77ad577ee645f42d26
+msgid "``opscode_solr4['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:47
+# 93e17a32902d4a5b9154493e9276487a
+msgid "|port service| Default value: ``8983``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:48
+# e3af9a601038474a8b93e5193659f8a2
+msgid "``opscode_solr4['ram_buffer_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:49
+# 917bfcaeb6c9439784d6e0a8df71d4cf
+msgid "|solr_ram_buffer_size| Default value: ``100``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:50
+# 53426a6e0c204e4b9840eab3c7f28f02
+msgid "``opscode_solr4['url']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:51
+# 56089bb6dec54c879bf6a61a44ad2f74
+msgid "Default value: ``\"http://localhost:8983/solr\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_opscode_solr4.rst:52
+# 9bb49ca396374eb5896676703c30109e
+msgid "``opscode_solr4['vip']``"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:123
+# 2c0a59f9cd924015a69c7c092867524b
+msgid "postgresql"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_postgresql.rst:4
+# 32cefe0aed764d2cb4e5bb9bbdcf4bf9
+msgid "The |service postgresql| service is used to store node, object, and user data."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:4
+# 9383c5a99e364df09a049a01a3f5a2f6
+msgid "This configuration file has the following settings for ``postgresql``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:12
+# 4fa767c64bbc4abda6cc20823a4780b8
+msgid "``postgresql['checkpoint_completion_target']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:13
+# 2070850d2f464a679e1c28933de275c3
+msgid "|checkpoint_completion_target| Default value: ``0.5``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:14
+# 6bddaaa39fc14b648856b6ab6f6f0a0e
+msgid "``postgresql['checkpoint_segments']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:15
+# 3cd1154d058d43eebbe429c00ea96541
+msgid "|checkpoint_segments| Default value: ``3``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:16
+# 8cedf31d3e3a4c89995446782f7db99c
+msgid "``postgresql['checkpoint_timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:17
+# bbd0575ad2104794bbabfc114b7a3bf5
+msgid "|checkpoint_timeout| Default value: ``5min``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:18
+# fae6cf570d9a44418ecaeb919a913014
+msgid "``postgresql['checkpoint_warning']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:19
+# 97889f769f4a426d8c6868c321322d6b
+msgid "|checkpoint_warning| Default value: ``30s``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:20
+# 24cf8b225f0846bd924bc6ca8cdd1c35
+msgid "``postgresql['data_dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:21
+# 991855966ff44ad2a4bd29a084342657
+msgid "|directory generic_data| |default_value_recommended| Default value: ``/var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}/data``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:22
+# 75cdca999c7047468e264b4b9168efd8
+msgid "``postgresql['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:23
+# 7d9c40b003744db88ddfdedebae91659
+msgid "|directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:24
+# 07e7e895865342e986173ee5e6e4cbc9
+msgid "``postgresql['effective_cache_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:25
+# 4db90b2c28034458a90794ccf57e0ba5
+msgid "|effective_cache_size postgresql| Default value: 50% of available RAM."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:26
+# 8e625bb68c334d6aaf231c6aef12e8e1
+msgid "``postgresql['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:28
+# 9453528ea8544630bf4bb7b266cdaf74
+msgid "``postgresql['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:30
+# b94b339a444a4da498557c68c3180e6f
+msgid "``postgresql['home']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:31
+# 0a906d94647c4e1ea9e2c12d2220f11c
+msgid "|directory postgresql_home| Default value: ``/var/opt/opscode/postgresql``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:32
+# 6f53eee5172142f6b8707ffd3dcb5399
+msgid "``postgresql['keepalives_count']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:33
+# 4d060c68373e448db3fea9491b5d0a26
+msgid "The maximum number of keepalive proves that should be sent before dropping a connection. Default value: ``2``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:34
+# e51f3c37884845708fcac275cad55081
+msgid "``postgresql['keepalives_idle']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:35
+# 83942ad415b84187ac1dcbef386c3017
+msgid "The amount of time (in seconds) a connection must remain idle before keepalive probes will resume. Default value: ``60``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:36
+# c761073a768f4c718cdb6095c66a3828
+msgid "``postgresql['keepalives_interval']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:37
+# e711bf912d5042bfbcb8a7888c60e3fa
+msgid "The amount of time (in seconds) between keepalive probes. Default value: ``15``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:38
+# fc491eda465945d0947969859632e9b3
+msgid "``postgresql['listen_address']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:39
+# 04418a1f651b488fb3b58aa7a1e7b0c6
+msgid "|port listen_postgresql| Default value: ``localhost``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:40
+# b027ba9707914427b4a483adefa08a63
+msgid "``postgresql['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:41
+# e1cb7e9e978d474eb77bbe499ac8f993
+msgid "|directory logs| |default_value_recommended| Default value: ``/var/log/opscode/postgresql/#{node['private_chef']['postgresql']['version']}``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:42
+# 9a77e476fe194f50aeb1ea8e88dbf3f4
+msgid "``postgresql['log_min_duration_statement']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:43
+# 4da03e95097142e99d0426c0adcf4b7f
+msgid "|log_rotation min_duration| Possible values: ``-1`` (disabled, do not log any statements), ``0`` (log every statement), or an integer greater than zero. When the integer is greater than zero, this value is the amount of time (in milliseconds) that a query statement must have run before it is logged. Default value: ``-1``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:44
+# 62a00771027a4ac89b68f1522a94c772
+msgid "``postgresql['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:46
+# 217b394761f14b06b7b96e69b32ce7da
+msgid "``postgresql['max_connections']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:47
+# 19d7f6026bfc4142a069c98f5beab1b9
+msgid "|max_connections| Default value: ``350``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:48
+# da7c693b8e104f26850b1317e3666861
+msgid "``postgresql['md5_auth_cidr_addresses']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:49
+# 388f54aeeeb24f5db1395306b9a187b1
+msgid "Use instead of ``trust_auth_cidr_addresses`` to encrypt passwords using MD5 hashes. Default value: ``[ '127.0.0.1/32', '::1/128' ]``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:50
+# eb6b48114f7a45d49db4df0313a52fd8
+msgid "``postgresql['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:51
+# 09eb2b6f810644709cf6aa9334ee26d0
+msgid "|port service| Default value: ``5432``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:52
+# def8ae208fc74972bfff32f7675a3113
+msgid "``postgresql['shared_buffers']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:53
+# 1a3c665cd9ad429ab639827d1878dbcd
+msgid "|shared_buffers postgresql| Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:54
+# 7a005043166848dbb77fa52b9e119eac
+msgid "``postgresql['shell']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:55
+# 8b849f27d3c24152a9ca71ff4152e45a
+msgid "Default value: ``/bin/sh``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:56
+# 1504044046f245beb885c0e891cbcbef
+msgid "``postgresql['shmall']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:57
+# a72e3da0acd245919d32c4e1ff1db971
+msgid "The total amount of available shared memory. Default value: ``4194304``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:58
+# d1afb151412a45cbb4a44ef6a30f4745
+msgid "``postgresql['shmmax']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:59
+# 2d5949e5ac6645278fc6807b2e20c95b
+msgid "The maximum amount of shared memory. Default value: ``17179869184``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:60
+# 94a57226ad4347c4b3eb511ebb6b0477
+msgid "``postgresql['sql_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:61
+# 799dcabb6a5b4551baafbeaab894e19c
+msgid "The password for the |postgresql| user account. Default value: ``snakepliskin``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:62
+# 27c6dc6997134c629e423faffedd0b37
+msgid "``postgresql['sql_ro_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:63
+# 457f7972c47540f9a93e0c3ba572eac7
+msgid "Default value: ``shmunzeltazzen``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:64
+# b1964bf4492d4b4abebf5a20f5e69901
+msgid "``postgresql['sql_ro_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:65
+# 84734060e3844894bb050d281d5580a1
+msgid "Default value: ``opscode_chef_ro``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:66
+# 8d0cbf5fd1514071883a5db41810902d
+msgid "``postgresql['sql_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:67
+# 853c974a1b6842e78c11cf7b8bf0ef18
+msgid "Default value: ``opscode_chef``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:68
+# d4149604521e442d9a783ca01f97f7cd
+msgid "``postgresql['trust_auth_cidr_addresses']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:69
+# f0363b0de0144b9da3914a14b4ec6a9a
+msgid "Use for clear-text passwords. See ``md5_auth_cidr_addresses``. Default value: ``'127.0.0.1/32', '::1/128'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:70
+# d6ea5973da5a420391d80646167c3f8b
+msgid "``postgresql['user_path']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:71
+# 7ad8b5c1275e4eb89edbf9ebdd5ab21f
+msgid "Default value: ``/opt/opscode/embedded/bin:/opt/opscode/bin:$PATH``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:72
+# 2c1d091289754f75a5493656185bbe4d
+msgid "``postgresql['username']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:73
+# 2250e7221cbe40b69c7517f9528406e8
+msgid "|name user postgresql| Default value: ``opscode-pgsql``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:74
+# b3716b924b6a4c2e95711c0786ec3409
+msgid "``postgresql['version']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:75
+# 93312ef6a6304bee8cb5de1aed7406c2
+msgid "The (currently) hardcoded version of |postgresql|. Default value: ``\"9.2\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:76
+# 3ab248aa95524e359f0543da3e57ec18
+msgid "``postgresql['vip']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:78
+# 4fac1386b6ea4da7aad77b0f5a4f6766
+msgid "``postgresql['work_mem']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_postgresql.rst:79
+# 36f7da1bb76f4e3a850bd5419b4e9da7
+msgid "|work_mem| Default value: ``8MB``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:129
+# 5fc146ad46aa40dab5a17c36dd84e4e4
+msgid "rabbitmq"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_rabbitmq.rst:4
+# 4aece0ab52504397a87b850edbddd7ad
+msgid "The |service rabbitmq| service is used to provide the message queue that is used by the |chef server| to get search data to |apache solr| so that it can be indexed for search."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:4
+# 9b3e86e62dc44592b8cad16372ae3a4d
+msgid "This configuration file has the following settings for ``rabbitmq``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:12
+# e0b387766fcc43a59a19bf8e485419f5
+msgid "``rabbitmq['actions_exchange']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:13
+# 688952dc09ab4e51a8caa8f5694183fa
+msgid "The name of the exchange to which |chef actions| publishes actions data. Default value: ``'actions'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:14
+# e1bbadbd65294a86bb1966aec80b82ad
+msgid "``rabbitmq['actions_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:15
+# 0cce737eca3f4d68aaa975a77f22bebc
+msgid "The password for the ``actions_user``. Default value: ``'changeme'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:16
+# 73a2a9c8a4b74e9b95b12c4d92ac2110
+msgid "``rabbitmq['actions_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:17
+# a08113a878ce44f198f63b8af4c5fc55
+msgid "The user with permission to publish actions data. Default value: ``'actions'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:18
+# 83ab68aadea74472a13b5b86bcdf4805
+msgid "``rabbitmq['actions_vhost']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:19
+# a7cf588db88f4a89a0060c9cdf8ad5a2
+msgid "The virtual host to which |chef actions| publishes actions data. Default value: ``'/analytics'``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:20
+# e5a7d39158bf4ec1a1f72593a33b25e6
+msgid "``rabbitmq['consumer_id']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:21
+# 949c6b8c884045618a8f884bd27b7a89
+msgid "The identity of the consumer to which messages are published. Default value: ``\"hotsauce\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:22
+# 1250f2df74fa4178ac09310396fb693f
+msgid "``rabbitmq['data_dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:23
+# 38996bc6967744f8b18cdaa324649a94
+msgid "|directory generic_data| |default_value_recommended| Default value: ``\"/var/opt/opscode/rabbitmq/db\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:24
+# 1d85d417da294e1a905a3d6610c11ab9
+msgid "``rabbitmq['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:25
+# d6e92ff3d8934a1f8aa7d60d558bf481
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/opscode/rabbitmq\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:26
+# 56bc856a34244d5d85c53bb28197b8b2
+msgid "``rabbitmq['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:28
+# c6747c73d9ce423fa9c742766e29117b
+msgid "``rabbitmq['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:30
+# 684869be22464e1899fb52fb7cade753
+msgid "``rabbitmq['jobs_password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:31
+# e4de86eafa0e4b50bd7a7898792035dd
+msgid "Default value: ``\"workcomplete\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:32
+# 6284320b1c9b4a5193ecfd305ee4aa27
+msgid "``rabbitmq['jobs_user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:33
+# b5f5251db02d4c31ba4d456c959b2972
+msgid "Default value: ``\"jobs\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:34
+# a8dbcb62a4ee4019b13b91621c76c592
+msgid "``rabbitmq['jobs_vhost']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:35
+# fef7617284d5493aaf8850cdbee26faf
+msgid "Default value: ``\"/jobs\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:36
+# ee33ffcdcd734161b4d1eff17beaa372
+msgid "``rabbitmq['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:37
+# 08f3e4f8de5a49499f33dbaad3e342b5
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/rabbitmq\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:38
+# ec64ec4797d54520936021e587283ae1
+msgid "``rabbitmq['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:40
+# 7e56ccdec4c4433c872b595394a2cf80
+msgid "``rabbitmq['node_ip_address']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:41
+# 347d0a0a280943e7aac4adb7dc0d60b1
+msgid "|ip_address rabbitmq| Default value: ``\"127.0.0.1\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:43
+# 09919f78762f4f5a85f91b28326f8896
+msgid "|analytics rabbitmq_settings| When the |chef analytics| server is configured as a standalone server, change this value to ``0.0.0.0``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:44
+# 87a79bfe8b564db1bb90f53508362707
+msgid "``rabbitmq['node_port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:45
+# c2157b993b8e4311b88eae78c6aab82e
+msgid "|port service| Default value: ``\"5672\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:46
+# 98d6f1bd52ea411097e83452de4958c3
+msgid "``rabbitmq['nodename']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:47
+# d02fb71107a24bcc92d66e9769757b22
+msgid "|name node| Default value: ``\"rabbit@localhost\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:48
+# d629751541904a548e8a365bdfe95105
+msgid "``rabbitmq['password']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:49
+# 0564330dee8944a58ee3e62555c59736
+msgid "|password rabbitmq| Default value: ``\"chefrocks\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:50
+# fe715e28855b4f9d8ef77e7ad88e2355
+msgid "``rabbitmq['reindexer_vhost']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:51
+# 1e4813aeef084790924403452c1af045
+msgid "Default value: ``\"/reindexer\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:52
+# d8606322ef824aad86892d8ade735939
+msgid "``rabbitmq['user']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:53
+# 5f5ca17d09e24e35861dc0d18100ea20
+msgid "Default value: ``\"chef\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:54
+# 1d9702a4669d489fb18597ed531514d2
+msgid "``rabbitmq['vhost']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:55
+# 58d1bb9da0664bf99480a346460a5f66
+msgid "Default value: ``\"/chef\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:56
+# c2ffa06d6ec44acb83a33f9f0055845b
+msgid "``rabbitmq['vip']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst:59
+# ce29b9669e994c2fabbf1aa76609c0bf
+msgid "|analytics rabbitmq_settings| When the |chef analytics| server is configured as a standalone server, change this value to the backend VIP address for the |chef server|."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:135
+# dcf1e65f26a34050a798231645ba6193
+msgid "redis_lb"
+msgstr ""
+
+#: ../../includes_server_services/includes_server_services_redis.rst:4
+# 1ae4c44974804f9cb5542d5f33c4c211
+msgid "The |service redis| service is used to store authorization data used by the |service authz| service."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:4
+# 415315ecda96429382714309f6041ac8
+msgid "This configuration file has the following settings for ``redis_lb``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:12
+# 006779d8aee94914af3d7ef3f1a5ced8
+msgid "``redis_lb['activerehashing']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:13
+# 868a9629ee4e47e98bab27d8ca60898a
+msgid "|active_rehashing| Default value: ``\"no\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:14
+# 1a0bce6dfc0047e6bcb61962b15ec34b
+msgid "``redis_lb['aof_rewrite_min_size']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:15
+# 2289f8acbaad461fb16ac64fdbc48f9c
+msgid "|appendonly_min_size| Default value: ``\"16mb\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:16
+# d5073e71d7b74c53b8ba4aff84e4a34d
+msgid "``redis_lb['aof_rewrite_percent']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:17
+# f8c9fbc2623e4042852af54946db62a6
+msgid "|appendonly_percent| Default value: ``\"50\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:18
+# baef9f7685fe4f85a3dcacc6f940abbd
+msgid "``redis_lb['appendfsync']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:19
+# 5fe25495030d40e8a54fa1fbeba8c41f
+msgid "|appendfsync| Default value: ``\"always\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:20
+# 2d25f3a3ac344525b138c062ba490e30
+msgid "``redis_lb['appendonly']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:21
+# ca725e4c43bd43ef9f0e6bd13784f80b
+msgid "|appendonly| Set to ``yes`` to dump data to an append-only log file. Default value: ``\"no\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:22
+# 80449e90c38e46579a15844aa7aaa0a7
+msgid "``redis_lb['bind']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:23
+# 8699e35f99ab4956a7d96b8236f20034
+msgid "|bind redis| Default value: ``\"127.0.0.1\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:24
+# 472d979b475544c0b344fb2c388edb20
+msgid "``redis_lb['data_dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:25
+# 89c19dde42d84309ad1ee7afcb569e43
+msgid "|directory generic_data| |default_value_recommended| Default value: ``\"/var/opt/opscode/redis_lb/data\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:26
+# a922908028034b80bbda7aca31de9cda
+msgid "``redis_lb['databases']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:27
+# f77742c9eb7c4ac6ab321c3d8eacbcc2
+msgid "|database_quantity| Default value: ``\"16\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:28
+# 9259f3c5989e4a47b6994c07b254c3de
+msgid "``redis_lb['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:29
+# 68786ce0635742d7af22afeca4068bf5
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/opscode/redis_lb\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:30
+# 63bd7094c7e54b9e9e2c5fc1ded8790c
+msgid "``redis_lb['enable']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:32
+# 6a22177d697b479c8dbe0b5fb8802176
+msgid "``redis_lb['ha']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:34
+# b8be3ac0a47f41bfbcd570db1729763b
+msgid "``redis_lb['keepalive']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:35
+# d56e1a5371a54f93a35d0af3c95218d9
+msgid "|keepalive request_time| Default value: ``\"60\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:36
+# 00152b2fcce5449bbd77183dd83461db
+msgid "``redis_lb['log_directory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:37
+# 086813da61ef4bc6a70b12e108d42624
+msgid "|directory logs| |default_value_recommended| Default value: ``\"/var/log/opscode/redis_lb\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:38
+# 7bc049e98a9047a597bbaf930d796a89
+msgid "``redis_lb['log_rotation']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:40
+# 394e125281494d8d945d3e35315fc9cf
+msgid "``redis_lb['loglevel']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:41
+# a9f38fd929064c799db2b4111429fa23
+msgid "|log_level|. Possible values: ``debug``, ``notice``, ``verbose``, and ``warning``. Default value: ``\"notice\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:42
+# 5ee711831ee9410ea4b51776fb7afdc4
+msgid "``redis_lb['maxmemory']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:43
+# 12810a24f08d43a9a9f6a9bf5ac67e00
+msgid "|memory maximum_redis| Default value: ``\"8m\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:44
+# d349ecea86d5427aa4afdd7e93dbcbff
+msgid "``redis_lb['maxmemory_policy']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:45
+# ab2a0c9420a245cab0dcacd858319cd7
+msgid "|memory maximum_policy_redis| Default value: ``\"noeviction\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:46
+# 7bef501238b744b794b2a9903c0d64d9
+msgid "``redis_lb['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:47
+# 79896d6fcf9a42fc9078b5f5c1bc9a8b
+msgid "|port service| Default value: ``\"16379\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:48
+# 862cab582be340ff8436894036f438f3
+msgid "``redis_lb['save_frequency']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:49
+# a6adfcb321214ec2a35361f3c16b17c0
+msgid "|save_frequency_redis| ``Default value: ``{ \"900\" => \"1\", \"300\" => \"10\", \"60\" => \"1000\" }``, which will save the database every 15 minutes if at least one key changes, every 5 minutes if at least 10 keys change, and every 60 seconds if 10000 keys change."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:50
+# 79750e2e2af24c1d98b5e46574c7bb64
+msgid "``redis_lb['timeout']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:51
+# e57dd05aa9cc4b0d84a67abcc83ecbc6
+msgid "|timeout redis| Default value: ``\"300\"``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_redis_lb.rst:52
+# d1bff6c608d74bc6ab57fffde726dc61
+msgid "``redis_lb['vip']``"
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:141
+# 0540c351a137471d91e788e894f686b5
+msgid "upgrades"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_upgrades.rst:4
+# 594b3da876c641dab9f003eab7124c98
+msgid "This configuration file has the following settings for ``upgrades``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_upgrades.rst:12
+# 22a0b8ba9f6846e994252ff6237bbead
+msgid "``upgrades['dir']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_upgrades.rst:13
+# e7652fb374ce417285af2ef9edfe3af0
+msgid "|directory generic| |default_value_recommended| Default value: ``\"/var/opt/opscode/upgrades\"``."
+msgstr ""
+
+#: ../source/config_rb_server_optional_settings.rst:145
+# 75ef87d34a004bd3a1ae09061264aa11
+msgid "user"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:4
+# c05c81f7ed0c4842b687530fba825ed1
+msgid "This configuration file has the following settings for ``user``:"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:12
+# fcbbbcef85e44efb8a3613d46b7902e5
+msgid "``user['home']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:13
+# 07df8990249240c483aa60b19a412ece
+msgid "The home directory for the user under which |chef server| services run. Default value: ``/opt/opscode/embedded``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:14
+# 5121c84d56144ec3bdea94d88b22a42d
+msgid "``user['shell']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:15
+# 53dbfaaf6c89482692860c966783c488
+msgid "The shell for the user under which |chef server| services run. Default value: ``/bin/sh``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:16
+# 7a1b47b17b4d498781235b1cb3597e7b
+msgid "``user['username']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_server_settings_user.rst:17
+# 859a591cd27d42ab93e753d9dcd3500f
+msgid "The user name under which |chef server| services run. Default value: ``opscode``."
+msgstr ""
+

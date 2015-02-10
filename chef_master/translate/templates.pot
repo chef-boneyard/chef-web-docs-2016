@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-10 09:43-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/templates.rst:8
+# 165507e73b58408fada14aa895fd0311
+msgid "About Templates"
+msgstr ""
+
+#: ../../includes_template/includes_template.rst:4
+# 4d85a550615945b5bf48dae4a8f61526
+msgid "A cookbook template is an |erb| template that is used to generate files based on the variables and logic contained within the template. Templates may contain |ruby| expressions and statements and are a great way to manage configuration files across an organization. Use the |resource template| resource to add cookbook templates to recipes; place the corresponding |erb| template in a cookbook's ``/templates`` directory."
+msgstr ""
+
+#: ../source/templates.rst:12
+# af61ac5212a24e1bb6cd99842cdf72bd
+msgid "|note cookbook template erubis|"
+msgstr ""
+
+#: ../source/templates.rst:15
+# 76c138d0460e4ea69ddc8c2105ae53de
+msgid "Requirements"
+msgstr ""
+
+#: ../../includes_template/includes_template_requirements.rst:4
+# 74c22f3201064d29aed682c070aa3655
+msgid "To use a template, two things must happen:"
+msgstr ""
+
+#: ../../includes_template/includes_template_requirements.rst:6
+# 733da21c43e543c293326574bb06a3e8
+msgid "A template resource must be added to a recipe"
+msgstr ""
+
+#: ../../includes_template/includes_template_requirements.rst:7
+# b8e4fcf7da3044e6ace286d122c45326
+msgid "An |erb| template must be added to a cookbook"
+msgstr ""
+
+#: ../../includes_template/includes_template_requirements.rst:9
+# 6a4f6e732ffb49b5a364b99069264130
+msgid "For example, the following template file and template resource settings can be used to manage a configuration file named |path etc sudoers|. Within a cookbook that uses |sudo cmd|, the following resource could be added to |path recipes default rb|:"
+msgstr ""
+
+#: ../../includes_template/includes_template_requirements.rst:24
+# e79f6d51c1c24406be99d2832fd5d535
+msgid "And then create a template called ``sudoers.erb`` and save it to ``templates/default/sudoers.erb``:"
+msgstr ""
+
+#: ../../includes_template/includes_template_requirements.rst:51
+# 8261ad8b7a684f2891366fedeb5b439e
+msgid "And then set the default attributes in |path attributes default rb|:"
+msgstr ""
+
+#: ../source/templates.rst:19
+# 22ffcf26f10c4f88b2bc895354d07ed6
+msgid "Variables"
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:4
+# 1c443cc9225f4b63afc8a9b60e955799
+msgid "A template is an |erb| template. An |erb| template allows |ruby| code to be embedded inside a text file within specially formatted tags. |ruby| code can be embedded using expressions and statements. An expression is delimited by ``<%=`` and ``%>``. For example:"
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:10
+# 1b76fdc82668439a9dc3fd0db753cfe0
+msgid "A statement is delimited by a modifier, such as ``if``, ``elseif``, and ``else``. For example:"
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:22
+# cdd1198b130a416d98b504f91a1dd30d
+msgid "Using a |ruby| expression is the most common approach for defining template variables because this is how all variables that are sent to a template are referenced. Whenever a template needs to use an ``each``, ``if``, or ``end``, use a |ruby| statement."
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:24
+# 7613a87093894889a77415c0abdcfd27
+msgid "When a template is rendered, |ruby| expressions and statements are evaluated by the |chef client|. The variables listed in the resource's variables parameter and the node object are evaluated. The |chef client| then passes these variables to the template, where they will be accessible as instance variables within the template; the node object can be accessed just as if it were part of a recipe, using the same syntax."
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:26
+# 356f40d642914664862d3c091f0ed2b8
+msgid "For example, a simple template resource like this:"
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:38
+# 222e546a08aa41c189f82cb716d58c7b
+msgid "And a simple |erb| template like this:"
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:44
+# 092deebe0c63470ca31ebb9bf4069b68
+msgid "Would render something like:"
+msgstr ""
+
+#: ../../includes_template/includes_template_variables.rst:50
+# 22a26c1c175143dda713786b47951524
+msgid "Even though this is a very simple example, the full capabilities of |ruby| can be used to tackle even the most complex and demanding template requirements."
+msgstr ""
+
+#: ../source/templates.rst:23
+# 7304e4910b0a4d8e8f909482da372d65
+msgid "File Specificity"
+msgstr ""
+
+#: ../../includes_template/includes_template_specificity.rst:4
+# 30e67dfa555b45ffa6f3c101ad2a3677
+msgid "A cookbook is frequently designed to work across many platforms and is often required to distribute a specific template to a specific platform. A cookbook can be designed to support the distribution of templates across platforms, while ensuring that the correct template ends up on each system."
+msgstr ""
+
+#: ../../includes_template/includes_template_11-16_specificity_pattern.rst:4
+# 62a97743dfe147beac6dbb4de34451fa
+msgid "The pattern for template specificity depends on two things: the lookup path and the source attribute. The first pattern that matches is used:"
+msgstr ""
+
+#: ../../includes_template/includes_template_11-16_specificity_pattern.rst:6
+# 22547554a1904c3e89db6f0f835a79f9
+msgid "/host-$fqdn/$source"
+msgstr ""
+
+#: ../../includes_template/includes_template_11-16_specificity_pattern.rst:7
+# 89babf131e684308a5575f628baaf1ea
+msgid "/$platform-$platform_version/$source"
+msgstr ""
+
+#: ../../includes_template/includes_template_11-16_specificity_pattern.rst:8
+# 697b6c7bb40f41d2ad2200ab99c6518f
+msgid "/$platform/$source"
+msgstr ""
+
+#: ../../includes_template/includes_template_11-16_specificity_pattern.rst:9
+# f99463ac98a1484aaa505bdaa4e2a5ca
+msgid "/default/$source"
+msgstr ""
+
+#: ../../includes_template/includes_template_specificity_example.rst:4
+# 4bc7df338e3343b2bcd68499eca257e7
+msgid "A cookbook may have a ``/templates`` directory structure like this:"
+msgstr ""
+
+#: ../../includes_template/includes_template_specificity_example.rst:15
+# 48abda4eb2994812a8f12db38d329346
+msgid "and a resource that looks something like the following:"
+msgstr ""
+
+#: ../../includes_template/includes_template_specificity_example.rst:26
+# 9e5707da24b24224a459f127d8b090a4
+msgid "This resource would be matched in the same order as the ``/templates`` directory structure. For a node named \"host-node-desktop\" that is running |windows 7|, the second item would be the matching item and the location:"
+msgstr ""
+
+#: ../source/templates.rst:31
+# 87b5e7f9ab804c9695d633681e25c34d
+msgid "Host Notation"
+msgstr ""
+
+#: ../../includes_template/includes_template_host_notation.rst:4
+# c87d790813c44290a9b96472d61e7475
+msgid "The naming of folders within cookbook directories must literally match the host notation used for template specificity matching. For example, if a host is named ``foo.example.com``, then the folder must be named ``host-foo.example.com``."
+msgstr ""
+
+#: ../source/templates.rst:35
+# a95f180e562240de9c9f8ed98589daae
+msgid "Transfer Frequency"
+msgstr ""
+
+#: ../../includes_template/includes_template_transfer_frequency.rst:4
+# be446480d268449fbf7465440557f279
+msgid "The |chef client| caches a template when it is first requested. On each subsequent request for that template, the |chef client| compares that request to the template located on the |chef server|. If the templates are the same, no transfer occurs."
+msgstr ""
+
+#: ../source/templates.rst:39
+# 47942cb4e9d746608b3ed79a76781757
+msgid "Partial Templates"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials.rst:5
+# 407f7a988a0c47b2a1b639a46864eada
+msgid "A template can be built in a way that allows it to contain references to one (or more) smaller template files. (These smaller template files are also referred to as partials.) A partial can be referenced from a template file in one of the following ways:"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials.rst:7
+# 28856797cf424459b9bcc9407b589cfa
+msgid "By using the |ruby| ``render`` method in the template file"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials.rst:8
+# 010af3b7fac1481e9ad3ded9b84f373a
+msgid "By using the |resource template| resource and the ``variables`` parameter."
+msgstr ""
+
+#: ../source/templates.rst:43
+# 057e9c43742a4a9181e141b3c77ca639
+msgid "``variables`` Attribute"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_variables_attribute.rst:5
+# 125dd6494b5b47f08e453786e7d20576
+msgid "The ``variables`` attribute of the |resource template| resource can be used to reference a partial template file by using a |ruby hash|. For example:"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_variables_attribute.rst:17
+# 5a482af242464f3794c12e71f4e9b04b
+msgid "where each of the partial template files can then be combined using normal |ruby| template patterns within a template file, such as:"
+msgstr ""
+
+#: ../source/templates.rst:47
+# 35beac6ccf0c4d269f08251119cfc303
+msgid "``render`` Method"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:5
+# 2af04ca7517744b9a2886360f7daae81
+msgid "Use the ``render`` method in a template to reference a partial template file:"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:11
+# f91f8ad025f04892bd8f10204dea4d17
+msgid "where ``partial_name`` is the name of the partial template file and ``:option`` is one (or more) of the following:"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:17
+# 7704978d01b54358b90caf9904807d3d
+msgid "Option"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:18
+# f652235a1c8149a0bb06562e7c6a1907
+msgid "Description"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:19
+# b8e639d844ec4564a1323046069d5642
+msgid "``:cookbook``"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:20
+# c4dd654e804641d3b9cd8ea60369dc1a
+msgid "By default, a partial template file is assumed to be located in the cookbook that contains the top-level template. Use this option to specify the path to a different cookbook"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:21
+# fab5fa61953c47cfa8262838ff86166a
+msgid "``:local``"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:22
+# 62fba28d75e34573913197415c346cf8
+msgid "Indicates that the name of the partial template file should be interpreted as a path to a file in the local file system or looked up in a cookbook using the normal rules for template files. Set to ``true`` to interpret as a path to a file in the local file system and to ``false`` to use the normal rules for template files"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:23
+# 1fd77a188b6e47ff80f99bfea3e652b3
+msgid "``:source``"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:24
+# 1ba1edec32234cac97bdc49c041bdda7
+msgid "By default, a partial template file is identified by its file name. Use this option to specify a different name or a local path to use (instead of the name of the partial template file)"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:25
+# 4991d20aef3a4f95af838cc4efc9942f
+msgid "``:variables``"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:26
+# 043e3119d4704a4286b12577538f98c3
+msgid "A hash of ``variable_name => value`` that will be made available to the partial template file. When this option is used, any variables that are defined in the top-level template that are required by the partial template file must have them defined explicitly using this option"
+msgstr ""
+
+#: ../../includes_template/includes_template_partials_render_method.rst:28
+# a2d60f971f9c46bb97c9c52ef916ec17
+msgid "For example:"
+msgstr ""
+
