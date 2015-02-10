@@ -7,3 +7,4 @@ Use |chef spec| to simulate the convergence of resources on a node:
 * Run the |chef client| on your local machine
 * Use |chef zero| or |chef solo|
 * Is an extension of |rspec|, a behavior-driven development (BDD) framework for |ruby|
+* Is the fastest way to test resources
