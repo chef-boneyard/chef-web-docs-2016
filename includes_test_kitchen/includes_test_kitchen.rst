@@ -7,4 +7,4 @@ Use |kitchen| to automatically test cookbook data across any combination of plat
 * Defined in a |kitchen yml| file
 * Uses a driver plugin architecture
 * Supports cookbook testing across many cloud providers and virtualization technologies
-* Supports all of the common testing frameworks used by the |ruby| community
+* Supports all common testing frameworks that are used by the |ruby| community
