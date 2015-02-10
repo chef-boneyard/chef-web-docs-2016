@@ -6,7 +6,7 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Workflow:**  `Berkshelf <http://berkshelf.com/>`_ | `Librarian <https://github.com/applicationsonline/librarian>`_ | `Spiceweasel <https://github.com/mattray/spiceweasel>`_
 
-**Development tools:**  `Kitchen <https://github.com/test-kitchen/test-kitchen>`_ | `Foodcritic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `ChefSpec <https://github.com/acrmp/chefspec>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Supermarket <https://supermarket.chef.io/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_
+**Development tools:**  `Kitchen <http://docs.chef.io/devkit/kitchen.html>`_ | `Foodcritic <http://docs.chef.io/devkit/foodcritic.html>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `ChefSpec <http://docs.chef.io/devkit/chefspec.html>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Supermarket <https://supermarket.chef.io/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_
 
 **Discussion:** `Guidelines <http://docs.chef.io/community_guidelines.html>`_ | `lists.opscode.com <http://docs.chef.io/community_lists.html>`_ | `Food Fight Show <http://foodfightshow.org/>`_
 
