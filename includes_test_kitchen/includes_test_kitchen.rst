@@ -2,4 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|kitchen| is an integration framework that is used to automatically test cookbook data across any combination of platforms and test suites, as defined by a |kitchen yml| file. |kitchen| uses a driver plugin architecture that allows it to support cookbook testing across many cloud providers and virtualization technologies. |kitchen| supports all of the common testing frameworks used by the |ruby| community.
+Use |kitchen| to automatically test cookbook data across any combination of platforms and test suites:
+
+* Defined in a |kitchen yml| file
+* Uses a driver plugin architecture
+* Supports cookbook testing across many cloud providers and virtualization technologies
+* Supports all of the common testing frameworks used by the |ruby| community
