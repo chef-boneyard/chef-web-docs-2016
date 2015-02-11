@@ -4,6 +4,7 @@
 
 |reporting| has the following requirements:
 
+* |chef server| 12
 * |chef server oec| version 11.0.1 (or later)
 * |chef server oec| 11.1.7 (and earlier) should use |reporting| 1.1.2 (or earlier); |chef server oec| 11.1.8 should use |reporting| 1.1.5
 * |chef client| version 11.6.0 (or later), with the exception of |chef client| version 11.8.0
