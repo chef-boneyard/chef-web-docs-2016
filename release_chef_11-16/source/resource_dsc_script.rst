@@ -1,7 +1,7 @@
 .. THIS PAGE DOCUMENTS chef-client version 11.16
 
 =====================================================
-dsc_script
+dsc_script 
 =====================================================
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
