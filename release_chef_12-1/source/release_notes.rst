@@ -13,6 +13,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **chef-client may be run in audit-mode** Use |chef client_audit| to run audit tests against a node.
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
+* **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -98,6 +99,41 @@ Examples
 **Duplicate control_group names**
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
+
+New ``dsc_script`` attribute
+-----------------------------------------------------
+The following attribute is new for the |resource dsc_script| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``imports``
+     - Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
+
+       .. code-block:: ruby
+
+          imports module_name
+
+       To import specific resources, specify the module name and then the name for each resource in that module to import:
+
+       .. code-block:: ruby
+
+          imports module_name, resource_name_a, resource_name_b, ...
+
+       For example, to import all resources from a module named ``cRDPEnabled``:
+
+       .. code-block:: ruby
+
+          imports cRDPEnabled
+
+       And to import only the ``PSHOrg_cRDPEnabled`` resource:
+
+       .. code-block:: ruby
+
+          imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
 
 
 Changelog
