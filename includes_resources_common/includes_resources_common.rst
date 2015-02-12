@@ -4,7 +4,7 @@
 
 A resource is a statement of configuration policy that:
 
-* Describes the desired state of a piece within your infrastructure
+* Describes the desired state for an item
 * Declares the steps needed to bring that item to the desired state
 * Specifies a resource type---such as ``package``, ``template``, or ``service`` 
 * Lists additional details (also known as attributes), if necessary
