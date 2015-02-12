@@ -5,7 +5,7 @@ An |ohai| plugin can be run independently of a |chef client| run. First, ensure 
 
 .. code-block:: ruby
 
-   Ohai.plugin(:sl) do
+   Ohai.plugin(:Sl) do
      provides "sl"
    
      collect_data(:default) do
@@ -26,7 +26,7 @@ To run that plugin from the command line, use the following command:
 
 .. code-block:: bash
 
-   $ ohai --directory /path/to/plugin_file.rb sl
+   $ ohai --directory /path/to/directory sl
 
 The command will return something similar to:
 
