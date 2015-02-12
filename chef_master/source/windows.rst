@@ -632,10 +632,13 @@ Examples
 
 .. include:: ../../step_resource/step_resource_windows_package_install.rst
 
-**Download a package from a URL**
-
-.. include:: ../../step_resource/step_resource_windows_package_url.rst
-
+.. 
+.. almost!
+.. 
+.. **Download a package from a URL**
+.. 
+.. .. include:: ../../step_resource/step_resource_windows_package_url.rst
+.. 
 
 
 windows_service
