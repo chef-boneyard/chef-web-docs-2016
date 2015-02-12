@@ -449,7 +449,7 @@ Actions
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_dsc_script_attributes.rst
+.. include:: ../../release_chef_12-1/includes_resource_12-0_dsc_script_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
