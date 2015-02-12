@@ -26,13 +26,13 @@
    * - ``flags``
      - |flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
    * - ``imports``
-     - Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module:
+     - Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
 
        .. code-block:: ruby
 
           imports module_name
 
-       To import only specified resources:
+       To import specific resources, specify the module name and then the name for each resource in that module to import:
 
        .. code-block:: ruby
 
