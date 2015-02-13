@@ -168,6 +168,18 @@ Recipes
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_patterns_recipes.rst
 
+Bad Patterns
+=====================================================
+This section covers things that should be avoided when authoring cookbooks and recipes.
+
+node.set
+-----------------------------------------------------
+
+Lamont Granquist, quote: 
+
+"Also you don't want to use node.set, you want to use node.default or maybe node.override if you have to.  When you use node.set that is an alias for node.normal which has the side effect of persisting data permanently in the node object.  If you delete those lines, you'll find the attributes are still set, which can be highly confusing.  The normal and override attribute precedence levels are actually wiped at the start of the chef run and re-built completely by your code which is what you actually want.  You should only use 'node.set' or 'node.normal' if you're doing something like generating a password for a database on the first run and you need to remember that (and even there you should probably use a data bag). And one last thing is that its better to move those kinds of settings into an attributes file if at all possible and not setattributes in recipe code like that."
+
+
 Use the |chef dk_title|
 =====================================================
 This section covers best practices for cookbook and recipe authoring.
