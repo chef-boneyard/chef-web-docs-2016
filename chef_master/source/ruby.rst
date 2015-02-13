@@ -8,7 +8,7 @@ Just Enough Ruby for Chef
 
 ``Chef::Log`` Entries
 =====================================================
-.. include:: ../../includes_ruby/includes_ruby_class_chef_log.rst
+.. include:: ../../includes_ruby/includes_ruby_style_basics_chef_log.rst
 
 The following examples show using ``Chef::Log`` entries in a recipe.
 
