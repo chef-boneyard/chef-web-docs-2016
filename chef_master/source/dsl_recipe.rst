@@ -12,19 +12,19 @@ Common |ruby| techniques can be used with the |dsl recipe| methods.
 
 if Statements
 -----------------------------------------------------
-.. include:: ../../includes_ruby/includes_ruby_statement_if.rst
+.. include:: ../../includes_ruby/includes_ruby_style_basics_statement_if.rst
 
 case Statements
 -----------------------------------------------------
-.. include:: ../../includes_ruby/includes_ruby_statement_case.rst
+.. include:: ../../includes_ruby/includes_ruby_style_basics_statement_case.rst
 
 include? Method
 -----------------------------------------------------
-.. include:: ../../includes_ruby/includes_ruby_method_include.rst
+.. include:: ../../includes_ruby/includes_ruby_style_basics_parameter_include.rst
 
 Array Syntax Shortcut
 -----------------------------------------------------
-.. include:: ../../includes_ruby/includes_ruby_shortcut_array.rst
+.. include:: ../../includes_ruby/includes_ruby_style_basics_array_shortcut.rst
 
 Include Recipes
 =====================================================
