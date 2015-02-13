@@ -50,6 +50,11 @@ Arrays
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_basics_array_lists.rst
 
+.. whitespace arrays assumes you understand what Array#include? is
+.. introduce `[ "foo", "bar", "baz" ].each do |thing|` first, then introduce `%w{foo bar baz}.each do |thing|`
+.. or just use #first or #last, since they are sort of introduced already
+.. %w{debian ubuntu}.first  # => "debian"
+
 Whitespace Arrays
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_style_basics_array_shortcut.rst
@@ -69,10 +74,6 @@ Statements
 if
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_style_basics_statement_if.rst
-
-not_if
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ruby/includes_ruby_style_basics_statement_not_if.rst
 
 case
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
