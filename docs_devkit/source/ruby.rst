@@ -6,7 +6,7 @@ Chef Style Guide
 
 .. warning:: This is a drafty version of a style guide for Chef, specifically about using Ruby and cookbook/recipe authoring.
 
-Basics
+Ruby Basics
 =====================================================
 This section covers the basics of |ruby|.
 
