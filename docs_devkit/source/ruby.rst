@@ -30,7 +30,7 @@ Strings
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_basics_strings.rst
 
-Embed |ruby| in Strings
+|ruby| in Strings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_style_basics_string_embed_ruby.rst
 
@@ -128,7 +128,7 @@ Good Cookbook Patterns
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_patterns_cookbook_good_examples.rst
 
-System and Component Naming
+Naming
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_patterns_system_and_component_naming.rst
 
@@ -136,7 +136,7 @@ Default Recipe
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_patterns_default_recipe.rst
 
-Resource Parameter Order
+Parameter Order
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_patterns_resource_parameter_order.rst
 
