@@ -32,7 +32,7 @@
 
           imports module_name
 
-       To import specific resources, specify the module name and then the name for each resource in that module to import:
+       To import specific resources, specify the module name, and then specify the name for each resource in that module to import:
 
        .. code-block:: ruby
 
