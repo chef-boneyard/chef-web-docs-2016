@@ -85,3 +85,4 @@ The following tools have been developed by members of the |chef| community. Thes
    kitchen
    plugin_kitchen_vagrant
    policy
+   ruby
