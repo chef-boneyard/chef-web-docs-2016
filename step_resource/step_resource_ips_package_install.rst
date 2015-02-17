@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   ips_package "name of package" do
+   ips_package 'name of package' do
      action :install
    end

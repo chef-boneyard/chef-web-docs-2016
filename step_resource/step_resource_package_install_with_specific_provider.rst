@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   package "tar" do
+   package 'tar' do
      action :install
-     source "/tmp/tar-1.16.1-1.rpm"
+     source '/tmp/tar-1.16.1-1.rpm'
      provider Chef::Provider::Package::Rpm
    end

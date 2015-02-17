@@ -4,14 +4,14 @@ Using the default attribute values for the various resources is the recommended 
 
 .. code-block:: ruby
 
-   deploy "name" do
+   deploy 'name' do
      ...
-     symlink_before_migrate       {"config/database.yml" => "config/database.yml"}
+     symlink_before_migrate       {'config/database.yml' => 'config/database.yml'}
      create_dirs_before_symlink   %w{tmp public config}
      purge_before_symlink         %w{log tmp/pids public/system}
-     symlinks                     { "system" => "public/system", 
-                                    "pids" => "tmp/pids", 
-                                    "log" => "log"
+     symlinks                     { 'system' => 'public/system', 
+                                    'pids' => 'tmp/pids', 
+                                    'log' => 'log'
                                   }
      ...
    end
@@ -20,7 +20,7 @@ and then what these layout modifiers look like if they were empty:
 
 .. code-block:: ruby
 
-   deploy "name" do
+   deploy 'name' do
      ...
      symlink_before_migrate       nil
      create_dirs_before_symlink   []
@@ -35,7 +35,7 @@ To clear the default values for a layout modifier:
 
 .. code-block:: ruby
 
-   deploy "name" do
+   deploy 'name' do
      ...
      symlink_before_migrate.clear
      create_dirs_before_symlink.clear

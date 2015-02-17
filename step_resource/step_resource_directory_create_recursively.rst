@@ -5,10 +5,10 @@
 .. code-block:: ruby
 
    %w{dir1 dir2 dir3}.each do |dir|
-     directory "/tmp/mydirs/#{dir}" do
-       mode '0775'
+     directory '/tmp/mydirs/#{dir}' do
        owner 'root'
        group 'root'
+       mode 00775
        action :create
        recursive true
      end
