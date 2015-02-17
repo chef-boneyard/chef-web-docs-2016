@@ -25,7 +25,7 @@ For example:
    directory "/var/lib/foo" do
      owner 'root'
      group 'root'
-     mode '0644'
+     mode '0755'
      action :create
    end
 
