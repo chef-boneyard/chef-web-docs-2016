@@ -60,6 +60,21 @@ Store Keys on Nodes
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_store_on_nodes.rst
 
+Edit a Data Bag Item
+=====================================================
+.. include:: ../../includes_data_bag/includes_data_bag_edit.rst
+
+Using |knife_title|
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_data_bag_edit.rst
+
+.. include:: ../../step_knife/step_knife_data_bag_edit_item.rst
+
+Using |chef manage_title|
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_edit_item.rst
+
+
 Use Data Bags
 =====================================================
 Data bags can be accessed in the following ways:
