@@ -11,5 +11,9 @@ For example:
      # do debian/ubuntu things with the Ruby array %w{} shortcut
    end 
 
+The ``%w`` array will use single-quotes, will not have access to code interpolation, and may a limited set of escape characters: ``\``.
+
+.. note:: Use an upper-case W---``%W``---to create an array with double-quotes, access to code interpolation, and access to all escape characters.
+ 
 .. future example: step_resource_package_use_whitespace_array
 .. future example: step_resource_template_use_whitespace_array
