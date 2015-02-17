@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   breakpoint "before yum_key node['yum']['repo_name']['key']" do
+   breakpoint 'before yum_key node['yum']['repo_name']['key']' do
      action :break
    end
 
@@ -13,16 +13,16 @@
      action :add
    end
 
-   breakpoint "after yum_key node['yum']['repo_name']['key']" do
+   breakpoint 'after yum_key node['yum']['repo_name']['key']' do
      action :break
    end
    
-   breakpoint "before yum_repository 'repo_name'" do
+   breakpoint 'before yum_repository repo_name' do
      action :break
    end
 
-   yum_repository "repo_name" do
-     description "description"
+   yum_repository 'repo_name' do
+     description 'description'
      key node['yum']['repo_name']['key']
      mirrorlist node['yum']['repo_name']['url']
      includepkgs node['yum']['repo_name']['includepkgs']
@@ -30,8 +30,8 @@
      action :create
    end
 
-   breakpoint "after yum_repository 'repo_name'" do
+   breakpoint 'after yum_repository repo_name' do
      action :break
    end
 
-where the ``"name"`` of each breakpoint is an arbitrary string. In the previous example, ``"name"`` is used to indicate if the breakpoint is before or after a resource, and then also to specify which resource.
+where the name of each breakpoint is an arbitrary string. In the previous example, the name is used to indicate if the breakpoint is before or after a resource, and then also to specify which resource.

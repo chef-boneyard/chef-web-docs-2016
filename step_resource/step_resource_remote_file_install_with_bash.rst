@@ -10,9 +10,9 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
 
    #  the following code sample is similar to the ``upload_progress_module`` recipe in the ``nginx`` cookbook: https://github.com/opscode-cookbooks/nginx
 
-   src_filename = "foo123-nginx-module-v#{node['nginx']['foo123']['version']}.tar.gz"
-   src_filepath = "#{Chef::Config['file_cache_path']}/#{src_filename}"
-   extract_path = "#{Chef::Config['file_cache_path']}/nginx_foo123_module/#{node['nginx']['foo123']['checksum']}"
+   src_filename = 'foo123-nginx-module-v#{node['nginx']['foo123']['version']}.tar.gz'
+   src_filepath = '#{Chef::Config['file_cache_path']}/#{src_filename}'
+   extract_path = '#{Chef::Config['file_cache_path']}/nginx_foo123_module/#{node['nginx']['foo123']['checksum']}'
    
    remote_file src_filepath do
      source node['nginx']['foo123']['url']

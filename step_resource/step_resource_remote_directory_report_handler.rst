@@ -13,7 +13,7 @@ The following example shows how to use the |resource remote_directory| resource 
    end
    
    chef_handler 'WindowsRebootHandler' do
-     source "#{node['chef_handler']['handler_path']}/windows_reboot_handler.rb"
+     source '#{node['chef_handler']['handler_path']}/windows_reboot_handler.rb'
      arguments node['windows']['allow_pending_reboots']
      supports :report => true, :exception => false
      action :enable

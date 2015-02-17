@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   file "/tmp/something" do
-     mode '0644'
+   file '/tmp/something' do
+     mode 00644
    end
  
 

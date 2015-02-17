@@ -4,7 +4,7 @@ To pass a block of |python| code before a migration is run:
 
 .. code-block:: ruby
 
-   deploy_revision "/deploy/dir/" do
+   deploy_revision '/deploy/dir/' do
      # other attributes
      # ...
      
@@ -22,7 +22,7 @@ To pass a block of |python| code before a migration is run:
         
        python do
          cwd current_release
-         user "myappuser"
+         user 'myappuser'
          code<<-PYCODE
            # Woah, callbacks in python!
            # ...

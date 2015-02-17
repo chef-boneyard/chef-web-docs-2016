@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   directory "/tmp/something" do
+   directory '/tmp/something' do
      recursive true
      action :delete
    end

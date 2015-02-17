@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   group "Administrators" do
+   group 'Administrators' do
      members ['domain\foo']
      append true
      action :modify
