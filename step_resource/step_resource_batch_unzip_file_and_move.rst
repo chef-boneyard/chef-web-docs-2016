@@ -4,7 +4,7 @@ To run a batch file that unzips and then moves |ruby|, do something like:
 
 .. code-block:: ruby
 
-   batch "unzip_and_move_ruby" do
+   batch 'unzip_and_move_ruby' do
      code <<-EOH
        7z.exe x #{Chef::Config[:file_cache_path]}/ruby-1.8.7-p352-i386-mingw32.7z  
          -oC:\\source -r -y
@@ -12,7 +12,7 @@ To run a batch file that unzips and then moves |ruby|, do something like:
        EOH
    end
    
-   batch "echo some env vars" do
+   batch 'echo some env vars' do
      code <<-EOH
        echo %TEMP%
        echo %SYSTEMDRIVE%
@@ -25,7 +25,7 @@ or:
 
 .. code-block:: ruby
 
-   batch "unzip_and_move_ruby" do
+   batch 'unzip_and_move_ruby' do
      code <<-EOH
        7z.exe x #{Chef::Config[:file_cache_path]}/ruby-1.8.7-p352-i386-mingw32.7z  
          -oC:\\source -r -y
@@ -33,7 +33,7 @@ or:
        EOH
    end
    
-   batch "echo some env vars" do
-     code "echo %TEMP%\\necho %SYSTEMDRIVE%\\necho %PATH%\\necho %WINDIR%"
+   batch 'echo some env vars' do
+     code 'echo %TEMP%\\necho %SYSTEMDRIVE%\\necho %PATH%\\necho %WINDIR%'
    end
 

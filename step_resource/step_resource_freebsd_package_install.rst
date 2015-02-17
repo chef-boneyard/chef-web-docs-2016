@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   freebsd_package "name of package" do
+   freebsd_package 'name of package' do
      action :install
    end

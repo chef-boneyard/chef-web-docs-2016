@@ -6,9 +6,9 @@ The following example shows how to get the contents of a data bag item named ``i
 
    private_key = data_bag_item("impossible_things", private_key_name)["private_key"]
    
-   file "some/directory/path/#{private_key_name}.pem" do
+   file 'some/directory/path/#{private_key_name}.pem' do
      content private_key
      owner 'root'
      group 'group'
-     mode '640'
+     mode 00640
    end

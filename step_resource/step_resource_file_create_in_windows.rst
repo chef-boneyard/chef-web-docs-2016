@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   file "C:\tmp\something.txt" do
-     rights :read, "Everyone"
-     rights :full_control, "DOMAIN\User"
+   file 'C:\tmp\something.txt' do
+     rights :read, 'Everyone'
+     rights :full_control, 'DOMAIN\User'
      action :create
    end
