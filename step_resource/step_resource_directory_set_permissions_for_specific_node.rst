@@ -4,10 +4,10 @@ The following example shows how permissions can be set for the ``/certificates``
 
 .. code-block:: ruby
 
-   directory '#{node[:nginx][:dir]}/shared/certificates' do
+   directory "#{node[:nginx][:dir]}/shared/certificates" do
      owner 'root'
      group 'root'
-     mode 00700
+     mode '0700'
      recursive true
    end
 

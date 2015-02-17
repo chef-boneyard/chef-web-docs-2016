@@ -9,8 +9,8 @@ The following example specifies a directory, and then uses the ``content`` attri
    file status_file do
      owner 'root'
      group 'root'
-     mode 00600
-     content 'My favourite foremost coastal Antarctic shelf, oh Larsen B!'
+     mode '0600'
+     content "My favourite foremost coastal Antarctic shelf, oh Larsen B!"
    end
 
 

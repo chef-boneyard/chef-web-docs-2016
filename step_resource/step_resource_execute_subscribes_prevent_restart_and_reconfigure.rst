@@ -5,9 +5,9 @@ Use the ``:nothing`` common action to prevent an application from restarting, an
 
 .. code-block:: ruby
 
-   execute 'test-nagios-config' do
-     command 'nagios3 --verify-config'
+   execute "test-nagios-config" do
+     command "nagios3 --verify-config"
      action :nothing
-     subscribes :run, 'template[/etc/nagios3/configures-nagios.conf]', :immediately
+     subscribes :run, "template[/etc/nagios3/configures-nagios.conf]", :immediately
    end
 
