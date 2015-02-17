@@ -6,8 +6,8 @@ To specify a file that contains code to be used as a block:
 
 .. code-block:: ruby
 
-   deploy "/deploy/dir/" do
+   deploy '/deploy/dir/' do
      # ...
       
-     before_migrate "callbacks/do_this_before_migrate.rb"
+     before_migrate 'callbacks/do_this_before_migrate.rb'
    end

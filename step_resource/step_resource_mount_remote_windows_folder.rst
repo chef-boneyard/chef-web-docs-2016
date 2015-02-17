@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   mount "T:" do
+   mount 'T:' do
      action :mount
-     device "\\\\hostname.example.com\\folder"
+     device '\\\\hostname.example.com\\folder'
    end
