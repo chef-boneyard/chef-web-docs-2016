@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   ohai "reload" do
+   ohai 'reload' do
      action :reload
    end

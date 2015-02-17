@@ -4,10 +4,10 @@ To send a ``POST`` request that has a |json| message body and uses basic authent
 
 .. code-block:: ruby
 
-   http_request "posting data" do
+   http_request 'posting data' do
      action :post
-     url "http://example.com/check_in"
-     message :some => "data"
+     url 'http://example.com/check_in'
+     message :some => 'data'
      headers({"AUTHORIZATION" => "Basic #{Base64.encode64("username:password")}"})
    end
 
