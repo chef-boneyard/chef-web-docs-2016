@@ -12,24 +12,24 @@ The following example shows how to install |sudo cmd| and then configure the ``/
    
    if node['authorization']['sudo']['include_sudoers_d']
      directory '/etc/sudoers.d' do
-       mode 00755
-       owner 'root'
-       group 'root'
-       action :create
+       mode        '0755'
+       owner       'root'
+       group       'root'
+       action      :create
      end
    
      cookbook_file '/etc/sudoers.d/README' do
-       source 'README'
-       mode 00440
-       owner 'root'
-       group 'root'
-       action :create
+       source      "README"
+       mode        '0440'
+       owner       'root'
+       group       'root'
+       action      :create
      end
    end
    
    template '/etc/sudoers' do
      source 'sudoers.erb'
-     mode 00440
+     mode '0440'
      owner 'root'
      group platform?('freebsd') ? 'wheel' : 'root'
      variables(
