@@ -4,6 +4,6 @@
 
 .. code-block:: ruby 
 
-   package "apache2" do
-     options "--no-install-recommends"
+   package 'apache2' do
+     options '--no-install-recommends'
    end  

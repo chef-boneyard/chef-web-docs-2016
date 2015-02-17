@@ -19,8 +19,8 @@ Convert new lines in the private key to ``\n`` when copying it to the data bag. 
 
    app = Chef::EncryptedDataBagItem.load('deploytest', 'app')
    
-   file "/tmp/private_code/.ssh/id_deploy" do
+   file '/tmp/private_code/.ssh/id_deploy' do
      content app['deploy_key']
      owner 'ubuntu'
-     mode '0600'
+     mode 00600
    end

@@ -8,8 +8,8 @@ Using the base |resource package| resource:
 
 .. code-block:: ruby
 
-   package "xlccmp.13.1.0" do
-     source "/var/tmp/IBM_XL_C_13.1.0/usr/sys/inst.images/xlccmp.13.1.0"
+   package 'xlccmp.13.1.0' do
+     source '/var/tmp/IBM_XL_C_13.1.0/usr/sys/inst.images/xlccmp.13.1.0'
      action :install
    end
 
@@ -17,7 +17,7 @@ Using the |resource package_bff| resource:
 
 .. code-block:: ruby
 
-   bff_package "xlccmp.13.1.0" do
-     source "/var/tmp/IBM_XL_C_13.1.0/usr/sys/inst.images/xlccmp.13.1.0"
+   bff_package 'xlccmp.13.1.0' do
+     source '/var/tmp/IBM_XL_C_13.1.0/usr/sys/inst.images/xlccmp.13.1.0'
      action :install
    end
