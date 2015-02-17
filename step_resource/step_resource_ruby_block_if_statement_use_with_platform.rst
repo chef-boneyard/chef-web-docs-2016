@@ -7,13 +7,13 @@ The following example shows how an if statement can be used with the ``platform?
    #  the following code sample comes from the ``client`` recipe in the following cookbook: https://github.com/opscode-cookbooks/mysql
 
    if platform?("windows")
-     ruby_block "copy libmysql.dll into ruby path" do
+     ruby_block 'copy libmysql.dll into ruby path' do
        block do
          require 'fileutils'
-         FileUtils.cp "#{node['mysql']['client']['lib_dir']}\\libmysql.dll", 
+         FileUtils.cp '#{node['mysql']['client']['lib_dir']}\\libmysql.dll', 
            node['mysql']['client']['ruby_dir']
        end
-       not_if { File.exist?("#{node['mysql']['client']['ruby_dir']}\\libmysql.dll") }
+       not_if { File.exist?('#{node['mysql']['client']['ruby_dir']}\\libmysql.dll') }
      end
    end
 

@@ -29,16 +29,16 @@ and then the methods in the recipe may refer to these values. A recipe that is u
    #  the following code sample comes from the ``oc-nginx`` cookbook on |github|: https://github.com/cookbooks/oc-nginx
    
    version = node['python']['version']
-   install_path = "#{node['python']['prefix_dir']}/lib/python#{version.split(/(^\d+\.\d+)/)[1]}"
+   install_path = '#{node['python']['prefix_dir']}/lib/python#{version.split(/(^\d+\.\d+)/)[1]}'
    
-   remote_file "#{Chef::Config[:file_cache_path]}/Python-#{version}.tar.bz2" do
-     source "#{node['python']['url']}/#{version}/Python-#{version}.tar.bz2"
+   remote_file '#{Chef::Config[:file_cache_path]}/Python-#{version}.tar.bz2' do
+     source '#{node['python']['url']}/#{version}/Python-#{version}.tar.bz2'
      checksum node['python']['checksum']
      mode '0644'
      not_if { ::File.exists?(install_path) }
    end
 
-   bash "build-and-install-python" do
+   bash 'build-and-install-python' do
      cwd Chef::Config[:file_cache_path]
      code <<-EOF
        tar -jxvf Python-#{version}.tar.bz2

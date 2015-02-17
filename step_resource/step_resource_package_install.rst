@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   package "tar" do
+   package 'tar' do
      action :install
    end
