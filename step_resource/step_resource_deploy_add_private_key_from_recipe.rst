@@ -6,10 +6,10 @@ To add a private key to a node:
 
 .. code-block:: ruby
 
-   cookbook_file '/tmp/private_code/.ssh/id_deploy' do
-     source 'id_deploy'
+   cookbook_file "/tmp/private_code/.ssh/id_deploy" do
+     source "id_deploy"
      owner 'ubuntu'
-     mode 00600
+     mode '0600'
    end
 
 
