@@ -13,19 +13,19 @@ The following example shows how to reload the configuration of a |chef client| u
      recursive true
    end
    
-   ruby_block 'reload_config' do
+   ruby_block "reload_config" do
      block do
-       Chef::Config.from_file('/etc/chef/client.rb')
+       Chef::Config.from_file("/etc/chef/client.rb")
      end
      action :nothing
    end
    
    if node[:ohai].key?(:plugins)
      node[:ohai][:plugins].each do |plugin|
-       remote_file node[:ohai][:plugin_path] +'/#{plugin}' do
+       remote_file node[:ohai][:plugin_path] +"/#{plugin}" do
          source plugin
          owner 'chef'
-		 notifies :run, 'ruby_block[reload_config]', :immediately
+		 notifies :run, "ruby_block[reload_config]", :immediately
        end
      end
    end
