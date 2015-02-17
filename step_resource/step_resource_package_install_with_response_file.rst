@@ -6,6 +6,6 @@ To install a package with a ``response_file``:
 
 .. code-block:: ruby
 
-   package "sun-java6-jdk" do
-     response_file "java.seed"
+   package 'sun-java6-jdk' do
+     response_file 'java.seed'
    end

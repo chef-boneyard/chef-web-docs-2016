@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   log "a debug string" do
+   log 'a debug string' do
      level :debug
    end

@@ -4,6 +4,6 @@ The following example will create a symbolic link from ``/tmp/file`` to ``/etc/f
 
 .. code-block:: ruby
 
-   link "/tmp/file" do
-     to "/etc/file"
+   link '/tmp/file' do
+     to '/etc/file'
    end

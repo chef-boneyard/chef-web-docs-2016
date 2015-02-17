@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   cookbook_file "file.txt" do
-     mode '0644'
+   cookbook_file 'file.txt' do
+     mode 00644
    end
