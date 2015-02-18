@@ -30,6 +30,10 @@ Changes Prior to |chef| 12
 -----------------------------------------------------
 .. include:: ../../includes_chef_repo/includes_chef_repo_directory_trusted_certs.rst
 
+``SSL_CERT_FILE``
+-----------------------------------------------------
+.. include:: ../../includes_environment_variables/includes_environment_variables_ssl_cert_file.rst
+
 |client rb| Settings
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst
