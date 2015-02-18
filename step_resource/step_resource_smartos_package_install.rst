@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   smartos_package "name of package" do
+   smartos_package 'name of package' do
      action :install
    end
