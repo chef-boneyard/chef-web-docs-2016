@@ -4,11 +4,11 @@ The following example shows how to create a system user using a variable called 
 
 .. code-block:: ruby
 
-   user_home = "/#{node[:matching_node][:user]}"
+   user_home = '/#{node[:matching_node][:user]}'
    
    user node[:matching_node][:group] do
      gid node[:matching_node][:group]
-     shell "/bin/bash"
+     shell '/bin/bash'
      home user_home
      system true
      action :create
@@ -18,11 +18,11 @@ where ``matching_node`` represents a type of node. For example, if the ``user_ho
 
 .. code-block:: ruby
 
-   user_home = "/#{node[:nginx][:user]}"
+   user_home = '/#{node[:nginx][:user]}'
    
    user node[:nginx][:group] do
      gid node[:nginx][:group]
-     shell "/bin/bash"
+     shell '/bin/bash'
      home user_home
      system true
      action :create

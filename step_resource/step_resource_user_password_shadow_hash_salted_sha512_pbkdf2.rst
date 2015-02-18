@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   password = "my_awesome_password"
+   password = 'my_awesome_password'
    salt = OpenSSL::Random.random_bytes(32)
    iterations = 25000 # Any value above 20k should be fine.
    
@@ -21,8 +21,8 @@ Use the calculated password shadow hash with the |resource user| resource:
 
 .. code-block:: ruby
 
-   user "my_awesome_user" do
-     password "cbd1a....fc843"  # Length: 256
-     salt "bd1a....fc83"        # Length: 64
+   user 'my_awesome_user' do
+     password 'cbd1a....fc843'  # Length: 256
+     salt 'bd1a....fc83'        # Length: 64
      iterations 25000
    end

@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   user "systemguy" do
-     comment "system guy"
+   user 'systemguy' do
+     comment 'system guy'
      system true
-     shell "/bin/false"
+     shell '/bin/false'
    end

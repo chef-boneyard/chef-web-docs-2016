@@ -4,12 +4,12 @@
 
 .. code-block:: ruby
 
-   user "random" do
+   user 'random' do
      supports :manage_home => true
-     comment "Random User"
+     comment 'Random User'
      uid 1234
-     gid "users"
-     home "/home/random"
-     shell "/bin/bash"
-     password "$1$JJsvHslV$szsCjVEroftprNn4JHtDi."
+     gid 'users'
+     home '/home/random'
+     shell '/bin/bash'
+     password '$1$JJsvHslV$szsCjVEroftprNn4JHtDi'
    end

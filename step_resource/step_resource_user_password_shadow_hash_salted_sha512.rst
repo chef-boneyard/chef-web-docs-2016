@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   password = "my_awesome_password"
+   password = 'my_awesome_password'
    salt = OpenSSL::Random.random_bytes(4)
    encoded_password = OpenSSL::Digest::SHA512.hexdigest(salt + password)
    shadow_hash = salt.unpack('H*').first + encoded_password
@@ -13,6 +13,6 @@ Use the calculated password shadow hash with the |resource user| resource:
 
 .. code-block:: ruby
 
-   user "my_awesome_user" do
-     password "c9b3bd....d843"  # Length: 136
+   user 'my_awesome_user' do
+     password 'c9b3bd....d843'  # Length: 136
    end
