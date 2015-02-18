@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   yum_package "netpbm" do
+   yum_package 'netpbm' do
      action :install
    end

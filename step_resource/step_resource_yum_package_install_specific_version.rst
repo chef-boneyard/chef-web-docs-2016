@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   yum_package "tzdata" do
-     version "2011b-1.el5"
+   yum_package 'tzdata' do
+     version '2011b-1.el5'
      allow_downgrade true
    end

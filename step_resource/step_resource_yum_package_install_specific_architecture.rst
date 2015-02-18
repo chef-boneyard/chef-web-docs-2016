@@ -4,12 +4,12 @@
 
 .. code-block:: ruby
 
-   yum_package "netpbm" do
-     arch "i386"
+   yum_package 'netpbm' do
+     arch 'i386'
    end
 
 or:
 
 .. code-block:: ruby
 
-   yum_package "netpbm.x86_64"
+   yum_package 'netpbm.x86_64'

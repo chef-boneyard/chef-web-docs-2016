@@ -6,12 +6,12 @@ When a |resource cookbook_file| resource and a |resource yum_package| resource a
 
 .. code-block:: ruby
 
-   cookbook_file "/etc/yum.repos.d/custom.repo" do
-     source "custom"
-     mode '0644'
+   cookbook_file '/etc/yum.repos.d/custom.repo' do
+     source 'custom'
+     mode 00644
    end
    
-   yum_package "only-in-custom-repo" do
+   yum_package 'only-in-custom-repo' do
      action :install
      flush_cache [:before]
    end

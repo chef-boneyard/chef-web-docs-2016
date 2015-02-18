@@ -4,21 +4,21 @@ The following example shows how to install new |yum| repositories from a file, w
 
 .. code-block:: ruby
 
-   execute "create-yum-cache" do
-    command "yum -q makecache"
+   execute 'create-yum-cache' do
+    command 'yum -q makecache'
     action :nothing
    end
    
-   ruby_block "reload-internal-yum-cache" do
+   ruby_block 'reload-internal-yum-cache' do
      block do
        Chef::Provider::Package::Yum::YumCache.instance.reload
      end
      action :nothing
    end
    
-   cookbook_file "/etc/yum.repos.d/custom.repo" do
-     source "custom"
-     mode '0644'
-     notifies :run, "execute[create-yum-cache]", :immediately
-     notifies :create, "ruby_block[reload-internal-yum-cache]", :immediately
+   cookbook_file '/etc/yum.repos.d/custom.repo' do
+     source 'custom'
+     mode 00644
+     notifies :run, 'execute[create-yum-cache]', :immediately
+     notifies :create, 'ruby_block[reload-internal-yum-cache]', :immediately
    end

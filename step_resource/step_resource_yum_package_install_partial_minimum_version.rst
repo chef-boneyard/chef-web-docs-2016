@@ -4,4 +4,4 @@
 
 .. code-block:: ruby
 
-   yum_package "netpbm >= 10"
+   yum_package 'netpbm >= 10'

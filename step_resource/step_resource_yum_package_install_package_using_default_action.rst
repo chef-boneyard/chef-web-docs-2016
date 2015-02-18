@@ -4,4 +4,4 @@
 
 .. code-block:: ruby
 
-   yum_package "netpbm"
+   yum_package 'netpbm'
