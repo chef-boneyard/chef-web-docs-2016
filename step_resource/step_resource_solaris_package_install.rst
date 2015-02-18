@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   solaris_package "name of package" do
+   solaris_package 'name of package' do
      action :install
    end
