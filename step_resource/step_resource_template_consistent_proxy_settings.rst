@@ -5,11 +5,11 @@ The following example shows how a template can be used to apply consistent proxy
 
 .. code-block:: ruby
 
-   template "#{node[:matching_node][:dir]}/sites-available/site_proxy.conf" do
-     source "site_proxy.matching_node.conf.erb"
+   template '#{node[:matching_node][:dir]}/sites-available/site_proxy.conf' do
+     source 'site_proxy.matching_node.conf.erb'
      owner 'root'
      group 'root'
-     mode '0644'
+     mode 00644
      variables(
        :ssl_certificate =>    "#{node[:matching_node][:dir]}/shared/certificates/site_proxy.crt",
        :ssl_key =>            "#{node[:matching_node][:dir]}/shared/certificates/site_proxy.key",

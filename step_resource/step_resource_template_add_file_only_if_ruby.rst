@@ -5,9 +5,9 @@ The following example shows how to use the ``only_if`` condition to create a fil
 
 .. code-block:: ruby
 
-   template "/tmp/somefile" do
-     mode '0644'
-     source "somefile.erb"
-     only_if do ! File.exists?("/etc/passwd") end
+   template '/tmp/somefile' do
+     mode 00644
+     source 'somefile.erb'
+     only_if do ! File.exists?('/etc/passwd') end
    end
 

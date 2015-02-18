@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   template "/tmp/config.conf" do
+   template '/tmp/config.conf' do
      local true
-     source "/tmp/config.conf.erb"
+     source '/tmp/config.conf.erb'
    end

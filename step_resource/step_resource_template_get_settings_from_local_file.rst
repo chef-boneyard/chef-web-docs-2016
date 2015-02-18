@@ -38,8 +38,8 @@ The recipe will be similar to the following:
    results = search(:node, "role:myapp_database_master AND chef_environment:#{node.chef_environment}")
    db_master = results[0]
    
-   template "/srv/myapp/shared/database.yml" do
-     source "/srv/myapp/current/config/database.yml.erb"
+   template '/srv/myapp/shared/database.yml' do
+     source '/srv/myapp/current/config/database.yml.erb'
      local true
      variables(
        :rails_env => node.chef_environment,

@@ -5,6 +5,6 @@ A template helper module can be defined in a library. This is useful when extens
 
 .. code-block:: ruby
 
-   template "/path/to/template.erb" do
+   template '/path/to/template.erb' do
      helpers(MyHelperModule)
    end

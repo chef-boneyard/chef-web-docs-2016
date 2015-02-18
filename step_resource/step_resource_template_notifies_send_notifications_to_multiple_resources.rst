@@ -4,11 +4,10 @@ To send notifications to multiple resources, just use multiple attributes. Multi
 
 .. code-block:: ruby
 
-   template "/etc/netatalk/netatalk.conf" do
-     notifies :restart, "service[afpd]", :immediately
-     notifies :restart, "service[cnid]", :immediately
+   template '/etc/netatalk/netatalk.conf' do
+     notifies :restart, 'service[afpd]', :immediately
+     notifies :restart, 'service[cnid]', :immediately
    end
  
-   service "afpd"
-   service "cnid"
-
+   service 'afpd'
+   service 'cnid'

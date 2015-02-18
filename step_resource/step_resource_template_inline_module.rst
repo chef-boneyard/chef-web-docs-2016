@@ -5,19 +5,19 @@ A template helper module can be defined inline on a per-resource basis. This app
 
 .. code-block:: ruby
 
-   template "/path" do
+   template '/path' do
      helpers do
    
        def hello_world
-         "hello world"
+         'hello world'
        end
    
        def app
-         node["app"]
+         node['app']
        end
    
        def app_conf(setting)
-         node["app"][setting]
+         node['app']['setting']
        end
 
      end

@@ -5,7 +5,7 @@ The following example shows how the |resource template| resource can be used in 
 
 .. code-block:: ruby
 
-   default['nginx']['dir'] = "/etc/nginx"
+   default['nginx']['dir'] = '/etc/nginx'
 
 The recipe then does the following to:
 
@@ -15,25 +15,25 @@ The recipe then does the following to:
 
 .. code-block:: ruby
 
-   node.default['nginx']['remote_ip_var'] = "remote_addr"
-   node.default['nginx']['authorized_ips'] = ["127.0.0.1/32"]
+   node.default['nginx']['remote_ip_var'] = 'remote_addr'
+   node.default['nginx']['authorized_ips'] = ['127.0.0.1/32']
 
-   service "nginx" do
+   service 'nginx' do
      supports :status => true, :restart => true, :reload => true
    end
    
-   template "authorized_ip" do
-     path "#{node['nginx']['dir']}/authorized_ip"
-     source "modules/authorized_ip.erb"
+   template 'authorized_ip' do
+     path '#{node['nginx']['dir']}/authorized_ip'
+     source 'modules/authorized_ip.erb'
      owner 'root'
      group 'root'
-     mode '0644'
+     mode 00644
      variables(
        :remote_ip_var => node['nginx']['remote_ip_var'],
        :authorized_ips => node['nginx']['authorized_ips']
      )
    
-     notifies :reload, "service[nginx]", :immediately
+     notifies :reload, 'service[nginx]', :immediately
    end
 
 where the ``variables`` attribute tells the template to use the variables set at the beginning of the recipe and the ``source`` attribute is used to call a template file located in the cookbook's ``/templates`` directory. The template file looks something like:

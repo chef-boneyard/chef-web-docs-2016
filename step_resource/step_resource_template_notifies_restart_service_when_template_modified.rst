@@ -4,7 +4,6 @@
 
 .. code-block:: ruby
 
-   template "/etc/www/configures-apache.conf" do
-     notifies :restart, "service[apache]", :immediately
+   template '/etc/www/configures-apache.conf' do
+     notifies :restart, 'service[apache]', :immediately
    end
-
