@@ -30,10 +30,10 @@ For example, weekly cookbook reports:
      user "getchef"
      mailto "nharvey@chef.io"
      home "/srv/supermarket/shared/system"
-     command %Q{ \
-       cd /srv/supermarket/current && \
-       env RUBYLIB="/srv/supermarket/current/lib" \
-       RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}" \
-       bundle exec rake cookbooks_report \
-     }
+     command %w{
+       cd /srv/supermarket/current &&
+       env RUBYLIB="/srv/supermarket/current/lib"
+       RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
+       bundle exec rake cookbooks_report
+     }.join(' ')
    end

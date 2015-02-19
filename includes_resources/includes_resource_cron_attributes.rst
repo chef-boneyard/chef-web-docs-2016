@@ -23,12 +23,12 @@
 
        .. code-block:: ruby
 
-          command %Q{
+          command %w{
             cd /srv/opscode-community-site/current &&
             env RUBYLIB="/srv/opscode-community-site/current/lib"
             RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
             bundle exec rake cookbooks_report
-          }
+          }.join(' ')
 
        and:
 
