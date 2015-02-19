@@ -12,6 +12,8 @@ SSL Certificates
 =====================================================
 .. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom.rst
 
+For more information about the server configuration file, see :doc:`private-chef.rb </config_rb_chef_server_enterprise>`.
+
 |chef analytics_title|
 -----------------------------------------------------
 .. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_analytics.rst
