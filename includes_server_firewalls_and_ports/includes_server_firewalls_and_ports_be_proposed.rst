@@ -18,14 +18,14 @@ For back-end servers:
    * - 
      - |service keepalived|
 
-       Manages primary/secondary status of services between backends in the "HA" topology.
+       Manages the virtual IP address (VIP) between backend chef server nodes using VRRP (Virtual Router Redundancy Protocol) in an "HA" topology.
      - yes
    * - 
      - |service nginx|
 
        Defines virtual hosts for internal and external API request/response routing, external add-on request routing, as well as routing for front-end components to back-end components.
      - yes
-   * - 
+   * - 9683
      - |service bifrost|
 
        Manages and restricts access to all objects, handles the RBAC aspect of user requests.
