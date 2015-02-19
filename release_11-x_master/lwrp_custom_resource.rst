@@ -1,5 +1,3 @@
-.. THIS PAGE DOCUMENTS chef-client version 11.0
-
 =====================================================
 Lightweight Resources
 =====================================================
@@ -16,7 +14,7 @@ Syntax
 =====================================================
 .. include:: ../../includes_dsl_resource/includes_dsl_resource.rst
 
-action
+actions
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_action.rst
 
@@ -31,6 +29,10 @@ attr_accessor
 default_action
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_default_action.rst
+
+state_attrs
+-----------------------------------------------------
+.. include:: ../../includes_dsl_resource/includes_dsl_resource_method_state_attrs.rst
 
 Validation Parameters
 -----------------------------------------------------

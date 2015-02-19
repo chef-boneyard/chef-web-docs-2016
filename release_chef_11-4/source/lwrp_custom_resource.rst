@@ -10,7 +10,7 @@ Lightweight Resources
 
 Syntax
 =====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst
+.. include:: ../../includes_lwrp/includes_lwrp_11x_custom_resource_syntax.rst
 
 |dsl resource| Methods
 =====================================================

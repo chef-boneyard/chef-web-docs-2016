@@ -30,7 +30,7 @@ Role Formats
 
 Ruby DSL
 -----------------------------------------------------
-.. include:: ../../includes_ruby/includes_ruby_dsl.rst
+.. include:: ../../includes_ruby/includes_ruby.rst
 
 .. include:: ../../includes_role/includes_role_formats_ruby.rst
 
