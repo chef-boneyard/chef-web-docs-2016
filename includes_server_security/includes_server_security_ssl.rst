@@ -7,8 +7,8 @@ Initial configuration of the |chef server| is done automatically using a self-si
 
 The locations of the certificate and private key files are 
 
-* ``/var/opt/opscode/nginx/ca/FQDN.cert``
-* ``/var/opt/opscode/nginx/ca/FQDN.pem``
+* ``/var/opt/opscode/nginx/ca/FQDN.crt``
+* ``/var/opt/opscode/nginx/ca/FQDN.key``
 
 As the |fqdn| will have already been configured previously, simply replace the contents of these two files with the certifying authority's files.
 
