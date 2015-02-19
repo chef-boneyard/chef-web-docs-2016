@@ -2,12 +2,40 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``actions`` method is used to define a list of actions that are available to be used in a recipe. Each action must have a corresponding section in a lightweight provider that tells the |chef client| what to do when this action is specified in a recipe. The syntax for the ``actions`` method is as follows:
+Use the ``provides`` method to map a custom resource to an existing resource by specifying the |chef client| resource and the platform to which the mapping applies. The syntax for the ``provides`` method is as follows:
 
 .. code-block:: ruby
 
-   actions :action_name, :action_name
+   provides :resource_name, os: [ "os", "os", ...], platform_family: "os"
 
-where ``actions`` is a comma-delimited list of individual actions.
+where:
 
+* ``:resource_name`` is the |chef client| resource: ``:cookbook_file``, ``:package``, ``:rpm_package``, and so on
+* ``"os"`` is a platform: ``"windows"``, ``"solaris2"``, ``"linux"``, and so on
+* ``platform_family`` is optional and may specify the same parameters as the ``platform_family?`` method in the |dsl recipe|
 
+A separate ``provides`` statement is required for each mapped resource. For example, a single mapped resource:
+
+.. code-block:: ruby
+
+   provides :cookbook_file
+
+and two mapped resources:
+
+.. code-block:: ruby
+
+   provides :cookbook_file
+   provides :package, os: "windows"
+
+Use multiple ``provides`` statements to define multiple conditions. Use an array to match any of the platforms within the array:
+
+.. code-block:: ruyby
+
+   provides :cookbook_file
+   provides :package, os: "windows"
+   provides :rpm_package, os: [ "linux", "aix" ]
+   provides :package, os: "solaris2", platform_family: "smartos"
+   provides :package, platform: "freebsd"
+   provides :package, os: "linux", platform_family: [ "rhel", "fedora" ]
+   provides :package, os: "solaris2", platform_family: "solaris2" do |node|
+            node[:platform_version].to_f <= 5.10
