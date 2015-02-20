@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``provides`` method to map the behavior of a custom resource/provider to the functionality of an existing resource/provider, and then specify the platform(s) on which the custom behavior will apply. This method enables scenarios like:
+Use the ``provides`` method to map the behavior of a custom resource/provider to the functionality of an existing resource/provider, and also to specify the platform(s) on which the custom behavior will apply. This method enables scenarios like:
 
 * Building a custom resource that is based on an existing resource
 * Defining platform mapping specific to a custom resource
