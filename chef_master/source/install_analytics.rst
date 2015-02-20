@@ -30,7 +30,7 @@ Hostnames
 
 Install the Server
 =====================================================
-|chef analytics| is installed on dedicated hardware, separately from the |chef server| configuration. For |chef analytics| version 1.1, it may be installed with standalone or tiered configurations. For earlier versions of |chef analytics|, standalone is the only configuration option.
+|chef analytics| is installed on dedicated hardware with its own configuration topology that is independent from the machines in the |chef server| configuration and compatible with the existing |chef server| machine topology (standalone, tiered, or high availability). |chef analytics| version 1.1 machines may be installed as a standalone or tiered configuration. Earlier versions of |chef analytics| may only be installed as a standalone configuration.
 
 Standalone (version 1.1)
 -----------------------------------------------------
