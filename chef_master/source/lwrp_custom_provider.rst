@@ -34,7 +34,7 @@ new_resource
 
 provides
 -----------------------------------------------------
-.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_provides.rst
+.. include:: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst
 
 updated_by_last_action
 -----------------------------------------------------
