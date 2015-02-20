@@ -11,6 +11,7 @@ What's New
 The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
 
 * **Ruby 2.0 (or higher) for Windows; and Ruby 2.1 (or higher) for Unix/Linux** |ruby| versions 1.8.7, 1.9.1, 1.9.2, and 1.9.3 are no longer supported. See `this blog post <https://www.chef.io/blog/2014/11/25/ruby-1-9-3-eol-and-chef-12/>`_ for more info.
+* **provides method for building custom resources and providers** Use the ``provides`` method to associate a custom resource/provider with a built-in |chef client| resource and to specify platforms on which the custom resource may be used.
 * **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform, versions 6.1 (TL6 or higher, recommended) and 7.1 (TL0 SP3 or higher, recommended). The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems. 
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource also replaces the |resource package_macports| resource as the default package installer on the |mac os x| platform.
@@ -42,6 +43,10 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Attribute behavior changes** Please `see RFC-23 for important changes to attributes <https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_ in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. In addition, ``node.default!`` is now ``node.force_default`` and ``node.override!`` is now ``node.force_override``.
 * **SSL certificate validation improvements** The default settings for |ssl| certificate validation now default in favor of validation. In addition, using the |subcommand knife ssl_fetch| command is now an important part of setting up your workstation.
 * **New attribute for git resource** The |resource scm_git| resource has a new attribute: ``environment``, which takes a |ruby hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``.
+
+provides Method
+-----------------------------------------------------
+.. include:: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst
 
 |ibm aix| Platform Support
 -----------------------------------------------------
