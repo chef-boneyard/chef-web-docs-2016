@@ -30,6 +30,10 @@ default_action
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_default_action.rst
 
+provides
+-----------------------------------------------------
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_provides.rst
+
 state_attrs
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_state_attrs.rst

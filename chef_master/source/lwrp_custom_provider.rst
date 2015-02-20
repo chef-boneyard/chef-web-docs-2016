@@ -32,6 +32,10 @@ new_resource
 -----------------------------------------------------
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_new_resource.rst
 
+provides
+-----------------------------------------------------
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_provides.rst
+
 updated_by_last_action
 -----------------------------------------------------
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action.rst
