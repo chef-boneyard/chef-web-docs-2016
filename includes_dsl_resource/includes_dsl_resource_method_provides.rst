@@ -8,7 +8,7 @@ Use the ``provides`` method to map a custom resource/provider to an existing res
 * Defining platform mapping specific to a custom resource
 * Handling situations where a resource on a particular platform may have more than one provider, such as the behavior on the |ubuntu| platform where both SysVInit and systemd are present
 * Allowing the custom resource to declare what platforms are supported, enabling the creator of the custom resource to use arbitrary criteria if desired
-* Not using the previous naming convention---``#{cookbook_name}_#{provider_filename}
+* Not using the previous naming convention---``#{cookbook_name}_#{provider_filename}``
 
 .. warning:: The ``provides`` method must be defined in both the custom resource and custom provider files and both files must have identical ``provides`` statement(s). 
 
@@ -45,7 +45,7 @@ A similar mapping, but also for packages on the |windows| platform:
 
 Use multiple ``provides`` statements to define multiple conditions: Use an array to match any of the platforms within the array:
 
-.. code-block:: ruyby
+.. code-block:: ruby
 
    provides :cookbook_file
    provides :package, os: "windows"
@@ -53,7 +53,7 @@ Use multiple ``provides`` statements to define multiple conditions: Use an array
 
 Use an array to match any of the platforms within the array:
 
-.. code-block:: ruyby
+.. code-block:: ruby
 
    provides :package, os: "solaris2", platform_family: "solaris2" do |node|
      node[:platform_version].to_f <= 5.10
