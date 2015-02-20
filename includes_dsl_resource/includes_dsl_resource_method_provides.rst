@@ -56,4 +56,5 @@ Use an array to match any of the platforms within the array:
 .. code-block:: ruyby
 
    provides :package, os: "solaris2", platform_family: "solaris2" do |node|
-            node[:platform_version].to_f <= 5.10
+     node[:platform_version].to_f <= 5.10
+   end
