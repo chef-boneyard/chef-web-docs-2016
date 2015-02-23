@@ -337,18 +337,18 @@ To move files to the |chef repo hidden| directory:
 
 **Create the knife.rb File**
 
-The |knife rb| file must be created in the |chef repo hidden| folder:
+The |knife rb| file must be created in the |chef repo hidden| folder. It should look similar to:
 
 .. code-block:: ruby
 
    current_dir = File.dirname(__FILE__)
    log_level                :info
    log_location             STDOUT
-   node_name                "mclennan01"
-   client_key               "#{current_dir}/grantmc.pem"
+   node_name                "node_name"
+   client_key               "#{current_dir}/USER.pem"
    validation_client_name   "chef-validator"
-   validation_key           "#{current_dir}/chef.pem"
-   chef_server_url          "https://api.chef.io/organizations/chef"
+   validation_key           "#{current_dir}/ORGANIZATION-validator.pem"
+   chef_server_url          "https://api.chef.io/organizations/ORG_NAME"
    cache_type               'BasicFile'
    cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
    cookbook_path            ["#{current_dir}/../cookbooks"]
