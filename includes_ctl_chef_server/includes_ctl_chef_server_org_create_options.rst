@@ -9,5 +9,5 @@ This subcommand has the following options:
    Use to associate a user with an organization and add them to the |webui group admins| and |webui group billing| security groups.
 
 ``-f FILE_NAME``, ``--filename FILE_NAME``
-   Use to write the private key to a file instead of ``STDOUT``.
+   |key organization_create|
 

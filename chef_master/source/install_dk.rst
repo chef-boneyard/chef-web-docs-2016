@@ -287,7 +287,7 @@ where
 
 * |name_rules org| For example: ``chef``
 * |name_rules org_full| For example: ``"Chef Software, Inc."``
-* Use ``-f FILE_NAME`` to write the |organization pem| to ``FILE_NAME`` instead of printing it to ``STDOUT``
+* ``-f FILE_NAME``: |key organization_create| For example: ``/tmp/chef.key``.
 
 For example, an organization named ``chef``, with a full name of ``Chef Software, Inc.``, and with the |organization pem| file saved to ``/tmp/chef.key``:
 
@@ -305,7 +305,7 @@ On the |chef server| machine, run the following command:
 
 where
 
-* Use ``-f FILE_NAME`` to write the |user pem| to ``FILE_NAME`` instead of printing it to ``STDOUT``
+* |key user_create| For example: ``/tmp/grantmc.key``.
 
 For example, a user named ``grantmc``, with a first and last name of ``Grant McLennan``, an email address of ``grantmc@chef.io``, a poorly-chosen password, and with the |user pem| file saved to ``/tmp/grantmc.key``:
 

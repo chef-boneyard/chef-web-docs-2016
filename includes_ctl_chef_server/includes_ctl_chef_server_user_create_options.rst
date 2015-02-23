@@ -6,4 +6,4 @@
 This subcommand has the following options:
 
 ``-f FILE_NAME``, ``--filename FILE_NAME``
-   Use to write the private key to a file instead of ``STDOUT``.
+   |key user_create|
