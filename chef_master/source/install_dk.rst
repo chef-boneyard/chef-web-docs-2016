@@ -195,7 +195,7 @@ To move files to the |chef repo hidden| directory:
 
 Manually (w/o Webui)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following steps to manually set up the |chef repo|, create the |organization pem| and |user pem| files with the |chef server ctl| command line tool, and then creating the |knife rb| file.
+Use the following steps to manually set up the |chef repo|, create the |organization pem| and |user pem| files with the |chef server ctl| command line tool, and then create the |knife rb| file.
 
 **Clone the chef-repo**
 
