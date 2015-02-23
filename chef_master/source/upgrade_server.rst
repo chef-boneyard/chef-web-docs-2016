@@ -9,7 +9,7 @@ From |chef server_title| 12
 There are two upgrade scenarios for upgrades from earlier versions of |chef server| 12 to a newer version of |chef server| 12:
 
 * `Standalone <http://docs.chef.io/upgrade_server.html#standalone>`__
-* `High Availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
+* `High availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
 
 The steps for both scenarios are identical to an upgrade from |chef server oec|. See the appropriate section below and follow the same steps.
 
@@ -19,7 +19,7 @@ From |chef server oec|
 There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: 
 
 * `Standalone <http://docs.chef.io/upgrade_server.html#standalone>`__
-* `High Availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
+* `High availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
 
 Before upgrading, please `view the notes <http://docs.chef.io/upgrade_server_notes.html>`__ for more background on the upgrade process from |chef server oec| 11 to |chef server| 12.
 
