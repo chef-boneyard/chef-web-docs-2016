@@ -287,9 +287,9 @@ where
 
 * |name_rules org| For example: ``chef``
 * |name_rules org_full| For example: ``"Chef Software, Inc."``
-* ``-f FILE_NAME`` will write the private key to ``FILE_NAME`` instead of printing the private key to ``STDOUT``
+* Use ``-f FILE_NAME`` to write the |organization pem| to ``FILE_NAME`` instead of printing it to ``STDOUT``
 
-For example:
+For example, an organization named ``chef``, with a full name of ``Chef Software, Inc.``, and with the |organization pem| file saved to ``/tmp/chef.key``:
 
 .. code-block:: bash
 
@@ -305,9 +305,9 @@ On the |chef server| machine, run the following command:
 
 where
 
-* ``-f FILE_NAME`` will write the private key to ``FILE_NAME`` instead of printing the private key to ``STDOUT``
+* Use ``-f FILE_NAME`` to write the |user pem| to ``FILE_NAME`` instead of printing it to ``STDOUT``
 
-For example:
+For example, a user named ``grantmc``, with a first and last name of ``Grant McLennan``, an email address of ``grantmc@chef.io``, a poorly-chosen password, and with the |user pem| file saved to ``/tmp/grantmc.key``:
 
 .. code-block:: bash
 
