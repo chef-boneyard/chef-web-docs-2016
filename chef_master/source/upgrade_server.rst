@@ -13,6 +13,17 @@ There are two upgrade scenarios for upgrades from earlier versions of |chef serv
 
 The steps for both scenarios are identical to an upgrade from |chef server oec|. See the appropriate section below and follow the same steps.
 
+Standalone
+-----------------------------------------------------
+This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+
+.. include:: ../../includes_upgrade/includes_upgrade_standalone_12-to-12.rst
+
+High Availability
+-----------------------------------------------------
+This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+
+.. include:: ../../includes_upgrade/includes_upgrade_ha_12-to-12.rst
 
 From |chef server oec|
 =====================================================
@@ -28,178 +39,13 @@ Standalone
 -----------------------------------------------------
 This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
 
-To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:
-
-#. Verify that the ``make`` command is available on the |chef server oec| machine. If it is not available, install the ``make`` command.
-
-#. Run the following command to make sure all services are in a sane state.
-
-   .. code-block:: bash
-      
-      $ private-chef-ctl reconfigure
-
-#. Stop the machine:
-
-   .. code-block:: bash
-      
-      $ private-chef-ctl stop
-
-#. Run |debian dpkg| or |rpm|. For |debian dpkg|:
-
-   .. code-block:: bash
-      
-      $ dpkg -D10 -i /path/to/chef-server-core-<version>.deb
-
-   where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
-   
-   For |rpm|:
-
-   .. code-block:: bash
-      
-      $ rpm -Uvh --nopostun /path/to/chef-server-core-<version>.rpm
-
-#. Upgrade the machine with the following command:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl upgrade
-
-#. Start |chef server| 12:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl start
-
-#. After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl cleanup
-
-#. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
-
-   **Use Downloads**
-
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
-
-   **Use Local Packages**
-
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
-
-
+.. include:: ../../includes_upgrade/includes_upgrade_standalone_11-to-12.rst
 
 High Availability
 -----------------------------------------------------
 This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
 
-To upgrade to |chef server| 12 from a high availability |chef server oec| server, do the following:
-
-#. Verify that the ``make`` command is available on the primary backend |chef server oec| machine. If it is not available, install the ``make`` command.
-
-#. Run the following on all machines to make sure all services are in a sane state.
-
-   .. code-block:: bash
-      
-      $ private-chef-ctl reconfigure
-
-#. Stop all of the front end machines:
-
-   .. code-block:: bash
-      
-      $ private-chef-ctl stop
-
-#. Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
-
-#. Stop |keepalived| on the original non-bootstrap backend machine. This will ensure that the bootstrap back end machine is the active machine. This action may trigger a failover.
-
-   .. code-block:: bash
-      
-      $ private-chef-ctl stop keepalived
-
-#. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
-
-   .. code-block:: bash
-      
-      $ dpkg -D10 -i /path/to/chef-server-core-<version>.deb
-
-   where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option.
-   
-   For |rpm|:
-
-   .. code-block:: bash
-      
-      $ rpm -Uvh --nopostun /path/to/chef-server-core-<version>.rpm
-
-#. On the primary back end machine, stop all services except |keepalived|. With |chef server| 12, the |keepalived| service will not be stopped with the following command:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl stop
-
-   If the upgrade process times out, re-run the command until it finishes successfully.
-
-
-#. Upgrade the back end primary machine with the following command:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl upgrade
-
-   If the upgrade process times out, re-run the command until it finishes successfully.
-
-#. Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
-
-   .. code-block:: bash
-      
-      $ scp -r <Bootstrap server IP>:/etc/opscode /etc
-
-   or from the back end primary machine:
-
-   .. code-block:: bash
-      
-      $ scp -r /etc/opscode <each servers IP>:/etc
-
-#. Upgrade the back end secondary machine with the following command:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl upgrade
-
-   In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine.
-
-#. Upgrade all front end machines with the following commands:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl upgrade
-
-#. Run the following command on all front end machines and the primary back end machine:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl start
-
-   .. note:: Do not run this command on the secondary back-end machine!
-
-#. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:
-
-   .. code-block:: bash
-      
-      $ chef-server-ctl cleanup
-
-   .. note:: The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore.
-
-#. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features.rst
-
-   **Use Downloads**
-
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_download.rst
-
-   **Use Local Packages**
-
-   .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
-
-
+.. include:: ../../includes_upgrade/includes_upgrade_ha_11-to-12.rst
 
 From |chef server osc|
 =====================================================
