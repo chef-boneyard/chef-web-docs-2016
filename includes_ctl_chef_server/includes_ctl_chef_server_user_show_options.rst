@@ -6,4 +6,4 @@
 This subcommand has the following options:
 
 ``-l``, ``--with-orgs``
-   Use to show the corresponding organizations.
+   |show_organizations|

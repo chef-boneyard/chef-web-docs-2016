@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-a``, ``--all-orgs``
-   Use to show all organizations.
+   |show_organizations|
 
 ``-w``, ``--with-uri``
    |with_uri|

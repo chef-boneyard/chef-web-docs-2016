@@ -6,4 +6,4 @@
 This subcommand has the following options:
 
 ``--admin``
-   Use to add the user to the |webui group admins| group.
+   |add_to_admins|
