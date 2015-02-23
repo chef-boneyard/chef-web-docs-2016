@@ -3,7 +3,11 @@
 =====================================================
 Install the |chef server_title|
 =====================================================
-There are two configuration scenarios for the |chef server|: standalone (everything on a single machine) and high availability (machines configured for front-end and back-end, allowing for failover and load-balancing, as required).
+There are three configuration scenarios for the |chef server|:
+
+* `Standalone <http://docs.chef.io/server/install_server.html#standalone>`__ (everything on a single machine)
+* `High availability <http://docs.chef.io/server/install_server.html#high-availability>`__ (machines configured for front-end and back-end, allowing for failover on the back-end and load-balancing on the front-end, as required)
+* `Tiered <http://docs.chef.io/server/install_server.html#tiered-single-backend>`__ (machines configured for front-end and back-end, with a single back-end and load-balancing on the front-end, as required)
 
 Prerequisites
 =====================================================
