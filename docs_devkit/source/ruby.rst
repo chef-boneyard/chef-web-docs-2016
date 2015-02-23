@@ -34,6 +34,10 @@ Strings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_style_basics_string_embed_ruby.rst
 
+Escape Character
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ruby/includes_ruby_style_basics_string_escape_character.rst
+
 Truths
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_basics_truths.rst
