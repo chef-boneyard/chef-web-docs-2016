@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef server| includes the following container permissions:
+The |chef server| includes the following global permissions:
 
 .. list-table::
    :widths: 60 420

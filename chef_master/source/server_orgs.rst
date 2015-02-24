@@ -37,7 +37,7 @@ Object Permissions
 -----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst
 
-Container Permissions
+Global Permissions
 -----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst
 
