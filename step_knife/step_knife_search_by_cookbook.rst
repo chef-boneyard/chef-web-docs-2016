@@ -5,3 +5,4 @@ To search for cookbooks on a node, use the ``recipes`` attribute followed by the
 .. code-block:: bash
 
    $ knife search node 'recipes:cookbook_name\:\:recipe_name'
+

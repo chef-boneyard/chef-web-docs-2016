@@ -112,6 +112,10 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_search_by_recipe.rst
 
+**Search by cookbook, then recipe**
+
+.. include:: ../../step_knife/step_knife_search_by_cookbook.rst
+
 **Search by node**
 
 .. include:: ../../step_knife/step_knife_search_by_node.rst
