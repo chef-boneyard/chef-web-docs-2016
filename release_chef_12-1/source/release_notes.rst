@@ -14,6 +14,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
 * **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
+* **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -134,6 +135,38 @@ The following attribute is new for the |resource dsc_script| resource:
        .. code-block:: ruby
 
           imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
+
+
+
+
+openbsd_package
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_openbsd.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_openbsd_package_install.rst
+
 
 
 Changelog
