@@ -23,4 +23,4 @@ When the |chef client| is run in |chef client_audit|, the following happens:
    * - **Upload audit data to the Chef server**
      - When |chef client_audit| mode is complete, the data is uploaded to the |chef server|.
    * - **Send to Chef Analytics**
-     - Most of this data is passed to the |chef analytics| platformfor further analysis, such as rules processing (for notification events triggered by expected or unexpected audit outcomes) and visibility from the actions web user interface.
+     - Most of this data is passed to the |chef analytics| platform for further analysis, such as rules processing (for notification events triggered by expected or unexpected audit outcomes) and visibility from the actions web user interface.
