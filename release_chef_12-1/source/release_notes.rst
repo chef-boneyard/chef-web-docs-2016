@@ -18,6 +18,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **New verify attribute for cookbook_file, file, remote_file, and template resources** Use the ``verify`` attribute to test a file using a block of code or a string.
 * **New options for knife-bootstrap** Use the ``--bootstrap-vault-file``, ``--bootstrap-vault-item``, and ``--bootstrap-vault-json`` options with ``knife bootstrap`` to specify items that are stored in |chef vault|.
 * **New attribute for chef_gem resource** Use the ``compile_time`` attribute to disable compile-time installation of |gems|.
+* **Bootstrap nodes without using the ORGANIZATION-validator.key file** A node may now be bootstrapped using the |user pem| file, instead of the |organization pem| file. Also known as a "validatorless bootstrap".
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -212,8 +213,13 @@ The following attribute is new for the |resource chef_gem| resource:
             compile_time false if respond_to?(:compile_time)
           end
 
-``knife bootstrap`` Options
+
+Validatorless Bootstrap
 -----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_bootstrap_no_validator.rst
+
+``knife bootstrap`` Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Use the following options to specify items that are stored in |chef vault|:
 
 ``--bootstrap-vault-file VAULT_FILE``
