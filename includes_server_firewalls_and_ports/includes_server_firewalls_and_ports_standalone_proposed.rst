@@ -8,7 +8,7 @@ For a standalone installation, and if host-based firewalls (iptables, ufw, etc.)
    :header-rows: 1
 
    * - Port
-     - Service
+     - Service Name, Description
      - External
    * - 4321
      - |service bookshelf|

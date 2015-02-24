@@ -8,7 +8,7 @@ For back-end servers in a tiered |chef server| installation:
    :header-rows: 1
 
    * - Port
-     - Service
+     - Service Name, Description
    * - 80, 443
      - |service nginx|
 

@@ -8,7 +8,7 @@ For back-end servers:
    :header-rows: 1
 
    * - Port
-     - Service
+     - Service Name, Description
      - External
    * - 4321
      - |service bookshelf|

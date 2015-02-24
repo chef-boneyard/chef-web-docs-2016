@@ -8,7 +8,7 @@ For front-end servers:
    :header-rows: 1
 
    * - Port
-     - Service
+     - Service Name, Description
      - External
    * - 80, 443
      - |service nginx|
