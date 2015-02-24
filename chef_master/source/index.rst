@@ -357,6 +357,7 @@ Cookbooks
    resource_mdadm
    resource_mount
    resource_ohai
+   resource_openbsd_package
    resource_package
    resource_pacman_package
    resource_perl
