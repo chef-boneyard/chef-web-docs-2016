@@ -29,8 +29,8 @@ From |chef server oec|
 =====================================================
 There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: 
 
-* `Standalone <http://docs.chef.io/upgrade_server.html#standalone>`__
-* `High availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
+* `Standalone <http://docs.chef.io/upgrade_server.html#id1>`__
+* `High availability <http://docs.chef.io/upgrade_server.html#id2>`__
 
 Before upgrading, please `view the notes <http://docs.chef.io/upgrade_server_notes.html>`__ for more background on the upgrade process from |chef server oec| 11 to |chef server| 12.
 
