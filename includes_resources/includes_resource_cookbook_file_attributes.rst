@@ -43,6 +43,50 @@
      - |windows| only. |rights windows security|
    * - ``source``
      - |source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
+   * - ``verify``
+     - Use to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command. For example:
+
+       .. code-block:: ruby
+
+		  template "/etc/nginx.conf" do
+		    verify "nginx -t -c %{path}"
+		  end
+
+        A block is arbitrary |ruby| defined within the resource block by using the keyword ``verify``. When a block is ``true``, the |chef client| will continue to update the file as appropriate. For example:
+
+       .. code-block:: ruby
+
+		  template "/tmp/baz" do
+		    verify { 1 == 1 }
+		  end
+
+        or:
+
+       .. code-block:: ruby
+
+		  template "/tmp/bar" do
+		    verify { 1 == 1}
+		  end
+
+       or:
+
+       .. code-block:: ruby
+
+		  template "/tmp/foo" do
+            verify do |path|
+              true
+            end
+          end
+
+       should all return ``true``. Whereas, the following should return ``false``:
+
+       .. code-block:: ruby
+
+		  template "/tmp/turtle" do
+		    verify "/usr/bin/false"
+		  end
+
+       If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
 
