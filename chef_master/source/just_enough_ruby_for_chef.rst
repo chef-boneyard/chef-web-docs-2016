@@ -1,7 +1,4 @@
-=====================================================
-Just Enough Ruby for Chef
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.chef.io/ruby.html BY DESIGN
+.. THIS PAGE IS LOCATED AT THE root PATH.
 
-.. include:: ../../includes_ruby/includes_ruby.rst
-
-.. include:: ../../includes_ruby/includes_ruby_just_enough.rst
+.. include:: ../../chef_master/source/ruby.rst

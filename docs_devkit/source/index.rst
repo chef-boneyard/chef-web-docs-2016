@@ -13,6 +13,7 @@ Getting Started
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/chef_overview.html">An Overview of Chef</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/install_dk.html">Install the Chef DK</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/getting_started.html">Getting Started with the Chef DK and Kitchen</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/ruby.html">Using Ruby</a> </br>
 
 .. note:: See this blog post by Irving Popovetsky about running the Chef DK on Windows: https://www.chef.io/blog/2014/11/04/the-chefdk-on-windows-survival-guide/.
 
