@@ -29,25 +29,25 @@ To update these settings, run the following commands:
 
 .. code-block:: bash
 
-   $ winrm set winrm/config/winrs @{MaxMemoryPerShellMB="300"}
+   $ winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="300"}'
 
 and:
 
 .. code-block:: bash
 
-   $ winrm set winrm/config @{MaxTimeoutms="1800000"}
+   $ winrm set winrm/config '@{MaxTimeoutms="1800000"}'
 
 and:
 
 .. code-block:: bash
 
-   $ winrm set winrm/config/service @{AllowUnencrypted="true"}
+   $ winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 
 and then:
 
 .. code-block:: bash
 
-   $ winrm set winrm/config/service/auth @{Basic="true"}
+   $ winrm set winrm/config/service/auth '@{Basic="true"}'
 
 Ensure that the |windows firewall| is configured to allow |windows remote management| connections between the workstation and the |chef server|. For example:
 
