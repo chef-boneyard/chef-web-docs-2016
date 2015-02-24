@@ -3,12 +3,12 @@
 
 The |chef server| supports using |windows ad| or |ldap| for any user that has an email address in the |ldap| directory. This allows those users to log in to the |chef server| by using their corporate credentials instead of having a separate username and password.
 
-.. warning:: The **required** attributes in the user LDAP record without which the system will not function are
+.. warning:: The **required** attributes in the user LDAP record without which the system will not function are:
   
    - ``mail:``
    - ``samaccountname:`` or ``uid:``
 
-   The **expected** attributes that should be found in the user LDAP record are 
+   The **expected** attributes that should be found in the user LDAP record are:
 
    - ``displayname:``
    - ``givenname:``
