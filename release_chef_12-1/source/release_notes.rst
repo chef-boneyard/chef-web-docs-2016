@@ -102,8 +102,12 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
-New ``dsc_script`` attribute
+New Attributes
 -----------------------------------------------------
+The following attributes are new for |chef client| 12.1.
+
+``imports`` Attribute
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attribute is new for the |resource dsc_script| resource:
 
 .. list-table::
@@ -138,36 +142,10 @@ The following attribute is new for the |resource dsc_script| resource:
           imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
 
 
-openbsd_package
------------------------------------------------------
-
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
-.. include:: ../../includes_resources/includes_resource_package_openbsd.rst
-
-.. note:: |note resource_based_on_package|
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_openbsd_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_openbsd_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_openbsd_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**Install a package**
-
-.. include:: ../../step_resource/step_resource_openbsd_package_install.rst
-
 ``verify`` Attribute
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The ``verify`` attribute may be used with the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources.
+
 Use the ``verify`` attribute to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command. For example:
 
 .. code-block:: ruby
@@ -211,6 +189,39 @@ should all return ``true``. Whereas, the following should return ``false``:
    end
 
 If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
+
+
+
+
+
+
+openbsd_package
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_openbsd.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_openbsd_package_install.rst
 
 
 
