@@ -277,7 +277,7 @@ To create the |chef repo hidden| directory:
 
 **Create an Organization**
 
-On the |chef server| machine, run the following command:
+On the |chef server| machine create the |organization pem| from the command line using |chef server ctl|. Run the following command:
 
 .. code-block:: bash
 
@@ -297,7 +297,7 @@ For example, an organization named ``chef``, with a full name of ``Chef Software
 
 **Create a User**
 
-On the |chef server| machine, run the following command:
+On the |chef server| machine create the |user pem| from the command line using |chef server ctl|. Run the following command:
 
 .. code-block:: bash
 
