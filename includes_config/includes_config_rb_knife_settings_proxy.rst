@@ -38,3 +38,13 @@ If the |chef server| is configured to use HTTPS (such as the hosted |chef server
    * - ``https_proxy_pass``
      - |https_proxy_pass| Default value: ``nil``.
 
+Use the following setting to specify URLs that do not need a proxy:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``no_proxy``
+     - |no_proxy| Default value: ``nil``.
