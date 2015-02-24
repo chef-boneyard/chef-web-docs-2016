@@ -15,6 +15,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
 * **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
 * **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
+* **New verify attribute for cookbook_file, file, remote_file, and template resources** Use the ``verify`` attribute to test a file using a block of code or a string.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -137,8 +138,6 @@ The following attribute is new for the |resource dsc_script| resource:
           imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
 
 
-
-
 openbsd_package
 -----------------------------------------------------
 
@@ -166,6 +165,52 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_openbsd_package_install.rst
+
+``verify`` Attribute
+-----------------------------------------------------
+Use the ``verify`` attribute to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command. For example:
+
+.. code-block:: ruby
+
+   template "/etc/nginx.conf" do
+     verify "nginx -t -c %{path}"
+   end
+
+A block is arbitrary |ruby| defined within the resource block by using the keyword ``verify``. When a block is ``true``, the |chef client| will continue to update the file as appropriate. For example:
+
+.. code-block:: ruby
+
+   template "/tmp/baz" do
+     verify { 1 == 1 }
+   end
+
+or:
+
+.. code-block:: ruby
+
+   template "/tmp/bar" do
+     verify { 1 == 1}
+   end
+
+or:
+
+.. code-block:: ruby
+
+   template "/tmp/foo" do
+     verify do |path|
+       true
+     end
+   end
+
+should all return ``true``. Whereas, the following should return ``false``:
+
+.. code-block:: ruby
+
+   template "/tmp/turtle" do
+     verify "/usr/bin/false"
+   end
+
+If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
 
 
 
