@@ -10,7 +10,13 @@
    * - Attribute
      - Description
    * - ``compile_time``
-     - Use to disable compile-time installation of |gems|. Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``.
+     - |chef_gem compile_time| Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``. Use a ``respond_to?`` check to ensure backward compatibility. For example:
+
+       .. code-block:: ruby
+
+          chef_gem 'aws-sdk' do
+            compile_time false if respond_to?(:compile_time)
+          end
    * - ``options``
      - |command options|
    * - ``package_name``

@@ -17,6 +17,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
 * **New verify attribute for cookbook_file, file, remote_file, and template resources** Use the ``verify`` attribute to test a file using a block of code or a string.
 * **New options for knife-bootstrap** Use the ``--bootstrap-vault-file``, ``--bootstrap-vault-item``, and ``--bootstrap-vault-json`` options with ``knife bootstrap`` to specify items that are stored in |chef vault|.
+* **New attribute for chef_gem resource** Use the ``compile_time`` attribute to disable compile-time installation of |gems|.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -191,6 +192,25 @@ should all return ``true``. Whereas, the following should return ``false``:
 
 If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
 
+
+``compile_time`` Attribute
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following attribute is new for the |resource chef_gem| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``compile_time``
+     - |chef_gem compile_time| Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``. Use a ``respond_to?`` check to ensure backward compatibility. For example:
+
+       .. code-block:: ruby
+
+          chef_gem 'aws-sdk' do
+            compile_time false if respond_to?(:compile_time)
+          end
 
 ``knife bootstrap`` Options
 -----------------------------------------------------
