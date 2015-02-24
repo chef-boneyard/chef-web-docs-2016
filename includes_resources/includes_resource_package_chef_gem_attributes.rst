@@ -9,6 +9,8 @@
 
    * - Attribute
      - Description
+   * - ``compile_time``
+     - Use to disable compile-time installation of |gems|. Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``.
    * - ``options``
      - |command options|
    * - ``package_name``
