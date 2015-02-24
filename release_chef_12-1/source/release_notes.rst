@@ -16,6 +16,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
 * **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
 * **New verify attribute for cookbook_file, file, remote_file, and template resources** Use the ``verify`` attribute to test a file using a block of code or a string.
+* **New options for knife-bootstrap** Use the ``--bootstrap-vault-file``, ``--bootstrap-vault-item``, and ``--bootstrap-vault-json`` options with ``knife bootstrap`` to specify items that are stored in |chef vault|.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -191,7 +192,18 @@ should all return ``true``. Whereas, the following should return ``false``:
 If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
 
 
+``knife bootstrap`` Options
+-----------------------------------------------------
+Use the following options to specify items that are stored in |chef vault|:
 
+``--bootstrap-vault-file VAULT_FILE``
+   |bootstrap valut_file|
+
+``--bootstrap-vault-item VAULT_ITEM``
+   |bootstrap valut_item|
+
+``--bootstrap-vault-json VAULT_JSON``
+   |bootstrap valut_json|
 
 
 

@@ -13,7 +13,7 @@ This subcommand has the following options:
 
 ``--bootstrap-install-command COMMAND``
    |bootstrap install_command| |bootstrap no_curl_sh_wget|
- 
+
 ``--bootstrap-install-sh URL``
    |bootstrap install_sh| |bootstrap no_install_command|
 
@@ -24,7 +24,16 @@ This subcommand has the following options:
 
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
-   
+
+``--bootstrap-vault-file VAULT_FILE``
+   |bootstrap valut_file|
+
+``--bootstrap-vault-item VAULT_ITEM``
+   |bootstrap valut_item|
+
+``--bootstrap-vault-json VAULT_JSON``
+   |bootstrap valut_json|
+
 ``--bootstrap-version VERSION``
    |bootstrap version|
 
@@ -61,7 +70,7 @@ This subcommand has the following options:
 
 ``--node-ssl-verify-mode PEER_OR_NONE``
    |ssl_verify_mode|
- 
+
    |ssl_verify_bootstrap_none|
 
    |ssl_verify_bootstrap_peer| This is the recommended setting.
@@ -98,4 +107,3 @@ This subcommand has the following options:
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh_user|
-
