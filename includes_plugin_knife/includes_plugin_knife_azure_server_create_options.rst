@@ -5,8 +5,11 @@
 
 This argument has the following options:
 
-``--azure-affinity-group GROUP``
+``-a``, ``--azure-affinity-group GROUP``
    |azure affinity_group| Required when not using ``--azure-service-location``.
+
+``--auto-update-client``
+   |auto_update_client| This option may only be used when ``--bootstrap-protocol`` is set to ``cloud-api``. Default value: ``false``.
 
 ``--azure-availability-set NAME``
    |azure availability_set|
@@ -29,6 +32,12 @@ This argument has the following options:
 ``--azure-vm-name NAME``
    |azure virtual_machine_name|
 
+``--azure-vm-ready-timeout TIMEOUT``
+   |azure vm_timeout_ready| Default value: ``10``.
+
+``--azure-vm-startup-timeout TIMEOUT``
+   |azure vm_timeout_startup| Default value: ``15``.
+
 ``--bootstrap-protocol PROTOCOL``
    |bootstrap protocol| Default value: ``winrm``.
 
@@ -37,6 +46,12 @@ This argument has the following options:
 
 ``-c``, ``--azure-connect-to-existing-dns``
    |azure connect_to_existing_dns|
+
+``--cert-passphrase PASSWORD``
+   |password certificate_ssl|
+
+``--cert-path PATH``
+   |path certificate_ssl|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -62,6 +77,9 @@ This argument has the following options:
 
 ``--identity-file_passphrase PASSWORD``
    |identity_file_passphrase|
+
+``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
+   |json first_run_string|
 
 ``-m LOCATION``, ``--azure-service-location LOCATION``
    |media location| Required when not using ``--azure-affinity-group``.
@@ -99,11 +117,17 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |path bootstrap_template|
 
+``--thumbprint THUMBPRINT``
+   |thumbprint|
+
 ``-u PORT_LIST``, ``---udp-endpoints PORT_LIST``
    |udp_ports|
 
 ``--verify-ssl-cert``
    |ssl_certificate|
+
+``--windows-auth-timeout MINUTES``
+   |timeout auth_windows| Default value: ``25``.
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh_user|

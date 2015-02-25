@@ -12,6 +12,32 @@ Install this plugin
 =====================================================
 .. include:: ../../step_plugin_knife/step_plugin_knife_azure_install_rubygem.rst
 
+
+ag create
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_ag_create.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_ag_create_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_ag_create_options.rst
+
+ag list
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_ag_list.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_ag_list_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_ag_list_options.rst
+
+
 image list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list.rst
@@ -95,3 +121,41 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst
+
+
+server show
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_show.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_show_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_show_options.rst
+
+
+vnet create
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_vnet_create.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_vnet_create_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_vnet_create_options.rst
+
+vnet list
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_vnet_list.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_vnet_list_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_vnet_list_options.rst
