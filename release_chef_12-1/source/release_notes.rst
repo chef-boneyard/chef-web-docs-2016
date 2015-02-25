@@ -13,12 +13,12 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **chef-client may be run in audit-mode** Use |chef client_audit| to run audit tests against a node.
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
-* **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
-* **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
-* **New verify attribute for cookbook_file, file, remote_file, and template resources** Use the ``verify`` attribute to test a file using a block of code or a string.
-* **New options for knife-bootstrap** Use the ``--bootstrap-vault-file``, ``--bootstrap-vault-item``, and ``--bootstrap-vault-json`` options with ``knife bootstrap`` to specify items that are stored in |chef vault|.
-* **New attribute for chef_gem resource** Use the ``compile_time`` attribute to disable compile-time installation of |gems|.
 * **Bootstrap nodes without using the ORGANIZATION-validator.key file** A node may now be bootstrapped using the |user pem| file, instead of the |organization pem| file. Also known as a "validatorless bootstrap".
+* **New options for knife-bootstrap** Use the ``--bootstrap-vault-file``, ``--bootstrap-vault-item``, and ``--bootstrap-vault-json`` options with ``knife bootstrap`` to specify items that are stored in |chef vault|.
+* **New verify attribute for cookbook_file, file, remote_file, and template resources** Use the ``verify`` attribute to test a file using a block of code or a string.
+* **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
+* **New attribute for chef_gem resource** Use the ``compile_time`` attribute to disable compile-time installation of |gems|.
+* **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -105,45 +105,30 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
+
+Validatorless Bootstrap
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_bootstrap_no_validator.rst
+
+``knife bootstrap`` Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Use the following options to specify items that are stored in |chef vault|:
+
+``--bootstrap-vault-file VAULT_FILE``
+   |bootstrap valut_file|
+
+``--bootstrap-vault-item VAULT_ITEM``
+   |bootstrap valut_item|
+
+``--bootstrap-vault-json VAULT_JSON``
+   |bootstrap valut_json|
+
+
+
+
 New Attributes
 -----------------------------------------------------
 The following attributes are new for |chef client| 12.1.
-
-``imports`` Attribute
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following attribute is new for the |resource dsc_script| resource:
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``imports``
-     - Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
-
-       .. code-block:: ruby
-
-          imports module_name
-
-       To import specific resources, specify the module name and then the name for each resource in that module to import:
-
-       .. code-block:: ruby
-
-          imports module_name, resource_name_a, resource_name_b, ...
-
-       For example, to import all resources from a module named ``cRDPEnabled``:
-
-       .. code-block:: ruby
-
-          imports cRDPEnabled
-
-       And to import only the ``PSHOrg_cRDPEnabled`` resource:
-
-       .. code-block:: ruby
-
-          imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
-
 
 ``verify`` Attribute
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -194,6 +179,42 @@ should all return ``true``. Whereas, the following should return ``false``:
 If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
 
 
+``imports`` Attribute
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following attribute is new for the |resource dsc_script| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``imports``
+     - Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
+
+       .. code-block:: ruby
+
+          imports module_name
+
+       To import specific resources, specify the module name and then the name for each resource in that module to import:
+
+       .. code-block:: ruby
+
+          imports module_name, resource_name_a, resource_name_b, ...
+
+       For example, to import all resources from a module named ``cRDPEnabled``:
+
+       .. code-block:: ruby
+
+          imports cRDPEnabled
+
+       And to import only the ``PSHOrg_cRDPEnabled`` resource:
+
+       .. code-block:: ruby
+
+          imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
+
+
 ``compile_time`` Attribute
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attribute is new for the |resource chef_gem| resource:
@@ -212,25 +233,6 @@ The following attribute is new for the |resource chef_gem| resource:
           chef_gem 'aws-sdk' do
             compile_time false if respond_to?(:compile_time)
           end
-
-
-Validatorless Bootstrap
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bootstrap_no_validator.rst
-
-``knife bootstrap`` Options
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following options to specify items that are stored in |chef vault|:
-
-``--bootstrap-vault-file VAULT_FILE``
-   |bootstrap valut_file|
-
-``--bootstrap-vault-item VAULT_ITEM``
-   |bootstrap valut_item|
-
-``--bootstrap-vault-json VAULT_JSON``
-   |bootstrap valut_json|
-
 
 
 openbsd_package
@@ -265,5 +267,5 @@ Examples
 
 Changelog
 =====================================================
-xxxxx
+https://github.com/chef/chef/blob/12-stable/CHANGELOG.md
 
