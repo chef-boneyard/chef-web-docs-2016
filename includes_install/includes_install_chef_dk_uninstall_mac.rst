@@ -19,4 +19,4 @@ To remove the symlinks under ``/usr/bin``:
 
 .. code-block:: bash
 
-   $ find /usr/bin -lname '/opt/chefdk/*' -delete
+   $ sudo find /usr/bin -lname '/opt/chefdk/*' -delete
