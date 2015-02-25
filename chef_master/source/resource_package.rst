@@ -18,7 +18,9 @@ This resource is the base resource for several other resources used for package 
 * :doc:`homebrew_package </resource_homebrew_package>`
 * :doc:`ips_package </resource_ips_package>`
 * :doc:`macports_package </resource_macports_package>`
+* :doc:`openbsd_package </resource_openbsd_package>`
 * :doc:`pacman_package </resource_pacman_package>`
+* :doc:`paludis_package </resource_paludis_package>`
 * :doc:`portage_package </resource_portage_package>`
 * :doc:`rpm_package </resource_rpm_package>`
 * :doc:`smartos_package </resource_smartos_package>`
