@@ -19,6 +19,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
 * **New attribute for chef_gem resource** Use the ``compile_time`` attribute to disable compile-time installation of |gems|.
 * **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
+* **New --proxy-auth option for knife raw subcommand** |proxy_auth|
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------

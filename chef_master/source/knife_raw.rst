@@ -12,7 +12,7 @@ Options
 =====================================================
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_raw_options.rst
+.. include:: ../../includes_knife/includes_knife_12-0_raw_options.rst
 
 knife.rb Settings
 -----------------------------------------------------
@@ -35,3 +35,4 @@ The following examples show how to use this |knife| subcommand:
 **Delete a data bag**
 
 .. include:: ../../step_knife/step_knife_raw_delete_data_bag.rst
+

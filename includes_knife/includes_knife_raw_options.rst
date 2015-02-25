@@ -13,3 +13,6 @@ This subcommand has the following options:
 
 ``-m METHOD``, ``--method METHOD``
    |method request type| Default value: ``GET``.
+
+``--proxy-auth``
+   |proxy_auth| Default value: ``false``.
