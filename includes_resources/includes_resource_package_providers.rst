@@ -37,8 +37,14 @@ The following providers are available. Use the short name to call the provider f
    * - ``Chef::Provider::Package::Macports``
      - ``macports_package``
      - 
+   * - ``Chef::Provider::Package::Openbsd``
+     - ``openbsd_package``
+     - 
    * - ``Chef::Provider::Package::Pacman``
      - ``pacman_package``
+     - 
+   * - ``Chef::Provider::Package::Paludis``
+     - ``paludis_package``
      - 
    * - ``Chef::Provider::Package::Portage``
      - ``portage_package``
