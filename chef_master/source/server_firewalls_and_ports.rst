@@ -53,7 +53,7 @@ Back End
 =====================================================
 The following sections describe the ports that are required by |chef analytics|:
 
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_analytics.rst
 
 .. 
 .. Standalone (Temp)
