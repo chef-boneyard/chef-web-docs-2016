@@ -48,6 +48,13 @@ Back End
 -----------------------------------------------------
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_tiered.rst
 
+
+|chef analytics_title|
+=====================================================
+The following sections describe the ports that are required by |chef analytics|:
+
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst
+
 .. 
 .. Standalone (Temp)
 .. =====================================================
