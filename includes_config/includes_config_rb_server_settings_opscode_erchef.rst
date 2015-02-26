@@ -53,6 +53,8 @@ This configuration file has the following settings for ``opscode-erchef``:
      - Default value: ``10000``.
    * - ``opscode_erchef['max_request_size']``
      - Default value: ``1000000``.
+   * - ``opscode_erchef['nginx_bookshelf_caching']``
+     - Use to specify if |nginx| is used to cache cookbooks. When ``:on``, |nginx| will serve up the cached content instead of forwarding the request. Default value: ``:off``.
    * - ``opscode_erchef['port']``
      - |port service| Default value: ``8000``.
    * - ``opscode_erchef['root_metric_key']``
@@ -63,6 +65,8 @@ This configuration file has the following settings for ``opscode-erchef``:
      - Default value: ``20``.
    * - ``opscode_erchef['s3_parallel_ops_timeout']``
      - Default value: ``5000``.
+   * - ``opscode_erchef['s3_url_expiry_window_size']``
+     - Use to specify the frequency at which unique URLs are generated. This value may be a specific amount of time, i.e. ``15m`` (fifteen minutes) or a percentage of the value of ``s3_url_ttl``, i.e. ``10%``. Default value: ``:off``.
    * - ``opscode_erchef['s3_url_ttl']``
      - |s3_url_ttl| If node bootstraps are timing out, increase this setting. Default value: ``28800``.
    * - ``opscode_erchef['udp_socket_pool_size']``
