@@ -9,13 +9,13 @@ This argument has the following options:
    |azure affinity_group|
 
 ``--azure-address-space CIDR``
-   |azure vnet_address_space| |azure_cidr|
+   |azure vnet_address_space| |azure cidr|
 
 ``--azure-publish-settings-file FILE_NAME``
    |file azure_publish_settings|
 
 ``--azure-subnet-name CIDR``
-   |azure subnet_name| |azure_cidr|
+   |azure subnet_name| |azure cidr|
 
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
    |azure_host_name|
