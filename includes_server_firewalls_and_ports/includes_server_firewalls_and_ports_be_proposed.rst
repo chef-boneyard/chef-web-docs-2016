@@ -13,63 +13,58 @@ For back-end servers:
    * - 4321
      - |service bookshelf|
 
-       File system-backed, S3 API compatible service for storage and retrieval of cookbooks.
+       .. include:: ../../includes_server_services/includes_server_services_bookshelf.rst
      - yes
    * - 
      - |service keepalived|
 
-       Manages the virtual IP address (VIP) between backend chef server nodes using VRRP (Virtual Router Redundancy Protocol) in an "HA" topology.
+       .. include:: ../../includes_server_services/includes_server_services_keepalived.rst
      - yes
    * - 
      - |service nginx|
 
-       Defines virtual hosts for internal and external API request/response routing, external add-on request routing, as well as routing for front-end components to back-end components.
+       .. include:: ../../includes_server_services/includes_server_services_nginx.rst
      - yes
    * - 9683
      - |service bifrost|
 
-       Manages and restricts access to all objects, handles the RBAC aspect of user requests.
+       .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
      - yes
    * - 9090
      - |service ocid|
 
-       OAuth2 provider (e.g. used by Supermarket) based on chef server user.
+       .. include:: ../../includes_server_services/includes_server_services_oc_id.rst
      - yes
    * - 
      - |service erchef|
 
-       Provides the complete REST API for Chef Server. In  EC11 and earlier, provided the API for data objects (cookbooks, nodes, clients, etc) but not RBAC objects (users, groups, containers)
+       .. include:: ../../includes_server_services/includes_server_services_erchef.rst
      - yes
    * - 
      - |service expander|
 
-       Captures modified objects published to rabbitmq, performs data transforms, submits to Solr for indexing. 
-     - yes
-   * - 
-     - |service reindexer|
-
-       (depricated) Manually resubmits data objects for Solr reindexing.
+       .. include:: ../../includes_server_services/includes_server_services_expander.rst
      - yes
    * - 8983
      - |service solr4|
 
-       Indexing used for searching for various API data objects (nodes, data_bags, etc.). Used only for timely search results via the API, actual data used by platform is stored in postgres.
-     - yes
+       .. include:: ../../includes_server_services/includes_server_services_solr4.rst
+     - no
    * - 5432
      - |service postgresql|
 
-       Relational data store for all versions of CS/EC. In CS12, exclusive data store - couch has been removed. In HA topology, data is persisted on a drdb-configured volume.
-     - yes
+       .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
+     - no
    * - 5672
      - |service rabbitmq|
 
-       Messaging service used for funneling of information to/from inter-service communication (solr indexing, analytics activity, etc.).
-     - yes
+       .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
+     - no
    * - 16379
      - |service redis_lb|
 
        Key-value store used in conjunction with nginx to route requests and populate request data used by erchef. Data is persisted on a drdb-configured volume in HA topology.
-     - yes
+     - no
    * - 7788-7799
      - |drbd| This port range must be open between all back end servers.
      - no

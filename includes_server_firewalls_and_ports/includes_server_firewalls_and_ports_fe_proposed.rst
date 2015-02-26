@@ -13,25 +13,22 @@ For front-end servers:
    * - 80, 443
      - |service nginx|
 
-       Defines virtual hosts for internal and external API request/response routing, external add-on request routing, as well as routing for front-end components to back-end components.
+       .. include:: ../../includes_server_services/includes_server_services_nginx.rst
      - yes
    * - 9463
      - |service bifrost|
 
-       Manages and restricts access to all objects, handles the RBAC aspect of user requests.
+       .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
      - no
    * - 9090
      - |service ocid|
 
-       OAuth2 provider (e.g. used by Supermarket) based on chef server user.
+       .. include:: ../../includes_server_services/includes_server_services_oc_id.rst
      - no
    * - 8000
      - |service erchef|
 
-       Provides the complete REST API for Chef Server. In  EC11 and earlier, provided the API for data objects (cookbooks, nodes, clients, etc) but not RBAC objects (users, groups, containers)  
-     - no
-   * - 9680
-     - |api chef server| internal LB port
+       .. include:: ../../includes_server_services/includes_server_services_erchef.rst
      - no
    * - 9683
      - |service bifrost| internal LB port
