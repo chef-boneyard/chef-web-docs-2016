@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife azure server list
+   $ knife azure server list (options)
 

@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife azure server show SERVER [SERVER...]
+   $ knife azure server show SERVER [SERVER...] (options)
 

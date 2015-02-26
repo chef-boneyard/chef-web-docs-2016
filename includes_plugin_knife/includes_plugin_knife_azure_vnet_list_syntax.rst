@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife azure vnet list
+   $ knife azure vnet list (options)
 

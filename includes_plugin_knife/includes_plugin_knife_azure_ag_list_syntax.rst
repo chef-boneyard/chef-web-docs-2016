@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife azure ag list
+   $ knife azure ag list (options)
 
