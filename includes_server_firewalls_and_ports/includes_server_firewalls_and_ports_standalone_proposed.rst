@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 For a standalone installation, and if host-based firewalls (iptables, ufw, etc.) are being used, ensure that the following ports are open:
 
 .. list-table::
@@ -15,10 +16,12 @@ For a standalone installation, and if host-based firewalls (iptables, ufw, etc.)
 
        .. include:: ../../includes_server_services/includes_server_services_bookshelf.rst
      - no
-   * - 80, 443
+   * - 80, 443, 9683
      - |service nginx|
 
        .. include:: ../../includes_server_services/includes_server_services_nginx.rst
+
+       .. note:: Port 9683 is used to internally load balance the |service bifrost| service.
      - yes
    * - 9463
      - |service bifrost|
@@ -34,9 +37,6 @@ For a standalone installation, and if host-based firewalls (iptables, ufw, etc.)
      - |service erchef|
 
        .. include:: ../../includes_server_services/includes_server_services_erchef.rst
-     - no
-   * - 9683
-     - |service bifrost| internal LB port
      - no
    * - 8983
      - |service solr4|
@@ -56,6 +56,6 @@ For a standalone installation, and if host-based firewalls (iptables, ufw, etc.)
    * - 16379
      - |service redis_lb|
 
-       Key-value store used in conjunction with nginx to route requests and populate request data used by erchef. Data is persisted on a drdb-configured volume in HA topology.
+       Key-value store used in conjunction with |nginx| to route requests and populate request data used by the |chef server|.
      - no
 

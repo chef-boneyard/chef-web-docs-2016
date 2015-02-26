@@ -2,32 +2,28 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-.. Anything listed as external=yes for tiered/ha, that firewall should be configured for those ports.
-.. Anything listed as external=yes for standalone, that firewall should be configured for those ports.
-
 For back-end servers in a tiered |chef server| installation:
 
 .. list-table::
-   :widths: 60 420
+   :widths: 60 420 60
    :header-rows: 1
 
    * - Port
      - Service Name, Description
      - External
-   * - 80, 443
+   * - 80, 443, 9671, 9683
      - |service nginx|
 
        .. include:: ../../includes_server_services/includes_server_services_nginx.rst
+
+       .. note:: Port 9671 is used to xxxxx.
+
+       .. note:: Port 9683 is used to internally load balance the |service bifrost| service.
      - yes
    * - 9463
      - |service bifrost|
 
        .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
-     - 
-   * - 9671, 9683 (oc_bifrost on ILB)
-     - |service nginx|
-
-       .. include:: ../../includes_server_services/includes_server_services_nginx.rst
      - 
    * - 8983
      - |service solr4|
@@ -47,7 +43,7 @@ For back-end servers in a tiered |chef server| installation:
    * - 16379
      - |service redis_lb|
 
-       Key-value store used in conjunction with nginx to route requests and populate request data used by erchef. Data is persisted on a drdb-configured volume in HA topology.
+       Key-value store used in conjunction with |nginx| to route requests and populate request data used by the |chef server|.
      - 
    * - 4321
      - |service bookshelf|
@@ -58,3 +54,4 @@ For back-end servers in a tiered |chef server| installation:
      - |service erchef|
 
        .. include:: ../../includes_server_services/includes_server_services_erchef.rst
+     -

@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 For back-end servers:
 
 .. list-table::
@@ -20,10 +21,14 @@ For back-end servers:
 
        .. include:: ../../includes_server_services/includes_server_services_keepalived.rst
      - yes
-   * - 
+   * - 80, 443, 9671, 9683
      - |service nginx|
 
        .. include:: ../../includes_server_services/includes_server_services_nginx.rst
+
+       .. note:: Port 9671 is used to xxxxx.
+
+       .. note:: Port 9683 is used to internally load balance the |service bifrost| service.
      - yes
    * - 9683
      - |service bifrost|
@@ -35,7 +40,7 @@ For back-end servers:
 
        .. include:: ../../includes_server_services/includes_server_services_oc_id.rst
      - yes
-   * - 
+   * - 8000
      - |service erchef|
 
        .. include:: ../../includes_server_services/includes_server_services_erchef.rst
@@ -63,8 +68,8 @@ For back-end servers:
    * - 16379
      - |service redis_lb|
 
-       Key-value store used in conjunction with nginx to route requests and populate request data used by erchef. Data is persisted on a drdb-configured volume in HA topology.
+       Key-value store used in conjunction with |nginx| to route requests and populate request data used by the |chef server|. Data may be persisted on a |drbd| configured volume in a high availability configuration.
      - no
    * - 7788-7799
-     - |drbd| This port range must be open between all back end servers.
+     - |drbd| This port range must be open between all back end servers in a high availability configuration that uses |drbd|.
      - no
