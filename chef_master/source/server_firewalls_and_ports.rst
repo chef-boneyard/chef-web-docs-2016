@@ -6,6 +6,8 @@ Firewalls and Ports
 
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_listening.rst
 
+.. note:: An "external" port is external from the perspective of the workstation, machine, or other user when accessing the |chef server| via the |api chef server|.
+
 Standalone
 =====================================================
 The following sections describe the ports that are required by the |chef server| in a standalone configuration:
