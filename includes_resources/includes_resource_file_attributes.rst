@@ -46,47 +46,7 @@
    * - ``sensitive``
      - |sensitive| Default value: ``false``.
    * - ``verify``
-     - Use to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command. For example:
+     - Use to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command.
 
-       .. code-block:: ruby
-
-		  template "/etc/nginx.conf" do
-		    verify "nginx -t -c %{path}"
-		  end
-
-        A block is arbitrary |ruby| defined within the resource block by using the keyword ``verify``. When a block is ``true``, the |chef client| will continue to update the file as appropriate. For example:
-
-       .. code-block:: ruby
-
-		  template "/tmp/baz" do
-		    verify { 1 == 1 }
-		  end
-
-        or:
-
-       .. code-block:: ruby
-
-		  template "/tmp/bar" do
-		    verify { 1 == 1}
-		  end
-
-       or:
-
-       .. code-block:: ruby
-
-		  template "/tmp/foo" do
-            verify do |path|
-              true
-            end
-          end
-
-       should all return ``true``. Whereas, the following should return ``false``:
-
-       .. code-block:: ruby
-
-		  template "/tmp/turtle" do
-		    verify "/usr/bin/false"
-		  end
-
-       If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
+       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
