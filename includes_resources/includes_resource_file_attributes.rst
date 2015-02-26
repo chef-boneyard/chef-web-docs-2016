@@ -27,14 +27,14 @@
      - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
    * - ``mode``
      - |mode resource_file|
-       
+
        The behavior is different depending on the platform.
-       
+
        |unix|- and |linux|-based systems: |mode *nix|
-       
+
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner windows security|	
+     - |owner windows security|
    * - ``path``
      - |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. |see syntax|
 
@@ -50,43 +50,42 @@
 
        .. code-block:: ruby
 
-		  template "/etc/nginx.conf" do
-		    verify "nginx -t -c %{path}"
-		  end
+         template "/etc/nginx.conf" do
+           verify "nginx -t -c %{path}"
+         end
 
-        A block is arbitrary |ruby| defined within the resource block by using the keyword ``verify``. When a block is ``true``, the |chef client| will continue to update the file as appropriate. For example:
-
-       .. code-block:: ruby
-
-		  template "/tmp/baz" do
-		    verify { 1 == 1 }
-		  end
-
-        or:
+       A block is arbitrary |ruby| defined within the resource block by using the keyword ``verify``. When a block is ``true``, the |chef client| will continue to update the file as appropriate. For example:
 
        .. code-block:: ruby
 
-		  template "/tmp/bar" do
-		    verify { 1 == 1}
-		  end
+         template "/tmp/baz" do
+           verify { 1 == 1 }
+         end
 
        or:
 
        .. code-block:: ruby
 
-		  template "/tmp/foo" do
-            verify do |path|
-              true
-            end
-          end
+         template "/tmp/bar" do
+           verify { 1 == 1}
+         end
+
+       or:
+
+       .. code-block:: ruby
+
+         template "/tmp/foo" do
+           verify do |path|
+             true
+           end
+         end
 
        should all return ``true``. Whereas, the following should return ``false``:
 
        .. code-block:: ruby
 
-		  template "/tmp/turtle" do
-		    verify "/usr/bin/false"
-		  end
+         template "/tmp/turtle" do
+           verify "/usr/bin/false"
+         end
 
        If a string or a block return ``false``, the |chef client| run will stop and an error will be returned.
-
