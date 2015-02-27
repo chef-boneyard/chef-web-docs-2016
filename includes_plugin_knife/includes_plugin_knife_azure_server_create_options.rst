@@ -41,6 +41,8 @@ This argument has the following options:
 ``--bootstrap-protocol PROTOCOL``
    |bootstrap protocol| Default value: ``winrm``.
 
+   .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_cloud_api.rst
+
 ``--bootstrap-version VERSION``
    |bootstrap version|
 
