@@ -323,6 +323,19 @@ The following configuration settings have updated default values starting with |
    * - ``api_version``
      - |version chef_server| Default value: ``"12.0.0"``.
 
+The following configuration settings are new in |chef server| version 12.0.5:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``opscode_erchef['nginx_bookshelf_caching']``
+     - |nginx bookshelf_caching| Default value: ``:off``.
+   * - ``opscode_erchef['s3_url_expiry_window_size']``
+     - |s3_url_expiry_window_size| Default value: ``:off``.
+
 oc_chef_authz
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_services/includes_server_services_authz.rst
