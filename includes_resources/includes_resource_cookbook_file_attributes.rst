@@ -44,9 +44,9 @@
    * - ``source``
      - |source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
    * - ``verify``
-     - Use to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command.
+     - |verify_file|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
 

@@ -135,9 +135,16 @@ The following attributes are new for |chef client| 12.1.
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The ``verify`` attribute may be used with the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources.
 
-Use the ``verify`` attribute to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command. 
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
 
-.. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+   * - Attribute
+     - Description
+   * - ``verify``
+     - |verify_file|
+
+        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 
 ``imports`` Attribute

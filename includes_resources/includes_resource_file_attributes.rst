@@ -46,7 +46,7 @@
    * - ``sensitive``
      - |sensitive| Default value: ``false``.
    * - ``verify``
-     - Use to specify a block or a string that returns ``true`` or ``false``. A string, when ``true`` is executed as a system command.
+     - |verify_file|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
