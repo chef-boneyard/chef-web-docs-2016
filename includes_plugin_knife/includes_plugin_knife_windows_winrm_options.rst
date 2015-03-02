@@ -47,6 +47,9 @@ This argument has the following options:
 ``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
    |winrm_transport| Possible values: ``ssl`` or ``plaintext``.
 
+``--winrm-authentication-protocol PROTOCOL``
+   |winrm_auth_protocol| Possible values: ``basic``, ``kerberos`` or ``negotiate``. Default value: ``negotiate``.
+
 ``-x USERNAME``, ``--winrm-user USERNAME``
    |winrm_user|
 
