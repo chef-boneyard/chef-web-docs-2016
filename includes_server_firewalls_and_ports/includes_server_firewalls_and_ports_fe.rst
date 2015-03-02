@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 For front-end servers:
 
 .. list-table::
@@ -8,26 +9,27 @@ For front-end servers:
    :header-rows: 1
 
    * - Port
-     - Service
+     - Service Name, Description
      - External
-   * - 80
+   * - 80, 443, 9683
      - |service nginx|
+
+       .. include:: ../../includes_server_services/includes_server_services_nginx.rst
+
+       .. note:: Port 9683 is used to internally load balance the |service bifrost| service.
      - yes
-   * - 443
-     - |service nginx|
-     - yes
-   * - 8000
-     - |service erchef|
-     - no
-   * - 9090
-     - |service ocid|
-     - no
    * - 9463
      - |service bifrost|
-     - no
-   * - 9680
-     - |api chef server| internal LB port
-     - no
-   * - 9683
-     - |service bifrost| internal LB port
-     - no
+
+       .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
+     - 
+   * - 9090
+     - |service ocid|
+
+       .. include:: ../../includes_server_services/includes_server_services_oc_id.rst
+     - 
+   * - 8000
+     - |service erchef|
+
+       .. include:: ../../includes_server_services/includes_server_services_erchef.rst
+     - 
