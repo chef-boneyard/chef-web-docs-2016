@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-For a standalone installation, and if host-based firewalls (iptables, ufw, etc.) are being used, ensure that the following ports are open:
+For a standalone installation, ensure that ports marked as external (marked as ``yes`` in the **External** column) are open and accessible via any firewalls that are in use:
 
 .. list-table::
    :widths: 60 420 60
