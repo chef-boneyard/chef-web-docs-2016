@@ -56,17 +56,17 @@ For back-end servers:
      - |service postgresql|
 
        .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
-     - 
+     - yes
    * - 5672
      - |service rabbitmq|
 
        .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
-     - 
+     - yes
    * - 16379
      - |service redis_lb|
 
        .. include:: ../../includes_server_services/includes_server_services_redis.rst
-     - 
+     - yes
    * - 7788-7799
      - |drbd| This port range must be open between all back end servers in a high availability configuration that uses |drbd|.
      - 
