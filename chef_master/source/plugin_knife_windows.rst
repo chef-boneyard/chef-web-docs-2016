@@ -110,3 +110,7 @@ Examples
 **Bootstrap a Windows machine using Windows Remote Management**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_windows_bootstrap_winrm.rst
+
+**Generate an SSL certificate, and then create a listener**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_windows_winrm_generate_cert_create_listener.rst
