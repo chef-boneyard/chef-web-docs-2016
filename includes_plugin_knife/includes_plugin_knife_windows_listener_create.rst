@@ -3,8 +3,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This argument has the following syntax:
+Use the ``listener create`` argument to create a |windows remote management| listener on the |windows| platform.
 
-.. code-block:: bash
-
-   $ knife bootstrap windows winrm FQDN
+.. note:: This command may only be used on the |windows| platform.

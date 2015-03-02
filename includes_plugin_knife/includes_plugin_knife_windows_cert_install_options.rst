@@ -3,8 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This argument has the following syntax:
+This argument has the following options:
 
-.. code-block:: bash
-
-   $ knife bootstrap windows winrm FQDN
+``-cp PASSWORD``, ``--cert-passphrase PASSWORD``
+   |password certificate_ssl|

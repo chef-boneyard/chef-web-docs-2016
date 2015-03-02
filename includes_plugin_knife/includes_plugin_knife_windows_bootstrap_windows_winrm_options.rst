@@ -40,5 +40,3 @@ This argument has the following options:
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|
-
-

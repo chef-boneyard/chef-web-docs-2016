@@ -42,6 +42,42 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm_options.rst
 
+cert generate
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_cert_generate.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_cert_generate_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_cert_generate_options.rst
+
+cert install
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_cert_install.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_cert_install_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_cert_install_options.rst
+
+listener create
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_listener_create.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_listener_create_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_listener_create_options.rst
+
 winrm
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm.rst

@@ -55,4 +55,3 @@ This argument has the following options:
 
 ``-x USERNAME``, ``--winrm-user USERNAME``
    |winrm_user|
-

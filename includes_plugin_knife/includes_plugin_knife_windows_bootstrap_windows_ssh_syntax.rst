@@ -8,4 +8,3 @@ This argument has the following syntax:
 .. code-block:: bash
 
    $ knife bootstrap windows ssh (options)
-

@@ -7,4 +7,4 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife bootstrap windows winrm FQDN
+   $ knife windows listener create (options)
