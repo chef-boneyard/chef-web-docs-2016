@@ -21,12 +21,10 @@ For back-end servers:
 
        .. include:: ../../includes_server_services/includes_server_services_keepalived.rst
      - yes
-   * - 80, 443, 9671, 9683
+   * - 80, 443, 9683
      - |service nginx|
 
        .. include:: ../../includes_server_services/includes_server_services_nginx.rst
-
-       .. note:: Port 9671 is used to xxxxx.
 
        .. note:: Port 9683 is used to internally load balance the |service bifrost| service.
      - yes
