@@ -37,6 +37,8 @@ We are a community of developers, deployers and integrators who make working wit
    :widths: 150 450
    :header-rows: 0
 
+   * - Our hangout (live) status meeting are at 15:30 GMT 10:30 EST 07:30 PST on Mondays and we post the links to the Google Group, or directly to the IRC channel.
+     - Our IRC status meeting/office hours are at 15:30 GMT 10:30 EST 07:30 PST on Thursdays we try to have as many core members here so we can discuss topics or issues users are having
    * - |irc|
      - ``#openstack-chef`` is our channel on ``irc.freenode.net``. Many useful conversations and debugging sessions happen there. Archives are available at `botbot.me/irc.freenode.net/openstack-chef/ <http://botbot.me/irc.freenode.net/openstack-chef/>`_ or the meeting notes via `http://eavesdrop.openstack.org/meetings/openstack-chef/ <http://eavesdrop.org/meetings/openstack-chef/>`_
    * - Mailing List
@@ -46,7 +48,7 @@ We are a community of developers, deployers and integrators who make working wit
    * - |twitter|
      - `@chefopenstack <http://twitter.com/chefopenstack>`_
 
-If you have questions or concerns outside the mailing list, please email jj@gchef.io.
+If you have questions or concerns outside the mailing list, please email jj@chef.io.
 
 .. toctree::
    :hidden:
