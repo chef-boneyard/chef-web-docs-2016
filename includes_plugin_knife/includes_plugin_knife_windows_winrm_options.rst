@@ -41,6 +41,9 @@ This argument has the following options:
 ``SSH_COMMAND``
    |ssh_command|
 
+``--session-timeout MINUTES``
+   |winrm_session_timeout|
+
 ``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
    |winrm_transport| Possible values: ``ssl`` or ``plaintext``.
 
