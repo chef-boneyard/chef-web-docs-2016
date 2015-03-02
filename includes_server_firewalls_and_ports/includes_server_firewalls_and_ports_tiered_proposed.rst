@@ -41,7 +41,7 @@ For back-end servers in a tiered |chef server| installation:
    * - 16379
      - |service redis_lb|
 
-       Key-value store used in conjunction with |nginx| to route requests and populate request data used by the |chef server|.
+       .. include:: ../../includes_server_services/includes_server_services_redis.rst
      - 
    * - 4321
      - |service bookshelf|

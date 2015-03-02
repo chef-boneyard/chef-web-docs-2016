@@ -52,22 +52,22 @@ For back-end servers:
      - |service solr4|
 
        .. include:: ../../includes_server_services/includes_server_services_solr4.rst
-     - no
+     - 
    * - 5432
      - |service postgresql|
 
        .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
-     - no
+     - 
    * - 5672
      - |service rabbitmq|
 
        .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
-     - no
+     - 
    * - 16379
      - |service redis_lb|
 
-       Key-value store used in conjunction with |nginx| to route requests and populate request data used by the |chef server|. Data may be persisted on a |drbd| configured volume in a high availability configuration.
-     - no
+       .. include:: ../../includes_server_services/includes_server_services_redis.rst
+     - 
    * - 7788-7799
      - |drbd| This port range must be open between all back end servers in a high availability configuration that uses |drbd|.
-     - no
+     - 

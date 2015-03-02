@@ -22,14 +22,14 @@ For front-end servers:
      - |service bifrost|
 
        .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
-     - no
+     - 
    * - 9090
      - |service ocid|
 
        .. include:: ../../includes_server_services/includes_server_services_oc_id.rst
-     - no
+     - 
    * - 8000
      - |service erchef|
 
        .. include:: ../../includes_server_services/includes_server_services_erchef.rst
-     - no
+     - 
