@@ -21,7 +21,7 @@ This argument has the following options:
    |manual_list|
 
 ``-p PORT``, ``--winrm-port PORT``
-   |winrm_port| Default: ``5985``.
+   |winrm_port| |winrm_port_knife| Default: ``5986`` when ``--winrm-transport`` is set to ``ssl``, otherwise ``5985``.
 
 ``-P PASSWORD``, ``--winrm-password PASSWORD``
    |winrm_password|
@@ -42,7 +42,7 @@ This argument has the following options:
    |ssh_command|
 
 ``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
-   |winrm_transport|
+   |winrm_transport| Possible values: ``ssl`` or ``plaintext``.
 
 ``-x USERNAME``, ``--winrm-user USERNAME``
    |winrm_user|
