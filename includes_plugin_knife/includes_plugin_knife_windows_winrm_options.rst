@@ -50,6 +50,9 @@ This argument has the following options:
 ``--winrm-authentication-protocol PROTOCOL``
    |winrm_auth_protocol| Possible values: ``basic``, ``kerberos`` or ``negotiate``. Default value: ``negotiate``.
 
+``--winrm-ssl-verify-mode MODE``
+   |winrm_ssl_verify_mode| Possible values: ``verify_none`` or ``verify_peer``. Default value: ``verify_peer``.
+
 ``-x USERNAME``, ``--winrm-user USERNAME``
    |winrm_user|
 
