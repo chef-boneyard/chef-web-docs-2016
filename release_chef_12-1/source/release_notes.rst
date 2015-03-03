@@ -160,19 +160,19 @@ The following attribute is new for the |resource dsc_script| resource:
 
        .. code-block:: ruby
 
-          imports module_name
+          imports "module_name"
 
        To import specific resources, specify the module name and then the name for each resource in that module to import:
 
        .. code-block:: ruby
 
-          imports module_name, resource_name_a, resource_name_b, ...
+          imports "module_name", "resource_name_a", "resource_name_b", ...
 
        For example, to import all resources from a module named ``cRDPEnabled``:
 
        .. code-block:: ruby
 
-          imports cRDPEnabled
+          imports "cRDPEnabled"
 
        And to import only the ``PSHOrg_cRDPEnabled`` resource:
 
