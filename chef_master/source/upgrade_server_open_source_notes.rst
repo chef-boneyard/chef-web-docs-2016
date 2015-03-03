@@ -14,6 +14,10 @@ Standalone>>Standalone
 -----------------------------------------------------
 The only supported upgrade path for a |chef server osc| server to |chef server| version 12 is from a standalone configuration to a standalone configuration.
 
+Max Database Connections
+-----------------------------------------------------
+In the |chef server rb| file, update the value of ``postgresql['max_connections']`` to be greater than the value of ``erchef['db_pool_size']``. This will ensure that the upgrade tool can connect to |postgresql| during the upgrade process.
+
 Backup Server Data
 -----------------------------------------------------
 Like any migration or upgrade, it's strongly recommended to back up your data before doing any of the migration or upgrade steps. While we don't anticipate any issues with the upgrade process itself, it's better to be safe.
