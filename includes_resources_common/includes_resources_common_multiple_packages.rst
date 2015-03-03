@@ -26,6 +26,8 @@ or:
      action :install
    do
 
+or:
+
 .. code-block:: ruby
 
    package 'some packages' do
@@ -33,6 +35,8 @@ or:
      version ['version1']
      action :remove
    do
+
+or:
 
 .. code-block:: ruby
 
