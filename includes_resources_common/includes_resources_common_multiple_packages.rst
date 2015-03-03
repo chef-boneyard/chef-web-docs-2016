@@ -26,25 +26,4 @@ or:
      action :install
    do
 
-or:
-
-.. code-block:: ruby
-
-   package 'some packages' do
-     package_name ['package1', 'package2']
-     version ['version1']
-     action :remove
-   do
-
-or:
-
-.. code-block:: ruby
-
-   package 'some packages' do
-     package_name ['package1']
-     version ['version1', 'version2']
-     action :purge
-   do
-
-
 .. note:: Notifications and subscriptions do not need to be updated when packages and versions are added or removed from the ``package_name`` or ``version`` attributes.
