@@ -16,7 +16,7 @@ The only supported upgrade path for a |chef server osc| server to |chef server| 
 
 Max Database Connections
 -----------------------------------------------------
-In the |chef server rb| file, update the value of ``postgresql['max_connections']`` to be greater than the value of ``erchef['db_pool_size']``. This will ensure that the upgrade tool can connect to |postgresql| during the upgrade process.
+The upgrade tool must be able to connect to |postgresql| during the upgrade process. In the |chef server rb| file, ensure that the value of ``postgresql['max_connections']`` is greater than the value of ``erchef['db_pool_size']``.
 
 Backup Server Data
 -----------------------------------------------------
