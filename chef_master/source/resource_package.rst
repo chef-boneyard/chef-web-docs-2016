@@ -33,7 +33,7 @@ Syntax
 .. include:: ../../includes_resources/includes_resource_package_syntax.rst
 
 Gem Package Options
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_options.rst
 
 .. warning:: Gem package options should only be used when |gems| are installed into the system-wide instance of |ruby|, and not the instance of |ruby| dedicated to the |chef client|.
@@ -69,6 +69,10 @@ Actions
 Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_attributes.rst
+
+Multiple Packages
+-----------------------------------------------------
+.. include:: ../../includes_resources_common/includes_resources_common_multiple_packages.rst
 
 Providers
 =====================================================

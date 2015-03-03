@@ -19,6 +19,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
 * **New --proxy-auth option for knife raw subcommand** |proxy_auth|.
 * **New watchdog_timeout setting for the Windows platform** Use the ``windows_service.watchdog_timeout`` setting in the |client rb| file to specify the maximum amount of time allowed for a |chef client| run on the |windows| platform.
+* **Support for multiple packages and versions** Multiple packages and versions may be specified for platforms that use |yum| or |apt|.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -242,6 +243,10 @@ The following |client rb| settings are new:
      - Description
    * - ``windows_service.watchdog_timeout``
      - |watchdog_timeout| Default value: ``2 * (60 * 60)``.
+
+Multiple Packages and Versions
+-----------------------------------------------------
+.. include:: ../../includes_resources_common/includes_resources_common_multiple_packages.rst
 
 Changelog
 =====================================================
