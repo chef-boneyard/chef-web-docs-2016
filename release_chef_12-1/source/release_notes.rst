@@ -17,7 +17,8 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **New imports attribute for dsc_script resource** Use the ``imports`` attribute to import |windows powershell_dsc_short| resources from modules.
 * **New attribute for chef_gem resource** Use the ``compile_time`` attribute to disable compile-time installation of |gems|.
 * **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
-* **New --proxy-auth option for knife raw subcommand** |proxy_auth|
+* **New --proxy-auth option for knife raw subcommand** |proxy_auth|.
+* **New watchdog_timeout setting for the Windows platform** Use the ``windows_service.watchdog_timeout`` setting in the |client rb| file to specify the maximum amount of time allowed for a |chef client| run on the |windows| platform.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -229,7 +230,18 @@ Examples
 
 .. include:: ../../step_resource/step_resource_openbsd_package_install.rst
 
+New |client rb| Settings
+-----------------------------------------------------
+The following |client rb| settings are new:
 
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``windows_service.watchdog_timeout``
+     - |watchdog_timeout| Default value: ``2 * (60 * 60)``.
 
 Changelog
 =====================================================
