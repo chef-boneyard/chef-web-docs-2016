@@ -1,9 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
-To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:
+To upgrade to |chef server| 12 from a standalone |chef server| server, do the following:
 
-#. Verify that the ``make`` command is available on the |chef server oec| machine. If it is not available, install the ``make`` command.
+#. Verify that the ``make`` command is available on the |chef server| machine. If it is not available, install the ``make`` command.
 
 #. Run the following command to make sure all services are in a sane state.
 

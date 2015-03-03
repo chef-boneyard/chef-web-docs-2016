@@ -13,17 +13,17 @@ There are two upgrade scenarios for upgrades from earlier versions of |chef serv
 * `Standalone <http://docs.chef.io/upgrade_server.html#standalone>`__
 * `High availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
 
-The steps for both scenarios are identical to an upgrade from |chef server oec|. See the appropriate section below and follow the same steps.
+The steps for both scenarios are similar to an upgrade from |chef server oec|. See the appropriate section below and follow the same steps.
 
 Standalone
 -----------------------------------------------------
-This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+This section describes the upgrade process for a standalone configuration. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
 
 .. include:: ../../includes_upgrade/includes_upgrade_standalone_12-to-12.rst
 
 High Availability
 -----------------------------------------------------
-This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+This section describes the upgrade process from a high availability configuration. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
 
 .. include:: ../../includes_upgrade/includes_upgrade_ha_12-to-12.rst
 
