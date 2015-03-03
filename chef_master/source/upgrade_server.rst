@@ -4,6 +4,8 @@ Upgrade to |chef server_title| 12
 
 The following sections describe the upgrade process for |chef server| 12.
 
+.. note:: Be sure to back up the |chef server| data before starting the upgrade process.
+
 From |chef server_title| 12
 =====================================================
 There are two upgrade scenarios for upgrades from earlier versions of |chef server| 12 to a newer version of |chef server| 12:
