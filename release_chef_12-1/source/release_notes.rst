@@ -144,7 +144,7 @@ The ``verify`` attribute may be used with the |resource cookbook_file|, |resourc
    * - ``verify``
      - |verify_file|
 
-        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 
 ``imports`` Attribute
