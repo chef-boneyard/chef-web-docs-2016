@@ -26,6 +26,8 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_syntax.rst
 
+.. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_ampersand.rst
+
 Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst
@@ -37,6 +39,8 @@ bootstrap windows winrm
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm_syntax.rst
+
+.. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_ampersand.rst
 
 Options
 -----------------------------------------------------
