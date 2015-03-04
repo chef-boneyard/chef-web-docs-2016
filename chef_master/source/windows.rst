@@ -135,7 +135,11 @@ Set the Text Editor
 
 Quotes, Windows
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_common_quotes_windows.rst
+.. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
+
+Ampersands, Windows
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_common_windows_ampersand.rst
 
 knife bootstrap
 -----------------------------------------------------
