@@ -253,6 +253,8 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_set_syntax.rst
 
+.. warning:: .. include:: ../../includes_knife/includes_knife_common_quotes_windows.rst
+
 Options
 -----------------------------------------------------
 |no_options|
