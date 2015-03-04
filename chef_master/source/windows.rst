@@ -133,6 +133,10 @@ Set the Text Editor
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_common_set_editor.rst
 
+Quotes, Windows
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_common_quotes_windows.rst
+
 knife bootstrap
 -----------------------------------------------------
 .. include:: ../../includes_chef/includes_chef_bootstrap.rst

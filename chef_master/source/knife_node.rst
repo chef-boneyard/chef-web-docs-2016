@@ -176,6 +176,8 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_syntax.rst
 
+.. warning:: .. include:: ../../includes_knife/includes_knife_common_quotes_windows.rst
+
 Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_options.rst
@@ -218,6 +220,8 @@ run_list remove
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove_syntax.rst
+
+.. warning:: .. include:: ../../includes_knife/includes_knife_common_quotes_windows.rst
 
 Options
 -----------------------------------------------------
