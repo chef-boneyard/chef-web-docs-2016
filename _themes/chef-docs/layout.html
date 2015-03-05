@@ -1,139 +1,25 @@
-{%- block doctype -%}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-{%- endblock %}
-{%- set script_files = script_files + [pathto("_static/jquery.sidebar.js", 1)] %}
-{%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
-{%- set reldelim2 = reldelim2 is not defined and ' •' or reldelim2 %}
-                     
-{%- macro relbar() %}
-    <div class="subnav boxheader">
-	<ul class="noprint">
-		<li><a href="http://docs.chef.io">Home</a></li>
-		<li>•</li>
-		<li><a href="http://docs.chef.io/chef_overview.html">Getting Started</a></li>
-		<li>•</li>
-		<li><a href="http://docs.chef.io/chef/resources.html">Resources</a></li>
-		<li>•</li>
-		<li><a href="http://docs.chef.io/client">Client</a></li>
-		<li>•</li>
-		<li><a href="http://docs.chef.io/enterprise">Server</a></li>
-		<li>•</li>
-		<li><a href="http://docs.chef.io/devkit">Chef DK</a></li>
-		<li>•</li>
-		<li><a href="http://docs.chef.io/index.html">Full Index</a></li>
-		<li>•</li>
-		<li><a href="http://docs.chef.io/search.html">Search</a></li>
-	</ul>
-    </div>
+{#
+    sphinxdoc/layout.html
+    ~~~~~~~~~~~~~~~~~~~~~
 
-{%- endmacro %}
+    Sphinx layout template for the sphinxdoc theme.
 
-{%- macro sidebar() %}
-      {%- if not embedded %}{% if not theme_nosidebar|tobool %}
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-          {%- block sidebarlogo %}
-          {%- if logo %}
-            <p class="logo"><a href="{{ pathto(master_doc) }}">
-              <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-            </a></p>
-          {%- endif %}
-          {%- endblock %}
-          {%- block sidebartoc %}
-          {%- if display_toc %}
-            <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
-            {{ toc }}
-          {%- endif %}
-          {%- endblock %}      
+    :copyright: Copyright 2007-2011 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{% extends "basic/layout.html" %}
 
-          {%- block sidebarsourcelink %}
-          
-          {%- endblock %}
-          {%- if customsidebar %}
-          {% include customsidebar %}
-          {%- endif %}
-          {%- block sidebarsearch %}
-          {%- if pagename != "search" %}
-          <div id="searchbox" style="display: none">
-            <h3>{{ _('Quick Search') }}</h3>
-              <form class="search" action="{{ pathto('search') }}" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="{{ _('Go') }}" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip">
-              {{ _('Enter search terms, and then click Go!') }}
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
-          {%- endif %}
-          {%- endblock %}
-        </div>
-      </div>
-      {%- endif %}{% endif %}
-{%- endmacro %}
+{# put the sidebar before the body #}
+{% block sidebar1 %}{{ sidebar() }}{% endblock %}
+{% block sidebar2 %}{% endblock %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    {{ metatags }}
-    {%- if not embedded and docstitle %}
-      {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
-    {%- else %}
-      {%- set titlesuffix = "" %}
-    {%- endif %}
-    <title>{{ title|striptags }}{{ titlesuffix }}</title>
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-    {%- if not embedded %}
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '{{ pathto("", 1) }}',
-        VERSION:     '{{ release|e }}',
-        COLLAPSE_MODINDEX: false,
-        FILE_SUFFIX: '{{ file_suffix }}',
-        HAS_SOURCE:  {{ has_source|lower }}
-      };
-    </script>
-    {%- for scriptfile in script_files %}
-    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor %}
-    {%- if favicon %}
-    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
-    {%- endif %}
-    {%- endif %}
+{%- block extrahead %}
+  <link rel="canonical" href="https://docs.chef.io/{{ pagename }}.html" />
 
-  </head>
-  <body> 
-    
-    <div class="document">
-    <div id="pageheader"></div>
-{%- block relbar1 %}{{ relbar() }}{% endblock %}
+  <link href='//www.chef.io/favicon.png' rel='icon' type='image/png'>
+  <link href='//www.chef.io/favicon.ico' rel='shortcut icon'>
 
-{%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
- 
-{%- block document %}
-      <div class="documentwrapper">
-      {%- if not embedded %}{% if not theme_nosidebar|tobool %}
-        <div class="bodywrapper">
-      {%- endif %}{% endif %}
-          <div class="body">
-            {% block body %} {% endblock %}
-          </div>
-      {%- if not embedded %}{% if not theme_nosidebar|tobool %}
-        </div>
-      {%- endif %}{% endif %}
-      </div>
-{%- endblock %}
-  
-{%- block sidebar2 %}{{ sidebar() }}{% endblock %}
-      <div class="clearer"></div>
-
-
-
+{% endblock %}
 
 {%- block footer %}
     <div class="footer">
@@ -150,11 +36,3 @@
 
     </div>
 {%- endblock %}
-
-
-
-
-    </div>
-  </body>
-</html>
- 
