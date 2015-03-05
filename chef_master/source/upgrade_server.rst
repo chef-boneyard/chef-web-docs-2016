@@ -13,8 +13,6 @@ There are two upgrade scenarios for upgrades from earlier versions of |chef serv
 * `Standalone <http://docs.chef.io/upgrade_server.html#standalone>`__
 * `High availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
 
-The steps for both scenarios are similar to an upgrade from |chef server oec|. See the appropriate section below and follow the same steps.
-
 Standalone
 -----------------------------------------------------
 This section describes the upgrade process for a standalone configuration. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
