@@ -54,8 +54,7 @@ This configuration file has the following settings for ``nginx``:
 
        .. code-block:: ruby
 
-          nginx['ssl_ciphers'] = HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK
-
+          nginx['ssl_ciphers'] = HIGH: ... [more parameters] ... :!PSK
    * - ``nginx['ssl_company_name']``
      - |nginx ssl_company_name| Default value: ``YouCorp``.
    * - ``nginx['ssl_country_name']``
