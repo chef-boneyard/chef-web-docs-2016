@@ -32,7 +32,7 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
           $ chef-server-ctl reconfigure 
 
-       .. warning:: .. include:: ../../includes_install/includes_install_manage_copy_secrets.rst
+       .. include:: ../../includes_install/includes_install_manage_copy_secrets.rst
 
    * - |push jobs_title|
      - Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run.
