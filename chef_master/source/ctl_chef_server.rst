@@ -44,128 +44,6 @@ Use Local Packages
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
-master-recover
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_master_recover.rst
-
-org-create
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst
-
-**Options**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create prod Production
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create staging Staging -a chef-admin
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create dev Development -f /tmp/id-dev.key
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-create dev Development --association_user grantmc
-
-org-delete
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-delete infra-testing-20140909
-
-.. code-block:: bash
-      
-   $ chef-server-ctl org-delete pedant-testing-org
-
-org-list
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_syntax.rst
-
-**Options**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst
-
-org-show
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
-
-
-org-user-add
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_syntax.rst
-
-**Options**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-user-add prod john_smith
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-user-add preprod testmaster
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-user-add dev grantmc --admin
-
-
-org-user-remove
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst
-
-**Examples**
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-user-remove prod john_smith
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-user-remove prod testmaster
-
-
-password
-=====================================================
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_password.rst
 
 Key Rotation
 =====================================================
@@ -295,6 +173,130 @@ Returns:
 
 
 
+
+
+master-recover
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_master_recover.rst
+
+org-create
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create_options.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-create prod Production
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-create staging Staging -a chef-admin
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-create dev Development -f /tmp/id-dev.key
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-create dev Development --association_user grantmc
+
+org-delete
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-delete infra-testing-20140909
+
+.. code-block:: bash
+      
+   $ chef-server-ctl org-delete pedant-testing-org
+
+org-list
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst
+
+org-show
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show_syntax.rst
+
+
+org-user-add
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add_options.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add prod john_smith
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add preprod testmaster
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-add dev grantmc --admin
+
+
+org-user-remove
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-remove prod john_smith
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-remove prod testmaster
+
+
+password
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_password.rst
 
 reconfigure
 =====================================================
