@@ -1821,11 +1821,50 @@ Examples
 .. include:: ../../step_resource/step_resource_ohai_reload_after_create_user.rst
 
 
+openbsd_package
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_openbsd.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_openbsd_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_package_openbsd_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_openbsd_package_install.rst
+
+
+
 package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package.rst
 
-.. note:: There are a number of platform-specific resources available for package management. In general, the |resource package| resource will use the correct package manager based on the platform-specific details collected by |ohai| at the start of the |chef client| run, which means that the platform-specific resources are often unnecessary. That said, there are cases when using a platform-specific package-based resource is desired. See the following resources for more information about these platform-specific resources: ``apt_package``, ``chef_gem``, ``dpkg_package``, ``easy_install_package``, ``freebsd_package``, ``gem_package``, ``ips_package``, ``macports_package``, ``pacman_package``, ``portage_package``, ``rpm_package``, ``smartos_package``, ``solaris_package``, and ``yum_package``.
+.. note:: There are a number of platform-specific resources available for package management. In general, the |resource package| resource will use the correct package manager based on the platform-specific details collected by |ohai| at the start of the |chef client| run, which means that the platform-specific resources are often unnecessary. That said, there are cases when using a platform-specific package-based resource is desired. See the following resources for more information about these platform-specific resources: ``apt_package``, ``chef_gem``, ``dpkg_package``, ``easy_install_package``, ``freebsd_package``, ``gem_package``, ``ips_package``, ``macports_package``, ``openbsd_package``, ``pacman_package``, ``paludis_package``, ``portage_package``, ``rpm_package``, ``smartos_package``, ``solaris_package``, and ``yum_package``.
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1972,6 +2011,47 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_pacman_package_install.rst
+
+
+
+paludis_package
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_paludis.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_paludis_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_paludis_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_paludis_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_package_paludis_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_paludis_package_install.rst
+
+
 
 
 perl
