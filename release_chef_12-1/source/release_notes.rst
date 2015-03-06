@@ -20,6 +20,7 @@ The following items are new for |chef client| 12.1 and/or are changes from previ
 * **New --proxy-auth option for knife raw subcommand** |proxy_auth|.
 * **New watchdog_timeout setting for the Windows platform** Use the ``windows_service.watchdog_timeout`` setting in the |client rb| file to specify the maximum amount of time allowed for a |chef client| run on the |windows| platform.
 * **Support for multiple packages and versions** Multiple packages and versions may be specified for platforms that use |yum| or |apt|.
+* **New attributes for windows_service resource** Use the ``run_as_user`` and ``run_as_password`` attributes to specify the user under which a |windows| service should run.
 
 |chef client|, |chef client_audit|
 -----------------------------------------------------
@@ -127,7 +128,7 @@ Use the following options to specify items that are stored in |chef vault|:
 
 
 
-New Attributes
+New Resource Attributes
 -----------------------------------------------------
 The following attributes are new for |chef client| 12.1.
 
@@ -201,6 +202,23 @@ The following attribute is new for the |resource chef_gem| resource:
           chef_gem 'aws-sdk' do
             compile_time false if respond_to?(:compile_time)
           end
+
+"run_as" Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following attributes are new for the |resource service_windows| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``run_as_password``
+     - |password windows_service_run_as|
+   * - ``run_as_user``
+     - |user windows_service_run_as|
+
+
 
 
 openbsd_package

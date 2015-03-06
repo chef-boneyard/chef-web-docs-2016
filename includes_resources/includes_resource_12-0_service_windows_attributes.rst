@@ -19,10 +19,6 @@
      - |command service_reload|
    * - ``restart_command``
      - |command service_restart|
-   * - ``run_as_password``
-     - |password windows_service_run_as|
-   * - ``run_as_user``
-     - |user windows_service_run_as|
    * - ``service_name``
      - |name service| Default value: the ``name`` of the resource block. |see syntax|
    * - ``start_command``
