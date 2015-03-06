@@ -15,8 +15,26 @@ This command has the following options:
 ``--audit-mode MODE``
    |audit_mode| Default value: ``disabled``.
 
+``-c CONFIG``, ``--config CONFIG``
+   |config chef-client|
+
+``--chef-zero-host HOST``
+   The host on which |chef zero| is started.
+
 ``--chef-zero-port PORT``
    |port chef_zero| If a port is not specified---individually, as range of ports, or from the ``chef_zero.port`` setting in the |client rb| file---the |chef client| will scan for ports between 8889-9999 and will pick the first port that is available.
+
+``-d``, ``--daemonize``
+   |daemonize| This option is only available on machines that run in |unix| or |linux| environments. For machines that are running |windows| that require similar functionality, use the ``chef-client::service`` recipe in the |cookbook chef_client| cookbook: http://community.opscode.com/cookbooks/chef-client. This will install a |chef client| service under |windows| using the |windows service wrapper|.
+
+``--disable-config``
+   Use to run the |chef client| using default settings. This will prevent the normally-associated configuration file from being used. This setting should only be used for testing purposes and should never be used in a production setting.
+
+``-E ENVIRONMENT_NAME``, ``--environment ENVIRONMENT_NAME``
+   |name environment|
+
+``-f``, ``--[no-]fork``
+   |fork_chef|
 
 ``-F FORMAT``, ``--format FORMAT``
    |format chef_ctls| 
@@ -61,6 +79,9 @@ This command has the following options:
 ``-L LOGLOCATION``, ``--logfile c``
    |log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``.
 
+``--lockfile LOCATION``
+   Use to specify the location of the lock file, which prevents multiple |chef client| processes from converging at the same time.
+
 ``--[no-]color``
    |color| Default setting: ``--color``.
 
@@ -84,6 +105,9 @@ This command has the following options:
 
 ``RECIPE_FILE``
    |path recipe_file|
+
+``--recipe-url=RECIPE_URL``
+   Use to specify the location of a recipe when it exists at a URL. Use this option only when the |chef client| is run with the ``--local-mode`` option.
 
 ``--run-lock-timeout SECONDS``
    |run_lock_timeout| Default value: not set (indefinite). Set to ``0`` to cause a second |chef client| to exit immediately.
