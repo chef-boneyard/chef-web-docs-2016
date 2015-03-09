@@ -65,6 +65,8 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
           $ chef-server-ctl install chef-sync
 
+       .. include:: ../../includes_install/includes_install_server_replication_create_directory.rst
+
        and then:
 
        .. code-block:: ruby
