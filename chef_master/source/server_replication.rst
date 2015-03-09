@@ -5,6 +5,8 @@
 
 .. note:: |chef replication| requires |chef server| version 12.
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Scenarios
 =====================================================
 .. include:: ../../includes_server_replication/includes_server_replication_scenarios.rst

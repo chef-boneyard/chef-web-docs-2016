@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 |chef analytics_title| Components
 =====================================================
 The following diagram shows the relationships between the various elements of |chef analytics|, including how information is routed from various nodes to the |chef analytics| server (through the |chef server|) nodes, where reports about |chef client| run outcomes may be viewed, where rules are processed, and where |chef analytics| data may be viewed.

@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_ctl_reporting/includes_ctl_reporting.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 cleanse
 =====================================================
 .. include:: ../../includes_ctl_reporting/includes_ctl_reporting_cleanse.rst

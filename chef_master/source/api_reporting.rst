@@ -4,6 +4,8 @@ Reporting API
 
 .. include:: ../../includes_api_reporting/includes_api_reporting.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Requirements
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst

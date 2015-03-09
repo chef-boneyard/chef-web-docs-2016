@@ -8,6 +8,8 @@ This topic describes how to set up the |chef server| for high availability using
 
 .. image:: ../../images/chef_server_ha_drbd.png
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Prerequisites
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_drbd_pre.rst

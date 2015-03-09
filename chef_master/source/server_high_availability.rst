@@ -9,6 +9,8 @@ For |chef server| 12, the following high availability configurations are support
 * DRBD
 * AWS
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 DRBD
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_drbd.rst

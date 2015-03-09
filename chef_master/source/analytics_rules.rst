@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Rule Syntax
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax.rst

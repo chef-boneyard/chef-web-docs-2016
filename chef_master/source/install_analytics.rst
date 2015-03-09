@@ -4,6 +4,8 @@ Install |chef analytics_title|
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Prerequisites
 =====================================================
 The |chef analytics| server shares the :doc:`same prerequisites </install_server_pre>` as the |chef server|:

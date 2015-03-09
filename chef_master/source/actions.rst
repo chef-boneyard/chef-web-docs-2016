@@ -8,6 +8,8 @@
 
 Install |chef actions| using the :doc:`Analytics </install_analytics>` add-on package.
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Architecture
 =====================================================
 .. include:: ../../includes_actions/includes_actions_architecture.rst

@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_manage/includes_manage.rst
 
-.. note:: The |chef manage| is a premium feature of the |chef server| and is `installed using the chef-server-ctl command <http://docs.chef.io/ctl_chef_server.html#install>`_.
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
 
 Nodes
 =====================================================

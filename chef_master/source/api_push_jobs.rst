@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_api_push_jobs/includes_api_push_jobs.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Endpoints 
 =====================================================
 .. include:: ../../includes_api_push_jobs/includes_api_push_jobs_endpoint.rst

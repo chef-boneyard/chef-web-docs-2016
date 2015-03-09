@@ -6,6 +6,8 @@ knife analytics
 
 .. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Install this plugin
 =====================================================
 .. include:: ../../step_plugin_knife/step_plugin_knife_analytics_install_rubygem.rst

@@ -6,6 +6,8 @@
 
 .. note:: If the |analytics rb| file does not exist, create a file called ``opscode-analytics.rb`` and put it in the ``/etc/opscode-analytics/`` directory.
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Example
 ==========================================================================
 .. include:: ../../includes_config/includes_config_rb_analytics_example.rst

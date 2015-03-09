@@ -6,6 +6,8 @@
 
 .. include:: ../../includes_config/includes_config_rb_manage.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Settings
 ==========================================================================
 

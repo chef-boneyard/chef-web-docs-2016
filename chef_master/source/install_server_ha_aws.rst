@@ -8,6 +8,8 @@ High Availability: AWS
 
 .. image:: ../../images/chef_server_ha_aws.png
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Prerequisites
 =====================================================
 .. include:: ../../includes_install/includes_install_server_ha_aws_pre.rst

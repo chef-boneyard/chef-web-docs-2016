@@ -4,6 +4,8 @@ Install |reporting_title|
 
 .. include:: ../../includes_reporting/includes_reporting.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Requirements
 =====================================================
 .. include:: ../../includes_system_requirements/includes_system_requirements_reporting.rst

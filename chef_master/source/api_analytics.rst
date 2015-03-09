@@ -4,6 +4,7 @@
 
 .. include:: ../../includes_api_analytics/includes_api_analytics.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
 
 Encryption
 =====================================================

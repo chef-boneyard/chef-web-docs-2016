@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_ctl_chef_sync/includes_ctl_chef_sync.rst
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 manager-log
 =====================================================
 .. include:: ../../includes_ctl_chef_sync/includes_ctl_chef_sync_manager_log.rst

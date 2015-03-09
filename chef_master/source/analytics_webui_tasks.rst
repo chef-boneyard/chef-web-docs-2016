@@ -6,6 +6,8 @@
 
 This topic is an alphabetical list of the various tasks that can be performed when using the |chef analytics|.
 
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
+
 Enable Auto-Refresh Mode
 =====================================================
 .. include:: ../../step_actions_webui/step_actions_webui_enable_auto_refresh_mode.rst
