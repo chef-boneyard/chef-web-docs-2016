@@ -269,7 +269,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_client_show.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_client_show_json.rst
 
 
 
@@ -492,7 +492,7 @@ Examples
 
 .. include:: ../../step_knife/step_knife_cookbook_show_cookbook_version.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_cookbook_show_json.rst
 
 
 test
@@ -670,7 +670,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_site_cookbook_show.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_site_cookbook_show_json.rst
 
 
 unshare
@@ -1131,7 +1131,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_environment_show.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_environment_show_json.rst
 
 
 
@@ -1410,9 +1410,9 @@ Examples
 
 .. include:: ../../step_knife/step_knife_node_show_run_list.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_node_show_json.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json_raw.rst
+.. include:: ../../step_knife/step_knife_node_show_json_raw.rst
 
 
 
@@ -1605,9 +1605,9 @@ Options
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_role_show_json.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_role_show_json_raw.rst
 
 
 

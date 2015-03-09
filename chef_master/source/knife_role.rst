@@ -166,10 +166,10 @@ The following examples show how to use this |knife| subcommand:
 
 **Show as JSON data**
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_role_show_json.rst
 
 **Show as raw JSON data**
 
-.. include:: ../../step_knife/step_knife_common_view_json_raw.rst
+.. include:: ../../step_knife/step_knife_role_show_json_raw.rst
 
 

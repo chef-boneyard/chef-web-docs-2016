@@ -160,4 +160,4 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_client_show.rst
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_client_show_json.rst
