@@ -9,8 +9,6 @@ For |chef server| 12, the following high availability configurations are support
 * DRBD
 * AWS
 
-.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
-
 DRBD
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_drbd.rst
@@ -56,6 +54,8 @@ AWS
 .. include:: ../../includes_server_ha/includes_server_ha_aws.rst
 
 View the topic :doc:`High Availability: AWS </install_server_ha_aws>` for more information about how to set up the |chef server| for high availability in |amazon aws|.
+
+.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
 
 Check HA Status
 =====================================================
