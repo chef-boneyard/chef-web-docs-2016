@@ -13,6 +13,8 @@ This resource has the following attributes:
      - |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
    * - ``arch``
      - |resource yum_package| resource only. |architecture package|
+   * - ``default_release``
+     - |resource package_apt| resource only. |default_release apt| For example: ``stable``.
    * - ``flush_cache``
      - |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
 

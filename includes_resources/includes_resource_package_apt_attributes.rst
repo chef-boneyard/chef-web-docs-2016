@@ -11,6 +11,8 @@
      - Description
    * - ``arch``
      - |architecture package|
+   * - ``default_release``
+     - |default_release apt| For example: ``stable``.
    * - ``options``
      - |command options| For example, common |aptget| directives, such as ``--no-install-recommends``. See the `apt-get man page <http://manpages.debian.net/cgi-bin/man.cgi?query=apt-get>`_ for the full list.
    * - ``package_name``
