@@ -10,6 +10,31 @@ Install |supermarket|
 =====================================================
 [Coming soon ...]
 
+
+Create Cookbook
+=====================================================
+The following examples show how to create a simple cookbook, and then upload it to the |supermarket|. These examples use the |chef ctl| command that is built into the the |chef dk|.
+
+**Generate a chef-repo**
+
+.. include:: ../../step_ctl_chef/step_ctl_chef_generate_repo_supermarket.rst
+
+**Generate a cookbook**
+
+.. include:: ../../step_ctl_chef/step_ctl_chef_generate_cookbook_supermarket.rst
+
+**Generate a template**
+
+.. include:: ../../step_ctl_chef/step_ctl_chef_generate_template_supermarket.rst
+
+**Create a recipe**
+
+.. include:: ../../step_ctl_chef/step_ctl_chef_generate_recipe_supermarket.rst
+
+**Upload the cookbook to Supermarket**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_supermarket_install_my_apache2.rst
+
 supermarket-ctl (executable)
 =====================================================
 .. include:: ../../includes_ctl_supermarket/includes_ctl_supermarket.rst
