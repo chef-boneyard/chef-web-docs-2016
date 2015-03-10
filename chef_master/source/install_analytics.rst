@@ -8,11 +8,12 @@ Install |chef analytics_title|
 
 Prerequisites
 =====================================================
-The |chef analytics| server shares the :doc:`same prerequisites </install_server_pre>` as the |chef server|:
+The |chef analytics| server shares the :doc:`same prerequisites </install_server_pre>` as the |chef server|. In addition:
 
 * |chef server| 11.1.8 (or higher) is required for |chef analytics| 1.0 versions
 * |chef server| version 12.0.3 is required |chef analytics| 1.1 versions
 * |chef client| version 12.1 is required for |chef client_audit| and using ``control_group`` and ``control`` |dsl recipe| methods
+* The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage|
 * |reporting| is installed on the |chef server|. |reporting| version 1.2.3 is required to view the results of |chef client_audit|, i.e. ``run_start``, ``run_resource``, and ``run_converge`` messages; earlier versions of |reporting| may be used, but will not show these results
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a FQDN or an IP address

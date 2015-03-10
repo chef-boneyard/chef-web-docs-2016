@@ -9,6 +9,8 @@ In a tiered configuration, the |chef analytics| deployment is on different machi
 * Installing |chef analytics| on the back end
 * Installing |chef analytics| on the front ends
 
+.. warning:: The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage| prior to installing |chef analytics|.
+
 Install |chef analytics| on the backend machine:
 
 #. Download the package from http://downloads.chef.io/analytics/ to the machines that will be used for the |chef analytics| deployment. For |redhat| and |centos| 6:
@@ -66,9 +68,13 @@ Configure the |chef server|. On each machine in the |chef server| configuration,
    
    .. code-block:: bash
 
-      $ chef-server-ctl start
+      $ chef-server-ctl restart
 
+#. Reconfigure the |chef manage|:
 
+   .. code-block:: ruby
+
+      $ opscode-manage-ctl reconfigure
 
 
 
