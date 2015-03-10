@@ -2,14 +2,13 @@
 |supermarket|
 =====================================================
 
-.. warning:: This page is the future home for all of the documentation about |supermarket|.
-
 .. include:: ../../includes_supermarket/includes_supermarket.rst
 
-Install |supermarket|
-=====================================================
-[Coming soon ...]
-
+.. 
+.. Install |supermarket|
+.. =====================================================
+.. [Coming soon ...]
+.. 
 
 Create Cookbook
 =====================================================
