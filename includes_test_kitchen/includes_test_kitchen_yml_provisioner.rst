@@ -16,6 +16,8 @@
      - The relative path to the directory in which client data is located. This data must be defined as |json|.
    * - ``cookbook_files_glob``
      - A file glob (pattern) that matches files considered to be part of the cookbook. (Typically, this value does not need to be modified from the default.)
+   * - ``data_path``
+     - Use to specify the path from which non-cookbook files are copied to a |kitchen| instance.
    * - ``data_bags_path``
      - The relative path to a directory in which data bags and data bag items are defined. This data must be structured as if it were in the |chef repo|.
    * - ``encrypted_data_bag_secret_key_path``
