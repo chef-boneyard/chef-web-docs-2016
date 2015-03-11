@@ -149,4 +149,4 @@ The following examples show how to use this |knife| subcommand:
 
 **Show environments as JSON**
 
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+.. include:: ../../step_knife/step_knife_environment_show_json.rst
