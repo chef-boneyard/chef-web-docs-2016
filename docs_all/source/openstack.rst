@@ -113,6 +113,9 @@ Feature Tracking
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_develop_features.rst
 
+Testing
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_develop_gerritt.rst
 
 Repository
 =====================================================
