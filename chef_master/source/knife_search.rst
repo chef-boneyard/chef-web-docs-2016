@@ -14,9 +14,11 @@ Query Syntax
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
-About Keys
+Keys
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_key.rst
+
+.. include:: ../../includes_search/includes_search_key_knife.rst
 
 Nested Fields
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
