@@ -1,12 +1,12 @@
 =====================================================
-|chef actions_title|
+|chef analytics_title| Webui
 =====================================================
 
 .. include:: ../../includes_actions/includes_actions.rst
 
 .. include:: ../../includes_actions/includes_actions_long.rst
 
-Install |chef actions| using the :doc:`Analytics </install_analytics>` add-on package.
+The |chef analytics| web user interface is installed as part of :doc:`Chef analytics </install_analytics>`.
 
 .. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
 

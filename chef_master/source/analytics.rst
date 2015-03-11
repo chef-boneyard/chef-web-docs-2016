@@ -76,7 +76,7 @@ Rule Types
 
 .. include:: ../../step_analytics_rules/step_analytics_rules_listen_on_port.rst
 
-|chef actions_title|
+|chef analytics_title| Webui
 =====================================================
 .. include:: ../../includes_actions/includes_actions.rst
 

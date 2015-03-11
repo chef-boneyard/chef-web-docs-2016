@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|chef actions| tracks the following types of data:
+|chef analytics| tracks the following types of data:
 
 * The name organization in which the event occurred, e.g. "chef"
 * The hostname for the node from which the request was initiated, e.g. "computer.chef.io" or "some.node.FQDN.com"
