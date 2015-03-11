@@ -10,4 +10,4 @@ The |chef server| gathers a lot of data. For example:
 * How and where policy settings---roles, environments, and data bags---are applied
 * Which users made which changes
 
-The |chef analytics| server collects all of this data and makes it visible from the |chef actions| user interface.
+The |chef analytics| server collects all of this data and makes it visible from the |chef analytics| user interface.
