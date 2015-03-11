@@ -72,21 +72,21 @@ Before this data is indexed on the |chef server|, the nested fields are extracte
 
 which allows searches like the following to find data that is present in this node:
 
-.. code-block:: bash
+.. code-block:: ruby
 
-   $ knife search node "broadcast:192.168.0.*"
-
-or:
-
-.. code-block:: bash
-
-   $ knife search node "mtu:1500"
+   node "broadcast:192.168.0.*"
 
 or:
 
-.. code-block:: bash
+.. code-block:: ruby
 
-   $ knife search node "flags:UP"
+   node "mtu:1500"
+
+or:
+
+.. code-block:: ruby
+
+   node "flags:UP"
 
 This data is also flattened into various compound fields, which follow the same pattern as the |json| hierarchy and use underscores (``_``) to separate the levels of data, similar to:
 
@@ -100,9 +100,9 @@ This data is also flattened into various compound fields, which follow the same 
 
 which allows searches like the following to find data that is present in this node:
 
-.. code-block:: bash
+.. code-block:: ruby
 
-   $ knife search node "network_interfaces_en1_addresses:192.168.0.195"
+   node "network_interfaces_en1_addresses:192.168.0.195"
 
 This flattened data structure also supports using wildcard compound fields, which allow searches to omit levels within the |json| data structure that are not important to the search query. In the following example, an asterisk (``*``) is used to show where the wildcard can exist when searching for a nested field:
 
