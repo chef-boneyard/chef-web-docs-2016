@@ -21,17 +21,23 @@ Expanded lists of roles (all of the roles that apply to a node, including nested
    * - Node Location
      - Description
    * - In a specified recipe
-     - To find a node with a specified recipe in the run-list, search within the ``run_list`` field (and escaping any special characters with the slash symbol) using the following syntax::
+     - To find a node with a specified recipe in the run-list, search within the ``run_list`` field (and escaping any special characters with the slash symbol) using the following syntax:
+
+       .. code-block:: ruby
 	          
-         search(:node, 'run_list:recipe\[foo\:\:bar\]')
+          search(:node, 'run_list:recipe\[foo\:\:bar\]')
         
-       where ``recipe`` (singular!) indicates the top-level run-list. Variables can be interpolated into search strings using the |ruby| alternate quoting syntax::
+       where ``recipe`` (singular!) indicates the top-level run-list. Variables can be interpolated into search strings using the |ruby| alternate quoting syntax:
+	          
+       .. code-block:: ruby
 	          
           search(:node, %Q{run_list:"recipe[#{the_recipe}]"} )
 
    * - In an expanded run-list
-     - To find a node with a recipe in an expanded run-list, search within the ``recipes`` field (and escaping any special characters with the slash symbol) using the following syntax::
+     - To find a node with a recipe in an expanded run-list, search within the ``recipes`` field (and escaping any special characters with the slash symbol) using the following syntax:
        
+       .. code-block:: ruby
+	          
           recipes:RECIPE_NAME
        
        where ``recipes`` (plural!) indicates to search within an expanded run-list. 
