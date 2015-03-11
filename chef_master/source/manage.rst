@@ -14,6 +14,56 @@ The |chef manage| provides ways for users to `delete nodes and reset their priva
 
 .. image:: ../../images/step_manage_webui_nodes.png
 
+Search
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search.rst
+
+.. note:: The syntax for search queries in the |chef manage| is identical to the syntax for search queries used with |knife|, the command line tool used to manage objects on the |chef server|.
+
+Query Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_query_syntax.rst
+
+Keys
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_key.rst
+
+Nested Fields
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_key_nested.rst
+
+About Patterns
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_pattern.rst
+
+Exact Matching
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_pattern_exact.rst
+
+Wildcard Matching
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_pattern_wildcard.rst
+
+Range Matching
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_pattern_range.rst
+
+Fuzzy Matching
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_pattern_fuzzy.rst
+
+About Operators
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_boolean_operators.rst
+
+.. include:: ../../includes_search/includes_search_boolean_operators_andnot.rst
+
+Special Characters
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_special_characters.rst
+
+
+
 Reports
 =====================================================
 .. include:: ../../includes_reporting/includes_reporting.rst
