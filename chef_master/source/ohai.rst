@@ -166,11 +166,7 @@ Options
 
 Examples
 -----------------------------------------------------
-The following examples show how to use the |ohai| command-line tool:
-
-**Run a plugin independently of a chef-client run**
-
-.. include:: ../../step_ohai/step_ohai_run_plugin.rst
+None.
 
 
 |ohai| Settings in |client rb|
