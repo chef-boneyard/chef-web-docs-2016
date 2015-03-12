@@ -6,13 +6,13 @@ Welcome to |chef|!
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-.. note:: This topic is a work in progress. It needs some editing, but you should be able to install the Chef DK and then configure Kitchen to build CentOS and Ubuntu instances, and then converge a node using the NTP cookbook. More sections are planned for future updates that will include more scenarios for Kitchen, new scenarios for ChefSpec, Berkshelf, and Chef policy. Feedback on the getting started page may be sent to docs @ getchef dot com.
+.. note:: Use `Quick Start <http://docs.chef.io/devkit/getting_started.html#quick-start>`__ for just the command lines needed to get started. Hack your way through!
 
-The following sections walk through the process of getting started using |chef|:
+   Use `Workstation Setup <http://docs.chef.io/devkit/getting_started.html#workstation-setup>`__ for a more verbose walkthrough:
 
-* Use `Quick Start <http://docs.chef.io/devkit/getting_started.html#quick-start>`__ for just the command lines. Hack your way through it!
-* Use `Workstation Setup <http://docs.chef.io/devkit/getting_started.html#workstation-setup>`__ for a more verbose walkthrough that also explains how to set up multiple virtual environments using |kitchen|, and then configure a cookbook to run on multiple platforms. This is a great way to see how |chef| manages multiple platforms in the same way.
-
+   * Continue to `Kitchen Setup <http://docs.chef.io/devkit/getting_started.html#kitchen-title-setup>`__ and set up multiple virtual environments using |kitchen|. These virtual environments may be used for testing, but in this case they are used to show how |chef| manages multiple platforms in the same way.
+   * Continue to `Configure NTP <http://docs.chef.io/devkit/getting_started.html#configure-ntp>`__ and configure a cookbook that runs in each of those virtual environments in the same way. |chef| configures all nodes in the same way, whether that node is a virtual environment on your local machine, a node in , or a physical machine.
+   * Try running the NTP cookbook on a node hosted by a cloud provider or on a physical machine. It should do the same thing on those machines that it did on the virtual machines running in |kitchen|.
 
 Quick Start
 =====================================================
