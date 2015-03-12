@@ -4,5 +4,7 @@
 
 Use the backslash character (``\``) as an escape character when quotes must appear within strings. For example:
 
-* 'It\'s alive'                      # => "It's alive!"
-* 'Won\'t you read Grant\'s book?'   # => "Won't you read Grant's book?"
+.. code-block:: ruby
+
+   'It\'s alive!'                        # => "It's alive!"
+   "Won\'t you read Grant\'s book?"      # => "Won't you read Grant's book?"

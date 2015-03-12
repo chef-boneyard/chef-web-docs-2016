@@ -6,7 +6,7 @@ Work with strings:
 
 .. code-block:: ruby
 
-   'single quoted' # => "single quoted"
-   "double quoted" # => "double quoted"
-   'It\'s alive'   # => "It's alive!" (the \ is an escape character)
-   "1 + 2 = 5"     # => "1 + 2 = 5" (numbers surrounded by quotes may exhibit string-like behavior)
+   'single quoted'   # => "single quoted"
+   "double quoted"   # => "double quoted"
+   'It\'s alive!'    # => "It's alive!" (the \ is an escape character)
+   "1 + 2 = 5"       # => "1 + 2 = 5" (numbers surrounded by quotes may behave like strings)
