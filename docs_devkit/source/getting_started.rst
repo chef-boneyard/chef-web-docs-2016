@@ -240,264 +240,33 @@ This is all of the configuration |kitchen| needs at this time. Let's set up some
 
 View Instance List
 -----------------------------------------------------
-From your working directory, run the following command:
-
-.. code-block:: bash
-
-   $ kitchen list
-
-which will return something similar to:
-
-.. code-block:: bash
-
-   Instance             Driver   Provisioner  Last Action
-   default-ubuntu-1204  Vagrant  ChefZero     <Not Created>
-   default-centos-65    Vagrant  ChefZero     <Not Created>
-
-There are two available platforms---|ubuntu| 12.04 and |centos| 6.5---that are pre-configured to use the |vagrant| driver that is included with the |chef dk|.
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_created_none.rst
 
 Create |centos| Instance
 -----------------------------------------------------
-Let's create an instance. Run the following command:
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_create_centos_default.rst
 
-.. code-block:: bash
-
-   $ kitchen create default-centos-65
-
-This will start |vagrant|, which will then build a machine that rubs |centos| 6.5. (If this is the first time you're running |kitchen|, then |centos| needs to first be downloaded from the default instance location and may take a few minutes.)
-
-.. code-block:: bash
-
-   -----> Starting Kitchen (v1.3.1)
-   -----> Creating <default-centos-65>...
-          Bringing machine 'default' up with 'virtualbox' provider...
-          ==> default: Box 'opscode-centos-6.5' could not be found. Attempting to find and install...
-              default: Box Provider: virtualbox
-              default: Box Version: >= 0
-          ==> default: Adding box 'opscode-centos-6.5' (v0) for provider: virtualbox
-              default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box
-          ==> default: Successfully added box 'opscode-centos-6.5' (v0) for 'virtualbox'!
-          ==> default: Importing base box 'opscode-centos-6.5'...
-          ==> default: Matching MAC address for NAT networking...
-          ==> default: Setting the name of the VM: default-centos-65_default_1403650129063_53517
-          ==> default: Clearing any previously set network interfaces...
-          ==> default: Preparing network interfaces based on configuration...
-              default: Adapter 1: nat
-          ==> default: Forwarding ports...
-              default: 22 => 2222 (adapter 1)
-          ==> default: Booting VM...
-          ==> default: Waiting for machine to boot. This may take a few minutes...
-              default: SSH address: 127.0.0.1:2222
-              default: SSH username: vagrant
-              default: SSH auth method: private key
-              default: Warning: Connection timeout. Retrying...
-          ==> default: Machine booted and ready!
-          ==> default: Checking for guest additions in VM...
-          ==> default: Setting hostname...
-          ==> default: Machine not provisioning because `--no-provision` is specified.
-          Vagrant instance <default-centos-65> created.
-          Finished creating <default-centos-65> (11m29.44s).
-   -----> Kitchen is finished. (11m29.76s)
-
-Verify the instance list with the following command:
-
-.. code-block:: bash
-
-   $ kitchen list
-
-and you will see the following:
-
-.. code-block:: bash
-
-   Instance             Driver   Provisioner  Last Action
-   default-ubuntu-1204  Vagrant  ChefZero     <Not Created>
-   default-centos-65    Vagrant  ChefZero     Created
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_created_one.rst
 
 Create |ubuntu| Instance
 -----------------------------------------------------
-Now let's create the |ubuntu| instance:
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_create_ubuntu_default.rst
 
-.. code-block:: bash
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_created_both.rst
 
-   $ kitchen create default-ubuntu-1204
-
-this may also take a few minutes, but will (eventually) return something similar to:
-
-.. code-block:: bash
-
-   -----> Starting Kitchen (v1.3.1)
-   -----> Creating <default-ubuntu-1204>...
-          Bringing machine 'default' up with 'virtualbox' provider...
-          ==> default: Box 'opscode-ubuntu-12.04' could not be found. Attempting to find and install...
-              default: Box Provider: virtualbox
-              default: Box Version: >= 0
-          ==> default: Adding box 'opscode-ubuntu-12.04' (v0) for provider: virtualbox
-              default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
-          ==> default: Successfully added box 'opscode-ubuntu-12.04' (v0) for 'virtualbox'!
-          ==> default: Importing base box 'opscode-ubuntu-12.04'...
-          ==> default: Matching MAC address for NAT networking...
-          ==> default: Setting the name of the VM: default-ubuntu-1204_default_1403651715173_54200
-          ==> default: Fixed port collision for 22 => 2222. Now on port 2200.
-          ==> default: Clearing any previously set network interfaces...
-          ==> default: Preparing network interfaces based on configuration...
-              default: Adapter 1: nat
-          ==> default: Forwarding ports...
-              default: 22 => 2200 (adapter 1)
-          ==> default: Booting VM...
-   ==> default: Waiting for machine to boot. This may take a few minutes...           default: SSH address: 127.0.0.1:2200
-              default: SSH username: vagrant
-              default: SSH auth method: private key
-              default: Warning: Connection timeout. Retrying...
-          ==> default: Machine booted and ready!
-          ==> default: Checking for guest additions in VM...
-          ==> default: Setting hostname...
-          ==> default: Machine not provisioning because `--no-provision` is specified.
-          Vagrant instance <default-ubuntu-1204> created.
-          Finished creating <default-ubuntu-1204> (10m57.93s).
-   -----> Kitchen is finished. (10m58.24s)
-
-Verify the instance list with the following command:
-
-.. code-block:: bash
-
-   $ kitchen list
-
-.. code-block:: bash
-
-   Instance             Driver   Provisioner  Last Action
-   default-ubuntu-1204  Vagrant  ChefZero     Created
-   default-centos-65    Vagrant  ChefZero     Created
-
-and now we're all set up! We're going to use the same recipe and cookbook that we already created.
+Now we're all set up! We're going to use the same recipe and cookbook that we already created.
 
 Converge |centos|
 -----------------------------------------------------
-Now that we're all configured and ready to run |kitchen|, let's try it in |centos|:
-
-.. code-block:: bash
-
-   $ kitchen converge default-centos-65
-
-The first time you run this, it'll have to download the |chef client| and will show something similar to the following while it converges the node via |kitchen|: 
-
-.. code-block:: bash
-
-   -----> Starting Kitchen (v1.3.1)
-   -----> Converging <default-centos-65>...
-          Preparing files for transfer
-          Preparing cookbooks from project directory
-          Removing non-cookbook files before transfer
-          Preparing nodes
-   -----> Installing Chef Omnibus (true)
-          downloading https://www.chef.io/chef/install.sh
-            to file /tmp/install.sh
-          ...
-          Downloading Chef ...
-          Installing Chef ...
-          Thank you for installing Chef!
-          Transferring files to <default-centos-65>
-          [2014-06-27T18:41:04+00:00] INFO: Forking chef instance to converge...
-          Starting Chef Client, version 12.1.1
-          [2014-06-27T18:45:18+00:00] INFO: *** Chef 12.1.1 ***
-          [2014-06-27T18:45:18+00:00] INFO: Chef-client pid: 3226
-          [2014-06-27T18:45:25+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options
-          [2014-06-27T18:45:25+00:00] INFO: Run List is [recipe[chef-repo::default]]
-          [2014-06-27T18:45:25+00:00] INFO: Run List expands to [chef-repo::default]
-          [2014-06-27T18:45:25+00:00] INFO: Starting Chef Run for default-centos-65
-          [2014-06-27T18:45:25+00:00] INFO: Running start handlers
-          [2014-06-27T18:42:40+00:00] INFO: Start handlers complete.
-          Compiling Cookbooks...
-          Converging 1 resources
-          Recipe: chef-repo::default
-            * file[/root/test.txt] action create... INFO: Processing file[/root/test.txt] 
-              action create (chef-repo::default line 10)
-          [2014-06-27T18:42:40+00:00] INFO: file[/root/test.txt] created file /root/test.txt
-            - create new file /root/test.txt... INFO: file[/root/test.txt] updated file contents /root/test.txt
-            - update content in file /root/test.txt from none to d9c88f
-          --- /root/test.txt	2014-06-27 18:42:40.695889276 +0000
-          +++ /tmp/.test.txt20140627-2810-1xdx98p	2014-06-27 18:42:40.695889276 +0000
-          @@ -1 +1,2 @@
-          +This file created by Chef!
-            - restore selinux security context
-          [2014-06-27T18:42:40+00:00] INFO: Chef Run complete in 0.168252291 seconds
-          Running handlers:
-          [2014-06-27T18:42:40+00:00] INFO: Running report handlers
-          Running handlers complete
-          [2014-06-27T18:42:40+00:00] INFO: Report handlers complete
-          Chef Client finished, 1/1 resources updated in 7.152725504 seconds
-          Finished converging <default-centos-65> (0m8.43s).
-   -----> Kitchen is finished. (0m15.96s)
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_converge_centos_default.rst
 
 Converge |ubuntu|
 -----------------------------------------------------
-Now let's try it in |ubuntu|:
-
-.. code-block:: bash
-
-   $ kitchen converge default-ubuntu-1204
-
-Like |centos|, the |chef client| will need to be downloaded:
-
-.. code-block:: bash
-
-   -----> Starting Kitchen (v1.3.1)
-   -----> Converging <default-ubuntu-1204>...
-          Preparing files for transfer
-          Preparing cookbooks from project directory
-          Removing non-cookbook files before transfer
-          Preparing nodes
-   -----> Installing Chef Omnibus (true)
-          downloading https://www.chef.io/chef/install.sh
-            to file /tmp/install.sh
-          ...
-          Downloading Chef ...
-          Installing Chef ...    
-          Thank you for installing Chef!       
-          Transferring files to <default-ubuntu-1204>
-          [2014-06-27T18:48:01+00:00] INFO: Forking chef instance to converge...       
-          Starting Chef Client, version 12.1.1       
-          [2014-06-27T18:48:01+00:00] INFO: *** Chef 12.1.1 ***       
-          [2014-06-27T18:48:01+00:00] INFO: Chef-client pid: 1246       
-          [2014-06-27T18:48:03+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options       
-          [2014-06-27T18:48:03+00:00] INFO: Run List is [recipe[chef-repo::default]]       
-          [2014-06-27T18:48:03+00:00] INFO: Run List expands to [chef-repo::default]       
-          [2014-06-27T18:48:03+00:00] INFO: Starting Chef Run for default-ubuntu-1204       
-          [2014-06-27T18:48:03+00:00] INFO: Running start handlers       
-          [2014-06-27T18:48:03+00:00] INFO: Start handlers complete.       
-          Compiling Cookbooks...       
-          Converging 1 resources       
-          Recipe: chef-repo::default       
-            * file[/home/vagrant/test.txt] action create... INFO: Processing file[/home/vagrant/test.txt] 
-              action create (chef-repo::default line 10)       
-          [2014-06-27T18:48:03+00:00] INFO: file[/home/vagrant/test.txt] created file /home/vagrant/test.txt       
-            - create new file /home/vagrant/test.txt... INFO: file[/home/vagrant/test.txt] updated file contents /home/vagrant/test.txt       
-            - update content in file /home/vagrant/test.txt from none to d9c88f       
-          --- /home/vagrant/test.txt	2014-06-27 18:48:03.233096345 +0000       
-           +++ /tmp/.test.txt20140627-1246-178u9dg	2014-06-27 18:48:03.233096345 +0000       
-          @@ -1 +1,2 @@       
-          +This file created by Chef!       
-          [2014-06-27T18:48:03+00:00] INFO: Chef Run complete in 0.015439954 seconds       
-          Running handlers:       
-          [2014-06-27T18:48:03+00:00] INFO: Running report handlers       
-          Running handlers complete       
-          [2014-06-27T18:48:03+00:00] INFO: Report handlers complete       
-          Chef Client finished, 1/1 resources updated in 1.955915841 seconds       
-          Finished converging <default-ubuntu-1204> (0m15.67s).
-   -----> Kitchen is finished. (0m15.96s)
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_converge_ubuntu_default.rst
 
 Verify Instance List
 -----------------------------------------------------
-To verify if both instances have been converged, run the following command:
-
-.. code-block:: bash
-
-   $ kitchen list
-
-.. code-block:: bash
-
-   Instance             Driver   Provisioner  Last Action
-   default-ubuntu-1204  Vagrant  ChefSolo     Converged
-   default-centos-65    Vagrant  ChefSolo     Converged
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_converged_both.rst
 
 Now you can run your cookbooks in a virtual instance managed by |kitchen| on multiple platforms (|ubuntu| and |centos|).
 

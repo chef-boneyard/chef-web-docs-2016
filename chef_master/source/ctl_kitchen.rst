@@ -102,21 +102,14 @@ Options
 
 Examples
 -----------------------------------------------------
-.. code-block:: bash
 
-   $ kitchen converge default-ubuntu-10.04
+**Converge the default CentOS instance**
 
-to return something similar to:
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_converge_centos_default.rst
 
-.. code-block:: bash
+**Converge the default Ubuntu instance**
 
-   -----> Starting Kitchen (v1.0.0)
-   -----> Converging <default-ubuntu-10.04>
-   -----> Installing Chef Omnibus (true)
-   ... # install the chef-client
-   ... # start a chef-client run
-   Finished converging <default-ubuntu-10.04> (2m1.12s).
-   -----> Kitchen is finished. (2m3.45s)
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_converge_ubuntu_default.rst
 
 
 kitchen create
@@ -133,7 +126,14 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+
+**Create the default CentOS instance**
+
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_create_centos_default.rst
+
+**Create the default Ubuntu instance**
+
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_create_ubuntu_default.rst
 
 kitchen destroy
 =====================================================
@@ -165,101 +165,18 @@ Options
 
 Examples
 -----------------------------------------------------
-This command returns data as |yaml|:
 
-.. code-block:: yaml
+**Diagnose an instance**
 
-   ---
-   timestamp: 2014-04-15 18:59:58.460470000 Z
-   kitchen-version: 1.2.2.dev
-   instances:
-     default-ubuntu-1404
-       # ...
-     default-centos-65
-       # ...
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_diagnose.rst
 
-When |kitchen| is being used to test cookbooks, |kitchen| will track state data:
+**Diagnose an instance using --instances option**
 
-.. code-block:: yaml
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_diagnose_instances.rst
 
-   ---
-   instances:
-     default-ubuntu-1404
-       state_file:
-         hostname: 192.168.123.456
-         last_action: create
-         port: '22'
-         ssh_key: "/Users/username/path/to/key"
-         username: vagrant
-     default-centos-65
-       # ...
+**Diagnose an instance using --loader option**
 
-and will track information that was given to a driver:
-
-.. code-block:: yaml
-
-   ---
-   instances:
-     default-ubuntu-1404
-       driver:
-         box: opscode-ubuntu-12.04
-         box_url: https://URL/path/to/filename.box
-         kitchen_root: "/Users/username/Projects/sandbox/"
-
-and will track information about provisioners:
-
-.. code-block:: yaml
-
-   ---
-   instances:
-     default-ubuntu-1404
-       provisioner:
-         attributes: {}
-         chef_omnibus_url: https://www.chef.io/chef/install.sh
-         clients_path: 
-         name: chef_zero
-
-Use the ``--instances`` option to track instances, which are based on the list of platforms and suites in the |kitchen yml| file:
-
-.. code-block:: yaml
-
-   ---
-   instances
-     default-ubuntu-1204
-       busser:
-         root_path: /tmp/busser
-         ruby_bindir: /opt/chef/embedded/bin
-         sudo: true
-
-Use the ``--loader`` option to include diagnostic data in the output:
-
-.. code-block:: yaml
-
-   ---
-   loader:
-     combined_config:
-       filename: 
-       raw_data:
-         driver:
-           name: vagrant
-           socket: tcp://192.168.12.34:1234
-       provisioner:
-        #...
-
-or:
-
-.. code-block:: yaml
-
-   ---
-   loader:
-     global_config:
-       filename: "/Users/username/.kitchen/config.yml"
-       raw_data: #...
-     project_config:
-       filename: "/Users/username/Projects/sandbox/path/to/kitchen.yml"
-       raw_data: #...
-     local_config:
-
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_diagnose_loader.rst
 
 kitchen driver create
 =====================================================
@@ -307,24 +224,10 @@ Options
 
 Examples
 -----------------------------------------------------
-.. code-block:: bash
 
-   $ kitchen init --driver=kitchen-vagrant
+**Create the Kitchen environment**
 
-will return something similar to:
-
-.. code-block:: bash
-
-   create .kitchen.yml
-   create test/integration/default
-   create .gitignore
-   append .gitignore
-   append .gitignore
-   run    gem install kitchen-vagrant from "."
-   Fetching: kitchen-vagrant-0.12.0.gem (100%)
-   Successfully installed kitchen-vagrant-0.12.0
-   1 gem installed
-
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_init.rst
 
 kitchen list
 =====================================================
@@ -340,51 +243,10 @@ Options
 
 Examples
 -----------------------------------------------------
-.. code-block:: bash
 
-   $ kitchen list
+**View a list of Kitchen instances**
 
-to return something similar to:
-
-.. code-block:: bash
-
-   Instance              Driver   Provisioner   Last Action
-   default-ubuntu-10.04  vagrant  chef_zero     created
-   default-centos-6.5    vagrant  chef_zero     created
-
-or:
-
-.. code-block:: bash
-
-   Instance              Driver   Provisioner   Last Action
-   default-ubuntu-10.04  vagrant  chef_zero     converged
-   default-centos-6.5    vagrant  chef_zero     created
-
-or:
-
-.. code-block:: bash
-
-   Instance              Driver   Provisioner   Last Action
-   default-ubuntu-10.04  vagrant  chef_zero     verified
-   default-centos-6.5    vagrant  chef_zero     created
-
-or:
-
-.. code-block:: bash
-
-   Instance              Driver   Provisioner   Last Action
-   default-ubuntu-10.04  vagrant  chef_zero     created
-   default-centos-6.5    vagrant  chef_zero     <not created>
-
-or if there are multiple suites defined, such as ``default`` and ``test``:
-
-.. code-block:: bash
-
-   Instance              Driver   Provisioner   Last Action
-   default-ubuntu-10.04  vagrant  chef_zero     <not created>
-   default-centos-6.5    vagrant  chef_zero     <not created>
-   test-ubuntu-10.04     vagrant  chef_zero     <not created>
-   test-centos-6.5       vagrant  chef_zero     <not created>
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list.rst
 
 kitchen login
 =====================================================
@@ -400,17 +262,7 @@ Options
 
 Examples
 -----------------------------------------------------
-.. code-block:: bash
-
-   $ kitchen login default-ubuntu-10.04
-
-to return something similar to:
-
-.. code-block:: bash
-
-   Welcome to Ubuntu 10.04.2 LTS (GNU/Linux 3.5.0-23-generic x86_64)
-   Last login: Mon Mar 28 17:34:26 2014 from 127.0.0.5
-   vagrant@default-ubuntu-10.04:~$
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_login_ubuntu_default.rst
 
 kitchen setup
 =====================================================
@@ -442,87 +294,14 @@ Options
 
 Examples
 -----------------------------------------------------
-.. code-block:: bash
 
-   $ kitchen test default-ubuntu-10.04
+**Test the default Ubuntu instance**
 
-to return something similar to:
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_test_ubuntu_default.rst
 
-.. code-block:: bash
+**Test an instance using --concurrency option**
 
-   -----> Starting Kitchen (v1.0.0)
-   -----> Cleaning up any prior instances of <default-ubuntu-10.04>
-   -----> Destroying <default-ubuntu-10.04>...
-   ...
-   Finished destroying <default-ubuntu-10.04> (0m3.06s).
-   -----> Testing <default-ubuntu-10.04>
-   -----> Creating <default-ubuntu-10.04>...
-   Bringing machine 'default' up with 'virtualbox' provider...
-   ...
-   Vagrant instance <default-ubuntu-10.04> created.
-   Finished creating <default-ubuntu-10.04> (0m46.22s).
-   -----> Converging <default-ubuntu-10.04>...
-   ...
-   -----> Installing Chef Omnibus (true)
-   downloading https://www.chef.io/chef/install.sh
-   ...
-   Installing Chef
-   ...
-   Setting up chef (11.12.0-1.ubuntu.12.04) ...
-   Thank you for installing Chef!
-   ...
-   Starting Chef Client, version 11.12.0
-   ...
-   Converging 2 resources
-   Recipe: git::default
-     * package[git] action install[date/time] INFO: Processing package[git] action install (git::default line 10)
-   
-       - install version 1:2.3.4.5-6 of package git
-   
-     * log[log_description] action write[date/time] INFO: Processing log[log_description] action write (git::default line 5)
-   ...
-   Chef Client finished, 2 resources updated
-   Finished converging <default-ubuntu-10.04> (0m45.17s).
-   -----> Starting Kitchen (v1.0.0)
-   -----> Setting up <default-ubuntu-10.04>
-   Fetching: <name of test tool> (100%)
-   Successfully installed <name of test tool>
-   # gems installed
-   -----> Setting up <name of test tool>
-   ...
-   -----> Running <name of test tool> test suite
-    ✓ <test result>
-
-   2 tests, 0 failures
-        Finished verifying <default-ubuntu-10.04> (2m1.12s).
-   -----> Kitchen is finished. (2m3.45s)
-   $ echo $?
-   0
-
-Use the ``--concurrency`` option to control the number of instances that are tested concurrently on the local workstation. The default setting is to test all instances, but the practical setting depends on the capabilities of the local machine itself. The following examples will limit the number of instances to four:
-
-.. code-block:: bash
-
-   $ kitchen test --concurrency=4
-
-or:
-
-.. code-block:: bash
-
-   $ kitchen test --concurrency 4
-
-or:
-
-.. code-block:: bash
-
-   $ kitchen test -c=4
-
-or:
-
-.. code-block:: bash
-
-   $ kitchen test -c 4
-
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_test_concurrency.rst
 
 kitchen verify
 =====================================================
@@ -538,51 +317,10 @@ Options
 
 Examples
 -----------------------------------------------------
-.. code-block:: bash
 
-   $ kitchen verify default-ubuntu-10.04
+**Verify the default Ubuntu instance**
 
-to return something similar to:
-
-.. code-block:: bash
-
-   -----> Starting Kitchen (v1.0.0)
-   -----> Setting up <default-ubuntu-10.04>
-   Fetching: <name of test tool> (100%)
-   Successfully installed <name of test tool>
-   # gems installed
-   -----> Setting up <name of test tool>
-   ...
-   -----> Running <name of test tool> test suite
-    ✓ <test result>
-
-   2 tests, 0 failures
-        Finished verifying <default-ubuntu-10.04> (2m1.12s).
-   -----> Kitchen is finished. (2m3.45s)
-   $ echo $?
-   0
-
-or:
-
-.. code-block:: bash
-
-   -----> Starting Kitchen (v1.0.0)
-   -----> Setting up <default-ubuntu-10.04>
-   Fetching: <name of test tool> (100%)
-   Successfully installed <name of test tool>
-   # gems installed
-   -----> Setting up <name of test tool>
-   ...
-   -----> Running <name of test tool> test suite
-    - <test result>
-
-   2 tests, 1 failures
-   ... exit code was 1
-   >>>>>> description of failure
-   ...
-   >>>>>> ----------------------
-   $ echo $?
-   10
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_verify_ubuntu_default.rst
 
 kitchen version
 =====================================================
@@ -598,12 +336,7 @@ This subcommand does not have any options.
 
 Examples
 -----------------------------------------------------
-.. code-block:: bash
 
-   $ kitchen version
+**Verify the version of Kitchen**
 
-will return something similar to:
-
-.. code-block:: bash
-
-   Text Kitchen version 1.0.0
+.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_version.rst
