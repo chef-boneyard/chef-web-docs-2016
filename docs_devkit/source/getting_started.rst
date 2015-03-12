@@ -43,7 +43,7 @@ For the quickest way to get started using |chef|:
 
    .. code-block:: bash
 
-      $ chef-client --local-mode --override-runlist chefdocs
+      $ chef-client --local-mode --override-runlist chef-repo
 
 This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file created by Chef!``. There's a lot more that |chef| can do, obviously, but that was super easy! Keep reading this topic for more information about setting up your workstation or go to https://docs.chef.io and dive in.
 
@@ -87,14 +87,14 @@ We have already used the |chef ctl| ``verify`` subcommand to verify the installa
 
    $ chef generate app name
    
-where ``name`` is a name that you have chosen for the both the |chef repo| and the default cookbook. We are calling ours ``chef-repo``; you can call yours whatever you want. (We also renamed the default cookbook to ``chefdocs``, which is totally optional.) You should have a directory structure at ``/Users/your_username/cookbook_name/`` similar to::
+where ``name`` is a name that you have chosen for the both the |chef repo| and the default cookbook. We are calling ours ``chef-repo``; you can call yours whatever you want. You should have a directory structure at ``/Users/your_username/cookbook_name/`` similar to::
 
    /chef-repo
      /.git
      .gitignore
      .kitchen.yml
      /cookbooks
-       /chefdocs
+       /chef-repo
          Berksfile
          chefignore
          metadata.rb
@@ -128,9 +128,9 @@ The following command will create the file ``test.txt``:
 
 .. code-block:: bash
 
-   $ chef-client --local-mode --override-runlist chefdocs
+   $ chef-client --local-mode --override-runlist chef-repo
 
-where ``chefdocs`` is the name of your cookbook.
+where ``chef-repo`` is the name of your cookbook.
 
 As the |chef client| adds the file to your system, output similar to the following is shown:
 
@@ -141,13 +141,13 @@ As the |chef client| adds the file to your system, output similar to the followi
    [2014-06-13T16:13:11-07:00] WARN: SSL validation of HTTPS requests is disabled. 
    [2014-06-13T16:13:13-07:00] WARN: Run List override has been provided.
    [2014-06-13T16:13:13-07:00] WARN: Original Run List: []
-   [2014-06-13T16:13:13-07:00] WARN: Overridden Run List: [recipe[chefdocs]]
-   resolving cookbooks for run list: ["chefdocs"]
+   [2014-06-13T16:13:13-07:00] WARN: Overridden Run List: [recipe[chef-repo]]
+   resolving cookbooks for run list: ["chef-repo"]
    Synchronizing Cookbooks:
-     - chefdocs
+     - chef-repo
    Compiling Cookbooks...
    Converging 1 resources
-   Recipe: chefdocs::default
+   Recipe: chef-repo::default
      * file[/Users/grantmc/test.txt] action create
        - create new file /Users/grantmc/test.txt
        - update content in file /Users/grantmc/test.txt from none to d9c88f
@@ -191,7 +191,7 @@ for now, let's just update the name and version settings, like this:
 
 .. code-block:: ruby
 
-   name             'chefdocs'
+   name             'chef-repo'
    version          '0.1.0'
 
 Verify |kitchen yml|
@@ -274,7 +274,7 @@ This will start |vagrant|, which will then build a machine that rubs |centos| 6.
 
 .. code-block:: bash
 
-   -----> Starting Kitchen (v1.2.2.dev)
+   -----> Starting Kitchen (v1.3.1)
    -----> Creating <default-centos-65>...
           Bringing machine 'default' up with 'virtualbox' provider...
           ==> default: Box 'opscode-centos-6.5' could not be found. Attempting to find and install...
@@ -331,7 +331,7 @@ this may also take a few minutes, but will (eventually) return something similar
 
 .. code-block:: bash
 
-   -----> Starting Kitchen (v1.2.2.dev)
+   -----> Starting Kitchen (v1.3.1)
    -----> Creating <default-ubuntu-1204>...
           Bringing machine 'default' up with 'virtualbox' provider...
           ==> default: Box 'opscode-ubuntu-12.04' could not be found. Attempting to find and install...
@@ -372,7 +372,7 @@ Verify the instance list with the following command:
 
    Instance             Driver   Provisioner  Last Action
    default-ubuntu-1204  Vagrant  ChefZero     Created
-   default-centos-64    Vagrant  ChefZero     Created
+   default-centos-65    Vagrant  ChefZero     Created
 
 and now we're all set up! We're going to use the same recipe and cookbook that we already created.
 
@@ -382,14 +382,14 @@ Now that we're all configured and ready to run |kitchen|, let's try it in |cento
 
 .. code-block:: bash
 
-   $ kitchen converge default-centos-64
+   $ kitchen converge default-centos-65
 
 The first time you run this, it'll have to download the |chef client| and will show something similar to the following while it converges the node via |kitchen|: 
 
 .. code-block:: bash
 
-   -----> Starting Kitchen (v1.2.2.dev)
-   -----> Converging <default-centos-64>...
+   -----> Starting Kitchen (v1.3.1)
+   -----> Converging <default-centos-65>...
           Preparing files for transfer
           Preparing cookbooks from project directory
           Removing non-cookbook files before transfer
@@ -401,15 +401,15 @@ The first time you run this, it'll have to download the |chef client| and will s
           Downloading Chef ...
           Installing Chef ...
           Thank you for installing Chef!
-          Transferring files to <default-centos-64>
+          Transferring files to <default-centos-65>
           [2014-06-27T18:41:04+00:00] INFO: Forking chef instance to converge...
-          Starting Chef Client, version 11.12.8
-          [2014-06-27T18:45:18+00:00] INFO: *** Chef 11.12.8 ***
+          Starting Chef Client, version 12.1.1
+          [2014-06-27T18:45:18+00:00] INFO: *** Chef 12.1.1 ***
           [2014-06-27T18:45:18+00:00] INFO: Chef-client pid: 3226
           [2014-06-27T18:45:25+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options
           [2014-06-27T18:45:25+00:00] INFO: Run List is [recipe[chef-repo::default]]
           [2014-06-27T18:45:25+00:00] INFO: Run List expands to [chef-repo::default]
-          [2014-06-27T18:45:25+00:00] INFO: Starting Chef Run for default-centos-64
+          [2014-06-27T18:45:25+00:00] INFO: Starting Chef Run for default-centos-65
           [2014-06-27T18:45:25+00:00] INFO: Running start handlers
           [2014-06-27T18:42:40+00:00] INFO: Start handlers complete.
           Compiling Cookbooks...
@@ -431,7 +431,7 @@ The first time you run this, it'll have to download the |chef client| and will s
           Running handlers complete
           [2014-06-27T18:42:40+00:00] INFO: Report handlers complete
           Chef Client finished, 1/1 resources updated in 7.152725504 seconds
-          Finished converging <default-centos-64> (0m8.43s).
+          Finished converging <default-centos-65> (0m8.43s).
    -----> Kitchen is finished. (0m15.96s)
 
 Converge |ubuntu|
@@ -446,7 +446,7 @@ Like |centos|, the |chef client| will need to be downloaded:
 
 .. code-block:: bash
 
-   -----> Starting Kitchen (v1.2.2.dev)
+   -----> Starting Kitchen (v1.3.1)
    -----> Converging <default-ubuntu-1204>...
           Preparing files for transfer
           Preparing cookbooks from project directory
@@ -461,8 +461,8 @@ Like |centos|, the |chef client| will need to be downloaded:
           Thank you for installing Chef!       
           Transferring files to <default-ubuntu-1204>
           [2014-06-27T18:48:01+00:00] INFO: Forking chef instance to converge...       
-          Starting Chef Client, version 11.12.8       
-          [2014-06-27T18:48:01+00:00] INFO: *** Chef 11.12.8 ***       
+          Starting Chef Client, version 12.1.1       
+          [2014-06-27T18:48:01+00:00] INFO: *** Chef 12.1.1 ***       
           [2014-06-27T18:48:01+00:00] INFO: Chef-client pid: 1246       
           [2014-06-27T18:48:03+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options       
           [2014-06-27T18:48:03+00:00] INFO: Run List is [recipe[chef-repo::default]]       
@@ -503,7 +503,7 @@ To verify if both instances have been converged, run the following command:
 
    Instance             Driver   Provisioner  Last Action
    default-ubuntu-1204  Vagrant  ChefSolo     Converged
-   default-centos-64    Vagrant  ChefSolo     Converged
+   default-centos-65    Vagrant  ChefSolo     Converged
 
 Now you can run your cookbooks in a virtual instance managed by |kitchen| on multiple platforms (|ubuntu| and |centos|).
 
@@ -538,7 +538,7 @@ and a directory structure in that cookbook similar to::
 	 .gitignore
      .kitchen.yml
      /cookbooks
-       /chefdocs
+       /chef-repo
          Berksfile
          chefignore
          metadata.rb
@@ -589,7 +589,7 @@ and a directory structure in that cookbook similar to::
 	 .gitignore
      .kitchen.yml
      /cookbooks
-       /chefdocs
+       /chef-repo
 	     /attributes
 		   default.rb
          Berksfile
@@ -653,32 +653,32 @@ Now let's install |ntp| in |centos|:
 
 .. code-block:: bash
 
-   $ kitchen converge default-centos-64
+   $ kitchen converge default-centos-65
 
 As it installs, the |chef client| will report back something similar to the following: 
 
 .. code-block:: bash
 
-   -----> Starting Kitchen (v1.2.2.dev)
-   -----> Converging <default-centos-64>...
+   -----> Starting Kitchen (v1.3.1)
+   -----> Converging <default-centos-65>...
           Preparing files for transfer
           Preparing cookbooks from project directory
           Removing non-cookbook files before transfer
           Preparing nodes
-          Transferring files to <default-centos-64>
+          Transferring files to <default-centos-65>
           [2014-07-10T20:43:50+00:00] INFO: Starting chef-zero on port 8889 with repository at repository at /tmp/kitchen
           One version per cookbook
           [2014-07-10T20:43:50+00:00] INFO: Forking chef instance to converge...
-          Starting Chef Client, version 11.12.8
-          [2014-07-10T20:34:52+00:00] INFO: *** Chef 11.12.8 ***
+          Starting Chef Client, version 12.1.1
+          [2014-07-10T20:34:52+00:00] INFO: *** Chef 12.1.1 ***
           [2014-07-10T20:34:52+00:00] INFO: Chef-client pid: 4229
           [2014-07-10T20:35:00+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options
           [2014-07-10T20:35:00+00:00] INFO: Run List is [recipe[chef-repo::default]]
           [2014-07-10T20:35:00+00:00] INFO: Run List expands to [chef-repo::default]
-          [2014-07-10T20:35:00+00:00] INFO: Starting Chef Run for default-centos-64
+          [2014-07-10T20:35:00+00:00] INFO: Starting Chef Run for default-centos-65
           [2014-07-10T20:35:00+00:00] INFO: Running start handlers
           [2014-07-10T20:35:00+00:00] INFO: Start handlers complete.
-          [2014-07-10T20:35:00+00:00] INFO: HTTP Request Returned 404 Not Found : Object not found: /reports/nodes/default-centos-64/runs
+          [2014-07-10T20:35:00+00:00] INFO: HTTP Request Returned 404 Not Found : Object not found: /reports/nodes/default-centos-65/runs
           resolving cookbooks for run list: ["chef-repo::default"]
           [2014-07-10T20:35:00+00:00] INFO: Loading cookbooks [chef-repo@0.1.0]
           Synchronizing Cookbooks:
@@ -705,7 +705,7 @@ As it installs, the |chef client| will report back something similar to the foll
           Running handlers complete
           [2014-07-10T20:35:20+00:00] INFO: Report handlers complete
           Chef Client finished, 2/5 resources updated in 27.444399186 seconds
-          Finished converging <default-centos-64> (0m30.97s).
+          Finished converging <default-centos-65> (0m30.97s).
    -----> Kitchen is finished. (0m31.28s)
 
 Install |ntp| on |ubuntu|
@@ -720,7 +720,7 @@ As it installs, the |chef client| will report back something similar to the foll
 
 .. code-block:: bash
 
-   -----> Starting Kitchen (v1.2.2.dev)
+   -----> Starting Kitchen (v1.3.1)
    -----> Converging <default-ubuntu-1204>...
           Preparing files for transfer
           Preparing cookbooks from project directory
@@ -730,8 +730,8 @@ As it installs, the |chef client| will report back something similar to the foll
           [2014-07-10T20:41:26+00:00] INFO: Starting chef-zero on port 8889 with repository at repository at /tmp/kitchen       
           One version per cookbook       
           [2014-07-10T20:41:26+00:00] INFO: Forking chef instance to converge...       
-          Starting Chef Client, version 11.12.8       
-          [2014-07-10T20:41:26+00:00] INFO: *** Chef 11.12.8 ***       
+          Starting Chef Client, version 12.1.1       
+          [2014-07-10T20:41:26+00:00] INFO: *** Chef 12.1.1 ***       
           [2014-07-10T20:41:26+00:00] INFO: Chef-client pid: 2106       
           [2014-07-10T20:41:28+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options       
           [2014-07-10T20:41:28+00:00] INFO: Run List is [recipe[chef-repo::default]]       
@@ -782,7 +782,7 @@ To verify if both instances have been converged, run the following command:
 
    Instance             Driver   Provisioner  Last Action
    default-ubuntu-1204  Vagrant  ChefZero     Converged
-   default-centos-64    Vagrant  ChefZero     Converged
+   default-centos-65    Vagrant  ChefZero     Converged
 
 .. More About Resources
 .. =====================================================
