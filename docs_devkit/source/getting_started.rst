@@ -159,7 +159,7 @@ As the |chef client| adds the file to your system, output similar to the followi
    
    Chef Client finished, 1/1 resources updated in 2.418878 seconds
 
-That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``.
+That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``. Open that file, edit the string, and then save that file. Re-run the |chef client|. Or delete the file. In both cases, re-run the |chef client|. |chef| will return the system to the state that is defined by the recipe.
 
 We'll come back to working with |chef| later on. Let's set up |kitchen| so that we can use it to build a virtual machine against which we can run |chef|.
 
@@ -205,28 +205,26 @@ Because |kitchen| is installed as part of the |chef dk|, the |kitchen yml| file 
    
    platforms:
      - name: ubuntu-12.04
-     - name: centos-6.4
+     - name: centos-6.5
    
    suites:
      - name: default
        run_list:
-         - recipe[bar::default]
+         - recipe[chef-repo::default]
        attributes:
 
-Make sure the default provisioner is |chef zero|:
+Verify that the default provisioner is |chef zero|:
 
 .. code-block:: yaml
 
-   ---
-   driver:
-     name: vagrant
+   ...
    
    provisioner:
      name: chef_zero
    
    ...
 
-and also make sure the |kitchen yml| knows about the default recipe in your cookbook. Under ``suites``, make sure the ``run_list`` contains the name of your cookbook. For example:
+Verify that the default recipe is the name of the cookbook that was generated earlier:
 
 .. code-block:: yaml
 
@@ -236,9 +234,9 @@ and also make sure the |kitchen yml| knows about the default recipe in your cook
          - recipe[chef-repo::default]
        attributes:
 
-where ``chef-repo`` is the name of your cookbook. This will ensure that |kitchen| uses this recipe when converging.
+where ``chef-repo`` is the name of your cookbook.
 
-For now, we don't need to do anything else to get started using |kitchen|.
+This is all of the configuration |kitchen| needs at this time. Let's set up some |kitchen| instances, and then build virtual machines that can run |chef|.
 
 View Instance List
 -----------------------------------------------------
