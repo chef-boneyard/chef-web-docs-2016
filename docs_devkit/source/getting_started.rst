@@ -50,7 +50,7 @@ where ``name`` is a name that you have chosen for the both the |chef repo| and t
 
    /chef-repo
      /.git
-	 .gitignore
+     .gitignore
      .kitchen.yml
      /cookbooks
        /chefdocs
