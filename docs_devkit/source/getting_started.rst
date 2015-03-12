@@ -8,6 +8,47 @@ Welcome to |chef|!
 
 .. note:: This topic is a work in progress. It needs some editing, but you should be able to install the Chef DK and then configure Kitchen to build CentOS and Ubuntu instances, and then converge a node using the NTP cookbook. More sections are planned for future updates that will include more scenarios for Kitchen, new scenarios for ChefSpec, Berkshelf, and Chef policy. Feedback on the getting started page may be sent to docs @ getchef dot com.
 
+The following sections walk through the process of getting started using |chef|:
+
+* Use `Quick Start <http://docs.chef.io/devkit/getting_started.html#quick-start>`__ for just the command lines. Hack your way through it!
+* Use `Workstation Setup <http://docs.chef.io/devkit/getting_started.html#workstation-setup>`__ for a more verbose walkthrough that also explains how to set up multiple virtual environments using |kitchen| so that you can see |chef| managing multiple platforms exactly the same way.
+
+
+Quick Start
+=====================================================
+For the quickest way to get started using |chef|:
+
+#. Download the |chef dk|: http://downloads.chef.io/chef-dk/.
+#. Set your system |ruby| to this path:
+
+   .. code-block:: bash
+
+      $ /opt/chefdk/embedded/bin/ruby
+
+#. Generate a cookbook: 
+
+   .. code-block:: bash
+
+      $ chef generate app cookbook_name
+
+#. Update the ``default.rb`` recipe in the generated cookbook to contain:
+
+   .. code-block:: ruby
+
+      file "#{ENV['HOME']}/test.txt" do
+        content 'This file created by Chef!'
+      end
+
+#. Run the |chef client| using the ``default.rb`` recipe:
+
+   .. code-block:: bash
+
+      $ chef-client --local-mode --override-runlist chefdocs
+
+This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file created by Chef!``. There's a lot more that |chef| can do, obviously, but that was super easy! Keep reading this topic for more information about setting up your workstation or go to https://docs.chef.io and dive in.
+
+
+
 .. About Resources
 .. =====================================================
 .. .. include:: ../../includes_resources_common/includes_resources_common.rst
