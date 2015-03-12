@@ -115,7 +115,7 @@ Feature Tracking
 
 Testing
 -----------------------------------------------------
-.. include:: ../../includes_openstack/includes_openstack_develop_gerritt.rst
+.. include:: ../../includes_openstack/includes_openstack_develop_gerrit.rst
 
 Repository
 =====================================================
