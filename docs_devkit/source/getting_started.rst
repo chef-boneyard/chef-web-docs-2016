@@ -61,10 +61,9 @@ where ``name`` is a name that you have chosen for the both the |chef repo| and t
            default.rb
      README.md
 
-Run the |chef client_title|
------------------------------------------------------
-The |chef client| includes a mode called "local mode", which runs the |chef client| locally on your machine. Local mode allows you to run recipes and work locally with the code you are using to run your business. Local mode does not require a connection to a |chef server|, public or private keys, or configuring of nodes. (Though we'll do all of these things later!) Many people use local mode for simple, local testing of recipes and cookbooks, often as a pre-cursor to running unit and integration tests against the same recipes and cookbooks.
 
+Update the Default Recipe
+-----------------------------------------------------
 Open the ``default.rb`` recipe in the cookbook you just created. Add the following resource to that recipe:
 
 .. code-block:: ruby
@@ -75,7 +74,16 @@ Open the ``default.rb`` recipe in the cookbook you just created. Add the followi
 
 This recipe creates a file called ``test.txt`` at the path defined by the ``HOME`` environment variable. (To view that path, run ``echo "$HOME"`` in the command shell.)
 
-Next, we'll run the |chef client|. This is done via the command line and the command must be run from within the |chef repo|. Use the ``--local-mode`` flag to run the |chef client| in local mode. Use the ``--override-runlist`` flag to run only the recipe we have just created. (More about the run-list later.) For a cookbook's default recipe, only the name of the cookbook needs to be specified, as that maps to the default recipe. The following command will create the file ``test.txt``:
+Run the |chef client_title|
+-----------------------------------------------------
+Next, we'll run the |chef client|. This is done via the command line and the command must be run from within the |chef repo|. 
+
+* Use the ``--local-mode`` flag to run the |chef client| locally on your machine exactly the same as if the |chef client| were able to communicate with a |chef server|. Local mode does not require a connection to a |chef server|, public or private keys, or configuring of nodes. Many people use local mode for simple, local testing of recipes and cookbooks, often as a pre-cursor to running unit and integration tests against the same recipes and cookbooks.
+* Use the ``--override-runlist`` flag to run only the recipe we have just created. (More about the run-list later.) 
+
+To run a cookbook's default recipe, only the name of the cookbook needs to be specified because the name of the cookbook is directly associated with the default recipe. 
+
+The following command will create the file ``test.txt``:
 
 .. code-block:: bash
 
