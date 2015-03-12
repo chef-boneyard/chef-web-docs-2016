@@ -224,7 +224,7 @@ Verify that the default provisioner is |chef zero|:
    
    ...
 
-Verify that the default recipe is the name of the cookbook that was generated earlier:
+Verify that the default recipe contains the name of the cookbook that was generated earlier:
 
 .. code-block:: yaml
 
