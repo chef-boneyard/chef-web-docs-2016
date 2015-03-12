@@ -12,7 +12,7 @@ This subcommand has the following options:
    Use to show help for the ``chef-server-ctl upgrade`` subcommand.
 
 ``-o NAME``, ``--org-name NAME``
-   The name of the |chef server| organization. An organization name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``. If this option is not specified, the ``upgrade`` command will prompt for it.
+   The name of the |chef server| organization. |name_rules org| For example: ``chef``. If this option is not specified, the ``upgrade`` command will prompt for it.
 
 ``-S``, ``--setup-only``
    Use to start |chef server| 12 in preparation for uploading data. This option does not upload data to the |chef server|.
