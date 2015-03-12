@@ -217,7 +217,7 @@ Because |kitchen| is installed as part of the |chef dk|, the |kitchen yml| file 
          - recipe[bar::default]
        attributes:
 
-Let's change the default provisioner to |chef zero|:
+Make sure the default provisioner is |chef zero|:
 
 .. code-block:: yaml
 
@@ -242,8 +242,6 @@ and also make sure the |kitchen yml| knows about the default recipe in your cook
 
 where ``chef-repo`` is the name of your cookbook. This will ensure that |kitchen| uses this recipe when converging.
 
-Also, |kitchen| has been added to gitignore, thor, etc. files. We just need to create the directory in which tests will be authored. This is typically a sub-directory of ``/cookbooks`` called ``/tests``. The structure underneath ``/tests`` may be customized, but is typically something like ``/test/integration/default``.
-
 For now, we don't need to do anything else to get started using |kitchen|.
 
 View Instance List
@@ -260,9 +258,9 @@ which will return something similar to:
 
    Instance             Driver   Provisioner  Last Action
    default-ubuntu-1204  Vagrant  ChefZero     <Not Created>
-   default-centos-64    Vagrant  ChefZero     <Not Created>
+   default-centos-65    Vagrant  ChefZero     <Not Created>
 
-So there are two available platforms---|ubuntu| 12.04 and |centos| 6.4---configured to use the |vagrant| driver (which is enabled via the ``kitchen-vagrant`` driver that is built-in to the |chef dk|), and to run |chef zero| while running tests.
+So there are two available platforms---|ubuntu| 12.04 and |centos| 6.5---configured to use the |vagrant| driver (which is enabled via the ``kitchen-vagrant`` driver that is built-in to the |chef dk|), and to run |chef zero| while running tests.
 
 Create |centos| Instance
 -----------------------------------------------------
@@ -270,24 +268,24 @@ Let's create an instance. Run the following command:
 
 .. code-block:: bash
 
-   $ kitchen create default-centos-64
+   $ kitchen create default-centos-65
 
-This will start |vagrant|, which will then build a machine that rubs |centos| 6.4. (If this is the first time you're running |kitchen|, then |centos| needs to first be downloaded from the default instance location and may take a few minutes.)
+This will start |vagrant|, which will then build a machine that rubs |centos| 6.5. (If this is the first time you're running |kitchen|, then |centos| needs to first be downloaded from the default instance location and may take a few minutes.)
 
 .. code-block:: bash
 
    -----> Starting Kitchen (v1.2.2.dev)
-   -----> Creating <default-centos-64>...
+   -----> Creating <default-centos-65>...
           Bringing machine 'default' up with 'virtualbox' provider...
-          ==> default: Box 'opscode-centos-6.4' could not be found. Attempting to find and install...
+          ==> default: Box 'opscode-centos-6.5' could not be found. Attempting to find and install...
               default: Box Provider: virtualbox
               default: Box Version: >= 0
-          ==> default: Adding box 'opscode-centos-6.4' (v0) for provider: virtualbox
-              default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.4_chef-provisionerless.box
-          ==> default: Successfully added box 'opscode-centos-6.4' (v0) for 'virtualbox'!
-          ==> default: Importing base box 'opscode-centos-6.4'...
+          ==> default: Adding box 'opscode-centos-6.5' (v0) for provider: virtualbox
+              default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box
+          ==> default: Successfully added box 'opscode-centos-6.5' (v0) for 'virtualbox'!
+          ==> default: Importing base box 'opscode-centos-6.5'...
           ==> default: Matching MAC address for NAT networking...
-          ==> default: Setting the name of the VM: default-centos-64_default_1403650129063_53517
+          ==> default: Setting the name of the VM: default-centos-65_default_1403650129063_53517
           ==> default: Clearing any previously set network interfaces...
           ==> default: Preparing network interfaces based on configuration...
               default: Adapter 1: nat
@@ -303,8 +301,8 @@ This will start |vagrant|, which will then build a machine that rubs |centos| 6.
           ==> default: Checking for guest additions in VM...
           ==> default: Setting hostname...
           ==> default: Machine not provisioning because `--no-provision` is specified.
-          Vagrant instance <default-centos-64> created.
-          Finished creating <default-centos-64> (11m29.44s).
+          Vagrant instance <default-centos-65> created.
+          Finished creating <default-centos-65> (11m29.44s).
    -----> Kitchen is finished. (11m29.76s)
 
 Verify the instance list with the following command:
@@ -319,7 +317,7 @@ and you will see the following:
 
    Instance             Driver   Provisioner  Last Action
    default-ubuntu-1204  Vagrant  ChefZero     <Not Created>
-   default-centos-64    Vagrant  ChefZero     Created
+   default-centos-65    Vagrant  ChefZero     Created
 
 Create |ubuntu| Instance
 -----------------------------------------------------
