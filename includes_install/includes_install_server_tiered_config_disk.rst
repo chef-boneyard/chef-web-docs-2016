@@ -11,8 +11,6 @@ This assumes that:
 * ~300GB of raw, unpartitioned disk space is available
 * The disk space presents as a single device, ``/dev/sdb``
 * The storage is added to a volume group named ``opscode`` and is presented to the |chef server| by mounting on ``/var/opt/opscode`` before a reconfiguration
-* The storage is added in a logical volume group named ``drbd``
-* The volume group should have adequate space to enable |lvm| snapshots to be used for backups; this amount depends on many factors, including how much changes in-between snapshots, how long the snapshots will be kept, and the (eventual) size of the |chef server| database; a decent starting point when sizing |lvm| snapshots is ~10% of the raw, unpartitioned disk space
 
 The following commands properly set up disk configuration on the backend machine:
 
