@@ -254,7 +254,7 @@ which will return something similar to:
    default-ubuntu-1204  Vagrant  ChefZero     <Not Created>
    default-centos-65    Vagrant  ChefZero     <Not Created>
 
-So there are two available platforms---|ubuntu| 12.04 and |centos| 6.5---configured to use the |vagrant| driver (which is enabled via the ``kitchen-vagrant`` driver that is built-in to the |chef dk|), and to run |chef zero| while running tests.
+There are two available platforms---|ubuntu| 12.04 and |centos| 6.5---that are pre-configured to use the |vagrant| driver that is included with the |chef dk|.
 
 Create |centos| Instance
 -----------------------------------------------------
