@@ -1,0 +1,733 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-11 21:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_cookbook_file.rst:8
+# cc56d43f58854f04959e8e3d4be2811f
+msgid "cookbook_file"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_generic.rst:5
+# 3d22a6b1b40e40ce946772de017139df
+msgid "A `resource <http://docs.chef.io/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.chef.io/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file.rst:4
+# b0e7eeabe2784dc09b853dfc08b9c8d7
+msgid "Use the |resource cookbook_file| resource to transfer files from a sub-directory of ``COOKBOOK_NAME/files/`` to a specified path located on a host that is running the |chef client|. The file is selected according to file specificity, which allows different source files to be used based on the hostname, host platform (operating system, distro, or as appropriate), or platform version. Files that are located in the ``COOKBOOK_NAME/files/default`` sub-directory may be used on any platform."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_transfers.rst:5
+# 2bfbb0386083498cb1733e9a56f45190
+msgid "During a |chef client| run, the checksum for each local file is calculated and then compared against the checksum for the same file as it currently exists in the cookbook on the |chef server|. A file is not transferred when the checksums match. Only files that require an update are transferred from the |chef server| to a node."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:17
+# 2af62279202b4f36bffcba3dbda24dc1
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_syntax.rst:4
+# 5ed91611105f46ea886c682c4178b297
+msgid "The syntax for using the |resource cookbook_file| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_syntax.rst:14
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:10
+# 1c1b81f5947b422ca44c4a7747727657
+# a08f5b5376c549a389fae446ccf3f40d
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_syntax.rst:16
+# d9f78a1fba284b7f8976e2621b2f7ab8
+msgid "``cookbook_file`` tells the |chef client| to use the ``Chef::Provider::CookbookFile`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_syntax.rst:17
+# c359231770224eb2b2629738f9698898
+msgid "``name`` is the name of the resource block; when the ``source`` attribute is not specified as part of a recipe, ``name`` is also the name of a file (and its extension) that exists in ``COOKBOOK_NAME/files/default`` directory"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_syntax.rst:18
+# cf9abcb64d1143a8ba6bf187369d5c73
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_syntax.rst:19
+# 462308de0c36483faae068f2c97937e5
+msgid "``:action`` identifies which steps the |chef client| will take to bring the node into the desired state"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_syntax.rst:21
+# 67d5c2cc6d41425f8807e8d50f165955
+msgid "The following is an example of how the |resource cookbook_file| resource can work when used in a recipe. In this example, because the ``source`` attribute is unspecified, the name of the resource (``\"cookbook_test_file\"``) defines the name the source file. The |chef client| will look for this source file in the ``/cookbook_name/files/default/`` directory. The ``path`` attribute defines the location in which the file will be created. The ``:create_if_missing`` action ensures that nothing happens if the file already exists."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:21
+# eb6a28c3bae5416892a92539d176ce84
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:4
+# 2e52d18b4d2e4fc1810cbe1819906caa
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:10
+# 2e085678f8f84566b62323f01c41aa1e
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:11
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:11
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:25
+# 5fca7dabc69c4bd29038eedbb21ad526
+# 8e5a6bf4524c4d8ba5754e7640bbfaaa
+# 75c623852c2343a1bd067c6bd6422ecc
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:12
+# 45be8aacee5841ccb080fc6ed3edaf83
+msgid "``:create``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:13
+# 0246ef4286b1420796feb5b9a3a4f55c
+msgid "Default. |resource action create file|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:14
+# 44cde67d62d146df8263e78aa01b0056
+msgid "``:create_if_missing``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:15
+# fd4354b9311b436c83178ca245d0e0b7
+msgid "|resource action create_if_missing file|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:16
+# 1f76240767b64b9fafd612f6d47ce9c5
+msgid "``:delete``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:17
+# bc5638ca5700435c89ddae51c49518e3
+msgid "|resource action delete file|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:18
+# 517506ddb3b24639a0c53e10d98d3185
+msgid "``:touch``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_actions.rst:19
+# bc00e364d3e94aeda0716fcda7cb73f1
+msgid "|resource action touch file| (This action may be used with this resource, but is typically only used with the |resource file| resource.)"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:25
+# 4686b0d84cf4404e91054bfeebeea626
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:4
+# 50395c24ed104e2fac7425d75dcd9a1f
+msgid "|description resource_attributes_intro|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:10
+# 00a092aa4d1e43e98c2bc0e47f159d20
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:12
+# 92bf6a141ebd48d189807ab913c6a681
+msgid "``atomic_update``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:13
+# 0b5ef179c009479799724baf238190f0
+msgid "|atomic_update| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:14
+# a2caaa44b3f4401abb22f4589b4c2f08
+msgid "``backup``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:15
+# e7e88045a0da4c81a3b8b599a6d406c4
+msgid "|backups_kept| Default value: ``5``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:16
+# 0e03056134a94e01b9b6957f07950d51
+msgid "``cookbook``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:17
+# 9f2613ba14f640a5829627efe92df9c7
+msgid "|cookbook file_location| The default value is the current cookbook."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:18
+# a3fe964305f7493ab2f852b2932e53f8
+msgid "``force_unlink``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:19
+# d547692abb764c9b8ff1f7be53491fcf
+msgid "|force_unlink| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:20
+# e1cd55baee1645fe8d75b8e9eb76936b
+msgid "``group``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:21
+# bc039572529046039701b2187f5f9115
+msgid "|windows group_identifier|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:22
+# 62cd0d6794424b53b0b906472268aabb
+msgid "``inherits``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:23
+# 17e7cbbced014ae7889f0a80f50dc56b
+msgid "|windows| only. |inherits windows security| Default value: ``true``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:24
+# 234ea35c213142bbadd3db95076bf9dc
+msgid "``manage_symlink_source``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:25
+# b82f616468764f51ab6bf7aa767af53f
+msgid "|manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:26
+# c504224eaec54eb08e049c4b2373e70b
+msgid "``mode``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:27
+# 4f872c7f58574479bb36e7b0fba8495e
+msgid "|mode resource_file|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:29
+# e4626f23bdf14f87b95b35af5a5b5184
+msgid "The behavior is different depending on the platform."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:31
+# 3bef08f1f4b74be5bdaf863f3ea42874
+msgid "|unix|- and |linux|-based systems: |mode *nix|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:33
+# 09533fca75e44253a1edf93a69691ac5
+msgid "|windows|: |mode windows security|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:34
+# af3f0302a6f34ee9af6fa703507334c5
+msgid "``owner``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:35
+# 565ee77abb7249e9ab3f2a661072344d
+msgid "|owner windows security|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:36
+# ef8b25ad09d74a7a86de4f7a3d63ccf6
+msgid "``path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:37
+# 49131920373745b19fc3399ba8d2697f
+msgid "|path cookbook_file| For example: ``file.txt``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:39
+# 9f31df5ca36d49c2a9465eeba7e67232
+msgid "|windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:40
+# 13cc7db0ab5b41438ba58a6a432f4a0a
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:41
+# 4ba732790c2847bba93bfbe70b7c8440
+msgid "Optional. |provider resource_parameter| |see providers|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:42
+# 49b5d316a6e449ecbe5345a1c1356906
+msgid "``rights``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:43
+# 775a38e8527146d1aeed4522f4d04d1f
+msgid "|windows| only. |rights windows security|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:44
+# 6968d0c9ff0646efb314fdc2fad08620
+msgid "``source``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:45
+# a5f7cbcbce0e4a1e8056bd27685df260
+msgid "|source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:46
+# a71ee94d7796428d8c15fa6c9553127d
+msgid "``verify``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:47
+# c903f14ac9534f84a09692f1cb2fb55e
+msgid "|verify_file|"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_attribute_verify.rst:4
+# 2cc15067056641bf85b92a18b69b7c1d
+msgid "For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_attribute_verify.rst:12
+# 9276ac3582a84feda3026f7789bdb861
+msgid "A block is arbitrary |ruby| defined within the resource block by using the keyword ``verify``. When a block is ``true``, the |chef client| will continue to update the file as appropriate. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_attribute_verify.rst:20
+#: ../../includes_resources_common/includes_resources_common_attribute_verify.rst:28
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:44
+# a483fb05a5a848f7adafeb2dabb5b392
+# dd4f8a837c8c4b27873c5adab395c95d
+# 189f978c9bb34898801b2ffa71761f87
+msgid "or:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_attribute_verify.rst:38
+# 2ee91aa82fa44bdfba33e4379af3dfc2
+msgid "should all return ``true``. Whereas, the following should return ``false``:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_attribute_verify.rst:46
+# 50d0b0a974084803b83893f323915b32
+msgid "If a string or a block return ``false``, the |chef client| run will stop and an error will be returned."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_attributes.rst:51
+# 7ea4e5d52975447db385b4c4a1e65c32
+msgid "Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:28
+# 5dedee66264a41ad88c4c7883a79413f
+msgid "|warning selinux_file_based_resources|"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:31
+# 20ff7bbd563041d199752352294959ab
+msgid "Atomic File Updates"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_atomic_update.rst:5
+# c8fd5a2a11c14b9bae09dcdab4313ddb
+msgid "Atomic updates are used with |resource file|-based resources to help ensure that file updates can be made when updating a binary or if disk space runs out."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_atomic_update.rst:7
+# 42ae11243000420f87966202282803b8
+msgid "Atomic updates are enabled by default. They can be managed globally using the ``file_atomic_update`` attribute in the |client rb| file. They can be managed on a per-resource basis using the ``atomic_update`` attribute that is available with the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_atomic_update.rst:9
+# 2e69d891a21245528221933ac33a65c2
+msgid "On certain platforms, and after a file has been moved into place, the |chef client| may modify file permissions to support features specific to those platforms. On platforms with |selinux| enabled, the |chef client| will fix up the security contexts after a file has been moved into the correct location by running the ``restorecon`` command. On the |windows| platform, the |chef client| will create files so that ACL inheritance works as expected."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:35
+# cdbc77b579db418ba7a316b2d4c4c155
+msgid "Windows File Security"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security.rst:4
+# eb38f8b746bb46db89d235d4f0472b97
+msgid "To support |windows| security, the |resource template|, |resource file|, |resource remote_file|, |resource cookbook_file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:38
+# 5175609b8b674f8bb9e0224a3f4d44f0
+msgid "**Access Control Lists (ACLs)**"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:4
+# 75591f16c29c416f9aae0f293b15f6bb
+msgid "The ``rights`` attribute can be used in a recipe to manage access control lists (ACLs), which allow permissions to be given to multiple users and groups. The syntax for the ``rights`` attribute is as follows:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:12
+# e7894bf617a044a483b049a2f099b758
+msgid "``permission`` is used to specify which rights will be granted to the ``principal``. The possible values are: ``:read``, ``:write``, ``read_execute``, ``:modify``, ``:full_control``,  and ``:deny``."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:14
+# 4991e59885f346afbb0fae3f5ee0a3dd
+msgid "These permissions are cumulative. If ``:write`` is specified, then it includes ``:read``. If ``:full_control`` is specified, then it includes both ``:write`` and ``:read``. If ``:deny`` is specified, then the user or group will not have rights to the object."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:16
+# 204faace07194dbdb7a57f5778fca071
+msgid "(For those who know the |windows| API: ``:read`` corresponds to ``GENERIC_READ``; ``:write`` corresponds to ``GENERIC_WRITE``; ``:read_execute`` corresponds to ``GENERIC_READ`` and ``GENERIC_EXECUTE``; ``:modify`` corresponds to ``GENERIC_WRITE``, ``GENERIC_READ``, ``GENERIC_EXECUTE``, and ``DELETE``; ``:full_control`` corresponds to ``GENERIC_ALL``, which allows a user to change the owner and other metadata about a file.)"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:17
+# cafa3202439143c196d99063dc0a946e
+msgid "``principal`` is used to specify a group or user name. This is identical to what is entered in the login box for |windows|, such as ``user_name``, ``domain\\user_name``, or ``user_name@fully_qualified_domain_name``. The |chef client| does not need to know if a principal is a user or a group."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:18
+# 71e9867292ba46c2964e9e4a99079551
+msgid "``option_type`` is a hash that contains advanced rights options. For example, the rights to a directory that only applies to the first level of children might look something like: ``rights :write, \"domain\\group_name\", :one_level_deep => true``. Possible option types:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:24
+# 5c0ed842769f4c41b31124b1474ab09b
+msgid "Option Type"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:26
+# 5fe420abfc6f4514bf8b403d616f0158
+msgid "``:applies_to_children``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:27
+# d29d1e6b6aae4807ac03b6ef2a343524
+msgid "Use to specify how permissions are applied to children. Possible values: ``true`` to inherit both child directories and files;  ``false`` to not inherit any child directories or files; ``:containers_only`` to inherit only child directories (and not files); ``:objects_only`` to recursively inherit files (and not child directories)."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:28
+# 91784c0f86e443c1a611f1abbf31b18c
+msgid "``:applies_to_self``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:29
+# 71918e807e4142438a50c39f1c401252
+msgid "Indicates whether a permission is applied to the parent directory. Possible values: ``true`` to apply to the parent directory or file and its children; ``false`` to not apply only to child directories and files."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:30
+# 003a15b34ea7488e9e893c8a333d0a2b
+msgid "``:one_level_deep``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:31
+# 0a862a181ca444079585a5277521c570
+msgid "Indicates the depth to which permissions will be applied. Possible values: ``true`` to apply only to the first level of children; ``false`` to apply to all children."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:33
+# 7925b4ea0c59485e8f6e80c8eacb2cda
+msgid "The ``rights`` attribute can be used as many times as necessary; the |chef client| will apply them to the file or directory as required. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:53
+# 1da416106a4a421f956e2a87a147e8bc
+msgid "Some other important things to know when using the ``rights`` attribute:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:55
+# 17d01ce8e3c648cf84f09bc82795351c
+msgid "Order independence. It doesn't matter if ``rights :deny, [\"Julian\", \"Lewis\"]`` is placed before or after ``rights :read, [\"Julian\", \"Lewis\"]``, both Julian and Lewis will be unable to read the document."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:56
+# 34f2670d0ec2495ab9139948bafb868c
+msgid "Only inherited rights remain. All existing explicit rights on the object are removed and replaced."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:57
+# 848912ca02b5422e9b912a8d1c7544ca
+msgid "If rights are not specified, nothing will be changed. The |chef client| does not clear out the rights on a file or directory if rights are not specified."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_acl.rst:58
+# 5c7ce64061db478d8a19b9c3f37f124a
+msgid "Changing inherited rights can be expensive. |windows| will propagate rights to all children recursively due to inheritance. This is a normal aspect of |windows|, so consider the frequency with which this type of action is necessary and take steps to control this type of action if performance is the primary consideration."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:42
+# ebdead038f9d41c28f17a8112b2dce4f
+msgid "**Inheritance**"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:4
+# 4a77591eff224cf7b66d409b246c94fd
+msgid "By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The ``inherits`` attribute can be used to specifically tell the |chef client| to apply (or not apply) inherited rights from its parent directory."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:6
+# 920db12949e54c37b188a33c56674b0e
+msgid "For example, the following example specifies the rights for a directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:15
+# 1c8b99c2bd994f9b9148eea861d4e094
+msgid "and then the following example specifies how to use inheritance to deny access to the child directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:24
+# 9771a45ab372461584238614e5c7ba1c
+msgid "If the ``:deny`` permission were to be used instead, something could slip through unless all users and groups were denied."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:26
+# 59d808d6ebce4550be780cf1d2c4ab18
+msgid "Another example also shows how to specify rights for a directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:36
+# 972d4ab8b53941b3937819990353966e
+msgid "but then not use the ``inherits`` attribute to deny those rights on a child directory:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_windows_security_inherits.rst:44
+# a3a07a187902476b919ecd49035c6631
+msgid "Because the ``inherits`` attribute is not specified, the |chef client| will default it to ``true``, which will ensure that security settings for existing files remain unchanged."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:47
+# aecd98eee47648738a209fb232fe2c2a
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider.rst:4
+# cead7616c1f447a48d2d87afbbc225db
+msgid "Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:4
+# 9d543cdffeb44d54886a725ee84d22ed
+msgid "The |chef client| will determine the correct provider based on configuration data collected by |ohai| at the start of the |chef client| run. This configuration data is then mapped to a platform and an associated list of providers."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:6
+# 59a2c73e099c43b891c750a8aa73eefd
+msgid "Generally, it's best to let the |chef client| choose the provider and this is (by far) the most common approach. However, in some cases specifying a provider may be desirable. There are two approaches:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:8
+# 736e4a5c5ab7415e88490d2507e6738c
+msgid "Use a more specific short name---``yum_package \"foo\" do`` instead of ``package \"foo\" do``, ``script \"foo\" do`` instead of ``bash \"foo\" do``, and so on---when available"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:9
+# fdd2ef33cd4e4619b06265fea5c1520f
+msgid "Use the ``provider`` attribute to specify the long name as an attribute of a resource, e.g. ``provider Chef::Provider::Long::Name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_providers.rst:4
+# fdffc352993c44188399d0564c83202b
+msgid "This resource has the following providers:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_providers.rst:10
+# 46271a3bfe3e4377ada1e8922719028d
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_providers.rst:11
+# a1201fcdbb80418f9ebe90d09f8da082
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_providers.rst:12
+# 7571e0f57de0425db5a67a1d69093b3f
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_providers.rst:13
+# bd59271e95f84e1cb06a1ee8dae93f33
+msgid "``Chef::Provider::CookbookFile``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_providers.rst:14
+# fcb94cf32ce14c8d98a4c0170454708a
+msgid "``cookbook_file``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file_providers.rst:15
+# 3a06d304aab34828b8a5ffc7397b0240
+msgid "The default provider for all platforms."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:55
+# 9f071bc45f1e4c8cb116664a207e28e5
+msgid "File Specificity"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity.rst:4
+# c32d23560f8f49348d7a8521ac6e7d51
+msgid "A cookbook is frequently designed to work across many platforms and is often required to distribute a specific file to a specific platform. A cookbook can be designed to support the distribution of files across platforms, while ensuring that the correct file ends up on each system."
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:4
+# d0e1c68f28704a42b302be78cd55afa7
+msgid "The pattern for file specificity depends on two things: the lookup path and the source attribute. The first pattern that matches is used:"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:6
+# 33ca54cce15a48e4b1b0bef7a57bfc25
+msgid "/host-$fqdn/$source"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:7
+# 68b21d4826194e3db871742b770aa6ea
+msgid "/$platform-$platform_version/$source"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:8
+# 23b47499bce04d2f8da0dd51889dd523
+msgid "/$platform/$source"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:9
+# 9b1daf8278d448b99b6b429adf9dee31
+msgid "/default/$source"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:10
+# 9fa43618091c4143968b1bafbe6b4dea
+msgid "/$source"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:12
+# dcfbc0c1602145309a535dd657532e91
+msgid "Use an array with the ``source`` attribute to define an explicit lookup path. For example:"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_pattern.rst:20
+# 440cad6b64cc406692ef56f0a69289ab
+msgid "The following example emulates the entire file specificity pattern by defining it as an explicit path:"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_example.rst:4
+# 3ff32525743147e8bf25d1978d677df3
+msgid "A cookbook may have a ``/files`` directory structure like this::"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_example.rst:16
+# a4dffa78b491465d87d4970352cf0b34
+msgid "and a resource that looks something like the following:"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_example.rst:27
+# 38ff7970befb4a91a0a9c1b886c501cc
+msgid "This resource is matched in the same order as the ``/files`` directory structure. For a node that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the |resource cookbook_file| resource would be distributed:"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_example.rst:37
+# 836fc4c3f1f24ba28d8bf287d873486b
+msgid "If the ``apache2_module_conf_generate.pl`` file was located in the cookbook directory under ``files/host-foo.example.com/``, the specified file(s) would only be copied to the machine with the domain name foo.example.com."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:62
+# 8a94ca3c215745a5a29e7956d46a2c58
+msgid "**Host Notation**"
+msgstr ""
+
+#: ../../includes_file/includes_file_cookbook_specificity_host_notation.rst:4
+# fdd79329d2444d1096b7f5ba1f689c6f
+msgid "The naming of folders within cookbook directories must literally match the host notation used for file specificity matching. For example, if a host is named ``foo.example.com``, the folder must be named ``host-foo.example.com``."
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:67
+# 55f6c13905af4d5d9725e642bc08923c
+msgid "Examples"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:68
+# 29a00bf59d814036a591f6049e175d00
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:70
+# f43df9eefad64b308e84b844d9441fbd
+msgid "**Transfer a file**"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:74
+# bdd63ee11897463c8952d9183b3ddaeb
+msgid "**Handle cookbook_file and yum_package resources in the same recipe**"
+msgstr ""
+
+#: ../../step_resource/step_resource_yum_package_handle_cookbook_file_and_yum_package.rst:5
+# 62c23374759042ebabbcc9b26a791f15
+msgid "When a |resource cookbook_file| resource and a |resource yum_package| resource are both called from within the same recipe, use the ``flush_cache`` attribute to dump the in-memory |yum| cache, and then use the repository immediately to ensure that the correct package is installed:"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:78
+# 652e6fbdf2b3462f9a54a0f7db6c6b8f
+msgid "**Install repositories from a file, trigger a command, and force the internal cache to reload**"
+msgstr ""
+
+#: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst:3
+# 9ae39b4c6b784446b970b448a1456ef7
+msgid "The following example shows how to install new |yum| repositories from a file, where the installation of the repository triggers a creation of the |yum| cache that forces the internal cache for the |chef client| to reload:"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:82
+# 93524f63cba14985aa471a0a84b0da58
+msgid "**Use a case statement**"
+msgstr ""
+
+#: ../../step_resource/step_resource_cookbook_file_use_case_statement.rst:3
+# 221359d7da6a467fa0bd2666d0600432
+msgid "The following example shows how a case statement can be used to handle a situation where an application needs to be installed on multiple platforms, but where the install directories are different paths, depending on the platform:"
+msgstr ""
+
+#: ../source/resource_cookbook_file.rst:86
+# 9b9bde2213a4435794f008b97880a597
+msgid "**Manage dotfiles**"
+msgstr ""
+
+#: ../../step_resource/step_resource_directory_manage_dotfiles.rst:3
+# 422de6244acc472ebbaa78db885155ad
+msgid "The following example shows using the |resource directory| and |resource cookbook_file| resources to manage dotfiles. The dotfiles are defined by a |json| data structure similar to:"
+msgstr ""
+
+#: ../../step_resource/step_resource_directory_manage_dotfiles.rst:22
+# 864206bce48742e5b11631f41314b143
+msgid "and then the following resources manage the dotfiles:"
+msgstr ""
+

@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-11 21:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_analytics.rst:8
+# a37abbf82ffb47a4afca01382723eb48
+msgid "Install |chef analytics_title|"
+msgstr ""
+
+#: ../../includes_analytics/includes_analytics.rst:5
+# bc334ab49e1c4909914fcdd3ec7030b8
+msgid "The |chef analytics| platform is a feature of |chef| that provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Individuals may be notified of these changes in real-time. Use this visibility to verify compliance against internal controls."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_subscriptions.rst:4
+# 304a249eae1649dc89ea676298b9466d
+msgid "This is a premium feature of |chef|. Access to premium features is free (up to 25 nodes) when the |chef server| is installed on-premises. For higher node counts, access is `available via subscription <https://www.chef.io/chef/#plans-and-pricing>`_. Premium features are installed `from the command line <http://docs.chef.io/ctl_chef_server.html#install>`_."
+msgstr ""
+
+#: ../source/install_analytics.rst:15
+# e1c9c8b7e9514516ac1ebd8b200481b1
+msgid "Prerequisites"
+msgstr ""
+
+#: ../source/install_analytics.rst:16
+# ef1a0360be754bddba7ae2e7778797de
+msgid "The |chef analytics| server shares the :doc:`same prerequisites </install_server_pre>` as the |chef server|. In addition:"
+msgstr ""
+
+#: ../source/install_analytics.rst:18
+# 96df4461068a402abcb28a64c40edcc1
+msgid "|chef server| version 12.0.3 **or** |chef server oec| version 11.3 is required to use |chef analytics| 1.1"
+msgstr ""
+
+#: ../source/install_analytics.rst:19
+# 81813e0c7de142a9a54f9a06be9e1c11
+msgid "|chef client| version 12.1 is required for |chef client_audit| and using the ``control_group`` and ``control`` |dsl recipe| methods"
+msgstr ""
+
+#: ../source/install_analytics.rst:20
+# 9f5ff71808034ff7b96b6d65960c91b6
+msgid "The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage|"
+msgstr ""
+
+#: ../source/install_analytics.rst:21
+# 0989fb87f50e45cfa3ebf2c53a370b89
+msgid "|reporting| is installed on the |chef server|. |reporting| version 1.2.3 is required to view the results of |chef client_audit|, i.e. ``run_start``, ``run_resource``, and ``run_converge`` messages; earlier versions of |reporting| may be used, but will not show these results"
+msgstr ""
+
+#: ../source/install_analytics.rst:22
+# 86eb7d3dd8da49ba8fc1c29e8bb13050
+msgid "An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation"
+msgstr ""
+
+#: ../source/install_analytics.rst:23
+# 6d6d4f4e3a1b4e7d93b8b9a63ab345b3
+msgid "A resolvable hostname that is specified using a FQDN or an IP address"
+msgstr ""
+
+#: ../source/install_analytics.rst:24
+# 6040f99ddc0d418587b34e0ec4902540
+msgid "A connection to |ntp| to prevent clock drift"
+msgstr ""
+
+#: ../source/install_analytics.rst:25
+# fd50bff9429740d1964b0e8aa0fe6426
+msgid "A local mail transfer agent that allows the |chef server| to send email notifications"
+msgstr ""
+
+#: ../source/install_analytics.rst:26
+# 5deb0efe413b450d906a6afb64cb0929
+msgid "Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks"
+msgstr ""
+
+#: ../source/install_analytics.rst:27
+# 99f7486396c94eb59d542352811b0d9a
+msgid "Disabling the |apache qpid| daemon on |centos| and |redhat| systems"
+msgstr ""
+
+#: ../source/install_analytics.rst:28
+# c944cef4a5514148a031cb00b3149d0a
+msgid "A local user account under which services will run"
+msgstr ""
+
+#: ../source/install_analytics.rst:29
+# 34ad0112f84d46e7867951bda00b9d52
+msgid "A local user account for |postgresql|"
+msgstr ""
+
+#: ../source/install_analytics.rst:30
+# c3b43e416a854ae2804f21d832dd38ca
+msgid "A group account under which services will run"
+msgstr ""
+
+#: ../source/install_analytics.rst:33
+# b3fc89706c87467a956ff56386834214
+msgid "Hostnames"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_hostname.rst:4
+# 2f54dbc3dade4b7fad30dd8e8bf33388
+msgid "The hostname for the |chef analytics| server may be specified using a |fqdn| or an IP address. This hostname must be resolvable. For example, a |chef analytics| server that is running in a production environment with a resolvable |fqdn| hostname can be added in the |dns| system. But when deploying |chef analytics| into a testing environment, adding the hostname to the ``/etc/hosts`` file is enough to ensure that hostname is resolvable."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_hostname.rst:6
+# f71fa915407944a787db91c56fe5e307
+msgid "**FQDN Hostnames** When the hostname for the |chef analytics| server is a |fqdn| be sure to include the domain suffix. For example, something like ``myanalyticsserver.example.com`` (and not something like ``myanalyticsserver``)."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_hostname.rst:8
+# adfdc11b663d4b9a956c200a03448c8a
+msgid "The ``analytics_fqdn`` setting must be added to the |analytics rb| file (it is not there by default). Its value should be equal to the |fqdn| or IP address for the service URI used by the |chef analytics| server. For example: ``analytics_fqdn \"chef-analytics.example.com\"`` or ``analytics_fqdn 123.45.67.890``."
+msgstr ""
+
+#: ../source/install_analytics.rst:36
+# c1d395710a524101afe803ffdc081c26
+msgid "The |fqdn| for the |chef analytics| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef analytics| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef analytics| server is longer than 64 characters, the ``chef-server-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty."
+msgstr ""
+
+#: ../source/install_analytics.rst:39
+# 26f164818c3b440bbb7979d72d8c6247
+msgid "Install the Server"
+msgstr ""
+
+#: ../source/install_analytics.rst:40
+# ac9fa5e2d65c4aee99282350b00bdc3e
+msgid "|chef analytics| is installed on dedicated hardware with its own configuration topology that is independent from the machines in the |chef server| configuration and compatible with the existing |chef server| machine topology (standalone, tiered, or high availability). |chef analytics| version 1.1 machines may be installed as a standalone or tiered configuration. Earlier versions of |chef analytics| may only be installed as a standalone configuration."
+msgstr ""
+
+#: ../source/install_analytics.rst:43
+# ccec319b1c244d2fb91804472abc67ca
+msgid "Standalone (version 1.1)"
+msgstr ""
+
+#: ../source/install_analytics.rst:44
+#: ../source/install_analytics.rst:50
+# 5fef994a70ad46fdbb88a7b56abf657c
+# 1df92211fa464bbd81a02599e79e64b0
+msgid "|chef analytics| version 1.1 requires |chef server| version 12."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:4
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:4
+# 04522c0490e54456a7ca36ce6b6cccb6
+# 53e3367ace47423ca094447ae86d0251
+msgid "In a standalone configuration, the |chef analytics| deployment is on a different machine from the |chef server|. This allows you to scale |chef analytics| independantly from the |chef server|. To set up |chef analytics| in a standalone configuration, an existing |chef server| deployment should already running. |chef analytics| is installed in two steps: configuring the |chef server| for |chef analytics|, and then installing |chef analytics|."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:6
+#: ../../includes_install/includes_install_analytics_tiered.rst:12
+# 5cb612e0c50b4be7b13f2802757aa9cd
+# a65e4ca94573421c813531a7df0ec5bb
+msgid "The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage| prior to installing |chef analytics|."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:8
+# 9ef5b2aca7ec4b64afd1e5b1d20de886
+msgid "Install |chef analytics|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:10
+# 48c19c7283b849c1aac4b260b2f93498
+msgid "Download the package from http://downloads.chef.io/analytics/ to the dedicated standalone machine that will be used for |chef analytics|. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:16
+#: ../../includes_install/includes_install_analytics_tiered.rst:22
+# c44c3f4b2de1428289b6269ee4bfdd5a
+# 0c22338b08ae456ca6ef47e8ae44957e
+msgid "For |ubuntu|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:22
+#: ../../includes_install/includes_install_analytics_tiered.rst:28
+# 4e33e3dc4c0049be94430af2de29d1ee
+# be2595feaffe495b8b35ddd8ba522142
+msgid "After a few minutes, |chef analytics| will be installed."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:24
+#: ../../includes_install/includes_install_analytics_tiered.rst:30
+# 89c3dee2164141ff90aeaafb49f82966
+# ae35455640a448b8bdb5ab6b5181c8e8
+msgid "Configure the |chef server|. On each machine in the |chef server| configuration, do the following:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:26
+# b9ee1cb1ca9443ed92c04e5dbca5d3d1
+msgid "Add the |fqdn| for the |chef analytics| server to ``/etc/opscode/chef-server.rb``. The ending slash is required:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:36
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:15
+# 885607fee8c64654b3b655c51eab1d32
+# b42094da157b4a0fa90f43eb955e52cd
+msgid "Stop the |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:42
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:21
+# 92691e7807944838b64caf338d868b0b
+# c2c70cfd917a471e8ffb3af67b2d36a6
+msgid "Enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/chef-server.rb``:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:49
+#: ../../includes_install/includes_install_analytics_tiered.rst:55
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:28
+# 76c2095c1bd94c2faf162fe6d79f341f
+# b606e6b9777f475e96fd9113ff1cd7da
+# 646edbd13fa54b90b65321d3a1f16658
+msgid "where ``BACKEND_VIP`` is the external IP address for the backend |chef server|. ``node_ip_address`` MUST be set to ``0.0.0.0``."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:51
+#: ../../includes_install/includes_install_analytics_tiered.rst:57
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:30
+# 5c433a09efb54806b46d088a0d784706
+# d79a76ed810f442789cc6779ec071812
+# 7656cd9272594a88a7eb5dafec5ba328
+msgid "|analytics rabbitmq_settings|"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:53
+#: ../../includes_install/includes_install_analytics_tiered.rst:59
+#: ../../includes_install/includes_install_analytics_tiered.rst:153
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:32
+# 36e455026d104b37b14d69d7d59ba4a1
+# cac061fbc6eb4ae191e17ae21608dc6d
+# aa2bd07ce6ed45eca548e53bd7057f22
+# 1d166727ed9f4fa6bb29c649d27abf59
+msgid "Reconfigure the |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:59
+#: ../../includes_install/includes_install_analytics_tiered.rst:65
+# 356758b7ee2f4e81ad89ef563aed2d93
+# 1f9fcbd1757a458f934a9aec8df34744
+msgid "This updates the |chef server| and creates the ``actions-source.json`` file, which is required by |chef analytics|, and adds it to the ``/etc/opscode-analytics`` directory on the |chef server|."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:61
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:38
+# 1a8a9a2bd98a4228afa189512c73a915
+# 0ebac444cb8841f3a00b568916dab040
+msgid "Restart the |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:67
+#: ../../includes_install/includes_install_analytics_tiered.rst:73
+# 9780a0fe2693457fadd01913ee395642
+# 0083881073114e8d9e33e1adb6af7dbf
+msgid "Reconfigure the |chef manage|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:74
+# 28d1a5e990bb4b8d9023f697ba5b1827
+msgid "Configure the |chef analytics| standalone machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:76
+# 37844313c24c442aa0e94f737d682382
+msgid "Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| machine to the standalone |chef analytics| machine."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:78
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:60
+# 68c434f60e6c4e02a3d5f1b1a5ca826f
+# aa7d06fe1e52486fb0802b50509f60bb
+msgid "Configure the |chef analytics| server by setting the ``analytics_fqdn`` in ``/etc/opscode-analytics/opscode-analytics.rb``. This is the |fqdn| for the |chef analytics| web application. For example:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:85
+#: ../../includes_install/includes_install_analytics_tiered.rst:145
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:67
+# d82795f28cec4ae4beae86449fbef5de
+# 9944c407ca184a3590baa55d502124c1
+# 4e478db4c6584a74b1ab3d8689a9f31c
+msgid "Verify the configuration using the preflight check command:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:91
+#: ../../includes_install/includes_install_analytics_tiered.rst:109
+#: ../../includes_install/includes_install_analytics_tiered.rst:151
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:73
+# 08a3e0f15472456c95c10da6f76b54a8
+# dc31fb445f6f437094addc8cd47ce6fc
+# 5c90694acd39490d906c66937bb68f0a
+# 358b64be3e594c74baeea7f92c5cd08b
+msgid "If there are any errors in the preflight check, correct them before carrying on to the next step."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:93
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:75
+# 67f307bd2ccc4baca0f2585785cd68b5
+# 0b186b6735bb45ba81e3cde824c205fb
+msgid "Reconfigure the |chef analytics| server on the |chef analytics| machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_11.rst:99
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:81
+# 350df53242f94da19893a6258b3ab6e6
+# 0189254c090d45ee8c6965765bda7c4a
+msgid "Verify the installation on the |chef analytics| machine:"
+msgstr ""
+
+#: ../source/install_analytics.rst:49
+# 751e37810bb147e3a16692ba56a74495
+msgid "Tiered (version 1.1 only)"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:4
+# 9560ca00134d49fba679449d54ed5e10
+msgid "In a tiered configuration, the |chef analytics| deployment is on different machines from the |chef server|, with a single back end and multiple load-balanced front end machines. In a tiered configuration, an existing |chef server| deployment should already running."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:6
+# 1e5e445431e545bdbdc9c3fd5708d5e9
+msgid "|chef analytics| is installed in the following steps:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:8
+# 2252890023a445ad9f1575e6ce9b08ec
+msgid "Configuring the |chef server| for |chef analytics|"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:9
+# f9fa056805f14dad9a341086911550f2
+msgid "Installing |chef analytics| on the back end"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:10
+# aa5c3d5214114e00b060cefbdd849630
+msgid "Installing |chef analytics| on the front ends"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:14
+# f20e92b98f5d4115ae413ac4a77a71e2
+msgid "Install |chef analytics| on the backend machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:16
+# 750baeb783514732a87e42b8f99ddaa3
+msgid "Download the package from http://downloads.chef.io/analytics/ to the machines that will be used for the |chef analytics| deployment. For |redhat| and |centos| 6:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:32
+# fbbd22e64ce043b0a29a84fa74368f86
+msgid "On each of the |chef server| machines, add the |fqdn| for the |chef analytics| frontend server to ``/etc/opscode/chef-server.rb``. The ending slash is required:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:42
+# d624f8f33c074996885bfa5c0f5589a5
+msgid "On the |chef server| backend, stop the |chef server|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:48
+# 44ab0bc5955c48c881828eba05ef35d4
+msgid "On the |chef server| backend, enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/chef-server.rb``:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:67
+# 1dec56152ed7458fb850cb4a026c6da5
+msgid "Restart the |chef server| backend:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:83
+# d0ee495777ad488f85030ba3f5e0f098
+msgid "Configure the |chef analytics| backend machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:85
+#: ../../includes_install/includes_install_analytics_tiered.rst:127
+# 268bcfe4bca241a3b3f831b4a2987422
+# 14c48dbf85d446fcb4461e7cc24d47fa
+msgid "Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:87
+# c81536c049d342e99525b05de9f3f127
+msgid "Edit the ``opscode-analytics.rb`` file on the backend |chef analytics| machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:103
+# 2c76a220147b48f8a864436711fba76f
+msgid "On the backend |chef analytics| machine, verify the configuration using the preflight check command:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:111
+# 8efe8b62d71645fc9308220af4a1e12e
+msgid "Reconfigure the |chef analytics| machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:119
+# b07c868117c04f6f916f7d72f06bd4ce
+msgid "Install |chef analytics| on frontend machines:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:121
+# 8d6e8aa5a66440fbb0058b751bf01454
+msgid "For each frontend machine, install the |chef analytics| package. For example on |ubuntu|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_tiered.rst:129
+# 15cdfce681454a25b881de43caa129fa
+msgid "Edit the ``opscode-analytics.rb`` file:"
+msgstr ""
+
+#: ../source/install_analytics.rst:55
+# 26162aab517945ddaf9e03e3d776a2b8
+msgid "Standalone (version 1.0)"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:6
+# ce633369e003461b975aa9c90a35adec
+msgid "On the |chef server| machines:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:8
+# 4f87ad26652e4f50846b75de4e19e145
+msgid "Download the package from http://downloads.chef.io/analytics/."
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:9
+# a5b3e9abfcff44e0bf997d0bfa1483cc
+msgid "Enable the |chef server| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/chef-server.rb``:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:44
+# 360bb86df5594999b8f4913c6b83b293
+msgid "If you are on |chef server| 11.1.8 you need to manually copy a single file from ``/etc/opscode`` to ``/etc/opscode-analytics``:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:50
+# 582f21bc5fd9491d8c5fb4e1b0ff54e3
+msgid "On the dedicated, standalone machine:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:52
+# 01fb3a5bccd24e258947d4b8fdc32bde
+msgid "Install the |chef analytics| package on the standalone |chef analytics| machine. For example on |ubuntu|:"
+msgstr ""
+
+#: ../../includes_install/includes_install_analytics_standalone_10.rst:58
+# 897e4aa4ca034774a2b861517ebf160b
+msgid "Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the standalone |chef analytics| machine."
+msgstr ""
+

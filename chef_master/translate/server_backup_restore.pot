@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-11 21:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_backup_restore.rst:8
+# c37e762e6eb4416cad05726333eceb24
+msgid "Backup and Restore"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore.rst:4
+# a22927c19a6d4d4d970b1cb76d2da664
+msgid "Periodic backups of |chef server| data are an essential part of managing and maintaining a healthy configuration and to help ensure that important data can be restored, if required."
+msgstr ""
+
+#: ../source/server_backup_restore.rst:13
+# a21d4418556443958a95dcaa557fbd0d
+msgid "High Availability"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:4
+# 2583d97ffc324ed1b0d254625766035c
+msgid "To configure backups on the backend servers in a |ha| configuration, set a |cron| job in ``/etc/cron.d/opc_snapshot`` similar to the following:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:15
+# 6f61e06d3e014d4f85d4ac6a28c91fe0
+msgid "A |cron| job similar to the previous example will mount a new snapshot logical volume named::"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:19
+# 1680db23083c434ca2d75108718bdb9f
+msgid "where ``{+%Y-%m-%d-%H-%M-%S}`` is a format string for year, month, day, so on."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:21
+# 0e0348e40f99480d967f8f7981e49b76
+msgid "After the |cron| job has run successfully, the ``mount`` command will show the new logical volume mounted on the ``/var/opt/opscode/drbd-backups`` mount point. The backup script will create a snapshot logical volume in unused space in the ``/opscode`` volume group. After the snapshot is created, the backup script will attempt to mount the snapshot logical volume, after which the snapshot will stay mounted for 24 hours. Upon the next |cron| job run, the backup script will attempt to unmount, destroy the snapshot, and then repeat the sequence."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst:23
+# b8bd6a44121c4995bc92cc3711e453bb
+msgid "The ``drbd-backups`` script with default settings requires at least 40 GB free space in the ``/opscode`` volume group on the backend servers."
+msgstr ""
+
+#: ../source/server_backup_restore.rst:18
+# 42ce8c6930824f888d1d5c38e06760fd
+msgid "Required Directories"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:4
+# 5105b2d9edc341399b87579648a8ffbe
+msgid "Data stored in the following directories should be backed up periodically:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:6
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:11
+# 8b9c0e80c00848f4b574d042730eb986
+# 0eca64bfd56d445190e857f23897903f
+msgid "/etc/opscode"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:7
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:12
+# 8b7cc2edbff2445a9667befc8801c3c5
+# f51c456c0584437dba8f30e5ba797df7
+msgid "/var/opt/opscode"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst:9
+# 0e152c5371724d7c83fb7bf09b2f3085
+msgid "This data is also essential when any type of backup and restore operation is done for the |chef server|."
+msgstr ""
+
+#: ../source/server_backup_restore.rst:23
+# 92f8c6abf71d4e65ac18632e8e7fd5ba
+msgid "Backup"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:5
+# 516de2a2eced4e96873bb4a70b3b482d
+msgid "When backing up |chef server| data, be sure that the system is shut down (or otherwise quiet) at the time of the backup. Perform all activities as root unless otherwise directed."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:8
+# df9b9624aefb468b9a405edd3cf700cd
+msgid "Make a postgres export using the following commands:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:17
+# 7cce5fad73a442c09ac9f929d56bc049
+msgid "Synchronize to make sure that all of the data is present on-disk:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst:23
+# 57aef56b9b724e31996fbddd01831d9c
+msgid "Backup the /etc/opscode and /var/opt/opscode directories and include the postgres export file as root"
+msgstr ""
+
+#: ../source/server_backup_restore.rst:27
+# c1e1f78b083f488a9c4f2797f14e0399
+msgid "Restore"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:4
+# fa61e28deb4d4773aa182431af68991e
+msgid "When restoring |chef server|  data, the previously backed-up files will be required, along with the |chef server| running only the |service postgresql| service. Perform all activities as root unless otherwise directed."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:7
+# 558ce7955e934a779da7f3f4c72d417f
+msgid "Stop all Chef Server services."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:9
+# 0f4e5fe8632c4e28b43ea78bfb3caab5
+msgid "and then restore the previously backed-up files to the following locations using this command to exclude postgres files:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:18
+# bb46029c7a134019930f9c74b01643b2
+msgid "Start PostgreSQL service."
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:19
+# 7a1baa4b5ba04240bfbe4cfefbdd6466
+msgid "Restore PostgreSQL DB:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:25
+# e87c1c973aa34b0d89d888ef249ffd85
+msgid "This process has only 2 ERRORs and these can be ignored:"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:27
+# a097d92b4be14fe29b04a9c0d4aca86f
+msgid "ERROR: current user cannot be dropped"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:29
+# cc9ea3ea3d1e417ba817742134865e6d
+msgid "ERROR: role \"opscode-pgsql\" already exists"
+msgstr ""
+
+#: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst:31
+# 3417357b58a74102ac6f584f2d1c4c85
+msgid "Start all Chef Server services."
+msgstr ""
+

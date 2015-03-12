@@ -1,0 +1,717 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-11 21:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/lwrp_custom_resource.rst:8
+# 16caf071c7514ae090df566556177fa4
+msgid "Lightweight Resources"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:5
+# ef929768aed942318765c344a4ad0b9b
+msgid "A resource is a statement of configuration policy that:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:7
+# 97a8321d37f14e528f2a8ff4573da2d7
+msgid "Describes the desired state for an item"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:8
+# 5d24db50ee184418a43b427c2fa9f5ce
+msgid "Declares the steps needed to bring that item to the desired state"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:9
+# 07c7505dca9c4d3cb8d6f01556d15771
+msgid "Specifies a resource type---such as ``package``, ``template``, or ``service``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:10
+# 008e894ba84349b7acdfd5e1b0175667
+msgid "Lists additional details (also known as attributes), if necessary"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:11
+# 3c1df632d73e49e1b37cabbc76b818d2
+msgid "Tells the |chef client| which action to take"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common.rst:13
+# 11c50425da854f6aa6ddde33da3fdd86
+msgid "Resources are grouped into recipes, which describe working configurations. For example, a package to install, the location of a template from which to build a file, and a service to be started."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource.rst:5
+# 627905f0c9404a8fb0d3376bc04b0025
+msgid "A lightweight resource is a custom resource that defines an action to be completed, which are then processed by a lightweight provider during the |chef client| run. A lightweight provider and lightweight resource work together, each being defined in the same cookbook (the ``/providers`` and ``/resources`` subdirectories, respectively); together, they are referred as a |lwrp| (or \"lightweight resource/provider\"). A lightweight resource is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight resource. In addition to using |ruby|, the |dsl resource| provides additional methods that are specific to the |chef client|."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:15
+#: ../source/lwrp_custom_resource.rst:67
+# 623dfa74156b49788bf228dfac26668f
+# c9ef3619e43e47d2859daa817316721f
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:5
+# 4ee451652d7a4747be8ab75fc9b64994
+msgid "The syntax for a lightweight resource is as follows:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:21
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:53
+#: ../../includes_lwrp/includes_lwrp_custom_resource_example_callbacks.rst:36
+# 9db1f6db556046b9bdfef4a945755c43
+# 0519b182401f4caba3882f8702c9f818
+# 362f24eba48348d8a88fb05f1bece6e6
+msgid "where"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:23
+# 50a470a4e43d4425b4a5b0340cf6d41f
+msgid "``require`` lists any external entities that may be required by the lightweight resources, such as a library; a lightweight resource is |ruby| and anything that can be done in |ruby| can be done in a lightweight resource"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:24
+# 7491d70126a449b3aa25a7fd11d0d9d9
+msgid "``:action_name1``, ``:action_name2``, and ``:action_name...`` represents a comma-delimited list of ``actions`` that are available to this lightweight resource; there must be at least one action"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:25
+# 326ad9a15aea44daaef0cb0aa8de3e4d
+msgid "``action_name1`` is set to be the ``default_action``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:26
+# b2ef06b166ae4a47b7bdc865d1fc1f19
+msgid "``:attribute_name`` is the name of the attribute; a lightweight resource may define as many attributes as necessary"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:27
+# c5215ebf17414bd0bb41b85562d963ea
+msgid "``:kind_of => value`` specifies the |ruby| class (or an array of |ruby| classes) that are used to define this attribute's value"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:28
+# 19daddb1dcfa447fa888588ee7cb60e9
+msgid "``:name_attribute`` is associated with one ``attribute`` to indicate which attribute's value will be defined by the name of the resource as it is defined in the recipe (i.e. the string that appears in front of the ``do`` block in the recipe and after the resource: ``resource_name \"name_attribute\" do``)"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:29
+# a46155e35dc14da8a3615af69bb67294
+msgid "``:validation_parameter`` represents a comma-delimited list of validation parameters for each attribute"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:30
+# a7dbeec47f514f11b6c6dc6bfcf469bb
+msgid "``attr_accessor`` allows the lightweight resource to use the ``Module`` |ruby| class to check for one (or more) named attributes, such as ``:exists`` or ``:running``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:32
+# f9d66db962bc451d8dd49782bd520563
+msgid "For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| cookbook) can be used to manage files located in ``/etc/cron.d``:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:55
+# af61907fb666475b8762298a116749eb
+msgid "the ``actions`` allow a recipe to manage entries in a |crontab| file (create entry, delete entry)"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:56
+# d669fd07064945d3babd579d07cbab47
+msgid "``:create`` is the default action"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:57
+# f7a517b5bf84443392f4276549db2a2f
+msgid "``:minute``, ``:hour``, ``:day``, ``:month``, and ``:weekday`` are the collection of attributes used to schedule a |cron| job, assigned a default value of ``\"*\"``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:58
+# bc45e0b9f0714f1caeed9adfb674d5ef
+msgid "``:command`` is the command that will be run (and also required)"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:59
+# 2cd9516dbb394431b9392c547c68496f
+msgid "``:user`` is the user by which the command is run"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_syntax.rst:60
+# b0631f99e952465bbf608839db4a5637
+msgid "``:mailto``, ``:path``, ``:home``, and ``:shell`` are optional environment variables that do not have default value, which each being defined as an array that supports the ``String`` and ``NilClass`` |ruby| classes"
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:19
+# 63d5b0155e1d4e568aee4bd3f2592722
+msgid "|dsl resource| Methods"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource.rst:5
+# eedf26395987456d9925f53855f0acec
+msgid "The |dsl resource| is a |ruby| DSL that is used to help define a lightweight resource and to ensure that a lightweight resource provides the correct information to a lightweight provider. The |dsl resource| is a small DSL with just three methods. Because the |dsl resource| is a |ruby| DSL, anything that can be done using |ruby| can also be done as part of defining a lightweight resource."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:23
+# b508d1bb4323475f98c4a5d2eb2d15a4
+msgid "actions"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_action.rst:5
+# 3464737539234368a6cea262cfe4d2b6
+msgid "The ``actions`` method is used to define a list of actions that are available to be used in a recipe. Each action must have a corresponding section in a lightweight provider that tells the |chef client| what to do when this action is specified in a recipe. The syntax for the ``actions`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_action.rst:11
+# 0410469fd8534a429b0d4faf987656cf
+msgid "where ``actions`` is a comma-delimited list of individual actions."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:27
+# 12accd80154d4756af61e15ae96930e8
+msgid "attribute"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute.rst:5
+# 74d62c7ffa1249ef96689e140da88739
+msgid "The ``attribute`` method is used to define a list of attributes and any of those attribute's associated validation parameters. The syntax for the ``attribute`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute.rst:11
+# 2a3367e3f17b44608eb9ea061970daa2
+msgid "where ``attribute`` must have an attribute name and zero (or more) validation parameters."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:31
+# 08fa840bfc544a1db29fb7c9e90c3e75
+msgid "attr_accessor"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attr_accessor.rst:5
+# 6afc71101a864bb8932b86fff01b15a7
+msgid "The ``attr_accessor`` method is used to define custom attributes for a lightweight resource that can be accessed by a lightweight provider. The syntax for the ``attr_accessor`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attr_accessor.rst:11
+# 6e48ff1f84564cb4aa182c58111ff414
+msgid "where ``accessor_name`` is a comma-delimited list of custom attributes."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:35
+# 06d9a3d42d1246deb62643e8edb24503
+msgid "default_action"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_default_action.rst:5
+# d1b3ad5dc3ea4ebfbabe0d3edf657062
+msgid "The ``default_action`` method is used to set the default action for a lightweight resource. The syntax for the ``default_action`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_default_action.rst:11
+# 4933a0a5eb7b4871bda7d1a0d5467162
+msgid "where ``action_name`` is the default action."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:39
+# c4ffee6211a84356ad4f6aa6a34cd104
+msgid "provides"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:5
+# b52d64b82c224165b48f011da11ceded
+msgid "Use the ``provides`` method to map a custom resource/provider to an existing resource/provider, and then to also specify the platform(s) on which the behavior of the custom resource/provider will be applied. This method enables scenarios like:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:7
+# a8c4a1cecdc442bf9a0527374adda77a
+msgid "Building a custom resource that is based on an existing resource"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:8
+# 0861480d65e5492abff1b58513ca487c
+msgid "Defining platform mapping specific to a custom resource"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:9
+# 37fb4d4a3bf44325be6a0e73e1de6487
+msgid "Handling situations where a resource on a particular platform may have more than one provider, such as the behavior on the |ubuntu| platform where both SysVInit and systemd are present"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:10
+# f1066822fdd94d4bb0d559d0fcdeb1a4
+msgid "Allowing the custom resource to declare what platforms are supported, enabling the creator of the custom resource to use arbitrary criteria if desired"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:11
+# e90533747fdc4b8e91e28fe2c75425f9
+msgid "Not using the previous naming convention---``#{cookbook_name}_#{provider_filename}``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:13
+# 72684f6a51a14a73b4b0b1851eac1500
+msgid "The ``provides`` method must be defined in both the custom resource and custom provider files and both files must have identical ``provides`` statement(s)."
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:15
+# 67d23076800c460d8689ab9d64bd9b2a
+msgid "The syntax for the ``provides`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:21
+# 0cf54625614d477eb141b2be34a27c34
+msgid "where:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:23
+# 8c4dbca4c61d439689a8d011c6564752
+msgid "``:resource_name`` is a |chef client| resource: ``:cookbook_file``, ``:package``, ``:rpm_package``, and so on"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:24
+# 0075f865c2bb4892b33045ce23eed1ef
+msgid "``\"platform\"`` is a comma-separated list of platforms: ``\"windows\"``, ``\"solaris2\"``, ``\"linux\"``, and so on"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:25
+# d36c8fb98d4949ff99249c3becff3f13
+msgid "``platform_family`` is optional and may specify the same parameters as the ``platform_family?`` method in the |dsl recipe|; ``platform`` is optional and also supported (and is the same as the ``platform?`` method in the |dsl recipe|)"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:27
+# e522661ff5ac463a84ee2c5a387c7994
+msgid "A custom resource/provider may be mapped to more than one existing resource/provider. Multiple platform associations may be made. For example, to completely map a custom resource/provider to an existing custom resource/provider, only specificy the resource name:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:33
+# 369df7e5962d4c5ea27a8fbc57600088
+msgid "The same mapping, but only for the |linux| platform:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:39
+# f7fd7ad2093b473d84ddda4f52fad9c9
+msgid "A similar mapping, but also for packages on the |windows| platform:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:46
+# 1790e1ec2c56419da40d73cd660812de
+msgid "Use multiple ``provides`` statements to define multiple conditions: Use an array to match any of the platforms within the array:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_provides.rst:54
+# bff6801b85b2469aadc1a50829821d23
+msgid "Use an array to match any of the platforms within the array:"
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:43
+# 72d448a296c64d2280bd19f70b093193
+msgid "state_attrs"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_state_attrs.rst:5
+# fbb4c6a271304019a07ea82d35d085f1
+msgid "The ``state_attrs`` method is used to define the attributes that will be tracked by the |reporting| server. In general, this should be a list of attributes that describe the desired state of the system, such as file permissions, cloud provider data (like snapshots, volumes, identifiers, sizes, and access keys), and so on."
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_state_attrs.rst:7
+# 4b31f668468e4f12b743eacf5f771a3e
+msgid "The syntax for the ``state_attrs`` method is as follows:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_state_attrs.rst:15
+# a83e6518cc35454380da003063139a00
+msgid "where ``attribute`` is a comma-delimited list of attributes. For example, the ``ebs_volume`` resource (available from the `aws <https://github.com/opscode-cookbooks/aws>`_ cookbook) uses the ``state_attrs`` method to tell the |reporting| server to track the following attributes:"
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:47
+# 515e58e83d1a46bb8d5dd74e740551b1
+msgid "Validation Parameters"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:5
+# 62b0245d7c7345afad842c1827298780
+msgid "A validation parameter is used to add zero (or more) validation parameters to an attribute."
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:11
+# 18afd3e7690b43a1933d33238b4fbba9
+msgid "Parameter"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:12
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:11
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:11
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:11
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:11
+# f43c6e8e36d64c3e8b240d8f5f8f791a
+# 2232c20f04bf4398866a8f825275559c
+# dc893566725c4cd7b73e767e995a7277
+# 4b105a235cf54e8db539c92c22f6576b
+# 38bc6d529e5d4667b90ffe70b1168792
+msgid "Description"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:13
+# 9491edb44dfa42a4acf90780b0a15cee
+msgid "``:callbacks``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:14
+# 6082a821439740329e5f3784f7e54fe4
+msgid "Use to define a collection of unique keys and values (a |ruby hash|) for which the key is the error message and the value is a lambda to validate the parameter. For example: ``\"Option #{key}'s value #{value} #{message}!\"``, which will insert a key into an error message if the |ruby proc| object does not return true. For example:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:24
+# a7ccc6cf92374e88bad7aca76d170742
+msgid "``:default``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:25
+# b68707c410f1406484c6e8157d85c6e0
+msgid "Use to specify the default value for an attribute. For example:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:46
+# 4ea51f94c393495f90f1f9584e9789ba
+msgid "``:equal_to``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:47
+# 4194f60d822748ea93aa50066794a43a
+msgid "Use to match a value with ``==``. Use an array of values to match any of those values with ``==``. For example: .. code-block:: ruby"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:50
+# 80872378b84a4869868fcf17e1cc6128
+msgid ":equal_to => [true, false]"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:56
+# a2fd4a4478554744a8f4182badfd6cca
+msgid "``:kind_of``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:57
+# e3ac75b7370041bdbc7867939dc46585
+msgid "Use to ensure a value is of a particular |ruby| class, such as ``TrueClass``, ``FalseClass``, ``NilClass``, ``String``, ``Array``, ``Hash``, and so on. Use an array of |ruby| classes to allow a value to be of more than one type. For example: ``:kind_of => String``, ``:kind_of => Array``, ``:kind_of => [TrueClass, FalseClass]`` and ``:kind_of => [Array, Hash]``. For example:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:86
+# 5457aea0cd0f45ecbaeff69f36a6fa69
+msgid "``:name_attribute``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:87
+# 7e0b12d25c9a4d0baffe6099be54ab55
+msgid "Use to set the default name of a lightweight resource. If the name isn't specified in the recipe, this is the value that will be used. For example:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:92
+# 9bed6fa0712746a5be039559fa95dfac
+msgid "``:regex``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:93
+# 73410226ed5840aeb199336560fa4a24
+msgid "Use to match a value to a regular expression. For example:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:98
+# ac2ed7046d6d4cd791f24b982c424120
+msgid "``:required``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:99
+# a160e772606f41568d4cc0e65ea2269c
+msgid "Indicates that an attribute is required. For example:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:104
+# 3e3d7ca700cd4820bb4645998f0c0170
+msgid "``:respond_to``"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:105
+# 0110cbaddecd45cc834948c7a09550e5
+msgid "Use to ensure that a value has a given method. This can be a single method name or an array of method names. For example:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:111
+# db79a28722234a4db7f3bba4cc2ace83
+msgid "Some examples of combining validation parameters:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:121
+# 4081367893794283937ee2aa3cba5a00
+msgid "From the ``nrpecheck`` lightweight resource in the |cookbook nagios| cookbook:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:131
+# c9c557f12d7e4cf5a145b43c3b4ea4dc
+msgid "From the ``policy`` lightweight resource in the |cookbook rabbitmq| cookbook:"
+msgstr ""
+
+#: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst:140
+# 339724befc7f4a0192b4f59e802fea6d
+msgid "From the ``module`` lightweight resource in the |cookbook iis| cookbook:"
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:51
+# 7090c16e83a949b5a281298ff818334a
+msgid "Guards"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:5
+# 30667d71a7c8476297414c0a0353d783
+msgid "A guard attribute can be used to evaluate the state of a node during the execution phase of the |chef client| run. Based on the results of this evaluation, a guard attribute is then used to tell the |chef client| if it should continue executing a resource. A guard attribute accepts either a string value or a |ruby| block value:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:7
+# 695e04ad34394c7199f06d5ffc7b1040
+msgid "A string is executed as a shell command. If the command returns ``0``, the guard is applied. If the command returns any other value, then the guard attribute is not applied."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:8
+# ca4754974e1e4d6aa3d3f2a5f83fe75a
+msgid "A block is executed as |ruby| code that must return either ``true`` or ``false``. If the block returns ``true``, the guard attribute is applied. If the block returns ``false``, the guard attribute is not applied."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards.rst:10
+# 98b5e83bad9a42f48ea6aee912e58d7c
+msgid "A guard attribute is useful for ensuring that a resource is idempotent by allowing that resource to test for the desired state as it is being executed, and then if the desired state is present, for the |chef client| to do nothing."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:55
+# d99d7011dbe641bd96481b888172521e
+msgid "Guard Attributes"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:4
+# df9e7326d26b411f99e9d60cea16165b
+msgid "The following attributes can be used to define a guard that is evaluated during the execution phase of the |chef client| run:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:10
+# 1d6b838831fe42519ee6e86d29c00ebe
+msgid "Guard"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:12
+# 578f09c6306d4eecb36261214882e0e0
+msgid "``not_if``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:13
+# d27f5ee235824de58d2e330048f73f90
+msgid "Use to prevent a resource from executing when the condition returns ``true``."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:14
+# 7125ab3a5cb147aeb0f78638b0867dd7
+msgid "``only_if``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_attributes.rst:15
+# 287f2b249dc54bef833dbc545236363e
+msgid "Use to allow a resource to execute only if the condition returns ``true``."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:59
+# afef2a0c0c314ae38f9620cc2d79cbd0
+msgid "Guard Arguments"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:4
+# f5252ac7b46e4e2686f6a29ade47bc3e
+msgid "The following arguments can be used with the ``not_if`` or ``only_if`` guard attributes:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:10
+# 7cafffe07dca4ef9852aad491b5deb37
+msgid "Argument"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:12
+# 847b70ed1706405dbc5d60e8c0f1c6fe
+msgid "``:user``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:13
+# 3aa780889ff046039057255b5bf51679
+msgid "Use to specify the user that a command will run as. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:19
+# 67f931350d1d4cf8a311685752599253
+msgid "``:group``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:20
+# a92f062ed4ec4e2eb4cca537def4013d
+msgid "Use to specify the group that a command will run as. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:26
+# b3c8f3da0c5a4938a0f3224331653f2e
+msgid "``:environment``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:27
+# 694fcb91123c453baf5b2363dba39034
+msgid "Use to specify a |ruby hash| of environment variables to be set. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:35
+# 2a94f9fcf650476b9fa37c4a387d212b
+msgid "``:cwd``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:36
+# 41c28edbb3084e8aa83d73fd987d0fbc
+msgid "Use to set the current working directory before running a command. For example:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:42
+# e772adee5b0e4d5da36cba156c748291
+msgid "``:timeout``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_guards_arguments.rst:43
+# 01164e1800ea4413aa73b94e618a9b7c
+msgid "Use to set a timeout for a command. For example:"
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:63
+# 4b49dcd490c9453d860ffa4fabe90f6d
+msgid "Notifications"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:4
+# b23d06c806134456bed6d38bd62a7540
+msgid "The following notifications can be used with any resource:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:10
+# 79addad6e8ca4b37bfad82cef3df02fb
+msgid "Notification"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:12
+# 4e26cf1fe55e4aa5b33d3aea0117ea21
+msgid "``notifies``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:13
+# 8ddc0b31f6424699bc6af6c06c8a85c0
+msgid "Use to notify another resource to take an action if this resource's state changes for any reason."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:14
+# 69a6d79add6c4d8a83eb1309d165203a
+msgid "``subscribes``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:15
+# 6ffa2f80532f42c5b179cefb475a0672
+msgid "Use to take action on this resource if another resource's state changes. This is similar to ``notifies``, but reversed."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications.rst:17
+# 99cf6f7f51ac4bda8945bf9ba742fc09
+msgid "Notifications are processed during the execution phase of the |chef client| run."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst:4
+# 2e8f6a7715ef45d69701087fa49b2879
+msgid "The basic syntax of a ``notifies`` notification is:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst:4
+# dfb73a1dbff34ea180fba612757dd283
+msgid "The basic syntax of a ``subscribes`` notification is:"
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:73
+# 3035e1c75a4740c69220a0bec1232142
+msgid "Timers"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:4
+# 433f1424ab344378813401abdabad5be
+msgid "The following timers can be used to define when a notification is triggered:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:10
+# 533576c547344e79afdbc6e991569bcd
+msgid "Timer"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:12
+# 5dc19e4494ea4ce1bc262bd31455b78d
+msgid "``:delayed``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:13
+# 119c019d0ebe416fb9a23fd13d03804a
+msgid "Use to specify that a notification should be queued up and then executed at the very end of a |chef client| run."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:14
+# 7e42709a6e05417a9e45b5b879988c3e
+msgid "``:immediately``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:15
+# 63204d1dc7994070b808f0e4a577a0e5
+msgid "Use to specify that a notification be run immediately."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:77
+# 21731f5850bc49d980d94ab1f5aafb48
+msgid "Examples"
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:78
+# 0355eb1f7ef14f7b94b642e29a9b805a
+msgid "The following examples show various lightweight providers that use platform resources or how to use certain parts of the |dsl resource|."
+msgstr ""
+
+#: ../source/lwrp_custom_resource.rst:81
+# a11462f07b3d4b03b2f5978b85b1fcb7
+msgid ":callbacks"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_example_callbacks.rst:5
+# b301b659d5024a0ba4f3bd2d0e0f5f7d
+msgid "An example of using the ``:callbacks`` validation parameter from the |cookbook gunicorn| cookbook (formatted for better readability):"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_example_callbacks.rst:38
+# 5595445d9855408f8ca2dd5e46bf41ad
+msgid "the ``:server_hooks`` attribute requires the value to be a valid |gunicorn| server hook name"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_example_callbacks.rst:39
+# 97eccf1de50947cea1e3a49ed2c872b1
+msgid "the ``VALID_SERVER_HOOK_NAMES`` array defines the list of valid server hooks"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_custom_resource_example_callbacks.rst:40
+# 0b6d7a02b611495e8450c5e79cd70cf4
+msgid "the ``private def`` block ensures the ``:callback`` validation parameter has the list of valid server hooks"
+msgstr ""
+

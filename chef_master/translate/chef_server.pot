@@ -1,0 +1,314 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-11 21:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/chef_server.rst:8
+# d81ca0f54b5944d5b50857ea586e5a66
+msgid "About the |chef server_title|"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server.rst:4
+# 1ec0b8f7899442458f7b5bfa368ffe58
+msgid "The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions. The |chef client| then does as much of the configuration work as possible on the nodes themselves (and not on the |chef server|). This scalable approach distributes the configuration effort throughout the organization."
+msgstr ""
+
+#: ../source/chef_server.rst:13
+# 1ff6b287d0454d32ab4a201c79a85c08
+msgid "Components"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst:4
+# d2d87859b651476788b7375b20917195
+msgid "Starting with the release of |chef server| 11, the front-end for the |chef server| is written using `Erlang <http://www.erlang.org/>`_, which is a programming language that `first appeared in 1986 <http://en.wikipedia.org/wiki/Erlang_%28programming_language%29>`_, was open sourced in 1998, and is excellent with critical enterprise concerns like concurrency, fault-tolerance, and distributed environments. The |chef server| can scale to the size of any enterprise and is sometimes referred to as |erchef|."
+msgstr ""
+
+#: ../source/chef_server.rst:16
+# 84caa951b00e4df5bf80c67a7ca98295
+msgid "The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another."
+msgstr ""
+
+#: ../source/chef_server.rst:24
+# 7c32e24c1853425ab76243082bc4baea
+msgid "Component"
+msgstr ""
+
+#: ../source/chef_server.rst:25
+#: ../source/chef_server.rst:58
+#: ../source/chef_server.rst:83
+# 17fd0b1572034916a8bbd903aa2cd92b
+# 469b9dcaaab343d28cd71abc31530ae8
+# 05994a7a3c3c4771b9e882f3fed58261
+msgid "Description"
+msgstr ""
+
+#: ../source/chef_server.rst:26
+# 2222a0ba62d044919612d8c3ae529a13
+msgid "Bookshelf"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst:4
+# 76235e5fc8f945e595326b534da735ba
+msgid "|chef bookshelf| is used to store cookbook content---files, templates, and so on---that have been uploaded to the |chef server| as part of a cookbook version. Cookbook content is stored by content checksum. If two different cookbooks or different versions of the same cookbook include the same file or template, |chef bookshelf| will store that file only once. The cookbook content managed by |chef bookshelf| is stored in flat files and is separated from the |chef server| and search index repositories."
+msgstr ""
+
+#: ../source/chef_server.rst:29
+# 825e1c5323f64c9c8d42183ee0d6a197
+msgid "All cookbooks are stored in a dedicated repository."
+msgstr ""
+
+#: ../source/chef_server.rst:30
+# cc5dc44d1ce74e2eae12fbc3775ca561
+msgid "WebUI"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_webui.rst:4
+# 28cbc72210a64e098fcc65923a206217
+msgid "|chef server webui| is a |ruby on rails| 3.0 application that hosts the web interface for the |chef server|."
+msgstr ""
+
+#: ../source/chef_server.rst:32
+# b5fecae8abff43e5bfd9f5975772f5d7
+msgid "Erchef"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef.rst:4
+# 3ac2ece6ac2046dc9c312a6efe90d7fb
+msgid "|erchef| is a complete rewrite of the core API for the |chef server|, which allows it to be faster and more scalable than previous versions. The API itself is still compatible with the original |ruby|-based |chef server|, which means that cookbooks and recipes that were authored for the |ruby|-based |chef server| will continue to work on the |erlang|-based |chef server|. The |chef client| is still written in |ruby|."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef.rst:6
+# 34c391e30af246729d16136b4bc44b70
+msgid "Even though the |chef server| is authored in |erlang|, writing code in |erlang| is NOT a requirement for using |chef|."
+msgstr ""
+
+#: ../source/chef_server.rst:34
+# 34b98dea6d9a4f0ab2549ec47961ce4c
+msgid "Message Queues"
+msgstr ""
+
+#: ../source/chef_server.rst:35
+# 928fbce3fc9d488680096ef94a97dd67
+msgid "Messages are sent to the Search Index using the following components:"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst:4
+# 068f2eabd0bd4c4e92d0f164c4fcbf0d
+msgid "|rabbitmq| is used as the message queue for the |chef server|. All items that will be added to the search index repository are first added to a queue."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_expander.rst:4
+# f8e75b3fe29e41d1840d1cb71702b8ae
+msgid "|chef expander| is used to pull messages from the |rabbitmq| queue, process them into the required format, and then post them to |chef solr| for indexing."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_solr.rst:4
+# 3c69c009559e42e6951c1c8ba157cb84
+msgid "|chef solr| wraps |apache solr| and exposes its REST API for indexing and search."
+msgstr ""
+
+#: ../source/chef_server.rst:41
+# 42ecad27ef2448ae9711f22a00562989
+msgid "All messages are added to a dedicated search index repository."
+msgstr ""
+
+#: ../source/chef_server.rst:42
+# 5ac5446f97444956a6826f2c1515f907
+msgid "Nginx"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_nginx.rst:4
+# 52a679a7c10b4387b979e10d21cc1324
+msgid "|nginx| is an open-source HTTP and reverse proxy server that is used as the front-end load balancer for the |chef server|. All requests to the |api chef server| are routed through |nginx|."
+msgstr ""
+
+#: ../source/chef_server.rst:44
+# 89ce2f7703e648af89c1224f8cb0a2aa
+msgid "PostgreSQL"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_postgresql.rst:4
+# e3a19c8a65be43539c632e41819c2300
+msgid "|postgresql| is the data storage repository for the |chef server|."
+msgstr ""
+
+#: ../source/chef_server.rst:47
+# d81099b5b7874f61bb08c5576c6b9cab
+msgid "For the hosted |chef server|, these components are mostly transparent because of the hosted interface for the |chef server|. When the |chef server| is deployed on-premises, these relationships can be more complex, depending on how the machines on which the |chef server| will run need to be deployed."
+msgstr ""
+
+#: ../source/chef_server.rst:50
+# 029b5ce11ae44d64ae88846e198556d6
+msgid "Common Features"
+msgstr ""
+
+#: ../source/chef_server.rst:51
+# 4e12078fdc724d6f9a08b807cb339331
+msgid "Each type of |chef server| provides the following features:"
+msgstr ""
+
+#: ../source/chef_server.rst:57
+#: ../source/chef_server.rst:82
+# 43bbcacdc7964a3b82352b4ad4e0c888
+# c405fa7df9dd48c9a7c0929566d1eb37
+msgid "Feature"
+msgstr ""
+
+#: ../source/chef_server.rst:59
+# 74af57825a414c70a58494f7362e0a92
+msgid ":doc:`Chef Server API </api_chef_server>`"
+msgstr ""
+
+#: ../source/chef_server.rst:60
+# aaed7cd8e5a64f709c91d5a442fc684a
+msgid "The |api chef server| is used to provide access to objects on the |chef server|."
+msgstr ""
+
+#: ../source/chef_server.rst:61
+# ae021a81f702420d8d4951735c3f498c
+msgid ":doc:`Data Bags </data_bags>`"
+msgstr ""
+
+#: ../source/chef_server.rst:62
+# 4b58ade1f5d7468180092fda42d6993d
+msgid "A data bag is a global variable that is stored as |json| data and is accessible from a |chef server|."
+msgstr ""
+
+#: ../source/chef_server.rst:63
+# 837a706ac2934b0ea34038c7a6e001f6
+msgid ":doc:`Environments </environments>`"
+msgstr ""
+
+#: ../source/chef_server.rst:64
+# baaa01eeaff84a16980dec27edf04e8a
+msgid "An environment is a way to map an organization’s real-life workflow to what can be configured and managed when using |chef server|."
+msgstr ""
+
+#: ../source/chef_server.rst:65
+# 494b929a418a4fbda06294ebd60c35e3
+msgid ":doc:`Node Objects </nodes>`"
+msgstr ""
+
+#: ../source/chef_server.rst:66
+# 3c7128fac50e46f7b3d494b9820e8d08
+msgid "The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef client| run and places an updated copy on the |chef server| at the end of each |chef client| run."
+msgstr ""
+
+#: ../source/chef_server.rst:67
+# fd97b3581d074acfa243bdd3e92b5064
+msgid ":doc:`Roles </roles>`"
+msgstr ""
+
+#: ../source/chef_server.rst:68
+# 70cb8c8f25fa4b50b5c38f0ecb151479
+msgid "A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function."
+msgstr ""
+
+#: ../source/chef_server.rst:69
+# 25e8c89f18ed4f9f9d7c068ae6b44ea7
+msgid ":doc:`Search </chef_search>`"
+msgstr ""
+
+#: ../source/chef_server.rst:70
+# c18436c0efde47a991d212e404fdb7cd
+msgid "Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles."
+msgstr ""
+
+#: ../source/chef_server.rst:71
+# 0c860936816d4290a9077fc4008b0188
+msgid "|supermarket|"
+msgstr ""
+
+#: ../source/chef_server.rst:72
+# 4add24488dc9454da072d0b45044921c
+msgid "|supermarket| is the new community site for |chef|, located at |url community|."
+msgstr ""
+
+#: ../source/chef_server.rst:75
+# e8ac73cbc6b8472f9c61e4592b05fbf0
+msgid "Premium Features"
+msgstr ""
+
+#: ../source/chef_server.rst:76
+# 20e559b745324608a323e04a0bffe99d
+msgid "The following premium feature are available for use with the |chef server|:"
+msgstr ""
+
+#: ../source/chef_server.rst:84
+# d0f7593b2c7b40c0b3696121a19b9bbe
+msgid "|chef analytics_title|"
+msgstr ""
+
+#: ../source/chef_server.rst:85
+# e9fa73719a3c44278fe9e7df11d2e660
+msgid "|chef analytics| provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred. Actions details are tracked on the |chef server| and are visible to users from the |chef analytics| web user interface."
+msgstr ""
+
+#: ../source/chef_server.rst:86
+# 91982407b88840f695644feaa5ca8958
+msgid "|chef ha_title|"
+msgstr ""
+
+#: ../source/chef_server.rst:87
+# 82cbeb5d589a4690bdc95d8bedb031bb
+msgid "Availability supports out-of-the-box and custom high availability scenarios, including using |drbd| and |amazon aws|."
+msgstr ""
+
+#: ../source/chef_server.rst:88
+# 2cac941bf9904935b544e49e9dc72d38
+msgid "|chef manage_title|"
+msgstr ""
+
+#: ../source/chef_server.rst:89
+# 77c4d3e52061418eb94fb15ccb363085
+msgid "The |chef manage| web user interface is used to manage objects that are stored on the |chef server|, including data bags, attributes, run-lists, roles, environments, and cookbooks. Additionally, reports are views into what happened during every |chef client| run that has occurred across all of the nodes that are under management by |chef|."
+msgstr ""
+
+#: ../source/chef_server.rst:90
+# feeb24b363b948aaa0a2c1ca162783e6
+msgid "|push jobs_title|"
+msgstr ""
+
+#: ../source/chef_server.rst:91
+# ceee8f0ec93141fca1bed493b5406d37
+msgid "|push jobs| allows jobs to be run against nodes independently of a |chef client| run. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is run are determined by the results of a search query made to the |chef server|."
+msgstr ""
+
+#: ../source/chef_server.rst:92
+# 8ea59e14180c4459929c112ea3819724
+msgid "|chef replication_title|"
+msgstr ""
+
+#: ../source/chef_server.rst:93
+# 8e4cd4062d1545b99db002fc733f594e
+msgid "|chef replication| provides a way to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|."
+msgstr ""
+
+#: ../source/chef_server.rst:94
+# 39c9936371874af280ef9259766fbcb5
+msgid "|reporting_title|"
+msgstr ""
+
+#: ../source/chef_server.rst:95
+# 5c85dc9f1fc94217938bba2375032821
+msgid "The |reporting| feature of the |chef server| is used to keep track of what happened during the execution of |chef client| runs across all of the infrastructure being managed by |chef|. Reports can be generated for the entire organization and they can be generated for specific nodes."
+msgstr ""
+
+#: ../../includes_ctl_chef_server/includes_ctl_chef_server_install.rst:6
+# 6ccb902261704d6d9e2715d4e13c0fd7
+msgid "The ``install`` subcommand is used to install premium features of the |chef server|: |chef manage|, |chef analytics|, |chef client| run reporting, high availability configurations, |push jobs|, and |chef server| replication."
+msgstr ""
+
