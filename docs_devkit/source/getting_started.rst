@@ -103,7 +103,7 @@ where ``name`` is a name that you have chosen for the both the |chef repo| and t
      README.md
 
 
-Update the Default Recipe
+Update Default Recipe
 -----------------------------------------------------
 Open the ``default.rb`` recipe in the cookbook you just created. Add the following resource to that recipe:
 
