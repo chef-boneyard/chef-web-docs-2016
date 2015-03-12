@@ -23,8 +23,14 @@ For each frontend machine, use the following steps to set up the |chef server|:
 
    .. code-block:: bash
       
-      $ sudo chef-server-ctl reconfigure
+      $ sudo chef-server-ctl start
 
 #. .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst
 
 #. .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst
+
+#. Run the following command:
+
+   .. code-block:: bash
+      
+      $ sudo chef-server-ctl reconfigure

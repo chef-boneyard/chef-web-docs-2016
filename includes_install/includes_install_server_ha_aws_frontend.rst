@@ -19,6 +19,12 @@ Use the following steps to set up each frontend |chef server|:
 
 #. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file.
 
+#. Run the following command:
+
+   .. code-block:: bash
+      
+      $ sudo chef-server-ctl start
+
 #. .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_user_create_admin.rst
 
 #. .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_org_create.rst
