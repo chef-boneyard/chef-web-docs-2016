@@ -205,7 +205,7 @@ Because |kitchen| is installed as part of the |chef dk|, the |kitchen yml| file 
      name: vagrant
    
    provisioner:
-     name: chef_solo
+     name: chef_zero
    
    platforms:
      - name: ubuntu-12.04
