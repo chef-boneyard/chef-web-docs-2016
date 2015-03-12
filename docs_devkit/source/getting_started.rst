@@ -624,9 +624,9 @@ Edit Recipe
 -----------------------------------------------------
 To install |ntp|, a recipe needs to do three things:
 
-# Install |ntp|
-# Create a configuration file; this will be done using the ``ntp.conf.erb`` template file
-# Start the ``ntp`` or ``ntpd`` service, depending on the platform; this will be done using the ``node[:ntp][:service]`` attribute
+#. Install |ntp|
+#. Create a configuration file; this will be done using the ``ntp.conf.erb`` template file
+#. Start the ``ntp`` or ``ntpd`` service, depending on the platform; this will be done using the ``node[:ntp][:service]`` attribute
 
 Open the ``default.rb`` recipe file and replace the contents of that file with the following:
 
