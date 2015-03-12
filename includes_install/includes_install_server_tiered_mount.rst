@@ -3,26 +3,32 @@
 
 To build and mount the storage device on the backend machine, do the following:
 
-#. Create the file system. For example, an ``ext4`` type named tiered:
+#. Create the file system. For example, an ``ext4`` type named ``tiered``:
 
-  .. code-block:: bash
+   .. code-block:: bash
       
       $ mkfs.ext4 /dev/opscode/tiered
 
-  then:
+   then:
 
-  .. code-block:: bash
+   .. code-block:: bash
       
       $ mkdir -p /var/opt/opscode
 
-  and then:
+   and then:
 
-  .. code-block:: bash
+   .. code-block:: bash
       
       $ mount /dev/opscode/tiered /var/opt/opscode
 
-#. Reconfigure the backend machine:
+#. Run the following command:
 
-  .. code-block:: bash
+   .. code-block:: bash
+      
+      $ sudo chef-server-ctl start
+
+#. Run the following command:
+
+    .. code-block:: bash
       
       $ sudo chef-server-ctl reconfigure
