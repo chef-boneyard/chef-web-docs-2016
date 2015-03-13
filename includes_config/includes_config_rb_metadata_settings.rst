@@ -70,7 +70,7 @@ This configuration file has the following settings:
            :description => "Describe your cat using the options below"
 
    * - ``issues_url``
-     - |url cookbook_issues| For example:
+     - |url cookbook_issues| In |supermarket|, this value is used to define the destination for the "View Issues" link. For example:
 
        .. code-block:: ruby
 
@@ -221,7 +221,7 @@ This configuration file has the following settings:
           replaces "dogs", "< 4.0"
 
    * - ``source_url``
-     - |url cookbook_source| For example:
+     - |url cookbook_source| In |supermarket|, this value is used to define the destination for the "View Source" link. For example:
 
        .. code-block:: ruby
 
