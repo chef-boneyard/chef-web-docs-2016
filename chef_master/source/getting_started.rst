@@ -544,6 +544,13 @@ As it installs, the |chef client| will report back something similar to the foll
 
    The |resource execute| resource block won't run on |centos| because the |centos| platform uses the |yum| package manager, and not the |apt| package manager.
 
+   Re-run the following command:
+
+   .. code-block:: bash
+
+      $ kitchen converge default-ubuntu-1204
+
+
 Verify Instance List
 -----------------------------------------------------
 To verify if both instances have been converged, run the following command:
