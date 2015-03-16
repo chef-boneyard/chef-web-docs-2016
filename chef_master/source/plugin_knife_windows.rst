@@ -14,6 +14,10 @@ Requirements
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst
 
+|microsoft negotiate|, |ntlm|
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements_nltm.rst
+
 Domain Authentication
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst
