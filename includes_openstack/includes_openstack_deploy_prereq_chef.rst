@@ -5,7 +5,7 @@ Guidelines for |openstack chef|:
 
 * Cookbooks are developed and tested with the latest release of the |chef client|
 * Most users will install the full-stack client using the |omnibus installer|: http://www.chef.io/chef/install/
-* |ruby| 1.9.3 or later is assumed
+* |ruby| 2.1 or later is assumed
 * A |chef server| is being used; |chef solo| may not work (patches welcome)
 * Cookbooks expose their configuration via attributes
 * Attributes are typically overridden by environment attributes
