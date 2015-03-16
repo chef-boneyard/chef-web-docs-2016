@@ -17,11 +17,11 @@ This configuration file has the following settings for ``oc-id``:
        .. code-block:: ruby
 
 		  oc_id['applications'] = {
-		    "analytics": {
-		      "redirect_uri": "https://analytics.rhel.aws"
+		    "analytics" => {
+		      "redirect_uri" => "https://analytics.rhel.aws"
 		    },
-		    "supermarket": {
-		      "redirect_uri": "https://default-ubuntu-1204.vagrantup.com/auth/chef_oauth2/callback"
+		    "supermarket" => {
+		      "redirect_uri" => "https://default-ubuntu-1204.vagrantup.com/auth/chef_oauth2/callback"
 		    }
 		  }
    * - ``oc_id['db_pool_size']``
