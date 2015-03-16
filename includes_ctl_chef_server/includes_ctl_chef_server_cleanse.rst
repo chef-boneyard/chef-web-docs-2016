@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``cleanse`` subcommand is used to re-set the |chef server| to the state it was in before the first time the ``reconfigure`` subcommand is run to destroy all data, configuration files, and logs. 
+The ``cleanse`` subcommand is used to re-set the |chef server| to the state it was in prior to the first time the ``reconfigure`` subcommand is run. This command will destroy all data, configuration files, and logs. 
 
 This subcommand has the following syntax:
 
