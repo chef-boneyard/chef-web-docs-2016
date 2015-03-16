@@ -13,10 +13,10 @@ Run the following command to create an organization:
 
 The ``--association_user`` option will associate the ``user_name`` with the |webui group admins| security group on the |chef server|.
 
-An RSA private key is generated automatically. This should be saved to a safe location. The ``--filename`` option will save the RSA private key to a specified path.
+An RSA private key is generated automatically. This is the validator client and should be saved to a safe location. The ``--filename`` option will save the RSA private key to a specified path.
 
 For example:
 
 .. code-block:: bash
   
-   $ chef-server-ctl org-create chef Chef Software, Inc. --association_user stevedanno --filename /path/to/file.key
+   $ chef-server-ctl org-create chef Chef Software, Inc. --association_user stevedanno --filename /path/to/chef-validator.pem
