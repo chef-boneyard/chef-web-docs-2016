@@ -37,6 +37,8 @@
           command "/srv/app/scripts/daily_report"
    * - ``day``
      - |day cron| Default value: ``*``.
+   * - ``environment``
+     - |environment variables|
    * - ``home``
      - |environment set_home|
    * - ``hour``
