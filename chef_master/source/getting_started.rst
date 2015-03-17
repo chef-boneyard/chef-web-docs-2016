@@ -41,7 +41,13 @@ For the quickest way to get started using |chef|:
 
       $ chef-client --local-mode --override-runlist chef-repo
 
-This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file created by Chef!``. There's a lot more that |chef| can do, obviously, but that was super easy! Keep reading this topic for more information about setting up your workstation or go to https://docs.chef.io and dive in.
+This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file created by Chef!``.
+
+* Delete the file, run the |chef client| again, and |chef| will put the file back.
+* Change the string int he file, run the |chef client| again, and |chef| will make the string in the file the same as the string in the recipe.
+* Change the string in the recile, run the |chef client| again, and |chef| will update that string to be the same as the one in the recipe.
+
+There's a lot more that |chef| can do, obviously, but that was super easy! Keep reading this topic for more information about setting up your workstation or go to https://docs.chef.io and dive in.
 
 
 
