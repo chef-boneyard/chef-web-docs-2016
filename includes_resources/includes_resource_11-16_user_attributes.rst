@@ -15,6 +15,8 @@
      - |id group|
    * - ``home``
      - |home_directory|
+   * - ``non_unique``
+     - |non_unique_user|
    * - ``password``
      - |password shadow_hash|
    * - ``provider``

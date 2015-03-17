@@ -17,6 +17,8 @@
      - |home_directory|
    * - ``iterations``
      - |mac os x| platform only, 10.8 (or higher). |iterations|
+   * - ``non_unique``
+     - |non_unique_user|
    * - ``password``
      - |password shadow_hash|
    * - ``provider``
