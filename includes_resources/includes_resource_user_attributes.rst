@@ -22,12 +22,11 @@
    * - ``iterations``
      - |mac os x| platform only, 10.8 (or higher). |iterations|
    * - ``manage_home``
-     - Use to xxxxx.
+     - |user homedir|
 
+       |user homedir_create|
 
-
-
-
+       |user homedir_modify|
    * - ``non_unique``
      - |non_unique_user|
    * - ``password``

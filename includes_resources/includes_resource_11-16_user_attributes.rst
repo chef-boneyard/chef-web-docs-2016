@@ -19,6 +19,12 @@
      - |id group|
    * - ``home``
      - |home_directory|
+   * - ``manage_home``
+     - |user homedir|
+
+       |user homedir_create|
+
+       |user homedir_modify|
    * - ``non_unique``
      - |non_unique_user|
    * - ``password``
