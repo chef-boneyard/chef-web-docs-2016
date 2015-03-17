@@ -53,7 +53,9 @@
      - Optional. |provider resource_parameter| |see providers|
    * - ``shell``
      - |environment set_shell|
+   * - ``time``
+     - |time cron|
    * - ``user``
-     - |name user cron| Default value: ``root``.
+     - This attribute is not applicable on the |ibm aix| platform. |name user cron| Default value: ``root``.
    * - ``weekday``
      - |weekday cron| Default value: ``*``. May be entered as a symbol, e.g. ``:monday`` or ``:friday``.

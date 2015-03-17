@@ -53,6 +53,8 @@
      - Optional. |provider resource_parameter| |see providers|
    * - ``shell``
      - |environment set_shell|
+   * - ``time``
+     - |time cron|
    * - ``user``
      - |name user cron| Default value: ``root``.
    * - ``weekday``
