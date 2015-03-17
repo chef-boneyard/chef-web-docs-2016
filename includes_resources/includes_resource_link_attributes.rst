@@ -13,6 +13,14 @@
      - |group resource link|
    * - ``link_type``
      - |link_type| Default value: ``:symbolic``.
+   * - ``mode``
+     - |mode resource_file| Default value: ``777``.
+       
+       The behavior is different depending on the platform.
+       
+       |unix|- and |linux|-based systems: |mode *nix|
+       
+       |windows|: |mode windows security|
    * - ``owner``
      - |owner resource link|
    * - ``provider``
