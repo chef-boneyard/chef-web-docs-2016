@@ -11,6 +11,10 @@
      - Description
    * - ``comment``
      - |comment user|
+   * - ``force``
+     - |force_remove_user|
+
+       .. warning:: Using this attribute may leave the system in an inconsistent state. For example, a user account will be removed even if the user is logged in. A user's home directory will be removed, even if that directory is shared by multiple users.
    * - ``gid``
      - |id group|
    * - ``home``

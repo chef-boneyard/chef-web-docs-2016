@@ -11,12 +11,23 @@
      - Description
    * - ``comment``
      - |comment user|
+   * - ``force``
+     - |force_remove_user|
+
+       .. warning:: Using this attribute may leave the system in an inconsistent state. For example, a user account will be removed even if the user is logged in. A user's home directory will be removed, even if that directory is shared by multiple users.
    * - ``gid``
      - |id group|
    * - ``home``
      - |home_directory|
    * - ``iterations``
      - |mac os x| platform only, 10.8 (or higher). |iterations|
+   * - ``manage_home``
+     - Use to xxxxx.
+
+
+
+
+
    * - ``non_unique``
      - |non_unique_user|
    * - ``password``
