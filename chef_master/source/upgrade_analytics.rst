@@ -4,6 +4,14 @@ Upgrade to |chef analytics_title| 1.1
 
 The following sections describe the upgrade process from |chef analytics| 1.0.4 to |chef analytics| 1.1.
 
+Prerequisites
+=====================================================
+This section describes the prereqs for the upgrade
+
+#. The |chef server| referenced by this Analytics system should already have been upgraded to at least 12.0.3 *or* Enterprise Chef 11.3.
+#. The |chef server| must have had `chef-server-ctl reconfigure` run.
+#. The newly generated `/etc/opscode-analytics` directory on the |chef server| must have replaced the existing `/etc/opscode-analytics` directory and it's contents on the |chef analytics| server. Specifically, the analytics-source.json will have changed after being reconfigured by the later release of |chef server|.
+
 Standalone
 =====================================================
 This section describes the upgrade process for a standalone configuraiton:
@@ -31,6 +39,8 @@ This section describes the upgrade process for a standalone configuraiton:
    .. code-block:: bash
       
       $ opscode-analytics-ctl preflight-check
+
+#. Copy in the `/etc/opscode-analytics` directory from the Chef Server
 
 #. Reconfigure the server:
 
