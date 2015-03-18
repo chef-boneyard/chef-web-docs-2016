@@ -48,5 +48,5 @@
    * - ``verify``
      - |verify_file|
 
-        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
