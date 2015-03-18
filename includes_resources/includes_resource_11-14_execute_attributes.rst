@@ -11,6 +11,8 @@
      - Description
    * - ``command``
      - |name command| Default value: the ``name`` of the resource block. |see syntax|
+
+       .. note:: Use the |resource execute| resource to run a single command. Use multiple |resource execute| resource blocks to run multiple commands.
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``
