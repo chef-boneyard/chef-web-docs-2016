@@ -19,7 +19,7 @@
      - |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
-   * - ``python_install_binary``
+   * - ``python_binary``
      - The location of the |python| binary.
    * - ``source``
      - Optional. |source resource package|
