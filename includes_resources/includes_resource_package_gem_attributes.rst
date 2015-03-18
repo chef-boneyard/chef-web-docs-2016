@@ -17,8 +17,6 @@
      - |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
-   * - ``response_file``
-     - Optional. |response_file|
    * - ``source``
      - Optional. The URL at which the gem package is located.
    * - ``version``

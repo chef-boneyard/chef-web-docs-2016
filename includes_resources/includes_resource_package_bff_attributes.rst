@@ -15,8 +15,6 @@
      - |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
-   * - ``response_file``
-     - Optional. |response_file|
    * - ``source``
      - Required. |source resource package| |source resource package aix|
    * - ``version``

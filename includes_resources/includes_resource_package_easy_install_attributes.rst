@@ -21,8 +21,6 @@
      - Optional. |provider resource_parameter| |see providers|
    * - ``python_install_binary``
      - The location of the |python| binary.
-   * - ``response_file``
-     - Optional. |response_file|
    * - ``source``
      - Optional. |source resource package|
    * - ``version``

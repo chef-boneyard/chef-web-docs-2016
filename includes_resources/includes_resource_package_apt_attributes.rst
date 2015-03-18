@@ -21,9 +21,9 @@
      - Optional. |provider resource_parameter| |see providers|
    * - ``response_file``
      - Optional. |response_file|
+   * - ``response_file_variables``
+     - Optional. |response_file variables|
    * - ``source``
      - Optional. |source resource apt_package|
    * - ``version``
      - |version package|
-
-
