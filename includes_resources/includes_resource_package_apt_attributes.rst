@@ -25,5 +25,7 @@
      - Optional. |response_file variables|
    * - ``source``
      - Optional. |source resource apt_package|
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|

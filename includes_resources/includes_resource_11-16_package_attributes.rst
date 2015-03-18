@@ -33,5 +33,7 @@ This resource has the following attributes:
      - |resource apt_package| and |resource dpkg_package| resources only. |response_file variables|
    * - ``source``
      - Optional. |source resource package|
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|

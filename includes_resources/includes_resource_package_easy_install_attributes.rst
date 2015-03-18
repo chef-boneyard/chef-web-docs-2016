@@ -23,5 +23,7 @@
      - The location of the |python| binary.
    * - ``source``
      - Optional. |source resource package|
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|

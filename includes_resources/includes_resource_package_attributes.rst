@@ -37,5 +37,7 @@ This resource has the following attributes:
      - Optional. |source resource package|
 
        .. note:: |source resource package aix|
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|

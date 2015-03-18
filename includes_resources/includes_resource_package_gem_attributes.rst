@@ -19,5 +19,7 @@
      - Optional. |provider resource_parameter| |see providers|
    * - ``source``
      - Optional. The URL at which the gem package is located.
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|

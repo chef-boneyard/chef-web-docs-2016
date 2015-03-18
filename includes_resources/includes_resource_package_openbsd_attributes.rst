@@ -17,5 +17,7 @@
      - Optional. |provider resource_parameter| |see providers|
    * - ``source``
      - Optional. |source resource package|
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|

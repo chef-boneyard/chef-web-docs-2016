@@ -21,5 +21,7 @@
      - Optional. |response_file variables|
    * - ``source``
      - Optional. |source resource package|
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|

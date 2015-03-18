@@ -17,5 +17,7 @@
      - Optional. |provider resource_parameter| |see providers|
    * - ``source``
      - Required. |source resource package| |source resource package aix|
+   * - ``timeout``
+     - |timeout|
    * - ``version``
      - |version package|
