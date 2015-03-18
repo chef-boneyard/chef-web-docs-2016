@@ -2,7 +2,7 @@
 .. This file describes a command or a sub-command for chef-sync-ctl.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use to show the current status of all organizations that are synchronizing.
+Use to show the current status of all organizations that are synchronizing. This subcommand should only be run for target organizations.
 
 This option has the following syntax:
 
