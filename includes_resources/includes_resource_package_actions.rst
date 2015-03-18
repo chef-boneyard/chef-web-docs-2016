@@ -11,11 +11,11 @@ This resource has the following actions:
      - Description
    * - ``:install``
      - Default. |resource action install package|
-   * - ``:upgrade``
-     - |resource action upgrade package|
+   * - ``:purge``
+     - |resource action purge package| (|debian| platform only; for other platforms, use the ``:remove`` action.)
    * - ``:reconfig``
      - |resource action reconfigure package|
    * - ``:remove``
      - |resource action remove package|
-   * - ``:purge``
-     - |resource action purge package| (|debian| platform only; for other platforms, use the ``:remove`` action.)
+   * - ``:upgrade``
+     - |resource action upgrade package|
