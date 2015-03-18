@@ -5,7 +5,7 @@ A node's initial run-list is specified using a |json| file on the host system. W
 
 .. code-block:: bash
 
-   $ chef-client -j /etc/chef/file.json
+   $ chef-client -j /etc/chef/file.json --environment _default
 
 where ``file.json`` is similar to:
 
@@ -19,4 +19,6 @@ where ``file.json`` is similar to:
      "run_list": [ "recipe[resolver]" ]
    }
 
-.. warning:: This option may be used to update ``normal`` attributes, but should never be used to update any other attribute type, as all attributes updated using this option are treated as ``normal`` attributes.
+and where ``_default`` is the name of the environment that is assigned to the node.
+
+.. warning:: This approach may be used to update ``normal`` attributes, but should never be used to update any other attribute type, as all attributes updated using this option are treated as ``normal`` attributes.
