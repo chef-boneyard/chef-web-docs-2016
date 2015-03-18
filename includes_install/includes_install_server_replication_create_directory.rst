@@ -3,6 +3,6 @@
 
 On the master |chef server|, create the |chef_sync rb| file in the ``/etc/chef-sync/`` directory, and then add the following setting:
 
-   .. code-block:: ruby
+.. code-block:: ruby
       
-      role :master
+   role :master
