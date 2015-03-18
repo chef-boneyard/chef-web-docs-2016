@@ -6,8 +6,6 @@ knife push jobs
 
 .. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
-
 job list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_push_jobs_job_list.rst
