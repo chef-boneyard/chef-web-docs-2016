@@ -29,6 +29,6 @@ To build and mount the storage device on the backend machine, do the following:
 
 #. Run the following command:
 
-    .. code-block:: bash
+   .. code-block:: bash
       
       $ sudo chef-server-ctl reconfigure
