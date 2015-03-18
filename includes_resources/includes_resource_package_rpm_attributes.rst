@@ -9,6 +9,8 @@
 
    * - Attribute
      - Description
+   * - ``allow_downgrade``
+     - |allow_downgrade|
    * - ``options``
      - |command options|
    * - ``package_name``
