@@ -420,6 +420,7 @@ Cookbooks
    supermarket
    supported_platforms
    templates
+   uninstall
    upgrade_analytics
    upgrade_client
    upgrade_client_notes
