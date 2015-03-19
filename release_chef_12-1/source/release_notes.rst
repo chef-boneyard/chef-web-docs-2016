@@ -107,6 +107,9 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_duplicate_names.rst
 
+**Verify a package is installed**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_group_simple_recipe.rst
 
 Validatorless Bootstrap
 -----------------------------------------------------
