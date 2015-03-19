@@ -414,7 +414,7 @@ To verify that a workstation can connect to the |chef server|:
 
 Uninstall
 =====================================================
-The |chef dk| can be uninstalled using the following steps.
+The |chef dk| can be uninstalled using the steps below that are appropriate for the platform on which the |chef dk| is installed.
 
 |debian|
 -----------------------------------------------------
