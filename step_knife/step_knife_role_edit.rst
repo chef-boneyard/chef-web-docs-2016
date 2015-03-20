@@ -14,16 +14,18 @@ Update the role data in |json|:
    ## sample:
    {
       "name": "role1",
+      "description": "This is the description for the role1 role.",
+      "json_class": "Chef::Role",
       "default_attributes": {
       },
-      "json_class": "Chef::Role",
-      "run_list": ['recipe[cookbook_name::recipe_name],
-                    role[role_name]'
-      ],
-      "description": "This is the description for the role1 role.",
-      "chef_type": "role",
       "override_attributes": {
-      }
+      },
+      "chef_type": "role",
+      "run_list": ["recipe[cookbook_name::recipe_name]",
+                   "role[role_name]"
+      ],
+      "env_run_lists": {
+      },
    }
 
 When finished, save it.
