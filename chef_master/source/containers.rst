@@ -2,12 +2,15 @@
 |chef| for Containers
 =====================================================
 
-.. include:: ../../includes_containers/includes_containers.rst
+.. warning:: This topic has been deprecated! For information about everything that |chef| can do, please see http://docs.chef.io.
 
-.. image:: ../../images/containers.png
-
-.. include:: ../../includes_containers/includes_containers_lxc.rst
-
+.. 
+.. .. include:: ../../includes_containers/includes_containers.rst
+.. 
+.. .. image:: ../../images/containers.png
+.. 
+.. .. include:: ../../includes_containers/includes_containers_lxc.rst
+.. 
 .. 
 .. |chef container|
 .. =====================================================
