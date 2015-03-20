@@ -18,7 +18,7 @@
             compile_time false if respond_to?(:compile_time)
           end
 
-       .. note:: Older versions of the |chef client| will need a workaround when ``chef-sugar`` is included in a recipe: 
+       .. note:: Older versions of the |chef client| will need a workaround when ``chef-sugar`` is a dependency on a cookbook that is loaded during the |chef client| run: 
 
           .. code-block:: ruby
 
