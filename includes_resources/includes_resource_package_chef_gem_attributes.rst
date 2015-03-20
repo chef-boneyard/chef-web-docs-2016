@@ -25,6 +25,8 @@
              chef_gem 'gem_name' do
                compile_time true if Chef::Resource::ChefGem.instance_methods(false).include?(:compile_time)
              end
+
+          See this `blog post <http://jtimberman.housepub.org/blog/2015/03/20/chef-gem-compile-time-compatibility/>`__ for more background on this behavior.
    * - ``options``
      - |command options|
    * - ``package_name``
