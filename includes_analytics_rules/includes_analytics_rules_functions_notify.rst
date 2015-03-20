@@ -28,6 +28,6 @@ For example:
        then
          set value #foo = "100"
          set value #xyz = "test"
-         notify(hipchat "Hipchat notification <obj.requestor_name> did something at <obj.recorded_at>!")
+         notify("hipchat", "Hipchat notification {{message.requestor_name}} did something at {{message.recorded_at}}!")
      end
    end
