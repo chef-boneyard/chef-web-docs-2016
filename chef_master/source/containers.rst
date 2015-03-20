@@ -8,32 +8,36 @@
 
 .. include:: ../../includes_containers/includes_containers_lxc.rst
 
-|chef container|
-=====================================================
-.. include:: ../../includes_containers/includes_containers_chef_container.rst
-
-Securing Credentials
------------------------------------------------------
-.. include:: ../../includes_containers/includes_containers_chef_container_secure_credentials.rst
-
-|chef| for |docker|
-=====================================================
-.. include:: ../../includes_containers/includes_containers_docker.rst
-
-.. image:: ../../images/containers_docker.png
-
-.. include:: ../../includes_containers/includes_containers_docker_chef.rst
-
-.. image:: ../../images/containers_docker_chef.png
-
-Credential Management
------------------------------------------------------
-.. include:: ../../includes_containers/includes_containers_credential_management.rst
-   
-|dockerfile|
------------------------------------------------------
-.. include:: ../../includes_containers/includes_containers_docker_dockerfile.rst
-
+.. 
+.. |chef container|
+.. =====================================================
+.. .. include:: ../../includes_containers/includes_containers_chef_container.rst
+.. 
+.. Securing Credentials
+.. -----------------------------------------------------
+.. .. include:: ../../includes_containers/includes_containers_chef_container_secure_credentials.rst
+.. 
+.. 
+.. |chef| for |docker|
+.. =====================================================
+.. .. include:: ../../includes_containers/includes_containers_docker.rst
+.. 
+.. .. image:: ../../images/containers_docker.png
+.. 
+.. .. include:: ../../includes_containers/includes_containers_docker_chef.rst
+.. 
+.. .. image:: ../../images/containers_docker_chef.png
+.. 
+.. 
+.. Credential Management
+.. -----------------------------------------------------
+.. .. include:: ../../includes_containers/includes_containers_credential_management.rst
+.. 
+.. 
+.. |dockerfile|
+.. -----------------------------------------------------
+.. .. include:: ../../includes_containers/includes_containers_docker_dockerfile.rst
+.. 
 ..
 .. Using LXC
 .. =====================================================
@@ -41,58 +45,8 @@ Credential Management
 .. 
 .. .. image:: ../../images/containers_lxc.png
 .. 
-
-|subcommand knife container|
-=====================================================
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_container.rst
-
-**Install this plugin**
-
-.. include:: ../../step_plugin_knife/step_plugin_knife_container_install_rubygem.rst
-
-docker build
------------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_build.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_build_syntax.rst
-
-Options
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_build_options.rst
-
-docker init
------------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_init.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_init_syntax.rst
-
-Options
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_init_options.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**Create a Dockerfile**
-
-.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
-
-**Local mode**
-
-.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_local_mode.rst
-
-**Server mode**
-
-.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_server_mode.rst
-
-**Include secure credentials in image**
-
-.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_include_credentials.rst
-
-Container Services
-=====================================================
-.. include:: ../../includes_containers/includes_containers_container_service_attributes.rst
+.. 
+.. Container Services
+.. =====================================================
+.. .. include:: ../../includes_containers/includes_containers_container_service_attributes.rst
+.. 
