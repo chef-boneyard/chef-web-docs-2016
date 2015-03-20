@@ -277,7 +277,6 @@ Cookbooks
    plugin_knife_azure
    plugin_knife_bluebox
    plugin_knife_bluelock
-   plugin_knife_container
    plugin_knife_custom
    plugin_knife_ec2
    plugin_knife_eucalyptus
@@ -320,7 +319,6 @@ Cookbooks
    resource_chef_role
    resource_chef_user
    resource_common
-   resource_container_service
    resource_cookbook_file
    resource_cron
    resource_csh
