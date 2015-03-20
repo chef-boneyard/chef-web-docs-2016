@@ -18,7 +18,7 @@
             compile_time false if respond_to?(:compile_time)
           end
 
-       .. note:: Older versions of the |chef client| will need a workaround when ``chef-sugar`` is a dependency on a cookbook that is loaded during the |chef client| run: 
+       .. note:: ``chef-sugar``---a `community cookbook <https://supermarket.chef.io/cookbooks/chef-sugar>`__---must be version 3.0.1 (or higher) to use the previous example. When an older version of ``chef-sugar`` is a dependency on a cookbook that is loaded during the |chef client| run, the following workaround is required: 
 
           .. code-block:: ruby
 
@@ -37,3 +37,5 @@
      - |timeout|
    * - ``version``
      - |version package|
+
+
