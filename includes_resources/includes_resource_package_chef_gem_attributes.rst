@@ -17,6 +17,14 @@
           chef_gem 'aws-sdk' do
             compile_time false if respond_to?(:compile_time)
           end
+
+       .. note:: Older versions of the |chef client| will need a workaround when ``chef-sugar`` is included in a recipe: 
+
+          .. code-block:: ruby
+
+             chef_gem 'gem_name' do
+               compile_time true if Chef::Resource::ChefGem.instance_methods(false).include?(:compile_time)
+             end
    * - ``options``
      - |command options|
    * - ``package_name``
