@@ -30,9 +30,9 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``response_file``
-     - |resource apt_package| and |resource dpkg_package| resources only. |response_file|
+     - |resource package_apt| and |resource package_dpkg| resources only. |response_file|
    * - ``response_file_variables``
-     - |resource apt_package| and |resource dpkg_package| resources only. |response_file variables|
+     - |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
    * - ``source``
      - Optional. |source resource package|
 
