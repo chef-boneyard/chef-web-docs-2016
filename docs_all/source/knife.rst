@@ -1178,8 +1178,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |no_options|
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_node_from_file.rst

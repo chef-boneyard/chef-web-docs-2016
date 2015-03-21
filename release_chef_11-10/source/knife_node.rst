@@ -107,8 +107,6 @@ Options
 -----------------------------------------------------
 |no_options|
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
