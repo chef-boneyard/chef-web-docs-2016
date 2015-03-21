@@ -14,11 +14,7 @@ Options
 
 .. include:: ../../includes_knife/includes_knife_list_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_list_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 =====================================================
@@ -35,5 +31,3 @@ The following examples show how to use this |knife| subcommand:
 **List everything**
 
 .. include:: ../../step_knife/step_knife_list_everything.rst
-
-
