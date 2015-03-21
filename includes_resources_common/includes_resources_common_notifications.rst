@@ -10,9 +10,9 @@ The following notifications can be used with any resource:
    * - Notification
      - Description
    * - ``notifies``
-     - Use to notify another resource to take an action if this resource's state changes for any reason.
+     - Use to specify that another resource should take action when this resource's state changes.
    * - ``subscribes``
-     - Use to take action on this resource if another resource's state changes. This is similar to ``notifies``, but reversed.
+     - Use to specify that a resource will listen to another resource, and then take action when that resource's state changes.
 
 Notifications are processed during the execution phase of the |chef client| run.
 
