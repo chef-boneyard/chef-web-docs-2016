@@ -107,12 +107,6 @@ Options
 -----------------------------------------------------
 |no_options|
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_from_file_settings.rst
-
 Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
@@ -134,11 +128,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_list_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_list_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -165,11 +155,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-10_node_run_list_add_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_run_list_add_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -208,11 +194,7 @@ Options
 -----------------------------------------------------
 |no_options|
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_run_list_remove_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
