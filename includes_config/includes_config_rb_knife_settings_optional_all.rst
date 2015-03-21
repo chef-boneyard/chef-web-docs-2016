@@ -26,12 +26,22 @@ The following list describes all of the optional settings that can be added to t
      - 
    * - ``knife[:bare_directories]``
      - |d knife list|
+   * - ``knife[:bootstrap_curl_options]``
+     - |bootstrap curl_options| |bootstrap no_install_command|
+   * - ``knife[:bootstrap_install_command]``
+     - |bootstrap install_command| |bootstrap no_curl_sh_wget|
    * - ``knife[:bootstrap_proxy]``
      - |bootstrap proxy|
+   * - ``knife[:bootstrap_no_proxy]``
+     - |bootstrap no_proxy|
+   * - ``knife[:bootstrap_vault_item]``
+     - |bootstrap valut_item|
    * - ``knife[:bootstrap_version]``
      - |bootstrap version|
    * - ``knife[:bootstrap_template]``
      - |path bootstrap_template|
+   * - ``knife[:bootstrap_wget_options]``
+     - |bootstrap wget_options| |bootstrap no_install_command|
    * - ``knife[:chef_repo_path]``
      - |path chef_repo|
    * - ``knife[:concurrency]``
@@ -64,6 +74,8 @@ The following list describes all of the optional settings that can be added to t
      - |forward_agent|
    * - ``knife[:hide_healthy]``
      - |hide_healthy|
+   * - ``knife[:hints]``
+     - |hint|
    * - ``knife[:host_key_verify]``
      - |no_host_key_verify|
    * - ``knife[:identity_file]``
