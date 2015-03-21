@@ -24,11 +24,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_create_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_create_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -74,11 +70,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_edit_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_edit_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -104,11 +96,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_from_file_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_from_file_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -158,11 +146,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_show_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_show_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------

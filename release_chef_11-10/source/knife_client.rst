@@ -36,11 +36,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-10_client_create_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -128,11 +124,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_reregister_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_client_reregister_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
