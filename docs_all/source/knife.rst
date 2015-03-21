@@ -73,8 +73,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
 
-.. note:: |note knife rb settings|
-
 Custom Templates
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_bootstrap_template.rst
@@ -165,8 +163,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_client_create_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_client_create_admin.rst
@@ -235,8 +231,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_client_reregister_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_client_reregister.rst
@@ -277,8 +271,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_configure_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_configure_knife_rb.rst
@@ -307,8 +299,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_cookbook_bulk_delete.rst
@@ -325,8 +315,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_create_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -345,8 +333,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_delete_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_cookbook_delete.rst
@@ -363,8 +349,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_download_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -383,8 +367,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_list_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_cookbook_list.rst
@@ -401,8 +383,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -438,8 +418,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_show_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_cookbook_show_cookbook_data.rst
@@ -463,8 +441,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_test_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_cookbook_test.rst
@@ -481,8 +457,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_cookbook_upload_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -515,8 +489,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_site_cookbook_download_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_site_cookbook_download.rst
@@ -532,8 +504,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_site_cookbook_install_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -582,8 +552,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_site_cookbook_share_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -651,8 +619,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_data_bag_create_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_data_bag_create.rst
@@ -687,8 +653,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_data_bag_edit_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_data_bag_edit.rst
@@ -706,8 +670,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_data_bag_from_file_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -744,8 +706,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_data_bag_show_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_data_bag_show.rst
@@ -775,8 +735,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_delete_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 None.
@@ -798,8 +756,6 @@ Options
 Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_deps_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -838,8 +794,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_diff_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_diff_compare_json_files.rst
@@ -864,8 +818,6 @@ Options
 Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_download_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -898,8 +850,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_edit_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 None.
@@ -929,8 +879,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_environment_create_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -982,8 +930,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_environment_from_file_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1051,8 +997,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_exec_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_exec_run_ruby_scripts.rst
@@ -1080,8 +1024,6 @@ Options
 Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_list_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -1194,8 +1136,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_node_list_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_node_list_all.rst
@@ -1215,8 +1155,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1241,8 +1179,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |no_options|
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1296,8 +1232,6 @@ Options
 Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_raw_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -1367,8 +1301,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_role_create_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_role_create.rst
@@ -1417,8 +1349,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |no_options|
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_role_from_file.rst
@@ -1450,8 +1380,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_role_show_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1580,8 +1508,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_ssh_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_ssh_find_uptime.rst
@@ -1675,8 +1601,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_status_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_status_include_run_lists.rst
@@ -1764,8 +1688,6 @@ Review the list of `common options <http://docs.chef.io/chef/knife.html#common-o
 
 .. include:: ../../includes_knife/includes_knife_upload_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_upload_repository.rst
@@ -1803,8 +1725,6 @@ Syntax
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_user_create_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1870,8 +1790,6 @@ Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_user_reregister_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_knife/step_knife_user_reregister.rst
@@ -1910,8 +1828,6 @@ Options
 Review the list of `common options <http://docs.chef.io/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_xargs_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
