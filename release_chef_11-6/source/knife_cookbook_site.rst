@@ -24,11 +24,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_site_cookbook_download_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_site_cookbook_download_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -50,11 +46,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_site_cookbook_install_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_site_cookbook_install_settings.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
@@ -116,11 +108,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_site_cookbook_share_options.rst
 
-knife.rb Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_site_cookbook_share.rst
+.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
