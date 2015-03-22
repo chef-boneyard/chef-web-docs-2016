@@ -102,7 +102,6 @@ All about |chef| ...
    chef_client
    chef_overview
    client_rb
-   config_rb_knife
    dsl_recipe
    essentials_chef_client
    essentials_cookbook_attribute_files
