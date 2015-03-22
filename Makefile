@@ -13,14 +13,14 @@ release: master devkit analytics all server client 12-0 12-1 11-0 11-2 11-4 11-6
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # 
-# 12-0 12-1 enterprise oec_11-0 oec_11-1 oec_11-2 open_source osc_11-0 osc_11-1
+# 12-0 12-1 12-2
 # 
-# 12-2
+# 
 # ohai-6 ohai-7 ohai-8
-# 
-#
+# open_source osc_11-0 osc_11-1
+# enterprise oec_11-0 oec_11-1 oec_11-2
 # RETIRED: located in chef-docs-misc, no longer built or maintained
-#
+# 
 # 10 private_chef
 #
 
