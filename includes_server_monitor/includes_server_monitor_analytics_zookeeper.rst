@@ -2,9 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|zookeeper| is a centralized service that is used to maintain configuration information for |chef analytics|, including the queue that moves actions data from the |chef server| to |chef analytics|. |zookeeper| does not automatically remove snapshots and log files, which means that snapshots and log file removal must be done periodically as part of the maintanence of |chef analytics|.
+|zookeeper| is a centralized service that is used to maintain configuration information for |chef analytics|. |zookeeper| does not automatically remove snapshots and log files, which means that snapshots and log file removal must be done periodically as part of the maintanence of |chef analytics|.
 
-If snapshots and log files are not cleaned up periodically, eventually the disk on the |chef analytics| server will fill up and the queue will stop ingesting actions data that is sent to |chef analytics| from the |chef server|. To prevent this situation, clean up the snapshots and log files before they are full. If the disk does fill up, do the following:
+If snapshots and log files are not cleaned up periodically, eventually the disk on the |chef analytics| server will fill up. To prevent this situation, clean up the snapshots and log files before they are full. If the disk does fill up, do the following:
 
 #. Inspect the log file for |zookeeper| on the |chef analytics| machine:
 
@@ -86,7 +86,7 @@ If snapshots and log files are not cleaned up periodically, eventually the disk 
       chef	33.33.33.9	56089	running
       ...done.
 
-#. Verify that the |chef analytics| actions data queue started correctly. This information is located in ``/var/log/opscode-analytics/alaska/current``:
+#. Verify that |chef analytics| started correctly. This information is located in ``/var/log/opscode-analytics/alaska/current``:
 
    .. code-block:: bash
 
