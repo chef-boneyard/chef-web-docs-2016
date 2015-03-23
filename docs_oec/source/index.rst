@@ -211,8 +211,6 @@ The |chef manage| add-on for |chef server oec| provides a user interface that en
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/enterprise/server_manage_reports.html">Reports</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/enterprise/server_manage_roles.html">Roles</a> </br>
 
-..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/enterprise/server_data.html">Server Data</a> </br>
-
 Settings and Tools 
 -----------------------------------------------------
 The following settings files are used to configure behavior for the |chef server|:
@@ -586,7 +584,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_yum
    server_backup_restore
    server_components
-   server_data
    server_deploy_be
    server_deploy_fe
    server_deploy_febe
