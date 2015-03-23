@@ -4,7 +4,7 @@
 
 |zookeeper| is a centralized service that is used to maintain configuration information for |chef analytics|, including the queue that moves actions data from the |chef server| to |chef analytics|. |zookeeper| does not automatically remove snapshots and log files, which means that snapshots and log file removal must be done periodically as part of the maintanence of |chef analytics|.
 
-If snapshots and log files are not cleaned up periodically, eventually the disk on the |chef analytics| server will fill up and the queue will stop ingesting actions data that is sent to |chef analytics| from the |chef server|. To prevent this situation, clean up the snapshots and log files before they are full. If the disk does fill up, do the following:
+If snapshots and log files are not cleaned up periodically, eventually the disk on the |chef analytics| server will fill up and the queue will stop ingesting actions data that are sent to |chef analytics| from the |chef server|. To prevent this situation, clean up the snapshots and log files before they are full. If the disk does fill up, do the following:
 
 #. Inspect the log file for |zookeeper| on the |chef analytics| machine:
 
@@ -37,7 +37,7 @@ If snapshots and log files are not cleaned up periodically, eventually the disk 
       2015-03-18_21:49:12.54474 at org.apache.zookeeper.server.persistence.FileTxnSnapLog.restore(FileTxnSnapLog.java:158)
       2015-03-18_21:49:12.54475 at org.apache.zookeeper.server.ZKDatabase.loadDataBase(ZKDatabase.java:223)
 
-   This type of log pattern indicates that the data store for |zookeeper| is full, is no longer ingesting data, and must be cleaned up.
+   This type of log pattern indicates that the data store for |zookeeper| has been corrupted as a result of the disk full situation, is no longer ingesting data, and must be cleaned up.
 
 #. Shut down the |chef analytics| machine:
 
@@ -65,7 +65,7 @@ If snapshots and log files are not cleaned up periodically, eventually the disk 
 
    There should not be any errors or warnings in the |zookeeper| log file and the |chef server| should be able to send actions data to the |chef analytics| server.
 
-#. Verify the connection between |chef analytics| and the |chef server|:
+#. On the |chef server| system, verify the connection from |chef analytics| to the |chef server|:
 
    .. code-block:: bash
 
@@ -172,4 +172,4 @@ If snapshots and log files are not cleaned up periodically, eventually the disk 
       2015-03-16_15:59:23.51030 chef_analytics [INFO] http_bolt - b0d60543-e2da-4d14-a74d-6d84a92eab26 posting message
       2015-03-16_15:59:23.53049 chef_analytics [INFO] http_bolt - b0d60543-e2da-4d14-a74d-6d84a92eab26 successfully posted message to endpoint
       2015-03-16_15:59:23.53050 chef_analytics [INFO] http_bolt - b0d60543-e2da-4d14-a74d-6d84a92eab26 acknowledging message
-       
+
