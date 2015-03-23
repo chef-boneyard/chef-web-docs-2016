@@ -37,7 +37,7 @@ If snapshots and log files are not cleaned up periodically, eventually the disk 
       2015-03-18_21:49:12.54474 at org.apache.zookeeper.server.persistence.FileTxnSnapLog.restore(FileTxnSnapLog.java:158)
       2015-03-18_21:49:12.54475 at org.apache.zookeeper.server.ZKDatabase.loadDataBase(ZKDatabase.java:223)
 
-   This type of log pattern indicates that the data store for |zookeeper| is full, is no longer ingesting data, and must be cleaned up.
+   This type of log pattern indicates that the data store for |zookeeper| has been corrupted as a result of it being full, is no longer ingesting data, and must be cleaned up.
 
 #. Shut down the |chef analytics| machine:
 
@@ -65,7 +65,7 @@ If snapshots and log files are not cleaned up periodically, eventually the disk 
 
    There should not be any errors or warnings in the |zookeeper| log file and the |chef server| should be able to send actions data to the |chef analytics| server.
 
-#. Verify the connection between |chef analytics| and the |chef server|:
+#. On the |chef server|, verify the connection from |chef analytics| to the |chef server|:
 
    .. code-block:: bash
 
