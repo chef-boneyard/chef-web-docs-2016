@@ -39,6 +39,14 @@ The following features are part of the |chef analytics| platform:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/reporting.html">Reporting</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
 
+Manage |chef analytics_title|
+=====================================================
+|chef analytics| can be managed in the following ways:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_monitor.html">Monitor</a> </br>
+
 Reference
 =====================================================
 This section contains links to topics about configuration files, command-line tools, and APIs that are used by the |chef analytics| platform.
@@ -59,6 +67,7 @@ This section contains links to topics about configuration files, command-line to
    :hidden:
 
    actions
+   analytics_monitor
    analytics_rules
    analytics_webui_tasks
    analytics

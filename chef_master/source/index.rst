@@ -119,6 +119,7 @@ Cookbooks
 
    actions
    analytics
+   analytics_monitor
    analytics_rules
    analytics_webui_tasks
    api_analytics
