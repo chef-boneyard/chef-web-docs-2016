@@ -33,5 +33,3 @@ This resource would be matched in the same order as the ``/templates`` directory
      windows-6.0/text_file.txt
      windows/text_file.txt
      default/text_file.txt
-
-
