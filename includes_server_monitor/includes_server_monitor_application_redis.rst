@@ -1,6 +1,6 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
-
+.. This file is true for both Chef server and Chef analytics!
 
 |redis cli| is the management tool for |redis|. It can be used to obtain information about keys that are being used with the |chef server|. For more information about |redis cli|, see http://redis.io/commands.
 
