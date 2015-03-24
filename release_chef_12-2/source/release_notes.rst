@@ -10,46 +10,44 @@ What's New
 =====================================================
 The following items are new for |chef client| 12.2 and/or are changes from previous versions. The short version:
 
-* **chef-client may be run in audit-mode** Use |chef client_audit| to run audit tests against a node.
-* **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
-* **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
+* **New dsc_resource** Use the |resource dsc_resource| resource to use any |windows powershell_dsc_short| resource in a |chef| recipe.
+* **xxxxx** xxxxx.
 
-control
+dsc_resource
 -----------------------------------------------------
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control.rst
 
-directory Matcher
+.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
+
+.. include:: ../../includes_resources/includes_resource_dsc_resource.rst
+
+.. warning:: Using the |resource dsc_resource| has the following requirements:
+
+   * |windows management_framework| 5.0 Preview
+   * The ``RefreshMode`` configuration setting in the Local Configuration Manager must be set to ``Disabled``
+   * **MAY NOT** use the |resource dsc_script| resource in the same recipe or cookbook
+
+Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_directory.rst
+.. include:: ../../includes_resources/includes_resource_dsc_resource_syntax.rst
 
-file Matcher
+Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_file.rst
+.. include:: ../../includes_resources/includes_resource_dsc_resource_attributes.rst
 
-package Matcher
+Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_package.rst
 
-port Matcher
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_port.rst
+**Open a Zip file**
 
-service Matcher
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_matcher_service.rst
+.. include:: ../../step_resource/step_resource_dsc_resource_zip_file.rst
 
-control_group
------------------------------------------------------
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
+**Manage users and groups**
 
-|chef client| Options
------------------------------------------------------
-The following options are added to the |chef client| executable:
-
-``--audit-mode MODE``
-   |audit_mode| Default value: ``disabled``.
+.. include:: ../../step_resource/step_resource_dsc_resource_manage_users.rst
 
 Changelog
 =====================================================
-xxxxx
+https://github.com/chef/chef/blob/12-stable/CHANGELOG.md
 
