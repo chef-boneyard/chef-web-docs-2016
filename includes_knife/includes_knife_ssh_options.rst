@@ -14,6 +14,9 @@ This subcommand has the following options:
 ``-C NUM``, ``--concurrency NUM``
    |concurrency|
 
+``-e``, ``--exit-on-error``
+   Use to exist immediately upon error.
+
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh_gateway|
 
