@@ -60,6 +60,18 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_alert_show_options.rst
 
+notification create
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_notification_create.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_notification_create_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_notification_create_options.rst
+
 notification list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_notification_list.rst
