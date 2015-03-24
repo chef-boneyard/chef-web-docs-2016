@@ -28,6 +28,8 @@ The following list describes all of the optional settings that can be added to t
      - 
    * - ``knife[:attribute_from_cli]``
      - 
+   * - ``knife[:authentication_protocol_version]``
+     - 
    * - ``knife[:bare_directories]``
      - |d knife list|
    * - ``knife[:before]``
@@ -42,7 +44,11 @@ The following list describes all of the optional settings that can be added to t
      - |bootstrap proxy|
    * - ``knife[:bootstrap_template]``
      - |path bootstrap_template|
+   * - ``knife[:bootstrap_vault_file]``
+     - 
    * - ``knife[:bootstrap_vault_item]``
+     - 
+   * - ``knife[:bootstrap_vault_json]``
      - |bootstrap valut_item|
    * - ``knife[:bootstrap_version]``
      - |bootstrap version|
@@ -56,7 +62,13 @@ The following list describes all of the optional settings that can be added to t
      - |path chef_repo|
    * - ``knife[:chef_server_url]``
      - 
+   * - ``knife[:chef_zero_host]``
+     - 
+   * - ``knife[:chef_zero_post]``
+     - 
    * - ``knife[:client_key]``
+     - 
+   * - ``knife[:color]``
      - 
    * - ``knife[:concurrency]``
      - |concurrency|
@@ -102,6 +114,8 @@ The following list describes all of the optional settings that can be added to t
      - |file private_key|
    * - ``knife[:filter_result]``
      - 
+   * - ``knife[:first_boot_attributes]``
+     - 
    * - ``knife[:flat]``
      - 
    * - ``knife[:force]``
@@ -114,6 +128,8 @@ The following list describes all of the optional settings that can be added to t
      - |fqdn|
    * - ``knife[:freeze]``
      - |freeze|
+   * - ``knife[:help]``
+     - 
    * - ``knife[:hide_healthy]``
      - |hide_healthy|
    * - ``knife[:hints]``
@@ -131,6 +147,12 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:latest]``
      - |latest|
    * - ``knife[:local]``
+     - 
+   * - ``knife[:local_mode]``
+     - 
+   * - ``knife[:log_level]``
+     - 
+   * - ``knife[:log_location]``
      - 
    * - ``knife[:manual]``
      - |manual_list|
@@ -243,6 +265,8 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:validator]``
      - 
    * - ``knife[:verbose_commands]``
+     - 
+   * - ``knife[:verbosity]``
      - 
    * - ``knife[:with_uri]``
      - 
