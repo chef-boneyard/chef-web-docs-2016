@@ -2,8 +2,6 @@
 dsc_resource
 =====================================================
 
-.. warning:: This page discusses functionality that is available for preview via the https://github.com/opscode-cookbooks/dsc cookbook. This functionality adds the ability to use Powershell DSC resources in Chef and is planned to be included in a future update of the chef-client. Watch the video of a recent Chef meetup where Chef's Adam Edwards and Microsoft's Jeffrey Snover discussed this new feature: https://www.youtube.com/watch?v=mXaAIawzNic.
-
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
@@ -12,7 +10,11 @@ dsc_resource
 
 .. include:: ../../includes_resources/includes_resource_dsc_resource.rst
 
-.. note:: |windows powershell| 4.0 is required for using the |resource dsc_resource| resource with |chef|.
+.. warning:: Using the |resource dsc_resource| has the following requirements:
+
+   * |windows management_framework| 5.0 Preview
+   * The ``RefreshMode`` configuration setting in the Local Configuration Manager must be set to ``Disabled``
+   * **MAY NOT** use the |resource dsc_script| resource in the same recipe or cookbook
 
 Syntax
 =====================================================
@@ -27,11 +29,8 @@ Examples
 
 **Open a Zip file**
 
-.. code-block:: ruby
+.. include:: ../../step_resource/step_resource_dsc_resource_zip_file.rst
 
-   dsc_resource 'example' do
-      resource_name :archive
-      property :ensure, 'Present'
-      property :path, "C:\Users\Public\Documents\example.zip"
-      property :destination, "C:\Users\Public\Documents\ExtractionPath"
-    end
+**Manage users and groups**
+
+.. include:: ../../step_resource/step_resource_dsc_resource_manage_users.rst
