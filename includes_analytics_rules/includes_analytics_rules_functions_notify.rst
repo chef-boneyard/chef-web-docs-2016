@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``notify()`` to configure notifications for a rule. Notifications may be sent using HTTP, SMTP, or |hipchat|.
+Use ``notify()`` to configure notifications for a rule. Notifications may be sent using email, webhook, |hipchat|, and |splunk|.
 
 The syntax for this function:
 
