@@ -14,70 +14,114 @@ The following list describes all of the optional settings that can be added to t
      - Description
    * - ``knife[:admin]``
      - |admin client|
+   * - ``knife[:admin_client_key]``
+     - 
+   * - ``knife[:admin_client_name]``
+     - 
    * - ``knife[:after]``
      - |after|
    * - ``knife[:all]``
      - Indicates that all environments, cookbooks, cookbook versions, metadata, and/or data bags will be uploaded, deleted, generated, or tested. The context depends on which |knife| subcommand and argument is used.
    * - ``knife[:all_versions]``
      - |all cookbooks return|
-   * - ``knife[:admin]``
-     - |admin client| (This setting is available only for the open source |chef server|.)
-   * - ``knife[:admin_client_name]``
+   * - ``knife[:attribute]``
+     - 
+   * - ``knife[:attribute_from_cli]``
      - 
    * - ``knife[:bare_directories]``
      - |d knife list|
+   * - ``knife[:before]``
+     - 
    * - ``knife[:bootstrap_curl_options]``
      - |bootstrap curl_options| |bootstrap no_install_command|
    * - ``knife[:bootstrap_install_command]``
      - |bootstrap install_command| |bootstrap no_curl_sh_wget|
-   * - ``knife[:bootstrap_proxy]``
-     - |bootstrap proxy|
    * - ``knife[:bootstrap_no_proxy]``
      - |bootstrap no_proxy|
+   * - ``knife[:bootstrap_proxy]``
+     - |bootstrap proxy|
+   * - ``knife[:bootstrap_template]``
+     - |path bootstrap_template|
    * - ``knife[:bootstrap_vault_item]``
      - |bootstrap valut_item|
    * - ``knife[:bootstrap_version]``
      - |bootstrap version|
-   * - ``knife[:bootstrap_template]``
-     - |path bootstrap_template|
    * - ``knife[:bootstrap_wget_options]``
      - |bootstrap wget_options| |bootstrap no_install_command|
+   * - ``knife[:both]``
+     - 
+   * - ``knife[:chef_node_name]``
+     - 
    * - ``knife[:chef_repo_path]``
      - |path chef_repo|
+   * - ``knife[:chef_server_url]``
+     - 
+   * - ``knife[:client_key]``
+     - 
    * - ``knife[:concurrency]``
      - |concurrency|
    * - ``knife[:config_file]``
      - |config|
+   * - ``knife[:cookbook_copyright]``
+     - 
+   * - ``knife[:cookbook_email]``
+     - 
+   * - ``knife[:cookbook_license]``
+     - 
+   * - ``knife[:cookbook_path]``
+     - 
+   * - ``knife[:delete_validators]``
+     - 
    * - ``knife[:depends]``
      - |include-dependencies|
    * - ``knife[:description]``
      - The description for an environment and/or a role.
+   * - ``knife[:diff]``
+     - 
+   * - ``knife[:diff_filter]``
+     - 
    * - ``knife[:disable_editing]``
      - |no_editor|
+   * - ``knife[:distro]``
+     - 
    * - ``knife[:download_directory]``
      - |directory cookbooks|
+   * - ``knife[:dry_run]``
+     - 
    * - ``knife[:editor]``
      - |editor|
+   * - ``knife[:encrypt]``
+     - 
+   * - ``knife[:env_run_list]``
+     - 
    * - ``knife[:environment]``
      - |name environment|
    * - ``knife[:exec]``
      - |exec|
    * - ``knife[:file]``
      - |file private_key|
+   * - ``knife[:filter_result]``
+     - 
+   * - ``knife[:flat]``
+     - 
    * - ``knife[:force]``
      - |force directory|
+   * - ``knife[:format]``
+     - 
+   * - ``knife[:forward_agent]``
+     - |forward_agent|
    * - ``knife[:fqdn]``
      - |fqdn|
    * - ``knife[:freeze]``
      - |freeze|
-   * - ``knife[:forward_agent]``
-     - |forward_agent|
    * - ``knife[:hide_healthy]``
      - |hide_healthy|
    * - ``knife[:hints]``
      - |hint|
    * - ``knife[:host_key_verify]``
      - |no_host_key_verify|
+   * - ``knife[:id_only]``
+     - 
    * - ``knife[:identity_file]``
      - |identity-file|
    * - ``knife[:initial]``
@@ -86,16 +130,34 @@ The following list describes all of the optional settings that can be added to t
      - |input file|
    * - ``knife[:latest]``
      - |latest|
+   * - ``knife[:local]``
+     - 
    * - ``knife[:manual]``
      - |manual_list|
+   * - ``knife[:max_arguments_per_command]``
+     - 
+   * - ``knife[:max_command_line]``
+     - 
    * - ``knife[:method]``
      - |method request type|
+   * - ``knife[:mismatch]``
+     - 
    * - ``knife[:name_only]``
      - |name only|
    * - ``knife[:name_status]``
      - |name status|
    * - ``knife[:no_deps]``
      - |skip-dependencies|
+   * - ``knife[:node_name]``
+     - 
+   * - ``knife[:null_separator]``
+     - 
+   * - ``knife[:on_error]``
+     - 
+   * - ``knife[:one_column]``
+     - 
+   * - ``knife[:patterns]``
+     - 
    * - ``knife[:platform]``
      - |platform|
    * - ``knife[:platform_version]``
@@ -104,16 +166,30 @@ The following list describes all of the optional settings that can be added to t
      - |no_pretty|
    * - ``knife[:print_after]``
      - |print_after|
+   * - ``knife[:proxy_auth]``
+     - 
    * - ``knife[:purge]``
      - |purge cookbook|
+   * - ``knife[:query]``
+     - 
    * - ``knife[:readme_format]``
      - |readme-format|
    * - ``knife[:recurse]``
      - Use to recursively delete, disable, or list a directory.
+   * - ``knife[:recursive]``
+     - 
+   * - ``knife[:remote]``
+     - 
+   * - ``knife[:replace_all]``
+     - 
+   * - ``knife[:replace_first]``
+     - 
    * - ``knife[:repo_mode]``
      - |repo_mode|
    * - ``knife[:repository]``
      - |repository|
+   * - ``knife[:rows]``
+     - 
    * - ``knife[:run_list]``
      - |run-list|
    * - ``knife[:script_path]``
@@ -124,6 +200,8 @@ The following list describes all of the optional settings that can be added to t
      - |secret_file|
    * - ``knife[:server_name]``
      - Same as node_name. Recommended configuration is to allow |ohai| to collect this value during each |chef client| run.
+   * - ``knife[:sort]``
+     - 
    * - ``knife[:sort_reverse]``
      - |sort_reverse|
    * - ``knife[:ssh_attribute]``
@@ -132,19 +210,41 @@ The following list describes all of the optional settings that can be added to t
      - |ssh_gateway|
    * - ``knife[:ssh_password]``
      - |ssh_password|
+   * - ``knife[:ssh_password_ng]``
+     - 
    * - ``knife[:ssh_port]``
      - |ssh_port|
    * - ``knife[:ssh_user]``
      - |ssh_user|
+   * - ``knife[:start]``
+     - 
+   * - ``knife[:template_file]``
+     - 
+   * - ``knife[:trailing_slashes]``
+     - 
+   * - ``knife[:tree]``
+     - 
    * - ``knife[:use current_branch]``
      - |use current_branch|
    * - ``knife[:use_sudo]``
      - |sudo bootstrap|
+   * - ``knife[:use_sudo_password]``
+     - 
    * - ``knife[:user]`` and/or ``knife[:user_home]``
      - |user knife|
    * - ``knife[:user_key]``
      - |file public_key|
    * - ``knife[:user_password]``
      - |password user|
+   * - ``knife[:validation_client_name]``
+     - 
+   * - ``knife[:validation_key]``
+     - 
+   * - ``knife[:validator]``
+     - 
+   * - ``knife[:verbose_commands]``
+     - 
+   * - ``knife[:with_uri]``
+     - 
    * - ``knife[:yes]``
      - |yes|
