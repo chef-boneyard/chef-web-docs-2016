@@ -14,7 +14,7 @@ dsc_resource
 
    * |windows management_framework| 5.0 February Preview (which includes |windows powershell| 5.0.10018.0)
    * The ``RefreshMode`` configuration setting in the Local Configuration Manager must be set to ``Disabled``
-   * **MAY NOT** use the |resource dsc_script| resource in the same run-list. This is because the |resource dsc_script| resource requires ``RefreshMode`` to be ``Pull``
+   * The |resource dsc_script| resource  may not be used in the same run-list with the |resource dsc_resource|. This is because the |resource dsc_script| resource requires that ``RefreshMode`` in the Local Configuration Manager be set to ``Pull``, whereas the |resource dsc_resource| resource requires it to be set to ``Disabled``
 
 Syntax
 =====================================================
