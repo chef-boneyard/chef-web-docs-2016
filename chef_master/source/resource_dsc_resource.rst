@@ -12,9 +12,9 @@ dsc_resource
 
 .. warning:: Using the |resource dsc_resource| has the following requirements:
 
-   * |windows management_framework| 5.0 Preview
+   * |windows management_framework| 5.0 February Preview (which includes |windows powershell| 5.0.10018.0)
    * The ``RefreshMode`` configuration setting in the Local Configuration Manager must be set to ``Disabled``
-   * **MAY NOT** use the |resource dsc_script| resource in the same recipe or cookbook
+   * **MAY NOT** use the |resource dsc_script| resource in the same run-list. This is because the |resource dsc_script| resource requires ``RefreshMode`` to be ``Pull``
 
 Syntax
 =====================================================
