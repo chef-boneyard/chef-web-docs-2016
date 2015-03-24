@@ -25,7 +25,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:all_versions]``
      - |all cookbooks return|
    * - ``knife[:attribute]``
-     - 
+     - |attribute_show|
    * - ``knife[:attribute_from_cli]``
      - 
    * - ``knife[:authentication_protocol_version]``
@@ -45,9 +45,9 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:bootstrap_template]``
      - |path bootstrap_template|
    * - ``knife[:bootstrap_vault_file]``
-     - 
+     - |bootstrap valut_file|
    * - ``knife[:bootstrap_vault_item]``
-     - 
+     - |bootstrap valut_item|
    * - ``knife[:bootstrap_vault_json]``
      - |bootstrap valut_item|
    * - ``knife[:bootstrap_version]``
@@ -55,7 +55,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:bootstrap_wget_options]``
      - |bootstrap wget_options| |bootstrap no_install_command|
    * - ``knife[:both]``
-     - 
+     - |delete_local_and_remote|
    * - ``knife[:chef_node_name]``
      - 
    * - ``knife[:chef_repo_path]``
@@ -63,9 +63,9 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:chef_server_url]``
      - 
    * - ``knife[:chef_zero_host]``
-     - 
+     - |host chef_zero|
    * - ``knife[:chef_zero_post]``
-     - 
+     - |port chef_zero|
    * - ``knife[:client_key]``
      - 
    * - ``knife[:color]``
@@ -91,7 +91,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:diff]``
      - 
    * - ``knife[:diff_filter]``
-     - 
+     - |diff_filter|
    * - ``knife[:disable_editing]``
      - |no_editor|
    * - ``knife[:distro]``
@@ -99,7 +99,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:download_directory]``
      - |directory cookbooks|
    * - ``knife[:dry_run]``
-     - 
+     - |dry_run|
    * - ``knife[:editor]``
      - |editor|
    * - ``knife[:encrypt]``
@@ -117,7 +117,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:first_boot_attributes]``
      - 
    * - ``knife[:flat]``
-     - 
+     - |flat|
    * - ``knife[:force]``
      - |force directory|
    * - ``knife[:format]``
@@ -147,7 +147,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:latest]``
      - |latest|
    * - ``knife[:local]``
-     - 
+     - |local_directory|
    * - ``knife[:local_mode]``
      - 
    * - ``knife[:log_level]``
@@ -177,7 +177,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:on_error]``
      - 
    * - ``knife[:one_column]``
-     - 
+     - |one_column|
    * - ``knife[:patterns]``
      - 
    * - ``knife[:platform]``
@@ -189,7 +189,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:print_after]``
      - |print_after|
    * - ``knife[:proxy_auth]``
-     - 
+     - |proxy_auth|
    * - ``knife[:purge]``
      - |purge cookbook|
    * - ``knife[:query]``
@@ -197,7 +197,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:readme_format]``
      - |readme-format|
    * - ``knife[:recurse]``
-     - Use to recursively delete, disable, or list a directory.
+     - |no_recurse_delete|
    * - ``knife[:recursive]``
      - 
    * - ``knife[:remote]``
@@ -245,7 +245,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:trailing_slashes]``
      - 
    * - ``knife[:tree]``
-     - 
+     - |tree|
    * - ``knife[:use current_branch]``
      - |use current_branch|
    * - ``knife[:use_sudo]``

@@ -6,4 +6,4 @@
 This subcommand has the following options:
 
 ``URL_or_URI``
-   The URL or URI for the location from which the |ssl| certificate is downloaded. Default value: the URL for the |chef server|, as defined in the |knife rb| file.
+   |ssl_url_or_uri| Default value: the URL for the |chef server|, as defined in the |knife rb| file.
