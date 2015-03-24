@@ -31,9 +31,9 @@ For built-in |windows powershell_dsc_short| resources, use the following values:
      - Use to to `manage local user accounts <http://technet.microsoft.com/en-us/library/dn282118.aspx>`_.
    * - ``:windowsfeature``
      - Use to to `add or remove Windows features and roles <http://technet.microsoft.com/en-us/library/dn282127.aspx>`_.
-   * - ``:windowsprocess``
-     - Use to to `configure Windows processes <http://technet.microsoft.com/en-us/library/dn282123.aspx>`_.
    * - ``:windowsoptionalfeature``
      - Use to configure |windows| optional features.
+   * - ``:windowsprocess``
+     - Use to to `configure Windows processes <http://technet.microsoft.com/en-us/library/dn282123.aspx>`_.
 
 Any |windows powershell_dsc_short| resource may be used in a |chef| recipe. For example, the |windows powershell_dsc_resource_kit| contains resources for `configuring Active Directory components <http://gallery.technet.microsoft.com/scriptcenter/xActiveDirectory-f2d573f3>`_, such as ``xADDomain``, ``xADDomainController``, and ``xADUser``. Assuming that these resources are available to the |chef client|, the corresponding values for the ``resource_name`` attribute would be: ``:xADDomain``, ``:xADDomainController``, and ``xADUser``.
