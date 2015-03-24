@@ -20,7 +20,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_create_options.rst
 
-.. note:: |note knife rb settings|
+.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
 
 Examples
 -----------------------------------------------------
@@ -95,7 +95,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_reregister_options.rst
 
-.. note:: |note knife rb settings|
+.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
 
 Examples
 -----------------------------------------------------

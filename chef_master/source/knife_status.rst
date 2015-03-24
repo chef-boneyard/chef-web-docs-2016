@@ -14,7 +14,7 @@ Options
 
 .. include:: ../../includes_knife/includes_knife_status_options.rst
 
-.. note:: |note knife rb settings|
+.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
 
 Examples
 =====================================================
