@@ -325,7 +325,6 @@ Cookbooks
    resource_deploy
    resource_directory
    resource_dpkg_package
-   resource_dsc_mof
    resource_dsc_resource
    resource_dsc_script
    resource_easy_install_package
