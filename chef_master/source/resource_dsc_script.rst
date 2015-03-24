@@ -14,6 +14,8 @@ dsc_script
 
 .. note:: The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)
 
+.. warning:: The |resource dsc_script| resource  may not be used in the same run-list with the |resource dsc_resource|. This is because the |resource dsc_script| requires that ``RefreshMode`` in the Local Configuration Manager be set to ``Pull``, whereas the |resource dsc_resource| resource requires ``Disabled``.
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_dsc_script_syntax.rst
