@@ -128,7 +128,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_list_options.rst
 
-.. note:: |note knife rb settings|
+.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
 
 Examples
 -----------------------------------------------------
@@ -155,7 +155,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-10_node_run_list_add_options.rst
 
-.. note:: |note knife rb settings|
+.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
 
 Examples
 -----------------------------------------------------
@@ -194,7 +194,7 @@ Options
 -----------------------------------------------------
 |no_options|
 
-.. note:: |note knife rb settings|
+.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
 
 Examples
 -----------------------------------------------------
