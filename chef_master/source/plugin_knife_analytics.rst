@@ -72,6 +72,35 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_notification_create_options.rst
 
+Example
+-----------------------------------------------------
+
+**Create a notification**
+
+To create a notification, run the following command:
+
+.. code-block:: bash
+
+   $ knife analytics notification create FILE_NAME.json
+
+where the ``FILE_NAME.json`` is similar to:
+
+.. code-block:: javascript
+
+   {
+     "name": "chef-splunk-example",
+     "notification_type": "Splunk",
+     "modified_by": "admin",
+     "delivery_options": {
+       "hostname": "splunk.chef.inc.com",
+       "port": 8089,
+       "username": "username",
+       "password": "password",
+       "index": "chef-analytics",
+       "sourcetype": "chef-analytics-data"
+     }
+   }
+
 notification list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_notification_list.rst
