@@ -22,11 +22,7 @@ dsc_resource
 
 .. include:: ../../includes_resources/includes_resource_dsc_resource.rst
 
-.. warning:: Using the |resource dsc_resource| has the following requirements:
-
-   * |windows management_framework| 5.0 Preview
-   * The ``RefreshMode`` configuration setting in the Local Configuration Manager must be set to ``Disabled``
-   * **MAY NOT** use the |resource dsc_script| resource in the same recipe or cookbook
+.. warning:: .. include:: ../../includes_resources/includes_resource_dsc_resource_requirements.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

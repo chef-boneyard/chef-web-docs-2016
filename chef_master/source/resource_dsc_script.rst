@@ -36,24 +36,17 @@ Examples
 
 .. include:: ../../step_resource/step_resource_dsc_script_code.rst
 
-
 **Specify DSC code using a Windows Powershell data file**
 
 .. include:: ../../step_resource/step_resource_dsc_script_command.rst
-
 
 **Pass parameters to DSC configurations**
 
 .. include:: ../../step_resource/step_resource_dsc_script_flags.rst
 
-
 **Use custom configuration data**
 
-Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways:
-
-* By using the ``configuration_data`` attribute
-* By using the ``configuration_data_script`` attribute
-* By specifying the path to a valid |windows powershell| data file
+.. include:: ../../includes_resources/includes_resource_dsc_script_custom_config_data.rst
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
 

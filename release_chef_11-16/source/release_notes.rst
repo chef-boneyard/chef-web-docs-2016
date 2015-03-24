@@ -23,6 +23,8 @@ dsc_script Resource
 
 .. note:: The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)
 
+.. warning:: The |resource dsc_script| resource  may not be used in the same run-list with the |resource dsc_resource|. This is because the |resource dsc_script| resource requires that ``RefreshMode`` in the Local Configuration Manager be set to ``Push``, whereas the |resource dsc_resource| resource requires it to be set to ``Disabled``.
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_dsc_script_syntax.rst
@@ -42,25 +44,21 @@ Examples
 
 .. include:: ../../step_resource/step_resource_dsc_script_code.rst
 
-
 **Specify DSC code using a Windows Powershell data file**
 
 .. include:: ../../step_resource/step_resource_dsc_script_command.rst
-
 
 **Pass parameters to DSC configurations**
 
 .. include:: ../../step_resource/step_resource_dsc_script_flags.rst
 
-
 **Use custom configuration data**
 
-Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
+.. include:: ../../includes_resources/includes_resource_dsc_script_custom_config_data.rst
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_name.rst
-
 
 **Using DSC with other Chef resources**
 
