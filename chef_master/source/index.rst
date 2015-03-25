@@ -159,6 +159,7 @@ Cookbooks
    community_plugin_ohai
    community_plugin_report_handler
    config
+   config_rb
    config_rb_analytics
    config_rb_chef_sync
    config_rb_client
