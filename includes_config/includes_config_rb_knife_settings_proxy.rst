@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-In certain situations the proxy used by the |chef server| requires authentication. In this situation, three settings must be added to the |knife rb| file. Which settings to add depends on the protocol used to access the |chef server|: HTTP or HTTPS.  
+In certain situations the proxy used by the |chef server| requires authentication. In this situation, three settings must be added to the configuration file. Which settings to add depends on the protocol used to access the |chef server|: HTTP or HTTPS.  
 
 If the |chef server| is configured to use HTTP, add the following settings:
 
