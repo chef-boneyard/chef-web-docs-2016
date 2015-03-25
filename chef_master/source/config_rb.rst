@@ -7,13 +7,13 @@ config.rb
 A ``config.rb`` file is used to specify |chef repo|-specific configuration details.
 
 * This file is loaded every time this executable is run
-* The default location in which the |chef client| expects to find this file is |path knife rb|; use the ``--config`` option from the command line to change this location
+* The default location in which the |chef client| expects to find this file is ~/.chef/config.rb; use the ``--config`` option from the command line to change this location
 * This file is not created by default
 * When a ``config.rb`` file is present in this directory, the settings contained within that file will override the default configuration settings
 
 Settings
 =====================================================
-.. include:: ../../includes_config/includes_config_rb_knife_settings.rst
+.. include:: ../../includes_config/includes_config_rb_config_settings.rst
 
 Proxy Settings
 -----------------------------------------------------
