@@ -4,7 +4,7 @@
 
 Containers are an approach to virtualization that allows a single operating system to host many working configurations, where each working configuration---a container---is assigned a single responsibility that is isolated from all other responsibilities. Containers are becoming increasingly popular as a way to manage distributed and scalable applications and services.
 
-|chef| interacts with and can manage a containers in a number of ways. This page is a quick summary of the tools and resources that are available. Some of these tools are developed and maintained by |company_name| itself and some are developed and maintained by the |chef| community.
+|chef| can manage a containers in a number of ways. This page is a quick summary of the tools and resources that are available. Some of these tools are developed and maintained by |company_name| itself and some are developed and maintained by the |chef| community.
 
 Base Containers
 =====================================================
