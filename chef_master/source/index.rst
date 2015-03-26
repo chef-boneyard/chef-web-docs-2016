@@ -6,7 +6,7 @@ All about |chef| ...
 
 Getting Started
 =====================================================
-**From the beginning:** :doc:`An Overview of Chef </chef_overview>` | :doc:`About Workstations </workstation>` | :doc:`About the Chef Server </chef_server>` | :doc:`About Nodes </nodes>` | :doc:`About Cookbooks </cookbooks>` | :doc:`About Attributes </attributes>` | :doc:`About Resources and Providers </resources>` | :doc:`About LWRPs (Custom Resources) </lwrp_custom>` | :doc:`About Knife </knife>` | :doc:`About Chef for Windows </windows>`
+**From the beginning:** :doc:`An Overview of Chef </chef_overview>` | :doc:`About Workstations </workstation>` | :doc:`About the Chef Server </chef_server>` | :doc:`About Nodes </nodes>` | :doc:`About Cookbooks </cookbooks>` | :doc:`About Attributes </attributes>` | :doc:`About Resources and Providers </resources>` | :doc:`About LWRPs (Custom Resources) </lwrp_custom>` | :doc:`About Knife </knife>` | :doc:`About Chef for Windows </windows>` | :doc:`About Containers </containers>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
 
