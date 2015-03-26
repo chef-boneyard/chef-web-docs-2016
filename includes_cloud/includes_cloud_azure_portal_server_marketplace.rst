@@ -1,5 +1,7 @@
 Chef provides a fully functional Chef Server that can be launched from the Azure Marketplace. This server is preconfigured with Chef server, Chef manage, and Chef reporting. This server is free to use for deployments under 25 nodes, and `can be licensed <https://www.chef.io/chef/#plans-and-pricing>`_ for deployments beyond 25 nodes.
 
+Before getting started, you will need a functioning Chef Workstation. You can follow this guide to `install ChefDK <https://docs.chef.io/install_dk.html>`_.
+
 #. `Sign in to Microsoft Azure <https://portal.azure.com>`_. (This Marketplace offering is only available via the new Azure Portal). Authenticate using your |azure| account credentials.
 
 #. Click the **New** icon in the lower left corner of the portal.
@@ -29,4 +31,10 @@ Chef provides a fully functional Chef Server that can be launched from the Azure
 
 #. Chef Manage will then **Create** a new Organization. Click **Create Organization** and complete the form. 
 
-#. Once the Organization is created, download the **Starter Kit** for the newly created Organization. You are now ready to use the Chef Server.
+#. Once the Organization is created, download the **Starter Kit** for the newly created Organization. 
+
+#. Extract the Starter Kit zip file downloaded. Open a command prompt and change into the ``chef-repo`` directory extracted from the Starter Kit.
+
+#. Run ``knife ssl fetch`` to retrieve the Chef Server's SSL keys.
+
+#. Run ``knife client list`` to test the connection to the Chef Server. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the Organization you previously created. You are now ready to add Virtual Machines to your Chef Server. 
