@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``uninstall`` subcommand is used to the hooks between |runit| and ``sysvinit`` or ``upstart``. This subcommand does not `uninstall the Chef management console <http://docs.chef.io/uninstall.html#chef-manage-title>`__.
+The ``uninstall`` subcommand is used to manage the hooks between |runit| and ``sysvinit`` or ``upstart``. This subcommand does not `uninstall the Chef management console <http://docs.chef.io/uninstall.html#chef-manage-title>`__.
 
 This subcommand has the following syntax:
 
