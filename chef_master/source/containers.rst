@@ -23,7 +23,7 @@ The following cookbooks are available to help manage service discovery:
 * Use the `serf cookbook <https://supermarket.chef.io/cookbooks/serf>`__ to set up and manage Serf
 * Use the `zookeeper cookbook <https://supermarket.chef.io/cookbooks/zookeeper>`__ to set up and manage |zookeeper|, which also provides an interface for modifying the |zookeeper| cluster configuration
 
-Schedule and Resource Allocation
+Schedule and Resources
 =====================================================
 The following cookbooks are available to help manage schedule and resource allocation:
 
