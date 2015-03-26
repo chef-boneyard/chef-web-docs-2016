@@ -19,7 +19,7 @@ Service Discovery
 The following cookbooks are available to help manage service discovery:
 
 * Use the `chef-etcd cookbook <https://github.com/ranjib/chef-etcd>`__ to read and write keys/values in ``etcd``, as well as saving |chef client| run data within ``etcd``; use the `etcd cookbook <https://supermarket.chef.io/cookbooks/etcd>`__ cookbook to set up ``etcd``
-* Use the `consul cookbook <https://supermarket.chef.io/cookbooks/consul>`__ to set up the Consule client, server, and user interface
+* Use the `consul cookbook <https://supermarket.chef.io/cookbooks/consul>`__ to set up the Consul client, server, and user interface
 * Use the `serf cookbook <https://supermarket.chef.io/cookbooks/serf>`__ to set up and manage Serf
 * Use the `zookeeper cookbook <https://supermarket.chef.io/cookbooks/zookeeper>`__ to set up and manage |zookeeper|, which also provides an interface for modifying the |zookeeper| cluster configuration
 
