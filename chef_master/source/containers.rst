@@ -12,7 +12,7 @@ The following cookbooks are available to help manage base containers:
 
 * Use the `docker cookbook <https://supermarket.chef.io/cookbooks/docker>`__ to install and manage |docker|, as well as use resources for managing |docker| images, |docker| containers, and the |docker| registry
 * Use the `lxc cookbook <https://supermarket.chef.io/cookbooks/lxc>`__ to install and manage |linux lxc|-based |linux| containers
-* Use the `zone cookbook <https://supermarket.chef.io/cookbooks/zone>`__ to manage |solaris| zones, which are partitioned operating system-lvel virtual environments that are unique to the |solaris| platform and are often referred to as "Solaris Containers"
+* Use the `zone cookbook <https://supermarket.chef.io/cookbooks/zone>`__ to manage |solaris| zones, which are partitioned operating system-level virtual environments that are unique to the |solaris| platform and are often referred to as "Solaris Containers"
 
 Service Discovery
 =====================================================
