@@ -2,7 +2,9 @@
 |chef| for Containers
 =====================================================
 
-|chef| interacts with and can manage a containerized infrastructure in a number of ways. This page is a summary of the tools and resources that have been developed by |company_name| itself and by the |chef| community.
+Containers are an approach to virtualization that allows a single operating system to host many working configurations, where each working configuration---a container---is assigned a single responsibility that is isolated from all other responsibilities. Containers are becoming increasingly popular as way to manage distributed and scalable applications and services.
+
+|chef| interacts with and can manage a containers in a number of ways. This page is a quick summary of the tools and resources that are available. Some of these tools are developed and maintained by |company_name| itself and some are developed and maintained by the |chef| community.
 
 Base Containers
 =====================================================
