@@ -62,6 +62,6 @@ For example:
        when
          name = 'mysql audit' and number_failed > 0
        then
-         audit:error('Control group failures detected')
+         alert:error('Control group failures detected')
      end
    end

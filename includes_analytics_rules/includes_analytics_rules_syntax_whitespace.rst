@@ -10,7 +10,7 @@ Whitespace is ignored by the rules parser unless it is contained within single- 
      when
        true
      then
-       audit:info("string")
+       alert:info("string")
      end
    end
 

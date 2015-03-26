@@ -45,6 +45,6 @@ For example:
        true
      then
        // single quoted string, 
-        audit:info('This rule matches all \'action\' messages')
+        alert:info('This rule matches all \'action\' messages')
      end
    end

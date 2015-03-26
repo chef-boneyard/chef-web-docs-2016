@@ -20,7 +20,7 @@ For example, accessing integer values in a nested field:
          // any node_name with "production" in it's name
          run.node_name =~ ".*production.*"
        then
-         audit:info('production control group match')
+         alert:info('production control group match')
      end
    end
 
@@ -35,6 +35,6 @@ And accessing integer values in aan array:
        or
          some_other.property[0].another_property[99] != 100
        then
-         audit:error('Run resource match')
+         alert:error('Run resource match')
      end
    end

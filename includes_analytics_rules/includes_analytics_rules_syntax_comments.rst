@@ -12,6 +12,6 @@ Use a comment to document the behavior of the rules. A comment starts with a dou
        true
      then
        // raise an audit for every action
-       audit:info("This rule matches all actions")
+       alert:info("This rule matches all actions")
      end
    end
