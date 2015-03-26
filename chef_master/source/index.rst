@@ -189,6 +189,7 @@ Cookbooks
    ctl_chef_solo
    ctl_chef_sync
    ctl_kitchen
+   ctl_manage
    ctl_ohai
    ctl_opscode_expander
    ctl_push_jobs_client
