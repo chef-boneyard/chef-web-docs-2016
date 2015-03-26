@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``uninstall`` subcommand is used to remove the |chef manage|, but without removing any of the data.
+The ``uninstall`` subcommand is used to kill all processes and uninstall the process supervisor.
 
 This subcommand has the following syntax:
 
