@@ -63,4 +63,4 @@ For more information ...
 =====================================================
 For more information about managing a containerized infrastructure:
 
-* Bridget Kromhout's ChefConf 2015 presentation (link will be updated after the presentation is available)
+* Docker in Production by Bridget Kromhout: https://www.youtube.com/watch?v=hwBcuZNuuJU
