@@ -8,7 +8,7 @@
 
 |azure| Marketplace
 =====================================================
-.. include:: ../../incudes_cloud/includes_cloud_azure_portal_server_marketplace.rst
+.. include:: ../../includes_cloud/includes_cloud_azure_portal_server_marketplace.rst
 
 |chef client_title| Settings
 =====================================================

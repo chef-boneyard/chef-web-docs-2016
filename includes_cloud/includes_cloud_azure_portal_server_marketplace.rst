@@ -5,7 +5,7 @@
 
 Before getting started, you will need a functioning workstation. Install the `Chef development kit <https://docs.chef.io/install_dk.html>`_ on that workstation.
 
-#. `Sign in to Microsoft Azure <https://portal.azure.com>`_. (This marketplace offering is only available via the |azure portal|). Authenticate using your |azure| account credentials.
+#. `Sign in to Microsoft Azure <https://portal.azure.com>`__. (This marketplace offering is only available via the |azure portal|). Authenticate using your |azure| account credentials.
 
 #. Click the **New** icon in the lower left corner of the portal.
 
