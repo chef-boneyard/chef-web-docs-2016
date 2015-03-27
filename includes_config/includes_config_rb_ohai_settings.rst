@@ -51,11 +51,21 @@
    * - ``Ohai::Config[:logfile]``
      - |log_location|
    * - ``Ohai::Config[:plugin_path]``
-     - An array of paths at which |ohai| plugins are located. Default value: ``[ '/etc/chef/ohai_plugins' ]``. When custom |ohai| plugins are not located at the default path, the path to each custom plugin must be added to the array. For example:
+     - An array of paths at which |ohai| plugins are located. Default value: ``[<CHEF_GEM_PATH>/ohai-9.9.9/lib/ohai/plugins]``. When custom |ohai| plugins are added, the paths must be added to the array. For example, a single plugin:
 
        .. code-block:: ruby
 
-          Ohai::Config[:plugin_path] << '/path/to/custom/plugin'
+          Ohai::Config[:plugin_path] << '/etc/chef/ohai_plugins'
+
+       and for multiple plugins:
+
+       .. code-block:: ruby
+
+          Ohai::Config[:plugin_path] += [
+            '/etc/chef/ohai_plugins',
+            '/path/to/other/plugins'
+            ]
+
 
    * - ``Ohai::Config[:version]``
      - |version ohai|
