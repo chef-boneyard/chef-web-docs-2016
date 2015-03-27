@@ -93,7 +93,7 @@ PATH System Variable
 
 .. include:: ../../includes_cloud/includes_cloud_azure_portal_platforms.rst
 
-|azure| Marketplace
+|azure marketplace|
 -----------------------------------------------------
 .. include:: ../../includes_cloud/includes_cloud_azure_portal_server_marketplace.rst
 
