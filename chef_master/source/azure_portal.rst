@@ -6,6 +6,10 @@
 
 .. include:: ../../includes_cloud/includes_cloud_azure_portal_platforms.rst
 
+Launch a Chef Server via the Azure Marketplace
+=====================================================
+.. include:: ../../incudes_cloud/includes_cloud_azure_portal_server_marketplace.rst
+
 |chef client_title| Settings
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_azure_portal_settings_chef_client.rst
