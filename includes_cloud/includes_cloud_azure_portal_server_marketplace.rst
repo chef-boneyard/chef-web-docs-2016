@@ -1,8 +1,11 @@
-Chef provides a fully functional Chef Server that can be launched from the Azure Marketplace. This server is preconfigured with Chef server, Chef manage, and Chef reporting. This server is free to use for deployments under 25 nodes, and `can be licensed <https://www.chef.io/chef/#plans-and-pricing>`_ for deployments beyond 25 nodes.
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Before getting started, you will need a functioning Chef Workstation. You can follow this guide to `install ChefDK <https://docs.chef.io/install_dk.html>`_.
+|chef| provides a fully functional |chef server| that can be launched from the |azure| marketplace. This server is preconfigured with |chef server|, the |chef manage|, and |reporting|. This configuration is free to use for deployments under 25 nodes, and `can be licensed <https://www.chef.io/chef/#plans-and-pricing>`_ for deployments beyond 25 nodes.
 
-#. `Sign in to Microsoft Azure <https://portal.azure.com>`_. (This Marketplace offering is only available via the new Azure Portal). Authenticate using your |azure| account credentials.
+Before getting started, you will need a functioning workstation. Install the `Chef development kit <https://docs.chef.io/install_dk.html>`_ on that workstation.
+
+#. `Sign in to Microsoft Azure <https://portal.azure.com>`_. (This marketplace offering is only available via the |azure portal|). Authenticate using your |azure| account credentials.
 
 #. Click the **New** icon in the lower left corner of the portal.
 
@@ -12,29 +15,30 @@ Before getting started, you will need a functioning Chef Workstation. You can fo
 
 #. Select the **Chef Server 12** offering.
 
-#. Click **Create** and follow the steps to launch the Chef Server, providing a Host Name, User Name, Password or SSH key, and any additional information required.  
+#. Click **Create** and follow the steps to launch the |chef server|, providing a host name, user name, password or SSH key, and any additional information required.  
 
-#. Once the virtual machine is launched, you will need to create an account to use with Chef Manage. To do this, open an SSH connection to the host using the User Name and Password (or SSH key) provided when you launch the VM.
+#. Once the virtual machine is launched, you will need to create an account to use with the |chef manage|. To do this, open an SSH connection to the host using the user name and password (or SSH key) provided when you launch the virtual machine.
 
 #. Once logged in, run the following command:
 
-	.. code-block:: bash
-		sudo chef-setup -u <username> -p <password>
+   .. code-block:: bash
+
+      $ sudo chef-setup -u <username> -p <password>
 	
-	Where ``<username>`` and ``<password>`` equal the User Name and Password you wish to use with Chef Manage.
+   where ``<username>`` and ``<password>`` equal the user name and password you wish to use with the |chef manage|.
 
 #. Accept the **License Aggreement** by entering ``Yes`` and hitting enter.
 
-#. The `chef-setup` command should return success. You can then navigate in a web browser to the appropriate URL of your Chef Server. Typically this is in the form of ``https://<vm-name>.cloudapp.net``, where ``<vm-name>`` is the name of your Azure VM.
+#. The `chef-setup` command should return success. Navigate in a web browser to the appropriate URL of the |chef server|. Typically this is in the form of ``https://<vm-name>.cloudapp.net``, where ``<vm-name>`` is the name of your |azure| virtual machine.
 
-#. Sign in to Chef Manage with with User Name and Password you created in the previous step. 
+#. Sign in to the |chef manage| with with user name and password created in the previous step. 
 
-#. Chef Manage will then **Create** a new Organization. Click **Create Organization** and complete the form. 
+#. The |chef manage| will then **Create** a new organization. Click **Create Organization** and complete the form. 
 
-#. Once the Organization is created, download the **Starter Kit** for the newly created Organization. 
+#. Once the organization is created, download the **Starter Kit** for the newly created organization. 
 
-#. Extract the Starter Kit zip file downloaded. Open a command prompt and change into the ``chef-repo`` directory extracted from the Starter Kit.
+#. Extract the starter kit zip file downloaded. Open a command prompt and change into the ``chef-repo`` directory extracted from the starter kit.
 
-#. Run ``knife ssl fetch`` to retrieve the Chef Server's SSL keys.
+#. Run ``knife ssl fetch`` to retrieve the SSL keys for the |chef server|.
 
-#. Run ``knife client list`` to test the connection to the Chef Server. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the Organization you previously created. You are now ready to add Virtual Machines to your Chef Server. 
+#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization you previously created. You are now ready to add virtual machines to your |chef server|.
