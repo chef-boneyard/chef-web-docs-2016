@@ -25,11 +25,11 @@ Before getting started, you will need a functioning workstation. Install the `Ch
 
       $ sudo chef-setup -u <username> -p <password>
 	
-   where ``<username>`` and ``<password>`` equal the user name and password you wish to use with the |chef manage|.
+   where ``<username>`` and ``<password>`` equal the user name and password you wish to use with the |chef manage|. The password must be at least 6 characters.
 
-#. Accept the **License Aggreement** by entering ``Yes`` and hitting enter.
+#. Accept the **License Agreement** by entering ``Yes`` and hitting enter.
 
-#. The `chef-setup` command should return success. Navigate in a web browser to the appropriate URL of the |chef server|. Typically this is in the form of ``https://<vm-name>.cloudapp.net``, where ``<vm-name>`` is the name of your |azure| virtual machine.
+#. The ``chef-setup`` command should return success. Navigate in a web browser to the appropriate URL of the |chef server|. Typically this is in the form of ``https://<vm-name>.cloudapp.net``, where ``<vm-name>`` is the name of your |azure| virtual machine.
 
 #. Sign in to the |chef manage| with with user name and password created in the previous step. 
 
