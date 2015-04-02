@@ -99,7 +99,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    |name_rules org_full| For example: ``"Chef Software, Inc."``.
 
-   .. note:: The upgrade process will automatically assign the organization name to the ``default_orgname`` setting in the |chef server rb| file. This setting ensures the new organization name is available for |api chef server| requests, such as those made by the |chef client| and by |knife|. However there's an [issue](https://github.com/chef/chef/issues/2536#issuecomment-73638214) related to read permission when using knife. It is recommended to update chef_server_url in `~/.chef/knife.rb` config to the new format "https://CHEF_SERVER/organizations/ORG".
+   .. note:: The upgrade process will automatically assign the organization name to the ``default_orgname`` setting in the |chef server rb| file. This setting ensures the new organization name is available for |api chef server| requests, such as those made by the |chef client| and by |knife|. However there's an `issue <https://github.com/chef/chef/issues/2536#issuecomment-73638214>`__ related to read permission when using knife. It is recommended to update chef_server_url in ``~/.chef/knife.rb`` config to the new format "https://CHEF_SERVER/organizations/ORG".
 
 #. The |chef server| is automatically restarted. A prompt is displayed that contains details about how to remove any temporary data that was created during the upgrade process.
 
