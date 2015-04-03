@@ -5,6 +5,8 @@
 
 Before getting started, you will need a functioning workstation. Install the `Chef development kit <https://docs.chef.io/install_dk.html>`_ on that workstation.
 
+#. Verify that you have set your workstation up with the `Chef development kit <https://docs.chef.io/install_dk.html>`.
+
 #. `Sign in to Microsoft Azure <https://portal.azure.com>`__. (The |azure marketplace| offering is only available via the |azure portal|). Authenticate using your |azure| account credentials.
 
 #. Click the **New** icon in the lower left corner of the portal.
@@ -39,6 +41,6 @@ Before getting started, you will need a functioning workstation. Install the `Ch
 
 #. Extract the starter kit zip file downloaded. Open a command prompt and change into the ``chef-repo`` directory extracted from the starter kit.
 
-#. Run ``knife ssl fetch`` to retrieve the |ssl| keys for the |chef server|.
+#. Run ``knife ssl fetch`` to retrieve the |ssl| keys for the |chef server|. If the ``knife`` command fails, please make sure that you install the `Chef development kit <https://docs.chef.io/install_dk.html>` on your workstation as per the first step.
 
 #. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization you previously created. You are now ready to add virtual machines to your |chef server|.
