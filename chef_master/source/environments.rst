@@ -79,6 +79,32 @@ Set for a Node
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment_manage_set_on_node.rst
 
+.. 
+.. ``chef_environment``
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. Use the ``chef_environment`` method to load the node object, and then set an environment during a |chef client| run. Because the environment is set during the |chef client| run, the changes will be applied during the next |chef client| run.
+.. 
+.. For example:
+.. 
+.. .. code-block:: ruby
+.. 
+..    def self.chef_environment(node, chef_env)
+..      begin
+..        Chef::Environment.load(chef_env)   
+..      node.chef_environment(chef_env)
+..    end
+..    
+..    ...
+..    
+..      def set_chef_environment(chef_env)
+..        Canaria.chef_environment(node, chef_env)
+..      end
+..    
+..    end
+.. 
+.. The complete example is `located in the canaria-cookbook <https://github.com/ryancragun/canaria-cookbook/blob/master/libraries/canaria.rb>`__.
+.. 
+
 Set using |chef solo|
 -----------------------------------------------------
 .. include:: ../../includes_chef_solo/includes_chef_solo_environments.rst
