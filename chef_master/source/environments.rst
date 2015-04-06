@@ -78,8 +78,6 @@ Set for a Node
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment_manage_set_on_node.rst
 
-
-
 Set using |chef solo|
 -----------------------------------------------------
 .. include:: ../../includes_chef_solo/includes_chef_solo_environments.rst
