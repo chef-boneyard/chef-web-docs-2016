@@ -24,13 +24,13 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
        .. code-block:: ruby
 
-          $ opscode-manage-ctl reconfigure
+          $ chef-server-ctl reconfigure 
 
        and then:
 
        .. code-block:: ruby
 
-          $ chef-server-ctl reconfigure 
+          $ opscode-manage-ctl reconfigure
 
        .. include:: ../../includes_install/includes_install_manage_copy_secrets.rst
 
@@ -47,13 +47,14 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
        .. code-block:: ruby
 
-          $ opscode-push-jobs-server-ctl reconfigure
+          $ chef-server-ctl reconfigure 
 
        and then:
 
        .. code-block:: ruby
 
-          $ chef-server-ctl reconfigure 
+          $ opscode-push-jobs-server-ctl reconfigure
+
 
 
    * - |chef replication_title|
@@ -67,17 +68,18 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
        .. include:: ../../includes_install/includes_install_server_replication_create_directory.rst
 
+       then:
+
+       .. code-block:: ruby
+
+          $ chef-server-ctl reconfigure 
+
        and then:
 
        .. code-block:: ruby
 
           $ chef-sync-ctl reconfigure
 
-       and then:
-
-       .. code-block:: ruby
-
-          $ chef-server-ctl reconfigure 
 
 ..
 ..   * - |chef ha_title|

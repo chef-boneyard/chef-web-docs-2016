@@ -24,13 +24,14 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
        .. code-block:: ruby
 
-          $ opscode-manage-ctl reconfigure
+          $ chef-server-ctl reconfigure 
 
        and then:
 
        .. code-block:: ruby
 
-          $ chef-server-ctl reconfigure 
+          $ opscode-manage-ctl reconfigure
+
 
    * - |push jobs_title|
      - Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run.
@@ -45,13 +46,14 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
        .. code-block:: ruby
 
-          $ opscode-push-jobs-server-ctl reconfigure
+          $ chef-server-ctl reconfigure 
 
        and then:
 
        .. code-block:: ruby
 
-          $ chef-server-ctl reconfigure 
+          $ opscode-push-jobs-server-ctl reconfigure
+
 
 
    * - |chef replication_title|
@@ -63,17 +65,18 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
           $ chef-server-ctl install chef-sync
 
+       then:
+
+       .. code-block:: ruby
+
+          $ chef-server-ctl reconfigure 
+
        and then:
 
        .. code-block:: ruby
 
           $ chef-sync-ctl reconfigure
 
-       and then:
-
-       .. code-block:: ruby
-
-          $ chef-server-ctl reconfigure 
 
    * - |reporting_title|
      - Use |reporting| to keep track of what happens during every |chef client| runs across all of the infrastructure being managed by |chef|. Run |reporting| with |chef manage| to view reports from a web user interface.
@@ -88,13 +91,14 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
 
        .. code-block:: ruby
 
-          $ opscode-reporting-ctl reconfigure	 
+          $ chef-server-ctl reconfigure 
 
        and then:
 
        .. code-block:: ruby
 
-          $ chef-server-ctl reconfigure 
+          $ opscode-reporting-ctl reconfigure	 
+
 
 ..
 ..   * - |chef ha_title|
