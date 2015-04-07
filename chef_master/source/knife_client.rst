@@ -128,7 +128,7 @@ Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
 
-**Reregister a client**
+**Re-register a client**
 
 .. include:: ../../step_knife/step_knife_client_reregister.rst
 
