@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-11 21:18-0700\n"
+"POT-Creation-Date: 2015-04-06 21:31-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,299 +17,329 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/resource_dsc_script.rst:8
-# cdb40b8649ca443982b865c1fac1be4f
+# d1b5dbfb5daa4857b333d6e588403225
 msgid "dsc_script"
 msgstr ""
 
 #: ../../includes_resources_common/includes_resources_common_generic.rst:5
-# e50bf2b399734d369737cfafed679f5f
+# f6109715508e4e109dfd93263f43141e
 msgid "A `resource <http://docs.chef.io/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.chef.io/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
 msgstr ""
 
 #: ../../includes_resources_common/includes_resources_common_powershell.rst:5
-# 2e2416d1f2d240e5af1d98e39f836432
+# bbe27ee279fd4f3e95e8415320b83e5e
 msgid "|windows powershell| is a task-based command-line shell and scripting language developed by |microsoft|. |windows powershell| uses a document-oriented approach for managing |windows|-based machines, similar to the approach that is used for managing |unix|- and |linux|-based machines. |windows powershell| is `a tool-agnostic platform <http://technet.microsoft.com/en-us/library/bb978526.aspx>`_ that supports using |chef| for configuration management."
 msgstr ""
 
 #: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst:5
-# 07b91a04eebf446db49607be56ef6843
+# 0c89cfc6b9e7415882c04fbfe6aea25f
 msgid "|windows powershell_dsc| is a feature of |windows powershell| that provides `a set of language extensions, cmdlets, and resources <http://technet.microsoft.com/en-us/library/dn249912.aspx>`_ that can be used to declaratively configure software. |windows powershell_dsc_short| is similar to |chef|, in that both tools are idempotent, take similar approaches to the concept of resources, describe the configuration of a system, and then take the steps required to do that configuration. The most important difference between |chef| and |windows powershell_dsc_short| is that |chef| uses |ruby| and |windows powershell_dsc_short| is exposed as configuration data from within |windows powershell|."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script.rst:5
-# 6bca52f6d86a4204a852af39b4650b17
+# 705972a77f9844e6b637627c6ff8bf91
 msgid "Many |windows powershell_dsc_short| resources are comparable to built-in |chef| resources. For example, both |windows powershell_dsc_short| and |chef| have |resource file|, |resource package|, and |resource service| resources. The |resource dsc_script| resource is most useful for those |windows powershell_dsc_short| resources that do not have a direct comparison to a resource in |chef|, such as the ``Archive`` resource, a custom |windows powershell_dsc_short| resource, an existing |windows powershell_dsc_short| script that performs an important task, and so on. Use the |resource dsc_script| resource to embed the code that defines a |windows powershell_dsc_short| configuration directly within a |chef| recipe."
 msgstr ""
 
 #: ../source/resource_dsc_script.rst:18
-# f0b6acfdabe746789fb1e1cc3b56bc6e
+# 9de445b4d1564fcbb926aa2f529d3947
 msgid "|windows powershell| 4.0 is required for using the |resource dsc_script| resource with |chef|."
 msgstr ""
 
 #: ../source/resource_dsc_script.rst:20
-# 1de512bcded1475e85658c4fffb95bac
+# 7ea2d39dc44c480489aa9e18f37f6917
 msgid "The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:23
-# e12cf45117624bda8ace937988a7b20f
+#: ../source/resource_dsc_script.rst:22
+# 84ca340430ed48eaa6509f950456597a
+msgid "The |resource dsc_script| resource  may not be used in the same run-list with the |resource dsc_resource|. This is because the |resource dsc_script| resource requires that ``RefreshMode`` in the Local Configuration Manager be set to ``Push``, whereas the |resource dsc_resource| resource requires it to be set to ``Disabled``."
+msgstr ""
+
+#: ../source/resource_dsc_script.rst:25
+# 54e5893f8b74438ea2ebe566a8d9fddb
 msgid "Syntax"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_syntax.rst:4
-# ab68df917f2046849580b1f1916ee344
+# 21efa7fbf6f044b1a78a579137adb204
 msgid "The syntax for using the |resource dsc_script| resource in a recipe is as follows:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_syntax.rst:14
-# 53923f12fd684ccb863a65ae789cdcc5
+# be0f8fd6db8d4cd8bc4552fab2a2fe80
 msgid "where"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_syntax.rst:16
-# a8898d9223fd495e8dfadc5f8a9705bb
+# 5eb63b2faaed41a79a696ae3eff519eb
 msgid "``dsc_script`` tells the |chef client| that a |windows powershell_dsc_short| resource is based on a |windows powershell| script"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_syntax.rst:17
-# 1d1c953ce9a747feaa3fb9199984d0fa
+# bcadd53e796c45db95f18ea1353ae103
 msgid "``name`` is the name of the configuration within a |windows powershell_dsc_short| script; when the ``configuration_name`` attribute is not specified as part of a recipe, ``name`` must also be the name of a valid |windows powershell| cmdlet"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_syntax.rst:18
-# 18e99cc758044224b995fba59dddc590
+# 20c99d1ebf4a4a369056a49db9a483f7
 msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_syntax.rst:19
-# 5d7bad0399854f3cbfd15e85dc6f17cb
+# 1a30ba6d83064c4284ccea36b2523711
 msgid "``:action`` identifies which steps the |chef client| will take to bring the node into the desired state"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:27
-# a2c5fb78b651434c9617e2086778906a
+#: ../source/resource_dsc_script.rst:29
+# e5df39f6a04a4c01b7c1f00af260dbc5
 msgid "Actions"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_actions.rst:4
-# 53fbf843fe084e30b1321898d648b73f
+# 304f27c0cb9c4710a49ce26d83b1ca74
 msgid "This resource has the following actions:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_actions.rst:10
-# 9ea1a6f1a2f54551bcea82a72f7af944
+# b491618257b4458195d4a9f6ba6c4155
 msgid "Action"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_actions.rst:11
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:11
-# 4f1bdad70ec84f0da93d875b925ccd11
-# c87a655d42d64c90befd1f13499815e4
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:11
+# 02ca4c9ff96a427cb3c5399389e50f0f
+# 76d01c83516d451c8443b338dac1e9bb
 msgid "Description"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_actions.rst:12
-# 1a9a5b7660b54666a7bce45bdc3f1add
+# 6d1c4de0fe0d4462bb7556c60fecdd94
 msgid "``:run``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_script_actions.rst:13
-# 37c9c6db669e4164b6927f269af61ddb
+# 468ae92251e348b7b7f29e3e3367b735
 msgid "Default. Use to run the |windows powershell_dsc_short| configuration defined as defined in this resource."
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:31
-# 567dd9fba5be4658a3efdc542470f86a
+#: ../source/resource_dsc_script.rst:33
+# fe5d0f4e57c04bbeb238fd5d7d3dcce8
 msgid "Attributes"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:4
-# 9d3fa06ddf474c4cbeff30404653b135
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:4
+# 261dfc17a26247819be0acbbfcd55fac
 msgid "|description resource_attributes_intro|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:10
-# e10e4daa18694365bb88a4ba30b52cbf
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:10
+# 23e8da975b6d4de199908a0af4366507
 msgid "Attribute"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:12
-# ab041854000947e1b7da16dc82078019
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:12
+# fd23ad75b78f4ec1af2c7d4eef690739
 msgid "``code``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:13
-# bcc722cc655f4f6e8c47ad52c6837933
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:13
+# 030a8692dd244cb2b1888783d6ef54b1
 msgid "|code powershell| |dsc_script no_command|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:14
-# bccd12270e8d4a6e902c3e8ba99e381f
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:14
+# 9d5f3048b95b4eb7b5ac17a446be887b
 msgid "``command``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:15
-# b4175eab217d4430842d041d6107e179
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:15
+# d120d5cdb4cf46c4b81169ad1f20234b
 msgid "|command powershell| |dsc_script no_code|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:16
-# 1bcffcff4cb049398074bf2c03e55731
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:16
+# b1b6472e07344a7687d8deae2bdb4484
 msgid "``configuration_data``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:17
-# 21d2ac6a42594624a159f723f4cd35ff
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:17
+# 064c12fe6e894bc9b30c2766382eac33
 msgid "|config powershell| The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. |dsc_script no_config_data_script|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:18
-# 4726ff1e6a5b4aaeb8c0f77d6ed37364
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:18
+# 9aa3178a9d3d43179e22ebc844106d54
 msgid "``configuration_data_script``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:19
-# 85e4e71ca0464f42b1c04353c1a01a8f
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:19
+# 0a2bf44994614c17b303493ad89333ba
 msgid "|path powershell_data_file| |dsc_script no_config_data|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:20
-# 35adb8fea6094e268625c8b420b52e0b
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:20
+# d18922d50da649edb5fd648e899a0c00
 msgid "``configuration_name``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:21
-# 0f3209f7411e48cfa240f6bc6781f6a5
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:21
+# e81f8fc624464d1f9e361fda1e8a5e1e
 msgid "|name powershell_cmdlet| |dsc_script no_code|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:22
-# c03fda92105040fb971f89b4e9d8f9f1
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:22
+# 66c6a9954d144780998a783ab6232cfb
 msgid "``cwd``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:23
-# 87d2c576891142a086c6a8e99d45875d
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:23
+# d48b4e8fbe654a3eb3e2494b7e59bde5
 msgid "|cwd|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:24
-# 1fb7be8ebfc9426faa9c90b1b691767e
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:24
+# 93885282decb4466b355717adb0af1ee
 msgid "``environment``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:25
-# 46ea3fc3a83b4b4b8931fafd05bf128c
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:25
+# 98a1402a7c2648df9e4147e6e9e27b22
 msgid "|environment variables|"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:26
-# af5ee63071064704a4963f2e9ed9c73a
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:26
+# 298e9136c98649e0ba9819f2f0e0bc93
 msgid "``flags``"
 msgstr ""
 
-#: ../../includes_resources/includes_resource_12-0_dsc_script_attributes.rst:27
-# aecbbbfaede249529c3c632f3666cdcb
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:27
+# ebfd661b0ef9440285cfcc8a8ce53040
 msgid "|flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``."
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:35
-# f2d4a260bedd4ca89d590decb24ddd7c
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:28
+# 6496175f56784a68af4a1b6168d565cc
+msgid "``imports``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:29
+# 9fb2415f5f304821b04a822adaef1aaa
+msgid "Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:35
+# 7d0038ac3dca4396855790690bc61d05
+msgid "To import specific resources, specify the module name, and then specify the name for each resource in that module to import:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:41
+# a81c7b3880f344aeb7c185ee223c3f59
+msgid "For example, to import all resources from a module named ``cRDPEnabled``:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_script_attributes.rst:47
+# 0a85c8513f144f13a73a373aae9d80cf
+msgid "And to import only the ``PSHOrg_cRDPEnabled`` resource:"
+msgstr ""
+
+#: ../source/resource_dsc_script.rst:37
+# 110d69c795f64e0ba40a859aa4666ea5
 msgid "Examples"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:36
-# 56d2618c570145d4b6726bfa2773a8fe
+#: ../source/resource_dsc_script.rst:38
+# 69b290b832d043c399195756ff22b32e
 msgid "|generic resource statement|"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:38
-# f5988e37c1534e80a11b66b33e6fb12d
+#: ../source/resource_dsc_script.rst:40
+# 149a99e500eb4a7592ed5d592947c7ab
 msgid "**Specify DSC code directly**"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_code.rst:3
-# 550697e698c446a58b6b52e1e7d04899
+# 72a86e22dc344b37a38866b097524ee4
 msgid "|windows powershell_dsc_short| data can be specified directly in a recipe:"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:43
-# 687a881681964970b1346167d18cce2f
+#: ../source/resource_dsc_script.rst:44
+# 4b33e10be809466e958bf288b3b5dd9d
 msgid "**Specify DSC code using a Windows Powershell data file**"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_command.rst:3
-# f5ed927393224b2ba0f1ec450b46913d
+# e40c82c4a55045ca8b69889050c77515
 msgid "Use the ``command`` attribute to specify the path to a |windows powershell| data file. For example, the following |windows powershell| script defines the ``DefaultEditor``:"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_command.rst:16
-# 3e527fc6b1d443748c6815a35f4d2b30
+# b3d9417f1f574ae69217d9c21f3f44d4
 msgid "Use the following recipe to specify the location of that data file:"
 msgstr ""
 
 #: ../source/resource_dsc_script.rst:48
-# 25c13219dc4c4adabe2b64d019fd74de
+# 1e38bfe5b21d4baba49b9fecc4df5a5b
 msgid "**Pass parameters to DSC configurations**"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_flags.rst:3
-# ae588c5c3ac44d538f12449e22527dfb
+# 3cfc2002259e4d1e9515f27d66991807
 msgid "If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` attribute. For example, the following |windows powershell| script takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_flags.rst:23
-# f9d1da63973f4b6cb0c6e2ab37082d2b
+# aa605f697ca14201ae4d82e0d65b9f28
 msgid "Use the following recipe to set those parameters:"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:53
-# 29df5fdfa52043868c00faba0ef0826d
+#: ../source/resource_dsc_script.rst:52
+# 7de587e2016842d99cc37c8aa3c88c1d
 msgid "**Use custom configuration data**"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:55
-# c04f321a5bd44dd184060f2caa9450c0
+#: ../../includes_resources/includes_resource_dsc_script_custom_config_data.rst:4
+# 5ae45c0f01da4439ae9cbfe3f2f79d05
 msgid "Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways:"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:57
-# d82faf2cad434d65b19d7e5ccb85e029
+#: ../../includes_resources/includes_resource_dsc_script_custom_config_data.rst:6
+# 198078514f5e4f86ae380e59a7e45751
 msgid "By using the ``configuration_data`` attribute"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:58
-# 2b7127a7e5c0491eb7bfe3a1cd3062ef
+#: ../../includes_resources/includes_resource_dsc_script_custom_config_data.rst:7
+# 500312ba95734c85a597a1cd0b93a0e0
 msgid "By using the ``configuration_data_script`` attribute"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:59
-# 6aa6cc78e709451a92fdfce517736604
+#: ../../includes_resources/includes_resource_dsc_script_custom_config_data.rst:8
+# a499859a2bc64df1a020424f0f4d976f
 msgid "By specifying the path to a valid |windows powershell| data file"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_configuration_data.rst:3
-# b2c58d5221084f2ab15f27560d89ee36
+# 5459d8e4a6e347ecbff5112691bd9d7b
 msgid "The following example shows how to specify custom configuration data using the ``configuration_data`` attribute:"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_configuration_name.rst:3
-# 6de5beaee1354edbae286add8a03a474
+# 04c322ae9fb746898e67b141cd969fa3
 msgid "The following example shows how to specify custom configuration data using the ``configuration_name`` attribute. For example, the following |windows powershell| script defines the ``vi`` configuration:"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_configuration_name.rst:25
-# fdf87baad120484e8728f1d66f596b28
+# b5ef4842e2d4437d95df960531eff774
 msgid "Use the following recipe to specify that configuration:"
 msgstr ""
 
-#: ../source/resource_dsc_script.rst:66
-# 4b9e95690823449f9528c4a8f6e14b27
+#: ../source/resource_dsc_script.rst:61
+# 10832b33af3c4eea8ac418cbd2abab92
 msgid "**Using DSC with other Chef resources**"
 msgstr ""
 
 #: ../../step_resource/step_resource_dsc_script_remote_files.rst:3
-# 5f7a3bdc3d894f289bb5806c4a38e3ce
+# c16f88b6f0084a89a8f57c4f0ee07401
 msgid "The |resource dsc_script| resource can be used with other resources. The following example shows how to download a file using the |resource remote_file| resource, and then uncompress it using the |windows powershell_dsc_short| ``Archive`` resource:"
 msgstr ""
 

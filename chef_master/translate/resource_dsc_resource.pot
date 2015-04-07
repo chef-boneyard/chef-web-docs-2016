@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-11 21:18-0700\n"
+"POT-Creation-Date: 2015-04-06 21:31-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,137 +17,394 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/resource_dsc_resource.rst:8
-# 9d453db7e058429da12b103f7e516260
+# 018bfe24ae864e58bf0a1f16bfe8f8a7
 msgid "dsc_resource"
 msgstr ""
 
-#: ../source/resource_dsc_resource.rst:10
-# 5843c8f1fc214b7ab1332b1d3a3b6bb2
-msgid "This page discusses functionality that is available for preview via the https://github.com/opscode-cookbooks/dsc cookbook. This functionality adds the ability to use Powershell DSC resources in Chef and is planned to be included in a future update of the chef-client. Watch the video of a recent Chef meetup where Chef's Adam Edwards and Microsoft's Jeffrey Snover discussed this new feature: https://www.youtube.com/watch?v=mXaAIawzNic."
-msgstr ""
-
 #: ../../includes_resources_common/includes_resources_common_generic.rst:5
-# ebdebd5635794286b277cb193bded151
+# 532dea15db30423a98890d32bef371d9
 msgid "A `resource <http://docs.chef.io/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During every `chef-client run <http://docs.chef.io/essentials_nodes_chef_run.html>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
 msgstr ""
 
 #: ../../includes_resources_common/includes_resources_common_powershell.rst:5
-# 21859a03ee194e0084b1017e84ffe639
+# 1ac703c7e94b4e6cba7804b8f4154548
 msgid "|windows powershell| is a task-based command-line shell and scripting language developed by |microsoft|. |windows powershell| uses a document-oriented approach for managing |windows|-based machines, similar to the approach that is used for managing |unix|- and |linux|-based machines. |windows powershell| is `a tool-agnostic platform <http://technet.microsoft.com/en-us/library/bb978526.aspx>`_ that supports using |chef| for configuration management."
 msgstr ""
 
 #: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst:5
-# 2a47164a78df409b9f20df66764ac88c
+# 9c314da2846f41cfa00a95a41d38e1fc
 msgid "|windows powershell_dsc| is a feature of |windows powershell| that provides `a set of language extensions, cmdlets, and resources <http://technet.microsoft.com/en-us/library/dn249912.aspx>`_ that can be used to declaratively configure software. |windows powershell_dsc_short| is similar to |chef|, in that both tools are idempotent, take similar approaches to the concept of resources, describe the configuration of a system, and then take the steps required to do that configuration. The most important difference between |chef| and |windows powershell_dsc_short| is that |chef| uses |ruby| and |windows powershell_dsc_short| is exposed as configuration data from within |windows powershell|."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource.rst:5
-# 81e4c2f99af0442083201ee768117d2a
+# 3128eb8968b74f9386c083d2476f2606
 msgid "The |resource dsc_resource| resource allows any |windows powershell_dsc_short| resource to be used in a |chef| recipe, as well as any `custom resources <http://technet.microsoft.com/en-us/library/dn249921.aspx>`_ that have been added to your |windows powershell| environment. |microsoft| `frequently adds new resources <http://gallery.technet.microsoft.com/scriptcenter/DSC-Resource-Kit-All-c449312d>`_ to the |windows powershell_dsc_short| resource collection."
 msgstr ""
 
-#: ../source/resource_dsc_resource.rst:20
-# 0cb6ba9e4d4b454e834edfcaa4039292
-msgid "|windows powershell| 4.0 is required for using the |resource dsc_resource| resource with |chef|."
+#: ../../includes_resources/includes_resource_dsc_resource_requirements.rst:4
+# a5003df06fb1462c986974736bfede2a
+msgid "Using the |resource dsc_resource| has the following requirements:"
 msgstr ""
 
-#: ../source/resource_dsc_resource.rst:23
-# cae49c11cd7a45a7bd8e2e4589a9eb03
+#: ../../includes_resources/includes_resource_dsc_resource_requirements.rst:6
+# 0056fdc52e9d4416b33fbfb26953e3bb
+msgid "|windows management_framework| 5.0 February Preview (or higher), which includes |windows powershell| 5.0.10018.0"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_requirements.rst:7
+# 9f35d0c908ea40c3a9807b8ea5d26be5
+msgid "The ``RefreshMode`` configuration setting in the Local Configuration Manager must be set to ``Disabled``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_requirements.rst:8
+# 07e21896eeb345579ef67c51dd12b239
+msgid "The |resource dsc_script| resource  may not be used in the same run-list with the |resource dsc_resource|. This is because the |resource dsc_script| resource requires that ``RefreshMode`` in the Local Configuration Manager be set to ``Push``, whereas the |resource dsc_resource| resource requires it to be set to ``Disabled``"
+msgstr ""
+
+#: ../source/resource_dsc_resource.rst:21
+# 73621f4291c84dde862487c7b0f3dc20
 msgid "Syntax"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_syntax.rst:4
-# 60d1ac4257444838b48be9443bb87e2a
+# 1fe196c920524048b898c460e6b26992
 msgid "The syntax for using the |resource dsc_resource| resource in a recipe is as follows:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_syntax.rst:15
-# 5d4df2106ea649f2aa524884fffdb27d
+# 17f0684b97d04e21884b9cf7580e5b2e
 msgid "where"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_syntax.rst:17
-# 9724baddf25a48edacd623cc4f5485b5
+# d7eefe92e9de4aacac11613845bc57bc
 msgid "``dsc_resource`` tells the |chef client| use a |windows powershell_dsc_short| resource"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_syntax.rst:18
-# 5ae55142327a4bdb8cad498f7668c4fc
+# 94782f16465a48b0b5db0803b626a60b
 msgid "``:dsc_resource_name`` is the name of the |windows powershell_dsc_short| resource"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_syntax.rst:19
-# 0d779c7457d648eea2e64beadd343f7c
-msgid "``property`` is zero (or more) properties in the |windows powershell_dsc_short| resource, where each property is entered on a separate line, ``:dsc_resource_property`` is the case-insensitive name of that property, and ``\"value\"`` is the value to be applied by the |chef client|"
+# ba48085b2ace43a096e5b8256f987e3c
+msgid "``property`` is zero (or more) properties in the |windows powershell_dsc_short| resource, where each property is entered on a separate line, ``:dsc_property_name`` is the case-insensitive name of that property, and ``\"property_value\"`` is a |ruby| value to be applied by the |chef client|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_syntax.rst:21
-# ba95826fa90d4150898ee29cdf2f71a5
+# f4154a95546c47f09aa444f43796121e
 msgid "For example, a |windows powershell_dsc_short| ``Archive`` resource:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_syntax.rst:31
-# 6d2698453efc4865943d40c10f374fe0
+# e30cf790058a4cf99cc52880b5a5d161
 msgid "and then the same |resource dsc_resource| with |chef|:"
 msgstr ""
 
-#: ../source/resource_dsc_resource.rst:27
-# b2a05c93ea054f7098ba02f6c483f8df
+#: ../source/resource_dsc_resource.rst:25
+# 52cd3b867bee4c679445e7eedc3ea984
 msgid "Attributes"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:4
-# 620ae34a3dec4dd590b8af36f613f740
+# 8bd7da36daba4a25b5d513b79d53951d
 msgid "|description resource_attributes_intro|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:10
-# 8e619d426e134826bbb5e821c31403a1
+# b804657b2ae94e56bae61f41d07e06bc
 msgid "Attribute"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:11
-# cff7a09c27dc452aa03d0fd7a4718293
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:11
+# fac7df636c504f7da543fc31384ef8b5
+# 8b3a2b905d7b46909ede2fac00275f52
 msgid "Description"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:12
-# 8d393f2a15e74acab7683d2ec83ef674
+# ced6716c780f4df8be5f4c878ee467a9
 msgid "``property``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:13
-# fb1ffb0e00de44639dcc2a51d41399eb
-msgid "|property dsc_resource| Format: ``property :dsc_property_name, \"value\"``."
-msgstr ""
-
-#: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:14
-# 5e202a7acf684559a14a6f57dd68f8a8
-msgid "``resource_name``"
+# fccafa8443ec4afeb1d77474d3b20534
+msgid "|property dsc_resource| The format for this attribute must follow ``property :dsc_property_name, \"property_value\"`` for each property added to the resource block."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:15
-# 016b58127e45457b919baecabdecd200
-msgid "|name powershell_dsc_resource| This value is case-insensitive and must be a symbol that matches the name of the |windows powershell_dsc_short| resource."
+# 4d5ad5f4999346639bf7ea1e58668a7a
+msgid "The ``:dsc_property_name`` must be a symbol."
 msgstr ""
 
-#: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:17
-# b9e2cffeba0349c2aed9fc23e88acf2b
-msgid "For built-in |windows powershell_dsc_short| resources, possible values: ``:archive`` (to `unpack archive (.zip) files <http://technet.microsoft.com/en-us/library/dn249917.aspx>`_), ``:environment`` (to `manage system environment variables <http://technet.microsoft.com/en-us/library/dn282121.aspx>`_), ``:file`` (to `manage files and directories <http://technet.microsoft.com/en-us/library/dn282129.aspx>`_), ``:group`` (to `manage local groups <http://technet.microsoft.com/en-us/library/dn282124.aspx>`_), ``:log`` (to `log configuration messages <http://technet.microsoft.com/en-us/library/dn282117.aspx>`_), ``:package`` (to `install and manage packages <http://technet.microsoft.com/en-us/library/dn282132.aspx>`_), ``:registry`` (to `manage registry keys and registry key values <http://technet.microsoft.com/en-us/library/dn282133.aspx>`_), ``:script`` (to `run Powershell script blocks <http://technet.microsoft.com/en-us/library/dn282130.aspx>`_), ``:service`` (to `manage services <http://technet.microsoft.com/en-us/library/dn282120.aspx>`_), ``:user`` (to `manage local user accounts <http://technet.microsoft.com/en-us/library/dn282118.aspx>`_), ``:windowsfeature`` (to `add or remove Windows features and roles <http://technet.microsoft.com/en-us/library/dn282127.aspx>`_), and ``:windowsprocess`` (to `configure Windows processes <http://technet.microsoft.com/en-us/library/dn282123.aspx>`_)."
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:4
+# 2ec428908e954228af7d08a43f87ac6f
+msgid "Use the following |ruby| types to define ``property_value``:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:10
+# 64eeb73f827c49338ebc932a0ba21897
+msgid "|ruby|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:11
+# b2b0cb43ea644721aee703064b8431c0
+msgid "|windows powershell|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:12
+# bc73de5e03804dcab1937ae6cd279a5a
+msgid "``Array``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:13
+# a395899ddbb340e1bd757ef5e1704dab
+msgid "``Object[]``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:14
+# 725d1feb6e3d443d88a751c1c8454f96
+msgid "``Chef::Util::Powershell:PSCredential``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:15
+# e83d2968335847ba95ac875c03a68169
+msgid "``PSCredential``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:16
+# 59b7469c92024c0a9af9c38704835ebd
+msgid "``FalseClass``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:17
+# 7129309869f842f48f65f1df4e9390d7
+msgid "``bool($false)``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:18
+# 8b02c5c4a83d4c20b2551f4eb6224eb8
+msgid "``Fixnum``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:19
+# 580c6f26ea044dcaac08c52d8839edba
+msgid "``Integer``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:20
+# 1ed03270a57249d9931d6df05f0199cf
+msgid "``Float``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:21
+# 56e4c391164741cb8308a83abec7d4e2
+msgid "``Double``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:22
+# 7b1387bbccf640228556a6bd2dda92c0
+msgid "``Hash``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:23
+# 169232c340f84e8bb461c9c6849b4597
+msgid "``Hashtable``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:24
+# 6860fe43701e4fc286d8dacfbac39821
+msgid "``TrueClass``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:25
+# de000a6b783c4c44b1c18155dcfe19a7
+msgid "``bool($true)``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst:27
+# 985c3ff3528b4f0a80d59503ea26190e
+msgid "These are converted into the corresponding |windows powershell| type during the |chef client| run."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:19
-# 8a0ca324f1314d3499dfd8e2e102c0e7
+# 0cbda6df9aed4ed8b645be8e2ddcadf5
+msgid "``module_name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:20
+# c68ebc0c73b149fcb31d5f423e803b46
+msgid "Use to specify the name of the modeule from which the |windows powershell_dsc_short| resource originates. If this attribute is not specified, it will be inferred."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:21
+# 5ae1fb4db156452d803736b43d928ebf
+msgid "``resource``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_attributes.rst:22
+# 6450afdf8a0149378f8c318ccbbf5881
+msgid "|name powershell_dsc_resource| This value is case-insensitive and must be a symbol that matches the name of the |windows powershell_dsc_short| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:4
+# afbb83d2b15b4bee8c49212ffd70cbf6
+msgid "For built-in |windows powershell_dsc_short| resources, use the following values:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:10
+# a7fcd4a156004800aa1b62b666f3fa5f
+msgid "Value"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:12
+# f4410f364265474386108e2ea148fe8b
+msgid "``:archive``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:13
+# 9e8e2eda407d4e05b82e6804c67f9623
+msgid "Use to to `unpack archive (.zip) files <http://technet.microsoft.com/en-us/library/dn249917.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:14
+# 5fb50a3788244b6293543dc79503de9f
+msgid "``:environment``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:15
+# 1876f75f7fb04e8bab10652389b75811
+msgid "Use to to `manage system environment variables <http://technet.microsoft.com/en-us/library/dn282121.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:16
+# 49276dc28b624190a5a0addf08ffa8fb
+msgid "``:file``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:17
+# 5dcfc635e0f24456b0d5a1843614562c
+msgid "Use to to `manage files and directories <http://technet.microsoft.com/en-us/library/dn282129.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:18
+# 22c8ea4484c74a0fb15128ee0d439492
+msgid "``:group``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:19
+# 49963f6be85e4f9c872dd8740d1f324f
+msgid "Use to to `manage local groups <http://technet.microsoft.com/en-us/library/dn282124.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:20
+# 501c093231044a96b7f648e429ebb9ce
+msgid "``:log``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:21
+# 4f8bc2762d6149b3b83f2d9883168380
+msgid "Use to to `log configuration messages <http://technet.microsoft.com/en-us/library/dn282117.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:22
+# 970bec2d223048d79d0e1a47f2efc20b
+msgid "``:package``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:23
+# 95ef6067bfae4f369ec7d4965c04910e
+msgid "Use to to `install and manage packages <http://technet.microsoft.com/en-us/library/dn282132.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:24
+# ac9b94960d484ae2abe227063353e80c
+msgid "``:registry``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:25
+# 0dc1956f1a1e4808bcfbce58e4bf95c0
+msgid "Use to to `manage registry keys and registry key values <http://technet.microsoft.com/en-us/library/dn282133.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:26
+# 2c9218562f534c8c9dabd06803025960
+msgid "``:script``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:27
+# b91b13fc6d2d48f5a4f8fc678f2f8bb3
+msgid "Use to to `run Powershell script blocks <http://technet.microsoft.com/en-us/library/dn282130.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:28
+# 8270ab392a804d9c9871ea971acf6535
+msgid "``:service``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:29
+# 6391a6f8fc0042a9b0245a6323b9e3a8
+msgid "Use to to `manage services <http://technet.microsoft.com/en-us/library/dn282120.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:30
+# bdd4497912014c6fae253aef2f032314
+msgid "``:user``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:31
+# e425626adeea49f2ace8bfabfc1f16db
+msgid "Use to to `manage local user accounts <http://technet.microsoft.com/en-us/library/dn282118.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:32
+# f4fae2a40a794c8aaa152c24e6f22070
+msgid "``:windowsfeature``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:33
+# 22f7f839636f4ef78ce859dd3186152e
+msgid "Use to to `add or remove Windows features and roles <http://technet.microsoft.com/en-us/library/dn282127.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:34
+# f5f33cb108464039bbd5ed9004c7c105
+msgid "``:windowsoptionalfeature``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:35
+# 258b769c4ec2458a9225696a2e91a04c
+msgid "Use to configure |windows| optional features."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:36
+# 116709393e9f4bd880e0c94cba08314b
+msgid "``:windowsprocess``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:37
+# 9a24cd1ba4744c9887fe71afb8f67a0d
+msgid "Use to to `configure Windows processes <http://technet.microsoft.com/en-us/library/dn282123.aspx>`_."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_dsc_resource_features.rst:39
+# 30ec1e212c304c1fb2b90d10ae67533d
 msgid "Any |windows powershell_dsc_short| resource may be used in a |chef| recipe. For example, the |windows powershell_dsc_resource_kit| contains resources for `configuring Active Directory components <http://gallery.technet.microsoft.com/scriptcenter/xActiveDirectory-f2d573f3>`_, such as ``xADDomain``, ``xADDomainController``, and ``xADUser``. Assuming that these resources are available to the |chef client|, the corresponding values for the ``resource_name`` attribute would be: ``:xADDomain``, ``:xADDomainController``, and ``xADUser``."
 msgstr ""
 
-#: ../source/resource_dsc_resource.rst:31
-# 1991b178596a46548aa3197eb2b9f65b
+#: ../source/resource_dsc_resource.rst:29
+# 551f55a2ac9c42baa5dda6269ee30c7a
 msgid "Examples"
 msgstr ""
 
-#: ../source/resource_dsc_resource.rst:33
-# daa6e0a88f454dd795e05d770186e3f1
+#: ../source/resource_dsc_resource.rst:31
+# 29984544349b4ba1a8f013d6c6beec2f
 msgid "**Open a Zip file**"
+msgstr ""
+
+#: ../source/resource_dsc_resource.rst:35
+# fb0e95e5c64b40c2be5c9fde72e3aa6c
+msgid "**Manage users and groups**"
 msgstr ""
 
