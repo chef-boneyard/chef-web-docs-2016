@@ -388,6 +388,7 @@ Cookbooks
    resources
    roles
    ruby
+   run_lists
    runbook
    security_notes
    server_backup_restore
