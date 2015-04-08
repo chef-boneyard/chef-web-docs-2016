@@ -30,10 +30,6 @@ The following examples show how to create a simple cookbook, and then upload it 
 
 .. include:: ../../step_ctl_chef/step_ctl_chef_generate_recipe_supermarket.rst
 
-**Upload the cookbook to Supermarket**
-
-.. include:: ../../step_plugin_knife/step_plugin_knife_supermarket_install_my_apache2.rst
-
 supermarket-ctl (executable)
 =====================================================
 .. include:: ../../includes_ctl_supermarket/includes_ctl_supermarket.rst
