@@ -24,10 +24,7 @@ Some simple ways to quickly identify common issues that can trigger recipe and/o
 
 Empty Run-lists
 -----------------------------------------------------
-Using an empty run-list is an effective way to determine if the failed |chef client| run has anything to do with the recipes within the run-list. This is often an indicator that the underlying cause of the |chef client| run failure is a configuration issue. If a failure persists even if the run-list is empty, check the following:
-
-* configuration settings in the |knife rb| file
-* permissions for the user to both the |chef server| and to the node on which the |chef client| run is to take place
+.. include:: ../../includes_node/includes_node_run_list_empty.rst
 
 |knife_title|
 -----------------------------------------------------
