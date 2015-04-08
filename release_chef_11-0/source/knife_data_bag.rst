@@ -24,8 +24,6 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_create_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
@@ -70,8 +68,6 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_edit_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
@@ -95,8 +91,6 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_from_file_options.rst
-
-.. note:: |note knife rb settings|
 
 Examples
 -----------------------------------------------------
