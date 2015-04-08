@@ -12,7 +12,7 @@
 
 Create Cookbook
 =====================================================
-The following examples show how to create a simple cookbook, and then upload it to the |supermarket|. These examples use the |chef ctl| command that is built into the the |chef dk|.
+The following examples show how to create a simple cookbook by using the |chef ctl| command that is built into the the |chef dk|.
 
 **Generate a chef-repo**
 
