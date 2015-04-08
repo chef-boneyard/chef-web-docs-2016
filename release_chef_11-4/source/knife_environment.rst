@@ -22,8 +22,6 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_create_options.rst
 
-.. note:: |note knife rb settings|
-
 Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
