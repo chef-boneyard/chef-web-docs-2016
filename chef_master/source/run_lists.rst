@@ -124,35 +124,35 @@ Management Console
 =====================================================
 The following sections describe how to manage run-lists when using the |chef manage|.
 
-Add Recipe to Run-list
+Add Recipe
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_add_role_or_recipe.rst
 
-Add Role to Run-list
+Add Role
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_add_role_or_recipe.rst
 
-Edit Node Run-list
+Edit Node
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_edit.rst
 
-Edit Role Run-list
+Edit Role
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_edit_run_list.rst
 
-Remove Recipe from Run-list
+Remove Recipe
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_remove_role_or_recipe.rst
 
-Remove Role from Run-list
+Remove Role
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_remove_role_or_recipe.rst
 
-View Current Run-list
+View Current
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_view_current.rst
 
-View Node Run-lists
+View Node
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_view_run_list.rst
 
