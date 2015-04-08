@@ -198,6 +198,7 @@ Cookbooks
    data_bags
    debug
    definitions
+   delivery
    dsl_recipe
    environment_variables
    environments
