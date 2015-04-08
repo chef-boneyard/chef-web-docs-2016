@@ -42,9 +42,13 @@ About Run-lists
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_run_list.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
+Run-list Format
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_node/includes_node_run_list_format.rst
 
-.. include:: ../../includes_role/includes_role.rst
+Empty Run-lists
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_node/includes_node_run_list_empty.rst
 
 About why-run Mode
 =====================================================
