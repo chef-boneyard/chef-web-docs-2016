@@ -14,6 +14,15 @@ Getting Started
 
 **Docs for Current Versions:** `chef-client <http://docs.chef.io/client/>`__ | `Chef Server <http://docs.chef.io/server/>`_ | `Chef DK <http://docs.chef.io/devkit/>`__ | `Ohai 8 <http://docs.chef.io/release/ohai-8/>`_ | :doc:`Release notes for chef-client 12.2 </release_notes>` | `Release notes for Chef server 12 <http://docs.chef.io/server/release_notes.html>`_ | :doc:`Previous Releases </releases>`
 
+.. 
+.. **Key concepts:** :doc:`Attributes </attributes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Nodes </nodes>` | :doc:`Recipes </recipes>` | :doc:`Recipe DSL </dsl_recipe>` | :doc:`Roles </roles>` | :doc:`Ruby </ruby>` | :doc:`Run-list </run_list>`
+.. 
+.. **Most popular resources:** :doc:`bash </resource_bash>` | :doc:`cookbook_file </resource_cookbook_file>` | :doc:`directory </resource_directory>` | :doc:`execute </resource_execute>` | :doc:`file </resource_file>` | :doc:`git </resource_git>` | :doc:`package </resource_package>` | :doc:`remote_file </resource_remote_file>` | :doc:`ruby_block </resource_ruby_block>` | :doc:`service </resource_service>` | :doc:`template </resource_template>` | :doc:`user </resource_user>` | :doc:`yum_package </resource_yum>`
+.. 
+.. **Most important tools:** :doc:`client.rb </config_rb_client>` | :doc:`config.rb </config_rb>` | :doc:`Debug Recipes </debug>` | :doc:`Kitchen </kitchen>` | :doc:`kitchen.yml </config_yml_kitchen>` | :doc:`Ohai </ohai>`
+.. 
+.. **Most common knife commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`cookbook </knife_cookbook>` | :doc:`data bag </knife_data_bag>` | :doc:`node </knife_node>` | :doc:`search </knife_search>`
+.. 
 
 The Community
 =====================================================
@@ -87,7 +96,7 @@ The server acts as a repository for all of the data that may be needed by the |c
 
 The Nodes
 =====================================================
-**The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | `The chef-client Run <http://docs.chef.io/chef_client.html#the-chef-client-title-run>`_ | :doc:`Chef Solo </chef_solo>` | :doc:`About the Run-list </run_list>` | :doc:`Debug Recipes </chef_shell>` | :doc:`Chef for Junos OS </junos>`
+**The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | `The chef-client Run <http://docs.chef.io/chef_client.html#the-chef-client-title-run>`_ | :doc:`Chef Solo </chef_solo>` | :doc:`About the Run-list </run_lists>` | :doc:`Debug Recipes </chef_shell>` | :doc:`Chef for Junos OS </junos>`
 
 **Install:** `About Bootstrap <http://docs.chef.io/chef_client.html#about-bootstrap-operations>`_ | :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
