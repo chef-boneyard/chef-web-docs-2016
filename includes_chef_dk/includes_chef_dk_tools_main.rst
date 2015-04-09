@@ -18,7 +18,7 @@ The most important tools included in the |chef dk| are:
    * - |chef client|
      - The agent that runs |chef|.
    * - |chef vault|
-     - Use to encrypt data bag items using the public keys of a list of nodes. This allows only those odes to decrypt the encrypted values.
+     - Use to encrypt data bag items using the public keys of a list of nodes. This allows only those nodes to decrypt the encrypted values.
    * - |chef spec|
      - A unit testing framework that tests resources locally.
    * - |fauxhai|
