@@ -87,7 +87,7 @@ The server acts as a repository for all of the data that may be needed by the |c
 
 The Nodes
 =====================================================
-**The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | `The chef-client Run <http://docs.chef.io/chef_client.html#the-chef-client-title-run>`_ | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>` | :doc:`Chef for Junos OS </junos>`
+**The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | `The chef-client Run <http://docs.chef.io/chef_client.html#the-chef-client-title-run>`_ | :doc:`Chef Solo </chef_solo>` | :doc:`About the Run-list </run_list>` | :doc:`Debug Recipes </chef_shell>` | :doc:`Chef for Junos OS </junos>`
 
 **Install:** `About Bootstrap <http://docs.chef.io/chef_client.html#about-bootstrap-operations>`_ | :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
