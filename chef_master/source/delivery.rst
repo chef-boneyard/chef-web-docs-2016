@@ -2,8 +2,6 @@
 About |chef delivery_title|
 =====================================================
 
-
-
 .. note:: |chef delivery| is currently an invitation-only application. For `more information about getting an invitation <https://www.chef.io/delivery/>`_ please request an invite!
 
 Use |chef delivery| to continuously deliver applications and infrastructure safely at speed:
