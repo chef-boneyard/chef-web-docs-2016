@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ kitchen exec "COMMAND"
+   $ kitchen exec PLATFORMS (options)
