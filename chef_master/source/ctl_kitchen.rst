@@ -210,6 +210,22 @@ Examples
 -----------------------------------------------------
 None.
 
+kitchen exec
+=====================================================
+.. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen_exec.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen_exec_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen_exec_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
 kitchen init
 =====================================================
 .. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen_init.rst
