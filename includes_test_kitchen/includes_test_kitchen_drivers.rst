@@ -30,6 +30,10 @@ Most drivers have driver-specific configuration settings that must be added to t
      - A driver for |fog|.
    * - `kitchen-gce <https://rubygems.org/gems/kitchen-gce>`_
      - A driver for |google compute engine|.
+   * - `kitchen-joyent <https://rubygems.org/gems/kitchen-joyent>`_
+     - A driver for |joyent|.
+   * - `kitchen-opennebula <https://rubygems.org/gems/kitchen-opennebula>`_
+     - A driver for |opennebula|.
    * - `kitchen-openstack <https://rubygems.org/gems/kitchen-openstack>`_
      - A driver for |openstack|.
    * - `kitchen-rackspace <https://rubygems.org/gems/kitchen-rackspace>`_
