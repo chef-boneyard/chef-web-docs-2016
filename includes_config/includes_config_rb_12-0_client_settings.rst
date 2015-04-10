@@ -11,8 +11,6 @@ This configuration file has the following settings:
      - Description
    * - ``add_formatter``
      - |add_formatter| (See `nyan-cat <https://github.com/andreacampi/nyan-cat-chef-formatter>`_ for an example of a 3rd-party formatter.) Each formatter requires its own entry.
-   * - ``audit_mode``
-     - |audit_mode| Default value: ``disabled``.
    * - ``automatic_attribute_whitelist``
      - |whitelist attribute_automatic|
    * - ``cache_path``

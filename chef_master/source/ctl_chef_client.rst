@@ -30,6 +30,15 @@ Use Encrypted Data Bags
 
 .. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted_local_mode.rst
 
+Run in Audit Mode
+=====================================================
+.. include:: ../../includes_chef_client/includes_chef_client_audit_mode.rst
+
+Use following option to run the |chef client| in |chef client_audit| mode:
+
+``--audit-mode MODE``
+   |audit_mode| Default value: ``disabled``.
+
 Run as a Service
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_daemonized.rst
