@@ -64,3 +64,4 @@ For more information ...
 For more information about managing a containerized infrastructure:
 
 * Docker in Production by Bridget Kromhout: https://www.youtube.com/watch?v=hwBcuZNuuJU
+* Baking Docker Using Chef - ChefConf 2015: https://www.youtube.com/watch?v=5NiJ03r8h9E
