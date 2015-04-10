@@ -14,7 +14,7 @@ The following documentation sets are available:
    * - |chef client_title| 12.2
      - `http://docs.chef.io/release/12-2/ <http://docs.chef.io/release/12-2/>`__
      - `Release Notes <http://docs.chef.io/release/12-2/release_notes.html>`__
-   * - |chef client_title| 12.2
+   * - |chef client_title| 12.1
      - `http://docs.chef.io/release/12-1/ <http://docs.chef.io/release/12-1/>`__
      - `Release Notes <http://docs.chef.io/release/12-1/release_notes.html>`__
    * - |chef client_title| 12.0
