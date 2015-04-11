@@ -48,7 +48,7 @@ The |chef dk| defines a common workflow for cookbook development, including unit
 
 **Install:** :doc:`Install the chef-dk </install_dk>`
 
-**Components:** :doc:`Kitchen </kitchen>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`Berkshelf </berkshelf>` | :doc:`chef-vault </chef_vault>`
+**Components:** :doc:`Kitchen </kitchen>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`Berkshelf </berkshelf>` | :doc:`chef-vault </chef_vault>` | :doc:`RuboCop <rubocop>`
 
 **Tools:** :doc:`kitchen (executable) </ctl_kitchen>` | :doc:`chef (executable) </ctl_chef>`
 
@@ -397,6 +397,7 @@ Cookbooks
    resource_yum
    resources
    roles
+   rubocop
    ruby
    run_lists
    runbook
