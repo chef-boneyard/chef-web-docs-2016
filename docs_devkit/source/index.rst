@@ -65,6 +65,9 @@ The following tools have been developed by members of the |chef| community. Thes
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/ctl_kitchen.html">kitchen (the command-line executable for Kitchen)</a> </br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/config_yml_kitchen.html">kitchen.yml (the configuration file for Kitchen)</a> </br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/plugin_kitchen_vagrant.html">kitchen-vagrant (the default driver plugin for Kitchen)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/devkit/rubocop.html">RuboCop</a> </br>
+
+
 
 .. Hide the TOC from this file.
 
@@ -86,4 +89,5 @@ The following tools have been developed by members of the |chef| community. Thes
    kitchen
    plugin_kitchen_vagrant
    policy
+   rubocop
    ruby
