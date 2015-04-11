@@ -6,6 +6,6 @@ Use |rubocop| to author better |ruby| code:
 
 * Enforce style conventions and best practices
 * Evaluate the code in a cookbook against metrics like "line length" and "function size"
-* Help every member of a team write similary structred code
+* Help every member of a team to author similary structured code
 * Estabilish uniformity of source code
 * Set expectations for fellow (and future) project contributors
