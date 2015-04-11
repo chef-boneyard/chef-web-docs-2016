@@ -16,6 +16,8 @@ The output for |rubocop| will:
    SOURCE CODE
    ^^^^^^^^^^^
 
+For example:
+
 .. code-block:: bash
 
    cookbooks/apache/attributes/default.rb:1:9: C: Prefer single-quoted strings when you don't
