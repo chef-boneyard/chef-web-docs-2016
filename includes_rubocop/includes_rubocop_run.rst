@@ -14,7 +14,7 @@ or from the root of an individual cookbook directory:
 
    $ rubocop .
 
-|rubocop| will return a list, via standard output, the results of the evaluation:
+|rubocop| will return a list, via standard output, the shows the results of the evaluation:
 
 .. code-block:: bash
 
