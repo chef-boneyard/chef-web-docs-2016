@@ -36,4 +36,4 @@ A typical ``.rubocop.yml`` that is used with |chef| looks like:
 
 This disables three rules that are enabled in |rubocop| by default: ``AlignParameters``, ``Encoding``, and ``StringLiterals``, and then sets the ``LineLength`` for |ruby| files in cookbooks to ``200`` characters, which is set to ``80`` in the default rule.
 
-.. note:: For all of the rules that are available in |rubocop|, see the ``/opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/rubocop-<version#>/config/`` directory.
+.. note:: For all of the rules that are available in |rubocop|, see the ``/opt/chefdk/embedded/lib/ruby/gems/-<ruby_version#>/gems/rubocop-<version#>/config/`` directory.
