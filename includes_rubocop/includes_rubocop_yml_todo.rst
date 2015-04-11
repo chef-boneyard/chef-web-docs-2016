@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use a |rubocop_todo yml| file to capture the current state of all evaluations, and then write them to a file. This will allow evaluations to reviewed one at a time. Disable the evaluations that are unhelpful, address the ones that are.
+Use a |rubocop_todo yml| file to capture the current state of all evaluations, and then write them to a file. This will allow evaluations to reviewed one at a time. Disable any evaluations that are unhelpful, and then address the ones that are.
 
 To generate the |rubocop_todo yml| file, run the following command:
 
