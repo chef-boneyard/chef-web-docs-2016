@@ -6,7 +6,7 @@ The output for |rubocop| will:
 
 * State the number of files found and examined. For example: ``Inspecting 8 files``
 * List the results of those files as a series of symbols. For example: ``CWCWCCCC``
-* For each symbol, state the file name, line number, character number, type of issue or error, description of the issue or error, and the location in the source code where that issue or error is located
+* For each symbol, state the file name, line number, character number, type of issue or error, description of the issue or error, and the location in the source code at which the issue or error is located
 
 |rubocop| uses the following syntax for each evaluation:
 
