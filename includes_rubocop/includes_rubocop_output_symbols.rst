@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|rubocop| uses the following symbols in the standard output to help describe the results of the evaluation:
+The following symbols appear in the standard output and are used to indicate the result of an evaluation:
 
 .. list-table::
    :widths: 60 420
