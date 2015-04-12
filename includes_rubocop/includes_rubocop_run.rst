@@ -8,13 +8,13 @@
 
    $ rubocop /path/to/cookbook
 
-or from the root of an individual cookbook directory:
+|rubocop| may also be run from the root of an individual cookbook directory:
 
 .. code-block:: bash
 
    $ rubocop .
 
-|rubocop| will return a list, via standard output, the shows the results of the evaluation:
+|rubocop| returns a list, via standard output, that shows the results of the evaluation:
 
 .. code-block:: bash
 
