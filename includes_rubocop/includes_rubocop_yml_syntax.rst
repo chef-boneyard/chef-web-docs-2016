@@ -14,9 +14,9 @@ A |rubocop yml| file has the following syntax:
 where
 
 * ``NAME_OF_RULE`` is the name of a rule
-* ``Description`` is the string that prints as part of the standard output that describes the rule, as triggered during the evaluation
-* ``Enabled`` enables a rule (``true``) or disables a rule (``false``)
-* ``KEY: VALUE`` adds additional details for a rule, if necessary. For example, ``Max: 200`` sets the line length to 200 characters
+* ``Description`` is the string that prints as part of the standard output that describes the rule if it is triggered during the evaluation
+* ``Enabled`` enables a rule (``true``) or disables a rule (``false``); for non-custom rules, this value will override the settings in the ``enabled.yml`` and ``disabled.yml`` files in |rubocop|
+* ``KEY: VALUE`` adds additional details for a rule, if necessary. For example, ``Max: 200`` sets the line length to 200 characters for the ``LineLength`` rule
 
 A typical ``.rubocop.yml`` that is used with |chef| looks like:
 
@@ -34,6 +34,6 @@ A typical ``.rubocop.yml`` that is used with |chef| looks like:
    StringLiterals:
      Enabled: false
 
-This disables three rules that are enabled in |rubocop| by default: ``AlignParameters``, ``Encoding``, and ``StringLiterals``, and then sets the ``LineLength`` for |ruby| files in cookbooks to ``200`` characters, which is set to ``80`` in the default rule.
+These settings disable three rules that are enabled in |rubocop| by default: ``AlignParameters``, ``Encoding``, and ``StringLiterals``, and then set the ``LineLength`` for |ruby| files in cookbooks to ``200`` characters, which is set to ``80`` in the default rule.
 
 .. note:: For all of the rules that are available in |rubocop|, see the ``/opt/chefdk/embedded/lib/ruby/gems/<ruby_version#>/gems/rubocop-<version#>/config/`` directory.
