@@ -2,13 +2,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The output for |rubocop| will:
+|rubocop| output:
 
-* State the number of files found and examined. For example: ``Inspecting 8 files``
-* List the results of those files as a series of symbols. For example: ``CWCWCCCC``
-* For each symbol, state the file name, line number, character number, type of issue or error, description of the issue or error, and the location in the source code at which the issue or error is located
+* States the number of files found and examined. For example: ``Inspecting 8 files``
+* Lists the results of those files as a series of symbols. For example: ``CWCWCCCC``
+* For each symbol, states the file name, line number, character number, type of issue or error, describes the issue or error, and specifies the location in the source code at which the issue or error is located
 
-|rubocop| uses the following syntax for each evaluation:
+A |rubocop| evaluation has the following syntax:
 
 .. code-block:: bash
 
