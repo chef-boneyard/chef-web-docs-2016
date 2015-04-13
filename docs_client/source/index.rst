@@ -260,28 +260,35 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_attribute.html">attribute?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_cookbook_name.html">cookbook_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_data_bag.html">data_bag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_data_bag_item.html">data_bag_item</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#attribute">attribute?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#control">control</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#control-group">control_group</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#cookbook-name">cookbook_name</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#data-bag">data_bag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#data-bag-item">data_bag_item</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_platform.html">platform?</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_reboot_pending.html">reboot_pending?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_recipe_name.html">recipe_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_registry_data_exists.html">registry_data_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_registry_get_subkeys.html">registry_get_subkeys</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_registry_get_values.html">registry_get_values</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_registry_has_subkeys.html">registry_has_subkeys?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_registry_key_exists.html">registry_key_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_registry_value_exists.html">registry_value_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_resources.html">resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_search.html">search</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_tag.html">tag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_tag.html">tagged?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_tag.html">untag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe_helper_windows_platform.html">Microsoft Windows Platform Helpers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#reboot-pending">reboot_pending?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#recipe-name">recipe_name</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#resources">resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#search">search</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#tag">tag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#tag">tagged?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#tag">untag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#value-for-platform">value_for_platform</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#value-for-platform-family">value_for_platform_family</a> </br>
+
+The following methods may be used on the |windows| platform:
+
+.. raw:: html
+   
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#windows-platform">Microsoft Windows Platform Helpers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#registry-data-exists">registry_data_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#registry-get-subkeys">registry_get_subkeys</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#registry-get-values">registry_get_values</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#registry-has-subkeys">registry_has_subkeys?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#registry-key-exists">registry_key_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#registry-value-exists">registry_value_exists?</a> </br>
 
 
 .. Hide the TOC from this file.
