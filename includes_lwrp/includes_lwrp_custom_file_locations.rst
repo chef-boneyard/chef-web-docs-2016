@@ -43,5 +43,5 @@ And the following files would be part of the ``providers/`` directory:
      - example
      - Chef::Provider::Example
    * - ``custom.rb``
-     - custom
+     - example_custom
      - Chef::Provider::ExampleCustom
