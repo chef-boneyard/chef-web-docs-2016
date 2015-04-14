@@ -33,3 +33,50 @@ Examples
 **Configure a network interface**
 
 .. include:: ../../step_resource/step_resource_ifconfig_configure_network_interface.rst
+
+**Specify a boot protocol**
+
+.. code-block:: ruby
+
+   ifconfig "33.33.33.80" do
+     bootproto "dhcp"
+     device "eth1"
+   end
+
+will create the following interface:
+
+.. code-block:: ruby
+
+   vagrant@default-ubuntu-1204:~$ cat /etc/network/interfaces.d/ifcfg-eth1 
+   iface eth1 inet dhcp
+
+**Specify a static IP address**
+
+.. code-block:: ruby
+
+   ifconfig "33.33.33.80" do
+     device "eth1"
+   end
+
+will create the following interface:
+
+.. code-block:: ruby
+
+   iface eth1 inet static
+     address 33.33.33.80
+
+**Update a static IP address with a boot protocol**
+
+.. code-block:: ruby
+
+   ifconfig "33.33.33.80" do
+     bootproto "dhcp"
+     device "eth1"
+   end
+
+will update the following interface:
+
+.. code-block:: ruby
+
+   iface eth1 inet dhcp
+     address 33.33.33.80
