@@ -74,7 +74,7 @@ will create the following interface:
      device "eth1"
    end
 
-will update the following interface:
+will update the interface from ``static`` to ``dhcp``:
 
 .. code-block:: ruby
 
