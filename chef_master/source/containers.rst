@@ -63,4 +63,5 @@ For more information ...
 =====================================================
 For more information about managing a containerized infrastructure:
 
+* Cooking Up Drama - ChefConf 2015: https://www.youtube.com/watch?v=8fcDZB-QMRA
 * Baking Docker Using Chef - ChefConf 2015: https://www.youtube.com/watch?v=5NiJ03r8h9E
