@@ -44,7 +44,7 @@ One approach to working around the double- vs. single-quote issue is to put the 
 
 .. code-block:: ruby
 
-   knife[:editor] = '"C:\Program Files (x86)\Notepad++\notepad++.exe -nosession -multiInst"'
+   knife[:editor] = '"C:\Program Files (x86)\Notepad++\notepad++.exe" -nosession -multiInst'
 
 for |sublime|:
 
