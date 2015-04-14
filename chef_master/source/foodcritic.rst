@@ -4,7 +4,15 @@
 
 .. include:: ../../includes_foodcritic/includes_foodcritic.rst
 
-.. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See http://acrmp.github.io/foodcritic/ for more information about |foodcritic|.
+.. include:: ../../includes_foodcritic/includes_foodcritic_whatis.rst
+
+Run |foodcritic|
+=====================================================
+.. include:: ../../includes_foodcritic/includes_foodcritic_run.rst
+
+Output
+-----------------------------------------------------
+.. include:: ../../includes_foodcritic/includes_foodcritic_output.rst
 
 Rules
 =====================================================
@@ -13,6 +21,10 @@ Rules
 Custom Rules
 -----------------------------------------------------
 .. include:: ../../includes_foodcritic/includes_foodcritic_rules_custom.rst
+
+Exclude Rules
+-----------------------------------------------------
+.. include:: ../../includes_foodcritic/includes_foodcritic_rules_exclude.rst
 
 |foodcritic| CLI
 =====================================================
