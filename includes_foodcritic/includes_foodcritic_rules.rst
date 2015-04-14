@@ -101,4 +101,3 @@ The following rules are checked by |foodcritic|:
      - "Template partials loop indefinitely"
 
 .. note:: Some |foodcritic| rules have been deprecated: FC001, FC021, FC020, FC035, and FC036. FC018 deals with issues that may exist in older versions of the |chef client| that pre-date this documentation.
-

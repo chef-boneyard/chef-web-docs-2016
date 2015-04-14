@@ -31,13 +31,3 @@ This command has the following options:
 
 ``-V``, ``--version``
    Use to display the version of |foodcritic|.
-
-For more information ...
-=====================================================
-For more information about |foodcritic|:
-
-* `http://acrmp.github.io/foodcritic/ <http://acrmp.github.io/foodcritic/>`_
-
-
-
-
