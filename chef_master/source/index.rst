@@ -428,7 +428,6 @@ Cookbooks
    server_tuning
    server_users
    server_webui_tasks
-   slide_decks
    style_guide
    supermarket
    supported_platforms
