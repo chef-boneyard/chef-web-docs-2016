@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master devkit analytics all server client 12-1 12-2
+release: master devkit analytics all server client 12-1 12-2 slides
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -43,6 +43,10 @@ master:
 	cp -r misc/sitemap.xml build/
 	cp -r misc/google46c9c5ad0fd168a0.html build/
 	$(BUILD_COMMAND_AND_ARGS) chef_master/source $(BUILDDIR)
+
+slides:
+	mkdir -p $(BUILDDIR)/slides/
+	$(BUILD_COMMAND_AND_ARGS) slide_decks/source $(BUILDDIR)/slides/
 
 all:
 	mkdir -p $(BUILDDIR)/chef/
