@@ -36,4 +36,4 @@ Slide Decks
 
     For more information, see:
 
-    * docs.chef.io/recipes.html
+    * http://docs.chef.io/recipes.html
