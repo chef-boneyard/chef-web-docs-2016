@@ -41,3 +41,36 @@ where:
         expect(chef_run).to remove_package('splunk')
       end
 
+When necessary, use a ``context`` block to group tests by platform:
+
+.. code-block:: ruby
+
+   describe "cookbook_name::recipe_name" do
+   
+     context "when on Debian" do
+       it "equals 2" do
+         a = 1
+         b = 1
+         sum = a + b
+         expect(sum).to eq(2)
+       end
+     end
+   
+     context "when on Ubuntu" do
+       it "equals 2" do
+         expect(1 + 1).to eq(2)
+       end
+     end
+   
+     context "when on Windows" do
+       it "equals 3" do
+         expect(1 + 2).to eq(3)
+       end
+     end
+   
+   end
+
+where:
+
+* ``context`` is an alias of ``describe`` and cannot be used as the top-level item in a test
+* each ``context`` block specifies how to test on a platform
