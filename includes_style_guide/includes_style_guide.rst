@@ -482,6 +482,166 @@ All of the documentation for Chef can be found here:
 
 https://github.com/chef/chef-docs
 
+The chef-docs repo contains a lot of directories!
+
+Build Directories
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The most important directory is ``chef_master`` and it contains all of the topics that can be found at the root of http://docs.chef.io. For example:
+
+.. list-table::
+   :widths: 250 250
+   :header-rows: 1
+   
+   * - chef-docs
+     - docs.chef.io
+   * - resource_execute.rst
+     - http://docs.chef.io/resource_execute.html
+   * - kitchen.rst
+     - http://docs.chef.io/kitchen.html
+   * - ruby.rst
+     - http://docs.chef.io/ruby.html
+
+There is always a 1:1.
+
+.. note:: The ``conf.py`` file should never be modified. This file just tells Sphinx what to do when it's asked to build chef-docs.
+
+There are other build directories: ``docs_all``, ``docs_analytics``, ``docs_client``, ``docs_devkit``, ``docs_server``. These are used to build sub-sites like http://docs.chef.io/server, which is focused only on the content for Chef Server 12. For example. These pages are almost always cloned from the ``chef_master`` directory, like this::
+
+   .. THIS PAGE IS IDENTICAL TO docs.chef.io/server_orgs.html BY DESIGN
+   .. THIS PAGE IS LOCATED AT THE /server/ PATH.
+   
+   .. include:: ../../chef_master/source/server_orgs.rst
+
+This just means that if a change is made to ``chef_master/source/server_orgs.rst`` it will also be made at build-time to ``docs_server/source/server_orgs.rst``. Manage the change in a single location.
+
+Includes Directories
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+But wait! Why do most of the files in the ``chef_master`` directory have zero actual content? It's to separate what is published from what is authored. There is an ``includes_*`` folder for all of the objects, concepts, tools, etc. that exist in Chef and with few exceptions, with the goal to ensure that all of the content about a specific piece of Chef is found in a single location.
+
+Single-sourcing this content allows publishing of versioned content, generating output to man pages, HTML, slide decks, and PDFs, etc. in a way that reuses the same content as much as possible.
+
+For example, the ``template`` resource::
+
+   =====================================================
+   template
+   =====================================================
+   
+   .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+   
+   .. include:: ../../includes_resources/includes_resource_template.rst
+   
+   |note execute resource intepreter|
+   
+   
+   Syntax
+   =====================================================
+   .. include:: ../../includes_resources/includes_resource_template_syntax.rst
+   
+   Actions
+   =====================================================
+   .. include:: ../../includes_resources/includes_resource_template_actions.rst
+   
+   Attributes
+   =====================================================
+   .. include:: ../../includes_resources/includes_resource_template_attributes.rst
+
+The actual content lives in the ``include_resources`` directory, and for each section at the file named in the path. For example, the attributes available to the ``template`` resource are in the ``includes_resource_template_attributes.rst`` file::
+
+   |description resource_attributes_intro|
+   
+   .. list-table::
+      :widths: 150 450
+      :header-rows: 1
+   
+      * - Attribute
+        - Description
+      * - ``atomic_update``
+        - |atomic_update| Default value: ``true``.
+      * - ``backup``
+        - |backups_kept| Default value: ``5``.
+      * - ``cookbook``
+        - |cookbook file_location| The default value is the current cookbook.
+      * - ``force_unlink``
+        - |force_unlink| Default value: ``false``.
+      * - ``group``
+        - |windows group_identifier|
+      * - ``helper``
+        - |helper| Default value: ``{}``.
+   <snip> ...
+      * - ``verify``
+        - |verify_file|
+   
+           .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+
+
+These attributes are available in the docs for the current version of Chef---chef-client 12.2, specifically---and are the same attributes available in previous versions, until there is a difference. The chef-client 12.1 release added the ``verify`` attribute. This is versioned in chef-docs using a file named ``includes_resource_12-0_template_attributes.rst``, which is then included backwards all the way to chef-client 11-4 docs, which is when the ``helper`` and ``helpers`` attributes were added. Three files, a few subtle changes, hooked in the same way, but with the correct file name for the correct version. This is how chef-docs build outputs are versioned.
+
+This pattern is the same everywhere. In some cases, it may well be that a topic is only included in a single build output, but this is rare. Most of the topics are included many times, across client, server, and devkit docs, and across versions (backwards in time). So keep this in mind when making changes.
+
+.. note:: For the majority of changes, especially those made by the Chef community, focus on making changes to the ``chef_master`` directory and against the current version of Chef. If you believe the change should be reflected to a specific version, just state that in the PR or issue and the chef-docs team will help apply that in the chef-docs repo.
+
+String Replacements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+So what are these things that are contained in pipes? For example::
+
+   |verify_file|
+
+or::
+
+   |chef client|
+
+These are string replacements. There are two types: descriptions and names.
+
+Descriptions are used primarily in the resource reference documentation to help ensure that the same descriptions are applied anywhere and everywhere. These are hooked into release notes, resource topics (across all versions) and elsewhere. For example, some descriptions apply to the Chef Server API as well as Knife reference docs and also resource docs.
+
+Names are proper names. For example:
+
+.. list-table::
+   :widths: 250 250
+   :header-rows: 1
+   
+   * - Name
+     - Replacement
+   * - Microsoft Azure
+     - ``|azure|``
+   * - Chef
+     - ``|company_name|``
+   * - chef-client
+     - ``|chef client|``
+
+String replacements are found in the ``/swaps`` directory. When submitting PRs or issues to chef-docs, it is not necessary to get the strings correct. Rather, just write what you think should be in the doc directly, and chef-docs will apply the string replacements (and/or create new ones!) later during an edit.
+
+New Topics and Sections
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+This can be tricky, but as long as you are following the pattern for the include_* files, it's pretty easy. They can be moved around, renamed, deleted, added quite easily.
+
+Files in the ``chef_master`` repo can be sticky, in that they become searchable on the internet and can be found for longer than intended. So we just want to be careful about creating new top-level topic names.
+
+Recap!
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+When submitting a PR or issue to chef-docs for a docs change, remember:
+
+* Focus on the ``chef_master`` repo to find the topic/files
+* Find the appropriate ``includes_`` folder, and then find the actual topic
+* For a straightfoward PR or issue, make it against that file
+* Keep in mind potential versioning issues, make those clear in the PR or issue if you're not sure---chef-docs will help out
+* Focus on the actual content---chef-docs will help with any string replacements, includes file management, and versioning
+
+For example, if you wanted to add an attribute to a resource, the PR or issue could look like this::
+
+   Please add the following attribute to the template resource:
+   
+   ``foo``
+   Use to do foo. Default value: ``false``.
+   
+   This appears to have been added in chef-client 11.8.
+   
+   Thanks!
+
+If you want to try to get the full PR done in a way that allows chef-docs to merge it straightaway? Always welcome, but not required.
+
+You can always send email to docs@chef.io if you have questions about specific folders, files, and patterns.
+
 quick-reference
 -----------------------------------------------------
 The quick-reference repository contains large PNG images that can be printed (front and back), plus smaller single-page images. It can be found here:
