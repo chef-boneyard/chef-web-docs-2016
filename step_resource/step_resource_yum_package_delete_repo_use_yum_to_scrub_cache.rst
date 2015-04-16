@@ -16,4 +16,3 @@
      notifies :run, 'execute[clean-yum-cache]', :immediately
      notifies :create, 'ruby_block[reload-internal-yum-cache]', :immediately
    end
-
