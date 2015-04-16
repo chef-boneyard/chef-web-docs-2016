@@ -516,7 +516,7 @@ This just means that if a change is made to ``chef_master/source/server_orgs.rst
 
 Includes Directories
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-But wait! Why do most of the files in the ``chef_master`` directory have zero actual content? It's to separate what is published from what is authored. There is an ``includes_*`` folder for all of the objects, concepts, tools, etc. that exist in Chef and with few exceptions, with the goal to ensure that all of the content about a specific piece of Chef is found in a single location.
+But wait! Why do most of the files in the ``chef_master`` directory have zero actual content? It's to separate what is published from what is authored. There is an ``includes_*`` folder for all of the objects, concepts, tools, etc. that exist in Chef. The goal of each ``includes_`` directory is to ensure that all of the content about a specific piece of Chef can be found in a single location.
 
 Single-sourcing this content allows publishing of versioned content, generating output to man pages, HTML, slide decks, and PDFs, etc. in a way that reuses the same content as much as possible.
 
