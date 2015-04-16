@@ -16,21 +16,21 @@ This configuration file has the following settings for ``ldap``:
    * - ``ldap['bind_password']``
      - |ldap bind_password| The password for the user specified by ``ldap['bind_dn']``. Leave this value and ``ldap['bind_dn']`` unset if anonymous bind is sufficient. Default value: ``nil``.
    * - ``ldap['group_dn']``
-     - The distinguished name for a group. When set to the distinguished name of a group, only members of that group can log in. This feature filters based on the ``memberOf`` attribute and only works with |ldap| servers that provide such an attribute. In |open ldap|, the ``memberOf`` overlay provides this attribute.
+     - |ldap group_dn| When set to the distinguished name of a group, only members of that group can log in. This feature filters based on the ``memberOf`` attribute and only works with |ldap| servers that provide such an attribute. In |open ldap|, the ``memberOf`` overlay provides this attribute.
    * - ``ldap['host']``
      - |ldap host| The hostname of the |ldap| or |windows ad| server. Be sure the |chef server| is able to resolve any host names. Default value: ``ldap-server-host``.
    * - ``ldap['login_attribute']``
-     - The attribute used when searching for |ldap| users given the provided ``base_dn``. Use to specify the |chef server| user name for an |ldap| user. Default value: ``sAMAccountName``.
+     - |ldap login_attribute| Use to specify the |chef server| user name for an |ldap| user. Default value: ``sAMAccountName``.
    * - ``ldap['port']``
      - |ldap port| The default value is an appropriate value for most configurations. Default value: ``389`` or ``636`` when ``ldap['encryption']`` is set to ``:simple_tls``.
    * - ``ldap['ssl_enabled']``
-     - Use to enable |ssl|. Default value: ``false``. Must be ``false`` when ``ldap['tls_enabled']`` is ``true``.
+     - |ldap ssl_enabled| Default value: ``false``. Must be ``false`` when ``ldap['tls_enabled']`` is ``true``.
 
        .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
    * - ``ldap['timeout']``
      - Default value: ``60000``.
    * - ``ldap['tls_enabled']``
-     - Use to enable TLS. When enabled, communication with the |ldap| server is done via a secure |ssl| connection on a dedicated port. When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['ssl_enabled']`` is ``true``.
+     - |ldap enable_tls| When ``true``, ``ldap['port']`` is also set to ``636``. Default value: ``false``. Must be ``false`` when ``ldap['ssl_enabled']`` is ``true``.
 
        .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
 
