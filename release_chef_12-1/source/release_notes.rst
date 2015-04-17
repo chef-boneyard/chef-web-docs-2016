@@ -128,9 +128,6 @@ Use the following options to specify items that are stored in |chef vault|:
 ``--bootstrap-vault-json VAULT_JSON``
    |bootstrap valut_json|
 
-
-
-
 New Resource Attributes
 -----------------------------------------------------
 The following attributes are new for |chef client| 12.1.
