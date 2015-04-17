@@ -7,7 +7,7 @@ The |organization pem| is typically added to the |chef repo hidden| directory on
 
 To create a node via the |user pem| file, simply delete the |organization pem| file on the workstation. For example:
 
-.. code-block::
+.. code-block:: bash
 
    $ rm -f /home/lamont/.chef/myorg-validator.pem
 
