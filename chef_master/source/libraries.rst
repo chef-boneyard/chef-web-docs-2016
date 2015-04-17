@@ -14,6 +14,14 @@ Examples
 =====================================================
 The following examples show how to use cookbook libraries.
 
+Library Resources
+-----------------------------------------------------
+.. include:: ../../includes_libraries/includes_libraries_custom_resource.rst
+
+.. include:: ../../includes_libraries/includes_libraries_custom_resource_core.rst
+
+.. include:: ../../includes_libraries/includes_libraries_custom_resource_example.rst
+
 Create a Namespace
 -----------------------------------------------------
 .. include:: ../../includes_libraries/includes_libraries_example_create_namespace.rst
@@ -28,7 +36,7 @@ Loop Over a Record
 
 ``Chef::Provider``
 =====================================================
-.. include:: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
 
 Template Helper Modules
 -----------------------------------------------------
