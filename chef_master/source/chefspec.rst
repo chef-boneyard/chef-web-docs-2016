@@ -10,6 +10,8 @@ Unit Test Syntax
 =====================================================
 .. include:: ../../includes_chefspec/includes_chefspec_syntax.rst
 
+.. note:: .. include:: ../../includes_chefspec/includes_chefspec_syntax_compare_to_resource.rst
+
 **Example**
 
 .. include:: ../../includes_chefspec/includes_chefspec_syntax_example.rst
