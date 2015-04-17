@@ -2,22 +2,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |lwrp| is a part of a cookbook that is used to extend the |chef client| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any platform resource. A |lwrp| has two principal components:
+A |lwrp| is a part of a cookbook that is used to extend the |chef client| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any platform resource. In other words: a |lwrp| is a custom resource. A custom resource has two principal components:
 
-* A `lightweight resource <http://docs.chef.io/lwrp_custom_resource.html>`_ that defines a set of actions and attributes
-* A lightweight provider that tells the |chef client| how to handle each action, what to do if certain conditions are met, and so on
+* A custom resource that defines a set of actions and attributes that is located in a cookbook's ``/resources`` directory
+* A custom provider that tells the |chef client| how to handle each action, what to do if certain conditions are met, and so on that is located in a cookbook's ``/providers`` directory
 
-In addition, most lightweight providers are built `using platform resources <http://docs.chef.io/lwrp_custom_provider.html>`_ and some lightweight providers are built `using custom Ruby code <http://docs.chef.io/lwrp_custom_provider_ruby.html>`_
+A custom provider is typically built in a way that leverages the core resources that are built into |chef|, but they may also be built using |ruby|.
 
-Once created, a |lwrp| becomes a |ruby| class within the organization. During each |chef client| run, the |chef client| will read the lightweight resources from recipes and process them alongside all of the other resources. When it is time to configure the node, the |chef client| will use the corresponding lightweight provider to determine the steps required to bring the system into the desired state.
-
-Where the lightweight resource represents a piece of the system, its current state, and the action that is needed to move it to the desired state, a lightweight provider defines the steps that are required to bring that piece of the system from its current state to the desired state. A |lwrp| behaves similar to platform resources and providers:
-
-* A lightweight resource is a key part of a recipe
-* A lightweight resource defines the actions that can be taken
-* During a |chef client| run, each lightweight resource is identified, and then associated with a lightweight provider
-* A lightweight provider does the work to complete the action requested by the lightweight resource
-
-
-
-
+Once created, a custom resource becomes a |ruby| class. During each |chef client| run, the |chef client| will read the custom resource from a recipe and will process it alongside all other resources. When it is time to configure the node, the |chef client| will use the custom provider to determine the steps required to bring the system into the desired state.
