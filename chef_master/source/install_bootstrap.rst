@@ -15,6 +15,23 @@ A node is any physical, virtual, or cloud machine that is configured to be maint
 
 .. include:: ../../step_knife/step_knife_bootstrap_install_chef_client.rst
 
+Validatorless Bootstrap
+=====================================================
+.. include:: ../../includes_knife/includes_knife_bootstrap_no_validator.rst
+
+``knife bootstrap`` Options
+-----------------------------------------------------
+Use the following options with a validatorless bootstrap to specify items that are stored in |chef vault|:
+
+``--bootstrap-vault-file VAULT_FILE``
+   |bootstrap valut_file|
+
+``--bootstrap-vault-item VAULT_ITEM``
+   |bootstrap valut_item|
+
+``--bootstrap-vault-json VAULT_JSON``
+   |bootstrap valut_json|
+
 Unattended Installs
 =====================================================
 .. include:: ../../includes_install/includes_install_chef_client_unattended_bootstrap.rst
