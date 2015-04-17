@@ -24,7 +24,9 @@ See `SSL Certificates <http://docs.chef.io/chef_client_security.html#ssl-certifi
 
 ``Chef::Provider`` Changes
 =====================================================
-.. include:: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_11-16_method_updated_by_last_action_example.rst
+
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
 
 ``node.default!``  Changes
 =====================================================
