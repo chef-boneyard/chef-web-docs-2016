@@ -44,7 +44,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo apt-get install lvm2
 
-#. Create a physical volume, volume group, and logical volume with the following series of commands. The volume group and logical volume names must be ``data`` and ``chef``, respectively.
+#. Create a physical volume, volume group, and logical volume with the following series of commands. The volume group and logical volume names must be ``chef`` and ``data``, respectively.
 
    .. code-block:: bash
       
