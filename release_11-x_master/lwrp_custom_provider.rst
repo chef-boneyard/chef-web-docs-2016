@@ -38,15 +38,17 @@ updated_by_last_action
 
 use_inline_resources
 -----------------------------------------------------
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_about.rst
+
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources.rst
 
-**Background**
-
+Background
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst
 
-**Turn off Inline Compile Mode**
-
-.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_definition.rst
+Disable
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_default_behavior.rst
 
 whyrun_supported?
 -----------------------------------------------------
