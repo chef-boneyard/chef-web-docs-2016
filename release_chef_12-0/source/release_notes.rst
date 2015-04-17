@@ -464,7 +464,9 @@ The following attribute is new for the |resource scm_git| resource:
 
 Chef::Provider, Custom Resources
 -----------------------------------------------------
-.. include:: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_11-16_method_updated_by_last_action_example.rst
+
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
 
 Attribute Behavior Changes
 -----------------------------------------------------
