@@ -219,6 +219,7 @@ Cookbooks
    getting_started_with_chef
    glossary
    handlers
+   hwrp
    images
    install
    install_analytics
