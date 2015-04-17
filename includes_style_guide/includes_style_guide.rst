@@ -649,6 +649,106 @@ The quick-reference repository contains large PNG images that can be printed (fr
 https://github.com/chef/quick-reference
 
 
+Slide Decks
+=====================================================
+You can build an HTML slide deck using reveal.js. First, install this plugin for Sphinx:
+
+https://github.com/tell-k/sphinxjp.themes.revealjs
+
+Slide Format
+-----------------------------------------------------
+A slide deck is a single .rst topic that uses the ``revealjs::`` directive to define each slide in the deck, and also to define the heirarchy of the slides themselves.
+
+Single Column
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Official slide decks should be a single column. This means that users of the slide deck will scroll through the slide deck vertically. This is defined using the following pattern::
+
+   .. revealjs::
+   
+    .. revealjs:: Slide Title
+   
+       slide contents
+   
+    .. revealjs:: Slide Title
+   
+       slide contents
+   
+    .. and so on ...
+
+Use as many slides as needed and ensure that each slide is indented under the top-level ``revealjs::`` directive using a single space, and then the content of each slide indented to the start of the directive. Topics should be included, as a general pattern, like this::
+
+   .. revealjs::
+   
+    .. revealjs:: Recipes
+   
+       .. include:: ../../includes_slides/includes_slides_core_splash.rst
+   
+    .. revealjs:: Recipes
+   
+       .. include:: ../../includes_slides/includes_slides_recipes.rst
+   
+    .. revealjs:: Order Matters
+   
+       .. include:: ../../includes_slides/includes_slides_recipes_order.rst
+
+where the included file is a standard .rst file from the chef-docs library that **DOES NOT** include any ``revealjs::`` directive information. It's just well-formed restructured text as defined by this style guide. (It's important to remember that included topics may be in other formats, like PDF, non-reveal.js HTML formats, and even man pages.)
+
+You may mix-and-match inclusions and custom content as needed. For example::
+
+   .. revealjs::
+   
+    .. revealjs:: Recipes
+   
+       .. include:: ../../includes_slides/includes_slides_core_splash.rst
+   
+    ... <snip> ...
+   
+    .. revealjs:: Order Matters - Service Runs Third
+   
+       .. include:: ../../includes_slides/includes_slides_recipes_order_service.rst
+   
+    .. revealjs:: Questions
+   
+       .. include:: ../../includes_slides/includes_slides_core_questions.rst
+   
+    .. revealjs:: More Info About Resources
+   
+       For more information, see:
+   
+       * http://docs.chef.io/recipes.html
+
+where the final slide contains information that only exists in this slide deck. As a general rule, custom slide contents should follow the styles defined in this style guide and should truly be custom. (Try to reuse slides as often as possible and use custom slides where necessary for flow, transition, genuinely unique information.)
+
+Many Columms
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+A subtle pattern change will create a deck that has multiple columns, accessed via horizontal navigation, and then for each column the same vertical navigation. To create multiple columns, use the following structure::
+
+   .. revealjs::
+   
+    .. revealjs:: Slide Title  
+   
+     slide contents
+   
+    .. revealjs:: Slide Title
+   
+     .. include:: ../../path/to/file.rst
+   
+   
+   .. revealjs::
+   
+    .. revealjs:: Slide Title
+   
+     .. include:: ../../path/to/file.rst
+   
+    .. revealjs:: Slide Title
+   
+     .. include:: ../../path/to/file.rst
+
+Custom Decks
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+If you're building a deck that leverages the chef-docs repo, but will never be published to either docs.chef.io or slides.chef.io, then you can use whatever formats and slides structures you prefer. As long as Sphinx can build it, then use it! These types of decks may be employees of Chef building a custom deck for a specific training course, a presentation at a conference, and so on. This may also be community members (perhaps you!) using a deck at a conference, for something internal to your company about Chef, or anything.
+
+
 Official Names
 =====================================================
 Official names are listed in the ``/swaps/swap_names.rst`` file, including both |company_name| and 3rd party names. For |company_name| applications and components, use:
