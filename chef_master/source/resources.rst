@@ -1906,6 +1906,10 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_11-16_package_attributes.rst
 
+Multiple Packages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources_common/includes_resources_common_multiple_packages.rst
+
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_11-16_package_providers.rst
