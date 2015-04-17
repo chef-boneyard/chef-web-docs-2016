@@ -199,11 +199,11 @@ Inline Resources
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources.rst
 
 Background
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst
 
 Disable
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_default_behavior.rst
 
 Lightweight Resources and Providers
