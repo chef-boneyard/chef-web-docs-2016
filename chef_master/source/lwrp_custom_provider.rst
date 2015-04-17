@@ -40,6 +40,8 @@ updated_by_last_action
 -----------------------------------------------------
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action.rst
 
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
+
 use_inline_resources
 -----------------------------------------------------
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_about.rst
