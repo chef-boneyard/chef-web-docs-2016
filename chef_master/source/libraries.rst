@@ -26,6 +26,10 @@ Loop Over a Record
 -----------------------------------------------------
 .. include:: ../../includes_libraries/includes_libraries_example_loop_over_records.rst
 
+``Chef::Provider``
+=====================================================
+.. include:: ../../includes_libraries/includes_libraries_syntax_lwrpbase_example.rst
+
 Template Helper Modules
 -----------------------------------------------------
 .. include:: ../../step_resource/step_resource_template_library_module.rst
