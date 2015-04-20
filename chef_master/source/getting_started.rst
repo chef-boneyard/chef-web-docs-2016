@@ -8,7 +8,7 @@ Welcome to |chef|!
 
 .. note:: Use `Quick Start <http://docs.chef.io/devkit/getting_started.html#quick-start>`__ for just the command lines needed to get started. Hack your way through!
 
-   Use `Workstation Setup <http://docs.chef.io/devkit/getting_started.html#workstation-setup>`__ for a more verbose walkthrough. Continue to `Kitchen Setup <http://docs.chef.io/devkit/getting_started.html#kitchen-title-setup>`__ and set up multiple virtual environments using |kitchen|. These virtual environments may be used for testing, but in this case they are used to show how |chef| manages multiple platforms in the same way.
+   Use `Workstation Setup <http://docs.chef.io/devkit/getting_started.html#workstation-setup>`__ for a more verbose walkthrough that creates a file on the local machine. Continue to `Kitchen Setup <http://docs.chef.io/devkit/getting_started.html#kitchen-title-setup>`__ and set up multiple virtual environments using |kitchen|, and then create that file in those instances. |kitchen| is ultiately used for testing |chef|, but for now it's just showing how |chef| manages multiple platforms in the same way.
 
 Quick Start
 =====================================================
