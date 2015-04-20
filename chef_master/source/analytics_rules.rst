@@ -136,7 +136,7 @@ Regular Expressions
 -----------------------------------------------------
 .. include:: ../../step_analytics_rules/step_analytics_rules_regular_expression.rst
 
-Notify if Machine Listens on Port 23
+Notify on Port 23
 -----------------------------------------------------
 .. include:: ../../step_analytics_rules/step_analytics_rules_listen_on_port.rst
 
