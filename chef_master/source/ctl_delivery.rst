@@ -4,6 +4,7 @@
 
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery.rst
 
+.. warning:: This resource is only available from: https://github.com/chef/delivery-cli.
 
 delivery api
 =====================================================
