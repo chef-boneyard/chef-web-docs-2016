@@ -197,6 +197,7 @@ Cookbooks
    ctl_chef_shell
    ctl_chef_solo
    ctl_chef_sync
+   ctl_delivery
    ctl_kitchen
    ctl_manage
    ctl_ohai
