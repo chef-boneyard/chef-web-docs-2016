@@ -209,6 +209,7 @@ Cookbooks
    debug
    definitions
    delivery
+   dsl_delivery
    dsl_recipe
    environment_variables
    environments
