@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``init`` subcommand is used to create an initial |kitchen| environment, including:
+Use the ``init`` subcommand to create an initial |kitchen| environment, including:
 
 * Creating a |kitchen yml| file
 * Appending |kitchen| to the |rubygems| file, |gitignore|, and |thorfile|

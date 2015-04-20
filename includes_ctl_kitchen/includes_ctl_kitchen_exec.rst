@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``exec`` subcommand is used to execute a command on a remote instance.
+Use the ``exec`` subcommand to execute a command on a remote instance.
