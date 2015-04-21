@@ -41,6 +41,10 @@ Global Permissions
 -----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst
 
+Node Permissions
+-----------------------------------------------------
+.. include:: ../../includes_server_rbac/includes_server_rbac_permissions_client.rst
+
 Groups
 =====================================================
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups.rst
