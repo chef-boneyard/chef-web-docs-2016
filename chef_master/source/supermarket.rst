@@ -51,7 +51,7 @@ To set up the |service ocid| service, do the following:
 .. note:: You may add as many OC-ID applications as you wish to the |chef server rb| configuration file. One file per application will be created.
 
 
-Run |supermarket| in |kitchen|
+Run in |kitchen|
 -----------------------------------------------------
 
 .. note:: The community |supermarket| cookbook installs |supermarket| from source and is not used for that reason. Instead, use an omnibus package to install |supermarket|. Omnibus packages are located at: https://packagecloud.io/chef/stable.
@@ -149,7 +149,7 @@ Run in Production
 |supermarket| is still in development and is not officially supported by |chef| for high availability, backup and restore, and so on. Even though |chef| has important customers running |supermarket| in production, they are doing so at their own risk. In general, |chef| recommends that you start running |supermarket| with small virtual machines, and then increase the size of the virtual machine as necessary. Put the ``/var/opt/supermarket`` directory on a separate disk, and then use LVM so that may be expanded.
 
 
-Wrapper Cookbook Attributes
+Wrapper Cookbooks
 -----------------------------------------------------
 |chef| recommends to use a wrapper cookbook with role recipes to deploy |supermarket|.
 
@@ -180,11 +180,11 @@ Incorrect Redict URL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The redirect URL specified for OC-ID **MUST** match the hostname of the |supermarket| server. The URI must also be correct: ``/auth/chef_oauth2/callback``. Otherwise, an error message similar to ``The redict uri included is not valid.`` will be shown.
 
-500 Errors During Login
+500 Errors At Login
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The |supermarket| server must be able to reach (via https) the specified ``chef_server_url`` during |oauth| 2.0 negotiation. This type of issue is typically with name resolution and firewall rules.
 
-|supermarket| Code Location
+Source Code Location
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The code for |supermarket| can be found at the following URLs:
 
