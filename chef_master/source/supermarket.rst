@@ -104,9 +104,7 @@ To run |supermarket| in |kitchen|, do the following:
 
 #. After logon, the following should be shown:
 
-   .. code-block:: html
-
-      {% img https://www.getchef.com/blog/wp-content/uploads/2014/08/oc-id5-1024x343.png %}
+   .. image:: ../../images/supermarket_onpremises.png
 
 
 Upload a Cookbook
@@ -125,7 +123,7 @@ To upload a cookbook to |supermarket|, do the following:
 
       knife[:supermarket_site] = 'https://default-centos-66'
 
-#. Resolve |ssl| errors by fetching, and then verifying the |ssl| certificate for |supermarket:
+#. Resolve |ssl| errors by fetching, and then verifying the |ssl| certificate for |supermarket|:
 
    .. code-block:: bash
 
