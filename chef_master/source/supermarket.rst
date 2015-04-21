@@ -150,7 +150,7 @@ Run in Production
 
 
 Wrapper Cookbooks
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |chef| recommends to use a wrapper cookbook with role recipes to deploy |supermarket|.
 
 All of the keys under ``node['supermarket_omnibus']`` are written out as ``/etc/supermarket/supermarket.json``. Add others as needed to override the defaults that are specified in the |supermarket| `omnibus package <https://github.com/chef/omnibus-supermarket/blob/master/cookbooks/omnibus-supermarket/attributes/default.rb>`__:
@@ -164,7 +164,7 @@ All of the keys under ``node['supermarket_omnibus']`` are written out as ``/etc/
 
 
 Scale |supermarket|
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |supermarket| is a |ruby on rails| application with a |postgresql| backend. Typical rules for scaling a |ruby on rails| application apply. To run |supermarket| in a scale-out or high availability configuration, build out the following components on the back end:
 
 * **Database** Build a separate |postgresql| 9.3+ server (or high availability pair). Note that the following |postgresql| extensions must be installed and loaded: ``pgpsql`` and ``pg_trgm``
