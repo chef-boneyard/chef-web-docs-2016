@@ -70,6 +70,8 @@ This command has the following options:
 ``-o RUN_LIST_ITEM``, ``--override-runlist RUN_LIST_ITEM``
    |override_runlist|
 
+   .. note:: This option **will** clear the list of cookbooks (and related files) that is cached on the node. (Starting in |chef client| 12.0, this option **will not** clear the list of cookbooks.)
+
 ``--once``
    |once|
 
