@@ -33,6 +33,6 @@ The following |chef delivery|-specific helpers can be used in recipes:
    * - ``project_slug``
      - Use to return a project slug.
    * - ``push_repo_to_github?``
-     - Use to push a repo to |github|, as specified by settings in the ``config.json`` file.
+     - Use to determine if a repo should be pushed to |github|.
    * - ``upload_cookbook_to_chef_server?``
-     - Use to upload a cookbook to the |chef server|, as specified by settings in the ``config.json`` file.
+     - Use to determine if a ookbook should be pushed to the |chef server|.
