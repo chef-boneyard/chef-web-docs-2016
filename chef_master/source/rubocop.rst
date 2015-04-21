@@ -33,3 +33,9 @@ Syntax
 |rubocop_todo yml|
 -----------------------------------------------------
 .. include:: ../../includes_rubocop/includes_rubocop_yml_todo.rst
+
+For more information ...
+=====================================================
+For more information about |rubocop|:
+
+* `Rubocop Github Repo <https://github.com/bbatsov/rubocop>`_
