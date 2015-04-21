@@ -27,7 +27,7 @@ The following |chef delivery|-specific helpers can be used in recipes:
    * - ``get_project_secrets``
      - Use to get the data bag from the |chef server| in which secrets used by this project are stored.
    * - ``has_kitchen_tests?``
-     - Use to determine if tests if a |kitchen yml| file exists in a cookbook.
+     - Use to determine if a |kitchen yml| file exists in a cookbook.
    * - ``has_spec_tests?``
      - Use to determine if tests exist in the ``/spec`` directory in a cookbook.
    * - ``project_slug``
