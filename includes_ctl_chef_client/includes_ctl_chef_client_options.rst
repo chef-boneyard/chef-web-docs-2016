@@ -82,8 +82,14 @@ This command has the following options:
 ``--lockfile LOCATION``
    Use to specify the location of the lock file, which prevents multiple |chef client| processes from converging at the same time.
 
+``--minimal-ohai``
+   |minimal_ohai|
+
 ``--[no-]color``
    |color| Default setting: ``--color``.
+
+``--[no-]listen``
+   |chef_zero_no_listen|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |name node|

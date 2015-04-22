@@ -101,6 +101,8 @@ This configuration file has the following settings:
      - |interval| Default value: ``1800``.
    * - ``json_attribs``
      - |json attributes|
+   * - ``listen``
+     - |chef_zero_no_listen| Set to ``false`` to disable port binding and HTTP requests on localhost.
    * - ``local_key_generation``
      - |generate local_keys| Default value: ``true``.
    * - ``local_mode``

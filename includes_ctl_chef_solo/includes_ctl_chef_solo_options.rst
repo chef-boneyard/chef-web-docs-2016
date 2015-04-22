@@ -60,6 +60,9 @@ This command has the following options:
 ``-L LOGLOCATION``, ``--logfile c``
    |log_location| This is recommended when starting any executable as a daemon.
 
+``--minimal-ohai``
+   |minimal_ohai|
+
 ``--[no-]color``
    |color| Default setting: ``--color``.
 

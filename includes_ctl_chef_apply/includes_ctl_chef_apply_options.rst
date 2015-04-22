@@ -15,6 +15,9 @@ This tool has the following options:
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
 
+``--minimal-ohai``
+   |minimal_ohai|
+
 ``-s``, ``--stdin``
    |stdin chef_apply|
 
