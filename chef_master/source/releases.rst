@@ -11,6 +11,9 @@ The following documentation sets are available:
    * - Application
      - Home Page
      - Release Notes
+   * - |chef client_title| 12.3
+     - `http://docs.chef.io/release/12-3/ <http://docs.chef.io/release/12-3/>`__
+     - `Release Notes <http://docs.chef.io/release/12-3/release_notes.html>`__
    * - |chef client_title| 12.2
      - `http://docs.chef.io/release/12-2/ <http://docs.chef.io/release/12-2/>`__
      - `Release Notes <http://docs.chef.io/release/12-2/release_notes.html>`__
