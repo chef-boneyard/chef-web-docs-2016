@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-f``, ``--for=<pipeline>``
-   Use to specify a pipeline.
+   |delivery pipeline|
 
 ``-P``, ``--patchset=<number>``
-   Use to specify the patchset number. Default value: ``latest``.
+   |delivery patchset| Default value: ``latest``.

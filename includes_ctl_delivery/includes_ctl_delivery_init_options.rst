@@ -6,19 +6,19 @@
 This subcommand has the following options:
 
 ``-e``, ``--ent=<ent>``
-   Use to specify an enterprise that is configured for |chef delivery|.
+   |delivery enterprise|
 
 ``-o``, ``--org=<org>``
-   Use to specify an organization that is configured for |chef delivery|.
+   |delivery organization|
 
 ``-p``, ``--project=<project>``
-   Use to specify a project name.
+   |name delivery_project|
 
 ``-s``, ``--server=<server>``
-   Use to specify a server on which |chef delivery| is running.
+   |delivery server|
 
 ``<type>````
-   Use to specify type of project: ``cookbook``.
+   |delivery project_type| Default value: ``cookbook``.
 
 ``-u``, ``--user=<user>``
-   Use to specify a |chef delivery| user name.
+   |delivery user|

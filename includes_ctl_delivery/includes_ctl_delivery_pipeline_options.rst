@@ -6,22 +6,22 @@
 This subcommand has the following options:
 
 ``-c``, ``--config-path=<dir>``
-   Use to specify the directory to which configuration is written.
+   |path directory_delivery|
 
 ``-e``, ``--ent=<ent>``
-   Use to specify an enterprise that is configured for |chef delivery|.
+   |delivery enterprise|
 
 ``-f``, ``--for=<pipeline>``
-   Use to specify a pipeline.
+   |delivery pipeline|
 
 ``-o``, ``--org=<org>``
-   Use to specify an organization that is configured for |chef delivery|.
+   |delivery organization|
 
 ``-p``, ``--project=<project>``
-   Use to specify a project name.
+   |name delivery_project|
 
 ``-s``, ``--server=<server>``
-   Use to specify a server on which |chef delivery| is running.
+   |delivery server|
 
 ``-u``, ``--user=<user>``
-   Use to specify a |chef delivery| user name.
+   |delivery user|

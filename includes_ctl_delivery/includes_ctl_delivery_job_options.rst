@@ -6,43 +6,43 @@
 This subcommand has the following options:
 
 ``-C``, ``--change=<change>``
-   Use to specify a branch name for a |chef delivery| change.
+   |delivery branch|
 
 ``-e``, ``--ent=<ent>``
-   Use to specify an enterprise that is configured for |chef delivery|.
+   |delivery enterprise|
 
 ``-f``, ``--for=<pipeline>``
-   Use to specify a pipeline.
+   |delivery pipeline|
 
 ``-g``, ``--git-url=<url>``
-   Use to specify a raw URL that exists in |git|.
+   |git url|
 
 ``-i``, ``--change-id=<id>``
-   Use to specify a |chef delivery| change identifier.
+   |id delivery_change|
 
 ``-j``, ``--job-root=<path>``
-   Use to specify the path to the job root.
+   |path delivery_job_root|
 
 ``-n``, ``--no-spinner``
-   Use to disable the spinner.
+   |delivery no_spinner|
 
 ``-o``, ``--org=<org>``
-   Use to specify an organization that is configured for |chef delivery|.
+   |delivery organization|
 
 ``-p``, ``--project=<project>``
-   Use to specify a project name.
+   |name delivery_project|
 
 ``-P``, ``--patchset=<number>``
-   Use to specify the patchset number. Default value: ``latest``.
+   |delivery patchset| Default value: ``latest``.
 
 ``<phase>````
-   Use to specify phase of a project.
+   |delivery phase|
 
 ``-s``, ``--server=<server>``
-   Use to specify a server on which |chef delivery| is running.
+   |delivery server|
 
 ``-S``, ``--shasum=<gitsha>``
-   Use to specify a SHA for |git|.
+   |git sha|
 
 ``-u``, ``--user=<user>``
-   Use to specify a |chef delivery| user name.
+   |delivery user|

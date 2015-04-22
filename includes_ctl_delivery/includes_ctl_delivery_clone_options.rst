@@ -6,16 +6,16 @@
 This subcommand has the following options:
 
 ``-e``, ``--ent=<ent>``
-   Use to specify an enterprise that is configured for |chef delivery|.
+   |delivery enterprise|
 
 ``-g``, ``--git-url=<url>``
-   Use to specify a raw URL that exists in |git|.
+   |git url|
 
 ``-o``, ``--org=<org>``
-   Use to specify an organization that is configured for |chef delivery|.
+   |delivery organization|
 
 ``-s``, ``--server=<server>``
-   Use to specify a server on which |chef delivery| is running.
+   |delivery server|
 
 ``-u``, ``--user=<user>``
-   Use to specify a |chef delivery| user name.
+   |delivery user|
