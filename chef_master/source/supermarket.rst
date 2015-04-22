@@ -160,7 +160,7 @@ All of the keys under ``node['supermarket_omnibus']`` are written out as ``/etc/
    default['supermarket_omnibus']['chef_oauth2_verify_ssl'] = false
 
 
-Scale |supermarket|
+Scale-out and HA
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |supermarket| is a |ruby on rails| application with a |postgresql| backend. Typical rules for scaling a |ruby on rails| application apply. To run |supermarket| in a scale-out or high availability configuration, build out the following components on the back end:
 
