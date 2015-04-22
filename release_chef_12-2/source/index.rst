@@ -2,9 +2,6 @@
 Docs for |chef client| 12.2
 =====================================================
 
-.. warning:: The release numbering for the chef-client, prior to chef-client 12.1 used an even numbering sequence. Starting with chef-client 12.0, the release numbering will be 12.1, 12.2, 12.3, and so on. This document collection was created before the new release numbering pattern, so is incorrect because the current release is chef-client 12.1. See http://docs.chef.io/release/12-1/ for those documents. When chef-client 12.2 is released, these topics will be updated in-place and properly versioned.
-
-
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 View the :doc:`release notes </release_notes>` for |chef client| 12.2.
