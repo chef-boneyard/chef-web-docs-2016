@@ -10,12 +10,12 @@ Install |supermarket|
 
 .. note:: This section superscedes an earlier blog post:  https://www.chef.io/blog/2014/08/29/getting-started-with-oc-id-and-supermarket/.
 
-|chef server| version 12 includes |chef identify|, which enables |oauth| 2.0 authentication used by |chef| web applications, including |supermarket|. To run |supermarket| behind a firewall on-premises, first upgrade to |chef server| version 12 (or higher) so that |oauth| 2.0 authentication is available.
+|chef server| version 12 includes |chef identity|, which enables |oauth| 2.0 authentication used by |chef| web applications, including |supermarket|. To run |supermarket| behind a firewall on-premises, first upgrade to |chef server| version 12 (or higher) so that |oauth| 2.0 authentication is available.
 
 
 Set Up |chef identity_title|
 -----------------------------------------------------
-To set up |chef identify|, do the following:
+To set up |chef identity|, do the following:
 
 #. Log on to the |chef server| via |ssh| and elevated to an admin-level user.
 #. Add the following setting to the ``/etc/opscode/chef-server.rb`` configuration file:
@@ -47,7 +47,7 @@ To set up |chef identify|, do the following:
 
    The ``uid`` and ``secret`` values will be needed later on during the setup process for |supermarket|.
 
-.. note:: You may add as many |chef identify| applications as you wish to the |chef server rb| configuration file. One file per application will be created.
+.. note:: You may add as many |chef identity| applications as you wish to the |chef server rb| configuration file. One file per application will be created.
 
 
 Run in |kitchen|
@@ -83,7 +83,7 @@ To run |supermarket| in |kitchen|, do the following:
               chef_oauth2_secret: 17cf1141cc971a10ce307611beda7f4dc6633bb54f1bc98d9f9ca76b9b127879
               chef_oauth2_verify_ssl: false
 
-#. Install the ``vagrant-hostupdater`` plugin. This plugin enables automatically adding the names of machines to the ``/etc/hosts`` file. This is important when using |oauth| 2.0, which cares about host names. The ``redirect_uri`` value in the |chef identify| configuration reflects this name.
+#. Install the ``vagrant-hostupdater`` plugin. This plugin enables automatically adding the names of machines to the ``/etc/hosts`` file. This is important when using |oauth| 2.0, which cares about host names. The ``redirect_uri`` value in the |chef identity| configuration reflects this name.
 
    .. code-block:: bash
 
