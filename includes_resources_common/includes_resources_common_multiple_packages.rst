@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A resource may specify multiple packages and/or versions for platforms that use |yum| or |apt|. Specifing multiple packages and/or versions allows a single transaction to 
+A resource may specify multiple packages and/or versions for platforms that use |yum| or |apt|. Specifing multiple packages and/or versions allows a single transaction to:
 
 * Download the specified packages and versions via a single HTTP transaction
 * Update or install multiple packages with a single resource during the |chef client| run
