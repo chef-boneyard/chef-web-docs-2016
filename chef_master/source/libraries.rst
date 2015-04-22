@@ -38,6 +38,10 @@ Loop Over a Record
 =====================================================
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
 
+Dynamic Resolution
+-----------------------------------------------------
+.. include:: ../../includes_libraries/includes_libraries_dynamic_resolution.rst
+
 Template Helper Modules
 -----------------------------------------------------
 .. include:: ../../step_resource/step_resource_template_library_module.rst
