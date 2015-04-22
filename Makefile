@@ -8,17 +8,17 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master delivery devkit analytics all server client 12-1 12-2 slides
+release: master delivery devkit analytics all server client 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18 12-0 12-1 12-2 12-3 slides ohai-6 ohai-7 ohai-8 open_source osc_11-0 osc_11-1 enterprise oec_11-0 oec_11-1 oec_11-2
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # 
-# 12-0
-# 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18
 # 
-# ohai-6 ohai-7 ohai-8
-# open_source osc_11-0 osc_11-1
-# enterprise oec_11-0 oec_11-1 oec_11-2
+# 
+# 
+# 
+# 
+# 
 # RETIRED: located in chef-docs-misc, no longer built or maintained
 # 
 # 10 private_chef
@@ -111,6 +111,10 @@ delivery:
 12-2:
 	mkdir -p $(BUILDDIR)/release/12-2/
 	$(BUILD_COMMAND_AND_ARGS) release_chef_12-2/source $(BUILDDIR)/release/12-2/
+
+12-3:
+	mkdir -p $(BUILDDIR)/release/12-3/
+	$(BUILD_COMMAND_AND_ARGS) release_chef_12-3/source $(BUILDDIR)/release/12-3/
 
 oec_11-0:
 	mkdir -p $(BUILDDIR)/release/oec_11-0/
