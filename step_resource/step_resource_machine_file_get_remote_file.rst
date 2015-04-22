@@ -15,7 +15,7 @@ A deployment process requires more than just setting up machines. For example, f
 
    machine_file '/tmp/mytarball.tgz' do
      machine 'x'
-     path 'mytarball.tgz'
+     local_path 'mytarball.tgz'
      action :upload
    end
 
