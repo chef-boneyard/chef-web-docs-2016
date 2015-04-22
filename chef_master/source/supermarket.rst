@@ -10,15 +10,14 @@ Install |supermarket|
 
 .. note:: This section superscedes an earlier blog post:  https://www.chef.io/blog/2014/08/29/getting-started-with-oc-id-and-supermarket/.
 
-|chef server| version 12 includes OC-ID, which enables |oauth| 2.0 authentication used by |chef| web applications, including |supermarket|. To run |supermarket| behind a firewall on-premises, first upgrade to |chef server| version 12 (or higher) so that |oauth| 2.0 authentication is available.
+|chef server| version 12 includes |chef identify|, which enables |oauth| 2.0 authentication used by |chef| web applications, including |supermarket|. To run |supermarket| behind a firewall on-premises, first upgrade to |chef server| version 12 (or higher) so that |oauth| 2.0 authentication is available.
 
 
-Set Up OC-ID
+Set Up |chef identity_title|
 -----------------------------------------------------
-To set up the |service ocid| service, do the following:
+To set up |chef identify|, do the following:
 
-
-#. Log on to the |chef server| via SSH and elevated to an admin-level user.
+#. Log on to the |chef server| via |ssh| and elevated to an admin-level user.
 #. Add the following setting to the ``/etc/opscode/chef-server.rb`` configuration file:
 
    .. code-block:: ruby
@@ -48,13 +47,13 @@ To set up the |service ocid| service, do the following:
 
    The ``uid`` and ``secret`` values will be needed later on during the setup process for |supermarket|.
 
-.. note:: You may add as many OC-ID applications as you wish to the |chef server rb| configuration file. One file per application will be created.
+.. note:: You may add as many |chef identify| applications as you wish to the |chef server rb| configuration file. One file per application will be created.
 
 
 Run in |kitchen|
 -----------------------------------------------------
 
-.. note:: The community |supermarket| cookbook installs |supermarket| from source and is not used for that reason. Instead, use an omnibus package to install |supermarket|. Omnibus packages are located at: https://packagecloud.io/chef/stable.
+.. note:: The community |supermarket| cookbook installs |supermarket| from source and is not used for that reason. Instead, use an omnibus package to install |supermarket|. Omnibus packages are located on |packagecloud| at https://packagecloud.io/chef/stable.
 
 To run |supermarket| in |kitchen|, do the following:
 
@@ -84,7 +83,7 @@ To run |supermarket| in |kitchen|, do the following:
               chef_oauth2_secret: 17cf1141cc971a10ce307611beda7f4dc6633bb54f1bc98d9f9ca76b9b127879
               chef_oauth2_verify_ssl: false
 
-#. Install the ``vagrant-hostupdater`` plugin. This plugin enables automatically adding the names of machines to the ``/etc/hosts`` file. This is important when using |oauth| 2.0, which cares about host names. The ``redirect_uri`` value in the OC-ID configuration reflects this name.
+#. Install the ``vagrant-hostupdater`` plugin. This plugin enables automatically adding the names of machines to the ``/etc/hosts`` file. This is important when using |oauth| 2.0, which cares about host names. The ``redirect_uri`` value in the |chef identify| configuration reflects this name.
 
    .. code-block:: bash
 
@@ -170,17 +169,17 @@ Scale |supermarket|
 * **Caching Service** Optional. |supermarket| uses |redis| as its caching service. One |redis| instance per |supermarket| application server may be run safely. Use |redis| 2.8 (or higher) for a high availability pair.
 
 
-Troubleshooting
+Notes
 -----------------------------------------------------
 The following errors and issues may be seen when running |supermarket| on premises.
 
 Incorrect Redict URL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The redirect URL specified for OC-ID **MUST** match the hostname of the |supermarket| server. The URI must also be correct: ``/auth/chef_oauth2/callback``. Otherwise, an error message similar to ``The redict uri included is not valid.`` will be shown.
+The redirect URL specified for |chef identity| **MUST** match the hostname of the |supermarket| server. The URI must also be correct: ``/auth/chef_oauth2/callback``. Otherwise, an error message similar to ``The redict uri included is not valid.`` will be shown.
 
 500 Errors At Login
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The |supermarket| server must be able to reach (via https) the specified ``chef_server_url`` during |oauth| 2.0 negotiation. This type of issue is typically with name resolution and firewall rules.
+The |supermarket| server must be able to reach (via HTTPS) the specified ``chef_server_url`` during |oauth| 2.0 negotiation. This type of issue is typically with name resolution and firewall rules.
 
 Source Code Location
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -208,7 +207,7 @@ and then run:
 
 Behind a Proxy
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-If packagecloud.io fails due to being behind a proxy, update the |kitchen yml| file:
+If |packagecloud| fails due to being behind a proxy, update the |kitchen yml| file:
 
 .. code-block:: yaml
 
