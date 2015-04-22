@@ -6,7 +6,7 @@
 
 Options
 =====================================================
-.. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply_options.rst
+.. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply_12-2_options.rst
 
 Examples
 =====================================================
