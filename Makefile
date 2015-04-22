@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master devkit analytics all server client 12-1 12-2 slides
+release: master delivery devkit analytics all server client 12-1 12-2 slides
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -55,6 +55,10 @@ all:
 server:
 	mkdir -p $(BUILDDIR)/server/
 	$(BUILD_COMMAND_AND_ARGS) docs_server/source $(BUILDDIR)/server/
+
+delivery:
+	mkdir -p $(BUILDDIR)/delivery/
+	$(BUILD_COMMAND_AND_ARGS) docs_delivery/source $(BUILDDIR)/delivery/
 
 11-0:
 	mkdir -p $(BUILDDIR)/release/11-0/
