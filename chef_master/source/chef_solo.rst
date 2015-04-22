@@ -34,7 +34,7 @@ Environments
 
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_11-12_options.rst
+.. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
