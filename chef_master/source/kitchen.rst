@@ -12,6 +12,10 @@ Test Frameworks
 =====================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_tests.rst
 
+Busser
+-----------------------------------------------------
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_busser.rst
+
 Drivers
 =====================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst
