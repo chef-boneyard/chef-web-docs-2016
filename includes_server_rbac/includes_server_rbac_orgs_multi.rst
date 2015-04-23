@@ -5,4 +5,7 @@ A single instance of the |chef server| can support many organizations. Each orga
 
 .. image:: ../../images/server_rbac_orgs_groups_and_users.png
 
-A user may belong to multiple organizations under the following conditions: role-based access control is configured per-organization, for a single user to interact with the |chef server| using |knife| from the same |chef repo|, that user may need to edit their |knife rb| file prior to that interaction.
+A user may belong to multiple organizations under the following conditions:
+
+* Role-based access control is configured per-organization
+* For a single user to interact with the |chef server| using |knife| from the same |chef repo|, that user may need to edit their |knife rb| file prior to that interaction 

@@ -97,6 +97,10 @@ Multiple Organizations
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_orgs_multi_use.rst
 
+Many Users, Same Repo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_chef_repo/includes_chef_repo_many_users_same_repo.rst
+
 |api chef server|
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server.rst
