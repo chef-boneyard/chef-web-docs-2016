@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: slides
+release: slides decks
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -47,7 +47,11 @@ master:
 
 slides:
 	mkdir -p $(BUILDDIR)/slides/
-	$(BUILD_COMMAND_AND_ARGS) slide_decks/source $(BUILDDIR)/slides/
+	$(BUILD_COMMAND_AND_ARGS) slide_master/source $(BUILDDIR)/slides/
+
+decks:
+	mkdir -p $(BUILDDIR)/decks/
+	$(BUILD_COMMAND_AND_ARGS) slide_decks/source $(BUILDDIR)/decks/
 
 all:
 	mkdir -p $(BUILDDIR)/chef/
