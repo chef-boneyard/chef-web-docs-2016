@@ -1,7 +1,8 @@
 .. The contents of this file are included in multiple slide decks.
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
-Slides should begin with simple, concise statements followed by a short list. chef-slides uses a very small subset of the Sphinx directive set: 
+
+Slides should begin with simple, concise statements followed by a short list. Slides uses a very small subset of the |python sphinx| directive set: 
 
 * Paragraphs, including **bold**, *italics*, and ``code``.
 * Ordered and unordered lists.

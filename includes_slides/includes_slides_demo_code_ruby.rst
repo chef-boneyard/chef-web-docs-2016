@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple slide decks.
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
-Ruby code:
+|ruby| code:
 
 .. code-block:: ruby
 
@@ -9,7 +9,7 @@ Ruby code:
      stuff
    end
 
-For example, a DSC script:
+For example, a |windows powershell_dsc| script:
 
 .. code-block:: ruby
        
