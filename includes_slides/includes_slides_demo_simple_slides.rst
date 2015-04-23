@@ -4,14 +4,14 @@
 
 Slides should begin with simple, concise statements followed by a short list. Slides uses a very small subset of the |python sphinx| directive set: 
 
-* Paragraphs, including **bold**, *italics*, and ``code``.
-* Ordered and unordered lists.
-* Fully qualified URLs.
-* Code blocks, both by themselves and within ordered lists.
+* Paragraphs, including **bold**, *italics*, and ``code``
+* Ordered and unordered lists
+* Fully qualified URLs
+* Code blocks, both by themselves and within ordered lists
 * Images. Used well, images are terrific! Used poorly, well ...
-* List-tables, which are tables built using an unordered list and whitespace.
+* List-tables, which are tables built using an unordered list and whitespace
 * Notes, warnings
 
-The titles are in all-caps and live in the slide map file, separate from the contents of the reStructuredText file. For more information see:
+Titles are in all-caps and live in the slide map file, separate from the contents of the reStructuredText file. For more information see http://docs.chef.io/style_guide.html#slide-decks.
 
-http://docs.chef.io/style_guide.html#slide-decks.
+.. warning:: Slides do not support speaker notes. Sorry.
