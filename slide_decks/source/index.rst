@@ -1,5 +1,5 @@
 =====================================================
-Chef Open Source Slide Decks 
+Chef Open Source Slide Decks
 =====================================================
 
 .. revealjs::
@@ -14,9 +14,14 @@ Chef Open Source Slide Decks
    :hidden:
 
    about
+   chef_repo
    chefspec
+   cookbooks
+   ctl_chef
    foodcritic
    kitchen
+   recipes
+   resources
    serverspec
    technical_overview
    testing
