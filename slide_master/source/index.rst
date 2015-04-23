@@ -19,6 +19,8 @@ Chef Open Source Slide Decks
 
 **Reference**
 
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/decks/about.html">About Chef Open Source Slide Decks</a> </br>
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
