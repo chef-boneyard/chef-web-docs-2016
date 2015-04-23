@@ -659,7 +659,30 @@ Slide Format
 -----------------------------------------------------
 A slide deck is a single .rst topic that uses the ``revealjs::`` directive to define each slide in the deck, and also to define the heirarchy of the slides themselves.
 
-Single Column
+Basic Writing Tips
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+You don't need a lot of formatting to make a good slide deck topic. When writing one, stick to using:
+
+* Lists (bullet, numbered, or definition)
+* Links
+* Inline markup
+* Code blocks
+* Notes and warnings
+* Images
+
+And you should never use:
+
+* Section headers (the header is defined in the maps)
+
+Use the following carefully:
+
+* List tables (you may need to hand-code a table in a slide, if a table is truly required)
+* Includes and inline replacements (make sure they fit, that they are what you want, and that they render what you wanted)
+* TOC trees (you just need to make sure any non-index.rst topic is listed under the toctree directive)
+
+.. warning:: There are lots of other directives in Sphinx. It's just that chef-docs isn't using most of them. Everything chef-docs is using is defined in this style guide. There are also revealjs-specific directives. See the release notes: https://github.com/tell-k/sphinxjp.themes.revealjs. We can try them as needed to see how they do.
+
+Single Column Maps
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Official slide decks should be a single column. This means that users of the slide deck will scroll through the slide deck vertically. This is defined using the following pattern::
 
@@ -719,7 +742,7 @@ You may mix-and-match inclusions and custom content as needed. For example::
 
 where the final slide contains information that only exists in this slide deck. As a general rule, custom slide contents should follow the styles defined in this style guide and should truly be custom. (Try to reuse slides as often as possible and use custom slides where necessary for flow, transition, genuinely unique information.)
 
-Many Columms
+Many Columm Maps
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 A subtle pattern change will create a deck that has multiple columns, accessed via horizontal navigation, and then for each column the same vertical navigation. To create multiple columns, use the following structure::
 
