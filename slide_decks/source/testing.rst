@@ -7,7 +7,7 @@ Testing Overview
 
  .. revealjs:: Testing Overview
 
-  .. include:: ../../includes_slides/includes_slides_core_splash.rst
+  .. include:: ../../includes_slides/includes_slides_testing_splash.rst
 
  .. revealjs:: About Test-Driven Development
 
