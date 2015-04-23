@@ -1,5 +1,5 @@
 ================================================
-Slide Decks  
+Slide Decks
 ================================================
 
 .. revealjs::
@@ -36,9 +36,13 @@ Slide Decks
 
   .. include:: ../../includes_slides/includes_slides_demo_admonitions.rst
 
- .. revealjs:: Images
+ .. revealjs:: Images -- Resource Types
 
   .. include:: ../../includes_slides/includes_slides_core_resources.rst
+
+ .. revealjs:: Images -- Node Types
+
+  .. include:: ../../includes_slides/includes_slides_core_node_types.rst
 
  .. revealjs:: Questions?
 
