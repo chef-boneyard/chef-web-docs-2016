@@ -15,13 +15,13 @@ There are two upgrade scenarios for upgrades from earlier versions of |chef serv
 
 Standalone
 -----------------------------------------------------
-This section describes the upgrade process for a standalone configuration. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
+This section describes the upgrade process for a standalone configuration. The upgrade process will require downtime equal to the amount of time it takes to stop the server, run |debian dpkg| or |rpm|, and then upgrade the server.
 
 .. include:: ../../includes_upgrade/includes_upgrade_standalone_12-to-12.rst
 
 High Availability
 -----------------------------------------------------
-This section describes the upgrade process from a high availability configuration. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
+This section describes the upgrade process from a high availability configuration. The upgrade process will require downtime equal to the amount of time it takes to stop the server, run |debian dpkg| or |rpm|, and then upgrade the server.
 
 .. include:: ../../includes_upgrade/includes_upgrade_ha_12-to-12.rst
 
@@ -37,19 +37,19 @@ Before upgrading, please `view the notes <http://docs.chef.io/upgrade_server_not
 
 Standalone
 -----------------------------------------------------
-This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+This section describes the upgrade process from a standalone |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the server, run |debian dpkg| or |rpm|, and then upgrade the server. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
 
 .. include:: ../../includes_upgrade/includes_upgrade_standalone_11-to-12.rst
 
 High Availability
 -----------------------------------------------------
-This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
+This section describes the upgrade process from a high availability |chef server oec| 11 to |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the server, run |debian dpkg| or |rpm|, and then upgrade the server. The final step will remove older components (like |couch db|) and will destroy the data after the upgrade process is complete.
 
 .. include:: ../../includes_upgrade/includes_upgrade_ha_11-to-12.rst
 
 From |chef server osc|
 =====================================================
-This section describes the upgrade process from a standalone configuration of |chef server osc| 11.1.0 (or higher) to a standalone configuration of |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine.
+This section describes the upgrade process from a standalone configuration of |chef server osc| 11.1.0 (or higher) to a standalone configuration of |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the server, run |debian dpkg| or |rpm|, and then upgrade the server.
 
 Please `view the notes <http://docs.chef.io/upgrade_server_open_source_notes.html>`__ for more background on the upgrade process from |chef server osc| 11 to |chef server| 12.
 
@@ -67,7 +67,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
       
       $ chef-server-ctl stop
 
-#. Run |debian dpkg| or |rpm| on the machine to install |chef server| 12. For |debian dpkg|:
+#. Run |debian dpkg| or |rpm| on the server to install |chef server| 12. For |debian dpkg|:
 
    .. code-block:: bash
       
@@ -83,7 +83,7 @@ To upgrade to |chef server| 12 from the |chef server osc| server, do the followi
 
    |chef server| 12 is installed to ``/opt/opscode``. (The existing |chef server osc| remains at ``/opt/chef-server``.) From this point, the ``chef-server-ctl`` commands are running against the ``/opt/opscode`` location.
 
-#. Upgrade the machine with the following command:
+#. Upgrade the server with the following command:
 
    .. code-block:: bash
       

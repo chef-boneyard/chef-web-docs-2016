@@ -3,7 +3,7 @@
 
 To upgrade to |chef server| 12 from a standalone |chef server oec| server, do the following:
 
-#. Verify that the ``make`` command is available on the |chef server oec| machine. If it is not available, install the ``make`` command.
+#. Verify that the ``make`` command is available on the |chef server oec| server. If it is not available, install the ``make`` command.
 
 #. Run the following command to make sure all services are in a sane state.
 
@@ -11,7 +11,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ private-chef-ctl reconfigure
 
-#. Stop the machine:
+#. Stop the server:
 
    .. code-block:: bash
       
@@ -31,7 +31,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ rpm -Uvh --nopostun /path/to/chef-server-core-<version>.rpm
 
-#. Upgrade the machine with the following command:
+#. Upgrade the server with the following command:
 
    .. code-block:: bash
       
@@ -43,7 +43,7 @@ To upgrade to |chef server| 12 from a standalone |chef server oec| server, do th
       
       $ chef-server-ctl start
 
-#. After the upgrade process is complete and everything is tested and verified to be working properly, clean up the machine by removing all of the old data:
+#. After the upgrade process is complete and everything is tested and verified to be working properly, clean up the server by removing all of the old data:
 
    .. code-block:: bash
       

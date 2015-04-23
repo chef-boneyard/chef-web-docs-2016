@@ -14,7 +14,7 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
    * - |chef manage_title|
      - Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface.
 
-       On each front end machine in the |chef server| configuration, run:
+       On each front end server in the |chef server| configuration, run:
 
        .. code-block:: ruby
 
@@ -37,7 +37,7 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
    * - |push jobs_title|
      - Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run.
 
-       On all machines in the |chef server| configuration, run:
+       On all servers in the |chef server| configuration, run:
 
        .. code-block:: ruby
 
@@ -60,7 +60,7 @@ The ``install`` subcommand downloads packages from https://packagecloud.io/ by d
    * - |chef replication_title|
      - Use |chef replication| to asynchronously distribute cookbook, environment, role, and data bag data from a single, primary |chef server| to one (or more) replicas of that |chef server|.
 
-       On all machines in the |chef server| configuration, run:
+       On all servers in the |chef server| configuration, run:
 
        .. code-block:: ruby
 

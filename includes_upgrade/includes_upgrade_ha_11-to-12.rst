@@ -3,29 +3,29 @@
 
 To upgrade to |chef server| 12 from a high availability |chef server oec| server, do the following:
 
-#. Verify that the ``make`` command is available on the primary backend |chef server oec| machine. If it is not available, install the ``make`` command.
+#. Verify that the ``make`` command is available on the primary backend |chef server oec| server. If it is not available, install the ``make`` command.
 
-#. Run the following on all machines to make sure all services are in a sane state.
+#. Run the following on all servers to make sure all services are in a sane state.
 
    .. code-block:: bash
       
       $ private-chef-ctl reconfigure
 
-#. Stop all of the front end machines:
+#. Stop all of the front end servers:
 
    .. code-block:: bash
       
       $ private-chef-ctl stop
 
-#. Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
+#. Identify the name of the original non-bootstrap backend server. This is the back end server that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
 
-#. Stop |keepalived| on the original non-bootstrap backend machine. This will ensure that the bootstrap back end machine is the active machine. This action may trigger a failover.
+#. Stop |keepalived| on the original non-bootstrap backend server. This will ensure that the bootstrap back end server is the active server. This action may trigger a failover.
 
    .. code-block:: bash
       
       $ private-chef-ctl stop keepalived
 
-#. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
+#. Run |debian dpkg| or |rpm| on all servers. For |debian dpkg|:
 
    .. code-block:: bash
       
@@ -39,7 +39,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
       
       $ rpm -Uvh --nopostun /path/to/chef-server-core-<version>.rpm
 
-#. On the primary back end machine, stop all services except |keepalived|. With |chef server| 12, the |keepalived| service will not be stopped with the following command:
+#. On the primary back end server, stop all services except |keepalived|. With |chef server| 12, the |keepalived| service will not be stopped with the following command:
 
    .. code-block:: bash
       
@@ -48,7 +48,7 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
    If the upgrade process times out, re-run the command until it finishes successfully.
 
 
-#. Upgrade the back end primary machine with the following command:
+#. Upgrade the back end primary server with the following command:
 
    .. code-block:: bash
       
@@ -56,41 +56,41 @@ To upgrade to |chef server| 12 from a high availability |chef server oec| server
 
    If the upgrade process times out, re-run the command until it finishes successfully.
 
-#. Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
+#. Copy the entire ``/etc/opscode`` directory from the back end primary server to all front and back end nodes. For example, from each server run:
 
    .. code-block:: bash
       
       $ scp -r <Bootstrap server IP>:/etc/opscode /etc
 
-   or from the back end primary machine:
+   or from the back end primary server:
 
    .. code-block:: bash
       
       $ scp -r /etc/opscode <each servers IP>:/etc
 
-#. Upgrade the back end secondary machine with the following command:
+#. Upgrade the back end secondary server with the following command:
 
    .. code-block:: bash
       
       $ chef-server-ctl upgrade
 
-   In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine.
+   In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary server, then restart |keepalived| on the back end primary server, and then restart |keepalived| on the back end secondary server.
 
-#. Upgrade all front end machines with the following commands:
+#. Upgrade all front end servers with the following commands:
 
    .. code-block:: bash
       
       $ chef-server-ctl upgrade
 
-#. Run the following command on all front end machines and the primary back end machine:
+#. Run the following command on all front end servers and the primary back end server:
 
    .. code-block:: bash
       
       $ chef-server-ctl start
 
-   .. note:: Do not run this command on the secondary back-end machine!
+   .. note:: Do not run this command on the secondary back-end server!
 
-#. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and everything looks satisfactory, remove old data, services, and configuration by running the following command on each machine:
+#. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and everything looks satisfactory, remove old data, services, and configuration by running the following command on each server:
 
    .. code-block:: bash
       
