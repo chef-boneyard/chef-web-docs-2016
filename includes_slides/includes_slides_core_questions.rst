@@ -3,4 +3,4 @@
 
 .. Use this slide every time the slide deck stops for Q/A sessions with attendees.
 
-.. image:: ../../images/questions.png
+.. image:: ../../images/slides_questions.png
