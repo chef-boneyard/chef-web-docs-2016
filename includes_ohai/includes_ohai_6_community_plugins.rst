@@ -27,8 +27,6 @@ The following |ohai| plugins are available from the open source community:
      - Adds extensions for network attributes so that |ohai| can detect to which interfaces TCP and UDP ports are bound.
    * - `parse_host_plugin.rb <https://github.com/sbates/Chef-odds-n-ends/blob/master/ohai/parse_host_plugin.rb>`_
      - Adds the ability to parse a host name using three top-level attribute and five nested attributes.
-   * - `rpm.rb <https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/rpm.rb>`_
-     - Adds |rpm| information to |ohai| and collects information about the status of |rpm| packages and about the various packages that are installed.
    * - `sysctl.rb <https://github.com/spheromak/cookbooks/blob/master/ohai/files/default/sysctl.rb>`_
      - Adds |sysctl| information to |ohai|.
    * - `vserver.rb <https://github.com/albertsj1/ohai-plugins/blob/master/vserver.rb>`_

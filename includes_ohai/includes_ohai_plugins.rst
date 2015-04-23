@@ -31,8 +31,6 @@ The following |ohai| plugins are available from the open source community:
      - Adds the ability to parse a host name using three top-level attribute and five nested attributes.
    * - `r.rb <https://github.com/stevendanna/ohai-plugins/blob/master/r.rb>`_
      - Adds the ability to collect basic information about the |r project|.
-   * - `rpm.rb <https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/rpm.rb>`_
-     - Adds |rpm| information to |ohai| and collects information about the status of |rpm| packages and about the various packages that are installed.
    * - `sysctl.rb <https://github.com/spheromak/cookbooks/blob/master/ohai/files/default/sysctl.rb>`_
      - Adds |sysctl| information to |ohai|.
    * - `vserver.rb <https://github.com/albertsj1/ohai-plugins/blob/master/vserver.rb>`_
