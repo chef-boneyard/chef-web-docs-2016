@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
 
-.. image:: ../../images/slides_hack.png
+.. image:: ../../images/slides_node_types.png
