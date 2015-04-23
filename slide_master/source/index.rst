@@ -4,7 +4,7 @@
 Chef Open Source Slide Decks   
 =====================================================
 
-.. include:: ../../../chef-docs/includes_chef/includes_chef.rst
+.. include:: ../../includes_chef/includes_chef.rst
 
 **Introduction to Chef**
 
