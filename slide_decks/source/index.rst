@@ -14,4 +14,9 @@ Chef Open Source Slide Decks
    :hidden:
 
    about
+   chefspec
+   foodcritic
+   kitchen
+   serverspec
    technical_overview
+   testing
