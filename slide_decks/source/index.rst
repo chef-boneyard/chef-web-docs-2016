@@ -4,11 +4,15 @@ Slide Decks
 
 .. revealjs::
 
+ .. revealjs:: Slide Decks from chef-docs 
+
+  .. include:: ../../includes_slides/includes_slides_core_splash.rst
+
  .. revealjs:: What is Sphinx?  
 
   .. include:: ../../includes_slides/includes_slides_demo_sphinx.rst
 
- .. revealjs:: What is chef-slides?
+ .. revealjs:: What are slide decks from chef-docs?
 
   .. include:: ../../includes_slides/includes_slides_demo_about.rst
 
