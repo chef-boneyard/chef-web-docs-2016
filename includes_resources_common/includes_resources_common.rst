@@ -4,10 +4,8 @@
 
 A resource is a statement of configuration policy that:
 
-* Describes the desired state for an item
+* Describes the desired state for a configuration item
 * Declares the steps needed to bring that item to the desired state
 * Specifies a resource type---such as ``package``, ``template``, or ``service`` 
-* Lists additional details (also known as attributes), if necessary
-* Tells the |chef client| which action to take
-
-Resources are grouped into recipes, which describe working configurations. For example, a package to install, the location of a template from which to build a file, and a service to be started.
+* Lists additional details (also known as attributes), as necessary
+* Are grouped into recipes, which describe working configuraitons
