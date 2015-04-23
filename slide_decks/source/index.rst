@@ -1,5 +1,5 @@
 =====================================================
-Chef Open Source Slide Decks
+Chef Open Source Slide Decks 
 =====================================================
 
 .. revealjs::
