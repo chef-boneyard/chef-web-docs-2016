@@ -32,6 +32,8 @@ Repository
 
 |git| is the most commonly-used location to store a |chef repo| that is used with a hosted |chef server oec| account, but |git| is not required.
 
+.. include:: ../../includes_chef_repo/includes_chef_repo_structure.rst
+
 The Hosted |chef server_title|
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
