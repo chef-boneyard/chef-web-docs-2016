@@ -661,7 +661,7 @@ A slide deck is a single .rst topic that uses the ``revealjs::`` directive to de
 
 Basic Writing Tips
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-You don't need a lot of formatting to make a good slide deck topic. When writing one, stick to using:
+You don't need a lot of formatting to make a good slide deck topic. When writing a slide deck topic, use this style guide, but stick to:
 
 * Lists (bullet, numbered, or definition)
 * Links
@@ -670,17 +670,17 @@ You don't need a lot of formatting to make a good slide deck topic. When writing
 * Notes and warnings
 * Images
 
-And you should never use:
+Never use:
 
-* Section headers (the header is defined in the maps)
+* Section headers (the headers in a slide deck are defined in the maps, not as headers, but as slide titles)
 
-Use the following carefully:
+Use carefully:
 
 * List tables (you may need to hand-code a table in a slide, if a table is truly required)
-* Includes and inline replacements (make sure they fit, that they are what you want, and that they render what you wanted)
+* Includes and inline replacements (make sure they fit, that they are what you want, and that they render what you want)
 * TOC trees (you just need to make sure any non-index.rst topic is listed under the toctree directive)
 
-.. warning:: There are lots of other directives in Sphinx. It's just that chef-docs isn't using most of them. Everything chef-docs is using is defined in this style guide. There are also revealjs-specific directives. See the release notes: https://github.com/tell-k/sphinxjp.themes.revealjs. We can try them as needed to see how they do.
+.. warning:: There are lots of other directives in Sphinx. It's just that chef-docs isn't using most of them. Everything chef-docs is using is defined in this style guide. If it's not here, it may not be supported. There are also revealjs-specific directives. See the release notes: https://github.com/tell-k/sphinxjp.themes.revealjs. We can try them as needed to see how they do. Most of those have yet to be tried out.
 
 Single Column Maps
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
