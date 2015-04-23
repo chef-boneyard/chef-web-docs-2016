@@ -1,5 +1,7 @@
+.. THIS PAGE IS LOCATED AT THE /decks/ PATH.
+
 ================================================
-Slide Decks 
+About Slide Decks 
 ================================================
 
 .. revealjs::
