@@ -11,4 +11,6 @@ Slides should begin with simple, concise statements followed by a short list. ch
 * List-tables, which are tables built using an unordered list and whitespace.
 * Notes, warnings
 
-The titles are in all-caps and live in the slide map file, separate from the contents of the reStructuredText file. For more information see http://docs.chef.io/style_guide.html#slide-decks.
+The titles are in all-caps and live in the slide map file, separate from the contents of the reStructuredText file. For more information see:
+
+http://docs.chef.io/style_guide.html#slide-decks.
