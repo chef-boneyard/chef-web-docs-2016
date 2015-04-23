@@ -88,8 +88,9 @@ pygments_style = 'emacs'
 
 # A string of reStructuredText that will be included at the beginning of every source file that is read.
 rst_prolog = """
-.. include:: ../../../chef-docs/swaps/swap_descriptions.txt
-.. include:: ../../../chef-docs/swaps/swap_names.txt
+.. include:: ../../swaps/swap_descriptions.txt
+.. include:: ../../swaps/swap_names.txt
+.. include:: ../../swaps/swap_notes.txt
 """
 
 # -- Options for HTML output ---------------------------------------------------
