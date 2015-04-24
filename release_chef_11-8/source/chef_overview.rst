@@ -179,8 +179,6 @@ In addition to attributes, recipes, and versions, the following items are also p
 
 Conclusion
 =====================================================
-.. include:: ../../includes_chef/includes_chef_why_principles.rst
-
-.. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
+.. include:: ../../includes_chef/includes_chef_about.rst
 
 

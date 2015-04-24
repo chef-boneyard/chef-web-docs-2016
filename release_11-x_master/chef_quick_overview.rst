@@ -46,9 +46,7 @@ The |chef client| uses |ruby| as its reference language for creating cookbooks a
 
 Conclusion
 =====================================================
-.. include:: ../../includes_chef/includes_chef_why_principles.rst
-
-.. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
+.. include:: ../../includes_chef/includes_chef_about.rst
 
 
 
