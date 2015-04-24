@@ -638,6 +638,4 @@ To verify if both instances have been converged, run the following command:
 
 Conclusion
 =====================================================
-.. include:: ../../includes_chef/includes_chef_why_principles.rst
-
-.. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
+.. include:: ../../includes_chef/includes_chef_about.rst

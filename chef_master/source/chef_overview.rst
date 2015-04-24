@@ -183,12 +183,6 @@ In addition to attributes, recipes, and versions, the following items are also p
 * Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
 * Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.
 
-
 Conclusion
 =====================================================
-.. include:: ../../includes_chef/includes_chef_why_principles.rst
-
-.. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
-
-
-
+.. include:: ../../includes_chef/includes_chef_about.rst
