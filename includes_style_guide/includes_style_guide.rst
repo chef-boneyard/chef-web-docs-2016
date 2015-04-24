@@ -776,11 +776,6 @@ Custom Decks
 If you're building a deck that leverages the |chef docs| repo, but will never be published to either docs.chef.io or slides.chef.io, then you can use whatever formats and slides structures you prefer. As long as |python sphinx| can build it, then use it! These types of decks may be employees of |company_name| building a custom deck for a specific training course, a presentation at a conference, and so on. This may also be community members (perhaps you!) using a deck at a conference, for something internal to your company about |chef|, or anything.
 
 
-About the Repo
-=====================================================
-The |chef docs| repo
-
-
 Official Names
 =====================================================
 Official names are listed in the ``/swaps/swap_names.rst`` file, including both |company_name| and 3rd party names. For |company_name| applications and components, use:
