@@ -22,6 +22,7 @@ Chef Open Source Slide Decks
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/decks/chefspec.html">ChefSpec</a> </br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/decks/serverspec.html">Serverspec</a> </br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/decks/kitchen.html">Kitchen</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/decks/git.html">git</a> </br>
 
 **Reference**
 
