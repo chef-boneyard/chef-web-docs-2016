@@ -19,6 +19,7 @@ Chef Open Source Slide Decks
    cookbooks
    ctl_chef
    foodcritic
+   git
    kitchen
    recipes
    resources
