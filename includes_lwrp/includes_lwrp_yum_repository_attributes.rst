@@ -3,7 +3,7 @@
 
 .. note:: The following table contains paraphrased descriptions for quick reference. See http://linux.die.net/man/5/yum.conf for complete descriptions of these attributes as they exist from the |yum| command line.
 
-|description resource_attributes_intro|
+This resource has the following attributes:
 
 .. list-table::
    :widths: 200 300
