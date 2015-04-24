@@ -2,9 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |company_name| style guide is just a limited subset of the full capabilities of Sphinx, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
+The |company_name| style guide is just a limited subset of the full capabilities of |python sphinx|, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
 
-All of the documents built by Sphinx can be found at |url docs|.
+All of the documents built by |python sphinx| can be found at |url docs|.
 
 Basic Doc Template
 =====================================================
@@ -86,7 +86,7 @@ Section Headers
 =====================================================
 Section headers create structure in a document. When section headers are part of a topic that is included in other topics, those headers are treated as if they first appeared at that location (and are bumped down appropriately). For this, and for other cosmetic reasons, the headers in |company_name| documents are limited to 4 levels beyond the topic title. If headers are required beyond that, they should only be done using standard emphasis and white space or through some other creative method (such as creating more topics with less TOC depth).
 
-Sphinx allows many different conventions for how headers can exist in documents and looks for consistency to determine which ones go where. The width of the header must be equal to (or longer) than the length of the text in the header and (ideally) the same width for headers are used everywhere. (Having everything the same width can help spot the headers during reviews or when trying to find bugs in topics. The following sections describe the section header pattern that |company_name| is using for topic titles, H1s, H2s, H3s, H4s, and the occasional H5.
+|python sphinx| allows many different conventions for how headers can exist in documents and looks for consistency to determine which ones go where. The width of the header must be equal to (or longer) than the length of the text in the header and (ideally) the same width for headers are used everywhere. (Having everything the same width can help spot the headers during reviews or when trying to find bugs in topics. The following sections describe the section header pattern that |company_name| is using for topic titles, H1s, H2s, H3s, H4s, and the occasional H5.
 
 .. note:: As a general rule, try to limit the number of header levels to no more than 2 within a topic. There can be exceptions, of course, and especially if the document is very large, but remember that HTML TOC structures usually have width limitations (on the display side) and the more structure within a TOC, the harder it can be for users to figure out what's in it.
 
@@ -100,7 +100,7 @@ If a topic requires a sub-header, this is the first one to use. Use the equals s
 
 H2
 -----------------------------------------------------
-If an H1 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like as reST:: 
+If an H1 requires a sub-header, this is one to use. |python sphinx| will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like as reST:: 
 
    header name goes here
    -----------------------------------------------------
@@ -108,7 +108,7 @@ If an H1 requires a sub-header, this is one to use. Sphinx will generate errors 
 
 H3
 -----------------------------------------------------
-If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like as reST:: 
+If an H2 requires a sub-header, this is one to use. |python sphinx| will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like as reST:: 
 
    header name goes here
    +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -116,7 +116,7 @@ If an H2 requires a sub-header, this is one to use. Sphinx will generate errors 
 
 H4
 -----------------------------------------------------
-If a H3 requires a sub-header, this is the one to use. Sphinx will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like as reST:: 
+If a H3 requires a sub-header, this is the one to use. |python sphinx| will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like as reST:: 
 
    header name goes here
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -150,7 +150,7 @@ Bulleted lists are useful for breaking up text blocks and for drawing attention 
    * text goes here
    * text goes here
 
-Use the asterisk symbol (*) only for bulleted lists, even though Sphinx supports using other symbols. What bullets look like after they are built:
+Use the asterisk symbol (*) only for bulleted lists, even though |python sphinx| supports using other symbols. What bullets look like after they are built:
 
 * text goes here
 * text goes here
@@ -166,7 +166,7 @@ Numbered lists are good for when people need to understand a list of information
    #. text goes here
    #. text goes here
 
-Use the number symbol (#) to let Sphinx handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. What an ordered list looks like after it is built:
+Use the number symbol (#) to let |python sphinx| handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. What an ordered list looks like after it is built:
 
 #. text goes here
 #. text goes here
@@ -193,7 +193,7 @@ What a definition list looks like after it's built:
 
 List Tables
 -----------------------------------------------------
-The list table is the only table style that |company_name| is using in the docs. Sphinx supports other approaches to tables, but they are crude and inelegant and are a pain so why bother with them. What the list table looks like as reST:: 
+The list table is the only table style that |company_name| is using in the docs. |python sphinx| supports other approaches to tables, but they are crude and inelegant and are a pain so why bother with them. What the list table looks like as reST:: 
 
    .. list-table::
       :widths: 250 250
@@ -206,7 +206,7 @@ The list table is the only table style that |company_name| is using in the docs.
       * - text, image, swap, or include
         - text, image, swap, or include
 
-The table cells support images and includes, along with all of the other standard Sphinx that is being used here. The widths can be changed and the number of columns can be changed too. In general, |company_name| is trying to keep the number of columns below 4. When creating a list table, think about what it will look like in HTML, PDF, man-page, and other formats and keep in mind the width limitations inherent in print formats.
+The table cells support images and includes, along with all of the other standard |python sphinx| that is being used here. The widths can be changed and the number of columns can be changed too. In general, |company_name| is trying to keep the number of columns below 4. When creating a list table, think about what it will look like in HTML, PDF, man-page, and other formats and keep in mind the width limitations inherent in print formats.
 
 .. warning:: Tables (as opposed to list tables) should never be used. This is, in part, to help ensure that all topics can work in any published format, including HTML, PDF, and man-page, but also because list tables are much, much easier to work with.
 
@@ -272,19 +272,19 @@ Links are ways to get users to other useful topics.
 
 Internal
 -----------------------------------------------------
-An internal link is one that resolves to another topic that is built by Sphinx. What it looks like as reST:: 
+An internal link is one that resolves to another topic that is built by |python sphinx|. What it looks like as reST:: 
 
    :doc:`essentials_nodes`
 
-where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. If this isn't formatted correctly, Sphinx will let you know.
+where ``:doc:`` tells |python sphinx| that what follows is a file name that |python sphinx| will encounter during the build process. If this isn't formatted correctly, |python sphinx| will let you know.
 
 Internal w/short names
 -----------------------------------------------------
-An internal link is one that resolves to another topic that is built by Sphinx. Sometimes it's better to have the name of the link that displays be as short as possible (and different from the actual title of the topic). What it looks like as reST:: 
+An internal link is one that resolves to another topic that is built by |python sphinx|. Sometimes it's better to have the name of the link that displays be as short as possible (and different from the actual title of the topic). What it looks like as reST:: 
 
    :doc:`Actions </resource_common_actions>`
 
-where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. ``Actions`` represents the short name that will display on the page in which this internal link is located, and then ``resource_common_actions`` is the filename and is contained within brackets (< >). If this isn't formatted correctly, Sphinx will let you know.
+where ``:doc:`` tells |python sphinx| that what follows is a file name that |python sphinx| will encounter during the build process. ``Actions`` represents the short name that will display on the page in which this internal link is located, and then ``resource_common_actions`` is the filename and is contained within brackets (< >). If this isn't formatted correctly, |python sphinx| will let you know.
 
 External
 -----------------------------------------------------
@@ -299,7 +299,7 @@ and what an external link looks like after it's built:
 
 TOC Trees
 =====================================================
-A TOC tree defines all of the topics that are children of this topic. In Sphinx outputs, the Previous and Next patterns use this topic structure to determine these links. In addition, a visible TOC will use the structure defined by the ``toctree`` directive. In general, |company_name| is not using the visible TOC tree, but they still need to be present in the topics to keep Sphinx happy. What the hidden ``toctree`` looks like as reST:: 
+A TOC tree defines all of the topics that are children of this topic. In |python sphinx| outputs, the Previous and Next patterns use this topic structure to determine these links. In addition, a visible TOC will use the structure defined by the ``toctree`` directive. In general, |company_name| is not using the visible TOC tree, but they still need to be present in the topics to keep |python sphinx| happy. What the hidden ``toctree`` looks like as reST:: 
 
    .. toctree::
       :hidden:
@@ -310,7 +310,7 @@ A TOC tree defines all of the topics that are children of this topic. In Sphinx 
 
 Code Blocks
 =====================================================
-Code blocks are used to show code samples, such as those for Ruby, JSON, and command-line strings. There are many options here, especially if Pygments is part of your Sphinx environment. The most common code block styles are shown below, but there are many lexers available.
+Code blocks are used to show code samples, such as those for Ruby, JSON, and command-line strings. There are many options here, especially if Pygments is part of your |python sphinx| environment. The most common code block styles are shown below, but there are many lexers available.
 
 .. note:: For more information about all of the code styles that Pygments supports, see: http://pygments.org/docs/lexers/#lexers-for-other-languages.
 
@@ -474,15 +474,15 @@ Images should be 96 dpi and no larger than 600 pixels wide. Ideally, no larger t
 
 Doc Repositories
 =====================================================
-There are two document repositories for Chef, one that contains the docs and another that contains image files for quick references.
+There are two document repositories for |chef docs|, one that contains the docs and another that contains image files for quick references.
 
-chef-docs
+|chef docs|
 -----------------------------------------------------
-All of the documentation for Chef can be found here:
+All of the documentation for |chef| can be found here:
 
 https://github.com/chef/chef-docs
 
-The chef-docs repo contains a lot of directories!
+The |chef docs| repo contains a lot of directories!
 
 Build Directories
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -501,11 +501,15 @@ The most important directory is ``chef_master`` and it contains all of the topic
    * - ruby.rst
      - http://docs.chef.io/ruby.html
 
-There is always a 1:1.
+There is always a 1:1. The contents within each of these files show the path to the actual content that is pulled into the topic at build time. These paths are similar to::
 
-.. note:: The ``conf.py`` file should never be modified. This file just tells Sphinx what to do when it's asked to build chef-docs.
+   .. include:: ../../includes_some_folder/includes_some_file.rst
 
-There are other build directories: ``docs_all``, ``docs_analytics``, ``docs_client``, ``docs_devkit``, ``docs_server``. These are used to build sub-sites like http://docs.chef.io/server, which is focused only on the content for Chef Server 12. For example. These pages are almost always cloned from the ``chef_master`` directory, like this::
+See the section "Includes Directories" below for more information about the included content.
+
+.. note:: The ``conf.py`` file should never be modified. This file just tells |python sphinx| what to do when it's asked to build |chef docs|.
+
+There are other build directories: ``docs_all``, ``docs_analytics``, ``docs_client``, ``docs_devkit``, ``docs_server``. These are used to build sub-sites like http://docs.chef.io/server, which is focused only on the content for |chef server| 12. For example. These pages are almost always cloned from the ``chef_master`` directory, like this::
 
    .. THIS PAGE IS IDENTICAL TO docs.chef.io/server_orgs.html BY DESIGN
    .. THIS PAGE IS LOCATED AT THE /server/ PATH.
@@ -516,7 +520,7 @@ This just means that if a change is made to ``chef_master/source/server_orgs.rst
 
 Includes Directories
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-But wait! Why do most of the files in the ``chef_master`` directory have zero actual content? It's to separate what is published from what is authored. There is an ``includes_*`` folder for all of the objects, concepts, tools, etc. that exist in Chef. The goal of each ``includes_`` directory is to ensure that all of the content about a specific piece of Chef can be found in a single location.
+But wait! Why do most of the files in the ``chef_master`` directory have zero actual content? It's to separate what is published from what is authored. There is an ``includes_*`` folder for all of the objects, concepts, tools, etc. that exist in |chef|. The goal of each ``includes_`` directory is to ensure that all of the content about a specific piece of |chef| can be found in a single location.
 
 Single-sourcing this content allows publishing of versioned content, generating output to man pages, HTML, slide decks, and PDFs, etc. in a way that reuses the same content as much as possible.
 
@@ -574,11 +578,11 @@ The actual content lives in the ``include_resources`` directory, and for each se
            .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 
-These attributes are available in the docs for the current version of Chef---chef-client 12.2, specifically---and are the same attributes available in previous versions, until there is a difference. The chef-client 12.1 release added the ``verify`` attribute. This is versioned in chef-docs using a file named ``includes_resource_12-0_template_attributes.rst``, which is then included backwards all the way to chef-client 11-4 docs, which is when the ``helper`` and ``helpers`` attributes were added. Three files, a few subtle changes, hooked in the same way, but with the correct file name for the correct version. This is how chef-docs build outputs are versioned.
+These attributes are available in the docs for the current version of |chef| and are the same attributes available in previous versions, until there is a difference. The chef-client 12.1 release added the ``verify`` attribute. This is versioned in |chef docs| using a file named ``includes_resource_12-0_template_attributes.rst``, which is then included backwards all the way to chef-client 11-4 docs, which is when the ``helper`` and ``helpers`` attributes were added. Three files, a few subtle changes, hooked in the same way, but with the correct file name for the correct version. This is how |chef docs| build outputs are versioned.
 
 This pattern is the same everywhere. In some cases, it may well be that a topic is only included in a single build output, but this is rare. Most of the topics are included many times, across client, server, and devkit docs, and across versions (backwards in time). So keep this in mind when making changes.
 
-.. note:: For the majority of changes, especially those made by the Chef community, focus on making changes to the ``chef_master`` directory and against the current version of Chef. If you believe the change should be reflected to a specific version, just state that in the PR or issue and the chef-docs team will help apply that in the chef-docs repo.
+.. note:: For the majority of changes, especially those made by the |chef| community, focus on making changes to the ``chef_master`` directory and against the current version of |chef|. If you believe the change should be reflected to a specific version, just state that in the PR or issue and the |chef docs| team will help apply that in the |chef docs| repo.
 
 String Replacements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -592,7 +596,7 @@ or::
 
 These are string replacements. There are two types: descriptions and names.
 
-Descriptions are used primarily in the resource reference documentation to help ensure that the same descriptions are applied anywhere and everywhere. These are hooked into release notes, resource topics (across all versions) and elsewhere. For example, some descriptions apply to the Chef Server API as well as Knife reference docs and also resource docs.
+Descriptions are used primarily in the resource reference documentation to help ensure that the same descriptions are applied anywhere and everywhere. These are hooked into release notes, resource topics (across all versions) and elsewhere. For example, some descriptions apply to the |api chef server| as well as Knife reference docs and also resource docs.
 
 Names are proper names. For example:
 
@@ -609,7 +613,7 @@ Names are proper names. For example:
    * - chef-client
      - ``|chef client|``
 
-String replacements are found in the ``/swaps`` directory. When submitting PRs or issues to chef-docs, it is not necessary to get the strings correct. Rather, just write what you think should be in the doc directly, and chef-docs will apply the string replacements (and/or create new ones!) later during an edit.
+String replacements are found in the ``/swaps`` directory. When submitting PRs or issues to |chef docs|, it is not necessary to get the strings correct. Rather, just write what you think should be in the doc directly, and |chef docs| will apply the string replacements (and/or create new ones!) later during an edit.
 
 New Topics and Sections
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -619,13 +623,13 @@ Files in the ``chef_master`` repo can be sticky, in that they become searchable 
 
 Recap!
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-When submitting a PR or issue to chef-docs for a docs change, remember:
+When submitting a PR or issue to |chef docs| for a docs change, remember:
 
 * Focus on the ``chef_master`` repo to find the topic/files
 * Find the appropriate ``includes_`` folder, and then find the actual topic
 * For a straightfoward PR or issue, make it against that file
-* Keep in mind potential versioning issues, make those clear in the PR or issue if you're not sure---chef-docs will help out
-* Focus on the actual content---chef-docs will help with any string replacements, includes file management, and versioning
+* Keep in mind potential versioning issues, make those clear in the PR or issue if you're not sure---|chef docs| will help out
+* Focus on the actual content---|chef docs| will help with any string replacements, includes file management, and versioning
 
 For example, if you wanted to add an attribute to a resource, the PR or issue could look like this::
 
@@ -638,7 +642,7 @@ For example, if you wanted to add an attribute to a resource, the PR or issue co
    
    Thanks!
 
-If you want to try to get the full PR done in a way that allows chef-docs to merge it straightaway? Always welcome, but not required.
+If you want to try to get the full PR done in a way that allows |chef docs| to merge it straightaway? Always welcome, but not required.
 
 You can always send email to docs@chef.io if you have questions about specific folders, files, and patterns.
 
@@ -651,7 +655,7 @@ https://github.com/chef/quick-reference
 
 Slide Decks
 =====================================================
-You can build an HTML slide deck using reveal.js. First, install this plugin for Sphinx:
+You can build an HTML slide deck using reveal.js. First, install this plugin for |python sphinx|:
 
 https://github.com/tell-k/sphinxjp.themes.revealjs
 
@@ -680,7 +684,7 @@ Use carefully:
 * Includes and inline replacements (make sure they fit, that they are what you want, and that they render what you want)
 * TOC trees (you just need to make sure any non-index.rst topic is listed under the toctree directive)
 
-.. warning:: There are lots of other directives in Sphinx. It's just that chef-docs isn't using most of them. Everything chef-docs is using is defined in this style guide. If it's not here, it may not be supported. There are also revealjs-specific directives. See the release notes: https://github.com/tell-k/sphinxjp.themes.revealjs. We can try them as needed to see how they do. Most of those have yet to be tried out.
+.. warning:: There are lots of other directives in |python sphinx|. It's just that |chef docs| isn't using most of them. Everything |chef docs| is using is defined in this style guide. If it's not here, it may not be supported. There are also |revealjs|-specific directives. See the release notes: https://github.com/tell-k/sphinxjp.themes.revealjs. We can try them as needed to see how they do. Most of those have yet to be tried out.
 
 Single Column Maps
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -714,7 +718,7 @@ Use as many slides as needed and ensure that each slide is indented under the to
    
        .. include:: ../../includes_slides/includes_slides_recipes_order.rst
 
-where the included file is a standard .rst file from the chef-docs library that **DOES NOT** include any ``revealjs::`` directive information. It's just well-formed restructured text as defined by this style guide. (It's important to remember that included topics may be in other formats, like PDF, non-reveal.js HTML formats, and even man pages.)
+where the included file is a standard .rst file from the |chef docs| library that **DOES NOT** include any ``revealjs::`` directive information. It's just well-formed restructured text as defined by this style guide. (It's important to remember that included topics may be in other formats, like PDF, non-|revealjs| HTML formats, and even man pages.)
 
 You may mix-and-match inclusions and custom content as needed. For example::
 
@@ -769,7 +773,12 @@ A subtle pattern change will create a deck that has multiple columns, accessed v
 
 Custom Decks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-If you're building a deck that leverages the chef-docs repo, but will never be published to either docs.chef.io or slides.chef.io, then you can use whatever formats and slides structures you prefer. As long as Sphinx can build it, then use it! These types of decks may be employees of Chef building a custom deck for a specific training course, a presentation at a conference, and so on. This may also be community members (perhaps you!) using a deck at a conference, for something internal to your company about Chef, or anything.
+If you're building a deck that leverages the |chef docs| repo, but will never be published to either docs.chef.io or slides.chef.io, then you can use whatever formats and slides structures you prefer. As long as |python sphinx| can build it, then use it! These types of decks may be employees of |company_name| building a custom deck for a specific training course, a presentation at a conference, and so on. This may also be community members (perhaps you!) using a deck at a conference, for something internal to your company about |chef|, or anything.
+
+
+About the Repo
+=====================================================
+The |chef docs| repo
 
 
 Official Names
@@ -786,7 +795,7 @@ For the full list of official names used in the documentation, see https://githu
 
 Localization
 =====================================================
-Sphinx supports localization into many languages.
+|python sphinx| supports localization into many languages.
 
 .pot files
 -----------------------------------------------------
@@ -796,7 +805,7 @@ Sphinx supports localization into many languages.
 
 .. warning:: .pot files are built only for the current release of documentation, which is the same as the ``chef_master`` source collection in |git|.
 
-The .pot file is built using much the same process as a regular Sphinx content build. For example, a regular content build:
+The .pot file is built using much the same process as a regular |python sphinx| content build. For example, a regular content build:
 
 .. code-block:: bash
 
@@ -812,11 +821,11 @@ with the very important difference of the ``/build`` vs. ``/translate`` folders 
 
 .pot files should be checked into the github repository like every other source file and even though they are output of the source files, should be treated as if they are source files.
 
-.. note:: The /translate folder in the github source contains a regularly updated set of .pot files. That said, it is recommended that if you want to localize the Chef documentation, check with Opscode (send email to docs@opscode.com) and let us know that you want to participate in the localization process and we can sync up. Or just update the .pot files locally to make sure they are the most current versions of the .pot files.
+.. note:: The /translate folder in the github source contains a regularly updated set of .pot files. That said, it is recommended that if you want to localize the |chef| documentation, check with |company_name| (send email to docs@chef.io) and let us know that you want to participate in the localization process and we can sync up. Or just update the .pot files locally to make sure they are the most current versions of the .pot files.
 
 conf.py Settings
 =====================================================
-Every Sphinx build has a configuration file.
+Every |python sphinx| build has a configuration file.
 
 rst_prolog
 -----------------------------------------------------
