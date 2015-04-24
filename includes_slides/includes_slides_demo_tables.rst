@@ -10,13 +10,7 @@ This is a table:
 
    * - Platform
      - Description
-   * - Ubuntu
-     - Ubuntu is a platform.
-   * - Mac OS X
-     - Mac OS X is another platform. It's popular.
-   * - Gentoo
-     - Gentoo is **THE ONLY** platform for freedom-loving neckbeards.
-
-       Because #freedom.
-
-       .. warning:: If you're using Gentoo are you *really* free?
+   * - |ubuntu|
+     - |ubuntu| is a platform.
+   * - |mac os x|
+     - |mac os x| is another platform. It's popular.

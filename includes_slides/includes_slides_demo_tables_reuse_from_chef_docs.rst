@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
 
-This is a table that is pulling in specific attributes/descriptions from chef-docs:
+This is a table that is pulling in specific attributes/descriptions from |chef docs|:
 
 .. list-table::
    :widths: 140 560
