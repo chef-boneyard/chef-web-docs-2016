@@ -615,7 +615,7 @@ Names are proper names. For example:
 
 String replacements are found in the ``/swaps`` directory. When submitting PRs or issues to |chef docs|, it is not necessary to get the strings correct. Rather, just write what you think should be in the doc directly, and |chef docs| will apply the string replacements (and/or create new ones!) later during an edit.
 
-New Topics and Sections
+New Topics, Sections
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This can be tricky, but as long as you are following the pattern for the include_* files, it's pretty easy. They can be moved around, renamed, deleted, added quite easily.
 
