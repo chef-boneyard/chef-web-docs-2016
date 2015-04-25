@@ -25,9 +25,6 @@ The following platforms are not supported:
    * - |mac os x|
      - 
      - ``10.7`` (and older), anything PPC-based
-   * - |hpux|
-     - 
-     - 
    * - |netbsd|
      - 
      - 
@@ -39,11 +36,11 @@ The following platforms are not supported:
      - ``4.x`` (or older)
    * - |redhat enterprise linux|
      - ``ppc64``, ``System/z``
-     - ``4.x`` (or older)
+     - 
 
    * - |suse els|
      - ``ppc64``, ``System/z``
-     - ``4.x`` (or older)
+     - 
    * - |solaris|
      - 
      - ``8``, ``9``
