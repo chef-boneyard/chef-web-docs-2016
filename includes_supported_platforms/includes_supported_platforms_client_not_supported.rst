@@ -25,9 +25,6 @@ The following platforms are not supported:
    * - |mac os x|
      - 
      - ``10.7`` (and older), anything PPC-based
-   * - |hpux|
-     - 
-     - 
    * - |netbsd|
      - 
      - 
