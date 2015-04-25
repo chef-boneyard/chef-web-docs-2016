@@ -91,49 +91,49 @@ IMPORTANT: If you want to build only the latest version of the docs, update your
 
 The following folders are used to build Chef documentation sets:
 
-chef_master -- the main set of documentation about the current versions of the chef-client, Ohai, the Chef server, and the Chef development kit. http://docs.chef.io
+* chef_master -- the main set of documentation about the current versions of the chef-client, Ohai, the Chef server, and the Chef development kit. http://docs.chef.io
 
-client -- the main set of documentation about the current version of the chef-client. http://docs.chef.io/client/
+* client -- the main set of documentation about the current version of the chef-client. http://docs.chef.io/client/
 
-docs_server -- the documentation for the current version of the Chef server, Private Chef. http://docs.chef.io/server/
+* docs_server -- the documentation for the current version of the Chef server, Private Chef. http://docs.chef.io/server/
 
-devkit -- the main set of documentation about the current version of the development kit for the chef-client. http://docs.chef.io/client/
+* devkit -- the main set of documentation about the current version of the development kit for the chef-client. http://docs.chef.io/client/
 
 These sets of docs are actively maintained and in many places are identical (because the functionality is the same). Only where there is some divergence---some knife commands, server functionality, and so on---is there a difference in the documentation.
 
-docs_all -- a filtered set of the main set of documentation that a) has a single-page flat structure (including a flat table of contents) and b) consolidates much of the information in the main doc set into a smaller collection of longer pages. Some of the most popular pages in all of chef-docs land are found here, such as http://docs.chef.io/chef/resources.html, http://docs.chef.io/chef/dsl_recipe.html, and http://docs.chef.io/chef/knife.html. http://docs.chef.io/chef/
+* docs_all -- a filtered set of the main set of documentation that a) has a single-page flat structure (including a flat table of contents) and b) consolidates much of the information in the main doc set into a smaller collection of longer pages. Some of the most popular pages in all of chef-docs land are found here, such as http://docs.chef.io/chef/resources.html, http://docs.chef.io/chef/dsl_recipe.html, and http://docs.chef.io/chef/knife.html. http://docs.chef.io/chef/
 
 See http://docs.chef.io/releases.html for the full list of versions that are available.
 
 The following folders are for versions of the chef-client:
 
-release_10
-release_11-0
-release_11-2
-release_11-4
-release_11-...
+* release_10
+* release_11-0
+* release_11-2
+* release_11-4
+* release_11-...
 
 These docs collections can be found at http://docs.chef.io/release/version#/, e.g. http://docs.chef.io/release/10/ or http://docs.chef.io/release/11-6/
 
 The following folders are for versions of the Enterprise Chef server:
 
-release_oec_11-0
-release_oec_11-1
-release_oec_11-2
+* release_oec_11-0
+* release_oec_11-1
+* release_oec_11-2
 
 The following folder is for the Private Chef server:
 
-release_private_chef
+* release_private_chef
 
 The following folders are for versions of the Open Source Chef server:
 
-release_osc_11-0
-release_osc_11-1
+* release_osc_11-0
+* release_osc_11-1
 
 The following folders are for versions of Ohai:
 
-release_ohai-6
-release_ohai-7
+* release_ohai-6
+* release_ohai-7
 
 If the subject matter for a specific release is identical to the current version of Chef (i.e. "hasn't changed"), then the file is simply a copy of the file that is located in chef_master. In some cases, subject matter has been consolidated for the 11 and 10 releases (so that it may take a new path for the 12 release) and the files from which those copies are made can be found in release_11-x_master.
 
@@ -148,28 +148,28 @@ All of the versions have release notes. Append release_notes.html at the end of 
 
 Chef builds the following docs collections on a daily basis:
 
-chef_master
-docs_all
-docs_analytics
-docs_client
-docs_devkit
-docs_server
-release_[current_version]
+* chef_master
+* docs_all
+* docs_analytics
+* docs_client
+* docs_devkit
+* docs_server
+* release_[current_version]
 
 Chef builds the following docs collections as needed, by request, or based on specific feedback:
 
-release_10
-release_11-0
-release_11-2
-release_11-4
-release_11-...
-release_12-...
-release_oec_11-...
-release_osc_11-...
-release_private_chef
-release_ohai-6
-release_ohai-7
-release_ohai-8
+* release_10
+* release_11-0
+* release_11-2
+* release_11-4
+* release_11-...
+* release_12-...
+* release_oec_11-...
+* release_osc_11-...
+* release_private_chef
+* release_ohai-6
+* release_ohai-7
+* release_ohai-8
 
 ## Versioning strategy
 
@@ -218,9 +218,9 @@ Let's say the template resource is wholly different in chef-client version 10-la
 
 So now instead of being a direct clone of the file in chef_master this file is configured to pull in the same exact content. Now we can version part of the file. Let's say the syntax is different in 10-latest. So
 
-a) create a new file in the includes_resources folder by copying the existing file and appending -10-latest to the filename
-b) in the new 10-latest file, make any desired change
-c) update the include path in the 10-latest source file to pull in the new file
+1. create a new file in the includes_resources folder by copying the existing file and appending -10-latest to the filename
+2. in the new 10-latest file, make any desired change
+3. update the include path in the 10-latest source file to pull in the new file
 
 like this:
 
@@ -265,7 +265,7 @@ Here's how this might look:
     git push origin my_new_edit
     
 
-Once pushed, visit your repo on GitHub, and open a Pull Request against `opscode/chef-docs:master`.
+Once pushed, visit your repo on GitHub, and open a Pull Request against `chef/chef-docs:master`.
 
 ## License
 
