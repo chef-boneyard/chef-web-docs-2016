@@ -71,7 +71,6 @@
 .. |availability_zone| replace:: The name of the availability zone. Each availability zone is unique within a region.
 .. |aws_access_key_id| replace:: The access key identifier used with |amazon ec2|.
 .. |aws_access_key_secret| replace:: The secret access key for the API endpoint used with |amazon ec2|.
-.. |azure cidr| replace:: This should use |cidr| notation.
 .. |aws_dedicated_instance| replace:: Use to launch this instance as an |amazon ec2_dedicated|.
 .. |azure connect_to_existing_dns| replace:: Use to add a new virtual machine to the existing deployment and/or service. Use with ``--azure-dns-name`` to ensure the correct DNS is used.
 .. |azure host description| replace:: The description for the host.
@@ -124,6 +123,7 @@
 .. |bootstrap curl_options| replace:: Use to specify arbitrary options to be added to the bootstrap command when using |curl|.
 .. |bootstrap install_command| replace:: Use to execute a custom installation command sequence for the |chef client|.
 .. |bootstrap install_sh| replace:: Use to fetch and execute an installation script at the specified URL.
+.. |bootstrap network| replace:: Use to specify the IP address on this network, for use during the bootstrap operation.
 .. |bootstrap no_curl_sh_wget| replace:: This option may not be used in the same command with ``--bootstrap-curl-options``, ``--bootstrap-install-sh``, or ``--bootstrap-wget-options``.
 .. |bootstrap no_install_command| replace:: This option may not be used in the same command with ``--bootstrap-install-command``.
 .. |bootstrap no_proxy| replace:: A URL or IP address that specifies a location that should not be proxied.
@@ -926,10 +926,12 @@
 
 .. |name_rules org| replace:: The organization name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters.
 .. |name_rules org_full| replace:: The full organization name must begin with a non-white space character and must be between 1 and 1023 characters.
-
 .. |netmask| replace:: The decimal representation of the network mask.
-.. |network_name| replace:: The name of the network in which a virtual machine is created.
 .. |network_address| replace:: The address for the network interface.
+.. |network_default| replace:: Use to specify the network as the default.
+.. |network_label| replace:: Use to add a private network.
+.. |network_name| replace:: The name of the network in which a virtual machine is created.
+.. |network_private| replace:: Use to specify that a bootstrap network is a private network.
 .. |nginx bookshelf_caching| replace:: Use to specify if |nginx| is used to cache cookbooks. When ``:on``, |nginx| will serve up the cached content instead of forwarding the request.
 .. |nginx cache_max_size| replace:: Use to specify the ``max_size`` parameter used by the |nginx| cache manager, which is part of the ``proxy_cache_path`` directive. When the size of file storage exceeds this value, the |nginx| cache manager will remove the least recently used data.
 .. |nginx client_max_body_size| replace:: Use to specify the maximum accepted body size for a client request, as indicated by the ``Content-Length`` request header. When the maximum accepted body size is greater than this value, a ``413 Request Entity Too Large`` error is returned.
@@ -1134,9 +1136,18 @@
 ..
 
 .. |r knife list| replace:: Use to list directories recursively.
+.. |rackconnect wait| replace:: Use to specify that |rackconnect| automation setup be complete before bootstrapping a node.
 .. |rackspace_api_auth_url| replace:: The URL used to authenticate the |rackspace| API key.
 .. |rackspace_api_key| replace:: The unique alphanumeric identifier that is associated with a |rackspace| account.
-.. |rackspace-metadata| replace:: A |json| string that contains a metadata hash.
+.. |rackspace config_drive| replace:: Use to specify if a config drive device should be created in ``/dev/disk/by-label/config-2``.
+.. |rackspace disk_partition| replace:: Use to specify the disk partitioning scheme.
+.. |rackspace file| replace:: The file used to inject data into a node on |rackspace|.
+.. |rackspace network_label| replace:: The label for the network.
+.. |rackspace metadata| replace:: A |json| string that contains a metadata hash.
+.. |rackspace region| replace:: The |rackspace| region.
+.. |rackspace service_level_wait| replace:: Use to specify that |rackspace| service level automation setup be complete before bootstrapping a node.
+.. |rackspace user_data_file| replace:: Use to specify the user data file that is placed in the directory on the config drive.
+.. |rackspace version_api_cloud_servers| replace:: The |rackspace api_cloud_servers| version.
 .. |raid_device mdadm| replace:: The name of the |raid| device.
 .. |readme-format| replace:: The document format of the readme file: ``md`` (markdown) and ``rdoc`` (|ruby| docs).
 .. |reboot reason| replace:: A string that describes the reboot action.
@@ -1424,6 +1435,7 @@
 .. |ssh_key eucalyptus| replace:: The |ssh| key for the |eucalyptus| environment.
 .. |ssh_key hp| replace:: The |ssh| key for the |hp cloud| environment.
 .. |ssh_key openstack| replace:: The |ssh| key for the |openstack| environment.
+.. |ssh_key rackspace| replace:: Use to specify the name of an existing SSH keypair. The public key will be injected into the node.
 .. |ssh_password| replace:: The |ssh| password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) |knife| will prompt for the password.
 .. |ssh_port| replace:: The |ssh| port.
 .. |ssh_user| replace:: The |ssh| user name.
@@ -1492,6 +1504,7 @@
 .. |target_interface| replace:: The IP address that will be assigned to the network interface.
 .. |target_address| replace:: The IP address of the target route.
 .. |tcp_ports| replace:: A comma-separated list of local and public TCP ports that will be opened. For example: ``80:80,433:5000``.
+.. |tcp_tests| replace:: Use to specify that |ssh| be available using a TCP check directory in port 22.
 .. |template bootstrap| replace:: Use to specify the bootstrap template to use. This may specify the name of a bootstrap template---``chef-full``, for example---or it may specify the full path to an |erb| template that defines a custom bootstrap.
 .. |template context_file| replace:: The name of a template that will be rendered to create the context file.
 .. |template database_yml| replace:: The name of a template that will be rendered to create the ``database.yml`` file.
@@ -1561,6 +1574,7 @@
 .. |url supermarket| replace:: Use to specify the URL at which the |supermarket| is located.
 .. |use bundler| replace:: Use to run ``bundler``. If ``false``, |bundler| will never be used. This attribute defaults to ``true`` when a |gem| includes |bundler|.
 .. |use bundler_option_deployment| replace:: Use to run |bundler| with the ``--deployment`` option. This attribute defaults to ``true`` when a |gemfilelock| is present.
+.. |use cidr| replace:: Use with |cidr| notation.
 .. |use conditional_get| replace:: Use to enable conditional HTTP requests by using a conditional ``GET`` (with the |if_modified_since| header) or an opaque identifier (|etag|). To use |if_modified_since| headers, ``use_last_modified`` must also be set to ``true``. To use |etag| headers, ``use_etag`` must also be set to ``true``.
 .. |use current_branch| replace:: Use to ensure that the current branch is used.
 .. |use custom_log_script| replace:: Use to specify that a service has a custom logging script.
