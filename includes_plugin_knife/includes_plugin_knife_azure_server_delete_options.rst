@@ -43,4 +43,3 @@ This argument has the following options:
 
 ``--wait``
    |azure wait|  
-

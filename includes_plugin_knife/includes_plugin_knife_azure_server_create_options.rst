@@ -136,4 +136,3 @@ This argument has the following options:
 
 ``-z SIZE``, ``--azure-vm-size SIZE``
    |role-size| Default value: ``Small``.
-

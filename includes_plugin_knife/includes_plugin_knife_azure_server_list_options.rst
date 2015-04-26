@@ -19,4 +19,3 @@ This argument has the following options:
 
 ``--verify-ssl-cert``
    |ssl_certificate|
-
