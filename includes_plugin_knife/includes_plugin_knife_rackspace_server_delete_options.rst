@@ -8,15 +8,20 @@ This argument has the following options:
 ``-A USER_NAME``, ``--rackspace-username USER_NAME``
    |name user rackspace|
 
+``--file TARGET_PATH=SOURCE_PATH``
+   |rackspace file|
+
 ``-K API_KEY``, ``--rackspace-api-key API_KEY``
    |rackspace_api_key|
-
-``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node_purge| This must be used with the ``--purge`` option.
 
 ``-p``, ``--purge``
    |purge node rackspace|
 
-``--rackspace-api-auth-url``
-   |rackspace_api_auth_url| Default: ``auth.api.rackspacecloud.com``.
+``--rackspace-auth-url``
+   |rackspace_api_auth_url|
 
+``--rackspace-region``
+   |rackspace region|
+
+``--rackspace-version``
+   |rackspace version_api_cloud_servers|
