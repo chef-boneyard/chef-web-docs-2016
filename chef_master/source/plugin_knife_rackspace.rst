@@ -34,6 +34,55 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_image_list_options.rst
 
+network create
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_create.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_create_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_create_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+
+network delete
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_delete.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_delete_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_delete_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+network list
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_list.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_list_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_network_list_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
 server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_create.rst
