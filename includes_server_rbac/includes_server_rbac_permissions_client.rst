@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Permissions for node objects in the |chef server| should have ``DELETE``, ``GRANT``, ``READ`` and ``UPDATE`` permissions for the client object that corresponds to the node.
+Permissions for client objects in the |chef server| should have ``DELETE``, ``GRANT``, ``READ`` and ``UPDATE`` permissions.
 
 Use the following code to set the correct permissions:
 
