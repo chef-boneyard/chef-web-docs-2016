@@ -17,7 +17,7 @@ with a request body similar to:
 
    {
      "name": "dev",
-     "attributes": {},
+     "default_attributes": {},
      "json_class": "Chef::Environment",
      "description": "",
      "cookbook_versions": {},
