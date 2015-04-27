@@ -3,9 +3,13 @@
 
 All machines in a |chef server| deployment (including a standalone |chef analytics| machine) have the following requirements.
 
+For all deployments:
+
+* 64-bit architecture
+
 For a standalone deployment:
 
-* 4 total cores, 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
+* 4 total cores, 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs
 * 4 GB of RAM; 8 GB of RAM for |chef analytics|
 * 5 GB of free disk space in ``/opt``
 * 5 GB of free disk space in ``/var``

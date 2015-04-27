@@ -5,3 +5,4 @@ The following platforms are not supported:
 
 * Any |linux| or |unix| distribution that is not listed as a supported platform.
 * |windows|
+* 32-bit architectures
