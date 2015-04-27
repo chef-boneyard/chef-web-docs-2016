@@ -70,11 +70,7 @@ The Reporting Run
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules.rst
 
-Rule Types
------------------------------------------------------
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_message_types.rst
-
-.. include:: ../../step_analytics_rules/step_analytics_rules_listen_on_port.rst
+.. note:: For more information about |chef analytics| rules, see http://docs.chef.io/analytics_rules.html.
 
 |chef analytics_title| Webui
 =====================================================
