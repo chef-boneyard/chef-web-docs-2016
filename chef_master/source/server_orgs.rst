@@ -41,7 +41,7 @@ Global Permissions
 -----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst
 
-Node Permissions
+Client Permissions
 -----------------------------------------------------
 .. note:: This is only necessary after migrating a client object from one |chef server| to another because the permissions for the nodes must be reset.
 
