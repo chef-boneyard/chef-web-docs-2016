@@ -1,16 +1,16 @@
 .. THIS PAGE IS LOCATED AT THE /decks/ PATH.
 
 ================================================
-About Slide Decks 
+About Slide Decks
 ================================================
 
 .. revealjs::
 
- .. revealjs:: Slide Decks from chef-docs 
+ .. revealjs:: Slide Decks from chef-docs
 
   .. include:: ../../includes_slides/includes_slides_core_splash.rst
 
- .. revealjs:: What is Sphinx?  
+ .. revealjs:: What is Sphinx?
 
   .. include:: ../../includes_slides/includes_slides_demo_sphinx.rst
 
@@ -18,7 +18,7 @@ About Slide Decks
 
   .. include:: ../../includes_slides/includes_slides_demo_about.rst
 
- .. revealjs:: Some Slide Basics   
+ .. revealjs:: Some Slide Basics
 
   .. include:: ../../includes_slides/includes_slides_demo_simple_slides.rst
 
@@ -38,6 +38,14 @@ About Slide Decks
 
   .. include:: ../../includes_slides/includes_slides_demo_code_yaml.rst
 
+ .. revealjs:: Images
+
+  .. image:: ../../images/rubocop_output_slides.png
+
+ .. revealjs:: Tables Topic
+
+  .. include:: ../../includes_slides/includes_slides_demo_table.rst
+
  .. revealjs:: Notes and Warnings
 
   .. include:: ../../includes_slides/includes_slides_demo_admonitions.rst
@@ -53,7 +61,7 @@ About Slide Decks
  .. revealjs:: Questions?
 
   .. include:: ../../includes_slides/includes_slides_core_questions.rst
- 
+
  .. revealjs:: Let's Hack!
 
   .. include:: ../../includes_slides/includes_slides_core_hack.rst
