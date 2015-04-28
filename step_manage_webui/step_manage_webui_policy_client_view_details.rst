@@ -1,10 +1,10 @@
 .. This is an included how-to. 
 
 
-To view key details:
+To view client key details:
 
 #. Open |webui|.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
-#. Select a key.
+#. Select a client key.
 #. Click the |webui tab_details| tab.

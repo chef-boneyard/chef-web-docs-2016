@@ -1,13 +1,13 @@
 .. This is an included how-to. 
 
 
-To add a key:
+To add a client key:
 
 #. Open |webui|.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
 #. Click |webui policy_client_create|.
-#. In the |webui db_create_client| dialog box, enter the name of the key.
+#. In the |webui db_create_client| dialog box, enter the name of the client key.
 
    .. image:: ../../images/step_manage_webui_policy_client_add.png
 

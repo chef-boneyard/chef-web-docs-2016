@@ -1,5 +1,5 @@
 =====================================================
-Manage Keys
+Manage Client Keys
 =====================================================
 
 .. note:: This topic is about using the |chef manage| add-on to manage keys in |chef server oec|.
@@ -8,9 +8,9 @@ Manage Keys
 
 Use the |chef manage| web user interface to create a key pair, download the private key, and then set permissions, to delete a key, or to reset a key.
 
-Manage Keys
+Manage Client Keys
 =====================================================
-Keys can be managed from the |chef manage| web user interface.
+Client keys can be managed from the |chef manage| web user interface.
 
 Add
 -----------------------------------------------------
