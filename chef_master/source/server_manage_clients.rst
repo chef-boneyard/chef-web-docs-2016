@@ -2,7 +2,7 @@
 Manage Keys
 =====================================================
 
-.. note:: This topic is about using the |chef manage| add-on to manage cookbooks in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage keys in |chef server oec|.
 
 |api client description|
 
