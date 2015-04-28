@@ -6,7 +6,7 @@ Manage Keys
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_clients_api.rst
 
-Use the |chef manage| web user interface to create a key, download it, and then set the permissions, delete a key, or reset a key.
+Use the |chef manage| web user interface to create a key pair, download the private key, and then set permissions, to delete a key, or to reset a key.
 
 Manage Keys
 =====================================================
