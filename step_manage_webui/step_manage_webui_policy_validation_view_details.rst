@@ -1,12 +1,12 @@
 .. This is an included how-to. 
 
 
-To view validation client details:
+To view details for a |chef validator| key:
 
 #. Open |webui|.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
-#. Select a validation client.
+#. Select a |chef validator| key.
 
    .. image:: ../../images/step_manage_webui_policy_validation_view_details.png
 

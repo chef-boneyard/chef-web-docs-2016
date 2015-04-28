@@ -39,11 +39,11 @@ Global Permissions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst
 
-Client Permissions
+Key Permissions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: This is only necessary after migrating a client object from one |chef server| to another because the permissions for the nodes must be reset.
+.. note:: This is only necessary after migrating a a client that uses a key from one |chef server| to another because the permissions for the key must be reset.
 
-.. include:: ../../includes_server_rbac/includes_server_rbac_permissions_client.rst
+.. include:: ../../includes_server_rbac/includes_server_rbac_permissions_key.rst
 
 Default Groups
 -----------------------------------------------------

@@ -1,14 +1,16 @@
 =====================================================
-Manage Clients
+Manage Keys
 =====================================================
 
 .. note:: This topic is about using the |chef manage| add-on to manage cookbooks in |chef server oec|.
 
 |api client description|
 
-Manage Clients
+Use the |chef manage| web user interface to create a key, and then set the permissions for that key, or to delete a key.
+
+Manage Keys
 =====================================================
-Clients can be managed from the |chef manage| web user interface.
+Keys can be managed from the |chef manage| web user interface.
 
 Add
 -----------------------------------------------------
@@ -44,7 +46,7 @@ View
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_view.rst
 
-Validation Clients
+|chef validator| Keys
 =====================================================
 .. include:: ../../includes_security/includes_security_chef_validator.rst
 

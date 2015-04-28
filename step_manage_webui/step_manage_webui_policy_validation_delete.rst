@@ -1,12 +1,12 @@
 .. This is an included how-to. 
 
 
-To delete a validation client:
+To delete a |chef validator| key:
 
 #. Open |webui|.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
-#. Select a validation client.
+#. Select a |chef validator| key.
 #. Click |webui policy_client_delete|.
 
    .. image:: ../../images/step_manage_webui_policy_validation_delete.png

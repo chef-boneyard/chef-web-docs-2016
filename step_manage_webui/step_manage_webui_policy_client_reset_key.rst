@@ -1,12 +1,12 @@
 .. This is an included how-to. 
 
 
-To reset a client's validation key:
+To regenerate a |chef validator| key:
 
 #. Open |webui|.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
-#. Select a client.
+#. Select a key.
 #. Click the |webui tab_details| tab.
 #. Click |webui button_reset_key|.
 #. In the |webui db_reset_key| dialog box, confirm that the key should be regenerated and click the |webui button_reset_key| button:
