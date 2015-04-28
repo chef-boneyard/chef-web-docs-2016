@@ -4,9 +4,9 @@ Manage Keys
 
 .. note:: This topic is about using the |chef manage| add-on to manage keys in |chef server oec|.
 
-|api client description|
+.. include:: ../../includes_server_rbac/includes_server_rbac_clients_api.rst
 
-Use the |chef manage| web user interface to create a key, and then set the permissions for that key, or to delete a key.
+Use the |chef manage| web user interface to create a key, download it, and then set the permissions, delete a key, or reset a key.
 
 Manage Keys
 =====================================================
