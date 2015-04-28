@@ -775,6 +775,16 @@ Custom Decks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 If you're building a deck that leverages the |chef docs| repo, but will never be published to either docs.chef.io or slides.chef.io, then you can use whatever formats and slides structures you prefer. As long as |python sphinx| can build it, then use it! These types of decks may be employees of |company_name| building a custom deck for a specific training course, a presentation at a conference, and so on. This may also be community members (perhaps you!) using a deck at a conference, for something internal to your company about |chef|, or anything.
 
+Speaker Notes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Speaker notes are not recommended for a publicly visible slide deck. (The slide deck should be able to communicate to the reader without notes.) For custom decks or decks that are used privately, use the ``.. rv_note::`` directive to add notes to slides. And then view the notes using the ``s`` key on the keyboard.
+
+For example:
+
+.. code-block:: python
+
+   .. rv_note:: This is a speaker note.
+
 
 Official Names
 =====================================================
