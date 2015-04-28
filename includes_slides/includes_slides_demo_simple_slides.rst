@@ -14,4 +14,6 @@ Slides should begin with simple, concise statements followed by a short list. Sl
 
 Titles are in all-caps and live in the slide map file, separate from the contents of the |rst| file. For more information see http://docs.chef.io/style_guide.html#slide-decks.
 
-.. warning:: Slides do not support speaker notes. Sorry.
+.. warning:: Slides do support speaker notes, like this: ``.. rv_note:: This is a speaker note.`` Hit the ``s`` key on the keyboard to view speaker notes.
+
+.. rv_note:: This is a speaker note.
