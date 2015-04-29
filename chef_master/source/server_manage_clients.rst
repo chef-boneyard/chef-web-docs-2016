@@ -4,7 +4,7 @@ Manage Client Keys
 
 .. note:: This topic is about using the |chef manage| add-on to manage keys in |chef server oec|.
 
-.. include:: ../../includes_server_rbac/includes_server_rbac_clients_api.rst
+.. include:: ../../includes_server_rbac/includes_server_rbac_clients.rst
 
 Use the |chef manage| web user interface to create a key pair, download the private key, and then set permissions, to delete a key, or to reset a key.
 

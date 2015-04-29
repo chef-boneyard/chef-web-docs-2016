@@ -41,9 +41,9 @@ Global Permissions
 
 Client Key Permissions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: This is only necessary after migrating a client from one |chef server| to another because permissions must be reset for client keys after the migration.
+.. note:: This is only necessary after migrating a client from one |chef server| to another. Permissions must be reset for client keys after the migration.
 
-.. include:: ../../includes_server_rbac/includes_server_rbac_clients_api.rst
+.. include:: ../../includes_server_rbac/includes_server_rbac_clients.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_key.rst
 
