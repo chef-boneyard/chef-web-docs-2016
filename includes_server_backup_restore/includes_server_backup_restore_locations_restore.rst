@@ -20,6 +20,7 @@ Perform all activities as root unless otherwise directed.
 
     .. code-block:: bash
 
+      su - opscode-pgsql
       gunzip -c postgresql-dump-$THEDATE.gz | /opt/opscode/embedded/bin/psql -U "opscode-pgsql" -d postgres
 
     This process has only 2 ERRORs and these can be ignored:
