@@ -4,29 +4,43 @@
 When restoring |chef server|  data, the previously backed-up files will be required, along with the |chef server| running only the |service postgresql| service.
 Perform all activities as root unless otherwise directed.
 
-#. Stop all Chef Server services.
+#. Stop the server:
 
-    and then restore the previously backed-up files to the following locations using this command to exclude postgres files:
+   .. code-block:: bash
+      
+      $ chef-server-ctl stop
 
-    * /etc/opscode 
-    * /var/opt/opscode
+#. Restore the previously backed-up files to the following locations:
 
-    .. code-block:: bash
+   * ``/etc/opscode`` 
+   * ``/var/opt/opscode``
+
+   by using the following command, which will exclude |postgresql| files:
+
+   .. code-block:: bash
 
       tar xvfzp var-opt-opscode-$THEDATE.tar.gz --exclude='var/opt/opscode/drbd/data/postgresql_9.2' -C /
 
-#. Start PostgreSQL service.
-#. Restore PostgreSQL DB:
+#. Start the |service postgresql| service:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl start postgresql
+
+#. Restore the |postgresql| database:
 
     .. code-block:: bash
 
       su - opscode-pgsql
       gunzip -c postgresql-dump-$THEDATE.gz | /opt/opscode/embedded/bin/psql -U "opscode-pgsql" -d postgres
 
-    This process has only 2 ERRORs and these can be ignored:
+    Ignore the following error messages:
 
-    ERROR: current user cannot be dropped 
+    * ``ERROR: current user cannot be dropped``
+    * ``ERROR: role "opscode-pgsql" already exists``
 
-    ERROR: role "opscode-pgsql" already exists
+#. Start the server:
 
-#. Start all Chef Server services.
+   .. code-block:: bash
+      
+      $ chef-server-ctl start

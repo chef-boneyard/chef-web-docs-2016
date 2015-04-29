@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-.. note:: This section only appplicable if you are running an EC11x version
+.. note:: This section only applies to the |oec chef server| server, version 11.x.
 
 To configure backups on the backend servers in a |ha| configuration, set a |cron| job in ``/etc/cron.d/opc_snapshot`` similar to the following:
 
