@@ -211,6 +211,8 @@ chef shell-init
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_shell_init.rst
 
+bash zsh fish PowerShell (posh)
+
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_shell_init_syntax.rst
@@ -221,7 +223,19 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+
+**Set PowerShell (in the current Windows session)**
+
+.. code-block:: bash
+
+   $ posh chef shell-init powershell | Invoke-Expression
+
+**Set PowerShell**
+
+.. code-block:: bash
+
+   $ posh "chef shell-init powershell | Invoke-Expression" >> $PROFILE
+
 
 chef verify
 =====================================================
