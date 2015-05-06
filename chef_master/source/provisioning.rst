@@ -31,7 +31,7 @@ The following drivers are available for |chef provisioning|:
    * - `LXC <https://github.com/chef/chef-provisioning-lxc>`__
      - A |chef provisioning| driver for |linux lxc|.
    * - `Microsoft Azure <https://github.com/chef/chef-provisioning-azure>`__
-     - A |chef provisioning| driver for |microsoft azure|.
+     - A |chef provisioning| driver for |azure|.
    * - `SSH <https://github.com/chef/chef-provisioning-ssh>`__
      - A |chef provisioning| driver for |ssh|.
    * - `Vagrant <https://github.com/chef/chef-provisioning-vagrant>`__
