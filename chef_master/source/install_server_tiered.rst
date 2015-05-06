@@ -6,6 +6,8 @@ Tiered
 
 .. include:: ../../includes_install/includes_install_server_tiered.rst
 
+.. image:: ../../images/chef_server_tiered.png
+
 Prerequisites
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_pre.rst
