@@ -10,6 +10,18 @@ Syntax
 =====================================================
 .. include:: ../../includes_libraries/includes_libraries_syntax.rst
 
+``Chef::Provider``
+=====================================================
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
+
+Dynamic Resolution
+=====================================================
+.. include:: ../../includes_libraries/includes_libraries_dynamic_resolution.rst
+
+Template Helper Modules
+=====================================================
+.. include:: ../../step_resource/step_resource_template_library_module.rst
+
 Examples
 =====================================================
 The following examples show how to use cookbook libraries.
@@ -33,15 +45,3 @@ Extend a Recipe
 Loop Over a Record
 -----------------------------------------------------
 .. include:: ../../includes_libraries/includes_libraries_example_loop_over_records.rst
-
-``Chef::Provider``
-=====================================================
-.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
-
-Dynamic Resolution
------------------------------------------------------
-.. include:: ../../includes_libraries/includes_libraries_dynamic_resolution.rst
-
-Template Helper Modules
------------------------------------------------------
-.. include:: ../../step_resource/step_resource_template_library_module.rst
