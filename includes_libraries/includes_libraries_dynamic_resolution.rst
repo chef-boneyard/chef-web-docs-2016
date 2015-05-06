@@ -4,7 +4,7 @@
 
 Resources and providers are resolved dynamically and can handle multiple ``provides`` lines for a specific platform. When multiple ``provides`` lines exist, such as ``Homebrew`` and ``MacPorts`` packages for the |mac os x| platform, then one is selected based on resource priority mapping performed by the |chef client| during the |chef client| run.
 
-Use the following helpers in a library to get and/or set resource and/or provider priority mapping before any recipes are compiled:
+Use the following helpers in a library file to get and/or set resource and/or provider priority mapping before any recipes are compiled:
 
 .. list-table::
    :widths: 250 250
