@@ -10,10 +10,241 @@ In-Parallel Processing
 =====================================================
 .. include:: ../../includes_provisioning/includes_provisioning_parallel.rst
 
-Resources
+Drivers
+=====================================================
+The following drivers are available for |chef provisioning|:
+
+.. list-table::
+   :widths: 120 400
+   :header-rows: 1
+
+   * - Driver
+     - Description
+   * - `Amazon Web Services <https://github.com/chef/chef-provisioning-aws>`__
+     - A |chef provisioning| driver for |amazon aws|.
+   * - `Docker <https://github.com/chef/chef-provisioning-docker>`__
+     - A |chef provisioning| driver for |docker|.
+   * - `Fog <https://github.com/chef/chef-provisioning-fog>`__
+     - A |chef provisioning| driver for |fog|.
+   * - `Hanlon <https://github.com/chef/chef-provisioning-hanlon>`__
+     - A |chef provisioning| driver for Hanlon.
+   * - `LXC <https://github.com/chef/chef-provisioning-lxc>`__
+     - A |chef provisioning| driver for |linux lxc|.
+   * - `Microsoft Azure <https://github.com/chef/chef-provisioning-azure>`__
+     - A |chef provisioning| driver for |microsoft azure|.
+   * - `SSH <https://github.com/chef/chef-provisioning-ssh>`__
+     - A |chef provisioning| driver for |ssh|.
+   * - `Vagrant <https://github.com/chef/chef-provisioning-vagrant>`__
+     - A |chef provisioning| driver for |vagrant|.
+
+
+Machine Resources
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common.rst
 
+
+load_balancer
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_load_balancer.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_load_balancer_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_load_balancer_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_load_balancer_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_load_balancer_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+machine
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_machine.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Build machines dynamically**
+
+.. include:: ../../step_resource/step_resource_machines_build_machines_dynamically.rst
+
+**Get a remote file onto a new machine**
+
+.. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
+
+**Build machines that depend on each other**
+
+.. include:: ../../step_resource/step_resource_machines_codependent_servers.rst
+
+**Use a loop to build many machines**
+
+.. include:: ../../step_resource/step_resource_machines_use_a_loop_to_create_many_machines.rst
+
+**Converge multiple machine types, in-parallel**
+
+.. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
+
+**Build a machine from a machine image**
+
+.. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
+
+
+machine_batch
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_machine_batch.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_batch_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_batch_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_batch_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_batch_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Set up multiple machines, in-parallel**
+
+.. include:: ../../step_resource/step_resource_machine_batch_setup_n_machines.rst
+
+**Converge multiple machines, in-parallel**
+
+.. include:: ../../step_resource/step_resource_machine_batch_converge_n_machines.rst
+
+**Stop multiple machines, in-parallel**
+
+.. include:: ../../step_resource/step_resource_machine_batch_stop_n_machines.rst
+
+**Destroy multiple machines, in-parallel**
+
+.. include:: ../../step_resource/step_resource_machine_batch_destroy_n_machines.rst
+
+**Converge multiple machine types, in-parallel**
+
+.. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
+
+
+machine_execute
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_machine_execute.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_execute_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_execute_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_execute_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_execute_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+machine_file
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_machine_file.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_file_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_file_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_file_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_file_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Get a remote file onto a new machine**
+
+.. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
+
+
+machine_image
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_machine_image.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_machine_image_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Build a machine from a machine image**
+
+.. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
+
+
+
+Other Resources
+=====================================================
+.. include:: ../../includes_resources_common/includes_resources_common.rst
 
 
 chef_acl
@@ -41,7 +272,6 @@ Examples
 None.
 
 
-
 chef_client
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client.rst
@@ -67,7 +297,6 @@ Providers
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
-
 
 
 chef_container
@@ -149,7 +378,6 @@ Examples
 None.
 
 
-
 chef_environment
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment.rst
@@ -202,7 +430,6 @@ Examples
 None.
 
 
-
 chef_mirror
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_chef_mirror.rst
@@ -226,8 +453,6 @@ Providers
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
-
-
 
 
 chef_node
@@ -257,7 +482,6 @@ Examples
 None.
 
 
-
 chef_organization
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_chef_organization.rst
@@ -281,9 +505,6 @@ Providers
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
-
-
-
 
 
 chef_role
@@ -312,6 +533,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
 
+
 chef_user
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_chef_user.rst
@@ -335,204 +557,6 @@ Providers
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
-
-load_balancer
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_load_balancer.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_load_balancer_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_load_balancer_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_load_balancer_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_load_balancer_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
-
-
-
-machine
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_machine.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**Build machines dynamically**
-
-.. include:: ../../step_resource/step_resource_machines_build_machines_dynamically.rst
-
-**Get a remote file onto a new machine**
-
-.. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
-
-**Build machines that depend on each other**
-
-.. include:: ../../step_resource/step_resource_machines_codependent_servers.rst
-
-**Use a loop to build many machines**
-
-.. include:: ../../step_resource/step_resource_machines_use_a_loop_to_create_many_machines.rst
-
-**Converge multiple machine types, in-parallel**
-
-.. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
-
-**Build a machine from a machine image**
-
-.. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
-
-machine_batch
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_machine_batch.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_batch_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_batch_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_batch_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_batch_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**Set up multiple machines, in-parallel**
-
-.. include:: ../../step_resource/step_resource_machine_batch_setup_n_machines.rst
-
-**Converge multiple machines, in-parallel**
-
-.. include:: ../../step_resource/step_resource_machine_batch_converge_n_machines.rst
-
-**Stop multiple machines, in-parallel**
-
-.. include:: ../../step_resource/step_resource_machine_batch_stop_n_machines.rst
-
-**Destroy multiple machines, in-parallel**
-
-.. include:: ../../step_resource/step_resource_machine_batch_destroy_n_machines.rst
-
-**Converge multiple machine types, in-parallel**
-
-.. include:: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst
-
-
-machine_execute
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_machine_execute.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_execute_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_execute_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_execute_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_execute_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
-
-machine_file
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_machine_file.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_file_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_file_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_file_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_file_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**Get a remote file onto a new machine**
-
-.. include:: ../../step_resource/step_resource_machine_file_get_remote_file.rst
-
-
-
-machine_image
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_machine_image.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_image_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_image_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_image_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_machine_image_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**Build a machine from a machine image**
-
-.. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
-
 
 
 private_key
@@ -559,6 +583,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
 
+
 public_key
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_public_key.rst
@@ -582,4 +607,3 @@ Providers
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
-
