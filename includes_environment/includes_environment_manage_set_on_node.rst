@@ -5,7 +5,7 @@ A node is considered to be associated with an environment when the ``chef_enviro
 
 * By using the |subcommand knife edit| and |subcommand knife exec| subcommands
 * By editing the ``chef_environment`` directly using |knife| or the |chef manage|
-* By editing the ``environment`` configuration details in the |client rb| file and then using the ``knife bootstrap`` subcommand to bootstrap the changes to the specified environment
+* By editing the ``environment`` configuration details in the |client rb| file, and then using ``knife bootstrap -e environment_name`` to bootstrap the changes to the specified environment
 
   .. note:: After the environment has been set via bootstrap, the environment is set in the |client rb| file and may not be modified using the |chef manage| or the ``edit`` argument of the |subcommand knife node| subcommand.
 * By setting the ``environment`` configuration entry in the |client rb| file ; when the |chef client| runs, it will pick up the value and then set the ``chef_environment`` attribute of the node
