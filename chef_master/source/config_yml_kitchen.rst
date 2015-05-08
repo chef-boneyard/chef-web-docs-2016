@@ -24,9 +24,9 @@ Driver-specific Settings
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_driver.rst
 
-.. Busser-specific Settings
-.. ==========================================================================
-.. .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_busser.rst
+Drivers
+--------------------------------------------------------------------------
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst
 
 Examples
 ==========================================================================
