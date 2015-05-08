@@ -5,7 +5,7 @@
 
 To set up the |reporting| server:
 
-#. Install the package on every machine that is running |chef server|:
+#. Install the package on each frontend and backend |chef server|:
 
    .. code-block:: bash
       

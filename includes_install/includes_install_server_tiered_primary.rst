@@ -18,10 +18,3 @@ Use the following steps to set up the backend |chef server|:
    After a few minutes, the |chef server| will be installed.
 
 #. Create a file named |chef server rb| that is located in the ``/etc/opscode/`` directory. See the |chef server rb| section below for an example of the settings and values that are required.
-
-#. Reconfigure the |chef server|:
-
-   .. code-block:: bash
-      
-      $ sudo chef-server-ctl reconfigure
-

@@ -9,7 +9,7 @@ Persistent data on the backend machine of the |chef server| is primarily compose
 This assumes that:
 
 * ~300GB of raw, unpartitioned disk space is available
-* The disk space presents as a single device, ``/dev/sdb``
+* The disk space presents as a single device: ``/dev/sdb``
 * The storage is added to a volume group named ``opscode`` and is presented to the |chef server| by mounting on ``/var/opt/opscode`` before a reconfiguration
 
 The following commands properly set up disk configuration on the backend machine:
