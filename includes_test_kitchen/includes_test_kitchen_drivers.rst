@@ -6,7 +6,9 @@
 
 .. note:: The |chef dk| includes the ``kitchen-vagrant`` driver.
 
-Most drivers have driver-specific configuration settings that must be added to the |kitchen yml| file before |kitchen| will be able to use that platform during cookbook testing. Some popular drivers:
+Most drivers have driver-specific configuration settings that must be added to the |kitchen yml| file before |kitchen| will be able to use that platform during cookbook testing. For information about these driver-specific settings, please refer to the driver-specific documentation.
+
+Some popular drivers:
 
 .. list-table::
    :widths: 150 450
