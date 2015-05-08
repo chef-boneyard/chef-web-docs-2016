@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-To set up the |reporting| server for a high availability configuration:
+To set up the |reporting| server:
 
 #. Install the package on every machine that is running |chef server|:
 
