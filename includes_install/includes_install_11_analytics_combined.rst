@@ -18,13 +18,13 @@ To set up the |chef analytics| server for a |combined| deployment:
 
       $ private-chef-ctl reconfigure
 
-#. Install the package on the same machine that is running |chef server| 11.1.8 or higher. For example on |ubuntu|:
+#. Install the package on the same server that is running |chef server| 11.1.8 or higher. For example on |ubuntu|:
 
    .. code-block:: bash
 
       $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
 
-#. Configure the |chef analytics| server by setting the analytics_fqdn in ``/etc/opscode-analytics/opscode-analytics.rb``. This is the FQDN for the |chef analytics| web application, and must be different from the api_fqdn set for |chef server|. For example:
+#. Configure the |chef analytics| server by setting the analytics_fqdn in ``/etc/opscode-analytics/opscode-analytics.rb``. This is the |fqdn| for the |chef analytics| web application, and must be different from the ``api_fqdn`` set for |chef server|. For example:
 
    .. code-block:: bash
 
@@ -49,7 +49,7 @@ To set up the |chef analytics| server for a |combined| deployment:
       $ nc -zv analytics.example.com 10012
       Connection to analytics.example.com 10012 port [tcp/*] succeeded!
 
-#. Troubleshoot issues by checking logs in ``/var/log/opscode-analytics/``, or by running the following command:
+#. Troubleshoot issues by checking logs in ``/var/log/opscode-analytics/`` or by running the following command:
 
    .. code-block:: bash
 

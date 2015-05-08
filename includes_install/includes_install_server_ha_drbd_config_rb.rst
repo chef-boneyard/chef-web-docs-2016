@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Each |chef server| in a high availabilty configuration must have an identical |chef server rb| file that is located in the ``/etc/opscode/`` directory on each server. This file describes the topology of the high availability configuration. On the primary backend machine, create a file named |chef server rb| and save it in the ``/etc/opscode/`` directory.
+Each |chef server| in a high availabilty configuration must have an identical |chef server rb| file that is located in the ``/etc/opscode/`` directory on each server. This file describes the topology of the high availability configuration. On the primary backend server, create a file named |chef server rb| and save it in the ``/etc/opscode/`` directory.
 
 Add the following settings to the |chef server rb| file:
 
@@ -21,7 +21,7 @@ Add the following settings to the |chef server rb| file:
         :bootstrap => true,
         :cluster_ipaddress => "CLUSTER_IPADDRESS"
 
-   Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``"backend"``. If the backend machine is used to bootstrap the |chef server| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface that is used for cluster communications. For example, the same IP address that is used by |keepalived| and |drbd|. If the |chef server| is not used to bootstrap the |chef server| installation, exclude the ``:cluster_ipaddress`` entry.
+   Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend server is ``"backend"``. If the backend server is used to bootstrap the |chef server| installation, replace ``CLUSTER_IPADDRESS`` with the IP address of the interface that is used for cluster communications. For example, the same IP address that is used by |keepalived| and |drbd|. If the |chef server| is not used to bootstrap the |chef server| installation, exclude the ``:cluster_ipaddress`` entry.
 
 #. Define the secondary backend server:
 
@@ -44,7 +44,7 @@ Add the following settings to the |chef server rb| file:
 
    Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind. This is typically the public interface of the server.
 
-#. Define each frontend machine:
+#. Define each frontend server:
 
    .. code-block:: ruby
 
@@ -52,9 +52,9 @@ Add the following settings to the |chef server rb| file:
         :ipaddress => "IP_ADDRESS",
         :role => "frontend"
 
-   Replace ``FQDN`` with the |fqdn| of the frontend machine. Replace ``IP_ADDRESS`` with the IP address of the frontend machine. Set ``:role`` to ``"frontend"``.
+   Replace ``FQDN`` with the |fqdn| of the frontend server. Replace ``IP_ADDRESS`` with the IP address of the frontend server. Set ``:role`` to ``"frontend"``.
 
-   Add separate entry in the |chef server rb| file for each frontend machine.
+   Add separate entry in the |chef server rb| file for each frontend server.
 
 #. Define the API |fqdn|:
 

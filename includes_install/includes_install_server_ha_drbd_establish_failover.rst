@@ -1,9 +1,9 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To establish failover between the two backend machines, do the following:
+To establish failover between the two backend servers, do the following:
 
-#. On the primary backend, define the server as the primary shared device. For |redhat| and |centos| 6:
+#. On the primary backend server, define it as the primary shared device. For |redhat| and |centos| 6:
 
    .. code-block:: bash
       
@@ -15,7 +15,7 @@ To establish failover between the two backend machines, do the following:
       
       $ drbdadm -- --overwrite-data-of-peer primary pc0
 
-#. On the primary backend, mount the file system. For example, a file system named ``ext4``:
+#. On the primary backend server, mount the file system. For example, a file system named ``ext4``:
 
    .. code-block:: bash
       
@@ -72,7 +72,7 @@ To establish failover between the two backend machines, do the following:
 
    Synchronization is complete hen the ``ds:`` section reads ``UpToDate/UpToDate``.
 
-#. When synchronization is complete, run the following command on the primary backend machine:
+#. When synchronization is complete, run the following command on the primary backend server:
 
    .. code-block:: bash
 
@@ -84,7 +84,7 @@ To establish failover between the two backend machines, do the following:
       
       $ sudo chef-server-ctl reconfigure
 
-#. Run the following command on the secondary backend machine:
+#. Run the following command on the secondary backend server:
 
    .. code-block:: bash
 

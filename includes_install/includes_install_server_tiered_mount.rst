@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To build and mount the storage device on the backend machine, do the following:
+To build and mount the storage device on the backend server, do the following:
 
 #. Create the file system. For example, an ``ext4`` type named ``tiered``:
 

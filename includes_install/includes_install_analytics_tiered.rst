@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-In a tiered configuration, the |chef analytics| deployment is on different machines from the |chef server|, with a single back end and multiple load-balanced front end machines. In a tiered configuration, an existing |chef server| deployment should already running. 
+In a tiered configuration, the |chef analytics| deployment is on different servers from the |chef server|, with a single backend and multiple load-balanced frontends. In a tiered configuration, an existing |chef server| deployment should already running. 
 
 |chef analytics| is installed in the following steps: 
 
 * Configuring the |chef server| for |chef analytics|
-* Installing |chef analytics| on the back end
-* Installing |chef analytics| on the front ends
+* Installing |chef analytics| on the backend
+* Installing |chef analytics| on the frontends
 
 .. warning:: The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage| prior to installing |chef analytics|.
 
@@ -80,11 +80,11 @@ Configure the |chef server|. On each machine in the |chef server| configuration,
 
 
 
-Configure the |chef analytics| backend machine:
+Configure the |chef analytics| backend:
 
-#. Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine.
+#. Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| server to the backend |chef analytics| machine.
 
-#. Edit the ``opscode-analytics.rb`` file on the backend |chef analytics| machine:
+#. Edit the ``opscode-analytics.rb`` file on the backend |chef analytics| server:
 
    .. code-block:: bash
 
@@ -100,7 +100,7 @@ Configure the |chef analytics| backend machine:
       backend_vip "<be_fqdn>",
         :ipaddress => "<be_ip>"
 
-#. On the backend |chef analytics| machine, verify the configuration using the preflight check command:
+#. On the backend |chef analytics| server, verify the configuration using the preflight check command:
 
    .. code-block:: bash
 
@@ -108,7 +108,7 @@ Configure the |chef analytics| backend machine:
 
    If there are any errors in the preflight check, correct them before carrying on to the next step.
 
-#. Reconfigure the |chef analytics| machine:
+#. Reconfigure the |chef analytics| server:
 
    .. code-block:: bash
 
@@ -116,15 +116,15 @@ Configure the |chef analytics| backend machine:
 
 
 
-Install |chef analytics| on frontend machines:
+Install |chef analytics| on frontend servers:
 
-#. For each frontend machine, install the |chef analytics| package. For example on |ubuntu|:
+#. For each frontend server, install the |chef analytics| package. For example on |ubuntu|:
 
    .. code-block:: bash
 
       $ dpkg -i opscode-analytics<version>.deb
 
-#. Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| machine to the backend |chef analytics| machine.
+#. Copy over the files in the ``/etc/opscode-analytics`` directory from the |chef server| to the backend |chef analytics| server.
 
 #. Edit the ``opscode-analytics.rb`` file:
 

@@ -3,7 +3,7 @@
 
 In a standalone configuration, the |chef analytics| deployment is on a different machine from the |chef server|. This allows you to scale |chef analytics| independantly from the |chef server|. To set up |chef analytics| in a standalone configuration, an existing |chef server| deployment should already running. |chef analytics| is installed in two steps: configuring the |chef server| for |chef analytics|, and then installing |chef analytics|.
 
-On the |chef server| machines:
+On the |chef server|:
 
 #. Download the package from http://downloads.chef.io/analytics/.
 #. Enable the |chef server| deployment to publish to |chef actions| by adding the following line to ``/etc/opscode/chef-server.rb``:

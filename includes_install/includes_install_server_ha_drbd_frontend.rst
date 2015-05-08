@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-For each frontend machine, use the following steps to set up the |chef server|:
+For each frontend server, use the following steps to set up the |chef server|:
 
 #. Install the |chef server| package. For |redhat| and |centos| 6:
 
@@ -17,7 +17,7 @@ For each frontend machine, use the following steps to set up the |chef server|:
 
    After a few minutes, the |chef server| will be installed.
 
-#. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file.
+#. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend server, including all certificates and the |chef server rb| file.
 
 #. Run the following command:
 

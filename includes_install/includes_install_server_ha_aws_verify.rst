@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To verify that failover is working, stop |keepalived| on the primary machine.
+To verify that failover is working, stop |keepalived| on the primary server.
 
 #. To watch the failover occur as it happens, run the following command in terminal windows on both the primary and secondary backend servers prior to stopping |keepalived|:
 
@@ -9,9 +9,9 @@ To verify that failover is working, stop |keepalived| on the primary machine.
 
       $ watch -n1 sudo chef-server-ctl ha-status
 
-   in terminal windows on both the primary and secondary machines prior to stopping |keepalived|.
+   in terminal windows on both the primary and secondary servers prior to stopping |keepalived|.
 
-#. Stop |keepalived| on the primary backend machine:
+#. Stop |keepalived| on the primary backend server:
 
    .. code-block:: bash
       
@@ -19,7 +19,7 @@ To verify that failover is working, stop |keepalived| on the primary machine.
 
    A cluster failover should occur.
 
-#. After a successful failover, restart |keepalived| on the primary backend machine:
+#. After a successful failover, restart |keepalived| on the primary backend server:
 
    .. code-block:: bash
 

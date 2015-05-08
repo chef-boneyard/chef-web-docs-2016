@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Persistent data on backend machines of the |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|. These disks should:
+Persistent data on a backend |chef server| is primarily composed of cookbook files and directories. Separate disks should be dedicated entirely to storing this data prior to installing the |chef server|. These disks should:
 
 * Utilize hardware |raid|
 * Be configured in either |raid1| or |raid5|
@@ -15,7 +15,7 @@ The recommended configuration utilizes the |linux| |lvm| as the backing store fo
 * The storage is added in a logical volume group named ``drbd``
 * The volume group should have adequate space to enable |lvm| snapshots to be used for backups; this amount depends on many factors, including how much changes in-between snapshots, how long the snapshots will be kept, and the (eventual) size of the |chef server| database; a decent starting point when sizing |lvm| snapshots is ~10% of the raw, unpartitioned disk space
 
-The following commands would properly set up the back-end disk configuration for |drbd|:
+The following commands would properly set up the backend disk configuration for |drbd|:
 
 .. code-block:: bash
 

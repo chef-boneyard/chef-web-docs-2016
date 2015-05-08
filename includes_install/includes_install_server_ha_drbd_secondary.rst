@@ -3,9 +3,9 @@
 
 Use the following steps to set up the secondary backend |chef server|:
 
-#. Repeat the same steps as described for the primary machine.
+#. Repeat the same steps as described for the primary backend server.
 
-#. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file.
+#. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend server, including all certificates and the |chef server rb| file.
 
 #. Reconfigure the |chef server|:
 

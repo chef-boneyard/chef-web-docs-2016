@@ -4,7 +4,7 @@
 To set up the |reporting| server for a standalone configuration:
 
 #. Contact |company_name| and get the package that is appropriate for the |chef server| platform and operating system
-#. Install the package on the same machine that is running |chef server| 11.0.1 or higher. For example on |ubuntu|:
+#. Install the package on the same server that is running |chef server| 11.0.1 or higher. For example on |ubuntu|:
 
    .. code-block:: bash
 

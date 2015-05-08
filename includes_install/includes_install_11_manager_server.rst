@@ -4,7 +4,7 @@
 To set up |chef manage| for a standalone configuration:
 
 #. Contact |company_name| and get the package that is appropriate for the |chef server| platform and operating system
-#. Install the package on the same machine that is running |chef server| 11.0.1 or higher. For example on |ubuntu|:
+#. Install the package on the same server that is running |chef server| 11.0.1 or higher. For example on |ubuntu|:
 
    .. code-block:: bash
 
@@ -18,13 +18,13 @@ To set up |chef manage| for a standalone configuration:
 
    If the |enterprise rb| file does not exist, then create the file and add this setting to it.
 
-#. Reconfigure the |chef server| server:
+#. Reconfigure the |chef server|:
 
    .. code-block:: bash
 
       $ private-chef-ctl reconfigure
 
-#. Reconfigure the |chef manage| server:
+#. Reconfigure the |chef manage|:
 
    .. code-block:: bash
 

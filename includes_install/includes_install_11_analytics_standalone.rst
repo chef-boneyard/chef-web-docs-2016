@@ -16,7 +16,7 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
       $ private-chef-ctl stop
 	  
-#. Enable remote access to |rabbitmq| on the |chef server| backend machine by adding the following settings to ``/etc/opscode/private-chef.rb``:
+#. Enable remote access to |rabbitmq| on the |chef server| backend server by adding the following settings to ``/etc/opscode/private-chef.rb``:
 
    .. code-block:: ruby
 
@@ -47,13 +47,13 @@ In a standalone configuration, the |chef analytics| deployment is on a different
 
 Now run the following steps on your |chef analytics| standalone instance:
 
-#. Install the |chef analytics| package on the standalone |chef analytics| machine. For example on |ubuntu|:
+#. Install the |chef analytics| package on the standalone |chef analytics| server. For example on |ubuntu|:
 
    .. code-block:: bash
 
       $ dpkg -i opscode-analytics_1.0.0-1_amd64.deb
 
-#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| machine to the standalone |chef analytics| machine.
+#. Copy over the ``/etc/opscode-analytics`` directory from the |chef server| to the standalone |chef analytics| server.
 
 #. Configure the |chef analytics| server by setting the ``analytics_fqdn`` in ``/etc/opscode-analytics/opscode-analytics.rb``. This is the |fqdn| for the |chef analytics| web application. For example:
 
@@ -70,13 +70,13 @@ Now run the following steps on your |chef analytics| standalone instance:
 
    If there are any errors in the preflight check, correct them before carrying on to the next step.
 
-#. Reconfigure the |chef analytics| server on the |chef analytics| machine:
+#. Reconfigure the |chef analytics| server:
 
    .. code-block:: bash
 
       $ opscode-analytics-ctl reconfigure
 
-#. Verify the installation on the |chef analytics| machine:
+#. Verify the installation:
 
    .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |chef server rb| file that is located in the ``/etc/opscode/`` directory describes the topology of the tiered configuration. On the backend machine, create a file named |chef server rb| and save it in the ``/etc/opscode/`` directory.
+The |chef server rb| file that is located in the ``/etc/opscode/`` directory describes the topology of the tiered configuration. On the backend server, create a file named |chef server rb| and save it in the ``/etc/opscode/`` directory.
 
 Add the following settings to the |chef server rb| file:
 
@@ -20,7 +20,7 @@ Add the following settings to the |chef server rb| file:
         :role => "backend",
         :bootstrap => true
 
-   Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend machine is ``"backend"``.
+   Replace ``FQDN`` with the |fqdn| of the server and ``IP_ADDRESS`` with the IP address of the server. The role is a backend server is ``"backend"``.
 
 #. Define the backend virtual IP address:
 
@@ -30,9 +30,9 @@ Add the following settings to the |chef server rb| file:
         :ipaddress => "IP_ADDRESS",
         :device => "eth0"
 
-   Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the virtual IP address will bind. This is typically the public interface of the server. In a typical tiered install, the config here could also be just the main FQDN and IP address that are already configured for the backend. Running ``chef-server-ctl reconfigure`` will not bind the ``backend_vip`` address to an interface, this must be done on startup of the machine. 
+   Replace ``FQDN`` with the |fqdn| of the server. Replace ``IP_ADDRESS`` with the virtual IP address of the server. The ``:device`` parameter should be the ethernet interface to which the virtual IP address will bind. This is typically the public interface of the server. In a typical tiered install, the config here could also be just the main |fqdn| and IP address that are already configured for the backend. Running ``chef-server-ctl reconfigure`` will not bind the ``backend_vip`` address to an interface, this must be done on startup of the machine. 
 
-#. Define each frontend machine:
+#. Define each frontend server:
 
    .. code-block:: ruby
 
@@ -40,9 +40,9 @@ Add the following settings to the |chef server rb| file:
         :ipaddress => "IP_ADDRESS",
         :role => "frontend"
 
-   Replace ``FQDN`` with the |fqdn| of the frontend machine. Replace ``IP_ADDRESS`` with the IP address of the frontend machine. Set ``:role`` to ``"frontend"``.
+   Replace ``FQDN`` with the |fqdn| of the frontend server. Replace ``IP_ADDRESS`` with the IP address of the frontend server. Set ``:role`` to ``"frontend"``.
 
-   Add separate entry in the |chef server rb| file for each frontend machine.
+   Add separate entry in the |chef server rb| file for each frontend server.
 
 #. Define the API |fqdn|:
 

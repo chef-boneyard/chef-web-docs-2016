@@ -17,7 +17,7 @@ Use the following steps to set up each frontend |chef server|:
 
    After a few minutes, the |chef server| will be installed. The |chef ha| package is **not** required on front end machines.
 
-#. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend machine, including all certificates and the |chef server rb| file.
+#. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend server, including all certificates and the |chef server rb| file.
 
 #. Run the following command:
 

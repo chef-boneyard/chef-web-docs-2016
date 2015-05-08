@@ -11,7 +11,7 @@ To install the |chef client| using the |omnibus installer|:
 
       curl -L https://www.chef.io/chef/install.sh | sudo bash
 
-   and then enter the password for the local machine.
+   and then enter the local password.
 #. As the |chef client| is being installed, the command window will show something like the following:
 
    .. code-block:: bash
@@ -52,7 +52,3 @@ and
    $ curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 12.0.2
 
 will both install the |chef client|, version 12.0.2.
-
-
-
-

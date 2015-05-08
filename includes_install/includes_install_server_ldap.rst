@@ -21,7 +21,7 @@ The |chef server| supports using |windows ad| or |ldap| for any user that has an
 To configure the |chef server| to use |windows ad| or |ldap| do the following:
 
 #. Install the |chef manage| (if it is not already).
-#. Add the following settings to the |chef server rb| file. These settings must be added to each machine in the |chef server| deployment, including both front and back end machines in a high availability or tiered configuration:
+#. Add the following settings to the |chef server rb| file. These settings must be added to each machine in the |chef server| deployment, including both frontend and backend servers in a high availability or tiered configuration:
 
    .. include:: ../../includes_config/includes_config_rb_server_settings_ldap.rst
 

@@ -11,25 +11,25 @@ To set up the |reporting| server:
       
       $ chef-server-ctl install opscode-reporting
 
-#. Reconfigure the |chef server| on the back end primary server (bootstrap):
+#. Reconfigure the |chef server| on the backend primary server (bootstrap):
 
    .. code-block:: bash
 
       $ chef-server-ctl reconfigure
 
-#. Reconfigure the |reporting| server on the back end primary server (bootstrap):
+#. Reconfigure the |reporting| server on the backend primary server (bootstrap):
 
    .. code-block:: bash
 
       $ opscode-reporting-ctl reconfigure
 
-#. Copy the entire ``/etc/opscode-reporting`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
+#. Copy the entire ``/etc/opscode-reporting`` directory from the backend primary server to all frontend and backend servers. For example, from each server run:
 
    .. code-block:: bash
       
       $ scp -r <Bootstrap server IP>:/etc/opscode-reporting /etc
 
-   or from the back end primary machine:
+   or from the backend primary server:
 
    .. code-block:: bash
       

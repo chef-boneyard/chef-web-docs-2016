@@ -48,9 +48,9 @@ Use the following steps to set up the secondary backend |chef server|:
       
       $ sudo chef-server-ctl reconfigure
 
-   This will reconfigure the |chef server|, start |keepalived|, and configure the machine as the secondary backend server.
+   This will reconfigure the |chef server|, start |keepalived|, and configure it as the secondary backend server.
 
-#. Verify the machine is the secondary backend server:
+#. Verify the secondary backend server:
 
    .. code-block:: bash
       

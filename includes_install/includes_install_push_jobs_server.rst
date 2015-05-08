@@ -9,9 +9,9 @@ To set up the |push jobs| server for a standalone configuration:
 
       $ dpkg -i opscode-push-jobs-server_0.0.1+20130307070157.git.98.c04f587-1.ubuntu.10.04_amd64.deb
 
-   This step is required on each of the servers in the |chef server| deployment. For example, in a configuration with two back end servers and three front end servers, this command would need to be run on all five machines.
+   This step is required on each of the servers in the |chef server| deployment. For example, in a configuration with two backend servers and three frontend servers, this command would need to be run on all five servers.
 
-#. TCP protocol ports 10000-10003 must be open. This allows the |push jobs| clients to communicate with the |push jobs| server. In a configuration with both front and back ends, these ports only need to be open on the back end servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client).
+#. TCP protocol ports 10000-10003 must be open. This allows the |push jobs| clients to communicate with the |push jobs| server. In a configuration with both frontend and backend servers, these ports only need to be open on the backend servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client).
 
 #. Reconfigure the |push jobs| servers:
 
@@ -19,7 +19,7 @@ To set up the |push jobs| server for a standalone configuration:
 
       $ opscode-push-jobs-server-ctl reconfigure
 
-   This step is required for each of the servers in the |chef server| deployment. After this has been completed, run the following command on each of the back end servers:
+   This step is required for each of the servers in the |chef server| deployment. After this has been completed, run the following command on each of the backend servers:
 
    .. code-block:: bash
 

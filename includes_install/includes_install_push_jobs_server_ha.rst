@@ -3,7 +3,7 @@
 
 To set up the |push jobs| server for a high availability configuration:
 
-#. Install the package on all machines that are running the |chef server|. For example on |ubuntu|:
+#. Install the package on all servers that are running the |chef server|. For example on |ubuntu|:
 
    .. code-block:: bash
 
@@ -15,19 +15,19 @@ To set up the |push jobs| server for a high availability configuration:
 
       $ opscode-push-jobs-server-ctl reconfigure
 
-#. Copy the entire ``/etc/opscode-push-jobs-server`` directory from the back end primary machine to all front and back end machines. For example, from each server run:
+#. Copy the entire ``/etc/opscode-push-jobs-server`` directory from the backend primary to all frontend and backend servers. For example, from each server run:
 
    .. code-block:: bash
       
       $ scp -r <Bootstrap server IP>:/etc/opscode-push-jobs-server /etc
 
-   or from the back end primary machine:
+   or from the backend primary server:
 
    .. code-block:: bash
       
       $ scp -r /etc/opscode-push-jobs-server <each servers IP>:/etc
 
-#. TCP protocol ports 10000-10003 must be open. This allows the |push jobs| clients to communicate with the |push jobs| server. In a configuration with both front and back ends, these ports only need to be open on the back end servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client).
+#. TCP protocol ports 10000-10003 must be open. This allows the |push jobs| clients to communicate with the |push jobs| server. In a configuration with both frontend and backend servers, these ports only need to be open on the backend servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client).
 
 #. Reconfigure the remaining |push jobs| servers:
 
@@ -35,7 +35,7 @@ To set up the |push jobs| server for a high availability configuration:
 
       $ opscode-push-jobs-server-ctl reconfigure
 
-#. Run the following command on each of the back end servers:
+#. Run the following command on each of the backend servers:
 
    .. code-block:: bash
 
@@ -43,7 +43,7 @@ To set up the |push jobs| server for a high availability configuration:
 
    This ensures that the |keepalived| scripts are regenerated so they are aware of |push jobs|.
 
-#. Restart all machines on which |push jobs| will run:
+#. Restart all servers on which |push jobs| will run:
 
    .. code-block:: bash
 
