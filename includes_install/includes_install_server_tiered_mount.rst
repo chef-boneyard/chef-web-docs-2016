@@ -21,14 +21,3 @@ To build and mount the storage device on the backend server, do the following:
       
       $ mount /dev/opscode/tiered /var/opt/opscode
 
-#. Run the following command:
-
-   .. code-block:: bash
-      
-      $ sudo chef-server-ctl start
-
-#. Run the following command:
-
-   .. code-block:: bash
-      
-      $ sudo chef-server-ctl reconfigure

@@ -16,6 +16,10 @@ Disk Configuration
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_config_disk.rst
 
+Mount Storage Device
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_server_tiered_mount.rst
+
 Backend
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_primary.rst
@@ -23,10 +27,6 @@ Backend
 |chef server rb|
 =====================================================
 .. include:: ../../includes_install/includes_install_server_tiered_config_rb.rst
-
-Mount Storage Device
-=====================================================
-.. include:: ../../includes_install/includes_install_server_tiered_mount.rst
 
 Frontend
 =====================================================
