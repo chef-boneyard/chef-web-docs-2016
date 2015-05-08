@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |kitchen yml| file is used to define what is required to run |kitchen|, including the driver, the provisioner, and which platforms are used to create instances on which one (or more) test suites will run. 
+Use a |kitchen yml| file to define what is required to run |kitchen|, including drivers, provisioners, platforms, and test suites. 
