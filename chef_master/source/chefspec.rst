@@ -6,15 +6,29 @@
 
 .. include:: ../../includes_chefspec/includes_chefspec_whatis.rst
 
-Unit Test Syntax
+.. include:: ../../includes_chefspec/includes_chefspec_compare_to_resource.rst
+
+Unit Tests
 =====================================================
-.. include:: ../../includes_chefspec/includes_chefspec_syntax.rst
+.. include:: ../../includes_rspec/includes_rspec.rst
 
-.. note:: .. include:: ../../includes_chefspec/includes_chefspec_syntax_compare_to_resource.rst
+ |chef spec| is built on the |rspec_dsl|.
 
-**Example**
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_rspec/includes_rspec_syntax.rst
 
-.. include:: ../../includes_chefspec/includes_chefspec_syntax_example.rst
+``context``
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_rspec/includes_rspec_syntax_context.rst
+
+``let``
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_rspec/includes_rspec_syntax_let.rst
+
+Require |chef spec|
+-----------------------------------------------------
+.. include:: ../../includes_chefspec/includes_chefspec_syntax_require.rst
 
 Examples
 =====================================================
