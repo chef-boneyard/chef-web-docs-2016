@@ -6,7 +6,7 @@
 
 .. include:: ../../includes_chefspec/includes_chefspec_whatis.rst
 
-.. include:: ../../includes_chefspec/includes_chefspec_compare_to_resource.rst
+.. .. include:: ../../includes_chefspec/includes_chefspec_compare_to_resource.rst
 
 Unit Tests
 =====================================================
