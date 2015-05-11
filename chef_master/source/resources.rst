@@ -2718,6 +2718,8 @@ Examples
 
 template
 -----------------------------------------------------
+.. include:: ../../includes_template/includes_template.rst
+
 .. include:: ../../includes_resources/includes_resource_template.rst
 
 .. include:: ../../includes_template/includes_template_requirements.rst
