@@ -91,3 +91,4 @@ The following tools have been developed by members of the |chef| community. Thes
    policy
    rubocop
    ruby
+   serverspec
