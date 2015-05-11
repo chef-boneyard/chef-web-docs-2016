@@ -27,6 +27,10 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_rspec/includes_rspec_syntax_let.rst
 
+Require |chef spec|
+-----------------------------------------------------
+.. include:: ../../includes_serverspec/includes_serverspec_syntax_require.rst
+
 For more information ...
 =====================================================
 For more information about |serverspec|:
