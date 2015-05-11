@@ -12,7 +12,7 @@ Unit Tests
 =====================================================
 .. include:: ../../includes_rspec/includes_rspec.rst
 
- |chef spec| is built on the |rspec_dsl|.
+|chef spec| is built on the |rspec_dsl|.
 
 Syntax
 -----------------------------------------------------
