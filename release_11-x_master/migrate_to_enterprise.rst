@@ -139,4 +139,6 @@ A cookbook can be uploaded individually using the ``upload`` argument for the ``
 
 Configure Permissions
 =====================================================
-.. include:: ../../includes_server_rbac/includes_server_rbac_permissions_client.rst
+.. include:: ../../includes_server_rbac/includes_server_rbac_clients.rst
+
+.. include:: ../../includes_server_rbac/includes_server_rbac_permissions_key.rst
