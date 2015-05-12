@@ -26,7 +26,11 @@ Getting Started
 
 The Community
 =====================================================
-.. include:: ../../includes_chef/includes_chef_index_community.rst
+.. include:: ../../includes_community/includes_community.rst
+
+.. include:: ../../includes_community/includes_community_read.rst
+
+See :doc:`this page </community>` for more about the awesome |chef| community!
 
 The Workstation
 =====================================================
@@ -162,7 +166,6 @@ Cookbooks
    community
    community_contributions
    community_guidelines
-   community_lists
    community_plugin_chef
    community_plugin_knife
    community_plugin_ohai
