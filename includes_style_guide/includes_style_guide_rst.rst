@@ -42,29 +42,13 @@ If an H1 requires a sub-header, this is one to use. Sphinx will generate errors 
 
 H3
 -----------------------------------------------------
-If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like:: 
-
-    header name goes here
-    +++++++++++++++++++++++++++++++++++++++++++++++++++++
-    This is the paragraph.
-
-H4
------------------------------------------------------
-If a H3 requires a sub-header, this is the one to use. Sphinx will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like:: 
-
-    header name goes here
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    This is the paragraph.
-
-H5
------------------------------------------------------
-Only 4 levels of headers are supported (title, H2, H3, and H4). Conversely, when more than 4 levels of headers are required, re-think the header structure rather than go deeper. If, in the rare instance a lower-level header is needed, use a bold emphasis and then white space to provide the visual treatment and content separation. What it looks like:: 
+Only 2 levels of headers are supported (H1, H2). Conversely, when more than 2 levels of headers are required, re-think the header structure rather than go deeper. If, in the rare instance a lower-level header is needed, use a bold emphasis and then white space to provide the visual treatment and content separation. What it looks like:: 
 
     **header name goes here**         # in regular bold emphasis
                                       # this is a hard return
     content, as normally authored.
 
-What an "H5 header" link looks like after it's built:
+What an "H3 header" looks like after it's built:
 
 **Header**
 
@@ -79,17 +63,9 @@ H2 Example
 -----------------------------------------------------
 This is an H2 paragraph!
 
-H3 Example
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+**H3 Example**
+
 This is an H3 paragraph!
-
-H4 Example
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-This is an H4 paragraph!
-
-**H5 Example**
-
-This is an H5 paragraph!
 
 Lists
 =====================================================
