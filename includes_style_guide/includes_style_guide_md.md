@@ -174,18 +174,18 @@ If you insist on using a table, you're gonna have to build it by hand. Which suc
     The preceding paragraph can't end in ``::``.
 
     +------------+------------+
-    | A table with stuff!     |
+    | The Table Header        |
     +------------+------------+
-    | Heading    | Heading    |
+    | Subheader  | Subheader  |
     +============+============+
     | column spanning row     |
     +------------+------------+
     | single row | spanning   |
-    +------------+            +
+    +------------+            |
     | single row | row        |
     +------------+------------+
     | single row | * one      |
-    +------------+ * two      +
+    +------------+ * two      |
     | single row | * three    |
     +------------+------------+
 
