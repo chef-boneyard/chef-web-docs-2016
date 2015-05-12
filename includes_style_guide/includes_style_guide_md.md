@@ -80,12 +80,11 @@ Bulleted lists are useful for breaking up text blocks and for drawing attention 
    * text goes here
    * text goes here
 
-Use the asterisk symbol (*) only for bulleted lists, even though Sphinx supports using other symbols. What bullet lists look like after they are built:
+For example:
 
-* text goes here
-* text goes here
-* text goes here
-* text goes here
+* foo
+* bar
+* baz
 
 Numbered Lists
 -----------------------------------------------------
@@ -96,12 +95,11 @@ Numbered lists are good for when people need to understand a list of information
    3. text goes here
    4. text goes here
 
-Use the number symbol (#) to let Sphinx handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. What ordered lists look like after it is built:
+For example:
 
-1. text goes here
-2. text goes here
-3. text goes here
-4. text goes here
+1. foo
+2. bar
+3. baz
 
 Inline Markup
 =====================================================
