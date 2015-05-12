@@ -107,13 +107,13 @@ Adding emphasis within text strings can be done using **bold**, *italics*, and `
 
 Bold
 -----------------------------------------------------
-Use two asterisks (*) to mark a text string as **bold**. What it looks like:: 
+Use two asterisks to mark a text string as **bold**. What it looks like:: 
 
    **bold**
 
 Italics
 -----------------------------------------------------
-Use a single asterisk (*) to mark a text string as *italics*. What it looks like:: 
+Use a single asterisk to mark a text string as *italics*. What it looks like:: 
 
    *text goes here*
 
