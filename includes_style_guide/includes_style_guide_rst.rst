@@ -183,11 +183,11 @@ If you insist on using a table, you're gonna have to build it by hand. Which suc
     | single row | spanning   |
     +------------+            +
     | single row | row        |
-    +------------|------------+
+    +------------+------------+
     | single row | * one      |
     +------------+ * two      +
     | single row | * three    |
-    +------------|------------+
+    +------------+------------+
 
 The preceding paragraph can't end in ``::``.
 
