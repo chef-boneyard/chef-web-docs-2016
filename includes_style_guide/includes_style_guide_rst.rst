@@ -14,9 +14,9 @@ Topic Titles
 -----------------------------------------------------
 Each topic can have a single topic title. Use the equals symbol (=) above and below the header name. What it looks like as reST::
 
-   =====================================================
-   header name goes here
-   =====================================================
+    =====================================================
+    header name goes here
+    =====================================================
 
 This is the only section header that requires the structure above and below the header.
 
@@ -28,33 +28,33 @@ H1
 -----------------------------------------------------
 If a topic requires a sub-header, this is the first one to use. Use the equals symbol (=) below the header name. What it looks like:: 
 
-   header name goes here
-   =====================================================
-   This is the paragraph.
+    header name goes here
+    =====================================================
+    This is the paragraph.
 
 H2
 -----------------------------------------------------
 If an H1 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like:: 
 
-   header name goes here
-   -----------------------------------------------------
-   This is the paragraph.
+    header name goes here
+    -----------------------------------------------------
+    This is the paragraph.
 
 H3
 -----------------------------------------------------
 If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like:: 
 
-   header name goes here
-   +++++++++++++++++++++++++++++++++++++++++++++++++++++
-   This is the paragraph.
+    header name goes here
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++
+    This is the paragraph.
 
 H4
 -----------------------------------------------------
 If a H3 requires a sub-header, this is the one to use. Sphinx will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like:: 
 
-   header name goes here
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   This is the paragraph.
+    header name goes here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    This is the paragraph.
 
 H5
 -----------------------------------------------------
