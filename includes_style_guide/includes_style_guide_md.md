@@ -1,16 +1,16 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
-
-
-The CHEF style guide is just a limited subset of the full capabilities of Sphinx, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it. Use this style guide when you MUST author a file in Markdown so that it may be more easily converted to reStructuredText later.
-
-All of the documents built by Sphinx can be found at https://docs.chef.io.
-
-Basic Doc Template
 =====================================================
-All documents must have a title and a body.
+.md vs. .rst? Write in both!
+=====================================================
 
-Topic Titles
+This is the CHEF style guide for authoring using syntax that is common to both Markdown and reStructuredText. It may seem limiting, given that there are only a handful of options, but realistically, most writing is headers, paragraphs (with bold, italics, and monospaced text), code blocks, lists (ordered and unordered) and hyperlinks. This is true regardless of the sophistication of the authoring toolset.
+
+This is the syntax you should stick to when creating topics (like Readmes) that you want included in chef-docs.
+
+Common Syntax -- DONE
+=====================================================
+This is the syntax that is common to both Markdown (.md) and reStructuredText (.rst) authoring. This syntax will render in the same way in both formats and is the required syntax for any Markdown-authored file that must be included in chef-docs and published to https://docs.chef.io. This syntax ensures that the Sphinx documentation parser is able to read the file and build it into the topic collection.
+
+Topic Titles -- DONE
 -----------------------------------------------------
 Each topic can have a single topic title. Use the equals symbol (=) above and below the header name. What it looks like as reST::
 
@@ -20,57 +20,49 @@ Each topic can have a single topic title. Use the equals symbol (=) above and be
 
 This is the only section header that requires the structure above and below the header.
 
-Body
------------------------------------------------------
-The body of the topic contains anything else needed for the topic. Often, a topic contains an include file (or three), and then some topics contain sub-headers. Most of the topics that are published to https://docs.chef.io contain a series of includes files. When authoring a draft topic in Markdown, this is not necessary.
-
-Section Headers
+Section Headers -- DONE
 =====================================================
 Section headers create structure in a document. When section headers are part of a topic that is included in other topics, those headers are treated as if they first appeared at that location (and are bumped down appropriately). For this, and for other cosmetic reasons, the headers in CHEF documents are limited to 4 levels beyond the topic title. If headers are required beyond that, they should only be done using standard emphasis and white space or through some other creative method (such as creating more topics with less TOC depth).
 
-Sphinx allows many different conventions for how headers can exist in documents and looks for consistency to determine which ones go where. The width of the header must be equal to (or longer) than the length of the text in the header and (ideally) the same width for headers are used everywhere. (Having everything the same width can help spot the headers during reviews or when trying to find bugs in topics. The following sections describe the section header pattern that CHEF is using for topic titles, H1s, H2s, H3s, H4s, and the occasional H5.
-
-.. note:: As a general rule, try to limit the number of header levels to no more than 2 within a topic. There can be exceptions, of course, and especially if the document is very large, but remember that HTML TOC structures usually have width limitations (on the display side) and the more structure within a TOC, the harder it can be for users to figure out what's in it.
-
-H1
+H1 -- DONE
 -----------------------------------------------------
-If a topic requires a sub-header, this is the first one to use. Use the equals symbol (=) below the header name. What it looks like as reST:: 
+If a topic requires a sub-header, this is the first one to use. Use the equals symbol (=) below the header name. What it looks like:: 
 
    header name goes here
    =====================================================
    This is the paragraph.
 
-H2
+H2 -- DONE
 -----------------------------------------------------
-If an H1 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like as reST:: 
+If an H1 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like:: 
 
    header name goes here
    -----------------------------------------------------
    This is the paragraph.
 
-H3
+H3 -- DONE
 -----------------------------------------------------
-If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like as reST:: 
+If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like:: 
 
    header name goes here
    +++++++++++++++++++++++++++++++++++++++++++++++++++++
    This is the paragraph.
 
-H4
+H4 -- DONE
 -----------------------------------------------------
-If a H3 requires a sub-header, this is the one to use. Sphinx will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like as reST:: 
+If a H3 requires a sub-header, this is the one to use. Sphinx will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like:: 
 
    header name goes here
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    This is the paragraph.
 
-H5
+H5 -- DONE
 -----------------------------------------------------
-Only 4 levels of headers are supported (title, H2, H3, and H4). Conversely, when more than 4 levels of headers are required, re-think the header structure rather than go deeper. If, in the rare instance a lower-level header is needed, use a bold emphasis and then white space to provide the visual treatment and content separation. What it looks like as reST:: 
+Only 4 levels of headers are supported (title, H2, H3, and H4). Conversely, when more than 4 levels of headers are required, re-think the header structure rather than go deeper. If, in the rare instance a lower-level header is needed, use a bold emphasis and then white space to provide the visual treatment and content separation. What it looks like:: 
 
-   **header name goes here**         # in regular bold emphasis
-                                     # this is a hard return
-   content, as normally authored.
+    **header name goes here**         # in regular bold emphasis
+                                      # this is a hard return
+    content, as normally authored.
 
 What an "H5 header" link looks like after it's built:
 
@@ -78,107 +70,140 @@ What an "H5 header" link looks like after it's built:
 
 content, as normally authored.
 
-
-Lists and Tables
+Lists -- DONE
 =====================================================
-Lists and tables can be useful. The following sections describe the various lists and tables that CHEF is using for its documentation.
+Lists and tables can be useful. The following sections describe the various lists and tables that CHEF is using for its documentation. A list must have a blank row before and after the list items.
 
-Bullet Lists
+Bullet Lists -- DONE
 -----------------------------------------------------
-Bulleted lists are useful for breaking up text blocks and for drawing attention to a group of items. What it looks like as reST:: 
+Bulleted lists are useful for breaking up text blocks and for drawing attention to a group of items. What it looks like:: 
 
    * text goes here
    * text goes here
    * text goes here
    * text goes here
 
-Use the asterisk symbol (*) only for bulleted lists, even though Sphinx supports using other symbols. What bullets look like after they are built:
+Use the asterisk symbol (*) only for bulleted lists, even though Sphinx supports using other symbols. What bullet lists look like after they are built:
 
 * text goes here
 * text goes here
 * text goes here
 * text goes here
 
-Numbered Lists
+Numbered Lists -- DONE
 -----------------------------------------------------
-Numbered lists are good for when people need to understand a list of information in a specific order, such as for how-tos or for process details. What it looks like as reST:: 
+Numbered lists are good for when people need to understand a list of information in a specific order, such as for how-tos or for process details. What it looks like:: 
 
-   #. text goes here
-   #. text goes here
-   #. text goes here
-   #. text goes here
+   1. text goes here
+   2. text goes here
+   3. text goes here
+   4. text goes here
 
-Use the number symbol (#) to let Sphinx handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. What an ordered list looks like after it is built:
+Use the number symbol (#) to let Sphinx handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. What ordered lists look like after it is built:
 
-#. text goes here
-#. text goes here
-#. text goes here
-#. text goes here
+1. text goes here
+2. text goes here
+3. text goes here
+4. text goes here
 
-Inline Markup
+Inline Markup -- DONE
 =====================================================
-Adding emphasis within text strings can be done using **bold**, *italics*, and ``code strings``.
+Adding emphasis within text strings can be done using **bold**, *italics*, and ``monospaced text``.
 
-Bold
+Bold -- DONE
 -----------------------------------------------------
-Use two asterisks (*) to mark a text string as **bold**. What it looks like as reST:: 
+Use two asterisks (*) to mark a text string as **bold**. What it looks like:: 
 
-   **text goes here**
+   **bold**
 
-Italics
+Italics -- DONE
 -----------------------------------------------------
-Use a single asterisk (*) to mark a text string as *italics*. What it looks like as reST:: 
+Use a single asterisk (*) to mark a text string as *italics*. What it looks like:: 
 
    *text goes here*
 
-Code Strings
+Monospaced Text -- DONE
 -----------------------------------------------------
-Sometimes the name of a method or database field needs to be used inline in a paragraph. Use two backquotes to mark certain strings as code within a regular string of text. What it looks like as reST::
+Use two backquotes to mark a string as monospaced text within a regular string of text. What it looks like:: 
 
-   ``code goes here``
+   Sometimes if an API ``method`` or database ``table`` needs to be referred to in a paragraph, it's useful to apply a style to that ``item`` so that readers can tell that it's special.
 
 What it looks like in a paragraph after it is built:
 
 Sometimes if an API ``method`` or database ``table`` needs to be referred to in a paragraph, it's useful to apply a style to that ``item`` so that readers can tell that it's special.
 
-Links
+Links -- DONE
 =====================================================
-Links are ways to get users to other useful topics.
+Links are ways to get users to other useful topics. A link must always be spelled out, like this::
 
-External
------------------------------------------------------
-An external link points to something that does not live on https://docs.chef.io. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
+    https://docs.chef.io/resource.html#file
 
-   http://www.codecademy.com/tracks/ruby
+For example, this is a link to one of the most popular pages on chef-docs: https://docs.chef.io/resource.html#file.
 
-and what an external link looks like after it's built:
-
-"A great tool for learning Ruby is http://www.codecademy.com/tracks/ruby."
-
-
-Code Blocks
+Code Blocks -- DONE
 =====================================================
-Code blocks are used to show code samples, such as those for Ruby, JSON, and command-line strings. There are many options here, especially if Pygments is part of your Sphinx environment. The most common code block styles are shown below, but there are many lexers available.
+Code blocks are used to show code samples, such as those for Ruby, JSON, and command-line strings. To ensure compatibility between Markdown and reStructuredText identify all code blocks as a literal code block using a double colon ``::``, and then use **FOUR** spaces to indent each line in the code block. For example::
 
-Use a literal code block.
+    # This is a code block
+    
+    file "/tmp/something" do
+      owner 'root'
+      group 'root'
+      mode '0755'
+      action :create
+    end
 
-Literal
+
+
+
+Things we can't do ... -- DONE
+=====================================================
+Sadly, there are times where what you want to do in Markdown just doesn't work the same way in reStructuredText. Since the goal is to create Markdown files that are 100% compatible with reStructuredText (and Sphinx), these are the things we can't do:
+
+* Use square brackets in regular text (Markdown uses these to identify a hyperlink). For example: []
+* Use a single backslash. For example: \
+* Use a table? No. Well ... see "Grid Tables" below
+* Comments
+* Markdown extensions (they won't parse in Sphinx)
+
+
+Grid Tables -- DONE
 -----------------------------------------------------
-These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``, such as showing a directory structure, basic syntax, or pseudocode. Use a double colon (::) at the end of the preceding paragraph, add a hard return, and then indent the literal text. What it looks like as reST::
+If you insist on using a table, you're gonna have to build it by hand. Which sucks. If a table has tab characters instead of spaces, it's gonna break. The preceding paragraph can't end in a double colon and they must be indented four spaces. They look something like this::
 
-   Use a double colon (::) at the end of the preceding paragraph. What it looks like as reST::
+    The preceding paragraph can't end in ``::``.
 
-      a block of literal text indented three spaces
-      with more
-      text as required to
-      complete the block of text.
-      end.
+    +------------+------------+
+    | A table with stuff!     |
+    +------------+------------+
+    | Heading    | Heading    |
+    +============+============+
+    | column spanning row     |
+    +------------+------------+
+    | single row | spanning   |
+    +------------+            +
+    | single row | row        |
+    +------------|------------+
+    | single row | * one      |
+    +------------+ * two      +
+    | single row | * three    |
+    +------------|------------+
 
-and what it looks like after it's built::
+The preceding paragraph can't end in ``::``.
 
-   a block of literal text indented three spaces
-   with more
-   text as required to
-   complete the block of text.
-   end.
++------------+------------+
+| A table with stuff!     |
++------------+------------+
+| Heading    | Heading    |
++============+============+
+| column spanning row     |
++------------+------------+
+| single row | spanning   |
++------------+            +
+| single row | row        |
++------------|------------+
+| single row | * one      |
++------------+ * two      +
+| single row | * three    |
++------------|------------+
 
