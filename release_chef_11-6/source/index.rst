@@ -19,9 +19,14 @@ Getting Started
 
 The Community
 =====================================================
-.. include:: ../../includes_chef/includes_chef_index_community.rst
+.. include:: ../../includes_community/includes_community.rst
 
-The Workstation  
+.. include:: ../../includes_community/includes_community_read.rst
+
+See `this page <https://docs.chef.io/community.html>`__ for more about the awesome |chef| community!
+
+
+The Workstation
 =====================================================
 **The Basics:** :doc:`About the Workstation </chef_overview_workstation>` | :doc:`The chef-repo </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
 

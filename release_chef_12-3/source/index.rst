@@ -19,7 +19,12 @@ Getting Started
 
 The Community
 =====================================================
-.. include:: ../../includes_chef/includes_chef_index_community.rst
+.. include:: ../../includes_community/includes_community.rst
+
+.. include:: ../../includes_community/includes_community_read.rst
+
+See `this page <https://docs.chef.io/community.html>`__ for more about the awesome |chef| community!
+
 
 The Workstation
 =====================================================
