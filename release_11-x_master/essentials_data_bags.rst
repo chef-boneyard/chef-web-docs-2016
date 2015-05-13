@@ -86,7 +86,7 @@ Create and edit
 
 Access from recipe
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_data_bag/includes_data_bag_recipes_access_encrypted_data.rst
+.. include:: ../../includes_data_bag/includes_data_bag_11-18_recipes_access_encrypted_data.rst
 
 Create users
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
