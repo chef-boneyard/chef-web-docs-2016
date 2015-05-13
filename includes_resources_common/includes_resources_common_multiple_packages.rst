@@ -19,7 +19,7 @@ Upgrading multiple packages:
 
    package ['package1', 'package2']  do
      action :upgrade
-   do
+   end
 
 Removing multiple packages:
 
@@ -27,7 +27,7 @@ Removing multiple packages:
 
    package ['package1', 'package2']  do
      action :remove
-   do
+   end
 
 Purging multiple packages:
 
@@ -35,7 +35,7 @@ Purging multiple packages:
 
    package ['package1', 'package2']  do
      action :purge
-   do
+   end
 
 Notifications, via an implicit name:
 
@@ -43,7 +43,7 @@ Notifications, via an implicit name:
 
    package ['package1', 'package2']  do
      action :nothing
-   do
+   end
    
    log "call a notification" do
      notifies :install, "package[package1, package2]", :immediately
