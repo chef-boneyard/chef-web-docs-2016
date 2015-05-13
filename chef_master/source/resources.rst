@@ -261,6 +261,7 @@ The following resources are platform resources with built-in providers:
 * deploy (including |git| and |svn|)
 * directory
 * dpkg_package (based on the package resource)
+* dsc_resource
 * dsc_script
 * easy_install_package (based on the package resource)
 * env
@@ -281,8 +282,10 @@ The following resources are platform resources with built-in providers:
 * mdadm
 * mount
 * ohai
+* openbsd_package (based on the package resource)
 * package
 * pacman_package (based on the package resource)
+* paludis_package (based on the package resource)
 * perl
 * portage_package (based on the package resource)
 * powershell_script
@@ -950,6 +953,38 @@ Examples
 .. include:: ../../step_resource/step_resource_dpkg_package_install.rst
 
 
+dsc_resource
+-----------------------------------------------------
+
+.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_powershell_dsc.rst
+
+.. include:: ../../includes_resources/includes_resource_dsc_resource.rst
+
+.. warning:: .. include:: ../../includes_resources/includes_resource_dsc_resource_requirements.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_resource_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_dsc_resource_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Open a Zip file**
+
+.. include:: ../../step_resource/step_resource_dsc_resource_zip_file.rst
+
+**Manage users and groups**
+
+.. include:: ../../step_resource/step_resource_dsc_resource_manage_users.rst
 
 dsc_script
 -----------------------------------------------------
@@ -980,21 +1015,19 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Specify DSC code directly**
 
 .. include:: ../../step_resource/step_resource_dsc_script_code.rst
 
-
 **Specify DSC code using a Windows Powershell data file**
 
 .. include:: ../../step_resource/step_resource_dsc_script_command.rst
 
-
 **Pass parameters to DSC configurations**
 
 .. include:: ../../step_resource/step_resource_dsc_script_flags.rst
-
 
 **Use custom configuration data**
 
@@ -1003,7 +1036,6 @@ Configuration data in |windows powershell_dsc_short| scripts may be customized f
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_name.rst
-
 
 **Using DSC with other Chef resources**
 
