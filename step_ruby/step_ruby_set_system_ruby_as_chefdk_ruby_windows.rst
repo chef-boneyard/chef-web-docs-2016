@@ -1,6 +1,6 @@
 .. This is an included how-to.
 
-You can use ``chef shell-init`` with PowerShell on Windows.
+You can use ``chef shell-init`` with |windows powershell|.
 
 To try it in your current session:
 
