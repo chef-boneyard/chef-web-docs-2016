@@ -69,16 +69,16 @@ This is an H3 paragraph!
 
 Lists
 =====================================================
-Lists and tables can be useful. The following sections describe the various lists and tables that CHEF is using for its documentation. A list must have a blank row before and after the list items.
+Lists are useful! The following sections describe the various list types that CHEF is using for its documentation. A list must have a blank row before and after the list items.
 
 Bulleted Lists
 -----------------------------------------------------
 Bulleted lists are useful for breaking up text blocks and for drawing attention to a group of items. What it looks like:: 
 
-   * text goes here
-   * text goes here
-   * text goes here
-   * text goes here
+    * text goes here
+    * text goes here
+    * text goes here
+    * text goes here
 
 For example:
 
@@ -90,10 +90,10 @@ Numbered Lists
 -----------------------------------------------------
 Numbered lists are good for when people need to understand a list of information in a specific order, such as for how-tos or for process details. What it looks like:: 
 
-   1. text goes here
-   2. text goes here
-   3. text goes here
-   4. text goes here
+    1. text goes here
+    2. text goes here
+    3. text goes here
+    4. text goes here
 
 For example:
 
@@ -109,19 +109,19 @@ Bold
 -----------------------------------------------------
 Use two asterisks to mark a text string as **bold**. What it looks like:: 
 
-   **bold**
+    **bold**
 
 Italics
 -----------------------------------------------------
 Use a single asterisk to mark a text string as *italics*. What it looks like:: 
 
-   *text goes here*
+    *text goes here*
 
 Monospaced Text
 -----------------------------------------------------
 Use two backquotes to mark a string as monospaced text within a regular string of text. What it looks like:: 
 
-   Sometimes if an API ``method`` or database ``table`` needs to be referred to in a paragraph, it's useful to apply a style to that ``item`` so that readers can tell that it's special.
+    Sometimes if an API ``method`` or database ``table`` needs to be referred to in a paragraph, it's useful to apply a style to that ``item`` so that readers can tell that it's special.
 
 What it looks like in a paragraph after it is built:
 
