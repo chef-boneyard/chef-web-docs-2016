@@ -99,10 +99,6 @@ Create and edit
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_recipes_edit_within_recipe.rst
 
-Access from recipe
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_data_bag/includes_data_bag_recipes_access_encrypted_data.rst
-
 Create users
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_recipes_create_users.rst
