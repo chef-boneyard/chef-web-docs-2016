@@ -47,6 +47,8 @@ This configuration file has the following settings:
      - Use to enable the ``opscode-manage-webapp`` service. Default value: ``true``.
    * - ``services['opscode-manage-worker'].enable``
      - Use to enable the ``opscode-manage-worker`` service. Default value: ``true``.
+   * - ``session_timeout``
+     - The amount of time (in minutes) to wait before timing out. When not set, a browser session will not have a timed expiration and will expire when the browser session ends, quits, or when the computer restarts.
    * - ``support_email_address``
      - The email address used to send feedback. Default value: ``support@chef.io``.
    * - ``support_site_url``
