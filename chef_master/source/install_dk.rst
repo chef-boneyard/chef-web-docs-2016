@@ -49,6 +49,10 @@ Set System |ruby|
 -----------------------------------------------------
 .. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby.rst
 
+PowerShell
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows.rst
+
 Install |git|
 -----------------------------------------------------
 An open source distributed version control system called |git| must be installed before the |chef repo| can be cloned to the workstation from |github|. 
