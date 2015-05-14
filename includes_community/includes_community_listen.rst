@@ -4,7 +4,7 @@
 
 * `Food Fight Show <http://foodfightshow.org>`_
 * `Arrested DevOps <http://arresteddevops.com>`_
-* `The Ship Show <http://theshipshow.com/>` _
+* `The Ship Show <http://theshipshow.com/>`_
 * `Ops All The Things <http://opsallthethings.com>`_
 * `DevOps Cafe <http://devopscafe.com>`_
 * `The Goat Farm <https://itunes.apple.com/us/podcast/the-goat-farm/id963113606?mt=2>`_
