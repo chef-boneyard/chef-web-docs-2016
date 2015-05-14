@@ -41,3 +41,7 @@ Examples
 **Cancel a reboot**
 
 .. include:: ../../step_resource/step_resource_service_reboot_cancel.rst
+
+**Rename computer, join domain, reboot**
+
+.. include:: ../../step_resource/step_resource_powershell_rename_join_reboot.rst

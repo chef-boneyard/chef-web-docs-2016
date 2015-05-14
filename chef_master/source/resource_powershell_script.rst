@@ -65,3 +65,7 @@ Examples
 **Use the flags attribute**
 
 .. include:: ../../step_resource/step_resource_powershell_script_use_flag.rst
+
+**Rename computer, join domain, reboot**
+
+.. include:: ../../step_resource/step_resource_powershell_rename_join_reboot.rst

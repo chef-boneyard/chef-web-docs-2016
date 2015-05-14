@@ -2186,6 +2186,10 @@ Examples
 
 .. include:: ../../step_resource/step_resource_powershell_pass_env_to_script.rst
 
+**Rename computer, join domain, reboot**
+
+.. include:: ../../step_resource/step_resource_powershell_rename_join_reboot.rst
+
 
 
 python
@@ -2251,7 +2255,9 @@ Examples
 
 .. include:: ../../step_resource/step_resource_service_reboot_cancel.rst
 
+**Rename computer, join domain, reboot**
 
+.. include:: ../../step_resource/step_resource_powershell_rename_join_reboot.rst
 
 
 registry_key
