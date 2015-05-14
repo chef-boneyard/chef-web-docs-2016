@@ -4,6 +4,8 @@ About the |chef| Community
 
 .. include:: ../../includes_community/includes_community.rst
 
+.. image:: ../../images/community.png
+
 Read
 =====================================================
 .. include:: ../../includes_community/includes_community_read.rst
