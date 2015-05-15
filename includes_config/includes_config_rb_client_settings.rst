@@ -112,7 +112,7 @@ This configuration file has the following settings:
    * - ``log_level``
      - |log_level| Possible levels: ``:auto`` (default), ``:debug``, ``:info``, ``:warn``, ``:error``, or ``:fatal``. Default value: ``:warn`` (when a terminal is available) or ``:info`` (when a terminal is not available).
    * - ``log_location``
-     - The location of the log file. Possible values: ``STDERR``, ``STDOUT``, or ``/path/to/log_location``. Default value: ``STDOUT``.
+     - The location of the log file. Possible values: ``/path/to/log_location``, ``STDOUT``, or ``STDERR``. Default value: ``STDOUT``.
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``no_proxy``
