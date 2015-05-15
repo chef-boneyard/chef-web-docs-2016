@@ -169,7 +169,7 @@ This configuration file has the following settings:
 
           log_level :info
    * - ``log_location``
-     - |log_location| Default value: ``STDOUT``. For example:
+     - |log_location| Standard output logging (``STDOUT``) is always performed, even if this value is set to another location. Default value: ``STDOUT``. For example:
 
        .. code-block:: ruby
 
