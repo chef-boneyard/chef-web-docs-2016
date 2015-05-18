@@ -36,7 +36,7 @@ The following attributes are used to configure ``kitchen-vagrant`` for |chef|:
      - Use to specify the private key file used for |ssh| authentication.
    * - ``synced_folders``
      - Use to specify a collection of synchronized folders on each |vagrant| instance. Source paths are relative to the |kitchen| root path. Default value: ``[]``. For example: ``synced_folders: - ["data/%{instance_name}", "/opt/instance_data"] - ["/host_path", "/vm_path", "create: true, type: :nfs"]``.
-	    * - ``vagrantfile_erb``
+   * - ``vagrantfile_erb``
      - Use to specify an alternate |vagrant| |erb| template to be used by this driver.
    * - ``vagrantfiles``
      - An array of paths to one (or more) |vagrant| files to be merged with the default |vagrant| file. The paths may be absolute or relative to the |kitchen yml| file.
