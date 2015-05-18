@@ -24,6 +24,10 @@ Driver-specific Settings
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_driver.rst
 
+Drivers
+--------------------------------------------------------------------------
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst
+
 ``kitchen-vagrant``
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant.rst
@@ -31,10 +35,6 @@ Driver-specific Settings
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst
 
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_config.rst
-
-Drivers
---------------------------------------------------------------------------
-.. include:: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst
 
 Examples
 ==========================================================================
