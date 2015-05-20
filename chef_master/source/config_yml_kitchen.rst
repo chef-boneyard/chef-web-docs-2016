@@ -40,6 +40,10 @@ Examples
 ==========================================================================
 The following examples show actual |kitchen yml| files used in |company_name|-maintained cookbooks.
 
+Use |chef| in the |chef dk|
+--------------------------------------------------------------------------
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_dk.rst
+
 |cookbook mysql| Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_mysql.rst
