@@ -44,7 +44,7 @@ The |chef server| may be configured for high availability after installing the |
 
 The premium features of the |chef server| must be installed and configured after the |chef server|. The |chef manage| must be installed before |reporting| because they share the same web user interface. The |chef manage|, |reporting|, and |chef replication| can all be installed using the `chef-server-ctl install <http://docs.chef.io/server/ctl_chef_server.html#install>`_ command. 
 
-The following premium features require additional steps:
+The following components require additional steps:
 
 .. raw:: html
 
