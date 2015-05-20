@@ -17,7 +17,7 @@
    * - ``chef_metadata_url``
      - 
    * - ``chef_omnibus_install_options``
-     - 
+     - Use to specify an option for the |omnibus installer|. For example: ``-P chefdk``.
    * - ``chef_omnibus_root``
      - Default value: ``/etc/opt`` for |unix| and |linux|, ``$env:systemdrive\\opscode\\chef`` on |windows|.
    * - ``chef_omnibus_url``
