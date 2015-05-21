@@ -17,7 +17,7 @@
    * - ``chef_metadata_url``
      - 
    * - ``chef_omnibus_install_options``
-     - Use to specify the package to be installed. Possible values: ``-P chef`` (for the |chef client|) and ``-P chefdk`` (for the |chef client| that is packaged as part of the |chef dk|). For example: ``-P chefdk``.
+     - Use to specify the package to be installed. Possible values: ``-P chef`` (for the |chef client|) and ``-P chefdk`` (for the |chef client| that is packaged as part of the |chef dk|). Use ``-n`` to specify the nightly build. For example: ``-P chefdk`` or ``-n -P chefdk``.
    * - ``chef_omnibus_root``
      - Default value: ``/etc/opt`` for |unix| and |linux|, ``$env:systemdrive\\opscode\\chef`` on |windows|.
    * - ``chef_omnibus_url``
@@ -71,4 +71,3 @@
 
 These settings may be added to the ``provisioner`` section of the |kitchen yml| file when the provisioner is |chef zero| or |chef solo|.
 
-.. warning:: See the 
