@@ -119,7 +119,7 @@ Visual Overview
 
    .. image:: ../../images/chef_overview_17.png
 
-.. revealjs:: Workflow vs. Delivery
+.. revealjs:: Workflow vs. Delivery Workflow
    :data-transition: none
    :data-transition-speed: slow
 
