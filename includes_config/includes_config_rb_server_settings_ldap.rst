@@ -27,6 +27,12 @@ This configuration file has the following settings for ``ldap``:
      - |ldap ssl_enabled| Default value: ``false``. Must be ``false`` when ``ldap['tls_enabled']`` is ``true``.
 
        .. note:: Previous versions of the |chef server| used the ``ldap['ssl_enabled']`` setting to first enable |ssl|, and then the ``ldap['encryption']`` setting to specify the encryption type. These settings are deprecated.
+
+   * - ``ldap['system_adjective']``
+     - |ldap system_adjective| If a value like "corporate" is used, then the |chef manage| user interface will display strings like "the corporate login server", "corporate login", or "corporate password." Default value: ``AD/LDAP``.
+
+       .. warning:: This setting is **not** used by the |chef server|. It is used only by the |chef manage|.
+
    * - ``ldap['timeout']``
      - Default value: ``60000``.
    * - ``ldap['tls_enabled']``
