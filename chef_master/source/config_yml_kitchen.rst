@@ -14,7 +14,7 @@ Provisioner-specific Settings
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst
 
-.. note:: There are two community provisioners for |kitchen|: `kitchen-dsc <https://github.com/smurawski/kitchen-dsc>`_ and `kitchen-pester <https://github.com/smurawski/kitchen-pester>`_.
+.. note:: There are two community provisioners for |kitchen|: `kitchen-dsc <https://github.com/smurawski/kitchen-dsc>`__ and `kitchen-pester <https://github.com/smurawski/kitchen-pester>`__.
 
 |chef client|-specific Settings
 ==========================================================================

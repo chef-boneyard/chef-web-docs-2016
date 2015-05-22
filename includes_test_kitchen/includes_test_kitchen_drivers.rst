@@ -16,35 +16,35 @@ Some popular drivers:
 
    * - Driver Plugin
      - Description
-   * - `kitchen-all <https://rubygems.org/gems/kitchen-all>`_
+   * - `kitchen-all <https://rubygems.org/gems/kitchen-all>`__
      - A driver for everything, or "all the drivers in a single |ruby| |gem|".
-   * - `kitchen-bluebox <https://github.com/blueboxgroup/kitchen-bluebox>`_
+   * - `kitchen-bluebox <https://github.com/blueboxgroup/kitchen-bluebox>`__
      - A driver for |bluebox|.
-   * - `kitchen-cloudstack <https://github.com/test-kitchen/kitchen-cloudstack>`_
+   * - `kitchen-cloudstack <https://github.com/test-kitchen/kitchen-cloudstack>`__
      - A driver for |cloudstack|.
-   * - `kitchen-digitalocean <https://github.com/test-kitchen/kitchen-digitalocean>`_
+   * - `kitchen-digitalocean <https://github.com/test-kitchen/kitchen-digitalocean>`__
      - A driver for |digital ocean|.
-   * - `kitchen-docker <https://github.com/portertech/kitchen-docker>`_
+   * - `kitchen-docker <https://github.com/portertech/kitchen-docker>`__
      - A driver for |docker|.
-   * - `kitchen-dsc <https://github.com/test-kitchen/kitchen-dsc>`_
+   * - `kitchen-dsc <https://github.com/test-kitchen/kitchen-dsc>`__
      - A driver for |windows powershell| |windows powershell_dsc|.
-   * - `kitchen-ec2 <https://github.com/test-kitchen/kitchen-ec2>`_
+   * - `kitchen-ec2 <https://github.com/test-kitchen/kitchen-ec2>`__
      - A driver for |amazon ec2|.
-   * - `kitchen-fog <https://github.com/TerryHowe/kitchen-fog>`_
+   * - `kitchen-fog <https://github.com/TerryHowe/kitchen-fog>`__
      - A driver for |fog|.
-   * - `kitchen-gce <https://github.com/anl/kitchen-gce>`_
+   * - `kitchen-gce <https://github.com/anl/kitchen-gce>`__
      - A driver for |google compute engine|.
-   * - `kitchen-hyperv <https://github.com/test-kitchen/kitchen-hyperv>`_
+   * - `kitchen-hyperv <https://github.com/test-kitchen/kitchen-hyperv>`__
      - A driver for |microsoft hyperv|.
-   * - `kitchen-joyent <https://github.com/test-kitchen/kitchen-joyent>`_
+   * - `kitchen-joyent <https://github.com/test-kitchen/kitchen-joyent>`__
      - A driver for |joyent|.
-   * - `kitchen-opennebula <https://github.com/test-kitchen/kitchen-opennebula>`_
+   * - `kitchen-opennebula <https://github.com/test-kitchen/kitchen-opennebula>`__
      - A driver for |opennebula|.
-   * - `kitchen-openstack <https://github.com/test-kitchen/kitchen-openstack>`_
+   * - `kitchen-openstack <https://github.com/test-kitchen/kitchen-openstack>`__
      - A driver for |openstack|.
-   * - `kitchen-pester <https://github.com/test-kitchen/kitchen-pester>`_
+   * - `kitchen-pester <https://github.com/test-kitchen/kitchen-pester>`__
      - A driver for |pester|, a testing framework for |windows|.
-   * - `kitchen-rackspace <https://github.com/test-kitchen/kitchen-rackspace>`_
+   * - `kitchen-rackspace <https://github.com/test-kitchen/kitchen-rackspace>`__
      - A driver for |rackspace|.
-   * - `kitchen-vagrant <https://github.com/test-kitchen/kitchen-vagrant>`_
+   * - `kitchen-vagrant <https://github.com/test-kitchen/kitchen-vagrant>`__
      - A driver for |vagrant|. The default driver packaged with the |chef dk|.
