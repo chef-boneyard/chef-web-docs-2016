@@ -12,6 +12,8 @@ Manage Client Keys
 =====================================================
 Client keys can be managed from the |chef manage| web user interface.
 
+.. warning:: The images below refer to client keys as "Clients".
+
 Add
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_add.rst
