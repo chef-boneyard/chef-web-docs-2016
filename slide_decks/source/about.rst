@@ -107,4 +107,3 @@ About Slide Decks
 
     * http://docs.chef.io/resources.html
     * http://docs.chef.io/recipes.html
-
