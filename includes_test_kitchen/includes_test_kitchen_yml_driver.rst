@@ -21,11 +21,11 @@ where ``driver_config`` is a collection of settings required by the driver plugi
      aws_access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
      aws_secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
      aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %>
-   
+
 and then within each ``platforms`` definition, additional settings may be necessary to ensure that specific platform can build the instance:
 
 .. code-block:: yaml
-   
+
    platforms:
    - name: centos-5.8
      driver_plugin: digitalocean
@@ -35,5 +35,3 @@ and then within each ``platforms`` definition, additional settings may be necess
        region_id: 4
        ssh_key_ids: <%= ENV['DIGITAL_OCEAN_SSH_KEY_IDS'] %>
        ssh_key: <%= ENV['DIGITAL_OCEAN_SSH_KEY_PATH'] %>
-   
-

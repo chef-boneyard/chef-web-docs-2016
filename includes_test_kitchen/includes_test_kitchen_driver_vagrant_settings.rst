@@ -21,7 +21,7 @@ The following attributes are used to configure ``kitchen-vagrant`` for |chef|:
    * - ``customize``
      - A hash of key-value pairs that define customizations that should be made to the |vagrant| virtual machine. For example: ``customize: memory: 1024 cpuexecutioncap: 50``.
    * - ``guest``
-     - Use to specify the ``config.vm.guest`` setting in the default ``Vagrantfile``.
+     - Use to specify the ``config.vm.guest`` setting in the default |vagrantfile|.
    * - ``gui``
      - Use to enable the graphical user interface for the defined platform. This is passed to the ``config.vm.provider`` setting in |vagrant|, but only when the |vagrant| provider is |virtualbox|- or |vmware|-based.
    * - ``network``
@@ -41,4 +41,4 @@ The following attributes are used to configure ``kitchen-vagrant`` for |chef|:
    * - ``vagrantfiles``
      - An array of paths to one (or more) |vagrant| files to be merged with the default |vagrant| file. The paths may be absolute or relative to the |kitchen yml| file.
    * - ``vm_hostname``
-     - Use to specify the internal hostname for the instance. This is not required when connecting to a |vagrant| virtual machine. Set this to ``false`` to prevent this value from being rendered in the default ``Vagrantfile``. Default value: computed from the platform name of the instance.
+     - Use to specify the internal hostname for the instance. This is not required when connecting to a |vagrant| virtual machine. Set this to ``false`` to prevent this value from being rendered in the default |vagrantfile|. Default value: computed from the platform name of the instance.

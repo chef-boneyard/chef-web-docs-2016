@@ -70,4 +70,3 @@ to specify the handler, and then include the handler within the test:
        '^exception_handlers << Report::UpdateResource.new'
      )
    end
-

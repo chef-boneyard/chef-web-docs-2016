@@ -73,6 +73,5 @@ For example, a very simple |kitchen yml| file:
       excludes:
         - debian-7.1.0
 
-
 This file uses |vagrant| as the driver, which requires no additional configuration because it's the default driver used by |kitchen|, |chef zero| as the provisioner, and a single (default) test suite that runs on |ubuntu| 12.04, and |centos| 6.4.
 
