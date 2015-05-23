@@ -12,7 +12,7 @@ Manage Client Keys
 =====================================================
 Client keys can be managed from the |chef manage| web user interface.
 
-.. warning:: The images below refer to client keys as "Clients".
+.. warning:: The images below refer to client keys as a "Client".
 
 Add
 -----------------------------------------------------
