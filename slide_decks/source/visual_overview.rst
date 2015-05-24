@@ -141,6 +141,6 @@ Visual Overview
    :data-transition: fade
    :data-transition-speed: slow
 
-   .. image:: ../../images/chef_overview_18.png
+   .. image:: ../../images/chef_overview_18.svg
 
 
