@@ -7,7 +7,7 @@ Before getting started, you will need a functioning workstation. Install the `Ch
 
 .. note:: The following steps assume that |chef| is installed on the workstation and that the ``knife ssl fetch`` subcommand is available. The ``knife ssl fetch`` subcommand was added to |chef| in the 11.16 release of the |chef client|, and then packaged as part of the |chef dk| starting with the 0.3 release.)
 
-#. `Sign in to Microsoft Azure <https://portal.azure.com>`__. (The |azure marketplace| offering is only available via the |azure portal|). Authenticate using your |azure| account credentials.
+#. Sign in to the |azure portal_preview| (|url azure_preview|). (The |azure marketplace| offering is only available via the preview portal.) Authenticate using your |azure| account credentials.
 
 #. Click the **New** icon in the lower left corner of the portal.
 

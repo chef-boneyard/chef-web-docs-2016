@@ -3,7 +3,7 @@
 
 Once this information has been identified, launch the |azure portal|, start the virtual machine creation workflow, and then bootstrap virtual machines with |chef|:
 
-#. `Sign in to Microsoft Azure <https://manage.windowsazure.com>`_. Authenticate using your |azure| account credentials.
+#. Sign in to the |azure portal_production| (|url azure_production|). Authenticate using your |azure| account credentials.
 
 #. Choose **Virtual Machines** in the left pane of the portal.
 
