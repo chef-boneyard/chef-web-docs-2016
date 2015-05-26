@@ -34,4 +34,4 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - Required. |source file_location chef_11-4|
+     - Required. |source file_location|

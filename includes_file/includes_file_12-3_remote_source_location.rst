@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-There are many ways to define the location of a source file. By using a path:
+There are many ways to define the location of a source file. By using HTTP:
 
 .. code-block:: ruby
 
@@ -18,12 +18,6 @@ By using a local path:
 .. code-block:: ruby
 
    source "file:///path/to/img/sketch.png"
-
-By using a |windows| UNC:
-
-.. code-block:: ruby
-
-   source "\\\\path\\to\\img\\sketch.png"
 
 By using a node attribute:
 

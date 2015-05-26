@@ -44,9 +44,9 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - Required. |source file_location| |source file_location http_ftp_local_unc|
+     - Required. |source file_location| |source file_location http_ftp_local|
        
-       .. include:: ../../includes_file/includes_file_remote_source_location.rst
+       .. include:: ../../includes_file/includes_file_12-3_remote_source_location.rst
 
    * - ``use_conditional_get``
      - |use conditional_get| Default value: ``true``.
