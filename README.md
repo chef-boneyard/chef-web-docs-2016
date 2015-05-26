@@ -27,27 +27,37 @@ There are several ways to provide feedback about the Chef documentation. See htt
 
 Fork and clone the chef-docs repo to your own account://
 
-    git clone https://github.com/chef/chef-docs.git
-    # will take a while, repo is ~800MB
+    git clone https://github.com/chef/chef-docs.git --depth 128
+    # The full repo and all 9000+ commit is over 800MB, so the command
+    # above only gets the last 128 commits of history. Omit '--depth 128'
+    # if want the full history
 
 You may wish to use [virtualenv](http://www.virtualenv.org/) & [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/) (similar to rvm or rbenv), to isolate this Python environment from others, so start out like so:
+
+    sudo easy_install pip
+    sudo pip install virtualenv
+
+Add something like this to your .bashrc (or equivalent) and then `source .bashrc`:
+
+    VIRTUALENV_SH=/usr/local/bin/virtualenvwrapper.sh
+    if [ -x $VIRTUALENV_SH ]; then
+      [ -d $HOME/.virtualenvs ] || mkdir $HOME/.virtualenvs
+      export WORKON_HOME=$HOME/.virtualenvs
+      source $VIRTUALENV_SH
+    fi
+
+Then `cd` to this directory and:
 
     mkvirtualenv chef-docs
     workon chef-docs
     echo chef-docs > .venv # personal preference, can hook into other control projects later
+    pip install -r requirements.txt
 
 If you don't use this and want to install into your system Python, prepend this command with `sudo`:
 
     pip install sphinx
 
 Will install all the dependencies you should need.
-
-There are other ways to install Sphinx as well. For example:
-
-    brew install sphinx
-
-for those using Homebrew.
-
 
 
 ## Building Docs
@@ -176,7 +186,7 @@ Chef builds the following docs collections as needed, by request, or based on sp
 The contents of many of the topics in this repo simply look like this:
 
     .. THIS PAGE IS IDENTICAL TO docs.chef.io/api_chef_server.html BY DESIGN
-      
+
     .. include:: ../../chef_master/source/api_chef_server.rst
 
 especially outside of the main chef_master topic collection.
@@ -191,29 +201,29 @@ Let's say the template resource is wholly different in chef-client version 10-la
     template
     =====================================================
     .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
-    
+
     .. note:: |note cookbook template erubis|
-    
+
     .. include:: ../../includes_resources/includes_resource_generic.rst
-    
+
     .. include:: ../../includes_resources/includes_resource_template.rst
-    
+
     Syntax
     =====================================================
     .. include:: ../../includes_resources/includes_resource_template_syntax.rst
-     
+
     Actions
     =====================================================
     .. include:: ../../includes_resources/includes_resource_template_actions.rst
-     
+
     # TRUNCATED FOR BREVITY
-    
+
     **Apply proxy settings consistently across a Chef organization**
-      
+
     .. include:: ../../step_resource/step_resource_template_consistent_proxy_settings.rst
-     
+
     **Get template settings from a local file**
-      
+
     .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
 So now instead of being a direct clone of the file in chef_master this file is configured to pull in the same exact content. Now we can version part of the file. Let's say the syntax is different in 10-latest. So
@@ -263,9 +273,20 @@ Here's how this might look:
     git commit
     # enter a good commit message
     git push origin my_new_edit
-    
+
 
 Once pushed, visit your repo on GitHub, and open a Pull Request against `chef/chef-docs:master`.
+
+## Previewing
+
+You can preview your slide decks by launching a local
+webserver. To use `node.js`, run:
+
+    npm install -g grunt-cli
+    npm install
+    grunt serve
+
+Then browse to http://localhost:8000
 
 ## License
 
