@@ -4,8 +4,6 @@ Release Notes: |chef client| 12.3
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-.. warning:: This is a placeholder for an upcoming release of the |chef client|.
-
 What's New
 =====================================================
 The following items are new for |chef client| 12.3 and/or are changes from previous versions. The short version:
