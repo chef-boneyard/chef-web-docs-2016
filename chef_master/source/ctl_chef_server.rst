@@ -105,7 +105,7 @@ delete-user-key
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_options.rst
 
-list-client-key
+list-client-keys
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys.rst
 
@@ -119,7 +119,7 @@ list-client-key
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_options.rst
 
-list-user-key
+list-user-keys
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys.rst
 
