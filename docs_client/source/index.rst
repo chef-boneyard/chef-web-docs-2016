@@ -108,7 +108,7 @@ The |chef server_title|
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-For more information about the |chef server| see docs.chef.io/server/.
+For more information about the |chef server| see `https://docs.chef.io/server/ <https://docs.chef.io/server/>`_.
 
 The Nodes
 =====================================================
