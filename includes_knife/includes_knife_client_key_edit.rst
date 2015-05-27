@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``edit`` argument to modify or rename a public key.
+Use the ``key edit`` argument to modify or rename a public key.

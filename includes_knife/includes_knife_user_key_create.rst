@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``create`` argument to create a public key.
+Use the ``key create`` argument to create a public key.

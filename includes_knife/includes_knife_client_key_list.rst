@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``list`` argument to view a list of public keys for the named client.
+Use the ``key list`` argument to view a list of public keys for the named client.

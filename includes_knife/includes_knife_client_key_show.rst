@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``show`` argument to view details for a specific public key.
+Use the ``key show`` argument to view details for a specific public key.

@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``delete`` argument to delete a public key.
+Use the ``key delete`` argument to delete a public key.
