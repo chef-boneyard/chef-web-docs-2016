@@ -8,13 +8,13 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master 12-3 server slides decks 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18 12-0 12-1 12-2 all client
+release: master 12-3 12-4 server slides decks 12-0 12-1 12-2 all client
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # 
 #
-#
+# 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18
 #
 # delivery devkit analytics
 # ohai-6 ohai-7 ohai-8
@@ -121,6 +121,10 @@ delivery:
 12-3:
 	mkdir -p $(BUILDDIR)/release/12-3/
 	$(BUILD_COMMAND_AND_ARGS) release_chef_12-3/source $(BUILDDIR)/release/12-3/
+
+12-4:
+	mkdir -p $(BUILDDIR)/release/12-4/
+	$(BUILD_COMMAND_AND_ARGS) release_chef_12-4/source $(BUILDDIR)/release/12-4/
 
 oec_11-0:
 	mkdir -p $(BUILDDIR)/release/oec_11-0/
