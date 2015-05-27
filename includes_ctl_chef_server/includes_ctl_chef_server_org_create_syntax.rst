@@ -7,7 +7,7 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl org-create ORG_NAME ORG_FULL_NAME (options)
+   $ chef-server-ctl org-create ORG_NAME "ORG_FULL_NAME" (options)
 
 where:
 
