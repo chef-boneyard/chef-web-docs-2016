@@ -1,0 +1,75 @@
+=====================================================
+Release Notes: |chef client| 12.4
+=====================================================
+
+.. include:: ../../includes_chef/includes_chef.rst
+
+.. warning:: This is a placeholder for an upcoming release of the |chef client|.
+
+What's New
+=====================================================
+The following items are new for |chef client| 12.4 and/or are changes from previous versions. The short version:
+
+* **remote_file resource supports Windows UNC paths for source location** A |windows| UNC path may be used to specify the location of a remote file.
+* **Logging may use the Windows Event Logger** Log files may be sent to the |windows event logger|.
+* **Package locations on the Windows platform may be specified using a URL** The location of a package may be at URL when using the |resource package_windows| resource.
+* **Package locations on the Windows platform may be specified by passing attributes to the remote_file resource** Use the ``remote_file_attributes`` attribute to pass a |ruby hash| of attributes that modifies the |resource remote_file| resource.
+
+UNC path for remote files
+-----------------------------------------------------
+When using the |resource remote_file| resource, the location of a source file may be specified using a |windows| UNC. For example:
+
+.. code-block:: ruby
+
+   source "\\\\path\\to\\img\\sketch.png"
+
+|client rb| Settings
+-----------------------------------------------------
+The following settings have changed:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``log_location``
+     - The location of the log file. Possible values: ``/path/to/log_location``, ``STDOUT``, ``STDERR``, or ``Chef::Log::WinEvt.new`` (|windows event logger|; application log will specify the source as ``Chef``). Default value: ``STDOUT``.
+
+
+Updates for |resource package_windows|
+-----------------------------------------------------
+The |resource package_windows| resource has two new attributes (``checksum`` and ``remote_file_attributes``) and the ``source`` attribute now supports using a URL:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``checksum``
+     - |checksum remote_file| Use when a URL is specified by the ``source`` attribute.
+   * - ``remote_file_attributes``
+     - |remote_file_attributes|
+   * - ``source``
+     - Optional. |source resource package| The location of the package may be at a URL. Default value: the ``name`` of the resource block. |see syntax|
+
+Examples:
+
+**Specify a URL for the source attribute**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url.rst
+
+**Specify path and checksum**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url_checksum.rst
+
+**Modify remote_file resource attributes**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_remote_file_attributes.rst
+
+
+Changelog
+=====================================================
+https://github.com/chef/chef/blob/12-stable/CHANGELOG.md
+
