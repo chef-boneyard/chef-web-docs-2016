@@ -115,10 +115,6 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_key_delete_syntax.rst
 
-Options
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_client_key_delete_options.rst
-
 Examples
 -----------------------------------------------------
 None.
@@ -162,10 +158,6 @@ key show
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_key_show_syntax.rst
-
-Options
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_client_key_show_options.rst
 
 Examples
 -----------------------------------------------------

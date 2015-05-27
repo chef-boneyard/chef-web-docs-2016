@@ -94,10 +94,6 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_key_delete_syntax.rst
 
-Options
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_user_key_delete_options.rst
-
 Examples
 -----------------------------------------------------
 None.
@@ -141,10 +137,6 @@ key show
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_key_show_syntax.rst
-
-Options
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_user_key_show_options.rst
 
 Examples
 -----------------------------------------------------
