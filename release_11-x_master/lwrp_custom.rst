@@ -28,6 +28,10 @@ File Locations
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_custom_file_locations.rst
 
+Resource Names
+=====================================================
+.. include:: ../../includes_lwrp/includes_lwrp_custom_names.rst
+
 Platform vs. Lightweight
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_custom_compare_to_platform_resource.rst
