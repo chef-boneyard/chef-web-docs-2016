@@ -14,6 +14,7 @@ The following items are new for |chef client| 12.4 and/or are changes from previ
 * **Logging may use the Windows Event Logger** Log files may be sent to the |windows event logger|.
 * **Package locations on the Windows platform may be specified using a URL** The location of a package may be at URL when using the |resource package_windows| resource.
 * **Package locations on the Windows platform may be specified by passing attributes to the remote_file resource** Use the ``remote_file_attributes`` attribute to pass a |ruby hash| of attributes that modifies the |resource remote_file| resource.
+* **Public key management for users and clients** The |subcommand knife client| and |subcommand knife user| subcommands may now create, delete, edit, list, and show public keys.
 
 UNC path for remote files
 -----------------------------------------------------
@@ -67,6 +68,126 @@ Examples:
 **Modify remote_file resource attributes**
 
 .. include:: ../../step_resource/step_resource_package_windows_source_remote_file_attributes.rst
+
+
+
+```knife client key```
+=====================================================
+
+.. include:: ../../includes_knife/includes_knife_create.rst
+
+key create
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_client_key_create.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_create_syntax.rst
+
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_create_options.rst
+
+key delete
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_client_key_delete.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_delete_syntax.rst
+
+key edit
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_client_key_edit.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_edit_syntax.rst
+
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_edit_options.rst
+
+key list
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_client_key_list.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_list_syntax.rst
+
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_list_options.rst
+
+key show
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_client_key_show.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_client_key_show_syntax.rst
+
+
+``knife user key``
+=====================================================
+
+.. include:: ../../includes_knife/includes_knife_user.rst
+
+key create
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_create.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_create_syntax.rst
+
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_create_options.rst
+
+key delete
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_delete.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_delete_syntax.rst
+
+key edit
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_edit.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_edit_syntax.rst
+
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_edit_options.rst
+
+key list
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_list.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_list_syntax.rst
+
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_list_options.rst
+
+key show
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_show.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_user_key_show_syntax.rst
+
+
+
 
 
 Changelog
