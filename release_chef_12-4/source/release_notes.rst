@@ -73,7 +73,7 @@ Examples:
 
 ```knife client key```
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_create.rst
+.. include:: ../../includes_knife/includes_knife_client.rst
 
 key create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
