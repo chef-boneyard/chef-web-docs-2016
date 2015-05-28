@@ -23,7 +23,6 @@ The |chef server| can be installed on new hardware. Existing |chef server oec| a
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/install_analytics.html#standalone-version-1-1">Install Analytics 1.1 as Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/install_analytics.html#tiered-version-1-1-only">Install Analytics 1.1 as Tiered</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/upgrade_analytics.html">Upgrade from Analytics 1.0.4</a> </br>
 
 Features
