@@ -14,4 +14,4 @@ This resource has the following attributes:
    * - ``plugin``
      - Optional. The name of an |ohai| plugin to be reloaded. If this attribute is not specified, the |chef client| will reload all plugins.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|

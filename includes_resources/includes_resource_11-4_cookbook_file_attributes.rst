@@ -30,7 +30,7 @@ This resource has the following attributes:
    * - ``path``
      - |path cookbook_file|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``

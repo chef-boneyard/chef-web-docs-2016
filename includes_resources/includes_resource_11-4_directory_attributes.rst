@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``path``
      - |path directory| Default value: ``name``.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``recursive``
      - |recursive directory|
    * - ``rights``

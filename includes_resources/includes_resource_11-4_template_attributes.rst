@@ -32,7 +32,7 @@ This resource has the following attributes:
    * - ``path``
      - |path file| |path_fully_qualified| Default value: ``name``.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``sensitive``

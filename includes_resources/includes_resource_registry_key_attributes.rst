@@ -19,7 +19,7 @@ This resource has the following attributes:
      - |key_name resource registry_key| Default value: the ``name`` of the resource block. |see syntax|
        |key_name resource registry_key hives|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``recursive``
      - |recursive registry_key|
 

@@ -26,7 +26,7 @@ This resource has the following attributes:
 
        .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``timeout``

@@ -14,4 +14,4 @@ This resource has the following attributes:
    * - ``plugin``
      - Optional. |plugin reload_by_ohai| The default behavior reloads all plug-ins.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|

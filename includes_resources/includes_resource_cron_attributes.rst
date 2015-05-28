@@ -52,7 +52,7 @@ This resource has the following attributes:
    * - ``path``
      - |environment set_path|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``shell``
      - |environment set_shell|
    * - ``time``

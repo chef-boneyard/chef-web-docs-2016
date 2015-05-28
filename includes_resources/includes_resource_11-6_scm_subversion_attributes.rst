@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``group``
      - |group deploy|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``repository``
      - |uri repository_svn|
    * - ``revision``

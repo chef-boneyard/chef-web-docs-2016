@@ -52,7 +52,7 @@ This resource has the following attributes:
    * - ``interpreter``
      - |interpreter|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``returns``
      - Inherited from |resource execute| resource. |return_value cmd| Default value: ``0``.
    * - ``timeout``

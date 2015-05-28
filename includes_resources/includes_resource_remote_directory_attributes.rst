@@ -42,7 +42,7 @@ This resource has the following attributes:
    * - ``path``
      - |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``purge``
      - |purge target_directory| Default value: ``false``.
    * - ``recursive``

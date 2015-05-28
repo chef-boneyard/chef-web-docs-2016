@@ -14,6 +14,6 @@ This resource has the following attributes:
    * - ``message``
      - |message http_request| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
    * - ``url``
      - |url http_request|

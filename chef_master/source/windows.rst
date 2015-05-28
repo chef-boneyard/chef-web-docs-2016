@@ -488,9 +488,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_batch_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_batch_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_batch_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -618,9 +620,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_env_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_env_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_env_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -646,9 +650,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_powershell_script_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_powershell_script_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -690,9 +696,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -771,9 +779,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -20,4 +20,4 @@ This resource has the following attributes:
    * - ``node_name``
      - |node_hostname| Default value: ``chef@localhost``.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|

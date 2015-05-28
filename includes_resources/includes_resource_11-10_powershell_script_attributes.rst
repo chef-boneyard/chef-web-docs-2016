@@ -20,5 +20,5 @@ This resource has the following attributes:
    * - ``interpreter``
      - |interpreter|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|
 

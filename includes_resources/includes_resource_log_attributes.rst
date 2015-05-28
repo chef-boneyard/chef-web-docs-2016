@@ -14,4 +14,4 @@ This resource has the following attributes:
    * - ``message``
      - |message resource log| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - Optional. |provider resource_parameter|

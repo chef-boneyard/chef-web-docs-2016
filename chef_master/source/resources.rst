@@ -421,9 +421,11 @@ Guards
 
 .. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_batch_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_batch_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -484,9 +486,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -667,9 +671,11 @@ Attributes
 
 .. warning:: |warning selinux_file_based_resources|
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
+.. 
 
 File Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -716,9 +722,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cron_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_cron_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_cron_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -885,9 +893,11 @@ Recursive Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_directory_recursive.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_directory_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_directory_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1097,9 +1107,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_env_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_env_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_env_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1128,9 +1140,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_erlang_call_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_erlang_call_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_erlang_call_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1159,9 +1173,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_execute_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_execute_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_execute_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1249,9 +1265,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_file_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_file_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_file_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1410,9 +1428,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_git_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_scm_git_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_scm_git_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1522,9 +1542,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_http_request_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_http_request_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_http_request_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1558,9 +1580,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ifconfig_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_ifconfig_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_ifconfig_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1619,9 +1643,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_link_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_link_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_link_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1664,9 +1690,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_log_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_log_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_log_providers.rst
+.. 
 
 ``Chef::Log`` Entries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1742,9 +1770,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_mdadm_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_mdadm_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_mdadm_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1836,9 +1866,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ohai_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_ohai_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_ohai_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2162,9 +2194,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_powershell_script_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_powershell_script_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2235,9 +2269,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2281,9 +2317,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2333,9 +2371,11 @@ Recursive Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_remote_directory_recursive.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_remote_directory_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_remote_directory_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2368,9 +2408,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_remote_file_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_remote_file_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2416,9 +2458,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_route_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_route_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_route_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2503,9 +2547,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ruby_block_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_ruby_block_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_ruby_block_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2741,9 +2787,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_subversion_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_scm_subversion_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_scm_subversion_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2774,9 +2822,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_template_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_template_providers.rst
+.. 
 
 File Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3016,9 +3066,11 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
+.. 
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
+.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
