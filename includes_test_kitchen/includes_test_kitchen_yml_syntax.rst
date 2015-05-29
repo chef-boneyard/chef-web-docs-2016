@@ -49,7 +49,7 @@ where:
         - recipe[cookbook_name::recipe_name]
 
 * Each ``suite_name`` grouping may specify ``attributes`` as a |ruby hash|: ``{ foo: "bar" }``
-* A ``suite_name`` grouping may use ``excludes`` to exclude certain platforms or may use ``includes`` to include only certain platforms
+* A ``suite_name`` grouping may use ``excludes`` and ``includes`` to exclude/include specific platforms
 
 For example, a very simple |kitchen yml| file:
 
