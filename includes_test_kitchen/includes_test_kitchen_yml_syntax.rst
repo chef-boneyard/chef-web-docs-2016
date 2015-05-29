@@ -25,6 +25,8 @@ The basic structure of a |kitchen yml| file is as follows:
        attributes: { foo: "bar" }
        excludes:
          - platform-version
+       includes:
+         - platform-version
      - name: suite_name
        driver:
          name: driver_name
@@ -32,6 +34,9 @@ The basic structure of a |kitchen yml| file is as follows:
          - recipe[cookbook_name::recipe_name]
        attributes: { foo: "bar" }
        excludes:
+         - platform-version
+         - platform-version
+       includes:
          - platform-version
 
 where:
@@ -73,6 +78,8 @@ For example, a very simple |kitchen yml| file:
         - recipe[apache::httpd]
       excludes:
         - debian-7.1.0
+      includes:
+        - debian-7.2.0
 
 This file uses |vagrant| as the driver, which requires no additional configuration because it's the default driver used by |kitchen|, |chef zero| as the provisioner, and a single (default) test suite that runs on |ubuntu| 12.04, and |centos| 6.4.
 
