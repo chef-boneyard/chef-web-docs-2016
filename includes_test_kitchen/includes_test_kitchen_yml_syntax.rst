@@ -50,6 +50,7 @@ where:
 
 * Each ``suite_name`` grouping may specify ``attributes`` as a |ruby hash|: ``{ foo: "bar" }``
 * Each ``suite_name`` grouping may use ``excludes`` to exclude certain platforms
+* Each ``suite_name`` grouping may use ``includes`` to include only certain platforms
 
 For example, a very simple |kitchen yml| file:
 
