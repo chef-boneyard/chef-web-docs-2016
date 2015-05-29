@@ -25,17 +25,12 @@ The basic structure of a |kitchen yml| file is as follows:
        attributes: { foo: "bar" }
        excludes:
          - platform-version
-       includes:
-         - platform-version
      - name: suite_name
        driver:
          name: driver_name
        run_list:
          - recipe[cookbook_name::recipe_name]
        attributes: { foo: "bar" }
-       excludes:
-         - platform-version
-         - platform-version
        includes:
          - platform-version
 
@@ -54,8 +49,7 @@ where:
         - recipe[cookbook_name::recipe_name]
 
 * Each ``suite_name`` grouping may specify ``attributes`` as a |ruby hash|: ``{ foo: "bar" }``
-* Each ``suite_name`` grouping may use ``excludes`` to exclude certain platforms
-* Each ``suite_name`` grouping may use ``includes`` to include only certain platforms
+* A ``suite_name`` grouping may use ``excludes`` to exclude certain platforms or may use ``includes`` to include only certain platforms
 
 For example, a very simple |kitchen yml| file:
 
@@ -78,8 +72,6 @@ For example, a very simple |kitchen yml| file:
         - recipe[apache::httpd]
       excludes:
         - debian-7.1.0
-      includes:
-        - debian-7.2.0
 
 This file uses |vagrant| as the driver, which requires no additional configuration because it's the default driver used by |kitchen|, |chef zero| as the provisioner, and a single (default) test suite that runs on |ubuntu| 12.04, and |centos| 6.4.
 
