@@ -7,62 +7,62 @@ Lab One - Install a Text Editor
 
  .. revealjs:: Install a text editor
 
-	* Every workstation needs an $EDITOR
-	* Use $EDITOR to edit files
-	* $EDITOR is your favorite command line text editor: vim, emacs, nano, etc.
+  * Every workstation needs an $EDITOR
+  * Use $EDITOR to edit files
+  * $EDITOR is your favorite command line text editor: vim, emacs, nano, etc.
 
  .. revealjs:: Objectives
 
-    Install a text editor using |chef apply|:
+  Install a text editor using |chef apply|:
 
-    * |vim|
-    * |emacs|
-    * |gnu nano|
+  * |vim|
+  * |emacs|
+  * |gnu nano|
 
  .. revealjs:: Login to your lab machine
 
-	Run:
+  Run:
 
-	.. code-block:: bash
+  .. code-block:: bash
 
-	   $ ssh chef@54.164.75.30
+     $ ssh chef@54.164.75.30
 
-	Returns:
+  Returns:
 
-	.. code-block:: bash
+  .. code-block:: bash
 
-	   The authenticity of host '54.165.227.226' can't be established.
-	   RSA key fingerprint is c1:ec:ab:66:fb:22:4a:8f:c2:c5:9b:26:77:f3:dd:b3.
-	   Are you sure you want to continue connecting (yes/no)? yes
-	   Warning: Permanently added '54.165.227.226' (RSA) to known hosts.
-	   chef@54.165.227.226's password:
+     The authenticity of host '54.165.227.226' can't be established.
+     RSA key fingerprint is c1:ec:ab:66:fb:22:4a:8f:c2:c5:9b:26:77:f3:dd:b3.
+     Are you sure you want to continue connecting (yes/no)? yes
+     Warning: Permanently added '54.165.227.226' (RSA) to known hosts.
+     chef@54.165.227.226's password:
 
  .. revealjs:: Welcome to your workstation
 
-	* ChefDK version 0.3.5 is installed
-	* chef --version
-	* Chef user has passwordless sudo access
-	* sudo cat /etc/shadow
+  * ChefDK version 0.3.5 is installed
+  * chef --version
+  * Chef user has passwordless sudo access
+  * sudo cat /etc/shadow
 
  .. revealjs:: Is $EDITOR installed?
 
-	Run:
+  Run:
 
-	.. code-block:: bash
+  .. code-block:: bash
 
-	   $ which vim
+     $ which vim
 
-	Returns:
+  Returns:
 
-	.. code-block:: bash
+  .. code-block:: bash
 
-	   /usr/bin/which: no vim in (
-	     /opt/chefdk/
-	     bin:/home/chef/.chefdk/gem/ruby/2.1.0/
-	     bin:/opt/chefdk/embedded/
-	     bin:/usr/local/bin:/bin:/usr/
-	     bin:/usr/local/sbin:/usr/sbin:/sbin:/home/chef/bin
-	     )
+     /usr/bin/which: no vim in (
+       /opt/chefdk/
+       bin:/home/chef/.chefdk/gem/ruby/2.1.0/
+       bin:/opt/chefdk/embedded/
+       bin:/usr/local/bin:/bin:/usr/
+       bin:/usr/local/sbin:/usr/sbin:/sbin:/home/chef/bin
+       )
 
  .. revealjs:: About chef-apply
 
@@ -115,7 +115,7 @@ Lab One - Install a Text Editor
 
  .. revealjs:: Recap
 
-    * Installed vim, emacs, or nano using |chef apply|
+  * Installed vim, emacs, or nano using |chef apply|
 
  .. revealjs:: Questions
 
@@ -123,6 +123,6 @@ Lab One - Install a Text Editor
 
  .. revealjs:: More Info About chef-apply
 
-    For more information, see:
+  For more information, see:
 
-    * |url slides_docs_chef_io|
+  * |url slides_docs_chef_io|
