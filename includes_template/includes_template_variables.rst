@@ -5,7 +5,7 @@ A template is an |erb| template. An |erb| template allows |ruby| code to be embe
 
 .. code-block:: ruby
 
-   ``<%= "my name is #{$ruby}" %>``
+   <%= "my name is #{$ruby}" %>
 
 A statement is delimited by a modifier, such as ``if``, ``elseif``, and ``else``. For example:
 
