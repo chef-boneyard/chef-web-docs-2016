@@ -12,6 +12,9 @@ This tool has the following options:
 ``-e RECIPE_TEXT``, ``--execute RECIPE_TEXT``
    |execute chef_apply|
 
+``-h``, ``--help``
+   |help subcommand|
+
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
 
@@ -26,7 +29,3 @@ This tool has the following options:
 
 ``-W``, ``--why-run``
    |whyrun_mode|
-
-``-h``, ``--help``
-   |help subcommand|
-
