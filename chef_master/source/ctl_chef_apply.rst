@@ -26,3 +26,7 @@ Examples
 **Install vim**
 
 .. include:: ../../step_ctl_chef_apply/step_ctl_chef_apply_install_vim.rst
+
+**Rerun a recipe**
+
+.. include:: ../../step_ctl_chef_apply/step_ctl_chef_apply_rerun_recipe.rst

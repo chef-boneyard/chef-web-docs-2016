@@ -21,6 +21,7 @@ Chef Open Source Slide Decks
    foodcritic
    git
    kitchen
+   lab_install_text_editor
    recipes
    resources
    serverspec
