@@ -42,14 +42,20 @@ where:
 * ``platforms`` may define |chef server| attributes that are common to the collection of test suites
 * ``suites`` is a collection of test suites, with each ``suite_name`` grouping defining an aspect of a cookbook to be tested. Each ``suite_name`` must specify a run-list, for example: 
    
-   .. code-block:: ruby
+  .. code-block:: ruby
 
-      run_list:
-        - recipe[cookbook_name::default]
-        - recipe[cookbook_name::recipe_name]
+     run_list:
+       - recipe[cookbook_name::default]
+       - recipe[cookbook_name::recipe_name]
 
 * Each ``suite_name`` grouping may specify ``attributes`` as a |ruby hash|: ``{ foo: "bar" }``
-* A ``suite_name`` grouping may use ``excludes`` and ``includes`` to exclude/include specific platforms
+* A ``suite_name`` grouping may use ``excludes`` and ``includes`` to exclude/include one (or more) platforms. For example:
+
+  .. code-block:: ruby
+
+     excludes:
+        - platform-version
+        - platform-version       # for additional platforms
 
 For example, a very simple |kitchen yml| file:
 
