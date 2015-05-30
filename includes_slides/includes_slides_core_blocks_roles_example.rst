@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
 
-.. image:: ../../images/blocks_roles_example.png
+.. image:: ../../images/blocks_roles_example.svg
 
 .. 
 .. the following is the legacy slide. the question is: does that mean anything if it's in the first overview someone sees? suggestion: make it more visual. the image is just a mockup attempt.
