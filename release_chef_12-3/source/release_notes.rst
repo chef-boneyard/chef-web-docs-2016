@@ -11,6 +11,7 @@ The following items are new for |chef client| 12.3 and/or are changes from previ
 * **Socketless local mode with chef-zero** Port binding and HTTP requests on localhost may be disabled in favor of socketless mode.
 * **Minimal Ohai plugins** Run only the plugins required for name resolution and resource/provider detection.
 * **Dynamic resource and provider resolution** Four helper methods may be used in a library file to get resource and/or provider mapping details, and then set them per-resource or provider.
+* **New clear_soruces attribute for the chef_gem and gem_package resources** |clear_sources|
 
 Socketless Local Mode
 -----------------------------------------------------
