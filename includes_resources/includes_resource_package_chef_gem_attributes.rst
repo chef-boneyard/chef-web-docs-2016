@@ -9,6 +9,8 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``clear_sources``
+     - |clear_sources| Default value: ``false``.
    * - ``compile_time``
      - |chef_gem compile_time| Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``. Use a ``respond_to?`` check to ensure backward compatibility. For example:
 

@@ -9,6 +9,8 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``clear_sources``
+     - |clear_sources| Default value: ``false``.
    * - ``gem_binary``
      - |gem_binary resource package| By default, the same version of |ruby| that is used by the |chef client| will be installed.
    * - ``options``
