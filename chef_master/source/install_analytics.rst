@@ -36,8 +36,6 @@ Install the Server
 
 Standalone (version 1.1)
 -----------------------------------------------------
-.. note:: |chef analytics| version 1.1 requires |chef server| version 12.
-
 .. include:: ../../includes_install/includes_install_analytics_standalone_11.rst
 
 Standalone (version 1.0)
