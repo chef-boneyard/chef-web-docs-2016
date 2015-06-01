@@ -8,6 +8,6 @@ The following example shows a schedule that will run every hour at 8:00 each Sat
      minute '0'
      hour '8'
      weekday '6'
-     mailto "admin@opscode.com"
+     mailto "admin@chef.io"
      action :create
    end
