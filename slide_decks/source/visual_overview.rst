@@ -2,7 +2,7 @@
 .. This is just a test.
 
 ================================================
-Visual Overview 
+Visual Overview  
 ================================================
 
 .. revealjs:: Visual Overview
