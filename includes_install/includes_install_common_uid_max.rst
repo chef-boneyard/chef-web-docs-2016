@@ -1,6 +1,16 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
+UID and GID Precreation
+-----------------------
+
+If you would like to choose the UID and GID for the ``opscode`` and ``opscode-pgsql`` user and group,
+you can create those users and groups before the initial reconfiguration of the Chef Server. If the identities already exist,
+the Chef Server will use the ones found instead of creating them anew.
+
+Login Defaults
+--------------
+
 The installation process for the |chef server| requires the use of at least 2 UIDs and GIDS, which are used to create the ``opscode`` and ``opscode-pgsql`` users and their default groups.
 
 To determine the current range of IDs, run the following command:
