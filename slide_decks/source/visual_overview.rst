@@ -143,4 +143,8 @@ Visual Overview
 
    .. image:: ../../images/chef_overview_18.svg
 
+.. revealjs:: Chef Provisioning
+   :data-transition: fade
+   :data-transition-speed: slow
 
+   .. image:: ../../images/chef_overview_19.svg
