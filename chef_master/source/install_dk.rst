@@ -409,8 +409,8 @@ To verify that a workstation can connect to the |chef server|:
 
    .. code-block:: bash
 
-       workstation
-       registered_node
+      workstation
+      registered_node
 
 
 
