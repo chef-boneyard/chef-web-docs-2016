@@ -23,6 +23,13 @@ The |chef analytics| server shares the :doc:`same prerequisites </install_server
 * A local user account under which services will run
 * A local user account for |postgresql|
 * A group account under which services will run
+* The Analytics queues on the Chef Server side have been capped, as root. This prevents unintended disk overruns.
+
+.. code-block:: bash
+
+  export PATH=/opt/ospcode/embedded/bin:$PATH
+         
+  rabbitmqctl set_policy -p /analytics max_length '(erchef|alaska|notifier.notifications|notifier_config)' '{"max-length":10000}' --apply-to queues
 
 Hostnames
 -----------------------------------------------------
