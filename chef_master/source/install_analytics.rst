@@ -17,7 +17,7 @@ The |chef analytics| server shares the :doc:`same prerequisites </install_server
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a FQDN or an IP address
 * A connection to |ntp| to prevent clock drift
-* A local mail transfer agent that allows |chef analytics| to send email notifications; for versions of |chef analytics| prior to 1.1.3, ``to``, ``from``, ``host`` (the email server), and ``port`` must be specified.
+* A local mail transfer agent that allows |chef analytics| to send email notifications; for versions of |chef analytics| prior to 1.1.3, ``to``, ``from``, ``host`` (the email server), ``password``, ``port``, and ``username`` must be specified.
 * Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks
 * Disabling the |apache qpid| daemon on |centos| and |redhat| systems
 * Optional. A local user account under which services will run, a local user account for |postgresql|, and a group account under which services will run. See http://docs.chef.io/install_server_pre.html#uids-and-gids for more information.
