@@ -5,10 +5,5 @@
 Detailed recommendations for using the |openstack glance| imaging service can be found here: http://docs.openstack.org/trunk/openstack-image/content/ch_obtaining_images.html. Mirroring them locally is a common approach:
 
 * For |ubuntu|: https://cloud-images.ubuntu.com
-* For |fedora| 18/19: http://fedoraproject.org/en/get-fedora-options#clouds
-* For |centos| 6.4: http://catn.com/labs/centos-images/
-
-
-
-
-
+* For |fedora|: http://fedoraproject.org/en/get-fedora-options#clouds
+* For |centos|: http://www.centos.org/download/mirrors/
