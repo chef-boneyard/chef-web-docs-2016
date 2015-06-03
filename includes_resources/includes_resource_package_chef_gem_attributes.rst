@@ -11,6 +11,16 @@ This resource has the following attributes:
      - Description
    * - ``clear_sources``
      - |clear_sources| Default value: ``false``.
+
+       .. note:: Another approach is to use the |resource package_gem| resource, and then specify the ``gem_binary`` location to the |rubygems| directory that is used by |chef|. For example:
+
+          .. code-block:: ruby
+
+             gem_package 'package' do
+               gem_binary Chef::Util::PathHelper.join(Chef::Config.embedded_dir,'bin','gem')
+               action :install             
+             end
+
    * - ``compile_time``
      - |chef_gem compile_time| Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``. Use a ``respond_to?`` check to ensure backward compatibility. For example:
 
