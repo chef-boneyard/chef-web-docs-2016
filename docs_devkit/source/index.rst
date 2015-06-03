@@ -51,6 +51,26 @@ The following resources are part of |chef provisioning| and are now available in
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/resource_machine_file.html">machine_file</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/resource_machine_image.html">machine_image</a> </br>
    
+The following resources are available in the |chef dk| and may be used as part of |chef provisioning|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_acl.html">chef_acl</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_client.html">chef_client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_container.html">chef_container</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_data_bag_item.html">chef_data_bag_item</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_data_bag.html">chef_data_bag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_environment.html">chef_environment</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_group.html">chef_group</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_mirror.html">chef_mirror</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_node.html">chef_node</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_organization.html">chef_organization</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_role.html">chef_role</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_chef_user.html">chef_user</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_private_key.html">private_key</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/resource_public_key.html">public_key</a> </br>
+
+
 Community Tools
 -----------------------------------------------------
 The following tools have been developed by members of the |chef| community. These tools are considered to be a useful part of the |chef| workflow and have been packaged as part of the |chef dk|. (They are all available independently of the |chef dk|, as well.) The use of these tools as part of your workflow is recommended, but at the same time is completely optional. Use them in the way that makes sense for your organization:
