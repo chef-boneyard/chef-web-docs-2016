@@ -7,7 +7,7 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ deivery clone PROJECT (options)
+   $ delivery clone PROJECT (options)
 
 where:
 

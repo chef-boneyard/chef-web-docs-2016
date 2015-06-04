@@ -7,7 +7,7 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ deivery job STAGE (options)
+   $ delivery job STAGE (options)
 
 where:
 

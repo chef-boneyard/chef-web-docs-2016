@@ -7,7 +7,7 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ deivery api METHOD PATH (options)
+   $ delivery api METHOD PATH (options)
 
 where:
 

@@ -7,7 +7,7 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ deivery diff CHANGE (options)
+   $ delivery diff CHANGE (options)
 
 where:
 

@@ -7,7 +7,7 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ deivery checkout CHANGE (options)
+   $ delivery checkout CHANGE (options)
 
 where:
 

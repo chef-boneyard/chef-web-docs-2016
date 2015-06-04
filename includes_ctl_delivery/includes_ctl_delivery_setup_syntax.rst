@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ deivery setup (options)
+   $ delivery setup (options)
