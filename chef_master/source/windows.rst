@@ -6,7 +6,7 @@
 
 The |chef client| has specific components that are designed to support unique aspects of the |windows| platform, including |windows powershell|, |microsoft iis|, and |microsoft sqlserver|.
 
-* The |chef client| is `installed on a machine <http://chef.io/windows.html#install-the-chef-client-on-windows>`_ running |windows| by using a |microsoft installer package|
+* The |chef client| is `installed on a machine <https://downloads.chef.io/chef-client/windows/#/>`_ running |windows| by using a |microsoft installer package|
 * Six resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource dsc_script|, |resource env|, |resource powershell_script|, |resource registry_key|, and |resource package_windows|
 * A resource named |resource dsc_resource| is in development---available for preview via the https://github.com/opscode-cookbooks/dsc cookbook---that adds the ability to use Powershell DSC resources in Chef!
 * Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
