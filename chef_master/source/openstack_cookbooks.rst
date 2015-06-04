@@ -53,6 +53,14 @@ Code Review
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_openstack/includes_openstack_cookbooks_contribute_code_review.rst
 
+Access Controller
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_openstack/includes_openstack_cookbooks_contribute_code_review_access_controller.rst
+
+Test Controller
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_openstack/includes_openstack_cookbooks_contribute_code_review_test_controller.rst
+
 Test Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_cookbooks_test.rst
