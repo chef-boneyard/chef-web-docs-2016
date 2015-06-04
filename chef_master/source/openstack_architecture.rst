@@ -2,11 +2,11 @@
 |openstack chef|: Architecture
 =====================================================
 
-This section describes the supported deployment scenarios for |openstack chef| and is based on the `OpenStack Grizzly <http://www.solinea.com/2013/06/15/openstack-grizzly-architecture-revisited/>`_ release.
+This section describes the supported deployment scenarios for |openstack chef| and is based on the `OpenStack Grizzly <http://www.solinea.com/2013/06/15/openstack-grizzly-architecture-revisited/>`_ release. This is going to be updated for both ``OpenStack Juno`` and ``OpenStack Kilo`` at a later date.
 
 .. image:: ../../images/openstack-arch-grizzly-conceptual-v2.jpg
 
-There are a number of configuration options available, including block storage, hypervisors, databases, message queuing, networking, object storage, source builds, and so on. The current supported deployment scenarios includ:
+There are a number of configuration options available, including block storage, hypervisors, databases, message queuing, networking, object storage, source builds, and so on. The current supported deployment scenarios include:
 
 .. list-table::
    :widths: 150 450
@@ -20,8 +20,6 @@ There are a number of configuration options available, including block storage, 
      - A single controller with 1 or more |openstack compute| nodes. No object storage.
    * - |vagrant|
      - A virtual instance on a single host using |vagrant|.
-
-.. note:: |openstack chef| is under very active development for the |openstack grizzly| release. |openstack| is flexible and additional configurations will be supported in the future.
 
 |openstack chef|: Single Controller + N Compute
 =====================================================

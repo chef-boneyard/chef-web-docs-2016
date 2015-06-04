@@ -8,9 +8,6 @@
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_develop_irc.rst
 
-|google|
-=====================================================
-.. include:: ../../includes_openstack/includes_openstack_develop_google.rst
 
 Issue Tracking
 =====================================================
