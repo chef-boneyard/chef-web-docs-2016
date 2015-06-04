@@ -2,7 +2,7 @@
 |openstack chef|: Architecture
 =====================================================
 
-This section describes the supported deployment scenarios for |openstack chef| and is based on the `OpenStack Grizzly <http://www.solinea.com/2013/06/15/openstack-grizzly-architecture-revisited/>`_ release. This is going to be updated for both ``OpenStack Juno`` and ``OpenStack Kilo`` at a later date.
+This section describes the supported deployment scenarios for |openstack chef| and is based on the `OpenStack Grizzly <http://www.solinea.com/2013/06/15/openstack-grizzly-architecture-revisited/>`_ release. This is going to be updated for both |openstack juno| and |openstack kilo| at a later date.
 
 .. image:: ../../images/openstack-arch-grizzly-conceptual-v2.jpg
 

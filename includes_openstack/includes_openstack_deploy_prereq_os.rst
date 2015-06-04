@@ -11,20 +11,20 @@
    * - Branch
      - Status
      - Platforms
-   * - Grizzly
+   * - |openstack grizzly|
      - stable - frozen
-     - Ubuntu 12.04
-   * - Havana
+     - |ubuntu| 12.04
+   * - |openstack havana|
      - stable - frozen
-     - Ubuntu 12.04, RedHat 6.5, Suse 11.03
-   * - Icehouse
+     - |ubuntu| 12.04, |redhat enterprise linux| 6.5, |opensuse| 11.03
+   * - |openstack icehouse|
      - stable - frozen
-     - Ubuntu 12.04, RedHat 6.5, Suse 11.03
-   * - Juno
+     - |ubuntu| 12.04, |redhat enterprise linux| 6.5, |opensuse| 11.03
+   * - |openstack juno|
      - stable - fixes
-     - Ubuntu 14.04, RedHat 7
-   * - Kilo
+     - |ubuntu| 14.04, |redhat enterprise linux| 7
+   * - |openstack kilo|
      - master - development
-     - Ubuntu 14.04, RedHat 7.1, Suse 11.03
-   * - Liberty
-     - coming 3Q2015
+     - |ubuntu| 14.04, |redhat enterprise linux| 7.1, |opensuse| 11.03
+   * - |openstack liberty|
+     - coming 3Q, 2015
