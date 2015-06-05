@@ -28,7 +28,7 @@ This configuration file has the following settings:
    * - ``json_attribs``
      - |json attributes|
    * - ``lockfile``
-     - |lockfile|
+     - |lockfile| This value is typically platform-dependent, so should be a location defined by ``file_cache_path``. The default location of a lock file should not on an NF mount. Default value: a location defined by ``file_cache_path``.
    * - ``log_level``
      - |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``.
    * - ``log_location``
@@ -42,7 +42,7 @@ This configuration file has the following settings:
    * - ``role_path``
      - |path roles_chef| Default value: ``/var/chef/roles``.
    * - ``run_lock_timeout``
-     - |run_lock_timeout| Default value: not set (indefinite). Set to ``0`` to cause a second |chef client| to exit immediately.
+     - |run_lock_timeout| A |chef client| run will not start when a lock file is present. If a lock file is not deleted before this time expires, the pending |chef client| run will exit. Default value: not set (indefinite). Set to ``0`` to cause a second |chef client| to exit immediately.
    * - ``sandbox_path``
      - |sandbox_path|
    * - ``solo``
