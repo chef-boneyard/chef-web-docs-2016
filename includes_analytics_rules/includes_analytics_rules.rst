@@ -11,4 +11,4 @@
 * Machines on which |chef client_audit| runs have failed
 * Resources that were updated as a result of a |chef client| run
 
-Notifications may be sent to any email address, a chat service like |hiptchat| or |slack|, or to a webhook-based service for generic intergrations.
+Notifications may be sent to any email address, a chat service like |hipchat| or |slack|, or to a webhook-based service for generic intergrations.
