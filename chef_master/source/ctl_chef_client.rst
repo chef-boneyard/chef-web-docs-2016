@@ -16,7 +16,7 @@ Options
 
 |chef client| Lock File
 -----------------------------------------------------
-.. include:: ../../includes_ctl_chef_client/includes_chef_client_lockfile.rst
+.. include:: ../../includes_chef_client/includes_chef_client_lockfile.rst
 
 Run in Local Mode
 =====================================================
