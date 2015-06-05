@@ -5,7 +5,7 @@
 |openstack chef| does not have any additional operating system requirements beyond the basic requirements for running the software.
 
 .. list-table::
-   :widths: 150 450
+   :widths: 150 150 300
    :header-rows: 1
 
    * - Branch
