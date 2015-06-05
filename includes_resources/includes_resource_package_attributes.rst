@@ -15,8 +15,20 @@ This resource has the following attributes:
      - |resource yum_package| resource only. |architecture package|
    * - ``default_release``
      - |resource package_apt| resource only. |default_release apt| For example: ``stable``.
-   * - ``flush_cache``
-     - |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
+   * - ``flush_cache()``
+     - |flush_cache| Default value: ``{ :before => false, :after => false }``.
+
+       .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
+
+       For example:
+
+       .. code-block:: ruby
+
+          yum_package 'some-package' do
+            #...
+            flush_cache({ :before => false, :after => false })
+            #...
+          end
 
        .. note:: |flush_cache yum_cache|
    * - ``gem_binary``

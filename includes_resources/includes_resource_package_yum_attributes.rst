@@ -13,8 +13,20 @@ This resource has the following attributes:
      - |allow_downgrade|
    * - ``arch``
      - |architecture package|
-   * - ``flush_cache``
+   * - ``flush_cache()``
      - |flush_cache| Default value: ``{ :before => false, :after => false }``.
+
+       .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
+
+       For example:
+
+       .. code-block:: ruby
+
+          yum_package 'some-package' do
+            #...
+            flush_cache({ :before => false, :after => false })
+            #...
+          end
 
        .. note:: |flush_cache yum_cache|
    * - ``options``
