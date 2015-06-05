@@ -24,7 +24,7 @@ This resource has the following attributes:
 
           yum_package 'some-package' do
             #...
-            flush_cache({ :before => false, :after => false })
+            flush_cache [ :before => false, :after => false ]
             #...
           end
 

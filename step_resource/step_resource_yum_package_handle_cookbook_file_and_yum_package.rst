@@ -13,5 +13,5 @@ When a |resource cookbook_file| resource and a |resource yum_package| resource a
    
    yum_package 'only-in-custom-repo' do
      action :install
-     flush_cache({:before => true})
+     flush_cache [ :before => true ]
    end
