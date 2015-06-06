@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``default_release``
      - |resource package_apt| resource only. |default_release apt| For example: ``stable``.
    * - ``flush_cache()``
-     - |flush_cache| Default value: ``{ :before => false, :after => false }``.
+     - |flush_cache| Default value: ``[ :before => false, :after => false ]``.
 
        .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
 

@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``arch``
      - |architecture package|
    * - ``flush_cache()``
-     - |flush_cache| Default value: ``{ :before => false, :after => false }``.
+     - |flush_cache| Default value: ``[ :before => false, :after => false ]``.
 
        .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
 
