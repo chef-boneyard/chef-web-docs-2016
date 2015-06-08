@@ -34,7 +34,7 @@ This resource has the following attributes:
 
           yum_package 'some-package' do
             #...
-            flush_cache({ :before, :after })
+            flush_cache( { :before, :after } )
             #...
           end
 
