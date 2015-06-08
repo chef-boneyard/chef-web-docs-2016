@@ -47,5 +47,5 @@ Dynamic Resolution
 
 Changelog
 =====================================================
-https://github.com/chef/chef/blob/12-stable/CHANGELOG.md
+https://github.com/chef/chef/blob/12.3-stable/CHANGELOG.md
 
