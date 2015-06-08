@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``default_release``
      - |resource package_apt| resource only. |default_release apt| For example: ``stable``.
    * - ``flush_cache``
-     - |flush_cache| Default value: ``[ :before, :after ]``.
+     - |flush_cache| Default value: ``[ :before, :after ]``. The value may also be a |ruby hash|: ``( { :before => true/false, :after => true/false } )``.
 
        .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
 
@@ -26,7 +26,7 @@ This resource has the following attributes:
 
           yum_package 'some-package' do
             #...
-            flush_cache [ :before, :after ]
+            flush_cache [ :before ]
             #...
           end
 
@@ -36,7 +36,7 @@ This resource has the following attributes:
 
           yum_package 'some-package' do
             #...
-            flush_cache( { :before, :after } )
+            flush_cache( { :after => true } )
             #...
           end
 
