@@ -10,7 +10,7 @@ This command has the following syntax::
 This command has the following options:
 
 ``-c CONFIG``, ``--config CONFIG``
-   |config chef-client| This is the same configuration file used by |push jobs|. Default value: ``Chef::Config.platform_specific_path("/etc/chef/client.rb")``.
+   |config chef-client| The |chef client| and |push jobs| client use the same configuration file: |client rb|. Default value: ``Chef::Config.platform_specific_path("/etc/chef/client.rb")``.
 
 ``-h``, ``--help``
    |help subcommand|
