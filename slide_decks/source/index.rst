@@ -22,6 +22,7 @@ Chef Open Source Slide Decks
    git
    kitchen
    lab_install_text_editor
+   list_resources
    recipes
    resources
    serverspec
