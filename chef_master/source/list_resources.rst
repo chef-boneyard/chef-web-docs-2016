@@ -52,7 +52,7 @@ As mentioned, a better approach is to use the |resource service| resource:
 =====================================================
 Use the `template resource <http://docs.chef.io/resource_template.html>`__ to build a file on a node that is based on a template located in a cookbook. |chef| uses |erb| templates and |ruby| expressions to define a template file. For example, when setting up |nginx|, there is a default site:
 
-.. code-block:: html
+.. code-block:: ruby
 
    server { # php/fastcgi
       listen       80;

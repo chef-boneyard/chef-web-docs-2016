@@ -65,7 +65,7 @@ The 9 most popular resources!
 
     For example, when setting up |nginx|, there is a default site:
     
-    .. code-block:: html
+    .. code-block:: ruby
     
        server { # php/fastcgi
           listen       80;
