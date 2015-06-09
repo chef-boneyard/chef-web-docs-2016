@@ -8,6 +8,10 @@
 
 .. .. include:: ../../includes_chefspec/includes_chefspec_compare_to_resource.rst
 
+Run |chef spec|
+=====================================================
+.. include:: ../../includes_chefspec/includes_chefspec_run.rst
+
 Unit Tests
 =====================================================
 .. include:: ../../includes_rspec/includes_rspec.rst
