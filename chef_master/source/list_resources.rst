@@ -15,10 +15,7 @@ Resources:
 * Start services
 * Run scripts and commands
  
-These nine resources are essential for anyone who uses |chef|!
-
-.. image:: ../../images/list_resources.svg
-   :width: 400px
+The following nine resources are essential for anyone who uses |chef|!
 
 1. execute
 =====================================================
