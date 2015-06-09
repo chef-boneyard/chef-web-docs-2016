@@ -3,8 +3,7 @@
 
 The ``GET`` method is used to get the status of an individual job, including node state (running, complete, crashed).
 
-This method has no parameters... The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+This method has no parameters.
 
 The ``POST`` method is used to start a job.
 
