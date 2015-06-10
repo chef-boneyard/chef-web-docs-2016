@@ -11,7 +11,7 @@ What's New
 The following items are new for |chef client| 12.4 and/or are changes from previous versions. The short version:
 
 * **remote_file resource supports Windows UNC paths for source location** A |windows| UNC path may be used to specify the location of a remote file.
-* **Logging may use the Windows Event Logger** Log files may be sent to the |windows event logger|.
+* **Logging may use the Windows Event Logger** Log files may be sent to the |windows event logger|. Set the ``log_location`` setting in the |client rb| file to ``Chef::Log::WinEvt.new``.
 * **Package locations on the Windows platform may be specified using a URL** The location of a package may be at URL when using the |resource package_windows| resource.
 * **Package locations on the Windows platform may be specified by passing attributes to the remote_file resource** Use the ``remote_file_attributes`` attribute to pass a |ruby hash| of attributes that modifies the |resource remote_file| resource.
 * **Public key management for users and clients** The |subcommand knife client| and |subcommand knife user| subcommands may now create, delete, edit, list, and show public keys.
