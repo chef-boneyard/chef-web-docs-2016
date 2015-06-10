@@ -8,12 +8,12 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master decks
+release: master decks 12-3 12-4
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # devkit analytics
-# 12-0 12-1 12-2 12-3 12-4
+# 12-0 12-1 12-2
 # 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18
 # server all client
 # delivery
