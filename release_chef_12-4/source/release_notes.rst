@@ -16,6 +16,7 @@ The following items are new for |chef client| 12.4 and/or are changes from previ
 * **Package locations on the Windows platform may be specified using a URL** The location of a package may be at URL when using the |resource package_windows| resource.
 * **Package locations on the Windows platform may be specified by passing attributes to the remote_file resource** Use the ``remote_file_attributes`` attribute to pass a |ruby hash| of attributes that modifies the |resource remote_file| resource.
 * **Public key management for users and clients** The |subcommand knife client| and |subcommand knife user| subcommands may now create, delete, edit, list, and show public keys.
+* **chef-client audit-mode is no longer marked as "expiremental"** The recommended version of |chef client_audit| is |chef client| 12.4, where it is no longer marked as expiremental. The |chef client| will report audit failures independently of converge failures.
 
 UNC paths, |resource remote_file|
 -----------------------------------------------------
