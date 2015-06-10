@@ -50,7 +50,7 @@ for |sublime|:
 
 .. code-block:: ruby
 
-   knife[:editor] = '"C:\Program Files\Sublime Text 2\sublime_text.exe --wait"'
+   knife[:editor] = '"C:\Program Files\Sublime Text 2\sublime_text.exe" --wait'
 
 for |textpad|:
 
