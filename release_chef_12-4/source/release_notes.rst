@@ -17,7 +17,7 @@ The following items are new for |chef client| 12.4 and/or are changes from previ
 * **Package locations on the Windows platform may be specified by passing attributes to the remote_file resource** Use the ``remote_file_attributes`` attribute to pass a |ruby hash| of attributes that modifies the |resource remote_file| resource.
 * **Public key management for users and clients** The |subcommand knife client| and |subcommand knife user| subcommands may now create, delete, edit, list, and show public keys.
 
-UNC path for remote files
+UNC paths, |resource remote_file|
 -----------------------------------------------------
 When using the |resource remote_file| resource, the location of a source file may be specified using a |windows| UNC. For example:
 
@@ -38,7 +38,7 @@ The following settings have changed:
    * - ``log_location``
      - The location of the log file. Possible values: ``/path/to/log_location``, ``STDOUT``, ``STDERR``, ``Chef::Log::WinEvt.new`` (|windows event logger|, or ``Chef::Log::Syslog.new("chef-client", ::Syslog::LOG_DAEMON)`` (writes to the syslog daemon facility with the originator set as ``chef-client``). The application log will specify the source as ``Chef``. Default value: ``STDOUT``.
 
-Updates for |resource package_windows|
+|resource package_windows| Updates
 -----------------------------------------------------
 The |resource package_windows| resource has two new attributes (``checksum`` and ``remote_file_attributes``) and the ``source`` attribute now supports using a URL:
 
