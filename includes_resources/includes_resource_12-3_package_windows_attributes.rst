@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter| |see providers|
    * - ``success_codes``
-     - |success_codes| Set an array of possible successful installation return codes. Must be an array, and defaults to [0, 42, 127].
+     - Optional. |success_codes| Set an array of possible successful installation return codes. Must be an array, and defaults to [0, 42, 127].
    * - ``source``
      - Optional. |source resource package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``timeout``
