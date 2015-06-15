@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_openstack/includes_openstack_cookbooks.rst
 
-The canonical upstream |chef| cookbooks and example repository are located in the `Stackforge Github organization <https://github.com/stackforge/>`_. Each integrated OpenStack project has a separate cookbook and repository.
+The canonical upstream |chef| cookbooks and example repository are located in the `OpenStack Github organization <https://github.com/openstack/>`_. Each integrated OpenStack project has a separate cookbook and repository.
 
 |openstack| Cookbooks
 -----------------------------------------------------
@@ -64,4 +64,3 @@ Test Controller
 Test Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_cookbooks_test.rst
-

@@ -15,14 +15,14 @@
 
    for i in client common compute identity image block-storage object-storage network metering dashboard telemetry database orchestration integration-test data-processing;
    do
-     git clone git@github.com:stackforge/cookbook-openstack-$i
+     git clone git@github.com:openstack/cookbook-openstack-$i
      cd cookbook-openstack-$i
-     git remote add gerrit ssh://$GERRIT_USERNAME@review.openstack.org:29418/stackforge/cookbook-openstack-$i.git
+     git remote add gerrit ssh://$GERRIT_USERNAME@review.openstack.org:29418/openstack/cookbook-openstack-$i.git
      git review -s
      cd ../
    done
 
 * After you pull down the code, you'll need to follow the steps in Jay Pipes' excellent post `Working with the OpenStack Code Review and CI system – Chef Edition <http://www.joinfu.com/2013/05/working-with-the-openstack-code-review-and-ci-system-chef-edition/>`_
 * Another tool to make the review process easier is ``git review``, you can install it a few different ways, but the quickest is ``pip install git-review``.
-* If you would like to play round with the ``openstack-chef-repo`` you'll need to do something like above but change the ``git checkout`` to point to `https://github.com/stackforge/openstack-chef-repo <https://github.com/stackforge/openstack-chef-repo>`_
+* If you would like to play round with the ``openstack-chef-repo`` you'll need to do something like above but change the ``git checkout`` to point to `https://github.com/openstack/openstack-chef-repo <https://github.com/openstack/openstack-chef-repo>`_
 * If you find yourself needing to run the CI again and say |github| is having trouble, add a comment "recheck no bug" in |gerrit| to re-run the tests.

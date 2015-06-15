@@ -4,4 +4,4 @@
 
 Installs |openstack horizon|, a dashboard that provides a web-based user interface for |openstack| services. For more information about |openstack horizon|, see http://docs.openstack.org/developer/horizon/.
 
-This cookbook is located at: https://github.com/stackforge/cookbook-openstack-dashboard.
+This cookbook is located at: https://github.com/openstack/cookbook-openstack-dashboard.
