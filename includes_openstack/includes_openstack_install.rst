@@ -8,9 +8,8 @@ Having reviewed the architecture and deployment prerequisites, you should be rea
 * Check out the |openstack chef_repo| from |github|
 * Follow the Berkshelf instructions to download all of the appropriate cookbooks
 * Edit the environment that will be used
-* Upload all the roles, environments, cookbooks and data bags as necessary (using |spiceweasel|). On the appropriate nodes, apply the proper roles to deploy
 * Converge the nodes, controller first, then compute
 * Log in to the |openstack horizon| dashboard and either install or download the private key
 * Create a test node
 
-
+We have a chef-provisioning based installation located `here <https://github.com/openstack/openstack-chef-repo>`_, and if you read the `README.md <https://github.com/openstack/openstack-chef-repo/blob/master/README.md>`_ it should be pretty straight forward.
