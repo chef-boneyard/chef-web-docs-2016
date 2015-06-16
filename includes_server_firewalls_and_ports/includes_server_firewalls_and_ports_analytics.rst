@@ -19,11 +19,11 @@ For communication between |chef analytics| and the |chef server|, ensure that po
    * - 5672
      - |service rabbitmq|
      - no
-   * - 10012
+   * - 10011
      - actions message
      - no
    * - 10013
-     - notifier
+     - notifier_config
      - no
 
 
