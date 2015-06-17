@@ -69,7 +69,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
-**Set default logging level**
+**Specify a log entry**
 
 .. include:: ../../step_resource/step_resource_log_set_info.rst
 
