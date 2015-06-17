@@ -24,7 +24,7 @@ This configuration file has the following general settings:
    * - ``install_path``
      - |directory chef_server| Default value: ``"/opt/opscode"``.
    * - ``from_email``
-     - Default value: ``'"Opscode" <donotreply@opscode.com>'``.
+     - The email address from which invitations to the |chef manage| are sent. Default value: ``'"Opscode" <donotreply@opscode.com>'``.
    * - ``license['nodes']``
      - |license chef_server| Default value: ``25``.
    * - ``license['upgrade_url']``
