@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how the |chef server| sets up and configures |ssl| certificates for |nginx|. For example, each time the ``chef-server-ctl reconfigure`` command is run. The cipher suite used by |nginx| `is configurable <https://docs.chef.io/config_rb_server.html#ssl-protocols>`_ using the ``ssl_protocols`` and ``ssl_ciphers`` settings.
+The following example shows how the |chef server| sets up and configures |ssl| certificates for |nginx|. The cipher suite used by |nginx| `is configurable <https://docs.chef.io/config_rb_server.html#ssl-protocols>`_ using the ``ssl_protocols`` and ``ssl_ciphers`` settings.
 
 .. code-block:: ruby
 
