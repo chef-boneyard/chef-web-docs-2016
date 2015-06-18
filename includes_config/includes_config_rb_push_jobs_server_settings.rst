@@ -14,7 +14,7 @@ This configuration file has the following settings:
    * - ``command_port``
      - The port on which a |push jobs| server listens for requests that are to be executed on managed nodes. Default: 10002
    * - ``heartbeat_interval``
-     - The frequency of the |push jobs| server heartbeat message. Default: 1000 (seconds)
+     - The frequency of the |push jobs| server heartbeat message. Default: 1000 (milliseconds)
    * - ``server_heartbeat_port``
      - The port on which the |push jobs| server receives heartbeat messages from each |push jobs| client. (This port is the ``ROUTER`` half of the |zeromq| DEALER / ROUTER pattern.) Default: 10000
    * - ``server_name``
