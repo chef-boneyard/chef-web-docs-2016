@@ -11,8 +11,8 @@ Before installing the |chef server|, ensure that each machine has the following 
 * **git** --- |git| must be installed so that various internal services can confirm revisions
 * **libfreetype and libpng** --- These libraries are required
 * **Apache Qpid** --- This daemon must be disabled on |centos| and |redhat| systems
-* **Required users** --- If the environment in which the |chef server| will run has restrictions on the creation of local user and group accounts, ensure that the correct users already exist
-* **Firewalls and ports** --- If host-based firewalls (iptables, ufw, etc.) are being used, ensure that ports 80 and 443 are open. These ports are used by the |service nginx| service.
+* **Required users** --- If the environment in which the |chef server| will run has restrictions on the creation of local user and group accounts, ensure that the correct users and groups exist before reconfiguring
+* **Firewalls and ports** --- If host-based firewalls (iptables, ufw, etc.) are being used, ensure that ports 80 and 443 are open. These ports are used by the |service nginx| service
 * **Hostname** --- The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.chef.io/install_server_pre.html#about-the-hostname>`_ for more information
 
 In addition:

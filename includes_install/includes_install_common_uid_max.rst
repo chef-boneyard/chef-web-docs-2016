@@ -3,11 +3,19 @@
 
 The installation process for the |chef server| requires the use of at least 2 user and group identifiers (UIDs and GIDs). These are used to create the ``opscode`` and ``opscode-pgsql`` users and their default groups.
 
-.. note:: The creation of required user and group identifiers is done **automatically** during the installation process for the |chef server|; however, the following user and group accounts **may** be created in advance of installing the |chef server| if specific UIDs and/or GIDs are preferred.
+.. note:: The creation of required user and group identifiers is done **automatically** during the installation process for the |chef server|; however, the following user and group accounts **may** be created in advance of installing the |chef server| if specific UIDs and GIDs are preferred. The user AND group must be created as a pair to satisfy reconfiguration requirements.
 
-   * A local user account under which services will run
-   * A local user account for |postgresql|
-   * A group account under which services will run
+   * A local user account under which services will run, opscode
+   * A local user account for |postgresql|, opscode-pgsql
+   * A group account for each user under which services will run, opscode and opscode-pgsql
+
+   The embedded Chef Server cookbooks can handle two cases
+
+   * Both opscode and opscode-pgsql user and group not found on the new server
+   * Both opscode and opscode-pgsql user and group found on the new server
+
+   Having only the group and not the corresponding users present during a chef-server-ctl reconfigure is unsupported
+   and leads to an error in the reconfiguration run.
 
    To determine the current range of IDs, run the following command:
 
