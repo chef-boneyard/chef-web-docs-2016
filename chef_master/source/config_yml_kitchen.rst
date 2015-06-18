@@ -28,6 +28,10 @@ Driver Settings
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_driver.rst
 
+Bento
+--------------------------------------------------------------------------
+.. include:: ../../includes_bento/includes_bento.rst
+
 Drivers
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst

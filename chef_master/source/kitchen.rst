@@ -8,6 +8,10 @@
 
 .. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See http://kitchen.ci/docs/getting-started/ for more information about |kitchen|.
 
+Bento
+=====================================================
+.. include:: ../../includes_bento/includes_bento.rst
+
 Test Frameworks
 =====================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_tests.rst
