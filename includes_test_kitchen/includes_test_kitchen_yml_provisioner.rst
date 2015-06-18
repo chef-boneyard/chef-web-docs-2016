@@ -50,6 +50,10 @@
      - The path to an RSA key file that is used to decrypt encrypted data bag items.
    * - ``environments_path``
      - The relative path to the directory in which environment data is located. This data must be defined as |json|.
+   * - ``http_proxy``
+     - |http_proxy|
+   * - ``https_proxy``
+     - |https_proxy|
    * - ``json_attributes``
      - |chef client| provisioner only. 
    * - ``kitchen_root``
