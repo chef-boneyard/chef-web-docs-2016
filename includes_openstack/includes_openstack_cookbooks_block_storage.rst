@@ -3,4 +3,4 @@
 
 Installs |openstack cinder|, an |openstack| project that provides block storage as a service. For more information about |openstack cinder|, see http://docs.openstack.org/developer/cinder/.
 
-This cookbook is located at: https://github.com/stackforge/cookbook-openstack-block-storage.
+This cookbook is located at: https://github.com/openstack/cookbook-openstack-block-storage.
