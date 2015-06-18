@@ -16,6 +16,12 @@ SSL Certificates
 
 For more information about the server configuration file, see :doc:`chef-server.rb </config_rb_server>`.
 
+SSL Protocols
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_nginx.rst
+
+.. include:: ../../step_resource/step_resource_file_ssl_keys.rst
+
 |chef analytics_title|
 -----------------------------------------------------
 .. include:: ../../includes_server_security/includes_server_security_ssl_cert_custom_analytics.rst
