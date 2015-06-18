@@ -8,3 +8,4 @@ Use |kitchen| to automatically test cookbook data across any combination of plat
 * Uses a driver plugin architecture
 * Supports cookbook testing across many cloud providers and virtualization technologies
 * Supports all common testing frameworks that are used by the |ruby| community
+* Uses a comprehensive set of base images provided by `Bento <https://github.com/chef/bento>`_ 
