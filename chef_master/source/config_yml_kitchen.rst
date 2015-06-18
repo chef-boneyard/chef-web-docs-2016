@@ -10,17 +10,21 @@ Syntax
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst
 
-Provisioner-specific Settings
+Provisioner Settings
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst
 
 .. note:: There are two community provisioners for |kitchen|: `kitchen-dsc <https://github.com/smurawski/kitchen-dsc>`__ and `kitchen-pester <https://github.com/smurawski/kitchen-pester>`__.
 
-|chef client|-specific Settings
+Working with Proxies
+--------------------------------------------------------------------------
+Use the ``http_proxy`` or ``https_proxy`` settings to configure |kitchen| to work in an environment where proxies are necessary.
+
+|chef client| Settings
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_chef_client.rst
 
-Driver-specific Settings
+Driver Settings
 ==========================================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_driver.rst
 
