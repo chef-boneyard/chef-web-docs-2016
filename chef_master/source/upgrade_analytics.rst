@@ -2,7 +2,7 @@
 Upgrade to |chef analytics_title| 1.1
 =====================================================
 
-The following sections describe the upgrade process from |chef analytics| 1.0.4 to |chef analytics| 1.1.
+The following sections describe the upgrade process to |chef analytics| 1.1.x.
 
 Prerequisites
 =====================================================
@@ -32,7 +32,7 @@ This section describes the upgrade process for a standalone configuraiton:
 
    .. code-block:: bash
       
-      $ rpm /path/to/opscode-analytics-<version>.rpm
+      $ rpm -Uvh /path/to/opscode-analytics-<version>.rpm
 
 #. Run the pre-flight check:
 
