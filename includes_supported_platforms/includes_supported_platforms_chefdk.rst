@@ -18,7 +18,7 @@ The following table lists the Tier 1 supported platforms for the |chef client|:
      - ``10.8``, ``10.9``, ``10.10``
    * - |redhat enterprise linux|
      - 
-     - ``6.x``
+     - ``6.x``, ``7.x``
    * - |ubuntu|
      - 
      - ``12.04``, ``14.04``
