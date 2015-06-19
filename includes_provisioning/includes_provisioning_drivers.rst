@@ -26,7 +26,5 @@ The following drivers are available for |chef provisioning|:
      - A |chef provisioning| driver for |ssh|.
    * - `Vagrant <https://github.com/chef/chef-provisioning-vagrant>`__
      - A |chef provisioning| driver for |vagrant|.
-   * - `VSphere <https://github.com/chef/chef-provisioning-vagrant>`__
-     - A |chef provisioning| driver for |vagrant|.
    * - `vSphere <https://github.com/CenturyLinkCloud/chef-provisioning-vsphere>`__
      - A |chef provisioning| driver for |vmware vsphere|.
