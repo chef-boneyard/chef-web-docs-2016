@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use |kitchen| to automatically test cookbook data across any combination of platforms and test suites:
+Use `Kitchen <http://kitchen.ci>`_  to automatically test cookbook data across any combination of platforms and test suites:
 
 * Defined in a |kitchen yml| file
 * Uses a driver plugin architecture
