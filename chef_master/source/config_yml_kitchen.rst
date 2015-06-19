@@ -18,7 +18,7 @@ Provisioner Settings
 
 Working with Proxies
 --------------------------------------------------------------------------
-Use the ``http_proxy`` or ``https_proxy`` settings to configure |kitchen| to work in an environment where proxies are necessary.
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax_proxy.rst
 
 |chef client| Settings
 ==========================================================================

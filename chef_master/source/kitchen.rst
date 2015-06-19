@@ -40,6 +40,10 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst
 
+Working with Proxies
+--------------------------------------------------------------------------
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax_proxy.rst
+
 For more information ...
 =====================================================
 For more information about test-driven development and |kitchen|:
