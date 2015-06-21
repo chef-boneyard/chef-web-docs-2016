@@ -22,7 +22,7 @@ This |chef provisioning| driver-specific resource has the following attributes:
    * - ``internet_gateway``
      - Use to specify if a defined virtual network has an internet gateway. Possible values: ``true``, ``false``, or ``:detach``. When ``true``, an internet gateway is created and attached to the defined virtual network. When ``false``, an internet gateway is deleted when the ``Owned`` tag on the internet gateway is ``true`` and is detached if the tag is ``false``.
    * - ``main_route_table``
-     - Use to specify the main routing table. This may be the name of an ``aws_route_table`` resource block that exists elsewhere in a cookbook, an actual ``aws_route_table`` resource block that exists in this recipe, or the name of the main route table in |amazon vpc|.
+     - Use to specify the main route table. This may be the name of an ``aws_route_table`` resource block that exists elsewhere in a cookbook, an actual ``aws_route_table`` resource block that exists in this recipe, or the name of the main route table in |amazon vpc|.
    * - ``main_routes``
      - Use to specify a |ruby hash| that defines the routes for the main route table. The destination (on the left side of the ``=>``) must be a |cidr| block. The target (on the right side of the ``=>``) may be the identifier for an internet gateway, an instance name, the identifier for network interface, a |chef provisioning| machine name, or a |chef provisioning| resource.
 
@@ -36,6 +36,6 @@ This |chef provisioning| driver-specific resource has the following attributes:
           }
 
    * - ``name``
-     - Use to specify the name of the VPC. Because the name of a |amazon vpc| instance is not guaranteed to be unique for an account at |amazon aws|, |chef provisioning| will store the associated identifier on the |chef server| using the ``data/aws_vpc/<name>`` data bag.
+     - Use to specify the name of the defined virtual network. Because the name of a |amazon vpc| instance is not guaranteed to be unique for an account at |amazon aws|, |chef provisioning| will store the associated identifier on the |chef server| using the ``data/aws_vpc/<name>`` data bag.
    * - ``vpc_id``
      - The identifier for the |amazon vpc|.
