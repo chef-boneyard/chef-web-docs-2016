@@ -224,6 +224,98 @@ AWS Driver Resources
 =====================================================
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning.rst
 
+The following driver-specific resources are available for |amazon aws| and |chef provisioning|:
+
+* ``aws_auto_scaling_group``
+* ``aws_cache_cluster``
+* ``aws_cache_replication_group``
+* ``aws_cache_subnet_group``
+* ``aws_dhcp_options``
+* ``aws_ebs_volume``
+* ``aws_eip_address``
+* ``aws_image``
+* ``aws_instance``
+* ``aws_internet_gateway``
+* ``aws_key_pair``
+* ``aws_launch_configuration``
+* ``aws_load_balancer``
+* ``aws_network_interface``
+* ``aws_route_table``
+* ``aws_s3_bucket``
+* ``aws_security_group``
+* ``aws_sns_topic``
+* ``aws_sqs_queue``
+* ``aws_subnet``
+* ``aws_vpc``
+
+aws_security_group
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_security_group.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_security_group_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_security_group_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Delete a security group**
+
+.. code-block:: ruby
+
+   aws_security_group 'test-sg' do
+     vpc 'test-vpc'
+     action :delete
+   end	
+
+**Define inbound rules**
+
+.. code-block:: ruby
+
+   aws_security_group 'ref-sg1-eni' do
+     vpc 'ref-vpc-eni'
+     inbound_rules 'ref-sg1-eni' => 2224
+   end
+
+aws_subnet
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_subnet.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_subnet_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_subnet_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Remove the default subnet**
+
+.. code-block:: ruby
+
+   aws_subnet "default" do
+     availability_zone availability_zone
+     action :destroy
+   end
+
+**Add a public subnet**
+
+.. code-block:: ruby
+
+   aws_subnet "public-#{availability_zone}" do
+     availability_zone availability_zone
+     cidr_block "10.0.#{128+class_c}.0/24"
+     route_table 'public-routes'
+     map_public_ip_on_launch true
+   end
+
 aws_vpc
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc.rst
@@ -239,17 +331,21 @@ Attributes
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: ruby
-
-   aws_vpc "provisioning-vpc" do
-     cidr_block "10.0.0.0/24"
-     internet_gateway true
-     main_routes '0.0.0.0/0' => :internet_gateway
-   end
+**Add a defined virtual network (VPC)**
 
 .. code-block:: ruby
 
    aws_vpc 'test-vpc' do
      cidr_block '10.0.0.0/24'
      internet_gateway true
+   end
+
+**Add a defined virtual network (VPC) with route table**
+
+.. code-block:: ruby
+
+   aws_vpc "provisioning-vpc" do
+     cidr_block "10.0.0.0/24"
+     internet_gateway true
+     main_routes '0.0.0.0/0' => :internet_gateway
    end
