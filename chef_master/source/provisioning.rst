@@ -314,6 +314,35 @@ Examples
    end
 
 
+aws_sqs_queue
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sqs_queue.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sqs_queue_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sqs_queue_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Create an SQS queue**
+
+.. code-block:: ruby
+
+   aws_sqs_queue 'ref-sqs-queue'
+
+**Delete an SQS queue**
+
+.. code-block:: ruby
+
+   aws_sqs_queue 'ref-sqs-queue' do
+     action :destroy
+   end
+
 
 aws_subnet
 -----------------------------------------------------
