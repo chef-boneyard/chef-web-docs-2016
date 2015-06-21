@@ -1,0 +1,11 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+
+A driver-specific resource is a statement of configuration policy that:
+
+* Describes the desired state for a configuration item that is created using |chef provisioning|
+* Declares the steps needed to bring that item to the desired state
+* Specifies a resource type---such as ``package``, ``template``, or ``service`` 
+* Lists additional details (also known as attributes), as necessary
+* Are grouped into recipes, which describe working configurations
