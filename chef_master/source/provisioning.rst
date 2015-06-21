@@ -14,6 +14,10 @@ Drivers
 =====================================================
 .. include:: ../../includes_provisioning/includes_provisioning_drivers.rst
 
+Driver-specific Resources
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning.rst
+
 Machine Resources
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common.rst
@@ -215,3 +219,37 @@ Examples
 **Build a machine from a machine image**
 
 .. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
+
+AWS Driver Resources
+=====================================================
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning.rst
+
+aws_vpc
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: ruby
+
+   aws_vpc "provisioning-vpc" do
+     cidr_block "10.0.0.0/24"
+     internet_gateway true
+     main_routes '0.0.0.0/0' => :internet_gateway
+   end
+
+.. code-block:: ruby
+
+   aws_vpc 'test-vpc' do
+     cidr_block '10.0.0.0/24'
+     internet_gateway true
+   end
