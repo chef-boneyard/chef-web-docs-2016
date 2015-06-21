@@ -248,6 +248,33 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
+
+aws_s3_bucket
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_s3_bucket.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_s3_bucket_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_s3_bucket_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Delete a security group**
+
+.. code-block:: ruby
+
+   aws_s3_bucket 'aws-bucket' do
+     enable_website_hosting true
+     website_options :index_document => { :suffix => "index.html" },
+                     :error_document => { :key => "not_found.html" }
+   end
+
+
 aws_security_group
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_security_group.rst
