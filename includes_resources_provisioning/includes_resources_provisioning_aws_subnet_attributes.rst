@@ -18,4 +18,4 @@ This |chef provisioning| driver-specific resource has the following attributes:
    * - ``route_table``
      - Use to specify the route table associated with this subnet. This may be the name of an ``aws_route_table`` resource block that exists elsewhere in a cookbook, an actual ``aws_route_table`` resource block that exists in this recipe, or the name of the main route table in |amazon vpc|. Default value: ``:default_to_main``, which will detach any explicit route table that may be associated with this subnet, and then use the subnet that exists for the defined virtual network in which this subnet exists.
    * - ``subnet_id``
-     - The identifier for the subnet.
+     - Use to specify the identifier for the subnet.

@@ -167,4 +167,4 @@ This |chef provisioning| driver-specific resource has the following attributes:
    * - ``security_group_id``
      - Use to specify the |amazon aws| security group identifier.
    * - ``vpc``
-     - The identifier for the |amazon vpc|.
+     - Use to specify the identifier for the |amazon vpc|.

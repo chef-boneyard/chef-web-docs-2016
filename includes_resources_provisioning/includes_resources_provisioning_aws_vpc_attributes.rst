@@ -38,4 +38,4 @@ This |chef provisioning| driver-specific resource has the following attributes:
    * - ``name``
      - Use to specify the name of the defined virtual network. Because the name of a |amazon vpc| instance is not guaranteed to be unique for an account at |amazon aws|, |chef provisioning| will store the associated identifier on the |chef server| using the ``data/aws_vpc/<name>`` data bag.
    * - ``vpc_id``
-     - The identifier for the |amazon vpc|.
+     - Use to specify the identifier for the |amazon vpc|.
