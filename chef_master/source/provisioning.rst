@@ -281,6 +281,40 @@ Examples
      inbound_rules 'ref-sg1-eni' => 2224
    end
 
+
+aws_sns_topic
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sns_topic.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sns_topic_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sns_topic_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Create an SNS topic named "seapower"**
+
+.. code-block:: ruby
+
+   aws_sns_topic 'seapower' do
+     arn 'arn:aws:sns:us-west-1:5060091557628:seapower'
+   end
+
+**Delete an SNS topic**
+
+.. code-block:: ruby
+
+   aws_sns_topic 'ref-sns-topic' do
+     action :destroy
+   end
+
+
+
 aws_subnet
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_subnet.rst
