@@ -249,6 +249,30 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_vpc``
 
 
+aws_route_table
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_route_table.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_route_table_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_route_table_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Define a route table**
+
+.. code-block:: ruby
+
+   aws_route_table 'ref-public1' do
+     vpc 'test-vpc'
+     routes '0.0.0.0/0' => :internet_gateway
+   end
+
 aws_s3_bucket
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_s3_bucket.rst
