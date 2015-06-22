@@ -248,6 +248,32 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
+aws_launch_configuration
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_launch_configuration.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_launch_configuration_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_launch_configuration_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Define an AMI instance type**
+
+.. code-block:: ruby
+
+   aws_launch_configuration 'ref-launch-configuration' do
+     image 'ref-machine_image1'
+     instance_type 't1.micro'
+     options security_groups: 'ref-sg1'
+   end
+
+
 aws_load_balancer
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_load_balancer.rst
