@@ -248,6 +248,33 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
+
+aws_key_pair
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_key_pair.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_key_pair_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_key_pair_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: ruby
+
+   aws_key_pair 'ref-key-pair' do
+     private_key_options({
+       :format => :pem,
+       :type => :rsa,
+       :regenerate_if_different => true
+     })
+     allow_overwrite true
+   end
+
 aws_launch_configuration
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_launch_configuration.rst
