@@ -248,6 +248,27 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
+
+
+
+aws_cache_subnet_group
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_subnet_group.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_subnet_group_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_subnet_group_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+
 aws_dhcp_options
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_dhcp_options.rst
@@ -282,6 +303,8 @@ Examples
    aws_dhcp_options 'ref-dhcp-options' do
      action :destroy
    end
+
+
 
 aws_ebs_volume
 -----------------------------------------------------
