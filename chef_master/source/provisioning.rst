@@ -249,6 +249,33 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_vpc``
 
 
+
+aws_network_interface
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_network_interface.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_network_interface_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_network_interface_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Define a network interface**
+
+.. code-block:: ruby
+
+   aws_network_interface 'ref-eni-1' do
+     machine 'ref-machine-eni-1'
+     subnet 'ref-subnet-eni'
+     security_groups ['ref-sg1-eni']
+     description 'ref-eni-desc'
+   end
+
 aws_route_table
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_route_table.rst
