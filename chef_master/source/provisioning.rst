@@ -250,6 +250,23 @@ The following driver-specific resources are available for |amazon aws| and |chef
 
 
 
+aws_cache_cluster
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_cluster.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_cluster_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_cluster_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
 
 aws_cache_replication_group
 -----------------------------------------------------
