@@ -248,6 +248,40 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
+aws_dhcp_options
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_dhcp_options.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_dhcp_options_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_dhcp_options_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Create an option set**
+
+.. code-block:: ruby
+
+   aws_dhcp_options 'ref-dhcp-options' do
+     domain_name 'example.com'
+     domain_name_servers %w(8.8.8.8 8.8.4.4)
+     netbios_name_servers %w(8.8.8.8 8.8.4.4)
+     netbios_node_type 2
+     aws_tags :chef_type => "aws_dhcp_options"
+   end
+
+**Destroy an option set**
+
+.. code-block:: ruby
+
+   aws_dhcp_options 'ref-dhcp-options' do
+     action :destroy
+   end
 
 aws_ebs_volume
 -----------------------------------------------------
