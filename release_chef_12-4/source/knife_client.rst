@@ -2,13 +2,13 @@
 .. THIS PAGE DOCUMENTS chef-client version 12.4
 
 =====================================================
-knife client 
+knife client
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_client.rst
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
-   
+
 bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_bulk_delete.rst
@@ -35,7 +35,20 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_client_create_options.rst
+``-a``, ``--admin``
+   Open source 11 |chef server|. |admin client| This option will have no effect when used with |chef server oec| server or Chef 12 server.
+
+``-f FILE``, ``--file FILE``
+   Write the private key to a file if the server generated one.
+
+``--validator``
+   Use to create the client as the |chef validator|. Default value: ``true``.
+
+``-p FILE``, ``--public-key FILE``
+   Set the initial default key for the client from a file on disk (cannot pass with --create-key).
+
+``-k``, ``--prevent-keygen``
+   API V1 only. Prevent server from generating a default key pair for you. Cannot be passed with --public-key.
 
 .. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
 
