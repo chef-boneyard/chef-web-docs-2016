@@ -248,7 +248,21 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
+aws_load_balancer
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_load_balancer.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_load_balancer_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_load_balancer_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
 
 aws_network_interface
 -----------------------------------------------------
