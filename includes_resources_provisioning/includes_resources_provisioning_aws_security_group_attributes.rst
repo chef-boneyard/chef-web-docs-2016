@@ -31,10 +31,10 @@ This |chef provisioning| driver-specific resource has the following attributes:
 
        .. code-block:: ruby
 
-		  {
+          {
             <permitted_source> => <port>,
             ...
-		  }
+          }
 
        where
 
@@ -105,10 +105,10 @@ This |chef provisioning| driver-specific resource has the following attributes:
 
        .. code-block:: ruby
 
-		  {
+          {
             <permitted_source> => <port>,
             ...
-		  }
+          }
 
        where
 
