@@ -249,6 +249,30 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_vpc``
 
 
+aws_internet_gateway
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_internet_gateway.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_internet_gateway_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_internet_gateway_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Create an internet gateway**
+
+.. code-block:: ruby
+
+   aws_internet_gateway 'name' do
+     internet_gateway_id '1234567890'
+   end
+
+
 aws_key_pair
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_key_pair.rst
@@ -263,6 +287,8 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Create a private key, regenerate it if necessary**
 
 .. code-block:: ruby
 
