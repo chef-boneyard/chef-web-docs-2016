@@ -19,23 +19,23 @@ Service Discovery
 The following cookbooks are available to help manage service discovery:
 
 * Use the `chef-etcd cookbook <https://github.com/ranjib/chef-etcd>`__ to read and write keys/values in ``etcd``, as well as saving |chef client| run data within ``etcd``; use the `etcd cookbook <https://supermarket.chef.io/cookbooks/etcd>`__ cookbook to set up ``etcd``
-* Use the `consul cookbook <https://supermarket.chef.io/cookbooks/consul>`__ to set up the Consul client, server, and user interface
-* Use the `serf cookbook <https://supermarket.chef.io/cookbooks/serf>`__ to set up and manage Serf
+* Use the `consul cookbook <https://supermarket.chef.io/cookbooks/consul>`__ to set up the |consul| client, server, and user interface
+* Use the `serf cookbook <https://supermarket.chef.io/cookbooks/serf>`__ to set up and manage |serf|
 * Use the `zookeeper cookbook <https://supermarket.chef.io/cookbooks/zookeeper>`__ to set up and manage |zookeeper|, which also provides an interface for modifying the |zookeeper| cluster configuration
 
 Schedule and Resources
 =====================================================
 The following cookbooks are available to help manage schedule and resource allocation:
 
-* Use the `mesos cookbook <https://supermarket.chef.io/cookbooks/mesos>`__ to set up and manage the Apache Mesos framework
-* Use the `marathon cookbook <https://github.com/mdsol/marathon_cookbook>`__ to set up and manage Mesosphere Marathon, framework for long-running services that runs on Apache Mesos
-* Use the `chronos cookbook <https://github.com/mdsol/chronos_cookbook>`__ to set up and manage Chronos, a fault-tolerant job scheduler that handles dependencies and iso8601-based schedules and runs on Apache Mesos
-* Use the `kubernetes cookbook <https://github.com/chenzhiwei/kubernetes-cookbook>`__ to set up and manage Kubernetes on |redhat| and |centos| 7.x
-* Use the `k8s cookbook <https://supermarket.chef.io/cookbooks/k8s>`__ to deploy Kubernetes entities, such as pods, replication controllers, and services
+* Use the `mesos cookbook <https://supermarket.chef.io/cookbooks/mesos>`__ to set up and manage the |apache mesos| framework
+* Use the `marathon cookbook <https://github.com/mdsol/marathon_cookbook>`__ to set up and manage |apache mesos_marathon|, framework for long-running services that runs on |apache mesos|
+* Use the `chronos cookbook <https://github.com/mdsol/chronos_cookbook>`__ to set up and manage |chronos|, a fault-tolerant job scheduler that handles dependencies and iso8601-based schedules and runs on |apache mesos|
+* Use the `kubernetes cookbook <https://github.com/chenzhiwei/kubernetes-cookbook>`__ to set up and manage |kubernetes| on |redhat| and |centos| 7.x
+* Use the `k8s cookbook <https://supermarket.chef.io/cookbooks/k8s>`__ to deploy |kubernetes| entities, such as pods, replication controllers, and services
 
 Build Container Images
 =====================================================
-Use `Packer <http://packer.io>`__ to build any infrastructure image type with the |chef client| or |chef solo| as the provisioner. This enables the use of |chef| to declaratively state what an infrastructure image should be, and then use |chef| to easily manage lightweight immutable infrastructure images. Packer has support for |docker| as a build target and can push images to the |docker| registry as a post-processor. 
+Use `Packer <http://packer.io>`__ to build any infrastructure image type with the |chef client| or |chef solo| as the provisioner. This enables the use of |chef| to declaratively state what an infrastructure image should be, and then use |chef| to easily manage lightweight immutable infrastructure images. |packer| has support for |docker| as a build target and can push images to the |docker| registry as a post-processor. 
 
 
 Provisioning
@@ -56,7 +56,7 @@ Infrastructure Testing
 
 APIs
 =====================================================
-Use the  `docker-api <https://github.com/swipely/docker-api>`__ gem to interact programmatically with the Docker API from within |chef| recipes. |company_name| is a contributor.
+Use the  `docker-api <https://github.com/swipely/docker-api>`__ gem to interact programmatically with the |docker| API from within |chef| recipes. |company_name| is a contributor.
 
 
 For more information ...
