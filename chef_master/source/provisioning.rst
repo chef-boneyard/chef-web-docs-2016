@@ -249,6 +249,97 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_vpc``
 
 
+aws_ebs_volume
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_ebs_volume.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_ebs_volume_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_ebs_volume_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Create**
+
+.. code-block:: ruby
+
+   aws_ebs_volume 'ref-volume-ebs' do
+     availability_zone 'a'
+     size 1
+   end
+
+**Attach to a machine**
+
+.. code-block:: ruby
+
+   aws_ebs_volume 'ref-volume-ebs' do
+     machine 'ref-machine-1'
+     device '/dev/xvdf'
+   end
+
+**Reattach to a different device**
+
+.. code-block:: ruby
+
+   aws_ebs_volume 'ref-volume-ebs' do
+     device '/dev/xvdg'
+   end
+
+**Reattach to a different machine**
+
+.. code-block:: ruby
+
+   aws_ebs_volume 'ref-volume-ebs' do
+     machine 'ref-machine-2'
+     device '/dev/xvdf'
+   end
+
+**Skip reattaching**
+
+.. code-block:: ruby
+
+   aws_ebs_volume 'ref-volume-ebs' do
+     machine 'ref-machine-2'
+     device '/dev/xvdf'
+   end
+
+**Create and attach**
+
+.. code-block:: ruby
+
+   aws_ebs_volume 'ref-volume-ebs-2' do
+     availability_zone 'a'
+     size 1
+     machine 'ref-machine-1'
+     device '/dev/xvdf'
+   end
+
+**Detach**
+
+.. code-block:: ruby
+
+   aws_ebs_volume 'ref-volume-ebs' do
+     machine false
+   end
+
+**Delete**
+
+.. code-block:: ruby
+
+   ['ref-volume-ebs', 'ref-volume-ebs-2'].each { |volume|
+     aws_ebs_volume volume do
+       action :destroy
+     end
+   }
+
+
+
+
 aws_eip_address
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_eip_address.rst
