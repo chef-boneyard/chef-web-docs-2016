@@ -250,6 +250,33 @@ The following driver-specific resources are available for |amazon aws| and |chef
 
 
 
+aws_auto_scaling_group
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_auto_scaling_group.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_auto_scaling_group_syntax.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_auto_scaling_group_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Define an auto scaling group**
+
+.. code-block:: ruby
+
+   aws_auto_scaling_group 'my-awesome-auto-scaling-group' do
+     desired_capacity 3
+     min_size 1
+     max_size 5
+     launch_config 'my-sweet-launch-config'
+   end
+
+
 aws_cache_cluster
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_cluster.rst
