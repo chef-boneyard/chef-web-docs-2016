@@ -265,6 +265,10 @@ reconfigure
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_reconfigure.rst
 
+reindex
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_reindex.rst
+
 show-config
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show_config.rst
