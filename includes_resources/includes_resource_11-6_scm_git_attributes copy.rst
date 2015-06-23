@@ -29,11 +29,7 @@ This resource has the following attributes:
      - |uri repository_git|
    * - ``revision``
      - |revision| Default value: ``HEAD``.
-
-       .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
-   * - ``timeout``
-     - |timeout scm| |timeout scm_value_git|
    * - ``user``
      - |user checked_out_code|

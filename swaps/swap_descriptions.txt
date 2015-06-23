@@ -153,7 +153,7 @@
 .. |cache_path| replace:: Use to specify the home directory for the user that is running the |chef client| as a non-root user.
 .. |cachedir| replace:: The directory in which |yum| stores cache and db files.
 .. |CATEGORY| replace:: The cookbook category: ``"Databases"``, ``"Web Servers"``, ``"Process Management"``, ``"Monitoring & Trending"``, ``"Programming Languages"``, ``"Package Management"``, ``"Applications"``, ``"Networking"``, ``"Operating Systems & Virtualization"``, ``"Utilities"``, or ``"Other"``.
-.. |checkout_branch git| replace:: Use to specify the name of a branch to be checked out.
+.. |checkout_branch git| replace:: Use to do a one-time checkout from |git| **or** use when a branch in the upstream repository is named ``deploy``. To prevent the |resource scm_git resource from attempting to check out master from master, set ``enable_checkout`` to ``false`` when using the ``checkout_branch`` attribute.
 .. |checkpoint_completion_target| replace:: A completion percentage that is used to determine how quickly a checkpoint should finish in relation to the completion status of the next checkpoint. For example, if the value is ``0.5``, then a checkpoint will attempt to finish before 50% of the next checkpoint is done.
 .. |checkpoint_segments| replace:: The maximum amount (in megabytes) between checkpoints in log file segments.
 .. |checkpoint_timeout| replace:: The amount of time (in minutes) between checkpoints.
@@ -1272,7 +1272,7 @@
 .. |retry_delay| replace:: Use to specify the retry delay (in seconds).
 .. |returns| replace:: A comma-delimited list of return codes, which indicate the success or failure for the command that was run remotely.
 .. |return_value cmd| replace:: The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match.
-.. |revision| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
+.. |revision| replace:: Use to specify a branch, tag, or commit to be synchronized with |git|. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
 .. |rights windows security| replace:: The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a |ruby hash| with one (or more) advanced rights options.
 .. |role chef_server| replace:: The configuration type of the |chef server|.
 .. |role memcached| replace:: The name of a role. During a |chef client| run, a search will be performed to find a node with the same name as this value in the same environment as the current role. If a node is found, it's IP address will be used when rendering the ``memcached.yml`` file.

@@ -12,13 +12,13 @@ This resource has the following attributes:
    * - ``additional_remotes``
      - |additional_remotes|
    * - ``checkout_branch``
-     - |checkout_branch git| Default value: ``deploy``.
+     - |checkout_branch git| See ``revision``. Default value: ``deploy``.
    * - ``depth``
      - |depth git_shallow_clone| The default behavior will do a full clone.
    * - ``destination``
      - |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
    * - ``enable_checkout``
-     - |enable_git_checkout| Default value: ``true``.
+     - |enable_git_checkout| Set to ``false`` when using the ``checkout_branch`` attribute to prevent the |resource scm_git| resource from attempting to check out master from master. Default value: ``true``.
    * - ``enable_submodules``
      - |enable_submodules| Default value: ``false``.
    * - ``group``
@@ -32,7 +32,9 @@ This resource has the following attributes:
    * - ``repository``
      - |uri repository_git|
    * - ``revision``
-     - |revision| Default value: ``HEAD``.
+     - |revision| See ``checkout_branch``. Default value: ``HEAD``.
+
+       .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
    * - ``timeout``
