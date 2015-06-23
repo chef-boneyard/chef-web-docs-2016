@@ -248,7 +248,9 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
-
+Common Actions
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_actions.rst
 
 aws_auto_scaling_group
 -----------------------------------------------------

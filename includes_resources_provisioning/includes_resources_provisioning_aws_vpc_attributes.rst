@@ -9,10 +9,18 @@ This |chef provisioning| driver-specific resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``aws_tags``
+     - |aws_tag|
+
+       .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
+   * - ``chef_server``
+     - |provisioning_server|
    * - ``cidr_block``
      - Required. Use to specify the |cidr| block of IP address that are associated with a defined virtual network. For example, ``'10.0.0.0/24'`` will give 256 addresses and ``'10.0.0.0/16'`` will give 65536.
    * - ``dhcp_options``
      - Use to specify the DHCP options for the defined virtual network.
+   * - ``driver``
+     - |driver_provisioning|
    * - ``enable_dns_hostnames``
      - Use to specify if instances launched in a defined virtual network are assigned DNS hostnames. Possible values: ``true`` or ``false``. When ``true``, ``enable_dns_support`` must also be set to ``true``.
    * - ``enable_dns_support``
@@ -38,6 +46,8 @@ This |chef provisioning| driver-specific resource has the following attributes:
           }
 
        Use ``main_routes`` by itself (without specifying ``main_route_table``) to update the default route table that is created when |amazon aws| creates |amazon vpc|.
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
      - Use to specify the name of the defined virtual network. Because the name of a |amazon vpc| instance is not guaranteed to be unique for an account at |amazon aws|, |chef provisioning| will store the associated identifier on the |chef server| using the ``data/aws_vpc/<name>`` data bag.
    * - ``vpc_id``

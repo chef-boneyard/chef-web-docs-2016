@@ -11,14 +11,24 @@ This |chef provisioning| driver-specific resource has the following attributes:
      - Description
    * - ``availability_zone``
      - Use to specify the availability zone in which the block-level storage device is created.
+   * - ``aws_tags``
+     - |aws_tag|
+
+       .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
+   * - ``chef_server``
+     - |provisioning_server|
    * - ``device``
      - Use to specify the device to which the block-level storage device is attached. For example: ``'/dev/xvdg'``.
+   * - ``driver``
+     - |driver_provisioning|
    * - ``encrypted``
      - Use to specify that a block-level storage device should be encrypted.
    * - ``iops``
      - Required for provisioned volumes. Use to specify the maximum number of input/output operations per second (IOPS) that the block-level storage device will support.
    * - ``machine``
      - Use to specify xxxxx.
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
      - Use to specify the name of the block-level storage device. Because the name of a |amazon vpc| instance is not guaranteed to be unique for an account at |amazon aws|, |chef provisioning| will store the associated identifier on the |chef server| using the ``data/aws_ebs_volume/<name>`` data bag.
    * - ``size``

@@ -9,14 +9,24 @@ This |chef provisioning| driver-specific resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``aws_tags``
+     - |aws_tag|
+
+       .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
    * - ``az_mode``
      - Use to specify if nodes in this group are created in a single availability zone or across multiple availability zones. This attribute is supported only for |memcached| cache clusters. Possible values: ``single-az``, ``cross-az``.
+   * - ``chef_server``
+     - |provisioning_server|
    * - ``cluster_name``
      - Use to specify the name of the cache cluster.
+   * - ``driver``
+     - |driver_provisioning|
    * - ``engine``
      - Use to specify the name of the cache engine for the cache cluster.
    * - ``engine_version``
      - Use to specify the version number of the cache engine.
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``node_type``
      - Use to specify the compute and memory capacity of the nodes in the cache replication group. The possible values depend on the type of nodes: general purpose volumes, provisioned volumes, or magnetic volumes. For example: ``cache.t2.small``, ``cache.r3.2xlarge``, or ``cache.m3.large``.
    * - ``number_nodes``

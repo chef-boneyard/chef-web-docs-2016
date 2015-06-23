@@ -11,14 +11,24 @@ This |chef provisioning| driver-specific resource has the following attributes:
      - Description
    * - ``automatic_failover``
      - Use to specify if a read-only replica is automatically promoted to read/write primary if the existing primary fails. Set to ``true`` to enabme automatic failover for this cache replication group.
+   * - ``aws_tags``
+     - |aws_tag|
+
+       .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
+   * - ``chef_server``
+     - |provisioning_server|
    * - ``description``
      - Use to specify the description for a cache replication group.
+   * - ``driver``
+     - |driver_provisioning|
    * - ``engine``
      - Use to specify the name of the cache engine used for the cache clusters in this cache replication group.
    * - ``engine_version``
      - Use to specify the version number of the cache engine used for the cache clusters in this cache replication group.
    * - ``group_name``
      - Use to specify the name of the cache parameter group to be associated with this cache replication group. If this value is not specified, the default cache parameter group for the specified ``engine`` will be used.
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``node_type``
      - Use to specify the compute and memory capacity of the nodes in the cache replication group. The possible values depend on the type of nodes: general purpose volumes, provisioned volumes, or magnetic volumes. For example: ``cache.t2.small``, ``cache.r3.2xlarge``, or ``cache.m3.large``.
    * - ``number_cache_clusters``

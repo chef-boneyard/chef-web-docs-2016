@@ -9,12 +9,22 @@ This |chef provisioning| driver-specific resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``aws_tags``
+     - |aws_tag|
+
+       .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
+   * - ``chef_server``
+     - |provisioning_server|
    * - ``description``
      - Use to specify the description for the network interface.
    * - ``device_index``
      - Use to specify the attachment order position for the network interface.
+   * - ``driver``
+     - |driver_provisioning|
    * - ``machine``
      - Use to specify the name of the |amazon aws| instance for which this network interface is associated.
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
      - Use to specify the name of the network interface.
    * - ``network_interface_id``

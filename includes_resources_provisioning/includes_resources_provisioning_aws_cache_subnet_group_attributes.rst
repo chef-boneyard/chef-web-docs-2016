@@ -9,9 +9,19 @@ This |chef provisioning| driver-specific resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``aws_tags``
+     - |aws_tag|
+
+       .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
+   * - ``chef_server``
+     - |provisioning_server|
    * - ``description``
      - Use to specify the description of a cache subnet group.
+   * - ``driver``
+     - |driver_provisioning|
    * - ``group_name``
      - Use to specify the name of a cache subnet group.
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``subnets``
      - Use to specify an array of subnets that are associated with this cache subnet group.

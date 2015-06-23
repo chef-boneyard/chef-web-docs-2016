@@ -10,14 +10,20 @@ This |chef provisioning| driver-specific resource has the following attributes:
    * - Attribute
      - Description
    * - ``aws_tags``
-     - Use to specify a |ruby hash| of tags (key value pairs) to be applied to the |amazon aws| security group object. May be specified as symbols or strings and is stored in |amazon aws| as a string. For example:
+     - |aws_tag|
+
+       For example:
 
        .. code-block:: ruby
 
           aws_tags { :chef_type => "aws_security_group" }
 
+   * - ``chef_server``
+     - |provisioning_server|
    * - ``description``
      - Use to specify a description for the |amazon aws| security group.
+   * - ``driver``
+     - |driver_provisioning|
    * - ``inbound_rules``
      - Use to specify inbound rules. Rules must be specified in one of the following formats:
 
@@ -90,6 +96,8 @@ This |chef provisioning| driver-specific resource has the following attributes:
 
             inbound_rules AWS.ec2.security_groups.first => 80
 
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
      - Use to specify the name of the |amazon aws| security group.
    * - ``outbound_rules``

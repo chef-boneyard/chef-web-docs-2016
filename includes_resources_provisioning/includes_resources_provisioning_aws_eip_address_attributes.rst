@@ -11,8 +11,14 @@ This |chef provisioning| driver-specific resource has the following attributes:
      - Description
    * - ``associate_to_vpc``
      - Use to associate an elastic IP address to a virtual network that is defined in |amazon vpc|.
+   * - ``chef_server``
+     - |provisioning_server|
+   * - ``driver``
+     - |driver_provisioning|
    * - ``machine``
      - Use to specify the xxxxx.
+   * - ``managed_entry_store``
+     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
      - Use to specify the name of an elastic IP address. 
    * - ``public_ip``
