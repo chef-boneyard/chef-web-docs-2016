@@ -20,9 +20,11 @@ This |chef provisioning| driver-specific resource has the following attributes:
    * - ``instance_tenancy``
      - Use to specify if an instance that runs in the defined virtual network instance will run on hardware that is dedicated to a single customer and is physically isolated at the host hardware level from non-dedicated instances. Set to ``:default`` when the instance runs on shared hardware. Set to ``:dedicated`` when the instance runs on dedicated hardware. Default value: ``:default``.
    * - ``internet_gateway``
-     - Use to specify if a defined virtual network has an internet gateway. Possible values: ``true``, ``false``, or ``:detach``. When ``true``, an internet gateway is created and attached to the defined virtual network. When ``false``, an internet gateway is deleted when the ``Owned`` tag on the internet gateway is ``true`` and is detached if the tag is ``false``.
+     - Use to specify if a defined virtual network has an internet gateway. Possible values: ``true`` or ``false``. When ``true``, an internet gateway is created and attached to the defined virtual network. When ``false``, an internet gateway is deleted when the ``Owned`` tag on the internet gateway is ``true`` and is detached if the tag is ``false``.
    * - ``main_route_table``
      - Use to specify the main route table. This may be the name of an ``aws_route_table`` resource block that exists elsewhere in a cookbook, an actual ``aws_route_table`` resource block that exists in this recipe, or the name of the main route table in |amazon vpc|.
+
+       Use ``main_route_table`` by itself (without specifying ``main_routes``) to update the main route association to point to the specified route table. In this situation, use the ``aws_route_table`` resource to manage the route table itself.
    * - ``main_routes``
      - Use to specify a |ruby hash| that defines the routes for the main route table. The destination (on the left side of the ``=>``) must be a |cidr| block. The target (on the right side of the ``=>``) may be the identifier for an internet gateway, an instance name, the identifier for network interface, a |chef provisioning| machine name, or a |chef provisioning| resource.
 
@@ -35,6 +37,7 @@ This |chef provisioning| driver-specific resource has the following attributes:
           '0.0.0.0/0' => :internet_gateway
           }
 
+       Use ``main_routes`` by itself (without specifying ``main_route_table``) to update the default route table that is created when |amazon aws| creates |amazon vpc|.
    * - ``name``
      - Use to specify the name of the defined virtual network. Because the name of a |amazon vpc| instance is not guaranteed to be unique for an account at |amazon aws|, |chef provisioning| will store the associated identifier on the |chef server| using the ``data/aws_vpc/<name>`` data bag.
    * - ``vpc_id``
