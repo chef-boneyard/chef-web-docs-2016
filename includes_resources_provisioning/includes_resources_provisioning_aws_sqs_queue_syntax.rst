@@ -6,11 +6,19 @@ The syntax for using the ``aws_sqs_queue`` driver-specific resource is as follow
 .. code-block:: ruby
 
    aws_sqs_queue 'name' do
-     options({ :delay_seconds => 1 })
+     options                       Hash
    end
 
 where 
 
 * ``aws_sqs_queue`` is the resource
-* ``name`` is the name of the resource block
+* ``name`` is the name of the resource block and also the name of a queue in |amazon sqs|
 * ``options`` is an attribute of this resource, with example values shown. |see attributes|
+
+**Example**
+
+.. code-block:: ruby
+
+   aws_sqs_queue 'name' do
+     options({ :delay_seconds => 1 })
+   end

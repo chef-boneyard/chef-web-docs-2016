@@ -6,12 +6,19 @@ The syntax for using the ``aws_sns_topic`` driver-specific resource is as follow
 .. code-block:: ruby
 
    aws_sns_topic 'name' do
-     arn 'arn:aws:sns:us-west-1:5060091557628:seapower'
-     name seapower
+     arn                           'string'
    end
 
-where 
+where
 
 * ``aws_sns_topic`` is the resource
-* ``name`` is the name of the resource block
+* ``name`` is the name of the resource block and also the name of a topic in |amazon sns|
 * ``arn`` and ``name`` are attributes of this resource, with example values shown. |see attributes|
+
+**Example**
+
+.. code-block:: ruby
+
+   aws_sns_topic 'seapower' do
+     arn 'arn:aws:sns:us-west-1:5060091557628:seapower'
+   end

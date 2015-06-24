@@ -6,11 +6,19 @@ The syntax for using the ``aws_image`` driver-specific resource is as follows:
 .. code-block:: ruby
 
    aws_image 'name' do
-     image_id 'image-1'
+     image_id                      'string'
    end
 
 where 
 
 * ``aws_image`` is the resource
-* ``name`` is the name of the resource block
+* ``name`` is the name of the resource block and also the name of an |amazon ami| image
 * ``image_id`` is an attribute of this resource, with example value shown. |see attributes|
+
+**Example**
+
+.. code-block:: ruby
+
+   aws_image 'name' do
+     image_id 'image-1'
+   end
