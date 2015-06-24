@@ -2,10 +2,10 @@
 .. This file describes a command or a sub-command for chef-server-ctl.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This subcommand has the following syntax:
+This subcommand has the following arguments:
 
-.. code-block:: bash
+``USER_NAME``
+   The user name.
 
-   $ chef-server-ctl list-user-keys USER_NAME [--verbose]
-
-.. warning:: All options for this subcommand must follow all arguments.
+``KEY_NAME``
+   The unique name to be assigned to the key you wish to delete.

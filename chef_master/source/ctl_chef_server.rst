@@ -49,15 +49,19 @@ Key Rotation
 =====================================================
 Use the following commands to manage public and private key rotation for users and clients.
 
+This subcommand was fully released in |chef server| 12.1 and as a preview in the |chef server| 12.0.3.
+
 add-client-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_syntax.rst
+
+**Arguments**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_arguments.rst
 
 **Options**
 
@@ -67,11 +71,13 @@ add-user-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_syntax.rst
+
+**Arguments**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_arguments.rst
 
 **Options**
 
@@ -81,39 +87,37 @@ delete-client-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_syntax.rst
 
-**Options**
+**Arguments**
 
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_options.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_arguments.rst
 
 delete-user-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_syntax.rst
 
-**Options**
+**Arguments**
 
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_options.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_arguments.rst
 
 list-client-keys
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_syntax.rst
+
+**Arguments**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_arguments.rst
 
 **Options**
 
@@ -123,11 +127,13 @@ list-user-keys
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_syntax.rst
+
+**Arguments**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_arguments.rst
 
 **Options**
 
@@ -136,7 +142,6 @@ list-user-keys
 **Example**
 
 .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_list_user_keys.rst
-
 
 master-recover
 =====================================================
@@ -187,7 +192,7 @@ org-delete
    $ chef-server-ctl org-delete infra-testing-20140909
 
 .. code-block:: bash
-      
+
    $ chef-server-ctl org-delete pedant-testing-org
 
 org-list
@@ -273,17 +278,17 @@ show-config
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show_config.rst
 
-.. 
-.. 
+..
+..
 .. Uncomment when https://github.com/chef/chef-server/issues/35 is available.
-.. 
+..
 .. show-versions
 .. =====================================================
 .. .. warning:: This command will be added to the |chef server| in an upcoming release.
-.. 
+..
 .. .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_show-versions.rst
-.. 
-.. 
+..
+..
 
 uninstall
 =====================================================
@@ -446,4 +451,3 @@ tail
 term
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_term.rst
-

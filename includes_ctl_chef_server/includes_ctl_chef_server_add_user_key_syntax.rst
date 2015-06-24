@@ -7,6 +7,6 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl add-user-key USER_NAME PATH_TO_KEY [--expiration-date DATE] [--key-name NAME]
+   $ chef-server-ctl add-user-key USER_NAME [--public-key-path PATH] [--expiration-date DATE] [--key-name NAME]
 
-.. warning:: The parameters for this subcommand must be in the order specified above.
+.. warning:: All options for this subcommand must follow all arguments.

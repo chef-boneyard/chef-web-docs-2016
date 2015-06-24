@@ -1,11 +1,11 @@
 .. This is an included how-to. 
 
 
-To view a list of user keys:
+To view a list of user keys (including public key output):
 
 .. code-block:: bash
 
-   $ chef-server-ctl list-user-keys applejack
+   $ chef-server-ctl list-user-keys applejack --verbose
 
 Returns:
 

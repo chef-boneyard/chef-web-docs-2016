@@ -2,12 +2,10 @@
 .. This file describes a command or a sub-command for chef-server-ctl.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+This subcommand has the following arguments:
 
-This subcommand has the following options:
+``ORG_NAME``
+   The short name for the organization to which the client belongs.
 
-
-``--hide-public-keys``
-   Use to suppress output of full public key strings in command output.
-
-``USER_NAME``
-   The user name.
+``CLIENT_NAME``
+   The name of the client.
