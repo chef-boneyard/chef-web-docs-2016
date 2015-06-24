@@ -14,7 +14,7 @@ template
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_template_syntax.rst
+.. include:: ../../includes_resources/includes_resource_12-0_template_syntax.rst
 
 Actions
 =====================================================
@@ -22,7 +22,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_template_attributes.rst
+.. include:: ../../includes_resources/includes_resource_12-0_template_attributes.rst
 
 .. warning:: |warning selinux_file_based_resources|
 

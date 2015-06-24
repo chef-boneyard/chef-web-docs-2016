@@ -14,7 +14,7 @@ template
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_template_syntax.rst
+.. include:: ../../includes_resources/includes_resource_11-4_template_syntax.rst
 
 Actions
 =====================================================

@@ -6,16 +6,11 @@ The syntax for using the |resource template| resource in a recipe is as follows:
 .. code-block:: ruby
 
    template 'name' do
-     atomic_update               true/false
      backup                      integer
      cookbook                    'string'
-     force_unlink                true/false
      group                       'string'
-     helper                      (:method) { "string"}
-     helpers                     (module)
      inherits                    true/false
      local                       true/false
-     manage_symlink_source       true/false
      mode                        '"string"'
      owner                       'string'
      path                        'string'  # defaults to resource block 'name' if not specified
@@ -24,7 +19,6 @@ The syntax for using the |resource template| resource in a recipe is as follows:
      sensitive                   true/false
      source                      'string' or [ array ]  # filename.erb
      variables                   Hash
-     verify                      'string' or :symbol
      action                      :action
    end
 
@@ -34,4 +28,4 @@ where
 * ``name`` is the name of the resource block, typically the path to the location in which a file is created *and also* the name of the file to be managed. For example: ``/var/www/html/index.html``, where ``/var/www/html/`` is the fully qualified path to the location and ``index.html`` is the name of the file
 * ``source`` is the template file that will be used to create the file on the node, for example: ``index.html.erb``; the template file is located in the ``/templates`` directory of a cookbook
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``atomic_update``, ``backup``, ``cookbook``, ``force_unlink``, ``group``, ``helper``, ``helpers``, ``inherits``, ``local``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``sensitive``, ``source``, ``variables``, and ``verify`` are attributes of this resource, with example values shown. |see attributes|
+* ``backup``, ``cookbook``, ``group``, ``inherits``, ``local``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``sensitive``, ``source``, and ``variables``, are attributes of this resource, with example values shown. |see attributes|
