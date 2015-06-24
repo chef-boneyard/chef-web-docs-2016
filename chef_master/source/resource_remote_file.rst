@@ -18,7 +18,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_12-3_remote_file_attributes.rst
+.. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
 
 .. warning:: |warning selinux_file_based_resources|
 
@@ -42,15 +42,13 @@ Prevent Re-downloads
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_file_redownload.rst
 
-.. 
-.. Providers
-.. =====================================================
-.. .. include:: ../../includes_resources_common/includes_resources_common_provider.rst
-.. 
-.. .. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
-.. 
-.. .. include:: ../../includes_resources/includes_resource_remote_file_providers.rst
-.. 
+Providers
+=====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_provider.rst
+
+.. include:: ../../includes_resources_common/includes_resources_common_provider_attributes.rst
+
+.. include:: ../../includes_resources/includes_resource_remote_file_providers.rst
 
 Examples
 =====================================================

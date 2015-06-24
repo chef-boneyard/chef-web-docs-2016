@@ -67,6 +67,79 @@ Examples
 None.
 
 
+key create
+=====================================================
+.. include:: ../../includes_knife/includes_knife_user_key_create.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_create_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_create_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+key delete
+=====================================================
+.. include:: ../../includes_knife/includes_knife_user_key_delete.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_delete_syntax.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+key edit
+=====================================================
+.. include:: ../../includes_knife/includes_knife_user_key_edit.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_edit_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_edit_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+key list
+=====================================================
+.. include:: ../../includes_knife/includes_knife_user_key_list.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_list_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_list_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+key show
+=====================================================
+.. include:: ../../includes_knife/includes_knife_user_key_show.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_user_key_show_syntax.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+
 list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_list.rst

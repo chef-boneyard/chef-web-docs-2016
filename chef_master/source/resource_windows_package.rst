@@ -16,7 +16,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_12-3_package_windows_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
 
 Providers
 =====================================================
@@ -33,6 +33,18 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_windows_package_install.rst
+
+**Specify a URL for the source attribute**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url.rst
+
+**Specify path and checksum**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url_checksum.rst
+
+**Modify remote_file resource attributes**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_remote_file_attributes.rst
 
 .. 
 .. almost!
