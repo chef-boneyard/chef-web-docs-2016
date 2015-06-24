@@ -132,7 +132,7 @@ New Resource Attributes
 -----------------------------------------------------
 The following attributes are new for |chef client| 12.1.
 
-``verify`` Attribute
+``verify``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The ``verify`` attribute may be used with the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources.
 
@@ -148,7 +148,7 @@ The ``verify`` attribute may be used with the |resource cookbook_file|, |resourc
        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 
-``imports`` Attribute
+``imports``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attribute is new for the |resource dsc_script| resource:
 
@@ -184,7 +184,7 @@ The following attribute is new for the |resource dsc_script| resource:
           imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
 
 
-``compile_time`` Attribute
+``compile_time``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attribute is new for the |resource chef_gem| resource:
 
@@ -203,7 +203,7 @@ The following attribute is new for the |resource chef_gem| resource:
             compile_time false if respond_to?(:compile_time)
           end
 
-"run_as" Attributes
+``run_as_``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attributes are new for the |resource service_windows| resource:
 
