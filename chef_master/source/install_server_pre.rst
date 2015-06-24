@@ -26,6 +26,10 @@ UIDs and GIDs
 =====================================================
 .. include:: ../../includes_install/includes_install_common_selinux.rst
 
+|apparmor|
+=====================================================
+.. include:: ../../includes_install/includes_install_common_apparmor.rst
+
 |apache qpid|
 =====================================================
 .. include:: ../../includes_install/includes_install_common_apache_qpid.rst
