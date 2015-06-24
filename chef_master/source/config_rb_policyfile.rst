@@ -2,7 +2,7 @@
 |policyfile rb|
 =====================================================
 
-.. warning:: This feature is new and expiremental. Some aspects of the design have not yet been finalized. If you are new to |chef|, please don't use it. If you are an experienced user, please try it out and provide feedback. If you do use it, please do so in a location that is isolated from production code.
+.. warning:: This feature is new and experimental. Some aspects of the design have not yet been finalized. If you are new to |chef|, please don't use it. If you are an experienced user, please try it out and provide feedback. If you do use it, please do so in a location that is isolated from production code.
 
 A policy file allows you to specify in a single document the cookbook revisions and recipes that should be applied by the |chef client|. A policy file is uploaded to the |chef server|, where it is associated with a group of nodes. When these nodes are configured by the |chef client|, the |chef client| will make decisions based on settings in the policy file, and will build a run-list based on that information. A policy file may be versioned, and then promoted through deployment stages to safely and reliably deploy new configuration. 
 
