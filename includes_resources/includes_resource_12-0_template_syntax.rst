@@ -1,30 +1,30 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource template| resource in a recipe is as follows:
+The syntax for properties in the |resource template| resource is:
 
 .. code-block:: ruby
 
    template 'name' do
-     atomic_update               true/false
-     backup                      integer
-     cookbook                    'string'
-     force_unlink                true/false
-     group                       'string'
-     helper                      (:method) { "string"}
-     helpers                     (module)
-     inherits                    true/false
-     local                       true/false
-     manage_symlink_source       true/false
-     mode                        '"string"'
-     owner                       'string'
-     path                        'string'  # defaults to resource block 'name' if not specified
-     provider                    Chef::Provider::File::Template
-     rights                      Hash
-     sensitive                   true/false
-     source                      'string' or [ array ]  # filename.erb
-     variables                   Hash
-     action                      :action
+     atomic_update true
+     backup integer
+     cookbook 'string'
+     force_unlink false
+     group 'string'
+     helper (:method) { "string"}
+     helpers (module)
+     inherits true
+     local false
+     manage_symlink_source nil
+     mode 'string'
+     owner 'string'
+     path 'string'  # defaults to 'name' if not specified
+     provider Chef::Provider::File::Template
+     rights Hash
+     sensitive false
+     source 'string' or [ array ]  # filename.erb
+     variables Hash
+     action :action
    end
 
 where 
@@ -34,3 +34,14 @@ where
 * ``source`` is the template file that will be used to create the file on the node, for example: ``index.html.erb``; the template file is located in the ``/templates`` directory of a cookbook
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
 * ``atomic_update``, ``backup``, ``cookbook``, ``force_unlink``, ``group``, ``helper``, ``helpers``, ``inherits``, ``local``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``sensitive``, ``source``, and ``variables`` are attributes of this resource, with example values shown. |see attributes|
+
+For example:
+
+.. code-block:: ruby
+
+   template 'name' do
+     source 'source.erb'
+     owner 'root'
+     group 'root'
+     mode '0644'
+   end
