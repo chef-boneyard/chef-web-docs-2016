@@ -248,6 +248,19 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_subnet``
 * ``aws_vpc``
 
+.. 
+.. Getting Started
+.. -----------------------------------------------------
+.. Use |chef provisioning| to create machines and define how they are connected to each other. To use |chef provisioning| for configuration of these machines on |amazon aws| a node must first be created that can act as the provisioner machine. This node must
+.. 
+.. #. Have the |chef client| installed on it
+.. #. Have |chef provisioning| installed on it, along with the ``chef-provisioning-aws`` |gem|
+.. #. Be configured to talk to |amazon aws| via the |amazon aws| APIs (to request instances, load balancers, and so on)
+.. #. Have credentials that allow access to perform any desired operation, such as creating and/or deleting an instance in |amazon ec2|
+.. 
+.. After an instance is provisioned, use a normal |chef client| run to fine-tune that machine. For example, updating configuration settings, installing packages, and so on.
+.. 
+
 Common Actions
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_actions.rst
