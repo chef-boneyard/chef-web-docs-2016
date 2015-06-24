@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for properties in the |resource template| resource is:
+The syntax for the attributes that are available to the |resource template| resource is:
 
 .. code-block:: ruby
 
@@ -11,12 +11,12 @@ The syntax for properties in the |resource template| resource is:
      cookbook 'string'
      force_unlink false
      group 'string'
-     helper (:method) { "string"}
-     helpers (module)
+     helper(:method) { "string"} # see Helpers below
+     helpers(module) # see Helpers below
      inherits true
      local false
-     manage_symlink_source nil
-     mode '"string"'
+     manage_symlink_source nil # can be true or false
+     mode 'string'
      owner 'string'
      path 'string'  # defaults to 'name' if not specified
      provider Chef::Provider::File::Template
@@ -36,7 +36,7 @@ where
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
 * ``atomic_update``, ``backup``, ``cookbook``, ``force_unlink``, ``group``, ``helper``, ``helpers``, ``inherits``, ``local``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``sensitive``, ``source``, ``variables``, and ``verify`` are attributes of this resource, with example values shown. |see attributes|
 
-For example:
+**Example**
 
 .. code-block:: ruby
 

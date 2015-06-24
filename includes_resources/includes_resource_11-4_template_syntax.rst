@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for properties in the |resource template| resource is:
+The syntax for the attributes that are available to the |resource template| resource is:
 
 .. code-block:: ruby
 
@@ -29,13 +29,15 @@ where
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
 * ``backup``, ``cookbook``, ``group``, ``inherits``, ``local``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, and ``variables``, are attributes of this resource, with example values shown. |see attributes|
 
-For example:
+**Example**
 
 .. code-block:: ruby
 
-   template 'name' do
+   template '/dev/null' do
      source 'source.erb'
      owner 'root'
      group 'root'
      mode '0644'
    end
+
+
