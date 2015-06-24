@@ -5,11 +5,11 @@ The installation process for the |chef server| requires the use of at least two 
 
 .. note:: The creation of required user and group identifiers is done **automatically** during the installation process for the |chef server|; however, the following user and group accounts **may** be created in advance of installing the |chef server| if specific UIDs and GIDs are preferred. The user **and** group must be created as a pair to satisfy reconfiguration requirements.
 
-.. warning:: If the UID and GID of ``opscode`` and ``opscode-pgsql`` do not match on both backend |chef server| machines, a high availability configuration will not run correctly.
-
    * A local user account named ``opscode`` under which services will run
    * A local user account named ``opscode-pgsql`` that is used by |postgresql|
    * A group account for each user account, one named ``opscode`` and the other named ``opscode-pgsql`` under which services will run
+
+.. warning:: If the UID and GID of ``opscode`` and ``opscode-pgsql`` do not match on both backend |chef server| machines, a high availability configuration will not run correctly.
 
    The embedded |chef server| cookbooks can handle two cases:
 
