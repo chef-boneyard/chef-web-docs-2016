@@ -58,7 +58,7 @@ The following attributes have been added to the |resource scm_git| resource:
    * - ``checkout_branch``
      - |checkout_branch git| Default value: ``deploy``.
    * - ``enable_checkout``
-     - |enable_git_checkout| Default value: ``true``.
+     - |enable_git_checkout| Set to ``false`` when using the ``checkout_branch`` attribute to prevent the |resource scm_git| resource from attempting to check out master from master. Default value: ``true``.
 
 knife environment compare
 -----------------------------------------------------
