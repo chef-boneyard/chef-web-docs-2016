@@ -6,19 +6,19 @@ The syntax for the attributes that are available to the |resource template| reso
 .. code-block:: ruby
 
    template 'name' do
-     backup integer
-     cookbook 'string'
-     group 'string'
-     inherits true
-     local false
-     mode 'string'
-     owner 'string'
-     path 'string'  # defaults to 'name' if not specified
-     provider Chef::Provider::File::Template
-     rights Hash
-     source 'string' or [ array ]  # filename.erb
-     variables Hash
-     action :action
+     backup                     integer
+     cookbook                   'string'
+     group                      'string'
+     inherits                   true
+     local                      false
+     mode                       'string'
+     owner                      'string'
+     path                       'string'  # defaults to 'name' if not specified
+     provider                   Chef::Provider::File::Template
+     rights                     Hash
+     source                     'string' or [ array ]  # filename.erb
+     variables                  Hash
+     action                     :action
    end
 
 where 

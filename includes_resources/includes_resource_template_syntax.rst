@@ -6,26 +6,26 @@ The syntax for the attributes that are available to the |resource template| reso
 .. code-block:: ruby
 
    template 'name' do
-     atomic_update true
-     backup integer
-     cookbook 'string'
-     force_unlink false
-     group 'string'
-     helper(:method) { "string"} # see Helpers below
-     helpers(module) # see Helpers below
-     inherits true
-     local false
-     manage_symlink_source nil # can be true or false
-     mode 'string'
-     owner 'string'
-     path 'string'  # defaults to 'name' if not specified
-     provider Chef::Provider::File::Template
-     rights Hash
-     sensitive false
-     source 'string' or [ array ]  # filename.erb
-     variables Hash
-     verify 'string' or :symbol
-     action :action
+     atomic_update              true
+     backup                     integer
+     cookbook                   'string'
+     force_unlink               false
+     group                      'string'
+     helper(:method)            { "string"} # see Helpers below
+     helpers(module)            # see Helpers below
+     inherits                   true
+     local                      false
+     manage_symlink_source nil  # can be true or false
+     mode                       'string'
+     owner                      'string'
+     path                       'string'  # defaults to 'name' if not specified
+     provider                   Chef::Provider::File::Template
+     rights                     Hash
+     sensitive                  false
+     source                     'string' or [ array ]  # filename.erb
+     variables                  Hash
+     verify                     'string' or :symbol
+     action                     :action
    end
 
 where 
