@@ -457,6 +457,12 @@ The |subcommand knife search| subcommand allows filtering search results with a 
 -----------------------------------------------------
 The following attribute is new for the |resource scm_git| resource:
 
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
    * - ``environment``
      - |environment variables|
 
