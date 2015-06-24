@@ -31,22 +31,7 @@ This page describes how to use the |openstack chef| cookbooks as the basis for m
 
 For More Information ...
 =====================================================
-We are a community of developers, deployers and integrators who make working with |openstack| consistent and automated. Join us!
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 0
-
-   * - |irc|
-     - The |irc| channel is on ``irc.freenode.net`` at ``#openstack-chef``.  Many useful conversations and debugging sessions happen there. We also have our |irc| status meeting at 1600 UTC, 1100 EST, 0800 PST on Mondays located in ``#openstack-meeting-3``. Archives and meeting notes are available via http://eavesdrop.openstack.org/meetings/openstack-chef/ and the channel is available via http://webchat.freenode.net/?channels=openstack-chef.
-   * - Mailing List
-     - We leverage the official `OpenStack Dev Mailing list <http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-dev/>`_ for our mailing list communications. We use the tag [chef] to help with the filtering.
-   * - |openstack chef| Wiki
-     - `wiki.openstack.org/wiki/Chef <https://wiki.openstack.org/wiki/Chef/>`_ most of this community information is migrated here
-   * - |twitter|
-     - `@chefopenstack <http://twitter.com/chefopenstack>`_
-
-If you have questions or concerns outside the mailing list, please email jj@chef.io or reach out to ``j^2`` on the IRC channel.
+.. include:: ../../includes_openstack/includes_openstack_more_info.rst
 
 .. toctree::
    :hidden:

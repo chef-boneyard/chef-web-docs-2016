@@ -12,6 +12,6 @@ Guidelines for |openstack chef|:
 * Roles do not provide attributes
 * Search may be short-circuited by attributes that provide a value, such as the IP addresses of services
 * Data bags are used for passwords and the like
-* `Berkshelf <http://berkshelf.com/>`_ is used to manage cookbook versions in the |openstack chef_repo|
-* `Foodcritic <http://acrmp.github.io/foodcritic/>`_ is used for lint-checking the cookbooks
-* `ChefSpec <https://github.com/acrmp/chefspec>`_ is used for basic unit acceptance tests
+* `Berkshelf <http://berkshelf.com/>`__ is used to manage cookbook versions in the |openstack chef_repo|
+* `Foodcritic <http://acrmp.github.io/foodcritic/>`__ is used for lint-checking the cookbooks
+* `ChefSpec <https://github.com/acrmp/chefspec>`__ is used for basic unit acceptance tests
