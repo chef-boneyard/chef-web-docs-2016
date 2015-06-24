@@ -101,10 +101,6 @@ Development
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_develop_irc.rst
 
-|google|
------------------------------------------------------
-.. include:: ../../includes_openstack/includes_openstack_develop_google.rst
-
 Issue Tracking
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_develop_issues.rst
@@ -124,10 +120,6 @@ Repository
 |berkshelf|
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_repo_berkshelf.rst
-
-|spiceweasel|
------------------------------------------------------
-.. include:: ../../includes_openstack/includes_openstack_repo_spiceweasel.rst
 
 Roles
 -----------------------------------------------------
@@ -285,19 +277,4 @@ lrrr.lab.atx
 
 For More Information ...
 =====================================================
-We are a community of developers, deployers and integrators who make working with |openstack| consistent and automated. Join us!
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 0
-
-   * - |irc|
-     - ``#openstack-chef`` is our channel on ``irc.freenode.net``. Many useful conversations and debugging sessions happen there. Archives are available at `community.opscode.com/chat/openstack-chef <http://community.opscode.com/chat/openstack-chef>`_
-   * - Mailing List
-     - `groups.google.com/group/opscode-chef-openstack <http://groups.google.com/group/opscode-chef-openstack>`_ is the mailing list. Traffic is typically a few posts a day, a great place for updates and longer discussions
-   * - |openstack chef| Wiki
-     - `wiki.openstack.org <https://wiki.openstack.org/wiki/Chef/GettingStarted>`_ most of this information is migrated here
-   * - |twitter|
-     - `@chefopenstack <http://twitter.com/chefopenstack>`_
-
-If you have questions or concerns outside the mailing list, please email matt@opscode.com.
+.. include:: ../../includes_openstack/includes_openstack_more_info.rst
