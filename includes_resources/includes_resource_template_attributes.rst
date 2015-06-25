@@ -92,7 +92,7 @@ This resource has the following attributes:
        
        .. include:: ../../includes_template/includes_template_partials_variables_attribute.rst
    * - ``verify``
-     - **Ruby Types:** TrueClass, FalseClass
+     - **Ruby Types:** String, Block
 
        |verify_file|
 
