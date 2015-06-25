@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef| provides a fully functional |chef server| AMI's that can be launched from the |aws marketplace| and come preconfigured with |chef server|, |chef manage|, and |reporting|. We currently offer 7 AMI's that are fully licensed and can accommodate 5, 25, 50, 100, 150, 200 and 250 nodes. The cost of licenses is bundled into the AMI and the billing is done hourly through AWS.
+|chef| provides a fully functional |chef server| AMIs that can be launched from the Amazon Web Services Marketplace and come preconfigured with |chef server|, the |chef manage|, and |reporting|. We currently offer 7 AMIs that are fully licensed and can accommodate 5, 25, 50, 100, 150, 200 and 250 nodes. The cost of licenses is bundled into the AMI and the billing is done hourly through AWS.
 
 Launch the Marketplace AMI
 -----------------------------

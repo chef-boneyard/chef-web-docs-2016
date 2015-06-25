@@ -145,6 +145,7 @@ Cookbooks
    auth
    auth_authentication
    auth_authorization
+   aws_marketplace
    azure_portal
    berkshelf
    chef_client
