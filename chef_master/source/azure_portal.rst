@@ -1,5 +1,5 @@
 =====================================================
-|microsoft| |azure portal|
+|microsoft| Azure Portal
 =====================================================
 
 .. include:: ../../includes_cloud/includes_cloud_azure_portal.rst
