@@ -6,7 +6,7 @@
 Launch the Marketplace AMI
 -----------------------------
 
-#. Login to the `AWS Marketplace <https://aws.amazon.com/marketplace>` using your AWS credentials
+#. Login to the `AWS Marketplace <https://aws.amazon.com/marketplace>`_ using your AWS credentials
 
 #. Choose an AMI based on the number of nodes you intend to manage with Chef.
 
@@ -19,7 +19,7 @@ Launch the Marketplace AMI
 Install the ChefDK
 ----------------------
 
-While the Chef Server has a feature rich Web UI to create and view Chef policy, we'll also want to download and install the `Chef development kit <https://docs.chef.io/install_dk.html>` or ChefDK onto your workstation.
+While the Chef Server has a feature rich Web UI to create and view Chef policy, we'll also want to download and install the `Chef development kit <https://docs.chef.io/install_dk.html>`_ or ChefDK onto your workstation.
 
 Configure the Chef Server Marketplace Appliance
 -------------------------------------------------
