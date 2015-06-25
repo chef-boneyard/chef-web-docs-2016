@@ -4,45 +4,98 @@
 This resource has the following attributes:
 
 .. list-table::
-   :widths: 150 150 450
+   :widths: 150 450
    :header-rows: 1
 
    * - Attribute
-     - Type
-     - Description
+     - Explanation
    * - ``atomic_update``
-     - TrueClass, FalseClass
-     - |atomic_update| Default value: ``true``.
+     - **Ruby Types:**
+
+       TrueClass, FalseClass
+
+       **Description**
+
+       |atomic_update| Default value: ``true``.
    * - ``backup``
-     - FalseClass, Integer
-     - |backups_kept| Default value: ``5``.
+     - **Ruby Types:**
+
+       FalseClass, Integer
+
+       **Description**
+
+       |backups_kept| Default value: ``5``.
    * - ``cookbook``
-     - String
-     - |cookbook file_location| The default value is the current cookbook.
+     - **Ruby Type:**
+
+       String
+
+       **Description**
+
+       |cookbook file_location| The default value is the current cookbook.
    * - ``force_unlink``
-     - TrueClass, FalseClass
-     - |force_unlink| Default value: ``false``.
+     - **Ruby Types:**
+
+       TrueClass, FalseClass
+
+       **Description**
+
+       |force_unlink| Default value: ``false``.
    * - ``group``
-     - Integer, String
-     - |windows group_identifier|
+     - **Ruby Types:**
+
+       Integer, String
+
+       **Description**
+       |windows group_identifier|
    * - ``helper``
-     - Method
-     - |helper| Default value: ``{}``.
+     - **Ruby Type:**
+
+       Method
+
+       **Description**
+
+       |helper| Default value: ``{}``.
    * - ``helpers``
-     - Module
-     - |helpers| Default value: ``[]``.
+     - **Ruby Type:**
+
+       Module
+
+       **Description**
+
+       |helpers| Default value: ``[]``.
    * - ``inherits``
-     - TrueClass, FalseClass
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:**
+
+       TrueClass, FalseClass
+
+       **Description**
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``local``
-     - TrueClass, FalseClass
-     - |local_template| Default value: ``false``.
+     - **Ruby Types:**
+
+       TrueClass, FalseClass
+
+       **Description**
+
+       |local_template| Default value: ``false``.
    * - ``manage_symlink_source``
-     - TrueClass, FalseClass, NilClass
-     - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
+     - **Ruby Types:**
+
+       TrueClass, FalseClass, NilClass
+
+       **Description**
+
+       |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
    * - ``mode``
-     - Integer, String
-     - |mode resource_file|
+     - **Ruby Types:**
+
+       Integer, String
+
+       **Description**
+
+       |mode resource_file|
        
        The behavior is different depending on the platform.
        
@@ -50,32 +103,74 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - Integer, String
-     - |owner windows security|
+     - **Ruby Types:**
+
+       Integer, String
+
+       **Description**
+
+       |owner windows security|
    * - ``path``
-     - String
-     - |path full_path_to_file|
+     - **Ruby Type:**
+
+       String
+
+       **Description**
+
+       |path full_path_to_file|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``
-     - Class
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:**
+
+       Chef Class
+
+       **Description**
+
+       Optional. |provider resource_parameter|
    * - ``rights``
-     - Integer, String
-     - |windows| only. |rights windows security|
+     - **Ruby Types:**
+
+       Integer, String
+
+       **Description**
+
+       |windows| only. |rights windows security|
    * - ``sensitive``
-     - TrueClass, FalseClass
-     - |sensitive| Default value: ``false``.
+     - **Ruby Types:**
+
+       TrueClass, FalseClass
+
+       **Description**
+
+       |sensitive| Default value: ``false``.
    * - ``source``
-     - String, Array
-     - |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:**
+
+       String, Array
+
+       **Description**
+
+       |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
    * - ``variables``
-     - Hash
-     - |variables passed_to_template|
+     - **Ruby Type:**
+
+       Hash
+
+       **Description**
+
+       |variables passed_to_template|
        
        .. include:: ../../includes_template/includes_template_partials_variables_attribute.rst
    * - ``verify``
-     - TrueClass, FalseClass
-     - |verify_file|
+     - **Ruby Types:**
+
+       TrueClass, FalseClass
+
+       **Description**
+
+       |verify_file|
+
+       **Examples**
 
        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
