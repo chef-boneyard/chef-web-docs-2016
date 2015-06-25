@@ -24,9 +24,10 @@ While the Chef Server has a feature rich Web UI to create and view Chef policy, 
 Configure the Chef Server Marketplace Appliance
 -------------------------------------------------
 
-#. Now that you've got the ChefDK installed and the AMI has has enough time to provision and boot you'll need to login to AMI to set up your account and accept the Chef End User Licensing Agreement.  To do so you'll need to SSH into the instance using your keypair and the IP address or public hostname of the instance.  The default user that you'll want to use is 'ec2-user', eg:
+#. Now that you've got the ChefDK installed and the AMI has has enough time to provision and boot you'll need to login to AMI to set up your account and accept the Chef End User Licensing Agreement.  To do so you'll need to SSH into the instance using your keypair and the IP address or public hostname of the instance. The default user that you'll want to use is 'ec2-user', eg:
 
    .. code-block:: bash
+
       $ ssh -i /path/to/your/ssh_key.pem ec2-user@<instance IP address>
 
 #. Once logged in, run the following command:
