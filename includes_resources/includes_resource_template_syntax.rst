@@ -6,17 +6,17 @@ A |resource template| resource block typically declares the location in which a 
 
 .. code-block:: ruby
 
-   template '/etc/chef/server.rb' do
-     source 'server.rb.erb'
+   template '/etc/motd' do
+     source 'motd.erb'
      owner 'root'
      group 'root'
-     mode '00644'
+     mode '0644'
    end
 
 where
 
-* ``'/etc/chef/server.rb'`` specifies the location in which the file is created
-* ``'server.rb.erb'`` specifies the name of a template that exists in in the ``/templates`` folder of a cookbook
+* ``'/etc/motd'`` specifies the location in which the file is created
+* ``'motd.erb'`` specifies the name of a template that exists in in the ``/templates`` folder of a cookbook
 * ``owner``, ``group``, and ``mode`` define the permissions
 
 The full syntax for all of the attributes that are available to the |resource template| resource is:
