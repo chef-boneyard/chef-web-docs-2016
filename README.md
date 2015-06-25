@@ -49,13 +49,6 @@ If you don't use this and want to install into your system Python, prepend this 
 
 Will install all the dependencies you should need.
 
-There are other ways to install Sphinx as well. For example:
-
-    brew install sphinx
-
-for those using Homebrew.
-
-
 
 ## Building Docs
 
