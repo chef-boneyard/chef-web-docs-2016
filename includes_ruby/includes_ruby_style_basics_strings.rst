@@ -10,3 +10,10 @@ Work with strings:
    "double quoted"   # => "double quoted"
    'It\'s alive!'    # => "It's alive!" (the \ is an escape character)
    "1 + 2 = 5"       # => "1 + 2 = 5" (numbers surrounded by quotes behave like strings)
+
+Convert a string to uppercase or lowercase. For example, a hostname named "Foo":
+
+.. code-block:: ruby
+
+   node["hostname"].downcase    # => "foo"
+   node["hostname"].upcase      # => "FOO"
