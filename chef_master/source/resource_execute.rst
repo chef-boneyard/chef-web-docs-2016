@@ -13,8 +13,6 @@ Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_execute_syntax.rst
 
-.. note:: .. include:: ../../includes_resources_common/includes_resources_common_guards_execute_resource.rst
-
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_execute_actions.rst
@@ -26,6 +24,8 @@ Attributes
 Guards
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_guards.rst
+
+.. note:: .. include:: ../../includes_resources_common/includes_resources_common_guards_execute_resource.rst
 
 **Attributes**
 
