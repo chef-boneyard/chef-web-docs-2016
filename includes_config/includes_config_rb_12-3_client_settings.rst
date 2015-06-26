@@ -114,7 +114,7 @@ This configuration file has the following settings:
    * - ``log_location``
      - The location of the log file. Possible values: ``/path/to/log_location``, ``STDOUT``, or ``STDERR``. Default value: ``STDOUT``.
    * - ``minimal_ohai``
-       |minimal_ohai|
+     - |minimal_ohai|
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``no_proxy``

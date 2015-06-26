@@ -114,7 +114,7 @@ This configuration file has the following settings:
    * - ``log_location``
      - The location of the log file. Possible values: ``/path/to/log_location``, ``STDOUT``, ``STDERR``, ``Chef::Log::WinEvt.new`` (|windows event logger|, or ``Chef::Log::Syslog.new("chef-client", ::Syslog::LOG_DAEMON)`` (writes to the syslog daemon facility with the originator set as ``chef-client``). The application log will specify the source as ``Chef``. Default value: ``STDOUT``.
    * - ``minimal_ohai``
-       |minimal_ohai|
+     - |minimal_ohai|
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``no_proxy``

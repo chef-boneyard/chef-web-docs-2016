@@ -34,7 +34,7 @@ This configuration file has the following settings:
    * - ``log_location``
      - |log_location| Default value: ``STDOUT``.
    * - ``minimal_ohai``
-       |minimal_ohai|
+     - |minimal_ohai|
    * - ``node_name``
      - |name node|
    * - ``recipe_url``
