@@ -2808,8 +2808,6 @@ template
 
 .. include:: ../../includes_resources/includes_resource_template.rst
 
-.. include:: ../../includes_template/includes_template_requirements.rst
-
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_syntax.rst
@@ -2827,6 +2825,10 @@ Attributes
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_template_providers.rst
 .. 
+
+Using Templates
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_template/includes_template_requirements.rst
 
 File Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2875,7 +2877,6 @@ Transfer Frequency
 Variables
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_template/includes_template_variables.rst
-
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
