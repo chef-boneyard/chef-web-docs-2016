@@ -40,6 +40,8 @@ The following option may be used with |chef client|, |chef solo|, and |chef appl
 ``--minimal-ohai``
    |minimal_ohai|
 
+This setting may be configured using the ``minimal_ohai`` setting in the |client rb| file.
+
 Dynamic Resolution
 -----------------------------------------------------
 .. include:: ../../includes_libraries/includes_libraries_dynamic_resolution.rst
