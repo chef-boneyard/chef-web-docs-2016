@@ -6,36 +6,33 @@ A |resource execute| resource block typically executes a single command that is 
 
 .. code-block:: ruby
 
-   %w{rover fido bubbers}.each do |pet_name|
-     execute "feed_pet_#{pet_name}" do
-       command "echo 'Feeding: #{pet_name}'; touch '/tmp/#{pet_name}'"
-       not_if { ::File.exists?("/tmp/#{pet_name}")}
-     end
+   execute 'apache_configtest' do
+     command '/usr/sbin/apachectl configtest'
    end
 
-where
+where ``'/usr/sbin/apachectl configtest'`` is a command that tests if the configuration files for |apache| are valid.
 
-* ``%w{rover fido bubbers}`` is an array of pet names
-* ``"echo 'Feeding: #{pet_name}'; touch '/tmp/#{pet_name}'"`` is the command that runs for each pet name
-
-A command that is run in combination with another |chef| resource is often similar to the following, where the |resource template| resource creates a configuration file from a template, after which the command enables enable IP forwarding on the node:
+A command that is run in combination with another |chef| resource is often similar to the following, where the |resource template| resource is run along with the previous example to add an entry to the LDAP Directory Interchange Format (LDIF) file:
 
 .. code-block:: ruby
 
-   execute 'forward_ipv4' do
-     command 'echo > /proc/sys/net/ipv4/ip_forward'
+   execute 'slapadd' do
+     command 'slapadd < /tmp/something.ldif'
+     creates '/var/lib/slapd/uid.bdb'
      action :nothing
    end
    
-   template '/etc/file_name.conf' do
-     source 'routing/file_name.conf.erb'
-     notifies :run, 'execute[forward_ipv4]', :delayed
+   template '/tmp/something.ldif' do
+     source 'something.ldif'
+     notifies :run, 'execute[slapadd]', :immediately
    end
 
 where
 
-* ``'forward_ipv4'`` specifies the name of the |resource execute| block that is referenced later by the ``notifies`` in the |resource template| resource block
-* ``'echo > /proc/.../ipv4/ip_forward'`` specifies the command that is run after the |resource execute| resource block is notified
+* ``'/tmp/something.ldif'`` specifies the location of the file
+* ``'something.ldif'`` specifies template file from which ``/tmp/something.ldif`` is created
+* ``'slapadd < /tmp/something.ldif'`` is the command that is run
+* ``/var/lib/slapd/uid.bdb`` prevents the |resource execute| resource block from running if that file already exists
 
 The full syntax for all of the attributes that are available to the |resource execute| resource is:
 
