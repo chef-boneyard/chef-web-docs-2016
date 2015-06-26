@@ -24,11 +24,11 @@ This resource has the following attributes:
 
        |id group|
    * - ``home``
-     - **Ruby Types:** String
+     - **Ruby Type:** String
 
        |home_directory|
    * - ``iterations``
-     - **Ruby Types:** Integer
+     - **Ruby Type:** Integer
 
        |mac os x| platform only, 10.8 (or higher). |iterations|
    * - ``manage_home``
@@ -44,23 +44,23 @@ This resource has the following attributes:
 
        |non_unique_user|
    * - ``password``
-     - **Ruby Types:** String
+     - **Ruby Type:** String
 
        |password shadow_hash|
    * - ``provider``
-     - **Ruby Types:** Chef Class
+     - **Ruby Type:** Chef Class
 
        Optional. |provider resource_parameter| |see providers|
    * - ``salt``
-     - **Ruby Types:** String
+     - **Ruby Type:** String
 
        |mac os x| platform only, 10.7 or higher. |salt| |mac os x| version 10.7 uses SALTED-SHA512 and version 10.8 (and higher) uses SALTED-SHA512-PBKDF2 to calculate password shadow hashes. 
    * - ``shell``
-     - **Ruby Types:** String
+     - **Ruby Type:** String
 
        |shell|
    * - ``supports``
-     - **Ruby Types:** Hash
+     - **Ruby Type:** Hash
 
        |supports user| Default value: ``:manage_home => false, :non_unique => false``.
    * - ``system``
