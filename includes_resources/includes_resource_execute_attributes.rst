@@ -10,30 +10,54 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name command| Default value: the ``name`` of the resource block. |see syntax|
 
        .. note:: Use the |resource execute| resource to run a single command. Use multiple |resource execute| resource blocks to run multiple commands.
    * - ``creates``
-     - |creates file_exists|
+     - **Ruby Type:** String
+
+       |creates file_exists|
    * - ``cwd``
-     - |cwd run_command|
+     - **Ruby Type:** String
+
+       |cwd run_command|
    * - ``environment``
-     - |environment variables|
+     - **Ruby Type:** Hash
+
+       |environment variables|
    * - ``group``
-     - |group command|
+     - **Ruby Types:** String, Integer
+
+       |group command|
    * - ``path``
-     - |path resource execute| The default value uses the system path.
+     - **Ruby Type:** Array
+
+       |path resource execute| The default value uses the system path.
 
        .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``returns``
-     - |return_value cmd| Default value: ``0``.
+     - **Ruby Types:** Integer, Array
+
+       |return_value cmd| Default value: ``0``.
    * - ``sensitive``
-     - |sensitive| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |sensitive| Default value: ``false``.
    * - ``timeout``
-     - |timeout command| Default value: ``3600``.
+     - **Ruby Types:** Integer, Float
+
+       |timeout command| Default value: ``3600``.
    * - ``user``
-     - |user command|
+     - **Ruby Types:** String, Integer
+
+       |user command|
    * - ``umask``
-     - |umask|
+     - **Ruby Types:** String, Integer
+
+       |umask|
