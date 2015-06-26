@@ -24,26 +24,26 @@ The full syntax for all of the attributes that are available to the |resource te
 .. code-block:: ruby
 
    template 'name' do
-     atomic_update              true
-     backup                     integer
-     cookbook                   'string'
-     force_unlink               false
-     group                      'string'
-     helper(:method)            { "string"} # see Helpers below
-     helpers(module)            # see Helpers below
-     inherits                   true
-     local                      false
-     manage_symlink_source nil  # can be true or false
-     mode                       'string'
-     owner                      'string'
-     path                       'string'  # defaults to 'name' if not specified
+     atomic_update              TrueClass, FalseClass
+     backup                     FalseClass, Integer
+     cookbook                   String
+     force_unlink               TrueClass, FalseClass
+     group                      String, Integer
+     helper(:method)            Method { String } # see Helpers below
+     helpers(module)            Module # see Helpers below
+     inherits                   TrueClass, FalseClass
+     local                      TrueClass, FalseClass
+     manage_symlink_source      TrueClass, FalseClass, NilClass
+     mode                       String, Integer
+     owner                      String, Integer
+     path                       String  # defaults to 'name' if not specified
      provider                   Chef::Provider::File::Template
      rights                     Hash
-     sensitive                  false
-     source                     'string' or [ array ]  # filename.erb
+     sensitive                  TrueClass, FalseClass
+     source                     String, Array
      variables                  Hash
-     verify                     'string' or :symbol
-     action                     :action
+     verify                     String, Block
+     action                     Symbol
    end
 
 where 
