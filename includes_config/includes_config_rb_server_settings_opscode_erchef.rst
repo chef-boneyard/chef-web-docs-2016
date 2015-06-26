@@ -69,6 +69,8 @@ This configuration file has the following settings for ``opscode-erchef``:
      - |s3_url_expiry_window_size| Default value: ``:off``.
    * - ``opscode_erchef['s3_url_ttl']``
      - |s3_url_ttl| If node bootstraps are timing out, increase this setting. Default value: ``28800``.
+   * - ``opscode_erchef['strict_search_result_acls']``
+     - When set, return only search results that the querier has read access to, according to each search result's ACL settings. Default value: ``false``.
    * - ``opscode_erchef['udp_socket_pool_size']``
      - Default value: ``20``.
    * - ``opscode_erchef['umask']``
@@ -77,4 +79,3 @@ This configuration file has the following settings for ``opscode-erchef``:
      - Default value: ``chef-validator``.
    * - ``opscode_erchef['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
-
