@@ -43,7 +43,7 @@ The full syntax for all of the attributes that are available to the |resource te
      source                     String, Array
      variables                  Hash
      verify                     String, Block
-     action                     Symbol
+     action                     Symbol # defaults to :create if not specified
    end
 
 where 

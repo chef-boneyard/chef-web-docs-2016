@@ -42,7 +42,7 @@ The full syntax for all of the attributes that are available to the |resource te
      sensitive                  TrueClass, FalseClass
      source                     String, Array
      variables                  Hash
-     action                     Symbol
+     action                     Symbol # defaults to :create if not specified
    end
 
 where 

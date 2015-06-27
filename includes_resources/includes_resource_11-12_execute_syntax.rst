@@ -49,7 +49,7 @@ The full syntax for all of the attributes that are available to the |resource ex
      timeout                    Integer, Float
      user                       String, Integer
      umask                      String, Integer
-     action                     Symbol
+     action                     Symbol # defaults to :run if not specified
    end
 
 where 
