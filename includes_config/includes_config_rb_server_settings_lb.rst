@@ -1,5 +1,5 @@
 .. The contents of this file are included in multiple topics.
-.. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This configuration file has the following settings for ``lb``:
 

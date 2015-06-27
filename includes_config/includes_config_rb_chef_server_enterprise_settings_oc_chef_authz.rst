@@ -1,5 +1,5 @@
 .. The contents of this file are included in multiple topics.
-.. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 .. warning:: This table is available in |chef server oec| 11.2.5 (or higher).
  
