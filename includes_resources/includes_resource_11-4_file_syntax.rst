@@ -23,21 +23,16 @@ The full syntax for all of the attributes that are available to the |resource ex
 .. code-block:: ruby
 
    file 'name' do
-     atomic_update              TrueClass, FalseClass
      backup                     FalseClass, Integer
      checksum                   String
      content                    String
-     force_unlink               TrueClass, FalseClass
      group                      String, Integer
      inherits                   TrueClass, FalseClass
-     manage_symlink_source      TrueClass, FalseClass, NilClass
      mode                       String, Integer
      owner                      String, Integer
      path                       String  # defaults to 'name' if not specified
      provider                   Chef::Provider::File
      rights                     Hash
-     sensitive                  TrueClass, FalseClass
-     verify                     String, Block
      action                     Symbol # defaults to :create if not specified
    end
 
@@ -47,4 +42,4 @@ where
 * ``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the path to the file
 * ``content`` specifies the contents of the file
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``atomic_update``, ``backup``, ``checksum``, ``content``, ``force_unlink``, ``group``, ``inherits``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``sensitive``, and ``verify`` are attributes of this resource, with example values shown. |see attributes|
+* ``backup``, ``checksum``, ``content``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, and ``rights`` are attributes of this resource, with example values shown. |see attributes|

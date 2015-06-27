@@ -12,7 +12,7 @@ file
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_file_syntax.rst
+.. include:: ../../includes_resources/includes_resource_12-0_file_syntax.rst
 
 Actions
 =====================================================

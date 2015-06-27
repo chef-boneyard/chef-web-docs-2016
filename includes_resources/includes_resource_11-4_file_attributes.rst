@@ -10,17 +10,29 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``backup``
-     - |backups_kept| Default value: ``5``.
+     - **Ruby Types:** FalseClass, Integer
+
+       |backups_kept| Default value: ``5``.
    * - ``checksum``
-     - |checksum file| Default value: no checksum required.
+     - **Ruby Types:** String
+
+       |checksum file| Default value: no checksum required.
    * - ``content``
-     - |content file| The default behavior will not modify content.
+     - **Ruby Type:** String
+
+       |content file| The default behavior will not modify content.
    * - ``group``
-     - |windows group_identifier|
+     - **Ruby Types:** Integer, String
+
+       |windows group_identifier|
    * - ``inherits``
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |mode resource_file_11-4|
+     - **Ruby Types:** Integer, String
+
+       |mode resource_file_11-4|
        
        The behavior is different depending on the platform.
        
@@ -28,12 +40,18 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner windows security|	
+     - **Ruby Types:** Integer, String
+
+       |owner windows security|	
    * - ``path``
-     - |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``rights``
-     - |windows| only. |rights windows security|
-   * - ``sensitive``
-     - |sensitive| Default value: ``false``.
+     - **Ruby Types:** Integer, String
+
+       |windows| only. |rights windows security|
