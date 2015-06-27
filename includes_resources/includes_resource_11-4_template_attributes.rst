@@ -10,17 +10,29 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``backup``
-     - |backups_kept| Default value: ``5``.
+     - **Ruby Types:** FalseClass, Integer
+
+       |backups_kept| Default value: ``5``.
    * - ``cookbook``
-     - |cookbook file_location| The default value is the current cookbook.
+     - **Ruby Type:** String
+
+       |cookbook file_location| The default value is the current cookbook.
    * - ``group``
-     - |windows group_identifier|
+     - **Ruby Types:** Integer, String
+
+       |windows group_identifier|
    * - ``inherits``
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``local``
-     - |local_template| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |local_template| Default value: ``false``.
    * - ``mode``
-     - |mode resource_file_11-4|
+     - **Ruby Types:** Integer, String
+
+       |mode resource_file_11-4|
        
        The behavior is different depending on the platform.
        
@@ -28,18 +40,32 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner windows security|
+     - **Ruby Types:** Integer, String
+
+       |owner windows security|
    * - ``path``
-     - |path file| |path_fully_qualified| Default value: ``name``.
+     - **Ruby Type:** String
+
+       |path file| |path_fully_qualified| Default value: ``name``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``rights``
-     - |windows| only. |rights windows security|
+     - **Ruby Types:** Integer, String
+
+       |windows| only. |rights windows security|
    * - ``sensitive``
-     - |sensitive| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |sensitive| Default value: ``false``.
    * - ``source``
-     - |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
    * - ``variables``
-     - |variables passed_to_template|
+     - **Ruby Type:** Hash
+
+       |variables passed_to_template|
        
        .. include:: ../../includes_template/includes_template_partials_variables_attribute.rst
