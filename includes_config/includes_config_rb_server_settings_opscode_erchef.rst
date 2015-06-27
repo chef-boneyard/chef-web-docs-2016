@@ -70,7 +70,7 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['s3_url_ttl']``
      - |s3_url_ttl| If node bootstraps are timing out, increase this setting. Default value: ``28800``.
    * - ``opscode_erchef['strict_search_result_acls']``
-     - When set, return only search results that the querier has read access to, according to each search result's ACL settings. Default value: ``false``.
+     - Use to specify that search results are returned only when a user has read access to the search result, as determined by ACL settings. Default value: ``false``.
    * - ``opscode_erchef['udp_socket_pool_size']``
      - Default value: ``20``.
    * - ``opscode_erchef['umask']``
