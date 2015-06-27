@@ -1,42 +1,42 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource directory| resource in a recipe is as follows:
+
+A |resource directory| resource block declares a directory and the permissions needed on that directory. For example:
 
 .. code-block:: ruby
 
-   directory "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
-   end
-
-where 
-
-* ``directory`` tells the |chef client| to use the ``Chef::Provider::Directory`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the path to the directory, from the root
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-
-For example:
-
-.. code-block:: ruby
-
-   directory "/var/lib/foo" do
+   directory '/etc/apache2' do
      owner 'root'
      group 'root'
      mode '0755'
      action :create
    end
 
-A variable may be used to define a directory, and then again within the recipe itself:
+where
+
+* ``'/etc/apache2'`` specifies the directory
+* ``owner``, ``group``, and ``mode`` define the permissions
+
+The full syntax for all of the attributes that are available to the |resource directory| resource is:
 
 .. code-block:: ruby
 
-   node.default['apache']['dir'] = '/etc/apache2'
-   
-   directory node['apache']['dir'] do
-     owner 'apache'
-     group 'apache'
-     action :create
+   directory 'name' do
+     group                      String, Integer
+     inherits                   TrueClass, FalseClass
+     mode                       String, Integer
+     owner                      String, Integer
+     path                       String  # defaults to 'name' if not specified
+     provider                   Chef::Provider::File::Template
+     recursive                  TrueClass, FalseClass
+     rights                     Hash
+     action                     Symbol # defaults to :create if not specified
    end
+
+where 
+
+* ``directory`` is the resource
+* ``name`` is the name of the resource block; when the ``path`` attribute is not specified, ``name`` is also the path to the directory, from the root
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``recursive``, and ``rights`` are attributes of this resource, with example values shown. |see attributes|

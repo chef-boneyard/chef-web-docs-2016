@@ -10,11 +10,17 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``group``
-     - |windows group_identifier|
+     - **Ruby Types:** Integer, String
+
+       |windows group_identifier|
    * - ``inherits``
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |mode resource_directory|
+     - **Ruby Types:** Integer, String
+
+       |mode resource_directory|
        
        The behavior is different depending on the platform.
        
@@ -22,12 +28,22 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner windows security|
+     - **Ruby Types:** Integer, String
+
+       |owner windows security|
    * - ``path``
-     - |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``recursive``
-     - |recursive directory| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |recursive directory| Default value: ``false``.
    * - ``rights``
-     - |windows| only. |rights windows security|
+     - **Ruby Types:** Integer, String
+
+       |windows| only. |rights windows security|
