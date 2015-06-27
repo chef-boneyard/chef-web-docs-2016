@@ -11,7 +11,7 @@ A |resource execute| resource block typically executes a single command that is 
 
 where ``'/usr/sbin/apachectl configtest'`` is a command that tests if the configuration files for |apache| are valid.
 
-A command that is run in combination with another |chef| resource is often similar to the following, where the |resource template| resource is run along with the previous example to add an entry to the LDAP Directory Interchange Format (LDIF) file:
+Commands are often run in combination with other |chef| resources. The following example shows the |resource template| resource run with the |resource execute| resource to add an entry to a |ldif| file:
 
 .. code-block:: ruby
 
