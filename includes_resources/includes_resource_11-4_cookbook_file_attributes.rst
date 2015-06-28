@@ -10,15 +10,25 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``backup``
-     - |backups_kept| Default value: ``5``.
+     - **Ruby Types:** FalseClass, Integer
+
+       |backups_kept| Default value: ``5``.
    * - ``cookbook``
-     - |cookbook file_location| The default value is the current cookbook.
+     - **Ruby Type:** String
+
+       |cookbook file_location| The default value is the current cookbook.
    * - ``group``
-     - |windows group_identifier|
+     - **Ruby Types:** Integer, String
+
+       |windows group_identifier|
    * - ``inherits``
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |mode resource_file_11-4|
+     - **Ruby Types:** Integer, String
+
+       |mode resource_file_11-4|
        
        The behavior is different depending on the platform.
        
@@ -26,14 +36,24 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner windows security|
+     - **Ruby Types:** Integer, String
+
+       |owner windows security|
    * - ``path``
-     - |path cookbook_file|
+     - **Ruby Type:** String
+
+       |path cookbook_file| Default value: the ``name`` of the resource block.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``rights``
-     - |windows| only. |rights windows security|
+     - **Ruby Types:** Integer, String
+
+       |windows| only. |rights windows security|
    * - ``source``
-     - |source file_location| Can be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** Sting, Array
+
+       |source file_location| Can be used to distribute specific files to specific platforms. |see file_specificity| |see syntax|
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.

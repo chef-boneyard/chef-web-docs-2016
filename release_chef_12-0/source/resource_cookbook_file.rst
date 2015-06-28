@@ -12,7 +12,7 @@ cookbook_file
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
+.. include:: ../../includes_resources/includes_resource_12-0_cookbook_file_syntax.rst
 
 Actions
 =====================================================

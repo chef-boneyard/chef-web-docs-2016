@@ -10,21 +10,37 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``atomic_update``
-     - |atomic_update| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |atomic_update| Default value: ``true``.
    * - ``backup``
-     - |backups_kept| Default value: ``5``.
+     - **Ruby Types:** FalseClass, Integer
+
+       |backups_kept| Default value: ``5``.
    * - ``cookbook``
-     - |cookbook file_location| The default value is the current cookbook.
+     - **Ruby Type:** String
+
+       |cookbook file_location| The default value is the current cookbook.
    * - ``force_unlink``
-     - |force_unlink| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |force_unlink| Default value: ``false``.
    * - ``group``
-     - |windows group_identifier|
+     - **Ruby Types:** Integer, String
+
+       |windows group_identifier|
    * - ``inherits``
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``manage_symlink_source``
-     - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
+     - **Ruby Types:** TrueClass, FalseClass, NilClass
+
+       |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
    * - ``mode``
-     - |mode resource_file|
+     - **Ruby Types:** Integer, String
+
+       |mode resource_file|
        
        The behavior is different depending on the platform.
        
@@ -32,21 +48,33 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner windows security|	
+     - **Ruby Types:** Integer, String
+
+       |owner windows security|	
    * - ``path``
-     - |path cookbook_file| For example: ``file.txt``.
+     - **Ruby Type:** String
+
+       |path cookbook_file| Default value: the ``name`` of the resource block. For example: ``file.txt``.
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``
-     - Optional. |provider resource_parameter|
-   * - ``rights``
-     - |windows| only. |rights windows security|
-   * - ``source``
-     - |source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
-   * - ``verify``
-     - |verify_file|
+     - **Ruby Type:** Chef Class
 
-        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+       Optional. |provider resource_parameter|
+   * - ``rights``
+     - **Ruby Types:** Integer, String
+
+       |windows| only. |rights windows security|
+   * - ``source``
+     - **Ruby Types:** Sting, Array
+
+       |source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| |see syntax|
+   * - ``verify``
+     - **Ruby Types:** String, Block
+
+       |verify_file|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
 

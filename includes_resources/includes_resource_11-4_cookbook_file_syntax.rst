@@ -25,13 +25,10 @@ The full syntax for all of the attributes that are available to the |resource co
 .. code-block:: ruby
 
    cookbook_file 'name' do
-     atomic_update              TrueClass, FalseClass
      backup                     FalseClass, Integer
      cookbook                   String
-     force_unlink               TrueClass, FalseClass
      group                      String, Integer
      inherits                   TrueClass, FalseClass
-     manage_symlink_source      TrueClass, FalseClass, NilClass
      mode                       String, Integer
      owner                      String, Integer
      path                       String  # defaults to 'name' if not specified
@@ -47,4 +44,4 @@ where
 * ``cookbook_file`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``atomic_update``, ``backup``, ``cookbook``, ``force_unlink``, ``group``, ``inherits``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, and ``verify`` are attributes of this resource, with example values shown. |see attributes|
+* ``backup``, ``cookbook``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, and ``verify`` are attributes of this resource, with example values shown. |see attributes|
