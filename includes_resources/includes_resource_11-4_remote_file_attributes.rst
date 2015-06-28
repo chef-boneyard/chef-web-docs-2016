@@ -10,15 +10,25 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``backup``
-     - |backups_kept| Default value: ``5``.
+     - **Ruby Types:** FalseClass, Integer
+
+       |backups_kept| Default value: ``5``.
    * - ``checksum``
-     - Optional. |checksum remote_file|
+     - **Ruby Type:** String
+
+       Optional. |checksum remote_file|
    * - ``group``
-     - |windows group_identifier|
+     - **Ruby Types:** Integer, String
+
+       |windows group_identifier|
    * - ``inherits``
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |mode resource_file_11-4|
+     - **Ruby Types:** Integer, String
+
+       |mode resource_file_11-4|
        
        The behavior is different depending on the platform.
        
@@ -26,12 +36,22 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner windows security|
+     - **Ruby Types:** Integer, String
+
+       |owner windows security|
    * - ``path``
-     - |path file| |path_fully_qualified| Default value: ``name``.
+     - **Ruby Type:** String
+
+       |path file| |path_fully_qualified| Default value: ``name``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``rights``
-     - |windows| only. |rights windows security|
+     - **Ruby Types:** Integer, String
+
+       |windows| only. |rights windows security|
    * - ``source``
-     - Required. |source file_location|
+     - **Ruby Types:** Sting, Array
+
+       Required. |source file_location|

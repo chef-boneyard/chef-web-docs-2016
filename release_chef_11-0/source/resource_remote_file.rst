@@ -12,7 +12,7 @@ remote_file
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_remote_file_syntax.rst
+.. include:: ../../includes_resources/includes_resource_11-4_remote_file_syntax.rst
 
 Actions
 =====================================================

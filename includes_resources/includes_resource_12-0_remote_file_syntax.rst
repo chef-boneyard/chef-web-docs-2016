@@ -42,7 +42,6 @@ The full syntax for all of the attributes that are available to the |resource co
      use_conditional_get        TrueClass, FalseClass
      use_etag                   TrueClass, FalseClass
      use_last_modified          TrueClass, FalseClass
-     verify                     String, Block
      action                     Symbol # defaults to :create if not specified
    end
 
@@ -51,4 +50,4 @@ where
 * ``remote_file`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``atomic_update``, ``backup``, ``checksum``, ``force_unlink``, ``ftp_active_mode``, ``group``, ``headers``, ``inherits``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, ``use_conditional_get``, ``use_etag``, ``use_last_modified``, and ``verify`` are attributes of this resource, with example values shown. |see attributes|
+* ``atomic_update``, ``backup``, ``checksum``, ``force_unlink``, ``ftp_active_mode``, ``group``, ``headers``, ``inherits``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, ``use_conditional_get``, ``use_etag``, and ``use_last_modified`` are attributes of this resource, with example values shown. |see attributes|
