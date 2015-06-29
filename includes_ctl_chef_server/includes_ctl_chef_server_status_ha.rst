@@ -12,4 +12,4 @@ A sample status line for a service that is running on the master server in a |ha
 
 .. code-block:: bash
 
-   run: opscode-solr: (pid 25341) 239s, normally down; run: log: (pid 5700) 145308s
+   run: opscode-solr4: (pid 25341) 239s, normally down; run: log: (pid 5700) 145308s

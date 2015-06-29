@@ -19,7 +19,7 @@ which will return something similar to:
 
 For each of the upstream services, ``pong`` or ``fail`` is returned. The possible upstream names are:
 
-* ``chef_solr`` (for the |service solr| service)
+* ``chef_solr`` (for the |service solr4| service)
 * ``chef_sql`` (for the |service postgresql| service)
 * ``oc_chef_authz`` (for the |service authz| service)
 

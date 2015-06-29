@@ -13,9 +13,9 @@ For |chef server|, these settings are configurable:
 
    * - Setting
      - Description
-   * - ``opscode_solr['commit_interval']``
+   * - ``opscode_solr4['commit_interval']``
      - |solr_commit_interval| Default value: ``60000`` (every 60 seconds).
-   * - ``opscode_solr['max_commit_docs']``
+   * - ``opscode_solr4['max_commit_docs']``
      - |solr_max_commit_docs| Default value: ``1000`` (every 1000 documents).
 
 
