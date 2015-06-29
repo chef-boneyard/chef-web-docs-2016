@@ -10,25 +10,41 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``cookbook``
-     - |cookbook file_location| The default value is the current cookbook.
+     - **Ruby Type:** String
+
+       |cookbook file_location| The default value is the current cookbook.
    * - ``files_backup``
-     - |files_backup| Default value: ``5``.
+     - **Ruby Types:** Integer, FalseClass
+
+       |files_backup| Default value: ``5``.
    * - ``files_group``
-     - |files_group| |windows group_identifier|
+     - **Ruby Type:** String
+
+       |files_group| |windows group_identifier|
    * - ``files_mode``
-     - The octal mode for a file.
+     - **Ruby Type:** String
+
+       The octal mode for a file.
        
        |unix|- and |linux|-based systems: |mode *nix|
        
        |windows|: |mode windows security|
    * - ``files_owner``
-     - |files_owner| |owner windows security|
+     - **Ruby Type:** String
+
+       |files_owner| |owner windows security|
    * - ``group``
-     - Use to configure permissions for directories. |windows group_identifier|
+     - **Ruby Types:** Integer, String
+
+       Use to configure permissions for directories. |windows group_identifier|
    * - ``inherits``
-     - |windows| only. |inherits windows security| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |mode resource_directory|
+     - **Ruby Types:** Integer, String
+
+       |mode resource_directory|
        
        The behavior is different depending on the platform.
        
@@ -36,18 +52,34 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``overwrite``
-     - |use file_overwrite| Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |use file_overwrite| Default value: ``true``.
    * - ``owner``
-     - Use to configure permissions for directories. |owner windows security|
+     - **Ruby Types:** Integer, String
+
+       Use to configure permissions for directories. |owner windows security|
    * - ``path``
-     - |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |path directory| |path_fully_qualified| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``purge``
-     - |purge target_directory| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |purge target_directory| Default value: ``false``.
    * - ``recursive``
-     - |recursive remote_directory| Default value: ``true``; the |chef client| must be able to create the directory structure, including parent directories (if missing), as defined in ``COOKBOOK_NAME/files/default/REMOTE_DIRECTORY``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |recursive remote_directory| Default value: ``true``; the |chef client| must be able to create the directory structure, including parent directories (if missing), as defined in ``COOKBOOK_NAME/files/default/REMOTE_DIRECTORY``.
    * - ``rights``
-     - |windows| only. |rights windows security|
+     - **Ruby Types:** Integer, String
+
+       |windows| only. |rights windows security|
    * - ``source``
-     - |source remote_directory|
+     - **Ruby Type:** String
+
+       |source remote_directory|
