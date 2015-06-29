@@ -10,11 +10,17 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``allow_downgrade``
-     - |allow_downgrade|
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |allow_downgrade|
    * - ``arch``
-     - |architecture package|
+     - **Ruby Types:** String, Array
+
+       |architecture package|
    * - ``flush_cache``
-     - |flush_cache| Default value: ``[ :before, :after ]``. The value may also be a |ruby hash|: ``( { :before => true/false, :after => true/false } )``.
+     - **Ruby Type:** Array
+
+       |flush_cache| Default value: ``[ :before, :after ]``. The value may also be a |ruby hash|: ``( { :before => true/false, :after => true/false } )``.
 
        .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
 
@@ -40,17 +46,26 @@ This resource has the following attributes:
 
        .. note:: |flush_cache yum_cache|
    * - ``options``
-     - |command options|
+     - **Ruby Type:** String
+
+       |command options|
    * - ``package_name``
-     - |name package_yum| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name package_yum| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``source``
-     - Optional. |source resource package|
+     - **Ruby Type:** String
+
+       Optional. |source resource package|
    * - ``timeout``
-     - |timeout|
+     - **Ruby Types:** String, Integer
+
+       |timeout|
    * - ``version``
-     - |version package|
+     - **Ruby Types:** String, Array
 
-
-
+       |version package|

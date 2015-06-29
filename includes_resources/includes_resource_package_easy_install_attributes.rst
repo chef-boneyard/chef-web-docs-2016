@@ -10,20 +10,38 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``easy_install_binary``
-     - The location of the |python easy_install| binary.
+     - **Ruby Type:** String
+
+       The location of the |python easy_install| binary.
    * - ``module_name``
-     - The name of the module.
+     - **Ruby Type:** String
+
+       The name of the module.
    * - ``options``
-     - |command options|
+     - **Ruby Type:** String
+
+       |command options|
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``python_binary``
-     - The location of the |python| binary.
+     - **Ruby Type:** String
+
+       The location of the |python| binary.
    * - ``source``
-     - Optional. |source resource package|
+     - **Ruby Type:** String
+
+       Optional. |source resource package|
    * - ``timeout``
-     - |timeout|
+     - **Ruby Types:** String, Integer
+
+       |timeout|
    * - ``version``
-     - |version package|
+     - **Ruby Types:** String, Array
+
+       |version package|

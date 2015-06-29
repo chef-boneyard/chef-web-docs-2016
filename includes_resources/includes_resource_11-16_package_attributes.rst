@@ -10,30 +10,56 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``allow_downgrade``
-     - |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
    * - ``arch``
-     - |resource yum_package| resource only. |architecture package|
+     - **Ruby Types:** String, Array
+
+       |resource yum_package| resource only. |architecture package|
    * - ``default_release``
-     - |resource package_apt| resource only. |default_release apt| For example: ``stable``.
+     - **Ruby Type:** String
+
+       |resource package_apt| resource only. |default_release apt| For example: ``stable``.
    * - ``flush_cache``
-     - |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
+     - **Ruby Type:** Array
+
+       |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
 
        .. note:: |flush_cache yum_cache|
    * - ``gem_binary``
-     - |gem_binary resource package|
+     - **Ruby Type:** String
+
+       |gem_binary resource package|
    * - ``options``
-     - |command options|
+     - **Ruby Type:** String
+
+       |command options|
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``response_file``
-     - |resource package_apt| and |resource package_dpkg| resources only. |response_file|
+     - **Ruby Type:** String
+
+       |resource package_apt| and |resource package_dpkg| resources only. |response_file|
    * - ``response_file_variables``
-     - |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
+     - **Ruby Type:** Hash
+
+       |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
    * - ``source``
-     - Optional. |source resource package|
+     - **Ruby Type:** String
+
+       Optional. |source resource package|
    * - ``timeout``
-     - |timeout|
+     - **Ruby Types:** String, Integer
+
+       |timeout|
    * - ``version``
-     - |version package|
+     - **Ruby Types:** String, Array
+
+       |version package|

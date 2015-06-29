@@ -10,18 +10,34 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``options``
-     - |command options|
+     - **Ruby Type:** String
+
+       |command options|
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``response_file``
-     - Optional. |response_file|
+     - **Ruby Type:** String
+
+       Optional. |response_file|
    * - ``response_file_variables``
-     - Optional. |response_file variables|
+     - **Ruby Type:** Hash
+
+       Optional. |response_file variables|
    * - ``source``
-     - Optional. |source resource package|
+     - **Ruby Type:** String
+
+       Optional. |source resource package|
    * - ``timeout``
-     - |timeout|
+     - **Ruby Types:** String, Integer
+
+       |timeout|
    * - ``version``
-     - |version package|
+     - **Ruby Types:** String, Array
+
+       |version package|

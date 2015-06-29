@@ -10,13 +10,21 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``allow_downgrade``
-     - |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
    * - ``arch``
-     - |resource yum_package| resource only. |architecture package|
+     - **Ruby Types:** String, Array
+
+       |resource yum_package| resource only. |architecture package|
    * - ``default_release``
-     - |resource package_apt| resource only. |default_release apt| For example: ``stable``.
+     - **Ruby Type:** String
+
+       |resource package_apt| resource only. |default_release apt| For example: ``stable``.
    * - ``flush_cache``
-     - |flush_cache| Default value: ``[ :before, :after ]``. The value may also be a |ruby hash|: ``( { :before => true/false, :after => true/false } )``.
+     - **Ruby Type:** Array
+
+       |flush_cache| Default value: ``[ :before, :after ]``. The value may also be a |ruby hash|: ``( { :before => true/false, :after => true/false } )``.
 
        .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
 
@@ -42,24 +50,44 @@ This resource has the following attributes:
 
        .. note:: |flush_cache yum_cache|
    * - ``gem_binary``
-     - |gem_binary resource package|
+     - **Ruby Type:** String
+
+       |gem_binary resource package|
    * - ``homebrew_user``
-     - |resource package_homebrew| resource only. |name homebrew_user|
+     - **Ruby Types:** String, Integer
+
+       |resource package_homebrew| resource only. |name homebrew_user|
    * - ``options``
-     - |command options|
+     - **Ruby Type:** String
+
+       |command options|
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+     - **Ruby Types:** String, Array
+
+       |name package| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
    * - ``provider``
-     - Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| (See "Providers" section below for more information.)
    * - ``response_file``
-     - |resource package_apt| and |resource package_dpkg| resources only. |response_file|
+     - **Ruby Type:** String
+
+       |resource package_apt| and |resource package_dpkg| resources only. |response_file|
    * - ``response_file_variables``
-     - |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
+     - **Ruby Type:** Hash
+
+       |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
    * - ``source``
-     - Optional. |source resource package|
+     - **Ruby Type:** String
+
+       Optional. |source resource package|
 
        .. note:: |source resource package aix|
    * - ``timeout``
-     - |timeout|
+     - **Ruby Types:** String, Integer
+
+       |timeout|
    * - ``version``
-     - |version package|
+     - **Ruby Types:** String, Array
+
+       |version package|

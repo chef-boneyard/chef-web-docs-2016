@@ -10,22 +10,42 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``arch``
-     - |architecture package|
+     - **Ruby Types:** String, Array
+
+       |architecture package|
    * - ``default_release``
-     - |default_release apt| For example: ``stable``.
+     - **Ruby Type:** String
+
+       |default_release apt| For example: ``stable``.
    * - ``options``
-     - |command options| For example, common |aptget| directives, such as ``--no-install-recommends``. See the `apt-get man page <http://manpages.debian.net/cgi-bin/man.cgi?query=apt-get>`_ for the full list.
+     - **Ruby Type:** String
+
+       |command options| For example, common |aptget| directives, such as ``--no-install-recommends``. See the `apt-get man page <http://manpages.debian.net/cgi-bin/man.cgi?query=apt-get>`_ for the full list.
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``response_file``
-     - Optional. |response_file|
+     - **Ruby Type:** String
+
+       Optional. |response_file|
    * - ``response_file_variables``
-     - Optional. |response_file variables|
+     - **Ruby Type:** Hash
+
+       Optional. |response_file variables|
    * - ``source``
-     - Optional. |source resource apt_package|
+     - **Ruby Type:** String
+
+       Optional. |source resource apt_package|
    * - ``timeout``
-     - |timeout|
+     - **Ruby Types:** String, Integer
+
+       |timeout|
    * - ``version``
-     - |version package|
+     - **Ruby Types:** String, Array
+
+       |version package|

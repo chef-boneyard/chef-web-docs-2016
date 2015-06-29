@@ -10,18 +10,34 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``clear_sources``
-     - |clear_sources| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |clear_sources| Default value: ``false``.
    * - ``gem_binary``
-     - |gem_binary resource package| By default, the same version of |ruby| that is used by the |chef client| will be installed.
+     - **Ruby Type:** String
+
+       |gem_binary resource package| By default, the same version of |ruby| that is used by the |chef client| will be installed.
    * - ``options``
-     - |command options|
+     - **Ruby Type:** String
+
+       |command options|
    * - ``package_name``
-     - |name package| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name package| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``source``
-     - Optional. The URL at which the gem package is located.
+     - **Ruby Type:** String
+
+       Optional. The URL at which the gem package is located.
    * - ``timeout``
-     - |timeout|
+     - **Ruby Types:** String, Integer
+
+       |timeout|
    * - ``version``
-     - |version package|
+     - **Ruby Types:** String, Array
+
+       |version package|
