@@ -34,7 +34,7 @@ This resource has the following attributes:
 
        |windows group_identifier|
    * - ``headers``
-     - **Ruby Types:** Hash
+     - **Ruby Type:** Hash
 
        |headers custom| Default value: ``{}``.
    * - ``inherits``
