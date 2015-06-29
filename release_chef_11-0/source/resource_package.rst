@@ -27,7 +27,7 @@ This resource is the base resource for several other resources used for package 
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_package_syntax.rst
+.. include:: ../../includes_resources/includes_resource_11-16_package_syntax.rst
 
 Gem Package Options
 =====================================================

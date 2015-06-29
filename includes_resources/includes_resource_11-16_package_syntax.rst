@@ -35,7 +35,6 @@ The full syntax for all of the attributes that are available to the |resource pa
      default_release            String # Apt packages only
      flush_cache                Array
      gem_binary                 String
-     homebrew_user              String, Integer # Homebrew packages only
      options                    String
      package_name               String, Array  # defaults to 'name' if not specified
      provider                   Chef::Provider::Package
@@ -52,4 +51,4 @@ where
 * ``package`` tells the |chef client| to manage a package; the |chef client| will determine the correct package provider to use based on the platform running on the node
 * ``'name'`` is the name of the package
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-* ``allow_downgrade``, ``arch``, ``default_release``, ``flush_cache``, ``gem_binary``, ``homebrew_user``, ``options``, ``package_name``, ``provider``, ``response_file``, ``response_file_variables``, ``source``, ``recursive``, ``timeout``, and ``version`` are attributes of this resource, with example values shown. |see attributes|
+* ``allow_downgrade``, ``arch``, ``default_release``, ``flush_cache``, ``gem_binary``, ``options``, ``package_name``, ``provider``, ``response_file``, ``response_file_variables``, ``source``, ``recursive``, ``timeout``, and ``version`` are attributes of this resource, with example values shown. |see attributes|
