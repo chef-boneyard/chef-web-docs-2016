@@ -16,7 +16,7 @@ A |resource remote_file| resource block manages files by using files that exist 
 where
 
 * ``'/var/www/customers/public_html/index.php'`` is path to the file to be created
-* ``'http://somesite.com/index.php'`` is location of the remote file
+* ``'http://somesite.com/index.php'`` specifies the location of the remote file
 * ``owner``, ``group``, and ``mode`` define the permissions
 
 The full syntax for all of the attributes that are available to the |resource cookbook_file| resource is:
