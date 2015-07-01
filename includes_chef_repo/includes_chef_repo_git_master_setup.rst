@@ -18,24 +18,24 @@ Use the following steps to set up a development repository for |chef|:
       
       $ cd chef/
 
-#. From the ``chef/`` directory, add a remote named ``opscode``:
+#. From the ``chef/`` directory, add a remote named ``chef``:
 
    .. code-block:: bash
 
-      $ git remote add opscode git://github.com/opscode/chef.git
+      $ git remote add opscode git://github.com/chef/chef.git
 
 #. Verify:
 
    .. code-block:: bash
       
-      $ git config --get-regexp "^remote\.opscode"
+      $ git config --get-regexp "^remote\.chef"
 
    which should return something like:
 
    .. code-block:: bash
 
-      remote.opscode.url git://github.com/opscode/chef.git
-      remote.opscode.fetch +refs/heads/*:refs/remotes/opscode/*
+      remote.chef.url git://github.com/chef/chef.git
+      remote.chef.fetch +refs/heads/*:refs/remotes/chef/*
 
 #. Adjust your branch to track the ``opscode master`` remote branch:
 
@@ -54,5 +54,5 @@ Use the following steps to set up a development repository for |chef|:
 
    .. code-block:: bash
 
-      $ git config branch.master.remote opscode
+      $ git config branch.master.remote chef
 

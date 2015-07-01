@@ -21,14 +21,14 @@ The following ``rakefile`` can be used to update |chef|, |ohai|, and cookbooks. 
 .. code-block:: ruby
 
    projects = %w[chef cookbooks ohai]
-   opscode = "#{ENV['HOME']}/projects/opscode"
+   chef = "#{ENV['HOME']}/projects/chef"
 
    desc "Update local repositories from upstream"
    task :update do
      projects.each do |p|
-       Dir.chdir("#{opscode}/#{p}") do
-         sh "git fetch opscode"
-         sh "git rebase opscode/master master"
+       Dir.chdir("#{chef}/#{p}") do
+         sh "git fetch chef"
+         sh "git rebase chef/master master"
        end
      end
    end
