@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_config/includes_config_rb_knife.rst
 
-|note knife rb windows path|
+.. note:: .. include:: ../../includes_notes/includes_notes_config_rb_knife_path_windows.rst
 
 Settings
 =====================================================
