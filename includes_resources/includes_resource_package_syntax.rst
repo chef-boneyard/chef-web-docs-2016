@@ -30,7 +30,7 @@ The full syntax for all of the attributes that are available to the |resource pa
 .. code-block:: ruby
 
    package 'name' do
-     allow_downgrade            TrueClass, FalseClass # Yum packages only
+     allow_downgrade            TrueClass, FalseClass # Yum, RPM packages only
      arch                       String, Array # Yum packages only
      default_release            String # Apt packages only
      flush_cache                Array

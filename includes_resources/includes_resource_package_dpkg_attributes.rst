@@ -21,14 +21,6 @@ This resource has the following attributes:
      - **Ruby Type:** Chef Class
 
        Optional. |provider resource_parameter| |see providers|
-   * - ``response_file``
-     - **Ruby Type:** String
-
-       Optional. |response_file|
-   * - ``response_file_variables``
-     - **Ruby Type:** Hash
-
-       Optional. |response_file variables|
    * - ``source``
      - **Ruby Type:** String
 
