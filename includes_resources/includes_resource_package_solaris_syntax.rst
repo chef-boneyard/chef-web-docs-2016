@@ -29,5 +29,5 @@ where
 * ``solaris_package`` tells the |chef client| to manage a package
 * ``'name'`` is the name of the package
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-* ``options``, ``package_name``, ``provider``, ``source``, ``timeout``, and ``version`` are attributes of this resource, with example values shown. |see attributes|
+* ``options``, ``package_name``, ``provider``, ``source``, ``timeout``, and ``version`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 

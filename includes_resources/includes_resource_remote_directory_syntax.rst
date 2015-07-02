@@ -49,4 +49,4 @@ where
 * ``remote_directory`` is the resource
 * ``name`` is the name of the resource block; when the ``path`` attribute is not specified, ``name`` is also the path to the directory, from the root
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``cookbook``, ``files_backup``, ``files_group``, ``files_mode``, ``files_owner``, ``group``, ``inherits``, ``mode``, ``overwrite``, ``owner``, ``path``, ``provider``, ``recursive``, ``rights``, and ``source`` are attributes of this resource, with example values shown. |see attributes|
+* ``cookbook``, ``files_backup``, ``files_group``, ``files_mode``, ``files_owner``, ``group``, ``inherits``, ``mode``, ``overwrite``, ``owner``, ``path``, ``provider``, ``recursive``, ``rights``, and ``source`` are attributes of this resource, with the |ruby| type shown. |see attributes|

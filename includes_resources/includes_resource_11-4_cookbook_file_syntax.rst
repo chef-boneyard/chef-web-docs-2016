@@ -44,4 +44,4 @@ where
 * ``cookbook_file`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``backup``, ``cookbook``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, and ``verify`` are attributes of this resource, with example values shown. |see attributes|
+* ``backup``, ``cookbook``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, and ``verify`` are attributes of this resource, with the |ruby| type shown. |see attributes|

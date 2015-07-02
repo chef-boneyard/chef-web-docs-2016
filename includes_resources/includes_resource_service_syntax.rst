@@ -1,20 +1,40 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource service| resource in a recipe is as follows:
+
+A |resource service| resource block manages the state of a service. For example:
 
 .. code-block:: ruby
 
-   service "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   service "tomcat" do
+     action :start
+   end
+
+will start the |apache tomcat| service.
+
+The full syntax for all of the attributes that are available to the |resource service| resource is:
+
+.. code-block:: ruby
+
+   service 'name' do
+     init_command               String
+     pattern                    String
+     priority                   Integer, String, Hash
+     provider                   Chef::Provider::Service
+     reload_command             String
+     restart_command            String
+     service_name               String # defaults to 'name' if not specified
+     start_command              String
+     status_command             String
+     stop_command               String
+     supports                   Hash
+     timeout                    Integer
+     action                     Symbol # defaults to :nothing if not specified
    end
 
 where 
 
-* ``service`` tells the |chef client| to use one of the following providers during the |chef client| run: ``Chef::Provider::Service::Init``, ``Chef::Provider::Service::Init::Debian``, ``Chef::Provider::Service::Upstart``, ``Chef::Provider::Service::Init::Freebsd``, ``Chef::Provider::Service::Init::Gentoo``, ``Chef::Provider::Service::Init::Redhat``, ``Chef::Provider::Service::Solaris``, ``Chef::Provider::Service::Windows``, or ``Chef::Provider::Service::Macosx``. The |chef client| will detect the platform at the start of the run based on data collected by |ohai|. After the platform is identified, the |chef client| will determine the correct provider
-* ``name`` is the name of the resource block; when the ``service_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the service
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-
+* ``service`` is the resource; depending on the platform, more specific providers are run: ``Chef::Provider::Service::Init``, ``Chef::Provider::Service::Init::Debian``, ``Chef::Provider::Service::Upstart``, ``Chef::Provider::Service::Init::Freebsd``, ``Chef::Provider::Service::Init::Gentoo``, ``Chef::Provider::Service::Init::Redhat``, ``Chef::Provider::Service::Solaris``, ``Chef::Provider::Service::Windows``, or ``Chef::Provider::Service::Macosx``
+* ``name`` is the name of the resource block; when the ``path`` attribute is not specified, ``name`` is also the path to the directory, from the root
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``init_command``, ``pattern``, ``priority``, ``provider``, ``reload_command``, ``restart_command``, ``service_name``, ``start_command``, ``status_command``, ``stop_command``, ``supports``, and ``timeout`` are attributes of this resource, with the |ruby| type shown. |see attributes|

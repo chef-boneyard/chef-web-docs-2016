@@ -42,4 +42,4 @@ where
 * ``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the path to the file
 * ``content`` specifies the contents of the file
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``backup``, ``checksum``, ``content``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, and ``rights`` are attributes of this resource, with example values shown. |see attributes|
+* ``backup``, ``checksum``, ``content``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, and ``rights`` are attributes of this resource, with the |ruby| type shown. |see attributes|
