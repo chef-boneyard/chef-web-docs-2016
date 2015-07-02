@@ -10,30 +10,58 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``code``
-     - |code quoted_string|
+     - **Ruby Type:** String
+
+       |code quoted_string|
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name command| Default value: the ``name`` of the resource block. |see syntax|
    * - ``creates``
-     - |creates file_exists|
+     - **Ruby Type:** String
+
+       |creates file_exists|
    * - ``cwd``
-     - |cwd|
+     - **Ruby Type:** String
+
+       |cwd|
    * - ``environment``
-     - |environment variables|
+     - **Ruby Type:** Hash
+
+       |environment variables|
    * - ``flags``
-     - |flags|
+     - **Ruby Type:** String
+
+       |flags|
    * - ``group``
-     - |group command|
+     - **Ruby Types:** String, Integer
+
+       |group command|
    * - ``interpreter``
-     - |interpreter|
+     - **Ruby Type:** String
+
+       |interpreter|
    * - ``path``
-     - |path resource execute| The default value uses the system path.
+     - **Ruby Type:** Array
+
+       |path resource execute| The default value uses the system path.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``returns``
-     - |return_value cmd| Default value: ``0``.
+     - **Ruby Types:** Integer, Array
+
+       |return_value cmd| Default value: ``0``.
    * - ``timeout``
-     - |timeout command| Default value: ``3600``.
+     - **Ruby Types:** Integer, Float
+
+       |timeout command| Default value: ``3600``.
    * - ``user``
-     - |user command|
+     - **Ruby Types:** String, Integer
+
+       |user command|
    * - ``umask``
-     - |umask|
+     - **Ruby Types:** String, Integer
+
+       |umask|
