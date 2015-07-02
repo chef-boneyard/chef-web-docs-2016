@@ -58,4 +58,4 @@ where
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``atomic_update``, ``backup``, ``cookbook``, ``force_unlink``, ``group``, ``helper``, ``helpers``, ``inherits``, ``local``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, ``variables``, and ``verify`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``command``, ``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are attributes of this resource, with the |ruby| type shown. |see attributes|
