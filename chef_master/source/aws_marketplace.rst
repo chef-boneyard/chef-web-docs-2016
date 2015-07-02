@@ -1,5 +1,6 @@
 =====================================================
-Amazon Web Services Marketplace
+AWS Marketplace
 =====================================================
 
-.. include:: ../../includes_cloud/includes_cloud_aws_marketplace.rst
+|Chef Server Marketplace Appliance|
+.. include:: ../../includes_cloud/includes_cloud_aws_chef_server.rst
