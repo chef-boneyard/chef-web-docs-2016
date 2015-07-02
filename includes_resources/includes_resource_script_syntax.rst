@@ -1,20 +1,70 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource script| resource in a recipe is as follows:
+
+A |resource script| resource block typically executes scripts using a specified interpreter, such as |bash|, |csh|, |perl|, |python|, or |ruby|:
 
 .. code-block:: ruby
 
-   script "name" do
-     some_attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   script 'extract_module' do
+     interpreter bash
+     cwd ::File.dirname(src_filepath)
+     code <<-EOH
+       mkdir -p #{extract_path}
+       tar xzf #{src_filename} -C #{extract_path}
+       mv #{extract_path}/*/* #{extract_path}/
+       EOH
+     not_if { ::File.exists?(extract_path) }
    end
 
 where 
 
-* ``script`` tells the |chef client| to use one of the following providers during the |chef client| run: ``Chef::Resource::Script``, ``Chef::Resource::Script::Bash``, ``Chef::Resource::Script::Csh``, ``Chef::Resource::Script::Perl``, ``Chef::Resource::Script::Python``, or ``Chef::Resource::Script::Ruby``. The provider that is used by the |chef client| depends on the platform of the machine on which the run is taking place
-* ``name`` is the name of the resource block; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the name of the command to be executed
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
+* ``interpreter`` specifies the command shell to use
+* ``cwd`` specifies the directory from which the command is run
+* ``code`` specifies the command to run
 
+It is more common to use the |resource script|-based resource that is specific to the command shell. |chef| has shell-specific resources for |bash|, |csh|, |perl|, |python|, and |ruby|.
+
+The same command as above, but run using the |resource script_bash| resource:
+
+.. code-block:: ruby
+
+   bash 'extract_module' do
+     cwd ::File.dirname(src_filepath)
+     code <<-EOH
+       mkdir -p #{extract_path}
+       tar xzf #{src_filename} -C #{extract_path}
+       mv #{extract_path}/*/* #{extract_path}/
+       EOH
+     not_if { ::File.exists?(extract_path) }
+   end
+
+The full syntax for all of the attributes that are available to the |resource execute| resource is:
+
+.. code-block:: ruby
+
+   script 'name' do
+     code                       String
+     command                    String, Array  # defaults to 'name' if not specified
+     creates                    String
+     cwd                        String
+     environment                Hash
+     flags                      String
+     group                      String, Integer
+     interpreter                String
+     path                       Array
+     provider                   Chef::Provider::Script
+     returns                    Integer, Array
+     timeout                    Integer, Float
+     user                       String, Integer
+     umask                      String, Integer
+     action                     Symbol # defaults to :run if not specified
+   end
+
+where 
+
+* ``script`` is the resource
+* ``name`` is the name of the resource block
+* ``command`` is the command to be run and ``cwd`` is the location from which the command is run
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``code``, ``command``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``interpreter``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are attributes of this resource, with the |ruby| type shown. |see attributes|
