@@ -224,18 +224,17 @@ Options
 Examples
 -----------------------------------------------------
 
-**Set PowerShell (in the current Windows session)**
-
-.. code-block:: bash
-
-   $ posh chef shell-init powershell | Invoke-Expression
-
 **Set PowerShell**
 
-.. code-block:: bash
+.. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows.rst
 
-   $ posh "chef shell-init powershell | Invoke-Expression" >> $PROFILE
+**Set the execution policy on new machines**
 
+.. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows_admin.rst
+
+**Create a $PROFILE on new machines**
+
+.. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows_user_profile.rst
 
 chef verify
 =====================================================

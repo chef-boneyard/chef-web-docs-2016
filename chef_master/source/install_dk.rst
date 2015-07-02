@@ -53,6 +53,14 @@ PowerShell
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows.rst
 
+**Set the execution policy on new machines**
+
+.. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows_admin.rst
+
+**Create a $PROFILE on new machines**
+
+.. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows_user_profile.rst
+
 Install |git|
 -----------------------------------------------------
 An open source distributed version control system called |git| must be installed before the |chef repo| can be cloned to the workstation from |github|. 
