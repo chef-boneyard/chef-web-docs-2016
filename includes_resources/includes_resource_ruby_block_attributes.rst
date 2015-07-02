@@ -10,8 +10,14 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``block``
-     - |block_ruby|
+     - **Ruby Type:** Block
+
+       |block_ruby|
    * - ``block_name``
-     - |name ruby_block| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |name ruby_block| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
