@@ -14,7 +14,7 @@ gem_package
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_package_gem_syntax.rst
+.. include:: ../../includes_resources/includes_resource_12-1_package_gem_syntax.rst
 
 Gem Package Options
 =====================================================
@@ -50,7 +50,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_12-2_package_gem_attributes.rst
+.. include:: ../../includes_resources/includes_resource_12-1_package_gem_attributes.rst
 
 Providers
 =====================================================

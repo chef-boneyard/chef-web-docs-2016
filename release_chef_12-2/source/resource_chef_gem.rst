@@ -22,7 +22,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_12-2_package_chef_gem_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_chef_gem_attributes.rst
 
 Providers
 =====================================================
