@@ -27,7 +27,7 @@ The full syntax for all of the attributes that are available to the |resource sc
 
    ruby 'name' do
      code                       String
-     command                    String, Array  # defaults to 'name' if not specified
+     command                    String, Array # defaults to 'name' if not specified
      creates                    String
      cwd                        String
      environment                Hash
@@ -35,7 +35,7 @@ The full syntax for all of the attributes that are available to the |resource sc
      group                      String, Integer
      interpreter                String
      path                       Array
-     provider                   Chef::Provider::Script
+     provider                   Chef::Provider::Script::Ruby
      returns                    Integer, Array
      timeout                    Integer, Float
      user                       String, Integer
