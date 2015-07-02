@@ -10,7 +10,7 @@ cron
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_cron_syntax.rst
+.. include:: ../../includes_resources/includes_resource_11-10_cron_syntax.rst
 
 Actions
 =====================================================

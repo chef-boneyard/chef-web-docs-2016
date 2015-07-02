@@ -29,7 +29,6 @@ The full syntax for all of the attributes that are available to the |resource cr
    cron 'name' do
      command                    String
      day                        String
-     environment                Hash
      home                       String
      hour                       String
      mailto                     String
@@ -50,4 +49,4 @@ where
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``command``, ``day``, ``environment``, ``home``, ``hour``, ``mailto``, ``minute``, ``month``, ``path``, ``provider``, ``shell``, ``time``, ``user``, and ``weekday`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``command``, ``day``, ``home``, ``hour``, ``mailto``, ``minute``, ``month``, ``path``, ``provider``, ``shell``, ``time``, ``user``, and ``weekday`` are attributes of this resource, with the |ruby| type shown. |see attributes|

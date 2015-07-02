@@ -10,7 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |command_or_path|
+     - **Ruby Type:** String
+
+       |command_or_path|
 
        Some examples:
 
@@ -36,26 +38,50 @@ This resource has the following attributes:
 
           command "/srv/app/scripts/daily_report"
    * - ``day``
-     - |day cron| Default value: ``*``.
+     - **Ruby Type:** String
+
+       |day cron| Default value: ``*``.
    * - ``home``
-     - |environment set_home|
+     - **Ruby Type:** String
+
+       |environment set_home|
    * - ``hour``
-     - |hour cron| Default value: ``*``.
+     - **Ruby Type:** String
+
+       |hour cron| Default value: ``*``.
    * - ``mailto``
-     - |environment set_mailto|
+     - **Ruby Type:** String
+
+       |environment set_mailto|
    * - ``minute``
-     - |minute cron| Default value: ``*``.
+     - **Ruby Type:** String
+
+       |minute cron| Default value: ``*``.
    * - ``month``
-     - |month cron| Default value: ``*``.
+     - **Ruby Type:** String
+
+       |month cron| Default value: ``*``.
    * - ``path``
-     - |environment set_path|
+     - **Ruby Type:** String
+
+       |environment set_path|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``shell``
-     - |environment set_shell|
+     - **Ruby Type:** String
+
+       |environment set_shell|
    * - ``time``
-     - |time cron|
+     - **Ruby Type:** Symbol
+
+       |time cron|
    * - ``user``
-     - |name user cron| Default value: ``root``.
+     - **Ruby Type:** String
+
+       |name user cron| Default value: ``root``.
    * - ``weekday``
-     - |weekday cron| Default value: ``*``.
+     - **Ruby Types:** String, Symbol
+
+       |weekday cron| Default value: ``*``.
