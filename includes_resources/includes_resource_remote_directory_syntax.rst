@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |resource remote_directory| resource block transfer a directory from a cookbook to a node, and then assigns the permissions needed on that directory. For example:
+A |resource remote_directory| resource block transfers a directory from a cookbook to a node, and then assigns the permissions needed on that directory. For example:
 
 .. code-block:: ruby
 
