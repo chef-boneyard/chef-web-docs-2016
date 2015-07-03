@@ -10,18 +10,34 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``append``
-     - |append_group| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |append_group| Default value: ``false``.
    * - ``excluded_members``
-     - |excluded_members|
+     - **Ruby Type:** Array
+
+       |excluded_members|
    * - ``gid``
-     - |id group|
+     - **Ruby Types:** String, Integer
+
+       |id group|
    * - ``group_name``
-     - |name group| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |name group| Default value: the ``name`` of the resource block. |see syntax|
    * - ``members``
-     - |members_group| When more than one group member is identified, the list of members should be an array: ``members ['user1', 'user2']``.
+     - **Ruby Type:** Array
+
+       |members_group| When more than one group member is identified, the list of members should be an array: ``members ['user1', 'user2']``.
    * - ``non_unique``
-     - |non_unique_members| Default value: ``false``.
+     - **Ruby Type:** TrueClass, FalseClass
+
+       |non_unique_members| Default value: ``false``.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``system``
-     - |system group|
+     - **Ruby Type:** TrueClass, FalseClass
+
+       |system group|

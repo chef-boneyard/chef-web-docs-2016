@@ -18,11 +18,9 @@ The full syntax for all of the attributes that are available to the |resource gr
 
    group 'name' do
      append                     TrueClass, FalseClass
-     excluded_members           Array
      gid                        String, Integer
      group_name                 String # defaults to 'name' if not specified
      members                    Array
-     non_unique                 TrueClass, FalseClass
      provider                   Chef::Provider::Group
      system                     TrueClass, FalseClass
      action                     Symbol # defaults to :create if not specified
@@ -33,4 +31,4 @@ where
 * ``group`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``append``, ``excluded_members``, ``gid``, ``group_name``, ``members``, ``non_unique``, ``provider``, and ``system`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``append``, ``gid``, ``group_name``, ``members``, ``provider``, and ``system`` are attributes of this resource, with the |ruby| type shown. |see attributes|

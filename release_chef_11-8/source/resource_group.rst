@@ -10,7 +10,7 @@ group
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_group_syntax.rst
+.. include:: ../../includes_resources/includes_11-8_resource_group_syntax.rst
 
 Actions
 =====================================================
