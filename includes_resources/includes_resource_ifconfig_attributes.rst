@@ -10,28 +10,54 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``bcast``
-     - |broadcast_address|
+     - **Ruby Type:** String
+
+       |broadcast_address|
    * - ``bootproto``
-     - |boot_protocol|
+     - **Ruby Type:** String
+
+       |boot_protocol|
    * - ``device``
-     - |device ifconfig|
+     - **Ruby Type:** String
+
+       |device ifconfig|
    * - ``hwaddr``
-     - |hardware_address|
+     - **Ruby Type:** String
+
+       |hardware_address|
    * - ``inet_addr``
-     - |internet_host_address|
+     - **Ruby Type:** String
+
+       |internet_host_address|
    * - ``mask``
-     - |netmask| For example: ``255.255.255.0``.
+     - **Ruby Type:** String
+
+       |netmask| For example: ``255.255.255.0``.
    * - ``metric``
-     - |routing_metric|
+     - **Ruby Type:** String
+
+       |routing_metric|
    * - ``mtu``
-     - |maximum_transmission_unit|
+     - **Ruby Type:** String
+
+       |maximum_transmission_unit|
    * - ``network``
-     - |network_address|
+     - **Ruby Type:** String
+
+       |network_address|
    * - ``onboot``
-     - |onboot ifconfig|
+     - **Ruby Type:** String
+
+       |onboot ifconfig|
    * - ``onparent``
-     - |onparent ifconfig|
+     - **Ruby Type:** String
+
+       |onparent ifconfig|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``target``
-     - |target_interface| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |target_interface| Default value: the ``name`` of the resource block. |see syntax|

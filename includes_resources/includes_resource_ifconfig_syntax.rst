@@ -1,19 +1,39 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource ifconfig| resource in a recipe is as follows:
+
+A |resource ifconfig| resource block manages interfaces, such as a static IP address:
 
 .. code-block:: ruby
 
-   ifconfig "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   ifconfig "33.33.33.80" do
+     device "eth1"
+   end
+
+The full syntax for all of the attributes that are available to the |resource ifconfig| resource is:
+
+.. code-block:: ruby
+
+   ifconfig 'name' do
+     bcast                      String
+     bootproto                  String
+     device                     String
+     hwaddr                     String
+     inet_addr                  String
+     mask                       String
+     metric                     String
+     mtu                        String
+     network                    String
+     onboot                     String
+     onparent                   String
+     provider                   Chef::Provider::Link
+     target                     String # defaults to 'name' if not specified
+     action                     Symbol # defaults to :create if not specified
    end
 
 where 
 
-* ``ifconfig`` tells the |chef client| to use the ``Chef::Provider::Ifconfig`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``target`` attribute is not specified as part of a recipe, ``name`` is also the IP address that will be assigned to the network interface
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
+* ``ifconfig`` is the resource
+* ``name`` is the name of the resource block
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``bcast``, ``bootproto``, ``device``, ``hwaddr``, ``inet_addr``, ``mask``, ``metric``, ``mtu``, ``network``, ``onboot``, ``onparent``, ``provider``,  and ``target`` are attributes of this resource, with the |ruby| type shown. |see attributes|
