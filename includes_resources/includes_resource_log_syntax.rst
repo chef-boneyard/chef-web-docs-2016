@@ -26,6 +26,6 @@ where
 
 * ``log`` is the resource
 * ``name`` is the name of the resource block
-* ``command`` is the command to be run
+* ``message`` is the log message to write
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``command``, ``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``provider``, ``returns``, ``sensitive``, ``timeout``, ``user``, and ``umask`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``level``, ``message``, and ``provider`` are attributes of this resource, with the |ruby| type shown. |see attributes|
