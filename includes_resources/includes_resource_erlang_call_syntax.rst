@@ -1,19 +1,34 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource erlang_call| resource in a recipe is as follows:
+
+A |resource erlang_call| resource block connects to a node located within a distributed |erlang| system:
 
 .. code-block:: ruby
 
-   erl_call "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   erl_call 'list names' do
+     code 'net_adm:names().'
+     distributed true
+     node_name 'chef@latte'
+   end
+
+The full syntax for all of the attributes that are available to the |resource erlang_call| resource is:
+
+.. code-block:: ruby
+
+   erl_call 'name' do
+     code                       String
+     cookie                     String
+     distributed                TrueClass, FalseClass
+     name_type                  String
+     node_name                  String
+     provider                   Chef::Provider::ErlCall
+     action                     Symbol # defaults to :run if not specified
    end
 
 where 
 
-* ``erl_call`` tells the |chef client| to use the ``Chef::Provider::ErlCall`` provider during the |chef client| run
-* ``"name"`` is the name of the call
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
+* ``erl_call`` is the resource
+* ``name`` is the name of the resource block
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``code``, ``cookie``, ``distributed``, ``name_type``, ``node_name``, and ``provider`` are attributes of this resource, with the |ruby| type shown. |see attributes|

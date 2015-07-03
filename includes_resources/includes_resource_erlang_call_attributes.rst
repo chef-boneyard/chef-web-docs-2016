@@ -10,14 +10,26 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``code``
-     - |code erlang_call| Default value: ``q()``.
+     - **Ruby Type:** String
+
+       |code erlang_call| Default value: ``q()``.
    * - ``cookie``
-     - |cookie resource erlang_call|
+     - **Ruby Type:** String
+
+       |cookie resource erlang_call|
    * - ``distributed``
-     - |distributed_erlang_node| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |distributed_erlang_node| Default value: ``false``.
    * - ``name_type``
-     - |name sname_or_name| Default value: ``sname``.
+     - **Ruby Type:** String
+
+       |name sname_or_name| Default value: ``sname``.
    * - ``node_name``
-     - |node_hostname| Default value: ``chef@localhost``.
+     - **Ruby Type:** String
+
+       |node_hostname| Default value: ``chef@localhost``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
