@@ -3,12 +3,6 @@
 
 This resource has the following attributes:
 
-
-enable_checkout
-OLD: Use to check out a repo from master.
-NEW: 
-
-
 .. list-table::
    :widths: 150 450
    :header-rows: 1
@@ -16,38 +10,70 @@ NEW:
    * - Attribute
      - Description
    * - ``additional_remotes``
-     - |additional_remotes|
+     - **Ruby Type:** Hash
+
+       |additional_remotes|
    * - ``checkout_branch``
-     - |checkout_branch git| See ``revision``. Default value: ``deploy``.
+     - **Ruby Type:** String
+
+       |checkout_branch git| See ``revision``. Default value: ``deploy``.
    * - ``depth``
-     - |depth git_shallow_clone| The default behavior will do a full clone.
+     - **Ruby Type:** Integer
+
+       |depth git_shallow_clone| The default behavior will do a full clone.
    * - ``destination``
-     - |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
    * - ``enable_checkout``
-     - |enable_git_checkout| Set to ``false`` when using the ``checkout_branch`` attribute to prevent the |resource scm_git| resource from attempting to check out master from master. Default value: ``true``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |enable_git_checkout| Set to ``false`` when using the ``checkout_branch`` attribute to prevent the |resource scm_git| resource from attempting to check out master from master. Default value: ``true``.
    * - ``enable_submodules``
-     - |enable_submodules| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |enable_submodules| Default value: ``false``.
    * - ``environment``
-     - |environment variables|
+     - **Ruby Type:** Hash
+
+       |environment variables|
 
        .. note:: The |resource scm_git| provider automatically sets the ``ENV['HOME']`` and ``ENV['GIT_SSH']`` environment variables. To override this behavior and provide different values, add ``ENV['HOME']`` and/or ``ENV['GIT_SSH']`` to the ``environment`` |ruby hash|.
    * - ``group``
-     - |group deploy|
+     - **Ruby Types:** String, Integer
+
+       |group deploy|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``reference``
-     - |reference resource scm|
+     - **Ruby Type:** String
+
+       |reference resource scm|
    * - ``remote``
-     - |remote resource|
+     - **Ruby Type:** String
+
+       |remote resource|
    * - ``repository``
-     - |uri repository_git|
+     - **Ruby Type:** String
+
+       |uri repository_git|
    * - ``revision``
-     - |revision| See ``checkout_branch``. Default value: ``HEAD``.
+     - **Ruby Type:** String
+
+       |revision| See ``checkout_branch``. Default value: ``HEAD``.
 
        .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
    * - ``ssh_wrapper``
-     - |ssh_wrapper resource|
+     - **Ruby Type:** String
+
+       |ssh_wrapper resource|
    * - ``timeout``
-     - |timeout scm| |timeout scm_value_git|
+     - **Ruby Type:** Integer
+
+       |timeout scm| |timeout scm_value_git|
    * - ``user``
-     - |user checked_out_code| Default value: the home directory of this user, as indicated by the ``HOME`` environment variable.
+     - **Ruby Types:** String, Integer
+
+       |user checked_out_code| Default value: the home directory of this user, as indicated by the ``HOME`` environment variable.

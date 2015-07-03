@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 This resource has the following attributes:
 
 .. list-table::
@@ -10,22 +11,42 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``destination``
-     - |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
    * - ``group``
-     - |group deploy|
+     - **Ruby Types:** String, Integer
+
+       |group deploy|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``repository``
-     - |uri repository_svn|
+     - **Ruby Type:** String
+
+       |uri repository_svn|
    * - ``revision``
-     - |revision| Default value: ``HEAD``.
+     - **Ruby Type:** String
+
+       |revision| Default value: ``HEAD``.
    * - ``svn_arguments``
-     - |svn_arguments resource|
+     - **Ruby Type:** String
+
+       |svn_arguments resource|
    * - ``svn_info_args``
-     - |svn_info_args resource|
+     - **Ruby Type:** String
+
+       |svn_info_args resource|
    * - ``svn_password``
-     - |svn_password resource|
+     - **Ruby Type:** String
+
+       |svn_password resource|
    * - ``svn_username``
-     - |svn_username resource|
+     - **Ruby Type:** String
+
+       |svn_username resource|
    * - ``user``
-     - |user checked_out_code|
+     - **Ruby Types:** String, Integer
+
+       |user checked_out_code|
