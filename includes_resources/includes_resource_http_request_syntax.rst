@@ -1,26 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource http_request| resource in a recipe is as follows:
 
-.. code-block:: ruby
-
-   http_request "name" do
-     url "http://some.url"
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
-   end
-
-where 
-
-* ``http_request`` tells the |chef client| to use the ``Chef::Provider::HttpRequest`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``message`` attribute is not specified as part of a recipe, ``name`` is also the message that is sent by the HTTP request
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``url`` is the URL that will precede ``?message=`` in the HTTP request
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-
-For example, send a ``DELETE`` request to "http://www.chef.io/some_page?message=please_delete_me".
+A |resource http_request| resource block sends HTTP requests with an arbitrary message. For example, send a ``DELETE`` request to "http://www.chef.io/some_page?message=please_delete_me".
 
 .. code-block:: ruby
 
@@ -28,3 +10,22 @@ For example, send a ``DELETE`` request to "http://www.chef.io/some_page?message=
      url "http://www.chef.io/some_page"
      action :delete
    end
+
+The full syntax for all of the attributes that are available to the |resource http_request| resource is:
+
+.. code-block:: ruby
+
+   http_request 'name' do
+     headers                    Hash
+     message                    Object # defaults to 'name' if not specified
+     provider                   Chef::Provider::HttpRequest
+     url                        String
+     action                     Symbol # defaults to :get if not specified
+   end
+
+where 
+
+* ``http_request`` is the resource
+* ``name`` is the name of the resource block
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``headers``, ``message``, ``provider``, and ``url`` are attributes of this resource, with the |ruby| type shown. |see attributes|

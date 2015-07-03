@@ -10,10 +10,18 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``headers``
-     - |headers custom| Default value: ``{}``.
+     - **Ruby Type:** Hash
+
+       |headers custom| Default value: ``{}``.
    * - ``message``
-     - |message http_request| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** Object
+
+       |message http_request| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``url``
-     - |url http_request|
+     - **Ruby Type:** String
+
+       |url http_request|
