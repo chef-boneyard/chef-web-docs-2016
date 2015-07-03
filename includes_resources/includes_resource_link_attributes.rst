@@ -10,11 +10,17 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``group``
-     - |group resource link|
+     - **Ruby Types:** Integer, String
+
+       |group resource link|
    * - ``link_type``
-     - |link_type| Default value: ``:symbolic``.
+     - **Ruby Type:** Symbol
+
+       |link_type| Default value: ``:symbolic``.
    * - ``mode``
-     - |mode resource_file| Default value: ``777``.
+     - **Ruby Types:** Integer, String
+
+       |mode resource_file| Default value: ``777``.
        
        The behavior is different depending on the platform.
        
@@ -22,11 +28,18 @@ This resource has the following attributes:
        
        |windows|: |mode windows security|
    * - ``owner``
-     - |owner resource link|
-   * - ``provider``
-     - Optional. |provider resource_parameter|
-   * - ``target_file``
-     - |name_link| Default value: the ``name`` of the resource block. |see syntax|
-   * - ``to``
-     - |to resource link|
+     - **Ruby Types:** Integer, String
 
+       |owner resource link|
+   * - ``provider``
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
+   * - ``target_file``
+     - **Ruby Type:** String
+
+       |name_link| Default value: the ``name`` of the resource block. |see syntax|
+   * - ``to``
+     - **Ruby Type:** String
+
+       |to resource link|
