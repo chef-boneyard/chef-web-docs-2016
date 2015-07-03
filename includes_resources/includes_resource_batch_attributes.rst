@@ -10,30 +10,56 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``architecture``
-     - |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
+     - **Ruby Type:** Symbol
+
+       |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
    * - ``code``
-     - |code quoted_string|
+     - **Ruby Type:** String
+
+       |code quoted_string|
    * - ``command``
-     - |name command|
+     - **Ruby Types:** String, Array
+
+       |name command|
    * - ``creates``
-     - |creates file_exists|
+     - **Ruby Type:** String
+
+       |creates file_exists|
    * - ``cwd``
-     - |cwd run_command|
+     - **Ruby Type:** String
+
+       |cwd run_command|
    * - ``flags``
-     - |flags|
+     - **Ruby Type:** String
+
+       |flags|
    * - ``group``
-     - |group command|
+     - **Ruby Types:** String, Integer
+
+       |group command|
    * - ``guard_interpreter``
-     - Default value: ``:batch``. When this attribute is set to ``:batch``, the 64-bit version of the |windows cmd exe| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` attributes. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
+     - **Ruby Type:** Symbol
+
+       Default value: ``:batch``. When this attribute is set to ``:batch``, the 64-bit version of the |windows cmd exe| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` attributes. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
    * - ``interpreter``
-     - |interpreter|
+     - **Ruby Type:** String
+
+       |interpreter| |interpreter|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``returns``
-     - |return_value cmd| Default value: ``0``.
+     - **Ruby Types:** Integer, Array
+
+       |return_value cmd| Default value: ``0``.
    * - ``timeout``
-     - |timeout command| Default value: ``3600``.
+     - **Ruby Types:** Integer, Float
+
+       |timeout command| Default value: ``3600``.
    * - ``user``
-     - |user name_or_id|
+     - **Ruby Types:** String, Integer
+
+       |user name_or_id|
 
 .. note:: See http://technet.microsoft.com/en-us/library/bb490880.aspx for more information about the |windows cmd exe| interpreter.
