@@ -24,12 +24,10 @@ The full syntax for all of the attributes that are available to the |resource us
      force                      TrueClass, FalseClass # see description
      gid                        String, Integer
      home                       String
-     iterations                 Integer
      manage_home                TrueClass, FalseClass
      non_unique                 TrueClass, FalseClass
      password                   String
      provider                   Chef::Provider::User
-     salt                       String
      shell                      String
      supports                   Hash
      system                     TrueClass, FalseClass
@@ -43,4 +41,4 @@ where
 * ``user`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``comment``, ``force``, ``gid``, ``home``, ``iterations``, ``manage_home``, ``non_unique``, ``password``, ``provider``, ``salt``, ``shell``, ``supports``, ``system``, ``uid``, and ``username`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``comment``, ``force``, ``gid``, ``home``, ``manage_home``, ``non_unique``, ``password``, ``provider``, ``shell``, ``supports``, ``system``, ``uid``, and ``username`` are attributes of this resource, with the |ruby| type shown. |see attributes|

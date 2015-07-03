@@ -10,7 +10,7 @@ user
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_user_syntax.rst
+.. include:: ../../includes_resources/includes_resource_11-16_user_syntax.rst
 
 Actions
 =====================================================
