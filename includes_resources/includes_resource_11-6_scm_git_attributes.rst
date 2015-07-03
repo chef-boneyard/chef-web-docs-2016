@@ -1,0 +1,61 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+This resource has the following attributes:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``additional_remotes``
+     - **Ruby Type:** Hash
+
+       |additional_remotes|
+   * - ``depth``
+     - **Ruby Type:** Integer
+
+       |depth git_shallow_clone| The default behavior will do a full clone.
+   * - ``destination``
+     - **Ruby Type:** String
+
+       |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
+   * - ``enable_submodules``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |enable_submodules| Default value: ``false``.
+   * - ``group``
+     - **Ruby Types:** String, Integer
+
+       |group deploy|
+   * - ``provider``
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
+   * - ``reference``
+     - **Ruby Type:** String
+
+       |reference resource scm|
+   * - ``remote``
+     - **Ruby Type:** String
+
+       |remote resource|
+   * - ``repository``
+     - **Ruby Type:** String
+
+       |uri repository_git|
+   * - ``revision``
+     - **Ruby Type:** String
+
+       |revision| Default value: ``HEAD``.
+
+       .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
+   * - ``ssh_wrapper``
+     - **Ruby Type:** String
+
+       |ssh_wrapper resource|
+   * - ``user``
+     - **Ruby Types:** String, Integer
+
+       |user checked_out_code|
