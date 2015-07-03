@@ -26,7 +26,7 @@ The full syntax for all of the attributes that are available to the |resource if
      network                    String
      onboot                     String
      onparent                   String
-     provider                   Chef::Provider::Link
+     provider                   Chef::Provider::Ifconfig
      target                     String # defaults to 'name' if not specified
      action                     Symbol # defaults to :create if not specified
    end
