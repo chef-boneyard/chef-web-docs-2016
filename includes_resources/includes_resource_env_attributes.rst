@@ -10,11 +10,18 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``delim``
-     - |delim resource directory|
-   * - ``key_name``
-     - |name key_directory| Default value: the ``name`` of the resource block. |see syntax|
-   * - ``provider``
-     - Optional. |provider resource_parameter|
-   * - ``value``
-     - |value resource directory|
+     - **Ruby Type:** String
 
+       |delim resource directory|
+   * - ``key_name``
+     - **Ruby Type:** String
+
+       |name key_directory| Default value: the ``name`` of the resource block. |see syntax|
+   * - ``provider``
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
+   * - ``value``
+     - **Ruby Type:** String
+
+       |value resource directory|

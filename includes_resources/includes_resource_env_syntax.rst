@@ -1,19 +1,30 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource env| resource in a recipe is as follows:
+
+A |resource env| resource block manages environment keys in |windows|:
 
 .. code-block:: ruby
 
-   env "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   env "ComSpec" do
+     value "C:\\Windows\\system32\\cmd.exe"
+   end
+
+The full syntax for all of the attributes that are available to the |resource env| resource is:
+
+.. code-block:: ruby
+
+   env 'name' do
+     delim                      String
+     key_name                   String # defaults to 'name' if not specified
+     provider                   Chef::Provider::Env
+     value                      String
+     action                     Symbol # defaults to :create if not specified
    end
 
 where 
 
-* ``env`` tells the |chef client| to use the ``Chef::Provider::Env::Windows`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``key_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the environment key that is created, deleted, or modified
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
+* ``env`` is the resource
+* ``name`` is the name of the resource block
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``delim``, ``key_name``, ``provider``, and ``value`` are attributes of this resource, with the |ruby| type shown. |see attributes|
