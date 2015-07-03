@@ -10,23 +10,34 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``bitmap``
-     - The path to a file in which a write-intent bitmap is stored.
+     - **Ruby Type:** String
+
+       |path bitmap|
    * - ``chunk``
-     - |chunk_size| This attribute should not be used for a RAID 1 mirrored pair (i.e. when the ``level`` attribute is set to ``1``). Default value: ``16``.
+     - **Ruby Type:** Integer
+
+       |chunk_size| This attribute should not be used for a RAID 1 mirrored pair (i.e. when the ``level`` attribute is set to ``1``). Default value: ``16``.
    * - ``devices``
-     - |device mdadm| Default value: ``[]``.
+     - **Ruby Type:** Array
+
+       |device mdadm| Default value: ``[]``.
    * - ``exists``
-     - Indicates whether the RAID array exists. Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |raid_device exists| Default value: ``false``.
    * - ``level``
-     - |level mdadm| Default value: ``1``.
+     - **Ruby Type:** Integer
+
+       |level mdadm| Default value: ``1``.
    * - ``metadata``
-     - The superblock type for RAID metadata. Default value: ``0.90``.
+     - **Ruby Type:** String
+
+       |raid_device superblock_type| Default value: ``0.90``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``raid_device``
-     - |raid_device mdadm| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
 
-
-
-
-
+       |raid_device mdadm| Default value: the ``name`` of the resource block. |see syntax|

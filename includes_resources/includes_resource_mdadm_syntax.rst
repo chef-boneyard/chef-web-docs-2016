@@ -1,19 +1,36 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource mdadm| resource in a recipe is as follows:
+
+A |resource mdadm| resource block manages |raid| devices in a |linux| environment using the |mdadm| utility:
 
 .. code-block:: ruby
 
-   mdadm "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   mdadm '/dev/md0' do
+     devices [ '/dev/sda', '/dev/sdb' ]
+     level 1
+     action [ :create, :assemble ]
+   end
+
+The full syntax for all of the attributes that are available to the |resource mdadm| resource is:
+
+.. code-block:: ruby
+
+   mdadm 'name' do
+     bitmap                     String
+     chunk                      Integer
+     devices                    Array
+     exists                     TrueClass, FalseClass
+     level                      Integer
+     metadata                   String
+     provider                   Chef::Provider::Mdadm
+     raid_device                String # defaults to 'name' if not specified
+     action                     Symbol # defaults to :create if not specified
    end
 
 where 
 
-* ``mdadm`` tells the |chef client| to use the ``Chef::Provider::Mdadm`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``raid_device`` attribute is not specified as part of a recipe, ``name`` is also the name of the |raid| device
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
+* ``mdadm`` is the resource
+* ``name`` is the name of the resource block
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``bitmap``, ``chunk``, ``devices``, ``exists``, ``level``, ``metadata``, ``provider``,  and ``raid_device`` are attributes of this resource, with the |ruby| type shown. |see attributes|
