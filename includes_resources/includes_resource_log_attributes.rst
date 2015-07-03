@@ -10,8 +10,14 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``level``
-     - |level log| Default value: ``:info``.
+     - **Ruby Type:** Symbol
+
+       |level log| Default value: ``:info``.
    * - ``message``
-     - |message resource log| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |message resource log| Default value: the ``name`` of the resource block. |see syntax|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|

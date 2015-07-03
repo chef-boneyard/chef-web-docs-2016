@@ -1,19 +1,31 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource log| resource in a recipe is as follows:
+
+A |resource log| resource block adds messages to the log file based on events that occur during the |chef client| run:
 
 .. code-block:: ruby
 
-   log "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   log 'message' do
+     message "A message add to the log."
+     level :info
+   end
+
+The full syntax for all of the attributes that are available to the |resource log| resource is:
+
+.. code-block:: ruby
+
+   log 'name' do
+     level                      Symbol
+     message                    String # defaults to 'name' if not specified
+     provider                   Chef::Provider::ChefLog
+     action                     Symbol # defaults to :write if not specified
    end
 
 where 
 
-* ``log`` tells the |chef client| to use the ``Chef::Provider::Log::ChefLog`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``message`` attribute is not specified as part of a recipe, ``name`` is also the message to be added to a log file
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
+* ``log`` is the resource
+* ``name`` is the name of the resource block
+* ``command`` is the command to be run
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``command``, ``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``provider``, ``returns``, ``sensitive``, ``timeout``, ``user``, and ``umask`` are attributes of this resource, with the |ruby| type shown. |see attributes|
