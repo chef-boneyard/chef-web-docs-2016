@@ -9,12 +9,10 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
-   * - ``class_name``
-     - |name class_chef_handler|
-   * - ``source``
-     - |path chef_handler|
    * - ``arguments``
-     - |arguments chef_handler| Default value: ``[]``. For example:
+     - **Ruby Type:** Array
+
+       |arguments chef_handler| Default value: ``[]``. For example:
 
        .. code-block:: ruby
 
@@ -26,5 +24,15 @@ This resource has the following attributes:
 
           arguments [:key1 => 'val1', :key2 => 'val2']
 
+   * - ``class_name``
+     - **Ruby Type:** String
+
+       |name class_chef_handler|
+   * - ``source``
+     - **Ruby Type:** String
+
+       |path chef_handler|
    * - ``supports``
-     - |supports chef_handler| Possible values: ``:exception``, ``:report``, or ``:start``. Default value: ``{ :report => true, :exception => true }``.
+     - **Ruby Type:** Hash
+
+       |supports chef_handler| Possible values: ``:exception``, ``:report``, or ``:start``. Default value: ``{ :report => true, :exception => true }``.
