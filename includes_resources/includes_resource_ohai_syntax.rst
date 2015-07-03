@@ -1,19 +1,29 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource ohai| resource in a recipe is as follows:
+
+A |resource ohai| resource block reloads the |ohai| configuration on a node:
 
 .. code-block:: ruby
 
-   ohai "name" do
-     attribute "value" # see attributes section below
-     ...
-     action :action # see actions section below
+   ohai "reload" do
+     action :reload
+   end
+
+The full syntax for all of the attributes that are available to the |resource ohai| resource is:
+
+.. code-block:: ruby
+
+   ohai 'name' do
+     name                       String
+     plugin                     String
+     provider                   Chef::Provider::Ohai
+     action                     Symbol # defaults to :reload if not specified
    end
 
 where 
 
-* ``ohai`` tells the |chef client| to use the ``Chef::Provider::Ohai`` provider during the |chef client| run
-* ``"name"`` is a friendly name for the action that is defined in the recipe
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
+* ``ohai`` is the resource
+* ``name`` is the name of the resource block
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``name``, ``plugin``,  and ``provider`` are attributes of this resource, with the |ruby| type shown. |see attributes|
