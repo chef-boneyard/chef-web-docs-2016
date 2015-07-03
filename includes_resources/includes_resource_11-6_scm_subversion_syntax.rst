@@ -27,7 +27,6 @@ The full syntax for all of the attributes that are available to the |resource sc
      svn_info_args              String
      svn_password               String
      svn_username               String
-     timeout                    Integer
      user                       String, Integer
      action                     Symbol # defaults to :sync if not specified
    end
@@ -37,4 +36,4 @@ where
 * ``subversion`` is the resource
 * ``name`` is the name of the resource block and also (when ``destination`` is not specified) the location in which the source files will be placed and/or synchronized with the files under source control management
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``destination``, ``group``, ``provider``, ``repository``, ``revision``, ``svn_arguments``, ``svn_info_args``, ``svn_password``, ``svn_username``, ``timeout``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``destination``, ``group``, ``provider``, ``repository``, ``revision``, ``svn_arguments``, ``svn_info_args``, ``svn_password``, ``svn_username``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|

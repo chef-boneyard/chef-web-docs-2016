@@ -18,12 +18,9 @@ The full syntax for all of the attributes that are available to the |resource sc
 
    git 'name' do
      additional_remotes         Hash
-     checkout_branch            String
      depth                      Integer
      destination                String # defaults to 'name' if not specified
-     enable_checkout            TrueClass, FalseClass
      enable_submodules          TrueClass, FalseClass
-     environment                Hash
      group                      String, Integer
      provider                   Chef::Provider::Scm::Git
      reference                  String
@@ -31,7 +28,6 @@ The full syntax for all of the attributes that are available to the |resource sc
      repository                 String
      revision                   String
      ssh_wrapper                String
-     timeout                    Integer
      user                       String, Integer
      action                     Symbol # defaults to :sync if not specified
    end
@@ -41,4 +37,4 @@ where
 * ``git`` is the resource
 * ``name`` is the name of the resource block and also (when ``destination`` is not specified) the location in which the source files will be placed and/or synchronized with the files under source control management
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``additional_remotes``, ``checkout_branch``, ``depth``, ``destination``, ``enable_checkout``, ``enable_submodules``, ``environment``, ``group``, ``provider``, ``reference``, ``remote``, ``repository``, ``revision``, ``ssh_wrapper``, ``timeout``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``additional_remotes``, ``depth``, ``destination``, ``enable_submodules``, ``group``, ``provider``, ``reference``, ``remote``, ``repository``, ``revision``, ``ssh_wrapper``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
