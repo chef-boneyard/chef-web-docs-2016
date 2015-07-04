@@ -12,7 +12,7 @@ git
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_11-16_resource_scm_git_syntax.rst
+.. include:: ../../includes_resources/includes_resource_11-16_scm_git_syntax.rst
 
 Actions
 =====================================================
