@@ -32,8 +32,6 @@ The full syntax for all of the attributes that are available to the |resource ds
      cwd                        String
      environment                Hash
      flags                      Hash
-     imports                    Array
-     timeout                    Integer
      action                     Symbol # defaults to :run if not specified
    end
 
@@ -42,4 +40,4 @@ where
 * ``dsc_script`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``code``, ``command``, ``configuration_data``, ``configuration_data_script``, ``configuration_name``, ``cwd``, ``environment``, ``flags``, ``imports``, and ``timeout`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``code``, ``command``, ``configuration_data``, ``configuration_data_script``, ``configuration_name``, ``cwd``, ``environment``, and ``flags`` are attributes of this resource, with the |ruby| type shown. |see attributes|

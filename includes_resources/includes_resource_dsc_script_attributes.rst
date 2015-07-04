@@ -10,23 +10,41 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``code``
-     - |code powershell| |dsc_script no_command|
+     - **Ruby Type:** String
+
+       |code powershell| |dsc_script no_command|
    * - ``command``
-     - |command powershell| |dsc_script no_code|
+     - **Ruby Type:** String
+
+       |command powershell| |dsc_script no_code|
    * - ``configuration_data``
-     - |config powershell| The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. |dsc_script no_config_data_script|
+     - **Ruby Type:** String
+
+       |config powershell| The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. |dsc_script no_config_data_script|
    * - ``configuration_data_script``
-     - |path powershell_data_file| |dsc_script no_config_data|
+     - **Ruby Type:** String
+
+       |path powershell_data_file| |dsc_script no_config_data|
    * - ``configuration_name``
-     - |name powershell_cmdlet| |dsc_script no_code|
+     - **Ruby Type:** String
+
+       |name powershell_cmdlet| |dsc_script no_code|
    * - ``cwd``
-     - |cwd|
+     - **Ruby Type:** String
+
+       |cwd|
    * - ``environment``
-     - |environment variables|
+     - **Ruby Type:** Hash
+
+       |environment variables|
    * - ``flags``
-     - |flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
+     - **Ruby Type:** Hash
+
+       |flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
    * - ``imports``
-     - Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
+     - **Ruby Type:** Array
+
+       Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
 
        .. code-block:: ruby
 
@@ -50,3 +68,7 @@ This resource has the following attributes:
 
           imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
 
+   * - ``timeout``
+     - **Ruby Types:** Integer
+
+       |timeout command|
