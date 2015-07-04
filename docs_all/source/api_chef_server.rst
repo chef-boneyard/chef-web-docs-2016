@@ -1,3 +1,3 @@
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/api_cookbooks_site.rst
+.. warning:: This topic has been moved to https://docs.chef.io/api_chef_server.html. Please update your bookmarks!

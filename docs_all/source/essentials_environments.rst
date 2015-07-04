@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/environments.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/environments.rst
+.. warning:: This topic has been moved to https://docs.chef.io/environments.html. Please update your bookmarks!

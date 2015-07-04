@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/install_bootstrap.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/install_bootstrap.rst
+.. warning:: This topic has been moved to https://docs.chef.io/install_bootstrap.html. Please update your bookmarks!

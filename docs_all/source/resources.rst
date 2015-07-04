@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/resources.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/resources.rst
+.. warning:: This topic has been moved to https://docs.chef.io/resources.html. Please update your bookmarks!

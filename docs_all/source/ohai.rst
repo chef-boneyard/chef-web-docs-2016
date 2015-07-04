@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/ohai.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/ohai.rst
+.. warning:: This topic has been moved to https://docs.chef.io/ohai.html. Please update your bookmarks!

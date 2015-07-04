@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/nodes.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/nodes.rst
+.. warning:: This topic has been moved to https://docs.chef.io/nodes.html. Please update your bookmarks!

@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/cookbook_repo.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/cookbook_repo.rst
+.. warning:: This topic has been moved to https://docs.chef.io/cookbook_repo.html. Please update your bookmarks!

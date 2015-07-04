@@ -1,4 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/roles.html BY DESIGN
 .. THIS PAGE IS LOCATED AT THE /chef/ PATH.
 
-.. include:: ../../chef_master/source/roles.rst
+.. warning:: This topic has been moved to https://docs.chef.io/roles.html. Please update your bookmarks!
