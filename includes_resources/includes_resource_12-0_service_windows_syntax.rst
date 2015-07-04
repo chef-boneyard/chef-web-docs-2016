@@ -21,8 +21,6 @@ The full syntax for all of the attributes that are available to the |resource se
      provider                   Chef::Provider::Service::Windows
      reload_command             String
      restart_command            String
-     run_as_password            String
-     run_as_user                String
      service_name               String # defaults to 'name' if not specified
      start_command              String
      startup_type               Symbol
@@ -38,4 +36,4 @@ where
 * ``windows_service`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``init_command``, ``pattern``, ``provider``, ``reload_command``, ``restart_command``, ``run_as_password``, ``run_as_user``, ``service_name``, ``start_command``, ``startup_type``, ``status_command``, ``stop_command``, ``supports``, and ``timeout`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``init_command``, ``pattern``, ``provider``, ``reload_command``, ``restart_command``, ``service_name``, ``start_command``, ``startup_type``, ``status_command``, ``stop_command``, ``supports``, and ``timeout`` are attributes of this resource, with the |ruby| type shown. |see attributes|

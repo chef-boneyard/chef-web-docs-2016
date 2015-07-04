@@ -10,7 +10,7 @@ windows_service
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_service_windows_syntax.rst
+.. include:: ../../includes_resources/includes_resource_12-0_service_windows_syntax.rst
 
 Actions
 =====================================================

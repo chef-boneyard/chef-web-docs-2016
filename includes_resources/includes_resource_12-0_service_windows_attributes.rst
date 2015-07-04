@@ -10,26 +10,50 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``init_command``
-     - |command service_init| This is typically ``/etc/init.d/SERVICE_NAME``. The ``init_command`` attribute can be used to prevent the need to specify  overrides for the ``start_command``, ``stop_command``, and ``restart_command`` attributes. Default value: ``nil``.
+     - **Ruby Type:** String
+
+       |command service_init| This is typically ``/etc/init.d/SERVICE_NAME``. The ``init_command`` attribute can be used to prevent the need to specify  overrides for the ``start_command``, ``stop_command``, and ``restart_command`` attributes. Default value: ``nil``.
    * - ``pattern``
-     - |pattern process_table| Default value: ``service_name``.
+     - **Ruby Type:** String
+
+       |pattern process_table| Default value: ``service_name``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Types:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``reload_command``
-     - |command service_reload|
+     - **Ruby Type:** String
+
+       |command service_reload|
    * - ``restart_command``
-     - |command service_restart|
+     - **Ruby Type:** String
+
+       |command service_restart|
    * - ``service_name``
-     - |name service| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |name service| Default value: the ``name`` of the resource block. |see syntax|
    * - ``start_command``
-     - |command service_start|
+     - **Ruby Type:** String
+
+       |command service_start|
    * - ``startup_type``
-     - Use to specify the startup type for a |windows| service. Possible values: ``:automatic``, ``:disabled``, or ``:manual``. Default value: ``:automatic``.
+     - **Ruby Type:** Symbol
+
+       Use to specify the startup type for a |windows| service. Possible values: ``:automatic``, ``:disabled``, or ``:manual``. Default value: ``:automatic``.
    * - ``status_command``
-     - |command service_status|
+     - **Ruby Type:** String
+
+       |command service_status|
    * - ``stop_command``
-     - |command service_stop|
+     - **Ruby Type:** String
+
+       |command service_stop|
    * - ``supports``
-     - |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms (except for the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.)
+     - **Ruby Type:** Hash
+
+       |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms (except for the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.)
    * - ``timeout``
-     - |windows| platform only. |timeout|
+     - **Ruby Type:** Integer
+
+       |windows| platform only. |timeout|
