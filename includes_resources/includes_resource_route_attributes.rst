@@ -10,12 +10,24 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``device``
-     - |route_device|
+     - **Ruby Type:** String
+
+       |route_device|
    * - ``gateway``
-     - |route_gateway|
+     - **Ruby Type:** String
+
+       |route_gateway|
    * - ``netmask``
-     - |netmask| For example: ``255.255.255.0``.
+     - **Ruby Type:** String
+
+       |netmask| For example: ``255.255.255.0``.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``target``
-     - |target_address| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |target_address| Default value: the ``name`` of the resource block. |see syntax|
+
+.. Attributes in the route resource that aren't in the route provider: domain, domainname, hostname, metric, networking, networking_ipv6, route_type
