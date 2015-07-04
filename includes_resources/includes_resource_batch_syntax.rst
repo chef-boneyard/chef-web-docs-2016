@@ -29,7 +29,7 @@ The full syntax for all of the attributes that are available to the |resource ba
      group                      String, Integer
      guard_interpreter          Symbol
      interpreter                String
-     provider                   Chef::Provider::Script
+     provider                   Chef::Provider::Batch
      returns                    Integer, Array
      timeout                    Integer, Float
      user                       String, Integer
