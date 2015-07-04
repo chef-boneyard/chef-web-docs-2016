@@ -5,7 +5,7 @@ A |resource breakpoint| resource block creates a breakpoint in a recipe:
 
 .. code-block:: ruby
 
-   breakpoint "name" do
+   breakpoint 'name' do
      action :break
    end
 

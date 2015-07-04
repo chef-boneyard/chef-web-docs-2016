@@ -6,8 +6,8 @@ A |resource ifconfig| resource block manages interfaces, such as a static IP add
 
 .. code-block:: ruby
 
-   ifconfig "33.33.33.80" do
-     device "eth1"
+   ifconfig '33.33.33.80' do
+     device 'eth1'
    end
 
 The full syntax for all of the attributes that are available to the |resource ifconfig| resource is:

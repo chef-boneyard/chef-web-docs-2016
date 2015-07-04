@@ -6,9 +6,9 @@ A |resource group| resource block manages groups on a node:
 
 .. code-block:: ruby
 
-   group "www-data" do
+   group 'www-data' do
      action :modify
-     members "maintenance"
+     members 'maintenance'
      append true
    end
 

@@ -6,7 +6,7 @@ A |resource ruby_block| resource block executes a block of arbitrary |ruby| code
 
 .. code-block:: ruby
 
-   ruby_block "reload_client_config" do
+   ruby_block 'reload_client_config' do
      block do
        Chef::Config.from_file("/etc/chef/client.rb")
      end

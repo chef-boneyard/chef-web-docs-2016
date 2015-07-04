@@ -17,7 +17,7 @@ The full syntax for all of the attributes that are available to the |resource pa
    homebrew_package 'name' do
      homebrew_user              String, Integer
      options                    String
-     package_name               String, Array  # defaults to 'name' if not specified
+     package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Homebrew
      source                     String
      timeout                    String, Integer

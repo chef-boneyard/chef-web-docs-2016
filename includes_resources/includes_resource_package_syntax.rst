@@ -14,16 +14,16 @@ For a package that has different package names, depending on the platform, use a
 
 .. code-block:: ruby
 
-   package "Install Apache" do
+   package 'Install Apache' do
      case node[:platform]
-     when "redhat", "centos"
-       package "httpd"
-     when "ubuntu", "debian"
-       package "apache2"
+     when 'redhat', 'centos'
+       package 'httpd'
+     when 'ubuntu', 'debian'
+       package 'apache2'
      end
    end
 
-where ``"redhat", "centos"`` will install |apache| using the ``httpd`` package and ``"ubuntu", "debian"`` will install it using the ``apache2`` package
+where ``'redhat', 'centos'`` will install |apache| using the ``httpd`` package and ``'ubuntu', 'debian'`` will install it using the ``apache2`` package
 
 The full syntax for all of the attributes that are available to the |resource package| resource is:
 

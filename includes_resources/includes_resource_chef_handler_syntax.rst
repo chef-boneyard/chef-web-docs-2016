@@ -6,8 +6,8 @@ A |lwrp chef handler| resource block enables handlers during a |chef client| run
 
 .. code-block:: ruby
 
-   chef_handler "Chef::Handler::JsonFile" do
-     source "chef/handler/json_file"
+   chef_handler 'Chef::Handler::JsonFile' do
+     source 'chef/handler/json_file'
      arguments :path => '/var/chef/reports'
      action :enable
    end
@@ -16,8 +16,8 @@ and:
 
 .. code-block:: ruby
 
-   chef_handler "Chef::Handler::ErrorReport" do
-     source "chef/handler/error_report"
+   chef_handler 'Chef::Handler::ErrorReport' do
+     source 'chef/handler/error_report'
      action :enable
    end
 

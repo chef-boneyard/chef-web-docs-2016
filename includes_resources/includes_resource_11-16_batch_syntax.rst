@@ -6,7 +6,7 @@ A |resource batch| resource block executes a batch script using the |windows cmd
 
 .. code-block:: ruby
 
-   batch "echo some env vars" do
+   batch 'echo some env vars' do
      code <<-EOH
        echo %TEMP%
        echo %SYSTEMDRIVE%
@@ -27,7 +27,7 @@ The full syntax for all of the attributes that are available to the |resource ba
      cwd                        String
      flags                      String
      group                      String, Integer
-     provider                   Chef::Provider::Script
+     provider                   Chef::Provider::Batch
      returns                    Integer, Array
      timeout                    Integer, Float
      user                       String, Integer

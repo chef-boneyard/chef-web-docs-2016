@@ -6,7 +6,7 @@ A |resource batch| resource block executes a batch script using the |windows cmd
 
 .. code-block:: ruby
 
-   batch "echo some env vars" do
+   batch 'echo some env vars' do
      code <<-EOH
        echo %TEMP%
        echo %SYSTEMDRIVE%

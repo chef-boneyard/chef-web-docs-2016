@@ -6,8 +6,8 @@ A |resource http_request| resource block sends HTTP requests with an arbitrary m
 
 .. code-block:: ruby
 
-   http_request "please_delete_me" do
-     url "http://www.chef.io/some_page"
+   http_request 'please_delete_me' do
+     url 'http://www.chef.io/some_page'
      action :delete
    end
 

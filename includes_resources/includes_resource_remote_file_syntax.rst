@@ -19,7 +19,7 @@ where
 * ``'http://somesite.com/index.php'`` specifies the location of the remote file
 * ``owner``, ``group``, and ``mode`` define the permissions
 
-The full syntax for all of the attributes that are available to the |resource cookbook_file| resource is:
+The full syntax for all of the attributes that are available to the |resource remote_file| resource is:
 
 .. code-block:: ruby
 
@@ -36,7 +36,7 @@ The full syntax for all of the attributes that are available to the |resource co
      mode                       String, Integer
      owner                      String, Integer
      path                       String  # defaults to 'name' if not specified
-     provider                   Chef::Provider::CookbookFile
+     provider                   Chef::Provider::File::RemoteFile
      rights                     Hash
      source                     String, Array
      use_conditional_get        TrueClass, FalseClass

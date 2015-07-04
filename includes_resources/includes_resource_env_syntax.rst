@@ -6,8 +6,8 @@ A |resource env| resource block manages environment keys in |windows|:
 
 .. code-block:: ruby
 
-   env "ComSpec" do
-     value "C:\\Windows\\system32\\cmd.exe"
+   env 'ComSpec' do
+     value 'C:\\Windows\\system32\\cmd.exe'
    end
 
 The full syntax for all of the attributes that are available to the |resource env| resource is:

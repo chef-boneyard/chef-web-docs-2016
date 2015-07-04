@@ -18,7 +18,7 @@ For example, an application that is deployed to a folder named ``"/path/to/appli
 
 .. code-block:: ruby
 
-   deploy_revision "/path/to/application" do
+   deploy_revision '/path/to/application' do
      repo 'ssh://name-of-git-repo/repos/repo.git'
      migrate false
      purge_before_symlink %w{one two folder/three}

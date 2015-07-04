@@ -39,7 +39,7 @@ The same command as above, but run using the |resource script_bash| resource:
      not_if { ::File.exists?(extract_path) }
    end
 
-The full syntax for all of the attributes that are available to the |resource execute| resource is:
+The full syntax for all of the attributes that are available to the |resource script| resource is:
 
 .. code-block:: ruby
 

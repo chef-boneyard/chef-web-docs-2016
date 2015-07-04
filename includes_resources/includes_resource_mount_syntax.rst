@@ -8,7 +8,7 @@ A |resource mount| resource block manages a mounted file system:
 
    mount node['mysql']['ec2_path'] do
      device ebs_vol_dev
-     fstype "xfs"
+     fstype 'xfs'
      action :mount
    end
 

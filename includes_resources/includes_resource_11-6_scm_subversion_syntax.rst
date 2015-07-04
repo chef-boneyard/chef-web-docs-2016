@@ -6,10 +6,10 @@ A |resource scm_subversion| resource block manages source control resources that
 
 .. code-block:: ruby
 
-   subversion "CouchDB Edge" do
-     repository "http://svn.apache.org/repos/asf/couchdb/trunk"
-     revision "HEAD"
-     destination "/opt/mysources/couch"
+   subversion 'CouchDB Edge' do
+     repository 'http://svn.apache.org/repos/asf/couchdb/trunk'
+     revision 'HEAD'
+     destination '/opt/mysources/couch'
      action :sync
    end
 

@@ -6,8 +6,8 @@ A |resource link| resource block creates symbolic or hard links. For example, to
 
 .. code-block:: ruby
 
-   link "/tmp/file" do
-     to "/etc/file"
+   link '/tmp/file' do
+     to '/etc/file'
      link_type :hard
    end
 
@@ -15,8 +15,8 @@ Because the default value for ``link_type`` is symbolic, and because attributes 
 
 .. code-block:: ruby
 
-   link "/tmp/file" do
-     to "/etc/file"
+   link '/tmp/file' do
+     to '/etc/file'
    end
 
 The full syntax for all of the attributes that are available to the |resource link| resource is:

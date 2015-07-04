@@ -31,7 +31,7 @@ The full syntax for all of the attributes that are available to the |resource co
      mode                       String, Integer
      owner                      String, Integer
      path                       String  # defaults to 'name' if not specified
-     provider                   Chef::Provider::CookbookFile
+     provider                   Chef::Provider::File::RemoteFile
      rights                     Hash
      source                     String, Array
      action                     Symbol # defaults to :create if not specified

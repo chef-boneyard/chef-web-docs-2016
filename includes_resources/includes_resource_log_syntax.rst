@@ -7,7 +7,7 @@ A |resource log| resource block adds messages to the log file based on events th
 .. code-block:: ruby
 
    log 'message' do
-     message "A message add to the log."
+     message 'A message add to the log.'
      level :info
    end
 
