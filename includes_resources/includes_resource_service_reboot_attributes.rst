@@ -10,6 +10,10 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``delay_mins``
-     - |delay_mins|
+     - **Ruby Type:** Fixnum
+
+       |delay_mins|
    * - ``reason``
-     - |reboot reason|
+     - **Ruby Type:** String
+
+       |reboot reason|
