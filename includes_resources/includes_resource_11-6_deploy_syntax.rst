@@ -77,7 +77,6 @@ The full syntax for all of the attributes that are available to the |resource de
      ssh_wrapper                String
      symlinks                   Hash
      symlink_before_migrate     Hash
-     timeout                    Integer
      user                       String
      action                     Symbol # defaults to :create if not specified
    end
@@ -113,7 +112,6 @@ and the full syntax for all of the attributes that are available to the |resourc
      svn_username               String
      symlinks                   Hash
      symlink_before_migrate     Hash
-     timeout                    Integer
      user                       String
      action                     Symbol # defaults to :create if not specified
    end
@@ -123,4 +121,4 @@ where
 * ``deploy`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``after_restart``, ``before_migrate``, ``before_restart``, ``before_symlink``, ``branch``, ``create_dirs_before_symlink``, ``deploy_to``, ``enable_submodules``, ``environment``, ``git_ssh_wrapper``, ``group``, ``keep_releases``, ``migrate``, ``migration_command``, ``provider``, ``purge_before_symlink``, ``remote``, ``repo``, ``repository``, ``repository_cache``, ``restart_command``, ``revision``, ``rollback_on_error``, ``scm_provider``, ``shallow_clone``, ``ssh_wrapper``, ``svn_arguments``, ``svn_password``, ``svn_username``, ``symlinks``, ``symlink_before_migrate``, ``timeout``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``after_restart``, ``before_migrate``, ``before_restart``, ``before_symlink``, ``branch``, ``create_dirs_before_symlink``, ``deploy_to``, ``enable_submodules``, ``environment``, ``git_ssh_wrapper``, ``group``, ``keep_releases``, ``migrate``, ``migration_command``, ``provider``, ``purge_before_symlink``, ``remote``, ``repo``, ``repository``, ``repository_cache``, ``restart_command``, ``revision``, ``rollback_on_error``, ``scm_provider``, ``shallow_clone``, ``ssh_wrapper``, ``svn_arguments``, ``svn_password``, ``svn_username``, ``symlinks``, ``symlink_before_migrate``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
