@@ -4,7 +4,7 @@
 
 To get a fully-functional |amazon ami| for |chef server|, do the following:
 
-#. Login to the `AWS Marketplace <https://aws.amazon.com/marketplace>`_ using your |amazon aws| account credentials
-#. `Choose an AMI <https://aws.amazon.com/marketplace/seller-profile/ref=dtl_pcp_sold_by?ie=UTF8&id=e7b7691e-634a-4d35-b729-a8b576175e8c>`_ based on the number of nodes to be under management by |chef|.
+#. Login to the `AWS Marketplace <https://aws.amazon.com/marketplace>`__ using your |amazon aws| account credentials
+#. `Choose an AMI <https://aws.amazon.com/marketplace/seller-profile/ref=dtl_pcp_sold_by?ie=UTF8&id=e7b7691e-634a-4d35-b729-a8b576175e8c>`__ based on the number of nodes to be under management by |chef|.
 #. Configure the region, the |amazon ec2| instance type, |amazon vpc| settings, security group, and the SSH key pair.
 #. Launch the |amazon ami|.
