@@ -10,22 +10,32 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``architecture``
-     - |architecture registry_key| Default value: ``:machine``.
+     - **Ruby Type:** Symbol
+
+       |architecture registry_key| Default value: ``:machine``.
 
        |architecture registry_key machine|
 
        .. note:: |note registry_key architecture|
    * - ``key``
-     - |key_name resource registry_key| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |key_name resource registry_key| Default value: the ``name`` of the resource block. |see syntax|
        |key_name resource registry_key hives|
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
    * - ``recursive``
-     - |recursive registry_key|
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |recursive registry_key|
 
        .. note:: |note registry_key resource recursive|
    * - ``values``
-     - |values resource registry_key|
+     - **Ruby Types:** Hash, Array
+
+       |values resource registry_key|
        
        |values resource registry_key types|
 

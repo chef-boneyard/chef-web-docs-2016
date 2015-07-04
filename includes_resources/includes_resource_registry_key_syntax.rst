@@ -1,41 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource registry_key| resource in a recipe is as follows:
 
-.. code-block:: ruby
-
-   registry_key "name" do
-     attribute "value" # see attributes section below
-     ...
-     values [{
-       :name => "name",
-       :type => :string,
-       :data => "data"
-       },
-       {
-       :name => "name",
-       :type => :string,
-       :data => "data"
-       },
-       ...
-       ]
-     action :action # see actions section below
-   end
-
-where 
-
-* ``registry_key`` tells the |chef client| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef client| run
-* ``name`` is the name of the resource block; when the ``key`` attribute is not specified as part of a recipe, ``name`` is also path to the location in which a registry key is created or from which a registry key is deleted
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified.
-* |values resource registry_key types|
-
-  .. warning:: |values resource registry_key multi_string|
-
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-
-For example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a multi-string value named "foo bar":
+A |resource registry_key| resource block creates and deletes registry keys in |windows|:
 
 .. code-block:: ruby
 
@@ -48,7 +15,7 @@ For example, a |windows| registry key named "System" will get a new value called
      action :create
    end
 
-Or, using multiple registry key entries to configure a single resource block with key values based on node attributes:
+Use multiple registry key entries with key values that are based on node attributes:
 
 .. code-block:: ruby
 
@@ -59,3 +26,28 @@ Or, using multiple registry key entries to configure a single resource block wit
             ]
      action :create
    end 
+
+
+The full syntax for all of the attributes that are available to the |resource registry_key| resource is:
+
+.. code-block:: ruby
+
+   registry_key 'name' do
+     architecture               Symbol
+     key                        String # defaults to 'name' if not specified
+     provider                   Chef::Provider::Windows::Registry
+     recursive                  TrueClass, FalseClass
+     values                     Hash, Array
+     action                     Symbol # defaults to :create if not specified
+   end
+
+where 
+
+* ``registry_key`` is the resource
+* ``name`` is the name of the resource block
+* ``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified.
+* |values resource registry_key types|
+
+  .. warning:: |values resource registry_key multi_string|
+* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
+* ``architecture``, ``key``, ``provider``, ``recursive`` and ``values`` are attributes of this resource, with the |ruby| type shown. |see attributes|
