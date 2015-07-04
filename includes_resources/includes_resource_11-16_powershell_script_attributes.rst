@@ -10,13 +10,21 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``architecture``
-     - |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
+     - **Ruby Type:** Symbol
+
+       |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
    * - ``code``
-     - |code quoted_string|
+     - **Ruby Type:** String
+
+       |code quoted_string|
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Types:** String, Array
+
+       |name command| Default value: the ``name`` of the resource block. |see syntax|
    * - ``convert_boolean_return``
-     - |convert_boolean_return| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |convert_boolean_return| Default value: ``false``.
        
        When the ``guard_intrepreter`` common attribute is set to ``:powershell_script``, a string command will be evaluated as if this value were set to ``true``. This is because the behavior of this attribute is similar to the value of the ``"$?"`` expression common in |unix| interpreters. For example, this:
        
@@ -38,9 +46,14 @@ This resource has the following attributes:
           end
 
    * - ``flags``
-     - |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
-   * - ``interpreter``
-     - |interpreter|
-   * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** String
 
+       |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
+   * - ``interpreter``
+     - **Ruby Type:** String
+
+       |interpreter|
+   * - ``provider``
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
