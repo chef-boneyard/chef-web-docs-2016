@@ -10,34 +10,60 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``comment``
-     - |comment user|
+     - **Ruby Type:** String
+
+       |comment user|
    * - ``force``
-     - |force_remove_user|
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |force_remove_user|
 
        .. warning:: Using this attribute may leave the system in an inconsistent state. For example, a user account will be removed even if the user is logged in. A user's home directory will be removed, even if that directory is shared by multiple users.
    * - ``gid``
-     - |id group|
+     - **Ruby Types:** String, Integer
+
+       |id group|
    * - ``home``
-     - |home_directory|
+     - **Ruby Type:** String
+
+       |home_directory|
    * - ``manage_home``
-     - |user homedir|
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |user homedir|
 
        |user homedir_create|
 
        |user homedir_modify|
    * - ``non_unique``
-     - |non_unique_user|
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |non_unique_user|
    * - ``password``
-     - |password shadow_hash|
+     - **Ruby Type:** String
+
+       |password shadow_hash|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``shell``
-     - |shell|
+     - **Ruby Type:** String
+
+       |shell|
    * - ``supports``
-     - |supports user| Default value: ``:manage_home => false, :non_unique => false``.
+     - **Ruby Type:** Hash
+
+       |supports user| Default value: ``:manage_home => false, :non_unique => false``.
    * - ``system``
-     - |system user|
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |system user|
    * - ``uid``
-     - |user uid|
+     - **Ruby Types:** String, Integer
+
+       |user uid|
    * - ``username``
-     - |name user| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |name user| Default value: the ``name`` of the resource block. |see syntax|
