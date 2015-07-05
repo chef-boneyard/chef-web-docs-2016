@@ -22,7 +22,6 @@ The full syntax for all of the attributes that are available to the |resource mo
      domain                     String
      dump                       Integer, FalseClass
      enabled                    TrueClass, FalseClass
-     fsck_device                String
      fstype                     String
      mount_point                String # defaults to 'name' if not specified
      mounted                    TrueClass, FalseClass
@@ -40,4 +39,4 @@ where
 * ``mount`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``device``, ``device_type``, ``domain``, ``dump``, ``enabled``, ``fsck_device``, ``fstype``, ``mount_point``, ``mounted``, ``options``, ``pass``, ``password``, ``provider``, ``supports``, and ``username`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``device``, ``device_type``, ``domain``, ``dump``, ``enabled``, ``fstype``, ``mount_point``, ``mounted``, ``options``, ``pass``, ``password``, ``provider``, ``supports``, and ``username`` are attributes of this resource, with the |ruby| type shown. |see attributes|
