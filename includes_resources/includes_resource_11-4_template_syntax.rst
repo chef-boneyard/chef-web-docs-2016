@@ -37,6 +37,7 @@ The full syntax for all of the attributes that are available to the |resource te
      rights                     Hash
      source                     String, Array
      variables                  Hash
+     subscribes                 # see description
      action                     Symbol # defaults to :create if not specified
    end
 

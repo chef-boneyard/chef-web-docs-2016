@@ -28,6 +28,7 @@ The full syntax for all of the attributes that are available to the |resource if
      onboot                     String
      onparent                   String
      provider                   Chef::Provider::Ifconfig
+     subscribes                 # see description
      target                     String # defaults to 'name' if not specified
      action                     Symbol # defaults to :create if not specified
    end

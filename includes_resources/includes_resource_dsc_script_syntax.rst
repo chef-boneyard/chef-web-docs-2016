@@ -34,6 +34,7 @@ The full syntax for all of the attributes that are available to the |resource ds
      flags                      Hash
      imports                    Array
      notifies                   # see description
+     subscribes                 # see description
      timeout                    Integer
      action                     Symbol # defaults to :run if not specified
    end

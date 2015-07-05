@@ -42,6 +42,7 @@ The full syntax for all of the attributes that are available to the |resource pa
      response_file              String # Apt packages only
      response_file_variables    Hash # Apt packages only
      source                     String
+     subscribes                 # see description
      timeout                    String, Integer
      version                    String, Array
      action                     Symbol # defaults to :install if not specified

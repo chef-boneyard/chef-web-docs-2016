@@ -26,6 +26,7 @@ The full syntax for all of the attributes that are available to the |resource po
      interpreter                String
      notifies                   # see description
      provider                   Chef::Provider::PowershellScript
+     subscribes                 # see description
      action                     Symbol # defaults to :run if not specified
    end
 

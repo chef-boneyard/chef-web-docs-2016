@@ -32,6 +32,7 @@ The full syntax for all of the attributes that are available to the |resource ds
      notifies                   # see description
      property                   Symbol
      resource                   String
+     subscribes                 # see description
    end
 
 where 

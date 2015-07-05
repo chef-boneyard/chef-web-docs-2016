@@ -33,6 +33,7 @@ The full syntax for all of the attributes that are available to the |resource po
      notifies                   # see description
      provider                   Chef::Provider::PowershellScript
      returns                    Integer, Array
+     subscribes                 # see description
      timeout                    Integer, Float
      user                       String, Integer
      action                     Symbol # defaults to :run if not specified

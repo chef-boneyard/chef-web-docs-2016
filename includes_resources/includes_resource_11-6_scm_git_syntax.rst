@@ -29,6 +29,7 @@ The full syntax for all of the attributes that are available to the |resource sc
      repository                 String
      revision                   String
      ssh_wrapper                String
+     subscribes                 # see description
      user                       String, Integer
      action                     Symbol # defaults to :sync if not specified
    end

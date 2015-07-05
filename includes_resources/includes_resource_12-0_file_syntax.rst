@@ -38,6 +38,7 @@ The full syntax for all of the attributes that are available to the |resource fi
      provider                   Chef::Provider::File
      rights                     Hash
      sensitive                  TrueClass, FalseClass
+     subscribes                 # see description
      action                     Symbol # defaults to :create if not specified
    end
 

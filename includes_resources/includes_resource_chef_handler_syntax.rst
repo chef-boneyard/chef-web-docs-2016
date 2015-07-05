@@ -32,6 +32,7 @@ The full syntax for all of the attributes that are available to the |lwrp chef h
      class_name                 String
      notifies                   # see description
      source                     String
+     subscribes                 # see description
      supports                   Hash
      action                     Symbol
    end

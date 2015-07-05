@@ -42,6 +42,7 @@ The full syntax for all of the attributes that are available to the |resource re
      recursive                  TrueClass, FalseClass
      rights                     Hash
      source                     String
+     subscribes                 # see description
      action                     Symbol # defaults to :create if not specified
    end
 

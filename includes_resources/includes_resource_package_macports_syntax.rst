@@ -19,6 +19,7 @@ The full syntax for all of the attributes that are available to the |resource pa
      options                    String
      provider                   Chef::Provider::Package::Macports
      source                     String
+     subscribes                 # see description
      timeout                    String, Integer
      version                    String, Array
      action                     Symbol # defaults to :install if not specified

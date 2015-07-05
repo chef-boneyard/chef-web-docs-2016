@@ -38,6 +38,7 @@ The full syntax for all of the attributes that are available to the |resource sc
      path                       Array
      provider                   Chef::Provider::Script::Ruby
      returns                    Integer, Array
+     subscribes                 # see description
      timeout                    Integer, Float
      user                       String, Integer
      umask                      String, Integer

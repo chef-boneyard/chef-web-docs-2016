@@ -76,6 +76,7 @@ The full syntax for all of the attributes that are available to the |resource de
      scm_provider               Chef::Provider::Git
      shallow_clone              TrueClass, FalseClass
      ssh_wrapper                String
+     subscribes                 # see description
      symlinks                   Hash
      symlink_before_migrate     Hash
      user                       String
@@ -109,6 +110,7 @@ and the full syntax for all of the attributes that are available to the |resourc
      revision                   String
      rollback_on_error          TrueClass, FalseClass
      scm_provider               Chef::Provider::Subversion
+     subscribes                 # see description
      svn_arguments              String
      svn_password               String
      svn_username               String

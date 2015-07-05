@@ -19,6 +19,7 @@ The full syntax for all of the attributes that are available to the |resource en
      key_name                   String # defaults to 'name' if not specified
      notifies                   # see description
      provider                   Chef::Provider::Env
+     subscribes                 # see description
      value                      String
      action                     Symbol # defaults to :create if not specified
    end

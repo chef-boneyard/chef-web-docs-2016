@@ -23,6 +23,7 @@ The full syntax for all of the attributes that are available to the |resource pa
      provider                   Chef::Provider::Package::EasyInstall
      python_binary              String
      source                     String
+     subscribes                 # see description
      timeout                    String, Integer
      version                    String, Array
      action                     Symbol # defaults to :install if not specified

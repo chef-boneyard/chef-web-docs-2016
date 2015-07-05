@@ -22,6 +22,7 @@ The full syntax for all of the attributes that are available to the |resource ru
      block_name                 String # defaults to 'name' if not specified
      notifies                   # see description
      provider                   Chef::Provider::RubyBlock
+     subscribes                 # see description
      action                     Symbol # defaults to :run if not specified
    end
 

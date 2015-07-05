@@ -40,6 +40,7 @@ The full syntax for all of the attributes that are available to the |resource co
      provider                   Chef::Provider::File::RemoteFile
      rights                     Hash
      source                     String, Array
+     subscribes                 # see description
      use_conditional_get        TrueClass, FalseClass
      use_etag                   TrueClass, FalseClass
      use_last_modified          TrueClass, FalseClass

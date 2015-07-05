@@ -21,6 +21,7 @@ The full syntax for all of the attributes that are available to the |resource ch
      package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Rubygems
      source                     String
+     subscribes                 # see description
      timeout                    String, Integer
      version                    String, Array
      action                     Symbol # defaults to :install if not specified

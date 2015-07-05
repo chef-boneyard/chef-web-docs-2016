@@ -110,6 +110,7 @@ and the full syntax for all of the attributes that are available to the |resourc
      revision                   String
      rollback_on_error          TrueClass, FalseClass
      scm_provider               Chef::Provider::Subversion
+     subscribes                 # see description
      svn_arguments              String
      svn_password               String
      svn_username               String

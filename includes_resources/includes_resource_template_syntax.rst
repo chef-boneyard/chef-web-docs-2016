@@ -42,6 +42,7 @@ The full syntax for all of the attributes that are available to the |resource te
      rights                     Hash
      sensitive                  TrueClass, FalseClass
      source                     String, Array
+     subscribes                 # see description
      variables                  Hash
      verify                     String, Block
      action                     Symbol # defaults to :create if not specified

@@ -31,6 +31,7 @@ The full syntax for all of the attributes that are available to the |resource mo
      pass                       Integer, FalseClass
      password                   String
      provider                   Chef::Provider::Mount
+     subscribes                 # see description
      supports                   Array
      username                   String
      action                     Symbol # defaults to :mount if not specified

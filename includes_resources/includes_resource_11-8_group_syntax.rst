@@ -23,6 +23,7 @@ The full syntax for all of the attributes that are available to the |resource gr
      members                    Array
      notifies                   # see description
      provider                   Chef::Provider::Group
+     subscribes                 # see description
      system                     TrueClass, FalseClass
      action                     Symbol # defaults to :create if not specified
    end

@@ -28,6 +28,7 @@ The full syntax for all of the attributes that are available to the |resource se
      start_command              String
      status_command             String
      stop_command               String
+     subscribes                 # see description
      supports                   Hash
      timeout                    Integer
      action                     Symbol # defaults to :nothing if not specified

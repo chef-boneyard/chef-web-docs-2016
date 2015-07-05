@@ -47,6 +47,7 @@ The full syntax for all of the attributes that are available to the |resource ex
      path                       Array # do not use
      provider                   Chef::Provider::Execute
      returns                    Integer, Array
+     subscribes                 # see description
      timeout                    Integer, Float
      user                       String, Integer
      umask                      String, Integer

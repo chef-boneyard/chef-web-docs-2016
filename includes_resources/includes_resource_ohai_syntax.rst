@@ -19,6 +19,7 @@ The full syntax for all of the attributes that are available to the |resource oh
      notifies                   # see description
      plugin                     String
      provider                   Chef::Provider::Ohai
+     subscribes                 # see description
      action                     Symbol # defaults to :reload if not specified
    end
 

@@ -30,6 +30,7 @@ The full syntax for all of the attributes that are available to the |resource us
      password                   String
      provider                   Chef::Provider::User
      shell                      String
+     subscribes                 # see description
      supports                   Hash
      system                     TrueClass, FalseClass
      uid                        String, Integer

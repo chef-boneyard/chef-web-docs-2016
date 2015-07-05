@@ -20,6 +20,7 @@ The full syntax for all of the attributes that are available to the |resource re
      delay_mins                 Fixnum
      notifies                   # see description
      reason                     String
+     subscribes                 # see description
      action                     Symbol
    end
 

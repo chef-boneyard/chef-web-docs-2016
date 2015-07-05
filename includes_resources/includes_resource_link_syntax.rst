@@ -30,6 +30,7 @@ The full syntax for all of the attributes that are available to the |resource li
      notifies                   # see description
      owner                      Integer, String
      provider                   Chef::Provider::Link
+     subscribes                 # see description
      target_file                String # defaults to 'name' if not specified
      to                         String
      action                     Symbol # defaults to :create if not specified

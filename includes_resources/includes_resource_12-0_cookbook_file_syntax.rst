@@ -39,6 +39,7 @@ The full syntax for all of the attributes that are available to the |resource co
      provider                   Chef::Provider::CookbookFile
      rights                     Hash
      source                     String, Array
+     subscribes                 # see description
      action                     Symbol # defaults to :create if not specified
    end
 

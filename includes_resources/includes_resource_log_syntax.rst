@@ -20,6 +20,7 @@ The full syntax for all of the attributes that are available to the |resource lo
      message                    String # defaults to 'name' if not specified
      notifies                   # see description
      provider                   Chef::Provider::ChefLog
+     subscribes                 # see description
      action                     Symbol # defaults to :write if not specified
    end
 

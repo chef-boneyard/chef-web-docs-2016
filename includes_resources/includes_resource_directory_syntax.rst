@@ -32,6 +32,7 @@ The full syntax for all of the attributes that are available to the |resource di
      provider                   Chef::Provider::Directory
      recursive                  TrueClass, FalseClass
      rights                     Hash
+     subscribes                 # see description
      action                     Symbol # defaults to :create if not specified
    end
 

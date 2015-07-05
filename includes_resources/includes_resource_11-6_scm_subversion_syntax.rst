@@ -24,6 +24,7 @@ The full syntax for all of the attributes that are available to the |resource sc
      provider                   Chef::Provider::Scm::Subversion
      repository                 String
      revision                   String
+     subscribes                 # see description
      svn_arguments              String
      svn_info_args              String
      svn_password               String

@@ -24,6 +24,7 @@ The full syntax for all of the attributes that are available to the |resource er
      node_name                  String
      notifies                   # see description
      provider                   Chef::Provider::ErlCall
+     subscribes                 # see description
      action                     Symbol # defaults to :run if not specified
    end
 

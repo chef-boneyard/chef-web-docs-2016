@@ -38,6 +38,7 @@ The full syntax for all of the attributes that are available to the |resource ex
      provider                   Chef::Provider::File
      rights                     Hash
      sensitive                  TrueClass, FalseClass
+     subscribes                 # see description
      verify                     String, Block
      action                     Symbol # defaults to :create if not specified
    end

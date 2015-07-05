@@ -38,6 +38,7 @@ The full syntax for all of the attributes that are available to the |resource cr
      path                       String
      provider                   Chef::Provider::Cron
      shell                      String
+     subscribes                 # see description
      time                       Symbol
      user                       String
      weekday                    String, Symbol

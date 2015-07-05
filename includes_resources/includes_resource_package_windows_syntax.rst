@@ -23,6 +23,7 @@ The full syntax for all of the attributes that are available to the |resource pa
      remote_file_attributes     Hash
      returns                    String, Integer, Array
      source                     String # defaults to 'name' if not specified
+     subscribes                 # see description
      timeout                    String, Integer
      action                     Symbol # defaults to :install if not specified
    end

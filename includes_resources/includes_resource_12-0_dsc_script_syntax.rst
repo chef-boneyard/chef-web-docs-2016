@@ -33,6 +33,7 @@ The full syntax for all of the attributes that are available to the |resource ds
      environment                Hash
      flags                      Hash
      notifies                   # see description
+     subscribes                 # see description
      action                     Symbol # defaults to :run if not specified
    end
 

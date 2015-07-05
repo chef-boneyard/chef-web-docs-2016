@@ -33,6 +33,7 @@ The full syntax for all of the attributes that are available to the |resource us
      salt                       String
      shell                      String
      supports                   Hash
+     subscribes                 # see description
      system                     TrueClass, FalseClass
      uid                        String, Integer
      username                   String # defaults to 'name' if not specified

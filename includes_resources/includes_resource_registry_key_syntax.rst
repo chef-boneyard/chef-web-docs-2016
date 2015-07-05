@@ -38,6 +38,7 @@ The full syntax for all of the attributes that are available to the |resource re
      notifies                   # see description
      provider                   Chef::Provider::Windows::Registry
      recursive                  TrueClass, FalseClass
+     subscribes                 # see description
      values                     Hash, Array
      action                     Symbol # defaults to :create if not specified
    end

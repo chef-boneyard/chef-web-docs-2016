@@ -34,6 +34,7 @@ The full syntax for all of the attributes that are available to the |resource ex
      path                       String # defaults to 'name' if not specified
      provider                   Chef::Provider::File
      rights                     Hash
+     subscribes                 # see description
      action                     Symbol # defaults to :create if not specified
    end
 

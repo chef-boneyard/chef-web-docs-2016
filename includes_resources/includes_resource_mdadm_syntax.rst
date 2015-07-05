@@ -26,6 +26,7 @@ The full syntax for all of the attributes that are available to the |resource md
      notifies                   # see description
      provider                   Chef::Provider::Mdadm
      raid_device                String # defaults to 'name' if not specified
+     subscribes                 # see description
      action                     Symbol # defaults to :create if not specified
    end
 
