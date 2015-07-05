@@ -14,7 +14,7 @@ This resource has the following attributes:
 
        |backups_kept| Default value: ``5``.
    * - ``checksum``
-     - **Ruby Types:** String
+     - **Ruby Type:** String
 
        |checksum file| Default value: no checksum required.
    * - ``content``
