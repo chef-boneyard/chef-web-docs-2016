@@ -9,5 +9,7 @@ This resource has the following actions:
 
    * - Action
      - Description
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:run``
      - Default. Use to run the |windows powershell_dsc_short| configuration defined as defined in this resource.

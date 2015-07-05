@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. Use to create an RSA public key.
    * - ``:delete``
      - Use to delete an RSA public key.
+   * - ``:nothing``
+     - |resource action nothing|

@@ -15,3 +15,5 @@ This resource has the following actions:
      - |resource action create_if_missing remote_directory|
    * - ``:delete``
      - |resource action delete remote_directory|
+   * - ``:nothing``
+     - |resource action nothing|

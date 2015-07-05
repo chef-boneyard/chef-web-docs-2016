@@ -13,5 +13,7 @@ This resource has the following actions:
      - Default. |resource action create mdadm|
    * - ``:assemble``
      - |resource action assemble mdadm|
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:stop``
      - |resource action stop mdadm|

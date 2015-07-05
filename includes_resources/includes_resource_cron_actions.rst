@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. |resource action create cron|
    * - ``:delete``
      - |resource action delete cron|
+   * - ``:nothing``
+     - |resource action nothing|

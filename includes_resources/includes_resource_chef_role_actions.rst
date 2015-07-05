@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. Use to create a role.
    * - ``:delete``
      - Use to delete a role.
+   * - ``:nothing``
+     - |resource action nothing|

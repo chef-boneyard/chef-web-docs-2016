@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. Use to create an environment.
    * - ``:delete``
      - Use to delete an environment.
+   * - ``:nothing``
+     - |resource action nothing|

@@ -11,13 +11,15 @@ This resource has the following actions:
      - Description
    * - ``:create``
      - Default. |resource action create user|
-   * - ``:remove``
-     - |resource action remove user|
-   * - ``:modify``
-     - |resource action modify user|
-   * - ``:manage``
-     - |resource action manage user|
    * - ``:lock``
      - |resource action lock user|
+   * - ``:manage``
+     - |resource action manage user|
+   * - ``:modify``
+     - |resource action modify user|
+   * - ``:nothing``
+     - |resource action nothing|
+   * - ``:remove``
+     - |resource action remove user|
    * - ``:unlock``
      - |resource action unlock user|

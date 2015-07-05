@@ -11,6 +11,8 @@ This resource has the following actions:
      - Description
    * - ``:install``
      - Default. |resource action install package|
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:purge``
      - |resource action purge package| (|debian| platform only; for other platforms, use the ``:remove`` action.)
    * - ``:reconfig``

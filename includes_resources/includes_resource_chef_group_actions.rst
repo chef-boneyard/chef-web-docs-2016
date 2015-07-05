@@ -14,4 +14,4 @@ This resource has the following actions:
    * - ``:delete``
      - 
    * - ``:nothing``
-     - 
+     - |resource action nothing|

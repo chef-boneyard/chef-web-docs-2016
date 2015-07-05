@@ -13,5 +13,7 @@ This resource has the following actions:
      - Default. Use to create a |chef client|.
    * - ``:delete``
      - Use to delete a |chef client|.
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:regenerate_keys``
      - Use to regenerate the RSA public key for a |chef client|.

@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. |resource action create remote_file|
    * - ``:create_if_missing``
      - |resource action create_if_missing remote_file|
+   * - ``:nothing``
+     - |resource action nothing|

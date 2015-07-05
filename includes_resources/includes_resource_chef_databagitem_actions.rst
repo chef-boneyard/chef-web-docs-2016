@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. Use to create a data bag item.
    * - ``:delete``
      - Use to delete a data bag item.
+   * - ``:nothing``
+     - |resource action nothing|

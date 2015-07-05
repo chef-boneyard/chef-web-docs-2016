@@ -19,5 +19,7 @@ This resource has the following actions:
      - |resource action delete http_request|
    * - ``:head``
      - |resource action head http_request|
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:options``
      - |resource action options http_request|

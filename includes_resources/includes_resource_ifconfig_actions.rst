@@ -17,3 +17,5 @@ This resource has the following actions:
      - |resource action enable ifconfig|
    * - ``:disable``
      - |resource action disable ifconfig|
+   * - ``:nothing``
+     - |resource action nothing|

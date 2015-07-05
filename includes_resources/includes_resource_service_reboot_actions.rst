@@ -11,8 +11,9 @@ This resource has the following actions:
      - Description
    * - ``:cancel``
      - |resource action cancel reboot|
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:reboot_now``
      - |resource action reboot now|
    * - ``:request_reboot``
      - |resource action request reboot|
-

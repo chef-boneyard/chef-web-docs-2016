@@ -15,5 +15,7 @@ This resource has the following actions:
      - |resource action create_if_missing file|
    * - ``:delete``
      - |resource action delete file|
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:touch``
      - |resource action touch file|

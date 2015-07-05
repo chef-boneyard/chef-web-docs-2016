@@ -18,6 +18,8 @@ This resource has the following actions:
      - Use to converge a machine, but only if the machine is in a ready state.
    * - ``:destroy``
      - Use to destroy a machine.
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:ready``
      - Use to create a machine, return its machine identifier, and then boot the machine to an image with the specified parameters and transport. This machine is in a ready state and may be connected to (via SSH or other transport).
    * - ``:setup``

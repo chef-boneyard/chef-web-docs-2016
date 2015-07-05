@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. |resource action add route|
    * - ``:delete``
      - |resource action delete route|
+   * - ``:nothing``
+     - |resource action nothing|

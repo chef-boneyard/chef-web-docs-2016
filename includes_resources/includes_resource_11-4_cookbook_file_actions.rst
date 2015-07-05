@@ -15,3 +15,5 @@ This resource has the following actions:
      - |resource action create_if_missing cookbook_file|
    * - ``:delete``
      - |resource action delete cookbook_file|
+   * - ``:nothing``
+     - |resource action nothing|

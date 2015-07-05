@@ -13,4 +13,6 @@ This resource has the following actions:
      - Default.
    * - ``:destroy``
      - 
+   * - ``:nothing``
+     - |resource action nothing|
 

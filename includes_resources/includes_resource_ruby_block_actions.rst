@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. |resource action run ruby_block|
    * - ``:create``
      - The same as ``:run``.
+   * - ``:nothing``
+     - |resource action nothing|

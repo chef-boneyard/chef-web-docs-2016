@@ -15,3 +15,5 @@ This resource has the following actions:
      - |resource action delete env|
    * - ``:modify``
      - |resource action modify env|
+   * - ``:nothing``
+     - |resource action nothing|

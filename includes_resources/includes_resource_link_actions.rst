@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. |resource action create link|
    * - ``:delete``
      - |resource action delete link|
+   * - ``:nothing``
+     - |resource action nothing|

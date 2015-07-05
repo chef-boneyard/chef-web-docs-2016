@@ -12,6 +12,6 @@ This resource has the following actions:
    * - ``:download``
      - 
    * - ``:nothing``
-     - Default.
+     - |resource action nothing|
    * - ``:upload``
      - 

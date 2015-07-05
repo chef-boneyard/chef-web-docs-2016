@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. Use to create a node.
    * - ``:delete``
      - Use to delete a node.
+   * - ``:nothing``
+     - |resource action nothing|

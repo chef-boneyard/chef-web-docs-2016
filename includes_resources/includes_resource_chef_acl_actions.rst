@@ -12,4 +12,4 @@ This resource has the following actions:
    * - ``:create``
      - Default.
    * - ``:nothing``
-     - 
+     - |resource action nothing|

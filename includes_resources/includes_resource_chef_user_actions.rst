@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. Use to create a user.
    * - ``:delete``
      - Use to delete a user.
+   * - ``:nothing``
+     - |resource action nothing|

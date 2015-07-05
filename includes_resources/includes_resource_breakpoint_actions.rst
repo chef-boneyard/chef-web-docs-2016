@@ -11,3 +11,5 @@ This resource has the following actions:
      - Description
    * - ``:break``
      - Use to add a breakpoint to a recipe.
+   * - ``:nothing``
+     - |resource action nothing|

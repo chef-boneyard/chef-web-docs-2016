@@ -14,6 +14,6 @@ This resource has the following actions:
    * - ``:download``
      - Use to download a file from a machine.
    * - ``:nothing``
-     - Use to do nothing.
+     - |resource action nothing|
    * - ``:upload``
      - Default. Use to upload a file to a machine.

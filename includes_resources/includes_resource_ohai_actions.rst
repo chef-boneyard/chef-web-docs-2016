@@ -9,5 +9,7 @@ This resource has the following actions:
 
    * - Action
      - Description
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:reload``
      - Default. |resource action reload ohai|

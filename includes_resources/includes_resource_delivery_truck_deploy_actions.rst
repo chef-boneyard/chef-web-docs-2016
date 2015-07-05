@@ -9,5 +9,7 @@ This resource has the following actions:
 
    * - Action
      - Description
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:run``
      - Use to deploy a cookbook to the |chef server| or to |github|.

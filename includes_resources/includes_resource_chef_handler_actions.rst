@@ -13,3 +13,5 @@ This resource has the following actions:
      - |resource action enable chef_handler|
    * - ``:disable``
      - |resource action disable chef_handler|
+   * - ``:nothing``
+     - |resource action nothing|

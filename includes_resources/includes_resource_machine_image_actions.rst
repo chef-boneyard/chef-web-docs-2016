@@ -15,3 +15,5 @@ This resource has the following actions:
      - Default. Use to create a machine image.
    * - ``:destroy``
      - Use to destroy a machine image.
+   * - ``:nothing``
+     - |resource action nothing|

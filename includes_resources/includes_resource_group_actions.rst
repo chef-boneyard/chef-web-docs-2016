@@ -17,3 +17,5 @@ This resource has the following actions:
      - |resource action modify group|
    * - ``:manage``
      - |resource action manage group|
+   * - ``:nothing``
+     - |resource action nothing|

@@ -17,5 +17,7 @@ This resource has the following actions:
      - |resource action delete registry_key|
    * - ``:delete_key``
      - |resource action delete key registry_key|
+   * - ``:nothing``
+     - |resource action nothing|
 
 .. note:: |note registry_key resource recursive|

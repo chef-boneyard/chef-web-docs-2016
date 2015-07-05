@@ -9,10 +9,11 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:sync``
-     - Default. |resource action sync scm|
    * - ``:checkout``
      - |resource action checkout scm|
    * - ``:export``
      - |resource action export scm|
-
+   * - ``:nothing``
+     - |resource action nothing|
+   * - ``:sync``
+     - Default. |resource action sync scm|

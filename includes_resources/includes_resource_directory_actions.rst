@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. |resource action create directory|
    * - ``:delete``
      - |resource action delete directory|
+   * - ``:nothing``
+     - |resource action nothing|

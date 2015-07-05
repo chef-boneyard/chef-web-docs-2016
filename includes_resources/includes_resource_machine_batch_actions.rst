@@ -17,6 +17,8 @@ This resource has the following actions:
      - 
    * - ``:destroy``
      - 
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:ready``
      - 
    * - ``:setup``

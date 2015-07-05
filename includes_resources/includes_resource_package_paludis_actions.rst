@@ -11,6 +11,8 @@ This resource has the following actions:
      - Description
    * - ``:install``
      - Default. |resource action install package|
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:remove``
      - |resource action remove package|
    * - ``:upgrade``

@@ -25,5 +25,3 @@ This resource has the following actions:
      - |resource action start service|
    * - ``:stop``
      - |resource action stop service|
-
-

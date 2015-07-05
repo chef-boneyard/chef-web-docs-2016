@@ -13,3 +13,5 @@ This resource has the following actions:
      - Default. |resource action create template|
    * - ``:create_if_missing``
      - |resource action create_if_missing template|
+   * - ``:nothing``
+     - |resource action nothing|

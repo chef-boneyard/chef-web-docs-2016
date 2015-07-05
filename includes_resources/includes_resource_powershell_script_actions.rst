@@ -9,7 +9,7 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:run``
-     - Default. |resource action run powershell_script|
    * - ``:nothing``
      - Inherited from |resource execute| resource. |resource action nothing execute|
+   * - ``:run``
+     - Default. |resource action run powershell_script|

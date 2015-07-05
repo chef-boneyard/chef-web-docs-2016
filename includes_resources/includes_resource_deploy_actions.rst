@@ -13,5 +13,7 @@ This resource has the following actions:
      - Default. |resource action deploy deploy|
    * - ``:force_deploy``
      - |resource action force_deploy deploy|
+   * - ``:nothing``
+     - |resource action nothing|
    * - ``:rollback``
      - |resource action rollback deploy|
