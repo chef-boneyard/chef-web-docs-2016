@@ -17,10 +17,9 @@ The full syntax for all of the attributes that are available to the |resource pa
    windows_package 'name' do
      installer_type             Symbol
      options                    String
-     package_name               String, Array  # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Windows
      returns                    String, Integer, Array
-     source                     String
+     source                     String # defaults to 'name' if not specified
      timeout                    String, Integer
      action                     Symbol # defaults to :install if not specified
    end
