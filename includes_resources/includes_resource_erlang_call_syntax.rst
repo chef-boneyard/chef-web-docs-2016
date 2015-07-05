@@ -22,6 +22,7 @@ The full syntax for all of the attributes that are available to the |resource er
      distributed                TrueClass, FalseClass
      name_type                  String
      node_name                  String
+     notifies                   # see description
      provider                   Chef::Provider::ErlCall
      action                     Symbol # defaults to :run if not specified
    end

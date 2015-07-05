@@ -29,6 +29,7 @@ The full syntax for all of the attributes that are available to the |resource ex
      group                      String, Integer
      inherits                   TrueClass, FalseClass
      mode                       String, Integer
+     notifies                   # see description
      owner                      String, Integer
      path                       String # defaults to 'name' if not specified
      provider                   Chef::Provider::File

@@ -18,6 +18,7 @@ The full syntax for all of the attributes that are available to the |resource yu
      allow_downgrade            TrueClass, FalseClass
      arch                       String, Array
      flush_cache                Array
+     notifies                   # see description
      options                    String
      package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Yum

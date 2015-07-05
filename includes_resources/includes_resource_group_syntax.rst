@@ -23,6 +23,7 @@ The full syntax for all of the attributes that are available to the |resource gr
      group_name                 String # defaults to 'name' if not specified
      members                    Array
      non_unique                 TrueClass, FalseClass
+     notifies                   # see description
      provider                   Chef::Provider::Group
      system                     TrueClass, FalseClass
      action                     Symbol # defaults to :create if not specified

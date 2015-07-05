@@ -26,6 +26,7 @@ The full syntax for all of the attributes that are available to the |resource us
      home                       String
      manage_home                TrueClass, FalseClass
      non_unique                 TrueClass, FalseClass
+     notifies                   # see description
      password                   String
      provider                   Chef::Provider::User
      shell                      String

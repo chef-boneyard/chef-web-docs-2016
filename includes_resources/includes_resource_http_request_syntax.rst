@@ -18,6 +18,7 @@ The full syntax for all of the attributes that are available to the |resource ht
    http_request 'name' do
      headers                    Hash
      message                    Object # defaults to 'name' if not specified
+     notifies                   # see description
      provider                   Chef::Provider::HttpRequest
      url                        String
      action                     Symbol # defaults to :get if not specified

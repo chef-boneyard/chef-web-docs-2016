@@ -17,6 +17,7 @@ The full syntax for all of the attributes that are available to the |resource pa
    easy_install_package 'name' do
      easy_install_binary        String
      module_name                String
+     notifies                   # see description
      options                    String
      package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::EasyInstall

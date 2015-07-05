@@ -16,6 +16,7 @@ The full syntax for all of the attributes that are available to the |resource oh
 
    ohai 'name' do
      name                       String
+     notifies                   # see description
      plugin                     String
      provider                   Chef::Provider::Ohai
      action                     Symbol # defaults to :reload if not specified

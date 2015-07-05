@@ -16,6 +16,7 @@ The full syntax for all of the attributes that are available to the |resource pa
 
    windows_package 'name' do
      installer_type             Symbol
+     notifies                   # see description
      options                    String
      provider                   Chef::Provider::Package::Windows
      returns                    String, Integer, Array

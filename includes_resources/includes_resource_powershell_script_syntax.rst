@@ -30,6 +30,7 @@ The full syntax for all of the attributes that are available to the |resource po
      group                      String, Integer
      guard_interpreter          Symbol
      interpreter                String
+     notifies                   # see description
      provider                   Chef::Provider::PowershellScript
      returns                    Integer, Array
      timeout                    Integer, Float

@@ -63,6 +63,7 @@ The full syntax for all of the attributes that are available to the |resource de
      keep_releases              Integer
      migrate                    TrueClass, FalseClass
      migration_command          String
+     notifies                   # see description
      provider                   Chef::Provider::Deploy
      purge_before_symlink       Array
      remote                     String
@@ -98,6 +99,7 @@ and the full syntax for all of the attributes that are available to the |resourc
      keep_releases              Integer
      migrate                    TrueClass, FalseClass
      migration_command          String
+     notifies                   # see description
      provider                   Chef::Provider::Deploy
      purge_before_symlink       Array
      repo                       String

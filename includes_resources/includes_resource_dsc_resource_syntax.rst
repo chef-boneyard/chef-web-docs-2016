@@ -29,6 +29,7 @@ The full syntax for all of the attributes that are available to the |resource ds
 
    dsc_resource 'name' do
      module_name                String
+     notifies                   # see description
      property                   Symbol
      resource                   String
    end

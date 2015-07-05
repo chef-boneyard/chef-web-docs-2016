@@ -17,6 +17,7 @@ The full syntax for all of the attributes that are available to the |resource se
 
    windows_service 'name' do
      init_command               String
+     notifies                   # see description
      pattern                    String
      provider                   Chef::Provider::Service::Windows
      reload_command             String

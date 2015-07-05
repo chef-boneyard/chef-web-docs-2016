@@ -18,6 +18,7 @@ The full syntax for all of the attributes that are available to the |resource re
 
    reboot 'name' do
      delay_mins                 Fixnum
+     notifies                   # see description
      reason                     String
      action                     Symbol
    end

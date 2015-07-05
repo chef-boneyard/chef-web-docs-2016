@@ -16,6 +16,7 @@ The full syntax for all of the attributes that are available to the |resource pa
 
    ips_package 'name' do
      accept_license             TrueClass, FalseClass
+     notifies                   # see description
      options                    String
      package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Ips

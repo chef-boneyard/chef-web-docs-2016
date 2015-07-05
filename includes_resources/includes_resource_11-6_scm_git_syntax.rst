@@ -22,6 +22,7 @@ The full syntax for all of the attributes that are available to the |resource sc
      destination                String # defaults to 'name' if not specified
      enable_submodules          TrueClass, FalseClass
      group                      String, Integer
+     notifies                   # see description
      provider                   Chef::Provider::Scm::Git
      reference                  String
      remote                     String

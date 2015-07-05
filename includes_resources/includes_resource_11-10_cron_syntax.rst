@@ -34,6 +34,7 @@ The full syntax for all of the attributes that are available to the |resource cr
      mailto                     String
      minute                     String
      month                      String
+     notifies                   # see description
      path                       String
      provider                   Chef::Provider::Cron
      shell                      String

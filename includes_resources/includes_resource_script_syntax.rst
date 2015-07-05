@@ -52,6 +52,7 @@ The full syntax for all of the attributes that are available to the |resource sc
      flags                      String
      group                      String, Integer
      interpreter                String
+     notifies                   # see description
      path                       Array
      provider                   Chef::Provider::Script
      returns                    Integer, Array

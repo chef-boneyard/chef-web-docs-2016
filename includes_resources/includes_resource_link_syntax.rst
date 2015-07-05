@@ -27,6 +27,7 @@ The full syntax for all of the attributes that are available to the |resource li
      group                      Integer, String
      link_type                  Symbol
      mode                       Integer, String
+     notifies                   # see description
      owner                      Integer, String
      provider                   Chef::Provider::Link
      target_file                String # defaults to 'name' if not specified

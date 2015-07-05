@@ -30,6 +30,7 @@ The full syntax for all of the attributes that are available to the |lwrp chef h
    chef_handler 'name' do
      arguments                  Array
      class_name                 String
+     notifies                   # see description
      source                     String
      supports                   Hash
      action                     Symbol

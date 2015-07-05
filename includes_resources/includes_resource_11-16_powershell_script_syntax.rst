@@ -25,6 +25,7 @@ The full syntax for all of the attributes that are available to the |resource po
      convert_boolean_return     TrueClass, FalseClass
      flags                      String
      interpreter                String
+     notifies                   # see description
      provider                   Chef::Provider::PowershellScript
      action                     Symbol # defaults to :run if not specified
    end

@@ -33,6 +33,7 @@ The full syntax for all of the attributes that are available to the |resource re
      group                      String, Integer
      inherits                   TrueClass, FalseClass
      mode                       String, Integer
+     notifies                   # see description
      overwrite                  TrueClass, FalseClass
      owner                      String, Integer
      path                       String # defaults to 'name' if not specified

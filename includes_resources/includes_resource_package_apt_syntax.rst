@@ -16,6 +16,7 @@ The full syntax for all of the attributes that are available to the |resource pa
 
    apt_package 'name' do
      default_release            String
+     notifies                   # see description
      options                    String
      package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Apt

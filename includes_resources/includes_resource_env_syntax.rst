@@ -17,6 +17,7 @@ The full syntax for all of the attributes that are available to the |resource en
    env 'name' do
      delim                      String
      key_name                   String # defaults to 'name' if not specified
+     notifies                   # see description
      provider                   Chef::Provider::Env
      value                      String
      action                     Symbol # defaults to :create if not specified

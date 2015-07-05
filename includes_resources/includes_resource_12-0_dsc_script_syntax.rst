@@ -32,6 +32,7 @@ The full syntax for all of the attributes that are available to the |resource ds
      cwd                        String
      environment                Hash
      flags                      Hash
+     notifies                   # see description
      action                     Symbol # defaults to :run if not specified
    end
 

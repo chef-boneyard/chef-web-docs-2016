@@ -18,6 +18,7 @@ The full syntax for all of the attributes that are available to the |resource se
 
    service 'name' do
      init_command               String
+     notifies                   # see description
      pattern                    String
      priority                   Integer, String, Hash
      provider                   Chef::Provider::Service

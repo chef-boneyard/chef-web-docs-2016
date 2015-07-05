@@ -24,6 +24,7 @@ The full syntax for all of the attributes that are available to the |resource po
      command                    String, Array
      flags                      String
      interpreter                String
+     notifies                   # see description
      provider                   Chef::Provider::PowershellScript
      action                     Symbol # defaults to :run if not specified
    end

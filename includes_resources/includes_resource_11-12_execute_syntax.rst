@@ -43,6 +43,7 @@ The full syntax for all of the attributes that are available to the |resource ex
      cwd                        String
      environment                Hash
      group                      String, Integer
+     notifies                   # see description
      path                       Array # do not use
      provider                   Chef::Provider::Execute
      returns                    Integer, Array

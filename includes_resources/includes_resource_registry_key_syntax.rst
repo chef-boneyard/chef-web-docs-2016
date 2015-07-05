@@ -35,6 +35,7 @@ The full syntax for all of the attributes that are available to the |resource re
    registry_key 'name' do
      architecture               Symbol
      key                        String # defaults to 'name' if not specified
+     notifies                   # see description
      provider                   Chef::Provider::Windows::Registry
      recursive                  TrueClass, FalseClass
      values                     Hash, Array

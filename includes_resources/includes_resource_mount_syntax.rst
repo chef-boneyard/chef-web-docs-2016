@@ -26,6 +26,7 @@ The full syntax for all of the attributes that are available to the |resource mo
      fstype                     String
      mount_point                String # defaults to 'name' if not specified
      mounted                    TrueClass, FalseClass
+     notifies                   # see description
      options                    Array, String
      pass                       Integer, FalseClass
      password                   String

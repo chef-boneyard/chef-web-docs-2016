@@ -19,6 +19,7 @@ The full syntax for all of the attributes that are available to the |resource ro
      device                     String
      gateway                    String
      netmask                    String
+     notifies                   # see description
      provider                   Chef::Provider::Route
      target                     String # defaults to 'name' if not specified
      action                     Symbol # defaults to :add if not specified

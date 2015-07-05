@@ -24,6 +24,7 @@ The full syntax for all of the attributes that are available to the |resource if
      metric                     String
      mtu                        String
      network                    String
+     notifies                   # see description
      onboot                     String
      onparent                   String
      provider                   Chef::Provider::Ifconfig

@@ -15,6 +15,7 @@ The full syntax for all of the attributes that are available to the |resource pa
 .. code-block:: ruby
 
    macports_package 'name' do
+     notifies                   # see description
      options                    String
      provider                   Chef::Provider::Package::Macports
      source                     String
