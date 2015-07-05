@@ -18,7 +18,7 @@ This resource has the following attributes:
 
        |pattern process_table| Default value: ``service_name``.
    * - ``provider``
-     - **Ruby Types:** Chef Class
+     - **Ruby Type:** Chef Class
 
        Optional. |provider resource_parameter|
    * - ``reload_command``
