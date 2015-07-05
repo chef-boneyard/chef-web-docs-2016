@@ -30,7 +30,7 @@ The full syntax for all of the attributes that are available to the |resource ex
      inherits                   TrueClass, FalseClass
      mode                       String, Integer
      owner                      String, Integer
-     path                       String  # defaults to 'name' if not specified
+     path                       String # defaults to 'name' if not specified
      provider                   Chef::Provider::File
      rights                     Hash
      action                     Symbol # defaults to :create if not specified

@@ -38,7 +38,7 @@ The full syntax for all of the attributes that are available to the |resource ex
 .. code-block:: ruby
 
    execute 'name' do
-     command                    String, Array  # defaults to 'name' if not specified
+     command                    String, Array # defaults to 'name' if not specified
      creates                    String
      cwd                        String
      environment                Hash

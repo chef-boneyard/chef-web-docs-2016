@@ -22,7 +22,7 @@ The full syntax for all of the attributes that are available to the |resource ba
    batch 'name' do
      architecture               Symbol
      code                       String
-     command                    String, Array  # defaults to 'name' if not specified
+     command                    String, Array # defaults to 'name' if not specified
      creates                    String
      cwd                        String
      flags                      String

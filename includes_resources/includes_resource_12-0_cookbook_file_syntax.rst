@@ -34,7 +34,7 @@ The full syntax for all of the attributes that are available to the |resource co
      manage_symlink_source      TrueClass, FalseClass, NilClass
      mode                       String, Integer
      owner                      String, Integer
-     path                       String  # defaults to 'name' if not specified
+     path                       String # defaults to 'name' if not specified
      provider                   Chef::Provider::CookbookFile
      rights                     Hash
      source                     String, Array

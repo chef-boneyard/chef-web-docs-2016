@@ -17,7 +17,7 @@ The full syntax for all of the attributes that are available to the |resource ch
    chef_gem 'name' do
      clear_sources              TrueClass, FalseClass
      options                    String
-     package_name               String, Array  # defaults to 'name' if not specified
+     package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Rubygems
      source                     String
      timeout                    String, Integer

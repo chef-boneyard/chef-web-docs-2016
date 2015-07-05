@@ -26,7 +26,7 @@ The full syntax for all of the attributes that are available to the |resource sc
 
    csh 'name' do
      code                       String
-     command                    String, Array  # defaults to 'name' if not specified
+     command                    String, Array # defaults to 'name' if not specified
      creates                    String
      cwd                        String
      environment                Hash

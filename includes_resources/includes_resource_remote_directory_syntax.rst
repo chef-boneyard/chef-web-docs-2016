@@ -35,7 +35,7 @@ The full syntax for all of the attributes that are available to the |resource re
      mode                       String, Integer
      overwrite                  TrueClass, FalseClass
      owner                      String, Integer
-     path                       String  # defaults to 'name' if not specified
+     path                       String # defaults to 'name' if not specified
      provider                   Chef::Provider::Directory::RemoteDirectory
      purge                      TrueClass, FalseClass
      recursive                  TrueClass, FalseClass

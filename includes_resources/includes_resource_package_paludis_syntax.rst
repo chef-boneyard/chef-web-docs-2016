@@ -16,7 +16,7 @@ The full syntax for all of the attributes that are available to the |resource pa
 
    paludis_package 'name' do
      options                    String
-     package_name               String, Array  # defaults to 'name' if not specified
+     package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package::Paludis
      source                     String
      timeout                    String, Integer

@@ -36,7 +36,7 @@ The full syntax for all of the attributes that are available to the |resource pa
      flush_cache                Array
      gem_binary                 String
      options                    String
-     package_name               String, Array  # defaults to 'name' if not specified
+     package_name               String, Array # defaults to 'name' if not specified
      provider                   Chef::Provider::Package
      response_file              String # Apt packages only
      response_file_variables    Hash # Apt packages only
