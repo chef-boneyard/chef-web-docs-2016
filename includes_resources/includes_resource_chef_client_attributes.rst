@@ -17,6 +17,14 @@ This resource has the following attributes:
      - Use to specify if this resource defines a |chef client| completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values.
    * - ``name``
      - The name of the |chef client|.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``output_key_format``
      - Use to specify the format of a public key. Possible values: ``pem``, ``der``, or ``openssh``. Default value: ``openssh``.
    * - ``output_key_path``

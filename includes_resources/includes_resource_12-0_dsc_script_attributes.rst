@@ -41,3 +41,11 @@ This resource has the following attributes:
      - **Ruby Type:** Hash
 
        |flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst

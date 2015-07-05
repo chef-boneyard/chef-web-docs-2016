@@ -13,6 +13,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |command service_init| This is typically ``/etc/init.d/SERVICE_NAME``. The ``init_command`` attribute can be used to prevent the need to specify  overrides for the ``start_command``, ``stop_command``, and ``restart_command`` attributes. Default value: ``nil``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``pattern``
      - **Ruby Type:** String
 

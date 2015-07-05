@@ -23,6 +23,14 @@ This resource has the following attributes:
      - Use to discover if a user is a member of an organization. Will return ``true`` if the user is a member.
    * - ``name``
      - |name_rules org| For example: ``chef``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``raw_json``
      - The organization as |json| data. For example:
        

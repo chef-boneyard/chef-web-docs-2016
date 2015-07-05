@@ -22,6 +22,14 @@ This resource has the following attributes:
 
        |key_name resource registry_key| |resource_block_default| |see syntax|
        |key_name resource registry_key hives|
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``provider``
      - **Ruby Type:** Chef Class
 

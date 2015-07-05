@@ -21,6 +21,14 @@ This resource has the following attributes:
      - The environment-specific run-list for a role. Default value: ``[]``. For example: ``["env_run_lists[webserver]"]``
    * - ``name``
      - The name of the role.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``override_attributes``
      - |attribute_type override| Default value: ``{}``.
    * - ``raw_json``

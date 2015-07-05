@@ -19,6 +19,14 @@ This resource has the following attributes:
      - Use to freeze cookbooks upon upload to the mirrored location. When ``true``, cookbooks are frozen.
    * - ``no_diff``
      - Use to upload only new files.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``path``
      - A path to a directory in the |chef repo| to be mirrored. For example: ``nodes``, ``nodes/*``, ``/nodes/my_node``, ``*/*``, ``roles/base``, ``data/secrets``, ``cookbooks/apache2``, and so on.
    * - ``purge``

@@ -29,6 +29,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |interpreter| The default interpreter is ``Cmd.exe``. To ensure that |windows powershell| is the interpreter, use the ``guard_interpreter`` common attribute with a value of ``:powershell_script``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``provider``
      - **Ruby Type:** Chef Class
 

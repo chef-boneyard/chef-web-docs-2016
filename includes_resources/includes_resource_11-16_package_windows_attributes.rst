@@ -15,6 +15,14 @@ This resource has the following attributes:
        |type package_11-16_string| Possible values: ``:msi``.
 
        .. note:: Starting with |chef client| version 12, this value is a symbol (``:msi``) and not a string.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``options``
      - **Ruby Type:** String
 

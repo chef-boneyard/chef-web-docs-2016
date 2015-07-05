@@ -11,6 +11,14 @@ This resource has the following attributes:
      - Description
    * - ``format``
      - Use to specify the format of a public key. Possible values: ``pem`` and ``der``. Default value: ``pem``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``path``
      - The path to a public key.
    * - ``source_key``

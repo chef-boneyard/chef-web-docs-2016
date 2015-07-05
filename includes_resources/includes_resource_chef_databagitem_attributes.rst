@@ -17,6 +17,14 @@ This resource has the following attributes:
      - Use to specify whether encryption is used for a data bag item.
    * - ``encryption_version``
      - |data_bag_decrypt_minimum_version|
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``raw_data``
      - Use to create a data bag from a local file from ``./data_bags/bag_name/file``.
    * - ``raw_json``

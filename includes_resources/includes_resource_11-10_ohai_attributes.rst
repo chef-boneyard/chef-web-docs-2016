@@ -13,6 +13,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        Always the same value as the ``name`` of the resource block. |see syntax|
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``plugin``
      - **Ruby Type:** String
 

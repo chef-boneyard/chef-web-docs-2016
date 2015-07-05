@@ -76,6 +76,14 @@ This resource has the following attributes:
      - A |ruby hash| that is specifies driver options.
    * - ``name``
      - The name of the machine.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``ohai_hints``
      - |hint| For example: ``'ec2' => { 'a' => 'b' } creates file ec2.json with json contents { 'a': 'b' }``.
    * - ``private_key_options``

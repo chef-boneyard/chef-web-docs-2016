@@ -13,6 +13,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |name powershell_module| If this attribute is not specified, it will be inferred.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``property``
      - **Ruby Type:** Symbol
 

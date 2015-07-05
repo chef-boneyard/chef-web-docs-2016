@@ -51,6 +51,14 @@ This resource has the following attributes:
        |unix|- and |linux|-based systems: |mode *nix|
        
        |windows|: |mode windows security|
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``overwrite``
      - **Ruby Types:** TrueClass, FalseClass
 

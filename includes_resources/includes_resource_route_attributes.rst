@@ -21,6 +21,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |netmask| For example: ``255.255.255.0``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``provider``
      - **Ruby Type:** Chef Class
 

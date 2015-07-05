@@ -15,6 +15,14 @@ This resource has the following attributes:
      - Use to specify the exponent for an RSA private key. This is always an odd integer value, often a prime Fermat number, and typically ``5``, ``17``, ``257``, or ``65537``.
    * - ``format``
      - Use to specify the format of a private key. Possible values: ``pem`` and ``der``. Default value: ``pem``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``pass_phrase``
      - Use to specify the pass phrase for a .pem file.
    * - ``path``

@@ -11,6 +11,14 @@ This resource has the following attributes:
      - Description
    * - ``command``
      - Use to run an executable. Default value: ``chef-client``.
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``search``
      - Use to specify a search string that is used to deploy a cookbook. This value is used as part of the ``deploy.rb`` file in |chef delivery|.
    * - ``timeout``

@@ -21,6 +21,14 @@ This resource has the following attributes:
      - |description environment|
    * - ``name``
      - |name environment|
+   * - ``notifies``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``override_attributes``
      - |attribute_type override| Default value: ``{}``.
    * - ``raw_json``
