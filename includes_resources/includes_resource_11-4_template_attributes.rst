@@ -62,7 +62,7 @@ This resource has the following attributes:
    * - ``source``
      - **Ruby Types:** String, Array
 
-       |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| Default value: the ``name`` of the resource block. |see syntax|
+       |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| |resource_block_default| |see syntax|
    * - ``variables``
      - **Ruby Type:** Hash
 

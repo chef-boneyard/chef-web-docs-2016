@@ -40,7 +40,7 @@ This resource has the following attributes:
    * - ``service_name``
      - **Ruby Type:** String
 
-       |name service| Default value: the ``name`` of the resource block. |see syntax|
+       |name service| |resource_block_default| |see syntax|
    * - ``start_command``
      - **Ruby Type:** String
 

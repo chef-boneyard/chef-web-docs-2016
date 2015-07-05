@@ -58,7 +58,7 @@ This resource has the following attributes:
    * - ``path``
      - **Ruby Type:** String
 
-       |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. |see syntax|
+       |path full_path_to_file| For example: ``/files/file.txt``. |resource_block_default| |see syntax|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``

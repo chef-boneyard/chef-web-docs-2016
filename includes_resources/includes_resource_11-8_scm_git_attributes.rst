@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``destination``
      - **Ruby Type:** String
 
-       |destination resource scm| Default value: the ``name`` of the resource block. |see syntax|
+       |destination resource scm| |resource_block_default| |see syntax|
    * - ``enable_submodules``
      - **Ruby Types:** TrueClass, FalseClass
 

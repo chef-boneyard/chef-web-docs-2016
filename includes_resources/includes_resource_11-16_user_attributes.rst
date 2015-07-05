@@ -66,4 +66,4 @@ This resource has the following attributes:
    * - ``username``
      - **Ruby Type:** String
 
-       |name user| Default value: the ``name`` of the resource block. |see syntax|
+       |name user| |resource_block_default| |see syntax|

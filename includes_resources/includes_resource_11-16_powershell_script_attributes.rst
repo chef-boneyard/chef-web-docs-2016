@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``command``
      - **Ruby Types:** String, Array
 
-       |name command| Default value: the ``name`` of the resource block. |see syntax|
+       |name command| |resource_block_default| |see syntax|
    * - ``convert_boolean_return``
      - **Ruby Types:** TrueClass, FalseClass
 

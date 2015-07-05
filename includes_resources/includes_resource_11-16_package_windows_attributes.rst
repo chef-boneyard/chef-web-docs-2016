@@ -30,7 +30,7 @@ This resource has the following attributes:
    * - ``source``
      - **Ruby Type:** String
 
-       Optional. |source resource package| Default value: the ``name`` of the resource block. |see syntax|
+       Optional. |source resource package| |resource_block_default| |see syntax|
    * - ``timeout``
      - **Ruby Types:** String, Integer
 

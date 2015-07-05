@@ -38,7 +38,7 @@ This resource has the following attributes:
    * - ``target_file``
      - **Ruby Type:** String
 
-       |name_link| Default value: the ``name`` of the resource block. |see syntax|
+       |name_link| |resource_block_default| |see syntax|
    * - ``to``
      - **Ruby Type:** String
 

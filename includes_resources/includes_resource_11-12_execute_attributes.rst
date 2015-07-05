@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``command``
      - **Ruby Types:** String, Array
 
-       |name command| Default value: the ``name`` of the resource block. |see syntax|
+       |name command| |resource_block_default| |see syntax|
 
        .. note:: Use the |resource execute| resource to run a single command. Use multiple |resource execute| resource blocks to run multiple commands.
    * - ``creates``

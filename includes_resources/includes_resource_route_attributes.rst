@@ -28,6 +28,6 @@ This resource has the following attributes:
    * - ``target``
      - **Ruby Type:** String
 
-       |target_address| Default value: the ``name`` of the resource block. |see syntax|
+       |target_address| |resource_block_default| |see syntax|
 
 .. Attributes in the route resource that aren't in the route provider: domain, domainname, hostname, metric, networking, networking_ipv6, route_type

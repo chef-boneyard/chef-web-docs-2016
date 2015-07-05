@@ -64,11 +64,11 @@ This resource has the following attributes:
    * - ``package_name``
      - **Ruby Types:** String, Array
 
-       |name package| Default value: the ``name`` of the resource block. (See "Syntax" section above for more information.)
+       |name package| |resource_block_default| |see syntax|
    * - ``provider``
      - **Ruby Type:** Chef Class
 
-       Optional. |provider resource_parameter| (See "Providers" section below for more information.)
+       Optional. |provider resource_parameter| |see providers|
    * - ``response_file``
      - **Ruby Type:** String
 

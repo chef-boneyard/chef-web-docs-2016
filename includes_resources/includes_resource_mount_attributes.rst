@@ -40,7 +40,7 @@ This resource has the following attributes:
    * - ``mount_point``
      - **Ruby Type:** String
 
-       |mount_point| Default value: the ``name`` of the resource block. |see syntax|
+       |mount_point| |resource_block_default| |see syntax|
    * - ``mounted``
      - **Ruby Types:** TrueClass, FalseClass
 

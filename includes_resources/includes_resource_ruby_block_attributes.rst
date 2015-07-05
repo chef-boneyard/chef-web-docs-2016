@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``block_name``
      - **Ruby Type:** String
 
-       |name ruby_block| Default value: the ``name`` of the resource block. |see syntax|
+       |name ruby_block| |resource_block_default| |see syntax|
    * - ``provider``
      - **Ruby Type:** Chef Class
 

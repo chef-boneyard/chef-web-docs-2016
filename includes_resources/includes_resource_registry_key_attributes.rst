@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``key``
      - **Ruby Type:** String
 
-       |key_name resource registry_key| Default value: the ``name`` of the resource block. |see syntax|
+       |key_name resource registry_key| |resource_block_default| |see syntax|
        |key_name resource registry_key hives|
    * - ``provider``
      - **Ruby Type:** Chef Class

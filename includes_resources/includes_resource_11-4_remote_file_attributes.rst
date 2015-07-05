@@ -42,7 +42,7 @@ This resource has the following attributes:
    * - ``path``
      - **Ruby Type:** String
 
-       |path file| |path_fully_qualified| Default value: ``name``.
+       |path file| |path_fully_qualified| |resource_block_default|
    * - ``provider``
      - **Ruby Type:** Chef Class
 

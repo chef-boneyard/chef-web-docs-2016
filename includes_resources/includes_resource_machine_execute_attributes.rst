@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``chef_server``
      - |chef_server_url|
    * - ``command``
-     - |name command| Default value: the ``name`` of the resource block. |see syntax|
+     - |name command| |resource_block_default| |see syntax|
    * - ``driver``
      - Use to specify the driver to be used for provisioning.
    * - ``machine``

@@ -60,4 +60,4 @@ This resource has the following attributes:
    * - ``target``
      - **Ruby Type:** String
 
-       |target_interface| Default value: the ``name`` of the resource block. |see syntax|
+       |target_interface| |resource_block_default| |see syntax|

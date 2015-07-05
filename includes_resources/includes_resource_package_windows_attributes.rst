@@ -36,7 +36,7 @@ This resource has the following attributes:
    * - ``source``
      - **Ruby Type:** String
 
-       Optional. |source resource package| The location of the package may be at a URL. Default value: the ``name`` of the resource block. |see syntax|
+       Optional. |source resource package| The location of the package may be at a URL. |resource_block_default| |see syntax|
    * - ``timeout``
      - **Ruby Types:** String, Integer
 

@@ -40,4 +40,4 @@ This resource has the following attributes:
    * - ``raid_device``
      - **Ruby Type:** String
 
-       |raid_device mdadm| Default value: the ``name`` of the resource block. |see syntax|
+       |raid_device mdadm| |resource_block_default| |see syntax|

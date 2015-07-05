@@ -33,7 +33,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path full_path_to_file| Default value: the ``name`` of the resource block. |see syntax|
+     - |path full_path_to_file| |resource_block_default| |see syntax|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
 

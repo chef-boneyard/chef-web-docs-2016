@@ -54,7 +54,7 @@ This resource has the following attributes:
    * - ``path``
      - **Ruby Type:** String
 
-       |path cookbook_file| Default value: the ``name`` of the resource block. For example: ``file.txt``.
+       |path cookbook_file| |resource_block_default| For example: ``file.txt``.
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``

@@ -46,7 +46,7 @@ This resource has the following attributes:
    * - ``path``
      - **Ruby Type:** String
 
-       |path full_path_to_file| For example: ``/files/file.txt``. Default value: the ``name`` of the resource block. |see syntax|
+       |path full_path_to_file| For example: ``/files/file.txt``. |resource_block_default| |see syntax|
    * - ``provider``
      - **Ruby Type:** Chef Class
 

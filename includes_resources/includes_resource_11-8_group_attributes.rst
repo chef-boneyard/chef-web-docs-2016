@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``group_name``
      - **Ruby Type:** String
 
-       |name group| Default value: the ``name`` of the resource block. |see syntax|
+       |name group| |resource_block_default| |see syntax|
    * - ``members``
      - **Ruby Type:** Array
 

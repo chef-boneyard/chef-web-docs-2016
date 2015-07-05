@@ -36,7 +36,7 @@ This resource has the following attributes:
    * - ``deploy_to``
      - **Ruby Type:** String
 
-       |deploy_to| Default value: the ``name`` of the resource block. |see syntax|
+       |deploy_to| |resource_block_default| |see syntax|
    * - ``environment``
      - **Ruby Type:** Hash
 

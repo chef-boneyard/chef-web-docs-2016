@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``message``
      - **Ruby Type:** Object
 
-       |message http_request| Default value: the ``name`` of the resource block. |see syntax|
+       |message http_request| |resource_block_default| |see syntax|
    * - ``provider``
      - **Ruby Type:** Chef Class
 
