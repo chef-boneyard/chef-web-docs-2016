@@ -30,7 +30,7 @@ This resource has the following attributes:
 
        |members_group| When more than one group member is identified, the list of members should be an array: ``members ['user1', 'user2']``.
    * - ``non_unique``
-     - **Ruby Type:** TrueClass, FalseClass
+     - **Ruby Types:** TrueClass, FalseClass
 
        |non_unique_members| Default value: ``false``.
    * - ``provider``
@@ -38,6 +38,6 @@ This resource has the following attributes:
 
        Optional. |provider resource_parameter| |see providers|
    * - ``system``
-     - **Ruby Type:** TrueClass, FalseClass
+     - **Ruby Types:** TrueClass, FalseClass
 
        |system group|
