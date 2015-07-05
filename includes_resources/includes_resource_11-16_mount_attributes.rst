@@ -10,30 +10,58 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``device``
-     - Required for ``:umount`` and ``:remount`` actions (for the purpose of checking the mount command output for presence). |device mount|
+     - **Ruby Type:** String
+
+       Required for ``:umount`` and ``:remount`` actions (for the purpose of checking the mount command output for presence). |device mount|
    * - ``device_type``
-     - |device_type| Default value: ``:device``.
+     - **Ruby Type:** Symbol
+
+       |device_type| Default value: ``:device``.
    * - ``domain``
-     - |windows| only. Use to specify the domain in which the ``username`` and ``password`` are located.
+     - **Ruby Type:** String
+
+       |windows| only. Use to specify the domain in which the ``username`` and ``password`` are located.
    * - ``dump``
-     - |dump_frequency| Default value: ``0``.
+     - **Ruby Types:** Integer, FalseClass
+
+       |dump_frequency| Default value: ``0``.
    * - ``enabled``
-     - Use to specify if a mounted file system is enabled. Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       Use to specify if a mounted file system is enabled. Default value: ``false``.
    * - ``fstype``
-     - Required. |fstype|
+     - **Ruby Type:** String
+
+       Required. |fstype|
    * - ``mount_point``
-     - |mount_point| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |mount_point| Default value: the ``name`` of the resource block. |see syntax|
    * - ``mounted``
-     - Use to specify if a file system is already mounted. Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       Use to specify if a file system is already mounted. Default value: ``false``.
    * - ``options``
-     - |options mount| Default value: ``defaults``.
+     - **Ruby Types:** Array, String
+
+       |options mount| Default value: ``defaults``.
    * - ``pass``
-     - |pass_number| Default value: ``2``.
+     - **Ruby Types:** Integer, FalseClass
+
+       |pass_number| Default value: ``2``.
    * - ``password``
-     - |windows| only. Use to specify the password for ``username``.
+     - **Ruby Type:** String
+
+       |windows| only. Use to specify the password for ``username``.
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``supports``
-     - |supports mount| Default value: ``{ :remount => false }``.
+     - **Ruby Type:** Array
+
+       |supports mount| Default value: ``{ :remount => false }``.
    * - ``username``
-     - |windows| only. Use to specify the user name.
+     - **Ruby Type:** String
+
+       |windows| only. Use to specify the user name.
