@@ -10,14 +10,26 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``append``
-     - |append_group| Default value: ``false``.
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |append_group| Default value: ``false``.
    * - ``gid``
-     - |id group|
+     - **Ruby Types:** String, Integer
+
+       |id group|
    * - ``group_name``
-     - |name group| Default value: the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       |name group| Default value: the ``name`` of the resource block. |see syntax|
    * - ``members``
-     - |members_group|
+     - **Ruby Type:** Array
+
+       |members_group|
    * - ``provider``
-     - Optional. |provider resource_parameter| |see providers|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter| |see providers|
    * - ``system``
-     - |system group|
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |system group|
