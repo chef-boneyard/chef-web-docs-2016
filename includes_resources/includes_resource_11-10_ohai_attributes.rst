@@ -10,8 +10,14 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     -  Always the same value as the ``name`` of the resource block. |see syntax|
+     - **Ruby Type:** String
+
+       Always the same value as the ``name`` of the resource block. |see syntax|
    * - ``plugin``
-     - Optional. |plugin reload_by_ohai| The default behavior reloads all plug-ins.
+     - **Ruby Type:** String
+
+       Optional. |plugin reload_by_ohai| The default behavior reloads all plug-ins.
    * - ``provider``
-     - Optional. |provider resource_parameter|
+     - **Ruby Type:** Chef Class
+
+       Optional. |provider resource_parameter|
