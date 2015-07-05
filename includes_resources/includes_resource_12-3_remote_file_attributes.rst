@@ -86,6 +86,14 @@ This resource has the following attributes:
        
        .. include:: ../../includes_file/includes_file_12-3_remote_source_location.rst
 
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``use_conditional_get``
      - **Ruby Types:** TrueClass, FalseClass
 

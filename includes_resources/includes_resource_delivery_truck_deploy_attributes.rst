@@ -21,5 +21,13 @@ This resource has the following attributes:
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``search``
      - Use to specify a search string that is used to deploy a cookbook. This value is used as part of the ``deploy.rb`` file in |chef delivery|.
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``timeout``
      - Use to specify the timeout. Default value: ``30 * 60``.

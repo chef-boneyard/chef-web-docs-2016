@@ -25,3 +25,11 @@ This resource has the following attributes:
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|

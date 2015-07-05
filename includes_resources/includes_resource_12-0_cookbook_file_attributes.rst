@@ -77,6 +77,14 @@ This resource has the following attributes:
      - **Ruby Types:** Sting, Array
 
        |source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| |see syntax|
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
 

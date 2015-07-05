@@ -50,10 +50,13 @@ This resource has the following attributes:
        .. include:: ../../includes_node/includes_node_run_list.rst
        
        .. include:: ../../includes_node/includes_node_run_list_format.rst
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``tags``
      - Use to specify the list of tags to be applied to the machine image. Any tag not specified in this list will be removed.
-
-
-
-

@@ -44,4 +44,11 @@ This resource has the following attributes:
           }
    * - ``remove_members``
      - Use to remove the specified users from an organization. Invitations that have not been accepted will be cancelled.
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|

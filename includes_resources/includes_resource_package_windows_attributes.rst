@@ -45,6 +45,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        Optional. |source resource package| The location of the package may be at a URL. |resource_block_default| |see syntax|
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``timeout``
      - **Ruby Types:** String, Integer
 

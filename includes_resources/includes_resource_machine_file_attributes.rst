@@ -44,14 +44,11 @@ This resource has the following attributes:
      - |path full_path_to_file| |resource_block_default| |see syntax|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
+       |subscribes|
 
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-
-
-
-
-
-
-
-
+       |subscribes timers|

@@ -41,9 +41,13 @@ This resource has the following attributes:
      - The pass phrase for the private key. Use in conjunction with ``source_key``` and ``source_key_path``.
    * - ``source_key_path``
      - The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``type``
      - Use to specify the type of private key. Possible values: ``dsa`` and ``rsa``. Default value: ``rsa``.
-
-
-
-

@@ -49,3 +49,11 @@ This resource has the following attributes:
      - The pass phrase for the public key. Use in conjunction with ``source_key``` and ``source_key_path``.
    * - ``source_key_path``
      - The path to the public key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|

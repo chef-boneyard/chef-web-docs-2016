@@ -71,6 +71,14 @@ This resource has the following attributes:
      - **Ruby Types:** Integer, Array
 
        Inherited from |resource execute| resource. |return_value cmd| Default value: ``0``.
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``timeout``
      - **Ruby Types:** Integer, Float
 

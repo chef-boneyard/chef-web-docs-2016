@@ -93,6 +93,14 @@ This resource has the following attributes:
      - **Ruby Types:** String, Array
 
        |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| |resource_block_default| |see syntax|
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``variables``
      - **Ruby Type:** Hash
 

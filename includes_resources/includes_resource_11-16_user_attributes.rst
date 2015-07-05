@@ -59,6 +59,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |shell|
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``supports``
      - **Ruby Type:** Hash
 

@@ -40,6 +40,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |path chef_handler|
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``supports``
      - **Ruby Type:** Hash
 

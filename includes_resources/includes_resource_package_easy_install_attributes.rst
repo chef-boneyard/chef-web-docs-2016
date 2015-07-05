@@ -41,6 +41,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        The location of the |python| binary.
+   * - ``subscribes``
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
+
+       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+       |subscribes timers|
    * - ``source``
      - **Ruby Type:** String
 
