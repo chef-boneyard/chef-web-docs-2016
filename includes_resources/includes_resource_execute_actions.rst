@@ -9,7 +9,7 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:run``
-     - Default. |resource action run execute|
    * - ``:nothing``
      - |resource action nothing execute|
+   * - ``:run``
+     - Default. |resource action run execute|
