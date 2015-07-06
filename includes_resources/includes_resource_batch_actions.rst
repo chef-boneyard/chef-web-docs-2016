@@ -10,6 +10,6 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:nothing``
-     - |resource action nothing|
+     - |resource action nothing execute|
    * - ``:run``
      - |resource action run windows_batch|
