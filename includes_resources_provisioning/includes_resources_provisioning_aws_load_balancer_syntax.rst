@@ -6,14 +6,14 @@ The syntax for using the ``aws_load_balancer`` driver-specific resource is as fo
 .. code-block:: ruby
 
    aws_load_balancer 'name' do
-     load_balancer_id              'string'
+     load_balancer_id              String
    end
 
 where 
 
 * ``aws_load_balancer`` is the resource
 * ``name`` is the name of the resource block and also the name of a load balancer in |amazon elb|
-* ``load_balancer_id`` is an attributes of this resource, with example values shown. |see attributes|
+* ``load_balancer_id`` is an attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

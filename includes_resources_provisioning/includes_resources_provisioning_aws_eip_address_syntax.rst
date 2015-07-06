@@ -6,16 +6,16 @@ The syntax for using the ``aws_eip_address`` driver-specific resource is as foll
 .. code-block:: ruby
 
    aws_eip_address 'name' do
-     associate_to_vpc              true
-     machine                       'string', false
-     public_ip                     'string'
+     associate_to_vpc              TrueClass, FalseClass
+     machine                       String, FalseClass
+     public_ip                     String
    end
 
 where 
 
 * ``aws_eip_address`` is the resource
 * ``name`` is the name of the resource block and also the name of an |amazon eip|
-* ``associate_to_vpc``, ``machine``, and ``public_ip`` are attributes of this resource, with example values shown. |see attributes|
+* ``associate_to_vpc``, ``machine``, and ``public_ip`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

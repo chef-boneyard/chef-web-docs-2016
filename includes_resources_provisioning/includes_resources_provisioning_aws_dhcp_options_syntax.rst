@@ -6,19 +6,19 @@ The syntax for using the ``aws_dhcp_options`` driver-specific resource is as fol
 .. code-block:: ruby
 
    aws_dhcp_options 'name' do
-     dhcp_options_id               'string'
-     domain_name                   'string'
-     domain_name_servers           [ array ]
-     ntp_servers                   [ array ]
-     netbios_name_servers          [ array ]
-     netbios_node_type             integer
+     dhcp_options_id               String
+     domain_name                   String
+     domain_name_servers           Array
+     ntp_servers                   Array
+     netbios_name_servers          Array
+     netbios_node_type             Integer
    end
 
 where 
 
 * ``aws_dhcp_options`` is the resource
 * ``name`` is the name of the resource block and also the name of an option set for the |dhcp| protocol
-* ``domain_name``, ``domain_name_servers``, ``netbios_name_servers``, ``netbios_node_type``, and ``ntp_servers`` are attributes of this resource, with example values shown. |see attributes|
+* ``domain_name``, ``domain_name_servers``, ``netbios_name_servers``, ``netbios_node_type``, and ``ntp_servers`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

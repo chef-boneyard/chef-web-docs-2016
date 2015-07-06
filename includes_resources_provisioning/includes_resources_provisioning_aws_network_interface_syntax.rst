@@ -6,20 +6,20 @@ The syntax for using the ``aws_network_interface`` driver-specific resource is a
 .. code-block:: ruby
 
    aws_network_interface 'name' do
-     description                   'string'
-     device_index                  integer
-     machine                       'string', false
-     network_interface_id          'string'
-     private_ip_address            'string'
-     subnet                        'string'
-     security_groups               [ array ]
+     description                   String
+     device_index                  Integer
+     machine                       String, FalseClass
+     network_interface_id          String
+     private_ip_address            String
+     subnet                        String
+     security_groups               Array
    end
 
 where 
 
 * ``aws_network_interface`` is the resource
 * ``name`` is the name of the resource block and also the name of a network interface in |amazon ec2|
-* ``description``, ``device_index``, ``machine``, ``security_groups``, and ``subnet`` are attributes of this resource, with example values shown. |see attributes|
+* ``description``, ``device_index``, ``machine``, ``security_groups``, and ``subnet`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

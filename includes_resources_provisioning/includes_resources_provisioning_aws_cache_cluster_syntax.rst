@@ -6,23 +6,23 @@ The syntax for using the ``aws_cache_cluster`` driver-specific resource is as fo
 .. code-block:: ruby
 
    aws_cache_cluster 'name' do
-     az_mode                       'string'
-     cluster_name                  'string'  # defaults to 'name' if not specified
-     engine                        'string'
-     engine_version                'string'
-     node_type                     'string'
-     number_nodes                  integer
-     preferred_availability_zone   'string'
-     preferred_availability_zones  'string' or [ array ]
-     security_groups               'string', [ array ]
-     subnet_group_name             'string'
+     az_mode                       String
+     cluster_name                  String  # defaults to 'name' if not specified
+     engine                        String
+     engine_version                String
+     node_type                     String
+     number_nodes                  Integer
+     preferred_availability_zone   String
+     preferred_availability_zones  String, Array
+     security_groups               String, Array
+     subnet_group_name             String
    end
 
 where 
 
 * ``aws_cache_cluster`` is the resource
 * ``name`` is the name of the resource block
-* ``az_mode``, ``engine``, ``engine_version``, ``node_type``, ``number_nodes``, ``preferred_availability_zones``, and ``subnet_group_name`` are attributes of this resource, with example values shown. |see attributes|
+* ``az_mode``, ``engine``, ``engine_version``, ``node_type``, ``number_nodes``, ``preferred_availability_zones``, and ``subnet_group_name`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

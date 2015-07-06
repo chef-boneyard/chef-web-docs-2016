@@ -6,14 +6,14 @@ The syntax for using the ``aws_internet_gateway`` driver-specific resource is as
 .. code-block:: ruby
 
    aws_internet_gateway 'name' do
-     internet_gateway_id           'string'
+     internet_gateway_id           String
    end
 
 where 
 
 * ``aws_internet_gateway`` is the resource
 * ``name`` is the name of the resource block and also the name of an internet gateway for a defined virtual network within |amazon vpc|
-* ``internet_gateway_id`` is an attribute of this resource, with example values shown. |see attributes|
+* ``internet_gateway_id`` is an attribute of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

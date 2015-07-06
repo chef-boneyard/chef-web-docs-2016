@@ -6,12 +6,12 @@ The syntax for using the ``aws_auto_scaling_group`` driver-specific resource is 
 .. code-block:: ruby
 
    aws_auto_scaling_group 'name' do
-     availability_zones            [ array ]
-     desired_capacity              integer
-     min_size                      integer
-     max_size                      integer
-     launch_configuration          'string'
-     load_balancers                [ array ]
+     availability_zones            Array
+     desired_capacity              Integer
+     min_size                      Integer
+     max_size                      Integer
+     launch_configuration          String
+     load_balancers                Array
      options                       Hash
    end
 
@@ -19,7 +19,7 @@ where
 
 * ``aws_auto_scaling_group`` is the resource
 * ``name`` is the name of the resource block and also the name of the auto scaling group in |amazon ec2|
-* ``availability_zones``, ``desired_capacity``, ``max_size``, ``min_size``, ``launch_configuration``, ``load_balancers``, and ``options`` are attributes of this resource, with example values shown. |see attributes|
+* ``availability_zones``, ``desired_capacity``, ``max_size``, ``min_size``, ``launch_configuration``, ``load_balancers``, and ``options`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

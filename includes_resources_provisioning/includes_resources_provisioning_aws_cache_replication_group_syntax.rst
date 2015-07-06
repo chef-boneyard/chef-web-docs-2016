@@ -6,24 +6,24 @@ The syntax for using the ``aws_cache_replication_group`` driver-specific resourc
 .. code-block:: ruby
 
    aws_cache_replication_group 'name' do
-     az_mode                       'string'
-     automatic_failover            true
-     description                   'string'
-     engine                        'string'
-     engine_version                'string'
-     group_name                    'string'  # defaults to 'name' if not specified
-     node_type                     'string'
-     number_cache_clusters         integer
-     preferred_availability_zones  'string' or [ array ]
-     security_groups               'string', [ array ]
-     subnet_group_name             'string'
+     az_mode                       String
+     automatic_failover            TrueClass, FalseClass
+     description                   String
+     engine                        String
+     engine_version                String
+     group_name                    String  # defaults to 'name' if not specified
+     node_type                     String
+     number_cache_clusters         Integer
+     preferred_availability_zones  String, Array
+     security_groups               String, Array
+     subnet_group_name             String
    end
 
 where 
 
 * ``aws_cache_replication_group`` is the resource
 * ``name`` is the name of the resource block
-* ``automatic_failover``, ``engine``, ``engine_version``, ``node_type``, ``number_cache_clusters``, ``preferred_availability_zones``, and ``subnet_group_name`` are attributes of this resource, with example values shown. |see attributes|
+* ``automatic_failover``, ``engine``, ``engine_version``, ``node_type``, ``number_cache_clusters``, ``preferred_availability_zones``, and ``subnet_group_name`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

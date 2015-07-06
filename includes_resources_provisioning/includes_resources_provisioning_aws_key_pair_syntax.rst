@@ -6,17 +6,17 @@ The syntax for using the ``aws_key_pair`` driver-specific resource is as follows
 .. code-block:: ruby
 
    aws_key_pair 'name' do
-     allow_overwrite               true
+     allow_overwrite               TrueClass, FalseClass
      private_key_options()         Hash
-     private_key_path              'string'
-     public_key_path               'string'      
+     private_key_path              String
+     public_key_path               String      
    end
 
 where 
 
 * ``aws_key_pair`` is the resource
 * ``name`` is the name of the resource block
-* ``allow_overwrite``, and ``private_key_options`` are attributes of this resource, with example values shown. |see attributes|
+* ``allow_overwrite``, and ``private_key_options`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

@@ -6,22 +6,22 @@ The syntax for using the ``aws_vpc`` driver-specific resource is as follows:
 .. code-block:: ruby
 
    aws_vpc 'name' do
-     cidr_block                    'string'
-     dhcp_options                  'string'
-     enable_dns_hostnames          true
-     enable_dns_support            true
-     internet_gateway              false
-     instance_tenancy              :default or :dedicated
-     main_route_table              'string'
+     cidr_block                    String
+     dhcp_options                  String
+     enable_dns_hostnames          TrueClass, FalseClass
+     enable_dns_support            TrueClass, FalseClass
+     internet_gateway              TrueClass, FalseClass
+     instance_tenancy              Symbol
+     main_route_table              String
      main_routes                   Hash
-     vpc_id                        string
+     vpc_id                        String
    end
 
 where 
 
 * ``aws_vpc`` is the resource
 * ``name`` is the name of the resource block and also the name of the defined virtual network in |amazon vpc|
-* ``cidr_block``, ``dhcp_options``, ``enable_dns_hostnames``, ``enable_dns_support``, ``internet_gateway``, ``instance_tenancy``, and ``main_routes`` are attributes of this resource, with example values shown. |see attributes|
+* ``cidr_block``, ``dhcp_options``, ``enable_dns_hostnames``, ``enable_dns_support``, ``internet_gateway``, ``instance_tenancy``, and ``main_routes`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

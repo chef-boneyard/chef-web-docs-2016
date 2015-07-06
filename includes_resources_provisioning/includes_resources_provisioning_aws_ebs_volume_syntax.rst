@@ -6,22 +6,22 @@ The syntax for using the ``aws_ebs_volume`` driver-specific resource is as follo
 .. code-block:: ruby
 
    aws_ebs_volume 'name' do
-     availability_zone             'string'
-     device                        'string'
-     encrypted                     true
-     iops                          integer
-     machine                       'string'
-     size                          integer
-     snapshot                      'string'
-     volume_id                     'string'
-     volume_type                   'string'
+     availability_zone             String
+     device                        String
+     encrypted                     TrueClass, FalseClass
+     iops                          Integer
+     machine                       String
+     size                          Integer
+     snapshot                      String
+     volume_id                     String
+     volume_type                   String
    end
 
 where 
 
 * ``aws_ebs_volume`` is the resource
 * ``name`` is the name of the resource block and also the name of a block-level storage device that is attached to an |amazon ec2| instance
-* ``availability_zone``, ``device``, ``encrypted``, ``iops``, ``machine``, ``size``, and ``volume_type`` are attributes of this resource, with example values shown. |see attributes|
+* ``availability_zone``, ``device``, ``encrypted``, ``iops``, ``machine``, ``size``, and ``volume_type`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

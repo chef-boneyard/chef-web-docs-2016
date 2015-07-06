@@ -7,18 +7,18 @@ The syntax for using the ``aws_security_group`` driver-specific resource is as f
 
    aws_security_group 'name' do
      aws_tags                      Hash
-     description                   'string'
-     inbound_rules                 Hash or [ array ]
-     outbound_rules                Hash or [ array ]
-     security_group_id             'string'
-     vpc                           'string'
+     description                   String
+     inbound_rules                 Hash, Array
+     outbound_rules                Hash, Array
+     security_group_id             String
+     vpc                           String
    end
 
 where 
 
 * ``aws_security_group`` is the resource
 * ``name`` is the name of the resource block and also the name of a security group in |amazon aws|
-* ``inbound_rules``, ``outbound_rules``, and ``vpc`` are attributes of this resource, with example values shown. |see attributes|
+* ``inbound_rules``, ``outbound_rules``, and ``vpc`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

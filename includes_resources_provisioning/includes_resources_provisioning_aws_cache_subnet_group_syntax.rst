@@ -6,16 +6,16 @@ The syntax for using the ``aws_cache_subnet_group`` driver-specific resource is 
 .. code-block:: ruby
 
    aws_cache_subnet_group 'name' do
-     description                   'string'
-     group_name                    'string'  # defaults to 'name' if not specified
-     subnets                       'string', [ array ]
+     description                   String
+     group_name                    String  # defaults to 'name' if not specified
+     subnets                       String, Array
    end
 
 where 
 
 * ``aws_cache_subnet_group`` is the resource
 * ``name`` is the name of the resource block (and is the same as the ``group_name`` attribute if ``group_name`` is not specified in the resource block)
-* ``description`` and ``subnets`` are attributes of this resource, with example values shown. |see attributes|
+* ``description`` and ``subnets`` are attributes of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
