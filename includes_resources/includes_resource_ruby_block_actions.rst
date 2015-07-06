@@ -9,9 +9,9 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:run``
-     - Default. |resource action run ruby_block|
    * - ``:create``
      - The same as ``:run``.
    * - ``:nothing``
      - |resource action nothing|
+   * - ``:run``
+     - Default. |resource action run ruby_block|

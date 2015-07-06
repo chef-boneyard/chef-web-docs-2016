@@ -9,7 +9,7 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:run``
-     - Default. |resource action run erlang|
    * - ``:nothing``
      - |resource action nothing erlang|
+   * - ``:run``
+     - Default. |resource action run erlang|

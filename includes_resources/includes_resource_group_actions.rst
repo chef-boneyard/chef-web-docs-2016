@@ -11,11 +11,11 @@ This resource has the following actions:
      - Description
    * - ``:create``
      - Default. |resource action create group|
-   * - ``:remove``
-     - |resource action remove group|
-   * - ``:modify``
-     - |resource action modify group|
    * - ``:manage``
      - |resource action manage group|
+   * - ``:modify``
+     - |resource action modify group|
    * - ``:nothing``
      - |resource action nothing|
+   * - ``:remove``
+     - |resource action remove group|

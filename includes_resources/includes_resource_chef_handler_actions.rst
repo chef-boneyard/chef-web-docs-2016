@@ -9,9 +9,9 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:enable``
-     - |resource action enable chef_handler|
    * - ``:disable``
      - |resource action disable chef_handler|
+   * - ``:enable``
+     - |resource action enable chef_handler|
    * - ``:nothing``
      - |resource action nothing|

@@ -9,10 +9,10 @@ This resource has the following actions:
 
    * - Action
      - Description
-   * - ``:create``
-     - Default. |resource action create mdadm|
    * - ``:assemble``
      - |resource action assemble mdadm|
+   * - ``:create``
+     - Default. |resource action create mdadm|
    * - ``:nothing``
      - |resource action nothing|
    * - ``:stop``

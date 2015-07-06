@@ -13,9 +13,9 @@ This resource has the following actions:
      - Default. |resource action add ifconfig|
    * - ``:delete``
      - |resource action delete ifconfig|
-   * - ``:enable``
-     - |resource action enable ifconfig|
    * - ``:disable``
      - |resource action disable ifconfig|
+   * - ``:enable``
+     - |resource action enable ifconfig|
    * - ``:nothing``
      - |resource action nothing|
