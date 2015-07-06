@@ -15,6 +15,10 @@ This resource has the following attributes:
      - |chef_server_url|
    * - ``complete``
      - Use to specify if this resource defines a |chef client| completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``name``
      - The name of the |chef client|.
    * - ``notifies``
@@ -45,6 +49,14 @@ This resource has the following attributes:
                           -----END CERTIFICATE-----\n",
           "name": "node_name"
           }
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``source_key``
      - Use to copy a public or private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
    * - ``source_key_pass_phrase``

@@ -31,6 +31,10 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |gem_binary resource package|
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
@@ -59,6 +63,14 @@ This resource has the following attributes:
      - **Ruby Type:** Hash
 
        |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``source``
      - **Ruby Type:** String
 

@@ -49,6 +49,10 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |hour cron| Default value: ``*``.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``mailto``
      - **Ruby Type:** String
 
@@ -77,6 +81,14 @@ This resource has the following attributes:
      - **Ruby Type:** Chef Class
 
        Optional. |provider resource_parameter|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``shell``
      - **Ruby Type:** String
 

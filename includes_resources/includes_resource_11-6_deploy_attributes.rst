@@ -45,6 +45,10 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |group deploy|
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``keep_releases``
      - **Ruby Type:** Integer
 
@@ -89,6 +93,14 @@ This resource has the following attributes:
      - **Ruby Types:** String, Proc
 
        |restart shell_command|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``revision``
      - **Ruby Type:** String
 

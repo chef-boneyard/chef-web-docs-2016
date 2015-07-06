@@ -9,6 +9,10 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``module_name``
      - **Ruby Type:** String
 
@@ -36,6 +40,14 @@ This resource has the following attributes:
        |name powershell_dsc_resource| This value is case-insensitive and must be a symbol that matches the name of the |windows powershell_dsc_short| resource.
 
        .. include:: ../../includes_resources/includes_resource_dsc_resource_features.rst
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

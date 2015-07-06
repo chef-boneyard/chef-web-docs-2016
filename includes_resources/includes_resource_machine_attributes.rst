@@ -72,6 +72,10 @@ This resource has the following attributes:
           files '/remote/path.txt' => { :content => 'foo' }
    * - ``from_image``
      - Use to specify an image created by the |resource machine_image| resource.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``machine_options``
      - A |ruby hash| that is specifies driver options.
    * - ``name``
@@ -123,6 +127,14 @@ This resource has the following attributes:
      - Use to remove a role from the run-list for the machine.
    * - ``remove_tag``
      - Use to remove a tag.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``role``
      - Use to add a role to the run-list for the machine. Use this attribute multiple times to add multiple roles to a run-list. Use this attribute along with ``recipe`` to define a run-list. The order in which the ``recipe`` and ``role`` attributes are specified will determine the order in which they are added to the run-list. This attribute should not be used in the same recipe as ``run_list``. For example:
 	 

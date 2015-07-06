@@ -19,6 +19,10 @@ This resource has the following attributes:
      - |description role|
    * - ``env_run_lists``
      - The environment-specific run-list for a role. Default value: ``[]``. For example: ``["env_run_lists[webserver]"]``
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``name``
      - The name of the role.
    * - ``notifies``
@@ -48,6 +52,14 @@ This resource has the following attributes:
            "override_attributes": {}
          }
 
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``run_list``
      - |run-list| Default value: ``[]``. For example: ``["recipe[default]","recipe[apache2]"]``
    * - ``subscribes``

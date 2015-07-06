@@ -11,6 +11,10 @@ This resource has the following attributes:
      - Description
    * - ``format``
      - Use to specify the format of a public key. Possible values: ``pem`` and ``der``. Default value: ``pem``.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
@@ -21,6 +25,14 @@ This resource has the following attributes:
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``path``
      - The path to a public key.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``source_key``
      - Use to copy a public key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
    * - ``source_key_pass_phrase``

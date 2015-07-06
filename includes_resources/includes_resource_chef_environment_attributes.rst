@@ -19,6 +19,10 @@ This resource has the following attributes:
      - |attribute_type default| Default value: ``{}``.
    * - ``description``
      - |description environment|
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``name``
      - |name environment|
    * - ``notifies``
@@ -45,6 +49,14 @@ This resource has the following attributes:
             "default_attributes":{},
             "override_attributes":{}
           }
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

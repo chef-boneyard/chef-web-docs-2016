@@ -13,6 +13,10 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |default_release apt| For example: ``stable``.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
@@ -33,6 +37,14 @@ This resource has the following attributes:
      - **Ruby Type:** Chef Class
 
        Optional. |provider resource_parameter| |see providers|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``source``
      - **Ruby Type:** String
 

@@ -17,6 +17,10 @@ This resource has the following attributes:
      - Use to specify the driver to be used for provisioning.
    * - ``group``
      - |windows group_identifier|
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``local_path``
      - The local path to a file.
    * - ``machine``
@@ -44,6 +48,14 @@ This resource has the following attributes:
      - |path full_path_to_file| |resource_block_default| |see syntax|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

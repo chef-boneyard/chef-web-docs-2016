@@ -13,6 +13,10 @@ This resource has the following attributes:
      - |chef_server_url|
    * - ``complete``
      - Use to specify if this resource defines a |chef client| completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
@@ -60,6 +64,14 @@ This resource has the following attributes:
        
           remove_rights :all, :users => [ 'jkeiser', 'adam' ]
 
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``rights``
      - Use to add rights. Syntax: ``:right, :right => 'user', :groups => [ 'group', 'group']``. For example:
        

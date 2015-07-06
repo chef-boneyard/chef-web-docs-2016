@@ -13,6 +13,10 @@ This resource has the following attributes:
      - **Ruby Types:** Integer, String
 
        |windows group_identifier|
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``inherits``
      - **Ruby Types:** TrueClass, FalseClass
 
@@ -51,6 +55,14 @@ This resource has the following attributes:
      - **Ruby Types:** TrueClass, FalseClass
 
        |recursive directory| Default value: ``false``.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``rights``
      - **Ruby Types:** Integer, String
 

@@ -31,6 +31,10 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``interpreter``
      - **Ruby Type:** String
 
@@ -47,6 +51,14 @@ This resource has the following attributes:
      - **Ruby Type:** Chef Class
 
        Optional. |provider resource_parameter|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

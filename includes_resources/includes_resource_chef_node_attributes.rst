@@ -19,6 +19,10 @@ This resource has the following attributes:
      - Use to specify if this resource defines a node completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values.
    * - ``default_attributes``
      - |attribute_type default| Default value: ``{}``.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``name``
      - The name of the node.
    * - ``normal_attributes``
@@ -51,6 +55,14 @@ This resource has the following attributes:
             ],
             "defaults": {}
           }
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``run_list``
      - |run-list| Default value: ``[]``. For example: ``["recipe[default]","recipe[apache2]"]``
    * - ``subscribes``

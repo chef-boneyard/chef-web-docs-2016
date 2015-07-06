@@ -37,6 +37,10 @@ This resource has the following attributes:
      - **Ruby Types:** Integer, String
 
        Use to configure permissions for directories. |windows group_identifier|
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``inherits``
      - **Ruby Types:** TrueClass, FalseClass
 
@@ -83,6 +87,14 @@ This resource has the following attributes:
      - **Ruby Types:** TrueClass, FalseClass
 
        |recursive remote_directory| Default value: ``true``; the |chef client| must be able to create the directory structure, including parent directories (if missing), as defined in ``COOKBOOK_NAME/files/default/REMOTE_DIRECTORY``.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``rights``
      - **Ruby Types:** Integer, String
 

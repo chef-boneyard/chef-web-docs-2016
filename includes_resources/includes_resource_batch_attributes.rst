@@ -41,6 +41,10 @@ This resource has the following attributes:
      - **Ruby Type:** Symbol
 
        Default value: ``:batch``. When this attribute is set to ``:batch``, the 64-bit version of the |windows cmd exe| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` attributes. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``interpreter``
      - **Ruby Type:** String
 
@@ -57,6 +61,14 @@ This resource has the following attributes:
      - **Ruby Type:** Chef Class
 
        Optional. |provider resource_parameter|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``returns``
      - **Ruby Types:** Integer, Array
 

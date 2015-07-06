@@ -17,6 +17,10 @@ This resource has the following attributes:
      - Use to specify whether encryption is used for a data bag item.
    * - ``encryption_version``
      - |data_bag_decrypt_minimum_version|
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
@@ -36,6 +40,14 @@ This resource has the following attributes:
             "id": "adam",
             "real_name": "Adam Brent Jacob"
           }
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

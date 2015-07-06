@@ -17,6 +17,10 @@ This resource has the following attributes:
      - 
    * - ``from_recipe``
      - 
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``machine_options``
      - 
    * - ``machines``
@@ -31,6 +35,14 @@ This resource has the following attributes:
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

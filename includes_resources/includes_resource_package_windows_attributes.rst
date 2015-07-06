@@ -13,6 +13,10 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |checksum remote_file| Use when a URL is specified by the ``source`` attribute.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``installer_type``
      - **Ruby Type:** Symbol
 
@@ -37,6 +41,14 @@ This resource has the following attributes:
      - **Ruby Type:** Hash
 
        |remote_file_attributes|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``returns``
      - **Ruby Types:** String, Integer, Array
 

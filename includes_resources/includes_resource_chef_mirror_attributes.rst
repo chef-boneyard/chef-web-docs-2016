@@ -17,6 +17,10 @@ This resource has the following attributes:
      - The number of threads to run in-parallel. Default value: ``10``.
    * - ``freeze``
      - Use to freeze cookbooks upon upload to the mirrored location. When ``true``, cookbooks are frozen.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``no_diff``
      - Use to upload only new files.
    * - ``notifies``
@@ -31,6 +35,14 @@ This resource has the following attributes:
      - A path to a directory in the |chef repo| to be mirrored. For example: ``nodes``, ``nodes/*``, ``/nodes/my_node``, ``*/*``, ``roles/base``, ``data/secrets``, ``cookbooks/apache2``, and so on.
    * - ``purge``
      - Use to remove objects that have been deleted locally from the mirrored location. For example, when used with the ``:upload`` action, cookbooks that exist in the mirrored location, but do not exist locally, will be deleted.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

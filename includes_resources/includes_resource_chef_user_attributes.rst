@@ -19,6 +19,10 @@ This resource has the following attributes:
      - The email address for the user.
    * - ``external_authentication_uid``
      - 
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``name``
      - The name of the user.
    * - ``notifies``
@@ -43,6 +47,14 @@ This resource has the following attributes:
           }
    * - ``recovery_authentication_enabled``
      - 
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``source_key``
      - Use to copy a public or private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
    * - ``source_key_pass_phrase``

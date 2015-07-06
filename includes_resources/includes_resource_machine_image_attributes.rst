@@ -15,6 +15,10 @@ This resource has the following attributes:
      - |name environment|
    * - ``complete``
      - Use to specify if all of the attributes specified in ``attributes`` represent a complete specification for the machine image. When true, any attributes not specified in ``attributes`` will be reset to their default values.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``image_options``
      - Use to specify options that are used with this machine image.
    * - ``name``
@@ -42,6 +46,14 @@ This resource has the following attributes:
      - Use to remove a recipe from the run-list for the machine image.
    * - ``remove_role``
      - Use to remove a role from the run-list for the machine image.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``role``
      - Use to add a role to the run-list for the machine image.
    * - ``run_list``

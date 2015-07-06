@@ -15,6 +15,10 @@ This resource has the following attributes:
      - Use to specify if this resource defines an organization completely. When ``true``, any attribute not specified by this resource will be reset to default attribute values.
    * - ``full_name``
      - |name_rules org_full| For example: ``Chef Software, Inc.``.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``invites``
      - Use to specify a list of users to be invited to the organization. An invitation is sent to any user in this list who is not already a member of the organization.
    * - ``members``
@@ -44,6 +48,14 @@ This resource has the following attributes:
           }
    * - ``remove_members``
      - Use to remove the specified users from an organization. Invitations that have not been accepted will be cancelled.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

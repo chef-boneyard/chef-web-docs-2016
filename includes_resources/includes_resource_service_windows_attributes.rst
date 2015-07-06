@@ -9,6 +9,10 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``init_command``
      - **Ruby Type:** String
 
@@ -37,6 +41,14 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |command service_restart|
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``run_as_password``
      - **Ruby Type:** String
 

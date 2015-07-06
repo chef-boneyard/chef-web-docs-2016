@@ -15,6 +15,10 @@ This resource has the following attributes:
      - Use to specify the exponent for an RSA private key. This is always an odd integer value, often a prime Fermat number, and typically ``5``, ``17``, ``257``, or ``65537``.
    * - ``format``
      - Use to specify the format of a private key. Possible values: ``pem`` and ``der``. Default value: ``pem``.
+   * - ``ignore_failure``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       |ignore_failure| Default value: ``false``.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
@@ -33,6 +37,14 @@ This resource has the following attributes:
      - The path to a public key.
    * - ``regenerate_if_different``
      - Use to regenerate a private key if it does not have the desired size, type, and so on. Default value: ``false``.
+   * - ``retries``
+     - **Ruby Type:** Integer
+
+       |retries| Default value: ``0``.
+   * - ``retry_delay``
+     - **Ruby Type:** Integer
+
+       |retry_delay| Default value: ``2``.
    * - ``size``
      - Use to specify the size of an RSA or DSA private key. Default value: ``2048``.
    * - ``source_key``
