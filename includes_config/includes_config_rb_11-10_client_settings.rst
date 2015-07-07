@@ -257,7 +257,7 @@ This configuration file has the following settings:
 
           log_level :info
    * - ``log_location``
-     - |log_location| Default value: ``STDOUT``. For example:
+     - |log_location| Possible values: ``/path/to/log_location``, ``STDOUT`` or ``STDERR``. The application log will specify the source as ``Chef``. Default value: ``STDOUT``. For example:
 
        .. code-block:: ruby
 
