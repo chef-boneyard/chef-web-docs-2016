@@ -7,7 +7,7 @@ For example:
 
 .. code-block:: ruby
 
-   directory "/tmp/folder" do
+   directory '/tmp/folder' do
      owner 'root'
      group 'root'
      mode '0755'

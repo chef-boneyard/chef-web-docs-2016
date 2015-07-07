@@ -6,7 +6,7 @@ Do something like this:
 
 .. code-block:: ruby
 
-   service "tomcat" do
+   service 'tomcat' do
      action :start
    end
 
@@ -14,8 +14,8 @@ and NOT something like this:
 
 .. code-block:: ruby
 
-   execute "start-tomcat" do
-     command "/etc/init.d/tomcat6 start"
+   execute 'start-tomcat' do
+     command '/etc/init.d/tomcat6 start'
      action :run
    end
 

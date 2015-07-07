@@ -5,13 +5,13 @@ The following example shows how to set up IPv4 packet forwarding using the |reso
 
 .. code-block:: ruby
 
-   execute "forward_ipv4" do
-     command "echo > /proc/.../ipv4/ip_forward"
+   execute 'forward_ipv4' do
+     command 'echo > /proc/.../ipv4/ip_forward'
      action :nothing
    end
    
-   template "/etc/file_name.conf" do
-     source "routing/file_name.conf.erb"
+   template '/etc/file_name.conf' do
+     source 'routing/file_name.conf.erb'
      notifies :run, 'execute[forward_ipv4]', :delayed
    end
 
