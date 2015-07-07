@@ -20,6 +20,8 @@ release: master 12-5
 # open_source osc_11-0 osc_11-1
 # slides
 # decks devkit client 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18 12-0 12-1 12-2 12-3 12-4
+# server_12-0 server_12-1
+#
 # RETIRED: located in chef-docs-misc, no longer built or maintained
 # 
 # 10 private_chef
@@ -180,6 +182,15 @@ ohai-7:
 ohai-6:
 	mkdir -p $(BUILDDIR)/release/ohai-6/
 	$(BUILD_COMMAND_AND_ARGS) release_ohai_6/source $(BUILDDIR)/release/ohai-6/
+
+server_12-1:
+	mkdir -p $(BUILDDIR)/release/server_12-1/
+	$(BUILD_COMMAND_AND_ARGS) release_server_12-1/source $(BUILDDIR)/release/server_12-1/
+
+server_12-0:
+	mkdir -p $(BUILDDIR)/release/server_12-0/
+	$(BUILD_COMMAND_AND_ARGS) release_server_12-0/source $(BUILDDIR)/release/server_12-0/
+
 
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
