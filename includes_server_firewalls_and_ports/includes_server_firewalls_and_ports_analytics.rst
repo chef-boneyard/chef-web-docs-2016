@@ -18,6 +18,8 @@ For communication between |chef analytics| and the |chef server|, ensure that po
      - yes
    * - 5672
      - |service rabbitmq|
+
+       .. note:: The |rabbitmq| port on the |chef server| must alow inbound traffic from |chef analytics|.
      - no
    * - 10011
      - actions
