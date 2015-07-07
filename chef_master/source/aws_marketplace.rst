@@ -15,3 +15,7 @@ Install the |chef dk_title|
 Configure the |chef server_title|
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_aws_chef_server_configure.rst
+
+Change the |amazon ami| instance size
+=====================================================
+.. include:: ../../includes_cloud/includes_cloud_aws_chef_server_change_instance.rst

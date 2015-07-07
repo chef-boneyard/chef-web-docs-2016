@@ -10,6 +10,8 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
+   .. note::  It may take a few minutes after the instance is available for the SSH daemon to be ready to accept connections.
+
 #. Configure the |chef server| using the following command:
 
    .. code-block:: bash
@@ -32,6 +34,6 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
       $ cd chef-repo
 
 #. Run ``knife ssl fetch`` to add |chef server| SSL certificates to the your SSL trusted certificates.
-#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously. 
+#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
 #. Add virtual machines to the |chef server|.
 #. Bootstrap nodes with the |chef server|.

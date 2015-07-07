@@ -5,10 +5,10 @@
 
 |company_name| currently offers seven |amazon ami| fully licensed configurations:
 
-* `5 nodes <https://aws.amazon.com/marketplace/pp/B010OMNV2W>`__
-* `25 nodes <https://aws.amazon.com/marketplace/pp/B010OMO0UE>`__
-* `50 nodes <https://aws.amazon.com/marketplace/pp/B010OMNZNW>`__
-* `100 nodes <https://aws.amazon.com/marketplace/pp/B010OMNWBW>`__
-* `150 nodes <https://aws.amazon.com/marketplace/pp/B010OMO25W>`__
-* `200 nodes <https://aws.amazon.com/marketplace/pp/B010OMCM6I>`__
-* `250 nodes <https://aws.amazon.com/marketplace/pp/B010OMNXH0>`__
+* `5 nodes <https://aws.amazon.com/marketplace/pp/B010OMNV2W>`__ (t2.medium)
+* `25 nodes <https://aws.amazon.com/marketplace/pp/B010OMO0UE>`__ (t2.medium)
+* `50 nodes <https://aws.amazon.com/marketplace/pp/B010OMNZNW>`__ (t2.medium)
+* `100 nodes <https://aws.amazon.com/marketplace/pp/B010OMNWBW>`__ (m3.large)
+* `150 nodes <https://aws.amazon.com/marketplace/pp/B010OMO25W>`__ (m3.large)
+* `200 nodes <https://aws.amazon.com/marketplace/pp/B010OMCM6I>`__ (m3.large)
+* `250 nodes <https://aws.amazon.com/marketplace/pp/B010OMNXH0>`__ (m3.large)
