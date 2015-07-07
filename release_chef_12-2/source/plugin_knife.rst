@@ -1,4 +1,4 @@
-.. THIS PAGE DOCUMENTS chef-client version 12.0
+.. THIS PAGE DOCUMENTS chef-client version 12.2
 
 =====================================================
 About |knife_title| Cloud Plugins
