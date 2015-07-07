@@ -12,13 +12,13 @@ The following table lists the supported platforms for the |chef server|:
      - Version
    * - |centos|
      - 
-     - ``5.x``, ``6.x``
+     - ``5.x``, ``6.x``, ``7.x``
    * - |oracle linux|
      - 
      - ``5.x``, ``6.x``
    * - |redhat enterprise linux|
      - 
-     - ``5.x``, ``6.x``
+     - ``5.x``, ``6.x``, ``7.x``
    * - |ubuntu|
      - 
      - ``10.04 LTS``, ``12.04 LTS``, ``14.04 LTS``
