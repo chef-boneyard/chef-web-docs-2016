@@ -18,7 +18,7 @@ The following items are new for |chef server| 12:
 * **New commands for managing organizations** New subcommands for the |chef server ctl| command line tool: ``org-user-add``, ``org-create``, ``org-delete``, ``org-user-remove``, ``org-list``, and ``org-show``.
 * **New commands for managing users** New subcommands for the |chef server ctl| command line tool: ``user-create``, ``user-delete``, ``user-edit``, ``user-list``, and ``user-show``.
 * **New command for log files** Use the ``gather-logs`` command to create a tarball of important log files and system information.
-* **Solr has been upgraded to Solr 4** The search capabilities of the |chef server| now use |apache solr| 4.
+* **Solr has been upgraded to Solr 4** The search capabilities of the |chef server| now use |apache solr| 4. The config item for |apache solr| 4 has changed names from opscode-solr to opscode-solr4. Change ``/etc/opscode/chef-server.rb`` accordingly.
 * **CouchDB removed** |couch db| is no longer a component of the |chef server|. All data is migrated to |postgresql|.
 * **Services removed** The following services have been removed from the |chef server|: ``opscode-account``, ``opscode-certificate``, ``oc_authz_migrator``, ``opscode-org-creator``, ``orgmapper``, and ``opscode-webui``. ``opscode-webui`` is replaced by the |chef manage|.
 * **private-chef.rb is now called chef-server.rb** The name of the configuration file used by the |chef server| has been changed. A symlink from |private chef rb| to |chef server rb| is created during upgrades from older versions of the |chef server|.
