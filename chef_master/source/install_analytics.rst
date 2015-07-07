@@ -27,6 +27,7 @@ The |chef analytics| server shares the :doc:`same prerequisites </install_server
 
      $ export PATH=/opt/ospcode/embedded/bin:$PATH
      $ rabbitmqctl set_policy -p /analytics max_length '(erchef|alaska|notifier.notifications|notifier_config)' '{"max-length":10000}' --apply-to queues
+* The |rabbitmq| port on the |chef server| must alow inbound traffic from |chef analytics|.
 
 Hostnames
 -----------------------------------------------------
