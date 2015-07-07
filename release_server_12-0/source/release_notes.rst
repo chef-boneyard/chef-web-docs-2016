@@ -1,5 +1,5 @@
 =====================================================
-Release Notes: |chef server_title| 12
+Release Notes: |chef server_title| 12.0
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
