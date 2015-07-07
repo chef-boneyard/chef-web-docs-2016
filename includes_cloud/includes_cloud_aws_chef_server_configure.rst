@@ -12,7 +12,7 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
 
    .. note::  It may take a few minutes after the instance is available for the SSH daemon to be ready to accept connections.
 
-#. If you're using the |amazon ami| verion 12.0.1-2 or earlier you'll need to fix cloud-init, otherwise, move to the next step.
+#. If you're using the |amazon ami| verion 12.0.1-2 or earlier you'll need to fix ``cloud-init``, otherwise, move to the next step.
 
    .. code-block:: bash
 
