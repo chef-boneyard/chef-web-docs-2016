@@ -1,6 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+To edit the |amazon ami| instance size, do the following:
+
 #. Login using |ssh| to access the |chef server| instance. Use the |ssh| key pair and the IP address or public hostname that was automatically assigned when the |amazon ami| was launched. The default user is ``ec2-user``. For example:
 
    .. code-block:: bash
@@ -13,33 +15,44 @@
 
       $ sudo chef-server-ctl stop
 
-#. Navigate to the AWS instance in the AWS Web Console.
-#. Select the instance and using the 'Actions' dropdown to select 'Instance State' and 'Stop'.
-#. After the instance transitions to 'Stopped' change the instance size using the 'Actions' dropdown to select 'Instance Settings' and 'Change Instance Type'.
-#. Select the desired instance size using the dropdown and click the 'Apply' button.
-#. Start the instance using the 'Actions' dropdown to select 'Instance State' and 'Start'.
-#. After the instance has started it will have a **new public IP address and public DNS**.  Login using ssh to the new instance using the |ssh| key pair and new IP address.  ``ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>``
-#. Update the API FQDN in ``/etc/opscode/chef-server.rb`` using your new public DNS name.  For example:
+#. Navigate to the |amazon aws| instance in the |amazon aws console|.
+#. From the **Actions** dropdown, select **Instance State**, and then **Stop**.
+#. After the instance transitions to **Stopped**, edit the instance size. From the **Actions** dropdown, select **Instance Settings**, and then **Change Instance Type**.
+#. From the dropdown, select the desired instance size, and then click **Apply**.
+#. From the **Actions** dropdown, select **Instance State**, and then click **Start**.
+#. After the instance has started it will have a **new public IP address and public DNS**.
+#. Use |ssh| to log into the new instance. Use the |ssh| key pair and new IP address: 
+
+   .. code-block:: bash
+
+      ``ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>``
+
+#. Update the API FQDN in ``/etc/opscode/chef-server.rb`` using the public DNS name.  For example:
 
    .. code-block:: bash
 
       $ sudo sed -ie "s/api_fqdn.*/api_fqdn 'ec2-52-6-31-230.compute-1.amazonaws.com'/" /etc/opscode/chef-server.rb
 
-   **Replace ec2-52-6-31-230.compute-1.amazonaws.com with your new Public DNS name**
+   Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with the public DNS name.
 
 #. Reconfigure the |chef server| and |chef manage|:
 
    .. code-block:: bash
 
       $ sudo chef-server-ctl reconfigure
+
+   and then:
+
+   .. code-block:: bash
+
       $ sudo opscode-manage-ctl reconfigure
 
-#. Verify that you can login to Manage UI by navigating to 'https://<YOUR NEW PUBLIC DNS>/login
+#. Verify that you can login to |chef manage| by navigating to ``https://<YOUR NEW PUBLIC DNS>/login``.
 
    .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
 
 #. Open a command prompt and change into your ``chef-repo`` directory.
-#. Open ``.chef/knife.rb`` in a text editor and modify the ``chef_server_url`` with your new Public DNS.  For example:
+#. Open ``.chef/knife.rb`` in a text editor and modify the ``chef_server_url`` with your new public DNS.  For example:
 
    .. code-block:: bash
 
@@ -65,4 +78,4 @@
 
       $ knife ssh name:* 'sudo sed -ie "s/chef_server_url.*/chef_server_url 'https://ec2-52-6-31-230.compute-1.amazonaws.com/organizations/your_org'/" /etc/chef/client.rb
 
-   **Replace ec2-52-6-31-230.compute-1.amazonaws.com with your new Public DNS name and your_org with your Org name**
+   Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with your new public DNS name and ``your_org`` with your organization name.
