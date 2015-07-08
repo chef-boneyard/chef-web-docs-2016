@@ -16,6 +16,10 @@ Configure the |chef server_title|
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_aws_chef_server_configure.rst
 
+Ports
+-----------------------------------------------------
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_aws.rst
+
 Edit AMI Instance Size
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_aws_chef_server_change_instance.rst
