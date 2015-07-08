@@ -10,6 +10,10 @@ The following notifications can be used with any resource. Notifications are use
    * - Notification
      - Description
    * - ``notifies``
-     - |notifies|
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |notifies|
    * - ``subscribes``
-     - |subscribes|
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+
+       |subscribes|
