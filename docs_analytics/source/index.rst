@@ -12,7 +12,9 @@ View the :doc:`release notes </release_notes>` for the current version of |chef 
 
 Getting Started
 =====================================================
-The :doc:`Chef analytics platform </analytics>` provides real-time visibility into what is happening on the |chef server|, including :doc:`what's changing </dsl_recipe>`, :doc:`who made those changes </actions>`, and :doc:`when they occurred </reporting>`. Individuals may be :doc:`notified of these changes in real-time </analytics_rules>`. Use this visibility to verify compliance against internal controls.
+The :doc:`Chef analytics platform </analytics>` provides real-time visibility into what is happening on the |chef server|, including :doc:`what's changing </dsl_recipe>`, :doc:`who made those changes </actions>`, and :doc:`when they occurred </reporting>`. Use the |splunk| application for |chef analytics| to :doc:`gather insights about nodes that are under management </analytics_splunk>` by |chef|. Individuals may be :doc:`notified of these changes in real-time </analytics_rules>`.
+
+Use this visibility to verify compliance against internal controls.
 
 If you are new to |chef|, familiarize yourself with the other core components: `the server, workstations, and nodes <http://docs.chef.io/chef_overview.html>`_. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.chef.io/client/>`_. For more information about the server, see `documentation for the Chef server <http://docs.chef.io/server/>`_
 
@@ -36,6 +38,7 @@ The following features are part of the |chef analytics| platform:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/dsl_recipe.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/chef_client.html">chef-client, audit-mode</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/reporting.html">Reporting</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_splunk.html">Splunk App for Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
 
 Manage |chef analytics_title|
@@ -66,10 +69,11 @@ This section contains links to topics about configuration files, command-line to
    :hidden:
 
    actions
+   analytics
    analytics_monitor
    analytics_rules
+   analytics_splunk
    analytics_webui_tasks
-   analytics
    api_analytics
    chef_client
    config_rb_analytics
