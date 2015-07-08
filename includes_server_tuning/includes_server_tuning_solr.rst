@@ -9,13 +9,13 @@ The following settings are often modified from the default as part of the tuning
 
    * - Setting
      - Description
-   * - ``opscode_solr1234['heap_size']``
+   * - ``opscode_solr4['heap_size']``
      - |heap_size solr| 
        
        If |apache solr| is running out of memory, the ``/var/log/opscode/opscode-solr4/current`` log file will contain ``SEVERE: java.lang.OutOfMemoryError: Java heap space``.
        
        The default value should work for many organizations with fewer than 25 nodes. Suggested value: ``256`` per every 25 nodes. For example, an organization with 300 nodes, this value should be set to ``3072``.
-   * - ``opscode_solr1234['max_field_length']``
+   * - ``opscode_solr4['max_field_length']``
      - |solr_max_field_length| Default value: ``100000`` (increased from the |apache solr| default value of ``10000``).
 
 
