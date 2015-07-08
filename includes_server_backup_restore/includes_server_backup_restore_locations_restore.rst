@@ -39,8 +39,20 @@ Perform all activities as root unless otherwise directed.
     * ``ERROR: current user cannot be dropped``
     * ``ERROR: role "opscode-pgsql" already exists``
 
+#. Reconfigure the server:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl reconfigure
+
 #. Start the server:
 
    .. code-block:: bash
-      
+
       $ chef-server-ctl start
+
+#. Reconfigure Manage:
+
+   .. code-block:: bash
+
+      $ opscode-manage-ctl reconfigure
