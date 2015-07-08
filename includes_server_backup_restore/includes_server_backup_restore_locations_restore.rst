@@ -1,10 +1,9 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-When restoring |chef server|  data, the previously backed-up files will be required, along with the |chef server| running only the |service postgresql| service.
-Perform all activities as root unless otherwise directed.
+When restoring |chef server| data, the previously backed-up files will be required, along with the |chef server| running only the |service postgresql| service. Perform all activities as root unless otherwise directed.
 
-#. Stop the server:
+#. Stop the |chef server|:
 
    .. code-block:: bash
       
@@ -39,19 +38,19 @@ Perform all activities as root unless otherwise directed.
     * ``ERROR: current user cannot be dropped``
     * ``ERROR: role "opscode-pgsql" already exists``
 
-#. Reconfigure the server:
+#. Reconfigure the |chef server|:
 
    .. code-block:: bash
 
       $ chef-server-ctl reconfigure
 
-#. Start the server:
+#. Start the |chef server|:
 
    .. code-block:: bash
 
       $ chef-server-ctl start
 
-#. Reconfigure Manage:
+#. Reconfigure the |chef manage|:
 
    .. code-block:: bash
 
