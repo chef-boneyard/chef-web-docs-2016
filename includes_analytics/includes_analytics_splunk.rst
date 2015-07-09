@@ -46,4 +46,4 @@ To set up the |splunk| application for |chef analytics|, do the following:
         end
       end
 
-   .. warning:: These rules must be inserted exactly as shown. If these rules do not match exactly, the |splunk| application for |chef analytics| may not work correctly.
+The ``rules`` block **MUST** be exactly as shown. If these rules do not match exactly, the |splunk| application for |chef analytics| may not work correctly.
