@@ -49,8 +49,6 @@ Key Rotation
 =====================================================
 Use the following commands to manage public and private key rotation for users and clients.
 
-This subcommand was fully released in |chef server| 12.1 and as a preview in the |chef server| 12.0.3.
-
 add-client-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key.rst
@@ -58,10 +56,6 @@ add-client-key
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_syntax.rst
-
-**Arguments**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_arguments.rst
 
 **Options**
 
@@ -75,10 +69,6 @@ add-user-key
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_syntax.rst
 
-**Arguments**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_arguments.rst
-
 **Options**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key_options.rst
@@ -91,9 +81,9 @@ delete-client-key
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_syntax.rst
 
-**Arguments**
+**Options**
 
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_arguments.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_options.rst
 
 delete-user-key
 -----------------------------------------------------
@@ -103,9 +93,9 @@ delete-user-key
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_syntax.rst
 
-**Arguments**
+**Options**
 
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_arguments.rst
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key_options.rst
 
 list-client-keys
 -----------------------------------------------------
@@ -114,10 +104,6 @@ list-client-keys
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_syntax.rst
-
-**Arguments**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_arguments.rst
 
 **Options**
 
@@ -130,10 +116,6 @@ list-user-keys
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_syntax.rst
-
-**Arguments**
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys_arguments.rst
 
 **Options**
 
