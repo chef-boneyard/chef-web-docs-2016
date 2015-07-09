@@ -7,6 +7,6 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl list-client-keys ORG_NAME CLIENT_NAME [--hide-public-keys]
+   $ chef-server-ctl list-client-keys ORG_NAME CLIENT_NAME [--verbose]
 
-.. warning:: The parameters for this subcommand must be in the order specified above.
+.. warning::  All options for this subcommand must follow all arguments.
