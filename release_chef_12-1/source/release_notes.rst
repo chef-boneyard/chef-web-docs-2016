@@ -268,5 +268,4 @@ Multiple Packages and Versions
 
 Changelog
 =====================================================
-https://github.com/chef/chef/blob/12-stable/CHANGELOG.md
-
+https://github.com/chef/chef/blob/12.1.2/CHANGELOG.md

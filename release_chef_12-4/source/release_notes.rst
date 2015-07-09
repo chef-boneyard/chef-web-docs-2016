@@ -186,5 +186,4 @@ Syntax
 
 Changelog
 =====================================================
-https://github.com/chef/chef/blob/12-stable/CHANGELOG.md
-
+https://github.com/chef/chef/blob/12.4.1/CHANGELOG.md

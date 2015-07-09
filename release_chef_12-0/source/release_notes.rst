@@ -494,7 +494,7 @@ See `SSL Certificates <http://docs.chef.io/chef_client_security.html#ssl-certifi
 
 Changelog
 =====================================================
-https://github.com/chef/chef/blob/12-stable/CHANGELOG.md
+https://github.com/chef/chef/blob/12.0.3/CHANGELOG.md
 
 .. What's Fixed
 .. =====================================================
