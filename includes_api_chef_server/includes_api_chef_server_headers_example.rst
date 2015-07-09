@@ -20,5 +20,6 @@ The following example shows an authentication request:
      X-Ops-Authorization-5: /sLcR7JjQky7sdafIHNfsBQrISktNPower1236hbFIayFBx3
      X-Ops-Authorization-6: nodilAGMb166@haC/fttwlWQ2N1LasdqqGomRedtyhSqXA==
      Host: api.opscode.com:443
+     X-Ops-Server-API-Info: 1
      X-Chef-Version: 12.0.2
      User-Agent: Chef Knife/12.0.2 (ruby-2.1.1-p320; ohai-8.0.0; x86_64-darwin12.0.2; +http://chef.io)
