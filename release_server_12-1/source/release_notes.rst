@@ -9,12 +9,17 @@ What's New
 =====================================================
 The following items are new for |chef server| 12.1:
 
-* **chef-server-ctl key commands use the chef-client Chef::Key object** The key rotation commands (``chef-server-ctl key``) for adding, deleting, and listing users and clients are fully integrated and are no longer preview.
+* **chef-server-ctl key commands use the chef-client Chef::Key object** The key rotation commands (``chef-server-ctl key``) for ``create``, ``delete``, ``edit``, ``list``, and ``show`` keys for users and clients. These were a preview in the |chef server| 12.0.3 release, and are now fully integrated.
 * **New X-Ops-Server-API-Info header for Chef Server API** The |api chef server| uses the ``X-Ops-Server-API-Info`` header to specify the API version as part of a request to the |api chef server|.
 * **New endpoints for policy and policy files** The |api chef server| adds the following endpoints: ``/policies``, ``/policy_groups``, and ``/POLICY_GROUP/policies/POLICY_NAME``.
 * **New endpoints for client key management** The |api chef server| adds the following endpoints: ``/CLIENT/keys`` and ``/CLIENT/keys/key``.
 * **New endpoints for user key management** The |api chef server| adds the following endpoints: ``/USER/keys`` and ``/USER/keys/key``.
 * **New configuration setting** Use the ``estatsd['protocol']`` setting to send application statistics with |statsd| protocol formatting.
+
+
+Key Rotation
+-----------------------------------------------------
+The ``knife user`` and ``knife client`` subcommands support key rotation. Use the ``create``, ``delete``, ``edit``, ``list``, and ``show`` subcommands to manage keys for users and clients, such as creating multiple expiring keys for a single user and also for basic key management. See http://docs.chef.io/knife_user.html and http://docs.chef.io/knife_client.html for more information about these subcommands.
 
 ``X-Ops-Server-API-Info``
 -----------------------------------------------------
