@@ -26,7 +26,13 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
 
       $ sudo chef-server-ctl marketplace-setup
 
-   **When prompted be sure to use a password that is at least 6 characters long.**
+   When prompted be sure to use a password that is at least 6 characters long.
+
+   And then create an organization. When prompted, enter the organization name, and then a full organization name.
+
+   |name_rules org| For example: ``chef``.
+
+   |name_rules org_full| For example: ``"Chef Software, Inc."``.
 
 #. The ``marketplace-setup`` command should output the username and URL that needed to login to the |chef manage|. Follow the supplied link and login.
 
