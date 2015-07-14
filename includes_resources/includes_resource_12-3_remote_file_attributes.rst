@@ -52,7 +52,7 @@ This resource has the following attributes:
    * - ``mode``
      - **Ruby Types:** Integer, String
 
-       |mode resource_file|
+       |mode resource| |mode resource_file|
        
        The behavior is different depending on the platform.
        

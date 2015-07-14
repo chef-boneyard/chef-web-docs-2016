@@ -24,7 +24,7 @@ This resource has the following attributes:
    * - ``mode``
      - **Ruby Types:** Integer, String
 
-       |mode resource_directory|
+       |mode resource| |mode resource_directory|
        
        The behavior is different depending on the platform.
        
