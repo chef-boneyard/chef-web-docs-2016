@@ -5,7 +5,9 @@
 
 This command has the following syntax::
 
-   ohai OPTION
+.. code-block:: bash
+
+   $ ohai OPTION
 
 This tool has the following options:
 
