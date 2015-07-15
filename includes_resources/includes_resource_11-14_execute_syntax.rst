@@ -50,8 +50,8 @@ The full syntax for all of the attributes that are available to the |resource ex
      sensitive                  TrueClass, FalseClass
      subscribes                 # see description
      timeout                    Integer, Float
-     user                       String, Integer
      umask                      String, Integer
+     user                       String, Integer
      action                     Symbol # defaults to :run if not specified
    end
 

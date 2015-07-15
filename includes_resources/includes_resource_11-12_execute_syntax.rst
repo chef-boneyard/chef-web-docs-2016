@@ -49,8 +49,8 @@ The full syntax for all of the attributes that are available to the |resource ex
      returns                    Integer, Array
      subscribes                 # see description
      timeout                    Integer, Float
-     user                       String, Integer
      umask                      String, Integer
+     user                       String, Integer
      action                     Symbol # defaults to :run if not specified
    end
 
