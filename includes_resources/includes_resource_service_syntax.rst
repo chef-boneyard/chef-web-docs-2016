@@ -30,7 +30,7 @@ The full syntax for all of the attributes that are available to the |resource se
      stop_command               String
      subscribes                 # see description
      supports                   Hash
-     timeout                    Integer
+     timeout                    Integer # Microsoft Windows only
      action                     Symbol # defaults to :nothing if not specified
    end
 
