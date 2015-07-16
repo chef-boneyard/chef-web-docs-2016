@@ -30,6 +30,14 @@ About Slide Decks
 
   .. include:: ../../includes_slides/includes_slides_demo_code_ruby.rst
 
+ .. revealjs:: JSON
+
+  .. include:: ../../includes_slides/includes_slides_demo_code_json.rst
+
+ .. revealjs:: Yaml
+
+  .. include:: ../../includes_slides/includes_slides_demo_code_yaml.rst
+
  .. revealjs:: Fragments
 
   .. rst-class:: fragment
@@ -43,14 +51,6 @@ About Slide Decks
         <li class="fragment"><em>fragment two</em></li>
         <li class="fragment"><strong>fragment three</strong></li>
         </ol>
-
- .. revealjs:: JSON
-
-  .. include:: ../../includes_slides/includes_slides_demo_code_json.rst
-
- .. revealjs:: Yaml
-
-  .. include:: ../../includes_slides/includes_slides_demo_code_yaml.rst
 
  .. revealjs:: Images
 
