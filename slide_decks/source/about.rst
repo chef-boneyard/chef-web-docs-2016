@@ -30,6 +30,20 @@ About Slide Decks
 
   .. include:: ../../includes_slides/includes_slides_demo_code_ruby.rst
 
+ .. revealjs:: Fragments
+
+  .. rst-class:: fragment
+
+     Hit the next arrow...
+
+     .. raw:: html
+
+        <ol>
+        <li class="fragment"><code>fragment one</code></li>
+        <li class="fragment"><em>fragment two</em></li>
+        <li class="fragment"><strong>fragment three</strong></li>
+        </ol>
+
  .. revealjs:: JSON
 
   .. include:: ../../includes_slides/includes_slides_demo_code_json.rst

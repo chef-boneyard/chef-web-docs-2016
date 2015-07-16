@@ -121,7 +121,7 @@ html_theme_options = {
  "touch": True,
  "loop": False,
  "rtl": False,
- "fragments": False,
+ "fragments": True,
  "auto_slide": 0,
  "mouse_wheel": False,
  "rolling_links": True,
