@@ -18,7 +18,7 @@ Cookbooks
     * Understand why we abstract data from policy
     * Policy defines the desired state of the system, whereas data defines the details that might change
     * Understand which resources to use to apply policy and manage data
-	
+
 	For example:
 
     * Apache Tomcat should be installed (policy); version 6 (data)
