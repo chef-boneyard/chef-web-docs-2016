@@ -10,6 +10,10 @@ About Slide Decks
 
   .. include:: ../../includes_slides/includes_slides_core_splash.rst
 
+  .. rv_note:: 
+
+     This is a speaker note. Hit "s" on the keyboard to view them.
+
  .. revealjs:: What is Sphinx?
 
   .. include:: ../../includes_slides/includes_slides_demo_sphinx.rst
@@ -71,6 +75,18 @@ About Slide Decks
  .. revealjs:: Images -- Node Types
 
   .. include:: ../../includes_slides/includes_slides_core_node_types.rst
+
+ .. revealjs:: Speaker Notes
+
+    You can use speaker notes by adding the ``.. rv_note::`` directive to a slide.
+
+    Hit "s" on your keyboard to view the notes.
+
+    .. code-block:: ruby
+
+       .. rv_note:: 
+
+          This is a speaker note. You found this from your keyboard's "s" key.
 
  .. revealjs:: Questions?
 
