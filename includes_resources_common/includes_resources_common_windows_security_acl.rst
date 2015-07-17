@@ -55,7 +55,7 @@ Some other important things to know when using the ``rights`` attribute:
 * If rights are not specified, nothing will be changed. The |chef client| does not clear out the rights on a file or directory if rights are not specified. 
 * Changing inherited rights can be expensive. |windows| will propagate rights to all children recursively due to inheritance. This is a normal aspect of |windows|, so consider the frequency with which this type of action is necessary and take steps to control this type of action if performance is the primary consideration.
 
-Use ``deny_rights`` to deny specific rights to specific users. The ordering is independent of using ``rights``. For example, it doesn't matter if ``rights :deny, ['Julian', 'Lewis']`` is placed before or after ``deny_rights :read, ['Julian', 'Lewis']``, both Julian and Lewis will be unable to read the document. For example:
+Use ``deny_rights`` to deny specific rights to specific users. The ordering is independent of using ``rights``. For example, it doesn't matter if rights are granted to everyone is placed before or after ``deny_rights :read, ['Julian', 'Lewis']``, both Julian and Lewis will be unable to read the document. For example:
 
 .. code-block:: ruby
 
