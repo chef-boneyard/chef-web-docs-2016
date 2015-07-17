@@ -88,6 +88,14 @@ About Slide Decks
 
           This is a speaker note. You found this from your keyboard's "s" key.
 
+ .. revealjs:: Embed HTML
+
+    Use the ``.. raw:: html`` directive to add HTML to a page. For example, a video:
+
+    .. raw:: html
+
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/0P0HD5pE-zU" frameborder="0" allowfullscreen></iframe>
+
  .. revealjs:: Questions?
 
   .. include:: ../../includes_slides/includes_slides_core_questions.rst
