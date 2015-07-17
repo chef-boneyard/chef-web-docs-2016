@@ -42,6 +42,12 @@ This section describes the upgrade process for a standalone configuraiton:
 
 #. Copy in the `/etc/opscode-analytics` directory from the Chef Server
 
+#. Stop the server:
+
+   .. code-block:: bash
+
+      $ opscode-analytics-ctl stop
+
 #. Reconfigure the server:
 
    .. code-block:: bash
@@ -52,5 +58,5 @@ This section describes the upgrade process for a standalone configuraiton:
 
    .. code-block:: bash
       
-      $ opscode-analytics-ctl restart
+      $ opscode-analytics-ctl start
 
