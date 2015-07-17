@@ -18,7 +18,7 @@ where
 * ``'/var/www/customers/public_html/index.php'`` is path to the file and also the filename to be managed
 * ``content`` defines the contents of the file
 
-The full syntax for all of the attributes that are available to the |resource execute| resource is:
+The full syntax for all of the attributes that are available to the |resource file| resource is:
 
 .. code-block:: ruby
 
