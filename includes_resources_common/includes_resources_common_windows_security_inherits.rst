@@ -38,7 +38,7 @@ but then not use the ``inherits`` attribute to deny those rights on a child dire
 .. code-block:: ruby
 
    directory 'C:\mordor\mount_doom' do
-     rights :deny, 'MORDOR\Minions' # Oops, not specific enough
+     deny_rights :read, 'MORDOR\Minions' # Oops, not specific enough
    end
 
 Because the ``inherits`` attribute is not specified, the |chef client| will default it to ``true``, which will ensure that security settings for existing files remain unchanged.
