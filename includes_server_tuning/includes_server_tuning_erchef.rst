@@ -14,4 +14,4 @@ The following settings are often modified from the default as part of the tuning
    * - ``opscode_erchef['s3_url_ttl']``
      - |s3_url_ttl| If |chef client| runs are timing out, increase this setting to ``3600``, and then adjust again if necessary. Default value: ``900``.
    * - ``opscode_erchef['strict_search_result_acls']``
-     - Use to specify that search results are returned only when a user has read access to the search result, as determined by ACL settings. When this option is enabled, reconfiguring |chef manage| after reconfiguring |chef server| will make searches in the |chef manage_title| interface faster, since redundant ACL checks can be skipped. Default value: ``false``.
+     - "Use to specify that search results are returned only when a user has read access to the search result, as determined by ACL settings. When true, the |chef manage| user interface will perform faster because redundant ACL checks are skipped. Run ``chef-manage-ctl reconfigure`` in addition to ``chef-server-ctl reconfigure`` to ensure a change to this setting is applied to the |chef manage|."
