@@ -94,7 +94,7 @@ About Slide Decks
 
     .. raw:: html
 
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/0P0HD5pE-zU" frameborder="0" allowfullscreen></iframe>
+       <iframe width="800" height="500" src="https://www.youtube.com/embed/0P0HD5pE-zU" frameborder="0" allowfullscreen></iframe>
 
  .. revealjs:: Questions?
 
