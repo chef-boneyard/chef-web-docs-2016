@@ -72,7 +72,7 @@ This resource has the following attributes:
 
        |windows| only. |rights windows security|
    * - ``source``
-     - **Ruby Types:** Sting, Array
+     - **Ruby Types:** String, Array
 
        |source file_location| Can be used to distribute specific files to specific platforms. |see file_specificity| |see syntax|
    * - ``subscribes``

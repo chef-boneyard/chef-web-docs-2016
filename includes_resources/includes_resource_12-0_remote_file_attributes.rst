@@ -92,7 +92,7 @@ This resource has the following attributes:
 
        |windows| only. |rights windows security|
    * - ``source``
-     - **Ruby Types:** Sting, Array
+     - **Ruby Types:** String, Array
 
        Required. |source file_location| |source file_location http_ftp_local|
        
