@@ -38,7 +38,7 @@
      - |path hint_ohai|
    * - ``Ohai::Config[:log_level]``
      - |log_level|
-   * - ``Ohai::Config[:logfile]``
+   * - ``Ohai::Config[:log_location]``
      - |log_location|
    * - ``Ohai::Config[:version]``
      - |version ohai|
