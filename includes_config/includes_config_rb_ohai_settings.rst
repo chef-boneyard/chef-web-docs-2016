@@ -48,7 +48,7 @@
      - |path hint_ohai|
    * - ``Ohai::Config[:log_level]``
      - |log_level|
-   * - ``Ohai::Config[:logfile]``
+   * - ``Ohai::Config[:log_location]``
      - |log_location|
    * - ``Ohai::Config[:plugin_path]``
      - An array of paths at which |ohai| plugins are located. Default value: ``[<CHEF_GEM_PATH>/ohai-9.9.9/lib/ohai/plugins]``. When custom |ohai| plugins are added, the paths must be added to the array. For example, a single plugin:
