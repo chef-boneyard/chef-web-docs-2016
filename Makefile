@@ -8,14 +8,14 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master 12-4 12-5 decks
+release: master 12-4 12-5 decks ohai-6 ohai-7 ohai-8
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # server_12-0 server_12-1 analytics
 # delivery
 # server
-# ohai-6 ohai-7 ohai-8
+#
 # enterprise oec_11-0 oec_11-1 oec_11-2
 # open_source osc_11-0 osc_11-1
 # slides
