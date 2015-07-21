@@ -8,14 +8,15 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master 12-4 12-5 decks ohai-6 ohai-7 ohai-8
+release: master server_12-2
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
+# 12-4 12-5 decks
 # server_12-0 server_12-1 analytics
 # delivery
 # server
-#
+# ohai-6 ohai-7 ohai-8
 # enterprise oec_11-0 oec_11-1 oec_11-2
 # open_source osc_11-0 osc_11-1
 # slides
@@ -182,6 +183,10 @@ ohai-7:
 ohai-6:
 	mkdir -p $(BUILDDIR)/release/ohai-6/
 	$(BUILD_COMMAND_AND_ARGS) release_ohai_6/source $(BUILDDIR)/release/ohai-6/
+
+server_12-2:
+	mkdir -p $(BUILDDIR)/release/server_12-2/
+	$(BUILD_COMMAND_AND_ARGS) release_server_12-2/source $(BUILDDIR)/release/server_12-2/
 
 server_12-1:
 	mkdir -p $(BUILDDIR)/release/server_12-1/
