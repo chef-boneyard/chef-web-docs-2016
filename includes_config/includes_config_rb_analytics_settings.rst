@@ -17,6 +17,10 @@ The following settings are typically added to the |analytics rb| file:
      - The hipchat room to which notifications will be published.
    * - ``analytics_fqdn``
      - The |fqdn| for the |chef analytics| server. This setting is not in the |analytics rb| file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef analytics| server. If you are installing in combined mode (|chef server oec| and |chef analytics| servers on the same node) then this must be different from the |fqdn| for the |chef server oec| server.
+   * - ``data_retention['month_interval_to_keep_activities']``
+     - The number of months for which activities data is retained. Default value: ``3``.
+   * - ``data_retention['keep_all_data']``
+     - Use to specify if all events are kept. If this setting is ``true``, the ``month_interval_to_keep_activities`` value is ignored. Default value: ``false``.
    * - ``nginx['ssl_protocols']``
      - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
    * - ``notifier_config['accept_insecure']``
@@ -31,4 +35,3 @@ The following settings are typically added to the |analytics rb| file:
      - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
    * - ``topology``
      - Default value: ``combined``.
-
