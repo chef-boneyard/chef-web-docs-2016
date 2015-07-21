@@ -1,7 +1,5 @@
 .. THIS PAGE DOCUMENTS Chef server version 12.1
 
-.. THIS PAGE DOCUMENTS Chef server version 12.0
-
 =====================================================
 |chef server rb| Optional Settings
 =====================================================
