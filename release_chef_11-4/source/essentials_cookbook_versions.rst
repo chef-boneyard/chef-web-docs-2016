@@ -24,10 +24,6 @@ Environments
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_environments.rst
 
-Run-lists
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_version_run_list_items.rst
-
 Freeze Versions
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_freezing.rst
