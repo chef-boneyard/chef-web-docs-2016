@@ -5,15 +5,17 @@
 The ``admins`` group is assigned permissions to the following groups by default:
 
 .. list-table::
-   :widths: 160 100 100 100 100
+   :widths: 160 100 100 100 100 100
    :header-rows: 1
 
    * - Group
      - Create
      - Delete
+     - Grant
      - Read
      - Update
    * - admins
+     - yes
      - yes
      - yes
      - yes
@@ -23,7 +25,9 @@ The ``admins`` group is assigned permissions to the following groups by default:
      - yes
      - yes
      - yes
+     - yes
    * - users
+     - yes
      - yes
      - yes
      - yes
