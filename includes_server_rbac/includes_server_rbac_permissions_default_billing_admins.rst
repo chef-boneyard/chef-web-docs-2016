@@ -14,7 +14,7 @@ The ``billing admins`` group is assigned permissions to the following group by d
      - Read
      - Update
    * - billing-admins
-     - 
-     - 
+     - no
+     - no
      - yes
      - yes

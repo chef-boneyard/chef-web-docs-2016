@@ -14,10 +14,10 @@ The ``users`` group is assigned the following permissions by default to objects 
      - Read
      - Update
    * - clients
-     - 
+     - no
      - yes
      - yes
-     - 
+     - no
    * - cookbooks
      - yes
      - yes
@@ -44,10 +44,10 @@ The ``users`` group is assigned the following permissions by default to objects 
      - yes
      - yes
    * - organization
-     - 
-     - 
+     - no
+     - no
      - yes
-     - 
+     - no
    * - policies
      - yes
      - yes
@@ -65,6 +65,6 @@ The ``users`` group is assigned the following permissions by default to objects 
      - yes
    * - sandboxes
      - yes
-     - 
-     - 
-     - 
+     - no
+     - no
+     - no
