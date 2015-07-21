@@ -62,8 +62,6 @@ This subcommand has the following options:
 ``-N NAME``, ``--node-name NAME``
    |name node|
 
-   .. note:: This option is required for a validatorless bootstrap (as of |chef client| version 12.4).
-
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
