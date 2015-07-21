@@ -1,12 +1,12 @@
 =====================================================
-Release Notes: |chef analytics_title| 1.1
+Release Notes: |chef analytics_title| 1.1.5
 =====================================================
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
 What's New
 =====================================================
-The following items are new for |chef analytics| 1.1 and/or are changes from previous versions. The short version:
+The following items are new for |chef analytics| 1.1.5 and/or are changes from previous versions.
 
 * **Splunk application for Chef server** Use the |splunk| application for |chef analytics| to gather insights about nodes that are under management by |chef|.
 * **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
@@ -15,12 +15,11 @@ The following items are new for |chef analytics| 1.1 and/or are changes from pre
 * **oc-id service** The |service ocid| service enables |oauth| 2.0 authentication to the |chef server| by |chef analytics|.
 * **knife-analytics plugin** Use the |subcommand knife analytics| subcommand to view information about actions, alerts, notifications, and rules that are managed by |chef analytics|.
 
-In addition, the following functionality is available in |chef client| 12.2.0.alpha.0 to support building audit tests and running the |chef client| in |chef client_audit|:
+In addition, the following functionality is available in |chef client| 12.4.1 to support building audit controls and running the |chef client| in |chef client_audit|:
 
-* **chef-client may be run in audit-mode** Use |chef client_audit| to run audit tests against a node.
+* **chef-client may be run in audit-mode** Use |chef client_audit| to run controls against a node.
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
-* **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
-
+* **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods together.
 
 |splunk| App for |chef server_title|
 -----------------------------------------------------
@@ -43,7 +42,7 @@ Message Types
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-**Raise audits**
+**Raise audit failure**
 
 .. include:: ../../step_analytics_rules/step_analytics_rules_raise_audit.rst
 

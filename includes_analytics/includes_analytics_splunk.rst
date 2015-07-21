@@ -8,7 +8,7 @@ Use the |splunk| application for |chef analytics| to gather insights about nodes
 
 .. image:: ../../images/splunk_app_server_activity.png
 
-.. note:: |splunk| enterprise is required for |chef analytics|. |splunk| light does not support the installation of packaged |splunk| applications.
+.. note:: |splunk| Enterprise is required for |chef analytics|. |splunk| Light does not support the installation of packaged |splunk| applications.
 
 To set up the |splunk| application for |chef analytics|, do the following:
 
@@ -19,7 +19,7 @@ To set up the |splunk| application for |chef analytics|, do the following:
 #. Name the configuration. For example: ``splunk-notifier``.
 #. Configure the hostname, port, username, and password for the |splunk| server.
 #. The port must be ``8089``.
-#. Add the following rules to enable data to be sent to the |splunk| server:
+#. You can choose what data to send to the |splunk| server by type. Valid types are ``action``, ``run_converge``, ``run_resource``, ``run_control``, and ``run_control_group``. Add the following rules to enable data to be sent to the |splunk| server:
 
    .. code-block:: ruby
 
@@ -28,21 +28,21 @@ To set up the |splunk| application for |chef analytics|, do the following:
         when
           true
         then
-          notify('my-splunk-notifier')
+          notify('splunk-notifier')
         end
 
         rule on run_converge
         when
           true
         then
-          notify('my-splunk-notifier')
+          notify('splunk-notifier')
         end
 
         rule on run_resource
         when
           true
         then
-          notify('my-splunk-notifier')
+          notify('splunk-notifier')
         end
       end
 

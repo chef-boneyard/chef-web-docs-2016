@@ -1,23 +1,16 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following rule raises an audit when ``run_converge`` or ``run_control_group`` is matched:
+The following rule raises an alert when a ``run_control_group`` fails, signifying that one or more controls failed:
 
 .. code-block:: java
 
-   rules "Match a run converge"
-     rule on run_converge
-     when
-       true
-     then
-       alert:info("Run converge detected at {{ message.end_time }} ")
-     end
-   
+   rules "throw errors on control group failure"
      rule on run_control_group
      when
        true
      then
        // the run_control_group name will appear in double quotes
-       alert:info("Run control group \"{{ message.name }}\" detected")
+       alert:info("Run control group \"{{ message.name }}\" failed on {{ message.run.node_name }}")
      end
    end
