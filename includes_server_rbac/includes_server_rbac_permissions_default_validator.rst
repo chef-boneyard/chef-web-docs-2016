@@ -18,8 +18,3 @@ The |chef validator| is allowed to do the following at the start of a |chef clie
      - 
      - 
      - 
-   * - nodes
-     - yes
-     - 
-     - 
-     - 
