@@ -25,7 +25,7 @@ The following configuration settings can be used to configure a |postgresql| ser
    * - ``postgresql['external']``
      - Required. This value must be set to ``true`` to run |postgresql| external to the |chef server|. Must be set once only on a new installation of the |chef server| before the first ``chef-server-ctl reconfigure`` command is run. If this is set after a reconfigure or set to ``false``, any reconfigure of the |chef server| will return an error. Default value: ``false``.
    * - ``postgresql['vip']``
-     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| The host for this IP address must be online and reachable from the |chef server| via the port specified by ``postgresql['port']``. Default value: ``"external-postgres-host-or-ip" ``.
+     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| The host for this IP address must be online and reachable from the |chef server| via the port specified by ``postgresql['port']``. Default value: ``"external-postgres-host-or-ip"``.
    * - ``postgresql['port']``
      - Optional when ``postgresql['external']`` is set to ``true``. The port used by |postgresql| if that port is **not** 5432. Default value: ``5432``.
    * - ``postgresql['db_superuser']``
