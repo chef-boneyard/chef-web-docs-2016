@@ -77,6 +77,12 @@ Default Groups
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_default_users.rst
 
+|chef validator|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_security/includes_security_chef_validator.rst
+ 
+.. include:: ../../includes_server_rbac/includes_server_rbac_permissions_default_validator.rst
+
 |push jobs_title| Groups
 -----------------------------------------------------
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst
