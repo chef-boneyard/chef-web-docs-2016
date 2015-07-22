@@ -70,7 +70,9 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['s3_url_ttl']``
      - |s3_url_ttl| If node bootstraps are timing out, increase this setting. Default value: ``28800``.
    * - ``opscode_erchef['strict_search_result_acls']``
-     - Use to specify that search results are returned only when a user has read access to the search result, as determined by ACL settings. Default value: ``false``.
+     - Use to specify that search results are returned only when a user has read access to the search result, as determined by ACL settings. When true, the |chef manage| user interface will perform faster because redundant ACL checks are skipped. Run ``chef-manage-ctl reconfigure`` in addition to ``chef-server-ctl reconfigure`` to ensure a change to this setting is applied to the |chef manage|. Default value: ``false``.
+
+       .. warning:: When ``true``, ``opscode_erchef['strict_search_result_acls']`` affects all search results and any user that does not have read access to the search result will not be able to view it.
    * - ``opscode_erchef['udp_socket_pool_size']``
      - Default value: ``20``.
    * - ``opscode_erchef['umask']``
