@@ -6,7 +6,7 @@ knife user
 
 .. include:: ../../includes_knife/includes_knife_user.rst
 
-.. warning:: This subcommand ONLY works when run against the open source |chef server| and will not run against |chef server oec| (including hosted |chef server oec|), or |chef private|.
+.. warning:: include:: ../../includes_notes/includes_notes_knife_user_limitations.rst
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
