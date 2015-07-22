@@ -7,4 +7,4 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife analytics notification create NOTIFICATION.json
+   $ knife notification create NOTIFICATION.json

@@ -7,4 +7,4 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife analytics notification show ID
+   $ knife notification show ID
