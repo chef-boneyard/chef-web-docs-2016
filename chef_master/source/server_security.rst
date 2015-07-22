@@ -133,11 +133,6 @@ list-user-key
 
 .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_list_user_keys.rst
 
-
-SSL Protocols
-=====================================================
-.. include:: ../../includes_server_tuning/includes_server_tuning_nginx.rst
-
 |chef client_title| Settings
 =====================================================
 .. include:: ../../includes_chef_client/includes_chef_client_ssl_config_settings.rst
