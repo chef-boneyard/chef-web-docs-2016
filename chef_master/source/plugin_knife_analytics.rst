@@ -12,6 +12,14 @@ Install this plugin
 =====================================================
 .. include:: ../../step_plugin_knife/step_plugin_knife_analytics_install_rubygem.rst
 
+Configure SSL
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_ssl_certificate.rst
+
+Configure knife.rb
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_knife_rb.rst
+
 action list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_action_list.rst
