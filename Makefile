@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master analytics
+release: master analytics delivery
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -23,7 +23,7 @@ release: master analytics
 # enterprise oec_11-0 oec_11-1 oec_11-2
 # open_source osc_11-0 osc_11-1
 # slides decks
-# delivery
+# 
 #
 # RETIRED: located in chef-docs-misc, no longer built or maintained
 # 
