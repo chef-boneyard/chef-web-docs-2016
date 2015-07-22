@@ -13,4 +13,4 @@ For example:
 
 .. code-block:: ruby
 
-   analytics_server_url     'https://ec2-52-27-166-146.us-west-2.compute.amazonaws.com/organizations/learnchef'
+   analytics_server_url 'https://ec2-52-27-166-146.us-west-2.compute.amazonaws.com/organizations/learnchef'
