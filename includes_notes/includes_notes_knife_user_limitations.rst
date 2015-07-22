@@ -12,4 +12,4 @@ Starting with |chef server| 12.0, this functionality is built into the `chef-ser
 * `user-list <http://docs.chef.io/ctl_chef_server.html#user-list>`_
 * `user-show <http://docs.chef.io/ctl_chef_server.html#user-show>`_
 
-Starting with |chef client| version 12.4.1, the ``knife user`` functionality is restored and may also be used to manage users with |chef server| version 12.0 (and higher).
+Starting with |chef client| version 12.4.1, the ``knife user`` functionality is restored for the following arguments: ``user-edit``, ``user-list``, and ``user-show`` for |chef server| version 12.0 (and higher).
