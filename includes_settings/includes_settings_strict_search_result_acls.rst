@@ -1,0 +1,7 @@
+.. The contents of this file are included in multiple topics and describes a property/attribute of a resource, a configuration setting, or an option in a command-line tool.
+.. This file is very likely included in many spots across doc sets and versioned docs sets. It should be edited carefully, keeping in mind that it must be a neutral, matter-of-fact statement that does not include default values, version- or application-specific context (which should be on the page about that version or application, instead).
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+Use to specify that search results are returned only when a user has read access to the search result, as determined by ACL settings. When true, the |chef manage| user interface will perform faster because redundant ACL checks are skipped. Run ``chef-manage-ctl reconfigure`` in addition to ``chef-server-ctl reconfigure`` to ensure a change to this setting is applied to the |chef manage|. Default value: ``false``.
+
+.. warning:: When ``true``, ``opscode_erchef['strict_search_result_acls']`` affects all search results and any user that does not have read access to the search result will not be able to view it.
