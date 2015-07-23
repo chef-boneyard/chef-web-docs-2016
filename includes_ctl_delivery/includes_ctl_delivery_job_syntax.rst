@@ -7,8 +7,9 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ delivery job STAGE (options)
+   $ delivery job STAGE PHASE (options)
 
 where:
 
 * ``STAGE`` is a stage in the |chef delivery| project
+* ``PHASE`` is a phase in |chef delivery|
