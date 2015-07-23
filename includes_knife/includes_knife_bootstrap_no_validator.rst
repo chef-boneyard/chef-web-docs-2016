@@ -23,7 +23,7 @@ When running a validatorless ``knife bootstrap`` operation, the output is simila
 .. code-block:: bash
 
    desktop% knife bootstrap 10.1.1.1 -N foo01.acme.org \
-     -E dev -r 'role[base] -j '{ "foo": "bar" }' \
+     -E dev -r 'role[base]' -j '{ "foo": "bar" }' \
      --ssh-user vagrant --sudo
    Node foo01.acme.org exists, overwrite it? (Y/N)
    Client foo01.acme.org exists, overwrite it? (Y/N)
