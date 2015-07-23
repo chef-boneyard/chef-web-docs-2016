@@ -32,6 +32,10 @@ Contribute
 =====================================================
 .. include:: ../../includes_community/includes_community_contribute.rst
 
+Supermarket
+=====================================================
+.. include:: ../../includes_community/includes_community_supermarket.rst
+
 Subscribe
 =====================================================
 .. include:: ../../includes_community/includes_community_subscribe.rst
