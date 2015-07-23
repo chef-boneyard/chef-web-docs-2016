@@ -20,6 +20,8 @@ SSL Protocols
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_nginx.rst
 
+**Example: Configure SSL Keys for Nginx**
+
 .. include:: ../../step_resource/step_resource_file_ssl_keys.rst
 
 |chef analytics_title|
