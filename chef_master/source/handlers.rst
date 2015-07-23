@@ -93,7 +93,7 @@ default.rb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions_recipe.rst
 
-|reporting|
+Chef Reporting
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_custom_example_reporting.rst
 
