@@ -4,6 +4,8 @@ Install |chef analytics_title|
 
 .. include:: ../../includes_analytics/includes_analytics.rst
 
+There is also a `tutorial on Learnchef <https://learn.chef.io/get-started-with-chef-analytics/linux/install-and-configure-chef-analytics/>`_ that walks through the setup and configuration of |chef analytics|.
+
 .. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
 
 Prerequisites
