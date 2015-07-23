@@ -167,9 +167,97 @@ where the ``FILE_NAME.json`` is similar to:
        "priority": 0
      },
      "active":true,
-     "rule":"rules 'Rule group 1'\n  rule on action\n  when\n    true\n  then\n    noop()\n  end\nend"
+     "rule":"rules 'Rule group 1'\n
+       rule on action\n  
+       when\n    
+         true\n  
+       then\n    
+         noop()\n  
+       end\n
+     end"
    }
 
+For example, to monitor the ``Administrators`` group for modifications, and then send alerts to |hipchat|, use a rule similar to:
+
+.. code-block:: javascript
+
+   {
+     "name": "watch Administrators group",
+     "org_name": "chef",
+     "modified_by": "chef",
+     "rule": "rules 'modified Administrators group'\n
+       rule on run_resource\n
+       when\n
+         resource_type = 'group'\n
+         and resource_result = 'modify'\n
+         and resource_name = 'Administrators'\n
+         and converge.status = 'success'\n
+       then\n
+         alert:warn('I had to modify the Administrators group on {{message.run.node_name}}!')\n
+         notify('hipchat-red','I had to modify the Administrators group on {{message.run.node_name}}!')\n
+       end\n
+     end",
+     "with": {
+       "priority": 0
+     },
+     "active": true
+   }
+
+and to send the same rule to Slack, set the ``notify()`` function to the name of an ``HTTP`` rule created in the |chef analytics| web user interface that is configured to send notifications to Slack, and then associate that name in the rule (shown below as ``notify('slack')``):
+
+.. code-block:: javascript
+
+   {
+     "name": "watch Administrators group",
+     "org_name": "chef",
+     "modified_by": "chef",
+     "rule": "rules 'modified Administrators group'\n
+       rule on run_resource\n
+       when\n
+         resource_type = 'group'\n
+         and resource_result = 'modify'\n
+         and resource_name = 'Administrators'\n
+         and converge.status = 'success'\n
+       then\n
+         alert:warn('I had to modify the Administrators group on {{message.run.node_name}}!')\n
+         notify('slack','I had to modify the Administrators group on {{message.run.node_name}}!')\n
+       end\n
+     end",
+     "with": {
+       "priority": 0
+     },
+     "active": true
+   }
+
+When the |chef client| is run in |chef client_audit|, notifications can be sent. For example, to |hipchat|:
+
+.. code-block:: javascript
+
+   {
+     "name": "show controls",
+     "org_name": "chef",
+     "modified_by": "chef",
+     "rule": "rules 'alert on controls'\n
+       rule on run_control\n
+       when\n
+         status = 'success'\n
+       then\n
+         notify('hipchat','Audit control [{{message.control_group.name}} {{message.name}}]
+           finished with status [{{message.status}}] on {{message.run.node_name}}')\n
+         alert:info('Audit control [{{message.control_group.name}} {{message.name}}]
+           finished with status [{{message.status}}] on {{message.run.node_name}}')\n
+       otherwise\n
+         notify('hipchat-red','Audit control [{{message.control_group.name}} {{message.name}}]
+           finished with status [{{message.status}}] on {{message.run.node_name}}')\n
+         alert:warn('Audit control [{{message.control_group.name}} {{message.name}}]
+           finished with status [{{message.status}}] on {{message.run.node_name}}')\n
+       end\n
+     end",
+     "with": {
+       "priority": 0
+     },
+     "active": true
+   }
 
 rule list
 =====================================================
