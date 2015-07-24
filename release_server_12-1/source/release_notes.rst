@@ -10,10 +10,10 @@ What's New
 The following items are new for |chef server| 12.1:
 
 * **chef-server-ctl key commands use the chef-client Chef::Key object** The key rotation commands (``chef-server-ctl key``) for ``create``, ``delete``, ``edit``, ``list``, and ``show`` keys for users and clients. These were a preview in the |chef server| 12.0.3 release, and are now fully integrated.
-* **New X-Ops-Server-API-Info header for Chef Server API** The |api chef server| uses the ``X-Ops-Server-API-Info`` header to specify the API version as part of a request to the |api chef server|.
+* **New version header for Chef Server API** The |api chef server| uses the ``X-Ops-Server-API-Info`` header to specify the API version as part of a request to the |api chef server|.
 * **New endpoints for policy and policy files** The |api chef server| adds the following endpoints: ``/policies``, ``/policy_groups``, and ``/POLICY_GROUP/policies/POLICY_NAME``.
-* **New endpoints for client key management** The |api chef server| adds the following endpoints: ``/CLIENT/keys`` and ``/CLIENT/keys/key``.
-* **New endpoints for user key management** The |api chef server| adds the following endpoints: ``/USER/keys`` and ``/USER/keys/key``.
+* **New endpoints for client key management** The |api chef server| adds the following endpoints: ``/client/CLIENT/keys`` and ``/client/CLIENT/keys/KEY``.
+* **New endpoints for user key management** The |api chef server| adds the following endpoints: ``/user/USER/keys`` and ``/user/USER/keys/KEY``.
 * **New configuration setting** Use the ``estatsd['protocol']`` setting to send application statistics with |statsd| protocol formatting.
 
 
@@ -25,71 +25,103 @@ The ``knife user`` and ``knife client`` subcommands support key rotation. Use th
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_info.rst
 
-/CLIENT/keys
+/client/CLIENT/keys/
 -----------------------------------------------------
-View and add keys for the named client.
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_clients.rst
 
-Methods:
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_clients_get.rst
 
-* ``GET`` Retrieves all of the client's key identifers and their associated URIs and expiry states.
-* ``PUT`` Add a new key for the named client.
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_clients_post.rst
 
-/CLIENT/keys/key
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/xxxxx.rst
+
+/client/CLIENT/keys/KEY
 -----------------------------------------------------
-View and add keys for the named client in an organization.
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client.rst
 
-Methods:
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client_delete.rst
 
-* ``DELETE`` Deletes the named key.
-* ``GET`` Retrieves the specified public key and it's associated data.
-* ``PUT`` Update one or more attributes of a key for a client in an organization.
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client_get.rst
 
-/USER/keys
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client_put.rst
+
+/user/USER/keys/
 -----------------------------------------------------
-View and add keys for the named user.
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users.rst
 
-Methods:
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_get.rst
 
-* ``GET`` Retrieves all of the user's key identifers and their associated URIs and expiry states.
-* ``PUT`` Add a new key for the named user.
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_post.rst
 
-/USER/keys/key
+/user/USER/keys/KEY
 -----------------------------------------------------
-View and add keys for the named user.
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user.rst
 
-Methods:
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_delete.rst
 
-* ``DELETE`` Deletes the named key.
-* ``GET`` Retrieves the specified public key and it's associated data.
-* ``PUT`` Update one or more attributes of a key for a user.
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_get.rst
+
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_put.rst
 
 /policies
 -----------------------------------------------------
-Manage revisions of policies. Each policy can have many revisions, identified by the revision id in the policy document.
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policies.rst
 
-Methods:
-
-* ``GET`` List all policies on the server, organized by policy_name.
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policies_get.rst
 
 /policy_groups
 -----------------------------------------------------
-Nodes have a many to one relationship with policies, based on their group and policy. A policy is generally named after the functional role a host preforms, such as "appserver", "chatserver", "load balancer", etc. A group defines a set of hosts in a deployment unit, which may map to an organization's environments (e.g., dev, qa, staging, production), or may represent more granular phases (e.g., a change may go to a "canary" group, and then be rolled through various clusters within the production environment, so you'd have "prod-canary", "prod-cluster-1", etc.).
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_groups.rst
 
-Methods:
+.. include:: ../../includes_policy/includes_policy_group_relates_to_nodes.rst
 
-* ``GET`` List all policy groups on the server, showing the active revision for each policy.
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_groups_get.rst
 
-/POLICY_GROUP/policies/POLICY_NAME
+/policies/NAME
 -----------------------------------------------------
-Manage policies as they are associated to policy groups. Though policies and policy groups are independent objects, in most cases it is desirable to manage them together. This endpoint allows you to show/create/update the policy for the given policy group in a single call.
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_group.rst
 
-Policies and policy groups are separate objects for the purposes of authorization. This allows administrators to restrict access to the policies for certain kinds of nodes (perhaps because they handle sensitive data) or in certain group (e.g., if changes to production require sign-off). The requestor must have access to both the policy and policy group in order for the request to be authorized. If the requestor does not have access on both objects for the requested action, the server will return a 403 response.
+.. include:: ../../includes_policy/includes_policy_group_relates_to_nodes.rst
 
-Methods:
+.. include:: ../../includes_policy/includes_policy_auth.rst
 
-* ``DELETE`` Deletes the association between the given policy name, policy group, and policy revision. The policy group and policy revision are not themselves deleted from the server, only the association is removed. Following this call, a subsequent GET to the same URI will return 404. When successful, the policy document revision that was previously associated to the policy name and policy group is returned.
-* ``GET`` Return the policy document for the given policy group and policy name.
-* ``PUT`` Create or update the policy document for the given policy group and policy name. If no policy group with the given name exists, it will be created. If no policy with the given revision_id exists, it will be created from the document in the request body. If a policy with that revision_id exists, the Chef Server simply associates that revision id with the given policy group. When successful, the document that was created or updated is returned.
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_group_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_group_get.rst
+
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_group_put.rst
 
 New Config Settings
 -----------------------------------------------------
