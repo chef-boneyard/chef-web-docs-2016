@@ -37,10 +37,6 @@ POST
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_clients_post.rst
 
-PUT
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/xxxxx.rst
-
 /client/CLIENT/keys/KEY
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client.rst
