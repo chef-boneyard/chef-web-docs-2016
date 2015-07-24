@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``GET`` method is used to return the |chef api client| list on the |chef server|, including nodes that have been registered with the |chef server|, the |chef validator| clients, and the |chef server webui| clients for the entire organization.
+The ``GET`` method is used to retrieve all of the named client's key identifiers, associated URIs, and expiry states.
 
 This method has no parameters.
 
@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/NAME/clients
+   GET /organizations/NAME/client/CLIENT/keys
 
 **Response**
 
@@ -17,10 +17,14 @@ The response is similar to:
 
 .. code-block:: javascript
 
-   {
-     "org1-validator" : "https://chef.example/orgaizations/org1/clients/org1-validator",
-     "client1" : "https://chef.example/orgaizations/org1/clients/client1"
-   }
+   [
+     { "name" : "default",
+                "uri" : "https://chef.example/organizations/example/client/client1/keys/default",
+                "expired" : false },
+     { "name" : "key1",
+                "uri" : "https://chef.example/organizations/example/client/client1/keys/key1",
+                "expired" : true }
+   ]
 
 **Response Codes**
 
@@ -36,3 +40,5 @@ The response is similar to:
      - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
+   * - ``404``
+     - |response code 404 not found|

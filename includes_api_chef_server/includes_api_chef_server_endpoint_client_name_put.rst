@@ -32,14 +32,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "name": "monkeypants",
-     "private_key": "-----BEGIN PRIVATE KEY-----\n
-                   MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyVPW9YXa5PR0rgEW1updSxygB\n
-                   wmVpDnHurgQ7/gbh+PmY49EZsfrZSbKgSKy+rxdsVoSoU+krYtHvYIwVfr2tk0FP\n
-                   nhAWJaFH654KpuCNG6x6iMLtzGO1Ma/VzHnFqoOeSCKHXDhmHwJAjGDTPAgCJQiI\n
-                   eau6cDNJRiJ7j0/xBwIDAQAB\n
-                   -----END PRIVATE KEY-----"
-     "admin": true
+     "uri" : "https://chef.example/orgaizations/org1/clients/client1"
    }
 
 **Response Codes**

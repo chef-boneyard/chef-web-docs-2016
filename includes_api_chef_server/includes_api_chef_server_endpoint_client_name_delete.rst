@@ -15,7 +15,14 @@ This method has no request body.
 
 **Response**
 
-This method has no response body.
+The response is similar to:
+
+.. code-block:: javascript
+
+   {
+     "name" : "client1",
+     "validator" : "false"
+   }
 
 **Response Codes**
 

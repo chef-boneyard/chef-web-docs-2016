@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``GET`` method is used to return the |chef api client| list on the |chef server|, including nodes that have been registered with the |chef server|, the |chef validator| clients, and the |chef server webui| clients for the entire organization.
+The ``POST`` method is used to add a key for the specified client.
 
 This method has no parameters.
 
@@ -9,8 +9,18 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/NAME/clients
+   POST /organizations/NAME/client/CLIENT/keys
 
+with a request body similar to:
+
+.. code-block:: javascript
+
+   {
+     "name" : "key1",
+     "public_key" : "-------- BEGIN PUBLIC KEY ----and a valid key here",
+     "expiration_date" : "infinity"
+   }
+   
 **Response**
 
 The response is similar to:
@@ -18,8 +28,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "org1-validator" : "https://chef.example/orgaizations/org1/clients/org1-validator",
-     "client1" : "https://chef.example/orgaizations/org1/clients/client1"
+     "uri" : "https://chef.example/organizations/example/clients/client1/keys/key1"
    }
 
 **Response Codes**
@@ -30,9 +39,11 @@ The response is similar to:
 
    * - Response Code
      - Description
-   * - ``200``
-     - |response code 200 ok|
+   * - ``201``
+     - |response code 201 created|
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
+   * - ``404``
+     - |response code 404 not found|
