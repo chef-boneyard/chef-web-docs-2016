@@ -59,9 +59,12 @@ The following documentation sets are available:
    * - |chef dk_title|
      - `http://docs.chef.io/devkit/ <http://docs.chef.io/devkit/>`__
      - 
-   * - |chef server_title| 12
-     - `http://docs.chef.io/server/ <http://docs.chef.io/server/>`__
-     - `Release Notes <http://docs.chef.io/server/release_notes.html>`__
+   * - |chef server_title| 12.1
+     - `http://docs.chef.io/release/server_12-1/ <http://docs.chef.io/release/server_12-1/>`__
+     - `Release Notes <http://docs.chef.io/release/server_12-1/release_notes.html>`__
+   * - |chef server_title| 12.0
+     - `http://docs.chef.io/release/server_12-0/ <http://docs.chef.io/release/server_12-0/>`__
+     - `Release Notes <http://docs.chef.io/release/server_12-0/release_notes.html>`__
    * - |chef server oec| Server 11.2
      - `http://docs.chef.io/release/oec_11-2/ <http://docs.chef.io/release/oec_11-2/>`__
      - `Release Notes <http://docs.chef.io/release/oec_11-2/release_notes.html>`__
