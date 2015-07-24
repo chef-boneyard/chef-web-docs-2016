@@ -7,8 +7,8 @@ A |ruby hash| is a list with keys and values. Sometimes they don't have a set or
 .. code-block:: ruby
 
    h = {
-   "first_name" => "Bob",
-   "last_name"  => "Jones"
+     "first_name" => "Bob",
+     "last_name"  => "Jones"
    }
 
 And sometimes they do. For example, first name then last name:
