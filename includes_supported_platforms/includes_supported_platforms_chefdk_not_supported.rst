@@ -15,4 +15,4 @@ The following platforms are not supported:
      - ``10.8`` (and earlier), anything PPC-based
    * - |windows|
      - 
-     - ``Vista``, ``XP``, ``2000``
+     - ``Vista``, ``XP``, ``2000``, ``2003``, ``2003 R2``
