@@ -38,12 +38,18 @@ The following authentication headers are required:
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst
    * - ``X-Ops-Content-Hash``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst
+   * - ``X-Ops-Server-API-Info``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_info.rst
    * - ``X-Ops-Sign``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst
    * - ``X-Ops-Timestamp``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst
    * - ``X-Ops-UserId``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst
+
+
+
+
 
 Example
 -----------------------------------------------------
@@ -167,6 +173,38 @@ POST
 POST
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_authenticate_user_post.rst
+
+
+
+/client/CLIENT/keys/
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_clients.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_clients_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_clients_post.rst
+
+/client/CLIENT/keys/KEY
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client.rst
+
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client_get.rst
+
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_client_put.rst
+
+
 
 /clients
 -----------------------------------------------------
@@ -464,6 +502,21 @@ PUT
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst
 
 
+/policies
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policies.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policies_get.rst
+
+/policy_groups
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_groups.rst
+
+.. include:: ../../includes_policy/includes_policy_group_relates_to_nodes.rst
+
+
 /principals/NAME
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name.rst
@@ -581,6 +634,36 @@ _status
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst
+
+
+/user/USER/keys/
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_post.rst
+
+/user/USER/keys/KEY
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user.rst
+
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_get.rst
+
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_put.rst
+
 
 
 Examples
