@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef validator| is allowed to do the following at the start of a |chef client| run|:
+The |chef validator| is allowed to do the following at the start of a |chef client| run. After the |chef client| is registered with |chef server|, that |chef client| is added to the ``clients`` group:
 
 .. list-table::
    :widths: 160 100 100 100 100
@@ -15,11 +15,6 @@ The |chef validator| is allowed to do the following at the start of a |chef clie
      - Update
    * - clients
      - yes
-     - 
-     - 
-     - 
-   * - nodes
-     - yes
-     - 
-     - 
-     - 
+     - no
+     - no
+     - no
