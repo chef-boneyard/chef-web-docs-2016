@@ -12,9 +12,44 @@ The following items are new for |chef server| 12.2:
 * **Configurable Postgresql** Postgresql can be configured for an external database.
 
 
-Configurable Postgresql
+Configurable |postgresql|
 -----------------------------------------------------
-The following configuration settings can be used to configure a |postgresql| server for use with the |chef server|:
+
+
+The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another. |postgresql| is configured independently of the |chef server| (and not as part of the built-in configuration).
+
+.. image:: ../../images/server_components_byop.svg
+
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Component
+     - Description
+   * - Bookshelf
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
+
+       All cookbooks are stored in a dedicated repository.
+   * - Manage
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_webui.rst
+   * - Chef Server
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
+   * - Message Queues
+     - Messages are sent to the Search Index using the following components:
+       
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
+
+       All messages are added to a dedicated search index repository.
+   * - Nginx
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
+   * - PostgreSQL
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
+
+       This represents the independently configured set of servers that are running |postgresql| and are configured to act as the data store for the |chef server|.
+
+Use the following configuration settings in the |chef server rb| file to configure |postgresql| for use with the |chef server|:
 
 .. list-table::
    :widths: 200 300
