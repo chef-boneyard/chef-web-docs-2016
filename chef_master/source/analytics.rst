@@ -31,6 +31,18 @@ The following diagram shows the relationships between the various elements of |c
 
 The following sections discuss these elements (and their various components) in more detail.
 
+Integrations
+=====================================================
+|chef analytics| can integrate with |slack| and |splunk|.
+
+|slack|
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_webhook_example_slack.rst
+
+|splunk|
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_splunk.rst
+
 Controls
 =====================================================
 .. include:: ../../includes_analytics/includes_analytics_controls.rst

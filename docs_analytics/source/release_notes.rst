@@ -8,6 +8,7 @@ What's New
 =====================================================
 The following items are new for |chef analytics| 1.1 and/or are changes from previous versions. The short version:
 
+* **Notifications to Slack using incoming webhooks** Send |chef analytics| notifications to |slack| in real time based on rules and notifications in |chef analytics| that are configured to send to the incoming webhooks functionality in |slack|.
 * **Splunk application for Chef server** Use the |splunk| application for |chef analytics| to gather insights about nodes that are under management by |chef|.
 * **Rules** Use rules to generate notifications based on the results of tests run during the |chef client| run.
 * **Actions** Use |chef actions| to view changes made to each node object, the run history for all nodes, the history of every cookbook (and cookbook version), how and where policy settings---roles, environments, and data bags---are applied, and which users made which changes.
@@ -22,6 +23,11 @@ In addition, the following functionality is available in |chef client| 12.2.0.al
 * **control method added to Recipe DSL** Use the ``control`` method to define specific tests that match directories, files, packages, ports, and services. A ``control`` method must be contained within a ``control_group`` block.
 * **control_group method added to Recipe DSL** Use the ``control_group`` method to group one (or more) ``control`` methods into a single audit.
 
+
+
+|slack| Incoming Webhooks
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_webhook_example_slack.rst
 
 |splunk| App for |chef server_title|
 -----------------------------------------------------
