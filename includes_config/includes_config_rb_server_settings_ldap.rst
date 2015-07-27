@@ -16,7 +16,11 @@ This configuration file has the following settings for ``ldap``:
    * - ``ldap['bind_password']``
      - |ldap bind_password| The password for the user specified by ``ldap['bind_dn']``. Leave this value and ``ldap['bind_dn']`` unset if anonymous bind is sufficient. Default value: ``nil``.
    * - ``ldap['group_dn']``
-     - |ldap group_dn| When set to the distinguished name of a group, only members of that group can log in. This feature filters based on the ``memberOf`` attribute and only works with |ldap| servers that provide such an attribute. In |open ldap|, the ``memberOf`` overlay provides this attribute.
+     - |ldap group_dn| When set to the distinguished name of a group, only members of that group can log in. This feature filters based on the ``memberOf`` attribute and only works with |ldap| servers that provide such an attribute. In |open ldap|, the ``memberOf`` overlay provides this attribute. For example, if the value of the ``memberOf`` attribute is ``cn=abcxyz,ou=users,dc=company,dc=com``, then use:
+
+       .. code-block:: ruby
+
+          ldap['group_dn'] = 'cn=abcxyz,ou=users,dc=company,dc=com'
    * - ``ldap['host']``
      - |ldap host| The hostname of the |ldap| or |windows ad| server. Be sure the |chef server| is able to resolve any host names. Default value: ``ldap-server-host``.
    * - ``ldap['login_attribute']``
