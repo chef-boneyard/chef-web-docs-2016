@@ -7,7 +7,7 @@ A |resource script| resource block typically executes scripts using a specified 
 .. code-block:: ruby
 
    script 'extract_module' do
-     interpreter bash
+     interpreter "bash"
      cwd ::File.dirname(src_filepath)
      code <<-EOH
        mkdir -p #{extract_path}
