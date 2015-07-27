@@ -32,7 +32,6 @@ The full syntax for all of the attributes that are available to the |resource sc
      environment                Hash
      flags                      String
      group                      String, Integer
-     interpreter                String
      notifies                   # see description
      path                       Array
      provider                   Chef::Provider::Script::Python
@@ -50,4 +49,4 @@ where
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run and ``cwd`` is the location from which the command is run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``code``, ``command``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``interpreter``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``code``, ``command``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are attributes of this resource, with the |ruby| type shown. |see attributes|
