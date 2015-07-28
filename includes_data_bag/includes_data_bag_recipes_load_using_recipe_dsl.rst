@@ -4,27 +4,31 @@
 The |dsl recipe| provides access to data bags and data bag items (including encrypted data bag items) with the following methods:
 
 * ``data_bag(bag)``, where ``bag`` is the name of the data bag.
-* ``data_bag_item('bag', 'item', 'secret_file')``, where ``bag`` is the name of the data bag and ``item`` is the name of the data bag item. ``secret_file`` is an optional parameter which specifies the path to an alternate encrypted data bag secret file.
+* ``data_bag_item('bag_name', 'item', 'secret')``, where ``bag`` is the name of the data bag and ``item`` is the name of the data bag item. If ``'secret'`` is not specified, the |chef client| will look for a secret at the path specified by the ``encrypted_data_bag_secret`` setting in the |client rb| file.
 
-The ``data_bag`` method returns an array with a key for each of the data bag items that are found in the data bag. For example, a data bag named "admins" with a single data bag item named "justin" could be loaded with:
+The ``data_bag`` method returns an array with a key for each of the data bag items that are found in the data bag.
+
+Some examples:
+
+To load the secret from a file:
+
+.. code-block:: ruby
+
+   data_bag_item('bag', 'item', IO.read('secret_file’))
+   
+To load a single data bag item named "justin":
 
 .. code-block:: ruby
 
    data_bag("admins")
 
-to return this:
-
-.. code-block:: ruby
-
-   # => ["justin"]
-
-To load the contents of the data bag item named "justin":
+The contents of a data bag item named "justin":
 
 .. code-block:: ruby
 
    data_bag_item('admins', 'justin')
 
-to return something like this:
+will return something similar to:
 
 .. code-block:: ruby
 
