@@ -15,7 +15,6 @@ The following items are new for |chef server| 12.2:
 Configurable |postgresql|
 -----------------------------------------------------
 
-
 The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another. |postgresql| is configured independently of the |chef server| (and not as part of the built-in configuration).
 
 .. image:: ../../images/server_components_postgresql.svg
@@ -27,14 +26,20 @@ The following diagram shows the various components that are part of a |chef serv
 
    * - Component
      - Description
+   * - Clients
+     - The |chef server| is accessed primarily by nodes that are under management by |chef|, as the |chef client| runs occur. It is also accessed by individuals who maintain cookbooks and policy that is stored on the |chef server|, typically from a workstation. And also by individual users with credentials to |chef server| components, such as the |chef manage|.
+   * - Load Balancer
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
+   * - Manage
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_webui.rst
+
+       The |chef manage| uses the |api chef server| for all communication to the |chef server|.
+   * - Chef Server
+     - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
    * - Bookshelf
      - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
 
        All cookbooks are stored in a dedicated repository.
-   * - Manage
-     - .. include:: ../../includes_chef_server/includes_chef_server_component_webui.rst
-   * - Chef Server
-     - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
    * - Message Queues
      - Messages are sent to the Search Index using the following components:
        
@@ -43,8 +48,6 @@ The following diagram shows the various components that are part of a |chef serv
           #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
 
        All messages are added to a dedicated search index repository.
-   * - Nginx
-     - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
    * - PostgreSQL
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
