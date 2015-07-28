@@ -30,8 +30,8 @@ See `SSL Certificates <http://docs.chef.io/chef_client_security.html#ssl-certifi
 
 ``node.default!``  Changes
 =====================================================
-.. include:: ../../includes_attributes/includes_node_attribute_type_force_default_changes.rst
+.. include:: ../../includes_node/includes_node_attribute_type_force_default_changes.rst
 
 ``node.override!`` Changes
 =====================================================
-.. include:: ../../includes_attributes/includes_node_attribute_type_force_override_changes.rst
+.. include:: ../../includes_node/includes_node_attribute_type_force_override_changes.rst
