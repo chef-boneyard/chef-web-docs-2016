@@ -21,25 +21,25 @@ The following diagram shows the various components that are part of a |chef serv
      - The |chef server| is accessed primarily by nodes that are under management by |chef|, as the |chef client| runs occur. It is also accessed by individuals who maintain cookbooks and policy that is stored on the |chef server|, typically from a workstation. And also by individual users with credentials to |chef server| components, such as the |chef manage|.
    * - Load Balancer
      - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
-   * - Manage
+   * - |chef manage_title|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_webui.rst
 
        The |chef manage| uses the |api chef server| for all communication to the |chef server|.
-   * - Chef Server
+   * - |chef server_title|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
-   * - Bookshelf
+   * - |chef bookshelf|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
 
        All cookbooks are stored in a dedicated repository.
    * - Message Queues
-     - Messages are sent to the Search Index using the following components:
+     - Messages are sent to the search index using the following components:
        
           #. .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
           #. .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
           #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
 
        All messages are added to a dedicated search index repository.
-   * - PostgreSQL
+   * - |postgresql|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
 
@@ -61,9 +61,9 @@ The following diagram highlights the specific changes that occur when cookbooks 
      - The |chef server| will provide signed URLs for cookbook requests made by the various clients (individual users, |knife| requests, and from the |chef client| that is installed on nodes under management by |chef|).
    * - Load Balancer
      - The signed URLs for cookbooks are pointed here, and then routed to cookbook storage, as required.
-   * - Chef Server
+   * - |chef server_title|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
-   * - Bookshelf
+   * - |amazon s3|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
 
        This represents the externally configured storage at |amazon s3|.
@@ -112,9 +112,9 @@ The following diagram highlights the specific changes that occur when |postgresq
 
    * - Component
      - Description
-   * - Chef Server
+   * - |chef server_title|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
-   * - PostgreSQL
+   * - |postgresql|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
        This represents the independently configured set of servers that are running |postgresql| and are configured to act as the data store for the |chef server|.
