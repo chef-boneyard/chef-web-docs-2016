@@ -19,6 +19,7 @@ Configurable |postgresql|
 The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another. |postgresql| is configured independently of the |chef server| (and not as part of the built-in configuration).
 
 .. image:: ../../images/server_components_postgresql.svg
+   :width: 500px
 
 .. list-table::
    :widths: 60 420
