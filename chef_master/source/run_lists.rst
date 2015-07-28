@@ -170,3 +170,7 @@ Bootstrap Operations
 The |chef client_title| Run
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client_run.rst
+
+Attribute Evaluation Order
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_evaluation_order.rst
