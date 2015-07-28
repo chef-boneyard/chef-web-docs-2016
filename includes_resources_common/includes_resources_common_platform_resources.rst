@@ -115,7 +115,7 @@ The following resources are platform resources (i.e. "are available from the |ch
      - .. include:: ../../includes_resources/includes_resource_template.rst
    * - `user <http://docs.chef.io/resource_user.html>`_
      - .. include:: ../../includes_resources/includes_resource_user.rst
-   * - `windows_package <http://docs.chef.io/resource_service_windows_package.html>`_
+   * - `windows_package <http://docs.chef.io/resource_windows_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_windows.rst
    * - `windows_service <http://docs.chef.io/resource_windows_service.html>`_
      - .. include:: ../../includes_resources/includes_resource_service_windows.rst
