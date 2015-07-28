@@ -125,6 +125,9 @@ The |resource service| resource has two new providers:
 
 .. include:: ../../step_resource/step_resource_service_aix_mkitab.rst
 
+Recipe DSL, Encrypted Data Bags
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_recipes_load_using_recipe_dsl.rst
 
 bff_package
 -----------------------------------------------------
