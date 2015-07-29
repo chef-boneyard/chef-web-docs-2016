@@ -6,6 +6,8 @@ bff_package
 
 .. include:: ../../includes_resources/includes_resource_package_bff.rst
 
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_bff_syntax.rst

@@ -6,7 +6,7 @@ freebsd_package
 
 .. include:: ../../includes_resources/includes_resource_package_freebsd.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 =====================================================

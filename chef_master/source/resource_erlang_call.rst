@@ -6,7 +6,7 @@ erl_call
 
 .. include:: ../../includes_resources/includes_resource_erlang_call.rst
 
-.. note:: |note erlang_call resource must be on path|
+.. note:: .. include:: ../../includes_notes/includes_notes_erlang_call_resource_must_be_on_path.rst
 
 Syntax
 =====================================================

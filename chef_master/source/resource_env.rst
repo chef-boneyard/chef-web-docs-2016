@@ -6,7 +6,7 @@ env
 
 .. include:: ../../includes_resources/includes_resource_env.rst
 
-.. note:: |note env resource variable on unix|
+.. note:: .. include:: ../../includes_notes/includes_notes_env_resource_variable_on_unix.rst
 
 Syntax
 =====================================================

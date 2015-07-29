@@ -3,7 +3,7 @@
 
 Use the ``registry_get_subkeys`` method to get a list of sub-keys that are present for a |windows| registry setting. 
 
-.. note:: |note registry_key not_if only_if|
+.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_not_if_only_if.rst
 
 The syntax for the ``registry_get_subkeys`` method is as follows:
 
@@ -18,8 +18,4 @@ where:
 
 The results of ``registry_get_subkeys`` is an array of sub-keys.
 
-.. note:: |note registry_key architecture|
-
-
-
-
+.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_architecture.rst

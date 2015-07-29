@@ -2,7 +2,7 @@
 chef_node
 =====================================================
 
-|warning provisioning|
+.. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst
 
 .. include:: ../../includes_node/includes_node.rst
 

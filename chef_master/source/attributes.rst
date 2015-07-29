@@ -67,7 +67,7 @@ Use Attribute Files
 
 .. include:: ../../includes_node/includes_node_attribute_when_to_use_unless_variants.rst
 
-.. note:: |note see_attributes_overview|
+.. note:: .. include:: ../../includes_notes/includes_notes_see_attributes_overview.rst
 
 File Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

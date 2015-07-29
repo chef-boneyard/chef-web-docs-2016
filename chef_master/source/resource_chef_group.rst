@@ -2,7 +2,7 @@
 chef_group
 =====================================================
 
-|warning provisioning|
+.. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst
 
 .. include:: ../../includes_chef_client/includes_chef_client.rst
 

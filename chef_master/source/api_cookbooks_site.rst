@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_site.rst
 
-.. note:: |note api cookbooks site using knife|
+.. note:: .. include:: ../../includes_notes/includes_notes_api_cookbooks_site_using_knife.rst
 
 Endpoints
 =====================================================

@@ -3,7 +3,7 @@
 
 Use the ``registry_get_values`` method to get the values (name, type, and data) for a |windows| registry key.
 
-.. note:: |note registry_key not_if only_if|
+.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_not_if_only_if.rst
 
 The syntax for the ``registry_get_values`` method is as follows:
 
@@ -18,8 +18,4 @@ where:
 
 The results of ``registry_get_values`` is an array of values.
 
-.. note:: |note registry_key architecture|
-
-
-
-
+.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_architecture.rst

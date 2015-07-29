@@ -315,7 +315,7 @@ apt_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_apt.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -509,9 +509,9 @@ chef_gem
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_chef_gem.rst
 
-.. warning:: |note chef_gem vs gem_package|
+.. warning:: .. include:: ../../includes_notes/includes_notes_chef_gem_vs_gem_package.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -669,8 +669,7 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
 
-.. warning:: |warning selinux_file_based_resources|
-
+.. warning:: .. include:: ../../includes_notes/includes_notes_selinux_file_based_resources.rst
 .. 
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -936,7 +935,7 @@ dpkg_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1053,16 +1052,11 @@ Configuration data in |windows powershell_dsc_short| scripts may be customized f
 
 
 
-
-
-
-
-
 easy_install_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1093,7 +1087,7 @@ env
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_env.rst
 
-.. note:: |note env resource variable on unix|
+.. note:: .. include:: ../../includes_notes/includes_notes_env_resource_variable_on_unix.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1126,7 +1120,7 @@ erl_call
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_erlang_call.rst
 
-.. note:: |note erlang_call resource must be on path|
+.. note:: .. include:: ../../includes_notes/includes_notes_erlang_call_resource_must_be_on_path.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1159,7 +1153,7 @@ execute
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_execute.rst
 
-.. note:: |note execute resource intepreter|
+.. note:: .. include:: ../../includes_notes/includes_notes_execute_resource_intepreter.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1251,7 +1245,7 @@ file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_file.rst
 
-.. note:: |note file resource use other resources|
+.. note:: .. include:: ../../includes_notes/includes_notes_file_resource_use_other_resources.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1316,7 +1310,7 @@ freebsd_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_freebsd.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1347,9 +1341,9 @@ gem_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_gem.rst
 
-.. warning:: |note chef_gem vs gem_package|
+.. warning:: .. include:: ../../includes_notes/includes_notes_chef_gem_vs_gem_package.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1414,7 +1408,7 @@ git
 
 .. include:: ../../includes_resources/includes_resource_scm_git.rst
 
-.. note:: |note scm resource use with resource deploy|
+.. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_use_with_resource_deploy.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1489,7 +1483,7 @@ homebrew_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_homebrew.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1598,7 +1592,7 @@ ips_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_ips.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1727,7 +1721,7 @@ macports_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_macports.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1892,7 +1886,7 @@ openbsd_package
 
 .. include:: ../../includes_resources/includes_resource_package_openbsd.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1928,7 +1922,7 @@ package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package.rst
 
-.. note:: There are a number of platform-specific resources available for package management. In general, the |resource package| resource will use the correct package manager based on the platform-specific details collected by |ohai| at the start of the |chef client| run, which means that the platform-specific resources are often unnecessary. That said, there are cases when using a platform-specific package-based resource is desired. See the following resources for more information about these platform-specific resources: ``apt_package``, ``chef_gem``, ``dpkg_package``, ``easy_install_package``, ``freebsd_package``, ``gem_package``, ``ips_package``, ``macports_package``, ``openbsd_package``, ``pacman_package``, ``paludis_package``, ``portage_package``, ``rpm_package``, ``smartos_package``, ``solaris_package``, and ``yum_package``.
+.. note:: .. include:: ../../includes_notes/includes_notes_available_package_resources.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2054,7 +2048,7 @@ pacman_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_pacman.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2089,7 +2083,7 @@ paludis_package
 
 .. include:: ../../includes_resources/includes_resource_package_paludis.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2151,7 +2145,7 @@ portage_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_portage.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2394,7 +2388,7 @@ remote_file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_file.rst
 
-.. note:: |note remote_file resource fetch from files directory|
+.. note:: .. include:: ../../includes_notes/includes_notes_remote_file_resource_fetch_from_files_directory.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2480,7 +2474,7 @@ rpm_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_rpm.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2709,7 +2703,7 @@ smartos_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_smartos.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2740,7 +2734,7 @@ solaris_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_solaris.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2773,7 +2767,7 @@ subversion
 
 .. include:: ../../includes_resources/includes_resource_scm_subversion.rst
 
-.. note:: |note scm resource use with resource deploy|
+.. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_use_with_resource_deploy.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3023,7 +3017,7 @@ windows_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_windows.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3090,9 +3084,9 @@ yum_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_yum.rst
 
-.. note:: |note yum resource using file names|
+.. note:: .. include:: ../../includes_notes/includes_notes_yum_resource_using_file_names.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

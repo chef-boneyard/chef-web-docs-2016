@@ -3,7 +3,7 @@
 
 Use the ``registry_value_exists?`` method to find out if a |windows| registry key has values set (name, type, and data).  
 
-.. note:: |note registry_key not_if only_if|
+.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_not_if_only_if.rst
 
 The syntax for the ``registry_value_exists?`` method is as follows:
 
@@ -24,8 +24,4 @@ where:
 
 This method will return ``true`` or ``false``.  
 
-.. note:: |note registry_key architecture|
-
-
-
-
+.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_architecture.rst

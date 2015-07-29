@@ -2,7 +2,7 @@
 private_key
 =====================================================
 
-|warning provisioning|
+.. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 

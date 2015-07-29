@@ -728,7 +728,7 @@ windows_package
 
 .. include:: ../../includes_resources/includes_resource_package_windows.rst
 
-.. note:: |note resource_based_on_package|
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -865,5 +865,4 @@ Run w/Elevated Privileges
 
 |knife rb|
 =====================================================
-|note knife rb windows path|
-
+.. include:: ../../includes_notes/includes_notes_knife_rb_windows_path.rst
