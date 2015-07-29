@@ -6,7 +6,7 @@ The |chef server| supports using |windows ad| or |ldap| for any user that has an
 .. warning:: The following attributes **MUST** be in the user LDAP record:
   
    - ``mail:``
-   - ``samaccountname:`` or ``uid:``
+   - ``sAMAccountName:`` or ``uid:``
 
    The following attributes **SHOULD** be in the user LDAP record:
 
@@ -15,8 +15,6 @@ The |chef server| supports using |windows ad| or |ldap| for any user that has an
    - ``sn:``
    - ``c:``
    - ``l:``
-   - ``mail:``
-   - ``sAMAccountName:`` or ``uid:``
 
 To configure the |chef server| to use |windows ad| or |ldap| do the following:
 

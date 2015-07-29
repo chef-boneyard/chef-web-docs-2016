@@ -16,7 +16,7 @@ This resource has the following attributes:
 
        |architecture registry_key machine|
 
-       .. note:: |note registry_key architecture|
+       .. note:: .. include:: ../../includes_notes/includes_notes_registry_key_architecture.rst
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
 
@@ -43,7 +43,7 @@ This resource has the following attributes:
 
        |recursive registry_key|
 
-       .. note:: |note registry_key resource recursive|
+       .. note:: .. include:: ../../includes_notes/includes_notes_registry_key_resource_recursive.rst
    * - ``retries``
      - **Ruby Type:** Integer
 
