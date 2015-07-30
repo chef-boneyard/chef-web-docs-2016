@@ -22,4 +22,4 @@ The following log levels are supported:
    * - Warn
      - ``Chef::Log.warn("string")``
 
-.. note:: The parentheses are optional, e.g. ``Chef::Log.info "string" `` may be used instead of ``Chef::Log.info("string")``.
+.. note:: The parentheses are optional, e.g. ``Chef::Log.info "string"`` may be used instead of ``Chef::Log.info("string")``.
