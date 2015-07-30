@@ -7,10 +7,10 @@ For example, using a ``case`` statement with the ``platform`` node attribute:
 
 .. code-block:: ruby
 
-   case node["platform"]
-   when "debian", "ubuntu"
+   case node['platform']
+   when 'debian', 'ubuntu'
      # do debian/ubuntu things
-   when "redhat", "centos", "fedora"
+   when 'redhat', 'centos', 'fedora'
      # do redhat/centos/fedora things
    end
 
@@ -18,10 +18,10 @@ For example, using a ``case`` statement with the ``platform_family`` node attrib
 
 .. code-block:: ruby
 
-   case node["platform_family"]
-   when "debian"
+   case node['platform_family']
+   when 'debian'
      # do things on debian-ish platforms (debian, ubuntu, linuxmint)
-   when "rhel"
+   when 'rhel'
      # do things on RHEL platforms (redhat, centos, scientific, etc)
    end
 

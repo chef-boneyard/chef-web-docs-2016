@@ -7,10 +7,10 @@ Define a method (or a function, if you like):
 .. code-block:: ruby
  
    def do_something_useless( first_argument, second_argument)
-     puts "You gave me #{first_argument} and #{second_argument}"
+     puts 'You gave me #{first_argument} and #{second_argument}'
    end
    
-   do_something_useless( "apple", "banana")
+   do_something_useless( 'apple', 'banana')
    # => "You gave me apple and banana"
    do_something_useless 1, 2
    # => "You gave me 1 and 2"

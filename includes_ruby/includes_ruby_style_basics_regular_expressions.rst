@@ -6,8 +6,8 @@ Use |perl|-style regular expressions:
 
 .. code-block:: ruby
 
-   "I believe"  =~ /I/                       # => 0 (matches at the first character)
-   "I believe"  =~ /lie/                     # => 4 (matches at the 5th character)
-   "I am human" =~ /bacon/                   # => nil (no match - bacon comes from pigs)
-   "I am human" !~ /bacon/                   # => true (correct, no bacon here)
-   /give me a ([0-9]+)/ =~ "give me a 7"     # => 0 (matched)
+   'I believe'  =~ /I/                       # => 0 (matches at the first character)
+   'I believe'  =~ /lie/                     # => 4 (matches at the 5th character)
+   'I am human' =~ /bacon/                   # => nil (no match - bacon comes from pigs)
+   'I am human' !~ /bacon/                   # => true (correct, no bacon here)
+   /give me a ([0-9]+)/ =~ 'give me a 7'     # => 0 (matched)

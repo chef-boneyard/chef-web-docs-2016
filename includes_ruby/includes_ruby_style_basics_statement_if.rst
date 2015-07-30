@@ -7,7 +7,7 @@ For example, using an ``if`` statement with the ``platform`` node attribute:
 
 .. code-block:: ruby
 
-   if node["platform"] == "ubuntu"
+   if node['platform'] == 'ubuntu'
      # do ubuntu things
    end
 

@@ -7,7 +7,7 @@ For example:
 
 .. code-block:: ruby
 
-   if %w{debian ubuntu}.include?(node["platform"])
+   if %w{debian ubuntu}.include?(node['platform'])
      # do debian/ubuntu things with the Ruby array %w{} shortcut
    end 
 

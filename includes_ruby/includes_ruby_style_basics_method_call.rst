@@ -6,6 +6,6 @@ Call a method on something with ``.method_name()``:
 
 .. code-block:: ruby
 
-   x = "My String"
-   x.split(" ")            # => ["My", "String"]
-   x.split(" ").join(", ") # => "My, String"
+   x = 'My String'
+   x.split(' ')            # => ["My", "String"]
+   x.split(' ').join(', ') # => "My, String"

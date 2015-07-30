@@ -10,5 +10,5 @@ Use the |ruby| ``File`` class in a recipe. Because |chef| has the |resource file
      command 'apt-get update'
      ignore_failure true
      only_if { apt_installed? }
-     not_if { ::File.exist?('/var/lib/apt/periodic/update-success-stamp') }
+     not_if { File.exist?('/var/lib/apt/periodic/update-success-stamp') }
    end

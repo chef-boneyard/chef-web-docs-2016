@@ -75,8 +75,8 @@ Embed |ruby| in a string:
 
 .. code-block:: ruby
 
-   x = "Bob"
-   "Hi, #{x}"      # => "Hi, Bob"
+   x = 'Bob'
+   'Hi, #{x}'      # => "Hi, Bob"
    'Hello, #{x}'   # => "Hello, \#{x}" Notice that single quotes don't work with #{}
 
 
@@ -132,13 +132,13 @@ Create lists using arrays:
 
 .. code-block:: ruby
 
-   x = ["a", "b", "c"] # => ["a", "b", "c"]
+   x = ['a', 'b', 'c'] # => ["a", "b", "c"]
    x[0]                # => "a" (zero is the first index)
    x.first             # => "a" (see?)
    x.last              # => "c"
-   x + ["d"]           # => ["a", "b", "c", "d"]
+   x + ['d']           # => ["a", "b", "c", "d"]
    x                   # => ["a", "b", "c"] ( x is unchanged)
-   x = x + ["d"]       # => ["a", "b", "c", "d"]
+   x = x + ['d']       # => ["a", "b", "c", "d"]
    x                   # => ["a", "b", "c", "d"]
 
 
@@ -152,8 +152,8 @@ A |ruby hash| is a list with keys and values. Sometimes they don't have a set or
 .. code-block:: ruby
 
    h = {
-   "first_name" => "Bob",
-   "last_name"  => "Jones"
+   'first_name' => 'Bob',
+   'last_name'  => 'Jones'
    }
 
 And sometimes they do. For example, first name then last name:
@@ -161,9 +161,9 @@ And sometimes they do. For example, first name then last name:
 .. code-block:: ruby
 
    h.keys              # => ["first_name", "last_name"]
-   h["first_name"]     # => "Bob"
-   h["last_name"]      # => "Jones"
-   h["age"] = 23
+   h['first_name']     # => "Bob"
+   h['last_name']      # => "Jones"
+   h['age'] = 23
    h.keys              # => ["first_name", "age", "last_name"]
    h.values            # => ["Jones", "Bob", 23]
 
@@ -176,11 +176,11 @@ Use |perl|-style regular expressions:
 
 .. code-block:: ruby
 
-   "I believe"  =~ /I/                       # => 0 (matches at the first character)
-   "I believe"  =~ /lie/                     # => 4 (matches at the 5th character)
-   "I am human" =~ /bacon/                   # => nil (no match - bacon comes from pigs)
-   "I am human" !~ /bacon/                   # => true (correct, no bacon here)
-   /give me a ([0-9]+)/ =~ "give me a 7"     # => 0 (matched)
+   'I believe'  =~ /I/                       # => 0 (matches at the first character)
+   'I believe'  =~ /lie/                     # => 4 (matches at the 5th character)
+   'I am human' =~ /bacon/                   # => nil (no match - bacon comes from pigs)
+   'I am human' !~ /bacon/                   # => true (correct, no bacon here)
+   /give me a ([0-9]+)/ =~ 'give me a 7'     # => 0 (matched)
 
 
 
@@ -203,11 +203,11 @@ or a ``case`` statement:
 
 .. code-block:: ruby
 
-   x = "dog"
+   x = 'dog'
    case x
-   when "fish"
+   when 'fish'
     # this won't happen
-   when "dog", "cat", "monkey"
+   when 'dog', 'cat', 'monkey'
      # this will run
    else
      # the else is an optional catch-all
@@ -222,10 +222,10 @@ Define a method (or a function, if you like):
 .. code-block:: ruby
  
    def do_something_useless( first_argument, second_argument)
-     puts "You gave me #{first_argument} and #{second_argument}"
+     puts 'You gave me #{first_argument} and #{second_argument}'
    end
    
-   do_something_useless( "apple", "banana")
+   do_something_useless( 'apple', 'banana')
    # => "You gave me apple and banana"
    do_something_useless 1, 2
    # => "You gave me 1 and 2"
@@ -237,9 +237,9 @@ Call a method on something with ``.method_name()``:
 
 .. code-block:: ruby
 
-   x = "My String"
-   x.split(" ")            # => ["My", "String"]
-   x.split(" ").join(", ") # => "My, String"
+   x = 'My String'
+   x.split(' ')            # => ["My", "String"]
+   x.split(' ').join(', ') # => "My, String"
 
 
 

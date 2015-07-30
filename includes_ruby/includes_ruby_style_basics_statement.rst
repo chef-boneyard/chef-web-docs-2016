@@ -18,11 +18,11 @@ or a ``case`` statement:
 
 .. code-block:: ruby
 
-   x = "dog"
+   x = 'dog'
    case x
-   when "fish"
+   when 'fish'
     # this won't happen
-   when "dog", "cat", "monkey"
+   when 'dog', 'cat', 'monkey'
      # this will run
    else
      # the else is an optional catch-all
