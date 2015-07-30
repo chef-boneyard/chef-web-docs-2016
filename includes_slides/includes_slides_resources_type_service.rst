@@ -6,7 +6,7 @@ A service that should be started:
 
 .. code-block:: ruby
        
-   service "haproxy" do
+   service 'haproxy' do
      supports :restart => :true
      action [:enable, :start]
    end

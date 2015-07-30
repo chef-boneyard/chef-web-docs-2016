@@ -5,7 +5,7 @@
 
 .. code-block:: ruby
 
-   some "ruby" do
+   some 'ruby' do
      stuff
    end
 

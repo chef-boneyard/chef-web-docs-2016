@@ -6,6 +6,6 @@ A resource describes the state of something by declaring an action:
 
 .. code-block:: ruby
        
-   file "hello.txt" do
+   file 'hello.txt' do
      action :create
    end

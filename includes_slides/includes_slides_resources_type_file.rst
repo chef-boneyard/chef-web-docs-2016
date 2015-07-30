@@ -6,6 +6,6 @@ A file that should be generated:
 
 .. code-block:: ruby
        
-   file "/etc/motd" do
-     content "Property of Chef Software, Inc."
+   file '/etc/motd' do
+     content 'Property of Chef Software, Inc.'
    end

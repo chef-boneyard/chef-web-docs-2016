@@ -6,7 +6,7 @@ A cron job that should be configured:
 
 .. code-block:: ruby
        
-   cron "restart webserver" do
+   cron 'restart webserver' do
      hour '2'
      minute '0'
      command 'service httpd restart'

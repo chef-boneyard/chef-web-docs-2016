@@ -6,9 +6,9 @@ A registry key that should be created:
 
 .. code-block:: ruby
        
-   registry_key "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\...\\System" do
+   registry_key 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\...\\System' do
      values [{
-       :name => "EnableLUA",
+       :name => 'EnableLUA',
        :type => :dword,
        :data => 0
      }]

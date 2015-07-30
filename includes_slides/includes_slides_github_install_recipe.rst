@@ -12,7 +12,7 @@
       end
       
       file '/home/chef/.gitconfig' do
-        content "[user]\n  name=John Doe\n  email=jdoe@example\n"
+        content '[user]\n  name=John Doe\n  email=jdoe@example\n'
         user 'chef'
         group 'chef'
       end

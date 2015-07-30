@@ -7,6 +7,6 @@
 
    .. code-block:: ruby
    
-      package "httpd"
+      package 'httpd'
 
 #. Save the file.

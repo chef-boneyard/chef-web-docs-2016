@@ -6,6 +6,6 @@ A resource includes details between keywords ``do`` and ``end``:
 
 .. code-block:: ruby
        
-   file "hello.txt" do
+   file 'hello.txt' do
      ...
    end

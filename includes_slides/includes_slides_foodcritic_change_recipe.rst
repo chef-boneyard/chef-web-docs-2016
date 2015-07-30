@@ -7,16 +7,16 @@
 
    .. code-block:: ruby
    
-      package_name = "httpd"
+      package_name = 'httpd'
       
-      package "#{package_name}"
+      package '#{package_name}'
       
-      service "httpd" do
+      service 'httpd' do
         action :start
       end
       
-      template "/var/www/html/index.html" do
-        source "index.html.erb"
+      template '/var/www/html/index.html' do
+        source 'index.html.erb'
       end
 
 #. Save the file.

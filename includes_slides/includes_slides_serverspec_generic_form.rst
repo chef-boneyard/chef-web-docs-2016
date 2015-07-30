@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   describe "<subject>" do
-     it "<description>" do
+   describe '<subject>' do
+     it '<description>' do
        expect(thing).to eq result
      end
    end

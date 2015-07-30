@@ -6,6 +6,6 @@ The file named ``hello.txt`` should be created:
 
 .. code-block:: ruby
        
-   file "hello.txt" do
+   file 'hello.txt' do
      action :create
    end

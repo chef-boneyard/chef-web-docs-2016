@@ -6,4 +6,4 @@ A resource has a name:
 
 .. code-block:: ruby
 
-   file "hello.txt"
+   file 'hello.txt'

@@ -6,10 +6,10 @@ State is policy that describes the resource. For example, create the ``motd`` fi
 
 .. code-block:: ruby
        
-   file "/etc/motd" do
-     content "Property of COMPANY NAME"
+   file '/etc/motd' do
+     content 'Property of COMPANY NAME'
      action :create
-     mode "0644"
-     owner "root"
-     group "root"
+     mode '0644'
+     owner 'root'
+     group 'root'
    end

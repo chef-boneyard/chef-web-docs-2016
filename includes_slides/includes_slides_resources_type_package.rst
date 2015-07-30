@@ -6,6 +6,6 @@ A package to be installed:
 
 .. code-block:: ruby
        
-   package "haproxy" do
+   package 'haproxy' do
     action :install
    end

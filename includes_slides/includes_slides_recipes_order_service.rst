@@ -4,21 +4,21 @@
 
 .. code-block:: python
 
-   package "haproxy" do
+   package 'haproxy' do
      action :install
    end
    
-   template "/etc/haproxy/haproxy.cfg" do
-     source "haproxy.cfg.erb"
-     owner "root"
-     group "root"
-     mode "0644"
-     notifies :restart, "service[haproxy]"
+   template '/etc/haproxy/haproxy.cfg' do
+     source 'haproxy.cfg.erb'
+     owner 'root'
+     group 'root'
+     mode '0644'
+     notifies :restart, 'service[haproxy]'
    end
 
 .. code-block:: ruby
 
-   service "haproxy" do
+   service 'haproxy' do
      supports :restart => :true
-     action [:enable, :start]
+     action [:start, :enable]
    end

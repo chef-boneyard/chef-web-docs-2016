@@ -6,10 +6,10 @@ The TYPE named NAME should be ACTION’d with ATTRIBUTES:
 
 .. code-block:: ruby
        
-   file "hello.txt" do
+   file 'hello.txt' do
      action :create
-     content "Hello, world!"
-     mode "0644"
-     owner "chef"
-     group "chef"
+     content 'Hello, world!'
+     mode '0644'
+     owner 'chef'
+     group 'chef'
    end

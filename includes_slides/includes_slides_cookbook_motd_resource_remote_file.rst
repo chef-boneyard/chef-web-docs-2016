@@ -6,10 +6,10 @@ Use the remote_file resource when a file is stored at a remote location, such as
 
 .. code-block:: ruby
        
-   file "/etc/motd" do
-     url "http://some.where.com/motd"
+   file '/etc/motd' do
+     url 'http://some.where.com/motd'
      action :create
-     mode "0644"
-     owner "root"
-     group "root"
+     mode '0644'
+     owner 'root'
+     group 'root'
    end
