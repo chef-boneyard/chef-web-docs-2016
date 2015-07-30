@@ -66,7 +66,7 @@ The following diagram highlights the specific changes that occur when cookbooks 
    * - |amazon s3|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
 
-       This represents the externally configured storage at |amazon s3|.
+       This represents external cookbooks storage at |amazon s3|.
 
 Use the following configuration settings in the |chef server rb| file to configure external cookbook storage using |amazon s3|:
 
@@ -113,7 +113,7 @@ The following diagram highlights the specific changes that occur when |postgresq
    * - Component
      - Description
    * - |chef server_title|
-     - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
+     - The |chef server| configuration file is updated to point to an independently configured set of servers for |postgresql|.
    * - |postgresql|
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
