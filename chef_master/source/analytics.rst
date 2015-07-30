@@ -39,7 +39,7 @@ Integrations
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_webhook_example_slack.rst
 
-|splunk|
+|chef splunk|
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_splunk.rst
 

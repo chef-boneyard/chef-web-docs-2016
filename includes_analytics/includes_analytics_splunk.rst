@@ -2,15 +2,15 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the |splunk| application for |chef analytics| to gather insights about nodes that are under management by |chef|. The |splunk| application for |chef analytics| requires |chef analytics| version 1.1.4 (or later).
+Use the |chef splunk| to gather insights about nodes that are under management by |chef|. The |chef splunk| requires |chef analytics| version 1.1.4 (or later).
 
 .. image:: ../../images/splunk_app_nodes_activity.png
 
 .. image:: ../../images/splunk_app_server_activity.png
 
-.. note:: |splunk| enterprise is required for |chef analytics|. |splunk| light does not support the installation of packaged |splunk| applications.
+.. note:: |splunk| enterprise is required to use the |chef splunk|. |splunk| light does not support the installation of packaged |splunk| applications.
 
-To set up the |splunk| application for |chef analytics|, do the following:
+To set up the |chef splunk|, do the following:
 
 #. Download and install |chef analytics|.
 #. Configure a notification for the |splunk| server.
@@ -46,4 +46,4 @@ To set up the |splunk| application for |chef analytics|, do the following:
         end
       end
 
-The ``rules`` block **MUST** be exactly as shown. If these rules do not match exactly, the |splunk| application for |chef analytics| may not work correctly.
+The ``rules`` block **MUST** be exactly as shown. If these rules do not match exactly, the |chef splunk| may not work correctly.
