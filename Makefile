@@ -8,12 +8,11 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master
+release: master analytics
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # 
-# analytics
 # delivery
 # client devkit
 # 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18
