@@ -2,7 +2,7 @@
 |chef provisioning_title|
 =====================================================
 
-.. warning:: |warning provisioning|
+.. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst
 
 .. include:: ../../includes_provisioning/includes_provisioning.rst
 

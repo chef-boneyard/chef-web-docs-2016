@@ -284,7 +284,7 @@ Server Tuning
 
 .. include:: ../../includes_server_tuning/includes_server_tuning.rst
 
-.. note:: |note enterprise_chef_tuning|
+.. note:: .. include:: ../../includes_notes/includes_notes_enterprise_chef_tuning.rst
 
 
 Customize the Config File

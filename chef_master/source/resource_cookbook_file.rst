@@ -20,7 +20,7 @@ Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
 
-.. warning:: |warning selinux_file_based_resources|
+.. warning:: .. include:: ../../includes_notes/includes_notes_selinux_file_based_resources.rst
 
 Atomic File Updates
 -----------------------------------------------------

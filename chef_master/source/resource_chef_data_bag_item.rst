@@ -2,7 +2,7 @@
 chef_data_bag_item
 =====================================================
 
-|warning provisioning|
+.. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst
 
 .. include:: ../../includes_data_bag/includes_data_bag_item.rst
 

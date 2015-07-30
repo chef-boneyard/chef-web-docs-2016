@@ -4,7 +4,7 @@ About |knife_title|
 
 .. include:: ../../includes_knife/includes_knife.rst
 
-.. note:: |note knife quick reference|
+.. note:: .. include:: ../../includes_notes/includes_notes_knife_quick_reference.rst
 
 .. list-table::
    :widths: 150 450
