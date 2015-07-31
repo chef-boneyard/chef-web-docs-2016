@@ -25,6 +25,8 @@ This configuration file has the following settings:
      - The log level for |ruby on rails| services. Default value: ``info``.
    * - ``nginx_addon_prefix``
      - The prefix used by |chef manage|. Default value: ``30``.
+   * - ``org_creation_enabled``
+     - Whether or not users can create new organizations from |chef manage|.  Default value: ``true``.
    * - ``platform.user``
      - The name of the privileged user that manages requests to the |chef server|. Default value: ``'pivotal'``.
    * - ``platform.key_file``
@@ -68,9 +70,3 @@ This configuration file has the following settings:
    * - ``webapp.worker_timeout``
      - |timeout worker| Default value: ``3600``.
 
-.. 
-.. will be in an upcoming release of the Chef management console
-.. 
-..    * - ``org_creation_enabled``
-..      - Whether or not users can create new organizations from Manage.  Default value: ``true``.
-.. 
