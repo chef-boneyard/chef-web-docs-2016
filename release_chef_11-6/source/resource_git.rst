@@ -18,7 +18,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_scm_git_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_11-6_scm_git_attributes.rst
 

@@ -16,7 +16,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cron_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_11-10_cron_attributes.rst
 
