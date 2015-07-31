@@ -21,7 +21,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_execute_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_11-12_execute_attributes.rst
 

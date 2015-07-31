@@ -18,7 +18,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_apt_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_apt_attributes.rst
 
