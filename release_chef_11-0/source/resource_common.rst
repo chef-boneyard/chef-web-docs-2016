@@ -38,7 +38,7 @@ The following examples show how to use common properties in a recipe.
 
 .. include:: ../../step_resource/step_resource_service_use_supports_attribute.rst
 
-**Use the supports and providers common property**
+**Use the supports and providers common properties**
 
 .. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
 
