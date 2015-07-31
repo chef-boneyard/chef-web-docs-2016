@@ -211,7 +211,6 @@ Cookbooks
    resource_windows_package
    resource_windows_service
    resource_yum
-   resources
    roles
    ruby
    templates
