@@ -48,6 +48,8 @@ This resource has the following attributes:
    * - ``imports``
      - **Ruby Type:** Array
 
+       .. warning:: This attribute **SHOULD** be used with the ``code`` attribute. This attribute **MAY** be used with the ``command`` attribute, but only after the ``import-dscresource`` statements are added manually. 
+
        Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
 
        .. code-block:: ruby
