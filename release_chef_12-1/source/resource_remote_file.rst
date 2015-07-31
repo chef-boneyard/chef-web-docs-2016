@@ -18,7 +18,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_remote_file_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_12-3_remote_file_attributes.rst
 
