@@ -164,6 +164,13 @@ At the point where no more upgrades to |chef server| 12 are required **and** the
 
       $ rm -rf /opt/chef-server
 
+#. Recreate the symbolic link for ``/usr/bin/chef-server-ctl``:
+
+   .. code-block:: bash
+
+      $ ln -s /opt/opscode/bin/chef-server-ctl /usr/bin/chef-server-ctl
+
+
 Multiple Upgrades
 -----------------------------------------------------
 The upgrade process may be run multiple times, as long as |chef server osc| 11 and |chef server| version 12 are installed on the system. Any subsequent upgrade process will re-create the temporary directories. Because the default behavior is to append a random string to the directory name, the number of temporary directories created is proportional to the number of upgrade processes run, unless identical directory names are specified using the ``--chef11-data-dir`` and ``--chef12-data-dir`` options during each upgrade.
