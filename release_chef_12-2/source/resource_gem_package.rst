@@ -48,7 +48,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_gem_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_gem_attributes.rst
 
