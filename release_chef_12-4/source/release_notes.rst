@@ -16,6 +16,7 @@ The following items are new for |chef client| 12.4 and/or are changes from previ
 * **Public key management for users and clients** The |subcommand knife client| and |subcommand knife user| subcommands may now create, delete, edit, list, and show public keys.
 * **chef-client audit-mode is no longer marked as "experimental"** The recommended version of |chef client_audit| is |chef client| 12.4, where it is no longer marked as experimental. The |chef client| will report audit failures independently of converge failures.
 * **Validatorless bootstrap now requires the node name** Use of the ``-N node_name`` option with a validatorless bootstrap is now required.
+* **Powershell wrappers for chef commands** An optional feature on the windows that provides powershell cmdlet wrappers for ``chef``, ``chef-client``, ``knife`` etc., making argument passing easier.
 
 UNC paths, |resource remote_file|
 -----------------------------------------------------
@@ -184,6 +185,39 @@ Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_knife/includes_knife_user_key_show_syntax.rst
 
+
+Powershell command wrappers
+-----------------------------------------------------
+
+There is now an optional feature in the msi that you can enable during the installation of |chef client| that deploys a powershell module alongside the rest of your installation (usually at ``C:\opscode\chef\modules\``). This location will also be appended to your ``PSModulePath`` environment variable. Since this feature is experimental, it is not automatically enabled. You may activate it by running the following from any powershell session
+
+.. code-block::
+
+   Import-Module chef
+
+You can also add the above to your powershell profile at ``~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1``
+
+The module exports a number of cmdlets that have the same name as the Chef command line utilities that you already use - such as ``chef-client``, ``knife`` and ``chef-apply``. What they provide is the ability to cleanly pass quoted argument strings from your powershell command line without the need for excessive double-quoting. See https://github.com/chef/chef/issues/3026 or https://github.com/chef/chef/issues/1687 for an examples.
+
+Previously you would have needed
+
+.. code-block::
+
+   knife exec -E 'puts ARGV' """&s0meth1ng"""
+   knife node run_list set test-node '''role[ssssssomething]'''
+
+Now you only need
+
+.. code-block::
+
+   knife exec -E 'puts ARGV' '&s0meth1ng'
+   knife node run_list set test-node 'role[ssssssomething]'
+
+If you wish to no longer use the wrappers, run
+
+.. code-block::
+
+   Remove-Module chef
 
 Changelog
 =====================================================
