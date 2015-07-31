@@ -42,7 +42,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_deploy_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_11-6_deploy_attributes.rst
 

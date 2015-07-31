@@ -16,7 +16,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_11-16_http_request_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_http_request_attributes.rst
 
