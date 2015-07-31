@@ -20,7 +20,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_12-0_template_attributes.rst
 
