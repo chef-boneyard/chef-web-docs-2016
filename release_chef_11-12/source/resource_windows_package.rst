@@ -16,7 +16,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_windows_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_11-16_package_windows_attributes.rst
 

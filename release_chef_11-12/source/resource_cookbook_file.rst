@@ -18,7 +18,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_12-0_cookbook_file_attributes.rst
 

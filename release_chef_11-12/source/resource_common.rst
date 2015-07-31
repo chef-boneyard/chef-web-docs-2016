@@ -4,7 +4,7 @@
 Common Functionality 
 =====================================================
 
-All resources (and lightweight resources) share a set of common actions, attributes, conditional executions, notifications, and relative path options.
+All resources (and lightweight resources) share a set of common actions, properties, conditional executions, notifications, and relative path options.
 
 Actions
 =====================================================
@@ -18,27 +18,27 @@ The following examples show how to use common actions in a recipe.
 
 .. include:: ../../step_resource/step_resource_service_use_nothing_action.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_11-12_attributes.rst
 
 Examples
 -----------------------------------------------------
-The following examples show how to use common attributes in a recipe.
+The following examples show how to use common properties in a recipe.
 
-**Use the ignore_failure common attribute**
+**Use the ignore_failure common property**
 
 .. include:: ../../step_resource/step_resource_package_use_ignore_failure_attribute.rst
 
-**Use the provider common attribute**
+**Use the provider common property**
 
 .. include:: ../../step_resource/step_resource_package_use_provider_attribute.rst
 
-**Use the supports common attribute**
+**Use the supports common property**
 
 .. include:: ../../step_resource/step_resource_service_use_supports_attribute.rst
 
-**Use the supports and providers common attributes**
+**Use the supports and providers common properties**
 
 .. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
 
@@ -89,6 +89,10 @@ only_if Examples
 **Re-register ASP.Net if it's already installed**
 
 .. include:: ../../step_recipe/step_recipe_guard_onlyif_reregister_aspdotnet.rst
+
+Lazy Evaluation
+=====================================================
+.. include:: ../../includes_resources_common/includes_resources_common_lazy_evaluation.rst
 
 Notifications
 =====================================================
