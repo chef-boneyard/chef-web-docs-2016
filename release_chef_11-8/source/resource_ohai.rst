@@ -16,7 +16,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_ohai_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_11-10_ohai_attributes.rst
 
