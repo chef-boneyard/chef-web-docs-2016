@@ -9,6 +9,7 @@ Runbook
 The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another.
 
 .. image:: ../../images/server_components.svg
+   :width: 500px
 
 .. list-table::
    :widths: 60 420
