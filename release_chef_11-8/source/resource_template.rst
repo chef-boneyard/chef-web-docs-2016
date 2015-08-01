@@ -6,7 +6,7 @@ template
 
 .. include:: ../../includes_template/includes_template.rst
 
-.. note:: |note cookbook template erubis|
+.. note:: .. include:: ../../includes_notes/includes_notes_cookbook_template_erubis.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
@@ -20,11 +20,11 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_actions.rst
 
+.. warning:: ../../includes_resources/includes_notes_selinux_file_based_resources.rst
+
 Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_12-0_template_attributes.rst
-
-.. warning:: |warning selinux_file_based_resources|
 
 Atomic File Updates
 -----------------------------------------------------

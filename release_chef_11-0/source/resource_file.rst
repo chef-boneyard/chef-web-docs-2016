@@ -10,7 +10,7 @@ file
 
 .. include:: ../../includes_resources/includes_resource_cookbook_file_transfers.rst
 
-.. note:: |note file resource use other resources|
+.. note:: .. include:: ../../includes_notes/includes_notes_file_resource_use_other_resources.rst
 
 Syntax
 =====================================================

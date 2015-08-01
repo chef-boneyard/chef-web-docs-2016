@@ -6,7 +6,7 @@ template
 
 .. include:: ../../includes_template/includes_template.rst
 
-.. note:: |note cookbook template erubis|
+.. note:: .. include:: ../../includes_notes/includes_notes_cookbook_template_erubis.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 

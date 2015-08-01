@@ -8,8 +8,7 @@ execute
 
 .. include:: ../../includes_resources/includes_resource_execute.rst
 
-|note execute resource intepreter|
-
+.. note:: ../../includes_notes/includes_notes_execute_resource_intepreter.rst
 
 Syntax
 =====================================================

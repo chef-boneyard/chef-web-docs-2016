@@ -11,7 +11,7 @@ Recipe Attributes
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
 
-.. note:: |note see_attributes_overview|
+.. note:: ../../includes_resources/includes_notes_see_attributes_overview.rst
 
 Attribute Types
 -----------------------------------------------------

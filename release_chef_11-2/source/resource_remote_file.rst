@@ -8,7 +8,7 @@ remote_file
 
 .. include:: ../../includes_resources/includes_resource_11-4_remote_file.rst
 
-.. note:: |note remote_file resource fetch from files directory|
+.. note:: .. include:: ../../includes_notes/includes_notes_remote_file_resource_fetch_from_files_directory.rst
 
 Syntax
 =====================================================

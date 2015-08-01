@@ -8,7 +8,7 @@ subversion
 
 .. include:: ../../includes_resources/includes_resource_scm_subversion.rst
 
-.. note:: |note scm resource use with resource deploy|
+.. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_use_with_resource_deploy.rst
 
 Syntax
 =====================================================

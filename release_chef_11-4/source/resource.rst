@@ -4,7 +4,7 @@
 About Resources and Providers
 =====================================================
 
-.. note:: |note all_resources|
+.. note:: .. include:: ../../includes_notes/includes_notes_all_resources.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common.rst
 

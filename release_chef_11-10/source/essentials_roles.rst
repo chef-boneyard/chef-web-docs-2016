@@ -10,7 +10,7 @@ Role Attributes
 =====================================================
 .. include:: ../../includes_role/includes_role_attribute.rst
 
-.. note:: |note see_attributes_overview|
+.. note:: ../../includes_resources/includes_notes_see_attributes_overview.rst
 
 Attribute Types
 -----------------------------------------------------

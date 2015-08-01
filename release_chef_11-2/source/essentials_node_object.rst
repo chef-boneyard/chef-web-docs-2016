@@ -12,7 +12,7 @@ Attributes
 =====================================================
 .. include:: ../../includes_node/includes_node_attribute_when_to_use.rst
 
-.. note:: |note see_attributes_overview|
+.. note:: .. include:: ../../includes_notes/includes_notes_see_attributes_overview.rst
 
 Attribute Types
 -----------------------------------------------------

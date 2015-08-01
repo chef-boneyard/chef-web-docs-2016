@@ -8,7 +8,7 @@ file
 
 .. include:: ../../includes_resources/includes_resource_file.rst
 
-.. note:: |note file resource use other resources|
+.. note:: .. include:: ../../includes_notes/includes_notes_file_resource_use_other_resources.rst
 
 Syntax
 =====================================================
@@ -18,11 +18,11 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_file_actions.rst
 
+.. warning:: .. include:: ../../includes_notes/includes_notes_selinux_file_based_resources.rst
+
 Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_12-0_file_attributes.rst
-
-.. warning:: |warning selinux_file_based_resources|
 
 Atomic File Updates
 -----------------------------------------------------
