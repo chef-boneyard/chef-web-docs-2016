@@ -90,7 +90,6 @@ pygments_style = 'emacs'
 rst_prolog = """
 .. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
 """
 
  
