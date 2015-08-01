@@ -16,7 +16,7 @@ Automatic Attributes
 
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
-.. note:: |note see_attributes_overview|
+.. note:: .. include:: ../../includes_notes/includes_notes_see_attributes_overview.rst
 
 Attribute Persistence
 -----------------------------------------------------

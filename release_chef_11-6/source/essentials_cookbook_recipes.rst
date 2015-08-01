@@ -6,12 +6,11 @@ About Recipes
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
-
 Recipe Attributes
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
 
-.. note:: |note see_attributes_overview|
+.. note:: .. include:: ../../includes_notes/includes_notes_see_attributes_overview.rst
 
 Attribute Types
 -----------------------------------------------------
@@ -25,7 +24,6 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-
 File Methods
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
@@ -35,7 +33,6 @@ Environment Variables
 .. include:: ../../includes_environment_variables/includes_environment_variables.rst
 
 .. include:: ../../includes_environment_variables/includes_environment_variables_access_resource_attributes.rst
-
 
 Work with Recipes
 =====================================================
