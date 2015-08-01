@@ -483,11 +483,11 @@ Please `see RFC-23 for important changes to attributes <https://github.com/chef/
 
 ``node.force_default``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_attributes/includes_attributes_type_force_default.rst
+.. include:: ../../includes_node/includes_node_attribute_type_force_default_changes.rst
 
 ``node.force_override``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_attributes/includes_attributes_type_force_override.rst
+.. include:: ../../includes_node/includes_node_attribute_type_force_override_changes.rst
 
 SSL Certificates
 -----------------------------------------------------
