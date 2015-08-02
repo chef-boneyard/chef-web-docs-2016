@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-In some cases, the value for an attribute cannot be known until the execution phase of a |chef client| run. In this situation, using lazy evaluation of attribute values can be helpful. Instead of an attribute being assigned a value, it may instead be assigned a code block. The syntax for using lazy evaluation is as follows:
+In some cases, the value for a property cannot be known until the execution phase of a |chef client| run. In this situation, using lazy evaluation of property values can be helpful. Instead of a property being assigned a value, it may instead be assigned a code block. The syntax for using lazy evaluation is as follows:
 
 .. code-block:: ruby
 
@@ -10,7 +10,7 @@ In some cases, the value for an attribute cannot be known until the execution ph
 
 where ``lazy`` is used to tell the |chef client| to evaluate the contents of the code block later on in the resource evaluation process (instead of immediately) and ``{ code_block }`` is arbitrary |ruby| code that provides the value.
 
-For example, a resource that is not doing lazy evaluation:
+For example, a resource that is **not** doing lazy evaluation:
 
 .. code-block:: ruby
 
@@ -19,7 +19,7 @@ For example, a resource that is not doing lazy evaluation:
      path "/foo/bar"
    end
 
-and a resource that is doing lazy evaluation:
+and a resource block that is doing lazy evaluation:
 
 .. code-block:: ruby
 
@@ -28,7 +28,7 @@ and a resource that is doing lazy evaluation:
      path lazy { " some Ruby code " }
    end
 
-In the previous examples, the first resource uses the value ``/foo/bar`` and the second resource uses the value provided by the code block, as long as the contents of that code block are a valid resource attribute.
+In the previous examples, the first resource uses the value ``/foo/bar`` and the second resource uses the value provided by the code block, as long as the contents of that code block are a valid resource property.
 
 The following example shows how to use lazy evaluation with template variables:
 
@@ -42,6 +42,3 @@ The following example shows how to use lazy evaluation with template variables:
        }
      )
    end
-
-
-

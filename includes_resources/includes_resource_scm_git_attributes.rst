@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``additional_remotes``
      - **Ruby Type:** Hash
@@ -38,7 +38,7 @@ This resource has the following attributes:
 
        |environment variables|
 
-       .. note:: The |resource scm_git| provider automatically sets the ``ENV['HOME']`` and ``ENV['GIT_SSH']`` environment variables. To override this behavior and provide different values, add ``ENV['HOME']`` and/or ``ENV['GIT_SSH']`` to the ``environment`` |ruby hash|.
+       .. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_git_env_variables.rst
    * - ``group``
      - **Ruby Types:** String, Integer
 

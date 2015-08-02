@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
@@ -104,7 +104,7 @@ This resource has the following attributes:
 
        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
-.. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
+.. note:: .. include:: ../../includes_notes/includes_notes_resource_properties_use_owner_and_right.rst
 
 
 

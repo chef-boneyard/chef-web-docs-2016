@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``chef_repo_path``
      - |path chef_repo|
@@ -52,4 +52,4 @@ This resource has the following attributes:
 
        |subscribes timers|
    * - ``versioned_cookbooks``
-     - |versioned_cookbooks| Defaults to ``true`` when ``chef_repo_path`` is specified, but this attribute is not.
+     - |versioned_cookbooks| Defaults to ``true`` when ``chef_repo_path`` is specified, but this property is not.

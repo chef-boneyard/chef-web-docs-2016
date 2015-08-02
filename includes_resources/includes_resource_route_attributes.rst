@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``device``
      - **Ruby Type:** String
@@ -58,4 +58,4 @@ This resource has the following attributes:
 
        |target_address| |resource_block_default| |see syntax|
 
-.. Attributes in the route resource that aren't in the route provider: domain, domainname, hostname, metric, networking, networking_ipv6, route_type
+.. Properties in the route resource that aren't in the route provider: domain, domainname, hostname, metric, networking, networking_ipv6, route_type ... these shouldn't be visible in this properties list at this time.

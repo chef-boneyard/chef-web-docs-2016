@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``code``
      - **Ruby Type:** String
@@ -48,31 +48,15 @@ This resource has the following attributes:
    * - ``imports``
      - **Ruby Type:** Array
 
-       .. warning:: This attribute **MUST** be used with the ``code`` attribute.
+       .. warning:: This property **MUST** be used with the ``code`` attribute.
 
-       Use to import |windows powershell_dsc_short| resources from a module. To import all resources from a module, specify only the module name:
+       Use to import |windows powershell_dsc_short| resources from a module.
 
-       .. code-block:: ruby
+       .. include:: ../../step_resource/step_resource_dsc_script_import_resources_all.rst
 
-          imports "module_name"
+       .. include:: ../../step_resource/step_resource_dsc_script_import_resources_specific.rst
 
-       To import specific resources, specify the module name, and then specify the name for each resource in that module to import:
-
-       .. code-block:: ruby
-
-          imports "module_name", "resource_name_a", "resource_name_b", ...
-
-       For example, to import all resources from a module named ``cRDPEnabled``:
-
-       .. code-block:: ruby
-
-          imports "cRDPEnabled"
-
-       And to import only the ``PSHOrg_cRDPEnabled`` resource:
-
-       .. code-block:: ruby
-
-          imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
+       .. include:: ../../step_resource/step_resource_dsc_script_import_resources_single.rst
 
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol

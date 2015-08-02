@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``comment``
      - **Ruby Type:** String
@@ -18,7 +18,7 @@ This resource has the following attributes:
 
        |force_remove_user|
 
-       .. warning:: Using this attribute may leave the system in an inconsistent state. For example, a user account will be removed even if the user is logged in. A user's home directory will be removed, even if that directory is shared by multiple users.
+       .. warning:: .. include:: ../../includes_notes/includes_notes_user_resource_force_property.rst
    * - ``gid``
      - **Ruby Types:** String, Integer
 

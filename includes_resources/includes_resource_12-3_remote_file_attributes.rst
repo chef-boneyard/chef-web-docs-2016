@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``atomic_update``
      - **Ruby Types:** TrueClass, FalseClass
@@ -124,4 +124,3 @@ This resource has the following attributes:
        |verify_file|
 
        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
-

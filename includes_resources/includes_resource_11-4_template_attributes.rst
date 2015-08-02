@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``backup``
      - **Ruby Types:** FalseClass, Integer
@@ -82,7 +82,7 @@ This resource has the following attributes:
    * - ``source``
      - **Ruby Types:** String, Array
 
-       |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms. |see file_specificity| |resource_block_default| |see syntax|
+       |source template| |source template_cookbook| |source template_local| This property may also be used to distribute specific files to specific platforms. |see file_specificity| |resource_block_default| |see syntax|
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

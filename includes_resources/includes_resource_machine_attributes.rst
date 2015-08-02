@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``admin``
      - Use to specify whether the |chef client| is an API client.
@@ -114,7 +114,7 @@ This resource has the following attributes:
             ...
           }
    * - ``recipe``
-     - Use to add a recipe to the run-list for a machine. Use this attribute multiple times to add multiple recipes to a run-list. Use this attribute along with ``role`` to define a run-list. The order in which the ``recipe`` and ``role`` attributes are specified will determine the order in which they are added to the run-list. This attribute should not be used in the same recipe as ``run_list``. For example:
+     - Use to add a recipe to the run-list for a machine. Use this property multiple times to add multiple recipes to a run-list. Use this property along with ``role`` to define a run-list. The order in which the ``recipe`` and ``role`` properties are specified will determine the order in which they are added to the run-list. This property should not be used in the same recipe as ``run_list``. For example:
        
        .. code-block:: ruby
        
@@ -136,7 +136,7 @@ This resource has the following attributes:
 
        |retry_delay| Default value: ``2``.
    * - ``role``
-     - Use to add a role to the run-list for the machine. Use this attribute multiple times to add multiple roles to a run-list. Use this attribute along with ``recipe`` to define a run-list. The order in which the ``recipe`` and ``role`` attributes are specified will determine the order in which they are added to the run-list. This attribute should not be used in the same recipe as ``run_list``. For example:
+     - Use to add a role to the run-list for the machine. Use this property multiple times to add multiple roles to a run-list. Use this property along with ``recipe`` to define a run-list. The order in which the ``recipe`` and ``role`` properties are specified will determine the order in which they are added to the run-list. This property should not be used in the same recipe as ``run_list``. For example:
 	 
        .. code-block:: ruby
        
@@ -144,7 +144,7 @@ This resource has the following attributes:
           role 'bar'
           recipe 'baz'
    * - ``run_list``
-     - An array of strings that specifies the run-list to apply to a machine. This attribute should not be used in the same recipe as ``recipe`` and ``role``. For example:
+     - An array of strings that specifies the run-list to apply to a machine. This property should not be used in the same recipe as ``recipe`` and ``role``. For example:
 
        .. code-block:: ruby
        

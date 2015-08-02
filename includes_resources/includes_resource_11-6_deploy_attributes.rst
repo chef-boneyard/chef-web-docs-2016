@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``after_restart``
      - **Ruby Types:** Proc, String
@@ -134,13 +134,13 @@ This resource has the following attributes:
 
        |user checked_out_code|
 
-The following attributes are for use with |git| only:
+The following properties are for use with |git| only:
 
 .. list-table::
    :widths: 200 300
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``enable_submodules``
      - **Ruby Types:** TrueClass, FalseClass
@@ -163,13 +163,13 @@ The following attributes are for use with |git| only:
 
        |ssh_wrapper resource|
 
-The following attributes are for use with |svn| only:
+The following properties are for use with |svn| only:
 
 .. list-table::
    :widths: 200 300
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``svn_arguments``
      - **Ruby Type:** String

@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``module_name``
      - **Ruby Type:** String
 
-       |name powershell_module| If this attribute is not specified, it will be inferred.
+       |name powershell_module| If this property is not specified, it will be inferred.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
@@ -28,7 +28,7 @@ This resource has the following attributes:
    * - ``property``
      - **Ruby Type:** Symbol
 
-       |property dsc_resource| The format for this attribute must follow ``property :dsc_property_name, "property_value"`` for each property added to the resource block.
+       |property dsc_resource| The format for this property must follow ``property :dsc_property_name, "property_value"`` for each |windows powershell_dsc_short| property added to the resource block.
 
        The ``:dsc_property_name`` must be a symbol.
 
