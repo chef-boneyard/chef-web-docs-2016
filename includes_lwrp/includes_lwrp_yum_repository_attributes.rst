@@ -1,15 +1,15 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-.. note:: The following table contains paraphrased descriptions for quick reference. See http://linux.die.net/man/5/yum.conf for complete descriptions of these attributes as they exist from the |yum| command line.
+.. note:: The following table contains paraphrased descriptions for quick reference. See http://linux.die.net/man/5/yum.conf for complete descriptions of these properties as they exist from the |yum| command line.
 
-This resource has the following attributes:
+This resource has the following properties:
 
 .. list-table::
    :widths: 200 300
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``baseurl``
      - |path repository|
