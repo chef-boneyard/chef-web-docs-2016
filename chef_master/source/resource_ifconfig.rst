@@ -14,7 +14,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_ifconfig_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_ifconfig_attributes.rst
 

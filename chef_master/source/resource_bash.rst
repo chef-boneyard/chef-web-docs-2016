@@ -14,7 +14,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_bash_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_bash_attributes.rst
 

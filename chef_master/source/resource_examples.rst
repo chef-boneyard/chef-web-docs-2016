@@ -2,7 +2,7 @@
 Resource Code Examples
 =====================================================
 
-This reference contains code examples for many of the core resources that are built in to the |chef client|, sorted by resource. This topic is a subset of the topic that contains a `complete description of all resources <http://docs.chef.io/chef/resources.html>`_, including actions, attributes, and providers (in addition to these examples).
+This reference contains code examples for many of the core resources that are built in to the |chef client|, sorted by resource. This topic is a subset of the topic that contains a `complete description of all resources <http://docs.chef.io/chef/resources.html>`_, including actions, properties, and providers (in addition to these examples).
 
 
 Common Examples

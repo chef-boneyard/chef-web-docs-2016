@@ -14,7 +14,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_perl_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_perl_attributes.rst
 

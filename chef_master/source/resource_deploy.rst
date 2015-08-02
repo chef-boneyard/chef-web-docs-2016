@@ -44,7 +44,7 @@ Naming Resources
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_actions_resource_names.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_deploy_attributes.rst
 

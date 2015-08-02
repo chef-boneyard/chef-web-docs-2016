@@ -16,7 +16,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_openbsd_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_openbsd_attributes.rst
 

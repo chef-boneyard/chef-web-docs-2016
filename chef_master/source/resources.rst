@@ -8,12 +8,12 @@ Resources Reference
 
 .. include:: ../../includes_resources_common/includes_resources_common_provider_platform.rst
 
-This reference describes each of the resources available to the |chef client|, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
+This reference describes each of the resources available to the |chef client|, including a list of actions, a list of properties, (when applicable) a list of providers, and examples of using each resource.
 
 
 Common Functionality
 =====================================================
-The attributes and actions in this section apply to all resources.
+The properties and actions in this section apply to all resources.
 
 Actions
 -----------------------------------------------------
@@ -27,7 +27,7 @@ The following examples show how to use common actions in a recipe.
 
 .. include:: ../../step_resource/step_resource_service_use_nothing_action.rst
 
-Attributes
+Properties
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_attributes.rst
 
@@ -37,21 +37,21 @@ Provider
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use common attributes in a recipe.
+The following examples show how to use common properties in a recipe.
 
-**Use the ignore_failure common attribute**
+**Use the ignore_failure common property**
 
 .. include:: ../../step_resource/step_resource_package_use_ignore_failure_attribute.rst
 
-**Use the provider common attribute**
+**Use the provider common property**
 
 .. include:: ../../step_resource/step_resource_package_use_provider_attribute.rst
 
-**Use the supports common attribute**
+**Use the supports common property**
 
 .. include:: ../../step_resource/step_resource_service_use_supports_attribute.rst
 
-**Use the supports and providers common attributes**
+**Use the supports and providers common properties**
 
 .. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
 
@@ -124,7 +124,7 @@ Examples
 .. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_example_default.rst
 
 
-Lazy Attribute Evaluation
+Lazy Evaluation
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_lazy_evaluation.rst
 
@@ -246,7 +246,7 @@ Windows File Security
 
 Resources
 =====================================================
-The following resources are platform resources with built-in providers:
+The following resources are built-in to the |chef client|:
 
 * apt_package (based on the package resource)
 * bash
@@ -309,7 +309,7 @@ The following resources are platform resources with built-in providers:
 * windows_service
 * yum (based on the package resource)
 
-See below for more information about each of these resources, their related actions and attributes, the providers they rely on, and examples of how these resources can be used in recipes.
+See below for more information about each of these resources, their related actions and properties, and examples of how these resources can be used in recipes.
 
 apt_package
 -----------------------------------------------------
@@ -325,7 +325,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_apt_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_apt_attributes.rst
 
@@ -361,7 +361,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_bash_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_bash_attributes.rst
 
@@ -405,7 +405,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_batch_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_batch_attributes.rst
 
@@ -448,7 +448,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_bff_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_bff_attributes.rst
 
@@ -482,7 +482,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_breakpoint_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
 
@@ -521,7 +521,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_chef_gem_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_chef_gem_attributes.rst
 
@@ -571,7 +571,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_chef_handler_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_chef_handler_attributes.rst
 
@@ -665,7 +665,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
 
@@ -717,7 +717,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cron_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cron_attributes.rst
 
@@ -760,7 +760,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_csh_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_csh_attributes.rst
 
@@ -811,7 +811,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_attributes.rst
 
@@ -884,7 +884,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_directory_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_directory_attributes.rst
 
@@ -945,7 +945,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_dpkg_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_dpkg_attributes.rst
 
@@ -979,7 +979,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_dsc_resource_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_dsc_resource_attributes.rst
 
@@ -1018,7 +1018,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_dsc_script_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_dsc_script_attributes.rst
 
@@ -1066,7 +1066,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_easy_install_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_easy_install_attributes.rst
 
@@ -1097,7 +1097,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_env_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_env_attributes.rst
 
@@ -1130,7 +1130,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_erlang_call_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_erlang_call_attributes.rst
 
@@ -1163,7 +1163,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_execute_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_execute_attributes.rst
 
@@ -1255,7 +1255,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_file_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_file_attributes.rst
 
@@ -1320,7 +1320,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_freebsd_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_freebsd_attributes.rst
 
@@ -1381,7 +1381,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_gem_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_gem_attributes.rst
 
@@ -1418,7 +1418,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_git_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_git_attributes.rst
 
@@ -1461,7 +1461,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_group_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_group_attributes.rst
 
@@ -1493,7 +1493,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_homebrew_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
 
@@ -1532,7 +1532,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_http_request_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_http_request_attributes.rst
 
@@ -1570,7 +1570,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ifconfig_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ifconfig_attributes.rst
 
@@ -1602,7 +1602,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_ips_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_ips_attributes.rst
 
@@ -1633,7 +1633,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_link_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_link_attributes.rst
 
@@ -1680,7 +1680,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_log_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_log_attributes.rst
 
@@ -1731,7 +1731,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_macports_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_macports_attributes.rst
 
@@ -1760,7 +1760,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_mdadm_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_mdadm_attributes.rst
 
@@ -1799,7 +1799,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_mount_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_mount_attributes.rst
 
@@ -1856,7 +1856,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ohai_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ohai_attributes.rst
 
@@ -1896,7 +1896,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_openbsd_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_openbsd_attributes.rst
 
@@ -1960,7 +1960,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_11-16_package_attributes.rst
 
@@ -2058,7 +2058,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_pacman_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_pacman_attributes.rst
 
@@ -2093,7 +2093,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_paludis_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_paludis_attributes.rst
 
@@ -2128,7 +2128,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_perl_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_perl_attributes.rst
 
@@ -2155,7 +2155,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_portage_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_portage_attributes.rst
 
@@ -2184,7 +2184,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_powershell_script_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
@@ -2232,7 +2232,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_python_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_python_attributes.rst
 
@@ -2259,7 +2259,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
@@ -2307,7 +2307,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
 
@@ -2357,7 +2357,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_directory_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_directory_attributes.rst
 
@@ -2398,7 +2398,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_file_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
 
@@ -2448,7 +2448,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_route_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_route_attributes.rst
 
@@ -2484,7 +2484,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_rpm_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_rpm_attributes.rst
 
@@ -2512,7 +2512,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_ruby_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_ruby_attributes.rst
 
@@ -2537,7 +2537,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ruby_block_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ruby_block_attributes.rst
 
@@ -2600,7 +2600,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_attributes.rst
 
@@ -2646,7 +2646,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_attributes.rst
 
@@ -2713,7 +2713,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_smartos_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_smartos_attributes.rst
 
@@ -2744,7 +2744,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_solaris_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_solaris_attributes.rst
 
@@ -2764,7 +2764,6 @@ Examples
 
 subversion
 -----------------------------------------------------
-
 .. include:: ../../includes_resources/includes_resource_scm_subversion.rst
 
 .. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_use_with_resource_deploy.rst
@@ -2777,7 +2776,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_subversion_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_subversion_attributes.rst
 
@@ -2810,7 +2809,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_attributes.rst
 
@@ -2977,7 +2976,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_user_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_user_attributes.rst
 
@@ -3027,7 +3026,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_windows_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
 
@@ -3057,7 +3056,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
@@ -3096,7 +3095,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_yum_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_yum_attributes.rst
 

@@ -14,7 +14,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_remote_directory_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_remote_directory_attributes.rst
 

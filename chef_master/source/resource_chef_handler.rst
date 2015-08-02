@@ -30,7 +30,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_chef_handler_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_chef_handler_attributes.rst
 

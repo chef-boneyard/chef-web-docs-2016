@@ -22,7 +22,7 @@ In-Parallel Processing
 -----------------------------------------------------
 .. include:: ../../includes_provisioning/includes_provisioning_parallel.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_machine_batch_attributes.rst
 

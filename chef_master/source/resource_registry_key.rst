@@ -43,7 +43,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_registry_key_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
 

@@ -17,7 +17,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_machine_image_actions.rst
 
-Attributes
+Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_machine_image_attributes.rst
 
