@@ -35,7 +35,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_load_balancer_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_load_balancer_attributes.rst
 
@@ -60,7 +60,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_attributes.rst
 
@@ -108,7 +108,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_batch_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_batch_attributes.rst
 
@@ -152,7 +152,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_execute_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_execute_attributes.rst
 
@@ -177,7 +177,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_file_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_file_attributes.rst
 
@@ -205,7 +205,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_image_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_machine_image_attributes.rst
 
@@ -273,7 +273,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_auto_scaling_group_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_auto_scaling_group_attributes.rst
 
@@ -300,7 +300,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_cluster_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_cluster_attributes.rst
 
@@ -318,7 +318,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_replication_group_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_replication_group_attributes.rst
 
@@ -335,7 +335,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_subnet_group_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_subnet_group_attributes.rst
 
@@ -353,7 +353,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_dhcp_options_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_dhcp_options_attributes.rst
 
@@ -390,7 +390,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_ebs_volume_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_ebs_volume_attributes.rst
 
@@ -481,7 +481,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_eip_address_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_eip_address_attributes.rst
 
@@ -506,7 +506,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_image_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_image_attributes.rst
 
@@ -523,7 +523,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_instance_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_instance_attributes.rst
 
@@ -540,7 +540,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_internet_gateway_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_internet_gateway_attributes.rst
 
@@ -564,7 +564,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_key_pair_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_key_pair_attributes.rst
 
@@ -592,7 +592,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_launch_configuration_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_launch_configuration_attributes.rst
 
@@ -618,7 +618,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_load_balancer_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_load_balancer_attributes.rst
 
@@ -634,7 +634,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_network_interface_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_network_interface_attributes.rst
 
@@ -660,7 +660,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_route_table_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_route_table_attributes.rst
 
@@ -684,7 +684,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_s3_bucket_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_s3_bucket_attributes.rst
 
@@ -710,7 +710,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_security_group_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_security_group_attributes.rst
 
@@ -744,7 +744,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sns_topic_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sns_topic_attributes.rst
 
@@ -776,7 +776,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sqs_queue_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_sqs_queue_attributes.rst
 
@@ -806,7 +806,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_subnet_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_subnet_attributes.rst
 
@@ -841,7 +841,7 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc_syntax.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc_attributes.rst
 
