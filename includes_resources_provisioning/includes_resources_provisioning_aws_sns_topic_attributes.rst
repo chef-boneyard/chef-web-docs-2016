@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This |chef provisioning| driver-specific resource has the following attributes:
+This |chef provisioning| driver-specific resource has the following properties:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``arn``
      - Use to specify the |amazon arn|. When a topic is created, |amazon sns| will assign a unique |amazon arn| to the topic, which will include the service name, region, and |amazon aws| identifier of the user and topic name. For example, a topic named ``seapower`` with a user account ID of ``5060091557628`` that is hosted in the ``US West`` region would be similar to: ``arn:aws:sns:us-west-1:5060091557628:seapower``.
