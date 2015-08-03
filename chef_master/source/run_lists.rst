@@ -16,6 +16,13 @@ Empty Run-lists
 =====================================================
 The following |knife| commands may be used to manage run-lists on the |chef server|.
 
+Quotes, Windows
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
+
+``Import-Module chef``
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_common_windows_quotes_module.rst
 
 run_list add
 -----------------------------------------------------
@@ -28,8 +35,6 @@ run_list add
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_syntax.rst
-
-.. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
 
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -70,8 +75,6 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove_syntax.rst
 
-.. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
-
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |no_options|
@@ -97,8 +100,6 @@ run_list set
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_node_run_list_set_syntax.rst
-
-.. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
 
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
