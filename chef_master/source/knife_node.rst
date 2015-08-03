@@ -168,6 +168,8 @@ Syntax
 
 .. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
 
+.. note:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes_module.rst
+
 Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_options.rst
@@ -207,8 +209,6 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove_syntax.rst
 
-.. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
-
 Options
 -----------------------------------------------------
 |no_options|
@@ -236,6 +236,8 @@ Syntax
 .. include:: ../../includes_knife/includes_knife_node_run_list_set_syntax.rst
 
 .. warning:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
+
+.. note:: .. include:: ../../includes_knife/includes_knife_common_windows_quotes_module.rst
 
 Options
 -----------------------------------------------------
