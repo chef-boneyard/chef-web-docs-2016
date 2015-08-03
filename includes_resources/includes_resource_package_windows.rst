@@ -5,4 +5,4 @@ Use the |resource package_windows| resource to manage |microsoft installer packa
 
 .. note:: This resource effectively replaces the ``windows_package`` resource found in the |cookbook windows| cookbook by moving that functionality into the |chef client|. The |cookbook windows| cookbook may still be used, but in that situation use the generic |resource package| resource instead of the |resource package_windows| resource.
 
-.. note:: This resource does not support downloading packages from the network. Please use the |resource remote_file| resource for this purpose. Then, install packages locally using the source attribute to point at the package location on disk.
+.. note:: This resource does not support downloading packages from the network. Please use the |resource remote_file| resource for this purpose. Then, install packages locally using the source property to point at the package location on disk.
