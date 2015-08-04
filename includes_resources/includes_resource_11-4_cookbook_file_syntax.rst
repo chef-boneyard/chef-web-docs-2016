@@ -20,7 +20,7 @@ where
 * ``'index.php'`` is a file in the ``/files`` directory in a cookbook that is used to create that file (the contents of the file in the cookbook will become the contents of the file on the node)
 * ``owner``, ``group``, and ``mode`` define the permissions
 
-The full syntax for all of the attributes that are available to the |resource cookbook_file| resource is:
+The full syntax for all of the properties that are available to the |resource cookbook_file| resource is:
 
 .. code-block:: ruby
 
@@ -46,4 +46,4 @@ where
 * ``cookbook_file`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``backup``, ``cookbook``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, and ``verify`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``backup``, ``cookbook``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``source``, and ``verify`` are properties of this resource, with the |ruby| type shown. |see attributes|

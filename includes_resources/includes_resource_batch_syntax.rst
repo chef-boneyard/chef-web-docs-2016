@@ -15,7 +15,7 @@ A |resource batch| resource block executes a batch script using the |windows cmd
        EOH
    end
 
-The full syntax for all of the attributes that are available to the |resource batch| resource is:
+The full syntax for all of the properties that are available to the |resource batch| resource is:
 
 .. code-block:: ruby
 
@@ -44,4 +44,4 @@ where
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run and ``cwd`` is the location from which the command is run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``architecture``, ``code``, ``command``, ``creates``, ``cwd``, ``flags``, ``group``, ``guard_interpreter``, ``interpreter``, ``provider``, ``returns``, ``timeout``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``architecture``, ``code``, ``command``, ``creates``, ``cwd``, ``flags``, ``group``, ``guard_interpreter``, ``interpreter``, ``provider``, ``returns``, ``timeout``, and ``user`` are properties of this resource, with the |ruby| type shown. |see attributes|

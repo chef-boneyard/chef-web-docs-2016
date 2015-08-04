@@ -38,13 +38,13 @@ For example, an application that is deployed to a folder named ``"/path/to/appli
 For the example shown above:
 
 * Because an action is not explicitly specified, the |chef client| will use the default action: ``:deploy``
-* The ``purge_before_symlink`` application layout is an array of paths that will be cleared before the ``symlinks`` attribute is run
-* The ``create_dirs_before_symlink`` attribute is empty, which is different from the default
-* The ``symlinks`` attribute is creating three symbolic links
+* The ``purge_before_symlink`` application layout is an array of paths that will be cleared before the ``symlinks`` property is run
+* The ``create_dirs_before_symlink`` property is empty, which is different from the default
+* The ``symlinks`` property is creating three symbolic links
 * The ``before_restart`` callback is being used to add custom actions that will occur at the end of the deployment process, but before any services have been notified
-* At the end, the recipe is using the ``notifies`` attribute---a common attribute available to all resources---to alert two services (named "foo" and "bar") that they should restart.
+* At the end, the recipe is using the ``notifies`` property---a common attribute available to all resources---to alert two services (named "foo" and "bar") that they should restart.
 
-The full syntax for all of the attributes that are available to the |resource deploy| when used with |git| is:
+The full syntax for all of the properties that are available to the |resource deploy| when used with |git| is:
 
 .. code-block:: ruby
 
@@ -83,7 +83,7 @@ The full syntax for all of the attributes that are available to the |resource de
      action                     Symbol # defaults to :create if not specified
    end
 
-and the full syntax for all of the attributes that are available to the |resource deploy| when used with |svn| is:
+and the full syntax for all of the properties that are available to the |resource deploy| when used with |svn| is:
 
 .. code-block:: ruby
 
@@ -126,4 +126,4 @@ where
 * ``deploy`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``after_restart``, ``before_migrate``, ``before_restart``, ``before_symlink``, ``branch``, ``create_dirs_before_symlink``, ``deploy_to``, ``enable_submodules``, ``environment``, ``git_ssh_wrapper``, ``group``, ``keep_releases``, ``migrate``, ``migration_command``, ``provider``, ``purge_before_symlink``, ``remote``, ``repo``, ``repository``, ``repository_cache``, ``restart_command``, ``revision``, ``rollback_on_error``, ``scm_provider``, ``shallow_clone``, ``ssh_wrapper``, ``svn_arguments``, ``svn_password``, ``svn_username``, ``symlinks``, ``symlink_before_migrate``, ``timeout``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``after_restart``, ``before_migrate``, ``before_restart``, ``before_symlink``, ``branch``, ``create_dirs_before_symlink``, ``deploy_to``, ``enable_submodules``, ``environment``, ``git_ssh_wrapper``, ``group``, ``keep_releases``, ``migrate``, ``migration_command``, ``provider``, ``purge_before_symlink``, ``remote``, ``repo``, ``repository``, ``repository_cache``, ``restart_command``, ``revision``, ``rollback_on_error``, ``scm_provider``, ``shallow_clone``, ``ssh_wrapper``, ``svn_arguments``, ``svn_password``, ``svn_username``, ``symlinks``, ``symlink_before_migrate``, ``timeout``, and ``user`` are properties of this resource, with the |ruby| type shown. |see attributes|

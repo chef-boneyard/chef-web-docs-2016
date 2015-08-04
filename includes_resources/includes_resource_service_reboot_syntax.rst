@@ -12,7 +12,7 @@ A |resource reboot| resource block reboots a node:
      delay_mins 5
    end
 
-The full syntax for all of the attributes that are available to the |resource reboot| resource is:
+The full syntax for all of the properties that are available to the |resource reboot| resource is:
 
 .. code-block:: ruby
 
@@ -29,4 +29,4 @@ where
 * ``reboot`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``delay_mins`` and ``reason`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``delay_mins`` and ``reason`` are properties of this resource, with the |ruby| type shown. |see attributes|

@@ -19,7 +19,7 @@ A |resource dsc_script| resource block embeds the code that defines a |windows p
 
 where the |resource remote_file| resource is first used to download the ``DSCResourceKit620082014.zip`` file.
 
-The full syntax for all of the attributes that are available to the |resource dsc_script| resource is:
+The full syntax for all of the properties that are available to the |resource dsc_script| resource is:
 
 .. code-block:: ruby
 
@@ -42,4 +42,4 @@ where
 * ``dsc_script`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``code``, ``command``, ``configuration_data``, ``configuration_data_script``, ``configuration_name``, ``cwd``, ``environment``, and ``flags`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``code``, ``command``, ``configuration_data``, ``configuration_data_script``, ``configuration_name``, ``cwd``, ``environment``, and ``flags`` are properties of this resource, with the |ruby| type shown. |see attributes|

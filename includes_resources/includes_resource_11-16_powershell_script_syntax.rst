@@ -14,7 +14,7 @@ A |resource powershell_script| resource block executes a batch script using the 
      EOH
    end
 
-The full syntax for all of the attributes that are available to the |resource powershell_script| resource is:
+The full syntax for all of the properties that are available to the |resource powershell_script| resource is:
 
 .. code-block:: ruby
 
@@ -37,4 +37,4 @@ where
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run and ``cwd`` is the location from which the command is run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``architecture``, ``code``, ``command``, ``convert_boolean_return``, ``flags``, ``interpreter``, and ``provider`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``architecture``, ``code``, ``command``, ``convert_boolean_return``, ``flags``, ``interpreter``, and ``provider`` are properties of this resource, with the |ruby| type shown. |see attributes|

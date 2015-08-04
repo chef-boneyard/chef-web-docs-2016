@@ -18,7 +18,7 @@ where
 * ``'/etc/apache2'`` specifies the directory
 * ``owner``, ``group``, and ``mode`` define the permissions
 
-The full syntax for all of the attributes that are available to the |resource directory| resource is:
+The full syntax for all of the properties that are available to the |resource directory| resource is:
 
 .. code-block:: ruby
 
@@ -39,6 +39,6 @@ The full syntax for all of the attributes that are available to the |resource di
 where 
 
 * ``directory`` is the resource
-* ``name`` is the name of the resource block; when the ``path`` attribute is not specified, ``name`` is also the path to the directory, from the root
+* ``name`` is the name of the resource block; when the ``path`` property is not specified, ``name`` is also the path to the directory, from the root
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``recursive``, and ``rights`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, ``recursive``, and ``rights`` are properties of this resource, with the |ruby| type shown. |see attributes|

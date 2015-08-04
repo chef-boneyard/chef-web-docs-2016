@@ -13,7 +13,7 @@ A |resource ruby_block| resource block executes a block of arbitrary |ruby| code
      action :run
    end
 
-The full syntax for all of the attributes that are available to the |resource ruby_block| resource is:
+The full syntax for all of the properties that are available to the |resource ruby_block| resource is:
 
 .. code-block:: ruby
 
@@ -32,4 +32,4 @@ where
 * ``name`` is the name of the resource block
 * ``block`` is the block of |ruby| code to be executed
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``block``, ``block_name``, and ``provider`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``block``, ``block_name``, and ``provider`` are properties of this resource, with the |ruby| type shown. |see attributes|

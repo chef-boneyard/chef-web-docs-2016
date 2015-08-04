@@ -10,7 +10,7 @@ A |resource package_windows| resource block manages a package on a node, typical
 
 which will install the named package using all of the default options and the default action (``:install``).
 
-The full syntax for all of the attributes that are available to the |resource package_windows| resource is:
+The full syntax for all of the properties that are available to the |resource package_windows| resource is:
 
 .. code-block:: ruby
 
@@ -33,4 +33,4 @@ where
 * ``windows_package`` tells the |chef client| to manage a package
 * ``'name'`` is the name of the package
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-* ``checksum``, ``installer_type``, ``options``, ``package_name``, ``provider``, ``remote_file_attributes``, ``returns``, ``source``, and ``timeout`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``checksum``, ``installer_type``, ``options``, ``package_name``, ``provider``, ``remote_file_attributes``, ``returns``, ``source``, and ``timeout`` are properties of this resource, with the |ruby| type shown. |see attributes|

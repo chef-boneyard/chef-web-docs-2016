@@ -10,7 +10,7 @@ A |resource ifconfig| resource block manages interfaces, such as a static IP add
      device 'eth1'
    end
 
-The full syntax for all of the attributes that are available to the |resource ifconfig| resource is:
+The full syntax for all of the properties that are available to the |resource ifconfig| resource is:
 
 .. code-block:: ruby
 
@@ -38,4 +38,4 @@ where
 * ``ifconfig`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``bcast``, ``bootproto``, ``device``, ``hwaddr``, ``inet_addr``, ``mask``, ``metric``, ``mtu``, ``network``, ``onboot``, ``onparent``, ``provider``,  and ``target`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``bcast``, ``bootproto``, ``device``, ``hwaddr``, ``inet_addr``, ``mask``, ``metric``, ``mtu``, ``network``, ``onboot``, ``onparent``, ``provider``,  and ``target`` are properties of this resource, with the |ruby| type shown. |see attributes|

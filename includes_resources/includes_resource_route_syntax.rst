@@ -11,7 +11,7 @@ A |resource route| resource block manages the system routing table in a |linux| 
      device 'eth1'
    end
 
-The full syntax for all of the attributes that are available to the |resource route| resource is:
+The full syntax for all of the properties that are available to the |resource route| resource is:
 
 .. code-block:: ruby
 
@@ -31,4 +31,4 @@ where
 * ``route`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``device``, ``gateway``, ``netmask``, ``provider`` and ``target`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``device``, ``gateway``, ``netmask``, ``provider`` and ``target`` are properties of this resource, with the |ruby| type shown. |see attributes|

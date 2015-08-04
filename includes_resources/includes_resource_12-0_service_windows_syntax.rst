@@ -11,7 +11,7 @@ A |resource service_windows| resource block manages the state of a service on a 
      startup_type :manual
    end
 
-The full syntax for all of the attributes that are available to the |resource service_windows| resource is:
+The full syntax for all of the properties that are available to the |resource service_windows| resource is:
 
 .. code-block:: ruby
 
@@ -38,4 +38,4 @@ where
 * ``windows_service`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``init_command``, ``pattern``, ``provider``, ``reload_command``, ``restart_command``, ``service_name``, ``start_command``, ``startup_type``, ``status_command``, ``stop_command``, ``supports``, and ``timeout`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``init_command``, ``pattern``, ``provider``, ``reload_command``, ``restart_command``, ``service_name``, ``start_command``, ``startup_type``, ``status_command``, ``stop_command``, ``supports``, and ``timeout`` are properties of this resource, with the |ruby| type shown. |see attributes|

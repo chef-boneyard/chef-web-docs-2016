@@ -18,7 +18,7 @@ where
 * ``'/var/www/customers/public_html/index.php'`` is path to the file and also the filename to be managed
 * ``content`` defines the contents of the file
 
-The full syntax for all of the attributes that are available to the |resource file| resource is:
+The full syntax for all of the properties that are available to the |resource file| resource is:
 
 .. code-block:: ruby
 
@@ -41,7 +41,7 @@ The full syntax for all of the attributes that are available to the |resource fi
 where 
 
 * ``file`` is the resource
-* ``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the path to the file
+* ``name`` is the name of the resource block; when the ``path`` property is not specified as part of a recipe, ``name`` is also the path to the file
 * ``content`` specifies the contents of the file
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``backup``, ``checksum``, ``content``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, and ``rights`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``backup``, ``checksum``, ``content``, ``group``, ``inherits``, ``mode``, ``owner``, ``path``, ``provider``, and ``rights`` are properties of this resource, with the |ruby| type shown. |see attributes|

@@ -25,7 +25,7 @@ For a package that has different package names, depending on the platform, use a
 
 where ``'redhat', 'centos'`` will install |apache| using the ``httpd`` package and ``'ubuntu', 'debian'`` will install it using the ``apache2`` package
 
-The full syntax for all of the attributes that are available to the |resource package| resource is:
+The full syntax for all of the properties that are available to the |resource package| resource is:
 
 .. code-block:: ruby
 
@@ -53,4 +53,4 @@ where
 * ``package`` tells the |chef client| to manage a package; the |chef client| will determine the correct package provider to use based on the platform running on the node
 * ``'name'`` is the name of the package
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-* ``allow_downgrade``, ``arch``, ``default_release``, ``flush_cache``, ``gem_binary``, ``options``, ``package_name``, ``provider``, ``response_file``, ``response_file_variables``, ``source``, ``recursive``, ``timeout``, and ``version`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``allow_downgrade``, ``arch``, ``default_release``, ``flush_cache``, ``gem_binary``, ``options``, ``package_name``, ``provider``, ``response_file``, ``response_file_variables``, ``source``, ``recursive``, ``timeout``, and ``version`` are properties of this resource, with the |ruby| type shown. |see attributes|

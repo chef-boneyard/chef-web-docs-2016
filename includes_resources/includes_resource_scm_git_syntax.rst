@@ -12,7 +12,7 @@ A |resource scm_git| resource block manages source control resources that exist 
      action :sync
    end
 
-The full syntax for all of the attributes that are available to the |resource scm_git| resource is:
+The full syntax for all of the properties that are available to the |resource scm_git| resource is:
 
 .. code-block:: ruby
 
@@ -41,6 +41,6 @@ The full syntax for all of the attributes that are available to the |resource sc
 where 
 
 * ``git`` is the resource
-* ``name`` is the name of the resource block and also (when ``destination`` is not specified) the location in which the source files will be placed and/or synchronized with the files under source control management
+* ``name`` is the name of the resource block and also (when the ``destination`` property is not specified) the location in which the source files will be placed and/or synchronized with the files under source control management
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``additional_remotes``, ``checkout_branch``, ``depth``, ``destination``, ``enable_checkout``, ``enable_submodules``, ``environment``, ``group``, ``provider``, ``reference``, ``remote``, ``repository``, ``revision``, ``ssh_wrapper``, ``timeout``, and ``user`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``additional_remotes``, ``checkout_branch``, ``depth``, ``destination``, ``enable_checkout``, ``enable_submodules``, ``environment``, ``group``, ``provider``, ``reference``, ``remote``, ``repository``, ``revision``, ``ssh_wrapper``, ``timeout``, and ``user`` are properties of this resource, with the |ruby| type shown. |see attributes|

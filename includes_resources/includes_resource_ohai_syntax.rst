@@ -10,7 +10,7 @@ A |resource ohai| resource block reloads the |ohai| configuration on a node:
      action :reload
    end
 
-The full syntax for all of the attributes that are available to the |resource ohai| resource is:
+The full syntax for all of the properties that are available to the |resource ohai| resource is:
 
 .. code-block:: ruby
 
@@ -28,4 +28,4 @@ where
 * ``ohai`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``name``, ``plugin``,  and ``provider`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``name``, ``plugin``,  and ``provider`` are properties of this resource, with the |ruby| type shown. |see attributes|

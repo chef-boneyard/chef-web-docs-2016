@@ -15,7 +15,7 @@ A |resource user| resource block manages users on a node:
      password '$1$JJsvHslasdfjVEroftprNn4JHtDi'
    end
 
-The full syntax for all of the attributes that are available to the |resource user| resource is:
+The full syntax for all of the properties that are available to the |resource user| resource is:
 
 .. code-block:: ruby
 
@@ -43,4 +43,4 @@ where
 * ``user`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``comment``, ``force``, ``gid``, ``home``, ``manage_home``, ``non_unique``, ``password``, ``provider``, ``shell``, ``supports``, ``system``, ``uid``, and ``username`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``comment``, ``force``, ``gid``, ``home``, ``manage_home``, ``non_unique``, ``password``, ``provider``, ``shell``, ``supports``, ``system``, ``uid``, and ``username`` are properties of this resource, with the |ruby| type shown. |see attributes|

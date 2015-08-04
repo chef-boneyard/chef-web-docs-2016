@@ -19,7 +19,7 @@ where
 * ``'motd.erb'`` specifies the name of a template that exists in in the ``/templates`` folder of a cookbook
 * ``owner``, ``group``, and ``mode`` define the permissions
 
-The full syntax for all of the attributes that are available to the |resource template| resource is:
+The full syntax for all of the properties that are available to the |resource template| resource is:
 
 .. code-block:: ruby
 
@@ -53,4 +53,4 @@ where
 * ``name`` is the name of the resource block, typically the path to the location in which a file is created *and also* the name of the file to be managed. For example: ``/var/www/html/index.html``, where ``/var/www/html/`` is the fully qualified path to the location and ``index.html`` is the name of the file
 * ``source`` is the template file that will be used to create the file on the node, for example: ``index.html.erb``; the template file is located in the ``/templates`` directory of a cookbook
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``atomic_update``, ``backup``, ``cookbook``, ``force_unlink``, ``group``, ``helper``, ``helpers``, ``inherits``, ``local``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``sensitive``, ``source``, and ``variables`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``atomic_update``, ``backup``, ``cookbook``, ``force_unlink``, ``group``, ``helper``, ``helpers``, ``inherits``, ``local``, ``manage_symlink_source``, ``mode``, ``owner``, ``path``, ``provider``, ``rights``, ``sensitive``, ``source``, and ``variables`` are properties of this resource, with the |ruby| type shown. |see attributes|

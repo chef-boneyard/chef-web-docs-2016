@@ -10,7 +10,7 @@ A |resource package_ips| resource block manages a package on a node, typically b
 
 which will install the named package using all of the default options and the default action (``:install``).
 
-The full syntax for all of the attributes that are available to the |resource package_ips| resource is:
+The full syntax for all of the properties that are available to the |resource package_ips| resource is:
 
 .. code-block:: ruby
 
@@ -32,4 +32,4 @@ where
 * ``ips_package`` tells the |chef client| to manage a package
 * ``'name'`` is the name of the package
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-* ``accept_license``, ``options``, ``package_name``, ``provider``, ``source``, ``timeout``, and ``version`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``accept_license``, ``options``, ``package_name``, ``provider``, ``source``, ``timeout``, and ``version`` are properties of this resource, with the |ruby| type shown. |see attributes|

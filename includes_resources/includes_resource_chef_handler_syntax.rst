@@ -23,7 +23,7 @@ and:
 
 show how to enable those handlers in a recipe.
 
-The full syntax for all of the attributes that are available to the |lwrp chef handler| resource is:
+The full syntax for all of the properties that are available to the |lwrp chef handler| resource is:
 
 .. code-block:: ruby
 
@@ -42,4 +42,4 @@ where
 * ``chef_handler`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``arguments``, ``class_name``, ``source``, and ``supports`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``arguments``, ``class_name``, ``source``, and ``supports`` are properties of this resource, with the |ruby| type shown. |see attributes|

@@ -23,7 +23,7 @@ and then the same |resource dsc_resource| with |chef|:
       property :destination, "C:\Users\Public\Documents\ExtractionPath"
     end
 
-The full syntax for all of the attributes that are available to the |resource dsc_resource| resource is:
+The full syntax for all of the properties that are available to the |resource dsc_resource| resource is:
 
 .. code-block:: ruby
 
@@ -40,4 +40,4 @@ where
 * ``dsc_resource`` is the resource
 * ``name`` is the name of the resource block
 * ``property`` is zero (or more) properties in the |windows powershell_dsc_short| resource, where each property is entered on a separate line, ``:dsc_property_name`` is the case-insensitive name of that property, and ``"property_value"`` is a |ruby| value to be applied by the |chef client|
-* ``module_name``, ``property``, and ``resource`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``module_name``, ``property``, and ``resource`` are properties of this resource, with the |ruby| type shown. |see attributes|

@@ -22,7 +22,7 @@ A |resource cron| resource block manage |cron| entries. For example, to get a we
      }.join(' ')
    end
 
-The full syntax for all of the attributes that are available to the |resource cron| resource is:
+The full syntax for all of the properties that are available to the |resource cron| resource is:
 
 .. code-block:: ruby
 
@@ -51,4 +51,4 @@ where
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``command``, ``day``, ``home``, ``hour``, ``mailto``, ``minute``, ``month``, ``path``, ``provider``, ``shell``, ``time``, ``user``, and ``weekday`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``command``, ``day``, ``home``, ``hour``, ``mailto``, ``minute``, ``month``, ``path``, ``provider``, ``shell``, ``time``, ``user``, and ``weekday`` are properties of this resource, with the |ruby| type shown. |see attributes|

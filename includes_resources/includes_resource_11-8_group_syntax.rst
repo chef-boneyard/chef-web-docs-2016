@@ -12,7 +12,7 @@ A |resource group| resource block manages groups on a node:
      append true
    end
 
-The full syntax for all of the attributes that are available to the |resource group| resource is:
+The full syntax for all of the properties that are available to the |resource group| resource is:
 
 .. code-block:: ruby
 
@@ -33,4 +33,4 @@ where
 * ``group`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``append``, ``gid``, ``group_name``, ``members``, ``provider``, and ``system`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``append``, ``gid``, ``group_name``, ``members``, ``provider``, and ``system`` are properties of this resource, with the |ruby| type shown. |see attributes|

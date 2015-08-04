@@ -10,7 +10,7 @@ A |resource env| resource block manages environment keys in |windows|:
      value 'C:\\Windows\\system32\\cmd.exe'
    end
 
-The full syntax for all of the attributes that are available to the |resource env| resource is:
+The full syntax for all of the properties that are available to the |resource env| resource is:
 
 .. code-block:: ruby
 
@@ -29,4 +29,4 @@ where
 * ``env`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``delim``, ``key_name``, ``provider``, and ``value`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``delim``, ``key_name``, ``provider``, and ``value`` are properties of this resource, with the |ruby| type shown. |see attributes|

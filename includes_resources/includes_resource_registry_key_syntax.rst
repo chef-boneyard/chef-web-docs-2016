@@ -28,7 +28,7 @@ Use multiple registry key entries with key values that are based on node attribu
    end 
 
 
-The full syntax for all of the attributes that are available to the |resource registry_key| resource is:
+The full syntax for all of the properties that are available to the |resource registry_key| resource is:
 
 .. code-block:: ruby
 
@@ -52,4 +52,4 @@ where
 
   .. warning:: |values resource registry_key multi_string|
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``architecture``, ``key``, ``provider``, ``recursive`` and ``values`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``architecture``, ``key``, ``provider``, ``recursive`` and ``values`` are properties of this resource, with the |ruby| type shown. |see attributes|
