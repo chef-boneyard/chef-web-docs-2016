@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
 
-Use the file resource to define the contents of a file inline within the recipe:
+Use the |resource file| resource to define the contents of a file inline within the recipe:
 
 .. code-block:: ruby
        

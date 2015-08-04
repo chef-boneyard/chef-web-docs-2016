@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
 
-Use the cookbook_file resource when a file is stored a cookbook's ``/files`` directory:
+Use the |resource cookbook_file| resource for a file that is stored a cookbook's ``/files`` directory:
 
 .. code-block:: python
 

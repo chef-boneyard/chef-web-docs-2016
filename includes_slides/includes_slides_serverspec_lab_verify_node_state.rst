@@ -3,4 +3,4 @@
 
 
 * Problem: Manually verifying the state of a node is tedious and error-prone.
-* Success Criteria: The end state of the node is automatically tested.
+* Success criteria: The end state of the node is automatically tested.

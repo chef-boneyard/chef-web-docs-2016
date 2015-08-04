@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
 
 
-Use the template resource when a template is stored a cookbook's ``/templates`` directory:
+Use the |resource template| resource when a template is stored a cookbook's ``/templates`` directory:
 
 .. code-block:: python
        

@@ -24,4 +24,3 @@
           attributes:
 
 #. Save the file.
-

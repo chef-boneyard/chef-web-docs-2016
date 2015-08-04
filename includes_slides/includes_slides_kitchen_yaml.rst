@@ -22,4 +22,3 @@ The |kitchen yml| file defines the test coverage:
        run_list:
          - recipe[apache::default]
        attributes:
-

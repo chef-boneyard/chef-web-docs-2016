@@ -5,4 +5,3 @@
 * Portable, lightweight application runtime
 * |linux| containers
 * Installed on the workstation
-

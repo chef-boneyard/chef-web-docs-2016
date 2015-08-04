@@ -3,6 +3,6 @@
 
 .. Images like these with text are better in includes for abstraction
 
-This is also a test
+This is also a test:
 
 .. image:: ../../images/rubocop_output_slides.png

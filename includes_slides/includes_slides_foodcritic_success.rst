@@ -3,4 +3,4 @@
 
 
 * What rules have been deprecated?
-* What does Foodcritic return on success?
+* What does |foodcritic| return on success?
