@@ -18,7 +18,7 @@ where
 
 * ``aws_security_group`` is the resource
 * ``name`` is the name of the resource block and also the name of a security group in |amazon aws|
-* ``inbound_rules``, ``outbound_rules``, and ``vpc`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``inbound_rules``, ``outbound_rules``, and ``vpc`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
@@ -30,5 +30,5 @@ where
      outbound_rules [
        {:port => 22..22, :protocol => :tcp, :destinations => ['0.0.0.0/0'] }
      ]
-     aws_tags :chef_type => "aws_security_group"
+     aws_tags :chef_type => 'aws_security_group'
    end

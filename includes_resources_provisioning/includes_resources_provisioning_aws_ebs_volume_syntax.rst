@@ -21,7 +21,7 @@ where
 
 * ``aws_ebs_volume`` is the resource
 * ``name`` is the name of the resource block and also the name of a block-level storage device that is attached to an |amazon ec2| instance
-* ``availability_zone``, ``device``, ``encrypted``, ``iops``, ``machine``, ``size``, and ``volume_type`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``availability_zone``, ``device``, ``encrypted``, ``iops``, ``machine``, ``size``, and ``volume_type`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
@@ -35,5 +35,5 @@ where
      volume_type 'io1'
      encrypted true
      device '/dev/sda2'
-     aws_tags :chef_type => "aws_ebs_volume"
+     aws_tags :chef_type => 'aws_ebs_volume'
    end

@@ -15,7 +15,7 @@ where
 
 * ``aws_launch_configuration`` is the resource
 * ``name`` is the name of the resource block and also the name of an |amazon ami| instance type
-* ``image``, ``instance_type``, and ``options`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``image``, ``instance_type``, and ``options`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

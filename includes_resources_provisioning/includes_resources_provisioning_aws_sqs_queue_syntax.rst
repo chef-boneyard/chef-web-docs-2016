@@ -13,7 +13,7 @@ where
 
 * ``aws_sqs_queue`` is the resource
 * ``name`` is the name of the resource block and also the name of a queue in |amazon sqs|
-* ``options`` is an attribute of this resource, with the |ruby| type shown. |see attributes|
+* ``options`` is a property of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

@@ -13,7 +13,7 @@ where
 
 * ``aws_internet_gateway`` is the resource
 * ``name`` is the name of the resource block and also the name of an internet gateway for a defined virtual network within |amazon vpc|
-* ``internet_gateway_id`` is an attribute of this resource, with the |ruby| type shown. |see attributes|
+* ``internet_gateway_id`` is a property of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

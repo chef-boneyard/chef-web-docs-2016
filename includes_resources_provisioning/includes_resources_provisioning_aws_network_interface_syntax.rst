@@ -19,7 +19,7 @@ where
 
 * ``aws_network_interface`` is the resource
 * ``name`` is the name of the resource block and also the name of a network interface in |amazon ec2|
-* ``description``, ``device_index``, ``machine``, ``security_groups``, and ``subnet`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``description``, ``device_index``, ``machine``, ``security_groups``, and ``subnet`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

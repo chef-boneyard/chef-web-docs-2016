@@ -26,4 +26,4 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - ``name``
      - Use to specify the name of the |amazon ami|.
    * - ``options``
-     - Use to specify a |ruby hash| that contains xxxxx. Default value: ``{ }``.
+     - Use to specify a |ruby hash| that contains a list of options used by this resource. Default value: ``{ }``.

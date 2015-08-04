@@ -16,7 +16,7 @@ This |chef provisioning| driver-specific resource has the following properties:
 
        .. code-block:: ruby
 
-          aws_tags { :chef_type => "aws_security_group" }
+          aws_tags { :chef_type => 'aws_security_group' }
 
    * - ``chef_server``
      - |provisioning_server|

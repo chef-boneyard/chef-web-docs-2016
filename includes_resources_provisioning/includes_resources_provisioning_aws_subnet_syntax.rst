@@ -18,7 +18,7 @@ where
 
 * ``aws_subnet`` is the resource
 * ``name`` is the name of the resource block and also the name of a subnet within a defined virtual network in |amazon vpc|
-* ``availability_zone``, ``cidr_block``, ``map_public_ip_on_launch``, ``route_table``, ``vpc`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``availability_zone``, ``cidr_block``, ``map_public_ip_on_launch``, ``route_table``, ``vpc`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
@@ -30,5 +30,5 @@ where
      availability_zone 'us-west-1a'
      map_public_ip_on_launch true
      route_table 'ref-public'
-     aws_tags :chef_type => "aws_subnet"
+     aws_tags :chef_type => 'aws_subnet'
    end

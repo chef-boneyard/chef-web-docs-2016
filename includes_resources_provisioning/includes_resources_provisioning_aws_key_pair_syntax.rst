@@ -16,7 +16,7 @@ where
 
 * ``aws_key_pair`` is the resource
 * ``name`` is the name of the resource block
-* ``allow_overwrite``, and ``private_key_options`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``allow_overwrite``, and ``private_key_options`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

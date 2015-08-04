@@ -13,7 +13,7 @@ where
 
 * ``aws_instance`` is the resource
 * ``name`` is the name of the resource block and also the name of an instance in |amazon ec2|
-* ``instance_id`` is an attribute of this resource, with the |ruby| type shown. |see attributes|
+* ``instance_id`` is a property of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

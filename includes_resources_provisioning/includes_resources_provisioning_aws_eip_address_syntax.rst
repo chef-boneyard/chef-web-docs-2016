@@ -15,7 +15,7 @@ where
 
 * ``aws_eip_address`` is the resource
 * ``name`` is the name of the resource block and also the name of an |amazon eip|
-* ``associate_to_vpc``, ``machine``, and ``public_ip`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``associate_to_vpc``, ``machine``, and ``public_ip`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

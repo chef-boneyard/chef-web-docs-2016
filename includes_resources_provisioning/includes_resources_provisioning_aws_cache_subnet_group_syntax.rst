@@ -14,8 +14,8 @@ The syntax for using the ``aws_cache_subnet_group`` driver-specific resource is 
 where 
 
 * ``aws_cache_subnet_group`` is the resource
-* ``name`` is the name of the resource block (and is the same as the ``group_name`` attribute if ``group_name`` is not specified in the resource block)
-* ``description`` and ``subnets`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``name`` is the name of the resource block (and is the same as the ``group_name`` property if ``group_name`` is not specified in the resource block)
+* ``description`` and ``subnets`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

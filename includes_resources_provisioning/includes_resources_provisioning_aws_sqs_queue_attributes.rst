@@ -27,4 +27,3 @@ This |chef provisioning| driver-specific resource has the following properties:
        .. code-block:: ruby
 
           options({ :delay_seconds => 1 })
-

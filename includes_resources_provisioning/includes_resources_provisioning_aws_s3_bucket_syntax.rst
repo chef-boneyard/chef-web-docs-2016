@@ -15,7 +15,7 @@ where
 
 * ``aws_s3_bucket`` is the resource
 * ``name`` is the name of the resource block and also the name of an |amazon s3| bucket
-* ``enable_website_hosting``, and ``options`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``enable_website_hosting``, and ``options`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
@@ -24,6 +24,6 @@ where
    aws_s3_bucket 'name' do
      enable_website_hosting true
      options({ :acl => 'private' })
-     website_options :index_document => { :suffix => "index.html" },
-                     :error_document => { :key => "not_found.html" }
+     website_options :index_document => { :suffix => 'index.html' },
+                     :error_document => { :key => 'not_found.html' }
    end

@@ -23,7 +23,7 @@ where
 
 * ``aws_cache_replication_group`` is the resource
 * ``name`` is the name of the resource block
-* ``automatic_failover``, ``engine``, ``engine_version``, ``node_type``, ``number_cache_clusters``, ``preferred_availability_zones``, and ``subnet_group_name`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``automatic_failover``, ``engine``, ``engine_version``, ``node_type``, ``number_cache_clusters``, ``preferred_availability_zones``, and ``subnet_group_name`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
@@ -36,9 +36,9 @@ where
      node_type 'cache.m3.large'
      number_cache_clusters 3
      preferred_availability_zones [ 
-       `PreferredAvailabilityZones.member.1=us-east-1a`, 
-       `PreferredAvailabilityZones.member.2=us-east-1c`, 
-       `PreferredAvailabilityZones.member.3=us-east-1d`
+       'PreferredAvailabilityZones.member.1=us-east-1a', 
+       'PreferredAvailabilityZones.member.2=us-east-1c', 
+       'PreferredAvailabilityZones.member.3=us-east-1d'
      ]
      subnet_group_name 'subnet-1'
    end

@@ -24,6 +24,6 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - ``name``
      - Use to specify the name of the |amazon s3| bucket.
    * - ``options``
-     - Use to specify a |ruby hash| that contains xxxxx. Default value: ``{ }``.
+     - Use to specify a |ruby hash| that contains options for this resource. Default value: ``{ }``.
    * - ``website_options``
      - Use to specify a |ruby hash| that contains details about support for the index and custom error documents. Default value: ``{ }``.

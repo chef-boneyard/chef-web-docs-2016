@@ -19,7 +19,7 @@ where
 
 * ``aws_auto_scaling_group`` is the resource
 * ``name`` is the name of the resource block and also the name of the auto scaling group in |amazon ec2|
-* ``availability_zones``, ``desired_capacity``, ``max_size``, ``min_size``, ``launch_configuration``, ``load_balancers``, and ``options`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``availability_zones``, ``desired_capacity``, ``max_size``, ``min_size``, ``launch_configuration``, ``load_balancers``, and ``options`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

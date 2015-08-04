@@ -18,7 +18,7 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - ``driver``
      - |driver_provisioning|
    * - ``ignore_route_targets``
-     - Use to specify a regular expression that describes one (or more) route targets that should be ignored. This attribute uses a regular expression because the full identifier for the instance or network interface is not known ahead of time. For example, in many cases a route for network address translation will points at the network interface that is attached to the network address translation. For example: ``['^eni-']`` to ignore all network interface routes (the ID prefix for all network interface routes is ``eni``).
+     - Use to specify a regular expression that describes one (or more) route targets that should be ignored. This property uses a regular expression because the full identifier for the instance or network interface is not known ahead of time. For example, in many cases a route for network address translation will points at the network interface that is attached to the network address translation. For example: ``['^eni-']`` to ignore all network interface routes (the ID prefix for all network interface routes is ``eni``).
    * - ``managed_entry_store``
      - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``

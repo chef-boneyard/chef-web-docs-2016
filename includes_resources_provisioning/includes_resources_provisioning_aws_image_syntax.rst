@@ -13,7 +13,7 @@ where
 
 * ``aws_image`` is the resource
 * ``name`` is the name of the resource block and also the name of an |amazon ami| image
-* ``image_id`` is an attribute of this resource, with the |ruby| type shown. |see attributes|
+* ``image_id`` is a property of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

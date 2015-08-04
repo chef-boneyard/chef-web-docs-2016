@@ -14,7 +14,7 @@ This |chef provisioning| driver-specific resource has the following properties:
 
        .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
    * - ``az_mode``
-     - Use to specify if nodes in this group are created in a single availability zone or across multiple availability zones. This attribute is supported only for |memcached| cache clusters. Possible values: ``single-az``, ``cross-az``.
+     - Use to specify if nodes in this group are created in a single availability zone or across multiple availability zones. This property is supported only for |memcached| cache clusters. Possible values: ``single-az``, ``cross-az``.
    * - ``chef_server``
      - |provisioning_server|
    * - ``cluster_name``
@@ -32,16 +32,16 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - ``number_nodes``
      - Use to specify the initial number of cache nodes for a cache cluster. If |memcached| is available, valid values are between ``1`` and ``20``. Default value: ``1``.
    * - ``preferred_availability_zone``
-     - Use to specify the perferred availability zone for this cache cluster. Use this attribute **or** use ``preferred_availability_zones``.
+     - Use to specify the perferred availability zone for this cache cluster. Use this property **or** use ``preferred_availability_zones``.
    * - ``preferred_availability_zones``
-     - Use to specify an array of identifiers for |amazon ec2| availability zones available to this cache cluster. Use this attribute **or** use ``preferred_availability_zone``. For example:
+     - Use to specify an array of identifiers for |amazon ec2| availability zones available to this cache cluster. Use this property **or** use ``preferred_availability_zone``. For example:
 
        .. code-block:: ruby
 
           preferred_availability_zones [ 
-            `PreferredAvailabilityZones.member.1=us-east-1a`, 
-            `PreferredAvailabilityZones.member.2=us-east-1c`, 
-            `PreferredAvailabilityZones.member.3=us-east-1d`
+            'PreferredAvailabilityZones.member.1=us-east-1a', 
+            'PreferredAvailabilityZones.member.2=us-east-1c', 
+            'PreferredAvailabilityZones.member.3=us-east-1d'
           ]
 
    * - ``security_groups``

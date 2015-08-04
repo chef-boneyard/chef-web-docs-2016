@@ -549,7 +549,7 @@ For example, the ``template`` resource::
    =====================================================
    .. include:: ../../includes_resources/includes_resource_template_attributes.rst
 
-The actual content lives in the ``include_resources`` directory, and for each section at the file named in the path. For example, the attributes available to the ``template`` resource are in the ``includes_resource_template_attributes.rst`` file::
+The actual content lives in the ``include_resources`` directory, and for each section at the file named in the path. For example, the properties available to the ``template`` resource are in the ``includes_resource_template_attributes.rst`` file::
 
    |description resource_attributes_intro|
    
@@ -557,7 +557,7 @@ The actual content lives in the ``include_resources`` directory, and for each se
       :widths: 150 450
       :header-rows: 1
    
-      * - Attribute
+      * - Property
         - Description
       * - ``atomic_update``
         - |atomic_update| Default value: ``true``.
@@ -578,7 +578,7 @@ The actual content lives in the ``include_resources`` directory, and for each se
            .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 
-These attributes are available in the docs for the current version of |chef| and are the same attributes available in previous versions, until there is a difference. The chef-client 12.1 release added the ``verify`` attribute. This is versioned in |chef docs| using a file named ``includes_resource_12-0_template_attributes.rst``, which is then included backwards all the way to chef-client 11-4 docs, which is when the ``helper`` and ``helpers`` attributes were added. Three files, a few subtle changes, hooked in the same way, but with the correct file name for the correct version. This is how |chef docs| build outputs are versioned.
+These properties are available in the docs for the current version of |chef| and are the same properties available in previous versions, until there is a difference. The chef-client 12.1 release added the ``verify`` property. This is versioned in |chef docs| using a file named ``includes_resource_12-0_template_attributes.rst``, which is then included backwards all the way to chef-client 11-4 docs, which is when the ``helper`` and ``helpers`` properties were added. Three files, a few subtle changes, hooked in the same way, but with the correct file name for the correct version. This is how |chef docs| build outputs are versioned.
 
 This pattern is the same everywhere. In some cases, it may well be that a topic is only included in a single build output, but this is rare. Most of the topics are included many times, across client, server, and devkit docs, and across versions (backwards in time). So keep this in mind when making changes.
 
@@ -631,9 +631,9 @@ When submitting a PR or issue to |chef docs| for a docs change, remember:
 * Keep in mind potential versioning issues, make those clear in the PR or issue if you're not sure---|chef docs| will help out
 * Focus on the actual content---|chef docs| will help with any string replacements, includes file management, and versioning
 
-For example, if you wanted to add an attribute to a resource, the PR or issue could look like this::
+For example, if you wanted to add an property to a resource, the PR or issue could look like this::
 
-   Please add the following attribute to the template resource:
+   Please add the following property to the template resource:
    
    ``foo``
    Use to do foo. Default value: ``false``.

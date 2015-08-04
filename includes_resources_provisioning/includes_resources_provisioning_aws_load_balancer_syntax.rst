@@ -13,7 +13,7 @@ where
 
 * ``aws_load_balancer`` is the resource
 * ``name`` is the name of the resource block and also the name of a load balancer in |amazon elb|
-* ``load_balancer_id`` is an attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``load_balancer_id`` is an properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 

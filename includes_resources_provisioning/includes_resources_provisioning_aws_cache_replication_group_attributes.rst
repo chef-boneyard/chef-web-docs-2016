@@ -39,9 +39,9 @@ This |chef provisioning| driver-specific resource has the following properties:
        .. code-block:: ruby
 
           preferred_availability_zones [ 
-            `PreferredAvailabilityZones.member.1=us-east-1a`, 
-            `PreferredAvailabilityZones.member.2=us-east-1c`, 
-            `PreferredAvailabilityZones.member.3=us-east-1d`
+            'PreferredAvailabilityZones.member.1=us-east-1a', 
+            'PreferredAvailabilityZones.member.2=us-east-1c', 
+            'PreferredAvailabilityZones.member.3=us-east-1d'
           ]
 
    * - ``security_groups``

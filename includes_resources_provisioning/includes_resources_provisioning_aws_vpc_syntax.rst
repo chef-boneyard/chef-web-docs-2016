@@ -21,7 +21,7 @@ where
 
 * ``aws_vpc`` is the resource
 * ``name`` is the name of the resource block and also the name of the defined virtual network in |amazon vpc|
-* ``cidr_block``, ``dhcp_options``, ``enable_dns_hostnames``, ``enable_dns_support``, ``internet_gateway``, ``instance_tenancy``, and ``main_routes`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``cidr_block``, ``dhcp_options``, ``enable_dns_hostnames``, ``enable_dns_support``, ``internet_gateway``, ``instance_tenancy``, and ``main_routes`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
@@ -35,5 +35,5 @@ where
      dhcp_options 'ref-dhcp-options'
      enable_dns_support true
      enable_dns_hostnames true
-     aws_tags :chef_type => "aws_vpc"
+     aws_tags :chef_type => 'aws_vpc'
    end

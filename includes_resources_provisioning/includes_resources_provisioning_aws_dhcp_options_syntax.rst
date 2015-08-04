@@ -18,7 +18,7 @@ where
 
 * ``aws_dhcp_options`` is the resource
 * ``name`` is the name of the resource block and also the name of an option set for the |dhcp| protocol
-* ``domain_name``, ``domain_name_servers``, ``netbios_name_servers``, ``netbios_node_type``, and ``ntp_servers`` are attributes of this resource, with the |ruby| type shown. |see attributes|
+* ``domain_name``, ``domain_name_servers``, ``netbios_name_servers``, ``netbios_node_type``, and ``ntp_servers`` are properties of this resource, with the |ruby| type shown. |see attributes|
 
 **Example**
 
@@ -30,5 +30,5 @@ where
      ntp_servers          %w(8.8.8.8 8.8.4.4)
      netbios_name_servers %w(8.8.8.8 8.8.4.4)
      netbios_node_type    2
-     aws_tags :chef_type => "aws_dhcp_options"
+     aws_tags :chef_type => 'aws_dhcp_options'
    end
