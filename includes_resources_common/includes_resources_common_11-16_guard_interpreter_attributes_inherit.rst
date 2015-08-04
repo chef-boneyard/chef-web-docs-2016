@@ -8,20 +8,20 @@ For example, the ``not_if`` guard statement in the following example **does not 
 
 .. code-block:: ruby
 
-   bash "javatooling" do
-     environment {"JAVA_HOME" => "/usr/lib/java/jdk1.7/home"}
-     code "java-based-daemon-ctl.sh -start"
-     not_if "java-based-daemon-ctl.sh -test-started"
+   bash 'javatooling' do
+     environment {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
+     code 'java-based-daemon-ctl.sh -start'
+     not_if 'java-based-daemon-ctl.sh -test-started'
    end
 
 and requires adding the ``environment`` property to the ``not_if`` guard statement so that it may use the ``JAVA_HOME`` path as part of its evaluation:
 
 .. code-block:: ruby
 
-   bash "javatooling" do
-     environment {"JAVA_HOME" => "/usr/lib/java/jdk1.7/home"}
-     code "java-based-daemon-ctl.sh -start"
-     not_if "java-based-daemon-ctl.sh -test-started, :environment => {"JAVA_HOME" => "/usr/lib/java/jdk1.7/home"}
+   bash 'javatooling' do
+     environment {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
+     code 'java-based-daemon-ctl.sh -start'
+     not_if 'java-based-daemon-ctl.sh -test-started', :environment => {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
    end
 
 To inherit properties, add the ``guard_attribute`` property to the resource block and set it to the appropriate value:
@@ -38,11 +38,11 @@ For example, using the same example as from above, but this time adding the ``gu
 
 .. code-block:: ruby
 
-   bash "javatooling" do
+   bash 'javatooling' do
      guard_interpreter :bash
-     environment {"JAVA_HOME" => "/usr/lib/java/jdk1.7/home"}
-     code "java-based-daemon-ctl.sh -start"
-     not_if "java-based-daemon-ctl.sh -test-started"
+     environment {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
+     code 'java-based-daemon-ctl.sh -start'
+     not_if 'java-based-daemon-ctl.sh -test-started'
    end
 
 The ``not_if`` statement now inherits the ``environment`` property and will use the ``JAVA_HOME`` path as part of its evaluation.

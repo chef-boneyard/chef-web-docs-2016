@@ -5,6 +5,6 @@ The ``path`` property is not implemented by any provider in any version of the |
 
 .. code-block:: ruby
 
-   execute "mycommand" do
-     environment "PATH" => "/my/path/to/bin:#{ENV["PATH"]}"
+   execute 'mycommand' do
+     environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
    end

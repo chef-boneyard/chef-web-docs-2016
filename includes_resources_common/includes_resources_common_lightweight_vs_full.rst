@@ -16,7 +16,7 @@ The following example shows the difference between the |resource file| resource 
            @resource_name = :file
            @path = name
            @backup = 5
-           @action = "create"
+           @action = 'create'
            @allowed_actions.push(:create, :delete, :touch, :create_if_missing)
          end
     

@@ -16,13 +16,13 @@ One situation where a first-run resource is useful is to prevent a command from 
 
 .. code-block:: ruby
 
-   execute "some_command" do
-     command "command to run once"
-     notifies :create, "ruby_block[some_command_run_flag]", :immediately
-     not_if { node.attribute?("attribute") }
+   execute 'some_command' do
+     command 'command to run once'
+     notifies :create, 'ruby_block[some_command_run_flag]', :immediately
+     not_if { node.attribute?('attribute') }
    end
    
-   ruby_block "some_command_run_flag" do
+   ruby_block 'some_command_run_flag' do
      block do
        node.set['attribute'] = true
        node.save

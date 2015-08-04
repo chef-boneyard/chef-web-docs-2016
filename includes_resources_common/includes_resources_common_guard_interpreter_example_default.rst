@@ -6,7 +6,7 @@ For example, the following code block will ensure the command is evaluated using
 
 .. code-block:: ruby
 
-   resource #name do
+   resource 'name' do
      guard_interpreter :default
      # code
    end

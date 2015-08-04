@@ -45,8 +45,8 @@ Notifications, via an implicit name:
      action :nothing
    end
    
-   log "call a notification" do
-     notifies :install, "package[package1, package2]", :immediately
+   log 'call a notification' do
+     notifies :install, 'package[package1, package2]', :immediately
    end
 
-.. note:: Notifications and subscriptions do not need to be updated when packages and versions are added or removed from the ``package_name`` or ``version`` attributes.
+.. note:: Notifications and subscriptions do not need to be updated when packages and versions are added or removed from the ``package_name`` or ``version`` properties.

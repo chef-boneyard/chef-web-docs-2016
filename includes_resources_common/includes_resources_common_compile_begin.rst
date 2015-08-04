@@ -6,7 +6,7 @@ Use ``.run_action(:some_action)`` at the end of a resource block to run the spec
 
 .. code-block:: ruby
 
-   resource_name "foo" do
+   resource_name 'foo' do
      action :nothing
    end.run_action(:some_action)
 
@@ -41,7 +41,7 @@ A very common use case us to install a |gem| during the compile phase so that it
 
 .. code-block:: ruby
 
-   chef_gem "foo" do
+   chef_gem 'foo' do
      action :install
    end
 
@@ -49,7 +49,7 @@ is effectively the same as
 
 .. code-block:: ruby
 
-   gem_package "foo" do
+   gem_package 'foo' do
      action :nothing
    end.run_action(:install)
    Gem.clear_paths
@@ -62,13 +62,12 @@ Resources that are executed during the compile phase cannot notify other resourc
 
 .. code-block:: ruby
 
-   execute "ifconfig"
+   execute 'ifconfig'
    
    p = package 'vim-enhanced' do
      action :nothing
-     notifies :run, "execute[ifconfig]", :immediately
+     notifies :run, 'execute[ifconfig]', :immediately
    end
    p.run_action(:install)
 
 A better approach in this type of situation is to install the package before the resource collection is built to ensure that it is available to other resources later on.
-

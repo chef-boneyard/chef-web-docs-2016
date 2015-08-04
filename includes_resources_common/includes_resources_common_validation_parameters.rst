@@ -10,18 +10,18 @@ The following parameters can be passed to the attribute keyword to validate a pa
    * - Parameter
      - Description
    * - ``:default``
-     - Use to set the default value for a parameter.
+     - Set the default value for a parameter.
    * - ``:kind_of``
-     - Use to ensure that a value is a ``kind_of?(whatever)``. Pass this parameter as an array to ensure that a value is one of those types.
+     - Ensure that a value is a ``kind_of?(whatever)``. Pass this parameter as an array to ensure that a value is one of those types.
    * - ``:required``
-     - Use to raise an exception if a parameter is missing. Valid values: ``true`` or ``false``. Default value: ``false``.
+     - Raise an exception if a parameter is missing. Valid values: ``true`` or ``false``. Default value: ``false``.
    * - ``:regex``
-     - Use to match the value of a parameter against a regular expression.
+     - Match the value of a parameter against a regular expression.
    * - ``:equal_to``
-     - Use to match the value of a parameter with ``==``. An array means it can be equal to any of the values.
+     - Match the value of a parameter with ``==``. An array means it can be equal to any of the values.
    * - ``:name_attribute``
-     - Use to specify the name of a resource. Valid value: ``true`` or ``false``.
+     - Specify the name of a resource. Valid value: ``true`` or ``false``.
    * - ``:callbacks``
-     - Use to take a |hash| of |ruby proc|, which should return ``true`` if the argument is valid. The key will be inserted into the error message if the |ruby proc| does not return true: ``"Option #{key}'s value #{value} #{message}!"``.
+     - Use a |hash| of |ruby proc|, which should return ``true`` if the argument is valid. The key will be inserted into the error message if the |ruby proc| does not return true: ``"Option #{key}'s value #{value} #{message}!"``.
    * - ``:respond_to``
-     - Use to ensure that a value has a given method. Takes one method name or an array of method names.
+     - Ensure that a value has a given method. Takes one method name or an array of method names.

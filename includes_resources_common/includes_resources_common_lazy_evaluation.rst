@@ -14,18 +14,18 @@ For example, a resource that is **not** doing lazy evaluation:
 
 .. code-block:: ruby
 
-   template "template_name" do
+   template 'template_name' do
      # some attributes
-     path "/foo/bar"
+     path '/foo/bar'
    end
 
 and a resource block that is doing lazy evaluation:
 
 .. code-block:: ruby
 
-   template "template_name" do
+   template 'template_name' do
      # some attributes
-     path lazy { " some Ruby code " }
+     path lazy { ' some Ruby code ' }
    end
 
 In the previous examples, the first resource uses the value ``/foo/bar`` and the second resource uses the value provided by the code block, as long as the contents of that code block are a valid resource property.

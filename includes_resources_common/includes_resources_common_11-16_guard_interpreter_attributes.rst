@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``guard_interpreter`` attribute may be set to any of the following values:
+The ``guard_interpreter`` property may be set to any of the following values:
 
 .. list-table::
    :widths: 150 450
@@ -11,18 +11,18 @@ The ``guard_interpreter`` attribute may be set to any of the following values:
    * - Value
      - Description
    * - ``:bash``
-     - Use to evaluate a string command using the |resource script_bash| resource.
+     - Evaluates a string command using the |resource script_bash| resource.
    * - ``:batch``
-     - Use to evaluate a string command using the |resource batch| resource.
+     - Evaluates a string command using the |resource batch| resource.
    * - ``:csh``
-     - Use to evaluate a string command using the |resource script_csh| resource.
+     - Evaluates a string command using the |resource script_csh| resource.
    * - ``:default``
-     - Default. Use to execute the default interpreter as identified by the |chef client|.
+     - Default. Executes the default interpreter as identified by the |chef client|.
    * - ``:perl``
-     - Use to evaluate a string command using the |resource script_perl| resource.
+     - Evaluates a string command using the |resource script_perl| resource.
    * - ``:powershell_script``
-     - Use to evaluate a string command using the |resource powershell_script| resource.
+     - Evaluates a string command using the |resource powershell_script| resource.
    * - ``:python``
-     - Use to evaluate a string command using the |resource script_python| resource.
+     - Evaluates a string command using the |resource script_python| resource.
    * - ``:ruby``
-     - Use to evaluate a string command using the |resource script_ruby| resource.
+     - Evaluates a string command using the |resource script_ruby| resource.
