@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   homebrew_package "name of package" do
+   homebrew_package 'name of package' do
      action :install
    end

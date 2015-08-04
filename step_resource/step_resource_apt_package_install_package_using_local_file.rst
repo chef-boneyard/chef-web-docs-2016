@@ -4,7 +4,7 @@
 
 .. code-block:: ruby 
 
-   apt_package "jwhois" do    
+   apt_package 'jwhois' do    
      action :install
      source '/path/to/jwhois.deb'
    end   

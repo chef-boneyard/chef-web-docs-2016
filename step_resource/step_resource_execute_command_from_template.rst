@@ -15,5 +15,4 @@ The following example shows how to set up IPv4 packet forwarding using the |reso
      notifies :run, 'execute[forward_ipv4]', :delayed
    end
 
-where the ``command`` attribute for the |resource execute| resource contains the command that is to be run and the ``source`` attribute for the |resource template| resource specifies which template to use. The ``notifies`` attribute for the |resource template| specifies that the ``execute[forward_ipv4]`` (which is defined by the |resource execute| resource) should be queued up and run at the end of the |chef client| run.
-
+where the ``command`` property for the |resource execute| resource contains the command that is to be run and the ``source`` property for the |resource template| resource specifies which template to use. The ``notifies`` property for the |resource template| specifies that the ``execute[forward_ipv4]`` (which is defined by the |resource execute| resource) should be queued up and run at the end of the |chef client| run.

@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   chef_gem "right_aws" do
+   chef_gem 'right_aws' do
      action :install
    end
    

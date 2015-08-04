@@ -4,6 +4,6 @@ When specifying a local |windows| file path as a valid file URI, an additional f
 
 .. code-block:: ruby
 
-   remote_file "file:///c:/path/to/file" do
+   remote_file 'file:///c:/path/to/file' do
      ...       # other attributes
    end

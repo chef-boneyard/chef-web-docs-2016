@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   service "samba" do
-     pattern "smbd"
+   service 'samba' do
+     pattern 'smbd'
      action [:enable, :start]
    end

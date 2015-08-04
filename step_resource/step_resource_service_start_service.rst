@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   service "example_service" do
+   service 'example_service' do
      action :start
    end

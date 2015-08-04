@@ -6,19 +6,19 @@ The following example shows how the ``platform?`` method and an if statement can
 
 .. code-block:: ruby
 
-   if platform?("ubuntu", "debian", "redhat", "centos", "fedora", "scientific", "amazon")
-     ruby_block "update-java-alternatives" do
+   if platform?('ubuntu', 'debian', 'redhat', 'centos', 'fedora', 'scientific', 'amazon')
+     ruby_block 'update-java-alternatives' do
        block do
-         if platform?("ubuntu", "debian") and version == 6
+         if platform?('ubuntu', 'debian') and version == 6
            run_context = Chef::RunContext.new(node, {})
-           r = Chef::Resource::Execute.new("update-java-alternatives", run_context)
-           r.command "update-java-alternatives -s java-6-openjdk"
+           r = Chef::Resource::Execute.new('update-java-alternatives', run_context)
+           r.command 'update-java-alternatives -s java-6-openjdk'
            r.returns [0,2]
            r.run_action(:create)
          else
 
-           require "fileutils"
-           arch = node['kernel']['machine'] =~ /x86_64/ ? "x86_64" : "i386"
+           require 'fileutils'
+           arch = node['kernel']['machine'] =~ /x86_64/ ? 'x86_64' : 'i386'
            Chef::Log.debug("glob is #{java_home_parent}/java*#{version}*openjdk*")
            jdk_home = Dir.glob("#{java_home_parent}/java*#{version}*openjdk{,[-\.]#{arch}}")[0]
            Chef::Log.debug("jdk_home is #{jdk_home}")
@@ -33,7 +33,7 @@ The following example shows how the ``platform?`` method and an if statement can
                  update-alternatives --set java #{java_home}/bin/java ]
                  ).run_command
               unless cmd.exitstatus == 0 or cmd.exitstatus == 2
-             Chef::Application.fatal!("Failed to update-alternatives for openjdk!")
+             Chef::Application.fatal!('Failed to update-alternatives for openjdk!')
            end
          end
        end

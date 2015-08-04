@@ -25,4 +25,3 @@ To notify multiple resources, and then have these resources run in a certain ord
    end
 
 where the sequencing will be in the same order as the resources are listed in the recipe: ``execute 'foo'``, ``template 'baz'``, ``execute [restart_baz]``, ``package 'bar'``, and ``execute 'final'``.
-

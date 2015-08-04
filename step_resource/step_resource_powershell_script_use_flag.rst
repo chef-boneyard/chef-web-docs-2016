@@ -11,5 +11,5 @@
      EOH
      flags '-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy Unrestricted, -InputFormat None, -File'
      guard_interpreter :powershell_script
-     not_if "(Get-WindowsFeature -Name Web-Server).Installed"
+     not_if '(Get-WindowsFeature -Name Web-Server).Installed'
    end

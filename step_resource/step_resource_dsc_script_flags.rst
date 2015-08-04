@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` attribute. For example, the following |windows powershell| script takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:
+If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` property. For example, the following |windows powershell| script takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:
 
 .. code-block:: powershell
 

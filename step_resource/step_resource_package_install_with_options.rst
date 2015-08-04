@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   package "debian-archive-keyring" do
+   package 'debian-archive-keyring' do
      action :install
-     options "--force-yes"
+     options '--force-yes'
    end

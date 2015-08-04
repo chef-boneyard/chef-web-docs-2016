@@ -4,7 +4,7 @@ The following example will delete the ``/tmp/file`` symbolic link and uses the `
 
 .. code-block:: ruby
 
-   link "/tmp/file" do
+   link '/tmp/file' do
      action :delete
-     only_if "test -L /tmp/file"
+     only_if 'test -L /tmp/file'
    end

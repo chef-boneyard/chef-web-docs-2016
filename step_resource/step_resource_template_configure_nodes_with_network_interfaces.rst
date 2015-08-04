@@ -17,8 +17,5 @@ The copy the file at ``/etc/network/interfaces`` into the ``/templates/default``
    template '/etc/network/interfaces' do
      action :create
      source 'interfaces.erb'
-     variables(
-     
-     )
+     variables()
    end
-

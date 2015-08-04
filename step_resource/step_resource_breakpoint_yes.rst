@@ -21,8 +21,8 @@
      action :break
    end
 
-   yum_repository "repo_name" do
-     description "description"
+   yum_repository 'repo_name' do
+     description 'description'
      key node['yum']['repo_name']['key']
      mirrorlist node['yum']['repo_name']['url']
      includepkgs node['yum']['repo_name']['includepkgs']
@@ -34,4 +34,4 @@
      action :break
    end
 
-where the ``"name"`` of each breakpoint is an arbitrary string. In the previous example, ``"name"`` is used to indicate if the breakpoint is before or after a resource, and then also to specify which resource.
+where the name of each breakpoint is an arbitrary string. In the previous examples, the names are used to indicate if the breakpoint is before or after a resource, and then also to specify which resource.

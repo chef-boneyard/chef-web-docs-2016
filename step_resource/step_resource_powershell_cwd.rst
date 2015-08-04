@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   powershell_script "cwd-then-write" do
+   powershell_script 'cwd-then-write' do
      cwd Chef::Config[:file_cache_path]
      code <<-EOH
      $stream = [System.IO.StreamWriter] "C:/powershell-test2.txt"

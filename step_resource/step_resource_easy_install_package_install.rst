@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   easy_install_package "name of package" do
+   easy_install_package 'name of package' do
      action :install
    end

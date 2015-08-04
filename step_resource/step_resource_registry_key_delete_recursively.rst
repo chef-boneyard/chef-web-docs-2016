@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   registry_key "HKCU\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Themes" do
+   registry_key 'HKCU\\SOFTWARE\\Policies\\path\\to\\key\\Themes' do
      recursive true
      action :delete_key
    end

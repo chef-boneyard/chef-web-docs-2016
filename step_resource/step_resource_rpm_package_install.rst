@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   rpm_package "name of package" do
+   rpm_package 'name of package' do
      action :install
    end

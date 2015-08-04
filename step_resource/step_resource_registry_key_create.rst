@@ -4,9 +4,9 @@
 
 .. code-block:: ruby
 
-   registry_key "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" do
+   registry_key 'HKEY_LOCAL_MACHINE\\path-to-key\\Policies\\System' do
      values [{
-       :name => "EnableLUA",
+       :name => 'EnableLUA',
        :type => :dword,
        :data => 0
      }]

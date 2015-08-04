@@ -17,4 +17,3 @@ The following example shows how to create two identical machines, both of which 
    machine 'server_a' do
      recipe 'theserver'
    end
-

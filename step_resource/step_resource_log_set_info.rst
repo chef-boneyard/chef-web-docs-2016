@@ -4,4 +4,4 @@
 
 .. code-block:: ruby
 
-   log "your string to log"
+   log 'a string to log'

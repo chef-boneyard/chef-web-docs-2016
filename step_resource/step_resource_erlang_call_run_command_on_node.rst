@@ -4,9 +4,8 @@
 
 .. code-block:: ruby
 
-   erl_call "list names" do
-     code "net_adm:names()."
+   erl_call 'list names' do
+     code 'net_adm:names().'
      distributed true
-     node_name "chef@latte"
+     node_name 'chef@latte'
    end
-

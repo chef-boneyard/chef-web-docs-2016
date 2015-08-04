@@ -4,19 +4,19 @@ The following examples show different ways of doing the same thing. The first sh
 
 .. code-block:: ruby
 
-   package "package-a" do
+   package 'package-a' do
      action :upgrade
    end
    
-   package "package-b" do
+   package 'package-b' do
      action :upgrade
    end
    
-   package "package-c" do
+   package 'package-c' do
      action :upgrade
    end
    
-   package "package-d" do
+   package 'package-d' do
      action :upgrade
    end
 

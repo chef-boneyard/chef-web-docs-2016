@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   file "/tmp/something" do
+   file '/tmp/something' do
      action :delete
    end

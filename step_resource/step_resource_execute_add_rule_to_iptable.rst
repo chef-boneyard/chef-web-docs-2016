@@ -20,5 +20,5 @@ The following example shows how to add a rule named ``test_rule`` to an IP table
      notifies :run, 'execute[test_rule]', :delayed
    end
 
-where the ``command`` attribute for the |resource execute| resource contains the command that is to be run and the ``source`` attribute for the |resource template| resource specifies which template to use. The ``notifies`` attribute for the |resource template| specifies that the ``execute[test_rule]`` (which is defined by the |resource execute| resource) should be queued up and run at the end of the |chef client| run.
+where the ``command`` property for the |resource execute| resource contains the command that is to be run and the ``source`` property for the |resource template| resource specifies which template to use. The ``notifies`` property for the |resource template| specifies that the ``execute[test_rule]`` (which is defined by the |resource execute| resource) should be queued up and run at the end of the |chef client| run.
 

@@ -5,7 +5,6 @@
 
 .. code-block:: ruby
 
-   package "some_package" do
+   package 'some_package' do
      provider Chef::Provider::Package::Rubygems
    end
-

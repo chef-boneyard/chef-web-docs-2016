@@ -5,4 +5,4 @@ To import only the ``PSHOrg_cRDPEnabled`` resource:
 
 .. code-block:: ruby
 
-   imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
+   imports 'cRDPEnabled', 'PSHOrg_cRDPEnabled'

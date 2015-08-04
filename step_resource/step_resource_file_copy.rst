@@ -4,8 +4,8 @@ The following example shows how to copy a file from one directory to another, lo
 
 .. code-block:: ruby
 
-   file "/root/1.txt" do
-     content IO.read("/tmp/1.txt")
+   file '/root/1.txt' do
+     content IO.read('/tmp/1.txt')
      action :create
    end
 

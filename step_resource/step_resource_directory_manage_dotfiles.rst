@@ -40,4 +40,3 @@ and then the following resources manage the dotfiles:
        backup 0
      end
    end
-

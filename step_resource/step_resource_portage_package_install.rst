@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   portage_package "name of package" do
+   portage_package 'name of package' do
      action :install
    end

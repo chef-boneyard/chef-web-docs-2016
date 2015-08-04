@@ -10,18 +10,18 @@ The following example shows how the |chef server| sets up and configures |ssl| c
    
    unless File.exists?(ssl_keyfile) && File.exists?(ssl_crtfile) && File.exists?(ssl_signing_conf)
      file ssl_keyfile do
-       owner "root"
-       group "root"
-       mode "0644"
-       content `/opt/opscode/embedded/bin/openssl genrsa 2048`
-       not_if { File.exists?(ssl_keyfile) }
+       owner 'root'
+       group 'root'
+       mode '0644'
+       content '/opt/opscode/embedded/bin/openssl genrsa 2048'
+       not_if { File.exist?(ssl_keyfile) }
      end
    
      file ssl_signing_conf do
-       owner "root"
-       group "root"
-       mode "0644"
-       not_if { File.exists?(ssl_signing_conf) }
+       owner 'root'
+       group 'root'
+       mode '0644'
+       not_if { File.exist?(ssl_signing_conf) }
        content <<-EOH
      [ req ]
      distinguished_name = req_distinguished_name
@@ -37,14 +37,14 @@ The following example shows how the |chef server| sets up and configures |ssl| c
      EOH
      end
    
-     ruby_block "create crtfile" do
+     ruby_block 'create crtfile' do
        block do
          r = Chef::Resource::File.new(ssl_crtfile, run_context)
-         r.owner "root"
-         r.group "root"
-         r.mode "0644"
-         r.content `/opt/opscode/embedded/bin/openssl req -config '#{ssl_signing_conf}' -new -x509 -nodes -sha1 -days 3650 -key #{ssl_keyfile}`
-         r.not_if { File.exists?(ssl_crtfile) }
+         r.owner 'root'
+         r.group 'root'
+         r.mode '0644'
+         r.content "/opt/opscode/embedded/bin/openssl req -config '#{ssl_signing_conf}' -new -x509 -nodes -sha1 -days 3650 -key '#{ssl_keyfile}'"
+         r.not_if { File.exist?(ssl_crtfile) }
          r.run_action(:create)
        end
      end

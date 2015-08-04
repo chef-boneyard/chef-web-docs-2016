@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   paludis_package "name of package" do
+   paludis_package 'name of package' do
      action :install
    end

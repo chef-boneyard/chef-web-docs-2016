@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   group "www-data" do
+   group 'www-data' do
      action :modify
-     members "maintenance"
+     members 'maintenance'
      append true
    end

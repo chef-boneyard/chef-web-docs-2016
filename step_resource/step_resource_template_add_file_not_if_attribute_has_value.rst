@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The following example shows how to use the ``not_if`` condition to create a file based on a template and using the presence of an attribute on the node to specify the condition:
+The following example shows how to use the ``not_if`` condition to create a file based on a template and using the presence of an attribute value on the node to specify the condition:
 
 .. code-block:: ruby
 
@@ -10,4 +10,3 @@ The following example shows how to use the ``not_if`` condition to create a file
      source 'somefile.erb'
      not_if { node[:some_value] }
    end
-

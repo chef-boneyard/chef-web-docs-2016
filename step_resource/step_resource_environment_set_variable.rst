@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   env "ComSpec" do
+   env 'ComSpec' do
      value "C:\\Windows\\system32\\cmd.exe"
    end

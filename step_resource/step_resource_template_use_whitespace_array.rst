@@ -10,6 +10,6 @@ The following example shows how to use a |ruby| whitespace array to define a lis
        source '#{f}.erb'
        owner 'root'
        group 'root'
-       mode 00755
+       mode '0755'
      end
    end

@@ -1,17 +1,17 @@
 .. This is an included how-to. 
 
-Using the default attribute values for the various resources is the recommended starting point when working with recipes. Then, depending on what each node requires, these default values can be overridden with node-, role-, environment-, and cookbook-specific values. The |resource deploy| resource has four layout modifiers: ``create_dirs_before_symlink``, ``purge_before_symlink``, ``symlink_before_migrate``, and ``symlinks``. Each of these is a |ruby hash| that behaves as an attribute of the |resource deploy| resource. When these layout modifiers are used in a recipe, they appear similar to the following:
+Using the default property values for the various resources is the recommended starting point when working with recipes. Then, depending on what each node requires, these default values can be overridden with node-, role-, environment-, and cookbook-specific values. The |resource deploy| resource has four layout modifiers: ``create_dirs_before_symlink``, ``purge_before_symlink``, ``symlink_before_migrate``, and ``symlinks``. Each of these is a |ruby hash| that behaves as a property of the |resource deploy| resource. When these layout modifiers are used in a recipe, they appear similar to the following:
 
 .. code-block:: ruby
 
-   deploy "name" do
+   deploy 'name' do
      ...
-     symlink_before_migrate       {"config/database.yml" => "config/database.yml"}
+     symlink_before_migrate       {'config/database.yml' => 'config/database.yml'}
      create_dirs_before_symlink   %w{tmp public config}
      purge_before_symlink         %w{log tmp/pids public/system}
-     symlinks                     { "system" => "public/system", 
-                                    "pids" => "tmp/pids", 
-                                    "log" => "log"
+     symlinks                     { 'system' => 'public/system', 
+                                    'pids' => 'tmp/pids', 
+                                    'log' => 'log'
                                   }
      ...
    end
@@ -20,7 +20,7 @@ and then what these layout modifiers look like if they were empty:
 
 .. code-block:: ruby
 
-   deploy "name" do
+   deploy 'name' do
      ...
      symlink_before_migrate       nil
      create_dirs_before_symlink   []
@@ -35,7 +35,7 @@ To clear the default values for a layout modifier:
 
 .. code-block:: ruby
 
-   deploy "name" do
+   deploy 'name' do
      ...
      symlink_before_migrate.clear
      create_dirs_before_symlink.clear

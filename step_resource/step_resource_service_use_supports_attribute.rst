@@ -4,8 +4,7 @@
 
 .. code-block:: ruby
 
-   service "apache" do
+   service 'apache' do
      supports :restart => true, :reload => true
      action :enable
    end
-

@@ -4,9 +4,10 @@ The following example shows how to use the |resource ruby_block| resource to sta
 
 .. code-block:: ruby
 
-   #  the following code sample comes from the ``seed`` recipe in the following cookbook: https://github.com/mattray/bittorrent-cookbook
+   # the following code sample comes from the ``seed`` recipe
+   # in the following cookbook: https://github.com/mattray/bittorrent-cookbook
 
-   ruby_block "share the torrent file" do
+   ruby_block 'share the torrent file' do
      block do
        f = File.open(node['bittorrent']['torrent'],'rb')
        #read the .torrent file and base64 encode it

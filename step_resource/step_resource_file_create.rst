@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   file "/tmp/something" do
+   file '/tmp/something' do
      owner 'root'
      group 'root'
      mode '0755'

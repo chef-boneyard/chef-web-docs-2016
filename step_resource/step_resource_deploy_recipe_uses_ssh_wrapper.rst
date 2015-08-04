@@ -15,24 +15,23 @@ To write a recipe that uses an |ssh| wrapper:
 
    .. code-block:: ruby
 
-      directory "/tmp/private_code/.ssh" do
+      directory '/tmp/private_code/.ssh' do
         owner 'ubuntu'
         recursive true
       end
        
-      cookbook_file "/tmp/private_code/wrap-ssh4git.sh" do
-        source "wrap-ssh4git.sh"
+      cookbook_file '/tmp/private_code/wrap-ssh4git.sh' do
+        source 'wrap-ssh4git.sh'
         owner 'ubuntu'
         mode '0700'
       end
       
-      deploy "private_repo" do
-        repo "git@github.com:acctname/private-repo.git"
-        user "ubuntu"
-        deploy_to "/tmp/private_code"
+      deploy 'private_repo' do
+        repo 'git@github.com:acctname/private-repo.git'
+        user 'ubuntu'
+        deploy_to '/tmp/private_code'
         action :deploy
-        ssh_wrapper "/tmp/private_code/wrap-ssh4git.sh"
+        ssh_wrapper '/tmp/private_code/wrap-ssh4git.sh'
       end
 
    This will deploy the |git| repository at ``git@github.com:acctname/private-repo.git`` in the ``/tmp/private_code`` directory.
-

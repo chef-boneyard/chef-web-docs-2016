@@ -1,7 +1,7 @@
 .. This is an included how-to.
 
 
-The following example shows how pass a value to a template using the ``variables`` attribute in the |resource template| resource. The template file is similar to:
+The following example shows how pass a value to a template using the ``variables`` property in the |resource template| resource. The template file is similar to:
 
 .. code-block:: ruby
 
@@ -19,9 +19,9 @@ The recipe then uses the ``variables`` attribute to find the values for ``splunk
 
 .. code-block:: ruby
 
-   template '#{splunk_dir}/etc/system/local/outputs.conf' do
+   template "#{splunk_dir}/etc/system/local/outputs.conf" do
      source 'outputs.conf.erb'
-     mode 00644
+     mode '0644'
      variables :splunk_servers => splunk_servers, :outputs_conf => node['splunk']['outputs_conf']
      notifies :restart, 'service[splunk]'
    end

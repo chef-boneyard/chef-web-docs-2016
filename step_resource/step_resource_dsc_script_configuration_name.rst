@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to specify custom configuration data using the ``configuration_name`` attribute. For example, the following |windows powershell| script defines the ``vi`` configuration:
+The following example shows how to specify custom configuration data using the ``configuration_name`` property. For example, the following |windows powershell| script defines the ``vi`` configuration:
 
 .. code-block:: powershell
 
@@ -28,6 +28,6 @@ Use the following recipe to specify that configuration:
 
    dsc_script 'EDITOR' do
      configuration_name 'vi'
-     command 'c:\dsc_scripts\editors.ps1'
+     command 'C:\dsc_scripts\editors.ps1'
    end
 

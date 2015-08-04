@@ -7,6 +7,6 @@
 
    1.upto(10) do |i|
      machine "hadoop#{i}" do
-       recipe "hadoop"
+       recipe 'hadoop'
      end
    end

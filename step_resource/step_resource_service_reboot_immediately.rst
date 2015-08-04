@@ -4,9 +4,9 @@
 
 .. code-block:: ruby
 
-   reboot "now" do
+   reboot 'now' do
      action :nothing
-     reason "Cannot continue Chef run without a reboot."
+     reason 'Cannot continue Chef run without a reboot.'
      delay_mins 2
    end
    

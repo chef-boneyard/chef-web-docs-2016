@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   directory "/tmp/something" do
+   directory '/tmp/something' do
      owner 'root'
      group 'root'
      mode '0755'

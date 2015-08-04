@@ -38,7 +38,7 @@ and then the methods in the recipe may refer to these values. A recipe that is u
      not_if { ::File.exists?(install_path) }
    end
 
-   bash "build-and-install-python" do
+   bash 'build-and-install-python' do
      cwd Chef::Config[:file_cache_path]
      code <<-EOF
        tar -jxvf Python-#{version}.tar.bz2

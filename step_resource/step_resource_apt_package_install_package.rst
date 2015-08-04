@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   apt_package "name of package" do
+   apt_package 'name of package' do
      action :install
    end

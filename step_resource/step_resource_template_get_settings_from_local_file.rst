@@ -54,7 +54,7 @@ The recipe will be similar to the following:
 where: 
 
 * the ``search`` method in the |dsl recipe| is used to find the first node that is the database master (of which there should only be one)
-* the ``:adapter`` attribute may also require an attribute to have been set on a role, which then determines the correct adapter
+* the ``:adapter`` variable property may also require an attribute to have been set on a role, which then determines the correct adapter
 
 The template will render similar to the following:
 
@@ -73,6 +73,4 @@ This example showed how to use the |resource template| resource to render a temp
 
 * Should the ``database.yml`` file be in a ``.gitignore`` file?
 * How do developers run the application locally?
-* How does this work with |chef solo|?
-
-
+* Does this work with |chef solo|?

@@ -5,11 +5,11 @@ The following example shows how a template can be used to apply consistent proxy
 
 .. code-block:: ruby
 
-   template '#{node[:matching_node][:dir]}/sites-available/site_proxy.conf' do
+   template "#{node[:matching_node][:dir]}/sites-available/site_proxy.conf" do
      source 'site_proxy.matching_node.conf.erb'
      owner 'root'
      group 'root'
-     mode 00644
+     mode '0644'
      variables(
        :ssl_certificate =>    "#{node[:matching_node][:dir]}/shared/certificates/site_proxy.crt",
        :ssl_key =>            "#{node[:matching_node][:dir]}/shared/certificates/site_proxy.key",
@@ -22,4 +22,3 @@ The following example shows how a template can be used to apply consistent proxy
    end
 
 where ``matching_node`` represents a type of node (like |nginx|) and ``site_proxy`` represents the type of proxy being used for that type of node (like |nexus|).
-

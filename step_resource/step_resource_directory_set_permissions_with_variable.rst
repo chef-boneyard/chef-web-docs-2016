@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how read/write/execute permissions can be set using a variable named ``user_home`` and then for owners and groups on any matching node:
+The following example shows how read/write/execute permissions can be set using a variable named ``user_home``, and then for owners and groups on any matching node:
 
 .. code-block:: ruby
 
@@ -13,7 +13,7 @@ The following example shows how read/write/execute permissions can be set using 
      action :create
    end
 
-where ``matching_node`` represents a type of node. For example, if the ``user_home`` variable specified ``{node[:nginx]...}``, a recipe might look something like this:
+where ``matching_node`` represents a type of node. For example, if the ``user_home`` variable specified ``{node[:nginx]...}``, a recipe might look similar to:
 
 .. code-block:: ruby
 

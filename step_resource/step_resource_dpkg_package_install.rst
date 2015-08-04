@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   dpkg_package "name of package" do
+   dpkg_package 'name of package' do
      action :install
    end

@@ -23,11 +23,11 @@ The recipe then does the following to:
    end
    
    template 'authorized_ip' do
-     path '#{node['nginx']['dir']}/authorized_ip'
+     path "#{node['nginx']['dir']}/authorized_ip"
      source 'modules/authorized_ip.erb'
      owner 'root'
      group 'root'
-     mode 00644
+     mode '0644'
      variables(
        :remote_ip_var => node['nginx']['remote_ip_var'],
        :authorized_ips => node['nginx']['authorized_ips']
@@ -36,7 +36,7 @@ The recipe then does the following to:
      notifies :reload, 'service[nginx]', :immediately
    end
 
-where the ``variables`` attribute tells the template to use the variables set at the beginning of the recipe and the ``source`` attribute is used to call a template file located in the cookbook's ``/templates`` directory. The template file looks something like:
+where the ``variables`` property tells the template to use the variables set at the beginning of the recipe and the ``source`` property is used to call a template file located in the cookbook's ``/templates`` directory. The template file looks similar to:
 
 .. code-block:: ruby
 
@@ -46,4 +46,3 @@ where the ``variables`` attribute tells the template to use the variables set at
      <%= "#{ip} yes;" %>
      <% end %>
    }
-

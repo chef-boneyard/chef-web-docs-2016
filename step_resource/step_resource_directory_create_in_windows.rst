@@ -21,4 +21,3 @@ or:
    end
 
 .. note:: The difference between the two previous examples is the single- versus double-quoted strings, where if the double quotes are used, the backslash character (``\``) must be escaped using the |ruby| escape character (which is a backslash).
-

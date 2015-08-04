@@ -4,16 +4,15 @@ To reload a service based on a template, use the |resource template| and |resour
 
 .. code-block:: ruby
 
-   template "/tmp/somefile" do
+   template '/tmp/somefile' do
      mode '0644'
-     source "somefile.erb"
+     source 'somefile.erb'
    end
 
-   service "apache" do
+   service 'apache' do
      supports :restart => true, :reload => true
      action :enable
-     subscribes :reload, "template[/tmp/somefile]", :immediately
+     subscribes :reload, 'template[/tmp/somefile]', :immediately
    end
 
 where the ``subscribes`` notification is used to reload the service using the template specified by the |resource template| resource.
-

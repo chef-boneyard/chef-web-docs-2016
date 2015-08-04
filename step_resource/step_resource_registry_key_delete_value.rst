@@ -4,15 +4,10 @@
 
 .. code-block:: ruby
 
-   registry_key "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU" do
+   registry_key 'HKEY_LOCAL_MACHINE\\SOFTWARE\\path\\to\\key\\AU' do
      values [{
-       :name => "NoAutoRebootWithLoggedOnUsers",
+       :name => 'NoAutoRebootWithLoggedOnUsers',
        :type => :dword
        }]
      action :delete
    end
-
-
-
-
-

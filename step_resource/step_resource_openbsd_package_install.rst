@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   openbsd_package "name of package" do
+   openbsd_package 'name of package' do
      action :install
    end

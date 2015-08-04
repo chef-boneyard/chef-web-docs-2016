@@ -10,8 +10,8 @@ where ``/dev/s01 .. /dev/s10`` represents 10 devices (01, 02, 03, and so on). Th
 
 .. code-block:: ruby
 
-   mdadm "/dev/md0" do
-     devices [ "/dev/s01", ... "/dev/s10" ]
+   mdadm '/dev/md0' do
+     devices [ '/dev/s01', ... '/dev/s10' ]
      level 0
      action :create
    end

@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   git "/opt/mysources/couch" do
-     repository "git://git.apache.org/couchdb.git"
-     revision "master"
+   git '/opt/mysources/couch' do
+     repository 'git://git.apache.org/couchdb.git'
+     revision 'master'
      action :sync
    end

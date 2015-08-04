@@ -4,11 +4,11 @@ The following example shows how to get the contents of a data bag item named ``i
 
 .. code-block:: ruby
 
-   private_key = data_bag_item("impossible_things", private_key_name)["private_key"]
+   private_key = data_bag_item('impossible_things', private_key_name)['private_key']
    
    file "some/directory/path/#{private_key_name}.pem" do
      content private_key
      owner 'root'
      group 'group'
-     mode '640'
+     mode '0640'
    end

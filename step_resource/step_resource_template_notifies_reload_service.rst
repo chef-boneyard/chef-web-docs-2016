@@ -5,8 +5,7 @@
 .. code-block:: ruby
 
    template '/tmp/somefile' do
-     mode 00644
+     mode '0644'
      source 'somefile.erb'
      notifies :reload, 'service[apache]', :immediately
    end
-

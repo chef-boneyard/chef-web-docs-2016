@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to specify custom configuration data using the ``configuration_data`` attribute:
+The following example shows how to specify custom configuration data using the ``configuration_data`` property:
 
 .. code-block:: ruby
 

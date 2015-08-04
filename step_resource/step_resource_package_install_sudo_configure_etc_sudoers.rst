@@ -19,7 +19,7 @@ The following example shows how to install |sudo cmd| and then configure the ``/
      end
    
      cookbook_file '/etc/sudoers.d/README' do
-       source      "README"
+       source      'README'
        mode        '0440'
        owner       'root'
        group       'root'
@@ -44,5 +44,4 @@ where
 * the |resource package| resource is used to install |sudo cmd|
 * the ``if`` statement is used to ensure availability of the ``/etc/sudoers.d`` directory
 * the |resource template| resource tells the |chef client| where to find the ``sudoers`` template
-* the ``variables`` attribute is a hash that passes values to template files (that are located in the ``templates/`` directory for the cookbook
-
+* the ``variables`` property is a hash that passes values to template files (that are located in the ``templates/`` directory for the cookbook

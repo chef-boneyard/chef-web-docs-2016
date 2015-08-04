@@ -7,7 +7,7 @@
    user 'random' do
      supports :manage_home => true
      comment 'Random User'
-     uid 1234
+     uid '1234'
      gid 'users'
      home '/home/random'
      shell '/bin/bash'

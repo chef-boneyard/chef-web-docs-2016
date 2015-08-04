@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   powershell_script "read-env-var" do
+   powershell_script 'read-env-var' do
      cwd Chef::Config[:file_cache_path]
      environment ({'foo' => 'BAZ'})
      code <<-EOH

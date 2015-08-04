@@ -4,7 +4,7 @@ The following example shows a schedule that will run at 8:00 PM, every weekday (
 
 .. code-block:: ruby
 
-   cron "name_of_cron_entry" do
+   cron 'name_of_cron_entry' do
      minute '0'
      hour '20'
      day '*'

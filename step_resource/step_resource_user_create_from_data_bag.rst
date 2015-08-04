@@ -13,4 +13,4 @@ The |resource user| resource can be used in conjunction with a data bag to creat
       end
    end
 
-where ``users`` is the name of the data bag, each "user" (``user_name``) is the name of a data bag item, and then for each user the |resource user| resource creates the username/password. See the `page for the user resource <http://docs.chef.io/resource_user.html>`_ for more information about additional attributes that can be used to define other aspects of a user, such as ``shell``, ``system``, and so on.
+where ``users`` is the name of the data bag, each "user" (``user_name``) is the name of a data bag item, and then for each user the |resource user| resource creates the username/password. See the `page for the user resource <http://docs.chef.io/resource_user.html>`_ for more information about additional properties that can be used to define other aspects of a user, such as ``shell``, ``system``, and so on.

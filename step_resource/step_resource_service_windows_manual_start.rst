@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   windows_service "BITS" do
+   windows_service 'BITS' do
      action :configure_startup
      startup_type :manual
    end

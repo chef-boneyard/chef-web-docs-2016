@@ -5,19 +5,19 @@ The following example shows how |bash| can be used to install a plug-in for |rbe
 .. code-block:: ruby
 
    git "#{Chef::Config[:file_cache_path]}/ruby-build" do
-     repository "git://github.com/sstephenson/ruby-build.git"
-     reference "master"
+     repository 'git://github.com/sstephenson/ruby-build.git'
+     reference 'master'
      action :sync
    end
    
-   bash "install_ruby_build" do
-     cwd "#{Chef::Config[:file_cache_path]}/ruby-build"
-     user "rbenv"
-     group "rbenv"
+   bash 'install_ruby_build' do
+     cwd '#{Chef::Config[:file_cache_path]}/ruby-build'
+     user 'rbenv'
+     group 'rbenv'
      code <<-EOH
        ./install.sh
        EOH
-     environment 'PREFIX' => "/usr/local"
+     environment 'PREFIX' => '/usr/local'
   end
 
 To read more about ``ruby-build``, see here: https://github.com/sstephenson/ruby-build.

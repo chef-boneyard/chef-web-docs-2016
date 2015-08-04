@@ -4,19 +4,19 @@
 
 .. code-block:: ruby
 
-   ohai "reload_passwd" do
+   ohai 'reload_passwd' do
      action :nothing
-     plugin "passwd"
+     plugin 'passwd'
    end
    
-   user "daemonuser" do
-     home "/dev/null"
-     shell "/sbin/nologin"
+   user 'daemonuser' do
+     home '/dev/null'
+     shell '/sbin/nologin'
      system true
-     notifies :reload, "ohai[reload_passwd]", :immediately
+     notifies :reload, 'ohai[reload_passwd]', :immediately
    end
    
-   ruby_block "just an example" do
+   ruby_block 'just an example' do
      block do
        # These variables will now have the new values
        puts node['etc']['passwd']['daemonuser']['uid']

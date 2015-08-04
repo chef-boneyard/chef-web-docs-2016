@@ -26,5 +26,3 @@ whereas the following will raise an exception:
      convert_boolean_return true
      code '$false'
    end
-
-

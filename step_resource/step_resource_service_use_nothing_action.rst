@@ -5,8 +5,7 @@
 
 .. code-block:: ruby
 
-   service "memcached" do
+   service 'memcached' do
      action :nothing
      supports :status => true, :start => true, :stop => true, :restart => true
    end
-

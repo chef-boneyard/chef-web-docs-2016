@@ -6,7 +6,7 @@ Do this:
 
 .. code-block:: ruby
 
-   package "mysql-server" do
+   package 'mysql-server' do
      version node['mysql']['version']
      action :install
    end
@@ -15,7 +15,7 @@ and not this:
 
 .. code-block:: ruby
 
-   package "mysql-server" do
+   package 'mysql-server' do
      version "#{node['mysql']['version']}"
      action :install
    end

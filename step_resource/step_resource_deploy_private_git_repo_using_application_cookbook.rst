@@ -6,11 +6,8 @@ To deploy from a private |git| repository without using the |cookbook applicatio
 * an |ssh| wrapper is being used
 * a private key has been added to the node
 
-and then use code like the following to remove a passphrase from a private key:
+and then remove a passphrase from a private key by using code similar to:
 
 .. code-block:: bash
 
-   ssh-keygen -p -P 'YOURPASSPHRASE' -N '' -f id_deploy
-
-
-
+   ssh-keygen -p -P 'PASSPHRASE' -N '' -f id_deploy

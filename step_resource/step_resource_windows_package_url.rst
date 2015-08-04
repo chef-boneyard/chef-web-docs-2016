@@ -11,6 +11,6 @@ Use the ``source`` attribute in a recipe to reference the attribute (and downloa
    windows_package '7-Zip 9.20 (x64 version)' do
      source node['tool']['url']
      action :install
-     not_if {::File.exists?(node['tool']['file'])}
-     not_if {reboot_pending?}
+     not_if { File.exist?(node['tool']['file']) }
+     not_if { reboot_pending? }
    end

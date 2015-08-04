@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Use the ``command`` attribute to specify the path to a |windows powershell| data file. For example, the following |windows powershell| script defines the ``DefaultEditor``:
+Use the ``command`` property to specify the path to a |windows powershell| data file. For example, the following |windows powershell| script defines the ``DefaultEditor``:
 
 .. code-block:: powershell
 

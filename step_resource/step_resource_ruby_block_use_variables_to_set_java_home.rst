@@ -4,8 +4,8 @@ The following example shows how to use a variable within a |ruby| block to set t
 
 .. code-block:: ruby
 
-   ruby_block "set-env-java-home" do
+   ruby_block 'set-env-java-home' do
      block do
-       ENV["JAVA_HOME"] = java_home
+       ENV['JAVA_HOME'] = java_home
      end
    end

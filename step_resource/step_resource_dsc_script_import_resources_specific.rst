@@ -5,10 +5,10 @@ To import specific resources, specify the module name, and then specify the name
 
 .. code-block:: ruby
 
-   imports "module_name", "resource_name_a", "resource_name_b", ...
+   imports 'module_name', 'resource_name_a', 'resource_name_b', ...
 
 For example, to import all resources from a module named ``cRDPEnabled``:
 
 .. code-block:: ruby
 
-   imports "cRDPEnabled"
+   imports 'cRDPEnabled'
