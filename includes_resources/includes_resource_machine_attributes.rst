@@ -14,20 +14,33 @@ This resource has the following properties:
    * - ``allow_overwrite_keys``
      - Use to overwrite the key on a machine when it is different from the key specified by ``source_key``.
    * - ``attribute``
-     - Use to specify an attribute, and then modify that attribute with the specified value. The following patterns may be used to specify the value:
+     - Use to specify an attribute, and then modify that attribute with the specified value. The following patterns may be used to specify the value.
 	 
        .. code-block:: ruby
 
           attribute <name>, <value>
           
+       .. code-block:: ruby
+
           attribute [<path>], <value>
           
-          attribute 'a', 'b'                         # set attribute "a" to "b"
+       The following example will set attribute ``a`` to ``b``:
+
+       .. code-block:: ruby
+
+          attribute 'a', 'b'
           
-          attribute %w[a b c], 'd'                   # set attribute node['a']['b']['c'] to 'd'
-                                                     # will ignore attributes a.b.x, a.b.y, etc.
+       The following example will set attribute ``node['a']['b']['c']`` to ``d`` and will ignore attributes ``a.b.x``, ``a.b.y``, etc.:
+
+       .. code-block:: ruby
+
+          attribute %w[a b c], 'd'
           
-          attribute 'a', { 'b' => { 'c' => 'd' } }   # similar to attribute %w[a b c], 'd'
+       The following example is similar to ``%w[a b c], 'd'``:
+
+       .. code-block:: ruby
+
+          attribute 'a', { 'b' => { 'c' => 'd' } }
 
        Each modified attribute should be specified individually. This attribute should not be used in the same recipe as ``attributes``.
    * - ``attributes``
