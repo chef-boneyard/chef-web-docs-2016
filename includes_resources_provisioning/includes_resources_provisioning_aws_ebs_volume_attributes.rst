@@ -26,7 +26,7 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - ``iops``
      - Required for provisioned volumes. Use to specify the maximum number of input/output operations per second (IOPS) that the block-level storage device will support.
    * - ``machine``
-     - Use to specify xxxxx.
+     - Use to specify the machine to be provisioned.
    * - ``managed_entry_store``
      - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
