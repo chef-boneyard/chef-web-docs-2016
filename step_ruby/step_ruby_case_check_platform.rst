@@ -5,13 +5,13 @@ The following example shows how to use a case statement to check the platform, a
 .. code-block:: ruby
 
    case node[:platform]
-     when "debian", "ubuntu"
-       package "package_a" do
+     when 'debian', 'ubuntu'
+       package 'package_a' do
          action :install
        end
-     when "centos", "redhat", "fedora"
-       package "package_b" do
+     when 'centos', 'redhat', 'fedora'
+       package 'package_b' do
          action :install
-         notifies :run, resources(:execute => "generate-module-list"), :immediately
+         notifies :run, resources(:execute => 'generate-module-list'), :immediately
        end
    end
