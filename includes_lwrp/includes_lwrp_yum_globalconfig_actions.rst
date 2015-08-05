@@ -13,4 +13,3 @@ This lightweight resource provider has the following actions:
      - Default. Use to create a |yum| global configuration file.
    * - ``:delete``
      - Use to delete a |yum| global configuration file.
-

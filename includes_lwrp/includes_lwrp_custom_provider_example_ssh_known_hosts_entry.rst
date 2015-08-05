@@ -8,9 +8,9 @@ The ``ssh_known_hosts_entry`` lightweight provider (found in the `ssh_known_host
 
    action :create do
      key = (new_resource.key || `ssh-keyscan -H #{new_resource.host} 2>&1`)
-     comment = key.split("\n").first
+     comment = key.split('\n').first
    
-     Chef::Application.fatal! "Could not resolve #{new_resource.host}" if key =~ /getaddrinfo/
+     Chef::Application.fatal! 'Could not resolve #{new_resource.host}' if key =~ /getaddrinfo/
    
      file node['ssh_known_hosts']['file'] do
        action        :create

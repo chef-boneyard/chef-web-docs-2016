@@ -11,8 +11,7 @@ Use the ``rescue`` clause to make sure that a log message is always provided. Fo
      begin
        ...
      rescue
-       Chef::Log.debug("Cannot find #{@new_resource} in the swarm")
+       Chef::Log.debug('Cannot find #{@new_resource} in the swarm')
      end
      ...
    end
-

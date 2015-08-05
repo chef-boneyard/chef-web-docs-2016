@@ -13,4 +13,3 @@ This lightweight resource provider has the following actions:
      - Default. Use to create a link aggregation group (LAG).
    * - ``:delete``
      - Use to delete a link aggregation group (LAG).
-

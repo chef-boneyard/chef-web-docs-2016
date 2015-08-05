@@ -21,4 +21,3 @@ This resource has the following properties:
      - |name interface|
    * - ``speed``
      - |speed interface| Default value: ``auto``.
-

@@ -17,4 +17,3 @@ This resource has the following properties:
      - |links minimum_physical_lag|
    * - ``name``
      - |name lag|
-

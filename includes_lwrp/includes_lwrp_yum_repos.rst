@@ -29,4 +29,3 @@ The following cookbooks should be used in conjunction with the |cookbook yum| co
      - Required for |postgresql| repositories. Use the |cookbook yum_pgdg| cookbook to manage the following repositories: ``base``, ``updates``, ``extras``, ``centosplus``, and ``contrib``.
    * - `yum-repoforge <https://github.com/opscode-cookbooks/yum-repoforge>`_
      - Required for |repoforge| repositories. Use the |cookbook yum_repoforge| cookbook to manage the following repositories: ``rpmforge``, ``rpmforge-extras``, and ``rpmforge-testing``.
-

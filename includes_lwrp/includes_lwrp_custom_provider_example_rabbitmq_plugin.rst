@@ -6,7 +6,7 @@ The ``rabbitmq_plugin`` lightweight provider (found in the `rabbitmq <https://gi
 
 .. code-block:: ruby
 
-   rabbitmq_plugin "my_plugin" do
+   rabbitmq_plugin 'my_plugin' do
      action :enable
    end
 
@@ -16,8 +16,8 @@ The lightweight provider then does most of the work:
 
    action :enable do
      unless plugin_enabled?(new_resource.plugin)
-       execute "rabbitmq-plugins enable #{new_resource.plugin}" do
-         Chef::Log.info "Enabling RabbitMQ plugin '#{new_resource.plugin}'."
+       execute 'rabbitmq-plugins enable #{new_resource.plugin}' do
+         Chef::Log.info 'Enabling RabbitMQ plugin '#{new_resource.plugin}'.'
          path plugins_bin_path(true)
          new_resource.updated_by_last_action(true)
        end
@@ -35,9 +35,8 @@ The lightweight provider then does most of the work:
      cmd.environment['HOME'] = ENV.fetch('HOME', '/root')
      cmd.environment['PATH'] = plugins_bin_path
      cmd.run_command
-     Chef::Log.debug "rabbitmq_plugin_enabled?: #{cmdStr}"
-     Chef::Log.debug "rabbitmq_plugin_enabled?: #{cmd.stdout}"
+     Chef::Log.debug 'rabbitmq_plugin_enabled?: #{cmdStr}'
+     Chef::Log.debug 'rabbitmq_plugin_enabled?: #{cmd.stdout}'
      cmd.error!
      cmd.stdout =~ /\b#{name}\b/
    end
-

@@ -8,7 +8,7 @@ An example of using the ``:callbacks`` validation parameter from the |cookbook g
 
    attribute :server_hooks, :kind_of => Hash, :default => {}, \
      :callbacks =>
-       {"should contain a valid gunicorn server hook name" => lambda 
+       {'should contain a valid gunicorn server hook name' => lambda 
            { 
              |hooks| Chef::Resource::GunicornConfig.validate_server_hook_hash_keys(hooks)
            }

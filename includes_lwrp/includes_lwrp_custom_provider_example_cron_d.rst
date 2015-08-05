@@ -7,15 +7,15 @@ The ``cron_d`` lightweight provider (found in the `cron <https://github.com/opsc
 .. code-block:: ruby
 
    action :delete do
-     file "/etc/cron.d/#{new_resource.name}" do
+     file '/etc/cron.d/#{new_resource.name}' do
        action :delete
      end
    end
    
    action :create do
-     t = template "/etc/cron.d/#{new_resource.name}" do
+     t = template '/etc/cron.d/#{new_resource.name}' do
        cookbook new_resource.cookbook
-       source "cron.d.erb"
+       source 'cron.d.erb'
        mode '0644'
        variables({
            :name => new_resource.name, 
@@ -47,11 +47,11 @@ For example, if a recipe used the ``cron_d`` lightweight resource similar to the
 
 .. code-block:: ruby
 
-   cron_d "daily-usage-report" do
+   cron_d 'daily-usage-report' do
      minute '0'
      hour '23'
-     command "/srv/app/scripts/daily_report"
-     user "appuser"
+     command '/srv/app/scripts/daily_report'
+     user 'appuser'
    end
 
 this tells the |chef client| to use the ``cron_d`` lightweight provider and the credentials for a user named ``appuser`` to create a |crontab| entry named "daily-usage-report". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the lightweight resource.

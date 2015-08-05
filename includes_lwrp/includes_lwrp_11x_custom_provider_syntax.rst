@@ -20,8 +20,8 @@ The basic syntax for a lightweight provider that is built to leverage platform r
 
    action :action_name do
      condition test
-       resource "resource_name" do
-         Chef::Log.log_type "log_message"
+       resource 'resource_name' do
+         Chef::Log.log_type 'log_message'
          # a Chef recipe
          new_resource.updated_by_last_action(true)
        end
@@ -55,10 +55,10 @@ For example:
 
    action :delete do
      if user_exists?(new_resource.user)
-       cmdStr = "rabbitmqctl delete_user #{new_resource.user}"
+       cmdStr = 'rabbitmqctl delete_user #{new_resource.user}'
        execute cmdStr do
          Chef::Log.debug "rabbitmq_user_delete: #{cmdStr}"
-         Chef::Log.info "Deleting RabbitMQ user '#{new_resource.user}'."
+         Chef::Log.info 'Deleting RabbitMQ user '#{new_resource.user}'.'
          new_resource.updated_by_last_action(true)
        end
      end
