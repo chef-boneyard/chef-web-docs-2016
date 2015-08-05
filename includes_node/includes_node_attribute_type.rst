@@ -21,4 +21,3 @@ Attribute types can be any of the following:
      - |attribute_type force_override|
    * - ``automatic``
      - |attribute_type automatic|
-

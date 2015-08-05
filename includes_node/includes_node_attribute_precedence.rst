@@ -30,5 +30,3 @@ Attribute precedence, viewed from the same perspective as the overview diagram, 
 Attribute precedence, when viewed as a table:
 
 .. image:: ../../images/overview_chef_attributes_table.png
-
-

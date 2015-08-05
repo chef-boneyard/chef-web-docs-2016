@@ -5,8 +5,3 @@
 .. notes for future documentation: Use ``node.run_status`` to view the current status of a |chef client| run. As resources are converged, they are added to the run status object. ``run_status`` is an empty |ruby hash| that stores the current status of the |chef client| run.
 
 .. notes for future documentation: ``run_status`` has two available methods: ``success?`` and ``failed?``.
-
-
-
-
-

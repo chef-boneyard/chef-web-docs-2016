@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-.. warning:: Starting with the 11.0 version of the |chef client|, node attributes must specify attribute precedence. For example, instead of ``node[:my_attribute] = "value"`` use ``node.normal[:my_attribute] = "value"``, where ``normal`` is the attribute precedence level. (Even with this change, please take a moment to consider using default-level attributes instead. In general, normal-level attributes are only required when a value needs to persist across |chef client| runs (such as auto-generated passwords) or when a node is a "special snowflake".)
+.. warning:: Starting with the 11.0 version of the |chef client|, node attributes must specify attribute precedence. For example, instead of ``node[:my_attribute] = 'value'`` use ``node.normal[:my_attribute] = 'value'``, where ``normal`` is the attribute precedence level. (Even with this change, please take a moment to consider using default-level attributes instead. In general, normal-level attributes are only required when a value needs to persist across |chef client| runs (such as auto-generated passwords) or when a node is a "special snowflake".)
 
 Attributes are always applied by the |chef client| in the following order:
 

@@ -3,11 +3,11 @@
 
 The following examples show how the logic works for substituting an existing string using a hash::
 
-   role_or_environment 1 { :x => "1", :y => "2" }
+   role_or_environment 1 { :x => '1', :y => '2' }
    +
-   role_or_environment 2 { :y => "3" }
+   role_or_environment 2 { :y => '3' }
    =
-   { :x => "1", :y => "3" }
+   { :x => '1', :y => '3' }
 
 For substituting an existing boolean using a hash::
 
@@ -19,10 +19,10 @@ For substituting an existing boolean using a hash::
 
 For substituting an array with a hash::
 
-   role_or_environment 1 [ "1", "2", "3" ]
+   role_or_environment 1 [ '1', '2', '3' ]
    +
-   role_or_environment 2 { :x => "1" , :y => "2" }
+   role_or_environment 2 { :x => '1' , :y => '2' }
    =
-   { :x => "1", :y => "2" }
+   { :x => '1', :y => '2' }
 
 When items cannot be merged through substitution, the original data is overwritten.

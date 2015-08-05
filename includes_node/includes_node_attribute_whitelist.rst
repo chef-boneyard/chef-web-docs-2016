@@ -15,13 +15,13 @@ Attribute are whitelisted by attribute type, with each attribute type being whit
    * - Setting
      - Description
    * - ``automatic_attribute_whitelist``
-     - |whitelist attribute_automatic| For example: ``["network/interfaces/eth0"]``. Default value: all attributes are saved. |whitelist attribute_none|
+     - |whitelist attribute_automatic| For example: ``['network/interfaces/eth0']``. Default value: all attributes are saved. |whitelist attribute_none|
    * - ``default_attribute_whitelist``
-     - |whitelist attribute_default| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+     - |whitelist attribute_default| For example: ``['filesystem/dev/disk0s2/size']``. Default value: all attributes are saved. |whitelist attribute_none|
    * - ``normal_attribute_whitelist``
-     - |whitelist attribute_normal| For example: ``["filesystem/dev/disk0s2/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+     - |whitelist attribute_normal| For example: ``['filesystem/dev/disk0s2/size']``. Default value: all attributes are saved. |whitelist attribute_none|
    * - ``override_attribute_whitelist``
-     - |whitelist attribute_override| For example: ``["map - autohome/size"]``. Default value: all attributes are saved. |whitelist attribute_none|
+     - |whitelist attribute_override| For example: ``['map - autohome/size']``. Default value: all attributes are saved. |whitelist attribute_none|
 
 .. warning:: It is recommended that only ``automatic_attribute_whitelist`` be used to whitelist attributes. This is primarily because automatic attributes generate the most data, but also that normal, default, and override attributes are typically much more important attributes and are more likely to cause issues if they are whitelisted incorrectly.
 
@@ -50,7 +50,7 @@ To whitelist the ``network`` attributes and prevent the other attributes from be
 
 .. code-block:: ruby
 
-   normal_attribute_whitelist ["network/interfaces/"]
+   normal_attribute_whitelist ['network/interfaces/']
 
 When a whitelist is defined, any attribute of that type that is not specified in that attribute whitelist **will not** be saved. So based on the previous whitelist for normal attributes, the ``filesystem`` and ``map - autohome`` attributes will not be saved, but the ``network`` attributes will.
 

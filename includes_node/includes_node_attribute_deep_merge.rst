@@ -1,7 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Attributes are typically stored in cookbooks and recipes, roles, and environments. These attributes are rolled-up to the node level during a |chef client| run. For example, a recipe can store attributes using a multi-level hash or array; a group of attributes for web servers might be:
+Attributes are typically defined in cookbooks, recipes, roles, and environments. These attributes are rolled-up to the node level during a |chef client| run. A recipe can store attribute values using a multi-level |ruby hash| or array.
+
+For example, a group of attributes for web servers might be:
 
 .. code-block:: ruby
 
@@ -31,7 +33,9 @@ But what if all of the web servers are not the same? What if some of the web ser
      }
    )
 
-But that is not very efficient, especially because most of them are identical. The deep merge capabilities of the |chef client| allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:
+But that is not very efficient, especially because most of them are identical. The deep merge capabilities of the |chef client| allows attributes to be layered across cookbooks, recipes, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. 
+
+For example, a role named ``baseline.rb``:
 
 .. code-block:: ruby
 
@@ -54,9 +58,9 @@ and then a role named ``web.rb``:
 
 .. code-block:: ruby
 
-   name "web"
-   description "Web server config"
-   run_list "role[baseline]"
+   name 'web'
+   description 'Web server config'
+   run_list 'role[baseline]'
  
    override_attributes(
      :apache => {
@@ -74,7 +78,7 @@ This approach will allow a recipe like this:
 
 .. code-block:: ruby
 
-   include_recipe "apache2"
+   include_recipe 'apache2'
    Chef::Log.info(node['apache']['prefork'].to_hash)
 
 and a ``run_list`` like this:

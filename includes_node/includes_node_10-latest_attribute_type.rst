@@ -17,4 +17,3 @@ Attribute types can be any of the following:
      - |attribute_type override|
    * - ``automatic``
      - |attribute_type automatic|
-

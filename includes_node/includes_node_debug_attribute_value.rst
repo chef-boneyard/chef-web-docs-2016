@@ -12,16 +12,16 @@ For example, the following attributes exist in a cookbook. Some are defined in a
 
 .. code-block:: ruby
 
-   default_attributes "test" => {"source" => "role default"}
-   override_attributes "test" => {"source" => "role override"}
+   default_attributes 'test' => {'source' => 'role default'}
+   override_attributes 'test' => {'source' => 'role override'}
 
 And others are defined in an attributes file:
 
 .. code-block:: ruby
 
-   default[:test][:source]  = "attributes default"
-   set[:test][:source]      = "attributes normal"
-   override[:test][:source] = "attributes override"
+   default[:test][:source]  = 'attributes default'
+   set[:test][:source]      = 'attributes normal'
+   override[:test][:source] = 'attributes override'
 
 To debug the location in which the value of ``node[:test][:source]`` is set, use |chef shell| and run a command similar to:
 
@@ -33,17 +33,17 @@ This will pretty-print return all of the attributes and sub-attributes as an arr
 
 .. code-block:: bash
 
-   [["set_unless_enabled?", false],
-    ["default", "attributes default"],
-    ["env_default", :not_present],
-    ["role_default", "role default"],
-    ["force_default", :not_present],
-    ["normal", "attributes normal"],
-    ["override", "attributes override"],
-    ["role_override", "role override"],
-    ["env_override", :not_present],
-    ["force_override", :not_present],
-    ["automatic", :not_present]]
+   [['set_unless_enabled?', false],
+    ['default', 'attributes default'],
+    ['env_default', :not_present],
+    ['role_default', 'role default'],
+    ['force_default', :not_present],
+    ['normal', 'attributes normal'],
+    ['override', 'attributes override'],
+    ['role_override', 'role override'],
+    ['env_override', :not_present],
+    ['force_override', :not_present],
+    ['automatic', :not_present]]
 
 where
 
