@@ -23,3 +23,11 @@ Ports
 Edit AMI Instance Size
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_aws_chef_server_change_instance.rst
+
+Upgrading the |chef server_title| software
+=====================================================
+.. include:: ../../includes_cloud/includes_cloud_aws_chef_server_upgrade_software.rst
+
+Migrating an existing |chef server_title| installation
+=====================================================
+.. include:: ../../includes_cloud/includes_cloud_aws_chef_server_migration.rst
