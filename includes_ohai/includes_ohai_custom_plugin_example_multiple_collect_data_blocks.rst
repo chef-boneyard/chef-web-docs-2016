@@ -7,7 +7,7 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
 .. code-block:: ruby
 
    Ohai.plugin(:Hostname) do
-     provides "domain", "fqdn", "hostname"
+     provides 'domain', 'fqdn', 'hostname'
    
      def from_cmd(cmd)
        so = shell_out(cmd)
@@ -22,29 +22,29 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
      end
    
      collect_data(:aix, :hpux) do
-       hostname from_cmd("hostname -s")
-       fqdn from_cmd("hostname")
+       hostname from_cmd('hostname -s')
+       fqdn from_cmd('hostname')
        domain collect_domain
      end
    
      collect_data(:darwin, :netbsd, :openbsd) do
-       hostname from_cmd("hostname -s")
-       fqdn from_cmd("hostname")
+       hostname from_cmd('hostname -s')
+       fqdn from_cmd('hostname')
        domain collect_domain
      end
    
      collect_data(:freebsd) do
-       hostname from_cmd("hostname -s")
-       fqdn from_cmd("hostname -f")
+       hostname from_cmd('hostname -s')
+       fqdn from_cmd('hostname -f')
        domain collect_domain
      end
    
      collect_data(:linux) do
-       hostname from_cmd("hostname -s")
+       hostname from_cmd('hostname -s')
        begin
-         fqdn from_cmd("hostname --fqdn")
+         fqdn from_cmd('hostname --fqdn')
        rescue
-         Ohai::Log.debug("hostname -f returned an error, probably no domain is set")
+         Ohai::Log.debug('hostname -f returned an error, probably no domain is set')
        end
        domain collect_domain
      end
@@ -52,7 +52,7 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
      collect_data(:solaris2) do
        require 'socket'
    
-       hostname from_cmd("hostname")
+       hostname from_cmd('hostname')
    
        fqdn_lookup = Socket.getaddrinfo(hostname, nil, nil, nil, nil, Socket::AI_CANONNAME).first[2]
        if fqdn_lookup.split('.').length > 1
@@ -60,9 +60,9 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
          fqdn fqdn_lookup
        else
          # default to assembling one
-         h = from_cmd("hostname")
-         d = from_cmd("domainname")
-         fqdn "#{h}.#{d}"
+         h = from_cmd('hostname')
+         d = from_cmd('domainname')
+         fqdn '#{h}.#{d}'
        end
    
        domain collect_domain
@@ -73,7 +73,7 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
        require 'socket'
    
        host = WMI::Win32_ComputerSystem.find(:first)
-       hostname "#{host.Name}" 
+       hostname '#{host.Name}' 
    
        info = Socket.gethostbyname(Socket.gethostname)
        if info.first =~ /.+?\.(.*)/
@@ -87,4 +87,3 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
       domain collect_domain
      end
    end
-

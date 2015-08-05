@@ -7,6 +7,5 @@ Use the ``rescue`` clause to make sure that a log message is always provided. Fo
 .. code-block:: ruby
 
    rescue LoadError => e
-     Ohai::Log.debug("ip_scopes: cannot load gem, plugin disabled: #{e}")
+     Ohai::Log.debug('ip_scopes: cannot load gem, plugin disabled: #{e}')
    end
-

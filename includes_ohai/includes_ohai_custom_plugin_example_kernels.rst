@@ -7,12 +7,12 @@ The following |ohai| example shows part of a file that gets initial kernel attri
 .. code-block:: ruby
 
    Ohai.plugin(:Kernel) do
-     provides "kernel", "kernel/modules"
+     provides 'kernel', 'kernel/modules'
    
      def init_kernel
        kernel Mash.new
-       [["uname -s", :name], ["uname -r", :release],
-       ["uname -v", :version], ["uname -m", :machine]].each do |cmd, property|
+       [['uname -s', :name], ['uname -r', :release],
+       ['uname -v', :version], ['uname -m', :machine]].each do |cmd, property|
          so = shell_out(cmd)
          kernel[property] = so.stdout.split($/)[0]
        end
@@ -25,13 +25,13 @@ The following |ohai| example shows part of a file that gets initial kernel attri
        kernel init_kernel
        kernel[:os] = kernel[:name]
    
-       so = shell_out("sysctl -n hw.optional.x86_64")
+       so = shell_out('sysctl -n hw.optional.x86_64')
        if so.stdout.split($/)[0].to_i == 1
          kernel[:machine] = 'x86_64'
        end
     
        modules = Mash.new
-       so = shell_out("kextstat -k -l")
+       so = shell_out('kextstat -k -l')
        so.stdout.lines do |line|
          if line =~ /(\d+)\s+(\d+)\s+0x[0-9a-f]+\s+0x([0-9a-f]+)\s+0x[0-9a-f]+\s+([a-zA-Z0-9\.]+) \(([0-9\.]+)\)/
            kext[$4] = { :version => $5, :size => $3.hex, :index => $1, :refcount => $2 }

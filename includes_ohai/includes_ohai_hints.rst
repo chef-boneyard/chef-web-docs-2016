@@ -18,7 +18,7 @@ If the hint file contains |json| content, it will be returned as a hash from the
    if antarctica_hint['snow']
      "There are #{antarctica_hint['penguins']} penguins here."
    else
-     "There is no snow here, and penguins like snow."
+     'There is no snow here, and penguins like snow.'
    end
 
 The default directory in which hint files are located is ``/etc/chef/ohai/hints/``. Use the ``Ohai::Config[:hints_path]`` setting in the |client rb| file to customize this location.

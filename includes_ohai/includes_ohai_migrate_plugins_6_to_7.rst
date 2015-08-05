@@ -13,11 +13,11 @@ For example, |ohai| 6:
 
    provides 'my_app'
    
-   require_plugin("kernel")
+   require_plugin('kernel')
    
    my_app Mash.new
-   my_app[:version] = shell_out("my_app -v").stdout
-   my_app[:message] = "Using #{kernel[:version]}"
+   my_app[:version] = shell_out('my_app -v').stdout
+   my_app[:message] = 'Using #{kernel[:version]}'
 
 and then |ohai| 7:
 
@@ -29,8 +29,8 @@ and then |ohai| 7:
    
      collect_data do
        my_app Mash.new
-       my_app[:version] = shell_out("my_app -v").stdout
-       my_app[:message] = "Using #{kernel[:version]}"
+       my_app[:version] = shell_out('my_app -v').stdout
+       my_app[:message] = 'Using #{kernel[:version]}'
      end
    end
 
@@ -38,15 +38,15 @@ Another example, for |ohai| 6:
 
 .. code-block:: ruby
 
-   provide "ipaddress"
-   require_plugin "#{os}::network"
-   require_plugin "#{os}::virtualization"
-   require_plugin "passwd"
+   provide 'ipaddress'
+   require_plugin '#{os}::network'
+   require_plugin '#{os}::virtualization'
+   require_plugin 'passwd'
    
-   if virtualization["system"] == "vbox"
-     if etc["passwd"].any? { |k,v| k == "vagrant"}
-       if network["interfaces"]["eth1"]
-         network["interfaces"]["eth1"]["addresses"].each do |ip, params|
+   if virtualization['system'] == 'vbox'
+     if etc['passwd'].any? { |k,v| k == 'vagrant'}
+       if network['interfaces']['eth1']
+         network['interfaces']['eth1']['addresses'].each do |ip, params|
            if params['family'] == ('inet')
              ipaddress ip
            end
@@ -60,13 +60,13 @@ and then |ohai| 7:
 .. code-block:: ruby
 
    Ohai.plugin(:Vboxipaddress) do
-     provides "ipaddress"
-     depends "ipaddress", "network/interfaces", "virtualization/system", "etc/passwd"
+     provides 'ipaddress'
+     depends 'ipaddress', 'network/interfaces', 'virtualization/system', 'etc/passwd'
      collect_data(:default) do
-       if virtualization["system"] == "vbox"
-         if etc["passwd"].any? { |k,v| k == "vagrant"}
-           if network["interfaces"]["eth1"]
-             network["interfaces"]["eth1"]["addresses"].each do |ip, params|
+       if virtualization['system'] == 'vbox'
+         if etc['passwd'].any? { |k,v| k == 'vagrant'}
+           if network['interfaces']['eth1']
+             network['interfaces']['eth1']['addresses'].each do |ip, params|
                if params['family'] == ('inet')
                  ipaddress ip
                end

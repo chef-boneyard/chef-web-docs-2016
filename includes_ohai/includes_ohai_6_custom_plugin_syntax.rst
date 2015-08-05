@@ -6,8 +6,8 @@ The syntax for an |ohai| 6 plugin is as follows:
 
 .. code-block:: ruby
 
-   require_plugin "plugin_name"
-   provides "attribute", "attribute/subattribute"
+   require_plugin 'plugin_name'
+   provides 'attribute', 'attribute/subattribute'
 
    # start of Ruby code that defines the Ohai 6 plugin
    
@@ -17,25 +17,25 @@ The syntax for an |ohai| 6 plugin is as follows:
 
 where 
 
-* ``require_plugin`` is used to extend one (or more) existing |ohai| 6 plugins; an often-used value for ``require_plugin`` is ``"#{os}::hostname"``
+* ``require_plugin`` is used to extend one (or more) existing |ohai| 6 plugins; an often-used value for ``require_plugin`` is ``'#{os}::hostname'``
 * Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This attribute will become an automatic attribute (i.e. ``node[:attribute]``) after it is collected by |ohai| at the start of the |chef client| run. An attribute can also be defined using an ``attribute/subattribute`` pattern
-* ``my_data`` is  string (``a string value``) or an empty mash (``{ :setting_a => "value_a", :setting_b" => "value_b" }``). This is used to define the data that should be collected by the plugin
+* ``my_data`` is  string (``a string value``) or an empty mash (``{ :setting_a => 'value_a', :setting_b => 'value_b' }``). This is used to define the data that should be collected by the plugin
 
 For example, an |ohai| 6 plugin could be built to add additional ``ipaddrtype_iface`` network attributes to help make it semantically easier to retrieve addresses:
 
 .. code-block:: ruby
 
-   provides "network"
+   provides 'network'
    
-   require_plugin "hostname"
-   require_plugin "#{os}::network"
+   require_plugin 'hostname'
+   require_plugin '#{os}::network'
    
    network['interfaces'].each do |iface, addrs|
    
    addrs['addresses'].each do |ip, params|
-     network["ipaddress_#{iface}"] ||= ip if params['family'].eql?('inet')
-     network["ipaddress6_#{iface}"] ||= ip if params['family'].eql?('inet6')
-     network["macaddress_#{iface}"] ||= ip if params['family'].eql?('lladdr')
+     network['ipaddress_#{iface}'] ||= ip if params['family'].eql?('inet')
+     network['ipaddress6_#{iface}'] ||= ip if params['family'].eql?('inet6')
+     network['macaddress_#{iface}'] ||= ip if params['family'].eql?('lladdr')
    end
    
    end

@@ -9,7 +9,7 @@ The following |ohai| example shows a plugin can use a ``mixin`` library and also
    require 'ohai/mixin/os'
    
    Ohai.plugin(:Os) do
-     provides "os", "os_version"
+     provides 'os', 'os_version'
      depends 'kernel'
    
      collect_data do
@@ -17,4 +17,3 @@ The following |ohai| example shows a plugin can use a ``mixin`` library and also
        os_version kernel[:release]
      end
    end
-

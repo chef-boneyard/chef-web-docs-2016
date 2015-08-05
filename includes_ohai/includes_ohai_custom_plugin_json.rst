@@ -6,9 +6,9 @@
 
 .. code-block:: ruby
 
-   provides "sl"
+   provides 'sl'
    
-   if ::File.exists?("/usr/games/sl")
+   if File.exist?('/usr/games/sl')
      sl Mash.new
      sl[:installed] = true
    end
@@ -18,8 +18,8 @@ would result in data being stored in a file as |json| data, similar to:
 .. code-block:: javascript
 
    {
-     "sl": {
-       "installed": true
+     'sl': {
+       'installed': true
      }
    }
 
@@ -29,11 +29,9 @@ Barewords are added to the |json| data, and are then added to the node object. F
 
 .. code-block:: ruby
 
-   if ::File.exists?("/usr/games/sl")
+   if File.exist?('/usr/games/sl')
      sl Mash.new
      sl[:installed] = true
    end 
 
 into which key/value pairs (``sl[:installed] = true``) are added.
-
-
