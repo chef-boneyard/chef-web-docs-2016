@@ -38,19 +38,7 @@ Escape Character
 
 Interpolation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-When strings have quotes within quotes, use double quotes (``" "``) on the outer quotes, and then single quotes (``' '``) for the inner quotes. For example:
-
-.. code-block:: ruby
-
-   Chef::Log.info("Loaded from aws[#{aws['id']}]")
-
-.. code-block:: ruby
-
-   "node['mysql']['secretpath']"
-
-.. code-block:: ruby
-
-   "#{ENV['HOME']}/chef.txt"
+.. include:: ../../includes_ruby/includes_ruby_style_basics_string_interpolation.rst
 
 Truths
 -----------------------------------------------------
