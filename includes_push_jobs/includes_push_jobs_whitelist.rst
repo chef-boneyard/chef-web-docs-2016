@@ -7,15 +7,15 @@ A whitelist is a list of jobs and commands that are used by |push jobs|. A white
 .. code-block:: ruby
 
    default['push_jobs']['whitelist'] = {
-     "job_name" => "command",
+     'job_name' => 'command',
    }
 
 The whitelist is accessed from a recipe using the ``node['push_jobs']['whitelist]`` attribute. For example:
 
 .. code-block:: ruby
 
-   template "name" do
-     source "name"
+   template 'name' do
+     source 'name'
      ...
      variables(:whitelist => node['push_jobs']['whitelist'])
    end
@@ -35,4 +35,3 @@ where ``["ntpdate"] = "ntpdate -u time"`` is added to the whitelist:
    default['push_jobs']['whitelist'] = {
      "ntpdate" => "ntpdate -u time",
    }
-
