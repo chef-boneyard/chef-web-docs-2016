@@ -13,4 +13,3 @@ There are two types of attributes that can be used with roles:
      - |attribute_type default|
    * - ``override``
      - |attribute_type override|
-

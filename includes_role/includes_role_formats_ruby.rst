@@ -14,8 +14,8 @@ Domain-specific |ruby| attributes:
 
        .. code-block:: ruby
 
-          default_attributes "apache2" => { 
-            "listen_ports" => [ "80", "443" ] 
+          default_attributes 'apache2' => { 
+            'listen_ports' => [ '80', '443' ] 
           }
    * - ``description``
      - |ruby dsl description| For example:
@@ -28,8 +28,8 @@ Domain-specific |ruby| attributes:
 
        .. code-block:: ruby
 
-          env_run_lists "prod" => ["recipe[apache2]"], 
-                        "staging" => ["recipe[apache2::staging]"
+          env_run_lists 'prod' => ['recipe[apache2]'], 
+                        'staging' => ['recipe[apache2::staging]'
        
        .. warning:: Using ``env_run_lists`` with roles is discouraged as it can be difficult to maintain over time. Instead, consider using multiple roles to define the required behavior.
    * - ``name``
@@ -43,8 +43,8 @@ Domain-specific |ruby| attributes:
 
        .. code-block:: ruby
 
-          override_attributes "apache2" => { 
-            "max_children" => "50" 
+          override_attributes 'apache2' => { 
+            'max_children' => '50' 
           }
 
        The parameters in a |ruby| file are |ruby| method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example:
@@ -53,7 +53,7 @@ Domain-specific |ruby| attributes:
 
           override_attributes(
             :apache2 => { 
-              :prefork => { :min_spareservers => "5" }
+              :prefork => { :min_spareservers => '5' }
             }
           )
 
@@ -63,10 +63,10 @@ Domain-specific |ruby| attributes:
 
           override_attributes(
             :apache2 => {
-              :prefork => { :min_spareservers => "5" }
+              :prefork => { :min_spareservers => '5' }
             },
             :tomcat => {
-              :worker_threads => "100"
+              :worker_threads => '100'
             }
           )  
    * - ``run_list``
@@ -74,9 +74,9 @@ Domain-specific |ruby| attributes:
 
        .. code-block:: ruby
 
-          run_list "recipe[apache2]", 
-                   "recipe[apache2::mod_ssl]", 
-                   "role[monitor]"
+          run_list 'recipe[apache2]', 
+                   'recipe[apache2::mod_ssl]', 
+                   'role[monitor]'
 
        would apply the ``apache2`` recipe first, then the ``apache2::mod_ssl`` recipe, and then the ``role[monitor]`` recipe.
 
@@ -91,7 +91,7 @@ A |ruby| DSL file for each role must exist in the ``roles/`` subdirectory of the
    default_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
    override_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
 
-where both default and override attributes are optional and at least one run-list (with at least one run-list item) is specified. For example, a role named "webserver" that has a run-list that defines actions for three different roles, and for certain roles takes extra steps (such as the "apache2" role listening on ports 80 and 443):
+where both default and override attributes are optional and at least one run-list (with at least one run-list item) is specified. For example, a role named ``webserver`` that has a run-list that defines actions for three different roles, and for certain roles takes extra steps (such as the ``apache2`` role listening on ports 80 and 443):
 
 .. code-block:: javascript
 
