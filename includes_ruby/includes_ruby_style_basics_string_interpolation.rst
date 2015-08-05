@@ -15,3 +15,12 @@ When strings have quotes within quotes, use double quotes (``" "``) on the outer
 .. code-block:: ruby
 
    "#{ENV['HOME']}/chef.txt"
+
+.. code-block:: ruby
+
+   antarctica_hint = hint?('antarctica')
+   if antarctica_hint['snow']
+     "There are #{antarctica_hint['penguins']} penguins here."
+   else
+     'There is no snow here, and penguins like snow.'
+   end
