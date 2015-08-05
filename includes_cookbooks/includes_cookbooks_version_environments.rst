@@ -5,12 +5,12 @@ An environment can use version constraints to specify a list of allowed cookbook
 
 .. code-block:: ruby
 
-   cookbook "apache2", "~> 1.2.3"
+   cookbook 'apache2', '~> 1.2.3'
 
 Or:
 
 .. code-block:: ruby
 
-   cookbook "runit", "= 4.2.0"
+   cookbook 'runit', '= 4.2.0'
 
 If a cookbook is not explicitly given a version constraint the environment will assume the cookbook has no version constraint and will use any version of that cookbook with any node in the environment.

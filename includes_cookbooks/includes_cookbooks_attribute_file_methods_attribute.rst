@@ -7,7 +7,7 @@ Using ``attribute?()`` in an attributes file:
 
 .. code-block:: ruby
 
-   if attribute?("ec2")
+   if attribute?('ec2')
      # ... set stuff related to EC2
    end
 
@@ -15,7 +15,6 @@ Using ``attribute?()`` in a recipe:
 
 .. code-block:: ruby
 
-   if node.attribute?("ec2")
+   if node.attribute?('ec2')
      # ... do stuff on EC2 nodes
    end
-

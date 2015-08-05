@@ -5,14 +5,14 @@ If a cookbook has a dependency on a recipe that is located in another cookbook, 
 
 .. note:: Declaring cookbook dependencies is not required with |chef solo|.
 
-For example, if the following recipe is included in a cookbook named "my_app":
+For example, if the following recipe is included in a cookbook named ``my_app``:
 
 .. code-block:: ruby
 
-   include_recipe "apache2::mod_ssl"
+   include_recipe 'apache2::mod_ssl'
 
 Then the |metadata rb| file for that cookbook would have:
 
 .. code-block:: ruby
 
-   depends "apache2"
+   depends 'apache2'

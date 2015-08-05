@@ -16,4 +16,3 @@ More than one recipe can be added:
          recipe[apache2]
          recipe[mysql]
          role[ssh]
-

@@ -25,16 +25,16 @@ For example:
 
 .. code-block:: ruby
 
-   tag("machine") 
+   tag('machine') 
     
-   if tagged?("machine") 
-      Chef::Log.info("Hey I'm #{node[:tags]}") 
+   if tagged?('machine') 
+      Chef::Log.info('Hey I'm #{node[:tags]}') 
    end 
     
-   untag("machine") 
+   untag('machine') 
     
-   if not tagged?("machine") 
-      Chef::Log.info("I has no tagz") 
+   if not tagged?('machine') 
+      Chef::Log.info('I has no tagz') 
    end
 
 Will return something like this:

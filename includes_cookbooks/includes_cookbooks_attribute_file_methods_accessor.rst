@@ -6,7 +6,7 @@ Attribute accessor methods are automatically created and the method invocation c
 
 .. code-block:: ruby
 
-   default.apache.dir          = "/etc/apache2"
-   default.apache.listen_ports = [ "80","443" ]
+   default.apache.dir          = '/etc/apache2'
+   default.apache.listen_ports = [ '80','443' ]
 
 This is a matter of style and preference for how attributes are reloaded from recipes, and may be seen when retrieving the value of an attribute.

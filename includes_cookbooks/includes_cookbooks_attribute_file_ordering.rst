@@ -7,18 +7,18 @@ When the |chef client| loads cookbook attribute files, the |chef client| first i
 
 .. code-block:: ruby
 
-   include_attribute "name_of_cookbook"
+   include_attribute 'name_of_cookbook'
 
 For example, if a cookbook requires that attributes from the |cookbook apache2| cookbook must be available, add the following to that cookbook's attribute file:
 
 .. code-block:: ruby
 
-   include_attribute "apache2"
+   include_attribute 'apache2'
 
 The |chef client| will then load the ``apache2/attributes/default.rb`` file before continuing the processing of the current attribute file. If a specific attribute file (and not the default attribute file) must be loaded, use the double colon (``::``) pattern (similar to the ``include_recipe`` method) and provide the name fo the attribute file after the double colon. For example:
 
 .. code-block:: ruby
 
-   include_attribute "apache2::mod_ssl"
+   include_attribute 'apache2::mod_ssl'
 
 This will load the ``apache2/attributes/mod_ssl.rb`` file in the |cookbook apache2| cookbook.

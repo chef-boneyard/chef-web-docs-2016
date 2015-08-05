@@ -12,31 +12,36 @@ Versions and version constraints can be specified in a cookbook's |metadata rb| 
      - Description
    * - ``conflicts``
      - |metadata rb conflicts| For example:
-       ::
 
-          conflicts "apache2", "< 3.0"
+       .. code-block:: ruby
 
-       Or:
-       ::
+          conflicts 'apache2', '< 3.0'
 
-          conflicts "daemon-tools"
+       or:
 
+       .. code-block:: ruby
+
+          conflicts 'daemon-tools'
 
    * - ``depends``
      - |metadata rb depends| For example:
-       ::
 
-          depends "opscode-base"
+       .. code-block:: ruby
 
-       Or:
-       ::
+          depends 'opscode-base'
 
-          depends "opscode-github", "> 1.0.0"
+       or:
 
-       Or:
-       ::
+       .. code-block:: ruby
 
-          depends "runit", "~> 1.2.3"
+          depends 'opscode-github', '> 1.0.0'
+
+       or:
+
+       .. code-block:: ruby
+
+          depends 'runit', '~> 1.2.3'
+
    * - ``provides``
      - |metadata rb provides|
    * - ``recommends``

@@ -8,4 +8,3 @@ Use the following methods within the attributes file for a cookbook or within a 
 * ``normal`` (or ``set``, where ``set`` is an alias for ``normal``)
 * ``_unless``
 * ``attribute?``
-

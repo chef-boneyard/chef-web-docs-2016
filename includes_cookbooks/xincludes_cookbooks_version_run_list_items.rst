@@ -5,4 +5,4 @@ A version constraint can be specified for recipe items that are part of a run-li
 
 .. code-block:: ruby
 
-   {"run_list":["recipe[nginx@1.2.3]"]}
+   {'run_list':['recipe[nginx@1.2.3]']}

@@ -5,12 +5,12 @@ An attribute file is located in the ``attributes/`` sub-directory for a cookbook
 
 .. code-block:: ruby
 
-   default["apache"]["dir"]          = "/etc/apache2"
-   default["apache"]["listen_ports"] = [ "80","443" ]
+   default['apache']['dir']          = '/etc/apache2'
+   default['apache']['listen_ports'] = [ '80','443' ]
 
 The use of the node object (``node``) is implicit in the previous example; the following example defines the node object itself as part of the attribute:
 
 .. code-block:: ruby
 
-   node.default["apache"]["dir"]          = "/etc/apache2"
-   node.default["apache"]["listen_ports"] = [ "80","443" ]
+   node.default['apache']['dir']          = '/etc/apache2'
+   node.default['apache']['listen_ports'] = [ '80','443' ]

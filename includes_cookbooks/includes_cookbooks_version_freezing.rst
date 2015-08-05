@@ -22,4 +22,8 @@ Once a cookbook version is frozen, only by using the ``--force`` option can an u
 
    $ knife cookbook upload redis --force
 
-Without the ``--force`` option specified, an error will be returned similar to "Version 0.0.0 of cookbook redis is frozen. Use --force to override."
+Without the ``--force`` option specified, an error will be returned similar to:
+
+.. code-block:: bash
+
+   Version 0.0.0 of cookbook redis is frozen. Use --force to override

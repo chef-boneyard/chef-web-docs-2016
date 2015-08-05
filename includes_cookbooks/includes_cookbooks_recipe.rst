@@ -13,4 +13,3 @@ A recipe is the most fundamental configuration element within the organization. 
 * May tag a node to facilitate the creation of arbitrary groupings
 * Must be added to a run-list before it can be used by the |chef client|
 * Is always executed in the same order as listed in a run-list
-

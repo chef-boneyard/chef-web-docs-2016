@@ -30,4 +30,3 @@ where ``::default_recipe`` is implied (and does not need to be specified). On a 
      "recipe[apache2::mod_ssl]"
      ]
    }
-
