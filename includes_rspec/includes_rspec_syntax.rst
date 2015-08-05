@@ -6,8 +6,8 @@ The syntax of |rspec|-based tests should follow the natural language description
 
 .. code-block:: ruby
 
-   describe "1 plus 1" do
-     it "equals 2" do
+   describe '1 plus 1' do
+     it 'equals 2' do
        a = 1
        b = 1
        sum = a + b

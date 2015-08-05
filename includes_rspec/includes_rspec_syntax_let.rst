@@ -6,21 +6,21 @@
 
 .. code-block:: ruby
 
-   describe "Math" do
-     context "when adding 1 + 1" do
+   describe 'Math' do
+     context 'when adding 1 + 1' do
        let(:sum) { 1 + 1 }
    
-       it "equals 2" do
+       it 'equals 2' do
          expect(sum).to eq(2)
        end
      end
    
-     context "when adding 2 + 2" do
+     context 'when adding 2 + 2' do
        let(:sum) do
          2 + 2
        end
    
-       it "equals 4" do
+       it 'equals 4' do
          expect(sum).to eq(4)
        end
      end

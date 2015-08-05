@@ -6,15 +6,15 @@
 
 .. code-block:: ruby
 
-   describe "math" do
-     context "when adding 1 + 1" do
-       it "equals 2" do
+   describe 'math' do
+     context 'when adding 1 + 1' do
+       it 'equals 2' do
          expect(sum).to eq(2)
        end
      end
    
-     context "when adding 2 + 2" do
-       it "equals 4" do
+     context 'when adding 2 + 2' do
+       it 'equals 4' do
          expect(sum).to eq(4)
        end
      end
@@ -24,10 +24,10 @@ where each ``context`` block describes a different testing scenario: "The sum of
 
 .. code-block:: ruby
 
-   describe "cookbook_name::recipe_name" do
+   describe 'cookbook_name::recipe_name' do
    
-     context "when on Debian" do
-       it "equals 2" do
+     context 'when on Debian' do
+       it 'equals 2' do
          a = 1
          b = 1
          sum = a + b
@@ -35,14 +35,14 @@ where each ``context`` block describes a different testing scenario: "The sum of
        end
      end
    
-     context "when on Ubuntu" do
-       it "equals 2" do
+     context 'when on Ubuntu' do
+       it 'equals 2' do
          expect(1 + 1).to eq(2)
        end
      end
    
-     context "when on Windows" do
-       it "equals 3" do
+     context 'when on Windows' do
+       it 'equals 3' do
          expect(1 + 2).to eq(3)
        end
      end
