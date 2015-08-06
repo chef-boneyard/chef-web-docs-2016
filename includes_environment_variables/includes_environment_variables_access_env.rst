@@ -5,10 +5,10 @@ Another method is to use the |ruby| predefined ``ENV`` variable to set the envir
 
 .. code-block:: ruby
 
-   ENV['IMPORTANT_VAR'] = "value"
+   ENV['IMPORTANT_VAR'] = 'value'
    
    # Some service that requires IMPORTANT VAR
-   service "example_service" do
+   service 'example_service' do
      action :start
    end
 

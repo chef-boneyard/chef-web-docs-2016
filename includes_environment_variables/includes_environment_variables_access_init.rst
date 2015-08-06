@@ -5,4 +5,4 @@ Ideally, a service's init script would contain everything needed to properly sta
 
 .. code-block:: ruby
 
-   export IMPORTANT_VAR="value"
+   export IMPORTANT_VAR='value'

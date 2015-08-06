@@ -40,28 +40,28 @@ The principles mentioned above (a child process receives a copy of its parent's 
 
 In |ruby|, the current environment can be altered via the ``ENV`` variable. Any changes made to the environment will also be available to child process started by the |chef client|. For example, consider the following recipe:
 
-.. code-block:: bash
+.. code-block:: ruby
 
-   ENV['FOO'] = "bar"
-   bash "env_test0" do
+   ENV['FOO'] = 'bar'
+   bash 'env_test0' do
      code <<-EOF
      echo $FOO
    EOF
    end
 
-When run, the |resource script_bash| resource will correctly ``echo "bar"`` to its standard output.
+When run, the |resource script_bash| resource will correctly ``echo 'bar'`` to its standard output.
 
 However, just as in |bash|, changes made in child processes have no affect on the parent, and thus no affect on subsequent child processes:
 
-.. code-block:: bash
+.. code-block:: ruby
 
-   bash "env_test1" do
+   bash 'env_test1' do
      code <<-EOF
-     export BAZ="bar"
+     export BAZ='bar'
    EOF
    end
    
-   bash "env_test2" do
+   bash 'env_test2' do
      code <<-EOF
      echo $BAZ
    EOF

@@ -35,4 +35,3 @@ The |json| format has two additional settings:
      - |json dsl environment chef type|
    * - ``json_class``
      - |json dsl environment json class|
-

@@ -5,5 +5,4 @@ For services started using |upstart| (the |unix systemv|-compatible init system 
 
 .. code-block:: ruby
 
-   env IMPORTANT_VAR="value"
-
+   env IMPORTANT_VAR='value'
