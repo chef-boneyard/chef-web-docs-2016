@@ -7,8 +7,8 @@ A customer record is stored in an attribute file that looks like this:
 
    mycompany_customers({
      :bob => {
-       :homedir => "/home/bob",
-       :webdir => "/home/bob/web"
+       :homedir => '/home/bob',
+       :webdir => '/home/bob/web'
      }
    }
    )

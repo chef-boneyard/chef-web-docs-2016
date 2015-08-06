@@ -36,7 +36,7 @@ A database can contain a list of virtual hosts that are used by customers. A cus
          }
          v.push(vhost_data)
        end
-       Chef::Log.debug("About to provision #{v.length} vhosts")
+       Chef::Log.debug('About to provision #{v.length} vhosts')
        v
      end
    end
@@ -53,7 +53,7 @@ After the custom namespace is created, it could then be used in a recipe, like t
        action :create
      end
     
-     directory "#{vhost[:documentroot]}/#{vhost[:domainname]}" do
+     directory '#{vhost[:documentroot]}/#{vhost[:domainname]}' do
        owner 'vhost[:uid]'
        group 'vhost[:gid]'
        mode '0755'

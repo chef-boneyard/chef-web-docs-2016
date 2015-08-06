@@ -7,7 +7,7 @@ A resource that is defined in the ``/libraries`` directory may leverage core |ch
 
 .. code-block:: ruby
 
-   Chef::Resource::name_of_resource.new("name", run_context)
+   Chef::Resource::name_of_resource.new('name', run_context)
 
 or:
 
