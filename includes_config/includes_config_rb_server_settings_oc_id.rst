@@ -47,6 +47,6 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['sql_user']``
      - |user ocid| Default value: ``oc_id``.
    * - ``oc_id['vip']``
-     - |ip_address virtual| Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"localhost"``.
 
 
