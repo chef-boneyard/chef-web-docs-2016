@@ -17,8 +17,8 @@ and a resource that looks something like the following:
 
 .. code-block:: ruby
 
-   cookbook_file "/usr/local/bin/apache2_module_conf_generate.pl" do
-     source "apache2_module_conf_generate.pl"
+   cookbook_file '/usr/local/bin/apache2_module_conf_generate.pl' do
+     source 'apache2_module_conf_generate.pl'
      mode '0755'
      owner 'root'
      group 'root'

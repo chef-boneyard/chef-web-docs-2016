@@ -14,7 +14,7 @@ Use an array with the ``source`` attribute to define an explicit lookup path. Fo
 .. code-block:: ruby
 
    file '/conf.py' do
-     source ["#{node.chef_environment}.py", 'conf.py']
+     source ['#{node.chef_environment}.py', 'conf.py']
    end
 
 The following example emulates the entire file specificity pattern by defining it as an explicit path:
