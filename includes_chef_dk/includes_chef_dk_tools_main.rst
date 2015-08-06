@@ -35,17 +35,3 @@ The most important tools included in the |chef dk| are:
      - The reference language for |chef|.
    * - |rubocop|
      - A static code analyzer for |ruby|.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
