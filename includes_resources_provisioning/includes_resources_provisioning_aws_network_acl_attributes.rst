@@ -47,55 +47,57 @@ This |chef provisioning| driver-specific resource has the following properties:
 
        * ``port`` is the port number or range. For example: ``80`` (number) or ``1024..2048`` (range)
        * ``protocol`` is the protocol to be used. For example: ``:http`` or ``:tcp``
-       * ``sources`` is an IP address (or a |cidr| of IP addresses), a security group to be authorized, and/or a load balancer to be authorized. For example, IP addresses:
+       * ``sources`` is an IP address (or a |cidr| of IP addresses), a security group to be authorized, and/or a load balancer to be authorized. 
 
-         .. code-block:: ruby
+       For example, IP addresses:
 
-            inbound_rules '1.2.3.4' => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules '1.2.3.4' => 80
 
-            inbound_rules '1.2.3.4/24' => 80
+       .. code-block:: ruby
 
-         Security groups:
+          inbound_rules '1.2.3.4/24' => 80
 
-         .. code-block:: ruby
+       Security groups:
 
-            inbound_rules 'mysecuritygroup'
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules 'mysecuritygroup'
 
-            inbound_rules { security_group: 'mysecuritygroup' }
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules { security_group: 'mysecuritygroup' }
 
-            inbound_rules 'sg-1234abcd' => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules 'sg-1234abcd' => 80
 
-            inbound_rules aws_security_group('mysecuritygroup') => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules aws_security_group('mysecuritygroup') => 80
 
-            inbound_rules AWS.ec2.security_groups.first => 80
+       .. code-block:: ruby
 
-         and load balancers:
+          inbound_rules AWS.ec2.security_groups.first => 80
 
-         .. code-block:: ruby
+       and load balancers:
 
-            inbound_rules { load_balancer: 'myloadbalancer' } => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules { load_balancer: 'myloadbalancer' } => 80
 
-            inbound_rules 'elb-1234abcd' => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules 'elb-1234abcd' => 80
 
-            inbound_rules load_balancer('myloadbalancer') => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          inbound_rules load_balancer('myloadbalancer') => 80
 
-            inbound_rules AWS.ec2.security_groups.first => 80
+       .. code-block:: ruby
+
+          inbound_rules AWS.ec2.security_groups.first => 80
 
    * - ``managed_entry_store``
      - **Ruby Type:** Chef::Provisioning::ManagedEntryStore
@@ -133,55 +135,58 @@ This |chef provisioning| driver-specific resource has the following properties:
 
        * ``port`` is the port number or range. For example: ``80`` (number) or ``1024..2048`` (range)
        * ``protocol`` is the protocol to be used. For example: ``:http`` or ``:tcp``
-       * ``sources`` is an IP address (or a |cidr| of IP addresses), a security group to be authorized, and/or a load balancer to be authorized. For example, IP addresses:
+       * ``sources`` is an IP address (or a |cidr| of IP addresses), a security group to be authorized, and/or a load balancer to be authorized. 
 
-         .. code-block:: ruby
+       For example, IP addresses:
 
-            outbound_rules '1.2.3.4' => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules '1.2.3.4' => 80
 
-            outbound_rules '1.2.3.4/24' => 80
+       .. code-block:: ruby
 
-         Security groups:
+          outbound_rules '1.2.3.4/24' => 80
 
-         .. code-block:: ruby
+       Security groups:
 
-            outbound_rules 'mysecuritygroup'
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules 'mysecuritygroup'
 
-            outbound_rules { security_group: 'mysecuritygroup' }
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules { security_group: 'mysecuritygroup' }
 
-            outbound_rules 'sg-1234abcd' => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules 'sg-1234abcd' => 80
 
-            outbound_rules aws_security_group('mysecuritygroup') => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules aws_security_group('mysecuritygroup') => 80
 
-            outbound_rules AWS.ec2.security_groups.first => 80
+       .. code-block:: ruby
 
-         and load balancers:
+          outbound_rules AWS.ec2.security_groups.first => 80
 
-         .. code-block:: ruby
+       and load balancers:
 
-            outbound_rules { load_balancer: 'myloadbalancer' } => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules { load_balancer: 'myloadbalancer' } => 80
 
-            outbound_rules 'elb-1234abcd' => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules 'elb-1234abcd' => 80
 
-            outbound_rules load_balancer('myloadbalancer') => 80
+       .. code-block:: ruby
 
-         .. code-block:: ruby
+          outbound_rules load_balancer('myloadbalancer') => 80
 
-            outbound_rules AWS.ec2.security_groups.first => 80
+       .. code-block:: ruby
+
+          outbound_rules AWS.ec2.security_groups.first => 80
+
    * - ``vpc``
      - **Ruby Type:** String, AwsVpc, AWS::EC2::VPC
 
