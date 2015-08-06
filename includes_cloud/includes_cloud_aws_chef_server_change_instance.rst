@@ -63,12 +63,12 @@ To edit the |amazon ami| instance size, do the following:
       current_dir = File.dirname(__FILE__)
       log_level                :info
       log_location             STDOUT
-      node_name                "your_username"
-      client_key               "#{current_dir}/your_username.pem"
-      validation_client_name   "your_username-validator"
-      validation_key           "#{current_dir}/your_username-validator.pem"
-      chef_server_url          "https://<YOUR NEW PUBLIC DNS>/organizations/your_org"
-      cookbook_path            ["#{current_dir}/../cookbooks"]
+      node_name                'your_username'
+      client_key               '#{current_dir}/your_username.pem'
+      validation_client_name   'your_username-validator'
+      validation_key           '#{current_dir}/your_username-validator.pem'
+      chef_server_url          'https://<YOUR NEW PUBLIC DNS>/organizations/your_org'
+      cookbook_path            ['#{current_dir}/../cookbooks']
 
 #. Run ``knife ssl fetch`` to add |chef server| SSL certificates to the your SSL trusted certificates.
 #. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.

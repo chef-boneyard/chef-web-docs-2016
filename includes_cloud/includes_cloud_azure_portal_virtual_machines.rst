@@ -17,7 +17,7 @@ Once this information has been identified, launch the |azure portal|, start the 
 
    .. note:: It’s best to use a new computer name each time through this workflow. This will help to avoid conflicts with virtual machine names that may have been previously registered on the |chef server|.
 
-#. Make the desired changes, if any, to the cloud service name, storage account, endpoints, etc., and then click to the next page
+#. Make the desired changes, if any, to the cloud service name, storage account, endpoints, etc., and then click to the next page.
 
 #. Install |chef|. Click the checkbox next to **Chef** to configure virtual machines using with |chef|: 
 
@@ -59,9 +59,9 @@ Once this information has been identified, launch the |azure portal|, start the 
 
 #. Click the checkmark button to complete the page. Provisioning will begin and the application will return to the **Virtual Machines** page showing the list of available virtual machines.
 
-   When the virtual machine has reached the status **starting**, click the virtual machine name to go to a page that contains more detail. Click **dashboard** to see more detailed status, and scroll down to the area that says **extensions**
+   When the virtual machine has reached the status **starting**, click the virtual machine name to go to a page that contains more detail. Click **dashboard** to see more detailed status, and scroll down to the area that says **extensions**.
 
-   Once the VM has gone far enough in the “running(provisioning” state, some entries should appear under status, like this:
+   Once the VM has gone far enough in the “running(provisioning)” state, some entries should appear under status, like this:
 
    .. image:: ../../images/azure_portal_1.png
 
@@ -69,4 +69,4 @@ Once this information has been identified, launch the |azure portal|, start the 
 
    .. image:: ../../images/azure_portal_2.png
 
-After the process is complete, the virtual machine will be registered with the |chef server| and it will have been provisioned with the configuration (applications, services, etc.) from the specified run-list. The |chef server| can now be used to perform all ongoing management of the virtual machine node. 
+After the process is complete, the virtual machine will be registered with the |chef server| and it will have been provisioned with the configuration (applications, services, etc.) from the specified run-list. The |chef server| can now be used to perform all ongoing management of the virtual machine node.

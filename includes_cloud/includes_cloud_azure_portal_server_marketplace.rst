@@ -37,7 +37,7 @@ Before getting started, you will need a functioning workstation. Install the `Ch
 
 #. The |chef manage| will then **Create** a new organization. Click **Create Organization** and complete the form. 
 
-#. Once the organization is created, download the **Starter Kit** for the newly created organization. 
+#. After the organization is created, download the **Starter Kit**. 
 
 #. Extract the starter kit zip file downloaded. Open a command prompt and change into the ``chef-repo`` directory extracted from the starter kit.
 

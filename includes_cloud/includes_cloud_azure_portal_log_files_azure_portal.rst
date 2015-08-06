@@ -16,4 +16,4 @@ Log files are available from within the |azure portal|:
       $ cd c:\windowsazure\logs
         ls –r chef*.log
 
-#. This should display the log files, including the |chef client| log file. 
+#. This should display the log files, including the |chef client| log file.
