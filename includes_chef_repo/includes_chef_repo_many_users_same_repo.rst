@@ -14,10 +14,10 @@ It is possible for multiple users to access the |chef server| using the same |kn
      validation_key           "#{ENV['HOME']}/chef-repo/.chef/#{ENV['ORGNAME']}-validator.pem"
      chef_server_url          "https://api.opscode.com/organizations/#{ENV['ORGNAME']}"
      syntax_check_cache_path  "#{ENV['HOME']}/chef-repo/.chef/syntax_check_cache"
-     cookbook_path            ["#{current_dir}/../cookbooks"]
-     cookbook_copyright       "Your Company, Inc."
-     cookbook_license         "apachev2"
-     cookbook_email           "cookbooks@yourcompany.com"
+     cookbook_path            ['#{current_dir}/../cookbooks']
+     cookbook_copyright       'Your Company, Inc.'
+     cookbook_license         'apachev2"
+     cookbook_email           'cookbooks@yourcompany.com'
    
      # Amazon AWS
      knife[:aws_access_key_id] = ENV['AWS_ACCESS_KEY_ID']
@@ -26,6 +26,3 @@ It is possible for multiple users to access the |chef server| using the same |kn
      # Rackspace Cloud
      knife[:rackspace_api_username] = ENV['RACKSPACE_USERNAME']
      knife[:rackspace_api_key] = ENV['RACKSPACE_API_KEY']
-
-
-

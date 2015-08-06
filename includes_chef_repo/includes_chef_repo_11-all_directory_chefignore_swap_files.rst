@@ -13,10 +13,3 @@ and for |vim|, do something like:
 .. code-block:: basemake
 
    *.sw[a-z]
-
-
-
-
-
-
-

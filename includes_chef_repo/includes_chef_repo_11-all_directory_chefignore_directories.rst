@@ -13,10 +13,3 @@ or:
 .. code-block:: basemake
 
    files/default/subdirectory/**
-
-
-
-
-
-
-

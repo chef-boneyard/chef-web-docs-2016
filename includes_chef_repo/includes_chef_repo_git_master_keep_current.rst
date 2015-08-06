@@ -23,12 +23,12 @@ The following ``rakefile`` can be used to update |chef|, |ohai|, and cookbooks. 
    projects = %w[chef cookbooks ohai]
    chef = "#{ENV['HOME']}/projects/chef"
 
-   desc "Update local repositories from upstream"
+   desc 'Update local repositories from upstream'
    task :update do
      projects.each do |p|
-       Dir.chdir("#{chef}/#{p}") do
-         sh "git fetch chef"
-         sh "git rebase chef/master master"
+       Dir.chdir('#{chef}/#{p}') do
+         sh 'git fetch chef'
+         sh 'git rebase chef/master master'
        end
      end
    end
