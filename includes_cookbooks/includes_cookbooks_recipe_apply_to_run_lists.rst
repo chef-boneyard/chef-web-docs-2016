@@ -14,9 +14,9 @@ There are two recipes: a default recipe (that has the same name as the cookbook)
 .. code-block:: ruby
 
    {
-     "run_list": [
-     "recipe[cookbook_name::default_recipe]",
-     "recipe[cookbook_name::recipe_name]"
+     'run_list': [
+     'recipe[cookbook_name::default_recipe]',
+     'recipe[cookbook_name::recipe_name]'
      ]
    }
 
@@ -25,8 +25,8 @@ where ``::default_recipe`` is implied (and does not need to be specified). On a 
 .. code-block:: ruby
 
    {
-     "run_list": [
-     "recipe[apache2]",
-     "recipe[apache2::mod_ssl]"
+     'run_list': [
+     'recipe[apache2]',
+     'recipe[apache2::mod_ssl]'
      ]
    }

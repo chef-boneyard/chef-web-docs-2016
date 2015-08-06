@@ -12,7 +12,10 @@ More than one recipe can be added:
 .. code-block:: bash
 
    % knife node run list add NODENAME "recipe[apache2],recipe[mysql],role[ssh]"
-      run_list:
-         recipe[apache2]
-         recipe[mysql]
-         role[ssh]
+
+which creates a runlist similar to::
+
+   run_list:
+      recipe[apache2]
+      recipe[mysql]
+      role[ssh]
