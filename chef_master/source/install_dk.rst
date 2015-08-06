@@ -85,9 +85,9 @@ Manually (w/ Webui)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_install/includes_install_chef_client_repo_manual_via_webui.rst
 
-**Clone the chef-repo**
+**Create the chef-repo**
 
-.. include:: ../../includes_install/includes_install_chef_client_repo_manual_clone_repo.rst
+Use `the chef generate app command <http://docs.chef.io/ctl_chef.html#chef-generate-app>`__ to create the |chef repo|.
 
 **Create .chef Directory**
 
@@ -105,9 +105,9 @@ Manually (w/o Webui)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_install/includes_install_chef_client_repo_manual_no_webui.rst
 
-**Clone the chef-repo**
+**Create the chef-repo**
 
-.. include:: ../../includes_install/includes_install_chef_client_repo_manual_clone_repo.rst
+Use `the chef generate app command <http://docs.chef.io/ctl_chef.html#chef-generate-app>`__ to create the |chef repo|.
 
 **Create .chef Directory**
 
