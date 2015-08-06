@@ -8,6 +8,3 @@ The syntax for the ``reboot_pending?`` method is as follows:
 .. code-block:: ruby
 
    reboot_pending?
-
-
-

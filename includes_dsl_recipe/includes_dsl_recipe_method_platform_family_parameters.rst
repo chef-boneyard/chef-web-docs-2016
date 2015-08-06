@@ -36,13 +36,12 @@ For example:
 
 .. code-block:: ruby
 
-   platform_family?("gentoo")
+   platform_family?('gentoo')
 
 or:
 
 .. code-block:: ruby
 
-   platform_family?("slackware", "suse", "arch")
+   platform_family?('slackware', 'suse', 'arch')
 
 .. note:: ``platform_family?`` will default to ``platform?`` when ``platform_family?`` is not explicitly defined.
-

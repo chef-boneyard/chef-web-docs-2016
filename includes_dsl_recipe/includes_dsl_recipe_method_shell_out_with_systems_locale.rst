@@ -10,5 +10,3 @@ The syntax for the ``shell_out_with_systems_locale`` method is as follows:
    shell_out_with_systems_locale(command_args)
 
 where ``command_args`` is the command that is run against the node.
-
-

@@ -11,17 +11,17 @@ Matchers are available for packages and may be used to define audits that test i
      - Description, Example
    * - ``be_installed``
      - Use to test if the named package is installed. For example:
-       
+
        .. code-block:: ruby
-       
-          it "should be installed" do
-            expect(package("httpd")).to be_installed
+
+          it 'should be installed' do
+            expect(package('httpd')).to be_installed
           end
 
        For a specific package version:
 
        .. code-block:: ruby
-       
-          it "should be installed" do
-            expect(package("httpd")).to be_installed.with_version("0.1.2")
+
+          it 'should be installed' do
+            expect(package('httpd')).to be_installed.with_version('0.1.2')
           end

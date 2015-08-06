@@ -13,5 +13,4 @@ This method is often used as part of a log entry. For example:
 
 .. code-block:: ruby
 
-   Chef::Log.info("I am a message from the #{recipe_name} recipe in the #{cookbook_name} cookbook.")
-
+   Chef::Log.info('I am a message from the #{recipe_name} recipe in the #{cookbook_name} cookbook.')

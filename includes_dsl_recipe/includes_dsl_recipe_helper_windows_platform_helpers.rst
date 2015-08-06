@@ -44,7 +44,3 @@ The following |windows| platform-specific helpers can be used in recipes:
      - Use to test for |windows vista|.
    * - ``windows_xp?``
      - Use to test for |windows xp|.
-
-
-
-

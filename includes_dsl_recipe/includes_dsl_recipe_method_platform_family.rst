@@ -7,18 +7,18 @@ The syntax for the ``platform_family?`` method is as follows:
 
 .. code-block:: ruby
 
-   platform_family?("parameter", "parameter")
+   platform_family?('parameter', 'parameter')
 
 where:
 
-* ``"parameter"`` is a comma-separated list, each specifying a platform family, such as |debian|, or |redhat enterprise linux|
+* ``'parameter'`` is a comma-separated list, each specifying a platform family, such as |debian|, or |redhat enterprise linux|
 * ``platform_family?`` method is typically used with an ``if``, ``elseif``, or ``case`` statement that contains |ruby| code that is specific for the platform family, if detected
 
 For example:
 
 .. code-block:: ruby
 
-   if platform_family?("rhel")
+   if platform_family?('rhel')
      # do RHEL things
    end
 
@@ -26,11 +26,8 @@ or:
 
 .. code-block:: ruby
 
-   if platform_family?("debian", "rhel")
+   if platform_family?('debian', 'rhel')
      # do things on debian and rhel families
    end
 
-
 .. future example: step_resource_remote_file_use_platform_family
-
-

@@ -23,13 +23,13 @@ And then use this variable to define specific behaviors for specific |windows| p
      resource_name do
        # resource block
      end
-
+   
    elsif variable_name.helper_name?
      # Ruby code goes here
      resource_name do
        # resource block for something else
      end
-
+   
    else variable_name.helper_name?
      # Ruby code goes here, such as
      log 'log entry' do
@@ -37,4 +37,3 @@ And then use this variable to define specific behaviors for specific |windows| p
      end
    
    end
-

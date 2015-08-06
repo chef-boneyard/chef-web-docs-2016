@@ -7,11 +7,11 @@ The syntax for the ``value_for_platform_family`` method is as follows:
 
 .. code-block:: ruby
 
-   value_for_platform_family( "platform_family" => { "version" => "value" }, ... )
+   value_for_platform_family( 'platform_family' => { 'version' => 'value' }, ... )
 
 where:
 
-* ``"platform_family" => { "version" => "value" }, ...`` is a comma-separated list of platforms, such as |fedora|, |suse|, or |redhat enterprise linux|
+* ``'platform_family' => { 'version' => 'value' }, ...`` is a comma-separated list of platforms, such as |fedora|, |suse|, or |redhat enterprise linux|
 * ``value`` specifies the value that will be used if the node's platform family matches the ``value_for_platform_family`` method
 
 When each value only has a single platform, use the following syntax:
@@ -19,9 +19,9 @@ When each value only has a single platform, use the following syntax:
 .. code-block:: ruby
 
    value_for_platform_family(
-     "platform_family" => { "version" => "value" },
-     "platform_family" => { "version" => "value" },
-     "platform_family" => "value"
+     'platform_family' => { 'version' => 'value' },
+     'platform_family' => { 'version' => 'value' },
+     'platform_family' => 'value'
    )
 
 When each value has more than one platform, the syntax changes to:
@@ -29,16 +29,16 @@ When each value has more than one platform, the syntax changes to:
 .. code-block:: ruby
 
    value_for_platform_family(
-     ["platform_family", "platform_family", "platform_family", "platform_family" ] => "value",
-     ["platform_family", "platform_family"] => "value",
-     "default" => "value"
+     ['platform_family', 'platform_family', 'platform_family', 'platform_family' ] => 'value',
+     ['platform_family', 'platform_family'] => 'value',
+     'default' => 'value'
    )
 
-The following example will set ``package`` to "httpd-devel" for the |redhat enterprise linux|, |fedora|, and |suse| platforms and to "apache2-dev" for the |debian| platform:
+The following example will set ``package`` to ``httpd-devel`` for the |redhat enterprise linux|, |fedora|, and |suse| platforms and to ``apache2-dev`` for the |debian| platform:
 
 .. code-block:: ruby
 
    package = value_for_platform_family(
-     ["rhel", "fedora", "suse"] => "httpd-devel",
-      "debian" => "apache2-dev"
+     ['rhel', 'fedora', 'suse'] => 'httpd-devel',
+      'debian' => 'apache2-dev'
    )

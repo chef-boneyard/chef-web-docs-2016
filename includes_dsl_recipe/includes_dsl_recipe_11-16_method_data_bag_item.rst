@@ -8,4 +8,3 @@ The syntax for the ``data_bag_item`` method is as follows:
 .. code-block:: ruby
 
    data_bag_item(bag_name, item)
-

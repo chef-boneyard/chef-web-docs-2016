@@ -7,4 +7,3 @@ The |dsl recipe| provides support for using attributes, data bags (and encrypted
 * ``platform_family?``
 * ``value_for_platform``
 * ``value_for_platform_family``
-

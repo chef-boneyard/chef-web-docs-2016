@@ -7,11 +7,11 @@ The syntax for the ``value_for_platform`` method is as follows:
 
 .. code-block:: ruby
 
-   value_for_platform( ["platform", ...] => { "version" => value } )
+   value_for_platform( ['platform', ...] => { 'version' => 'value' } )
 
 where:
 
-* ``"platform", ...`` is a comma-separated list of platforms, such as |redhat|, |suse|, or |fedora|
+* ``'platform', ...`` is a comma-separated list of platforms, such as |redhat|, |suse|, or |fedora|
 * ``version`` specifies the version of that platform
 * Version constraints---``>``, ``<``, ``>=``, ``<=``, ``~>``---may be used with ``version``; an exception is raised if two version constraints match; an exact match will always take precedence over a match made from a version constraint
 * ``value`` specifies the value that will be used if the node's platform matches the ``value_for_platform`` method
@@ -21,9 +21,9 @@ When each value only has a single platform, use the following syntax:
 .. code-block:: ruby
 
    value_for_platform(
-     "platform" => { "version" => "value" },
-     "platform" => { "version" => "value" },
-     "platform" => "value"
+     'platform' => { 'version' => 'value' },
+     'platform' => { 'version' => 'value' },
+     'platform' => 'value'
    )
 
 When each value has more than one platform, the syntax changes to:
@@ -31,7 +31,7 @@ When each value has more than one platform, the syntax changes to:
 .. code-block:: ruby
 
    value_for_platform(
-     ["platform", "platform", ... ] => {
-      "version" => "value"
+     ['platform', 'platform', ... ] => {
+      'version' => 'value'
      },
    )

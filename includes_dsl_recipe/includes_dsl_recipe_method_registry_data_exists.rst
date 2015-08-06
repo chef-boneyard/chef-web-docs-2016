@@ -11,14 +11,14 @@ The syntax for the ``registry_data_exists?`` method is as follows:
 
    registry_data_exists?(
      KEY_PATH, 
-     { :name => "NAME", :type => TYPE, :data => VALUE }, 
+     { :name => 'NAME', :type => TYPE, :data => VALUE }, 
      ARCHITECTURE
    )
 
 where:
 
 * ``KEY_PATH`` is the path to the registry key. |key_name resource registry_key hives|
-* ``{ :name => "NAME", :type => TYPE, :data => VALUE }`` is a hash that contains the name, type, and value of the registry setting
+* ``{ :name => 'NAME', :type => TYPE, :data => VALUE }`` is a hash that contains the name, type, and value of the registry setting
 * |values resource registry_key types|
 * ``ARCHITECTURE`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``. |architecture registry_key machine|
 
