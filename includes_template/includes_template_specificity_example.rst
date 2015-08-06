@@ -16,14 +16,14 @@ and a resource that looks something like the following:
 
 .. code-block:: ruby
 
-   template "C:\path\to\file\text_file.txt" do
-     source "text_file.txt"
+   template 'C:\path\to\file\text_file.txt' do
+     source 'text_file.txt'
      mode '0755'
      owner 'root'
      group 'root'
    end
 
-This resource would be matched in the same order as the ``/templates`` directory structure. For a node named "host-node-desktop" that is running |windows 7|, the second item would be the matching item and the location:
+This resource would be matched in the same order as the ``/templates`` directory structure. For a node named ``host-node-desktop`` that is running |windows 7|, the second item would be the matching item and the location:
 
 .. code-block:: ruby
 

@@ -21,17 +21,17 @@ A statement is delimited by a modifier, such as ``if``, ``elseif``, and ``else``
 
 Using a |ruby| expression is the most common approach for defining template variables because this is how all variables that are sent to a template are referenced. Whenever a template needs to use an ``each``, ``if``, or ``end``, use a |ruby| statement.
 
-When a template is rendered, |ruby| expressions and statements are evaluated by the |chef client|. The variables listed in the resource's variables parameter and the node object are evaluated. The |chef client| then passes these variables to the template, where they will be accessible as instance variables within the template; the node object can be accessed just as if it were part of a recipe, using the same syntax.
+When a template is rendered, |ruby| expressions and statements are evaluated by the |chef client|. The variables listed in the |resource template| resource's ``variables`` parameter and in the node object are evaluated. The |chef client| then passes these variables to the template, where they will be accessible as instance variables within the template. The node object can be accessed just as if it were part of a recipe, using the same syntax.
 
 For example, a simple template resource like this:
 
 .. code-block:: ruby
 
-   node[:fqdn] = "latte"
-   template "/tmp/foo" do
+   node[:fqdn] = 'latte'
+   template '/tmp/foo' do
      source 'foo.erb'
      variables({
-       :x_men => "are keen"
+       :x_men => 'are keen'
      })
    end
 

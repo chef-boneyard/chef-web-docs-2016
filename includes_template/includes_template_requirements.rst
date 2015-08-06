@@ -10,8 +10,8 @@ For example, the following template file and template resource settings can be u
 
 .. code-block:: ruby
 
-   template "/etc/sudoers" do
-     source "sudoers.erb"
+   template '/etc/sudoers' do
+     source 'sudoers.erb'
      mode '0440'
      owner 'root'
      group 'root'
@@ -52,5 +52,5 @@ And then set the default attributes in |path attributes default rb|:
 
 .. code-block:: ruby
 
-   default["authorization"]["sudo"]["groups"] = [ "sysadmin","wheel","admin" ]
-   default["authorization"]["sudo"]["users"]  = [ "jerry","greg"]
+   default['authorization']['sudo']['groups'] = [ 'sysadmin', 'wheel', 'admin' ]
+   default['authorization']['sudo']['users']  = [ 'jerry', 'greg']
