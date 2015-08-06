@@ -17,19 +17,19 @@ A definition file is similar to a macro; use a definition to define reusable cod
    
      if %w{omnios}.include?(node['platform'])
        pkgopts = [
-         "-a #{cache_dir}/#{params[:name]}-nocheck",
-         "-r #{cache_dir}/splunk-response"
+         '-a #{cache_dir}/#{params[:name]}-nocheck',
+         '-r #{cache_dir}/splunk-response'
        ]
    
-       execute "uncompress #{cached_package}" do
-         not_if { ::File.exists?("#{cache_dir}/#{package_file.gsub(/\.Z/, '')}") }
+       execute 'uncompress #{cached_package}' do
+         not_if { File.exist?("#{cache_dir}/#{package_file.gsub(/\.Z/, '')}") }
        end
    
-       cookbook_file "#{cache_dir}/#{params[:name]}-nocheck" do
+       cookbook_file '#{cache_dir}/#{params[:name]}-nocheck' do
          source 'splunk-nocheck'
        end
    
-       file "#{cache_dir}/splunk-response" do
+       file '#{cache_dir}/splunk-response' do
          content 'BASEDIR=/opt'
        end
      end

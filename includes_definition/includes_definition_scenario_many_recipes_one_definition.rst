@@ -8,19 +8,19 @@ Data can be passed to a definition from more than one recipe. For example, when 
    # example provided by community member "Mithrandir". Thank you!
 
    define :email_alias, :recipients => [] do
-     execute "newaliases" do
+     execute 'newaliases' do
        action :nothing
      end
     
      t = nil
      begin
-       t = resources(:template => "/etc/aliases")
+       t = resources(:template => '/etc/aliases')
      rescue Chef::Exceptions::ResourceNotFound
-       t = template "/etc/aliases" do
-         source "aliases.erb"
-         cookbook "aliases"
+       t = template '/etc/aliases' do
+         source 'aliases.erb'
+         cookbook 'aliases'
          variables({:aliases => {} })
-         notifies :run, "execute[newaliases]"
+         notifies :run, 'execute[newaliases]'
        end
      end
    

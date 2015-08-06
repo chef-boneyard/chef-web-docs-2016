@@ -24,13 +24,13 @@ More commonly, the usage incorporates arguments to the definition:
      body (likely referencing the params hash)
    end
 
-The following simplistic example shows a definition with no arguments (a parameter-less macro in the truest sense): 
+The following simplistic example shows a definition with no arguments (a parameterless macro in the truest sense): 
 
 .. code-block:: ruby
 
    define :prime_myfile do
-     file "/etc/myfile" do
-       content "some content"
+     file '/etc/myfile' do
+       content 'some content'
      end
    end
 
@@ -53,12 +53,12 @@ Or the following definition, which looks like a resource when used in a recipe, 
    define :host_porter, :port => 4000, :hostname => nil do
      params[:hostname] ||= params[:name]
    
-     directory "/etc/#{params[:hostname]}" do
+     directory '/etc/#{params[:hostname]}' do
        recursive true
      end
    
-     file "/etc/#{params[:hostname]}/#{params[:port]}" do
-       content "some content"
+     file '/etc/#{params[:hostname]}/#{params[:port]}' do
+       content 'some content'
      end
    end
 
@@ -70,6 +70,6 @@ which is then used in a recipe like this:
     port 4000
    end
    
-   host_porter "www1" do
+   host_porter 'www1' do
      port 4001
    end

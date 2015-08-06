@@ -7,10 +7,10 @@ The virtual host on the |apache 2| server is only one per node, which can create
 
 .. code-block:: ruby
 
-   web_app "blog_site" do
-     server_name "blog"
+   web_app 'blog_site' do
+     server_name 'blog'
      server_aliases [ "blog.#{node['domain']}", node['fqdn'] ]
-     docroot "/srv/www/blog_site"
+     docroot '/srv/www/blog_site'
    end
 
 When the |chef client| processes a recipe that contains this definition, it will find the ``web_app`` resource and will attempt to recognize it as a resource. Assuming that the |cookbook apache2| cookbook is available, the resources contained within that cookbook will be found and loaded, replacing the definition.
