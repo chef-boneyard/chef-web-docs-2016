@@ -1,6 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
+.. THIS FILE SHOULD BE DEPRECATED IN FAVOR OF THE CHEF GENERATE APP COMMAND. THE CHEF-REPO REPOSITORY ON GITHUB IS DEPRECATED. THIS FILE PRESERVES THE HISTORY, ONLY.
+
 The |chef repo| on |github| must be cloned to every workstation that will interact with a |chef server|.
 
 To clone the |chef repo|:
