@@ -10,18 +10,16 @@ For example:
 
    action :add do
      unless @current_resource.exists
-       cmd = "#{appcmd} add app /site.name:\"#{@new_resource.app_name}\""
-       cmd << " /path:\"#{@new_resource.path}\""
-       cmd << " /applicationPool:\"#{@new_resource.application_pool}\"" if @new_resource.application_pool
-       cmd << " /physicalPath:\"#{@new_resource.physical_path}\"" if @new_resource.physical_path
+       cmd = "#{appcmd} add app /site.name:\'#{@new_resource.app_name}\'"
+       cmd << " /path:\'#{@new_resource.path}\'"
+       cmd << " /applicationPool:\'#{@new_resource.application_pool}\'" if @new_resource.application_pool
+       cmd << " /physicalPath:\'#{@new_resource.physical_path}\'" if @new_resource.physical_path
        Chef::Log.debug(cmd)
        shell_out!(cmd)
-       Chef::Log.info("App created")
+       Chef::Log.info('App created')
      else
-       Chef::Log.debug("#{@new_resource} app already exists - nothing to do")
+       Chef::Log.debug('#{@new_resource} app already exists - nothing to do')
      end
    end
 
-where the ``unless`` conditional statement checks to make sure the resource doesn't already exist on a node, and then runs a series of commands when it doesn't. If the resource already exists, the log entry would be "Foo app already exists - nothing to do."
-
-
+where the ``unless`` conditional statement checks to make sure the resource doesn't already exist on a node, and then runs a series of commands when it doesn't. If the resource already exists, the log entry would be ``Foo app already exists - nothing to do``.

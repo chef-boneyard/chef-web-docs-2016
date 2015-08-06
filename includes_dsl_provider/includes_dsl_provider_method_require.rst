@@ -8,12 +8,4 @@ For example:
 
 .. code-block:: ruby
 
-   require path/to/external/library
-
-
-
-
-
-
-
-
+   require 'path/to/external/library'

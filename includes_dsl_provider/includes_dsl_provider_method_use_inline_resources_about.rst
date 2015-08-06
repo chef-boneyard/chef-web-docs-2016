@@ -16,4 +16,3 @@ then when ``lwrp_resource`` is executed, the resource collection will be modifie
    top_level_resource_two
 
 In this situation, embedded lightweight resources cannot notify the top-level resource because the top-level resource has finished processing. This has the same effect as if the top-level resource collection were invisible to the embedded lightweight resources.
-

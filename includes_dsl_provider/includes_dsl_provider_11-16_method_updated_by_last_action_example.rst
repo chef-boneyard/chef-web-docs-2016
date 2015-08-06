@@ -21,7 +21,7 @@ For example, the ``lvm_logical_volume`` custom resource from the `lvm cookbook <
            end
 
            dir_resource = directory mount_spec[:location] do
-             mode 0755
+             mode '0755'
              owner 'root'
              group 'root'
              recursive true

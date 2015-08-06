@@ -10,15 +10,15 @@ For example:
 
    def load_current_resource
      @current_resource = Chef::Resource::TransmissionTorrentFile.new(@new_resource.name)
-     Chef::Log.debug("#{@new_resource} torrent hash = #{torrent_hash}")
-     @transmission = Opscode::Transmission::Client.new("foo:#{@new_resource.att1}@#{@new_resource.att2}:#{@new_resource.att3}/path")
+     Chef::Log.debug('#{@new_resource} torrent hash = #{torrent_hash}')
+     @transmission = Opscode::Transmission::Client.new('foo:#{@new_resource.att1}@#{@new_resource.att2}:#{@new_resource.att3}/path')
      @torrent = nil
      begin
        @torrent = @transmission.get_torrent(torrent_hash)
        Chef::Log.info("Found existing #{@new_resource} in swarm with name of '#{@torrent.name}' and status of '#{@torrent.status_message}'")
        @current_resource.torrent(@new_resource.torrent)
      rescue
-       Chef::Log.debug("Cannot find #{@new_resource} in the swarm")
+       Chef::Log.debug('Cannot find #{@new_resource} in the swarm')
      end
      @current_resource
    end

@@ -8,11 +8,11 @@ The ``action`` method is used to define the steps that will be taken for each of
 
    action :action_name do
      if @current_resource.exists
-       Chef::Log.info "#{ @new_resource } already exists - nothing to do."
+       Chef::Log.info '#{ @new_resource } already exists - nothing to do.'
      else
-       converge_by("Create resource #{ @new_resource }")
-         resource "resource_name" do
-           Chef::Log.info "#{ @new_resource } created."
+       converge_by('Create resource #{ @new_resource }')
+         resource 'resource_name' do
+           Chef::Log.info '#{ @new_resource } created.'
          end
        end
      end
@@ -26,5 +26,3 @@ where:
 * If the object already exists, a ``#{ @new_resource } already exists - nothing to do.`` log entry is created
 * If the object does not already exists, the ``resource`` block is run. This block is a recipe that tells the |chef client| what to do. A ``#{ @new_resource } created.`` log entry is created
 * ``converge_by`` tells the |chef client| which message to provide when the |chef client| is run in |whyrun| mode
-
-

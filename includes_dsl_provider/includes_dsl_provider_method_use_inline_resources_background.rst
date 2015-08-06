@@ -12,12 +12,12 @@ For example:
 
 .. code-block:: ruby
 
-   custom_resource "something" do
+   custom_resource 'something' do
      action :run
-     notifies :restart, "service[whatever]", :immediately
+     notifies :restart, 'service[whatever]', :immediately
    end
    
-   service "whatever" do
+   service 'whatever' do
      action :nothing
    end
 
@@ -34,11 +34,11 @@ If the author of the custom resource knows in advance what notification is requi
 .. code-block:: ruby
 
    action :run do
-     file "/tmp/foo" do
-       owner "root"
-       group "root"
-       mode "0644"
-       notifies :restart, "service[whatever]", :immediately
+     file '/tmp/foo' do
+       owner 'root'
+       group 'root'
+       mode '0644'
+       notifies :restart, 'service[whatever]', :immediately
      end
    end
 
@@ -46,7 +46,7 @@ And then in the recipe:
 
 .. code-block:: ruby
 
-   service "whatever" do
+   service 'whatever' do
      action :nothing
    end
 
@@ -56,12 +56,12 @@ Using the ``use_inline_resources`` method will ensure that the |chef client| pro
 
 .. code-block:: ruby
 
-   custom_resource "something" do
+   custom_resource 'something' do
      action :run
-     notifies :restart, "service[whatever]", :immediately
+     notifies :restart, 'service[whatever]', :immediately
    end
    
-   service "whatever" do
+   service 'whatever' do
      action :nothing
    end
 
@@ -71,5 +71,3 @@ If the ``custom_resource`` is built using the |resource file| resource, what hap
      file (updated)
    custom_resource (updated, because ``file`` updated)
    service (updates, because ``:immediately`` is set in the custom resource)
-
-

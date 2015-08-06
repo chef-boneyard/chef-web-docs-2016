@@ -11,15 +11,13 @@ For example:
    action :delete do 
     if exists?
       if ::File.writable?(new_resource.path)
-        Chef::Log.info("Deleting #{new_resource} at #{new_resource.path}")
+        Chef::Log.info('Deleting #{new_resource} at #{new_resource.path}')
         ::File.delete(new_resource.path)
         new_resource.updated_by_last_action(true)
       else
-        raise "Cannot delete #{new_resource} at #{new_resource.path}!"
+        raise 'Cannot delete #{new_resource} at #{new_resource.path}!'
       end
     end
   end
 
 where the |chef client| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource.
-
-
