@@ -6,7 +6,7 @@ A role is defined using |json| or the |ruby| DSL. |chef solo| will look for role
 
 .. code-block:: ruby
 
-   role_path "/var/chef-solo/roles"
+   role_path '/var/chef-solo/roles'
 
 Role data looks like the following in |json|:
 
@@ -34,4 +34,4 @@ and finally, |json| data passed to |chef solo|:
 
 .. code-block:: ruby
 
-   { "run_list": "role[test]" }
+   { 'run_list': 'role[test]' }

@@ -6,7 +6,7 @@ An environment is defined using |json| or the |ruby| DSL. |chef solo| will look 
 
 .. code-block:: ruby
 
-   environment_path "/var/chef-solo/environments"
+   environment_path '/var/chef-solo/environments'
 
 Environment data looks like the following in |json|:
 
@@ -34,12 +34,8 @@ and like the following in the |ruby| DSL:
 
 .. code-block:: ruby
 
-   name "environment_name"
-   description "environment_description"
-   cookbook OR cookbook_versions  "cookbook" OR "cookbook" => "cookbook_version"
-   default_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
-   override_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
-
-
-
-
+   name 'environment_name'
+   description 'environment_description'
+   cookbook OR cookbook_versions  'cookbook' OR 'cookbook' => 'cookbook_version'
+   default_attributes 'node' => { 'attribute' => [ 'value', 'value', 'etc.' ] }
+   override_attributes 'node' => { 'attribute' => [ 'value', 'value', 'etc.' ] }

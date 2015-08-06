@@ -6,7 +6,7 @@ A data bag is defined using |json|. |chef solo| will look for data bags in ``/va
 
 .. code-block:: ruby
 
-   data_bag_path "/var/chef-solo/data_bags"
+   data_bag_path '/var/chef-solo/data_bags'
 
 Create a data bag by creating folders. For example:
 
@@ -28,6 +28,8 @@ and then create a |json| file in that location:
      "id": "ITEM_NAME"
    }
 
-where the name of the file is the ``ITEM_NAME``, for example::
+where the name of the file is the ``ITEM_NAME``, for example:
+
+.. code-block:: ruby
 
    /var/chef-solo/data_bags/admins/ITEM_NAME.json
