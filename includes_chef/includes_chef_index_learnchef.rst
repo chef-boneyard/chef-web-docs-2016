@@ -3,9 +3,3 @@
 
 
 **Learn Chef:**  `Get started <http://learn.chef.io>`_
-
-
-
-
-
-
