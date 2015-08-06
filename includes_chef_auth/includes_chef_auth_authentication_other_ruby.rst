@@ -11,12 +11,12 @@ On a system with the |chef client| installed, use |ruby| to make an authenticate
    require 'chef/log'
    require 'chef/rest'
     
-   chef_server_url="https://chefserver.com"
-   client_name = "clientname"
-   signing_key_filename="/path/to/pem/for/clientname"
+   chef_server_url = 'https://chefserver.com'
+   client_name = 'clientname'
+   signing_key_filename = '/path/to/pem/for/clientname'
    
    rest = Chef::REST.new(chef_server_url, client_name, signing_key_filename)
-   puts rest.get_rest("/clients")
+   puts rest.get_rest('/clients')
 
 or:
 
@@ -29,15 +29,15 @@ or:
    require 'chef/mixin/xml_escape'
    require 'json'
    
-   config_file = "c:/chef/client.rb"
+   config_file = 'c:/chef/client.rb'
    Chef::Config.from_file(config_file)
    Chef::Log.level = Chef::Config[:log_level]
    
    def Usage()
-     puts "/etc/chef/client.rb" #The config file location, e.g. ~/home/.chef/knife.rb etc
+     puts '/etc/chef/client.rb' # The config file location, e.g. ~/home/.chef/knife.rb etc
      config_file = gets.chomp
-     if (!File.exists?(config_file))
-       puts "config_file #{config_file} does not exist. Exiting.\n"
+     if (!File.exist?(config_file))
+       puts 'config_file #{config_file} does not exist. Exiting.\n'
        exit
      end
      STDOUT.puts <<-EOF
@@ -52,24 +52,24 @@ or:
    def ExecuteUserChoice()
      testoption = gets.chomp
      case testoption
-     when "1"
+     when '1'
        Execute(method(:DisplayNodesPerEnv))
-     when "2"
+     when '2'
        Execute(method(:DisplayNodesDetail))
-     when "9"
-       puts "exit"
+     when '9'
+       puts 'exit'
      else
-       puts "Unknown option #{testoption}. Exiting\n"
+       puts 'Unknown option #{testoption}. Exiting\n'
        exit
      end
    end
    
    def DisplayNodesPerEnv()
      Chef::Environment.list(false).each do |envr|
-       print "ENVIRONMENT: ", envr[0], "\n"
+       print 'ENVIRONMENT: ', envr[0], '\n'
        Chef::Node.list_by_environment(envr[0], false).each do |node_info|
-         print "\tNODE: ", node_info[0], "\n"
-         print "\t\tURL: ", node_info[1], "\n"
+         print '\tNODE: ', node_info[0], '\n'
+         print '\t\tURL: ', node_info[1], '\n'
        end
      end
    end
@@ -77,14 +77,14 @@ or:
    def DisplayNodesDetail()
      Chef::Node.list(true).each do |node_array|
        node = node_array[1]
-       print "#{node.name}\n"
-       print "\t#{node[:fqdn]}\n"
-       print "\t#{node[:kernel][:machine]}\n"
-       print "\t#{node[:kernel][:os]}\n"
-       print "\t#{node[:platform]}\n"
-       print "\t#{node[:platform_version]}\n"
-       print "\t#{node.chef_environment}\n"
-       print "\t#{node.run_list.roles}\n"
+       print '#{node.name}\n'
+       print '\t#{node[:fqdn]}\n'
+       print '\t#{node[:kernel][:machine]}\n'
+       print '\t#{node[:kernel][:os]}\n'
+       print '\t#{node[:platform]}\n'
+       print '\t#{node[:platform_version]}\n'
+       print '\t#{node.chef_environment}\n'
+       print '\t#{node.run_list.roles}\n'
      end
    end
    
@@ -94,29 +94,20 @@ or:
        option.call()
        profileend = Time.now
        timeofrun = profileend - profilestart
-       print "Time taken = #{timeofrun}"
+       print 'Time taken = #{timeofrun}'
      rescue Exception => ex
-       print "Error calling chef API"
+       print 'Error calling chef API'
        print ex.message
-       print ex.backtrace.join("\n")
+       print ex.backtrace.join('\n')
      end
    end
    
    Usage()
    ExecuteUserChoice()
 
-Another way |ruby| can be used with the |api chef server| is to get objects from the |chef server|, and then interact with the returned data using |ruby| methods. Whenever possible, the |api chef server| will return an object of the relevant type. The returned object is then available to be called by other methods. For example, the ``api.get`` method can be used to return a node named "foobar", and then ``.destroy`` can be used to delete that node:
+Another way |ruby| can be used with the |api chef server| is to get objects from the |chef server|, and then interact with the returned data using |ruby| methods. Whenever possible, the |api chef server| will return an object of the relevant type. The returned object is then available to be called by other methods. For example, the ``api.get`` method can be used to return a node named ``foobar``, and then ``.destroy`` can be used to delete that node:
 
 .. code-block:: ruby
 
-   silly_node = api.get("/nodes/foobar")
+   silly_node = api.get('/nodes/foobar')
    silly_node.destroy
-
-
-
-
-
-
-
-
-
