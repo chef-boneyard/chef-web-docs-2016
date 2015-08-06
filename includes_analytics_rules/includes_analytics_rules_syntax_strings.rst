@@ -1,24 +1,23 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A string must be contained in single- or double-quotes and may contain any valid UTF-8 character. For example
+A string must be contained in single- or double-quotes and may contain any valid UTF-8 character. For example, a single-quoted string:
 
 .. code-block:: ruby
 
    'A string.'
 
-or:
+or a double-quoted string:
 
 .. code-block:: ruby
 
    "A string."
 
-or:
+or a valid UTF-8 character:
 
 .. code-block:: ruby
 
    "ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ"
-
 
 Use a backslash---``\``---to escape single-quotes that must appear within a single-quoted string. For example:
 
@@ -38,7 +37,7 @@ For example:
 
 .. code-block:: ruby
 
-   rules "string example"
+   rules 'string example'
      rule on action
      when
        // this rule always matches

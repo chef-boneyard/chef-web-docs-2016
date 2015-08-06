@@ -6,9 +6,9 @@ The syntax for a |chef analytics| rule is as follows:
 
 .. code-block:: java
 
-   rules "name"
+   rules 'name'
      with priority=n
-     rule "name" on message_type
+     rule 'name' on message_type
      when
        // comment
        function()
@@ -32,7 +32,7 @@ where:
 * ``rules`` defines a rules group which is comprised of individual rules (``rule``)
 * ``rule`` defines an individual rule; each rule must be contained in its own ``rule`` block
 * ``with priority=n`` is a positive or negative integer that defines the relative priority of a rules group as compared to all other rules groups
-* ``"name"`` is name of the rule group and/or the name of the rule; required for ``rules``, optional for each ``rule``
+* ``'name'`` is name of the rule group and/or the name of the rule; required for ``rules``, optional for each ``rule``
 * ``message_type`` is one of the following: ``action``, ``run_control``, ``run_control_group``, ``run_converge``, ``run_resource``, or ``run_start``
 * ``when`` is a series of evaluations that result in ``true`` or ``false``
 * ``then`` is a comma-separated group of statements that are used to test data

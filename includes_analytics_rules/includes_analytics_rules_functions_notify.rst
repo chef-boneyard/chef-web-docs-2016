@@ -19,15 +19,15 @@ For example:
 
 .. code-block:: ruby
 
-   rules "Send notification"
+   rules 'Send notification'
      rule on action
        when
-         organization_name = "ponyville" and
-         (entity_type = "foo" or entity_type = "bar") and
-         remote_hostname =~ "33\.3[0-9].*"
+         organization_name = 'ponyville' and
+         (entity_type = 'foo' or entity_type = 'bar') and
+         remote_hostname =~ '33\.3[0-9].*'
        then
-         set value #foo = "100"
-         set value #xyz = "test"
-         notify("hipchat", "Hipchat notification {{message.requestor_name}} did something at {{message.recorded_at}}!")
+         set value #foo = '100'
+         set value #xyz = 'test'
+         notify('hipchat', 'Hipchat notification {{message.requestor_name}} did something at {{message.recorded_at}}!')
      end
    end

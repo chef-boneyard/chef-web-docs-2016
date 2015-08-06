@@ -23,7 +23,7 @@ For example:
    rule on action when
      get(foo, false) = false
    then
-     notify("some_alias")
+     notify('some_alias')
    end
 
 will pass if ``foo`` is missing in the |json| object.

@@ -57,7 +57,7 @@ For example:
 
 .. code-block:: bash
 
-   rules "Match control groups with failures"
+   rules 'Match control groups with failures'
      rule on run control group
        when
          name = 'mysql audit' and number_failed > 0

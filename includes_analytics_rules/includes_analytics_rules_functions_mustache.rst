@@ -20,7 +20,7 @@ For example:
 
 .. code-block:: ruby
 
-   rule "test_rule" on action 
+   rule 'test_rule' on action 
      when
        true
      then

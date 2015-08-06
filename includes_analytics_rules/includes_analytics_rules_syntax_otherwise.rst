@@ -6,11 +6,11 @@ Use the ``otherwise`` statement to specify what to do when a rule in the ``when`
 .. code-block:: ruby
 
    rule on action when
-     data.name="app1"
+     data.name='app1'
    then
-     set(#foo, "100")  
+     set(#foo, '100')  
    otherwise
-     set(#foo, "200")  
+     set(#foo, '200")  
    end
 
 When the name matches ``app1``, ``#foo`` will be set to ``100`` and if the name does not match ``app1``, ``#foo`` will be set to ``200``.

@@ -7,9 +7,9 @@ Use the ``then`` statement to specify what to do when a rule in the ``when`` sta
 .. code-block:: ruby
 
    rule on action when
-     data.name="app1"
+     data.name='app1'
    then
-     set(#foo, "100")  
+     set(#foo, '100')  
    end
 
 When the name matches ``app1``, ``#foo`` will be set to ``100``.

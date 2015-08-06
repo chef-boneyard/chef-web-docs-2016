@@ -5,13 +5,13 @@ Use a comment to document the behavior of the rules. A comment starts with a dou
 
 .. code-block:: ruby
 
-   rules "user-agent matching"
+   rules 'user-agent matching'
      rule on action
      when
        // this rule always matches
        true
      then
        // raise an audit for every action
-       alert:info("This rule matches all actions")
+       ':info('This rule matches all actions')
      end
    end

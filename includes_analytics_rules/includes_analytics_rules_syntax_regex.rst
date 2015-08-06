@@ -11,16 +11,16 @@ For example:
 
 .. code-block:: ruby
 
-   rules "regex demo"
+   rules 'regex demo'
      rule on action
        when
-         // match if the user_agent starts with the string "Chef Manage"
-         user_agent =~ "Chef Manage.*"
+         // match if the user_agent starts with the string 'Chef Manage'
+         user_agent =~ 'Chef Manage.*'
            or 
          // match 1 or more lower case characters followed by a single digit
-         entity_name =~ "[a-z]+\d"
+         entity_name =~ '[a-z]+\d'
        then
-         nofity("my_webhook")
+         nofity('my_webhook')
      end
    end
 

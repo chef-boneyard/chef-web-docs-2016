@@ -5,12 +5,12 @@ Whitespace is ignored by the rules parser unless it is contained within single- 
 
 .. code-block:: ruby
 
-   rules "rule"
+   rules 'rule'
      rule on action
      when
        true
      then
-       alert:info("string")
+       alert:info('string')
      end
    end
 
@@ -18,7 +18,7 @@ and:
 
 .. code-block:: ruby
 
-   rules "rule" rule on action when true then audit:info("string") end end
+   rules 'rule' rule on action when true then audit:info('string') end end
 
 The rules parser does not ignore spaces that are contained within single- or double-quotes. For example
 

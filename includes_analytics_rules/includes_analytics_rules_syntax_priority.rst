@@ -6,7 +6,7 @@ Use the ``with priority`` statement to specify a positive or negative integer th
 
 .. code-block:: ruby
 
-   rules "rule name"
+   rules 'rule name'
      with priority=100
        rule on action ...
      ...

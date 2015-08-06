@@ -12,13 +12,13 @@ For example, accessing integer values in a nested field:
 
 .. code-block:: ruby
 
-   rules "Control group matches"
+   rules 'Control group matches'
      rule on run control group
        when
-         run.chef_server_fqdn = "mysql.production.foo.com"
+         run.chef_server_fqdn = 'mysql.production.foo.com'
            or
-         // any node_name with "production" in it's name
-         run.node_name =~ ".*production.*"
+         // any node_name with 'production' in it's name
+         run.node_name =~ '.*production.*'
        then
          alert:info('production control group match')
      end
@@ -28,10 +28,10 @@ And accessing integer values in aan array:
 
 .. code-block:: ruby
 
-   rules "Run resource matches"
+   rules 'Run resource matches'
      rule on run resource
        when
-         converge.run_list[0] = "role[opscode-reporting]"
+         converge.run_list[0] = 'role[opscode-reporting]'
        or
          some_other.property[0].another_property[99] != 100
        then

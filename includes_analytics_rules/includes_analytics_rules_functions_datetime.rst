@@ -8,7 +8,7 @@ The syntax for this function:
 
 .. code-block:: ruby
 
-   datetime:component(field, "dateTimeComponent")
+   datetime:component(field, 'dateTimeComponent')
 
 where:
 
@@ -19,4 +19,4 @@ For example:
 
 .. code-block:: ruby
 
-   datetime:component(adate, "era")
+   datetime:component(adate, 'era')

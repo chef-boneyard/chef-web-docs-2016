@@ -32,10 +32,10 @@ The following fields are available for the ``run_control_group`` message type:
 
    * - ``id``
      - string
-     - The globaly-unique identifier for this message. For example: ``"12345678-9012-3456-7890-12345678901211"``.
+     - The globaly-unique identifier for this message. For example: ``'12345678-9012-3456-7890-12345678901211'``.
    * - ``name``
      - string
-     - The name of the control group object. For example: ``"mysql audit"``.
+     - The name of the control group object. For example: ``'mysql audit'``.
    * - ``number_failed``
      - integer
      - The number of tests within the control group that failed. For example: ``7``.
@@ -44,26 +44,26 @@ The following fields are available for the ``run_control_group`` message type:
      - The number of tests within the control group that passed. For example: ``4``.
    * - ``organization_name``
      - string
-     - The short name of the organization to which the node belongs. For example: ``"chef"``.
+     - The short name of the organization to which the node belongs. For example: ``'chef'``.
    * - ``run``
      - object
      - A |json| object that contains run data, including the |chef client| run identifier, the |fqdn| for the |chef server|, the name of the node, and the times at which the |chef client| started and finished.
    * - ``run.chef_server_fqdn``
      - string
-     - The |fqdn| for the |chef server| against which the instance is running. For example: ``"api.chef.io"``.
+     - The |fqdn| for the |chef server| against which the instance is running. For example: ``'api.chef.io'``.
    * - ``run.end_time``
      - string
-     - The ISO timestamp at which the |chef client| run finished. For example: ``"2014-06-05T10:39:43Z"``.
+     - The ISO timestamp at which the |chef client| run finished. For example: ``'2014-06-05T10:39:43Z'``.
    * - ``run.node_name``
      - string
-     - The name of the node on which the |chef client| run occurred. For example: ``"grantmc01-abc"``.
+     - The name of the node on which the |chef client| run occurred. For example: ``'grantmc01-abc'``.
    * - ``run.run_id``
      - string
-     - The internal message identifier for the |chef client| run. For example: ``"12345678-9012-3456-7890-12345678901211"``.
+     - The internal message identifier for the |chef client| run. For example: ``'12345678-9012-3456-7890-12345678901211'``.
    * - ``run.start_time``
      - string
-     - The ISO timestamp at which the |chef client| run started. For example: ``"2014-06-05T10:34:35Z"``.
+     - The ISO timestamp at which the |chef client| run started. For example: ``'2014-06-05T10:34:35Z'``.
    * - ``status``
      - string
-     - The status of the control object. For example: ``"failure"``.
+     - The status of the control object. For example: ``'failure'``.
 

@@ -19,4 +19,4 @@ For example:
 
 .. code-block:: ruby
 
-   set(#organization_name = "ponyville")
+   set(#organization_name = 'ponyville')

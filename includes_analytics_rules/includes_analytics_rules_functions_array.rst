@@ -19,4 +19,4 @@ For example:
 
 .. code-block:: ruby
 
-   array:contains(organization_name = "ponyville")
+   array:contains(organization_name = 'ponyville')

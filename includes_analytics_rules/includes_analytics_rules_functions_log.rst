@@ -18,4 +18,4 @@ For example:
 
 .. code-block:: ruby
 
-   log("Added rule for org <obj.organization_name>")
+   log('Added rule for org <obj.organization_name>')
