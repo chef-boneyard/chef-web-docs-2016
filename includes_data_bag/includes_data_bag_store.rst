@@ -14,9 +14,9 @@ When deploying from a private repository using a data bag, use the ``deploy_key`
 .. code-block:: ruby
 
    {
-     "id": "my_app",
+     'id': 'my_app',
      ... (truncated) ...
-     "deploy_key": "ssh_private_key"
+     'deploy_key': 'ssh_private_key'
    }
 
 where ``ssh_private_key`` is the same |ssh| private key as used with a private |git| repository and the new lines converted to ``\n``.

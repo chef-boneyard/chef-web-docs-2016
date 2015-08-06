@@ -16,13 +16,13 @@ To load the secret from a file:
 
    data_bag_item('bag', 'item', IO.read('secret_file’))
    
-To load a single data bag item named "justin":
+To load a single data bag item named ``justin``:
 
 .. code-block:: ruby
 
-   data_bag("admins")
+   data_bag('admins')
 
-The contents of a data bag item named "justin":
+The contents of a data bag item named ``justin``:
 
 .. code-block:: ruby
 
@@ -32,6 +32,6 @@ will return something similar to:
 
 .. code-block:: ruby
 
-   # => {"comment"=>"Justin Currie", "gid"=>1005, "id"=>"justin", "uid"=>1005, "shell"=>"/bin/zsh"}
+   # => {'comment'=>'Justin Currie', 'gid'=>1005, 'id'=>'justin', 'uid'=>1005, 'shell'=>'/bin/zsh'}
 
 If ``item`` is encrypted, ``data_bag_item`` will automatically decrypt it using the key specified above, or (if none is specified) by the ``Chef::Config[:encrypted_data_bag_secret]`` method, which defaults to ``/etc/chef/encrypted_data_bag_secret``.

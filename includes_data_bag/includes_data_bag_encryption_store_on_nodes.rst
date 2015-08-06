@@ -7,10 +7,10 @@ An encryption key can also be stored in an alternate file on the nodes that need
 .. code-block:: ruby
 
    # inside your attribute file:
-   # default[:mysql][:secretpath] = "C:\\chef\\any_secret_filename"
+   # default[:mysql][:secretpath] = 'C:\\chef\\any_secret_filename'
    #
    # inside your recipe:
    # look for secret in file pointed to by mysql attribute :secretpath
-   mysql_secret = Chef::EncryptedDataBagItem.load_secret("#{node[:mysql][:secretpath]}")
-   mysql_creds = Chef::EncryptedDataBagItem.load("passwords", "mysql", mysql_secret)
-   mysql_creds["pass"] # will be decrypted
+   mysql_secret = Chef::EncryptedDataBagItem.load_secret('#{node[:mysql][:secretpath]}')
+   mysql_creds = Chef::EncryptedDataBagItem.load('passwords', 'mysql', mysql_secret)
+   mysql_creds['pass'] # will be decrypted

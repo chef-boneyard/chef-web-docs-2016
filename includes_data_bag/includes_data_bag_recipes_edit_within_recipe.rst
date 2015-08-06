@@ -13,7 +13,7 @@ To create a data bag from a recipe:
 .. code-block:: ruby
 
    users = Chef::DataBag.new
-   users.name("users")
+   users.name('users')
    users.create
 
 To create a data bag item from a recipe:
@@ -21,12 +21,12 @@ To create a data bag item from a recipe:
 .. code-block:: ruby
 
    sam = {
-     "id" => "sam",
-     "Full Name" => "Sammy",
-     "shell" => "/bin/zsh"
+     'id' => 'sam',
+     'Full Name' => 'Sammy',
+     'shell' => '/bin/zsh'
    }
    databag_item = Chef::DataBagItem.new
-   databag_item.data_bag("users")
+   databag_item.data_bag('users')
    databag_item.raw_data = sam 
    databag_item.save
 
@@ -34,6 +34,6 @@ To edit the contents of a data bag item from a recipe:
 
 .. code-block:: ruby
 
-   sam = data_bag_item("users", "sam")
-   sam["Full Name"] = "Samantha"
+   sam = data_bag_item('users', 'sam')
+   sam['Full Name'] = 'Samantha'
    sam.save

@@ -11,17 +11,17 @@ The |chef client| can create users on systems based on the contents of a data ba
    admins.each do |login|
      # This causes a round-trip to the server for each admin in the data bag
      admin = data_bag_item('admins', login)
-     homedir = "/home/#{login}"
+     homedir = '/home/#{login}'
    
      # for each admin in the data bag, make a user resource
      # to ensure they exist
      user(login) do
-       uid       admin['uid']
-       gid       admin['gid']
-       shell     admin['shell']
-       comment   admin['comment']
-       home      homedir
-       supports  :manage_home => true
+       uid admin['uid']
+       gid admin['gid']
+       shell admin['shell']
+       comment admin['comment']
+       home homedir
+       supports :manage_home => true
      end
    
    end
@@ -29,7 +29,7 @@ The |chef client| can create users on systems based on the contents of a data ba
    # Create an "admins" group on the system
    # You might use this group in the /etc/sudoers file
    # to provide sudo access to the admins
-   group "admins" do
-     gid     999
-     members admins
+   group 'admins' do
+     gid '999'
+     members 'admins'
    end

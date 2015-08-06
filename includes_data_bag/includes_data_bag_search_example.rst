@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following example shows how to use the search index to find all of the items in a data bag (called "admins" that stores the user data for each system administrator), add each data bag item to an array, ensure that each data bag item exists as a user resource, and then to create a security group to which each of the data bag items belongs.
+The following example shows how to use the search index to find all of the items in a data bag (called ``admins`` that stores the user data for each system administrator), add each data bag item to an array, ensure that each data bag item exists as a user resource, and then to create a security group to which each of the data bag items belongs.
 
 .. code-block:: ruby
 
@@ -9,25 +9,25 @@ The following example shows how to use the search index to find all of the items
    admins = []
    
    # search for all items in the 'admins' data bag and loop over them
-   search(:admins, "*:*") do |admin|
+   search(:admins, '*:*') do |admin|
      # Set `login` to the id of the data bag item
-     login = admin["id"]
+     login = admin['id']
     
      # build up the list of the admins logins
      admins << login
     
-     home = "/home/#{login}"
+     home = '/home/#{login}'
    
      # for each admin in the data bag, make a user resource
      # to ensure they exist
      user(login) do
-       uid       admin['uid']
-       gid       admin['gid']
-       shell     admin['shell']
-       comment   admin['comment']
+       uid admin['uid']
+       gid admin['gid']
+       shell admin['shell']
+       comment admin['comment']
        
-       home      home
-       supports  :manage_home => true
+       home home
+       supports :manage_home => true
      end
    
    end
@@ -35,7 +35,7 @@ The following example shows how to use the search index to find all of the items
    # Create an "admins" group on the system
    # You might use this group in the /etc/sudoers file
    # to provide sudo access to the admins
-   group "admins" do
-     gid     999
-     members admins
+   group 'admins' do
+     gid '999'
+     members 'admins'
    end
