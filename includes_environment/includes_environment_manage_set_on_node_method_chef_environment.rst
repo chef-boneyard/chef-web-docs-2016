@@ -24,9 +24,9 @@ code-block:: ruby
        rescue Net::HTTPServerException => e
          msg = 'Chef Environment error: '
          if e.response.code.to_s == '404'
-           msg << "#{chef_env} does not exist, cannot change."
+           msg << '#{chef_env} does not exist, cannot change.'
          else
-           msg << "#{chef_env} raised #{e.message}"
+           msg << '#{chef_env} raised #{e.message}'
          end
          Chef::Log.error(msg)
          raise
