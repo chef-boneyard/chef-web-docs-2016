@@ -10,7 +10,9 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - Property
      - Description
    * - ``aws_tags``
-     - |aws_tag|
+     - **Ruby Type:** Hash
+
+       |aws_tag|
 
        For example:
 
@@ -19,13 +21,21 @@ This |chef provisioning| driver-specific resource has the following properties:
           aws_tags { :chef_type => 'aws_security_group' }
 
    * - ``chef_server``
-     - |provisioning_server|
+     - **Ruby Type:** Hash
+
+       |provisioning_server|
    * - ``description``
-     - Use to specify a description for the |amazon aws| security group.
+     - **Ruby Type:** String
+
+       Use to specify a description for the |amazon aws| security group.
    * - ``driver``
-     - |driver_provisioning|
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       |driver_provisioning|
    * - ``inbound_rules``
-     - Use to specify inbound rules. Rules must be specified in one of the following formats:
+     - **Ruby Type:** Array, Hash
+
+       Use to specify inbound rules. Rules must be specified in one of the following formats:
 
        .. code-block:: ruby
 
@@ -97,11 +107,17 @@ This |chef provisioning| driver-specific resource has the following properties:
             inbound_rules AWS.ec2.security_groups.first => 80
 
    * - ``managed_entry_store``
-     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
+     - **Ruby Type:** Chef::Provisioning::ManagedEntryStore
+
+       |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
-     - Use to specify the name of the |amazon aws| security group.
+     - **Ruby Type:** String
+
+       Use to specify the name of the |amazon aws| security group.
    * - ``outbound_rules``
-     - Use to specify outbound rules. Rules must be specified in one of the following formats:
+     - **Ruby Type:** Array, Hash
+
+       Use to specify outbound rules. Rules must be specified in one of the following formats:
 
        .. code-block:: ruby
 
@@ -172,7 +188,7 @@ This |chef provisioning| driver-specific resource has the following properties:
 
             outbound_rules AWS.ec2.security_groups.first => 80
 
-   * - ``security_group_id``
-     - Use to specify the |amazon aws| security group identifier.
    * - ``vpc``
-     - Use to specify the identifier for the |amazon vpc|.
+     - **Ruby Type:** String, AwsVpc, AWS::EC2::VPC
+
+       Use to specify the identifier for the |amazon vpc|.

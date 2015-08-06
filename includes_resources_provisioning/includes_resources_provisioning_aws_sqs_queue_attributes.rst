@@ -10,19 +10,31 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - Property
      - Description
    * - ``aws_tags``
-     - |aws_tag|
+     - **Ruby Type:** Hash
+
+       |aws_tag|
 
        .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
    * - ``chef_server``
-     - |provisioning_server|
+     - **Ruby Type:** Hash
+
+       |provisioning_server|
    * - ``driver``
-     - |driver_provisioning|
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       |driver_provisioning|
    * - ``managed_entry_store``
-     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
+     - **Ruby Type:** Chef::Provisioning::ManagedEntryStore
+
+       |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
-     - Use to specify the name of the |amazon sqs| queue.
+     - **Ruby Type:** String
+
+       Use to specify the name of the |amazon sqs| queue.
    * - ``options``
-     - Use to specify a |ruby hash| that `contains one (or more) attributes <http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_GetQueueAttributes.html>`__ for the |amazon sqs| queue. For example:
+     - **Ruby Type:** Hash
+
+       Use to specify a |ruby hash| that `contains one (or more) attributes <http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_GetQueueAttributes.html>`__ for the |amazon sqs| queue. For example:
 
        .. code-block:: ruby
 

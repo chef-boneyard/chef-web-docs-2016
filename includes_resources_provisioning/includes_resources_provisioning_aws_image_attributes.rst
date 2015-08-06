@@ -10,16 +10,28 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - Property
      - Description
    * - ``aws_tags``
-     - |aws_tag|
+     - **Ruby Type:** Hash
+
+       |aws_tag|
 
        .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
    * - ``chef_server``
-     - |provisioning_server|
+     - **Ruby Type:** Hash
+
+       |provisioning_server|
    * - ``driver``
-     - |driver_provisioning|
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       |driver_provisioning|
    * - ``image_id``
-     - Use to specify the image identifier.
+     - **Ruby Type:** String
+
+       Use to specify the image identifier.
    * - ``managed_entry_store``
-     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
+     - **Ruby Type:** Chef::Provisioning::ManagedEntryStore
+
+       |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
-     - Use to specify the name of an image.
+     - **Ruby Type:** String
+
+       Use to specify the name of an image.

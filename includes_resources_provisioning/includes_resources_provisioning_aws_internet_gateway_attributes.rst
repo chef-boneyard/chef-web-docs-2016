@@ -10,14 +10,24 @@ This |chef provisioning| driver-specific resource has the following properties:
    * - Property
      - Description
    * - ``aws_tags``
-     - |aws_tag|
+     - **Ruby Type:** Hash
+
+       |aws_tag|
 
        .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_attributes_aws_tag_example.rst
    * - ``driver``
-     - |driver_provisioning|
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       |driver_provisioning|
    * - ``internet_gateway_id``
-     - Use to specify the identifier for an internet gateway.
+     - **Ruby Type:** String
+
+       Use to specify the identifier for an internet gateway.
    * - ``managed_entry_store``
-     - |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
+     - **Ruby Type:** Chef::Provisioning::ManagedEntryStore
+
+       |managed_entry_store| For example: ``Chef::Provisioning.chef_managed_entry_store(self.chef_server)``.
    * - ``name``
-     - Use to specify the name of the internet gateway.
+     - **Ruby Type:** String
+
+       Use to specify the name of the internet gateway.
