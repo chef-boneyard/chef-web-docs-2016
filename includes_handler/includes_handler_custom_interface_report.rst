@@ -23,8 +23,8 @@ The `error_report <https://github.com/chef/chef/blob/master/lib/chef/handler/err
      class Handler
        class ErrorReport < ::Chef::Handler 
          def report
-           Chef::FileCache.store("failed-run-data.json", Chef::JSONCompat.to_json_pretty(data), 0640)
-           Chef::Log.fatal("Saving node information to #{Chef::FileCache.load("failed-run-data.json", false)}")
+           Chef::FileCache.store('failed-run-data.json', Chef::JSONCompat.to_json_pretty(data), 0640)
+           Chef::Log.fatal("Saving node information to #{Chef::FileCache.load('failed-run-data.json', false)}")
          end
        end
     end
@@ -43,18 +43,18 @@ The `json_file <https://github.com/chef/chef/blob/master/lib/chef/handler/json_f
          attr_reader :config
          def initialize(config={})
            @config = config
-           @config[:path] ||= "/var/chef/reports"
+           @config[:path] ||= '/var/chef/reports'
            @config
          end
          def report
            if exception
-             Chef::Log.error("Creating JSON exception report")
+             Chef::Log.error('Creating JSON exception report')
            else
-             Chef::Log.info("Creating JSON run report")
+             Chef::Log.info('Creating JSON run report')
            end
            build_report_dir
-           savetime = Time.now.strftime("%Y%m%d%H%M%S")
-           File.open(File.join(config[:path], "chef-run-report-#{savetime}.json"), "w") do |file|
+           savetime = Time.now.strftime('%Y%m%d%H%M%S')
+           File.open(File.join(config[:path], 'chef-run-report-#{savetime}.json'), 'w') do |file|
              run_data = data
              run_data[:start_time] = run_data[:start_time].to_s
              run_data[:end_time] = run_data[:end_time].to_s

@@ -10,4 +10,3 @@ The ``run_report_unsafe`` method is used to run the report handler without any e
      @run_status = run_status
      report
    end
-

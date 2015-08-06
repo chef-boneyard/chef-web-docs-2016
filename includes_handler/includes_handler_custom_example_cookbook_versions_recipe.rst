@@ -6,18 +6,18 @@ The following recipe is added to the run-list for every node on which a list of 
 
 .. code-block:: ruby
 
-   include_recipe "chef_handler"
+   include_recipe 'chef_handler'
    
-   cookbook_file "#{node["chef_handler"]["handler_path"]}/cookbook_versions.rb" do
-     source "cookbook_versions.rb"
+   cookbook_file "#{node['chef_handler']['handler_path']}/cookbook_versions.rb" do
+     source 'cookbook_versions.rb'
      owner 'root'
      group 'root'
      mode '0755'
      action :create
    end
    
-   chef_handler "Opscode::CookbookVersionsHandler" do
-     source "#{node["chef_handler"]["handler_path"]}/cookbook_versions.rb"
+   chef_handler 'Opscode::CookbookVersionsHandler' do
+     source "#{node['chef_handler']['handler_path']}/cookbook_versions.rb"
      supports :report => true
      action :enable
    end

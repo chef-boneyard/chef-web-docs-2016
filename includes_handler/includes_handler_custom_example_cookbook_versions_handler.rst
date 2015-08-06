@@ -13,7 +13,7 @@ The following custom handler defines how cookbooks and cookbook versions that ar
    
        def report
          cookbooks = run_context.cookbook_collection
-         Chef::Log.info("Cookbooks and versions run: #{cookbooks.keys.map {|x| cookbooks[x].name.to_s + " " + cookbooks[x].version} }")
+         Chef::Log.info('Cookbooks and versions run: #{cookbooks.keys.map {|x| cookbooks[x].name.to_s + ' ' + cookbooks[x].version} }')
        end
      end
    end

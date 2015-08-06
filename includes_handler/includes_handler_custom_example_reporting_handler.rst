@@ -21,16 +21,16 @@ The following code shows the start handler used by the |reporting| add-in for th
          end
    
          def report
-           version_checker = Chef::VersionConstraint.new("< 11.6.0")
+           version_checker = Chef::VersionConstraint.new('< 11.6.0')
            if version_checker.include?(Chef::VERSION)
-             Chef::Log.info("Enabling backported resource reporting Handler")
+             Chef::Log.info('Enabling backported resource reporting Handler')
              rest = Chef::REST.new(Chef::Config[:chef_server_url], @run_status.node.name, Chef::Config[:client_key])
              resource_reporter = Chef::Reporting::ResourceReporter.new(rest)
              @run_status.events.register(resource_reporter)
    
              resource_reporter.run_started(@run_status)
            else
-            Chef::Log.debug("Chef Version already has new Resource Reporter - skipping startup of backport version")
+            Chef::Log.debug('Chef Version already has new Resource Reporter - skipping startup of backport version')
            end
          end
        end

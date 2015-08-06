@@ -8,5 +8,3 @@ Start handlers are made available to the |chef client| run in one of the followi
 
 * By adding a start handler to the |cookbook chef_client| cookbook, which installs the handler on the node so that it is available to the |chef client| at the start of the |chef client| run
 * By adding the handler to one of the following settings in the node's client.rb file: ``start_handlers``
-
-

@@ -9,7 +9,7 @@ The ``run_report_safely`` method is used to run the report handler, rescuing and
    def run_report_safely(run_status)
      run_report_unsafe(run_status)
    rescue Exception => e
-     Chef::Log.error("Report handler #{self.class.name} raised #{e.inspect}")
+     Chef::Log.error('Report handler #{self.class.name} raised #{e.inspect}')
      Array(e.backtrace).each { |line| Chef::Log.error(line) }
    ensure
      @run_status = nil

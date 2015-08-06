@@ -21,14 +21,13 @@ For example, the |reporting| start handler adds the following code to the top of
      require 'chef_reporting'
      start_handlers << Chef::Reporting::StartHandler.new()
    rescue LoadError
-     Chef::Log.warn "Failed to load #{lib}. This should be resolved after a chef run."
+     Chef::Log.warn 'Failed to load #{lib}. This should be resolved after a chef run.'
    end
 
 This ensures that when the |chef client| run begins the ``chef_reporting`` event handler is enabled. The ``chef_reporting`` event handler is part of a |gem| named ``chef-reporting``. The |resource chef_gem| resource is used to install this |gem|:
 
 .. code-block:: ruby
 
-   chef_gem "chef-reporting" do
+   chef_gem 'chef-reporting' do
      action :install
    end
-

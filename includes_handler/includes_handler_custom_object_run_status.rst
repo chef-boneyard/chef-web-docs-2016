@@ -34,4 +34,3 @@ The ``run_status`` object is initialized by the |chef client| before the ``repor
      - |handler method_updated_resources|
 
 .. note:: These properties are not always available. For example, a start handler runs at the beginning of the |chef client| run, which means that properties like ``end_time`` and ``elapsed_time`` are still unknown and will be unavailable to the ``run_status`` object.
-

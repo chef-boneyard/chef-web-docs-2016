@@ -13,9 +13,9 @@ The |cookbook chef_client| cookbook can be configured to automatically install a
    
    node.set['chef_client']['start_handlers'] = [
      {
-       :class => "Chef::Reporting::StartHandler",
+       :class => 'Chef::Reporting::StartHandler',
        :arguments => []
      }
    ]
-
-   include_recipe "chef-client::config"
+   
+   include_recipe 'chef-client::config'

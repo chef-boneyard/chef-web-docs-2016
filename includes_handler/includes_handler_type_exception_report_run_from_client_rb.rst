@@ -21,12 +21,11 @@ For example:
 
 .. code-block:: ruby
 
-   require "rubygems"
-   require "/var/chef/handlers/email_me"         # the installation path
+   require 'rubygems'
+   require '/var/chef/handlers/email_me'         # the installation path
 
    email_handler = MyOrg::EmailMe.new            # a simple handler
 
    start_handlers << email_handler               # run at the start of the run
    report_handlers << email_handler              # run at the end of a successful run
    exception_handlers << email_handler           # run at the end of a failed run
-

@@ -8,8 +8,8 @@ To use the |lwrp chef handler| resource in a recipe, add code similar to the fol
 
 .. code-block:: ruby
 
-   chef_handler "name_of_handler" do
-     source "/path/to/handler/handler_name"
+   chef_handler 'name_of_handler' do
+     source '/path/to/handler/handler_name'
      action :enable
    end
 
@@ -17,13 +17,13 @@ For example, a handler for |growl| needs to be enabled at the beginning of the |
 
 .. code-block:: ruby
 
-   chef_gem "chef-handler-growl"
+   chef_gem 'chef-handler-growl'
 
 and then is activated in a recipe by using the |lwrp chef handler| resource:
 
 .. code-block:: ruby
 
-   chef_handler "Chef::Handler::Growl" do
-     source "chef/handler/growl"
+   chef_handler 'Chef::Handler::Growl' do
+     source 'chef/handler/growl'
      action :enable
    end

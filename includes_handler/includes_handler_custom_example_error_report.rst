@@ -16,11 +16,7 @@ By using the `chef_handler <https://docs.chef.io/resource_chef_handler.html>`_ r
 
 .. code-block:: ruby
 
-   chef_handler "Chef::Handler::ErrorReport" do
-     source "chef/handler/error_report"
+   chef_handler 'Chef::Handler::ErrorReport' do
+     source 'chef/handler/error_report'
      action :enable
    end
-   
-
-   
-   
