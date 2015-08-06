@@ -31,7 +31,7 @@ and then later on in the same plugin, the ``cloud`` object can be reused:
      cloud[:public_hostname] = linode['public_hostname']
      cloud[:local_ipv4] = linode['local_ipv4']
      cloud[:local_hostname] = linode['local_hostname']
-     cloud[:provider] = "linode"
+     cloud[:provider] = 'linode'
    end
 
 and
@@ -39,12 +39,12 @@ and
 .. code-block:: ruby
 
    def get_azure_values
-     cloud[:vm_name] = azure["vm_name"]
+     cloud[:vm_name] = azure['vm_name']
      cloud[:public_ips] << azure['public_ip']
      cloud[:public_fqdn] = azure['public_fqdn']
      cloud[:public_ssh_port] = azure['public_ssh_port'] if azure['public_ssh_port']
      cloud[:public_winrm_port] = azure['public_winrm_port'] if azure['public_winrm_port']
-     cloud[:provider] = "azure"
+     cloud[:provider] = 'azure'
    end
 
 and so on, for each of the various cloud providers.

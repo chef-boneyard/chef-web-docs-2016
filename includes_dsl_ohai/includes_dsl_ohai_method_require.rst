@@ -41,10 +41,3 @@ When a class is an external class (and therefore should not have ``Ohai::`` prep
 .. code-block:: ruby
 
    ::External::Class::Library
-
-
-
-
-
-
-

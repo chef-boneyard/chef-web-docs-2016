@@ -11,7 +11,7 @@ The ``/common`` directory stores code that is used across all |ohai| plugins. Fo
        module Virtualization
    
          def host?(virtualization)
-           !virtualization.nil? && virtualization[:role].eql?("host")
+           !virtualization.nil? && virtualization[:role].eql?('host')
          end
    
          def open_virtconn(system)
@@ -19,11 +19,11 @@ The ``/common`` directory stores code that is used across all |ohai| plugins. Fo
              require 'libvirt'
              require 'hpricot'
            rescue LoadError => e
-             Ohai::Log.debug("Cannot load gem: #{e}.")
+             Ohai::Log.debug('Cannot load gem: #{e}.')
            end
    
            emu = (system.eql?('kvm') ? 'qemu' : system)
-           virtconn = Libvirt::open_read_only("#{emu}:///system")
+           virtconn = Libvirt::open_read_only('#{emu}:///system')
          end
    
          ...
@@ -33,7 +33,7 @@ The ``/common`` directory stores code that is used across all |ohai| plugins. Fo
            virtconn.list_networks.each do |n|
              nv = virtconn.lookup_network_by_name n
              networks[n] = Mash.new
-             networks[n][:xml_desc] = (nv.xml_desc.split("\n").collect {|line| line.strip}).join
+             networks[n][:xml_desc] = (nv.xml_desc.split('\n').collect {|line| line.strip}).join
              ['bridge_name','uuid'].each {|a| networks[n][a] = nv.send(a)}
              #xdoc = Hpricot networks[n][:xml_desc]
            end
@@ -55,9 +55,9 @@ can then be leveraged in a plugin by using the ``require`` method to require the
    Ohai.plugin(:Virtualization) do
      include Ohai::Common::Virtualization
    
-     provides "virtualization"
+     provides 'virtualization'
      %w{ capabilities domains networks storage }.each do |subattr|
-       provides "virtualization/#{subattr}"
+       provides 'virtualization/#{subattr}'
      end
    
      collect_data(:linux) do

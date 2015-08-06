@@ -6,6 +6,6 @@ Use a mash to store data. This is done by creating a new mash, and then setting 
 
 .. code-block:: ruby
 
-   provides "name_of_mash"
+   provides 'name_of_mash'
    name_of_mash Mash.new
-   name_of_mash[:attribute] = "value"
+   name_of_mash[:attribute] = 'value'
