@@ -32,7 +32,7 @@ versus:
 
 .. code-block:: ruby
 
-   describe "use this test to foo" do
+   describe 'use this test to foo' do
      let(:subject) { command('ls -al /') }
      its(:stdout) { should match /bin/ }
    end

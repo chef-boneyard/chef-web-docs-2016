@@ -11,8 +11,8 @@
    end
 
    file '/tmp/with_attributes' do
-     user   'user'
-     group  'group'
+     user 'user'
+     group 'group'
      backup false
      action :delete
    end
