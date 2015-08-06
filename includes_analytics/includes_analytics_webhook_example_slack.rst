@@ -30,12 +30,12 @@ A webhook for |chef analytics| enables real-time event streams to be sent to arb
           true
         then
           notify('slack', '{
-            "text": "test from the blog post"
+            'text': 'test from the blog post'
           }')
         end
       end
 
-   |slack| expects a |json| document to be sent to the incoming webook integration from |chef analytics|. |chef analytics| supports multi-line notifications to be written. Use the ``"text"`` property in the rule to send the data as a |json| document.
+   |slack| expects a |json| document to be sent to the incoming webook integration from |chef analytics|. |chef analytics| supports multi-line notifications to be written. Use the ``'text'`` property in the rule to send the data as a |json| document.
 
 # Next, create a rule that is more specific to the |chef analytics| data, such as assigning an emoji and a name for the notification:
 
@@ -47,12 +47,12 @@ A webhook for |chef analytics| enables real-time event streams to be sent to arb
           status != 'success'
         then
           notify('slack', '{
-            "username": "Audit Alarm",
-            "icon_emoji": ":rotating_light:",
-            "text": "{{message.name}} (cookbook {{message.cookbook_name}})\n
-            had `{{message.number_failed}}` failed audit test(s)\n
-            on node `{{message.run.node_name}}`\n
-            in organization `{{message.organization_name}}`"
+            'username': 'Audit Alarm',
+            'icon_emoji': ':rotating_light:',
+            'text': "{{message.name}} (cookbook {{message.cookbook_name}})\n
+            had '{{message.number_failed}}' failed audit test(s)\n
+            on node '{{message.run.node_name}}'\n
+            in organization '{{message.organization_name}}'"
           }')
         end
       end
