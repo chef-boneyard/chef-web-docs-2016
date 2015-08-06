@@ -10,7 +10,7 @@ This configuration file has the following general settings:
    * - Setting
      - Description
    * - ``api_fqdn``
-     - The |fqdn| for the |chef server|. This setting is not in the |enterprise rb| file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. For example: ``api_fqdn "chef.example.com"``.
+     - The |fqdn| for the |chef server|. This setting is not in the |enterprise rb| file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. For example: ``api_fqdn 'chef.example.com'``.
    * - ``bootstrap``
      - Default value: ``true``.
    * - ``ip_version``
@@ -18,6 +18,6 @@ This configuration file has the following general settings:
    * - ``notification_email``
      - Default value: ``info@example.com``.
    * - ``role``
-     - |role chef_server| Possible values: ``backend``, ``frontend``, or ``standalone``. Default value: ``"standalone"``.
+     - |role chef_server| Possible values: ``backend``, ``frontend``, or ``standalone``. Default value: ``'standalone'``.
    * - ``topology``
-     - The topology of the |chef server|. Possible values: ``ha``, ``manual``, ``standalone``, and ``tier``. Default value: ``"standalone"``.
+     - The topology of the |chef server|. Possible values: ``ha``, ``manual``, ``standalone``, and ``tier``. Default value: ``'standalone'``.

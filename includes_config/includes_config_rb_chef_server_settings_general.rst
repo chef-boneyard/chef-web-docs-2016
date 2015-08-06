@@ -10,7 +10,7 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``api_fqdn``
-     - The |fqdn| for the |chef server|. This setting is not in the |enterprise rb| file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. Then configure the same value for the ``bookshelf['vip']`` setting prior to installing |chef server oec|. For example: ``api_fqdn "chef.example.com"``.
+     - The |fqdn| for the |chef server|. This setting is not in the |enterprise rb| file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. Then configure the same value for the ``bookshelf['vip']`` setting prior to installing |chef server oec|. For example: ``api_fqdn 'chef.example.com'``.
    * - ``bootstrap``
      - Default value: ``true``.
    * - ``ip_version``
@@ -21,4 +21,3 @@ This configuration file has the following settings:
      - Default value: ``info@example.com``.
    * - ``topology``
      - Default value: ``standalone``.
-

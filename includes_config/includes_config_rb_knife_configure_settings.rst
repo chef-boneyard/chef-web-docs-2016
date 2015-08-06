@@ -6,29 +6,28 @@
 The following ``knife configure`` settings can be added to the |knife rb| file:
 
 ``knife[:admin_client_name]``
-   Use for the name of the admin client that is passed as part of a the command itself.
+   The name of the admin client that is passed as part of a the command itself.
 
 ``knife[:config_file]``
-   Use to add the ``--config`` option.
+   Adds the the ``--config`` option.
 
 ``knife[:disable_editing]``
-   Use to add the ``--disable-editing`` option.
+   Adds the the ``--disable-editing`` option.
 
 ``knife[:file]``
-   Use to add the ``--file`` option.
+   Adds the the ``--file`` option.
 
 ``knife[:initial]``
-   Use to add the ``--initial`` option.
+   Adds the the ``--initial`` option.
 
 ``knife[:repository]``
-   Use to add the ``--repository`` option.
+   Adds the the ``--repository`` option.
 
 ``knife[:user_home]``
-   Use to add the ``--user`` option.
+   Adds the the ``--user`` option.
 
 ``knife[:user_password]``
-   Use to add the ``--password`` option.
+   Adds the the ``--password`` option.
 
 ``knife[:yes]``
-   Use to add the ``--yes`` option.
-
+   Adds the the ``--yes`` option.

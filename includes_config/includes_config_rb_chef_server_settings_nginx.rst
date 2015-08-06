@@ -30,7 +30,7 @@ This configuration file has the following settings:
    * - ``nginx['gzip_proxied']``
      - The type of compression used based on the request and response. Default value: ``any``.
    * - ``nginx['gzip_types']``
-     - Enables compression for the specified MIME-types. Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
+     - Enables compression for the specified MIME-types. Default value: ``[ 'text/plain', 'text/css', 'application/x-javascript', 'text/xml', 'application/xml', 'application/xml+rss', 'text/javascript', 'application/json' ]``.
    * - ``nginx['ha']``
      - |use ha| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
@@ -52,10 +52,10 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          nginx['ssl_ciphers'] =  "HIGH:MEDIUM:!LOW:!kEDH: \
+          nginx['ssl_ciphers'] =  'HIGH:MEDIUM:!LOW:!kEDH: \
                                    !aNULL:!ADH:!eNULL:!EXP: \
                                    !SSLv2:!SEED:!CAMELLIA: \
-                                   !PSK"
+                                   !PSK'
 
 
 
@@ -73,7 +73,7 @@ This configuration file has the following settings:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``. Default value: varies, depending on the configuration of the |chef server| topology.
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] 'TLSv1 TLSv1.1 TLSv1.2'``. Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``

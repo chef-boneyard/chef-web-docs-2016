@@ -17,7 +17,7 @@ If the |chef server| is configured to use HTTP, add the following settings:
 
        .. code-block:: ruby
 
-          http_proxy "http://proxy.vmware.com:3128"
+          http_proxy 'http://proxy.vmware.com:3128'
    * - ``http_proxy_user``
      - |http_proxy_user| Default value: ``nil``.
    * - ``http_proxy_pass``

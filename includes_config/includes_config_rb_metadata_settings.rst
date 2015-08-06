@@ -15,43 +15,43 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           attribute 'pets/cat/name',
-            :display_name => "Cat Name",
-            :description => "The name of your cat",
+            :display_name => 'Cat Name',
+            :description => 'The name of your cat',
             :choice => \[
               'kitty kitty',
               'peanut',
               'einstein',
               'honey' \],
-            :type => "string",
-            :required => "recommended",
+            :type => 'string',
+            :required => 'recommended',
             :recipes => \[ 'cats::eat' \],
-            :default => "kitty kitty"
+            :default => 'kitty kitty'
 
    * - ``conflicts``
-     - For information only; not used outside this file. |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named "dogs":
+     - For information only; not used outside this file. |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named ``dogs``:
 
        .. code-block:: ruby
 
-          conflicts "dogs"
+          conflicts 'dogs'
 
-       Or if the cookbook conflicted with a cookbook named "dogs" and greater than version 1.0:
+       Or if the cookbook conflicted with a cookbook named ``dogs`` and greater than version 1.0:
 
        .. code-block:: ruby
 
-          conflicts "dogs", "> 1.0"
+          conflicts 'dogs', '> 1.0'
 
    * - ``depends``
-     - |metadata rb depends| For example, to set a dependency a cookbook named "cats":
+     - |metadata rb depends| For example, to set a dependency a cookbook named ``cats``:
 
        .. code-block:: ruby
 
-          depends "cats"
+          depends 'cats'
 
        Or, to set a dependency on the same cookbook, but only when the version is less than 1.0:
 
        .. code-block:: ruby
 
-          depends "cats", "< 1.0"
+          depends 'cats', '< 1.0'
 
    * - ``description``
      - |description cookbook| For example:
@@ -66,15 +66,15 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           grouping 'pets/cat',
-           :title => "Cat Options",
-           :description => "Describe your cat using the options below"
+           :title => 'Cat Options',
+           :description => 'Describe your cat using the options below'
 
    * - ``issues_url``
      - |url cookbook_issues| In |supermarket|, this value is used to define the destination for the "View Issues" link. For example:
 
        .. code-block:: ruby
 
-          issues_url "https://github.com/opscode-cookbooks/chef-client/issues"
+          issues_url 'https://github.com/opscode-cookbooks/chef-client/issues'
 
    * - ``license``
      - |license metadata_rb| For example:
@@ -166,79 +166,79 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          provides "cats::sleep"
-          provides "cats::eat"
+          provides 'cats::sleep'
+          provides 'cats::eat'
 
        For definitions:
 
        .. code-block:: ruby
 
-          provides "here(:kitty, :time_to_eat)"
+          provides 'here(:kitty, :time_to_eat)'
 
        And for resources:
 
        .. code-block:: ruby
 
-          provides "service[snuggle]"
+          provides 'service[snuggle]'
 
    * - ``recipe``
      - |description recipe| For example:
 
        .. code-block:: ruby
 
-          recipe "cats::sleep", "For a crazy 20 hours a day."
+          recipe 'cats::sleep', 'For a crazy 20 hours a day.'
 
        Or:
 
        .. code-block:: ruby
 
-          recipe "cats::eat", "When they are not sleeping."
+          recipe 'cats::eat', 'When they are not sleeping.'
 
    * - ``recommends``
      - |metadata rb recommends| For example:
 
        .. code-block:: ruby
 
-          recommends "dogs"
+          recommends 'dogs'
 
-       Or, to recommend a cookbook named "dogs" and for version 1.0 (or higher):
+       Or, to recommend a cookbook named ``dogs`` and for version 1.0 (or higher):
 
        .. code-block:: ruby
 
-          recommends "dogs", "> 1.0"
+          recommends 'dogs', '> 1.0'
 
    * - ``replaces``
-     - For information only; not used outside this file. |metadata rb replaces| For example, to replace a cookbook named "dogs" with this cookbook:
+     - For information only; not used outside this file. |metadata rb replaces| For example, to replace a cookbook named ``dogs`` with this cookbook:
 
        .. code-block:: ruby
 
-          replaces "dogs"
+          replaces 'dogs'
 
-       Or to replace a cookbook named dogs, but only for versions prior to 4.0:
+       Or to replace a cookbook named ``dogs``, but only for versions prior to 4.0:
 
        .. code-block:: ruby
 
-          replaces "dogs", "< 4.0"
+          replaces 'dogs', '< 4.0'
 
    * - ``source_url``
      - |url cookbook_source| In |supermarket|, this value is used to define the destination for the "View Source" link. For example:
 
        .. code-block:: ruby
 
-          source_url "https://github.com/opscode-cookbooks/chef-client"
+          source_url 'https://github.com/opscode-cookbooks/chef-client'
 
    * - ``suggests``
      - For information only; not used outside this file. |metadata rb suggests| For example:
 
        .. code-block:: ruby
 
-          suggests "cats"
+          suggests 'cats'
 
-       Or, to suggest a cookbook named "cats", but only for versions 1.0 and higher:
+       Or, to suggest a cookbook named ``cats``, but only for versions 1.0 and higher:
 
        .. code-block:: ruby
 
-          suggests "cats", "> 1.0"
+          suggests 'cats', '> 1.0'
 
    * - ``supports``
      - |metadata rb supports| For example, to support every version of |ubuntu|:
@@ -251,7 +251,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          supports 'ubuntu', ">= 8.04"
+          supports 'ubuntu', '>= 8.04'
 
        Or, to support only |ubuntu| 9.10:
 
@@ -264,4 +264,4 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          version "1.9.0"
+          version '1.9.0'

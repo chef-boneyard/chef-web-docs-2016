@@ -6,5 +6,4 @@
 The following ``knife cookbook test`` settings can be added to the |knife rb| file:
 
 ``knife[:all]``
-   Use to add the ``--all`` option.
-
+   Adds the the ``--all`` option.

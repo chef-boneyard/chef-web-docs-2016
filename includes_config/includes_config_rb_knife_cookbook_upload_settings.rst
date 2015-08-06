@@ -6,17 +6,16 @@
 The following ``knife cookbook upload`` settings can be added to the |knife rb| file:
 
 ``knife[:all]``
-   Use to add the ``--all`` option.
+   Adds the the ``--all`` option.
 
 ``knife[:depends]``
-   Use to add the ``--include-dependencies`` option.
+   Adds the the ``--include-dependencies`` option.
 
 ``knife[:environment]``
-   Use to add the ``--environment`` option.
+   Adds the the ``--environment`` option.
 
 ``knife[:force]``
-   Use to add the ``--force`` option.
+   Adds the the ``--force`` option.
 
 ``knife[:freeze]``
-   Use to add the ``--freeze`` option.
-
+   Adds the the ``--freeze`` option.

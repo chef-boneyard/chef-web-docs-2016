@@ -6,11 +6,10 @@
 The following ``knife status`` settings can be added to the |knife rb| file:
 
 ``knife[:hide_healthy]``
-   Use to add the ``--hide-healthy`` option.
+   Adds the the ``--hide-healthy`` option.
 
 ``knife[:run_list]``
-   Use to add the ``--run-list`` option.
+   Adds the the ``--run-list`` option.
 
 ``knife[:sort_reverse]``
-   Use to add the ``--sort-reverse`` option.
-
+   Adds the the ``--sort-reverse`` option.

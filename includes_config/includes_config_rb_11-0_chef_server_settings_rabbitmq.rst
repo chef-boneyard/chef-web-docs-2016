@@ -35,5 +35,3 @@ This configuration file has the following settings:
      - The virtual host. Default value: ``/chef``.
    * - ``rabbitmq['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
-
-

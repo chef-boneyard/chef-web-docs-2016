@@ -16,7 +16,7 @@ The |service erchef| service has the following settings:
    * - ``opscode_erchef['cache_ttl']``
      - Default value: ``3600``.
    * - ``opscode_erchef['couchdb_max_conn']``
-     - Default value: ``"100"``.
+     - Default value: ``'100'``.
    * - ``opscode_erchef['db_pool_size']``
      - |db_pool_size| Default value: ``20``.
    * - ``opscode_erchef['dir']``

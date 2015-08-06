@@ -72,9 +72,8 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['username']``
      - |name user postgresql| Default value: ``opscode-pgsql``.
    * - ``postgresql['version']``
-     - The (currently) hardcoded version of |postgresql|. Default value: ``"9.2"``.
+     - The (currently) hardcoded version of |postgresql|. Default value: ``'9.2'``.
    * - ``postgresql['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``postgresql['work_mem']``
      - |work_mem| Default value: ``8MB``.
-

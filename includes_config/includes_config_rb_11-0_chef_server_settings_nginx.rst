@@ -28,7 +28,7 @@ This configuration file has the following settings:
    * - ``nginx['gzip_proxied']``
      - The type of compression used based on the request and response. Default value: ``any``.
    * - ``nginx['gzip_types']``
-     - Enables compression for the specified MIME-types. Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
+     - Enables compression for the specified MIME-types. Default value: ``[ 'text/plain', 'text/css', 'application/x-javascript', 'text/xml', 'application/xml', 'application/xml+rss', 'text/javascript', 'application/json' ]``.
    * - ``nginx['ha']``
      - |use ha| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``

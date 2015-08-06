@@ -30,7 +30,7 @@ This configuration file has the following settings for |nginx|:
    * - ``nginx['gzip_proxied']``
      - |gzip proxied| Default value: ``any``.
    * - ``nginx['gzip_types']``
-     - |gzip types| Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
+     - |gzip types| Default value: ``[ 'text/plain', 'text/css', 'application/x-javascript', 'text/xml', 'application/xml', 'application/xml+rss', 'text/javascript', 'application/json' ]``.
    * - ``nginx['ha']``
      - |use ha| |ha true| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
@@ -64,7 +64,7 @@ This configuration file has the following settings for |nginx|:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``. Default value: varies, depending on the configuration of the |chef server| topology.
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] 'TLSv1 TLSv1.1 TLSv1.2'``. Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``
@@ -78,4 +78,4 @@ This configuration file has the following settings for |nginx|:
    * - ``nginx['worker_processes']``
      - |worker_processes| Use with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.
    * - ``nginx['x_forwarded_proto']``
-     - |x_forwarded_proto| This is the protocol used to connect to |chef server oec| by a |chef client| or a workstation. Default value: ``"https"``.
+     - |x_forwarded_proto| This is the protocol used to connect to |chef server oec| by a |chef client| or a workstation. Default value: ``'https'``.

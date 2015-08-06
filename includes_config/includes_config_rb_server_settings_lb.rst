@@ -38,13 +38,13 @@ This configuration file has the following settings for ``lb``:
    * - ``lb['redis_keepalive_timeout']``
      - |timeout ms| Default value: ``2000``.
    * - ``lb['upstream']['bookshelf']``
-     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
+     - |default_value_recommended| Default value: ``[ '127.0.0.1' ]``.
    * - ``lb['upstream']['oc_bifrost']``
-     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
+     - |default_value_recommended| Default value: ``[ '127.0.0.1' ]``.
    * - ``lb['upstream']['opscode_erchef']``
-     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
+     - |default_value_recommended| Default value: ``[ '127.0.0.1' ]``.
    * - ``lb['upstream']['opscode_solr4']``
-     - |default_value_recommended| Default value: ``[ "127.0.0.1" ]``.
+     - |default_value_recommended| Default value: ``[ '127.0.0.1' ]``.
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``lb['web_ui_fqdn']``
@@ -81,4 +81,4 @@ And for the internal load balancers:
    * - ``lb_internal['oc_bifrost_port']``
      - Default value: ``9683``.
    * - ``lb_internal['vip']``
-     - |ip_address virtual| Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``'127.0.0.1'``.

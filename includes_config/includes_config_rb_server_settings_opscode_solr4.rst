@@ -26,7 +26,7 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['ip_address']``
      - |solr_ip_address| Default value: ``127.0.0.1``.
    * - ``opscode_solr4['java_opts']``
-     - |solr_java_opts| (``-XX:NewSize`` is configured using the ``new_size`` setting.) Default value: ``" "`` (empty).
+     - |solr_java_opts| (``-XX:NewSize`` is configured using the ``new_size`` setting.) Default value: ``' '`` (empty).
    * - ``opscode_solr4['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-solr4``.
    * - ``opscode_solr4['log_rotation']``
@@ -48,6 +48,6 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['ram_buffer_size']``
      - |solr_ram_buffer_size| Default value: ``100``.
    * - ``opscode_solr4['url']``
-     - Default value: ``"http://localhost:8983/solr"``.
+     - Default value: ``'http://localhost:8983/solr'``.
    * - ``opscode_solr4['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.

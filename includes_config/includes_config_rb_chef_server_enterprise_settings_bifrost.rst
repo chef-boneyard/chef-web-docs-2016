@@ -28,13 +28,13 @@ The |service bifrost| service has the following settings:
    * - ``oc_bifrost['port']``
      - |port service| Default value: ``9463``.
    * - ``oc_bifrost['sql_password']``
-     - Default value: ``"challengeaccepted"``.
+     - Default value: ``'challengeaccepted'``.
    * - ``oc_bifrost['sql_ro_password']``
-     - Default value: ``"foreveralone"``.
+     - Default value: ``'foreveralone'``.
    * - ``oc_bifrost['sql_ro_user']``
-     - Default value: ``"bifrost_ro"``.
+     - Default value: ``'bifrost_ro'``.
    * - ``oc_bifrost['sql_user']``
-     - Default value: ``"bifrost"``.
+     - Default value: ``'bifrost'``.
    * - ``oc_bifrost['superuser_id']``
      - Default value: ``'5ca1ab1ef005ba111abe11eddecafbad'``.
    * - ``oc_bifrost['vip']``

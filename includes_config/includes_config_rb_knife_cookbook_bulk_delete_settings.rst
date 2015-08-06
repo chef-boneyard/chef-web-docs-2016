@@ -6,8 +6,7 @@
 The following ``knife cookbook bulk delete`` settings can be added to the |knife rb| file:
 
 ``knife[:purge]``
-   Use to add the ``--purge`` option.
+   Adds the the ``--purge`` option.
 
 ``knife[:yes]``
-   Use to add the ``--yes`` option.
-
+   Adds the the ``--yes`` option.

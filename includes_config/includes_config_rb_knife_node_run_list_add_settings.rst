@@ -6,8 +6,7 @@
 The following ``knife node run list add`` settings can be added to the |knife rb| file:
 
 ``knife[:after]``
-   Use to add the ``--after`` option.
+   Adds the the ``--after`` option.
 
 ``knife[:run_list]``
    |knife option_run_list|
-

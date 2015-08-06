@@ -19,14 +19,14 @@ To add settings to the |knife rb| file, use the following syntax:
 
    knife[:setting_name] = value
 
-where ``value`` may require quotation marks (" ") if that value is a string. For example:
+where ``value`` may require quotation marks (' ') if that value is a string. For example:
 
 .. code-block:: ruby
 
    knife[:ssh_port] = 22
-   knife[:bootstrap_template] = "ubuntu14.04-gems"
-   knife[:bootstrap_version] = ""
-   knife[:bootstrap_proxy] = ""
+   knife[:bootstrap_template] = 'ubuntu14.04-gems'
+   knife[:bootstrap_version] = ''
+   knife[:bootstrap_proxy] = ''
 
 Some of the optional |knife rb| settings are used often, such as the template file used in a bootstrap operation. The frequency of use of any option varies from organization to organization, so even though the following settings are often added to a |knife rb| file, they may not be the right settings to add for every organization:
 

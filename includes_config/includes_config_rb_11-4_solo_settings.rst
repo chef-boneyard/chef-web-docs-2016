@@ -22,34 +22,34 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          checksum_path "path_to_folder"
+          checksum_path 'path_to_folder'
    * - ``cookbook_path``
      - |cookbook_path subdirectory| For example:
 
        .. code-block:: ruby
 
           cookbook_path [ 
-            "/var/chef/cookbooks", 
-            "/var/chef/site-cookbooks" 
+            '/var/chef/cookbooks', 
+            '/var/chef/site-cookbooks' 
           ]
    * - ``data_bag_path``
      - |data_bag_path| Default value: ``/var/chef/databags``. For example:
 
        .. code-block:: ruby
 
-          data_bag_path "/var/chef/databags"
+          data_bag_path '/var/chef/databags'
    * - ``file_backup_path``
      - |path file_backup| Default value: ``/var/chef/backup``. For example:
 
        .. code-block:: ruby
 
-          file_backup_path "/var/chef/backup"
+          file_backup_path '/var/chef/backup'
    * - ``file_cache_path``
      - |file cache_path| For example:
 
        .. code-block:: ruby
 
-          file_cache_path "/var/chef/cache"
+          file_cache_path '/var/chef/cache'
    * - ``json_attribs``
      - |json attributes| For example:
 
@@ -79,13 +79,13 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          node_name "mynode.example.com"
+          node_name 'mynode.example.com'
    * - ``recipe_url``
      - |recipe_url| For example:
 
        .. code-block:: ruby
 
-          recipe_url "http://path/to/remote/cookbook"
+          recipe_url 'http://path/to/remote/cookbook'
    * - ``rest_timeout``
      - |timeout rest| Default value: ``300``. For example:
 
@@ -97,13 +97,13 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          role_path "/var/chef/roles"
+          role_path '/var/chef/roles'
    * - ``sandbox_path``
      - |sandbox_path| For example:
 
        .. code-block:: ruby
 
-          sandbox_path "path_to_folder"
+          sandbox_path 'path_to_folder'
    * - ``solo``
      - |solo mode| Default value: ``false``. For example:
 
@@ -121,7 +121,7 @@ This configuration file has the following settings:
    * - ``verbose_logging``
      - |verbose_logging| Default value: ``nil``. For example, when ``verbose_logging`` is set to ``true`` or ``nil``:
 
-       .. code-block:: ruby
+       .. code-block:: bash
 
           [date] INFO: *** Chef 0.10.6.rc.1 ***
           [date] INFO: Setting the run_list 
@@ -145,7 +145,8 @@ This configuration file has the following settings:
           [date] INFO: Report handlers complete
 
        When ``verbose_logging`` is set to ``false`` (for the same output):
-       ::
+
+       .. code-block:: bash
 
           [date] INFO: *** Chef 0.10.6.rc.1 ***
           [date] INFO: Setting the run_list 

@@ -6,8 +6,7 @@
 The following ``knife exec`` settings can be added to the |knife rb| file:
 
 ``knife[:exec]``
-   Use to add the ``--exec`` option.
+   Adds the the ``--exec`` option.
 
 ``knife[:script_path]``
-   Use to add the ``--script-path`` option.
-
+   Adds the the ``--script-path`` option.

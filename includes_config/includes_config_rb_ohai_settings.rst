@@ -35,7 +35,7 @@
           Ohai::Config[:disabled_plugins] = [
 		       :MyPlugin, 
 			   :MyPlugin, 
-			   "my_ohai_6_plugin"
+			   'my_ohai_6_plugin'
 			   ]
 
        When a plugin is disabled, the |chef client| log file will contain entries similar to:

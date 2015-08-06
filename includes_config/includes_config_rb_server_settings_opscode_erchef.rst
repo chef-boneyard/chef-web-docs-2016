@@ -24,13 +24,13 @@ This configuration file has the following settings for ``opscode-erchef``:
    * - ``opscode_erchef['cleanup_batch_size']``
      - Default value: ``0``.
    * - ``opscode_erchef['couchdb_max_conn']``
-     - Default value: ``"100"``.
+     - Default value: ``'100'``.
    * - ``opscode_erchef['db_pool_size']``
      - |db_pool_size| Default value: ``20``.
    * - ``opscode_erchef['depsolver_timeout']``
-     - |timeout depsolver| Default value: ``"5000"``.
+     - |timeout depsolver| Default value: ``'5000'``.
    * - ``opscode_erchef['depsolver_worker_count']``
-     - |worker_processes depsolver| Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. If you are seeing 503 service unavailable errors, increase this value. Default value: ``"5"``.
+     - |worker_processes depsolver| Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. If you are seeing 503 service unavailable errors, increase this value. Default value: ``'5'``.
    * - ``opscode_erchef['dir']``
      - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-erchef``.
    * - ``opscode_erchef['enable']``

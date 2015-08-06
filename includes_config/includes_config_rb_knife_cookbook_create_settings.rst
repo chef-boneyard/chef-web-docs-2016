@@ -6,5 +6,4 @@
 The following ``knife cookbook create`` settings can be added to the |knife rb| file:
 
 ``knife[:readme_format]``
-   Use to add the ``--readme-format`` option.
-
+   Adds the the ``--readme-format`` option.

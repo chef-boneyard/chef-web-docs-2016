@@ -83,7 +83,7 @@ The following example shows how the settings look when added to the configuratio
    
    # General settings
    
-   api_fqdn "chef.example.com"
+   api_fqdn 'chef.example.com'
    bootstrap true
    ip_version ipv4
    notification_email info@example.com
@@ -113,7 +113,7 @@ The following example shows how the settings look when added to the configuratio
    nginx['gzip_comp_level'] = 2
    nginx['gzip_http_version'] = 1.0
    nginx['gzip_proxied'] = any
-   nginx['gzip_types'] = [ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]
+   nginx['gzip_types'] = [ 'text/plain', 'text/css', 'application/x-javascript', 'text/xml', 'application/xml', 'application/xml+rss', 'text/javascript', 'application/json' ]
    nginx['ha'] = false
    nginx['keepalive_timeout'] = 65
    nginx['log_directory'] = /var/log/chef-server/nginx

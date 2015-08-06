@@ -6,5 +6,4 @@
 The following ``knife role show`` settings can be added to the |knife rb| file:
 
 ``knife[:environment]``
-   Use to add the ``--environment`` option.
-
+   Adds the the ``--environment`` option.

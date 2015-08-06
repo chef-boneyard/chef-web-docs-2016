@@ -6,29 +6,28 @@
 The following ``knife ssh`` settings can be added to the |knife rb| file:
 
 ``knife[:concurrency]``
-   Use to add the ``--concurrency`` option.
+   Adds the the ``--concurrency`` option.
 
 ``knife[:identity_file]``
-   Use to add the ``--identity-file`` option.
+   Adds the the ``--identity-file`` option.
 
 ``knife[:host_key_verify]``
-   Use to add the ``--[no-]host-key-verify`` option.
+   Adds the the ``--[no-]host-key-verify`` option.
 
 ``knife[:manual]``
-   Use to add the ``--manual-list`` option.
+   Adds the the ``--manual-list`` option.
 
 ``knife[:ssh_attribute]``
-   Use to add the ``--attribute`` option.
+   Adds the the ``--attribute`` option.
 
 ``knife[:ssh_gateway]``
-   Use to add the ``--ssh-gateway`` option.
+   Adds the the ``--ssh-gateway`` option.
 
 ``knife[:ssh_password]``
-   Use to add the ``--ssh-password`` option.
+   Adds the the ``--ssh-password`` option.
 
 ``knife[:ssh_port]``
-   Use to add the ``--ssh-port`` option.
+   Adds the the ``--ssh-port`` option.
     
 ``knife[:ssh_user]``
-   Use to add the ``--ssh-user`` option.
-
+   Adds the the ``--ssh-user`` option.

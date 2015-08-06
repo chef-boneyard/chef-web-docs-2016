@@ -112,7 +112,7 @@ This configuration file has the following settings:
    * - ``log_level``
      - |log_level| Possible levels: ``:auto`` (default), ``:debug``, ``:info``, ``:warn``, ``:error``, or ``:fatal``. Default value: ``:warn`` (when a terminal is available) or ``:info`` (when a terminal is not available).
    * - ``log_location``
-     - |log_location| Possible values: ``/path/to/log_location``, ``STDOUT``, ``STDERR``, ``Chef::Log::WinEvt.new`` (|windows event logger|, or ``Chef::Log::Syslog.new("chef-client", ::Syslog::LOG_DAEMON)`` (writes to the syslog daemon facility with the originator set as ``chef-client``). The application log will specify the source as ``Chef``. Default value: ``STDOUT``.
+     - |log_location| Possible values: ``/path/to/log_location``, ``STDOUT``, ``STDERR``, ``Chef::Log::WinEvt.new`` (|windows event logger|, or ``Chef::Log::Syslog.new('chef-client', ::Syslog::LOG_DAEMON)`` (writes to the syslog daemon facility with the originator set as ``chef-client``). The application log will specify the source as ``Chef``. Default value: ``STDOUT``.
    * - ``minimal_ohai``
      - |minimal_ohai|
    * - ``no_lazy_load``
@@ -172,12 +172,12 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           whitelist {
-            "job-name" => "command",
-            "job-name" => "command",
-            "chef-client" => "chef-client"
+            'job-name' => 'command',
+            'job-name' => 'command',
+            'chef-client' => 'chef-client'
           }
 
-       A job entry may also be ``"job-name" => {:lock => true}``, which will check the ``lockfile`` setting in the |client rb| file before starting the job.
+       A job entry may also be ``'job-name' => {:lock => true}``, which will check the ``lockfile`` setting in the |client rb| file before starting the job.
 
        .. warning:: The ``whitelist`` setting is available only when using |push jobs|, a tool that runs jobs against nodes in an organization.
    * - ``windows_service.watchdog_timeout``

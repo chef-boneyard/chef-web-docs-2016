@@ -6,11 +6,10 @@
 The following ``knife cookbook show`` settings can be added to the |knife rb| file:
 
 ``knife[:fqdn]``
-   Use to add the ``--fqdn`` option.
+   Adds the the ``--fqdn`` option.
 
 ``knife[:platform]``
-   Use to add the ``--platform`` option.
+   Adds the the ``--platform`` option.
 
 ``knife[:platform_version]``
-   Use to add the ``--platform-version`` option.
-
+   Adds the the ``--platform-version`` option.

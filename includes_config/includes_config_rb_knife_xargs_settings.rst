@@ -6,50 +6,43 @@
 The following ``knife delete`` settings can be added to the |knife rb| file:
 
 ``knife[:chef_repo_path]``
-   Use to add the ``--chef-repo-path`` option.
+   Adds the the ``--chef-repo-path`` option.
 
 ``knife[:concurrency]``
-   Use to add the ``--concurrency`` option.
+   Adds the the ``--concurrency`` option.
 
 ``knife[:diff]``
-   Use to add the ``--diff`` option.
+   Adds the the ``--diff`` option.
 
 ``knife[:dry_run]``
-   Use to add the ``--dry-run`` option.
+   Adds the the ``--dry-run`` option.
 
 ``knife[:force]``
-   Use to add the ``--force`` option.
+   Adds the the ``--force`` option.
 
 ``knife[:local]``
-   Use to add the ``--local`` option.
+   Adds the the ``--local`` option.
 
 ``knife[:max_arguments_per_command]``
-   Use to add the ``--max-args`` option.
+   Adds the the ``--max-args`` option.
 
 ``knife[:max_command_line]``
-   Use to add the ``--max-chars`` option.
+   Adds the the ``--max-chars`` option.
 
 ``knife[:null_separator]``
-   Use to add the ``-0`` option.
+   Adds the the ``-0`` option.
 
 ``knife[:patterns]``
-   Use to add the ``--pattern`` option.
+   Adds the the ``--pattern`` option.
 
 ``knife[:replace_all]``
-   Use to add the ``--replace`` option.
+   Adds the the ``--replace`` option.
 
 ``knife[:replace_first]``
-   Use to add the ``--replace-first`` option.
+   Adds the the ``--replace-first`` option.
 
 ``knife[:repo_mode]``
-   Use to add the ``--repo-mode`` option.
+   Adds the the ``--repo-mode`` option.
 
 ``knife[:verbose_commands]``
-   Use to add the ``-t`` option.
-
-  
-  
-  
-  
-  
-  
+   Adds the the ``-t`` option.

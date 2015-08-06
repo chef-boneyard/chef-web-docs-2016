@@ -6,5 +6,4 @@
 The following ``knife client reregister`` settings can be added to the |knife rb| file:
 
 ``knife[:file]``
-   Use to add the ``--file`` option.
-
+   Adds the the ``--file`` option.

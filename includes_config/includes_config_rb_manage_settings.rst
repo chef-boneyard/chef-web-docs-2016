@@ -60,7 +60,7 @@ This configuration file has the following settings:
    * - ``webapp.backlog``
      - The size of the backlog. Default value: ``1024``.
    * - ``webapp.listen``
-     - The port on which |chef manage| services listen. Default value: ``{ "127.0.0.1:#{port}" }``.
+     - The port on which |chef manage| services listen. Default value: ``{ '127.0.0.1:#{port}' }``.
    * - ``webapp.port``
      - The port on which |chef manage| services run. Default value: ``9462``.
    * - ``webapp.tcp_nodelay``

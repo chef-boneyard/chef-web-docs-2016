@@ -13,4 +13,3 @@ The following example shows how the settings look when added to the configuratio
    actions_consumer['hipchat_api_token'] = '4yZvEWO6gnVhjtl3F6aU12obylgNXzzqmklI5jP0'
    actions_consumer['hipchat_room'] = 'Chef Notifications'
    actions_consumer['hipchat_enabled'] = ['prod', 'preprod']
-

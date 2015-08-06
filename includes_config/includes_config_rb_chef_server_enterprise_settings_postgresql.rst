@@ -75,7 +75,7 @@ The |service postgresql| service has the following settings:
    * - ``postgresql['username']``
      - |name user postgresql| Default value: ``opscode-pgsql``.
    * - ``postgresql['version']``
-     - The (currently) hardcoded version of |postgresql|. Default value: ``"9.2"``.
+     - The (currently) hardcoded version of |postgresql|. Default value: ``'9.2'``.
    * - ``postgresql['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``postgresql['work_mem']``

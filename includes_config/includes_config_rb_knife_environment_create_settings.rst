@@ -6,5 +6,4 @@
 The following ``knife environment create`` settings can be added to the |knife rb| file:
 
 ``knife[:description]``
-   Use to add the ``--description`` option.
-
+   Adds the the ``--description`` option.

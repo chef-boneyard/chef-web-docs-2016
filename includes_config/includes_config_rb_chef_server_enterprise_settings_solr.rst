@@ -46,6 +46,6 @@ The |service solr| service has the following settings:
    * - ``opscode_solr['ram_buffer_size']``
      - Default value: ``200``.
    * - ``opscode_solr['url']``
-     - Default value: ``"http://localhost:8983"``.
+     - Default value: ``'http://localhost:8983'``.
    * - ``opscode_solr['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.

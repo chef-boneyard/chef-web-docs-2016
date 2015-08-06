@@ -11,13 +11,12 @@ This configuration file has the following settings from previous versions of the
    * - Setting
      - Description
    * - ``couchdb['data_dir']``
-     - Default value: ``"/var/opt/opscode/couchdb/db"``.
+     - Default value: ``'/var/opt/opscode/couchdb/db'``.
    * - ``couchdb['port']``
      - Default value: ``5984``.
    * - ``couchdb['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - Default value: ``'127.0.0.1'``.
    * - ``opscode_solr['data_dir']``
-     - Default value: ``"/var/opt/opscode/opscode-solr/data"``.
+     - Default value: ``'/var/opt/opscode/opscode-solr/data'``.
    * - ``opscode_webui['enable']``
      - Default value: ``false``.
-

@@ -46,12 +46,12 @@ This configuration file has the following settings for load balancers:
        .. code-block:: ruby
 
           {
-            "oc_bifrost"=>["127.0.0.1"],
-            "opscode-account"=>["127.0.0.1"],
-            "opscode-authz"=>["127.0.0.1"],
-            "opscode-bookshelf"=>["127.0.0.1"],
-            "opscode-erchef"=>["127.0.0.1"],
-            "opscode-solr4"=>["127.0.0.1"]
+            'oc_bifrost'=>['127.0.0.1'],
+            'opscode-account'=>['127.0.0.1'],
+            'opscode-authz'=>['127.0.0.1'],
+            'opscode-bookshelf'=>['127.0.0.1'],
+            'opscode-erchef'=>['127.0.0.1'],
+            'opscode-solr4'=>['127.0.0.1']
           }
    * - ``lb['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
@@ -83,4 +83,4 @@ And for the internal load balancers:
    * - ``lb_internal['oc_bifrost_port']``
      - Default value: ``9683``.
    * - ``lb_internal['vip']``
-     - |ip_address virtual| Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``'127.0.0.1'``.

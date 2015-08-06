@@ -14,7 +14,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          amqp_consumer_id "default"
+          amqp_consumer_id 'default'
    * - ``amqp_host``
      - |amqp_host| For example:
 
@@ -44,7 +44,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          amqp_vhost "/chef"
+          amqp_vhost '/chef'
    * - ``authorized_openid_identifiers``
      - |authorized_openid_identifiers| For example:
 
@@ -68,13 +68,13 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          chef_server_url "http://localhost:4000"
+          chef_server_url 'http://localhost:4000'
    * - ``chef_server_url``
      - |chef_server_url| For example:
 
        .. code-block:: ruby
 
-          chef_server_url "http://localhost:4000"
+          chef_server_url 'http://localhost:4000'
    * - ``client_registration_retries``
      - |client_registration_retries| Default value: ``5``. For example:
 
@@ -87,27 +87,27 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           cookbook_path [ 
-            "/var/chef/cookbooks", 
-            "/var/chef/site-cookbooks" 
+            '/var/chef/cookbooks', 
+            '/var/chef/site-cookbooks' 
           ]
    * - ``cookbook_tarball_path``
      - |cookbook_tarball_path| Default value: ``/var/chef/cookbook-tarballs``. For example:
 
        .. code-block:: ruby
 
-          cookbook_tarball_path "/var/chef/cookbook-tarballs"
+          cookbook_tarball_path '/var/chef/cookbook-tarballs'
    * - ``couchdb_database``
      - |couchdb_database| For example:
 
        .. code-block:: ruby
 
-          couchdb_database "chef"
+          couchdb_database 'chef'
    * - ``couchdb_url``
      - |couchdb_url| For example:
 
        .. code-block:: ruby
 
-          couchdb_url "http://localhost:5984"
+          couchdb_url 'http://localhost:5984'
    * - ``couchdb_version``
      - |couchdb_version| For example:
 
@@ -119,25 +119,25 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          data_bag_path "/var/chef/databags"
+          data_bag_path '/var/chef/databags'
    * - ``environment``
      - |name environment| This is typically set from the command line (using the ``-E`` option) or in the |client rb| configuration file. For example:
 
        .. code-block:: ruby
 
-          environment "production"
+          environment 'production'
    * - ``file_cache_path``
      - |file cache_path| For example:
 
        .. code-block:: ruby
 
-          file_cache_path "/var/chef/cache"
+          file_cache_path '/var/chef/cache'
    * - ``file_backup_path``
      - |path file_backup| For example:
 
        .. code-block:: ruby
 
-          file_backup_path "/var/chef/backup"
+          file_backup_path '/var/chef/backup'
    * - ``group``
      - |group config| For example:
 
@@ -149,19 +149,19 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          http_proxy "http://proxy.vmware.com:3128"
+          http_proxy 'http://proxy.vmware.com:3128'
    * - ``http_proxy_pass``
      - |http_proxy_pass| For example:
 
        .. code-block:: ruby
 
-          http_proxy_pass "1234567890"
+          http_proxy_pass '1234567890'
    * - ``http_proxy_user``
      - |http_proxy_user| For example:
 
        .. code-block:: ruby
 
-          http_proxy_user "my_username"
+          http_proxy_user 'my_username'
    * - ``http_retry_count``
      - |http_retry_count| For example:
 
@@ -179,7 +179,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          https_proxy "http://proxy.vmware.com:3128"
+          https_proxy 'http://proxy.vmware.com:3128'
    * - ``interval``
      - |interval| For example:
 
@@ -209,19 +209,19 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          node_name "mynode.example.com"
+          node_name 'mynode.example.com'
    * - ``node_path``
      - |node_path| For example:
 
        .. code-block:: ruby
 
-          node_path "/var/chef/node"
+          node_path '/var/chef/node'
    * - ``no_proxy``
      - |no_proxy| For example:
 
        .. code-block:: ruby
 
-          no_proxy "*.vmware.com,10.*"
+          no_proxy '*.vmware.com,10.*'
    * - ``openid_cstore_couchdb``
      - |openid_cstore_couchdb| Default value: ``false``. For example:
 
@@ -233,19 +233,19 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          openid_cstore_path "/var/chef/openid/cstore"
+          openid_cstore_path '/var/chef/openid/cstore'
    * - ``pid_file``
      - |path pid_file| For example:
 
        .. code-block:: ruby
 
-          pid_file "/tmp/executable.pid"
+          pid_file '/tmp/executable.pid'
    * - ``recipe_url``
      - |recipe_url| For example:
 
        .. code-block:: ruby
 
-          recipe_url "http://path/to/remote/cookbook"
+          recipe_url 'http://path/to/remote/cookbook'
    * - ``rest_timeout``
      - |rest_timeout| Default value: ``300``. For example:
 
@@ -257,19 +257,19 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          role_path "/var/chef/roles"
+          role_path '/var/chef/roles'
    * - ``signing_ca_cert``
      - |signing_ca_cert| Default value: ``/var/chef/ca/cert.pem``. For example:
 
        .. code-block:: ruby
 
-          signing_ca_cert "/var/chef/ca/cert.pem"
+          signing_ca_cert '/var/chef/ca/cert.pem'
    * - ``signing_ca_key``
      - |signing_ca_key| For example:
 
        .. code-block:: ruby
 
-          signing_ca_key "/var/chef/ca/key.pem"
+          signing_ca_key '/var/chef/ca/key.pem'
    * - ``signing_ca_user``
      - |signing_ca_user| Default value: ``/var/chef/ca/key.pem``. For example:
 
@@ -287,37 +287,37 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          signing_ca_country "US"
+          signing_ca_country 'US'
    * - ``signing_ca_state``
      - |signing_ca_state| For example:
 
        .. code-block:: ruby
 
-          signing_ca_state "Washington"
+          signing_ca_state 'Washington'
    * - ``signing_ca_location``
      - |signing_ca_location| For example:
 
        .. code-block:: ruby
 
-          signing_ca_location "Seattle"
+          signing_ca_location 'Seattle'
    * - ``signing_ca_org``
      - |signing_ca_org| For example:
 
        .. code-block:: ruby
 
-          signing_ca_org "Chef User"
+          signing_ca_org 'Chef User'
    * - ``signing_ca_domain``
      - |signing_ca_domain| For example:
 
        .. code-block:: ruby
 
-          signing_ca_domain "opensource.opscode.com"
+          signing_ca_domain 'opensource.opscode.com'
    * - ``signing_ca_email``
      - |signing_ca_email| For example:
 
        .. code-block:: ruby
 
-          signing_ca_email "opensource-cert@opscode.com"
+          signing_ca_email 'opensource-cert@opscode.com'
    * - ``solo``
      - |solo mode| Default value: ``opensource.opscode.com``. For example:
 
@@ -329,7 +329,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          solr_data_path "/var/chef/solr/data"
+          solr_data_path '/var/chef/solr/data'
    * - ``solr_heap_size``
      - |solr_heap_size| Default value: ``256``. For example:
 
@@ -341,7 +341,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          solr_home_path "/var/chef/solr"
+          solr_home_path '/var/chef/solr'
    * - ``solr_java_opts``
      - |solr_java_opts| Default value: ``nil``. For example:
 
@@ -353,13 +353,13 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          solr_jetty_path "/var/chef/solr-jetty"
+          solr_jetty_path '/var/chef/solr-jetty'
    * - ``solr_url``
      - |solr_url| Default value: ``http://localhost:8983``. For example:
 
        .. code-block:: ruby
 
-          solr_url "http://localhost:8983"
+          solr_url 'http://localhost:8983'
    * - ``splay``
      - |splay| For example:
 
@@ -371,19 +371,19 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          ssl_client_cert ""
+          ssl_client_cert ''
    * - ``ssl_client_key``
      - |ssl_client_key| For example:
 
        .. code-block:: ruby
 
-          ssl_client_key ""
+          ssl_client_key ''
    * - ``ssl_ca_path``
      - |ssl_ca_path| For example:
 
        .. code-block:: ruby
 
-          ssl_ca_path nil "/etc/ssl/certs"
+          ssl_ca_path nil '/etc/ssl/certs'
    * - ``ssl_ca_file``
      - |ssl_ca_file| For example:
 
@@ -415,17 +415,17 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          validation_key "/etc/chef/validation.pem"
+          validation_key '/etc/chef/validation.pem'
    * - ``validation_client_name``
      - |validation_client_name| For example:
 
        .. code-block:: ruby
 
-          validation_client_name "chef-validator"
+          validation_client_name 'chef-validator'
    * - ``verbose_logging``
      - |verbose_logging| Default value: ``nil``. For example, when ``verbose_logging`` is set to ``true`` or ``nil``:
 
-       .. code-block:: ruby
+       .. code-block:: bash
 
           [date] INFO: *** Chef 0.10.6.rc.1 ***
           [date] INFO: Setting the run_list 
@@ -450,7 +450,7 @@ This configuration file has the following settings:
 
        When ``verbose_logging`` is set to ``false`` (for the same output):
 
-       .. code-block:: ruby
+       .. code-block:: bash
 
           [date] INFO: *** Chef 0.10.6.rc.1 ***
           [date] INFO: Setting the run_list 
@@ -471,22 +471,22 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          web_ui_admin_default_password "p@ssw0rd1"
+          web_ui_admin_default_password 'p@ssw0rd1'
    * - ``web_ui_admin_user_name``
      - |web_ui_admin_user_name| For example:
 
        .. code-block:: ruby
 
-          web_ui_admin_user_name  "admin"
+          web_ui_admin_user_name  'admin'
    * - ``web_ui_client_name``
      - |name client_webui| Default value: ``chef-webui``. For example:
 
        .. code-block:: ruby
 
-          web_ui_client_name "chef-webui"
+          web_ui_client_name 'chef-webui'
    * - ``web_ui_key``
      - |web_ui_key| For example:
 
        .. code-block:: ruby
 
-          web_ui_key "/etc/chef/webui.pem"
+          web_ui_key '/etc/chef/webui.pem'

@@ -22,16 +22,16 @@ The following settings are typically added to the |analytics rb| file:
    * - ``data_retention['keep_all_data']``
      - Use to specify if all events are kept. If this setting is ``true``, the ``month_interval_to_keep_activities`` value is ignored. Default value: ``false``.
    * - ``nginx['ssl_protocols']``
-     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] 'TLSv1 TLSv1.1 TLSv1.2'``.
    * - ``notifier_config['accept_insecure']``
      - Use to disable authentication to |api analytics| endpoints that create and modify rules and notifications. This setting should only be set to ``true`` when debugging rules and notifications in a non-production environment. Default value: ``false``.
    * - ``ssl['cacert_file_path']``
-     - Use to specify the path to the ``cacert.pem`` file. Default value: ``"/opt/opscode-analytics/embedded/ssl/certs/cacert.pem"``.
+     - Use to specify the path to the ``cacert.pem`` file. Default value: ``'/opt/opscode-analytics/embedded/ssl/certs/cacert.pem'``.
    * - ``ssl['certificate']``
      - |ssl_certificate|
    * - ``ssl['certificate_key']``
      - |ssl_certificate key|
    * - ``ssl['sslprotocols']``
-     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] "TLSv1 TLSv1.1 TLSv1.2"``.
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] 'TLSv1 TLSv1.1 TLSv1.2'``.
    * - ``topology``
      - Default value: ``combined``.

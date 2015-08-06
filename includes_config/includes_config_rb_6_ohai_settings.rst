@@ -14,19 +14,19 @@
 
        .. code-block:: ruby
 
-          Ohai::Config[:disabled_plugins] = "my_plugin"
+          Ohai::Config[:disabled_plugins] = 'my_plugin'
 
        or:
 
        .. code-block:: ruby
 
-          Ohai::Config[:disabled_plugins] = "windows::my_plugin"
+          Ohai::Config[:disabled_plugins] = 'windows::my_plugin'
 
        or:
 
        .. code-block:: ruby
 
-          Ohai::Config[:disabled_plugins] = ["my_plugin", "my_plugin", "my_plugin"]
+          Ohai::Config[:disabled_plugins] = ['my_plugin', 'my_plugin', 'my_plugin']
 
        When a plugin is disabled, the |chef client| log file will contain entries similar to:
 

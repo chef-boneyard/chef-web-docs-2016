@@ -15,14 +15,14 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          chef_server_url "http://localhost:4000"
+          chef_server_url 'http://localhost:4000'
 
    * - ``client_key``
      - |client_key| Default value: ``/etc/chef/client.pem``. For example:
 
        .. code-block:: ruby
 
-          client_key "/etc/chef/client.pem"
+          client_key '/etc/chef/client.pem'
 
    * - ``cookbook_copyright``
      - |copyright|
@@ -44,21 +44,21 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           cookbook_path [ 
-            "/var/chef/cookbooks", 
-            "/var/chef/site-cookbooks" 
+            '/var/chef/cookbooks', 
+            '/var/chef/site-cookbooks' 
           ]
    * - ``http_proxy``
      - |http_proxy| For example:
 
        .. code-block:: ruby
 
-          http_proxy "http://proxy.vmware.com:3128"
+          http_proxy 'http://proxy.vmware.com:3128'
    * - ``https_proxy``
      - |https_proxy| For example:
 
        .. code-block:: ruby
 
-          https_proxy "http://proxy.vmware.com:3128"
+          https_proxy 'http://proxy.vmware.com:3128'
    * - ``http_proxy_user``
      - |http_proxy_user|
    * - ``http_proxy_pass``
@@ -68,13 +68,13 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          node_name "node_name"
+          node_name 'node_name'
    * - ``no_proxy``
      - |no_proxy| Default value: ``nil``. For example:
 
        .. code-block:: ruby
 
-          no_proxy "localhost, 10.*, *.example.com, *.dev.example.com"
+          no_proxy 'localhost, 10.*, *.example.com, *.dev.example.com'
    * - ``syntax_check_cache_path``
      - |syntax_check_cache_path|
    * - ``validation_client_name``
@@ -82,10 +82,10 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          validation_client_name "chef-validator"
+          validation_client_name 'chef-validator'
    * - ``validation_key``
      - |validation_key| Default value: ``/etc/chef/validation.pem``. For example:
 
        .. code-block:: ruby
 
-          validation_key "/etc/chef/validation.pem"
+          validation_key '/etc/chef/validation.pem'

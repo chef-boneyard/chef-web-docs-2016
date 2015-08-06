@@ -42,4 +42,4 @@ This configuration file has the following settings for |postgresql|:
    * - ``supermarket['postgresql']['shmmax']``
      - The maximum amount of shared memory. Default value: ``17179869184``.
    * - ``supermarket['postgresql']['work_mem']``
-     - |work_mem| Default value: ``"8MB"``.
+     - |work_mem| Default value: ``'8MB'``.

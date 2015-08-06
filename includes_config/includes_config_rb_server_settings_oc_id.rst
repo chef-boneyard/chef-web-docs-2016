@@ -10,18 +10,18 @@ This configuration file has the following settings for ``oc-id``:
    * - Setting
      - Description
    * - ``oc_id['administrators']``
-     - |user ocid_admins| For example, ``["user1", "user2"]``. Default value: ``[ ]``.
+     - |user ocid_admins| For example, ``['user1', 'user2']``. Default value: ``[ ]``.
    * - ``oc_id['applications']``
      - |application ocid| Default value: ``{ }``. For example:
 
        .. code-block:: ruby
 
 		  oc_id['applications'] = {
-		    "analytics" => {
-		      "redirect_uri" => "https://analytics.rhel.aws"
+		    'analytics' => {
+		      'redirect_uri' => 'https://analytics.rhel.aws'
 		    },
-		    "supermarket" => {
-		      "redirect_uri" => "https://default-ubuntu-1204.vagrantup.com/auth/chef_oauth2/callback"
+		    'supermarket' => {
+		      'redirect_uri' => 'https://default-ubuntu-1204.vagrantup.com/auth/chef_oauth2/callback'
 		    }
 		  }
    * - ``oc_id['db_pool_size']``
@@ -33,7 +33,7 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['ha']``
      - |use ha| |ha true| Default value: ``false``.
    * - ``oc_id['log_directory']``
-     - |directory logs| |default_value_recommended| Default value: ``"/var/opt/opscode/oc_id"``.
+     - |directory logs| |default_value_recommended| Default value: ``'/var/opt/opscode/oc_id'``.
    * - ``oc_id['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``oc_id['num_to_keep']``
@@ -47,6 +47,4 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['sql_user']``
      - |user ocid| Default value: ``oc_id``.
    * - ``oc_id['vip']``
-     - |ip_address virtual| Default value: ``"127.0.0.1"``.
-
-
+     - |ip_address virtual| Default value: ``'127.0.0.1'``.

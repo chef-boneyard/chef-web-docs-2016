@@ -28,17 +28,14 @@ This configuration file has the following settings for ``oc_bifrost``:
    * - ``oc_bifrost['port']``
      - |port service| Default value: ``9463``.
    * - ``oc_bifrost['sql_password']``
-     - |password sql_user| Default value: ``"challengeaccepted"``.
+     - |password sql_user| Default value: ``'challengeaccepted'``.
    * - ``oc_bifrost['sql_ro_password']``
-     - |password sql_ro_user| Default value: ``"foreveralone"``.
+     - |password sql_ro_user| Default value: ``'foreveralone'``.
    * - ``oc_bifrost['sql_ro_user']``
-     - Default value: ``"bifrost_ro"``.
+     - Default value: ``'bifrost_ro'``.
    * - ``oc_bifrost['sql_user']``
-     - |user bifrost| Default value: ``"bifrost"``.
+     - |user bifrost| Default value: ``'bifrost'``.
    * - ``oc_bifrost['superuser_id']``
      - Default value: ``'5ca1ab1ef005ba111abe11eddecafbad'``.
    * - ``oc_bifrost['vip']``
      - |ip_address virtual| Default value: ``'127.0.0.1'``.
-
-
-

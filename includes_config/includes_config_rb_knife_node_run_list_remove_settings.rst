@@ -7,4 +7,3 @@ The following ``knife node run list remove`` settings can be added to the |knife
 
 ``knife[:run_list]``
    |knife option_run_list|
-

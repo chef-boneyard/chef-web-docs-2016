@@ -6,11 +6,10 @@
 The following ``knife data bag from file`` settings can be added to the |knife rb| file:
 
 ``knife[:all]``
-   Use to add the ``--all`` option.
+   Adds the the ``--all`` option.
 
 ``knife[:secret]``
-   Use to add the ``--secret`` option.
+   Adds the the ``--secret`` option.
 
 ``knife[:secret_file]``
-   Use to add the ``--secret-file`` option.
-
+   Adds the the ``--secret-file`` option.

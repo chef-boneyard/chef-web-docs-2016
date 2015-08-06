@@ -23,34 +23,34 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          cache_path "~/.chef/cache"
+          cache_path '~/.chef/cache'
  
        or:
 
        .. code-block:: ruby
 
-          cache_path File.join(File.expand_path("~"), ".chef", "cache")
+          cache_path File.join(File.expand_path('~'), '.chef', 'cache')
 
    * - ``checksum_path``
      - |checksum_path| For example:
 
        .. code-block:: ruby
 
-          checksum_path "/var/chef/checksums"
+          checksum_path '/var/chef/checksums'
 
    * - ``chef_server_url``
      - |chef_server_url| For example:
 
        .. code-block:: ruby
 
-          chef_server_url "http://localhost:4000"
+          chef_server_url 'http://localhost:4000'
 
    * - ``client_key``
      - |client_key| Default value: ``/etc/chef/client.pem``. For example:
 
        .. code-block:: ruby
 
-          client_key "/etc/chef/client.pem"
+          client_key '/etc/chef/client.pem'
 
    * - ``client_registration_retries``
      - |client_registration_retries| Default value: ``5``. For example:
@@ -65,8 +65,8 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           cookbook_path [ 
-            "/var/chef/cookbooks", 
-            "/var/chef/site-cookbooks" 
+            '/var/chef/cookbooks', 
+            '/var/chef/site-cookbooks' 
           ]
 
    * - ``data_bag_decrypt_minimum_version``
@@ -74,14 +74,14 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          data_bag_decrypt_minimum_version "2"
+          data_bag_decrypt_minimum_version '2'
 
    * - ``data_bag_path``
      - |data_bag_path| Default value: ``/var/chef/data_bags``. For example:
 
        .. code-block:: ruby
 
-          data_bag_path "/var/chef/data_bags"
+          data_bag_path '/var/chef/data_bags'
 
    * - ``diff_disabled``
      - |diff_disabled| Default value: ``false``. For example:
@@ -109,35 +109,35 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          encrypted_data_bag_secret "/etc/chef/encrypted_data_bag_secret"
+          encrypted_data_bag_secret '/etc/chef/encrypted_data_bag_secret'
 
    * - ``environment``
      - |name environment| This is typically set from the command line (using the ``-E`` option) or in the |client rb| configuration file. For example:
 
        .. code-block:: ruby
 
-          environment "production"
+          environment 'production'
 
    * - ``environment_path``
      - |path environment|  Default value: ``/var/chef/environments``. For example:
 
        .. code-block:: ruby
 
-          environment_path "/var/chef/environments"
+          environment_path '/var/chef/environments'
 
    * - ``file_backup_path``
      - |path file_backup| Default value: ``/var/chef/backup``. For example:
 
        .. code-block:: ruby
 
-          file_backup_path "/var/chef/backup"
+          file_backup_path '/var/chef/backup'
 
    * - ``file_cache_path``
      - |file cache_path| For example:
 
        .. code-block:: ruby
 
-          file_cache_path "/var/chef/cache"
+          file_cache_path '/var/chef/cache'
 
    * - ``file_staging_uses_destdir``
      - |file_staging_uses_destdir| Default value: ``false``. For example:
@@ -158,21 +158,21 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          http_proxy "http://proxy.vmware.com:3128"
+          http_proxy 'http://proxy.vmware.com:3128'
 
    * - ``http_proxy_pass``
      - |http_proxy_pass| For example:
 
        .. code-block:: ruby
 
-          http_proxy_pass "1234567890"
+          http_proxy_pass '1234567890'
 
    * - ``http_proxy_user``
      - |http_proxy_user| For example:
 
        .. code-block:: ruby
 
-          http_proxy_user "my_username"
+          http_proxy_user 'my_username'
 
    * - ``http_retry_count``
      - |http_retry_count| For example:
@@ -193,7 +193,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          https_proxy "http://proxy.vmware.com:3128"
+          https_proxy 'http://proxy.vmware.com:3128'
 
    * - ``interval``
      - |interval| Default value: ``1800``. For example:
@@ -207,14 +207,14 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          https_proxy_pass "1234567890"
+          https_proxy_pass '1234567890'
 
    * - ``https_proxy_user``
      - |https_proxy_user| Default value: ``nil``. For example:
 
        .. code-block:: ruby
 
-          httpx_proxy_user "my_username"
+          httpx_proxy_user 'my_username'
 
    * - ``json_attribs``
      - |json attributes| For example:
@@ -249,28 +249,28 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          no_proxy "*.vmware.com,10.*"
+          no_proxy '*.vmware.com,10.*'
 
    * - ``node_name``
      - |name node| |name node_client_rb| For example:
 
        .. code-block:: ruby
 
-          node_name "mynode.example.com"
+          node_name 'mynode.example.com'
 
    * - ``node_path``
      - |node_path| Default value: ``/var/chef/node``. For example:
 
        .. code-block:: ruby
 
-          node_path "/var/chef/node"
+          node_path '/var/chef/node'
 
    * - ``pid_file``
      - |path pid_file| Default value: ``/tmp/name-of-executable.pid``. For example:
 
        .. code-block:: ruby
 
-          pid_file "/tmp/chef-client.pid"
+          pid_file '/tmp/chef-client.pid'
 
    * - ``rest_timeout``
      - |timeout rest| Default value: ``300``. For example:
@@ -284,7 +284,7 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          role_path "/var/chef/roles"
+          role_path '/var/chef/roles'
 
    * - ``splay``
      - |splay| Default value: ``nil``. For example:
@@ -305,21 +305,21 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          ssl_ca_path nil "/etc/ssl/certs"
+          ssl_ca_path nil '/etc/ssl/certs'
 
    * - ``ssl_client_cert``
      - |ssl_client_cert| For example:
 
        .. code-block:: ruby
 
-          ssl_client_cert ""
+          ssl_client_cert ''
 
    * - ``ssl_client_key``
      - |ssl_client_key| For example:
 
        .. code-block:: ruby
 
-          ssl_client_key ""
+          ssl_client_key ''
 
    * - ``ssl_verify_mode``
      - |ssl_verify_mode|
@@ -355,19 +355,19 @@ This configuration file has the following settings:
 
        .. code-block:: ruby
 
-          validation_client_name "chef-validator"
+          validation_client_name 'chef-validator'
 
    * - ``validation_key``
      - |validation_key| Default value: ``/etc/chef/validation.pem``. For example:
 
        .. code-block:: ruby
 
-          validation_key "/etc/chef/validation.pem"
+          validation_key '/etc/chef/validation.pem'
 
    * - ``verbose_logging``
      - |verbose_logging| Default value: ``nil``. For example, when ``verbose_logging`` is set to ``true`` or ``nil``:
 
-       .. code-block:: ruby
+       .. code-block:: bash
 
           [date] INFO: *** Chef 0.10.6.rc.1 ***
           [date] INFO: Setting the run_list 
@@ -392,7 +392,7 @@ This configuration file has the following settings:
 
        When ``verbose_logging`` is set to ``false`` (for the same output):
 
-       .. code-block:: ruby
+       .. code-block:: bash
 
           [date] INFO: *** Chef 0.10.6.rc.1 ***
           [date] INFO: Setting the run_list 

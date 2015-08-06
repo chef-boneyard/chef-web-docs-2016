@@ -6,5 +6,4 @@
 The following ``knife role from file`` settings can be added to the |knife rb| file:
 
 ``knife[:print_after]``
-   Use to add the ``--print-after`` option.
-
+   Adds the the ``--print-after`` option.

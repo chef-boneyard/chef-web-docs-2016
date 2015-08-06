@@ -18,9 +18,9 @@ This configuration file has the following settings:
    * - ``erchef['cache_ttl']``
      - Default value: ``3600``.
    * - ``erchef['depsolver_timeout']``
-     - The amount of time (in milliseconds) to wait for cookbook dependency problems to be solved. Default value: ``"5000"``.
+     - The amount of time (in milliseconds) to wait for cookbook dependency problems to be solved. Default value: ``'5000'``.
    * - ``erchef['depsolver_worker_count']``
-     - The number of |ruby| processes for which cookbook dependency problems are unsolved. Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. Default value: ``"5"``.
+     - The number of |ruby| processes for which cookbook dependency problems are unsolved. Use the ``pgrep -fl depselector`` command to verify the number of depsolver workers that are running. Default value: ``'5'``.
    * - ``erchef['db_pool_size']``
      - Default value: ``20``.
    * - ``erchef['dir']``

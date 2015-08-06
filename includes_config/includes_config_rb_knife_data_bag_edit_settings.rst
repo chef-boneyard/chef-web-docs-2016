@@ -6,11 +6,10 @@
 The following ``knife data bag edit`` settings can be added to the |knife rb| file:
 
 ``knife[:print_after]``
-   Use to add the ``--print-after`` option.
+   Adds the the ``--print-after`` option.
 
 ``knife[:secret]``
-   Use to add the ``--secret`` option.
+   Adds the the ``--secret`` option.
 
 ``knife[:secret_file]``
-   Use to add the ``--secret-file`` option.
-
+   Adds the the ``--secret-file`` option.

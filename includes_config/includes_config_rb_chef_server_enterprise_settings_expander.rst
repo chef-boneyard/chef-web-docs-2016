@@ -25,5 +25,3 @@ The |service expander| service has the following settings:
      - |worker_processes| Default value: ``2``.
    * - ``opscode_expander['reindexer_log_directory']``
      - Default value: ``/var/log/chef-server/chef-expander-reindexer``.
-
-

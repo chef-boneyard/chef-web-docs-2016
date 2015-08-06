@@ -6,14 +6,13 @@
 The following ``knife cookbook site install`` settings can be added to the |knife rb| file:
 
 ``knife[:cookbook_path]``
-   Use to add the ``--cookbook-path`` option.
+   Adds the the ``--cookbook-path`` option.
 
 ``knife[:file]``
-   Use to add the ``--file`` option.
+   Adds the the ``--file`` option.
 
 ``knife[:no_deps]``
-   Use to add the ``--skip-dependencies`` option.
+   Adds the the ``--skip-dependencies`` option.
 
 ``knife[:use_current_branch]``
-   Use to add the ``--use-current-branch`` option.
-
+   Adds the the ``--use-current-branch`` option.

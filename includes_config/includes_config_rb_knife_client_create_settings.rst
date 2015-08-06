@@ -6,8 +6,7 @@
 The following ``knife client create`` settings can be added to the |knife rb| file:
 
 ``knife[:admin]``
-   Use to add the ``--admin`` option.
+   Adds the the ``--admin`` option.
 
 ``knife[:file]``
-   Use to add the ``--file`` option.
-
+   Adds the the ``--file`` option.

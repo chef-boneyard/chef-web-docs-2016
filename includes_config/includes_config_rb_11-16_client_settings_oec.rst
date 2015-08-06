@@ -153,12 +153,12 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           whitelist {
-            "job-name" => "command",
-            "job-name" => "command",
-            "chef-client" => "chef-client"
+            'job-name' => 'command',
+            'job-name' => 'command',
+            'chef-client' => 'chef-client'
           }
 
-       A job entry may also be ``"job-name" => {:lock => true}``, which will check the ``lockfile`` setting in the |client rb| file before starting the job.
+       A job entry may also be ``'job-name' => {:lock => true}``, which will check the ``lockfile`` setting in the |client rb| file before starting the job.
 
        .. warning:: The ``whitelist`` setting is available only when using |push jobs|, a tool that runs jobs against nodes in an organization.
    * - ``yum_lock_timeout``

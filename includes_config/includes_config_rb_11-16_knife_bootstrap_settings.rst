@@ -24,5 +24,3 @@ The following ``knife bootstrap`` settings can be added to the |knife rb| file:
    Use to add the ``--sudo`` option.
 
 .. note:: The ``knife bootstrap`` subcommand relies on a number of |ssh|-related settings that are handled by the ``knife ssh`` subcommand.
-
-

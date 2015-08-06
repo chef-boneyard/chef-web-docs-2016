@@ -38,9 +38,9 @@ The |service webui| service has the following settings:
    * - ``opscode_webui['umask']``
      - |umask| Default value: ``0022``.
    * - ``opscode_webui['url']``
-     - Default value: ``"http://127.0.0.1:9462"``.
+     - Default value: ``'http://127.0.0.1:9462'``.
    * - ``opscode_webui['validation_client_name']``
-     - |webui validation_client_name| Default value: ``"chef"``.
+     - |webui validation_client_name| Default value: ``'chef'``.
    * - ``opscode_webui['vip']``
      - Default value: ``127.0.0.1``.
    * - ``opscode_webui['worker_processes']``

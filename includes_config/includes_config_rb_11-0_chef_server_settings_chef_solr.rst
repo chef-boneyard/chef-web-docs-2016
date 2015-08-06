@@ -45,8 +45,3 @@ This configuration file has the following settings:
      - Default value: ``200``.
    * - ``chef_solr['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
-
-
-
-
-

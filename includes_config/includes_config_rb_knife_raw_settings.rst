@@ -6,19 +6,19 @@
 The following ``knife raw`` settings can be added to the |knife rb| file:
 
 ``knife[:chef_repo_path]``
-   Use to add the ``--chef-repo-path`` option.
+   Adds the the ``--chef-repo-path`` option.
 
 ``knife[:concurrency]``
-   Use to add the ``--concurrency`` option.
+   Adds the the ``--concurrency`` option.
 
 ``knife[:input]``
-   Use to add the ``--input`` option.
+   Adds the the ``--input`` option.
 
 ``knife[:method]``
-   Use to add the ``--method`` option.
+   Adds the the ``--method`` option.
 
 ``knife[:pretty]``
-   Use to add the ``--[no-]pretty`` option.
+   Adds the the ``--[no-]pretty`` option.
 
 ``knife[:repo_mode]``
-   Use to add the ``--repo-mode`` option.
+   Adds the the ``--repo-mode`` option.

@@ -6,19 +6,19 @@
 The following ``knife delete`` settings can be added to the |knife rb| file:
 
 ``knife[:chef_repo_path]``
-   Use to add the ``--chef-repo-path`` option.
+   Adds the the ``--chef-repo-path`` option.
 
 ``knife[:concurrency]``
-   Use to add the ``--concurrency`` option.
+   Adds the the ``--concurrency`` option.
 
 ``knife[:disable_editing]``
-   Use to add the ``--disable-editing`` option.
+   Adds the the ``--disable-editing`` option.
 
 ``knife[:editor]``
-   Use to add the ``--editor`` option.
+   Adds the the ``--editor`` option.
 
 ``knife[:local]``
-   Use to add the ``--local`` option.
+   Adds the the ``--local`` option.
 
 ``knife[:repo_mode]``
-   Use to add the ``--repo-mode`` option.
+   Adds the the ``--repo-mode`` option.

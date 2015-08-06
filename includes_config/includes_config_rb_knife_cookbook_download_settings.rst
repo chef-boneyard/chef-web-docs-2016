@@ -6,11 +6,10 @@
 The following ``knife cookbook download`` settings can be added to the |knife rb| file:
 
 ``knife[:download_directory]``
-   Use to add the ``--dir`` option.
+   Adds the the ``--dir`` option.
 
 ``knife[:force]``
-   Use to add the ``--force`` option.
+   Adds the the ``--force`` option.
 
 ``knife[:latest]``
-   Use to add the ``--latest`` option.
-
+   Adds the the ``--latest`` option.

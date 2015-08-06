@@ -56,7 +56,7 @@ This configuration file has the following settings for |nginx|:
    * - ``supermarket['nginx']['gzip_static']``
      - Default value: ``'off'``.
    * - ``supermarket['nginx']['gzip_types']``
-     - |gzip types| Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "application/atom+xml", "text/javascript", "application/javascript", "application/json" ]``.
+     - |gzip types| Default value: ``[ 'text/plain', 'text/css', 'application/x-javascript', 'text/xml', 'application/xml', 'application/xml+rss', 'application/atom+xml', 'text/javascript', 'application/javascript', 'application/json' ]``.
    * - ``supermarket['gzip_vary']``
      - Default value: ``'off'``.
    * - ``supermarket['nginx']['keepalive']``

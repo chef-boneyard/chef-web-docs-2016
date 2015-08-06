@@ -6,5 +6,4 @@
 The following ``knife cookbook site share`` settings can be added to the |knife rb| file:
 
 ``knife[:cookbook_path]``
-   Use to add the ``--cookbook-path`` option.
-
+   Adds the the ``--cookbook-path`` option.

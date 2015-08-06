@@ -10,4 +10,4 @@ This configuration file has the following settings for ``upgrades``:
    * - Setting
      - Description
    * - ``upgrades['dir']``
-     - |directory generic| |default_value_recommended| Default value: ``"/var/opt/opscode/upgrades"``.
+     - |directory generic| |default_value_recommended| Default value: ``'/var/opt/opscode/upgrades'``.

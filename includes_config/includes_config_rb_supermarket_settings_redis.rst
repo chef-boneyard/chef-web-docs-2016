@@ -10,7 +10,7 @@ This configuration file has the following settings for |redis|:
    * - Setting
      - Description
    * - ``supermarket['redis']['bind']``
-     - |bind redis| Default value: ``"127.0.0.1"``.
+     - |bind redis| Default value: ``'127.0.0.1'``.
    * - ``supermarket['redis']['directory']``
      - |directory generic| |default_value_recommended| Default value: ``"#{node['supermarket']['var_directory']}/redis"``.
    * - ``supermarket['redis']['enable']``
@@ -20,4 +20,4 @@ This configuration file has the following settings for |redis|:
    * - ``supermarket['redis']['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``supermarket['redis']['port']``
-     - |port service| Default value: ``"16379"``.
+     - |port service| Default value: ``'16379'``.

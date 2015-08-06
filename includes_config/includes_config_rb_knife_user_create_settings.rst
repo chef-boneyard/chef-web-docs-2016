@@ -6,14 +6,13 @@
 The following ``knife user create`` settings can be added to the |knife rb| file:
 
 ``knife[:admin]``
-   Use to add the ``--admin`` option.
+   Adds the the ``--admin`` option.
 
 ``knife[:file]``
-   Use to add the ``--file`` option.
+   Adds the the ``--file`` option.
 
 ``knife[:user_key]``
-   Use to add the ``--user-key`` option.
+   Adds the the ``--user-key`` option.
 
 ``knife[:user_password]``
-   Use to add the ``--password`` option.
-
+   Adds the the ``--password`` option.

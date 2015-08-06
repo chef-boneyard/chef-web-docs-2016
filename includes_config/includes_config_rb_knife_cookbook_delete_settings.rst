@@ -6,11 +6,10 @@
 The following ``knife cookbook delete`` settings can be added to the |knife rb| file:
 
 ``knife[:all]``
-   Use to add the ``--all`` option.
+   Adds the the ``--all`` option.
 
 ``knife[:print_after]``
-   Use to add the ``--print-after`` option.
+   Adds the the ``--print-after`` option.
 
 ``knife[:purge]``
-   Use to add the ``--purge`` option.
-
+   Adds the the ``--purge`` option.

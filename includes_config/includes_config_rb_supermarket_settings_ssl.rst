@@ -14,19 +14,19 @@ This configuration file has the following settings for |ssl|:
    * - ``supermarket['ssl']['certificate_key']``
      - |ssl_certificate key|
    * - ``supermarket['ssl']['company_name']``
-     - |nginx ssl_company_name| Default value: ``"My Supermarket"``.
+     - |nginx ssl_company_name| Default value: ``'My Supermarket'``.
    * - ``supermarket['ssl']['country_name']``
-     - |nginx ssl_country_name| Default value: ``"US"``.
+     - |nginx ssl_country_name| Default value: ``'US'``.
    * - ``supermarket['ssl']['directory']``
      - |directory generic| Default value: ``'/var/opt/supermarket/ssl'``.
    * - ``supermarket['ssl']['email_address']``
-     - |nginx ssl_email_address| Default value: ``"you@example.com"``.
+     - |nginx ssl_email_address| Default value: ``'you@example.com'``.
    * - ``supermarket['ssl']['locality_name']``
-     - |nginx ssl_locality_name| Default value: ``"Seattle"``.
+     - |nginx ssl_locality_name| Default value: ``'Seattle'``.
    * - ``supermarket['ssl']['openssl_bin']``
      - Default value: ``"#{node['supermarket']['install_directory']}/embedded/bin/openssl"``.
    * - ``supermarket['ssl']['organizational_unit_name']``
-     - |nginx ssl_organizational_unit_name| Default value: ``"Operations"``.
+     - |nginx ssl_organizational_unit_name| Default value: ``'Operations'``.
    * - ``supermarket['ssl']['session_cache']``
      - Default value: ``'shared:SSL:4m'``.
    * - ``supermarket['ssl']['session_timeout']``
@@ -38,7 +38,7 @@ This configuration file has the following settings for |ssl|:
 
           nginx['ssl_ciphers'] = HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK
    * - ``supermarket['ssl']['protocols']``
-     - |version protocols_ssl| Default value: ``"TLSv1 TLSv1.1 TLSv1.2"``.
+     - |version protocols_ssl| Default value: ``'TLSv1 TLSv1.1 TLSv1.2'``.
    * - ``supermarket['ssl']['state_name']``
-     - |nginx ssl_state_name| Default value: ``"WA"``.
+     - |nginx ssl_state_name| Default value: ``'WA'``.
 

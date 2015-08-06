@@ -6,8 +6,7 @@
 The following ``knife cookbook site download`` settings can be added to the |knife rb| file:
 
 ``knife[:file]``
-   Use to add the ``--file`` option.
+   Adds the the ``--file`` option.
 
 ``knife[:force]``
-   Use to add the ``--force`` option.
-
+   Adds the the ``--force`` option.

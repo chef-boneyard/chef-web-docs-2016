@@ -6,8 +6,7 @@
 The following ``knife cookbook list`` settings can be added to the |knife rb| file:
 
 ``knife[:all]``
-   Use to add the ``--all`` option.
+   Adds the the ``--all`` option.
 
 ``knife[:environment]``
-   Use to add the ``--environment`` option.
-
+   Adds the the ``--environment`` option.
