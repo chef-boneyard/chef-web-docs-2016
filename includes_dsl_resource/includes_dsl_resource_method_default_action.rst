@@ -9,5 +9,3 @@ The ``default_action`` method is used to set the default action for a lightweigh
    default_action :action_name
 
 where ``action_name`` is the default action.
-
-

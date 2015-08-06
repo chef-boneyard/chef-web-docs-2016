@@ -2,17 +2,17 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``state_attrs`` method is used to define the attributes that will be tracked by the |reporting| server. In general, this should be a list of attributes that describe the desired state of the system, such as file permissions, cloud provider data (like snapshots, volumes, identifiers, sizes, and access keys), and so on.
+The ``state_attrs`` method is used to define the properties that will be tracked by the |reporting| server. In general, this should be a list of properties that describe the desired state of the system, such as file permissions, cloud provider data (like snapshots, volumes, identifiers, sizes, and access keys), and so on.
 
 The syntax for the ``state_attrs`` method is as follows:
 
 .. code-block:: ruby
 
-   state_attrs :attribute, 
-               :attribute, 
-               :attribute
+   state_attrs :property, 
+               :property, 
+               :property
 
-where ``attribute`` is a comma-delimited list of attributes. For example, the ``ebs_volume`` resource (available from the `aws <https://github.com/opscode-cookbooks/aws>`_ cookbook) uses the ``state_attrs`` method to tell the |reporting| server to track the following attributes:
+where ``:property`` is a comma-delimited list of properties. For example, the ``ebs_volume`` resource (available from the `aws <https://github.com/opscode-cookbooks/aws>`_ cookbook) uses the ``state_attrs`` method to tell the |reporting| server to track the following properties:
 
 .. code-block:: ruby
 
@@ -28,6 +28,3 @@ where ``attribute`` is a comma-delimited list of attributes. For example, the ``
                :timeout,
                :volume_id,
                :volume_type
-
-
-

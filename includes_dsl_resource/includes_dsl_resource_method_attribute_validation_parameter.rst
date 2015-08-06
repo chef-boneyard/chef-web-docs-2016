@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A validation parameter is used to add zero (or more) validation parameters to an attribute.
+A validation parameter is used to add zero (or more) validation parameters to an property.
 
 .. list-table::
    :widths: 150 450
@@ -16,17 +16,17 @@ A validation parameter is used to add zero (or more) validation parameters to an
        .. code-block:: ruby
        
           :callbacks => {
-		    "should be a valid non-system port" => lambda { 
+		    'should be a valid non-system port' => lambda { 
 		      |p| p > 1024 && p < 65535 
 		      }
 		    }
 
    * - ``:default``
-     - Use to specify the default value for an attribute. For example:
+     - Use to specify the default value for an property. For example:
 
        .. code-block:: ruby
        
-          :default => "a_string_value"
+          :default => 'a_string_value'
        
        .. code-block:: ruby
        
@@ -96,7 +96,7 @@ A validation parameter is used to add zero (or more) validation parameters to an
        
           :regex => [ /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/ ]
    * - ``:required``
-     - Indicates that an attribute is required. For example:
+     - Indicates that an property is required. For example:
 
        .. code-block:: ruby
        
@@ -145,6 +145,3 @@ From the ``module`` lightweight resource in the |cookbook iis| cookbook:
    attribute :type, :kind_of => String, :default => nil
    attribute :precondition, :kind_of => String, :default => nil
    attribute :application, :kind_of => String, :default => nil
-
-
-

@@ -9,5 +9,3 @@ The ``actions`` method is used to define a list of actions that are available to
    actions :action_name, :action_name
 
 where ``actions`` is a comma-delimited list of individual actions.
-
-

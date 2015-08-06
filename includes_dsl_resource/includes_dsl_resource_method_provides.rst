@@ -16,12 +16,12 @@ The syntax for the ``provides`` method is as follows:
 
 .. code-block:: ruby
 
-   provides :resource_name, os: [ "platform", "platform", ...], platform_family: "family"
+   provides :resource_name, os: [ 'platform', 'platform', ...], platform_family: 'family'
 
 where:
 
 * ``:resource_name`` is a |chef client| resource: ``:cookbook_file``, ``:package``, ``:rpm_package``, and so on
-* ``"platform"`` is a comma-separated list of platforms: ``"windows"``, ``"solaris2"``, ``"linux"``, and so on
+* ``'platform'`` is a comma-separated list of platforms: ``'windows'``, ``'solaris2'``, ``'linux'``, and so on
 * ``platform_family`` is optional and may specify the same parameters as the ``platform_family?`` method in the |dsl recipe|; ``platform`` is optional and also supported (and is the same as the ``platform?`` method in the |dsl recipe|)
 
 A custom resource/provider may be mapped to more than one existing resource/provider. Multiple platform associations may be made. For example, to completely map a custom resource/provider to an existing custom resource/provider, only specificy the resource name:
@@ -34,27 +34,27 @@ The same mapping, but only for the |linux| platform:
 
 .. code-block:: ruby
 
-   provides :cookbook_file, os: "linux"
+   provides :cookbook_file, os: 'linux'
 
 A similar mapping, but also for packages on the |windows| platform:
 
 .. code-block:: ruby
 
    provides :cookbook_file
-   provides :package, os: "windows"
+   provides :package, os: 'windows'
 
 Use multiple ``provides`` statements to define multiple conditions: Use an array to match any of the platforms within the array:
 
 .. code-block:: ruby
 
    provides :cookbook_file
-   provides :package, os: "windows"
-   provides :rpm_package, os: [ "linux", "aix" ]
+   provides :package, os: 'windows'
+   provides :rpm_package, os: [ 'linux', 'aix' ]
 
 Use an array to match any of the platforms within the array:
 
 .. code-block:: ruby
 
-   provides :package, os: "solaris2", platform_family: "solaris2" do |node|
+   provides :package, os: 'solaris2', platform_family: 'solaris2' do |node|
      node[:platform_version].to_f <= 5.10
    end
