@@ -52,9 +52,13 @@ External Cookbooks
 .. include:: ../../includes_server_ha/includes_server_ha_external_cookbooks_aws_settings.rst
 
 
+.. DO NOT CHANGE THE FOLLOWING TITLE BECAUSE IT IS LINKED FROM THE ERROR MESSAGES IN THE CODE FOR THESE SETTINGS.
+
 External |postgresql|
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql.rst
+
+.. DO NOT CHANGE THE FOLLOWING TITLE BECAUSE IT IS LINKED FROM THE ERROR MESSAGES IN THE CODE FOR THESE SETTINGS.
 
 |postgresql| Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
