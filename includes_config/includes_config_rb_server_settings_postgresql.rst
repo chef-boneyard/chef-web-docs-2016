@@ -19,22 +19,28 @@ This configuration file has the following settings for ``postgresql``:
      - |checkpoint_warning| Default value: ``30s``.
    * - ``postgresql['data_dir']``
      - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}/data``.
+   * - ``postgresql['db_superuser']``
+     - Required when ``postgresql['external']`` is set to ``true``. |postgresql external_db_superuser| Default value: ``'superuser_userid'``.
+   * - ``postgresql['db_superuser_password']``
+     - Required when ``postgresql['external']`` is set to ``true``. |postgresql external_db_password| Default value: ``'the password'``.
    * - ``postgresql['dir']``
      - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}``.
    * - ``postgresql['effective_cache_size']``
      - |effective_cache_size postgresql| Default value: 50% of available RAM.
    * - ``postgresql['enable']``
      - |enable service| Default value: ``true``.
+   * - ``postgresql['external']``
+     - Required. |postgresql external| Default value: ``false``.
    * - ``postgresql['ha']``
      - |use ha| |ha true| Default value: ``false``.
    * - ``postgresql['home']``
      - |directory postgresql_home| Default value: ``/var/opt/opscode/postgresql``.
    * - ``postgresql['keepalives_count']``
-     - The maximum number of keepalive proves that should be sent before dropping a connection. Default value: ``2``.
+     - |keepalive postgresql_count| Default value: ``2``.
    * - ``postgresql['keepalives_idle']``
-     - The amount of time (in seconds) a connection must remain idle before keepalive probes will resume. Default value: ``60``.
+     - |keepalive postgresql_idle| Default value: ``60``.
    * - ``postgresql['keepalives_interval']``
-     - The amount of time (in seconds) between keepalive probes. Default value: ``15``.
+     - |keepalive postgresql_interval| Default value: ``15``.
    * - ``postgresql['listen_address']``
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
@@ -46,19 +52,19 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['max_connections']``
      - |max_connections| Default value: ``350``.
    * - ``postgresql['md5_auth_cidr_addresses']``
-     - Use instead of ``trust_auth_cidr_addresses`` to encrypt passwords using MD5 hashes. Default value: ``[ '127.0.0.1/32', '::1/128' ]``.
+     - |md5_auth_cidr_addresses| Default value: ``[ '127.0.0.1/32', '::1/128' ]``.
    * - ``postgresql['port']``
-     - |port service| Default value: ``5432``.
+     - Optional when ``postgresql['external']`` is set to ``true``. |port service| |postgresql external_port| Default value: ``5432``.
    * - ``postgresql['shared_buffers']``
      - |shared_buffers postgresql| Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``.
    * - ``postgresql['shell']``
      - Default value: ``/bin/sh``.
    * - ``postgresql['shmall']``
-     - The total amount of available shared memory. Default value: ``4194304``.
+     - |postgresql shmall| Default value: ``4194304``.
    * - ``postgresql['shmmax']``
-     - The maximum amount of shared memory. Default value: ``17179869184``.
+     - |postgresql shmax| Default value: ``17179869184``.
    * - ``postgresql['sql_password']``
-     - The password for the |postgresql| user account. Default value: ``snakepliskin``.
+     - |password postgresql_user| Default value: ``snakepliskin``.
    * - ``postgresql['sql_ro_password']``
      - Default value: ``shmunzeltazzen``.
    * - ``postgresql['sql_ro_user']``
@@ -66,14 +72,14 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['sql_user']``
      - Default value: ``opscode_chef``.
    * - ``postgresql['trust_auth_cidr_addresses']``
-     - Use for clear-text passwords. See ``md5_auth_cidr_addresses``. Default value: ``'127.0.0.1/32', '::1/128'``.
+     - |trust_auth_cidr_addresses| See ``md5_auth_cidr_addresses``. Default value: ``'127.0.0.1/32', '::1/128'``.
    * - ``postgresql['user_path']``
      - Default value: ``/opt/opscode/embedded/bin:/opt/opscode/bin:$PATH``.
    * - ``postgresql['username']``
      - |name user postgresql| Default value: ``opscode-pgsql``.
    * - ``postgresql['version']``
-     - The (currently) hardcoded version of |postgresql|. Default value: ``'9.2'``.
+     - |version postgresql| Default value: ``'9.2'``.
    * - ``postgresql['vip']``
-     - |ip_address virtual| Default value: ``127.0.0.1``.
+     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| |postgresql external_vip| Default value: ``external-postgres-host-or-ip`` when ``postgresql['external']`` is ``true`` and ``127.0.0.1`` when ``postgresql['external']`` is ``false``.
    * - ``postgresql['work_mem']``
      - |work_mem| Default value: ``8MB``.

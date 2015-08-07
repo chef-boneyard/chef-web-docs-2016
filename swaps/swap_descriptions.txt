@@ -662,6 +662,9 @@
 
 
 .. |keepalive request_time| replace:: The amount of time (in seconds) to wait for requests on a connection.
+.. |keepalive postgresql_count| replace:: The maximum number of keepalive proves that should be sent before dropping a connection.
+.. |keepalive postgresql_idle| replace:: The amount of time (in seconds) a connection must remain idle before keepalive probes will resume.
+.. |keepalive postgresql_interval| replace:: The amount of time (in seconds) between probes.
 .. |keepcache| replace:: Keep the cache of headers and packages after a successful installation.
 .. |keep_releases| replace:: The number of releases for which a backup is kept.
 .. |kerberos-realm| replace:: The administrative domain to which a user belongs.
@@ -764,6 +767,7 @@
 .. |max_connections| replace:: The maximum number of allowed concurrent connections.
 .. |max_retry| replace:: The maximum number of attempts made to retrieve a file before returning an error.
 .. |maximum_transmission_unit| replace:: The maximum transmission unit (MTU) for the network interface.
+.. |md5_auth_cidr_addresses| replace:: Use instead of ``trust_auth_cidr_addresses`` to encrypt passwords using MD5 hashes.
 .. |mdpolicy| replace:: The metadata download policy for the repository metadata index.
 .. |media location| replace:: The geographic location for a virtual machine and its services.
 .. |medium| replace:: Display normal attributes in the output and to show the output as |json|.
@@ -1002,6 +1006,7 @@
 .. |password openstack_compute| replace:: The |openstack compute| password.
 .. |password proxy_server| replace:: The password for the proxy server.
 .. |password rabbitmq| replace:: The password for the |rabbitmq| user.
+.. |password postgresql_user| replace:: The password for the |postgresql| user account.
 .. |password shadow_hash| replace:: The password shadow hash. This property requires that ``ruby-shadow`` be installed. This is part of the |debian| package: ``libshadow-ruby1.8``.
 .. |password sql_user| replace:: The password for the ``sql_user``.
 .. |password sql_ro_user| replace:: The password for the ``sql_ro_user``.
@@ -1064,6 +1069,13 @@
 .. |port enable_non_ssl_nginx| replace:: Allow port 80 redirects to port 443. When this value is set to ``false``, load balancers on the front-end hardware are allowed to do |ssl| termination of the WebUI and API.
 .. |port non_ssl_nginx| replace:: The port on which the WebUI and API are bound for non-|ssl| connections.
 .. |port service| replace:: The port on which the service is to listen.
+.. |postgresql external| replace:: Set to ``true`` to run |postgresql| external to the |chef server|. Must be set once only on a new installation of the |chef server| before the first ``chef-server-ctl reconfigure`` command is run. If this is set after a reconfigure or set to ``false``, any reconfigure of the |chef server| will return an error.
+.. |postgresql external_db_superuser| replace:: The |postgresql| user name. This user must be granted either the ``CREATE ROLE`` and ``CREATE DATABASE`` permissions in |postgresql| or be granted ``SUPERUSER`` permission. This user must also have an entry in the host-based authentication configuration file used by |postgresql| (traditionally named ``pg_hba.conf``).
+.. |postgresql external_db_password| replace:: The password for the user specified by ``postgresql['db_superuser']``.
+.. |postgresql external_port| replace:: The port used by |postgresql| if that port is **not** 5432.
+.. |postgresql external_vip| replace:: The host for this IP address must be online and reachable from the |chef server| via the port specified by ``postgresql['port']``.
+.. |postgresql shmax| replace:: The maximum amount of shared memory.
+.. |postgresql shmall| replace:: The total amount of available shared memory.
 .. |precompile_assetsx| replace:: Pre-compile assets. Unless this attribute is specified, the |chef client| attempts to auto-detect whether the pipeline is in use by looking in ``config/assets.yml``.
 .. |prerelease| replace:: Install pre-release gems.
 .. |print_after| replace:: Show data after a destructive operation.
@@ -1527,6 +1539,7 @@
 .. |tolerant| replace:: Be tolerant of errors that may occur on the command line.
 .. |trace functions_on_server| replace:: Execute trace functions by the server.
 .. |tree| replace:: Show dependencies in a visual tree structure (including duplicates, if they exist).
+.. |trust_auth_cidr_addresses| replace:: Use for clear-text passwords.
 .. |tsflags| replace:: A comma- or space-separated list of transaction flags to be passed to the transaction set.
 .. |type module| replace:: The module type.
 .. |type package_11-16_string| replace:: A string that specifies the type of package.
@@ -1625,6 +1638,7 @@
 .. |version cookbook_download| replace:: The version of a cookbook to download.
 .. |version package| replace:: The version of a package to be installed or upgraded.
 .. |version package_version_assumed| replace:: The version of a package to be installed or upgraded. If a version is not specified, the latest version is assumed.
+.. |version postgresql| replace:: The (currently) hardcoded version of |postgresql|.
 .. |version push jobs| replace:: The version of |push jobs|.
 .. |version protocols_ssl| replace:: The |ssl| protocol versions that are enabled.
 .. |versioned_cookbooks| replace:: Append cookbook versions to cookbooks. Set to ``false`` to hide cookbook versions: ``cookbooks/apache``. Set to ``true`` to show cookbook versions: ``cookbooks/apache-1.0.0`` and/or ``cookbooks/apache-1.0.1``. When this setting is ``true``, |subcommand knife download| downloads ALL cookbook versions, which can be useful if a full-fidelity backup of data on the |chef server| is required.
