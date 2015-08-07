@@ -239,10 +239,12 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_key_pair``
 * ``aws_launch_configuration``
 * ``aws_load_balancer``
+* ``aws_network_acl``
 * ``aws_network_interface``
 * ``aws_route_table``
 * ``aws_s3_bucket``
 * ``aws_security_group``
+* ``aws_server_certificate``
 * ``aws_sns_topic``
 * ``aws_sqs_queue``
 * ``aws_subnet``
