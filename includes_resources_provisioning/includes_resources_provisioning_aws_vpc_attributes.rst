@@ -32,11 +32,11 @@ This |chef provisioning| driver-specific resource has the following properties:
 
        |driver_provisioning|
    * - ``enable_dns_hostnames``
-     - **Ruby Type:** TrueClass, FalseClass
+     - **Ruby Type:** TrueClass
 
        Use to specify if instances launched in a defined virtual network are assigned DNS hostnames. Possible values: ``true`` or ``false``. When ``true``, ``enable_dns_support`` must also be set to ``true``.
    * - ``enable_dns_support``
-     - **Ruby Type:** TrueClass, FalseClass
+     - **Ruby Type:** TrueClass
 
        Use to specify if DNS resolution is supported for a defined virtual network. When ``false``, resolution of public DNS hostnames to IP addresses is disabled. When ``true``, queries made to either the DNS server provided by |amazon aws| (and located at the 169.254.169.253 IP address) or the reserved IP address at the base of the defined virtual network range (plus two) will be resolved successfully. For example, a reserved IP address of ``10.0.0.0/16`` is located at ``10.0.0.2``.
    * - ``instance_tenancy``
