@@ -29,9 +29,9 @@ A webhook for |chef analytics| enables real-time event streams to be sent to arb
         when
           true
         then
-          notify('slack', '{
+          notify('slack', "{
             'text': 'test from the blog post'
-          }')
+          }")
         end
       end
 
@@ -46,14 +46,14 @@ A webhook for |chef analytics| enables real-time event streams to be sent to arb
         when
           status != 'success'
         then
-          notify('slack', '{
+          notify('slack', "{
             'username': 'Audit Alarm',
             'icon_emoji': ':rotating_light:',
             'text': "{{message.name}} (cookbook {{message.cookbook_name}})\n
             had '{{message.number_failed}}' failed audit test(s)\n
             on node '{{message.run.node_name}}'\n
             in organization '{{message.organization_name}}'"
-          }')
+          }")
         end
       end
 
