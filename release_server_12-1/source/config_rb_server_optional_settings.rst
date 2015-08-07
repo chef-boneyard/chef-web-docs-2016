@@ -120,7 +120,7 @@ postgresql
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
 
-.. include:: ../../includes_config/includes_config_rb_server_settings_postgresql.rst
+.. include:: ../../includes_config/includes_config_rb_12-2_server_settings_postgresql.rst
 
 rabbitmq
 -----------------------------------------------------
