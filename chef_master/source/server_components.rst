@@ -43,11 +43,11 @@ The following diagram shows the various components that are part of a |chef serv
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
 
-External Cookbooks (AWS)
+External Cookbooks
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_external_cookbooks_aws.rst
 
-Settings
+|amazon aws| Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_ha/includes_server_ha_external_cookbooks_aws_settings.rst
 
@@ -56,6 +56,6 @@ External |postgresql|
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql.rst
 
-Settings
+|postgresql| Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql_settings.rst
