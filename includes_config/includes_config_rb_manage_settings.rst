@@ -52,7 +52,7 @@ This configuration file has the following settings:
    * - ``session_timeout``
      - The amount of time (in minutes) to wait before timing out. When not set, a browser session will not have a timed expiration and will expire when the browser session ends, quits, or when the computer restarts.
    * - ``sign_in_page_message``
-     - A message to display on the sign in page. If present, the message will show up in a box on the sign in page. Any valid HTML is allowed here. Default value: ``nil``.
+     - A message to display on the sign-in page. If present, the message will show up in a box on the sign in page. Any valid HTML is allowed here. Default value: ``nil``.
    * - ``support_email_address``
      - The email address used to send feedback. Default value: ``support@chef.io``.
    * - ``support_site_url``
