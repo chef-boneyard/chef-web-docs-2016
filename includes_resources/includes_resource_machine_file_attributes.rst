@@ -10,23 +10,35 @@ This resource has the following properties:
    * - Property
      - Description
    * - ``chef_server``
-     - |chef_server_url|
+     - **Ruby Type:** Hash
+
+       |chef_server_url|
    * - ``content``
      - |content file| The default behavior will not modify content.
    * - ``driver``
-     - Use to specify the driver to be used for provisioning.
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       Use to specify the driver to be used for provisioning.
    * - ``group``
-     - |windows group_identifier|
+     - **Ruby Type:** String
+
+       |windows group_identifier|
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
 
        |ignore_failure| Default value: ``false``.
    * - ``local_path``
-     - The local path to a file.
+     - **Ruby Type:** String
+
+       The local path to a file.
    * - ``machine``
-     - Use to specify the machine type.
+     - **Ruby Type:** String
+
+       Use to specify the machine type.
    * - ``mode``
-     - |mode resource_file|
+     - **Ruby Type:** String
+
+       |mode resource_file|
        
        The behavior is different depending on the platform.
        
@@ -43,9 +55,13 @@ This resource has the following properties:
 
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
    * - ``owner``
-     - |owner windows security|
+     - **Ruby Type:** String
+
+       |owner windows security|
    * - ``path``
-     - |path full_path_to_file| |resource_block_default| |see syntax|
+     - **Ruby Type:** String
+
+       |path full_path_to_file| |resource_block_default| |see syntax|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``retries``

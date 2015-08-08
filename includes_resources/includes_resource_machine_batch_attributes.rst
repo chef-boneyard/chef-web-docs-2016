@@ -10,9 +10,13 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``chef_server``
-     - |chef_server_url|
+     - **Ruby Type:** Hash
+
+       |chef_server_url|
    * - ``driver``
-     - Use to specify the driver to be used for provisioning.
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       Use to specify the driver to be used for provisioning.
    * - ``files``
      - 
    * - ``from_recipe``

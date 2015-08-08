@@ -10,17 +10,29 @@ This resource has the following properties:
    * - Property
      - Description
    * - ``chef_server``
-     - |chef_server_url|
+     - **Ruby Type:** Hash
+
+       |chef_server_url|
    * - ``command``
-     - |name command| |resource_block_default| |see syntax|
+     - **Ruby Type:** String
+
+       |name command| |resource_block_default| |see syntax|
    * - ``driver``
-     - Use to specify the driver to be used for provisioning.
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       Use to specify the driver to be used for provisioning.
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
 
        |ignore_failure| Default value: ``false``.
+   * - ``live_stream``
+     - **Ruby Types:** TrueClass, FalseClass
+
+       Default value: ``false``.
    * - ``machine``
-     - Use to specify the machine type.
+     - **Ruby Type:** String
+
+       Use to specify the machine type.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 

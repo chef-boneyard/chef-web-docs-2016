@@ -20,7 +20,9 @@ This resource has the following properties:
 
        |ignore_failure| Default value: ``false``.
    * - ``image_options``
-     - Use to specify options that are used with this machine image.
+     - **Ruby Type:** Hash
+
+       Use to specify options that are used with this machine image.
    * - ``name``
      - The name of the machine image.
    * - ``notifies``

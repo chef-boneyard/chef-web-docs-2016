@@ -10,7 +10,9 @@ This resource has the following properties:
    * - Property
      - Description
    * - ``driver``
-     - Use to specify the driver to be used for provisioning.
+     - **Ruby Type:** Chef::Provisioning::Driver
+
+       Use to specify the driver to be used for provisioning.
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
 
@@ -20,9 +22,11 @@ This resource has the following properties:
    * - ``machines``
      - 
    * - ``name``
-     - 
+     - **Ruby Type:** String
+
+       The name of the load balancer.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Types:** Symbol, 'Chef::Resource[String]', Symbol
 
        |notifies|
 
