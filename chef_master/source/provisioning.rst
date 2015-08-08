@@ -668,6 +668,7 @@ Examples
      routes '0.0.0.0/0' => :internet_gateway
    end
 
+
 aws_s3_bucket
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_s3_bucket.rst
@@ -684,15 +685,13 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
-**Delete a security group**
+**Add an Amazon S3 bucket**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_s3_bucket_add.rst
 
-   aws_s3_bucket 'aws-bucket' do
-     enable_website_hosting true
-     website_options :index_document => { :suffix => "index.html" },
-                     :error_document => { :key => "not_found.html" }
-   end
+**Delete an Amazon S3 bucket**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_s3_bucket_delete.rst
 
 
 aws_security_group
