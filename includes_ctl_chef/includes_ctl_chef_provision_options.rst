@@ -26,7 +26,7 @@ This subcommand has the following options:
 ``-o OPT=VALUE``, ``--opt OPT=VALUE``
    Use to set an arbitrary command-line option (``OPT``) and value (``=VALUE``). Use this option one per command-line option. Default value: ``{}``.
 
-   .. note:: Use the ``extra_chef_config`` property in a recipe to set arbitrary configuration settings.
+   .. note:: Use the ``extra_chef_config`` property in a recipe in the ``provision`` cookbook to set arbitrary configuration settings.
 
 ``-p POLICY_NAME``, ``--policy-name POLICY_NAME``
    Use to set the policy name for one (or more) machines that are managed by this |policyfile rb| file.
