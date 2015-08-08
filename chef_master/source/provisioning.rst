@@ -713,21 +713,23 @@ Examples
 
 **Delete a security group**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_delete.rst
 
-   aws_security_group 'test-sg' do
-     vpc 'test-vpc'
-     action :delete
-   end	
+**Add inbound and outbound rules**
 
-**Define inbound rules**
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_inbound_and_outbound_rules.rst
 
-.. code-block:: ruby
+**Add and edit inbound rules**
 
-   aws_security_group 'ref-sg1-eni' do
-     vpc 'ref-vpc-eni'
-     inbound_rules 'ref-sg1-eni' => 2224
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_inbound_rules.rst
+
+**Add and edit outbound rules**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_outbound_rules.rst
+
+**Add rules for specific ports, sources, and destinations**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_rules_ports_etc.rst
 
 
 aws_server_certificate
