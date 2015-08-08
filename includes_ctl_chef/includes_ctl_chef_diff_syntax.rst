@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef diff FILE --head | --git GROUP | GROUP...GROUP (options)
+   $ chef diff POLICY_FILE --head | --git POLICY_GROUP | POLICY_GROUP...POLICY_GROUP (options)
