@@ -4,6 +4,7 @@
 
 .. include:: ../../includes_ctl_chef/includes_ctl_chef.rst
 
+
 chef diff
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_diff.rst
@@ -61,6 +62,24 @@ Examples
 
    $ chef diff production...staging
 
+
+chef env
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_env.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_env_syntax.rst
+
+Options
+-----------------------------------------------------
+|no_options|
+
+Examples
+-----------------------------------------------------
+None.
+
+
 chef exec
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_exec.rst
@@ -76,6 +95,28 @@ Options
 Examples
 -----------------------------------------------------
 None.
+
+
+chef export
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_export.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_export_syntax.rst
+
+Configuration Settings
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_export_config.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_export_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
 
 chef gem
 =====================================================
@@ -104,6 +145,7 @@ Examples
 
 .. include:: ../../step_ctl_chef/step_ctl_chef_gem_view.rst
 
+
 chef generate app
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_app.rst
@@ -123,6 +165,7 @@ Examples
 
 .. include:: ../../step_ctl_chef/step_ctl_chef_generate_application.rst
 
+
 chef generate attribute
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_attribute.rst
@@ -141,6 +184,7 @@ Examples
 **Create an attribute**
 
 .. include:: ../../step_ctl_chef/step_ctl_chef_generate_attribute.rst
+
 
 chef generate cookbook
 =====================================================
@@ -165,6 +209,7 @@ Examples
 
 .. include:: ../../step_ctl_chef/step_ctl_chef_generate_cookbook_skeleton.rst
 
+
 chef generate file
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_file.rst
@@ -180,6 +225,7 @@ Options
 Examples
 -----------------------------------------------------
 None.
+
 
 chef generate lwrp
 =====================================================
@@ -197,6 +243,7 @@ Examples
 -----------------------------------------------------
 None.
 
+
 chef generate recipe
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_generate_recipe.rst
@@ -212,6 +259,7 @@ Options
 Examples
 -----------------------------------------------------
 None.
+
 
 chef generate template
 =====================================================
@@ -247,6 +295,23 @@ Examples
 None.
 
 
+chef provision
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_provision.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_provision_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_provision_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+
 chef push
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_push.rst
@@ -258,6 +323,23 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_push_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+
+chef push-archive
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_push_archive.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_push_archive_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_push_archive_options.rst
 
 Examples
 -----------------------------------------------------
@@ -293,6 +375,7 @@ Examples
 
 .. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows_user_profile.rst
 
+
 chef show-policy
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_show_policy.rst
@@ -308,6 +391,24 @@ Options
 Examples
 -----------------------------------------------------
 None.
+
+
+chef update
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_update.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_update_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_update_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
 
 chef verify
 =====================================================
