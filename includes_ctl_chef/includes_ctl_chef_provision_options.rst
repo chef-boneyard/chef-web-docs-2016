@@ -14,11 +14,19 @@ This subcommand has the following options:
 ``-d``, ``--destroy``
    Use to set the default action for the |resource machine| resource to ``:destroy``. Default value: ``false``.
 
+``-D``, ``--debug``
+   Use to enable stack traces and other debug output. Default value: ``false``.
+
 ``-h``, ``--help``
    |help subcommand|
 
 ``-n NODE_NAME``, ``--node-name NODE_NAME``
    Use to specify the name of the node. (This value may be overridden by the cookbook that is used to provision the node.)
+
+``-o OPT=VALUE``, ``--opt OPT=VALUE``
+   Use to set an arbitrary command-line option (``OPT``) and value (``=VALUE``). Use this option one per command-line option. Default value: ``{}``.
+
+   .. note:: Use the ``extra_chef_config`` property in a recipe to set arbitrary configuration settings.
 
 ``-p POLICY_NAME``, ``--policy-name POLICY_NAME``
    Use to set the policy name for one (or more) machines that are managed by this |policyfile rb| file.
