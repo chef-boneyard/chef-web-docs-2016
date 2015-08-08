@@ -880,22 +880,15 @@ Examples
 
 **Add a defined virtual network (VPC)**
 
-.. code-block:: ruby
-
-   aws_vpc 'test-vpc' do
-     cidr_block '10.0.0.0/24'
-     internet_gateway true
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_vpc_add.rst
 
 **Add a defined virtual network (VPC) with route table**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_vpc_add_route_table.rst
 
-   aws_vpc "provisioning-vpc" do
-     cidr_block "10.0.0.0/24"
-     internet_gateway true
-     main_routes '0.0.0.0/0' => :internet_gateway
-   end
+**Delete a VPC that has a defined route table**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_vpc_destroy_route_table.rst
 
 **Set up a VPC, route table, key pair, and machine**
 
@@ -904,6 +897,8 @@ Examples
 **Define a VPC for a cache cluster**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
+
+
 
 |fog| Driver Resources
 =====================================================
