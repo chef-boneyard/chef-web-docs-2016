@@ -453,13 +453,17 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
-**Associate existing IP address with Chef**
+**Associate elastic IP address**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_eip_address_associate.rst
 
-   aws_eip_address 'frontend_ip' do
-     public_ip '205.32.21.0'
-   end
+**Associate elastic IP address with a machine**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_eip_address_associate_with_machine.rst
+
+**Associate elastic IP address to a machine's VPC**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_eip_address_associate_with_vpc.rst
 
 
 
