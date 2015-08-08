@@ -8,4 +8,3 @@ This subcommand has the following syntax:
 .. code-block:: bash
 
    $ chef gem GEM_COMMAND GEM_OPTIONS (options)
-

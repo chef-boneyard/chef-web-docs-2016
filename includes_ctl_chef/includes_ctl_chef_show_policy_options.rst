@@ -18,7 +18,7 @@ This subcommand has the following options:
    Use to show policy revisions that are not currently assigned to any policy group.
 
 ``--[no-]pager``
-   Use ``--pager`` to enable paged output for a ``Policyfile.lock.json`` file. Default value: ``--pager``.
+   Use ``--pager`` to enable paged output for a |policylock| file. Default value: ``--pager``.
 
 ``-v``, ``--version``
    |version chef|

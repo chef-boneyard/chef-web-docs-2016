@@ -8,4 +8,3 @@ This subcommand has the following syntax:
 .. code-block:: bash
 
    $ chef exec SYSTEM_COMMAND (options)
-

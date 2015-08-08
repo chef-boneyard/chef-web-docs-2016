@@ -13,4 +13,3 @@ This subcommand has the following options:
 
 ``-v``, ``--version``
    |version chef|
-
