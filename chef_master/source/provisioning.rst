@@ -281,18 +281,15 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Define an auto scaling group**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_launch_config_auto_scale.rst
 
-   aws_auto_scaling_group 'my-awesome-auto-scaling-group' do
-     desired_capacity 3
-     min_size 1
-     max_size 5
-     launch_config 'my-sweet-launch-config'
-   end
+**Destroy auto scaling group and associated launch configuration**
 
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_launch_config_auto_scale_destroy.rst
 
 aws_cache_cluster
 -----------------------------------------------------
@@ -361,6 +358,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Create an option set**
 
@@ -398,81 +396,39 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Create**
 
-.. code-block:: ruby
-
-   aws_ebs_volume 'ref-volume-ebs' do
-     availability_zone 'a'
-     size 1
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_create_machine.rst
 
 **Attach to a machine**
 
-.. code-block:: ruby
-
-   aws_ebs_volume 'ref-volume-ebs' do
-     machine 'ref-machine-1'
-     device '/dev/xvdf'
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_attach_to_machine.rst
 
 **Reattach to a different device**
 
-.. code-block:: ruby
-
-   aws_ebs_volume 'ref-volume-ebs' do
-     device '/dev/xvdg'
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_reattach_to_device.rst
 
 **Reattach to a different machine**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_reattach_to_machine.rst
 
-   aws_ebs_volume 'ref-volume-ebs' do
-     machine 'ref-machine-2'
-     device '/dev/xvdf'
-   end
+**Skip a reattach attempt**
 
-**Skip reattaching**
-
-.. code-block:: ruby
-
-   aws_ebs_volume 'ref-volume-ebs' do
-     machine 'ref-machine-2'
-     device '/dev/xvdf'
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_skip_reattach.rst
 
 **Create and attach**
 
-.. code-block:: ruby
-
-   aws_ebs_volume 'ref-volume-ebs-2' do
-     availability_zone 'a'
-     size 1
-     machine 'ref-machine-1'
-     device '/dev/xvdf'
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_create_and_attach.rst
 
 **Detach**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_detach.rst
 
-   aws_ebs_volume 'ref-volume-ebs' do
-     machine false
-   end
+**Destroy volumes for batch of machines, along with keys**
 
-**Delete**
-
-.. code-block:: ruby
-
-   ['ref-volume-ebs', 'ref-volume-ebs-2'].each { |volume|
-     aws_ebs_volume volume do
-       action :destroy
-     end
-   }
-
-
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_delete_machine_and_keys.rst
 
 
 aws_eip_address
@@ -489,6 +445,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Associate existing IP address with Chef**
 
@@ -548,6 +505,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Create an internet gateway**
 
@@ -572,6 +530,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Create a private key, regenerate it if necessary**
 
@@ -585,6 +544,11 @@ Examples
      })
      allow_overwrite true
    end
+
+**Destroy volumes for batch of machines, along with keys**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_delete_machine_and_keys.rst
+
 
 aws_launch_configuration
 -----------------------------------------------------
@@ -600,6 +564,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Define an AMI instance type**
 
@@ -611,6 +576,13 @@ Examples
      options security_groups: 'ref-sg1'
    end
 
+**Define an auto scaling group**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_launch_config_auto_scale.rst
+
+**Destroy auto scaling group and associated launch configuration**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_launch_config_auto_scale_destroy.rst
 
 aws_load_balancer
 -----------------------------------------------------
@@ -658,6 +630,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Define a network interface**
 
@@ -684,6 +657,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Define a route table**
 
@@ -708,6 +682,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Delete a security group**
 
@@ -734,6 +709,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Delete a security group**
 
@@ -784,6 +760,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Create an SNS topic named "seapower"**
 
@@ -816,6 +793,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Create an SQS queue**
 
@@ -846,6 +824,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Remove the default subnet**
 
@@ -881,6 +860,7 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
 
 **Add a defined virtual network (VPC)**
 

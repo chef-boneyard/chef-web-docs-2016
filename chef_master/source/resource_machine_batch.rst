@@ -67,3 +67,7 @@ Examples
 **Set up primary and secondary machines for high availability**
 
 .. include:: ../../step_resource/step_resource_machine_batch_setup_primary_and_secondary.rst
+
+**Destroy EBS volumes for batch of machines, along with keys**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_delete_machine_and_keys.rst
