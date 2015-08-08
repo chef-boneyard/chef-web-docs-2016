@@ -742,6 +742,10 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
+**Define a security group for a batch of machines**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_machine_batch.rst
+
 aws_server_certificate
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_server_certificate.rst
@@ -862,6 +866,10 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
+**Define subnets for a batch of machines**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_machine_batch.rst
+
 aws_vpc
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc.rst
@@ -898,7 +906,9 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
+**Define a VPC for a batch of machines**
 
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_machine_batch.rst
 
 |fog| Driver Resources
 =====================================================

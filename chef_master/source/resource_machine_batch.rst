@@ -71,3 +71,7 @@ Examples
 **Destroy EBS volumes for batch of machines, along with keys**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_delete_machine_and_keys.rst
+
+**Define subnets for a batch of machines on Amazon AWS**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_machine_batch.rst
