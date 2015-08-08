@@ -68,6 +68,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_machine_image_add_apache_to_image.rst
 
-**Set up a VPC, route table, key pair, and machine**
+**Set up a VPC, route table, key pair, and machine for Amazon AWS**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_route_table_define_vpc_key_machine.rst
