@@ -527,16 +527,7 @@ Examples
 
 **Create a private key, regenerate it if necessary**
 
-.. code-block:: ruby
-
-   aws_key_pair 'ref-key-pair' do
-     private_key_options({
-       :format => :pem,
-       :type => :rsa,
-       :regenerate_if_different => true
-     })
-     allow_overwrite true
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_key_pair_add.rst
 
 **Destroy volumes for batch of machines, along with keys**
 
@@ -545,6 +536,7 @@ Examples
 **Set up a VPC, route table, key pair, and machine**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_route_table_define_vpc_key_machine.rst
+
 
 aws_launch_configuration
 -----------------------------------------------------
