@@ -309,7 +309,36 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+
+**Create a machine with lock file, synchronized to the Chef server**
+
+.. code-block:: ruby
+
+   with_driver 'vagrant:~/.vagrant.d/boxes' do
+   
+     # Set machine options
+     options = {
+       vagrant_options: { 'vm.box' => 'opscode-ubuntu-14.04' },
+       # Set all machine options to default values
+       convergence_options: ChefDK::ProvisioningData.context.convergence_options
+     }
+   
+     # Set node name to --node-name
+     machine context.node_name do
+       machine_options(options)
+   
+       # Force a Chef run every time and set action to --destroy option
+       action(ChefDK::ProvisioningData.context.action)
+     end
+   end
+
+and then to provision the machine, run the following:
+
+.. code-block:: bash
+
+   $ chef provision test123 --sync -n aar-dev
+
+This will synchronize the |policylock| file to the |chef server|, and then run the |chef client| on the node.
 
 
 chef push
