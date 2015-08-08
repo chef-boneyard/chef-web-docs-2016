@@ -4,8 +4,6 @@
 
 .. code-block:: ruby
 
-.. code-block:: ruby
-
    require 'chef/provisioning/aws_driver'
    with_driver 'aws::us-east-1'
    
