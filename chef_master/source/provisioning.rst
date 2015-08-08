@@ -549,6 +549,9 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_ebs_volume_delete_machine_and_keys.rst
 
+**Set up a VPC, route table, key pair, and machine**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_route_table_define_vpc_key_machine.rst
 
 aws_launch_configuration
 -----------------------------------------------------
@@ -661,12 +664,11 @@ Examples
 
 **Define a route table**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_route_table_define.rst
 
-   aws_route_table 'ref-public1' do
-     vpc 'test-vpc'
-     routes '0.0.0.0/0' => :internet_gateway
-   end
+**Set up a VPC, route table, key pair, and machine**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_route_table_define_vpc_key_machine.rst
 
 
 aws_s3_bucket
@@ -882,7 +884,9 @@ Examples
      main_routes '0.0.0.0/0' => :internet_gateway
    end
 
+**Set up a VPC, route table, key pair, and machine**
 
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_route_table_define_vpc_key_machine.rst
 
 |fog| Driver Resources
 =====================================================
