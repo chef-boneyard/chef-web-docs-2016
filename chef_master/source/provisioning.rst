@@ -305,7 +305,11 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
+|generic resource statement|
+
+**Define a VPC, subnets, and security group for a cache cluster**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
 
 
@@ -340,9 +344,11 @@ Properties
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
+|generic resource statement|
 
+**Define a cache subnet group for a cache cluster**
 
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
 aws_dhcp_options
 -----------------------------------------------------
@@ -732,6 +738,9 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_rules_ports_etc.rst
 
+**Define a security group for a cache cluster**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
 aws_server_certificate
 -----------------------------------------------------
@@ -849,6 +858,10 @@ Examples
      map_public_ip_on_launch true
    end
 
+**Define a subnet for a cache cluster**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
+
 aws_vpc
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc.rst
@@ -887,6 +900,10 @@ Examples
 **Set up a VPC, route table, key pair, and machine**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_route_table_define_vpc_key_machine.rst
+
+**Define a VPC for a cache cluster**
+
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
 |fog| Driver Resources
 =====================================================
