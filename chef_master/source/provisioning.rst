@@ -506,11 +506,7 @@ Examples
 
 **Create an internet gateway**
 
-.. code-block:: ruby
-
-   aws_internet_gateway 'name' do
-     internet_gateway_id '1234567890'
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_internet_gateway_add.rst
 
 
 aws_key_pair
