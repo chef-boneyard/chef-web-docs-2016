@@ -4,6 +4,63 @@
 
 .. include:: ../../includes_ctl_chef/includes_ctl_chef.rst
 
+chef diff
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_diff.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_diff_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_diff_options.rst
+
+Examples
+-----------------------------------------------------
+
+**Compare current lock to latest commit on latest branch**
+
+.. code-block:: bash
+
+   $ chef diff --git HEAD
+
+**Compare current lock with latest commit on master branch**
+
+.. code-block:: bash
+
+   $ chef diff --git master
+
+**Compare current lock to specified revision**
+
+.. code-block:: bash
+
+   $ chef diff --git v1.0.0
+
+**Compare lock on master branch to lock on revision**
+
+.. code-block:: bash
+
+   $ chef diff --git master...dev
+
+**Compare lock for version with latest commit on master branch**
+
+.. code-block:: bash
+
+   $ chef diff --git v1.0.0...master
+
+**Compare current lock with latest lock for policy group**
+
+.. code-block:: bash
+
+   $ chef diff staging
+
+**Compare locks for two policy groups**
+
+.. code-block:: bash
+
+   $ chef diff production...staging
+
 chef exec
 =====================================================
 .. include:: ../../includes_ctl_chef/includes_ctl_chef_exec.rst
@@ -235,6 +292,22 @@ Examples
 **Create a $PROFILE on new machines**
 
 .. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows_user_profile.rst
+
+chef show-policy
+=====================================================
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_show_policy.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_show_policy_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef/includes_ctl_chef_show_policy_options.rst
+
+Examples
+-----------------------------------------------------
+None.
 
 chef verify
 =====================================================
