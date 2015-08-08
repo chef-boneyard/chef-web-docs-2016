@@ -340,6 +340,19 @@ and then to provision the machine, run the following:
 
 This will synchronize the |policylock| file to the |chef server|, and then run the |chef client| on the node.
 
+**Pass arbitrary options**
+
+Use the ``--opt`` option to pass arbitrary command-line options. For example:
+
+.. code-block:: bash
+
+   $ chef provision (other options) --opt foo=bar
+
+Use the ``--opt`` option more than once to pass more than one option. For example:
+
+.. code-block:: bash
+
+   $ chef provision (other options) --opt foo=bar --opt baz=qux
 
 chef push
 =====================================================
