@@ -622,14 +622,8 @@ Examples
 
 **Define a network interface**
 
-.. code-block:: ruby
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_network_interface_define.rst
 
-   aws_network_interface 'ref-eni-1' do
-     machine 'ref-machine-eni-1'
-     subnet 'ref-subnet-eni'
-     security_groups ['ref-sg1-eni']
-     description 'ref-eni-desc'
-   end
 
 aws_route_table
 -----------------------------------------------------
