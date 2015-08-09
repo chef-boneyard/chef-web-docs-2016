@@ -757,21 +757,13 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
-**Create an SNS topic named "seapower"**
+**Create an SNS topic**
 
-.. code-block:: ruby
-
-   aws_sns_topic 'seapower' do
-     arn 'arn:aws:sns:us-west-1:5060091557628:seapower'
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_sns_topic_create.rst
 
 **Delete an SNS topic**
 
-.. code-block:: ruby
-
-   aws_sns_topic 'ref-sns-topic' do
-     action :destroy
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_sns_topic_delete.rst
 
 
 aws_sqs_queue
