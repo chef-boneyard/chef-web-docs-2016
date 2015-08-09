@@ -291,6 +291,7 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_launch_config_auto_scale_destroy.rst
 
+
 aws_cache_cluster
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cache_cluster.rst
@@ -310,7 +311,6 @@ Examples
 **Define a VPC, subnets, and security group for a cache cluster**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
-
 
 
 aws_cache_replication_group
@@ -453,7 +453,6 @@ Examples
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_eip_address_associate_with_vpc.rst
 
 
-
 aws_image
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_image.rst
@@ -556,13 +555,7 @@ Examples
 
 **Define an AMI instance type**
 
-.. code-block:: ruby
-
-   aws_launch_configuration 'ref-launch-configuration' do
-     image 'ref-machine_image1'
-     instance_type 't1.micro'
-     options security_groups: 'ref-sg1'
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_launch_config_define.rst
 
 **Define an auto scaling group**
 
@@ -571,6 +564,7 @@ Examples
 **Destroy auto scaling group and associated launch configuration**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_launch_config_auto_scale_destroy.rst
+
 
 aws_load_balancer
 -----------------------------------------------------
@@ -588,6 +582,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
 
+
 aws_network_acl
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_network_acl.rst
@@ -603,6 +598,7 @@ Properties
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
+
 
 aws_network_interface
 -----------------------------------------------------
@@ -719,6 +715,7 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_machine_batch.rst
 
+
 aws_server_certificate
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_server_certificate.rst
@@ -734,6 +731,7 @@ Properties
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
+
 
 aws_sns_topic
 -----------------------------------------------------
@@ -817,6 +815,7 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_machine_batch.rst
 
+
 aws_vpc
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_vpc.rst
@@ -856,6 +855,8 @@ Examples
 **Define a VPC for a batch of machines**
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_security_group_machine_batch.rst
+
+
 
 |fog| Driver Resources
 =====================================================
