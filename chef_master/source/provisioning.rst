@@ -817,23 +817,11 @@ Examples
 
 **Remove the default subnet**
 
-.. code-block:: ruby
-
-   aws_subnet "default" do
-     availability_zone availability_zone
-     action :destroy
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_subnet_remove_default.rst
 
 **Add a public subnet**
 
-.. code-block:: ruby
-
-   aws_subnet "public-#{availability_zone}" do
-     availability_zone availability_zone
-     cidr_block "10.0.#{128+class_c}.0/24"
-     route_table 'public-routes'
-     map_public_ip_on_launch true
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_subnet_add_public.rst
 
 **Define a subnet for a cache cluster**
 
