@@ -792,17 +792,11 @@ Examples
 
 **Create an SQS queue**
 
-.. code-block:: ruby
-
-   aws_sqs_queue 'ref-sqs-queue'
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_sqs_queue_create.rst
 
 **Delete an SQS queue**
 
-.. code-block:: ruby
-
-   aws_sqs_queue 'ref-sqs-queue' do
-     action :destroy
-   end
+.. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_sqs_queue_delete.rst
 
 
 aws_subnet
