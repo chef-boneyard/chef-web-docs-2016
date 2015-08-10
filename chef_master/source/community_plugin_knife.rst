@@ -35,7 +35,7 @@ The following table lists |knife| plugins built by the |chef| community.
    * - `knife-cleanup <https://github.com/mdxp/knife-cleanup>`_
      - Adds the ability to remove unused versions of cookbooks that are hosted on the |chef server|. (Cookbook versions that are removed are backed-up prior to deletion.)
    * - `knife-cloudstack-fog <https://github.com/fifthecho/knife-cloudstack-fog>`_
-     - Adds the ability to create, bootstrap, and manage instances in |cloudstack|.
+     - Adds the ability to create, bootstrap, and manage instances in |cloudstack| using |fog|, a |ruby| |gem| for interacting with various cloud providers.
    * - `knife-cloudstack <https://github.com/CloudStack-extras/knife-cloudstack>`_
      - Adds the ability to create, bootstrap, and manage |cloudstack| instances.
    * - `knife-community <https://github.com/miketheman/knife-community>`_
