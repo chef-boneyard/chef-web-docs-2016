@@ -543,7 +543,9 @@ Examples
 
 .. include:: ../../step_resource/step_resource_dsc_resource_manage_users.rst
 
+**Create a test message queue**
 
+.. include:: ../../step_resource/step_resource_dsc_resource_manage_msmq.rst
 
 
 
