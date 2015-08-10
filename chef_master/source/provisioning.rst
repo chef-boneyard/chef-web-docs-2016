@@ -350,6 +350,27 @@ Examples
 
 .. include:: ../../step_resource_provisioning/step_resource_provisioning_aws_cache_cluster_create.rst
 
+
+
+aws_cloudsearch_domain
+-----------------------------------------------------
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cloudsearch_domain.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cloudsearch_domain_syntax.rst
+
+Properties
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_cloudsearch_domain_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+
+
 aws_dhcp_options
 -----------------------------------------------------
 .. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_dhcp_options.rst
