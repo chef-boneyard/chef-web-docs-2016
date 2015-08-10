@@ -10,14 +10,14 @@ Use the following configuration settings in the |chef server rb| file to configu
 
    * - Setting
      - Description
-   * - ``postgresql['external']``
-     - Required. |postgresql external| Default value: ``false``.
-   * - ``postgresql['vip']``
-     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| |postgresql external_vip| Set this value to ``external-postgres-host-or-ip`` when ``postgresql['external']`` is set to ``true``.
-   * - ``postgresql['port']``
-     - Optional when ``postgresql['external']`` is set to ``true``. |port service| |postgresql external_port| Default value: ``5432``.
    * - ``postgresql['db_superuser']``
      - Required when ``postgresql['external']`` is set to ``true``. |postgresql external_db_superuser| Default value: ``'superuser_userid'``.
    * - ``postgresql['db_superuser_password']``
      - Required when ``postgresql['external']`` is set to ``true``. |postgresql external_db_password| Default value: ``'the password'``.
+   * - ``postgresql['external']``
+     - Required. |postgresql external| Default value: ``false``.
+   * - ``postgresql['port']``
+     - Optional when ``postgresql['external']`` is set to ``true``. |port service| |postgresql external_port| Default value: ``5432``.
+   * - ``postgresql['vip']``
+     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| |postgresql external_vip| Set this value to ``external-postgres-host-or-ip`` when ``postgresql['external']`` is set to ``true``.
 
