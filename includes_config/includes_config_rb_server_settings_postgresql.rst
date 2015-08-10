@@ -80,6 +80,6 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['version']``
      - |version postgresql| Default value: ``'9.2'``.
    * - ``postgresql['vip']``
-     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| |postgresql external_vip| Default value: ``external-postgres-host-or-ip`` when ``postgresql['external']`` is ``true`` and ``127.0.0.1`` when ``postgresql['external']`` is ``false``.
+     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| |postgresql external_vip| Default value: ``127.0.0.1``. Set this value to ``external-postgres-host-or-ip`` when ``postgresql['external']`` is set to ``true``.
    * - ``postgresql['work_mem']``
      - |work_mem| Default value: ``8MB``.
