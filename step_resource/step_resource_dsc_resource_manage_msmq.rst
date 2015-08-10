@@ -10,25 +10,25 @@ The following example creates a file on a node (based on one that is located in 
      path "#{Chef::Config[:file_cache_path]}\\MessageQueue.zip"
      action :create_if_missing
    end
-
+   
    windows_zipfile "#{ENV['PROGRAMW6432']}\\WindowsPowerShell\\Modules" do
      source "#{Chef::Config[:file_cache_path]}\\MessageQueue.zip"
      action :unzip
    end
-
+   
    dsc_resource 'install-sub-features' do
      resource_name :windowsfeature
      property :ensure, 'Present'
      property :name, 'msmq'
      property :IncludeAllSubFeature, true
    end
-
+   
    dsc_resource 'create-test-queue' do
      resource_name :cPrivateMsmqQueue
      property :ensure, 'Present'
      property :name, 'Test_Queue'
-end
-
+   end
+   
    dsc_resource 'set-permissions' do
      resource_name :cPrivateMsmqQueuePermissions
      property :ensure, 'Present'
