@@ -19,5 +19,5 @@ Use the following configuration settings in the |chef server rb| file to configu
    * - ``postgresql['port']``
      - Optional when ``postgresql['external']`` is set to ``true``. |port service| |postgresql external_port| Default value: ``5432``.
    * - ``postgresql['vip']``
-     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| |postgresql external_vip| Set this value to ``external-postgres-host-or-ip`` when ``postgresql['external']`` is set to ``true``.
+     - Required when ``postgresql['external']`` is set to ``true``. |ip_address virtual| |postgresql external_vip| Set this value to the IP address or hostname for the machine on which external |postgresql| is located when ``postgresql['external']`` is set to ``true``.
 
