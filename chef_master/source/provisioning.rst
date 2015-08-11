@@ -644,15 +644,15 @@ Examples
 
 aws_rds_instance
 -----------------------------------------------------
-.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_rds_instance_group.rst
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_rds_instance.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_rds_instance_group_syntax.rst
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_rds_instance_syntax.rst
 
 Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_rds_instance_group_attributes.rst
+.. include:: ../../includes_resources_provisioning/includes_resources_provisioning_aws_rds_instance_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
