@@ -25,10 +25,10 @@ where
 
 .. code-block:: ruby
 
-   aws_cloudsearch_domain "ref-cs-domain" do
-     instance_type "search.m1.small"
+   aws_cloudsearch_domain 'ref-cs-domain' do
+     instance_type 'search.m1.small'
      partition_count 2
      replication_count 2
-     index_fields [{:index_field_name => "foo",
-                    :index_field_type => "text"}]
+     index_fields [{:index_field_name => 'foo',
+                    :index_field_type => 'text'}]
    end

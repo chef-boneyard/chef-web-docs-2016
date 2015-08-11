@@ -26,5 +26,5 @@ where
    aws_route_table 'name' do
      vpc 'ref-vpc'
      routes '0.0.0.0/0' => :internet_gateway
-     aws_tags :chef_type => "aws_route_table"
+     aws_tags :chef_type => 'aws_route_table'
    end
