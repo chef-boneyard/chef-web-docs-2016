@@ -230,6 +230,7 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_cache_cluster``
 * ``aws_cache_replication_group``
 * ``aws_cache_subnet_group``
+* ``aws_cloudsearch_domain``
 * ``aws_dhcp_options``
 * ``aws_ebs_volume``
 * ``aws_eip_address``
@@ -241,6 +242,8 @@ The following driver-specific resources are available for |amazon aws| and |chef
 * ``aws_load_balancer``
 * ``aws_network_acl``
 * ``aws_network_interface``
+* ``aws_rds_instance``
+* ``aws_rds_subnet_group``
 * ``aws_route_table``
 * ``aws_s3_bucket``
 * ``aws_security_group``
