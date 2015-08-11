@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   aws_vpc "provisioning-vpc" do
-     cidr_block "10.0.0.0/24"
+   aws_vpc 'provisioning-vpc' do
+     cidr_block '10.0.0.0/24'
      internet_gateway true
      main_routes '0.0.0.0/0' => :internet_gateway
    end

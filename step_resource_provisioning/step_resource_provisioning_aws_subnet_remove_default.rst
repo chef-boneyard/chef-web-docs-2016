@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   aws_subnet "default" do
+   aws_subnet 'default' do
      availability_zone availability_zone
      action :destroy
    end

@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   aws_eip_address "Web_IP_1" do
-     machine "SRV_OR_Web_1"
+   aws_eip_address 'Web_IP_1' do
+     machine 'SRV_OR_Web_1'
      associate_to_vpc true
    end

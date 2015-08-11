@@ -8,13 +8,13 @@
    with_driver 'aws::us-east-1'
    
    aws_vpc 'test' do
-     cidr_block "10.0.0.0/24"
+     cidr_block '10.0.0.0/24'
    end
    
-   aws_subnet "public-test" do
+   aws_subnet 'public-test' do
      vpc 'test'
      availability_zone 'us-east-1a'
-     cidr_block "10.0.0.0/24"
+     cidr_block '10.0.0.0/24'
    end
    
    aws_cache_subnet_group 'test-ec' do

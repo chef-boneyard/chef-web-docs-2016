@@ -14,7 +14,7 @@
        }
      end
    
-     aws_eip_address "Web_IP_1" do
-       machine "SRV_OR_Web_1"
+     aws_eip_address 'Web_IP_1' do
+       machine 'SRV_OR_Web_1'
      end
    end
