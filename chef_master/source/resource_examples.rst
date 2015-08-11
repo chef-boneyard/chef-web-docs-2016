@@ -122,6 +122,7 @@ The examples in this section show functionality that is common across all resour
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
 
 
+
 apt_package
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_apt.rst
@@ -137,6 +138,7 @@ apt_package
 **Install without using recommend packages as a dependency**
 
 .. include:: ../../step_resource/step_resource_apt_package_install_without_recommends_suggests.rst
+
 
 
 bash
@@ -160,6 +162,7 @@ bash
 .. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
 
 
+
 batch
 =====================================================
 .. include:: ../../includes_resources/includes_resource_batch.rst
@@ -167,6 +170,17 @@ batch
 **Unzip a file, and then move it**
 
 .. include:: ../../step_resource/step_resource_batch_unzip_file_and_move.rst
+
+
+
+bff_package
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_bff.rst
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_bff_package_install.rst
+
 
 
 breakpoint
@@ -194,6 +208,7 @@ chef_gem
 **Install MySQL for Chef**
 
 .. include:: ../../step_resource/step_resource_chef_gem_install_mysql.rst
+
 
 
 chef_handler
@@ -285,11 +300,13 @@ cron
 .. include:: ../../step_resource/step_resource_cron_run_only_in_november.rst
 
 
+
 csh
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_csh.rst
 
 No examples.
+
 
 
 deploy
@@ -331,6 +348,7 @@ deploy
 **Clear a layout modifier attribute**
 
 .. include:: ../../step_resource/step_resource_deploy_clear_layout_modifiers.rst
+
 
 
 directory
@@ -379,36 +397,54 @@ dpkg_package
 .. include:: ../../step_resource/step_resource_dpkg_package_install.rst
 
 
+
+dsc_resource
+=====================================================
+.. include:: ../../includes_resources/includes_resource_dsc_resource.rst
+
+**Open a Zip file**
+
+.. include:: ../../step_resource/step_resource_dsc_resource_zip_file.rst
+
+**Manage users and groups**
+
+.. include:: ../../step_resource/step_resource_dsc_resource_manage_users.rst
+
+**Create a test message queue**
+
+.. include:: ../../step_resource/step_resource_dsc_resource_manage_msmq.rst
+
+
+
 dsc_script
 =====================================================
+.. include:: ../../includes_resources/includes_resource_dsc_script.rst
 
 **Specify DSC code directly**
 
 .. include:: ../../step_resource/step_resource_dsc_script_code.rst
 
-
 **Specify DSC code using a Windows Powershell data file**
 
 .. include:: ../../step_resource/step_resource_dsc_script_command.rst
-
 
 **Pass parameters to DSC configurations**
 
 .. include:: ../../step_resource/step_resource_dsc_script_flags.rst
 
-
 **Use custom configuration data**
 
-Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
+.. include:: ../../includes_resources/includes_resource_dsc_script_custom_config_data.rst
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_name.rst
 
-
 **Using DSC with other Chef resources**
 
 .. include:: ../../step_resource/step_resource_dsc_script_remote_files.rst
+
+
 
 easy_install_package
 =====================================================
@@ -417,6 +453,7 @@ easy_install_package
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_easy_install_package_install.rst
+
 
 
 env
@@ -428,6 +465,7 @@ env
 .. include:: ../../step_resource/step_resource_environment_set_variable.rst
 
 
+
 erl_call
 =====================================================
 .. include:: ../../includes_resources/includes_resource_erlang_call.rst
@@ -435,6 +473,7 @@ erl_call
 **Run a command**
 
 .. include:: ../../step_resource/step_resource_erlang_call_run_command_on_node.rst
+
 
 
 execute
@@ -547,6 +586,9 @@ file
 
 .. include:: ../../step_resource/step_resource_file_content_add_string.rst
 
+**Create a file from a copy**
+
+.. include:: ../../step_resource/step_resource_file_copy.rst
 
 
 
@@ -562,18 +604,6 @@ freebsd_package
 gem_package
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_gem.rst
-
-**Use a Hash for a Gem Package**
-
-.. include:: ../../step_resource/step_resource_package_install_gem_with_hash_options.rst
-
-**Use a String for a Gem Package**
-
-.. include:: ../../step_resource/step_resource_package_install_gem_with_options_string.rst
-
-**Use a .gemrc File for a Gem Package**
-
-.. include:: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst
 
 **Install a gems file from the local file system**
 
@@ -605,6 +635,11 @@ git
 
 .. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
 
+**Pass in environment variables**
+
+.. include:: ../../step_resource/step_resource_scm_git_environment_variables.rst
+
+
 
 group
 =====================================================
@@ -613,6 +648,11 @@ group
 **Append users to groups**
 
 .. include:: ../../step_resource/step_resource_group_append_user.rst
+
+**Add a user to group on the Windows platform**
+
+.. include:: ../../step_resource/step_resource_group_add_user_on_windows.rst
+
 
 
 http_request
@@ -632,13 +672,28 @@ http_request
 .. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst
 
 
+
 ifconfig
 =====================================================
 .. include:: ../../includes_resources/includes_resource_ifconfig.rst
 
 **Configure a network interface**
 
+.. include:: ../../step_resource/step_resource_ifconfig_boot_protocol.rst
+
+**Specify a boot protocol**
+
 .. include:: ../../step_resource/step_resource_ifconfig_configure_network_interface.rst
+
+**Specify a static IP address**
+
+.. include:: ../../step_resource/step_resource_ifconfig_static_ip_address.rst
+
+**Update a static IP address with a boot protocol**
+
+.. include:: ../../step_resource/step_resource_ifconfig_update_static_ip_with_boot_protocol.rst
+
+
 
 ips_package
 =====================================================
@@ -647,6 +702,7 @@ ips_package
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_ips_package_install.rst
+
 
 
 link
@@ -674,6 +730,7 @@ link
 .. include:: ../../step_resource/step_resource_link_multiple_links_redhat.rst
 
 
+
 log
 =====================================================
 .. include:: ../../includes_resources/includes_resource_log.rst
@@ -691,6 +748,7 @@ log
 .. include:: ../../step_resource/step_resource_log_add_message.rst
 
 
+
 macports_package
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_macports.rst
@@ -698,6 +756,7 @@ macports_package
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_macports_package_install.rst
+
 
 
 mdadm
@@ -715,6 +774,7 @@ mdadm
 **Create and assemble a RAID 5 array**
 
 .. include:: ../../step_resource/step_resource_mdadm_raid5.rst
+
 
 
 mount
@@ -754,6 +814,7 @@ mount
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
 
 
+
 ohai
 =====================================================
 .. include:: ../../includes_resources/includes_resource_ohai.rst
@@ -765,6 +826,17 @@ ohai
 **Reload Ohai after a new user is created**
 
 .. include:: ../../step_resource/step_resource_ohai_reload_after_create_user.rst
+
+
+
+openbsd_package
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_openbsd.rst
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_openbsd_package_install.rst
+
 
 
 package
@@ -847,6 +919,14 @@ package
 
 .. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst
 
+**Specify the Homebrew user with a UUID**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+
+**Specify the Homebrew user with a string**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_string.rst
+
 
 
 pacman_package
@@ -858,11 +938,23 @@ pacman_package
 .. include:: ../../step_resource/step_resource_pacman_package_install.rst
 
 
+
+paludis_package
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_paludis.rst
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_paludis_package_install.rst
+
+
+
 perl
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_perl.rst
 
 No examples.
+
 
 
 portage_package
@@ -899,6 +991,14 @@ powershell_script
 
 .. include:: ../../step_resource/step_resource_powershell_convert_boolean_return.rst
 
+**Use the flags attribute**
+
+.. include:: ../../step_resource/step_resource_powershell_script_use_flag.rst
+
+**Rename computer, join domain, reboot**
+
+.. include:: ../../step_resource/step_resource_powershell_rename_join_reboot.rst
+
 
 
 python
@@ -906,6 +1006,29 @@ python
 .. include:: ../../includes_resources/includes_resource_script_python.rst
 
 No examples.
+
+
+
+
+reboot
+=====================================================
+.. include:: ../../includes_resources/includes_resource_service_reboot.rst
+
+**Reboot a node immediately**
+
+.. include:: ../../step_resource/step_resource_service_reboot_immediately.rst
+
+**Reboot a node at the end of a chef-client run**
+
+.. include:: ../../step_resource/step_resource_service_reboot_request.rst
+
+**Cancel a reboot**
+
+.. include:: ../../step_resource/step_resource_service_reboot_cancel.rst
+
+**Rename computer, join domain, reboot**
+
+.. include:: ../../step_resource/step_resource_powershell_rename_join_reboot.rst
 
 
 
@@ -933,6 +1056,11 @@ registry_key
 
 .. include:: ../../step_resource/step_resource_registry_key_set_proxy_settings_to_same_as_chef_client.rst
 
+**Set the name of a registry key to "(Default)"**
+
+.. include:: ../../step_resource/step_resource_registry_key_set_default.rst
+
+
 
 remote_directory
 =====================================================
@@ -945,6 +1073,7 @@ remote_directory
 **Use with the chef_handler lightweight resource**
 
 .. include:: ../../step_resource/step_resource_remote_directory_report_handler.rst
+
 
 
 remote_file
@@ -972,6 +1101,8 @@ remote_file
 .. include:: ../../step_resource/step_resource_remote_file_local_windows_path.rst
 
 
+
+
 route
 =====================================================
 .. include:: ../../includes_resources/includes_resource_route.rst
@@ -984,6 +1115,8 @@ route
 
 .. include:: ../../step_resource/step_resource_route_delete_network.rst
 
+
+
 rpm_package
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_rpm.rst
@@ -992,11 +1125,14 @@ rpm_package
 
 .. include:: ../../step_resource/step_resource_rpm_package_install.rst
 
+
+
 ruby
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_ruby.rst
 
 No examples.
+
 
 
 ruby_block
@@ -1034,6 +1170,7 @@ ruby_block
 **Reload the configuration**
 
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
+
 
 
 script
@@ -1126,6 +1263,10 @@ service
 
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
 
+**Enable a service on AIX using the mkitab command**
+
+.. include:: ../../step_resource/step_resource_service_aix_mkitab.rst
+
 
 
 smartos_package
@@ -1135,6 +1276,7 @@ smartos_package
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_smartos_package_install.rst
+
 
 
 solaris_package
@@ -1154,6 +1296,7 @@ subversion
 **Get the latest version of an application**
 
 .. include:: ../../step_resource/step_resource_scm_get_latest_version.rst
+
 
 
 template
@@ -1242,6 +1385,10 @@ template
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
+**Pass values from recipe to template**
+
+.. include:: ../../step_resource/step_resource_template_pass_values_to_template_from_recipe.rst
+
 
 
 user
@@ -1260,6 +1407,15 @@ user
 
 .. include:: ../../step_resource/step_resource_user_create_system_user_with_variable.rst
 
+**Use SALTED-SHA512 passwords**
+
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512.rst
+
+**Use SALTED-SHA512-PBKDF2 passwords**
+
+.. include:: ../../step_resource/step_resource_user_password_shadow_hash_salted_sha512_pbkdf2.rst
+
+
 
 windows_package
 =====================================================
@@ -1268,6 +1424,30 @@ windows_package
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_windows_package_install.rst
+
+**Specify a URL for the source attribute**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url.rst
+
+**Specify path and checksum**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url_checksum.rst
+
+**Modify remote_file resource attributes**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_remote_file_attributes.rst
+
+
+
+windows_service
+=====================================================
+.. include:: ../../includes_resources/includes_resource_service_windows.rst
+
+**Start a service manually**
+
+.. include:: ../../step_resource/step_resource_service_windows_manual_start.rst
+
+
 
 yum_package
 =====================================================
