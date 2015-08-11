@@ -1,7 +1,22 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the ``aws_rds_instance`` driver-specific resource is as follows:
+
+A ``aws_rds_instance`` resource block manages remote database intances. For example:
+
+.. code-block:: ruby
+
+   aws_rds_instance 'rds-instance' do
+     engine 'postgres'
+     publicly_accessible false
+     db_instance_class 'db.t1.micro'
+     master_username 'user'
+     master_user_password 'password'
+     multi_az false
+     db_subnet_group_name 'db-subnet-group'
+   end
+
+The full syntax for all of the properties that are available to the ``aws_rds_instance`` resource is:
 
 .. code-block:: ruby
 
@@ -27,17 +42,3 @@ where
 * ``aws_rds_instance`` is the resource
 * ``name`` is the name of the resource block
 * ``additional_options``, ``allocated_storage``, ``db_instance_class``, ``db_instance_identifier``, ``db_name``, ``db_subnet_group_name``, ``engine``, ``engine_version``, ``iops``, ``master_user_password``, ``master_username``, ``multi_az``, ``port``, and ``publicly_accessible`` are properties of this resource, with the |ruby| type shown. |see attributes|
-
-**Example**
-
-.. code-block:: ruby
-
-   aws_rds_instance 'rds-instance' do
-     engine 'postgres'
-     publicly_accessible false
-     db_instance_class 'db.t1.micro'
-     master_username 'user'
-     master_user_password 'password'
-     multi_az false
-     db_subnet_group_name 'db-subnet-group'
-   end

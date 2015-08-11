@@ -1,7 +1,26 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the ``aws_cache_replication_group`` driver-specific resource is as follows:
+
+A ``aws_cache_replication_group`` resource block manages replication groups for cache clusters in |amazon aws|. For example:
+
+.. code-block:: ruby
+
+   aws_cache_replication_group 'name' do
+     automatic_failover true
+     engine 'name'
+     engine_version '1.2.3'
+     node_type 'cache.m3.large'
+     number_cache_clusters 3
+     preferred_availability_zones [ 
+       'PreferredAvailabilityZones.member.1=us-east-1a', 
+       'PreferredAvailabilityZones.member.2=us-east-1c', 
+       'PreferredAvailabilityZones.member.3=us-east-1d'
+     ]
+     subnet_group_name 'subnet-1'
+   end
+
+The full syntax for all of the properties that are available to the ``aws_cache_replication_group`` resource is:
 
 .. code-block:: ruby
 
@@ -24,21 +43,3 @@ where
 * ``aws_cache_replication_group`` is the resource
 * ``name`` is the name of the resource block
 * ``automatic_failover``, ``engine``, ``engine_version``, ``node_type``, ``number_cache_clusters``, ``preferred_availability_zones``, and ``subnet_group_name`` are properties of this resource, with the |ruby| type shown. |see attributes|
-
-**Example**
-
-.. code-block:: ruby
-
-   aws_cache_replication_group 'name' do
-     automatic_failover true
-     engine 'name'
-     engine_version '1.2.3'
-     node_type 'cache.m3.large'
-     number_cache_clusters 3
-     preferred_availability_zones [ 
-       'PreferredAvailabilityZones.member.1=us-east-1a', 
-       'PreferredAvailabilityZones.member.2=us-east-1c', 
-       'PreferredAvailabilityZones.member.3=us-east-1d'
-     ]
-     subnet_group_name 'subnet-1'
-   end
