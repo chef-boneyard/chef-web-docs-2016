@@ -22,6 +22,7 @@ Properties
 
 Examples
 =====================================================
+|generic resource statement|
 
 **Open a Zip file**
 
