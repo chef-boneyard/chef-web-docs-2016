@@ -34,7 +34,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_group_append_user.rst
 
-
 **Add a user to group on the Windows platform**
 
 .. include:: ../../step_resource/step_resource_group_add_user_on_windows.rst

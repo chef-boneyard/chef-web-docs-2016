@@ -52,7 +52,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_name.rst
 
-
 **Using DSC with other Chef resources**
 
 .. include:: ../../step_resource/step_resource_dsc_script_remote_files.rst
