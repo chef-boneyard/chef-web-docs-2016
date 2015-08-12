@@ -218,6 +218,7 @@ Cookbooks
    environment_variables
    environments
    errors
+   error_messages
    feedback
    files
    foodcritic
