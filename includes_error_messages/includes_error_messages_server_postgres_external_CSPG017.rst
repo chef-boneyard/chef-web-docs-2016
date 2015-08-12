@@ -12,7 +12,7 @@ One (or more) of the |postgresql| predefined users already exists.
 * The ``postgresql['vip']`` setting is configured to a remote host, but ``postgresql['external']`` is not set to ``true``, which causes the ``opscode_chef`` and ``ospcode_chef_ro`` users to be created before the machine is reconfigured, which will return a permissions error
 * Existing, valid naming conflicts are present, where the users were created independently of the |chef server|
 
-**Verify**
+**Resolution**
 
 * Run the following, if it is safe to do so:
 

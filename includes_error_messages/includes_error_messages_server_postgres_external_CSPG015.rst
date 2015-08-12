@@ -11,7 +11,7 @@ The database template ``template1`` does not exist.
 * The ``template1`` database template has been removed from the remote server
 * xxxxx
 
-**Verify**
+**Resolution**
 
 * Run the following command (as a superuser):
 

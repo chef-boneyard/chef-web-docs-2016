@@ -12,7 +12,7 @@ Cannot connect to |postgresql| on the remote server because rules in ``pg_hba`` 
 * A rule exists for the ``db_superuser`` in ``pg_hba.conf``, but it does not specify ``md5`` access
 * A rule in ``pg_hba.conf`` specifies an incorrect originating address
 
-**Verify**
+**Resolution**
 
 * Entries in the ``pg_hba.conf`` file should allow all user names that originate from any |chef server| instance using ``md5`` authentication
 * Rules in the ``pg_hba.conf`` file should allow only specific application names: ``$db_superuser`` (the configured superuser name in the |chef server rb| file), ``oc_id``, ``oc_id_ro``, ``opscode_chef``, ``opscode_chef_ro``, ``bifrost``, and ``bifrost_ro``
