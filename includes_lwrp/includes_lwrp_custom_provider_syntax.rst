@@ -23,7 +23,6 @@ The basic syntax for a lightweight provider that is built to leverage platform r
        resource 'resource_name' do
          Chef::Log.log_type 'log_message'
          # a Chef recipe
-         new_resource.updated_by_last_action(true)
        end
      end
    end
@@ -41,7 +40,6 @@ where:
 * ``test`` is used to test for idempotence; ``test`` can be defined inline (within the ``action`` block), defined as a method using a definition block elsewhere in the lightweight provider (shown as ``def test()``), or defined using any other pattern that is available in |ruby|
 * ``resource`` is a resource written as a recipe
 * ``Chef::Log.log_type`` is used to tell the |chef client| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
-* ``updated_by_last_action`` is used to notify that a node was updated successfully
 
 For example:
 
