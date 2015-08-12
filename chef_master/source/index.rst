@@ -183,6 +183,7 @@ Cookbooks
    config_rb_metadata
    config_rb_policyfile
    config_rb_push_jobs_server
+   config_rb_reporting
    config_rb_server
    config_rb_server_optional_settings
    config_rb_solo
