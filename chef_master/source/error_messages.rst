@@ -4,7 +4,7 @@ Error Messages
 
 The following sections describe how to troubleshoot some common errors and problems.
 
-External |postgresql| Configuration
+External |postgresql|
 =====================================================
 The following error messages may be present when configuring the |chef server| to use a remote |postgresql| server.
 
