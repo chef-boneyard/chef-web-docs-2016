@@ -21,7 +21,7 @@ The recipe then uses the ``variables`` attribute to find the values for ``splunk
 
    template "#{splunk_dir}/etc/system/local/outputs.conf" do
      source 'outputs.conf.erb'
-     mode '0644'
+     mode '0755'
      variables :splunk_servers => splunk_servers, :outputs_conf => node['splunk']['outputs_conf']
      notifies :restart, 'service[splunk]'
    end

@@ -23,7 +23,7 @@ Using resources from within your callbacks as blocks or within callback files di
        # creates a callback for before_symlink
        template "#{current_release}/deploy/before_symlink_callback.rb" do
          source 'embedded_recipe_before_symlink.rb.erb'
-         mode '0644'
+         mode '0755'
        end
       
      end
@@ -34,7 +34,7 @@ Using resources from within your callbacks as blocks or within callback files di
      restart do
        current_release = release_path
        file "#{release_path}/tmp/restart.txt" do
-         mode '0644'
+         mode '0755'
        end
      end
    

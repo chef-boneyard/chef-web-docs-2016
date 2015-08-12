@@ -34,7 +34,7 @@ and then the methods in the recipe may refer to these values. A recipe that is u
    remote_file "#{Chef::Config[:file_cache_path]}/Python-#{version}.tar.bz2" do
      source "#{node['python']['url']}/#{version}/Python-#{version}.tar.bz2"
      checksum node['python']['checksum']
-     mode '0644'
+     mode '0755'
      not_if { ::File.exists?(install_path) }
    end
 

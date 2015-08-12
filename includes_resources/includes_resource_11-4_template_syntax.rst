@@ -10,7 +10,7 @@ A |resource template| resource block typically declares the location in which a 
      source 'motd.erb'
      owner 'root'
      group 'root'
-     mode '0644'
+     mode '0755'
    end
 
 where

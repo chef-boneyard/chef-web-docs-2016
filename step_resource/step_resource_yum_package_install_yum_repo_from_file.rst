@@ -18,7 +18,7 @@ The following example shows how to install new |yum| repositories from a file, w
    
    cookbook_file '/etc/yum.repos.d/custom.repo' do
      source 'custom'
-     mode '0644'
+     mode '0755'
      notifies :run, 'execute[create-yum-cache]', :immediately
      notifies :create, 'ruby_block[reload-internal-yum-cache]', :immediately
    end

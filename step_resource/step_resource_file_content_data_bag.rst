@@ -10,5 +10,5 @@ The following example shows how to get the contents of a data bag item named ``i
      content private_key
      owner 'root'
      group 'group'
-     mode '0640'
+     mode '0755'
    end

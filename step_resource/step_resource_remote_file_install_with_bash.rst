@@ -27,7 +27,7 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
      checksum node['nginx']['foo123']['checksum']
      owner 'root'
      group 'root'
-     mode '0644'
+     mode '0755'
    end
    
    bash 'extract_module' do

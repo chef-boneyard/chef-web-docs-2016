@@ -5,5 +5,5 @@
 .. code-block:: ruby
 
    file '/tmp/something' do
-     mode '0644'
+     mode '0755'
    end

@@ -7,6 +7,6 @@ The following example shows how to use the ``content`` property to write a |yaml
    file "#{app['deploy_to']}/shared/config/settings.yml" do
      owner "app['owner']"
      group "app['group']"
-     mode '0644'
+     mode '0755'
      content app.to_yaml
    end

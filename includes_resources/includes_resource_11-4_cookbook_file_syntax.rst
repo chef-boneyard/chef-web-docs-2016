@@ -10,7 +10,7 @@ A |resource cookbook_file| resource block manages files by using files that exis
      source 'index.php'
      owner 'web_admin'
      group 'web_admin'
-     mode '0644'
+     mode '0755'
      action :create
    end
 

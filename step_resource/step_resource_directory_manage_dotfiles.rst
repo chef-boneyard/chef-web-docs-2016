@@ -6,15 +6,15 @@ The following example shows using the |resource directory| and |resource cookboo
 
    "files": {
      ".zshrc": {
-       "mode": '0644',
+       "mode": '0755',
        "source": "dot-zshrc"
        },
      ".bashrc": {
-       "mode": '0644',
+       "mode": '0755',
        "source": "dot-bashrc"
         },
      ".bash_profile": {
-       "mode": '0644',
+       "mode": '0755',
        "source": "dot-bash_profile"
        },
      }

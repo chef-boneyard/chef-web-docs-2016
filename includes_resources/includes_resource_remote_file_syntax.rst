@@ -9,7 +9,7 @@ A |resource remote_file| resource block manages files by using files that exist 
      source 'http://somesite.com/index.php'
      owner 'web_admin'
      group 'web_admin'
-     mode '0644'
+     mode '0755'
      action :create
    end
 

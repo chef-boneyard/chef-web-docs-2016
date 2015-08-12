@@ -9,7 +9,7 @@ The following example shows how a template can be used to apply consistent proxy
      source 'site_proxy.matching_node.conf.erb'
      owner 'root'
      group 'root'
-     mode '0644'
+     mode '0755'
      variables(
        :ssl_certificate =>    "#{node[:matching_node][:dir]}/shared/certificates/site_proxy.crt",
        :ssl_key =>            "#{node[:matching_node][:dir]}/shared/certificates/site_proxy.key",

@@ -12,7 +12,7 @@ The following is an example of using the ``platform_family?`` method in the |dsl
    
    remote_file "#{Chef::Config[:file_cache_path]}/distribute_setup.py" do
      source 'http://python-distribute.org/distribute_setup.py'
-     mode '0644'
+     mode '0755'
      not_if { File.exist?(pip_binary) }
    end
    

@@ -8,7 +8,7 @@ When a |resource cookbook_file| resource and a |resource yum_package| resource a
 
    cookbook_file '/etc/yum.repos.d/custom.repo' do
      source 'custom'
-     mode '0644'
+     mode '0755'
    end
    
    yum_package 'only-in-custom-repo' do

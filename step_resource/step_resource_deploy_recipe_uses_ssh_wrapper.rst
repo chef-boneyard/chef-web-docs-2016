@@ -23,7 +23,7 @@ To write a recipe that uses an |ssh| wrapper:
       cookbook_file '/tmp/private_code/wrap-ssh4git.sh' do
         source 'wrap-ssh4git.sh'
         owner 'ubuntu'
-        mode '0700'
+        mode '0755'
       end
       
       deploy 'private_repo' do

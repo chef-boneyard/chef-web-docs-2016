@@ -8,7 +8,7 @@
      source 'server.rb.erb'
      owner 'root'
      group 'root'
-     mode 00644
+     mode '0755'
      notifies :restart, 'service[chef-solr]', :delayed
      notifies :restart, 'service[chef-solr-indexer]', :delayed
      notifies :restart, 'service[chef-server]', :delayed

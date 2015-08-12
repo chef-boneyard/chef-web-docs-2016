@@ -8,8 +8,8 @@ A |resource user| resource block manages users on a node:
 
    user 'a user' do
      comment 'A random user'
-     uid 1234
-     gid 'users'
+     uid '1234'
+     gid '1234'
      home '/home/random'
      shell '/bin/bash'
      password '$1$JJsvHslasdfjVEroftprNn4JHtDi'

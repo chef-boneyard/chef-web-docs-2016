@@ -5,7 +5,7 @@ To reload a service based on a template, use the |resource template| and |resour
 .. code-block:: ruby
 
    template '/tmp/somefile' do
-     mode '0644'
+     mode '0755'
      source 'somefile.erb'
    end
 
