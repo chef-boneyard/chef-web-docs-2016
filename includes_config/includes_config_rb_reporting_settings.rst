@@ -10,17 +10,17 @@ The following settings are typically added to the ``opscode-reporting.rb`` file:
    * - Setting
      - Description
    * - ``enable``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``ha``
-     - Default value: ``false``.
+     - |use ha| |ha true| Default value: ``false``.
    * - ``dir``
-     - Default value: ``'/var/opt/opscode-reporting/opscode-reporting'``.
+     - |directory generic| |default_value_recommended| Default value: ``'/var/opt/opscode-reporting/opscode-reporting'``.
    * - ``log_directory``
-     - Default value: ``'/var/log/opscode/opscode-reporting'``.
+     - |directory logs| |default_value_recommended| Default value: ``'/var/log/opscode/opscode-reporting'``.
    * - ``protocol_version``
      - Default value: ``'0.1.0'``.
    * - ``vip``
-     - Default value: ``'127.0.0.1'``.
+     - |ip_address virtual| Default value: ``'127.0.0.1'``.
    * - ``listen``
      - Default value: ``'127.0.0.1'``.
    * - ``port``
@@ -28,7 +28,7 @@ The following settings are typically added to the ``opscode-reporting.rb`` file:
    * - ``auth_skew``
      - Default value: ``'900'``.
    * - ``db_pool_size``
-     - Default value: ``25``.
+     - |db_pool_size| Default value: ``25``.
    * - ``node_search_limit``
      - Default value: ``50``.
    * - ``org_cache_size``
@@ -56,9 +56,9 @@ The following settings are typically added to the ``opscode-reporting.rb`` file:
    * - ``pool['max_connection_duration']``
      - May be ``min``, ``sec``, or ``ms``. Default value: ``'{70, sec}'``.
    * - ``pool['ibrowse_options']``
-     - Default value: ``'[{connect_timeout, 8000}]'``.
+     - |timeout authz| Default value: ``'[{connect_timeout, 8000}]'``.
    * - ``log_rotation['file_maxbytes']``
-     - Default value: ``104857600``.
+     - |log_rotation| Default value: ``104857600``.
    * - ``log_rotation['num_to_keep']``
      - Default value: ``10``.
    * - ``chef_api_version``
@@ -68,29 +68,29 @@ The following settings are typically added to the ``opscode-reporting.rb`` file:
    * - ``rabbitmq_user``
      - Default value: ``'runs'``.
    * - ``rabbitmq_password``
-     - Default value: ``'changeme'``.
+     - |password rabbitmq| Default value: ``'changeme'``.
    * - ``postgresql['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``postgresql['username']``
-     - Default value: ``'opscode-pgsql'``.
+     - |name user postgresql| Default value: ``'opscode-pgsql'``.
    * - ``postgresql['sql_user']``
      - Default value: ``'opscode_reporting'``.
    * - ``postgresql['sql_password']``
-     - Default value: ``'snakepliskin'``.
+     - The password for the |postgresql| user account. Default value: ``'snakepliskin'``.
    * - ``postgresql['sql_ro_user']``
      - Default value: ``'opscode_reporting_ro'``.
    * - ``postgresql['sql_ro_password']``
      - Default value: ``'shmunzeltazzen'``.
    * - ``postgresql['vip']``
-     - Default value: ``'127.0.0.1'``.
+     - |ip_address virtual| Default value: ``'127.0.0.1'``.
    * - ``postgresql['port']``
-     - Default value: ``5432``.
+     - |port service| Default value: ``5432``.
    * - ``nginx['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``graphite['host']``
      - Default value: ``'localhost'``.
    * - ``graphite['port']``
-     - Default value: ``2003``.
+     - |port service| Default value: ``2003``.
    * - ``graphite['prefix']``
      - Default value: ``'folsom'``.
    * - ``graphite['send_interval']``
