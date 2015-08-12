@@ -24,9 +24,19 @@ This subcommand has the following options:
    Use to specify the name of the node. (This value may be overridden by the cookbook that is used to provision the node.)
 
 ``-o OPT=VALUE``, ``--opt OPT=VALUE``
-   Use to set an arbitrary command-line option (``OPT``) and value (``=VALUE``). Use this option one per command-line option. Default value: ``{}``.
+   Use to set an arbitrary command-line option (``OPT``) and value (``=VALUE``). Use this option once per command-line option. Default value: ``{}``.
 
-   .. note:: Use the ``extra_chef_config`` property in a recipe in the ``provision`` cookbook to set arbitrary configuration settings.
+   .. note:: Use the ``extra_chef_config`` property in a recipe in the ``provision`` cookbook to set arbitrary configuration settings. Define the ``extra_chef_config`` values in the ``provision`` cookbook using the following syntax:
+
+      .. code-block:: ruby
+
+         ChefDK::ProvisioningData.context.extra_chef_config = 'setting :value'
+
+      For example:
+
+      .. code-block:: ruby
+
+         ChefDK::ProvisioningData.context.extra_chef_config = 'log_level :debug'
 
 ``-p POLICY_NAME``, ``--policy-name POLICY_NAME``
    Use to set the policy name for one (or more) machines that are managed by this |policyfile rb| file.
