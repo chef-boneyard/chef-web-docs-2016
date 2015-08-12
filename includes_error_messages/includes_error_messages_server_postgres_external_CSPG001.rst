@@ -8,7 +8,7 @@ The value of ``postgresql['external']`` has been changed.
 
 **Possible Causes**
 
-* This setting may not be changed after the |postgresql| remote instance is configured
+* This setting must be set before running ``chef-server-ctl reconfigure``, and may not be changed after
 
 .. warning:: Upgrading is not supported at this time.
 

@@ -32,7 +32,7 @@ CSPG014 (incorrect version)
 -----------------------------------------------------
 .. include:: ../../includes_error_messages/includes_error_messages_server_postgres_external_CSPG014.rst
 
-CSPG015 (incorrect template)
+CSPG015 (missing database)
 -----------------------------------------------------
 .. include:: ../../includes_error_messages/includes_error_messages_server_postgres_external_CSPG015.rst
 

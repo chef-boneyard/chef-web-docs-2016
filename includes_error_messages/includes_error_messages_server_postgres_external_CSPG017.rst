@@ -14,7 +14,7 @@ One (or more) of the |postgresql| predefined users already exists.
 
 **Resolution**
 
-* Run the following, if it is safe to do so:
+* Run the following, if it is safe to do so, to update the user name that is specified in the error message:
 
   .. code-block:: bash
 

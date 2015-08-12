@@ -9,7 +9,6 @@ The database template ``template1`` does not exist.
 **Possible Causes**
 
 * The ``template1`` database template has been removed from the remote server
-* xxxxx
 
 **Resolution**
 
