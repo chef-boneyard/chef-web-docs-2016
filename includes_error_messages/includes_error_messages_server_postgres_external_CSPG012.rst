@@ -37,4 +37,32 @@ Cannot connect to |postgresql| on the remote server because rules in ``pg_hba`` 
 
      host     postgres     @chef_users     192.168.93.0/24     md5
 
+  or, using the same ``$PGDATA/chef_users`` file (from the previous example), the following example shows a way to limit connections to specific nodes that are running components of the |chef server|. This approach requires more maintanence because the ``pg_hba.conf`` file must be updated when machines are added to or removed from the |chef server| configuration. For example, a high availability configuration with four nodes:
+
+  * backend-1 is  `192.168.18.100`
+  * backend-2 is `192.168.18.101`
+  * frontend-1 is `192.168.18.110`
+  * frontend2 is `192.168.18.111`
+
+  The corresponding ``pg_hba.conf`` entry is similar to:
+
+  .. code-block:: bash
+
+     host     postgres     @chef_users     192.168.18.100     md5
+     host     postgres     @chef_users     192.168.18.101     md5
+     host     postgres     @chef_users     192.168.18.110     md5
+     host     postgres     @chef_users     192.168.18.111     md5
+
+  These changes also require a configuration reload for |postgresql|:
+
+  .. code-block:: bash
+
+	 pg_ctl reload
+
+  or:
+
+  .. code-block:: bash
+
+	 SELECT pg_reload_conf();
+
 * Rules in the ``pg_hba.conf`` file should allow only specific application names: ``$db_superuser`` (the configured superuser name in the |chef server rb| file), ``oc_id``, ``oc_id_ro``, ``opscode_chef``, ``opscode_chef_ro``, ``bifrost``, and ``bifrost_ro``
