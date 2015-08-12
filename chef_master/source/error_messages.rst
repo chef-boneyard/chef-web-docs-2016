@@ -8,6 +8,10 @@ External |postgresql|
 =====================================================
 The following error messages may be present when configuring the |chef server| to use a remote |postgresql| server.
 
+CSPG001 (changed setting)
+-----------------------------------------------------
+.. include:: ../../includes_error_messages/includes_error_messages_server_postgres_external_CSPG001.rst
+
 CSPG010 (cannot connect)
 -----------------------------------------------------
 .. include:: ../../includes_error_messages/includes_error_messages_server_postgres_external_CSPG010.rst
