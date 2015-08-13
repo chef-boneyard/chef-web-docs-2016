@@ -442,6 +442,7 @@ Cookbooks
    supermarket
    supported_platforms
    templates
+   test_doc
    uninstall
    upgrade_analytics
    upgrade_client
