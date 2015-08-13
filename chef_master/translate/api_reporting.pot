@@ -1,0 +1,749 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-13 10:10-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/api_reporting.rst:7
+# 5cb3d9e773354504897c5cc25ce023f2
+msgid "Reporting API"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting.rst:4
+# aef62d6d9097426c9a9f2ff04368cc2e
+msgid "The Reporting API is a REST API that provides access to |reporting| data that is collected during a |chef client| run. |reporting| data is collected only for nodes that have permission to publish |reporting| data to the |chef server| and only for organizations that have |reporting| enabled."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_subscriptions.rst:4
+# 65b738b21f824f6f83af88e5b124fa3d
+msgid "This is a premium feature of |chef|. Access to premium features is free (up to 25 nodes) when the |chef server| is installed on-premises. For higher node counts, access is `available via subscription <https://www.chef.io/chef/#plans-and-pricing>`_. Premium features are installed `from the command line <http://docs.chef.io/ctl_chef_server.html#install>`_."
+msgstr ""
+
+#: ../source/api_reporting.rst:14
+# bfe8a13a80934822909119e658285b01
+msgid "Requirements"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:4
+# 8442e20190804668b40480c27d9438d0
+msgid "The |api chef server| has the following requirements:"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:6
+# b520f55ce2684a1a9e0ed6321e501a10
+msgid "Access to a |chef server| running version 0.10.x or above"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:7
+# 1d31413efd634bd497c64d61438c7f6d
+msgid "The ``Accept`` header must be set to ``application/json``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:8
+# 3b7f02d29d4b45b7a9224e18bc7888ba
+msgid "For ``PUT`` and ``POST`` requests, the ``Content-Type`` header must be set to ``application/json``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:9
+# 91b09f09175f43c49ad8559a20f4acd2
+msgid "The ``X-Chef-Version`` header must be set to the version of the |api chef server| that is being used"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:10
+# 14b7e749e06243cb97d86b8bffba3083
+msgid "A request must be signed using ``Mixlib::Authentication``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:11
+# ea6021d81b614c5982b506cb9d07cceb
+msgid "A request must be well-formatted. The easiest way to ensure a well-formatted request is to use the ``Chef::REST`` library"
+msgstr ""
+
+#: ../source/api_reporting.rst:18
+# 9d0fd356cbda4b2184a62c8c32a50b93
+msgid "Authentication Headers"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:4
+# 4b37c4f4c4c3498fb19813523e849613
+msgid "Authentication to the |chef server| occurs when a specific set of HTTP headers are signed using a private key that is associated with the machine from which the request is made. The request is authorized if the |chef server| can verify the signature using the public key. Only authorized actions are allowed."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:6
+# d35cbdf94b714d86b77c04352502e4c6
+msgid "Most authentication requests made to the |chef server| are abstracted from the user. Such as when using |knife| or the |chef server| user interface. In some cases, such as when using the |subcommand knife exec| subcommand, the authentication requests need to be made more explicitly, but still in a way that does not require authentication headers. In a few cases, such as when using arbitrary |ruby| code or |curl|, it may be necessary to include the full authentication header as part of the request to the |chef server|."
+msgstr ""
+
+#: ../source/api_reporting.rst:22
+# 4b0ea33467b446a68de6103842202b26
+msgid "Header Format"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:5
+# 997ee0e955d54bb4be1d061a3a932ef5
+msgid "All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters. Each canonical header should be encoded in the following format:"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:15
+# 204c584c19b94ca981c3480182a78c41
+msgid "where:"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:17
+# 4739bd3e0ed34d30bcc515494f56ad2b
+msgid "``HTTP_METHOD`` is the method used in the API request (``GET``, ``POST``, and so on)"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:18
+# 3522721772bd4c48986cedfe813b7bb9
+msgid "``HASHED_PATH`` is the path of the request: ``/organizations/NAME/name_of_endpoint``. The ``HASHED_PATH`` must be hashed using |sha1| and encoded using |base64|, must not have repeated forward slashes (``/``), must not end in a forward slash (unless the path is ``/``), and must not include a query string."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:19
+# a7f4fe0d7a0f4b8881b6911b50ae39f3
+msgid "The private key must be an RSA key in the SSL .pem file format. This signature is then broken into character strings (of not more than 60 characters per line) and placed in the header."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:21
+# 573592d931b840caa46fa78f4c6fa56b
+msgid "The |chef server| decrypts this header and ensures its content matches the content of the non-encrypted headers that were in the request. The timestamp of the message is checked to ensure the request was received within a reasonable amount of time. One approach generating the signed headers is to use `mixlib-authentication <https://github.com/chef/mixlib-authentication>`_, which is a class-based header signing authentication object similar to the one used by the |chef client|."
+msgstr ""
+
+#: ../source/api_reporting.rst:26
+# 67851a9b69d94df68a1a5e4d46fb982e
+msgid "Required Headers"
+msgstr ""
+
+#: ../source/api_reporting.rst:27
+# 664aa4138d07473d86078688aba82eb8
+msgid "The following authentication headers are required:"
+msgstr ""
+
+#: ../source/api_reporting.rst:33
+# a8edd20d98814f18952932fadd8faa7f
+msgid "Feature"
+msgstr ""
+
+#: ../source/api_reporting.rst:34
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:36
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:35
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:35
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:14
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:69
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:14
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:49
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:14
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:41
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:14
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:43
+# 63ef1edc542e45d3ba1d021cf2decfc5
+# 23f6236889aa4967bca17868dc0b0758
+# 169870dcb3a04555b3bed68a7ac8a9b8
+# c0c817da4b184638bff62952c7a94162
+# a4fd881eff294d928c2afd6fc15b461b
+# 4f9e8eae8e6342f4ada81b29d2a606b1
+# 4e376601936747288cf335f1b9bf2dde
+# a146eb09012e41028b8ea9523fd535f7
+# 678fa58d394b4e3e99e821e12d7d7d02
+# 8818fd9a2f4c46a698ea5c19e76b286c
+# 93eb9431547e49bf955f1e1b8f5d05db
+# 945044de4c4944f7853348d6a41ea4bb
+msgid "Description"
+msgstr ""
+
+#: ../source/api_reporting.rst:35
+# b5780d97d52f49fbb56f03cbc18c66eb
+msgid "``Accept``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst:4
+# 5f6ddea19fa64395ba07eb7d1ed26921
+msgid "The format in which response data from the |chef server| is provided. This header must be set to ``application/json``."
+msgstr ""
+
+#: ../source/api_reporting.rst:37
+# 94925dabbb2b4069a94bdfa67d5f752b
+msgid "``Content-Type``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_content_type.rst:4
+# 7a95b4443de84641af812026b860911e
+msgid "The format in which data is sent to the |chef server|. This header is required for ``PUT`` and ``POST`` requests and must be set to ``application/json``."
+msgstr ""
+
+#: ../source/api_reporting.rst:39
+# 94a78baecec445a9b0b606955bff8087
+msgid "``Host``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst:5
+# a7fb49fc729e424b83166d20a0700525
+msgid "The host name (and port number) to which a request is sent. (Port number ``80`` does not need to be specified.) For example: ``api.opscode.com`` (which is the same as ``api.opscode.com:80``) or ``api.opscode.com:443``."
+msgstr ""
+
+#: ../source/api_reporting.rst:41
+# a140af0034bf4d73890df5f9c40847c4
+msgid "``X-Chef-Version``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst:5
+# 7e4c7c23c0dc419da5fcef4889c0a578
+msgid "The version of the |chef client| executable from which a request is made. This header ensures that responses are in the correct format. For example: ``12.0.2`` or ``11.16.x``."
+msgstr ""
+
+#: ../source/api_reporting.rst:43
+# 4f3a086eadd54dce934a319f6ad53bb6
+msgid "``X-Ops-Authorization-N``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst:5
+# 1f9837ec145f4654a592b179167f84d6
+msgid "One (or more) 60 character segments that comprise the canonical header. A canonical header is signed with the private key used by the client machine from which the request is sent, and is also encoded using |base64|. If more than one segment is required, each should be named sequentially, e.g. ``X-Ops-Authorization-1``, ``X-Ops-Authorization-2``, ``X-Ops-Authorization-N``, where ``N`` represents the integer used by the last header that is part of the request."
+msgstr ""
+
+#: ../source/api_reporting.rst:45
+# 2f13a2710ba14c2a820c6951bf554f06
+msgid "``X-Ops-Content-Hash``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst:5
+# ea0c573781bc4b53b9f3f8dd15b26945
+msgid "The body of the request. The body should be hashed using |sha1| and encoded using |base64|. All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters."
+msgstr ""
+
+#: ../source/api_reporting.rst:47
+# 248cd6a384e94944a77a7807c9488804
+msgid "``X-Ops-Reporting-Protocol-Version``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_headers_x_ops_reporting_protocol_version.rst:5
+# 12a892d4fcc04a1e87e17870f2ebe570
+msgid "Use to specify the protocol version for the Reporting API. This header must be set to ``0.1.0``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_headers_x_ops_reporting_protocol_version.rst:7
+# c2098925233343c8afe1661c065ba671
+msgid "A request to the |api chef server| that does not include this header and the correct value will return a 404 response code."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_headers_x_ops_reporting_protocol_version.rst:8
+# f7adb30a19824b0bbe998c2f049729b6
+msgid "A request to the |api chef server| that includes this header with an incorrect value will return a 406 reponse code."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_headers_x_ops_reporting_protocol_version.rst:10
+# 61a15c9b77964e2589b8d34e794e4553
+msgid "If the protocol version is incorrect (or unspecified), the |chef client| run will proceed normally, but |reporting| data will not be collected for that |chef client| run unless the ``enable_reporting_url_fatals`` setting is ``true`` in the |client rb| file for that node."
+msgstr ""
+
+#: ../source/api_reporting.rst:49
+# 95929fa7fee74e39abaead481fe579ca
+msgid "``X-Ops-Sign``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst:5
+# 5be4d439e3a94c39b93c942e26c7a989
+msgid "Set this header to the following value: ``version=1.0``."
+msgstr ""
+
+#: ../source/api_reporting.rst:51
+# ef74d6bb2b1f47f290277b018ccd7648
+msgid "``X-Ops-Timestamp``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst:5
+# 663d074cda5740e7bab77e64217063ce
+msgid "The timestamp, in |iso 8601| format and with |utc| indicated by a trailing ``Z`` and separated by the character ``T``. For example: ``2013-03-10T14:14:44Z``."
+msgstr ""
+
+#: ../source/api_reporting.rst:53
+# 7bf5bf062ddd49d5acb87ab4484c90b6
+msgid "``X-Ops-UserId``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst:5
+# a90a764e5388432fa9fa50e056eb51c0
+msgid "The name of the |chef api client| whose private key will be used to create the authorization header."
+msgstr ""
+
+#: ../source/api_reporting.rst:57
+# 9a86805c677f448ba4348dc77060b636
+msgid "Example"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst:5
+# 9ee1ae43c12948e681f016718cfc2fbe
+msgid "The following example shows an authentication request:"
+msgstr ""
+
+#: ../source/api_reporting.rst:61
+# c042622fcb324c369bd690ba64933eb2
+msgid "Global Endpoints"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_endpoints_global.rst:4
+# 0c709054a31e45049bb1d10232e75513
+msgid "A global endpoint may be used to access all of the organizations on the |chef server|."
+msgstr ""
+
+#: ../source/api_reporting.rst:65
+# e3f04bf695eb4124a90ce7e19f86ae8c
+msgid "/reports/status"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status.rst:5
+# 2e2496d4974b4276ba8e690f22d716cd
+msgid "The ``/reports/status`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../source/api_reporting.rst:69
+#: ../source/api_reporting.rst:89
+#: ../source/api_reporting.rst:98
+#: ../source/api_reporting.rst:108
+#: ../source/api_reporting.rst:118
+#: ../source/api_reporting.rst:128
+#: ../source/api_reporting.rst:138
+# 6cf535d0d42e4f1e957ab8afc715b648
+# a8111f57afd0465583a2d7aa15299e3f
+# acaf54cc7f074f68b789b797f3a0f6bb
+# 1df6ad1e82844e658edc447cf48937f1
+# af215314e05e4752b5bd301bb2a2491d
+# 15ce1a3e96d3402ca539a0532f09f578
+# 1153ec0e39354d48964712d62b6f5a56
+msgid "GET"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:5
+# 0ad86ad495c0425da05c14e52ef2111a
+msgid "The ``GET`` method is used to return the status of the system components used by |reporting|."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:7
+# 4e2b108b83444ef580f370907dbc3e5d
+msgid "This method does not have any parameters."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:9
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:9
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:9
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:22
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:26
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:18
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:20
+# 28c312a52fb84456816db1386b5d0785
+# d1331deda5d64d7e96af2278e62bff13
+# 2c6cd47d7ae044068057177ffc2c7271
+# c8e39f7f0c924165ab92b9c5648e0a6a
+# 2560fdbb2ff74d119864007886f9b1ca
+# 0bce8aa05cb0483abbf6d3700afadfc0
+# e25af0cd0fde43b299f1fc237f6b12af
+msgid "**Request**"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:15
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:15
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:15
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:28
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:32
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:24
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:26
+# de89c5856c09447c88a1a0775015d248
+# 84fe59b63e134ef3a497644bf0a74051
+# 7adc963bb4bc4a9894a39b9effbe3d5e
+# 9783ae46cbb847309ea495b4251cb3c2
+# 44ff49e67bd642cbbb314c622b89e06c
+# 68812b88b9ee42b3b667a2026fcc5b17
+# f4abcbbbda8d4a5f85fcfc407555031f
+msgid "**Response**"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:17
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:17
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:17
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:30
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:34
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:26
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:28
+# 1ac6c8978fab4859a57e16dfd80d7149
+# b1f117934a91417d8bc8f2d6ebac9199
+# 1b7238bbce1946a3b641501c6372d885
+# 7b39bbdf007041d39101713bbe9565a9
+# 14601a79cb124ee5ba5fc68fb2a0ee1a
+# bf0d8c4f4cfa4d3aafec861af0b7bb4f
+# e5ad53d0305d40da8ac2f037b0657f5a
+msgid "The response is similar to:"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:27
+# 13f9cebb0a4943ed9b1357b68892b45b
+msgid "where ``index`` is the |chef server| search index. If the system component is not online, the response will return ``offline``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:29
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:28
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:28
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:62
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:42
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:34
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:36
+# cf972a88e53345509372395ebea5e634
+# f1a29469286a477a969854ff81bc3081
+# 678c5ac59f55481eb46b4fb9ed6e3aba
+# 305dbb44140a47c692f6c004f37bc7bb
+# 104d2abfdb984787943769131098ebed
+# 6f064df29b04425ca836d94283105bf2
+# 9c50977f16aa468197484780125dfddb
+msgid "**Response Codes**"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:35
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:34
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:34
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:68
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:48
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:40
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:42
+# 871c76ba3bfd45328aa8f1b0ebceae2a
+# 313a410873a64f1b9c36874b44b0d9a4
+# 427fdd59d1fb4c7889acd7687f433e57
+# 7bfdbc09207949299d82cbf7ce1662cd
+# d4bc60e1e35a4047a16062a0e43ac31c
+# eff00df02dd04d838c1f3a0dc4d904eb
+# a7df4ac2d80b4511b26ab0ebbd1b7629
+msgid "Response Code"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:37
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:36
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:36
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:70
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:50
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:42
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:44
+# 0a1e00a5e6b740fe94dcb8d8b46506d5
+# d59d2153f7374dfdb569da69fe427170
+# f8808256cdc246498d634da4748eeddf
+# 43fc5bd582704ca8bbc0315091fd0a64
+# 502bd48c9c764e62879f642fa6d77b22
+# 24ac28b59dcc4fa291ff37f464ba7fc5
+# 49a9a3fc9b4746bc84d12c9c34a7a41b
+msgid "``200``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:38
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:37
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:37
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:71
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:51
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:43
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:45
+# 016e5fee74124620b6449dc0982797c1
+# 2311d97adf754c9b9cc10cf3e76711da
+# e3e111cf76034ac9b4a03eac5585e177
+# 2b7ee6ffeb8145f890a85e3780f5ff04
+# 29376eb3b89b44f98b4a9916cf00c8c4
+# 45f63831ae364018a9133ede9443f7e1
+# e21234c0fadc4f47b37f3fda136450c5
+msgid "|response code 200 ok|"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:39
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:38
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:38
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:72
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:52
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:44
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:46
+# d7ba1e55636244c0a8efa8c40c3cdb05
+# 48ed251f8e07468a804a0c099e411533
+# 39ebc377afc047f3b0abf6fdb808c8e3
+# 8fc8678907814496800d5dc0b8c05637
+# 283b74367177483c81e1c7bbdcef16de
+# dcb868477e974065a186b4a452ac7ac3
+# 4a88f150cc224ec9a7b13f798e3c3f1e
+msgid "``404``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:40
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:39
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:39
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:73
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:53
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:45
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:47
+# 96608258ce744d1badb4b28adf9f6182
+# 98560f79737c421e8743b745529760fb
+# 45c74f1f8a5c498ab04e604821ff334a
+# 8aa7f6be7a9b4b56970133b761ebfd5a
+# db1e859867704f66aa3f1918bb435064
+# 6a5685ad45384294bd838f5a537da63a
+# 4851a552354744fdaae648fc5e56363a
+msgid "|response code 404 not found|"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:41
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:40
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:40
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:74
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:54
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:46
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:48
+# 51d01dd4db5c4e6dbb33612fa3b11d8f
+# 33819659f54146c8b663382e8b72bbaa
+# e97bf784ff1a443890bf6fb14c0ed5cc
+# 9c48b32dd29849e0973a89f4aa610882
+# 142a3c36e3c84c009d2111f56d29fa76
+# 7c78f5c45874483f90e2aae66acfda5a
+# 72dc7be51af44f43b8d44b9144e9dcb1
+msgid "``406``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_status_get.rst:42
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:41
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:41
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:75
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:55
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:47
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:49
+# 314d5ac8a85040b1a6c23a25a65630d8
+# 1af544e97ed940a992842f5ce1d5c8ea
+# 0dda0f71ae8a47a6a63f7c7ed7c810c1
+# 557431206ec2480aa7183b3c842f322c
+# bd1f0c63030e45b2a5537e7e1f7d87a3
+# cbec556934684f7eaed436bfdb7d45d5
+# 5d0ae531cd21478a8e74fe4052da9875
+msgid "Invalid request. The protocol version is incorrect."
+msgstr ""
+
+#: ../source/api_reporting.rst:80
+# 6fa0dee92299402f8dde790011f4ef48
+msgid "Organization Endpoints"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoints.rst:4
+# 3e71a5050feb433f98446c1527de00d5
+msgid "Each organization-specific authentication request must include ``/organizations/ORG_NAME`` as part of the name for the endpoint. For example, the full endpoint for getting the details for a specific reporting run identifier for a node:"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoints.rst:10
+# 022101c69de8455ca79be1ab77d99b94
+msgid "where ``ORG_NAME`` is the name of the organization, ``NODE`` is the name of the node, and ``RUNID`` is the reporting run identifier."
+msgstr ""
+
+#: ../source/api_reporting.rst:85
+# 9974f7b1a7fa411e971f837bdc55572c
+msgid "/reports/nodes/NODE/runs"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs.rst:5
+# 7fce26ad6fa14e9baa40b7c9d247c66a
+msgid "The ``/reports/nodes/NODE/runs`` endpoint has the following methods: ``GET`` and ``POST``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:5
+# 5e8d5579b16047e1947119146382eab9
+msgid "The ``GET`` method is used to return |reporting| data for a |chef client| run."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runs_get.rst:7
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:7
+# 11250f174d084d68a51aae85cb9423a3
+# cf137b8f805b44ab84eae4264f3029dc
+msgid "This method has no parameters."
+msgstr ""
+
+#: ../source/api_reporting.rst:94
+# ed786a6cf7594935a928657fca22cf38
+msgid "/reports/nodes/NODE/runs/RUNID/RESID"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid.rst:5
+# 9b179d59dfd443dd86f24836cdd497ad
+msgid "The ``/reports/nodes/NODE/runs/RUNID/RESID`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_resid_get.rst:5
+# 0093e47383e9413f8072de28a6efd8c5
+msgid "The ``GET`` method is used to return a list of what changed during the |chef client| run for the specified resource."
+msgstr ""
+
+#: ../source/api_reporting.rst:104
+# 5c1b59be927c4821bbc41527e8d6c406
+msgid "/reports/nodes/NODE/runs/RUNID"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid.rst:5
+# 7243a6cc45274251a31cdf84ad4c7bcb
+msgid "The ``/reports/nodes/NODE/runs/RUNID`` endpoint has the following methods: ``GET`` and ``POST``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:5
+# fc949f4160b143bfb6892dc7c17841b7
+msgid "The ``GET`` method is used to return a list of resources for a given |reporting| run identifier."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:7
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:7
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:7
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:7
+# 1cd8774c51074de3a87fca467a52bace
+# 9978004069cf4d1eb02da3199835771f
+# 0624f522bdbe4f0eb7332ce2857014db
+# 333a33f7ee904e9b979a473f70856a6b
+msgid "This method has the following parameters:"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:13
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:13
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:13
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:13
+# 501f520b210147de8e8396d0c39dbc95
+# dda04f1c3c3f431e8bf6bac65155db61
+# 2e1ec3ac876a4a10bf9339a3e30f5c21
+# c7a25899874d4205905c0f9a9187c4f4
+msgid "Parameter"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:15
+# b471c8f00d7c4e168de56221ccdbfc3f
+msgid "``detail``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:16
+# d26e050b0529418c86cc92fb6959f10e
+msgid "Optional. When ``true``, include the ``run_detail`` |json| object in the output. Default value: ``false``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:17
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:17
+# 0c1af6b5d09542528e655b78192b3671
+# 635f1df3ae604056a101ec6215181600
+msgid "``rows``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:18
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:18
+# 52ce1028961f4df3aa34e42b9795d1a9
+# 3ae42e430e3240bd8d441d97ec5c7557
+msgid "Optional. The number of resources to return. Default value: ``10``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:19
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:19
+# 97eb8d7bf95d494f92486292aefd108d
+# 8ae7f8f7b05d4f72ac68dc693c5b72dc
+msgid "``start``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_node_runid_get.rst:20
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:20
+# a36c83dc4e4a4bea9eb54e84b984dfde
+# 694cafd1070e4893b1cbe79d4e642237
+msgid "Optional. The row at which the results will start. Default value: ``0``."
+msgstr ""
+
+#: ../source/api_reporting.rst:114
+# b602b7075f2c4b30be6668f1c850241d
+msgid "/reports/org/runs"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs.rst:5
+# 3d715b7994814a35895d3096ed74a894
+msgid "The ``/reports/org/runs`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:5
+# 053406545e934d4f8b760769aea13cf7
+msgid "The ``GET`` method is used to return information about |chef client| runs for all nodes in the specified organization."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:15
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:15
+# 0b699df334bf4d329ee77b25f9ab8085
+# e4ae5deb0586443c8548f1711d868c35
+msgid "``from``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:16
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:16
+# e6c65b9c08d94260b8fdf6d68e8e73b1
+# a6c56aa9a02b413c804069ba179a8ddd
+msgid "Optional. Use to specify the time before which node data will not be returned. Use with ``until`` to define a range."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:21
+# b12ce703aa454134a1c5930d0e21f6c5
+msgid "``status``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:22
+# c29a94c37eb943e19eee423523fe81ac
+msgid "Optional. Use to specify a status code. When a status code is provided, only nodes with that status will be returned. When a status code is not provided, all nodes will be returned. Possible values: ``aborted``, ``failure``, or ``success``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:23
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:17
+# 2c285c8fba724102ba2e2536bf71df47
+# 75abb48328744d78a7c85114a4945a33
+msgid "``until``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_org_runs_get.rst:24
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:18
+# 6def2c0548274517a85ca7ff90cad4f3
+# 77a60209dbf9463daed69c4b4b9ab9c8
+msgid "Optional. Use to specify the time after which node data will not be returned. Use with ``until`` to define a range."
+msgstr ""
+
+#: ../source/api_reporting.rst:124
+# 25c4c46c32c04088ad628f5489dd9bd2
+msgid "/reports/runs/counts"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts.rst:5
+# 3327faa4402747f69113099fbe7bbbdf
+msgid "The ``/reports/runs/counts`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:5
+# 3031eb89d12e4bb083cf0c81f08274be
+msgid "The ``GET`` method is used to return the frequency of |chef client| runs, per-minute, per-hour, per-day, or per-week."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:15
+# 096c47ab32bd4f40a1b72feae95d5e41
+msgid "``granularity``"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_counts_get.rst:16
+# 6321a5e631ed4795872c1fbe4e163ade
+msgid "Required. The length of time for which |chef client| run counts are returned. Possible values: ``hour``, ``minute``, ``day``, or ``week``."
+msgstr ""
+
+#: ../source/api_reporting.rst:134
+# 63a6f8251065469abdb44f829b25bc6b
+msgid "/reports/runs/durations"
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations.rst:5
+# 114b6777ae3948c393b33030c7a988ee
+msgid "The ``/reports/runs/durations`` endpoint has the following methods: ``GET``."
+msgstr ""
+
+#: ../../includes_api_reporting/includes_api_reporting_endpoint_reports_runs_durations_get.rst:5
+# 27d33a69ce364022a7b2a916660a45d2
+msgid "The ``GET`` method is used to return the frequency of |chef client| runs that occured within a specified range."
+msgstr ""
+

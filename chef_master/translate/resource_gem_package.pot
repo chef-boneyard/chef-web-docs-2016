@@ -1,0 +1,643 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-13 10:10-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_gem_package.rst:7
+# 9b7f865fb92f4935a8f6ece662cf1ee2
+msgid "gem_package"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_generic.rst:5
+# 1677fc90365e49949c9307559c4fd668
+msgid "A `resource <http://docs.chef.io/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During a `chef-client run <http://docs.chef.io/chef_client.html#the-chef-client-title-run>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../includes_notes/includes_notes_chef_gem_vs_gem_package.rst:6
+# 618a42214370496c9ba289ab063b3863
+msgid "The |resource chef_gem| and |resource package_gem| resources are both used to install |ruby| |gems|. For any machine on which the |chef client| is installed, there are two instances of |ruby|. One is the standard, system-wide instance of |ruby| and the other is a dedicated instance that is available only to the |chef client|. Use the |resource chef_gem| resource to install |gems| into the instance of |ruby| that is dedicated to the |chef client|. Use the |resource package_gem| resource to install all other |gems| (i.e. install |gems| system-wide)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem.rst:4
+# 3de8b28c5ce34817b17a4c8769abf1ca
+msgid "Use the |resource package_gem| resource to manage |gem| packages that are only included in recipes. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_notes/includes_notes_resource_based_on_package.rst:6
+# efe96ce56a4942458442420b93ff1aa8
+msgid "In many cases, it is better to use the |resource package| resource instead of this one. This is because when the |resource package| resource is used in a recipe, the |chef client| will use details that are collected by |ohai| at the start of the |chef client| run to determine the correct package application. Using the |resource package| resource allows a recipe to be authored in a way that allows it to be used across many platforms."
+msgstr ""
+
+#: ../source/resource_gem_package.rst:18
+# 2ae6b06651244a4e834d36b6f02dfd07
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:5
+# 28f167787f6e4ef59735e5354b941ce5
+msgid "A |resource package_gem| resource block manages a package on a node, typically by installing it. The simplest use of the |resource package_gem| resource is:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:11
+# 7ff19402e27f43e684d4da8b7eb81779
+msgid "which will install the named package using all of the default options and the default action (``:install``)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:13
+# c632e79cb4084b0489588e3fe8c987a8
+msgid "The full syntax for all of the properties that are available to the |resource package_gem| resource is:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:31
+# 813e2880b06844858a7fd534e0576871
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:33
+# eb9276da8cf44a8b8ff5153b40876883
+msgid "``gem_package`` tells the |chef client| to manage a package"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:34
+# 85492274b85a4ebb9e0d82d2fe6bb257
+msgid "``'name'`` is the name of the package"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:35
+# 73d32879a1d04b3e96ee04a735c82f06
+msgid "``:action`` identifies which steps the |chef client| will take to bring the node into the desired state"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_syntax.rst:36
+# 5262dc1704604aea8e9baa893c2a8c77
+msgid "``clear_sources``, ``gem_binary``, ``options``, ``package_name``, ``provider``, ``source``, ``timeout``, and ``version`` are properties of this resource, with the |ruby| type shown. |see attributes|"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:22
+# 6e0fb963f2dc4c79b66f29d4e22d8e5a
+msgid "Gem Package Options"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options.rst:4
+# dedb37e235dd48e4a4aeca68c7cb8ec6
+msgid "The |rubygems| package provider attempts to use the |rubygems| API to install |gems| without spawning a new process, whenever possible. A |gems| command to install will be spawned under the following conditions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options.rst:6
+# 4d55d158c9de4176a2792ee9baba316a
+msgid "When a ``gem_binary`` property is specified (as a hash, a string, or by a .gemrc file), the |chef client| will run that command to examine its environment settings and then again to install the |gem|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options.rst:7
+# 003647e067a44a149f3979bc4bc448f8
+msgid "When install options are specified as a string, the |chef client| will span a |gems| command with those options when installing the |gem|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options.rst:8
+# 35aed5e38bd54d0e8b17902b6aaaec2b
+msgid "The |omnibus installer| will search the ``PATH`` for a |gem| command rather than defaulting to the current |gem| environment. As part of ``enforce_path_sanity``, the ``bin`` directories area added to the ``PATH``, which means when there are no other proceeding |rubygems|, the installation will still be operated against it."
+msgstr ""
+
+#: ../source/resource_gem_package.rst:26
+# 3acc1a1d61ac4db2b3160ab8a7bbe93f
+msgid "Specify with Hash"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:4
+# cb9da54f011a4d9995190c723f53a596
+msgid "If an explicit ``gem_binary`` parameter is not being used with the ``gem_package`` resource, it is preferable to provide the install options as a hash. This approach allows the provider to install the |gem| without needing to spawn an external |gem| process."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:6
+# df2d39d25d1a487bb8903f2f452298db
+msgid "The following |rubygems| options are available for inclusion within a hash and are passed to the |rubygems| DependencyInstaller:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:8
+# 0bf11772633f4a54a96c8d5af778e24a
+msgid "``:env_shebang``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:9
+# bb97dc4c4b7f43fbbca380d8ec2d8860
+msgid "``:force``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:10
+# c8ce69c3777942ed899f573bc0156bce
+msgid "``:format_executable``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:11
+# e3d0af40e83e4f9e936cc9c8fa9c9564
+msgid "``:ignore_dependencies``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:12
+# 907aaf7396c44872883c99591c4608af
+msgid "``:prerelease``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:13
+# 45483296813d412fbb1f2e2043fc1606
+msgid "``:security_policy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:14
+# 398a97c0e2d0495cb4db2d8a65e75754
+msgid "``:wrappers``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_hash.rst:16
+# 313712f828004542b78f201861820dc5
+msgid "For more information about these options, see the |rubygems| documentation: http://rubygems.rubyforge.org/rubygems-update/Gem/DependencyInstaller.html."
+msgstr ""
+
+#: ../source/resource_gem_package.rst:29
+#: ../source/resource_gem_package.rst:37
+#: ../source/resource_gem_package.rst:45
+# b06cb7b9e0a743acba17631e8d5aac6c
+# a60013ed9230423896eb604e799e924c
+# 317d2c7be06c4ad4b9e7a368f3213d92
+msgid "**Example**"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:34
+# 83106523d1d942be9220283069660fcc
+msgid "Specify with String"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_string.rst:4
+# a016b2e802f44dec82f1fe90687aac43
+msgid "When using an explicit ``gem_binary``, options must be passed as a string. When not using an explicit ``gem_binary``, the |chef client| is forced to spawn a |gems| process to install the |gems| (which uses more system resources) when options are passed as a string. String options are passed verbatim to the |gems| command and should be specified just as if they were passed on a command line. For example, ``--prerelease`` for a pre-release gem."
+msgstr ""
+
+#: ../source/resource_gem_package.rst:42
+# 0168e38bd0be4909becc9f71d947dcb8
+msgid "Specify with .gemrc File"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_options_gemrc.rst:4
+# 798f79977ad141d59816916c9e8e104e
+msgid "Options can be specified in a .gemrc file. By default the ``gem_package`` resource will use the |ruby| interface to install |gems| which will ignore the .gemrc file. The ``gem_package`` resource can be forced to use the |gems| command instead (and to read the .gemrc file) by adding the ``gem_binary`` attribute to a code block."
+msgstr ""
+
+#: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst:4
+# cad062d836f04197976ae05c241e1723
+msgid "A template named ``gemrc.erb`` is located in a cookbook's ``/templates`` directory:"
+msgstr ""
+
+#: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst:11
+# 8e89d29cf7e14ec5bb15062f00fbee71
+msgid "A recipe can be built that does the following:"
+msgstr ""
+
+#: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst:13
+# 5e2baef7b2c54b829d74bc61371c32e1
+msgid "Builds a ``.gemrc`` file based on a ``gemrc.erb`` template"
+msgstr ""
+
+#: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst:14
+# c5bede7e81fd4e9c9aa31ab643c93324
+msgid "Runs a ``Gem.configuration`` command"
+msgstr ""
+
+#: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst:15
+# eb047f492d864715a97fb22e0b9a6123
+msgid "Installs a package using the ``.gemrc`` file"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:50
+# df82fd74b19140a4b4331704b0213df6
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:4
+# b9a0529b898c45b8a2e614674a7a871a
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:10
+# 23a6ed78933e4bacb339a7a531434f56
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:11
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:11
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:11
+# 6cf1e658677141249c746f8f4940518f
+# 2f6e4c99a3c4428893278ac2527313b3
+# 435375be60774d8cb195063e6298c51f
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:12
+# dfbba0748f1b4f7bbc1ac6df1ce03793
+msgid "``:install``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:13
+# 929339ab74504fc3b9d12d23c82641fc
+msgid "Default. |resource action install package|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:14
+# 30329cbb9316465f88a53eaea0c45b0f
+msgid "``:nothing``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:15
+# 860028752bb0412cab03a928ed114458
+msgid "|resource action nothing|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:16
+# e7f3fe165e0744b285728cc07bd5afa3
+msgid "``:purge``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:17
+# b3d791ebe08f496fb3587e8d1e015c7f
+msgid "|resource action purge package|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:18
+# 60aa1edc017e420d83cf5cdad67b2b40
+msgid "``:reconfig``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:19
+# a9f146b5d6614d569ce817c79d87b288
+msgid "|resource action reconfigure package|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:20
+# 82cc58918da14384969663d8ee18fbdc
+msgid "``:remove``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:21
+# b854ad745a60433192e330fb476786d5
+msgid "|resource action remove package|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:22
+# 614939f3c08f45d2a37c4a05d070f856
+msgid "``:upgrade``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_actions.rst:23
+# b34e7869d8c64393934cdfbfb8ad05da
+msgid "|resource action upgrade package|"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:54
+# 01c295dff9a24a2c8947d24cb8505356
+msgid "Properties"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:4
+# 57a02b0b627c4bf59047878c049af155
+msgid "This resource has the following properties:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:10
+# 5d4af0d7090a4c15b40faae490db71b1
+msgid "Property"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:12
+# 8203bcad2b734c268809e285e9a0049c
+msgid "``clear_sources``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:13
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:21
+# fb8462dfb9874043ab79f40c5703f745
+# fdcd099d6bfc4e33b2f8b55d86955283
+msgid "**Ruby Types:** TrueClass, FalseClass"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:15
+# fd4fbfd00346465cb4113fcfb8aca99f
+msgid "|clear_sources| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:16
+# a086e1d3088f4b09a7eb9d81154a764e
+msgid "``gem_binary``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:17
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:33
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:53
+# aac74e0773b74dacac710b52684c9522
+# da103377148440e3b107be40341dfa9d
+# 6665f884c91649f2a0ef24a4d48d888a
+msgid "**Ruby Type:** String"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:19
+# 937fbee4cf2a492b93e4c9b2705f8157
+msgid "|gem_binary resource package| By default, the same version of |ruby| that is used by the |chef client| will be installed."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:20
+# 2001ca0d78a8413daf4c62b0440b6607
+msgid "``ignore_failure``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:23
+# d4ee9ecf13ff4bfd976ca273e67893ed
+msgid "|ignore_failure| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:24
+# c692eca4bad24f3c9725a17bcbbda22f
+msgid "``notifies``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:25
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:57
+# cd5dd655d1574b4aa02b63948e3c0d53
+# 297d1240aea94b4abb6d10824b56acdd
+msgid "**Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:27
+# 437c124749c042928532110b20a16b1e
+msgid "|notifies|"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst:4
+# 544dbe9633a44f43a535f8f9b15d00e2
+msgid "Specify the ``:action``, ``'resource[name]'``, and timer (``:delayed`` or ``:immediately``). Use multiple ``notifies`` statements to notify more than one resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:4
+# f5e75b0d17284b03bf6318b92d542a83
+msgid "Use the following timers to specify when a notification is triggered:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:10
+# f8c62dbd77114f14837a3d714d7cfe89
+msgid "Timer"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:12
+# 2b4af7a3256e48edae48b86c2341d595
+msgid "``:delayed``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:13
+# 9f2bdcf8149042d287d3b87f52c34343
+msgid "Use to specify that a notification should be queued up, and then executed at the very end of a |chef client| run."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:14
+# 1907ca051ace43fdb7f4396aa5662ffb
+msgid "``:immediately``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:15
+# 7d775d2e6b43483eb51068d46a3e30ac
+msgid "Use to specify that a notification should be run immediately, per resource notified."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:32
+# a40aec7a95af45d99e2ce31e8dc2b2d1
+msgid "``options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:35
+# cf81340887fb4c02a46eacfabfad97f0
+msgid "|command options|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:36
+# 02c5228686aa4b3cb2d96cd1082390ce
+msgid "``package_name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:37
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:69
+# d4422a0dc4114d1d8ec6732b4497dd04
+# 7f8a614504fc4a2c8205df49f6d5d2f9
+msgid "**Ruby Types:** String, Array"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:39
+# 3afc8c5d9094481f8e87d5c6cbed1f68
+msgid "|name package| |resource_block_default| |see syntax|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:40
+# 4512a44c12884caaa984407aa21bc16e
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:41
+# 97ce882c8e57444ab238127e8e83acf4
+msgid "**Ruby Type:** Chef Class"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:43
+# 8514bcbbfc3347f3bb4f60f0aeb44541
+msgid "Optional. |provider resource_parameter| |see providers|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:44
+# 4c2db3322614402381a327a7ebce1b15
+msgid "``retries``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:45
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:49
+# b68498499b254f7db46fa91e467e6d7a
+# 7d05817ca09342ae9b65805047a5673f
+msgid "**Ruby Type:** Integer"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:47
+# 2c76d572dd844e689bc371dfedba21de
+msgid "|retries| Default value: ``0``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:48
+# 9b60c49bb9464207a170d7a9e911acd3
+msgid "``retry_delay``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:51
+# a0c73d370a664b399c6aeb56ddaecea1
+msgid "|retry_delay| Default value: ``2``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:52
+# 008d5632e24c4ad99fcdf475864086d7
+msgid "``source``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:55
+# d317cee55d9a4c2695e227b387a83e39
+msgid "Optional. The URL at which the gem package is located."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:56
+# 01f25c092bf2415b823123088c54925d
+msgid "``subscribes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:59
+# e8ac99c216834bc68be7c48840dc8187
+msgid "|subscribes|"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst:4
+# 51ac6bd72bdf4c518c9b2d6aff6acf37
+msgid "Specify the ``:action``, ``'resource[name]'``, and timer (``:delayed`` or ``:immediately``). Use multiple ``subscribes`` statements to listen to more than one resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:63
+# f57039b89864455ca0cdf4d167867204
+msgid "|subscribes timers|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:64
+# 25e7cb66aaf34c2686e65adfade845dd
+msgid "``timeout``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:65
+# c3bbce253bdb48a0871ffd292d79a682
+msgid "**Ruby Types:** String, Integer"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:67
+# a9da82112b5c4a8b9393c77cddcaf442
+msgid "|timeout|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:68
+# bda5a51deda440c2b228417bd330333a
+msgid "``version``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_attributes.rst:71
+# 4c559a25b24a4e6cac995a80382fe7c1
+msgid "|version package|"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:58
+# a0113c456bd740b2be3eaa0091f8bbda
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider.rst:4
+# 81051f8905d04856bd864ddd07e2a5ca
+msgid "Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:4
+# d974fd242c854bd18eb76a0a3eb25c45
+msgid "The |chef client| will determine the correct provider based on configuration data collected by |ohai| at the start of the |chef client| run. This configuration data is then mapped to a platform and an associated list of providers."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:6
+# 786b3c7abb284f08be4f8421a8c8889f
+msgid "Generally, it's best to let the |chef client| choose the provider and this is (by far) the most common approach. However, in some cases specifying a provider may be desirable. There are two approaches:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:8
+# 33fa8349c4b340d79e36ce32f695d597
+msgid "Use a more specific short name---``yum_package \"foo\" do`` instead of ``package \"foo\" do``, ``script \"foo\" do`` instead of ``bash \"foo\" do``, and so on---when available"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_provider_attributes.rst:9
+# b31f29f80cd34f09a7fe3f33491961c0
+msgid "Use the ``provider`` property within the resource block to specify the long name of the provider as an property of a resource. For example: ``provider Chef::Provider::Long::Name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:4
+# 7b8e7554f6244221923dc4ff36fc6b02
+msgid "This resource has the following providers:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:10
+# 49c7694aba404e62959a0703fd80b2c8
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:11
+# 0f9b066ee0c045d99d2a1c7c5ca5ef46
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:12
+# e94e74924a3742faa75f260547eccdef
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:13
+# 9173137a828743f287026e18b68dd0fb
+msgid "``Chef::Provider::Package``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:14
+# df0cd82e33384ef48ef478d93aadee9f
+msgid "``package``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:15
+# 8db24fdf6a824791b0de1dc49deb167c
+msgid "When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:16
+# 8ed1aba11507450bb37afedeff4d1d18
+msgid "``Chef::Provider::Package::Rubygems``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:17
+# bcf7247fb61449d59c32dd6027948efe
+msgid "``gem_package``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem_providers.rst:18
+# 3495b4a729414d47b13bb5029eb391f4
+msgid "Can be used with the ``options`` attribute."
+msgstr ""
+
+#: ../source/resource_gem_package.rst:66
+# a306ef432f264b28b5061cca8bb05913
+msgid "Examples"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:67
+# 73791232f72a4b41a2f6f59fab3fbbac
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:69
+# 975923cae0314fd28de94a5ba20290d1
+msgid "**Install a gems file from the local file system**"
+msgstr ""
+
+#: ../source/resource_gem_package.rst:73
+# c9ada09d75d24fb8b21d5736fdf82e75
+msgid "**Use the ignore_failure common attribute**"
+msgstr ""
+

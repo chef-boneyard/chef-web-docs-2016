@@ -1,0 +1,811 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-13 10:10-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_machine.rst:7
+# 6059d03ce7c14bd89de7111d9c8ce037
+msgid "machine"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_generic.rst:5
+# 447456fe4c2f4451988a231f832d4a56
+msgid "A `resource <http://docs.chef.io/resource.html>`_ defines the desired state for a single configuration item present on a node that is under management by |chef|. A resource collection---one (or more) individual resources---defines the desired state for the entire node. During a `chef-client run <http://docs.chef.io/chef_client.html#the-chef-client-title-run>`_, the current state of each resource is tested, after which the |chef client| will take any steps that are necessary to repair the node and bring it back into the desired state."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine.rst:4
+# 6f3edf0b37bd4c01818032e72b17c090
+msgid "Use the |resource machine| resource to define one (or more) machines, and then converge entire clusters of machines. This allows clusters to be maintained in a version control system and to be defined using multi-machine orchestration scenarios. For example, spinning up small test clusters and using them for continuous integration and local testing, building clusters that auto-scale, moving a set of machines in one cluster to another, building images, and so on."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine.rst:6
+# 5fd8207d292b4b519daea45a43bf6e24
+msgid "Each machine is declared as a separate application topology, defined using operating system- and provisioner-independent files. Recipes (defined in cookbooks) are used to manage them. The |chef client| is used to converge the individual nodes (machines) within the cluster."
+msgstr ""
+
+#: ../../includes_notes/includes_notes_provisioning.rst:5
+# ede9a56826204c3aacf9c1f5b2ccbce7
+msgid "This functionality is available with |chef provisioning| and is packaged in the |chef dk|. |chef provisioning| is a framework that allows clusters to be managed by the |chef client| and the |chef server| in the same way nodes are managed: with recipes. Use |chef provisioning| to describe, version, deploy, and manage clusters of any size and complexity using a common set of tools."
+msgstr ""
+
+#: ../source/resource_machine.rst:18
+# 0d4b8a66a1c947b08b8cbd8907757c8a
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:4
+# 18260dc38e63478e8c46e809f56d0228
+msgid "The syntax for using the |resource machine| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:14
+# c04f85b7fd0147c1a799f97e6374ae9b
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:16
+# 6a97b2592fd143ca8930bf5f29ae862a
+msgid "``machine`` tells the |chef client| to use the ``Chef::Provider::Machine`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:17
+# d00113ce11bd4038b7a6895f20de6409
+msgid "``name`` is the name of the resource block and also the name of the machine"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:18
+# 2564a6f327144004a4c5347b0e330546
+msgid "``attribute`` is zero (or more) of the properties that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_syntax.rst:19
+# 456e9b435e084e90ab4421eba4e945b9
+msgid "``:action`` identifies which steps the |chef client| will take to bring the node into the desired state"
+msgstr ""
+
+#: ../source/resource_machine.rst:22
+# ad98430438624b8a93cf8a56a8b3adbd
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:5
+# 1f8db05407314c0b9875e28da8800659
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:11
+# 81491ad936d840caa987ff79de0e2213
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:12
+#: ../../includes_resources/includes_resource_machine_attributes.rst:11
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:11
+# b741496beefd4348bc248451b8d23180
+# 58771c8dac93469a8ec2d65f2eb2bfe3
+# 151e0c7c786b41ae948e459458470d43
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:13
+# 138d78ebc0b343a2b73f51450a227bc3
+msgid "``:allocate``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:14
+# c0070db258104206979c47c80a1a5cd2
+msgid "Use to create a machine, return its machine identifier, and then (depending on the provider) boot the machine to an image. This reserves the machine with the provider and subsequent ``:allocate`` actions against this machine no longer need to create the machine, just update it."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:15
+# db23fcc5527e453ebeb89dceda7ec05b
+msgid "``:converge``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:16
+# 74b695329682479f82d698066dd7ecee
+msgid "Default. Use to create a machine, return its machine identifier, boot the machine to an image with the specified parameters and transport, install the |chef client|, and then converge the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:17
+# 2a563bc8f32042468109ce6fbfcd0063
+msgid "``:converge_only``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:18
+# bc43bfb3f7674cdf9d73625c5b831435
+msgid "Use to converge a machine, but only if the machine is in a ready state."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:19
+# 85cb382969c84e69bf05d73cc3fa5a97
+msgid "``:destroy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:20
+# 9bd1cdb260184d5eb351f159c72684b8
+msgid "Use to destroy a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:21
+# cb5889b51b7546a682c81516ea8cd194
+msgid "``:nothing``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:22
+# 1aed3c4df979430d81737a70d95d6749
+msgid "|resource action nothing|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:23
+# 5628644988d147108d6d75233fdd25cb
+msgid "``:ready``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:24
+# bb37b1e040b74d28b2069f74a3d92683
+msgid "Use to create a machine, return its machine identifier, and then boot the machine to an image with the specified parameters and transport. This machine is in a ready state and may be connected to (via SSH or other transport)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:25
+# d1dc326a75dc4cf1ada03a83bd52dacb
+msgid "``:setup``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:26
+# afd39b0a92a94b09bfc2d49883123051
+msgid "Use to create a machine, return its machine identifier, boot the machine to an image with the specified parameters and transport, and then install the |chef client|. This machine is in a ready state, has the |chef client| installed, and all of the configuration data required to apply the run-list to the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:27
+# db2593888bfe4877b2f67d17e2459e4f
+msgid "``:stop``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_actions.rst:28
+# 0ba011313f3841e1b577658dd1233e47
+msgid "Use to stop a machine."
+msgstr ""
+
+#: ../source/resource_machine.rst:26
+# 04c8faa0fbbd4c92ad14ac980a5ebb0b
+msgid "In-Parallel Processing"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:5
+# 0c2f870f750346568cc315a334f0f2e7
+msgid "In certain situations |chef provisioning| will run multiple |resource machine| processes in-parallel, as long as each of the individual |resource machine| resources have the same declared action. The |resource machine_batch| resource is used to run in-parallel processes."
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:7
+# 41d81bb4bcb34549a7ec77941bbe539a
+msgid "|chef provisioning| will processes resources in-parallel automatically, unless:"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:9
+# 3b7a4643fb724ebba077afc204200bd9
+msgid "The recipe contains complex scripts, such as when a |resource file| resource sits in-between two |resource machine| resources in a single recipe. In this situation, the resources will be run sequentially"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:10
+# 292d36327eea4d8cb052bd4400645e93
+msgid "The actions specified for each individual |resource machine| resource are not identical; for example, if resource A is set to ``:converge`` and resource B is set to ``:destroy``, then they may not be processed in-parallel"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:12
+# 940b46ef7782486a88a422ac260a1981
+msgid "To disable in-parallel processing, add the ``auto_machine_batch`` setting to the |client rb| file, and then set it to ``false``."
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:14
+# 9ced8b8f92d541c483c837b1406927d3
+msgid "For example, a recipe that looks like:"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:22
+# d32b3a2a5fbf40bc8ab723da97bcee9d
+msgid "will show output similar to:"
+msgstr ""
+
+#: ../../includes_provisioning/includes_provisioning_parallel.rst:69
+# f7fb0c0571f24ac3956a069fc0824a95
+msgid "At the end, it shows ``1/1 resources updated``. The three |resource machine| resources are replaced with a single |resource machine_batch| resource, which then runs each of the individual |resource machine| processes in-parallel."
+msgstr ""
+
+#: ../source/resource_machine.rst:30
+# 453e6ae46c934ca797782bb7a8d8e5af
+msgid "Properties"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:4
+# a82f81ddb5f4408d89b99ae1c8cf8758
+msgid "This resource has the following properties:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:10
+# fa63a8a4cd5240a490962de7dd8f1f56
+msgid "Property"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:12
+# 90ed6829e8cc44c997f443ce806906d3
+msgid "``admin``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:13
+#: ../../includes_resources/includes_resource_machine_attributes.rst:17
+#: ../../includes_resources/includes_resource_machine_attributes.rst:71
+#: ../../includes_resources/includes_resource_machine_attributes.rst:107
+#: ../../includes_resources/includes_resource_machine_attributes.rst:218
+# 29f61963aa78470f9b3c5ae04235af36
+# 584f9cfd381b4c978000b96bdacc055c
+# 81ce5368c12d437395ee7281e8b1731d
+# c445ed94aeee4569aeb07008e301f069
+# c178b57a8c6c4983945cc772db9121ff
+msgid "**Ruby Types:** TrueClass, FalseClass"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:15
+# 8dcbd849635b4a99a92ab51be39fc15c
+msgid "Use to specify whether the |chef client| is an API client."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:16
+# 9f7a4cbeebdb4a8c8252849eb65e06ef
+msgid "``allow_overwrite_keys``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:19
+# 0be313ecebcb4cb2b8a8531f774cd021
+msgid "Use to overwrite the key on a machine when it is different from the key specified by ``source_key``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:20
+# 9028a51b1bf34152b9752841ba7bc127
+msgid "``attribute``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:21
+# 93d1053de4b2449ab94033fa97b0bed9
+msgid "Use to specify an attribute, and then modify that attribute with the specified value. The following patterns may be used to specify the value."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:31
+# 455b5253453b44eebde0de2e683d1034
+msgid "The following example will set attribute ``a`` to ``b``:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:37
+# 4b6b32c51ce541c3b632790aa8c0b985
+msgid "The following example will set attribute ``node['a']['b']['c']`` to ``d`` and will ignore attributes ``a.b.x``, ``a.b.y``, etc.:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:43
+# ab9bb759b26c4ddda14c3dca7812c836
+msgid "The following example is similar to ``%w[a b c], 'd'``:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:49
+# 53875f681ec14761b1836f8696ce8d35
+msgid "Each modified attribute should be specified individually. This attribute should not be used in the same recipe as ``attributes``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:50
+# a568447c32f54c44aa9d480ca6518d20
+msgid "``attributes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:51
+# c3d53a48fb414b219deba88083b0f676
+msgid "Use to specify a |ruby hash| that contains all of the normal attributes to be applied to a machine. This attribute should not be used in the same recipe as ``attribute``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:52
+# 1b460a2df46d477f9404c91247595b40
+msgid "``chef_config``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:53
+#: ../../includes_resources/includes_resource_machine_attributes.rst:103
+#: ../../includes_resources/includes_resource_machine_attributes.rst:115
+#: ../../includes_resources/includes_resource_machine_attributes.rst:135
+#: ../../includes_resources/includes_resource_machine_attributes.rst:139
+#: ../../includes_resources/includes_resource_machine_attributes.rst:198
+#: ../../includes_resources/includes_resource_machine_attributes.rst:202
+# 1329bc7bb5464dcfb28af9aaeda86d60
+# 57b316f5aebc4828b2d85fc3c8086764
+# 55a6707f51254332b0f1311f61ece9f2
+# a18da25c800146eb9ebd7d0e062b22ea
+# b03613eba65c4caaabeb76a13105c8f2
+# 7649935c2e244553a6c01f8d78e2d94b
+# de66528c89e34305b39feceb809f4314
+msgid "**Ruby Type:** String"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:55
+# 66dc373c79a8418ab284fe29873adac9
+msgid "Use to specify a string that contains extra configuration settings for a machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:56
+# a0223459d76447f8b25231d5b72cdf6a
+msgid "``chef_environment``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:57
+# 62fba0f4970d47fb98ee0c6a9e44f5d3
+msgid "|name environment|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:58
+# face842a7f344ceb9b5cfb448449e67e
+msgid "``chef_server``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:59
+#: ../../includes_resources/includes_resource_machine_attributes.rst:79
+#: ../../includes_resources/includes_resource_machine_attributes.rst:111
+#: ../../includes_resources/includes_resource_machine_attributes.rst:127
+#: ../../includes_resources/includes_resource_machine_attributes.rst:131
+# bb4c9cd9444c455a9e67166ddd11a4ef
+# 70885204406240f9aba6d48cf092e9a5
+# 49dfd249cb9e4f459c012a3c2f9afb38
+# b56a30841cdb48c58316748a3c612362
+# 3c875a3d122c4a7d8d018908efb72e10
+msgid "**Ruby Type:** Hash"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:61
+# 8cb1da431f0449478dfa2b5943084cb5
+msgid "|chef_server_url|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:62
+# 9b52a7ea4ee84e2cad4345d29b6c7fac
+msgid "``complete``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:63
+# a122ce8087ae4f0b824ff0b086daedcc
+msgid "Use to specify if all of the normal attributes specified by this resource represent a complete specification of normal attributes for a machine. When ``true``, any attributes not specified will be reset to their default values. For example, if a |resource machine| resource is empty and sets ``complete`` to ``true``, all existing attributes will be reset:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:70
+# 5c0be88619d54fa182092742d5d76207
+msgid "``converge``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:73
+# eca711947e3246ba817929d659979a8d
+msgid "Use to manage convergence when used with the ``:create`` action. Set to ``false`` to prevent convergence. Set to ``true`` to force convergence. When ``nil``, the machine will converge only if something changes. Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:74
+# 346c783a3c3f4642999a10eac7790cdc
+msgid "``driver``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:75
+# 68af0b5c3c234c4cb60c2dc58c348413
+msgid "**Ruby Type:** Chef::Provisioning::Driver"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:77
+# 6e74294a8d6442bba150d31b46bbdb9d
+msgid "Use to specify the URL for the driver to be used for provisioning."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:78
+# 71b98a49501b4afdac52115fa744a39d
+msgid "``files``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:81
+# 68d10030ab16421ca8403b4ce3fc0c9c
+msgid "A list of files to upload. Syntax: ``REMOTE_PATH => LOCAL_PATH_OR_HASH``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:83
+# f94618494423401789dd31cbd62b671d
+msgid "For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:89
+#: ../../includes_resources/includes_resource_machine_attributes.rst:97
+# 7a02160dd5b748ab973e5359087926d8
+# ba271fb429c5463395f93a819328489d
+msgid "or:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:102
+# 33092cc8321e4d55b31ef73a4dd8b4c5
+msgid "``from_image``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:105
+# 06ac0049eb354e118390eca081a3c229
+msgid "Use to specify an image created by the |resource machine_image| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:106
+# 83b01a52173c407a91edff119955d834
+msgid "``ignore_failure``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:109
+# ef134a1bca6c4079ad2e2e978d136199
+msgid "|ignore_failure| Default value: ``false``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:110
+# 3b13dcbb2a2748b2bbf1bdaf6f3c225f
+msgid "``machine_options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:113
+# c4af1f80eaeb4d1a9e3591873eee3942
+msgid "A |ruby hash| that is specifies driver options."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:114
+# a631d80e72fa478e8a169ece51dfc725
+msgid "``name``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:117
+# 47d2d193589b4ceea2f6bf5e3115f020
+msgid "The name of the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:118
+# 566e451e80894e79aa7304ceb1e5f1b8
+msgid "``notifies``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:119
+#: ../../includes_resources/includes_resource_machine_attributes.rst:206
+# c4f1fc2ebb0b46ab8f604fcbf2269fa1
+# feb4b2ce0b0946279d846aa115a5497c
+msgid "**Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:121
+# 1b31c96798774bc5a31798f4670a0cd8
+msgid "|notifies|"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst:4
+# 9902fc1109d34c9494250f4082485ffc
+msgid "Specify the ``:action``, ``'resource[name]'``, and timer (``:delayed`` or ``:immediately``). Use multiple ``notifies`` statements to notify more than one resource."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:4
+# b5016d8f4fb645c08639448cf78fa2c4
+msgid "Use the following timers to specify when a notification is triggered:"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:10
+# 00867f5e9e124249989f2eec166b47eb
+msgid "Timer"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:12
+# 59d4953a23ea4571b2f494bbd4a21976
+msgid "``:delayed``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:13
+# 4b78a368a5a748e6ab171a8b8196d5a6
+msgid "Use to specify that a notification should be queued up, and then executed at the very end of a |chef client| run."
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:14
+# 151c452ecb694744b6343fef2b9ac338
+msgid "``:immediately``"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_timers.rst:15
+# 156a1fea621a474786c1e698d4a62ac8
+msgid "Use to specify that a notification should be run immediately, per resource notified."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:126
+# 689fd4f1a0564d80a98d2361884dbde0
+msgid "``ohai_hints``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:129
+# 28cc682447fa47eb8d94999c7761cb08
+msgid "|hint| For example: ``'ec2' => { 'a' => 'b' } creates file ec2.json with json contents { 'a': 'b' }``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:130
+# 20eca8243ede40cba9e7e5dae6f90666
+msgid "``private_key_options``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:133
+# de1435db0645458591814f3c2d6a373c
+msgid "Use to generate a private key of the desired size, type, and so on."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:134
+# e726f04067f6483eb291de98c8c4196d
+msgid "``public_key_format``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:137
+# fe46e477717845aa9b68d9fb6fdad9cb
+msgid "Use to specify the format of a public key. Possible values: ``pem`` and ``der``. Default value: ``pem``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:138
+# 62064ced10464bbcbc7908e66f231596
+msgid "``public_key_path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:141
+# 1cd1c7d95d224158a49142eaca7a3f94
+msgid "The path to a public key."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:142
+# 1d79c95617d54041903dcaf4b9992764
+msgid "``raw_json``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:143
+# c4985428d3114be3a8497e284cc7a606
+msgid "The machine as |json| data. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:159
+# 0da91fd8305341deaf6d73d8fc951093
+msgid "``recipe``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:160
+# 6ddf2bb5cdec432f88f37e14597d6aaa
+msgid "Use to add a recipe to the run-list for a machine. Use this property multiple times to add multiple recipes to a run-list. Use this property along with ``role`` to define a run-list. The order in which the ``recipe`` and ``role`` properties are specified will determine the order in which they are added to the run-list. This property should not be used in the same recipe as ``run_list``. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:167
+# 20f75be5941d4eda9f82dc21092bc6e0
+msgid "``remove_recipe``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:168
+# c80a77409121449481dc4107347f3e69
+msgid "Use to remove a recipe from the run-list for the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:169
+# d00c06ecfd34493da29402811ce3ff5d
+msgid "``remove_role``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:170
+# 4a94d175e75b4d71b5d0f49f05239d49
+msgid "Use to remove a role from the run-list for the machine."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:171
+# 8803073c79964396ad751e6b65ded8e9
+msgid "``remove_tag``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:172
+# 60c64654a6d44b0480910ede9f94d5dd
+msgid "Use to remove a tag."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:173
+# 9443d66b2cad43b48cb17fcdeec77384
+msgid "``retries``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:174
+#: ../../includes_resources/includes_resource_machine_attributes.rst:178
+# 23289e9ddb124bccae4abece31b65dd1
+# a41a35569c8d4f42bd2cdfab89f98807
+msgid "**Ruby Type:** Integer"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:176
+# b99b63f9d0134f459638bb5135c1e477
+msgid "|retries| Default value: ``0``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:177
+# d0592c8918fb4e238fe9205fcf8493d1
+msgid "``retry_delay``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:180
+# 11b9d04cf23b45bda4111386a2ca948b
+msgid "|retry_delay| Default value: ``2``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:181
+# 07a800998770417c983199bd6b6533bd
+msgid "``role``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:182
+# 6d8ac03504484bb4a889819496291629
+msgid "Use to add a role to the run-list for the machine. Use this property multiple times to add multiple roles to a run-list. Use this property along with ``recipe`` to define a run-list. The order in which the ``recipe`` and ``role`` properties are specified will determine the order in which they are added to the run-list. This property should not be used in the same recipe as ``run_list``. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:189
+# 8b1670a9db854e3c8127058097e052b2
+msgid "``run_list``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:190
+# 0162bc5e2b5e4a968982aed81d65c364
+msgid "An array of strings that specifies the run-list to apply to a machine. This property should not be used in the same recipe as ``recipe`` and ``role``. For example:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:195
+# 3a553661b6004d94b9f79e63b9de5fdb
+msgid "``source_key``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:196
+# dd00bb591e37427091cf82bfe9ef3d62
+msgid "Use to copy a private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:197
+# 4c6d61b3887143b79ea59aaed3e0e665
+msgid "``source_key_pass_phrase``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:200
+# 7fe4db2190e14e13a07ad37840f9b7da
+msgid "The pass phrase for the private key. Use in conjunction with ``source_key``` and ``source_key_path``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:201
+# 228e1298926946df99b4cc6c532187ec
+msgid "``source_key_path``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:204
+# 2adaccfd57fd48f49f6f635240492f22
+msgid "The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:205
+# f046ce5b02064a0697ed726379ed3ac7
+msgid "``subscribes``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:208
+# ef403fa1e58445c5ac28f113a22d5a76
+msgid "|subscribes|"
+msgstr ""
+
+#: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst:4
+# 646cc92ab1b4468abfa996bb81b7f080
+msgid "Specify the ``:action``, ``'resource[name]'``, and timer (``:delayed`` or ``:immediately``). Use multiple ``subscribes`` statements to listen to more than one resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:212
+# eb7f6a24541a4765b8ad2b1c6c035d93
+msgid "|subscribes timers|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:213
+# d2ffb980f5644b2b85cff744244db9c1
+msgid "``tag``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:214
+# 3349c226fc2c4b8fb0f3968e16d3cf42
+msgid "Use to add a tag."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:215
+# 16b5cd0edf784f2fb21f8d18de5c81a0
+msgid "``tags``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:216
+# 571363b5574244c2ac0da9bd0edd46b5
+msgid "Use to add one (or more) tags. This will remove any tag currently associated with the machine. For example: ``tags :a, :b, :c``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:217
+# 6f4db92bb5014571939c1a2464b38635
+msgid "``validator``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_machine_attributes.rst:220
+# 005c510e2eb34ad0b497f7ea7ff73733
+msgid "Use to specify if the |chef client| is a |chef validator|."
+msgstr ""
+
+#: ../source/resource_machine.rst:44
+# c5a6f5636d124f51abeff5048f1dae70
+msgid "Examples"
+msgstr ""
+
+#: ../source/resource_machine.rst:45
+# cc9ab046d1454605b1bff36ef8309131
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/resource_machine.rst:47
+# 9c5bd02edace4b2da44ee8f5283d4c93
+msgid "**Build machines dynamically**"
+msgstr ""
+
+#: ../source/resource_machine.rst:51
+# 1d88b84e12654dcc859c2309df3c091d
+msgid "**Get a remote file onto a new machine**"
+msgstr ""
+
+#: ../../step_resource/step_resource_machine_file_get_remote_file.rst:4
+# ef0e0061f64d46bda92e3615f8ae8df8
+msgid "A deployment process requires more than just setting up machines. For example, files may need to be copied to machines from remote locations. The following example shows how to use the |resource remote_file| resource to grab a tarball from a URL, create a machine, copy that tarball to the machine, and then get that machine running by using a recipe that installs and configures that tarball on the machine:"
+msgstr ""
+
+#: ../source/resource_machine.rst:55
+# d9fb8f22ce20499490268be501dee57a
+msgid "**Build machines that depend on each other**"
+msgstr ""
+
+#: ../../step_resource/step_resource_machines_codependent_servers.rst:4
+# f8e04ced69284444b1dd98e47ceb80d5
+msgid "The following example shows how to create two identical machines, both of which cannot exist without the other. The first |resource machine| resource block creates the first machine by omitting the recipe that requires the other machine to be defined. The second resource block creates the second machine; because the first machine exists, both recipes can be run. The third resource block applies the second recipe to the first machine:"
+msgstr ""
+
+#: ../source/resource_machine.rst:59
+# 7625d5bf23664423b1e16260e1b904f6
+msgid "**Use a loop to build many machines**"
+msgstr ""
+
+#: ../source/resource_machine.rst:63
+# 6980e435f3ef454e926e259d3d3a0ec5
+msgid "**Converge multiple machine types, in-parallel**"
+msgstr ""
+
+#: ../../step_resource/step_resource_machine_batch_multiple_machine_types.rst:4
+# 8316ce0d1cd947e59167bd70db9b7521
+msgid "The |resource machine_batch| resource can be used to converge multiple machine types, in-parallel, even if each machine type has different drivers. For example:"
+msgstr ""
+
+#: ../source/resource_machine.rst:67
+# bbe7ff9612144d2789ed42f0df863b23
+msgid "**Define machine_options for a driver**"
+msgstr ""
+
+#: ../../step_resource/step_resource_machines_define_machine_options.rst:25
+# dfc49f9e9f604458a97e0aa1d2f3c1a0
+msgid "where ``provisioning_driver`` and ``:driver_options`` specify the actual ``driver`` that is being used to build the machine."
+msgstr ""
+
+#: ../source/resource_machine.rst:71
+# 8fb6e88438d84c37990d3b0cbe822ae3
+msgid "**Build a machine from a machine image**"
+msgstr ""
+
+#: ../source/resource_machine.rst:75
+# 54355ad6586e42be90d98cbd20cdbcd4
+msgid "**Set up a VPC, route table, key pair, and machine for Amazon AWS**"
+msgstr ""
+

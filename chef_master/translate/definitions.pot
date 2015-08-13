@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-13 10:10-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/definitions.rst:7
+# fef36ee5257049238c6725276d974f8f
+msgid "About Definitions"
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:5
+# 042ee97529884856b7a6b34f6579e03b
+msgid "A definition is code that is reused across recipes, similar to a compile-time macro. A definition is created using arbitrary code wrapped around built-in |chef client| resources---|resource file|, |resource execute|, |resource template|, and so on---by declaring those resources into the definition as if they were declared in a recipe. A definition is then used in one (or more) recipes as if it were a resource."
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:7
+# d91985880d7d4ea9b97d0d6803cdc248
+msgid "Though a definition behaves like a resource, some key differences exist. A definition:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:9
+# 7410b361f0a844e580b36e645bfd28ef
+msgid "Is not a resource or a lightweight resource"
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:10
+# ce041dfe7f38401fb29363f2b234dbbd
+msgid "Is defined from within the ``/definitions`` directory of a cookbook"
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:11
+# 33e387bfdcb2428cafe2d35999cd18fa
+msgid "Is loaded before resources during the |chef client| run; this ensures the definition is available to all of the resources that may need it"
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:12
+# 990a6926cbc343d0881dc1e65d938759
+msgid "May not notify resources in the resource collection because a definition is loaded **before** the resource collection itself is created; however, a resource in a definition **may** notify a resource that exists within the same definition"
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:13
+# b375fc306ec14dd1b45b3247082af813
+msgid "Automatically supports |whyrun| mode, unlike lightweight resources"
+msgstr ""
+
+#: ../../includes_definition/includes_definition.rst:15
+# 54432a458ab942e894eb9690686027bc
+msgid "Use a defintion when repeating patterns exist across resources and/or when a simple, direct approach is desired. There is no limit to the number of resources that may be included in a definition: use as many built-in |chef client| resources as necessary."
+msgstr ""
+
+#: ../source/definitions.rst:12
+# 6a20b3af43d04d77ab2990dbcb8f22cf
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:4
+# 8c4a0b902f0240deb62bcdc61b7b0003
+msgid "A definition has four components:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:6
+# aefe6bb304da4e50af1f02ede07f1510
+msgid "A resource name"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:7
+# 869acb317c404b4d937cec90f71d3649
+msgid "Zero or more arguments that define parameters their default values; if a default value is not specified, it is assumed to be ``nil``"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:8
+# c0d9f56851cd4089b29a2669207fd8d5
+msgid "A hash that can be used within a definition's body to provide access to parameters and their values"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:9
+# 4b620d282fb847a3b816cf9f1edf48e7
+msgid "The body of the definition"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:11
+# f2892f4dc9cd41fdaba77dba5a555923
+msgid "The basic syntax of a definition is:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:19
+# 2669889f46234faa977d4899cff2796e
+msgid "More commonly, the usage incorporates arguments to the definition:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:27
+# 664d7f2b73e642c686e5ea30bbe2665b
+msgid "The following simplistic example shows a definition with no arguments (a parameterless macro in the truest sense):"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:37
+# 46979e495abe461e82701a06109685fd
+msgid "An example showing the more common usage pattern, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable``, would look something like:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:49
+# 2c3897c2745c47f0bb8465c85dcc5b68
+msgid "Or the following definition, which looks like a resource when used in a recipe, but also contains resources---|resource directory| and |resource file|---that are repeated, but with slightly different parameters:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_syntax.rst:65
+# 305b4dbe6fee44578cba0b7d1290aeae
+msgid "which is then used in a recipe like this:"
+msgstr ""
+
+#: ../source/definitions.rst:16
+# 79d5114d5936418fa6ce759bba12e9db
+msgid "Examples"
+msgstr ""
+
+#: ../source/definitions.rst:17
+# a89eb8a51e7242d6b09c69f36fa0981e
+msgid "The following examples show how to use cookbook definitions."
+msgstr ""
+
+#: ../source/definitions.rst:20
+# 9157208d297444ce9050cedfd06763d2
+msgid "Simplify Repeating Patterns"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_common_install.rst:4
+# fe99bdcd054744228c7ff82bcadba9eb
+msgid "A definition file is similar to a macro; use a definition to define reusable code. For example, the following definition defines a common installation scenario, in this case installing |splunk| on multiple machines:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_common_install.rst:51
+# db6df93f122a48f88d3465994ef96132
+msgid "Once created, this definition is used just like a resource:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_common_install.rst:59
+# ad045682bef74499b448b72d4513d101
+msgid "and then another recipe:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_common_install.rst:67
+# 85fed78cac644be0bc06a04b6a5ff988
+msgid "and so on."
+msgstr ""
+
+#: ../source/definitions.rst:24
+# 63086697276e43c5848dac716a86bba3
+msgid "Create a Resource"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_create_resource.rst:4
+# 7e2702e0624643b8aa61e4aa2e7e24f1
+msgid "A definition file can be used to create an object that the |chef client| can then use like a resource. For example:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_create_resource.rst:31
+# 3700694a254a440d9a15395cedea17f1
+msgid "Once created, the definition can be used by placing it in a recipe:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_create_resource.rst:46
+# 5bb74d9200e6422b86bc396075f51772
+msgid "The attributes of the new ``apache_site`` object are made accessible with the params hash. Within the context of a |chef client| run, the definition will be replaced by all the resources that are specified within the definition. For example, in the ``enabled`` case, the definition will be expanded to:"
+msgstr ""
+
+#: ../source/definitions.rst:28
+# 3417b21b2bfa488cb264e287941230c0
+msgid "Many Recipes, One Definition"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_many_recipes_one_definition.rst:4
+# 497cf21824444e149ca05e8dd361fa55
+msgid "Data can be passed to a definition from more than one recipe. For example, when both ``/etc/aliases`` and |path etc sudoers| require updates from multiple recipes during a single |chef client| run. A definition file that reopens resources would look something like:"
+msgstr ""
+
+#: ../source/definitions.rst:32
+# b7225d8970874bfaaa659491b7106c5c
+msgid "Virtual Hosts"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_virtaul_hosts.rst:4
+# d5b147a09d9f42f1b840da0091c1d38c
+msgid "Two applications need to be deployed and run on a single node under the same domain and sub-domain. A |ruby on rails| application will reside as the main application at ``example.com`` and a |wordpress| application will reside at ``blog.example.com``. The domain is running |apache 2| as the web server. The domain is expected to grow, but for now only two ``run_list`` resources are created, with the appropriate roles added to them. At some point in the future, when a new sub-domain is required, a new ``run_list`` resource would also be created."
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_virtaul_hosts.rst:6
+# eba32d22e7e14216bd8c28c0452d0a7b
+msgid "The virtual host on the |apache 2| server is only one per node, which can create challenges when a node requires updates. Using a definition helps get around this issue. For example, the ``web_app`` definition exists in the |cookbook apache2| cookbook, and can be used like this:"
+msgstr ""
+
+#: ../../includes_definition/includes_definition_scenario_virtaul_hosts.rst:16
+# 31de2fee34ca435ea9cccd873dd74e26
+msgid "When the |chef client| processes a recipe that contains this definition, it will find the ``web_app`` resource and will attempt to recognize it as a resource. Assuming that the |cookbook apache2| cookbook is available, the resources contained within that cookbook will be found and loaded, replacing the definition."
+msgstr ""
+
