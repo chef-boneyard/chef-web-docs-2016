@@ -11,4 +11,4 @@ Style Guide
 .. toctree::
    :hidden:
 
-   
+   test_doc
