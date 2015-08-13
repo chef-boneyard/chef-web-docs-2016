@@ -130,7 +130,7 @@ This configuration file has the following settings:
    * - ``pid_file``
      - |path pid_file| Default value: ``/tmp/name-of-executable.pid``.
    * - ``rest_timeout``
-     - |timeout rest|
+     - |timeout rest| Default value: ``300``.
    * - ``role_path``
      - |path roles_chef| Default value: ``/var/chef/roles``.
    * - ``run_lock_timeout``
