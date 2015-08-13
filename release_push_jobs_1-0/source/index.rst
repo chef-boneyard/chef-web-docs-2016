@@ -26,5 +26,4 @@ All about |push jobs_title| 1.0 ...
    install_push_jobs
    plugin_knife_push_jobs
    push_jobs
-   release_notes
    server_orgs
