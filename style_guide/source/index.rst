@@ -1,5 +1,5 @@
 =====================================================
-Style Guide 
+Style Guide Index File 
 =====================================================
 
 .. include:: ../../includes_style_guide/includes_style_guide.rst
