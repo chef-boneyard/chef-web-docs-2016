@@ -38,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Slides'
+project = u'Ohai 8 Documentation'
 copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -110,7 +110,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Slides"
+html_title = "Ohai 8 Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -135,7 +135,7 @@ html_static_path = ['_static']
 # hack that achieved the desired behavior. Plus, there's 0% chance that we'll
 # ever want to insert a datetime stamp in the docs.
 
-html_last_updated_fmt = 'Slides'
+html_last_updated_fmt = 'Ohai, version 8'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
