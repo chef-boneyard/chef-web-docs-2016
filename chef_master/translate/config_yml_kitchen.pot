@@ -1,0 +1,957 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-13 10:10-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/config_yml_kitchen.rst:7
+# 0d93de209c0f405e81fa951a0b7de766
+msgid "|kitchen yml|"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen.rst:5
+# 630cb6f480b841e5a22e3354013d91f6
+msgid "Use `Kitchen <http://kitchen.ci>`_  to automatically test cookbook data across any combination of platforms and test suites:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen.rst:7
+# c2841c611fd04a7f979f3d34e06dfb35
+msgid "Defined in a |kitchen yml| file"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen.rst:8
+# 4871ea29ed034044b32e4ea68a91b2c8
+msgid "Uses a driver plugin architecture"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen.rst:9
+# a51e946b641249b7982e1dc98f53d1ed
+msgid "Supports cookbook testing across many cloud providers and virtualization technologies"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen.rst:10
+# 489e6f2dbc29438bb99327fb9101a259
+msgid "Supports all common testing frameworks that are used by the |ruby| community"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen.rst:11
+# 312294c69efc49ca9018612bb004c169
+msgid "Uses a comprehensive set of base images provided by `Bento <https://github.com/chef/bento>`_"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml.rst:5
+# 4d7ad6f3192e48f49c1b9a10eebe783c
+msgid "Use a |kitchen yml| file to define what is required to run |kitchen|, including drivers, provisioners, platforms, and test suites."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:13
+# 438b9d828ced4b139401ecdcc1d32bfa
+msgid "This topic details functionality that is packaged with |chef dk|. See http://kitchen.ci/docs/getting-started/ for more information about |kitchen|."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:16
+# 77c7c947bfa0451390ab25680ffd0a19
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:5
+# a4361a3813804b67a7c6fcde6bfcf278
+msgid "The basic structure of a |kitchen yml| file is as follows:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:37
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_chef_client.rst:34
+# 5f1065ba42b24b5993451a71f12b4416
+# f4832cfc87e34d4ab3fa9f024ecdc3e7
+msgid "where:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:39
+# 5a32624cf42f418682254ad6418f6441
+msgid "``driver_name`` is the name of a driver that will be used to create platform instances used during cookbook testing. This is the default driver used for all platforms and suites **unless** a platform or suite specifies a ``driver`` to override the default driver for that platform or suite; a driver specified for a suite will override a driver set for a platform"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:40
+# 38e0168099f44a589afa57bc62cfba95
+msgid "``provisioner_name`` specifies how the |chef client| will be simulated during testing. ``chef_zero``  and ``chef_solo`` are the most common provisioners used for testing cookbooks"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:41
+# f761a6e57c7c4efd89bfde0090961788
+msgid "``platform-version`` is a the name of a platform on which |kitchen| will perform cookbook testing, for example, ``ubuntu-12.04`` or ``centos-6.4``; depending on the platform, additional driver details---for example, instance names and URLs used with cloud platforms like |openstack| or |amazon ec2|---may be required"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:42
+# 24273f17083440abab3678c21b770733
+msgid "``platforms`` may define |chef server| attributes that are common to the collection of test suites"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:43
+# a544fc11e109456fb33d326d22314090
+msgid "``suites`` is a collection of test suites, with each ``suite_name`` grouping defining an aspect of a cookbook to be tested. Each ``suite_name`` must specify a run-list, for example:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:51
+# c4165400d6de4f0db2d8747daf90d6db
+msgid "Each ``suite_name`` grouping may specify ``attributes`` as a |ruby hash|: ``{ foo: \"bar\" }``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:52
+# 9ad36549ee674f6286a77c4c98cf58b4
+msgid "A ``suite_name`` grouping may use ``excludes`` and ``includes`` to exclude/include one (or more) platforms. For example:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:60
+# 99cf2a1ede934ed1954c176fc1673d17
+msgid "For example, a very simple |kitchen yml| file:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax.rst:82
+# 8cb2dd5f4154485d8497ea4c725f421d
+msgid "This file uses |vagrant| as the driver, which requires no additional configuration because it's the default driver used by |kitchen|, |chef zero| as the provisioner, and a single (default) test suite that runs on |ubuntu| 12.04, and |centos| 6.4."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:20
+# f93b88abd162427fa3339916ab95198a
+msgid "Provisioner Settings"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:5
+# 9f8cff207dd24bd18184a54d6221abbe
+msgid "|kitchen| can configure the |chef zero| provisioner with the following |chef|-specific settings:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:11
+# 1b782c13995d404daae2c2c33bc14d8c
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:12
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:18
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:12
+# 5894cea81da145a1bc8687f1478479b8
+# f4683cbdcd8c481cac2aca629ea15c61
+# d76f92cd2e644a7f9267a7d9e7e11566
+msgid "Description"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:13
+# 29f5298be85d4062a0188047e00e75a4
+msgid "``attributes``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:15
+# e9e40d89e2734a2a92c6a78f82ff8170
+msgid "``chef_client_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:16
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:28
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:58
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:70
+# 4d324e110b2649148791dbc6108e289b
+# ecf2a441e4d54831aef8c2fc6df19989
+# 9a3728ab691d45d3ac390f6ba69c4d08
+# 92d26a12cfe648de812ddd2f51bb25c4
+msgid "|chef client| provisioner only."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:17
+# 3500dd94e05e44349b315b4cc30f48c8
+msgid "``chef_metadata_url``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:19
+# 48e37fc57c8149d7a8c7ae87e562a555
+msgid "``chef_omnibus_install_options``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:20
+# 185c428a9a154c12ae2dd17993abe705
+msgid "Use to specify the package to be installed. Possible values: ``-P chef`` (for the |chef client|) and ``-P chefdk`` (for the |chef client| that is packaged as part of the |chef dk|). Use ``-n`` to specify the nightly build. For example: ``-P chefdk`` or ``-n -P chefdk``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:21
+# 8565a4215ec84af7b13454a869794945
+msgid "``chef_omnibus_root``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:22
+# 672697a7f16543f5a709f2dce6bef4ab
+msgid "Default value: ``/etc/opt`` for |unix| and |linux|, ``$env:systemdrive\\\\opscode\\\\chef`` on |windows|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:23
+# 53849a0db095414891374add29acbdf6
+msgid "``chef_omnibus_url``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:24
+# 12c3654feca6462ab5fff77c0fa37095
+msgid "The URL for an ``install.sh`` script that will install |chef client| on the machine under test. Default value: ``https://www.chef.io/chef/install.sh``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:25
+# ae5beeb97c7042428d64fc93975b360d
+msgid "``chef_solo_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:26
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:74
+# 9c03497c0f16494e94853472887a42c0
+# 7cd99d33e49a49f992d9cfb8e773c651
+msgid "|chef solo| provisioner only."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:27
+# d15e2d81257a4b19b513fc5194084a7e
+msgid "``chef_zero_host``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:29
+# f59942d763674b708b0758e8b1353d3f
+msgid "``chef_zero_port``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:30
+# 1f12892e80374c36aab6bdfbd0ca9c79
+msgid "|chef client| provisioner only. |chef_zero_port|"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:31
+# 10811c838a3a40a4a53392ff6fbad850
+msgid "``client_rb``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:32
+# 7cee815fae1f4ffc8efc3ac4d699ac34
+msgid "|chef client| provisioner only. A list of |client rb| file settings. For example:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:39
+# 420a526c23db46b093a2a319cf44b922
+msgid "``clients_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:40
+# f485a3316d8646e1b94c6b85d1a5c8d4
+msgid "The relative path to the directory in which client data is located. This data must be defined as |json|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:41
+# cf6a0eac8a964361a4d9ce2e50802758
+msgid "``cookbook_files_glob``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:42
+# ae6cf86a3fed46c49d9afcd742964c76
+msgid "A file glob (pattern) that matches files considered to be part of the cookbook. (Typically, this value does not need to be modified from the default.)"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:43
+# 62595a0d505448cf9cb36a7bb0eb34b7
+msgid "``data_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:44
+# 85679e6661e14e5faa16642faa6658d0
+msgid "Use to specify the path from which non-cookbook files are copied to a |kitchen| instance."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:45
+# 5aed42f5aa834e11baa82bdf6336b8a8
+msgid "``data_bags_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:46
+# a38b5f31a214420cb6e466b53e63858e
+msgid "The relative path to a directory in which data bags and data bag items are defined. This data must be structured as if it were in the |chef repo|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:47
+# 7eeb775c00a042e495f25fee3c1b0e1b
+msgid "``driver``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:48
+# d5db4a5c203c454dae45c5c13c8cd7d2
+msgid "Use to specify a driver for a platform. This will override the default driver."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:49
+# 32b19ee9eb5e448abd97ec89656c8414
+msgid "``encrypted_data_bag_secret_key_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:50
+# 6f30786dc8de46259e6ab19ca19aa64b
+msgid "The path to an RSA key file that is used to decrypt encrypted data bag items."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:51
+# dc871f85f83e4c239b8a5095b60f15b0
+msgid "``environments_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:52
+# 514fe1edfacf4dc6a91d500d769591fb
+msgid "The relative path to the directory in which environment data is located. This data must be defined as |json|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:53
+# ecafa8c43e8f44cdbf6c7e1a3ba5e26d
+msgid "``http_proxy``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:54
+# 4653bd0d585a462293239d48609c6d71
+msgid "|http_proxy|"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:55
+# afd377e19b464ee7a741f28741caed1a
+msgid "``https_proxy``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:56
+# 4f5279774ed745d19c638856ef6de4cc
+msgid "|https_proxy|"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:57
+# eb127537f36145efb3c26b3e35d2875f
+msgid "``json_attributes``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:59
+# a7ea679a54cf403db80738d56f981fb1
+msgid "``kitchen_root``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:60
+# 9ac6c69ba770445fbbcec698a9b5e041
+msgid "The directory in which |kitchen| will stage all content on the target node. This directory should be large enough to store all the content and must be writable. (Typically, this value does not need to be modified from the default value.) Default value: ``/tmp/kitchen``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:61
+# 67eeef5999b8414d8c93fb5236d13808
+msgid "``log_file``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:63
+# f94df7d3af2f4b689183b4a2cd4eff6c
+msgid "``nodes_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:64
+# e42d10c934cf4c1280c941e0ed952e6d
+msgid "The relative path to the directory in which node data is located. This data must be defined as |json|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:65
+# fed31122ee6d42a996757fc8fca351f7
+msgid "``require_chef_omnibus``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:66
+# bf02275573bc41308527667ddcddac26
+msgid "Use to install the latest version of the |chef client| in a node. Set to ``true`` to install the latest version, ``false`` to not install |chef client| (assumes the box already has it installed), or a version specifier like ``11.8.0`` to install a particular version. When set to ``true`` or a version number, the ``chef_omnibus_url`` may be used to specify the URL of the ``install.sh`` that installs the specified version of |chef client|. Default value: ``false``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:67
+# 5959f12475164a3586bc887a56f4fcd6
+msgid "``roles_path``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:68
+# fd301b1a806d489297e1b5c80b9dda03
+msgid "The relative path to the directory in which role data is located. This data must be defined as |json|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:69
+# 66cb0e32112f4e50bbfe1ef41fc77641
+msgid "``ruby_bindir``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:71
+# 434195191c8743ff972a2eeae08d07a1
+msgid "``run_list``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:73
+# d8b4570302ef494e9cef77ef422171c6
+msgid "``solo_rb``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_provisioner.rst:76
+# c20f177473024dfbbd59f2418bcb2ac9
+msgid "These settings may be added to the ``provisioner`` section of the |kitchen yml| file when the provisioner is |chef zero| or |chef solo|."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:23
+# c427181c26fd491cac9ee7c812fbb8f1
+msgid "There are two community provisioners for |kitchen|: `kitchen-dsc <https://github.com/smurawski/kitchen-dsc>`__ and `kitchen-pester <https://github.com/smurawski/kitchen-pester>`__."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:26
+# f424441ba4364279a513e6cf72f983a3
+msgid "Work with Proxies"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_syntax_proxy.rst:5
+# aeae0294e6864028ae3245c2b47aa595
+msgid "Use the ``http_proxy`` or ``https_proxy`` settings to configure |kitchen| to work in an environment where proxies are necessary. For example:"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:30
+# 292bb7fabed44e82808003788bf9e35b
+msgid "|chef client| Settings"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_chef_client.rst:5
+# acbb3fd4b8344e8e94ff566bdbae526c
+msgid "A |kitchen yml| file may define |chef client|-specific settings, such as whether to require the |omnibus installer| or the URL from which the |chef client| is downloaded, or to override settings in the |client rb| file:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_chef_client.rst:36
+# b5077ccc99554bf083884fd21d7c5296
+msgid "``require_chef_omnibus`` is used to ensure that the |omnibus installer| will be used to install the |chef client| to all platform instances; ``require_chef_omnibus`` may also be set to ``latest``, which means the newest version of the |chef client| for that platform will be used for cookbook testing"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_chef_client.rst:37
+# 8edaa6517ed9483682ccf9541b6bc446
+msgid "``chef_omnibus_url`` is used to specify the URL from which the |chef client| is downloaded"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_chef_client.rst:38
+# 80a2d15b55e649d58864936f1501c737
+msgid "All of the ``attributes`` for the ``config`` test suite contain specific |client rb| settings for use with this test suite"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:34
+# cc305376d4344572bad69333a9750061
+msgid "Driver Settings"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_driver.rst:5
+# 8905be36efed46cbbbb63b242bc97d98
+msgid "Driver-specific configuration settings may be required. Use the following block in the |kitchen yml| file:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_driver.rst:14
+# eee715f55f7b4594a9719e2655da1a9a
+msgid "where ``driver_config`` is a collection of settings required by the driver plugins listed in the |kitchen yml| file; specific ``key: value`` pairs will vary, depending on which drivers, provisioners, and platforms are being used. For example:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_driver.rst:25
+# fc7fc7e97a234c1ab73ba0c6fac9f03d
+msgid "and then within each ``platforms`` definition, additional settings may be necessary to ensure that specific platform can build the instance:"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:38
+# 3b2eaaf5c83847298db572d3ed000650
+msgid "Bento"
+msgstr ""
+
+#: ../../includes_bento/includes_bento.rst:5
+# e314469851fd406bbbd95e8902559f86
+msgid "`Bento <https://github.com/chef/bento>`_ is a project that contains a set of base images that are used by |company_name| for internal testing and to provide a comprehensive set of base images for use with |kitchen|. By default, |kitchen| uses the base images provided by |bento|. (Custom images may also be built using |packer|.)"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:42
+# 61468bf676c94799be92dc12a89af2ae
+msgid "Drivers"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:5
+# d9259cc932444d7a836050fd0c3ec149
+msgid "|kitchen| uses a driver plugin architecture to enable |kitchen| to simulate testing on cloud providers, such as |amazon ec2|, |openstack|, and |rackspace|, and also on non-cloud platforms, such as |windows|. Each driver is responsible for managing a virtual instance of that platform so that it may be used by |kitchen| during cookbook testing."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:7
+# 8d6f2b8ce1e54368aa5f08d3f3704ef8
+msgid "The |chef dk| includes the ``kitchen-vagrant`` driver."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:9
+# 9410b8d98ffb418ba965fc6174aca95f
+msgid "Most drivers have driver-specific configuration settings that must be added to the |kitchen yml| file before |kitchen| will be able to use that platform during cookbook testing. For information about these driver-specific settings, please refer to the driver-specific documentation."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:11
+# f680188dc16c41509afd618226e5d854
+msgid "Some popular drivers:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:17
+# 95307f22f0cc451ba0e3297632e2ab64
+msgid "Driver Plugin"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:19
+# 385449091bfd4c9389693b5b3539739f
+msgid "`kitchen-all <https://rubygems.org/gems/kitchen-all>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:20
+# 4dea01c3c1334acaa3958d443d8db443
+msgid "A driver for everything, or \"all the drivers in a single |ruby| |gem|\"."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:21
+# 125ced21a5e842709521799ed2c30e7e
+msgid "`kitchen-bluebox <https://github.com/blueboxgroup/kitchen-bluebox>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:22
+# 474ac04861f2427c87de7f5d02c49472
+msgid "A driver for |bluebox|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:23
+# 10d3702123134824bc40a3d3d60da074
+msgid "`kitchen-cloudstack <https://github.com/test-kitchen/kitchen-cloudstack>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:24
+# 1fb524f4a0cd4757a507f9b29cda94df
+msgid "A driver for |cloudstack|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:25
+# fed2297037944750a6dd0c1787a1fbd9
+msgid "`kitchen-digitalocean <https://github.com/test-kitchen/kitchen-digitalocean>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:26
+# ea6cd45248934acd9bc342160bd2ce1d
+msgid "A driver for |digital ocean|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:27
+# 0312a82c7758412b98038be732e5c4a6
+msgid "`kitchen-docker <https://github.com/portertech/kitchen-docker>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:28
+# 8cb342ad50a941bfb035c2b05cdcd2b1
+msgid "A driver for |docker|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:29
+# fde816deb9414f1aadbe58044b0c9798
+msgid "`kitchen-dsc <https://github.com/test-kitchen/kitchen-dsc>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:30
+# 56c37d0858ca46adb18a688296c46dc5
+msgid "A driver for |windows powershell| |windows powershell_dsc|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:31
+# 2a0b8fb42b6440a7af996f29c22b4bc2
+msgid "`kitchen-ec2 <https://github.com/test-kitchen/kitchen-ec2>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:32
+# d7a98fd8d3a54de7a856da23ff0c85ed
+msgid "A driver for |amazon ec2|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:33
+# a143db7dc3e54ddb8ff0b4f4da323d5d
+msgid "`kitchen-fog <https://github.com/TerryHowe/kitchen-fog>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:34
+# f7bff6b7217145c0b9855467994c4e73
+msgid "A driver for |fog|, a |ruby| |gem| for interacting with various cloud providers."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:35
+# 25e1fcb20edd427db42f11a3e819e639
+msgid "`kitchen-gce <https://github.com/anl/kitchen-gce>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:36
+# a9a198ef49464359a7d044bed86738a3
+msgid "A driver for |google compute engine|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:37
+# 09e7c11bf4c340d58ecd238ce535f593
+msgid "`kitchen-hyperv <https://github.com/test-kitchen/kitchen-hyperv>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:38
+# 8984b3d5d06347e3b7cfbda106f14d1b
+msgid "A driver for |microsoft hyperv|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:39
+# 93db624a94a449c6982612f770f40ddd
+msgid "`kitchen-joyent <https://github.com/test-kitchen/kitchen-joyent>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:40
+# 54254a140f1842b8a52fcda91e225bc4
+msgid "A driver for |joyent|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:41
+# 89cfbd3811844f6899c1a4de2c6ab57e
+msgid "`kitchen-opennebula <https://github.com/test-kitchen/kitchen-opennebula>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:42
+# 13653b8f75144a409838080555c6fb7e
+msgid "A driver for |opennebula|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:43
+# 593cc31fd5b5421386363e6c2f4f1963
+msgid "`kitchen-openstack <https://github.com/test-kitchen/kitchen-openstack>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:44
+# 600bbbfa146c42ffb2fc9588ed1b2310
+msgid "A driver for |openstack|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:45
+# c911b4b149f14651b41469d13bca920e
+msgid "`kitchen-pester <https://github.com/test-kitchen/kitchen-pester>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:46
+# cce333aa25564cac8c331df5988dcaf7
+msgid "A driver for |pester|, a testing framework for |windows|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:47
+# be4411df06bb457dafe2d4cca76c1e72
+msgid "`kitchen-rackspace <https://github.com/test-kitchen/kitchen-rackspace>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:48
+# c55d133090d4401188fdc58120917e3c
+msgid "A driver for |rackspace|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:49
+# 9bcc088b37ed43fcaf1b7a04f452e88b
+msgid "`kitchen-vagrant <https://github.com/test-kitchen/kitchen-vagrant>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst:50
+# d702d9a764e04c68aecb75baef274748
+msgid "A driver for |vagrant|. The default driver packaged with the |chef dk|."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:46
+# a479a1796dd04ec195c2d0437eab96d9
+msgid "``kitchen-vagrant``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant.rst:5
+# fbf5e5ea59fc48ca855dd984eef34d1d
+msgid "The ``kitchen-vagrant`` driver for |kitchen| generates a single |vagrantfile| for each instance of |kitchen| in a sandboxed directory. The ``kitchen-vagrant`` driver supports |virtualbox| and |vmware fusion|, requires |vagrant| 1.1.0 (or higher), and is the default driver for |kitchen|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:5
+# 35bdc6375b12442b9e8b3e235494786f
+msgid "The following attributes are used to configure ``kitchen-vagrant`` for |chef|:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:11
+# 3265d037594c450785d256e494d3203e
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:13
+# b6b39fb16646479a87d2cc9cc1a7d2fc
+msgid "``box``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:14
+# bd966e53aa454f998166f67c93d2c036
+msgid "Required. Use to specify the box on which |vagrant| will run. Default value: computed from the platform name of the instance."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:15
+# 150603e57f0941698a902ba20a961dc7
+msgid "``box_check_update``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:16
+# eb44b46592474f14bcf3123c4e2269af
+msgid "Use to check for box updates. Default value: ``false``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:17
+# 6c07981feb584823a725cf02c218f2dc
+msgid "``box_url``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:18
+# 60f3959c955f4d5ebd320f394ff3ac1b
+msgid "Use to specify the URL at which the configured box is located. Default value: computed from the platform name of the instance, but only when the |vagrant| provider is |virtualbox|- or |vmware|-based."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:19
+# 71666fdd578a4bada965b91e16b9ac26
+msgid "``communicator``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:20
+# 523b8de96c5b4096930d0af012b3b47c
+msgid "Use to override the ``config.vm.communicator`` setting in |vagrant|. For example, when a base box is a |windows| operating system that does not have |ssh| installed and enabled, |vagrant| will not be able to boot without a custom |vagrant| file. Default value: ``nil`` (assumes |ssh| is available)."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:21
+# ee69daf6a3f34f06ac5580f5029d33d4
+msgid "``customize``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:22
+# 4e7112dd1ced490f8cdd35315dd078cb
+msgid "A hash of key-value pairs that define customizations that should be made to the |vagrant| virtual machine. For example: ``customize: memory: 1024 cpuexecutioncap: 50``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:23
+# 03c8c39110914d488cea5acbfc1e906a
+msgid "``guest``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:24
+# 9c8e7e0df8c841f8831fa8eb7b1acb5b
+msgid "Use to specify the ``config.vm.guest`` setting in the default |vagrantfile|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:25
+# 84d48141ab6843e596e0b97b6ceda0e5
+msgid "``gui``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:26
+# 338e39a19dd64616b3914b1bee8c2648
+msgid "Use to enable the graphical user interface for the defined platform. This is passed to the ``config.vm.provider`` setting in |vagrant|, but only when the |vagrant| provider is |virtualbox|- or |vmware|-based."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:27
+# 5e1f5b2a1ad64723a6159fd28b0f836d
+msgid "``network``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:28
+# a7824d64a81645928aa223b7b4cef0bf
+msgid "Use to specify an array of network customizations to be applied to the virtual machine. Default value: ``[]``. For example: ``network: - [\"forwarded_port\", {guest: 80, host: 8080}] - [\"private_network\", {ip: \"192.168.33.33\"}]``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:29
+# 45a1b31f49884b1e8c70154bd94f83db
+msgid "``pre_create_command``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:30
+# cf437b9b950c4db5924accda12bae91d
+msgid "Use to run a command immediately prior to ``vagrant up --no-provisioner``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:31
+# 89daa8f9464644f396d4599f2558c299
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:32
+# ec21931468744e50b3f30f312d79b44e
+msgid "Use to specify the |vagrant| provider. This value must match a provider name in |vagrant|."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:33
+# b33df2048bc7478eb1cebcf5a447cd38
+msgid "``provision``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:34
+# 704f68176b2d4939a73ea45f38cbccfd
+msgid "Use to provision |vagrant| when the instance is created. This is useful if the operating system needs customization during provisioning. Default value: ``false``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:35
+# 78d187dee26a41d8a2f8a8c96d072b3f
+msgid "``ssh_key``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:36
+# fa51b63ab04643719ec7ba4c5b5d9c0c
+msgid "Use to specify the private key file used for |ssh| authentication."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:37
+# 18f3e56b66f04e65a9b64f673e6ade9e
+msgid "``synced_folders``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:38
+# 9277a006c0284b37920f796f3ee7004a
+msgid "Use to specify a collection of synchronized folders on each |vagrant| instance. Source paths are relative to the |kitchen| root path. Default value: ``[]``. For example: ``synced_folders: - [\"data/%{instance_name}\", \"/opt/instance_data\"] - [\"/host_path\", \"/vm_path\", \"create: true, type: :nfs\"]``."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:39
+# 59f03f4061244299a42f498535f264fe
+msgid "``vagrantfile_erb``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:40
+# 954703c0f7e344bf812e1fac5e858293
+msgid "Use to specify an alternate |vagrant| |erb| template to be used by this driver."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:41
+# 1afc11ca8f5a4f4c954590b2004735f6
+msgid "``vagrantfiles``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:42
+# 9d62d3ec249e4a859a1d35c59345fdc1
+msgid "An array of paths to one (or more) |vagrant| files to be merged with the default |vagrant| file. The paths may be absolute or relative to the |kitchen yml| file."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:43
+# 0434142c1a64482497177093575652c1
+msgid "``vm_hostname``"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_settings.rst:44
+# c4de13c09adb41ad958b0dc38e13f804
+msgid "Use to specify the internal hostname for the instance. This is not required when connecting to a |vagrant| virtual machine. Set this to ``false`` to prevent this value from being rendered in the default |vagrantfile|. Default value: computed from the platform name of the instance."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_config.rst:5
+# 9f92713e2a734a08a824a399d309d5bf
+msgid "The ``kitchen-vagrant`` driver can predict the box name for |vagrant| and the download URL that have been published by |company_name|. For example:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant_config.rst:18
+# beb4b1e8c240466595903f7413ed3bf9
+msgid "which will generate a configuration file similar to:"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:54
+# 7ca610944b2c4dd19f808a55c24ff0dc
+msgid "Examples"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:55
+# 455108f64e1d4ae2b0607c73dd491091
+msgid "The following examples show actual |kitchen yml| files used in |company_name|-maintained cookbooks."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:58
+# 13c90f0a0fd64781af09839bf8b51c16
+msgid "|chef|, |chef dk_title|"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_dk.rst:5
+# 08bb6b1b428f4026b6a7993214673d43
+msgid "The following example shows the provisioner settings needed to install the |chef dk|, and then use the version of |chef| that is embedded in the |chef dk| to converge the node."
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_dk.rst:7
+# 364ea9f321574779b9828c6a7e3e4f78
+msgid "To install the latest version of the |chef dk|:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_dk.rst:16
+# 971334adbdd34eff8decda0d84750fa1
+msgid "and to install a specific version of the |chef dk|:"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:62
+# 2b3b9043e2e14e3c92e4b9bc00536dfd
+msgid "|chef client|, |chef client_audit|"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_audit_mode.rst:5
+# 3eed675883184f139f46db9e9b9c4a63
+msgid "The following example shows provisioner settings for running the |chef client| in |chef client_audit|:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_audit_mode.rst:35
+# a18bbcf2ca204de0bacb13a0d70abd6e
+msgid "where ``audit_mode`` may be ``:enabled``, ``:disabled`` (default), or ``:audit_only``."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:66
+# e73a35b50e584f5ca6792ad9c2e0d55a
+msgid "|cookbook mysql| Cookbook"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_mysql.rst:5
+# 666a5602dca341ee94a0771e0dc16bb4
+msgid "The most impressive (and thorough) |kitchen yml| files are part of the |cookbook mysql| cookbook. They are too big to paste into this topic, so please see them at the following links:"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_mysql.rst:7
+# 08be7444a43a4a36821cf1f1fe2791e1
+msgid "`.kitchen.yml <https://github.com/chef-cookbooks/mysql/blob/master/.kitchen.yml>`__"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_mysql.rst:8
+# fa254bed79b24c0aae3d68f73b9b6045
+msgid "`.kitchen.cloud.yml <https://github.com/chef-cookbooks/mysql/blob/master/.kitchen.cloud.yml>`__"
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:70
+# ec5f3e33731048dc85c3dbd5598a522b
+msgid "|cookbook chef_client| Cookbook"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_client.rst:5
+# 1bf57f980e4e47799d9b269ef4f767b8
+msgid "The following |kitchen yml| file is part of the |cookbook chef_client| cookbook and ensures the |chef client| is configured correctly."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:74
+# efd87740a3e24067baf0fe426374376f
+msgid "|cookbook chef_splunk| Cookbook"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_splunk.rst:4
+# e0f9cdfa4f9441a2bf6b7f642d569eb2
+msgid "The following |kitchen yml| file is part of the |cookbook chef_splunk| cookbook and is used to help ensure the installation of the |splunk| client and server is done correctly."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:78
+# 697781e7afdc4f6690d49e922b8406d9
+msgid "|cookbook yum| Cookbook"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_yum.rst:4
+# d7c04285bc0b4105baadd5f51617353d
+msgid "The following |kitchen yml| file is part of the |cookbook yum| cookbook. It is named ``.kitchen.cloud.yml`` and is used for cloud-specific providers. In this cookbook, for |digital ocean|- and |amazon aws|-based providers."
+msgstr ""
+
+#: ../source/config_yml_kitchen.rst:82
+# c766fae348bc4afd8820753c0e698279
+msgid "Platform Attributes"
+msgstr ""
+
+#: ../../includes_test_kitchen/includes_test_kitchen_yml_example_frontend_backend.rst:5
+# c80bbe7772f145818cef699908cb944b
+msgid "The following |kitchen yml| file sets up a simple |ha| configuration of |chef server oec|, including two front-end servers, a single back-end server, and all three add-ons (|push jobs|, |reporting|, and |chef manage|). The ``platforms`` block uses an ``attributes`` section to define |chef server|-specific attributes that are used by all three test suites:"
+msgstr ""
+

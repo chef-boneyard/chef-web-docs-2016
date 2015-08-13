@@ -1,0 +1,571 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-13 10:10-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_monitor.rst:7
+# dded4366ad9546de933b0f5394fef5ee
+msgid "Monitor"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor.rst:4
+# b741bff61516454ca20bf9a6a07b688d
+msgid "Monitoring the |chef server| involves two types of checks: application and system. In addition monitoring the HTTP requests that workstations and nodes are making to the |chef server| and per-disk data storage volumes is recommended."
+msgstr ""
+
+#: ../source/server_monitor.rst:12
+# 7c894d7db71d42e794189e05fbaaa8e2
+msgid "Application Checks"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application.rst:4
+# dca565896c6c46eb97fa699780fbfb97
+msgid "Application-level checks should be done periodically to ensure that there is enough disk space, enough memory, and that the front-end and back-end services are communicating."
+msgstr ""
+
+#: ../source/server_monitor.rst:16
+# d570dc0eff194e919458f93fec9ff172
+msgid "|drbd|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_drbd.rst:5
+# a124c0814ec9441290cd2d4234bc5b46
+msgid "|drbdadm| is the management tool for |drbd|. It can be used to obtain status information and to alter the state of the |drbd| cluster. For more information about |drbdadm|, see http://www.drbd.org/users-guide/re-drbdadm.html."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_drbd.rst:7
+# bf3c2fc9b3c84218a1ce57a50f8bb913
+msgid "``/proc/drbd`` is a virtual file that displays real-time status information about all currently-configured |drbd| resources. Use the following command to view the contents of this virtual file:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_drbd.rst:13
+# 10d57d95d7e2447d92d04abe768dafc1
+msgid "Use ``chef-server-ctl ha-status`` along with ``/proc/drbd`` to help evaluate the current state of the cluster. Follow the split-brain recovery procedures for |drbd| if the cluster becomes two unconnected pieces."
+msgstr ""
+
+#: ../source/server_monitor.rst:20
+# 40107bed39774e09af25b8114511e006
+msgid "|erlang|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:5
+# 3977c24ca99c408ca1d9bd26029dcaa4
+msgid "Many components of the |chef server| are written using |erlang| and run on the |beam| virtual machine. One feature of |erlang| and |beam| is the ability to interact with the running service using a command shell. For example:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:13
+# 7fc06e3496f64b3499dcc50ac9761111
+msgid "where ``service_name`` is ``bifrost`` or ``erchef``. This command will then open a shell that is connected to the |erchef| processes:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:19
+# 4e5a9a21801543fb814176aa91451532
+msgid "Connecting to the |erlang| processes should only be done when directed by |company_name| support services."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:21
+# 50996ab275884042a97415427c441f81
+msgid "To connect to the |service bifrost| service, use the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:27
+# 845b8585a0624329a1e06a0f125a1e1c
+msgid "To connect to the |service erchef| service, use the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:33
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:29
+# e3c0fdbeede14d598c9c0d09004d9a53
+# f5a98c32d6db4d82bb35679f1c659bdf
+msgid "To disconnect from the shell, use the following key sequence ``CTRL-g``, ``q``, and then ``ENTER``."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:35
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:31
+# a894d4661b7c4e9a83f09152459ab594
+# e6926d9290c2472e9d33f06a9ec025c4
+msgid "The output from the shell after the ``CTRL-g`` looks similar to:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:42
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:38
+# 2b87cdc85f874895ae76744746b13b1e
+# 7a9765e0bb8642d6940f4ace6ba3baf8
+msgid "then enter ``q``, and then hit ``ENTER`` to exit the shell."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:44
+# 2ec02d0cee134f5baec247f773eed699
+msgid "Some commands should not be entered when interacting with a running service while using the command shell, including:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:46
+# ea1a8314ae554a16adf20245b1dd2db4
+msgid "``q()`` kills the |erlang| node"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:47
+# 1d851c6ba6b34ebca7b3942e84db698e
+msgid "``init:stop()``"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst:48
+# e598280518114f3781c1cff9820a0590
+msgid "``exit`` or ``exit()`` does nothing"
+msgstr ""
+
+#: ../source/server_monitor.rst:24
+# abea8cd67038470f98db6f75ee2ee93d
+msgid "``eper`` tools"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:4
+# 1edfc9e40dc24c4798a1d281e9f0bad6
+msgid "As root on the |chef server|, point to the bundled ``eper`` package of debugging tools. Replace the 2nd and 5th path entries and the ``X.XX.X`` value in the following path with the items that occur on the system."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:10
+# b6f0d9acef17447d9df60687f84dad40
+msgid "Open an |erlang| command shell to begin diagnosing service issues on the |chef server|:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:17
+# 0cb9c590d0fa4710be25d5d514ac0a68
+msgid "The ``dtop`` tool presents a view on the |erlang| virtual machine that is similar to the ``linuxdagnostic`` command. The period at the end of the dtop command is required for the command to take effect."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_erlang_eper.rst:23
+# 3748544f54634cacb4d651cbbc9de0c2
+msgid "To stop the ``dtop`` command, run:"
+msgstr ""
+
+#: ../source/server_monitor.rst:28
+# 07d03f50021c4ec58eb7022df8b33095
+msgid "|nginx|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst:5
+# 871c85c64fc34b49b7b557c7660904ae
+msgid "Use |nginx| to monitor for services that may be returning 504 errors. Use the following command on a front-end machine:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst:11
+# ef49cb649868431cada4d9477bc03614
+msgid "and then extract the URLs and sort them by ``uniq`` count:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst:17
+# e4451101ade54432b160f899bbb22018
+msgid "In a large installation, restricting these results to a subset of results may be necessary:"
+msgstr ""
+
+#: ../source/server_monitor.rst:32
+# 94cdbd72dd114b90924d7b4c6ab95fd1
+msgid "|postgresql|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_postgresql.rst:5
+# 1d53a8d493aa41b799736d7a48b96854
+msgid "|postgresql ctl| is the management tool for |postgresql|. It can be used to obtain information about data stored in |postgresql|. For more information about |postgresql ctl|, see http://www.postgresql.org/docs/manuals/, and then the doc set appropriate for the version of |postgresql| being used."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_postgresql.rst:7
+# c13b8cf06b254881b1b27b1523805742
+msgid "To connect to the |postgresql| database, run the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_postgresql.rst:15
+# 50267271944a4c9c9537c70b5f40f4f0
+msgid "Connecting to the |postgresql| database should only be done when directed by |company_name| support services."
+msgstr ""
+
+#: ../source/server_monitor.rst:36
+# 20a53edf70444185a7d96d24178179ca
+msgid "|rabbitmq|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_rabbitmq.rst:5
+# 44e5f3fa94d34d9197632fbe264060e4
+msgid "|rabbitmq ctl| is the management tool for |rabbitmq|. It can be used to obtain status information and to ensure that message queuing is running properly. For more information about |rabbitmq ctl|, see https://www.rabbitmq.com/man/rabbitmqctl.1.man.html."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_rabbitmq.rst:7
+# ebef130e6c9843d4a375ee2c4d629196
+msgid "To obtain status information for message queues, run the following command:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_rabbitmq.rst:15
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_example.rst:13
+# c1b9bd77a49043418cdc9d6dfeb42051
+# 3674d7f9ea7842599b76810110779a4f
+msgid "to return something similar to:"
+msgstr ""
+
+#: ../source/server_monitor.rst:40
+# b125c098fc89474abc832cd5825d6234
+msgid "|redis|"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:4
+# 6b1a75354acb4c91951ed76b5f736092
+msgid "The |service redis_lb| service located on the back end machine handles requests that are made from the |nginx| service that is located on all front end machines in a |chef server| cluster."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:6
+# cf5ff01d89964138925df766a046bdd5
+msgid "In the event of a disk full condition for the |redis| data store, the ``dump.rdb`` (the primary data store ``.rdb`` used by |redis|) can become corrupt and saved as a zero byte file."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:8
+# f6344bf65d9b4d9186b2e819041469ae
+msgid "When this occurs, after the |service redis_lb| service started, it's logs will show a statement similar to the following:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:16
+# b7f9f284b04e4bf6a42486a065a7ce38
+msgid "The ``dump.rdb`` file will be empty:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:26
+# 59c267bc26f24edea3151c42414eb9bd
+msgid "This situation is caused by a bug in |redis| where saves are allowed to succeed even when the disk has been full for some time, and not just on edge cases where the disk becomes full as |redis| is writing. To fix this issue, do the following:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:28
+# 9ec0f4627ac84c1d9a5cc7ac4264194e
+msgid "Stop the |service redis_lb| service:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:34
+# fedd772f038b43c0bba96d5a339b45ae
+msgid "Remove the corrupt files:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:41
+# 57fb114a0a004df1a609472f66024e71
+msgid "Start the |service redis_lb| service:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:50
+# d36fe15da0114542b394cd977ec4c91e
+msgid "Reconfigure the |chef server| to re-populate |redis|:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_application_redis.rst:56
+# f980de9ee68447a69575e803617ad8d7
+msgid "Verify that |redis| is re-populated, as indicated by the key ``dl_default``:"
+msgstr ""
+
+#: ../source/server_monitor.rst:44
+# ec2875ae49de4d609263a34d8a83aea6
+msgid "System Checks"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system.rst:4
+# 6b932f1291624915aef288f569cecc28
+msgid "System-level checks should be done for the following components: ports, services, and high availability status."
+msgstr ""
+
+#: ../source/server_monitor.rst:48
+# 431de002221f422c829aeb908dcc87f7
+msgid "ha-status"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:6
+# ba599ed514944f908fe72e63795d5d02
+msgid "The ``ha-status`` subcommand is used to check the status for services running in a |ha| topology. This command will verify the following:"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:8
+# 71db43c470054844be852d0974d14f6e
+msgid "The |keepalived| daemon is enabled in the config"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:9
+# a202910ca1534479afe6f15ca7c89233
+msgid "The |drbd| process is enabled in the config"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:10
+# 69fe03b29c8045bc9c63426f38522d34
+msgid "The underlying block device or logical volume for |drbd| has been created and configured"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:11
+# 09787e47be184f9eab5946f5c417c513
+msgid "The |drbd| device exists"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:12
+# 8c79406af64a4a039bd2ff1f3120fc4b
+msgid "The current state of the server is ``master`` or ``backup``; any migration processes have completed"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:13
+# b7ff4933323b420bb805e7d3b805a504
+msgid "The failover virtual IP address is correctly attached to only the ``master`` node"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:14
+# 04cd6c7ded27463bab8e03a5d7d688f6
+msgid "The |drbd| state is correct based on the state of the server being ``master`` or ``backup``"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:15
+# 88945abcabc34e1eae3b569bad2be621
+msgid "The |drbd| mount point is correctly mounted to only the ``master`` node"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:16
+# c8a733026a9940fc99f0fea63c276bfd
+msgid "The |drbd| replication IP addresses are pingable"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:17
+# 87913cfc226048d2ac06e43d5e93d977
+msgid "The ``runit`` status of the services are correct (up or down) based on the ``master`` or ``backup`` state of the server"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:19
+# 7e9eadd895aa4f3fa0d65ca34c75bca5
+msgid "This subcommand has the following syntax:"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:25
+# cd07759f7f4040599eb0bb426d63345c
+msgid "If this command runs successfully, it will return the following:"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:31
+# 884c42ef8aca4a579d15552d2d970391
+msgid "Otherwise it will print out a list of errors, similar to the following:"
+msgstr ""
+
+#: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst:42
+# 05229668c9b34ee191779eaee8905dda
+msgid "For example:"
+msgstr ""
+
+#: ../source/server_monitor.rst:52
+# 0f1e82a0a32847d89ac15449cef53cee
+msgid "opscode-authz"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_authz.rst:5
+# 83e98ea95e26408e8577d3e7a49e094b
+msgid "The authz API provides a high-level view of the health of the |service authz| service with a simple endpoint: ``_ping``. This endpoint can be accessed using |curl| and |gnu wget|. For example:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_authz.rst:11
+# 963552a5ce9a47ef9e9f0919a92f7e05
+msgid "This command typically prints a lot of information. Use |python| to use pretty-print output:"
+msgstr ""
+
+#: ../source/server_monitor.rst:56
+# 0e998e7e2214469cba7d989397ba40fb
+msgid "opscode-erchef"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:5
+# 9f15377c7c4c418a87ffd00116ac5afa
+msgid "The status API provides a high-level view of the health of the system with a simple endpoint: ``_status``. This endpoint can be accessed using |curl| and |gnu wget|. For example:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:11
+# d336d45626124a8aa4f12e314164be58
+msgid "which will return something similar to:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:20
+# 4ffd2cc23ac24627a6911773ce63a3fb
+msgid "For each of the upstream services, ``pong`` or ``fail`` is returned. The possible upstream names are:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:22
+# 3c69c9ad9ccb4a15a61c28b5036bf67c
+msgid "``chef_solr`` (for the |service solr4| service)"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:23
+# 47b190eb8a694d44951ee949bd4467eb
+msgid "``chef_sql`` (for the |service postgresql| service)"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:24
+# 4dcc0fb3ab5f4e5698a71322ab66a8b6
+msgid "``oc_chef_authz`` (for the |service authz| service)"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst:26
+# aec4c5b2540d4529bbba8ccaf9226860
+msgid "If any of the status values return ``fail``, this typically means the |chef server| is unavailable for that service."
+msgstr ""
+
+#: ../source/server_monitor.rst:60
+# 9d5424992c7e4afda6af141e253a5661
+msgid "opscode-expander"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander.rst:4
+# 8cb34b2a2f3a42d69e1827a27e5c7551
+msgid "As the queue depth increases it may take longer for updates posted to the |chef server| by each |chef client| to be added to the search indexes on the |chef server|. The depth of this queue should be monitored using the following command:"
+msgstr ""
+
+#: ../source/server_monitor.rst:64
+# fa551e633ae94ed882cca2e0d5e427d4
+msgid "Search Indexes"
+msgstr ""
+
+#: ../../includes_search/includes_search.rst:4
+# edcbb4d3c94d4269866f2728b13f7c32
+msgid "Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. A defined query syntax is used to support search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the ``search`` subcommand in |knife|, the ``search`` method in the |dsl recipe|, the search box in the |chef manage|, and by using the ``/search`` or ``/search/INDEX`` endpoints in the |api chef server|. The search engine is based on |apache solr| and is run from the |chef server|."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:5
+# e9bd93ceff0b4120977c865c8f084408
+msgid "If the search indexes are not being updated properly, first ensure that the |service expander| service is running on the backend machine:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:11
+# 7b5ae4ba5fdf4a67906d9c77b158b740
+msgid "and then (if it is not running), start the service:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:17
+# e9349a4740d74a66a5d1fcbda4499655
+msgid "If the |service expander| does not start correctly, then take a look at the ``/var/log/opscode/opscode-expander/current`` log file for error messages."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:19
+# 298f069b79b845aa84954d5ed1b25a03
+msgid "If the |service expander| is running, check the queue length:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst:25
+# aff0e40680fa42d1bba9e65528ab64c6
+msgid "If the number of total messages continues to increase, increase the number of workers available to the |service expander| service."
+msgstr ""
+
+#: ../source/server_monitor.rst:70
+# b9b37f8052594babbfe29afcebaddc54
+msgid "|opscode expander ctl|"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander.rst:5
+# 7889e5cdcd864f7cb1436f04b0d4f5a8
+msgid "The |opscode expander ctl| executable can be used to generate status information for the |service expander| service. The |opscode expander ctl| executable is run as a command-line tool from the master backend machine."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:6
+# 9f46c25e525b4cf2842dba13695e187c
+msgid "This tool has the following syntax::"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:10
+# 4dbec7c952b54ca99f87974dbff7520e
+msgid "This tool has the following options:"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:13
+# bc726a6cc88441188a8441aef6c4386e
+msgid "``log-level``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:13
+# d679bdceda05457cb28d40505ffd26b8
+msgid "Use to show the log level for all nodes in the cluster."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:16
+# 5ef60f29694e4ba59077867035b9d5a0
+msgid "``node-status``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:16
+# 919fd9487e9d45bab9935395c4f6d78d
+msgid "Use to show the status for all nodes in the cluster."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:19
+# d4c1edeaf67d4b70a737816c2013ee32
+msgid "``queue-depth``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:19
+# 6531e53901bd464496b2bb7aa9d0cf86
+msgid "Use to display the aggregate queue backlog."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:23
+# e8b39262226b4e5c8c54fa2b413e2a67
+msgid "``queue-status``"
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_options.rst:22
+# 8cbf065eae8b40c7952e8fb9263296d4
+msgid "Use to show the backlog and consumer counts for each vnode queue."
+msgstr ""
+
+#: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_example.rst:5
+# bed2299b0c60486888f835b3cd75b1c8
+msgid "For example, to view the aggregate queue backlog, enter the following:"
+msgstr ""
+
+#: ../source/server_monitor.rst:78
+# 4a462fe5ad4e41c9af461bb9f0921471
+msgid "Nodes, Workstations"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_client.rst:5
+# 09b98d322a7f4ed1a6d48c94631dab4b
+msgid "If a client makes an HTTP request to the server that returns a non-specific error message, this is typically an issue with the |service chef| or |service erchef| services. View the full error message for these services in their respective log files. The error is most often a stacktrace from the application error. In some cases, the error message will clearly indicate a problem with another service, which can then be investigated further. For non-obvious errors, please contact |company_name| support services."
+msgstr ""
+
+#: ../source/server_monitor.rst:82
+# be040e5a5c684faca0f279408b614b86
+msgid "Disks"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:5
+# ffb19b73db1b4e95ae1b4dd88fab060a
+msgid "Over time, and with enough data, disks will fill up or exceed the per-disk quotas that may have been set for them and they will not be able to write data. A disk that is not able to write data will not be able to support certain components of the |chef server|, such as |postgresql|, |rabbitmq|, service log files, and deleted file handles. Monitoring disk usage is the best way to ensure that disks don't fill up or exceed their quota."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:7
+# 8f23f5ac81d245699b04ab2489bdb5da
+msgid "The following components should be monitored for signs that disks may be rapidly filling up:"
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:9
+# 363464eab90e49d8a36bbd9d48d9b0c2
+msgid "**PostgreSQL** |postgresql| is the data store for the |chef server|."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:10
+# 8902d40953c44743b53d122e86add498
+msgid "**RabbitMQ** The |rabbitmq| data folder can fill up if the |service expander| service is not able to keep up with the data being moved into the search database by |rabbitmq|. When the |service expander| service falls behind, |rabbitmq| will start storing the individual messages on-disk while it waits for the |service expander| service to catch up. If the |rabbitmq| disk fills up completely, |rabbitmq| will need to be restarted to free up the disk space and any data that was stored on-disk will be lost."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:11
+# 4e4ee61912e4446691c5245f842b9189
+msgid "**Log files** If ``/var/log/opscode`` is taking up a lot of disk space, ensure that the |chef server| log rotation cron job is running without errors. These errors can be found in ``/var/log/messages``, ``/var/log/syslog`` and/or the root user's local mail."
+msgstr ""
+
+#: ../../includes_server_monitor/includes_server_monitor_system_disk.rst:12
+# 0da46c91930b4d7b86081be5859e99c4
+msgid "**Deleted file handles** Running processes with file handles associated with one (or more) deleted files will prevent the disk space being used by the deleted files from being reclaimed. Use the ``sudo lsof | grep '(deleted)'`` command to find all deleted file handles."
+msgstr ""
+
