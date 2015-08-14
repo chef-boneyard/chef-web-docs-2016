@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master devkit
+release: master devkit push_1-0 push_2-0
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -19,7 +19,7 @@ release: master devkit
 # 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18
 # 12-0 12-1 12-2 12-3 12-4 12-5
 # ohai-6 ohai-7 ohai-8
-# push_1-0 push_2-0
+# 
 # server
 # server_12-0 server_12-1 server_12-2
 # enterprise oec_11-0 oec_11-1 oec_11-2
@@ -193,7 +193,7 @@ push_1-0:
 
 push_2-0:
 	mkdir -p $(BUILDDIR)/release/push_jobs-2-0/
-	$(BUILD_COMMAND_AND_ARGS) release_push_jobs_2-0/source $(BUILDDIR)/release/push_jobs-2-0/
+	$(BUILD_COMMAND_AND_ARGS) release_push_jobs_2-0/source $(BUILDDIR)/release/push_jobs_2-0/
 
 server_12-2:
 	mkdir -p $(BUILDDIR)/release/server_12-2/
