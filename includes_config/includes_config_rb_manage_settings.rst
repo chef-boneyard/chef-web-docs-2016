@@ -50,7 +50,9 @@ This configuration file has the following settings:
    * - ``services['opscode-manage-worker'].enable``
      - Use to enable the ``opscode-manage-worker`` service. Default value: ``true``.
    * - ``session_timeout``
-     - The amount of time (in minutes) to wait before timing out. When not set, a browser session will not have a timed expiration and will expire when the browser session ends, quits, or when the computer restarts.
+     - The amount of time (in minutes) of inactivity before a user is logged out. When not set (or set to 0), a browser session will not have a timed expiration and will expire when the browser session ends, quits, or when the computer restarts, or when the absolute session time limit is hit (see ``session_timeout_absolute``).  Default value: ``1440`` (one day).
+   * - ``session_timeout_absolute``
+     - The amount of time (in minutes) after which a user will be logged out, regardless of activity. When not set (or set to 0), a browser session will not have a timed expiration unless a session is inactive longer than the session time limit (see ``session_timeout``).  Default value: ``10080`` (one week).
    * - ``sign_in_page_message``
      - A message to display on the sign-in page. If present, the message will show up in a box on the sign in page. Any valid HTML is allowed here. Default value: ``nil``.
    * - ``support_email_address``
