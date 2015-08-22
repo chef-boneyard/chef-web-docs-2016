@@ -70,7 +70,7 @@ To edit the |amazon ami| instance size, do the following:
       chef_server_url          'https://<YOUR NEW PUBLIC DNS>/organizations/your_org'
       cookbook_path            ['#{current_dir}/../cookbooks']
 
-#. Run ``knife ssl fetch`` to add |chef server| SSL certificates to the your SSL trusted certificates.
+#. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to your trusted certificates.
 #. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
 #. Update the ``/etc/chef/client.rb`` on all of your nodes to use the new public DNS.  For example:
 
