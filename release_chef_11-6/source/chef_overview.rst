@@ -22,22 +22,7 @@ Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
 
-The following types of nodes can be managed:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_node_cloud.png
-     - .. include:: ../../includes_node/includes_node_type_cloud.rst
-   * - .. image:: ../../images/icon_node_physical.png
-     - .. include:: ../../includes_node/includes_node_type_physical.rst
-   * - .. image:: ../../images/icon_node_virtual.png
-     - .. include:: ../../includes_node/includes_node_type_virtual.rst
-   * - .. image:: ../../images/icon_node_networking.png
-     - .. include:: ../../includes_node/includes_node_type_network.rst
+.. include:: ../../includes_node/includes_node_types.rst
 
 Some important components on nodes include:
 
