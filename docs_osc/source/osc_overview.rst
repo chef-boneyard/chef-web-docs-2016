@@ -18,56 +18,15 @@ Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
 
-The following types of nodes can be managed:
+.. include:: ../../includes_node/includes_node_types.rst
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_node_cloud.png
-     - .. include:: ../../includes_node/includes_node_type_cloud.rst
-   * - .. image:: ../../images/icon_node_physical.png
-     - .. include:: ../../includes_node/includes_node_type_physical.rst
-   * - .. image:: ../../images/icon_node_virtual.png
-     - .. include:: ../../includes_node/includes_node_type_virtual.rst
-   * - .. image:: ../../images/icon_node_networking.png
-     - .. include:: ../../includes_node/includes_node_type_network.rst
-
-Some important components on nodes include:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_chef_client.png
-     - .. include:: ../../includes_chef_client/includes_chef_client.rst
-       
-       .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
-   * - .. image:: ../../images/icon_ohai.png
-     - .. include:: ../../includes_ohai/includes_ohai.rst
+.. include:: ../../includes_node/includes_node_components.rst
 
 Workstations
 =====================================================
 .. include:: ../../includes_workstation/includes_workstation.rst
 
-Some important components of workstations include:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_knife.png
-     - .. include:: ../../includes_knife/includes_knife.rst
-       
-       .. include:: ../../includes_security/includes_security_key_pairs_knife.rst
-   * - .. image:: ../../images/icon_repository.png
-     - .. include:: ../../includes_chef_repo/includes_chef_repo.rst
+.. include:: ../../includes_workstation/includes_workstation_components.rst
 
 System administrators and developers know best about how their infrastructure should be put together. Therefore, the |chef client| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.
 
@@ -83,7 +42,10 @@ In addition to node objects, policy, and cookbooks, a |chef server| includes:
 
    * - Feature
      - Description
-   * - .. image:: ../../images/icon_search.png
+   * - .. image:: ../../images/icon_search.svg
+          :width: 100px
+          :align: center
+
      - .. include:: ../../includes_search/includes_search.rst
 
 Node Objects
@@ -98,9 +60,15 @@ Some important node objects include:
 
    * - Feature
      - Description
-   * - .. image:: ../../images/icon_node_attribute.png
+   * - .. image:: ../../images/icon_node_attribute.svg
+          :width: 100px
+          :align: center
+
      - .. include:: ../../includes_node/includes_node_attribute.rst
-   * - .. image:: ../../images/icon_run_lists.png
+   * - .. image:: ../../images/icon_run_lists.svg
+          :width: 100px
+          :align: center
+
      - .. include:: ../../includes_node/includes_node_run_list.rst
 
 Policy
@@ -115,11 +83,20 @@ Some important aspects of policy include:
 
    * - Feature
      - Description
-   * - .. image:: ../../images/icon_roles.png
+   * - .. image:: ../../images/icon_roles.svg
+          :width: 100px
+          :align: center
+
      - .. include:: ../../includes_role/includes_role.rst
-   * - .. image:: ../../images/icon_data_bags.png
+   * - .. image:: ../../images/icon_data_bags.svg
+          :width: 100px
+          :align: center
+
      - .. include:: ../../includes_data_bag/includes_data_bag.rst
-   * - .. image:: ../../images/icon_environments.png
+   * - .. image:: ../../images/icon_environments.svg
+          :width: 100px
+          :align: center
+
      - .. include:: ../../includes_environment/includes_environment.rst
 
 Cookbooks
@@ -128,31 +105,7 @@ Cookbooks
 
 The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. A reasonable set of resources are available to the |chef client|, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
-Some important components of cookbooks include:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_cookbook_attributes.png
-     - .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
-   * - .. image:: ../../images/icon_cookbook_recipes.png
-     - .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
-   * - .. image:: ../../images/icon_cookbook_versions.png
-     - .. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
-
-The |chef client| will run a recipe only when asked. When the |chef client| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, the |chef client| won't change anything.
-
-In addition to attributes, recipes, and versions, the following items are also part of cookbooks:
-
-* Resources and providers. A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks, such as installing packages, running |ruby| code, or accessing directories and file systems. A resource is generic: "install program A" while a provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. Default providers exist that cover the most common scenarios.
-* File distributions. A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
-* Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.
-* Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
-* Templates. A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
-* Configuration files. A metadata file to ensure that each cookbook is correctly deployed to each node.
+.. include:: ../../includes_cookbooks/includes_cookbooks_components.rst
 
 Conclusion
 =====================================================
