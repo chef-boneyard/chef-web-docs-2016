@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``cron_d`` lightweight provider (found in the `cron <https://github.com/opscode-cookbooks/cron>`_ cookbook maintained by |company_name|) is used to tell the |chef client| what to do whenever the ``cron_d`` lightweight resource is used in a recipe:
+The ``cron_d`` lightweight provider (found in the `cron <https://github.com/opscode-cookbooks/cron>`_ cookbook) is used to tell the |chef client| what to do whenever the ``cron_d`` lightweight resource is used in a recipe:
 
 .. code-block:: ruby
 
