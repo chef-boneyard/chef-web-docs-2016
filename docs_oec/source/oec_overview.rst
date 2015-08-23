@@ -63,7 +63,7 @@ Some important node objects include:
 
    * - Feature
      - Description
-   * - .. image:: ../../images/icon_node.svg
+   * - .. image:: ../../images/icon_node_attribute.svg
           :width: 100px
           :align: center
 
