@@ -4,19 +4,9 @@ About Nodes
 
 .. include:: ../../includes_node/includes_node.rst
 
-Cloud vs. Physical Nodes
+Node Types
 =====================================================
-.. include:: ../../includes_node/includes_node_type_cloud.rst
-
-.. include:: ../../includes_node/includes_node_type_physical.rst
-
-Virtual Nodes
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_type_virtual.rst
-
-Network Nodes
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_type_network.rst
+.. include:: ../../includes_node/includes_node_types.rst
 
 Node Names
 =====================================================

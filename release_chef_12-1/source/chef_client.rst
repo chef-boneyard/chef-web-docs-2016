@@ -16,18 +16,7 @@ Node Types
 
 .. include:: ../../includes_node/includes_node_types.rst
 
-Some important components of nodes include:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_chef_client.png
-     - .. include:: ../../includes_chef_client/includes_chef_client.rst
-   * - .. image:: ../../images/icon_ohai.png
-     - .. include:: ../../includes_ohai/includes_ohai.rst
+.. include:: ../../includes_node/includes_node_components.rst
 
 The |chef client_title| Run
 =====================================================
