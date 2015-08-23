@@ -464,11 +464,13 @@ Images
 =====================================================
 Images are useful and can be better at telling readers what is going on than actual text. What it looks like as reST::
 
-   .. image:: ../../images/icon_chef_client.png
+   .. image:: ../../images/icon_chef_client.svg
+      :width: 100px
+      :align: center
 
 What an image looks like after it's built:
 
-.. image:: ../../images/icon_chef_client.png
+.. image:: ../../images/icon_chef_client.svg
 
 Images should be 96 dpi and no larger than 600 pixels wide. Ideally, no larger than 550 pixels wide. (This helps ensure that the image can be printed and/or built into other output formats more easily; in some cases, separate 300 dpi files should be maintained for images that require inclusion in formats designed for printing and/or presentations.)
 
