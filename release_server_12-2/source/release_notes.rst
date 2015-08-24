@@ -9,8 +9,16 @@ What's New
 =====================================================
 The following items are new for |chef server| 12.2:
 
+* **Solr to Solr4 settings** Built-in transition for |apache solr| memory and |jvm| settings from |chef server oec| to |chef server| version 12.
 * **Configurable Postgresql** Postgresql can be configured for an external database.
 
+.. 
+.. when Chef server 12.2 is released, uncomment the "Solr => Solr 4 Changes" section in chef_master/upgrade_server_notes.rst
+.. 
+
+Solr => Solr 4 Changes
+=====================================================
+.. include:: ../../includes_upgrade/includes_upgrade_12-2_solr_to_solr4.rst
 
 External |postgresql|
 =====================================================
