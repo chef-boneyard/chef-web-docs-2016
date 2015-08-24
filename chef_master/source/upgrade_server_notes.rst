@@ -15,8 +15,8 @@ If the |resource template| resource is managing the |private chef rb| file in |c
 #. Re-create the management process that was used prior to the upgrade, but make the necessary changes so that |chef| is managing the |chef server rb| file.
 #. Verify that the |chef server rb| file is being managed and that the symlink from |private chef rb| to |chef server rb| is not broken.
 
-Deprecated Solr Configuration Options
+Solr => Solr 4 Changes
 =====================================================
-You may have tuned your Solr options while running your |chef server|, and placed customized options in your |private chef rb| using the opscode_solr options. With Chef 12 we've upgraded to Solr 4, and the configuration settings are now stored in |chef server rb| under opscode_solr4.
+|chef server| version 12 is upgraded to |apache solr| 4. If |apache solr| options were added to the |private chef rb| file under ``opscode_solr`` for |chef server oec|, those configuration options are now stored under ``opscode_solr4`` in the |chef server rb| file for |chef server| version 12.
 
-We've introduced automatic importing of some opscode_solr settings (heap, new size, and java options), but a vast majority are ignored. If you have a highly tuned Solr setup on your Chef server you should ensure you're porting your opscode_solr settings to opscode_solr4.
+Some ``opscode_solr`` settings are imported automatically, such as heap, new size, and |java| options, but many settings are ignored. If your |chef server oec| configuration is highly tuned for |apache solr|, review `these configuration settings <https://docs.chef.io/config_rb_server_optional_settings.html#opscode-solr4>`__ before re-tuning |apache solr| for |chef server| version 12.
