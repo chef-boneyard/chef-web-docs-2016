@@ -14,4 +14,4 @@ This resource has the following properties:
    * - ``name``
      - |name vlan|
    * - ``vlan_id``
-     - |id vlan|
+     - Required. |id vlan|
