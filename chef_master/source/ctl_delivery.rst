@@ -20,7 +20,21 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+A |github| user name must be associated with |chef delivery| in order for |github| pull requests to be able to create changes in |chef delivery|.
+
+**Link a Github enterprise user name**
+
+.. code-block:: bash
+
+   $ delivery api put users/$DELIVERY_USERNAME/set-oauth-alias --data='{"app_name":"github","alias":"$GITHUB_USERNAME"}'
+
+**Link a Github.com user name**
+
+.. code-block:: bash
+
+   $ delivery api put users/$DELIVERY_USERNAME/set-oauth-alias --data='{"app_name":"github-enterprise","alias":"$GITHUB_USERNAME"}'
+
+.. note:: Two |github| accounts may not be linked to a single |chef delivery| user. Two |chef delivery| users may not share a single |github| user name.
 
 delivery checkout
 =====================================================
