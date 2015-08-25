@@ -17,9 +17,9 @@ For a package that has different package names, depending on the platform, use a
    package 'Install Apache' do
      case node[:platform]
      when 'redhat', 'centos'
-       package 'httpd'
+       package_name 'httpd'
      when 'ubuntu', 'debian'
-       package 'apache2'
+       package_name 'apache2'
      end
    end
 
