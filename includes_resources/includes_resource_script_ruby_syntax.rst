@@ -27,7 +27,6 @@ The full syntax for all of the properties that are available to the |resource sc
 
    ruby 'name' do
      code                       String
-     command                    String, Array # defaults to 'name' if not specified
      creates                    String
      cwd                        String
      environment                Hash
@@ -48,6 +47,6 @@ where
 
 * ``ruby`` is the resource
 * ``name`` is the name of the resource block
-* ``command`` is the command to be run and ``cwd`` is the location from which the command is run
+* ``cwd`` is the location from which the command is run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``code``, ``command``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``code``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are properties of this resource, with the |ruby| type shown. |see attributes|
