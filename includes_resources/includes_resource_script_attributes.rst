@@ -13,10 +13,6 @@ This resource has the following attributes:
      - **Ruby Type:** String
 
        |code quoted_string|
-   * - ``command``
-     - **Ruby Types:** String, Array
-
-       |name command| |resource_block_default| |see syntax|
    * - ``creates``
      - **Ruby Type:** String
 
