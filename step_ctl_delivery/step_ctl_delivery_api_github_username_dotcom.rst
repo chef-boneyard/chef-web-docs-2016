@@ -4,4 +4,4 @@
 
 .. code-block:: bash
 
-   $ delivery api put users/$DELIVERY_USERNAME/set-oauth-alias --data='{"app_name":"github-enterprise","alias":"$GITHUB_USERNAME"}'
+   $ delivery api put users/$DELIVERY_NAME/set-oauth-alias --data='{"app":"github-enterprise","alias":"$GITHUB_NAME"}'
