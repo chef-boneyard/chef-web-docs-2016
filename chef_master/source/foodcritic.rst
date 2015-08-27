@@ -34,4 +34,4 @@ For more information ...
 =====================================================
 For more information about |foodcritic|:
 
-* `http://acrmp.github.io/foodcritic/ <http://acrmp.github.io/foodcritic/>`_
+* `http://www.foodcritic.io/ <http://www.foodcritic.io/>`_
