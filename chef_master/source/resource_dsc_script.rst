@@ -10,11 +10,11 @@ dsc_script
 
 .. include:: ../../includes_resources/includes_resource_dsc_script.rst
 
-.. note:: |windows powershell| 4.0 is required for using the |resource dsc_script| resource with |chef|.
+.. note:: .. include:: ../../includes_notes/includes_notes_dsc_script_required_powershell_version.rst
 
-.. note:: The |windows remote management| service must be enabled. (Use ``winrm quickconfig`` to enable the service.)
+.. note:: .. include:: ../../includes_notes/includes_notes_dsc_script_enable_winrm.rst
 
-.. warning:: The |resource dsc_script| resource  may not be used in the same run-list with the |resource dsc_resource|. This is because the |resource dsc_script| resource requires that ``RefreshMode`` in the Local Configuration Manager be set to ``Push``, whereas the |resource dsc_resource| resource requires it to be set to ``Disabled``.
+.. warning:: .. include:: ../../includes_notes/includes_notes_dsc_script_vs_dsc_resource.rst
 
 Syntax
 =====================================================
