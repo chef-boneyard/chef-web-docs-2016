@@ -10,8 +10,8 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 
 * **Rename "resource attributes" to "resource properties"** One of the outcomes of `RFC-054 <https://github.com/chef/chef-rfc/blob/master/rfc054-resource-attribute-improvements.md>`__ is that |company_name| will be more clear about what a node attribute is versus a resource property. In previous releases of |chef|, resource properties are referred to as attributes. Starting with |chef client| 12.5 (and retroactively updated for all previous releases of the docs), "resource attributes" will now be referred to as "resource properties". This is a semantic change in the docs that makes it more clear for everyone---they should have been called "resource properties" originally---but otherwise does not change any workflows or break anything.
 * **ps_credential helper to embed usernames and passwords** Use the ``ps_credential`` helper to embed a ``PSCredential`` object---security credentials, such as a user name or password---in a script defined by the |resource dsc_script| resource.
-* **The terms LWRP and HWRP are deprecated** The new way to refer to creating a custom resource is "custom resource" and the acronymns LWRP ("lightweight resource provider") and HWRP ("heavyweight resource provider") are deprecated. They are older, legacy terms that refer to specific ways of building custom resources. The current version of |chef| supports the older lightweight/heavyweight approaches, but adds additional ways of building custom resources.
-* **New way to build custom resources** The process for extending the built-in collection of resources in |chef| has been simplified. It is defined only in the ``/resources`` directory using a simplified syntax that easily leverages the built-in collection of resources. The ``/providers`` directory is deprecated.
+* **The terms LWRP and HWRP are deprecated** The new way to refer to creating a custom resource is "custom resource" and the acronyms LWRP ("lightweight resource provider") and HWRP ("heavyweight resource provider") are deprecated. They are older, legacy terms that refer to specific ways of building custom resources. The current version of |chef| supports the older lightweight/heavyweight approaches, but adds additional ways of building custom resources.
+* **New way to build custom resources** The process for extending the built-in collection of resources in |chef| has been simplified. It is defined only in the ``/resources`` directory using a simplified syntax that easily leverages the built-in collection of resources. The ``/providers`` directory is no longer required.
 
 
 ``ps_credential`` Helper
@@ -20,21 +20,21 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 
 Custom Resources
 -----------------------------------------------------
-The |chef client| 12.5 release includes a way of extending the built-in collection of resources.
+The |chef client| 12.5 release includes a way of extending the built-in collection of resources. This process has been simplified and uses only the ``/resources`` directory with a syntax that easily leverages the built-in collection of resources. The ``/providers`` directory is no longer required. 
 
-For example, |chef| does not include a resource named ``website``, which (if it existed) could be used to install and configure |apache|, manage related configuration files, deploy SSL certificates, and so on.
+For example, |chef| does not include a resource named ``website``, which (if it existed) could be used to install and configure a web server, manage related configuration files, deploy SSL certificates, and so on.
 
 A custom resource is defined in a file that is located in the ``/resources`` directory in a cookbook. This file
 
 * Declares the properties of the custom resource
-* Loads current resource properties, if they exist
+* Loads current properties, if the resource already exists
 * Defines each action the custom resource may take
 
 Once built, the custom resource may be used in a recipe just like the built-in collection of resources. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``acmeco`` with a custom resource named ``website.rb`` is used in a recipe like this:
 
 .. code-block:: ruby
 
-   acmeco_website 'httpd' do
+   acmeco_website 'name' do
      # some properties
      # an action
    end
