@@ -210,6 +210,7 @@ Cookbooks
    ctl_push_jobs_client
    ctl_reporting
    ctl_supermarket
+   custom_resources
    data_bags
    debug
    definitions
