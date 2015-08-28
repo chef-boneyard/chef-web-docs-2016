@@ -24,7 +24,7 @@
 
      - One (or more) workstations are configured to allow users to author, test, and maintain cookbooks. Cookbooks are uploaded to the |chef server| from the workstation. Some cookbooks are custom to the organization and others are based on community cookbooks available from the |supermarket|.
        
-       |ruby| is the programming language that is the authoring syntax for cookbooks. Most recipes are simple patterns (blocks of attributes and values that map to specific configuration items like packages, files, services, templates, or users). The full power of |ruby| is available for when you need a programming language.
+       |ruby| is the programming language that is the authoring syntax for cookbooks. Most recipes are simple patterns (blocks that define properties and values that map to specific configuration items like packages, files, services, templates, and users). The full power of |ruby| is available for when you need a programming language.
        
        Often, a workstation is configured to use the |chef dk| as the development toolkit. The |chef dk| is a package from |chef| that provides an optional (but recommended) set of tooling, including |chef| itself, the |chef ctl| command line tool, |kitchen|, |chef spec|, |berkshelf|, and more.
 
