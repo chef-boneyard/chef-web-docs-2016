@@ -13,6 +13,8 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **The terms LWRP and HWRP are deprecated** The new way to refer to creating a custom resource is "custom resource" and the acronyms LWRP ("lightweight resource provider") and HWRP ("heavyweight resource provider") are deprecated. They are older, legacy terms that refer to specific ways of building custom resources. The current version of |chef| supports the older lightweight/heavyweight approaches, but adds additional ways of building custom resources.
 * **New way to build custom resources** The process for extending the built-in collection of resources in |chef| has been simplified. It is defined only in the ``/resources`` directory using a simplified syntax that easily leverages the built-in collection of resources. The ``/providers`` directory is no longer required.
 
+.. https://github.com/chef/chef/pull/3776#issuecomment-135525399
+
 
 ``ps_credential`` Helper
 -----------------------------------------------------
