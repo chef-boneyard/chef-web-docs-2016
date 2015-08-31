@@ -18,6 +18,7 @@ Chef Open Source Slide Decks
    chefspec
    cookbooks
    ctl_chef
+   custom_resources
    foodcritic
    git
    kitchen
