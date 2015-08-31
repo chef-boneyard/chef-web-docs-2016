@@ -88,7 +88,7 @@ For example, the ``website.rb`` file in the ``acmeco`` cookbook could be similar
 where
 
 * ``homepage`` is a property that sets the default HTML for the ``index.html`` file with a default value of ``'<h1>Hello world!</h1>'``
-* the ``load_current_value`` block loads the current values for all specified properties, in this example there is just a single property: ``homepage``
+* the (optional) ``load_current_value`` block loads the current values for all specified properties, in this example there is just a single property: ``homepage``
 * the ``if`` statement checks to see if the ``index.html`` file is already present on the node. If that file is already present, its contents are loaded **instead** of the default value for ``homepage`` 
 * the ``action`` block uses the built-in collection of resources to tell the |chef client| how to install Apache, start and enable the ``httpd`` service, and then create the contents of the file located at ``/var/www/html/index.html``
 
@@ -100,6 +100,12 @@ The resulting ``acmeco_website`` resource may now be used in a recipe like this:
      homepage '<h1>Welcome to the Acme Co. website!</h1>'
      action: create
    end
+
+
+
+
+
+
 
 
 
