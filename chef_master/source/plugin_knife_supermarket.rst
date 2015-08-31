@@ -158,4 +158,6 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_supermarket_unshare.rst
 
+**Unshare a cookbook version**
 
+.. include:: ../../step_plugin_knife/step_plugin_knife_supermarket_unshare_version.rst
