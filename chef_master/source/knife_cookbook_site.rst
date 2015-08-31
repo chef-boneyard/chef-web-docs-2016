@@ -161,3 +161,7 @@ The following examples show how to use this |knife| subcommand:
 **Unshare a cookbook**
 
 .. include:: ../../step_knife/step_knife_site_cookbook_unshare.rst
+
+**Unshare a cookbook version**
+
+.. include:: ../../step_knife/step_knife_site_cookbook_unshare_version.rst

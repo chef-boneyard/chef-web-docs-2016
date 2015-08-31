@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife cookbook site unshare COOKBOOK_NAME
+   $ knife cookbook site unshare COOKBOOK_NAME/version/VERSION
 

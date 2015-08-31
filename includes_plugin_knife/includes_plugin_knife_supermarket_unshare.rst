@@ -5,3 +5,4 @@
 
 Use the ``unshare`` argument to stop the sharing of a cookbook located at |supermarket|. Only the maintainer of a cookbook may perform this action.
 
+.. note:: Unsharing a cookbook will break a cookbook that has set a dependency on that cookbook or cookbook version.
