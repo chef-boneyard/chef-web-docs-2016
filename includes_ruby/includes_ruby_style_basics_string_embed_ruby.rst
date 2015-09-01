@@ -8,4 +8,4 @@ Embed |ruby| in a string:
 
    x = 'Bob'
    "Hi, #{x}"      # => "Hi, Bob"
-   "Hello, #{x}"   # => "Hello, \#{x}" Notice that single quotes don't work with #{}
+   'Hello, #{x}'   # => "Hello, \#{x}" Notice that single quotes don't work with #{}
