@@ -37,8 +37,6 @@ Update Metadata
 
 Objectives
 -----------------------------------------------------
-.. image:: ../../images/custom_resources_01.svg
-
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_objectives.rst
 
 What is needed?
@@ -64,8 +62,6 @@ httpd.service.erb
 
 Define Properties
 -----------------------------------------------------
-.. image:: ../../images/custom_resources_02.svg
-
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_properties.rst
 
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_properties_add.rst
@@ -73,15 +69,11 @@ Define Properties
 
 Define Actions
 -----------------------------------------------------
-.. image:: ../../images/custom_resources_03.svg
-
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_actions.rst
 
 
 Define Resource
 -----------------------------------------------------
-.. image:: ../../images/custom_resources_04.svg
-
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources.rst
 
 package
@@ -115,8 +107,6 @@ Final Cookbook Directory
 
 Recipe
 -----------------------------------------------------
-.. image:: ../../images/custom_resources_05.svg
-
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_recipe.rst
 
 
