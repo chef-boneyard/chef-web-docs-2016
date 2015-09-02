@@ -24,6 +24,7 @@ Chef Open Source Slide Decks
    kitchen
    lab_install_text_editor
    list_resources
+   recipe_order_matters
    recipes
    resources
    serverspec
