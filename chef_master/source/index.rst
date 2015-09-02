@@ -12,7 +12,7 @@ Getting Started
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
-**Docs for Current Versions:** `chef-client 12.4 <http://docs.chef.io/client/>`__ | `Chef Server 12.1 <http://docs.chef.io/server/>`_ | `Chef DK <http://docs.chef.io/devkit/>`__ | `Ohai 8 <http://docs.chef.io/release/ohai-8/>`_ | :doc:`Release notes for chef-client 12.4 </release_notes>` | `Release notes for Chef server 12.1 <http://docs.chef.io/release_server_12-1/release_notes.html>`_ | :doc:`Previous Releases </releases>`
+**Docs for Current Versions:** `chef-client 12.4 <http://docs.chef.io/client/>`__ | `Chef Server 12.1 <http://docs.chef.io/server/>`_ | `Chef DK <http://docs.chef.io/devkit/>`__ | `Ohai 8 <http://docs.chef.io/release/ohai-8/>`_ | :doc:`Release notes for chef-client 12.4 </release_notes>` | `Release notes for Chef server 12.1 <http://docs.chef.io/release/server_12-1/release_notes.html>`_ | :doc:`Previous Releases </releases>`
 
 .. 
 .. **Key concepts:** :doc:`Attributes </attributes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Nodes </nodes>` | :doc:`Recipes </recipes>` | :doc:`Recipe DSL </dsl_recipe>` | :doc:`Roles </roles>` | :doc:`Ruby </ruby>` | :doc:`Run-list </run_list>`
