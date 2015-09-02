@@ -1,11 +1,11 @@
 ================================================
-Resource Order Matters in Recipes
+Order Matters
 ================================================
 
 
 .. revealjs::
 
- .. revealjs:: Resource Order Matters in Recipes
+ .. revealjs:: Order Matters
 
     .. include:: ../../includes_slides/includes_slides_recipes_order.rst
 
