@@ -42,22 +42,6 @@ Custom Resources
 
     .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_objectives_requirements.rst
 
- .. revealjs:: Create Templates
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates.rst
-
- .. revealjs:: httpd.conf.erb
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_conf.rst
-
- .. revealjs:: Template Variables
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates_httpd_conf_erb_variables.rst
-
- .. revealjs:: httpd.service.erb
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_service.rst
-
  .. revealjs:: Define Properties
     :noheading:
 
@@ -108,6 +92,22 @@ Custom Resources
  .. revealjs:: service
 
     .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_service.rst
+
+ .. revealjs:: Create Templates
+
+    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates.rst
+
+ .. revealjs:: httpd.conf.erb
+
+    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_conf.rst
+
+ .. revealjs:: Template Variables
+
+    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates_httpd_conf_erb_variables.rst
+
+ .. revealjs:: httpd.service.erb
+
+    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_service.rst
 
  .. revealjs:: Final Resource (Part One)
 

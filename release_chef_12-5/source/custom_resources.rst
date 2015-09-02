@@ -41,22 +41,6 @@ What is needed?
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_objectives_requirements.rst
 
-Create Templates
------------------------------------------------------
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates.rst
-
-httpd.conf.erb
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_conf.rst
-
-Template Variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates_httpd_conf_erb_variables.rst
-
-httpd.service.erb
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_service.rst
-
 
 Define Properties
 -----------------------------------------------------
@@ -94,13 +78,30 @@ service
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_service.rst
 
-Final Resource
+Create Templates
+-----------------------------------------------------
+.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates.rst
+
+httpd.conf.erb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_conf.rst
+
+Template Variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates_httpd_conf_erb_variables.rst
+
+httpd.service.erb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_service.rst
+
+Final Resource
+-----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_website_final_resource.rst
 
 Final Cookbook Directory
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_final_cookbook_directory.rst
+
 
 
 Recipe
