@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``/policies/NAME`` endpoint has the following methods: ``DELETE``, ``GET``, and ``PUT``. These endpoints enables the management of policies as they relate to a specific policy group.
+The ``/policies/NAME`` endpoint has the following methods: ``DELETE`` and ``GET``. These endpoints enables the management of policies as they relate to a specific policy group.
