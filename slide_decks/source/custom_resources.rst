@@ -6,8 +6,38 @@ Custom Resources
 .. revealjs::
 
  .. revealjs:: Custom Resources
+    :noheading:
 
-    Let's build a cookbook named ``website`` and a custom resource named ``httpd`` that installs and configures |apache| |httpd| on |redhat enterprise linux| 7 and |centos| 7.
+    .. image:: ../../images/custom_resources.svg
+
+
+ .. revealjs:: About Custom Resources
+
+    A custom resource is simple extension of |chef| that is a reusable component that isn't built-in to the core |chef| language. For example, |chef| includes resources to manage files, packages, templates, and services, but it does not include a resource to manage websites.
+
+
+ .. revealjs:: Scenario: Build an Apache Website
+
+    Let's create a resource that installs and configures |apache| |httpd| on |redhat enterprise linux| 7 and |centos| 7. We will do the following:
+
+    #. Create a cookbook named ``website``.
+    #. Update the ``README.md`` and ``metadata.rb`` files in that cookbook.
+    #. Identify any properties that are needed by this custom resource, the actions to perform, and the steps required to complete these actions.
+    #. Create two templates.
+    #. Define properties.
+    #. Define actions.
+    #. For each action, define the steps that are needed to configure the system, and then implement those steps using the resources that are built-in to |chef|.
+    #. Add the resource to a recipe.
+    #. Test the resource using |kitchen|.
+
+ .. revealjs:: Create a Cookbook
+
+    Create a new (empty) cookbook using the ``chef`` command-line tool that is buil-in to the |chef dk|:
+
+    .. code-block:: bash
+
+       $ chef generate cookbook website
+
 
  .. revealjs:: Update the Readme
 
@@ -24,6 +54,7 @@ Custom Resources
 	   * License: Apache 2.0
 	   * Author: Your Name
 
+
  .. revealjs:: Update Metadata
 
 	Update the ``metadata.rb`` file:
@@ -37,6 +68,30 @@ Custom Resources
 	   description       'Demo cookbook for custom resources in Chef 12.5'
 	   long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 	   version           '0.1.0'
+
+
+ .. revealjs:: What should this resource do?
+    :noheading:
+
+    .. image:: ../../images/custom_resources_01.svg
+
+ .. revealjs:: What should this custom resource do?
+
+	A custom resource follows simple, repeatable syntax patterns, and effectively leverages the resources that are built-in to |chef|. A custom resource typically contains:
+
+	* A list of custom properties; properties for a custom resource are set from within a recipe
+	* At least one action; each action tells the |chef client| what to do
+	* For each action, a collection of resources that are built-in to the |chef client|---|resource package|, |resource service|, |resource directory|, and |resource template|---that defines the steps required to complete the described action
+
+ .. revealjs:: What is needed?
+
+	This custom resource will need the following:
+
+	* Two properties
+	* Two templates
+	* An action that creates the website
+	* The steps required to complete this action, built using the |resource package|, |resource service|, |resource directory|, and |resource template| resources
+
 
  .. revealjs:: Create Templates
 
@@ -85,58 +140,31 @@ Custom Resources
 	   [Unit]
 	   Description=The Apache HTTP Server - instance <%= @instance_name %>
 	   After=network.target remote-fs.target nss-lookup.target
-   
+       
 	   [Service]
 	   Type=notify
-   
+       
 	   ExecStart=/usr/sbin/httpd -f /etc/httpd/conf/httpd-<%= @instance_name %>.conf -DFOREGROUND
 	   ExecReload=/usr/sbin/httpd -f /etc/httpd/conf/httpd-<%= @instance_name %>.conf -k graceful
 	   ExecStop=/bin/kill -WINCH ${MAINPID}
-   
+       
 	   KillSignal=SIGCONT
 	   PrivateTmp=true
-   
+       
 	   [Install]
 	   WantedBy=multi-user.target
 
 	For now, copy it as shown, add it to the ``templates`` directory, name it ``httpd.service.erb``.
 
- .. revealjs:: /resources
 
-	Now let's build a custom resource. Creating a custom resource is simple, following repeatable syntax patterns, and effectively leveraging the resources that are built-in to |chef|.
 
-	A custom resource defines:
 
-	* A list of custom properties; properties for a custom resource are set from within a recipe
-	* At least one action; each action tells the |chef client| what to do
-	* For each action, a collection of resources that are built-in to the |chef client|---|resource package|, |resource service|, |resource directory|, and |resource template|---that defines the steps required to complete the described action
+ .. revealjs:: Define Properties
+    :noheading:
 
-	.. note:: Do I need to be a programmer? No. There is no "|ruby| code" in this example. It only contains simple patterns that are defined using |ruby| syntax to define custom properties and actions, and then uses the resources that are built-in to |chef| to describe each action.
+    .. image:: ../../images/custom_resources_02.svg
 
- .. revealjs:: Custom Resource Syntax
-
-	This custom resource will need two custom properties and a single action that leverages resources that are built-in to |chef|. Use the following syntax pattern:
-
-	.. code-block:: ruby
-
-	   property :name, RubyType, name_property: true # if true
-
-	   action :create do
-
-	     package # Installs httpd
-
-	     template # Creates /lib/systemd/system/httpd.service
-
-	     template # Creates /etc/httpd/conf/httpd.conf
-
-	     directory # Creates /var/www/vhosts/
-
-	     service # Starts, stops, and restarts httpd
-
-	   end
-    
-
- .. revealjs:: Custom Properties
+ .. revealjs:: Define Properties
 
 	This custom resource requires two custom properties:
 
@@ -145,7 +173,7 @@ Custom Resources
 
 	Custom properties are tunable when they are declared in a recipe. Note also that both of these properties are defined as variables in the ``httpd.conf.erb`` file. A |resource template| block below will tell the |chef client| how to handle those variables.
 
- .. revealjs:: Custom Properties (continued)
+ .. revealjs:: Define Properties (continued)
 
 	In the custom resource, add the following custom properties:
 
@@ -161,7 +189,14 @@ Custom Resources
 
 	The ``instance_name`` property is then used within the custom resource in many locations, including defining paths to configuration files, services, and virtual hosts.
 
- .. revealjs:: Custom Actions
+
+ .. revealjs:: Define Actions
+    :noheading:
+
+    .. image:: ../../images/custom_resources_03.svg
+
+
+ .. revealjs:: Define Actions
 
 	Each custom resource must have at least one action that is defined within an ``action`` block:
 
@@ -173,6 +208,15 @@ Custom Resources
 
 	where ``:create`` is a value that may be assigned to the ``action`` property for when this resource is used in a recipe. The following sections describe each of the resource blocks that are contained within this action.
 
+
+
+
+
+ .. revealjs:: Define Resource
+    :noheading:
+
+    .. image:: ../../images/custom_resources_04.svg
+
  .. revealjs:: package
 
 	Use the |resource package| resource to install |httpd|:
@@ -182,7 +226,6 @@ Custom Resources
 	   package 'httpd' do
 	     action :install
 	   end
-    
 
  .. revealjs:: template, httpd.service
 
@@ -320,13 +363,17 @@ Custom Resources
 	   end
 
 
- .. revealjs:: /recipes
 
-    Now let's add this custom resource to a recipe. The resource name is inferred from the name of the cookbook (``website``) and the name of the recipe (``httpd``), separated by an underscore(``_``): ``website_httpd``.
 
- .. revealjs:: How the recipe works
+ .. revealjs:: Recipe
+    :noheading:
 
-	The ``website_httpd`` resource is used in a recipe like this:
+    .. image:: ../../images/custom_resources_05.svg
+
+
+ .. revealjs:: Add the Resource to a Recipe
+
+	Add the following to the ``default.rb`` recipe in the ``website`` cookbook. The resource name is inferred from the name of the cookbook (``website``) and the name of the recipe (``httpd``), separated by an underscore(``_``): ``website_httpd``.
 
 	.. code-block:: ruby
 
@@ -343,20 +390,45 @@ Custom Resources
 	* Creates the virtual host for the website
 	* Starts the |httpd| service
 
- .. revealjs:: Create Default Recipe
 
-	Add the following to the ``default.rb`` recipe in the ``website`` cookbook. When this cookbook is part of a run-list, |apache| |httpd| will be installed, configured, and started:
 
-	.. code-block:: ruby
-       
-	   website_httpd 'httpd_site' do
-	     port 81
-	     action :create
-	   end
+
+ .. revealjs:: Test
+    :noheading:
+
+    .. image:: ../../images/custom_resources_06.svg
+
+
+ .. revealjs:: Add to Run-List, Run Kitchen
+
+    Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
 
  .. revealjs:: Add to Run-List, Run Chef
 
     Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  .. revealjs:: Questions
 
@@ -367,4 +439,4 @@ Custom Resources
     For more information, see:
 
     * |url slides_docs_chef_io|
-    * docs.chef.io/custom_resources.html
+    * https://docs.chef.io/custom_resources.html
