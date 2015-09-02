@@ -13,12 +13,17 @@ Custom Resources
 
  .. revealjs:: About Custom Resources
 
-    A custom resource is simple extension of |chef| that is a reusable component that isn't built-in to the core |chef| language. For example, |chef| includes resources to manage files, packages, templates, and services, but it does not include a resource to manage websites.
+    A custom resource is:
 
+    * A simple extension of |chef|
+    * Implemented as part of a cookbook
+    * Reusable across recipes
 
- .. revealjs:: Scenario: Build an Apache Website
+    For example, |chef| includes built-in resources to manage files, packages, templates, and services, but it does not include a resource that manages websites.
 
-    Let's create a resource that installs and configures |apache| |httpd| on |redhat enterprise linux| 7 and |centos| 7. We will do the following:
+ .. revealjs:: Scenario: Build a Website
+
+    Let's create a resource that installs and configures |apache| |httpd| on |redhat enterprise linux| 7 and |centos| 7. You will need to do the following:
 
     #. Create a cookbook named ``website``.
     #. Update the ``README.md`` and ``metadata.rb`` files in that cookbook.
@@ -32,12 +37,20 @@ Custom Resources
 
  .. revealjs:: Create a Cookbook
 
-    Create a new (empty) cookbook using the ``chef`` command-line tool that is buil-in to the |chef dk|:
+    This article assumes that a cookbook directory named ``website`` exists with (at least) the following directories and file names:
 
-    .. code-block:: bash
+    .. code-block:: text
 
-       $ chef generate cookbook website
+       /website
+         /cookbooks
+           /website
+             metadata.rb
+             /recipes
+             README.md
+             /resources
+             /templates
 
+    See https://docs.chef.io/ctl_chef.html for more information about how to use the ``chef`` command-line tool that is packaged with the |chef dk| to build the |chef repo|, plus related cookbook sub-directories.
 
  .. revealjs:: Update the Readme
 
@@ -45,7 +58,7 @@ Custom Resources
 
 	.. code-block:: text
 
-	   Custom Resources in Chef 12.5
+	   Your Cookbook
 	   =====================================================
    
 	   License and Authors
@@ -59,7 +72,7 @@ Custom Resources
 
 	Update the ``metadata.rb`` file:
 
-	.. code-block:: text
+	.. code-block:: ruby
 
 	   name              'website'
 	   maintainer        'Your Company, Inc.'
@@ -70,12 +83,12 @@ Custom Resources
 	   version           '0.1.0'
 
 
- .. revealjs:: What should this resource do?
+ .. revealjs:: Objectives
     :noheading:
 
     .. image:: ../../images/custom_resources_01.svg
 
- .. revealjs:: What should this custom resource do?
+ .. revealjs:: Objectives
 
 	A custom resource follows simple, repeatable syntax patterns, and effectively leverages the resources that are built-in to |chef|. A custom resource typically contains:
 
@@ -102,7 +115,7 @@ Custom Resources
 
  .. revealjs:: httpd.conf.erb
 
-	The following configuration file is used by |apache| to store information about the server and is typically located under the ``/etc/httpd`` path:
+	``httpd.conf.erb`` stores information about the server and is typically located under the ``/etc/httpd``:
 
 	.. code-block:: ruby
 
@@ -116,16 +129,15 @@ Custom Resources
 	     Require all denied
 	   </Directory>
 	   DocumentRoot "/var/www/vhosts/<%= @instance_name %>"
-	   <IfModule mime_module>
-	     # Silly RHEL, putting things in non-standard locations    
+	   <IfModule mime_module> 
 	     TypesConfig /etc/mime.types
 	   </IfModule>
 
-	For now, copy it as shown, add it to the ``templates`` directory, name the file ``httpd.conf.erb``.
+	For now, copy it as shown, add it under the ``/templates`` directory, name the file ``httpd.conf.erb``.
 
  .. revealjs:: instance_name and port Variables
 
-	The two variables in that template are ``<%= @instance_name %>`` and ``<%= @port %>``. They will be
+	The ``httpd.conf.erb`` template has two variables: ``<%= @instance_name %>`` and ``<%= @port %>``. They are:
 
 	* Declared as properties of the custom resource
 	* Defined as variables in a |resource template| resource block within the custom resource (using the ``variables`` property)
@@ -133,7 +145,7 @@ Custom Resources
 
  .. revealjs:: httpd.service.erb
 
-	The following configuration file tells the |chef client| how to start (``ExecStart``), stop (``ExecStop``), and reload (``ExecReload``) the |apache| |httpd| service:
+	``httpd.service.erb`` tells |systemd| how to start and stop the website:
 
 	.. code-block:: ruby
 
@@ -154,7 +166,7 @@ Custom Resources
 	   [Install]
 	   WantedBy=multi-user.target
 
-	For now, copy it as shown, add it to the ``templates`` directory, name it ``httpd.service.erb``.
+	For now, copy it as shown, add it under the ``/templates`` directory, name it ``httpd.service.erb``.
 
 
 
@@ -363,6 +375,26 @@ Custom Resources
 	   end
 
 
+ .. revealjs:: Final Cookbook Directory
+
+    When finished adding the templates and building the custom resource, the cookbook directory structure should look like this:
+
+    .. code-block:: text
+
+    .. code-block:: text
+
+       /website
+         /cookbooks
+           /website
+             metadata.rb
+             /recipes
+               default.rb
+             README.md
+             /resources
+               httpd.rb
+             /templates
+               httpd.conf.erb
+               httpd.service.erb
 
 
  .. revealjs:: Recipe
@@ -440,3 +472,16 @@ Custom Resources
 
     * |url slides_docs_chef_io|
     * https://docs.chef.io/custom_resources.html
+
+
+
+
+.. 
+.. Notes for future sections:
+.. 
+.. 1) custom resource names (that don't join cookbook_recipe) by using provides
+.. 2) proper location of the defaut.rb recipe (not in this cookbook!)
+.. 
+
+
+
