@@ -21,4 +21,4 @@
      TypesConfig /etc/mime.types
    </IfModule>
 
-Copy it as shown, add it under the ``/templates`` directory, and then name the file ``httpd.conf.erb``.
+Copy it as shown, add it under ``/templates/default``, and then name the file ``httpd.conf.erb``.
