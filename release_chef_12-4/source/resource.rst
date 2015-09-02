@@ -1,7 +1,7 @@
 .. THIS PAGE DOCUMENTS chef-client version 12.4
 
 =====================================================
-About Resources and Providers
+About Resources
 =====================================================
 
 .. note:: ../../includes_notes/includes_notes_all_resources.rst
