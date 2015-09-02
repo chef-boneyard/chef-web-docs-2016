@@ -22,91 +22,15 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 
 Custom Resources
 -----------------------------------------------------
-The |chef client| 12.5 release includes a way of extending the built-in collection of resources. This process has been simplified and uses only the ``/resources`` directory with a syntax that easily leverages the built-in collection of resources. The ``/providers`` directory is no longer required. 
+.. include:: ../../includes_custom_resources/includes_custom_resources.rst
 
-For example, |chef| does not include a resource named ``website``, which (if it existed) could be used to install and configure a web server, manage related configuration files, deploy SSL certificates, and so on.
-
-A custom resource is defined in a file that is located in the ``/resources`` directory in a cookbook. This file
-
-* Declares the properties of the custom resource
-* Loads current properties, if the resource already exists
-* Defines each action the custom resource may take
-
-Once built, the custom resource may be used in a recipe just like the built-in collection of resources. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``acmeco`` with a custom resource named ``website.rb`` is used in a recipe like this:
-
-.. code-block:: ruby
-
-   acmeco_website 'name' do
-     # some properties
-     # an action
-   end
-
+.. note:: See https://docs.chef.io/custom_resources.html for more information about custom resources, including a scenario that shows how to build a ``website`` resource. Read this scenario as an HTML presentation at https://docs.chef.io/decks/custom_resources.html.
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-A custom resource declares properties, defines current properties to be loaded (if any), and one (or more) actions. The syntax for a custom resource is. For example:
+.. include:: ../../includes_custom_resources/includes_custom_resources_syntax.rst
 
-.. code-block:: ruby
-
-   property :name, RubyType, default: 'value'
-
-   load_current_value do
-     # some Ruby
-   end
-
-   action :name do
-    # a mix of built-in Chef resources and Ruby
-   end
-
-
-Example
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-For example, the ``website.rb`` file in the ``acmeco`` cookbook could be similar to:
-
-.. code-block:: ruby
-
-   property :homepage, String, default: '<h1>Hello world!</h1>'
-
-   load_current_value do
-     if File.exist?('/var/www/html/index.html')
-       homepage IO.read('/var/www/html/index.html')
-     end
-   end
-
-   action :create do
-     package 'httpd'
-
-     service 'httpd' do
-       action [:enable, :start]
-     end
-
-     file '/var/www/html/index.html' do
-       content homepage
-     end
-   end
-
-where
-
-* ``homepage`` is a property that sets the default HTML for the ``index.html`` file with a default value of ``'<h1>Hello world!</h1>'``
-* the (optional) ``load_current_value`` block loads the current values for all specified properties, in this example there is just a single property: ``homepage``
-* the ``if`` statement checks to see if the ``index.html`` file is already present on the node. If that file is already present, its contents are loaded **instead** of the default value for ``homepage`` 
-* the ``action`` block uses the built-in collection of resources to tell the |chef client| how to install Apache, start and enable the ``httpd`` service, and then create the contents of the file located at ``/var/www/html/index.html``
-
-The resulting ``acmeco_website`` resource may now be used in a recipe like this:
-
-.. code-block:: ruby
-
-   acmeco_website 'httpd' do
-     homepage '<h1>Welcome to the Acme Co. website!</h1>'
-     action: create
-   end
-
-
-
-
-
-
-
+.. include:: ../../includes_custom_resources/includes_custom_resources_syntax_example.rst
 
 
 Changelog
