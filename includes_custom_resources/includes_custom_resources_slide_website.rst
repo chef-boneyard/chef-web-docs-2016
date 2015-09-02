@@ -8,7 +8,7 @@ Let's create a resource that configures |apache| |httpd| for |redhat enterprise 
 This scenario covers the following:
 
 #. Defining a cookbook named ``website``; updating the ``README.md`` and ``metadata.rb`` files
-#. Creating two templates
+#. Creating two templates that support the custom resource
 #. Defining each property
 #. Defining an action
 #. For the action, defining the steps to configure the system using resources that are built into |chef|

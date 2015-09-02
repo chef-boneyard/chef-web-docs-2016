@@ -3,7 +3,7 @@
 .. This file is hooked into a slide deck
 
 
-The ``/templates`` directory must contain two templates:
+The ``/templates/default`` directory must contain two templates:
 
 * ``httpd.conf.erb`` to configure |apache| |httpd|
 * ``httpd.service.erb`` to tell |systemd| how to start and stop the website

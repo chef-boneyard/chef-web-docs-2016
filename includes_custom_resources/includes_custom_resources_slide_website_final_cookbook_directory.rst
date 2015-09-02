@@ -17,5 +17,6 @@ When finished adding the templates and building the custom resource, the cookboo
          /resources
            httpd.rb
          /templates
-           httpd.conf.erb
-           httpd.service.erb
+           /default
+             httpd.conf.erb
+             httpd.service.erb

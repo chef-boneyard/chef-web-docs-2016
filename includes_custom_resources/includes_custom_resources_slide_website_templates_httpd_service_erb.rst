@@ -24,4 +24,4 @@
    [Install]
    WantedBy=multi-user.target
 
-Copy it as shown, add it under the ``/templates`` directory, and then name it ``httpd.service.erb``.
+Copy it as shown, add it under ``/templates/default``, and then name it ``httpd.service.erb``.
