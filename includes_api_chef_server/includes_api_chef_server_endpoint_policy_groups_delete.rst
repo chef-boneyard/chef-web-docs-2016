@@ -10,6 +10,7 @@ This method has no parameters.
 .. code-block:: xml
 
    DELETE /organizations/NAME/policy_groups/NAME
+
 **Response**
 
 The response returns the policy details and is similar to:
