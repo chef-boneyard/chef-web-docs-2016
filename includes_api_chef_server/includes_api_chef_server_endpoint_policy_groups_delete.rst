@@ -17,7 +17,17 @@ The response returns the policy details and is similar to:
 
 .. code-block:: javascript
 
-   xxxxx
+   {
+     "uri": "https://chef.example/organizations/org1/policy_groups/dev",
+     "policies": {
+       "aar": {
+         "revision_id": "95040c199302c85c9ccf1bcc6746968b820b1fa25d92477ea2ec5386cd58b9c5"
+       },
+       "jenkins": {
+         "revision_id": "613f803bdd035d574df7fa6da525b38df45a74ca82b38b79655efed8a189e073"
+       }
+     }
+   }
 
 **Response Codes**
 

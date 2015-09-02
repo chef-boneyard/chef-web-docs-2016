@@ -17,7 +17,14 @@ The response returns the policy details and is similar to:
 
 .. code-block:: javascript
 
-   xxxxx
+   {
+     "revisions":
+       {
+         "37f9b658cdd1d9319bac8920581723efcc2014304b5f3827ee0779e10ffbdcc9": {},
+         "95040c199302c85c9ccf1bcc6746968b820b1fa25d92477ea2ec5386cd58b9c5": {},
+         "d81e80ae9bb9778e8c4b7652d29b11d2111e763a840d0cadb34b46a8b2ca4347": {}
+       }
+   }
 
 **Response Codes**
 
