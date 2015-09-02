@@ -49,6 +49,8 @@ This resource has the following properties:
      - **Ruby Type:** Array
 
        |path resource execute| The default value uses the system path.
+
+       .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
    * - ``provider``
      - **Ruby Type:** Chef Class
 
