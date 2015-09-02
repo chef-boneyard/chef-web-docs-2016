@@ -49,6 +49,15 @@ This resource has the following properties:
        |path resource execute| The default value uses the system path.
 
        .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
+
+          For example:
+
+          .. code-block:: ruby
+
+             execute 'mycommand' do
+               environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
+             end
+
    * - ``provider``
      - **Ruby Type:** Chef Class
 
