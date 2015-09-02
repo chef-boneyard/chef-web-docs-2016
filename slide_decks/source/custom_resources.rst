@@ -147,10 +147,6 @@ Custom Resources
 
     Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
 
- .. revealjs:: Questions
-
-    .. include:: ../../includes_slides/includes_slides_core_questions.rst
-
  .. revealjs:: More Info About Resources
 
     For more information, see:
