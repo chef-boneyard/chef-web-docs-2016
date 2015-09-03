@@ -41,7 +41,7 @@ DELETE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_groups_delete.rst
 
-GET /policies/NAME
+/policies/NAME
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_policy_name.rst
 
