@@ -15,11 +15,6 @@ Cookbooks are comprised of the following components:
           :align: center
 
      - .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
-   * - .. image:: ../../images/icon_cookbook_definitions.svg
-          :width: 100px
-          :align: center
-
-     - .. include:: ../../includes_definition/includes_definition.rst
    * - .. image:: ../../images/icon_cookbook_files.svg
           :width: 100px
           :align: center
