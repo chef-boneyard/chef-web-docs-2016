@@ -2,7 +2,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-.. warning:: This is about an upcoming feature in |chef server| 12.2.
 
 The following diagram highlights the specific changes that occur when |postgresql| is configured and managed independently of the |chef server| configuration.
 
