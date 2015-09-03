@@ -11,6 +11,9 @@ The following documentation sets are available:
    * - Application
      - Home Page
      - Release Notes
+   * - |chef client_title| 12.5
+     - `http://docs.chef.io/release/12-5/ <http://docs.chef.io/release/12-5/>`__
+     - `Release Notes <http://docs.chef.io/release/12-5/release_notes.html>`__
    * - |chef client_title| 12.4
      - `http://docs.chef.io/release/12-4/ <http://docs.chef.io/release/12-4/>`__
      - `Release Notes <http://docs.chef.io/release/12-4/release_notes.html>`__
@@ -59,6 +62,9 @@ The following documentation sets are available:
    * - |chef dk_title|
      - `http://docs.chef.io/devkit/ <http://docs.chef.io/devkit/>`__
      - 
+   * - |chef server_title| 12.2
+     - `http://docs.chef.io/release/server_12-2/ <http://docs.chef.io/release/server_12-2/>`__
+     - `Release Notes <http://docs.chef.io/release/server_12-2/release_notes.html>`__
    * - |chef server_title| 12.1
      - `http://docs.chef.io/release/server_12-1/ <http://docs.chef.io/release/server_12-1/>`__
      - `Release Notes <http://docs.chef.io/release/server_12-1/release_notes.html>`__
