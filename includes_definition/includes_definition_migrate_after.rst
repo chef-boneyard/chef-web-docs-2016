@@ -53,11 +53,11 @@ The following example shows a definition as a custom resource:
 
 
 
-Once built, the custom resource may be used in a recipe just like the any of the resources that are built into |chef|. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``website`` with a custom resource named ``splunk.rb`` is used in a recipe like this:
+Once built, the custom resource may be used in a recipe just like the any of the resources that are built into |chef|. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``install`` with a custom resource named ``splunk.rb`` is used in a recipe like this:
 
 .. code-block:: ruby
 
-   website_splunk 'name' do
+   install_splunk 'name' do
      url 'https://downloads.chef.io/whatever.pkg'
    end
 
