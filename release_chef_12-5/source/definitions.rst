@@ -23,6 +23,4 @@ Old Definition
 
 New Custom Resource
 -----------------------------------------------------
-.. include:: ../../includes_custom_resources/includes_custom_resources.rst
-
 .. include:: ../../includes_definition/includes_definition_migrate_after.rst
