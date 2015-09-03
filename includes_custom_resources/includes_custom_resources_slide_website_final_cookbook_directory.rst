@@ -8,15 +8,13 @@ When finished adding the templates and building the custom resource, the cookboo
 .. code-block:: text
 
    /website
-     /cookbooks
-       /website
-         metadata.rb
-         /recipes
-           default.rb
-         README.md
-         /resources
-           httpd.rb
-         /templates
-           /default
-             httpd.conf.erb
-             httpd.service.erb
+     metadata.rb
+     /recipes
+       default.rb
+     README.md
+     /resources
+       httpd.rb
+     /templates
+       /default
+         httpd.conf.erb
+         httpd.service.erb
