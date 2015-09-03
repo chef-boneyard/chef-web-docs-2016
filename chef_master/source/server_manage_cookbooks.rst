@@ -27,7 +27,10 @@ A cookbook can contain the following types of files:
    * - Attributes
      - .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
    * - Definitions
-     - .. include:: ../../includes_definition/includes_definition.rst
+     - .. include:: ../../includes_definition/includes_definition_12-4.rst
+
+       .. warning:: Starting with |chef client| 12.5, it is recommended to `build custom resources <https://docs.chef.io/custom_resources.html>`__ instead of definitions and to `migrate existing definitions to be custom resources <https://docs.chef.io/definitions.html>`__.
+
    * - Files
      - .. include:: ../../includes_resources/includes_resource_cookbook_file.rst
    * - Libraries
