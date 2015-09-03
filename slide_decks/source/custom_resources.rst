@@ -21,14 +21,6 @@ Custom Resources
 
     .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_cookbook.rst
 
- .. revealjs:: Update the Readme
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_cookbook_readme.rst
-
- .. revealjs:: Update Metadata
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_cookbook_metadata.rst
-
  .. revealjs:: Objectives
     :noheading:
 

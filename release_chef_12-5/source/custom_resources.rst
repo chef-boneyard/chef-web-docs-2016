@@ -25,14 +25,6 @@ Create a Cookbook
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_cookbook.rst
 
-Update the Readme
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_cookbook_readme.rst
-
-Update Metadata
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_cookbook_metadata.rst
-
 Objectives
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_objectives.rst
