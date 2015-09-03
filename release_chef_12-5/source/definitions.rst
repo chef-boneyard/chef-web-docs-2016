@@ -17,11 +17,11 @@ Migrate to Custom Resource
 =====================================================
 This section shows a definition, and then that definition as custom resource.
 
-Definition
+Old Definition
 -----------------------------------------------------
 .. include:: ../../includes_definition/includes_definition_migrate_before.rst
 
-Custom Resource
+New Custom Resource
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources.rst
 
