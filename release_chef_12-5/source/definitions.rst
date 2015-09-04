@@ -13,30 +13,30 @@ Syntax (pre-12.5)
 =====================================================
 .. include:: ../../includes_definition/includes_definition_12-4_syntax.rst
 
-Migrate to Custom Resource
+Definition vs. Resource
 =====================================================
-This section shows a definition, and then that definition as custom resource.
+This section shows a definition, and then that definition as custom resource. It also shows how to break that custom resource down into simpler, platform-specific resources.
 
-Old Definition
+Definition
 -----------------------------------------------------
 .. include:: ../../includes_definition/includes_definition_migrate_before.rst
 
-New Custom Resource
+Custom Resource
 -----------------------------------------------------
 .. include:: ../../includes_definition/includes_definition_migrate_after.rst
 
-Refactor by Platform
+By Platform
 -----------------------------------------------------
 .. include:: ../../includes_definition/includes_definition_migrate_after_by_platform.rst
 
-|debian|
+``debian``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_debian.rst
 
-|redhat enterprise linux|
+``rhel``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_rhel.rst
 
-|solaris|
+``omnios``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_omnios.rst
