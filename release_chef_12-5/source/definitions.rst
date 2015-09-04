@@ -5,7 +5,7 @@
 About Definitions
 =====================================================
 
-.. warning:: Starting with |chef client| 12.5, it is recommended to :doc:`build custom resources </custom_resources>` instead of definitions. While the use of definitions is not deprecated---all existing definitions will continue to work---it is recommended to also migrate existing definitions to the new custom resource patterns. This topic introduces definitions as they once were (and still can be, if desired), but deprecates examples of using them in favor of showing how to migrate an existing definition to the new custom resource pattern.
+.. warning:: Starting with |chef client| 12.5, it is recommended to :doc:`build custom resources </custom_resources>` instead of definitions. While the use of definitions is not deprecated---all existing definitions will continue to work---it is recommended to also migrate existing definitions to the new custom resource patterns. This topic introduces definitions as they once were (and still can be, if desired), but deprecates all but one example of using them in favor of showing how to migrate an existing definition to the new custom resource pattern.
 
 .. include:: ../../includes_definition/includes_definition.rst
 
