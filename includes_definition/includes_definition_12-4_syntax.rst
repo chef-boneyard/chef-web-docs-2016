@@ -54,11 +54,11 @@ Or the following definition, which looks like a resource when used in a recipe, 
    define :host_porter, :port => 4000, :hostname => nil do
      params[:hostname] ||= params[:name]
    
-     directory '/etc/#{params[:hostname]}' do
+     directory "/etc/#{params[:hostname]}" do
        recursive true
      end
    
-     file '/etc/#{params[:hostname]}/#{params[:port]}' do
+     file "/etc/#{params[:hostname]}/#{params[:port]}" do
        content 'some content'
      end
    end

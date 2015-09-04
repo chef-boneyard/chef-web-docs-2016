@@ -25,3 +25,7 @@ Custom Resource
 -----------------------------------------------------
 .. include:: ../../includes_definition/includes_definition_migrate_after.rst
 
+Many Recipes, One Resource (Accumulator Pattern)
+================================================
+
+.. include:: ../../includes_definition/includes_definition_12-4_scenario_many_recipes_one_definition.rst
