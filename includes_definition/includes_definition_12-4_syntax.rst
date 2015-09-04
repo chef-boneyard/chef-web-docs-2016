@@ -34,15 +34,16 @@ The following simplistic example shows a definition with no arguments (a paramet
      end
    end
 
-An example showing the more common usage pattern, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable``, would look something like:
-
-.. code-block:: ruby
-
-   define :apache_site, :action => :enable do
-     if params[:action] == :enable
-        ...
-     else
-        ...
+An example showing the use of parameters, with a parameter named ``port`` that defaults to ``4000`` rendered into a |resource template| resource, would look like:
+ 		 
+ .. code-block:: ruby
+ 		 
+   define :prime_myfile, port: 4000 do
+     template '/etc/myfile' do
+       source 'myfile.erb'
+       variables({
+         port: params[:port],
+       })
      end
    end
 
