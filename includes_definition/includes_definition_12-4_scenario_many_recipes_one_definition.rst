@@ -11,6 +11,14 @@ A better approach for this use case is to use a definition.  This builds a singl
 the template resource early in the run_list where it will be converged, you can then use an immediate notification to run ``newaliases`` and then subsequent recipes can rely on the fact that
 the aliases will be setup early in compile time before any of their resources are converged.
 
+Generally when the problem to be solved involves:
+
+- Editing a single file multiple times, but the whole file is ultimately going to be managed
+- Notifying a resource (or multiple resources) once the edits are done
+- Writing the problem as a custom resource runs into trouble with notifications and use_inline_resources
+
+Those are the ``code smells`` that a definition would better solve the problem than a resource.
+
 .. code-block:: ruby
 
    # example provided by community member "Mithrandir". Thank you!
