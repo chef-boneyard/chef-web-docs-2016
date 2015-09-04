@@ -22,7 +22,7 @@ Create a Resource
 
 Many Recipes, One Definition
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_12-4_scenario_many_recipes_one_definition.rst
+.. include:: ../../includes_definition/includes_definition_scenario_many_recipes_one_definition.rst
 
 Virtual Hosts
 -----------------------------------------------------

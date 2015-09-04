@@ -13,6 +13,14 @@ Syntax (pre-12.5)
 =====================================================
 .. include:: ../../includes_definition/includes_definition_12-4_syntax.rst
 
+Examples
+=====================================================
+The following examples show how to use cookbook definitions.
+
+Many Recipes, One Definition
+-----------------------------------------------------
+.. include:: ../../includes_definition/includes_definition_scenario_many_recipes_one_definition.rst
+
 Definition vs. Resource
 =====================================================
 This section shows a definition, and then that definition as custom resource. It also shows how to break that custom resource down into simpler, platform-specific resources.
