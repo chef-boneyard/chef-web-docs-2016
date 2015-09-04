@@ -29,5 +29,5 @@ Put this recipe in the ``install`` cookbook's ``/resources`` directory and name 
 .. code-block:: ruby
 
    install_splunk_dpkg 'name' do
-     url 'https://downloads.chef.io/some.pkg'
+     url node['splunk']['forwarder']['url']
    end

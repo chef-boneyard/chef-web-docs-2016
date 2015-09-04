@@ -56,6 +56,6 @@ Once built, the custom resource may be used in a recipe just like the any of the
 .. code-block:: ruby
 
    install_splunk 'name' do
-     url 'https://downloads.chef.io/some.pkg'
+     url node['splunk']['forwarder']['url']
    end
 
