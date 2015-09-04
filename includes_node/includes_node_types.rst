@@ -30,3 +30,8 @@ The types of nodes that can be managed by |chef| include, but are not limited to
           :align: center
 
      - |node type_network|
+   * - .. image:: ../../images/icon_node_type_network_container.svg
+          :width: 100px
+          :align: center
+
+     - .. include:: ../../includes_containers/includes_containers.rst
