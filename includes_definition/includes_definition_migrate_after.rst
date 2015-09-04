@@ -10,7 +10,7 @@ The following example shows a definition as a custom resource:
    action :create do
    
      cache_dir = Chef::Config[:file_cache_path]
-     package_file = splunk_file(params[:url])
+     package_file = splunk_file(url)
      cached_package = ::File.join(cache_dir, package_file)
    
      remote_file cached_package do
@@ -50,8 +50,6 @@ The following example shows a definition as a custom resource:
        end
      end
    end
-
-
 
 Once built, the custom resource may be used in a recipe just like the any of the resources that are built into |chef|. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``install`` with a custom resource in the ``/resources`` directory named ``splunk.rb``. Use it in a recipe like this:
 
