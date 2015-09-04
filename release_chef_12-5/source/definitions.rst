@@ -24,3 +24,19 @@ Old Definition
 New Custom Resource
 -----------------------------------------------------
 .. include:: ../../includes_definition/includes_definition_migrate_after.rst
+
+Refactor by Platform
+-----------------------------------------------------
+.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform.rst
+
+|debian|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_debian.rst
+
+|redhat enterprise linux|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_rhel.rst
+
+|solaris|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_omnios.rst
