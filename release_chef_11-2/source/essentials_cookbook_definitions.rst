@@ -24,4 +24,4 @@ Many Recipes, One Definition
 
 Virtual Hosts
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_12-4_scenario_virtaul_hosts.rst
+.. include:: ../../includes_definition/includes_definition_12-4_scenario_virtual_hosts.rst
