@@ -6,7 +6,21 @@ platform_family? Method
 
 Parameters
 =====================================================
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family_parameters.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_parameters.rst
+
+For example:
+
+.. code-block:: ruby
+
+   platform_family?('gentoo')
+
+or:
+
+.. code-block:: ruby
+
+   platform_family?('slackware', 'suse', 'arch')
+
+.. note:: ``platform_family?`` will default to ``platform?`` when ``platform_family?`` is not explicitly defined.
 
 Examples
 =====================================================
