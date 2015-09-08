@@ -8,7 +8,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master 12-5 slides decks server_12-2
+release: master 12-5 slides decks server_12-2 osc_11-1
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
@@ -23,7 +23,7 @@ release: master 12-5 slides decks server_12-2
 # push_1-0 push_2-0
 # server server_12-0 server_12-1
 # enterprise oec_11-0 oec_11-1 oec_11-2
-# open_source osc_11-0 osc_11-1
+# open_source osc_11-0
 #
 # 
 # RETIRED: located in chef-docs-misc, no longer built or maintained
