@@ -3,7 +3,7 @@
 
 The ``--json-attributes`` option may also be used to set the ``chef_environment`` value for a node.
 
-.. note:: Any environment specified by ``chef_environment`` in a |json| file will take precedence over an environment specified by the ``--environment`` option when both options are part of the same command..
+.. note:: Any environment specified by ``chef_environment`` in a |json| file will take precedence over an environment specified by the ``--environment`` option when both options are part of the same command.
 
 For example, run the following:
 
