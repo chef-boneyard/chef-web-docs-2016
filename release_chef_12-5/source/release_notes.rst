@@ -34,6 +34,23 @@ Syntax
 .. include:: ../../includes_custom_resources/includes_custom_resources_syntax_example.rst
 
 
+
+Definition vs. Resource
+-----------------------------------------------------
+.. include:: ../../includes_definition/includes_definition_example.rst
+
+As a Definition
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_definition/includes_definition_example_as_definition.rst
+
+As a Resource
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_definition/includes_definition_example_as_resource.rst
+
+Common Properties
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_definition/includes_definition_example_as_resource_with_common_properties.rst
+
 Changelog
 =====================================================
 https://github.com/chef/chef/blob/master/CHANGELOG.md
