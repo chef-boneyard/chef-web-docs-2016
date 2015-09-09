@@ -65,6 +65,8 @@ This command has the following options:
 
    .. include:: ../../includes_node/includes_node_ctl_run_list.rst
 
+   .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
+
    .. warning:: .. include:: ../../includes_node/includes_node_ctl_attribute.rst
 
 ``-k KEY_FILE``, ``--client_key KEY_FILE``

@@ -13,13 +13,10 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **Use custom resources instead of providers and definitions** The new way of defining custom resource changes the ways that providers and definitions are used with |chef|. Defining a provider (in the ``/providers`` directory) is no longer necessary. The typical purpose of a definition (in the ``/definitions`` directory) is to create a reusable component that can be leveraged by recipes across any number of cookbooks: use a custom resource instead of a definition and :doc:` migrate existing definitions to be custom resources </definitions>`.
 * **The terms LWRP and HWRP are deprecated** The new way to refer to creating a custom resource is "custom resource" and the acronyms LWRP ("lightweight resource provider") and HWRP ("heavyweight resource provider") are deprecated. They are older, legacy terms that refer to specific ways of building custom resources. The current version of |chef| supports the older lightweight/heavyweight approaches, but adds additional ways of building custom resources.
 * **ps_credential helper to embed usernames and passwords** Use the ``ps_credential`` helper to embed a ``PSCredential`` object---security credentials, such as a user name or password---in a script defined by the |resource dsc_script| resource.
+* **The -j / --json-attributes option may be used to specify environments** The ``--json-attributes`` option for the |chef client| may now be used to specify a |json| file that contains environment data.
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
-
-``ps_credential`` Helper
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_dsc_script_helper_ps_credential.rst
 
 Custom Resources
 -----------------------------------------------------
@@ -32,7 +29,6 @@ Syntax
 .. include:: ../../includes_custom_resources/includes_custom_resources_syntax.rst
 
 .. include:: ../../includes_custom_resources/includes_custom_resources_syntax_example.rst
-
 
 
 Definition vs. Resource
@@ -50,6 +46,17 @@ As a Resource
 Common Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_definition/includes_definition_example_as_resource_with_common_properties.rst
+
+
+
+``ps_credential`` Helper
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_dsc_script_helper_ps_credential.rst
+
+``-json-attributes``, Environments
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
+
 
 Changelog
 =====================================================
