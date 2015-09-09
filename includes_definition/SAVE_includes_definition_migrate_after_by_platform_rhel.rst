@@ -1,7 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. Keep this example---it's useful for showing the progression of a pre-12.5 definition translated to a post-12.5 custom resource, but also to show how the custom resource patterns can be used to remove complexity from resources by eliminating logic, like if statements. These may get re-published someday.
 
-The following example shows the previous definition, but broken down to be a custom resource specific to the |debian| platform:
+The following example shows the previous definition, but broken down to be a custom resource specific to the |redhat enterprise linux| platform:
 
 .. code-block:: ruby
 
@@ -18,16 +19,16 @@ The following example shows the previous definition, but broken down to be a cus
        action :create_if_missing
      end
    
-     dpkg_package params[:name] do
+     rpm_package params[:name] do
        source cached_package.gsub(/\.Z/, '')
      end
    
    end
 
-Put this recipe in the ``install`` cookbook's ``/resources`` directory and name ``splunk_dpkg.rb``. Use it in a recipe like this:
+Put this recipe in the ``install`` cookbook's ``/resources`` directory and name ``splunk_rpm.rb``. Use it in a recipe like this:
 
 .. code-block:: ruby
 
-   install_splunk_dpkg 'name' do
+   install_splunk_rpm 'name' do
      url node['splunk']['forwarder']['url']
    end

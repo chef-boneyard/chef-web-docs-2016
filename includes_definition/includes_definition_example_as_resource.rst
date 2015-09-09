@@ -1,27 +1,6 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following examples show a definition, the same definition rewritten as a custom resource, and then rewritten again to use a common resource property:
-
-Definition:
-
-The following definition processes unique hostnames and ports, passed on as parameters:
- 		 
-.. code-block:: ruby
- 		 
-   define :host_porter, :port => 4000, :hostname => nil do
-     params[:hostname] ||= params[:name]
-
-     directory '/etc/#{params[:hostname]}' do
-       recursive true
-     end
-
-     file '/etc/#{params[:hostname]}/#{params[:port]}' do
-       content 'some content'
-     end
-   end
-
-Custom resource:
 
 The definition is improved by rewriting it as a custom resource:
 
@@ -57,19 +36,3 @@ or:
    host_porter 'www1' do
      port 4001
    end
-
-
-Common resource properties:
-
-
-This updated custom resource now supports common resource properties like ``notifies``, ``subscribes``, ``not_if``, and ``only_if``. For example:
-
-.. code-block:: ruby
-
-   host_porter 'www1' do
-     port 4001
-     only_if '{ node['hostname'] == 'foo.bar.com' }'
-   end
-
-
-

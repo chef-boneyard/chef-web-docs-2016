@@ -1,17 +1,21 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. Keep this example---it's useful for showing the progression of a pre-12.5 definition translated to a post-12.5 custom resource, but also to show how the custom resource patterns can be used to remove complexity from resources by eliminating logic, like if statements. These may get re-published someday.
 
-A definition file is similar to a macro; use a definition to define reusable code. For example, the following definition defines a common installation scenario, in this case installing |splunk| on multiple machines:
+The definition is improved by rewriting it as a custom resource:
 
 .. code-block:: ruby
 
-   define :splunk_installer, :url => nil do
+   property :url, String
+   
+   action :create do
+   
      cache_dir = Chef::Config[:file_cache_path]
-     package_file = splunk_file(params[:url])
+     package_file = splunk_file(url)
      cached_package = ::File.join(cache_dir, package_file)
    
      remote_file cached_package do
-       source params[:url]
+       source url
        action :create_if_missing
      end
    
@@ -48,20 +52,11 @@ A definition file is similar to a macro; use a definition to define reusable cod
      end
    end
 
-Once created, this definition is used just like a resource:
+Once built, the custom resource may be used in a recipe just like the any of the resources that are built into |chef|. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``install`` with a custom resource in the ``/resources`` directory named ``splunk.rb``. Use it in a recipe like this:
 
 .. code-block:: ruby
 
-   splunk_installer 'use #1' do
-     url node['splunk']['server']['url']
-   end
-
-and then another recipe:
-
-.. code-block:: ruby
-
-   splunk_installer 'use #2' do
+   install_splunk 'name' do
      url node['splunk']['forwarder']['url']
    end
 
-and so on.
