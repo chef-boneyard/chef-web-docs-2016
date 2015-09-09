@@ -9,7 +9,7 @@ Run the following command to create an organization:
 
 |name_rules org| For example: ``4thcoffee``.
 
-|name_rules org_full| For example: ``"Fourth Coffee, Inc."``.
+|name_rules org_full| For example: ``"fourth coffee, inc."``.
 
 The ``--association_user`` option will associate the ``user_name`` with the |webui group admins| security group on the |chef server|.
 
@@ -19,4 +19,4 @@ For example:
 
 .. code-block:: bash
   
-   $ chef-server-ctl org-create 4thcoffee "Fourth Coffee, Inc." --association_user stevedanno --filename /path/to/4thcoffee-validator.pem
+   $ chef-server-ctl org-create 4thcoffee "fourth coffee, inc." --association_user stevedanno --filename /path/to/4thcoffee-validator.pem
