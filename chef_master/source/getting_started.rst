@@ -50,7 +50,7 @@ This will create a file named ``test.txt`` at the home path on your machine. Ope
 There's a lot more that |chef| can do, obviously, but that was super easy! Keep reading this topic for more information about setting up your workstation, configuring |kitchen| to run virtual environments from your workstation, and setting up a more detailed cookbook. Or go to https://docs.chef.io and dive in.
 
 
-
+.. 
 .. About Resources
 .. =====================================================
 .. .. include:: ../../includes_resources_common/includes_resources_common.rst
@@ -68,11 +68,13 @@ Install the |chef dk_title|
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_chef_dk.rst
 
-What's in the |chef dk_title|?
------------------------------------------------------
-.. include:: ../../includes_chef_dk/includes_chef_dk_tools.rst
-
-.. include:: ../../includes_chef_dk/includes_chef_dk_tools_main.rst
+.. 
+.. What's in the |chef dk_title|?
+.. -----------------------------------------------------
+.. .. include:: ../../includes_chef_dk/includes_chef_dk_tools.rst
+.. 
+.. .. include:: ../../includes_chef_dk/includes_chef_dk_tools_main.rst
+.. 
 
 Set the System |ruby|
 -----------------------------------------------------
@@ -572,6 +574,7 @@ To verify if both instances have been converged, run the following command:
    default-centos-64    Vagrant  ChefSolo     Converged
 
 
+.. 
 .. More About Resources
 .. =====================================================
 .. The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
