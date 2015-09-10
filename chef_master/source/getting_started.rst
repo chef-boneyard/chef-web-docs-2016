@@ -579,6 +579,51 @@ To verify if both instances have been converged, run the following command:
    default-centos-71    Vagrant  ChefZero     Busser    Ssh        Converged
 
 .. 
+.. Add |debian|
+.. -----------------------------------------------------
+.. It's simple to add additional platforms for testing. For example, let's add support in |kitchen| for |debian|. First, update the |kitchen yml| file:
+.. 
+.. .. code-block:: javascript
+.. 
+..    platforms:
+..      - name: ubuntu-14.04
+..      - name: centos-7.1
+..      - name: debian-8.1
+.. 
+.. Run the following command:
+.. 
+.. .. code-block:: bash
+.. 
+..    $ kitchen list
+.. 
+.. .. code-block:: bash
+.. 
+..    Instance             Driver   Provisioner  Verifier  Transport  Last Action
+..    default-ubuntu-1404  Vagrant  ChefZero     Busser    Ssh        Converged
+..    default-centos-71    Vagrant  ChefZero     Busser    Ssh        Converged
+..    default-debian-81    Vagrant  ChefZero     Busser    Ssh        <Not Created>
+.. 
+.. Run the following command:
+.. 
+.. .. code-block:: bash
+.. 
+..    $ kitchen create default-debian-81
+.. 
+.. Re-run ``kitchen list`` and the last action for ``default-debian-81`` is updated to ``Created``.
+.. 
+.. Now run the following command:
+.. 
+.. .. code-block:: bash
+.. 
+..    $ kitchen create default-debian-81
+.. 
+.. and the recipe will converge on the node just like it did for the |ubuntu| and |centos| instances and the last action is updated to ``Converged``.
+.. 
+.. Compare the results of all three converge processes to see how |chef| behaves on all three platforms. While there are some differences between the platforms, the results are identical.
+.. 
+
+
+.. 
 .. More About Resources
 .. =====================================================
 .. The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
