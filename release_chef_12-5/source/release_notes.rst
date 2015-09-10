@@ -49,6 +49,9 @@ Common Properties
 
 Event Dispatch
 -----------------------------------------------------
+
+.. see: https://github.com/chef/chef/pull/3242
+
 Handlers now support an event handler that passes a user-defined block against an event that occurs during the |chef client| run.
 
 Syntax:
@@ -63,7 +66,7 @@ Syntax:
 
 where
 
-* ``:event_type`` is valid exception event type: ``run_failed``, ``registration_failed``, ``node_load_failed``, ``run_list_expand_failed``, ``cookbook_resolution_failed``, ``cookbook_sync_failed``, ``library_file_load_failed``, ``lwrp_file_load_failed``, ``attribute_file_load_failed``, ``definition_file_load_failed``, ``recipe_file_load_failed``, ``recipe_not_found``, ``converge_failed``, or ``resource_failed``, ``provider_requirement_failed``, ``audit_phase_failed``
+* ``:event_type`` is a valid exception event type: ``run_failed``, ``registration_failed``, ``node_load_failed``, ``run_list_expand_failed``, ``cookbook_resolution_failed``, ``cookbook_sync_failed``, ``library_file_load_failed``, ``lwrp_file_load_failed``, ``attribute_file_load_failed``, ``definition_file_load_failed``, ``recipe_file_load_failed``, ``recipe_not_found``, ``converge_failed``, or ``resource_failed``, ``provider_requirement_failed``, ``audit_phase_failed``
 * ``# ...`` is arbitrary |ruby| code that tells the |chef client| how to process the message, should the event occur
 
 ``ps_credential`` Helper
