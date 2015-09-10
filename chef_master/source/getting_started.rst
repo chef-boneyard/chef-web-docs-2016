@@ -195,8 +195,13 @@ for now, let's just update the name and version settings, like this:
 
 .. code-block:: ruby
 
-   name             'chef-repo'
-   version          '0.1.0'
+   name 'chef-repo'
+   maintainer 'docs'
+   maintainer_email 'docs@chef.io'
+   license 'Apache License, Version 2.0'
+   description 'example metadata.rb'
+   long_description 'This is an example metadata.rb file used in docs.chef.io.'
+   version '0.1.0'
 
 Verify |kitchen yml|
 -----------------------------------------------------
