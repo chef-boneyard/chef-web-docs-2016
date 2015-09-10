@@ -28,6 +28,8 @@ ssh_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh')
 ssh_private_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', node['delivery']['change']['project'])
 ssh_public_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', "#{node['delivery']['change']['project']}.pub")
 
+chef_gem 'kitchen-ec2'
+
 directory ssh_key_path do
   owner node['delivery_builder']['build_user']
   group node['delivery_builder']['build_user']
