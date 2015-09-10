@@ -40,36 +40,6 @@ aws_s3_bucket artifact_bucket do
   }
 end
 
-with_driver 'aws::us-west-2'
-
-directory ssh_key_path do
-  owner node['delivery_builder']['build_user']
-  group node['delivery_builder']['build_user']
-  mode '0700'
-  sensitive true
-end
-
-file ssh_private_key_path do
-  content ssh['private_key']
-  owner node['delivery_builder']['build_user']
-  group node['delivery_builder']['build_user']
-  mode '0600'
-  sensitive true
-end
-
-file ssh_public_key_path do
-  content ssh['public_key']
-  owner node['delivery_builder']['build_user']
-  group node['delivery_builder']['build_user']
-  mode '0644'
-end
-
-aws_key_pair node['delivery']['change']['project']  do
-  public_key_path ssh_public_key_path
-  private_key_path ssh_private_key_path
-  allow_overwrite false
-end
-
 template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-builder', '.kitchen.delivery.yml') do
   source '.kitchen.delivery.yml.erb'
   variables(
@@ -83,15 +53,7 @@ template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-bui
   sensitive true
 end
 
-execute 'build the site' do
-  command 'kitchen test --destroy always'
-  environment(
-    'PATH' => '/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
-    'HOME' => node['delivery']['workspace']['cache'],
-    'KITCHEN_YAML' => '.kitchen.delivery.yml'
-  )
-  cwd File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-builder')
-end
+include_recipe 'build-cookbook::_run_builder'
 
 execute "download the checksum" do
   command "aws s3 cp s3://#{artifact_bucket}/#{build_name}.tar.gz.checksum #{node['delivery']['workspace']['cache']}/"
