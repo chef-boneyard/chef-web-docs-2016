@@ -30,6 +30,18 @@ ssh_public_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh',
 
 chef_gem 'kitchen-ec2'
 
+aws_s3_bucket artifact_bucket do
+  enable_website_hosting false
+  website_options :index_document => {
+    :suffix => "index.html"
+  },
+  :error_document => {
+    :key => "not_found.html"
+  }
+end
+
+with_driver 'aws::us-west-2'
+
 directory ssh_key_path do
   owner node['delivery_builder']['build_user']
   group node['delivery_builder']['build_user']
@@ -58,16 +70,6 @@ aws_key_pair node['delivery']['change']['project']  do
   allow_overwrite false
 end
 
-aws_s3_bucket artifact_bucket do
-  enable_website_hosting false
-  website_options :index_document => {
-    :suffix => "index.html"
-  },
-  :error_document => {
-    :key => "not_found.html"
-  }
-end
-
 template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-builder', '.kitchen.delivery.yml') do
   source '.kitchen.delivery.yml.erb'
   variables(
@@ -78,6 +80,7 @@ template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-bui
     build_name: build_name,
     bucket_name: artifact_bucket
   )
+  sensitive true
 end
 
 execute 'build the site' do
