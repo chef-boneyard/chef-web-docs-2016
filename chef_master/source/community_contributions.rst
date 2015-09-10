@@ -116,7 +116,7 @@ Things that would still require signing a CLA before submitting would likely inc
 
 Issues and Bug Reports
 =====================================================
-Issues and bug reports may be created for |chef|, including the |chef client|, the |chef server|, the |chef analytics| platform, and the |chef manage|. The following repositories are the preferred locations for the creation of issues and bug reports:
+Issues and bug reports may be created for |company_name| products, including the |chef client|, the |chef dk| the |chef server|, the |chef analytics| platform, and the |chef manage| WebUI. The following repositories are the preferred locations for the creation of issues and bug reports:
 
 .. list-table::
    :widths: 100 400
@@ -126,6 +126,8 @@ Issues and bug reports may be created for |chef|, including the |chef client|, t
      - URL
    * - |chef client|
      - https://github.com/chef/chef
+   * - |chef dk_title|
+     - https://github.com/chef/chef-dk
    * - |chef server_title|
      - https://github.com/chef/chef-server
    * - |chef manage_title|
@@ -134,11 +136,16 @@ Issues and bug reports may be created for |chef|, including the |chef client|, t
      - https://github.com/chef/chef-analytics
    * - |push jobs_title|
      - https://github.com/chef/chef-push
+   * - |delivery_title|
+     - please contact Support below
 
-For additional support about |chef|, including documentation, learning, and opening tickets with the support team, see https://www.chef.io/support/.
+For additional support about |company_name| products, including documentation, learning, and opening tickets with the support team, see https://www.chef.io/support/.
 
-.. warning:: If you require a response from |company_name| per the terms of a support level agreement (SLA), please contact support directly.
+.. warning:: If you require a response from |company_name| per the terms of a support level agreement (SLA), please contact support directly by following the above link to Support Tickets.
 
+Questions on how to use Chef should be sent as Support Tickets if you have an SLA, or should be asked on
+the Chef Mailing List, Stack Overflow or IRC.  The Bug Trackers are not appropriate for general purpose
+questions that are not bugs.
 
 Use |git|
 =====================================================
