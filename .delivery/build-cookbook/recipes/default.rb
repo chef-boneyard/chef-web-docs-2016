@@ -58,6 +58,7 @@ slack_creds = encrypted_data_bag_item_for_environment('cia-creds','slack')
 
 # We need aws creds so we get them here.
 aws_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-cia')
+chef_aws_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-aws')
 
 cookbook_file 'slack.rb' do
   path File.join(node['chef_handler']['handler_path'], 'slack.rb')
@@ -102,6 +103,21 @@ file aws_config_filename do
   content aws_config_contents
 end
 
+chef_aws_config_contents = <<EOF
+[default]
+region = us-east-1
+aws_access_key_id = #{chef_aws_creds['access_key_id']}
+aws_secret_access_key = #{chef_aws_creds['secret_access_key']}
+EOF
+
+# This figures out where we are going to put the config file.
+chef_aws_config_filename = File.join(node['delivery']['workspace']['root'], 'chef_aws_config')
+
+# And here we write it out.
+file chef_aws_config_filename do
+  sensitive true
+  content chef_aws_config_contents
+end
 # Here we leave client mode. I don't actually understand the implications of not leaving,
 # but it seems like a good idea.
 Chef_Delivery::ClientHelper.leave_client_mode_as_delivery
