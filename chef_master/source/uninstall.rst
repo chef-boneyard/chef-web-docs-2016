@@ -28,9 +28,9 @@ To uninstall the |chef manage|, do the following:
 =====================================================
 .. include:: ../../includes_ctl_reporting/includes_ctl_reporting_uninstall.rst
 
-|push_jobs|
+|push jobs_title|
 =====================================================
-The uninstall |push_jobs|, do the following:
+The uninstall |push jobs|, do the following:
 
 #. Shut down the |push jobs| service.
 #. Uninstall the |push jobs| package.
@@ -42,7 +42,7 @@ The uninstall |push_jobs|, do the following:
 
 .. note:: This will leave some data in |postgresql| that is not used by any other |chef| application or service.
 
-|push jobs| Client
+|push jobs client|
 -----------------------------------------------------
 Use the package manager for the platform on which |push jobs| is installed to uninstall |push jobs|.
 
