@@ -66,7 +66,7 @@ aws_s3_bucket artifact_bucket do
   }
 end
 
-template File.join(node['delivery']['workspace']['repo'], '.kitchen.delivery.yml') do
+template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-builder', '.kitchen.delivery.yml') do
   source '.kitchen.delivery.yml.erb'
   variables(
     chef_aws_access_key: chef_aws_creds['access_key_id'],
