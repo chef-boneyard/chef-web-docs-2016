@@ -30,7 +30,7 @@ To uninstall the |chef manage|, do the following:
 
 |push jobs_title|
 =====================================================
-The uninstall |push jobs|, do the following:
+To uninstall |push jobs|, do the following:
 
 #. Shut down the |push jobs| service.
 #. Uninstall the |push jobs| package.
