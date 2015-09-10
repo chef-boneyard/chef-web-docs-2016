@@ -24,8 +24,16 @@ artifact_bucket = "#{node['delivery']['change']['project'].gsub(/_/, '-')}-artif
 chef_aws_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-aws')
 chef_cia_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-cia')
 ssh = encrypted_data_bag_item_for_environment('cia-creds', 'aws-ssh')
+ssh_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh')
 ssh_private_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', node['delivery']['change']['project'])
 ssh_public_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', "#{node['delivery']['change']['project']}.pub")
+
+directory ssh_key_path do
+  owner node['delivery_builder']['build_user']
+  group node['delivery_builder']['build_user']
+  mode '0700'
+  sensitive true
+end
 
 file ssh_private_key_path do
   content ssh['private_key']
