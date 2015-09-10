@@ -70,6 +70,6 @@ To edit the |amazon ami| instance size, do the following:
       chef_server_url          'https://<YOUR NEW PUBLIC DNS>/organizations/your_org'
       cookbook_path            ['#{current_dir}/../cookbooks']
 
-.. include:: ./includes_cloud_download_fetch_ssl.rst
+.. include:: ./includes_cloud_fetch_ssl.rst
 
-.. include:: ./includes_cloud_download_update_client_rb.rb
+.. include:: ./includes_cloud_update_client_rb.rst

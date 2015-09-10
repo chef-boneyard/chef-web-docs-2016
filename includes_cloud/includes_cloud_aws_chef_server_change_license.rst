@@ -15,6 +15,6 @@ To increase or decrease the number of licenses you'll need to migrate to your da
 
       .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
 
-   .. include:: ./includes_cloud_download_fetch_ssl.rst
+.. include:: ./includes_cloud_fetch_ssl.rst
 
-.. include:: ./includes_cloud_download_update_client_rb.rb
+.. include:: ./includes_cloud_update_client_rb.rst

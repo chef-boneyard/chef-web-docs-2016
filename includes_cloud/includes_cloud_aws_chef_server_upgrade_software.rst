@@ -11,13 +11,21 @@ The |chef server| |amazon ami| can perform in-place upgrades of all of the pre-b
 
    .. note:: The |chef server| will be unavailable while the software is in the process of being updated.
 
-#. Upgrade the Marketplace add-on using the following command:
+#. Upgrade |chef analytics| using the following command:
+
+   .. code-block:: bash
+
+      $ sudo chef-marketplace-ctl upgrade -a
+
+   .. note:: |chef analytics| will be unavailable while the software is in the process of being updated.
+
+#. Upgrade Chef Marketplace using the following command:
 
    .. code-block:: bash
 
       $ sudo chef-marketplace-ctl upgrade -m
 
-# If you'd like to update all four packages run the following command:
+# Upgrade all the installed packages using the following command:
 
    .. code-block:: bash
 
