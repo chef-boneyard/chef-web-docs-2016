@@ -217,8 +217,8 @@ Because |kitchen| is installed as part of the |chef dk|, the |kitchen yml| file 
      name: chef_zero
    
    platforms:
-     - name: ubuntu-12.04
-     - name: centos-6.5
+     - name: ubuntu-14.04
+     - name: centos-7.1
    
    suites:
      - name: default
