@@ -1,0 +1,34 @@
+---
+driver_config:
+  aws_access_key_id: <%= @chef_aws_access_key %>
+  aws_secret_access_key: <%= @chef_aws_secret_key %>
+  aws_ssh_key_id: <%= node['delivery']['change']['project'] %>
+  region: us-west-2
+  subnet_id: subnet-19ac017c
+  availability_zone: us-west-2a
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: latest
+
+platforms:
+- name: ubuntu-14.04
+  driver_plugin: ec2
+  driver_config:
+    username: ubuntu
+    flavor_id: c4.8xlarge
+    image_id: ami-5189a661
+  run_list:
+    - recipe[apt]
+
+suites:
+- name: builder
+  run_list:
+    - recipe[docs-builder]
+  attributes:
+    docs-builder:
+      ssh_key: "<%= File.read('/var/opt/delivery/workspace/etc/builder_key').gsub(/\n/, '::::::::') %>"
+      build_name: <%= @build_name %>
+      bucket_name: <%= @bucket_name %>
+      aws_access_key: <%= @cia_access_key  %>
+      aws_secret_access_key: <%= @cia_secret_key %>
