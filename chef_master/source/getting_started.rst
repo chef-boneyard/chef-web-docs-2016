@@ -285,7 +285,7 @@ Now you can run your cookbooks in a virtual instance managed by |kitchen| on mul
 
 Configure NTP
 =====================================================
-Instead of putting a text file on these |kitchen| instances, let's try something useful and install |ntp|. Within the cookbook we're already using, let's update the default recipe to install and configure |ntp| using the |resource package|, |resource template|, and |resource service| resources, a template file, and an attributes file.
+Instead of putting a text file on these |kitchen| instances, let's try something more useful and install |ntp|. Within the cookbook we're already using, let's update the default recipe to install and configure |ntp| using the |resource package|, |resource template|, and |resource service| resources, a template file, and an attributes file.
 
 Add Template
 -----------------------------------------------------
