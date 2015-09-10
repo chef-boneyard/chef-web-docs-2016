@@ -378,7 +378,7 @@ and a directory structure in that cookbook similar to::
 		     ntp.conf.erb
      README.md
 
-and an empty ``default.rb`` file. Let's edit this file and define its contents. Open this file and add the following:
+and an empty ``default.rb`` file under ``/attributes``. Let's edit this file and define its contents. Open this file and add the following:
 
 .. code-block:: ruby
 
@@ -425,36 +425,36 @@ The |resource package| resource installs the |ntp| package. The |resource templa
 
 Install |ntp| on |centos|
 -----------------------------------------------------
-Now let's install |ntp| in |centos|:
+Now let's install |ntp| in |centos|. From the |chef repo|, run:
 
 .. code-block:: bash
 
-   $ kitchen converge default-centos-64
+   $ kitchen converge default-centos-71
 
 As it installs, the |chef client| will report back something similar to the following: 
 
 .. code-block:: bash
 
    -----> Starting Kitchen (v1.2.2.dev)
-   -----> Converging <default-centos-64>...
+   -----> Converging <default-centos-71>...
           Preparing files for transfer
           Preparing cookbooks from project directory
           Removing non-cookbook files before transfer
           Preparing nodes
-          Transferring files to <default-centos-64>
+          Transferring files to <default-centos-71>
           [2014-07-10T20:43:50+00:00] INFO: Starting chef-zero on port 8889 with repository at repository at /tmp/kitchen
           One version per cookbook
           [2014-07-10T20:43:50+00:00] INFO: Forking chef instance to converge...
-          Starting Chef Client, version 11.12.8
-          [2014-07-10T20:34:52+00:00] INFO: *** Chef 11.12.8 ***
+          Starting Chef Client, version 12.4.1
+          [2014-07-10T20:34:52+00:00] INFO: *** Chef 12.4.1 ***
           [2014-07-10T20:34:52+00:00] INFO: Chef-client pid: 4229
           [2014-07-10T20:35:00+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options
           [2014-07-10T20:35:00+00:00] INFO: Run List is [recipe[chef-repo::default]]
           [2014-07-10T20:35:00+00:00] INFO: Run List expands to [chef-repo::default]
-          [2014-07-10T20:35:00+00:00] INFO: Starting Chef Run for default-centos-64
+          [2014-07-10T20:35:00+00:00] INFO: Starting Chef Run for default-centos-71
           [2014-07-10T20:35:00+00:00] INFO: Running start handlers
           [2014-07-10T20:35:00+00:00] INFO: Start handlers complete.
-          [2014-07-10T20:35:00+00:00] INFO: HTTP Request Returned 404 Not Found : Object not found: /reports/nodes/default-centos-64/runs
+          [2014-07-10T20:35:00+00:00] INFO: HTTP Request Returned 404 Not Found : Object not found: /reports/nodes/default-centos-71/runs
           resolving cookbooks for run list: ["chef-repo::default"]
           [2014-07-10T20:35:00+00:00] INFO: Loading cookbooks [chef-repo@0.1.0]
           Synchronizing Cookbooks:
@@ -481,41 +481,41 @@ As it installs, the |chef client| will report back something similar to the foll
           Running handlers complete
           [2014-07-10T20:35:20+00:00] INFO: Report handlers complete
           Chef Client finished, 2/5 resources updated in 27.444399186 seconds
-          Finished converging <default-centos-64> (0m30.97s).
+          Finished converging <default-centos-71> (0m30.97s).
    -----> Kitchen is finished. (0m31.28s)
 
 Install |ntp| on |ubuntu|
 -----------------------------------------------------
-And finally, install |ntp| in |ubuntu|:
+And finally, install |ntp| in |ubuntu|. From the |chef repo|, run:
 
 .. code-block:: bash
 
-   $ kitchen converge default-ubuntu-1204
+   $ kitchen converge default-ubuntu-1404
 
 As it installs, the |chef client| will report back something similar to the following: 
 
 .. code-block:: bash
 
    -----> Starting Kitchen (v1.2.2.dev)
-   -----> Converging <default-ubuntu-1204>...
+   -----> Converging <default-ubuntu-1404>...
           Preparing files for transfer
           Preparing cookbooks from project directory
           Removing non-cookbook files before transfer
           Preparing nodes
-          Transferring files to <default-ubuntu-1204>
+          Transferring files to <default-ubuntu-1404>
           [2014-07-10T20:41:26+00:00] INFO: Starting chef-zero on port 8889 with repository at repository at /tmp/kitchen       
           One version per cookbook       
           [2014-07-10T20:41:26+00:00] INFO: Forking chef instance to converge...       
-          Starting Chef Client, version 11.12.8       
-          [2014-07-10T20:41:26+00:00] INFO: *** Chef 11.12.8 ***       
+          Starting Chef Client, version 12.4.1       
+          [2014-07-10T20:41:26+00:00] INFO: *** Chef 12.4.1 ***       
           [2014-07-10T20:41:26+00:00] INFO: Chef-client pid: 2106       
           [2014-07-10T20:41:28+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options       
           [2014-07-10T20:41:28+00:00] INFO: Run List is [recipe[chef-repo::default]]       
           [2014-07-10T20:41:28+00:00] INFO: Run List expands to [chef-repo::default]       
-          [2014-07-10T20:41:28+00:00] INFO: Starting Chef Run for default-ubuntu-1204       
+          [2014-07-10T20:41:28+00:00] INFO: Starting Chef Run for default-ubuntu-1404       
           [2014-07-10T20:41:28+00:00] INFO: Running start handlers       
           [2014-07-10T20:41:28+00:00] INFO: Start handlers complete.       
-          [2014-07-10T20:41:28+00:00] INFO: HTTP Request Returned 404 Not Found : Object not found: /reports/nodes/default-ubuntu-1204/runs       
+          [2014-07-10T20:41:28+00:00] INFO: HTTP Request Returned 404 Not Found : Object not found: /reports/nodes/default-ubuntu-1404/runs       
           resolving cookbooks for run list: ["chef-repo::default"]       
           [2014-07-10T20:41:28+00:00] INFO: Loading cookbooks [chef-repo@0.1.0]       
           Synchronizing Cookbooks:       
@@ -543,7 +543,7 @@ As it installs, the |chef client| will report back something similar to the foll
           Running handlers complete       
           [2014-07-10T20:41:29+00:00] INFO: Report handlers complete       
           Chef Client finished, 3/5 resources updated in 3.313988417 seconds       
-          Finished converging <default-ubuntu-1204> (0m6.49s).
+          Finished converging <default-ubuntu-1404> (0m6.49s).
    -----> Kitchen is finished. (0m6.79s)
 
 .. note:: Did it work? Sometimes on the |ubuntu| platform the |apt| cache gets out of date and the |chef client| is unable to download the correct package. This will result in an exception and the |chef client| run will fail. Add this to the default recipe to run the ``apt-get-update`` command at the start of the |chef client| run:
@@ -561,7 +561,7 @@ As it installs, the |chef client| will report back something similar to the foll
 
    .. code-block:: bash
 
-      $ kitchen converge default-ubuntu-1204
+      $ kitchen converge default-ubuntu-1404
 
 
 Verify Instance List
@@ -574,10 +574,9 @@ To verify if both instances have been converged, run the following command:
 
 .. code-block:: bash
 
-   Instance             Driver   Provisioner  Last Action
-   default-ubuntu-1204  Vagrant  ChefSolo     Converged
-   default-centos-64    Vagrant  ChefSolo     Converged
-
+   Instance             Driver   Provisioner  Verifier  Transport  Last Action
+   default-ubuntu-1404  Vagrant  ChefZero     Busser    Ssh        Converged
+   default-centos-71    Vagrant  ChefZero     Busser    Ssh        Converged
 
 .. 
 .. More About Resources
