@@ -13,6 +13,8 @@ Custom Resources
 
     .. include:: ../../includes_custom_resources/includes_custom_resources.rst
 
+    .. note:: Read this scenario as a single-page topic at http://docs.chef.io/custom_resources.html.
+
  .. revealjs:: Scenario: Create a Resource that Manages a Website
 
     .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website.rst
