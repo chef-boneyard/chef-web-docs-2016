@@ -22,7 +22,7 @@ To edit the |amazon ami| instance size, do the following:
 
    .. code-block:: bash
 
-      ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
+      $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
 #. Update the API FQDN in ``/etc/opscode/chef-server.rb`` using the public DNS name.  For example:
 
@@ -40,11 +40,13 @@ To edit the |amazon ami| instance size, do the following:
    .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
 
 #. Open a command prompt and change into your ``chef-repo`` directory.
-#. Open ``.chef/knife.rb`` in a text editor and modify the ``chef_server_url`` with your new public DNS.  For example:
+#. Open ``.chef/knife.rb`` in a text editor and modify the ``chef_server_url`` with your new public DNS. For example:
 
    .. code-block:: bash
 
       $ vim ~/chef-repo/.chef/knife.rb
+
+   will open a ``knife.rb`` file similar to:
 
    .. code-block:: ruby
 
