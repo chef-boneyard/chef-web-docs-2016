@@ -37,7 +37,7 @@ To edit the |amazon ami| instance size, do the following:
 
 #. Verify that you can login to |chef manage| by navigating to ``https://<YOUR NEW PUBLIC DNS>/login``.
 
-   .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
+   .. note:: .. include:: ../../includes_notes/includes_notes_chef_aws_ssl.rst
 
 #. Open a command prompt and change into your ``chef-repo`` directory.
 #. Open ``.chef/knife.rb`` in a text editor and modify the ``chef_server_url`` with your new public DNS. For example:

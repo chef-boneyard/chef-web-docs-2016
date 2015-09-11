@@ -31,7 +31,7 @@ To increase or decrease the number of licenses you'll need to migrate to your da
 
 #. Verify that you can login to |chef manage| by navigating to ``https://<YOUR NEW NODES PUBLIC IP ADDRESS>/login``.
 
-   .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
+   .. note:: .. include:: ../../includes_notes/includes_notes_chef_aws_ssl.rst
 
 #. .. include:: ../../step_install/step_install_aws_chef_server_knife_ssl_fetch.rst
 #. .. include:: ../../step_install/step_install_aws_chef_server_knife_client_list.rst
