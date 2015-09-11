@@ -43,8 +43,8 @@ aws_ebs_volume "build_space" do
   action :attach
   volume_id 'vol-c2f12d36'
   device '/dev/sdi'
-  aws_access_key node['docs-builder']['aws_access_key']
-  aws_secret_access_key node['docs-builder']['aws_secret_access_key']
+  aws_access_key node['docs-builder']['build_aws_access_key']
+  aws_secret_access_key node['docs-builder']['build_aws_secret_access_key']
   sensitive true
 end
 
@@ -119,11 +119,17 @@ end
 execute "create the tarball" do
   command "tar cvzf /srv/#{node['docs-builder']['build_name']}.tar.gz --exclude .git --exclude .delivery build"
   cwd '/srv/chef-web-docs'
+  environment 'AWS_ACCESS_KEY_ID' => node['docs-builder']['prod_aws_access_key'],
+    'AWS_SECRET_ACCESS_KEY' => node['docs-builder']['prod_aws_secret_access_key'],
+    'AWS_DEFAULT_REGION' => 'us-east-1'
 end
 
 execute "upload the tarball" do
   command "aws s3 cp /srv/#{node['docs-builder']['build_name']}.tar.gz s3://#{node['docs-builder']['bucket_name']}/"
   cwd '/srv/chef-web-docs'
+  environment 'AWS_ACCESS_KEY_ID' => node['docs-builder']['prod_aws_access_key'],
+    'AWS_SECRET_ACCESS_KEY' => node['docs-builder']['prod_aws_secret_access_key'],
+    'AWS_DEFAULT_REGION' => 'us-east-1'
 end
 
 checksum = ''
@@ -140,4 +146,7 @@ end
 execute "upload the checksum" do
   command "aws s3 cp /srv/#{node['docs-builder']['build_name']}.tar.gz.checksum s3://#{node['docs-builder']['bucket_name']}/"
   cwd '/srv/chef-web-docs'
+  environment 'AWS_ACCESS_KEY_ID' => node['docs-builder']['prod_aws_access_key'],
+    'AWS_SECRET_ACCESS_KEY' => node['docs-builder']['prod_aws_secret_access_key'],
+    'AWS_DEFAULT_REGION' => 'us-east-1'
 end
