@@ -1,32 +1,36 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |chef server| |amazon ami| can perform in-place upgrades of all of the pre-bundled software making it easy to stay up to date with the latest version of the |chef server| and the |chef manage|, |reporting| and Marketplace add-on's while not requiring you to migrate your data to the latest published |amazon ami|.
+The |chef server| |amazon ami| can perform in-place upgrades of all of the pre-bundled software. This makes it easy to stay up-to-date with the latest version of the |chef server|, the |chef manage|, |reporting| and other |amazon aws marketplace| add-ons, while not requiring data to be migrated to the latest published |amazon ami|.
 
-#. Upgrade the |chef server|, |chef manage| and |reporting| using the following command:
+There are four options: upgrade the |chef server|, the |chef manage|, and |reporting|; upgrade |chef analytics|; upgrade the |chef server| (only, without add-ons); upgrade everything.
 
-   .. code-block:: bash
+To upgrade, do one of the following:
 
-      $ sudo chef-marketplace-ctl upgrade -s
+* Upgrade the |chef server|, the |chef manage| and |reporting| marketplace instances by using the following command:
 
-   .. note:: The |chef server| will be unavailable while the software is in the process of being updated.
+  .. code-block:: bash
 
-#. Upgrade |chef analytics| using the following command:
+     $ sudo chef-marketplace-ctl upgrade -s
 
-   .. code-block:: bash
+  .. note:: The |chef server| will be unavailable while the software is updated.
 
-      $ sudo chef-marketplace-ctl upgrade -a
+* Upgrade |chef analytics| marketplace instance by using the following command:
 
-   .. note:: |chef analytics| will be unavailable while the software is in the process of being updated.
+  .. code-block:: bash
 
-#. Upgrade Chef Marketplace using the following command:
+     $ sudo chef-marketplace-ctl upgrade -a
 
-   .. code-block:: bash
+  .. note:: |chef analytics| will be unavailable while the software is updated.
 
-      $ sudo chef-marketplace-ctl upgrade -m
+* Upgrade the |chef server| marketplace instance by using the following command:
 
-# Upgrade all the installed packages using the following command:
+  .. code-block:: bash
 
-   .. code-block:: bash
+     $ sudo chef-marketplace-ctl upgrade -m
 
-      $ sudo chef-marketplace-ctl upgrade -y
+* Upgrade all the installed packages by using the following command:
+
+  .. code-block:: bash
+
+     $ sudo chef-marketplace-ctl upgrade -y

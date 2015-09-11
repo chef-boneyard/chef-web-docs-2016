@@ -32,10 +32,15 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
 
 #. The ``marketplace-setup`` command should supply a link to starter kit, which is a zip file that contains various configuration files for the workstation, including the user key required for authentication to the |chef server| and the validation key used to bootstrap nodes with the |chef server|. Follow the link that is provided and download the starter kit.
 #. Extract the ``chef-starter.zip`` file to a directory on the workstation.
+#. Open a command prompt and change into the |chef repo| directory extracted from the starter kit. For example:
 
-.. include:: ./includes_cloud_extract_starter_kit.rst
+   .. code-block:: bash
 
-.. include:: ./includes_cloud_fetch_ssl.rst
+      $ cd ~/Downloads
+      $ unzip chef-starter.zip
+      $ cd chef-repo
 
+#. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to the your SSL trusted certificates.
+#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
 #. Add virtual machines to the |chef server|.
 #. Bootstrap nodes with the |chef server|.

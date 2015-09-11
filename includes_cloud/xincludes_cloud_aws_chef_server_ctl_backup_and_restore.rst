@@ -15,13 +15,18 @@
 
 #. Login to the |amazon ami| and ensure that it is running the latest version of the |chef server|:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
       $ chef-marketplace-ctl upgrade -s
+
+#. Reconfigure the |chef server|:
+
+   .. code-block:: bash 
+
       $ chef-server-ctl reconfigure
 
 #. Restore the backup:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
       $ chef-server-ctl restore /tmp/chef-backup-2014-12-10-20-31-40.tgz

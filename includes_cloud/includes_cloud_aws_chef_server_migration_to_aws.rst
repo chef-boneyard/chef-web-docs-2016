@@ -1,20 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To increase or decrease the number of licenses you'll need to migrate to your data to another |amazon ami| instance that is licensed in the range that you desire.
 
-#. Launch a new |amazon ami| that is licensed for the maximum number of nodes you require.
-
-To get a fully-functional |amazon ami| for |chef server|, do the following:
-
-#. Login to the `AWS Marketplace <https://aws.amazon.com/marketplace>`__ using your |amazon aws| account credentials
-#. `Choose an AMI <https://aws.amazon.com/marketplace/seller-profile/ref=dtl_pcp_sold_by?ie=UTF8&id=e7b7691e-634a-4d35-b729-a8b576175e8c>`__ based on the number of nodes to be under management by |chef|.
-#. Configure the region, the |amazon ec2| instance type, |amazon vpc| settings, security group, and the SSH key pair.
-#. Assign the |chef server| `a public IP address <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses>`__.
-#. Launch the |amazon ami|.
-
-
-Take a backup of your data and migrate it to your new node:
+To upgrade an existing |chef server| to the |amazon ami| instance, do the following:
 
 #. Take a backup:
 
@@ -46,9 +34,17 @@ Take a backup of your data and migrate it to your new node:
 
       $ chef-server-ctl restore /tmp/chef-backup-2014-12-10-20-31-40.tgz
 
-#. Verify that you can login to |chef manage| by navigating to ``https://<YOUR NEW NODES PUBLIC IP ADDRESS>/login``.
+#. Download your new starter kit:
 
-   .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
+   Login to the |chef manage| by navigating to ``https://<MARKETPLACE AMI IP ADDRESS>/getting_started`` and download the starter kit.
+
+#. Extract the starter kit. Open a command prompt and change into the |chef repo| directory extracted from the starter kit. For example:
+
+   .. code-block:: bash
+
+      $ cd ~/Downloads
+      $ unzip chef-starter.zip
+      $ cd chef-repo
 
 #. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to the your SSL trusted certificates.
 #. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.

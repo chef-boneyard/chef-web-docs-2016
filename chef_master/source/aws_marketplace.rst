@@ -22,20 +22,20 @@ Ports
 
 Hostname
 -----------------------------------------------------
-.. include:: ../../includes_cloud/includes_cloud_update_hostname.rst
+.. include:: ../../includes_cloud/includes_cloud_aws_chef_server_update_hostname.rst
 
-Change AMI Instance Size
+Edit AMI Instance Size
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_aws_chef_server_change_instance.rst
 
-Increasing the License Count
-=====================================================
-.. include:: ../../includes_cloud/includes_cloud_aws_chef_server_change_license.rst
-
-Upgrading the |chef server_title| software
+Upgrade the |chef server_title|
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_aws_chef_server_upgrade_software.rst
 
-Migrating an existing |chef server_title| installation
+Migrate an Existing Server
 =====================================================
 .. include:: ../../includes_cloud/includes_cloud_aws_chef_server_migration.rst
+
+Move to Amazon AMI
+-----------------------------------------------------
+.. include:: ../../includes_cloud/includes_cloud_aws_chef_server_migration_to_aws.rst

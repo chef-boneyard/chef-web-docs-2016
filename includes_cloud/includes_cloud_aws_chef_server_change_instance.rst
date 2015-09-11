@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 To edit the |amazon ami| instance size, do the following:
 
 #. Login using |ssh| to access the |chef server| instance. Use the |ssh| key pair and the IP address or public hostname that was automatically assigned when the |amazon ami| was launched. The default user is ``ec2-user``. For example:
@@ -70,6 +71,12 @@ To edit the |amazon ami| instance size, do the following:
       chef_server_url          'https://<YOUR NEW PUBLIC DNS>/organizations/your_org'
       cookbook_path            ['#{current_dir}/../cookbooks']
 
-.. include:: ./includes_cloud_fetch_ssl.rst
+#. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to the your SSL trusted certificates.
+#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
+#. Update the ``/etc/chef/client.rb`` on all of your nodes to use the new public DNS.  For example:
 
-.. include:: ./includes_cloud_update_client_rb.rst
+   .. code-block:: bash
+
+      $ knife ssh name:* 'sudo sed -ie "s/chef_server_url.*/chef_server_url 'https://ec2-52-6-31-230.compute-1.amazonaws.com/organizations/your_org'/" /etc/chef/client.rb
+
+   Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with your new public DNS name and ``your_org`` with your organization name.
