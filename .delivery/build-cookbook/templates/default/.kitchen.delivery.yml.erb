@@ -28,7 +28,7 @@ suites:
     - recipe[docs-builder]
   attributes:
     docs-builder:
-      ssh_key: "<%= File.read('/var/opt/delivery/workspace/etc/builder_key').gsub(/\n/, '::::::::') %>"
+      ssh_key: "<%= @ssh_key.gsub(/\n/, '::::::::') %>"
       build_name: <%= @build_name %>
       bucket_name: <%= @bucket_name %>
       prod_aws_access_key: <%= @cia_access_key  %>

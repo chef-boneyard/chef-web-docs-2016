@@ -27,6 +27,7 @@ ssh = encrypted_data_bag_item_for_environment('cia-creds', 'aws-ssh')
 ssh_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh')
 ssh_private_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', node['delivery']['change']['project'])
 ssh_public_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', "#{node['delivery']['change']['project']}.pub")
+github_keys = encrypted_data_bag_item_for_environment('keys', 'github')
 
 chef_gem 'kitchen-ec2'
 
@@ -48,7 +49,8 @@ template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-bui
     cia_access_key: chef_cia_creds['access_key_id'],
     cia_secret_key: chef_cia_creds['secret_access_key'],
     build_name: build_name,
-    bucket_name: artifact_bucket
+    bucket_name: artifact_bucket,
+    ssh_key: github_keys['chef-delivery']
   )
   sensitive true
 end
