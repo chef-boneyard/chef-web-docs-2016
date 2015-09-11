@@ -3,6 +3,6 @@
 
 Backup the data on the |chef server|:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      $ chef-server-ctl backup
+   $ sudo chef-server-ctl backup

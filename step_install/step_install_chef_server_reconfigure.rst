@@ -5,4 +5,4 @@ Reconfigure the |chef server|:
 
 .. code-block:: bash 
 
-   $ chef-server-ctl reconfigure
+   $ sudo chef-server-ctl reconfigure

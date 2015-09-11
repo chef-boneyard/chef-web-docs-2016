@@ -5,4 +5,4 @@ Reconfigure the |chef server|:
 
 .. code-block:: bash 
 
-   $ opscode-manage-ctl reconfigure
+   $ sudo opscode-manage-ctl reconfigure

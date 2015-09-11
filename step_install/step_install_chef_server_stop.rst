@@ -5,4 +5,4 @@ Stop the |chef server|:
 
 .. code-block:: bash 
 
-   $ chef-server-ctl stop
+   $ sudo chef-server-ctl stop
