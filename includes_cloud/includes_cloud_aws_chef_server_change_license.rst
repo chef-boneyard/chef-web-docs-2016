@@ -5,22 +5,9 @@ To increase or decrease the number of licenses you'll need to migrate to your da
 
 #. Launch a new |amazon ami| that is licensed for the maximum number of nodes you require.
 
-To get a fully-functional |amazon ami| for |chef server|, do the following:
+#. `Launch the AMI <http://docs.chef.io/aws_marketplace.html#launch-the-ami>`_
 
-#. Login to the `AWS Marketplace <https://aws.amazon.com/marketplace>`__ using your |amazon aws| account credentials
-#. `Choose an AMI <https://aws.amazon.com/marketplace/seller-profile/ref=dtl_pcp_sold_by?ie=UTF8&id=e7b7691e-634a-4d35-b729-a8b576175e8c>`__ based on the number of nodes to be under management by |chef|.
-#. Configure the region, the |amazon ec2| instance type, |amazon vpc| settings, security group, and the SSH key pair.
-#. Assign the |chef server| `a public IP address <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses>`__.
-#. Launch the |amazon ami|.
-
-
-Take a backup of your data and migrate it to your new node:
-
-#. Take a backup:
-
-   .. code-block:: bash
-
-      $ chef-server-ctl backup
+#. .. include:: ../../step_install/step_install_chef_server_backup.rst
 
 #. Copy the resulting tarball to your |amazon ami| instance:
 
@@ -34,11 +21,7 @@ Take a backup of your data and migrate it to your new node:
 
       $ chef-marketplace-ctl upgrade -s
 
-#. Reconfigure the |chef server|:
-
-   .. code-block:: bash 
-
-      $ chef-server-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
 
 #. Restore the backup:
 
@@ -50,13 +33,6 @@ Take a backup of your data and migrate it to your new node:
 
    .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
 
-#. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to the your SSL trusted certificates.
-#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
-
-#. Update the ``/etc/chef/client.rb`` on all of your nodes to use the new public DNS.  For example:
-
-   .. code-block:: bash
-
-      $ knife ssh name:* 'sudo sed -ie "s/chef_server_url.*/chef_server_url 'https://ec2-52-6-31-230.compute-1.amazonaws.com/organizations/your_org'/" /etc/chef/client.rb
-
-   Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with your new public DNS name and ``your_org`` with your organization name.
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_ssl_fetch.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_client_list.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_update_to_public_dns.rst

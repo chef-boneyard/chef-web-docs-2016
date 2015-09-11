@@ -10,11 +10,7 @@ To edit the |amazon ami| instance size, do the following:
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
-#. Stop the |chef server| using the following command:
-
-   .. code-block:: bash
-
-      $ sudo chef-server-ctl stop
+#. .. include:: ../../step_install/step_install_chef_server_stop.rst
 
 #. Navigate to the |amazon aws| instance in the |amazon aws console|.
 #. From the **Actions** dropdown, select **Instance State**, and then **Stop**.
@@ -36,17 +32,8 @@ To edit the |amazon ami| instance size, do the following:
 
    Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with the public DNS name.
 
-#. Reconfigure the |chef server| and |chef manage|:
-
-   .. code-block:: bash
-
-      $ sudo chef-server-ctl reconfigure
-
-   and then:
-
-   .. code-block:: bash
-
-      $ sudo opscode-manage-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
+#. .. include:: ../../step_install/step_install_chef_manage_reconfigure.rst
 
 #. Verify that you can login to |chef manage| by navigating to ``https://<YOUR NEW PUBLIC DNS>/login``.
 
@@ -71,12 +58,6 @@ To edit the |amazon ami| instance size, do the following:
       chef_server_url          'https://<YOUR NEW PUBLIC DNS>/organizations/your_org'
       cookbook_path            ['#{current_dir}/../cookbooks']
 
-#. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to the your SSL trusted certificates.
-#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
-#. Update the ``/etc/chef/client.rb`` on all of your nodes to use the new public DNS.  For example:
-
-   .. code-block:: bash
-
-      $ knife ssh name:* 'sudo sed -ie "s/chef_server_url.*/chef_server_url 'https://ec2-52-6-31-230.compute-1.amazonaws.com/organizations/your_org'/" /etc/chef/client.rb
-
-   Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with your new public DNS name and ``your_org`` with your organization name.
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_ssl_fetch.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_client_list.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_update_to_public_dns.rst

@@ -4,11 +4,7 @@
 
 To upgrade an existing |chef server| to the |amazon ami| instance, do the following:
 
-#. Take a backup:
-
-   .. code-block:: bash
-
-      $ chef-server-ctl backup
+#. .. include:: ../../step_install/step_install_chef_server_backup.rst
 
 #. Copy the resulting tarball to your |amazon ami| instance:
 
@@ -22,11 +18,7 @@ To upgrade an existing |chef server| to the |amazon ami| instance, do the follow
 
       $ chef-marketplace-ctl upgrade -s
 
-#. Reconfigure the |chef server|:
-
-   .. code-block:: bash 
-
-      $ chef-server-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
 
 #. Restore the backup:
 
@@ -38,16 +30,9 @@ To upgrade an existing |chef server| to the |amazon ami| instance, do the follow
 
    Login to the |chef manage| by navigating to ``https://<MARKETPLACE AMI IP ADDRESS>/getting_started`` and download the starter kit.
 
-#. Extract the starter kit. Open a command prompt and change into the |chef repo| directory extracted from the starter kit. For example:
-
-   .. code-block:: bash
-
-      $ cd ~/Downloads
-      $ unzip chef-starter.zip
-      $ cd chef-repo
-
-#. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to the your SSL trusted certificates.
-#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
+#. .. include:: ../../step_install/step_install_aws_chef_server_extract_starter_kit.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_ssl_fetch.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_client_list.rst
 
 #. Update the ``/etc/chef/client.rb`` on all of your nodes to use the new public DNS.  For example:
 
