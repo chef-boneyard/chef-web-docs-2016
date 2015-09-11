@@ -28,7 +28,7 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
 
 #. The ``marketplace-setup`` command should output the username and URL that needed to login to the |chef manage|. Follow the supplied link and login.
 
-   .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificate during logon. Ignore the warning and accept the certificate.
+   .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificates during login. In this situation, ignore the warning and accept the certificate.
 
 #. The ``marketplace-setup`` command should supply a link to starter kit, which is a zip file that contains various configuration files for the workstation, including the user key required for authentication to the |chef server| and the validation key used to bootstrap nodes with the |chef server|. Follow the link that is provided and download the starter kit.
 
