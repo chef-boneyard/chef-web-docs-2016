@@ -8,11 +8,11 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: 12-5 slides decks 
+release: master 12-5 slides decks 
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
-# master
+# 
 # analytics
 # delivery
 # client
