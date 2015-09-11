@@ -5,8 +5,8 @@ ENV['AWS_CONFIG_FILE'] = File.join(node['delivery']['workspace']['root'], 'chef_
 require 'chef/provisioning/aws_driver'
 ssh = encrypted_data_bag_item_for_environment('cia-creds', 'aws-ssh')
 ssh_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh')
-ssh_private_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', node['delivery']['change']['project'])
-ssh_public_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', "#{node['delivery']['change']['project']}.pub")
+ssh_private_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', 'id_rsa')
+ssh_public_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', 'id_rsa.pub')
 
 with_driver 'aws::us-west-2'
 
