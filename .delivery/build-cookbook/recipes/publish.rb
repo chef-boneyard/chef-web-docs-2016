@@ -60,6 +60,7 @@ include_recipe 'build-cookbook::_run_builder'
 execute "download the checksum" do
   command "aws s3 cp s3://#{artifact_bucket}/#{build_name}.tar.gz.checksum #{node['delivery']['workspace']['cache']}/"
   cwd node['delivery']['workspace']['repo']
+  environment 'AWS_CONFIG_FILE'=> File.join(node['delivery']['workspace']['root'], 'aws_config')
 end
 
 checksum = ''
