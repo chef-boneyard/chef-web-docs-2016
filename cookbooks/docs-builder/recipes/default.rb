@@ -52,7 +52,7 @@ mount '/srv' do
   device '/dev/xvdi'
 end
 
-unless node['docs-builder']['cached'] do
+unless node['docs-builder']['cached']
   execute 'rm -rf /srv/chef-web-docs'
 end
 
