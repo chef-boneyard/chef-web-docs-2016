@@ -33,8 +33,8 @@ file '/root/.ssh/id_rsa' do
   sensitive true
 end
 
-execute "ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts" do
-  not_if "grep -q github.com '/root/.ssh/known_hosts'"
+execute "ssh-keyscan -t rsa delivery.chef.co >> /root/.ssh/known_hosts" do
+  not_if "grep -q delivery.chef.co '/root/.ssh/known_hosts'"
 end
 
 directory '/srv'
@@ -52,9 +52,13 @@ mount '/srv' do
   device '/dev/xvdi'
 end
 
+unless node['docs-builder']['cached'] do
+  execute 'rm -rf /srv/chef-web-docs'
+end
+
 git '/srv/chef-web-docs' do
   action :sync
-  repository 'git@github.com:chef/chef-docs.git'
+  repository node['docs-builder']['repo_location']
   revision 'master'
 end
 
