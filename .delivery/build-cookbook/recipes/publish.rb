@@ -49,7 +49,7 @@ template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-bui
     cia_secret_key: chef_cia_creds['secret_access_key'],
     build_name: build_name,
     bucket_name: artifact_bucket,
-    ssh_key: node['delivery_build']['ssh_key'],
+    ssh_key: File.read('/var/opt/delivery/workspace/etc/builder_key'),
     repo_location: 'ssh://cwebber@chef@delivery.chef.co:8989/chef/CIA/chef-web-docs',
     cached: false
   )
