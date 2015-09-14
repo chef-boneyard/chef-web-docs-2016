@@ -51,7 +51,7 @@ template File.join(node['delivery']['workspace']['repo'], 'cookbooks', 'docs-bui
     bucket_name: artifact_bucket,
     ssh_key: File.read('/var/opt/delivery/workspace/etc/builder_key'),
     repo_location: 'ssh://builder@chef@delivery.chef.co:8989/chef/CIA/chef-web-docs',
-    cached: false
+    cached: true
   )
   sensitive true
 end
