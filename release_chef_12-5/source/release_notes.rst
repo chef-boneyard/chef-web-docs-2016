@@ -15,6 +15,8 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **ps_credential helper to embed usernames and passwords** Use the ``ps_credential`` helper to embed a ``PSCredential`` object---security credentials, such as a user name or password---in a script defined by the |resource dsc_script| resource.
 * **The -j / --json-attributes option may be used to specify environments** The ``--json-attributes`` option for the |chef client| may now be used to specify a |json| file that contains environment data.
 * **Warning added to the ``verify`` property examples** The behavior of the property expects ``file``, but should have expected ``path``. For versions of the |chef client| prior to 12.5, use ``file``; starting with |chef client| 12.5, use ``path``. This change is documented as a warning across all versions in any topic in which the ``version`` attribute is documented.
+* **depth property added to deploy resource** The ``depth`` property allows the depth of a |git| repository to be truncated to the specified number of versions.
+
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
@@ -77,6 +79,21 @@ where
 ``-json-attributes``, Environments
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
+
+|resource deploy| Property
+-----------------------------------------------------
+The following property is new for the |resource deploy| resource:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Property
+     - Description
+   * - ``depth``
+     - **Ruby Type:** Integer
+
+       |depth git_truncated|
 
 
 Changelog
