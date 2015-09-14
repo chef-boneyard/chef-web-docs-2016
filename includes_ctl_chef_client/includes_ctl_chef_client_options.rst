@@ -63,9 +63,17 @@ This command has the following options:
 ``-j PATH``, ``--json-attributes PATH``
    |json attributes|
 
+   **Run-lists**
+
    .. include:: ../../includes_node/includes_node_ctl_run_list.rst
 
-   .. warning:: .. include:: ../../includes_node/includes_node_ctl_attribute.rst
+   **Environments**
+
+   .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
+
+   **All attributes are normal attributes**
+
+   .. include:: ../../includes_node/includes_node_ctl_attribute.rst
 
 ``-k KEY_FILE``, ``--client_key KEY_FILE``
    |client_key| Default value: ``/etc/chef/client.pem``.

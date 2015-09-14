@@ -37,6 +37,10 @@ This resource has the following properties:
      - **Ruby Type:** String
 
        |deploy_to| |resource_block_default| |see syntax|
+   * - ``depth``
+     - **Ruby Type:** Integer
+
+       |depth git_truncated|
    * - ``environment``
      - **Ruby Type:** Hash
 

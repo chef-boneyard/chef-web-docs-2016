@@ -1,0 +1,8 @@
+.. This is an included how-to. 
+.. This topic is hooked in globally to install topics for Chef server applications.
+
+Reconfigure the |chef server|:
+
+.. code-block:: bash
+
+   $ sudo opscode-manage-ctl reconfigure

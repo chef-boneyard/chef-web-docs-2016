@@ -131,7 +131,7 @@ Cookbooks
 
 The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. A reasonable set of resources are available to the |chef client|, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_components.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_12-4_components.rst
 
 Conclusion
 =====================================================

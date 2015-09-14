@@ -41,7 +41,7 @@ The |chef client| uses |ruby| as its reference language for creating cookbooks a
 
 Components
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_components.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_12-4_components.rst
 
 
 Nodes

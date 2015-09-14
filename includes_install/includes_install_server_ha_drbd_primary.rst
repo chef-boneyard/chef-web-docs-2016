@@ -114,11 +114,7 @@ Use the following steps to set up the primary backend |chef server|:
       $ yum install -y drbd84-utils kmod-drbd84-xen
 
 
-#. Reconfigure the |chef server|:
-
-   .. code-block:: bash
-      
-      $ sudo chef-server-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
 
    This will configure |drbd|. The installer will pause and ask for confirmation that |drbd| has been set up. Confirm (``CTRL-C``), and then run the following commands:
 

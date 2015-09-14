@@ -10,9 +10,11 @@ This resource has the following properties:
    * - Property
      - Description
    * - ``lacp``
-     - |mode lacp|
+     - |mode lacp| Default value: ``disable``.
    * - ``links``
-     - |links interface_lag|
+     - Required. |links interface_lag|
+
+       .. note:: If a ``netdev_lag`` resource is deleted, interfaces that are defined by this attribute are also deleted, unless they have been configured elsewhere.
    * - ``minimum_links``
      - |links minimum_physical_lag|
    * - ``name``

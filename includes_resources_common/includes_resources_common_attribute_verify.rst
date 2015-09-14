@@ -1,7 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A block is arbitrary |ruby| defined within the resource block by using the ``verify`` property. When a block is ``true``, the |chef client| will continue to update the file as appropriate. For example:
+A block is arbitrary |ruby| defined within the resource block by using the ``verify`` property. When a block is ``true``, the |chef client| will continue to update the file as appropriate.
+
+For example, this should return ``true``:
 
 .. code-block:: ruby
 
@@ -9,7 +11,7 @@ A block is arbitrary |ruby| defined within the resource block by using the ``ver
      verify { 1 == 1 }
    end
 
-or:
+This should return ``true``:
 
 .. code-block:: ruby
 
@@ -17,7 +19,17 @@ or:
      verify 'nginx -t -c %{path}'
    end
 
-or:
+.. warning:: For releases of the |chef client| prior to 12.5 (|chef client| 12.4 and earlier) the correct syntax is:
+
+   .. code-block:: ruby
+
+      template '/etc/nginx.conf' do
+        verify 'nginx -t -c %{file}'
+      end
+
+   See |github| issues https://github.com/chef/chef/issues/3232 and https://github.com/chef/chef/pull/3693 for more information about these differences.
+
+This should return ``true``:
 
 .. code-block:: ruby
 
@@ -25,7 +37,7 @@ or:
      verify { 1 == 1}
    end
 
-or:
+And this should return ``true``:
 
 .. code-block:: ruby
 
@@ -35,7 +47,7 @@ or:
      end
    end
 
-should all return ``true``. Whereas, the following should return ``false``:
+Whereas, this should return ``false``:
 
 .. code-block:: ruby
 

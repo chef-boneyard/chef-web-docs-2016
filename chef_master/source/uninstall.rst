@@ -28,6 +28,24 @@ To uninstall the |chef manage|, do the following:
 =====================================================
 .. include:: ../../includes_ctl_reporting/includes_ctl_reporting_uninstall.rst
 
+|push jobs_title|
+=====================================================
+To uninstall |push jobs|, do the following:
+
+#. Shut down the |push jobs| service.
+#. Uninstall the |push jobs| package.
+#. Run the following command:
+
+   .. code-block:: bash
+      
+      $ chef-server-ctl reconfigure
+
+.. note:: This will leave some data in |postgresql| that is not used by any other |chef| application or service.
+
+|push jobs client|
+-----------------------------------------------------
+Use the package manager for the platform on which |push jobs| is installed to uninstall |push jobs|.
+
 |chef dk_title|
 =====================================================
 The |chef dk| can be uninstalled using the steps below that are appropriate for the platform on which the |chef dk| is installed.

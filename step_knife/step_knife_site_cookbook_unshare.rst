@@ -5,4 +5,4 @@ To unshare a cookbook named ``getting-started``, enter:
 
 .. code-block:: bash
 
-   $ knife cookbook site unshare getting-started
+   $ knife cookbook site unshare "getting-started"

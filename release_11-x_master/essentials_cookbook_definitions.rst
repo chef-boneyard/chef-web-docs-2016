@@ -2,11 +2,11 @@
 About Definitions
 =====================================================
 
-.. include:: ../../includes_definition/includes_definition.rst
+.. include:: ../../includes_definition/includes_definition_12-4.rst
 
 Syntax
 =====================================================
-.. include:: ../../includes_definition/includes_definition_syntax.rst
+.. include:: ../../includes_definition/includes_definition_12-4_syntax.rst
 
 Examples
 =====================================================
@@ -14,11 +14,11 @@ The following examples show how to use cookbook definitions.
 
 Simplify Repeating Patterns
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_scenario_common_install.rst
+.. include:: ../../includes_definition/includes_definition_12-4_scenario_common_install.rst
 
 Create a Resource
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_scenario_create_resource.rst
+.. include:: ../../includes_definition/includes_definition_12-4_scenario_create_resource.rst
 
 Many Recipes, One Definition
 -----------------------------------------------------
@@ -26,4 +26,4 @@ Many Recipes, One Definition
 
 Virtual Hosts
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_scenario_virtaul_hosts.rst
+.. include:: ../../includes_definition/includes_definition_12-4_scenario_virtual_hosts.rst

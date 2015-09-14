@@ -18,11 +18,13 @@ Chef Open Source Slide Decks
    chefspec
    cookbooks
    ctl_chef
+   custom_resources
    foodcritic
    git
    kitchen
    lab_install_text_editor
    list_resources
+   recipe_order_matters
    recipes
    resources
    serverspec

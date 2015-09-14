@@ -80,11 +80,7 @@ Use the following steps to set up the primary backend |chef server|:
       
       $ sudo mount /dev/mapper/chef-data /var/opt/opscode/drbd/data
 
-#. Run the following command to configure |chef server|:
-
-   .. code-block:: bash
-      
-      $ sudo chef-server-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
 
    This will reconfigure the |chef server|, start |keepalived|, assign the VIP IP address as a secondary address on the |amazon eni|, and then configure the machine as the primary backend server.
 

@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 To edit the |amazon ami| instance size, do the following:
 
 #. Login using |ssh| to access the |chef server| instance. Use the |ssh| key pair and the IP address or public hostname that was automatically assigned when the |amazon ami| was launched. The default user is ``ec2-user``. For example:
@@ -9,11 +10,7 @@ To edit the |amazon ami| instance size, do the following:
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
-#. Stop the |chef server| using the following command:
-
-   .. code-block:: bash
-
-      $ sudo chef-server-ctl stop
+#. .. include:: ../../step_install/step_install_chef_server_stop.rst
 
 #. Navigate to the |amazon aws| instance in the |amazon aws console|.
 #. From the **Actions** dropdown, select **Instance State**, and then **Stop**.
@@ -25,7 +22,7 @@ To edit the |amazon ami| instance size, do the following:
 
    .. code-block:: bash
 
-      ``ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>``
+      $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
 #. Update the API FQDN in ``/etc/opscode/chef-server.rb`` using the public DNS name.  For example:
 
@@ -35,28 +32,21 @@ To edit the |amazon ami| instance size, do the following:
 
    Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with the public DNS name.
 
-#. Reconfigure the |chef server| and |chef manage|:
-
-   .. code-block:: bash
-
-      $ sudo chef-server-ctl reconfigure
-
-   and then:
-
-   .. code-block:: bash
-
-      $ sudo opscode-manage-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
+#. .. include:: ../../step_install/step_install_chef_manage_reconfigure.rst
 
 #. Verify that you can login to |chef manage| by navigating to ``https://<YOUR NEW PUBLIC DNS>/login``.
 
-   .. note:: In order to use TLS/SSL for the |chef manage| and |api chef server| the ``marketplace-setup`` command will automatically create and use a self-signed certificate. Modern web browsers typically warn about self-signed certificated during logon. Ignore the warning and accept the certificate.
+   .. note:: .. include:: ../../includes_notes/includes_notes_chef_aws_ssl.rst
 
 #. Open a command prompt and change into your ``chef-repo`` directory.
-#. Open ``.chef/knife.rb`` in a text editor and modify the ``chef_server_url`` with your new public DNS.  For example:
+#. Open ``.chef/knife.rb`` in a text editor and modify the ``chef_server_url`` with your new public DNS. For example:
 
    .. code-block:: bash
 
       $ vim ~/chef-repo/.chef/knife.rb
+
+   will open a ``knife.rb`` file similar to:
 
    .. code-block:: ruby
 
@@ -70,12 +60,6 @@ To edit the |amazon ami| instance size, do the following:
       chef_server_url          'https://<YOUR NEW PUBLIC DNS>/organizations/your_org'
       cookbook_path            ['#{current_dir}/../cookbooks']
 
-#. Run ``knife ssl fetch`` to add the |chef server| SSL certificate to your trusted certificates.
-#. Run ``knife client list`` to test the connection to the |chef server|. The command should return ``<orgname>-validator``, where ``<orgname>`` is the name of the organization that was created previously.
-#. Update the ``/etc/chef/client.rb`` on all of your nodes to use the new public DNS.  For example:
-
-   .. code-block:: bash
-
-      $ knife ssh name:* 'sudo sed -ie "s/chef_server_url.*/chef_server_url 'https://ec2-52-6-31-230.compute-1.amazonaws.com/organizations/your_org'/" /etc/chef/client.rb
-
-   Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with your new public DNS name and ``your_org`` with your organization name.
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_ssl_fetch.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_knife_client_list.rst
+#. .. include:: ../../step_install/step_install_aws_chef_server_update_to_public_dns.rst

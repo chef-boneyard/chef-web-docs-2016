@@ -10,7 +10,7 @@ Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>`
 
-**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </chef_server>` | :doc:`Nodes </nodes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Attributes </attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs (Custom Resources) </lwrp_custom>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </chef_server>` | :doc:`Nodes </nodes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Attributes </attributes>` | :doc:`Resources and Providers </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
 
@@ -58,7 +58,7 @@ Cookbooks
 =====================================================
 **The Basics:** :doc:`About Cookbooks </cookbooks>` | :doc:`About Recipes </recipes>` | :doc:`About Attribute Files </attributes>` |  :doc:`Handlers </handlers>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
 
-**LWRPs:** :doc:`About Custom LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
+**Custom Resources:** :doc:`About Custom Resources </custom_resources>`
 
 **Other Cookbook Components:** :doc:`About Definitions </definitions>` | :doc:`About Files </files>` | :doc:`About Libraries </libraries>` | :doc:`About Cookbook Metadata </cookbook_repo>` | :doc:`About Templates </templates>` | :doc:`About Versions </cookbook_versions>`
 
@@ -94,6 +94,7 @@ Cookbooks
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
+   custom_resources
    data_bags
    debug
    definitions
@@ -137,12 +138,6 @@ Cookbooks
    knife_using
    knife_xargs
    libraries
-   lwrp
-   lwrp_custom
-   lwrp_custom_provider
-   lwrp_custom_provider_ruby
-   lwrp_custom_resource
-   lwrp_custom_resource_library
    nodes
    plugin_knife
    plugin_knife_custom

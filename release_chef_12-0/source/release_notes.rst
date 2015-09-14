@@ -12,7 +12,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 
 * **Ruby 2.0 (or higher) for Windows; and Ruby 2.1 (or higher) for Unix/Linux** |ruby| versions 1.8.7, 1.9.1, 1.9.2, and 1.9.3 are no longer supported. See `this blog post <https://www.chef.io/blog/2014/11/25/ruby-1-9-3-eol-and-chef-12/>`_ for more info.
 * **The number of changes between Ruby 1.9 and 2.0 is small** Please review the `Ruby 2.0 release notes <https://github.com/ruby/ruby/blob/v2_0_0_0/NEWS>`_ or `Ruby 2.1 release notes <https://github.com/ruby/ruby/blob/v2_1_0/NEWS>`_ for the full list of changes.
-* **provides method for building custom resources and providers** Use the ``provides`` method to associate a custom resource/provider with a built-in |chef client| resource and to specify platforms on which the custom resource may be used.
+* **provides method for building custom resources** Use the ``provides`` method to associate a custom resource with a built-in |chef client| resource and to specify platforms on which the custom resource may be used.
 * **The chef-client supports the AIX platform** The |chef client| may now be used to configure nodes that are running on the |ibm aix| platform, versions 6.1 (TL6 or higher, recommended) and 7.1 (TL0 SP3 or higher, recommended). The |resource service| resource supports starting, stopping, and restarting services that are managed by |ibm aix_src|, as well as managing all service states with |berkeley os|-based init systems. 
 * **New bff_package resource** Use the |resource package_bff| resource to install packages on the |ibm aix| platform.
 * **New homebrew_package resource** Use the |resource package_homebrew| resource to install packages on the |mac os x| platform. The |resource package_homebrew| resource also replaces the |resource package_macports| resource as the default package installer on the |mac os x| platform.
@@ -21,7 +21,7 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **New --bootstrap-template option** Use the ``--bootstrap-template`` option to install the |chef client| with a bootstrap template. Specify the name of a template, such as ``chef-full``, or specify the path to a custom bootstrap template. This option deprecates the ``--distro`` and ``--template-file`` options.
 * **New SSL options for bootstrap operations** The |subcommand knife bootstrap| subcommand has new options that support |ssl| with bootstrap operations. Use the ``--[no-]node-verify-api-cert`` option to to perform |ssl| validation of the connection to the |chef server|. Use the ``--node-ssl-verify-mode`` option to validate |ssl| certificates.
 * **New format options for knife status** Use the ``--medium`` and ``--long`` options to include attributes in the output and to format that output as |json|.
-* **New fsck_device attribute for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` attribute.
+* **New fsck_device property for mount resource** The |resource mount| resource supports |fsck| devices for the |solaris| platform with the ``fsck_device`` property.
 * **New settings for metadata.rb** The |metadata rb| file has two new settings: ``issues_url`` and ``source_url``. These settings are used to capture the source location and issues tracking location for a cookbook. These settings are also used with |supermarket|. In addition, the ``name`` setting is now **required**.
 * **The http_request GET and HEAD requests drop the hard-coded query string** |http_request query_string|
 * **New Recipe DSL methods** The |dsl recipe| has three new methods: ``shell_out``, ``shell_out!``, and ``shell_out_with_systems_locale``.
@@ -37,13 +37,13 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **File staging now defaults to the destination directory by default** Staging into a system's temporary directory---typically ``/tmp`` or ``/var/tmp``---as opposed to the destination directory may cause issues with permissions, available space, or cross-device renames. Files are now staged to the destination directory by default.
 * **Partial search updates** Use ``:filter_result`` to build search results into a |ruby hash|. This replaces the previous functionality that was provided by the ``partial_search`` cookbook, albeit with a different API. Use the ``--filter-result`` option to return only attributes that match the specified filter. For example: ``\"ServerName=name, Kernel=kernel.version\"``.
 * **Client-side key generation is enabled by default** When a new |chef client| is created using the validation client account, the |chef server| allows the |chef client| to generate a key-pair locally, and then send the public key to the |chef server|. This behavior is controlled by the ``local_key_generation`` attribute in the |client rb| file and now defaults to ``true``. 
-* **New guard_interpreter attribute defaults** The ``guard_interpreter`` attribute now defaults to ``:batch`` for the |resource batch| resource and ``:powershell_script`` for the |resource powershell_script| resource.
+* **New guard_interpreter property defaults** The ``guard_interpreter`` property now defaults to ``:batch`` for the |resource batch| resource and ``:powershell_script`` for the |resource powershell_script| resource.
 * **Events are sent to the Application event log on the Windows platform by default** Events are sent to the |windows| "Application" event log at the start and end of a |chef client| run, and also if a |chef client| run fails. Set the ``disable_event_logger`` configuration setting in the |client rb| file to ``true`` to disable event logging.
-* **The installer_type attribute for the windows_package resource uses a symbol instead of a string** Previous versions of the |chef client| (starting with version 11.8) used a string.
-* **The path attribute is deprecated for the execute resource** Use the ``environment`` attribute instead.
+* **The installer_type property for the windows_package resource uses a symbol instead of a string** Previous versions of the |chef client| (starting with version 11.8) used a string.
+* **The path property is deprecated for the execute resource** Use the ``environment`` property instead.
 * **Attribute behavior changes** Please `see RFC-23 for important changes to attributes <https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_ in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. In addition, ``node.default!`` is now ``node.force_default`` and ``node.override!`` is now ``node.force_override``.
 * **SSL certificate validation improvements** The default settings for |ssl| certificate validation now default in favor of validation. In addition, using the |subcommand knife ssl_fetch| command is now an important part of setting up your workstation.
-* **New attribute for git resource** The |resource scm_git| resource has a new attribute: ``environment``, which takes a |ruby hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``.
+* **New property for git resource** The |resource scm_git| resource has a new property: ``environment``, which takes a |ruby hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``.
 
 provides Method
 -----------------------------------------------------
@@ -141,7 +141,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_bff_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_bff_attributes.rst
 
@@ -169,7 +169,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_homebrew_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_homebrew_attributes.rst
 
@@ -205,7 +205,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
@@ -241,7 +241,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_actions.rst
 
-Attributes
+Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
@@ -288,15 +288,15 @@ The following options are new:
    |medium|
 
 
-``fsck_device`` Attribute
+``fsck_device`` Property
 -----------------------------------------------------
-The following attribute is new for the |resource mount| resource:
+The following property is new for the |resource mount| resource:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``fsck_device``
      - |fsck_device| Default value: ``-``.
@@ -391,13 +391,13 @@ or:
 
 |mac os x|, Passwords
 -----------------------------------------------------
-The following attributes are new for the |resource user| resource:
+The following properties are new for the |resource user| resource:
 
 .. list-table::
    :widths: 150 450
    :header-rows: 1
 
-   * - Attribute
+   * - Property
      - Description
    * - ``iterations``
      - |iterations|
@@ -452,19 +452,19 @@ The |subcommand knife search| subcommand allows filtering search results with a 
 ``-f FILTER``, ``--filter-result FILTER``
    Use to return only attributes that match the specified ``FILTER``. For example: ``\"ServerName=name, Kernel=kernel.version\"``.
 
-|resource execute| Resource, ``path`` Attribute
+|resource execute| Resource, ``path`` Property
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
 
-|resource scm_git| Attributes
+|resource scm_git| Property
 -----------------------------------------------------
-The following attribute is new for the |resource scm_git| resource:
+The following property is new for the |resource scm_git| resource:
 
 .. list-table::
    :widths: 200 300
    :header-rows: 1
 
-   * - Setting
+   * - Property
      - Description
    * - ``environment``
      - |environment variables|

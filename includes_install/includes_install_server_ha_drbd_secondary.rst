@@ -7,11 +7,7 @@ Use the following steps to set up the secondary backend |chef server|:
 
 #. Create the ``/etc/opscode/`` directory, and then copy the entire contents of the ``/etc/opscode`` directory from the primary backend server, including all certificates and the |chef server rb| file.
 
-#. Reconfigure the |chef server|:
-
-   .. code-block:: bash
-      
-      $ sudo chef-server-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
 
    This will configure |drbd|. The installer will pause and ask for confirmation that |drbd| has been set up. Confirm (``CTRL-C``), and then run the following commands:
 

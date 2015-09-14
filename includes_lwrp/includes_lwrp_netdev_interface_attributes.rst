@@ -20,4 +20,4 @@ This resource has the following properties:
    * - ``name``
      - |name interface|
    * - ``speed``
-     - |speed interface| Default value: ``auto``.
+     - |speed interface| Default value: ``auto`` which specifies the default speed configuration for the interface.

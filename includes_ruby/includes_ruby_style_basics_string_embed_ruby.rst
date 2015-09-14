@@ -7,5 +7,5 @@ Embed |ruby| in a string:
 .. code-block:: ruby
 
    x = 'Bob'
-   'Hi, #{x}'      # => "Hi, Bob"
+   "Hi, #{x}"      # => "Hi, Bob"
    'Hello, #{x}'   # => "Hello, \#{x}" Notice that single quotes don't work with #{}

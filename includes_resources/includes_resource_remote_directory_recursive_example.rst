@@ -75,21 +75,20 @@ The |chef client| will manage the permissions of the entire directory structure 
 
 .. code-block:: bash
 
-   dr-xr-xr-x 2 root     root 4096 /var/www/html/website
-   dr--r----- 1 yan      root 4096 /var/www/html/website/index.html
-   drwxrwx--- 2 hamilton root 4096 /var/www/html/website/cities
-   dr--r----- 1 yan      root 4096 /var/www/html/website/cities/carlisle.html
-   dr--r----- 1 yan      root 4096 /var/www/html/website/cities/kendal.html
-   dr--r----- 1 yan      root 4096 /var/www/html/website/cities/penrith.html
-   dr--r----- 1 yan      root 4096 /var/www/html/website/cities/windermere.html
-   drwxrwx--- 2 hamilton root 4096 /var/www/html/website/football
-   dr--r----- 1 yan      root 4096 /var/www/html/website/football/carlisle_united.html
-   drwxrwx--- 2 hamilton root 4096 /var/www/html/website/images
-   dr--r----- 1 yan      root 4096 /var/www/html/website/images/carlisle_united/png
-   dr--r----- 1 yan      root 4096 /var/www/html/website/images/furness_abbey/png
-   dr--r----- 1 yan      root 4096 /var/www/html/website/images/hadrians_wall.png
-   dr--r----- 1 yan      root 4096 /var/www/html/website/images/kendal.png
-   drwxrwx--- 2 hamilton root 4096 /var/www/html/website/places
-   dr--r----- 1 yan      root 4096 /var/www/html/website/places/furness_abbey.html
-   dr--r----- 1 yan      root 4096 /var/www/html/website/places/hadrians_wall.html
-
+   dr-xr-xr-x 2 root     root 4096 /var/www/html
+   dr--r----- 1 yan      root 4096 /var/www/html/index.html
+   drwxrwx--- 2 hamilton root 4096 /var/www/html/cities
+   dr--r----- 1 yan      root 4096 /var/www/html/cities/carlisle.html
+   dr--r----- 1 yan      root 4096 /var/www/html/cities/kendal.html
+   dr--r----- 1 yan      root 4096 /var/www/html/cities/penrith.html
+   dr--r----- 1 yan      root 4096 /var/www/html/cities/windermere.html
+   drwxrwx--- 2 hamilton root 4096 /var/www/html/football
+   dr--r----- 1 yan      root 4096 /var/www/html/football/carlisle_united.html
+   drwxrwx--- 2 hamilton root 4096 /var/www/html/images
+   dr--r----- 1 yan      root 4096 /var/www/html/images/carlisle_united/png
+   dr--r----- 1 yan      root 4096 /var/www/html/images/furness_abbey/png
+   dr--r----- 1 yan      root 4096 /var/www/html/images/hadrians_wall.png
+   dr--r----- 1 yan      root 4096 /var/www/html/images/kendal.png
+   drwxrwx--- 2 hamilton root 4096 /var/www/html/places
+   dr--r----- 1 yan      root 4096 /var/www/html/places/furness_abbey.html
+   dr--r----- 1 yan      root 4096 /var/www/html/places/hadrians_wall.html
