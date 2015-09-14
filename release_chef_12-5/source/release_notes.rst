@@ -14,6 +14,7 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **The terms LWRP and HWRP are deprecated** The new way to refer to creating a custom resource is "custom resource" and the acronyms LWRP ("lightweight resource provider") and HWRP ("heavyweight resource provider") are deprecated. They are older, legacy terms that refer to specific ways of building custom resources. The current version of |chef| supports the older lightweight/heavyweight approaches, but adds additional ways of building custom resources.
 * **ps_credential helper to embed usernames and passwords** Use the ``ps_credential`` helper to embed a ``PSCredential`` object---security credentials, such as a user name or password---in a script defined by the |resource dsc_script| resource.
 * **The -j / --json-attributes option may be used to specify environments** The ``--json-attributes`` option for the |chef client| may now be used to specify a |json| file that contains environment data.
+* **Warning added to the ``verify`` property examples** The behavior of the property expects ``file``, but should have expected ``path``. For versions of the |chef client| prior to 12.5, use ``file``; starting with |chef client| 12.5, use ``path``. This change is documented as a warning across all versions in any topic in which the ``version`` attribute is documented.
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
