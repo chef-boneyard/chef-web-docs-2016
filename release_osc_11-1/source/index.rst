@@ -59,7 +59,7 @@ The following APIs can be used to access data on the |chef server|:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.å/release/osc_11-1/api_chef_server.html">Chef Server API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/osc_11-1/api_chef_server.html">Chef Server API</a> </br>
 
 
 .. Hide the TOC from this file.

@@ -76,7 +76,7 @@ Create Templates
 
 httpd.conf.erb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_conf.rst
+.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates_httpd_conf_erb.rst
 
 Template Variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,7 +84,7 @@ Template Variables
 
 httpd.service.erb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_service.rst
+.. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates_httpd_service_erb.rst
 
 Final Resource
 -----------------------------------------------------

@@ -5,14 +5,14 @@ To converge the default |ubuntu| instance, run the following:
 
 .. code-block:: bash
 
-   $ kitchen converge default-ubuntu-1204
+   $ kitchen converge default-ubuntu-1404
 
 The |chef client| is downloaded the first time this command is run. The output of the command is similar to:
 
 .. code-block:: bash
 
-   -----> Starting Kitchen (v1.3.1)
-   -----> Converging <default-ubuntu-1204>...
+   -----> Starting Kitchen (v1.4.2)
+   -----> Converging <default-ubuntu-1404>...
           Preparing files for transfer
           Preparing cookbooks from project directory
           Removing non-cookbook files before transfer
@@ -24,15 +24,15 @@ The |chef client| is downloaded the first time this command is run. The output o
           Downloading Chef ...
           Installing Chef ...    
           Thank you for installing Chef!       
-          Transferring files to <default-ubuntu-1204>
+          Transferring files to <default-ubuntu-1404>
           [2014-06-27T18:48:01+00:00] INFO: Forking chef instance to converge...       
-          Starting Chef Client, version 12.1.1       
-          [2014-06-27T18:48:01+00:00] INFO: *** Chef 12.1.1 ***       
+          Starting Chef Client, version 12.4.1       
+          [2014-06-27T18:48:01+00:00] INFO: *** Chef 12.4.1 ***       
           [2014-06-27T18:48:01+00:00] INFO: Chef-client pid: 1246       
           [2014-06-27T18:48:03+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options       
           [2014-06-27T18:48:03+00:00] INFO: Run List is [recipe[chef-repo::default]]       
           [2014-06-27T18:48:03+00:00] INFO: Run List expands to [chef-repo::default]       
-          [2014-06-27T18:48:03+00:00] INFO: Starting Chef Run for default-ubuntu-1204       
+          [2014-06-27T18:48:03+00:00] INFO: Starting Chef Run for default-ubuntu-1404       
           [2014-06-27T18:48:03+00:00] INFO: Running start handlers       
           [2014-06-27T18:48:03+00:00] INFO: Start handlers complete.       
           Compiling Cookbooks...       
@@ -53,5 +53,5 @@ The |chef client| is downloaded the first time this command is run. The output o
           Running handlers complete       
           [2014-06-27T18:48:03+00:00] INFO: Report handlers complete       
           Chef Client finished, 1/1 resources updated in 1.955915841 seconds       
-          Finished converging <default-ubuntu-1204> (0m15.67s).
+          Finished converging <default-ubuntu-1404> (0m15.67s).
    -----> Kitchen is finished. (0m15.96s)

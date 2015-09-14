@@ -23,7 +23,7 @@ To set up the |push jobs| server for a standalone configuration:
 
    .. code-block:: bash
 
-      $ private-chef-ctl reconfigure
+      $ chef-server-ctl reconfigure
 
    This ensures that the |keepalived| scripts are regenerated so they are aware of |push jobs|.
 
@@ -31,7 +31,7 @@ To set up the |push jobs| server for a standalone configuration:
 
    .. code-block:: bash
 
-      $ private-chef-ctl restart opscode-pushy-server
+      $ chef-server-ctl restart opscode-pushy-server
 
 #. Verify the installation:
 
