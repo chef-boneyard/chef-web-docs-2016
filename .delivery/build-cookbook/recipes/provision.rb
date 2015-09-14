@@ -14,7 +14,7 @@ else
   slack_channels = slack_creds['channels']
 end
 
-site_name = 'learn'
+site_name = 'docs'
 domain_name = 'chef.io'
 
 chef_slack_notify 'Notify Slack' do

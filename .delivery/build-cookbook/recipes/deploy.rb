@@ -4,7 +4,7 @@ include_recipe 'delivery-truck::deploy'
 
 Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 
-site_name = 'learn'
+site_name = 'docs'
 domain_name = 'chef.io'
 env = Chef::Environment.load(delivery_environment)
 software_version = env.override_attributes['applications'][node['delivery']['change']['project']]
@@ -38,20 +38,22 @@ execute "upload the site" do
   cwd File.join(node['delivery_builder']['repo'], 'build')
 end
 
-#include_recipe 'build-cookbook::_install_dependencies'
+=begin
+include_recipe 'build-cookbook::_install_dependencies'
 
-#execute 'create redirects' do
-#  command "bundle exec rake build_redirects"
-#  cwd node['delivery_builder']['repo']
-#  user node['delivery_builder']['build_user']
-#  environment(
-#    'PATH' => '/opt/chef/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
-#    'S3_BUCKET' => bucket_name,
-#    'AWS_ACCESS_KEY_ID' => aws_creds['access_key_id'],
-#    'AWS_SECRET_ACCESS_KEY' => aws_creds['secret_access_key']
-#  )
-#  sensitive true
-#end
+execute 'create redirects' do
+  command "bundle exec rake build_redirects"
+  cwd node['delivery_builder']['repo']
+  user node['delivery_builder']['build_user']
+  environment(
+    'PATH' => '/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
+    'S3_BUCKET' => bucket_name,
+    'AWS_ACCESS_KEY_ID' => aws_creds['access_key_id'],
+    'AWS_SECRET_ACCESS_KEY' => aws_creds['secret_access_key']
+  )
+  sensitive true
+end
+=end
 
 fastly_service = fastly_service fqdn do
   action :purge_all
