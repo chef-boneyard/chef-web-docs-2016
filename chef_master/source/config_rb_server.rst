@@ -26,11 +26,13 @@ The following settings are often used for performance tuning of the |chef server
 
 .. note:: When changes are made to the |chef server rb| file the |chef server| must be reconfigured by running the ``chef-server-ctl reconfigure`` command.
 
-.. warning:: Review the full list of :doc:`optional settings </config_rb_server_optional_settings>` that can be added to the |chef server rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
+.. note:: Review the full list of :doc:`optional settings </config_rb_server_optional_settings>` that can be added to the |chef server rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
 bookshelf
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
+
+.. warning:: .. include:: ../../includes_notes/includes_notes_server_aws_cookbook_storage.rst
 
 opscode-account
 -----------------------------------------------------
