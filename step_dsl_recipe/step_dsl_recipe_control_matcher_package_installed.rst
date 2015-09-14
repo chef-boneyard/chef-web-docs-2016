@@ -4,10 +4,10 @@ For example, a package is installed:
 
 .. code-block:: ruby
 
-   control_group "audit name" do
-     control "mysql package" do
-       it "should be installed" do
-         expect(package("mysql")).to be_installed
+   control_group 'audit name' do
+     control 'mysql package' do
+       it 'should be installed' do
+         expect(package('mysql')).to be_installed
        end
      end
    end
@@ -33,8 +33,8 @@ If an audit was unsuccessful, the |chef client| will return output similar to:
    Failures:
    
    1) Audit Mode mysql package should be installed
-     Failure/Error: expect(package("mysql")).to be_installed.with_version("5.6")
-       expected Package "mysql" to be installed
+     Failure/Error: expect(package('mysql')).to be_installed.with_version('5.6')
+       expected Package 'mysql' to be installed
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:22:in 'block (3 levels) in from_file'
    
    Finished in 0.5745 seconds (files took 0.46481 seconds to load)

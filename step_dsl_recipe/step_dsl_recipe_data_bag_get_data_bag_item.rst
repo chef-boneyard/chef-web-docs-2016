@@ -5,11 +5,11 @@ The following example shows how to get data bag items from a data bag named ``ge
 .. code-block:: ruby
 
    data_bag_item = Chef::Cookbook.get_credentials_data_bag
-     credentials_default = data_bag_item["default_admin"]
-     credentials_updated = data_bag_item["updated_admin"]
+     credentials_default = data_bag_item['default_admin']
+     credentials_updated = data_bag_item['updated_admin']
 
-   foo_user "admin" do
+   foo_user 'admin' do
      action :change_password
-     password_old credentials_default["12#$abCD"]
-     password_new credentials_updated["56&*efGH"]
+     password_old credentials_default['12#$abCD']
+     password_new credentials_updated['56&*efGH']
    end
