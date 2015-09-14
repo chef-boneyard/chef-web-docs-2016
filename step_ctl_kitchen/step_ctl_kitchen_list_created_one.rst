@@ -11,6 +11,6 @@ to return a list similar to:
 
 .. code-block:: bash
 
-   Instance             Driver   Provisioner  Last Action
-   default-ubuntu-1204  Vagrant  ChefZero     <Not Created>
-   default-centos-65    Vagrant  ChefZero     Created
+   Instance             Driver   Provisioner  Verifier  Transport  Last Action
+   default-ubuntu-1404  Vagrant  ChefZero     Busser    Ssh        <Not Created>
+   default-centos-71    Vagrant  ChefZero     Busser    Ssh        Created

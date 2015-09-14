@@ -42,11 +42,7 @@ Use the following steps to set up the secondary backend |chef server|:
 
 #. Create the ``/etc/opscode/`` directory, and then copy the contents of the entire ``/etc/opscode`` directory from the primary server, including all certificates and the |chef server rb|.
 
-#. Run the following command:
-
-   .. code-block:: bash
-      
-      $ sudo chef-server-ctl reconfigure
+#. .. include:: ../../step_install/step_install_chef_server_reconfigure.rst
 
    This will reconfigure the |chef server|, start |keepalived|, and configure it as the secondary backend server.
 

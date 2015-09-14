@@ -162,8 +162,24 @@ platform?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform.rst
 
-**Examples**
+Parameters
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_parameters.rst
 
+For example:
+
+.. code-block:: ruby
+
+   platform?('debian')
+
+or:
+
+.. code-block:: ruby
+
+   platform?('rhel', 'debian')
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following example shows how the ``platform?`` method can be used in a recipe.
 
 **Use an if statement with the platform recipe DSL method**
@@ -176,7 +192,21 @@ platform_family?
 
 Parameters
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family_parameters.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_parameters.rst
+
+For example:
+
+.. code-block:: ruby
+
+   platform_family?('gentoo')
+
+or:
+
+.. code-block:: ruby
+
+   platform_family?('slackware', 'suse', 'arch')
+
+.. note:: ``platform_family?`` will default to ``platform?`` when ``platform_family?`` is not explicitly defined.
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

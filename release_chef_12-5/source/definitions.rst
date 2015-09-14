@@ -19,32 +19,24 @@ The following examples show how to use cookbook definitions.
 
 Many Recipes, One Definition
 -----------------------------------------------------
+.. warning:: With the improved custom resource pattern available starting with |chef client| 12.5, the need to use definitions is greatly minimized. In every case when considering to use a definition, first evaluate whether that defintion is better represented as a custom resource.
+
 .. include:: ../../includes_definition/includes_definition_scenario_many_recipes_one_definition.rst
+
 
 Definition vs. Resource
 =====================================================
-This section shows a definition, and then that definition as custom resource. It also shows how to break that custom resource down into simpler, platform-specific resources.
+.. include:: ../../includes_definition/includes_definition_example.rst
 
-Definition
+As a Definition
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_migrate_before.rst
+.. include:: ../../includes_definition/includes_definition_example_as_definition.rst
 
-Custom Resource
+As a Resource
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_migrate_after.rst
+.. include:: ../../includes_definition/includes_definition_example_as_resource.rst
 
-By Platform
+Use Common Properties
 -----------------------------------------------------
-.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform.rst
+.. include:: ../../includes_definition/includes_definition_example_as_resource_with_common_properties.rst
 
-``debian``
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_debian.rst
-
-``rhel``
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_rhel.rst
-
-``omnios``
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_definition/includes_definition_migrate_after_by_platform_omnios.rst

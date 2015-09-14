@@ -2,11 +2,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A ``network_acl`` resource block typically declares ACLs for networks. For example:
+A ``aws_network_acl`` resource block typically declares ACLs for networks. For example:
 
 .. code-block:: ruby
 
-   network_acl 'name' do
+   aws_network_acl 'name' do
      vpc 'ref-vpc'
      inbound_rules '0.0.0.0/0' => [ 22, 80 ]
      outbound_rules [
@@ -19,7 +19,7 @@ The full syntax for all of the properties that are available to the ``network_ac
 
 .. code-block:: ruby
 
-   network_acl 'name' do
+   aws_network_acl 'name' do
      inbound_rules                 Array, Hash
      network_acl_id                String
      outbound_rules                Array, Hash
@@ -28,6 +28,6 @@ The full syntax for all of the properties that are available to the ``network_ac
 
 where 
 
-* ``network_acl`` is the resource
+* ``aws_network_acl`` is the resource
 * ``name`` is the name of the resource block
 * ``inbound_rules``, ``network_acl_id``, ``outbound_rules``, and ``vpc`` are properties of this resource, with the |ruby| type shown. |see attributes|
