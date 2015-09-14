@@ -33,6 +33,13 @@ file '/root/.ssh/id_rsa' do
   sensitive true
 end
 
+directory '/root/bin'
+
+file '/root/bin/git_ssh' do
+  mode '0755'
+  source 'git_ssh'
+end
+
 execute "ssh-keyscan -t rsa delivery.chef.co >> /root/.ssh/known_hosts" do
   not_if "grep -q delivery.chef.co '/root/.ssh/known_hosts'"
 end
@@ -60,6 +67,7 @@ git '/srv/chef-web-docs' do
   action :sync
   repository node['docs-builder']['repo_location']
   revision 'master'
+  environment 'GIT_SSH' => '/root/bin/git_ssh'
 end
 
 execute "pip install -r requirements.txt" do
