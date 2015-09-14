@@ -129,7 +129,7 @@ file File.join('/srv/chef-web-docs', 'build', 'version.txt') do
 end
 
 execute "create the tarball" do
-  command "tar cvzf /srv/#{node['docs-builder']['build_name']}.tar.gz --exclude .git --exclude .delivery build"
+  command "tar cvzf /srv/#{node['docs-builder']['build_name']}.tar.gz --exclude .git --exclude .delivery --exclude .doctrees build"
   cwd '/srv/chef-web-docs'
   environment 'AWS_ACCESS_KEY_ID' => node['docs-builder']['prod_aws_access_key'],
     'AWS_SECRET_ACCESS_KEY' => node['docs-builder']['prod_aws_secret_access_key'],
