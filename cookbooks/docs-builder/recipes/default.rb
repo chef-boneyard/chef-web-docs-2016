@@ -35,7 +35,7 @@ end
 
 directory '/root/bin'
 
-file '/root/bin/git_ssh' do
+cookbook_file '/root/bin/git_ssh' do
   mode '0755'
   source 'git_ssh'
 end
