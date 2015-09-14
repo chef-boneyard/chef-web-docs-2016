@@ -3,7 +3,7 @@ include_recipe 'chef-sugar::default'
 
 Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 
-site_name = 'learn'
+site_name = 'docs'
 domain_name = 'chef.io'
 
 if node['delivery']['change']['stage'] == 'delivered'
