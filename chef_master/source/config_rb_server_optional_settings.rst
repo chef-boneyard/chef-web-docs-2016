@@ -20,6 +20,8 @@ bookshelf
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_bookshelf.rst
 
+.. note:: .. include:: ../../includes_notes/includes_notes_server_aws_cookbook_storage.rst
+
 .. include:: ../../includes_config/includes_config_rb_server_settings_bookshelf.rst
 
 bootstrap

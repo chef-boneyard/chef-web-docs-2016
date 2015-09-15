@@ -5,16 +5,16 @@ If two ``control_group`` blocks have the same name, the |chef client| will raise
 
 .. code-block:: ruby
 
-   control_group "basic control group" do
-     it "should pass" do
+   control_group 'basic control group' do
+     it 'should pass' do
        expect(2 - 2).to eq(0)
      end
    end
 
 .. code-block:: ruby
 
-   control_group "basic control group" do
-     it "should pass" do
+   control_group 'basic control group' do
+     it 'should pass' do
        expect(3 - 2).to eq(1)
      end
    end
@@ -45,14 +45,14 @@ Because the two ``control_group`` block names are identical, the |chef client| w
    ----------------------
    /Users/grantmc/.cache/chef/cache/cookbooks/audit_test/recipes/error_duplicate_control_groups.rb:
    
-   control_group "basic control group" do
-     it "should pass" do
+   control_group 'basic control group' do
+     it 'should pass' do
        expect(2 - 2).to eq(0)
      end
    end
    
-   control_group "basic control group" do
-     it "should pass" do
+   control_group 'basic control group' do
+     it 'should pass' do
        expect(3 - 2).to eq(1)
      end
    end

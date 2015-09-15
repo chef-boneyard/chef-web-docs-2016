@@ -40,5 +40,5 @@ The following example will set ``package`` to ``httpd-devel`` for the |redhat en
 
    package = value_for_platform_family(
      ['rhel', 'fedora', 'suse'] => 'httpd-devel',
-      'debian' => 'apache2-dev'
+       'debian' => 'apache2-dev'
    )

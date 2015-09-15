@@ -8,14 +8,14 @@ The following example shows how to use the ``platform_family?`` and ``value_for_
    
    if platform_family?('rhel') && major_version < 6
      include_recipe 'yum::epel'
-     python_pkgs = ["python26", "python26-devel"]
-     node['python']['binary'] = "/usr/bin/python26"
+     python_pkgs = ['python26', 'python26-devel']
+     node['python']['binary'] = '/usr/bin/python26'
    else
      python_pkgs = value_for_platform_family(
-                     "debian" => ["python","python-dev"],
-                     "rhel" => ["python","python-devel"],
-                     "freebsd" => ["python"],
-                     "default" => ["python","python-dev"]
+                     'debian' => ['python', 'python-dev'],
+                     'rhel' => ['python', 'python-devel'],
+                     'freebsd' => ['python'],
+                     'default' => ['python', 'python-dev']
                    )
    end
    

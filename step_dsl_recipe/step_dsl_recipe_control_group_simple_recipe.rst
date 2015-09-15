@@ -5,22 +5,22 @@ The following ``control_group`` verifies that the ``git`` package has been insta
 
 .. code-block:: ruby
 
-   package "git" do
+   package 'git' do
      action :install
    end
 
-   execute "list packages" do
-     command "dpkg -l"
+   execute 'list packages' do
+     command 'dpkg -l'
    end
 
-   execute "list directory" do
-     command "ls -R ~"
+   execute 'list directory' do
+     command 'ls -R ~'
    end
 
-   control_group "my audits" do
-     control "check git" do
-       it "should be installed" do
-         expect(package("git")).to be_installed
+   control_group 'my audits' do
+     control 'check git' do
+       it 'should be installed' do
+         expect(package('git')).to be_installed
        end
      end
    end
