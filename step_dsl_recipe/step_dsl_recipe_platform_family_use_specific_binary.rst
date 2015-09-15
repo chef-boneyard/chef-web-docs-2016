@@ -4,8 +4,8 @@ The following is an example of using the ``platform_family?`` method and an ``if
 
 .. code-block:: ruby
 
-   if platform_family?("rhel")
-     pip_binary = "/usr/bin/pip"
+   if platform_family?('rhel')
+     pip_binary = '/usr/bin/pip'
    else
-     pip_binary = "/usr/local/bin/pip"
+     pip_binary = '/usr/local/bin/pip'
    end

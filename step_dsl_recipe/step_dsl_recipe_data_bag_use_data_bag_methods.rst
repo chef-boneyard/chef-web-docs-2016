@@ -4,7 +4,7 @@ The following example shows how to use the ``data_bag`` and ``data_bag_item`` me
 
 .. code-block:: ruby
 
-   package "sea-power" do
+   package 'sea-power' do
      action :install
    end
    
@@ -13,7 +13,7 @@ The following example shows how to use the ``data_bag`` and ``data_bag_item`` me
    end
    
    gale_warnings = data_bag('sea-power').map do |viking_north|
-     data_bag_item('sea-power', viking_north)["source"]
+     data_bag_item('sea-power', viking_north)['source']
    end
    
    template '/etc/seattle/power.list' do

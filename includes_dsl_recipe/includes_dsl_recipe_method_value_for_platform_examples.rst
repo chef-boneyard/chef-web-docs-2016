@@ -7,10 +7,10 @@ The following example will set ``package_name`` to ``httpd`` for the |redhat| pl
 
    package_name = value_for_platform(
      ['centos', 'redhat', 'suse', 'fedora' ] => {
-      'default' => 'httpd'
+       'default' => 'httpd'
      },
      ['ubuntu', 'debian'] => {
-      'default' => 'apache2'
+       'default' => 'apache2'
      }
    )
 

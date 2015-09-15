@@ -5,48 +5,48 @@ The following ``control_group`` ensures that |mysql| is installed, that |postgre
 
 .. code-block:: ruby
 
-   control_group "Audit Mode" do
+   control_group 'Audit Mode' do
    
-     control "mysql package" do
-       it "should be installed" do
-         expect(package("mysql")).to be_installed.with_version("5.6")
+     control 'mysql package' do
+       it 'should be installed' do
+         expect(package('mysql')).to be_installed.with_version('5.6')
        end
      end
    
-     control "postgres package" do
-       it "should not be installed" do
-         expect(package("postgresql")).to_not be_installed
+     control 'postgres package' do
+       it 'should not be installed' do
+         expect(package('postgresql')).to_not be_installed
        end
      end
    
-     control "mysql service" do
-       let(:mysql_service) { service("mysql") }
-       it "should be enabled" do
+     control 'mysql service' do
+       let(:mysql_service) { service('mysql') }
+       it 'should be enabled' do
          expect(mysql_service).to be_enabled
        end
-       it "should be running" do
+       it 'should be running' do
          expect(mysql_service).to be_running
        end
      end
    
-     control "mysql config directory" do
-       let(:config_dir) { file("/etc/mysql") }
-       it "should exist with correct permissions" do
+     control 'mysql config directory' do
+       let(:config_dir) { file('/etc/mysql') }
+       it 'should exist with correct permissions' do
          expect(config_dir).to be_directory
          expect(config_dir).to be_mode(0700)
        end
-       it "should be owned by the db user" do
+       it 'should be owned by the db user' do
          expect(config_dir).to be_owned_by('db_service_user')
        end
      end
    
-     control "mysql config file" do
-       let(:config_file) { file("/etc/mysql/my.cnf") }
-       it "should exist with correct permissions" do
+     control 'mysql config file' do
+       let(:config_file) { file('/etc/mysql/my.cnf') }
+       it 'should exist with correct permissions' do
          expect(config_file).to be_file
          expect(config_file).to be_mode(0400)
        end
-       it "should contain required configuration" do
+       it 'should contain required configuration' do
          expect(config_file.content).to match(/default-time-zone='UTC'/)
        end
      end
@@ -96,38 +96,38 @@ If an audit was unsuccessful, the |chef client| will return output similar to:
    Failures:
    
    1) Audit Mode mysql package should be installed
-     Failure/Error: expect(package("mysql")).to be_installed.with_version("5.6")
-       expected Package "mysql" to be installed
+     Failure/Error: expect(package('mysql')).to be_installed.with_version('5.6')
+       expected Package 'mysql' to be installed
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:22:in 'block (3 levels) in from_file'
    
    2) Audit Mode mysql service should be enabled
      Failure/Error: expect(mysql_service).to be_enabled
-       expected Service "mysql" to be enabled
+       expected Service 'mysql' to be enabled
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:35:in 'block (3 levels) in from_file'
    
    3) Audit Mode mysql service should be running
       Failure/Error: expect(mysql_service).to be_running
-       expected Service "mysql" to be running
+       expected Service 'mysql' to be running
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:38:in 'block (3 levels) in from_file'
    
    4) Audit Mode mysql config directory should exist with correct permissions
      Failure/Error: expect(config_dir).to be_directory
-       expected `File "/etc/mysql".directory?` to return true, got false
+       expected `File '/etc/mysql'.directory?` to return true, got false
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:45:in 'block (3 levels) in from_file'
    
    5) Audit Mode mysql config directory should be owned by the db user
      Failure/Error: expect(config_dir).to be_owned_by('db_service_user')
-       expected `File "/etc/mysql".owned_by?("db_service_user")` to return true, got false
+       expected `File '/etc/mysql'.owned_by?('db_service_user')` to return true, got false
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:49:in 'block (3 levels) in from_file'
    
    6) Audit Mode mysql config file should exist with correct permissions
      Failure/Error: expect(config_file).to be_file
-       expected `File "/etc/mysql/my.cnf".file?` to return true, got false
+       expected `File '/etc/mysql/my.cnf'.file?` to return true, got false
      # /var/chef/cache/cookbooks/grantmc/recipes/default.rb:56:in 'block (3 levels) in from_file'
    
    7) Audit Mode mysql config file should contain required configuration
      Failure/Error: expect(config_file.content).to match(/default-time-zone='UTC'/)
-       expected "-n\n" to match /default-time-zone='UTC'/
+       expected '-n\n' to match /default-time-zone='UTC'/
        Diff:
        @@ -1,2 +1,2 @@
        -/default-time-zone='UTC'/

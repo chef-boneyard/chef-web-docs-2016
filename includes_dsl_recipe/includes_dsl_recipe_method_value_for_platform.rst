@@ -32,6 +32,6 @@ When each value has more than one platform, the syntax changes to:
 
    value_for_platform(
      ['platform', 'platform', ... ] => {
-      'version' => 'value'
+       'version' => 'value'
      },
    )
