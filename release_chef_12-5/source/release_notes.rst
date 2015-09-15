@@ -16,7 +16,7 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **The -j / --json-attributes option may be used to specify environments** The ``--json-attributes`` option for the |chef client| may now be used to specify a |json| file that contains environment data.
 * **Warning added to the ``verify`` property examples** The behavior of the property expects ``file``, but should have expected ``path``. For versions of the |chef client| prior to 12.5, use ``file``; starting with |chef client| 12.5, use ``path``. This change is documented as a warning across all versions in any topic in which the ``version`` attribute is documented.
 * **depth property added to deploy resource** The ``depth`` property allows the depth of a |git| repository to be truncated to the specified number of versions.
-
+* **The knife ssl check subcommand supports SNI*** Support for Server Name Indication (SNI) is added to the |subcommand knife ssl_check| subcommand.
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
