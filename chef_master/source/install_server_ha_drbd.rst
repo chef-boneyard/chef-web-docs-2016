@@ -6,7 +6,9 @@ High Availability: DRBD
 
 This topic describes how to set up the |chef server| for high availability using physical machines and |drbd|.
 
-.. image:: ../../images/chef_server_ha_drbd.png
+.. image:: ../../images/chef_server_ha_drbd.svg
+   :width: 600px
+   :align: center
 
 Prerequisites
 =====================================================
