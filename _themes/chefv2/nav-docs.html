@@ -1,3 +1,5 @@
+{% set active_product = active_product|default('Chef') -%}
+{% set active_version = active_version|default('Latest') -%}
 {% set defaultNavItems = [
   {
     "title": "Chef Client 12.5",
@@ -107,7 +109,7 @@
           },
           {
             "title": "Policy Files",
-            "url": "tbd"
+            "url": "#"
           }
         ]
       },
@@ -128,7 +130,7 @@
     </li>
     <li class="version-picker">
       Product: Version
-      {% include 'version-picker.html' %}
+      {% include 'version-picker.html' with context %}
     </li>
     {% block leftnav %}
     {%- for item in navItems %}
