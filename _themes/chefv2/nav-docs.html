@@ -148,44 +148,45 @@
           <div class="has-sub-items-content" title="{{ subItem.title }}">
             {{ subItem.title }}
             <i class="fa fa-chevron-down"></i>
-            <ul class="sub-items level-2">
-
-              {%- for subItem2 in subItem.subItems %}
-              {%- if subItem2.hasSubItems %}
-
-              <li class="has-sub-items">
-                <div class="has-sub-items-content" title="{{ subItem2.title }}">
-                  {{ subItem2.title }}
-                  <i class="fa fa-chevron-down"></i>
-                </div>
-                <ul class="sub-items level-3">
-
-                  {%- for subItem3 in subItem2.subItems %}
-
-                  <li>
-                    <a href="{{ subItem3.url }}" title="{{ subItem3.title }}">
-                      {{ subItem3.title }}
-                    </a>
-                  </li>
-
-                  {%- endfor %} <!-- /for subItem3 in subItem2.subItems -->
-
-                </ul>
-              </li>
-
-              {%- else %} <!-- if subItem2 does not have sub items -->
-
-              <li>
-                <a href="{{ subItem2.url }}" title="{{ subItem2.title }}">
-                  {{ subItem2.title }}
-                </a>
-              </li>
-
-              {%- endif %} <!-- /if subItem2.hasSubItems -->
-              {%- endfor %} <!-- /for subItem2 in subItem.subItems -->
-
-            </ul>
           </div>
+          <ul class="sub-items level-2">
+
+            {%- for subItem2 in subItem.subItems %}
+            {%- if subItem2.hasSubItems %}
+
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                {%- for subItem3 in subItem2.subItems %}
+
+                <li>
+                  <a href="{{ subItem3.url }}" title="{{ subItem3.title }}">
+                    {{ subItem3.title }}
+                  </a>
+                </li>
+
+                {%- endfor %} <!-- /for subItem3 in subItem2.subItems -->
+
+              </ul>
+            </li>
+
+            {%- else %} <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a href="{{ subItem2.url }}" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+              </a>
+            </li>
+
+            {%- endif %} <!-- /if subItem2.hasSubItems -->
+            {%- endfor %} <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
         </li>
 
         {%- else %} <!-- if subItem does not have sub items  -->
