@@ -1,14 +1,12 @@
 $(document).ready(function() { 
   // Nav Interactions
   const $navLinks = $(".nav-links.links-main");
-  const $bodyWrap = $(".body-wrap");
   const $navDocs = $(".nav-docs");
-  const $navElements = [$navDocs, $navLinks, $bodyWrap];
+  const $navElements = [$navDocs, $navLinks];
   const navBreakpoint = 730; // navBreakpoint should be the same as breakpoint in _nav.scss file
   const navHeight = $(".nav-main").outerHeight();
   var navDocsHeight, navLinksHeight, windowWidth;
   var largeScreen;
-  var sidebarOpen = false;
 
   var removeOpenClass = function(elements) {
     $.each(elements, function(index, value) {
@@ -18,7 +16,6 @@ $(document).ready(function() {
 
   var checkWindowSize = function() {
     windowWidth = $(window).width();
-    $bodyWrap.width(windowWidth);
     removeOpenClass($navElements);
 
     if (windowWidth > navBreakpoint) {
