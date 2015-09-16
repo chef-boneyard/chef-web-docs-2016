@@ -1,3 +1,125 @@
+{% set defaultNavItems = [
+  {
+    "title": "Chef Client 12.5",
+    "iconClass": "fa-home",
+    "subItems": [
+      {
+        "title": "Getting Started",
+        "hasSubItems": false,
+        "url": "/release/12-5/index.html"
+      },
+      {
+        "title": "Overview",
+        "hasSubItems": false,
+        "url": "/release/12-5/chef_overview.html"
+      },
+      {
+        "title": "Community",
+        "hasSubItems": false,
+        "url": "/community.html"
+      },
+      {
+        "title": "Tutorials",
+        "hasSubItems": false,
+        "url": "https://learn.chef.io"
+      },
+      {
+        "title": "Release Notes",
+        "hasSubItems": false,
+        "url": "/release/12-5/release_notes.html"
+      }
+    ]
+  },
+  {
+    "title": "Theory &amp; Concepts",
+    "iconClass": "fa-star",
+    "subItems": [
+      {
+        "title": "Workstations",
+        "hasSubItems": false,
+        "url": "/release/12-5/workstation.html"
+      },
+      {
+        "title": "Nodes",
+        "hasSubItems": false,
+        "url": "/release/12-5/nodes.html"
+      },
+      {
+        "title": "Chef Server",
+        "hasSubItems": false,
+        "url": "/release/12-5/chef_server.html"
+      },
+      {
+        "title": "Cookbooks",
+        "hasSubItems": false,
+        "url": "/release/12-5/cookbooks.html"
+      },
+      {
+        "title": "Cookbook Components",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Attributes",
+            "url": "/release/12-5/attributes.html"
+          },
+          {
+            "title": "Definitions",
+            "url": "/release/12-5/definitions.html"
+          },
+          {
+            "title": "Files",
+            "url": "/release/12-5/files.html"
+          },
+          {
+            "title": "Libraries",
+            "url": "/release/12-5/libraries.html"
+          },
+          {
+            "title": "Recipes",
+            "url": "/release/12-5/recipes.html"
+          },
+          {
+            "title": "Templates",
+            "url": "/release/12-5/templates.html"
+          }
+        ]
+      },
+      {
+        "title": "Cookbook Versions",
+        "hasSubItems": false,
+        "url": "/release/12-5/cookbook_versions.html"
+      },
+      {
+        "title": "Policy",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Data Bags",
+            "url": "/release/12-5/data_bags.html"
+          },
+          {
+            "title": "Environments",
+            "url": "/release/12-5/environments.html"
+          },
+          {
+            "title": "Roles",
+            "url": "/release/12-5/roles.html"
+          },
+          {
+            "title": "Policy Files",
+            "url": "tbd"
+          }
+        ]
+      },
+      {
+        "title": "Search",
+        "hasSubItems": false,
+        "url": "/release/12-5/chef_search.html"
+      }
+    ]
+  }
+] -%}
+{% set navItems = navItems|default(defaultNavItems) -%}
 <nav class="nav-docs">
   <ul class="nav-docs-items">
     <li class="main-item dark-item">
@@ -9,73 +131,77 @@
       {% include 'version-picker.html' %}
     </li>
     {% block leftnav %}
-    <li class="main-item has-sub-items is-open">
-      <div class="has-sub-items-content" title="Start Here">
-        <i class="fa fa-home icon-left"></i>Start Here
+    {%- for item in navItems %}
+    <li class="main-item has-sub-items{%- if loop.index == 1 %} is-open{%- endif %}">
+
+      <div class="has-sub-items-content" title="{{ item.title }}">
+        <i class="fa {{ item.iconClass }} icon-left"></i>{{ item.title }}
         <i class="fa fa-chevron-down"></i>
       </div>
+
       <ul class="sub-items">
+
+        {%- for subItem in item.subItems %}
+        {%- if subItem.hasSubItems %}
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="{{ subItem.title }}">
+            {{ subItem.title }}
+            <i class="fa fa-chevron-down"></i>
+            <ul class="sub-items level-2">
+
+              {%- for subItem2 in subItem.subItems %}
+              {%- if subItem2.hasSubItems %}
+
+              <li class="has-sub-items">
+                <div class="has-sub-items-content" title="{{ subItem2.title }}">
+                  {{ subItem2.title }}
+                  <i class="fa fa-chevron-down"></i>
+                </div>
+                <ul class="sub-items level-3">
+
+                  {%- for subItem3 in subItem2.subItems %}
+
+                  <li>
+                    <a href="{{ subItem3.url }}" title="{{ subItem3.title }}">
+                      {{ subItem3.title }}
+                    </a>
+                  </li>
+
+                  {%- endfor %} <!-- /for subItem3 in subItem2.subItems -->
+
+                </ul>
+              </li>
+
+              {%- else %} <!-- if subItem2 does not have sub items -->
+
+              <li>
+                <a href="{{ subItem2.url }}" title="{{ subItem2.title }}">
+                  {{ subItem2.title }}
+                </a>
+              </li>
+
+              {%- endif %} <!-- /if subItem2.hasSubItems -->
+              {%- endfor %} <!-- /for subItem2 in subItem.subItems -->
+
+            </ul>
+          </div>
+        </li>
+
+        {%- else %} <!-- if subItem does not have sub items  -->
+
         <li>
-          <a href="#" class="is-active" title="Getting Started">
-            Getting Started
+          <a href="{{ subItem.url }}" title="{{ subItem.title }}">
+            {{ subItem.title }}
           </a>
         </li>
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Overview">
-            Overview
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2">
-            <li class="has-sub-items">
-              <div class="has-sub-items-content" title="Example">
-                Example
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <ul class="sub-items level-3">
-                <li><a href="#" title="This is an example of a really long title in case that happens">This is an example of a really long title in case that happens</a></li>
-                <li><a href="#" title="Example">Example</a></li>
-                <li><a href="#" title="Example">Example</a></li>
-              </ul>
-            </li>
-            <li><a href="#" title="Example">Example</a></li>
-            <li><a href="#" title="Example">Example</a></li>
-            <li><a href="#" title="Example">Example</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" title="Another example of a really long title just in case">Another example of a really long title just in case</a>
-        </li>
-        <li>
-          <a href="#" title="Why Ruby?">Why Ruby?</a>
-        </li>
-        <li>
-          <a href="#" title="Community">Community</a>
-        </li>
+
+        {% endif %} <!-- /if subItem2.hasSubItems -->
+        {%- endfor %} <!-- /for subItem in subItems -->
+
       </ul>
     </li>
-    <li class="main-item has-sub-items">
-      <div class="has-sub-items-content" title="Theory &amp; Concepts">
-        <i class="fa fa-star-o icon-left"></i>Theory &amp; Concepts
-        <i class="fa fa-chevron-down"></i>
-      </div>
-      <ul class="sub-items">
-        <li>
-          <a href="#" title="Getting Started">Getting Started</a>
-        </li>
-        <li>
-          <a href="#" title="Overview">Overview</a>
-        </li>
-        <li>
-          <a href="#" title="Why Chef?">Why Chef?</a>
-        </li>
-        <li>
-          <a href="#" title="Why Ruby?">Why Ruby?</a>
-        </li>
-        <li>
-          <a href="#" title="Community">Community</a>
-        </li>
-      </ul>
-    </li>
+    {%- endfor %} <!-- /for item in navItems -->
     {% endblock %}
     <li class="main-item dark-item">
       <a href="https://github.com/chef/chef-docs" title="Available on Github">
