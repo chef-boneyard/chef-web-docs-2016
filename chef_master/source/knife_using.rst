@@ -40,4 +40,8 @@ Many Users, Same Repo
 =====================================================
 .. include:: ../../includes_chef_repo/includes_chef_repo_many_users_same_repo.rst
 
+Authenticated API Requests
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst

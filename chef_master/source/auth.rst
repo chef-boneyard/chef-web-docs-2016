@@ -22,6 +22,12 @@ During a |chef client_title| Run
 
 |knife| can also use the |subcommand knife exec| subcommand to make specific, authenticated requests to the |chef server|. |knife| plugins can also make authenticated requests to the |chef server| by leveraging the |subcommand knife exec| subcommand.
 
+API Requests
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
+
 From the Web Interface
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_webui.rst
