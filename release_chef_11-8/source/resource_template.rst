@@ -20,7 +20,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_actions.rst
 
-.. warning:: ../../includes_resources/includes_notes_selinux_file_based_resources.rst
+.. warning:: .. include:: ../../includes_resources/includes_notes_selinux_file_based_resources.rst
 
 Properties
 =====================================================

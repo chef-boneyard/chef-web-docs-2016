@@ -6,7 +6,7 @@ template
 
 .. include:: ../../includes_template/includes_template.rst
 
-.. note:: ../../includes_notes/includes_notes_cookbook_template_erubis.rst
+.. note:: .. include:: ../../includes_notes/includes_notes_cookbook_template_erubis.rst
 
 .. include:: ../../includes_resources_common/includes_resources_common_generic.rst
 
@@ -20,7 +20,7 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_actions.rst
 
-.. warning:: ../../includes_notes/includes_notes_selinux_file_based_resources.rst
+.. warning:: .. include:: ../../includes_notes/includes_notes_selinux_file_based_resources.rst
 
 Properties
 =====================================================
