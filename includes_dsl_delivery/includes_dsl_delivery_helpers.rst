@@ -11,28 +11,28 @@ The following |chef delivery|-specific helpers can be used in recipes:
    * - Helper
      - Description
    * - ``bumped_version?``
-     - Use to determine if files in a cookbook have been modified, and then to ensure that a cookbook's version is updated in its |metadata rb| file.
+     - Determines if files in a cookbook have been modified, and then to ensure that a cookbook's version is updated in its |metadata rb| file.
    * - ``changed_cookbooks``
-     - Use to get a list of cookbooks that have been modified.
+     - Gets a list of cookbooks that have been modified.
    * - ``changed_files``
-     - Use to get a list of files that have been modified.
+     - Gets a list of files that have been modified.
    * - ``delivery_chef_server``
-     - Use to return a |ruby hash| that contains details about how to talk to the |chef server|.
+     - Returns a |ruby hash| that contains details about how to talk to the |chef server|.
    * - ``delivery_environment``
-     - Use to get the name of the standard environment.
+     - Gets the name of the standard environment.
    * - ``foodcritic_tags``
-     - Use to get the list of |foodcritic| tags that are applied to a node.
+     - Gets the list of |foodcritic| tags that are applied to a node.
    * - ``get_acceptance_environment``
-     - Use to get the name of the acceptance environment.
+     - Gets the name of the acceptance environment.
    * - ``get_project_secrets``
-     - Use to get the data bag from the |chef server| in which secrets used by this project are stored.
+     - Gets the data bag from the |chef server| in which secrets used by this project are stored.
    * - ``has_kitchen_tests?``
-     - Use to determine if a |kitchen yml| file exists in a cookbook.
+     - Determines if a |kitchen yml| file exists in a cookbook.
    * - ``has_spec_tests?``
-     - Use to determine if tests exist in the ``/spec`` directory in a cookbook.
+     - Determines if tests exist in the ``/spec`` directory in a cookbook.
    * - ``project_slug``
-     - Use to return a project slug.
+     - Returns a project slug.
    * - ``push_repo_to_github?``
-     - Use to determine if a repo should be pushed to |github|.
+     - Determines if a repo should be pushed to |github|.
    * - ``upload_cookbook_to_chef_server?``
-     - Use to determine if a ookbook should be pushed to the |chef server|.
+     - Determines if a cookbook should be pushed to the |chef server|.

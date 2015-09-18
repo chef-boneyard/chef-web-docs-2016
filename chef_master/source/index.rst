@@ -1,5 +1,5 @@
 =====================================================
-All about |chef| ... 
+All about |chef| ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -280,7 +280,6 @@ Cookbooks
    knife_using
    knife_xargs
    libraries
-   list_resources
    lwrp
    lwrp_custom
    lwrp_custom_provider
@@ -294,6 +293,7 @@ Cookbooks
    ohai_custom
    openstack
    page_not_found
+   plugin_community
    plugin_kitchen_vagrant
    plugin_knife
    plugin_knife_analytics

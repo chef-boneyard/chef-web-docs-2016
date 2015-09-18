@@ -37,8 +37,8 @@ In addition to attributes and recipes, the following items are also part of cook
      - A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
    * - :doc:`Libraries </libraries>`
      - A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
-   * - :doc:`Lightweight Resources </lwrp>`
-     - A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters.
+   * - :doc:`Custom Resources </custom_resources>`
+     - A custom resource is an abstract approach for defining a set of actions and (for each action) a set of properties and validation parameters.
    * - :doc:`Metadata </cookbook_repo>`
      - A metadata file is used to ensure that each cookbook is correctly deployed to each node.\
    * - :doc:`Resources and Providers </resource>`

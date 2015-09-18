@@ -107,10 +107,30 @@ Read more :doc:`about exception, report, and start handlers </handlers>`.
 -----------------------------------------------------
 .. include:: ../../includes_chef_shell/includes_chef_shell.rst
 
+.. note:: |chef shell| is configured using the :doc:`chef-shell (executable) </ctl_chef_shell>`.
+
 .. include:: ../../includes_chef_shell/includes_chef_shell_modes.rst
+
+Configure
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_chef_shell/includes_chef_shell_config.rst
+
+|chef_shell rb|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_chef_shell/includes_chef_shell_config_rb.rst
+
+Run as a |chef client_title|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_chef_shell/includes_chef_shell_run_as_chef_client.rst
+
+Manage
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_chef_shell/includes_chef_shell_manage.rst
 
 breakpoint Resource
 -----------------------------------------------------
+.. include:: ../../includes_chef_shell/includes_chef_shell_breakpoints.rst
+
 .. include:: ../../includes_resources/includes_resource_breakpoint.rst
 
 Syntax
@@ -140,6 +160,18 @@ Examples
 **The same recipe with breakpoints**
 
 .. include:: ../../step_resource/step_resource_breakpoint_yes.rst
+
+Step Through Run-list
+-----------------------------------------------------
+.. include:: ../../includes_chef_shell/includes_chef_shell_step_through_run_list.rst
+
+Debug Existing Recipe
+-----------------------------------------------------
+.. include:: ../../includes_chef_shell/includes_chef_shell_debug_existing_recipe.rst
+
+Advanced Debugging
+-----------------------------------------------------
+.. include:: ../../includes_chef_shell/includes_chef_shell_advanced_debug.rst
 
 debug_value
 -----------------------------------------------------
@@ -195,3 +227,11 @@ where the ``-r URL`` option is not used. |chef solo| will look in the |solo rb| 
    $ chef-solo -c ~/solo.rb -j http://www.example.com/node.json -r http://www.example.com/chef-solo.tar.gz
 
 where ``-r`` corresponds to ``recipe_url`` and ``-j`` corresponds to ``json_attribs``, both of which are configuration options in |solo rb|.
+
+**"Hello World"**
+
+.. include:: ../../includes_chef_shell/includes_chef_shell_example_hello_world.rst
+
+**Get Specific Nodes**
+
+.. include:: ../../includes_chef_shell/includes_chef_shell_example_get_specific_nodes.rst
