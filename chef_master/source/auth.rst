@@ -1,5 +1,5 @@
 =====================================================
-Authentication and Authorization
+Authentication, Authorization
 =====================================================
 
 .. include:: ../../includes_chef_auth/includes_chef_auth.rst
