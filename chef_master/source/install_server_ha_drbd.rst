@@ -77,3 +77,7 @@ Backend
 Frontend
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst
+
+GRE Tunnels
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_server_ha_drbd_gre_tunnels.rst
