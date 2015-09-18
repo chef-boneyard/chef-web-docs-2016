@@ -414,13 +414,7 @@ View Validation Client Details
 .. include:: ../../step_manage_webui/step_manage_webui_policy_validation_view_details.rst
 
 
-
-
-
-
-
-
-List of |reporting_title| Tasks
+|reporting_title| Tasks
 =====================================================
 This section is an alphabetical list of tasks available when using |reporting|, a premium feature of the |chef server|.
 

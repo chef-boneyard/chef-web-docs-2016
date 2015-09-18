@@ -48,12 +48,15 @@ The following authentication headers are required:
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst
 
 
-
-
-
 Example
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst
+
+Knife API Requests
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
 
 Global Endpoints
 =====================================================

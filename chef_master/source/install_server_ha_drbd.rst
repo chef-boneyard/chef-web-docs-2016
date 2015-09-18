@@ -6,7 +6,9 @@ High Availability: DRBD
 
 This topic describes how to set up the |chef server| for high availability using physical machines and |drbd|.
 
-.. image:: ../../images/chef_server_ha_drbd.png
+.. image:: ../../images/chef_server_ha_drbd.svg
+   :width: 600px
+   :align: center
 
 Prerequisites
 =====================================================
@@ -75,3 +77,7 @@ Backend
 Frontend
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst
+
+GRE Tunnels
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_server_ha_drbd_gre_tunnels.rst

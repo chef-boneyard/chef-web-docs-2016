@@ -37,10 +37,6 @@ This resource has the following properties:
      - **Ruby Type:** String
 
        |deploy_to| |resource_block_default| |see syntax|
-   * - ``depth``
-     - **Ruby Type:** Integer
-
-       |depth git_truncated|
    * - ``environment``
      - **Ruby Type:** Hash
 
@@ -150,6 +146,10 @@ The following properties are for use with |git| only:
 
    * - Property
      - Description
+   * - ``depth``
+     - **Ruby Type:** Integer
+
+       |depth git_truncated| See ``shallow_clone``.
    * - ``enable_submodules``
      - **Ruby Types:** TrueClass, FalseClass
 
@@ -165,7 +165,7 @@ The following properties are for use with |git| only:
    * - ``shallow_clone``
      - **Ruby Types:** TrueClass, FalseClass
 
-       |shallow_clone| Default value: ``false``.
+       |shallow_clone| If a depth other than ``5`` is required, use the ``depth`` property instead of ``shallow_clone``. Default value: ``false``.
    * - ``ssh_wrapper``
      - **Ruby Type:** String
 

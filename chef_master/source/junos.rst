@@ -10,13 +10,13 @@
 
 For more information about |juniper chef|, including information about installing and configuring the |chef client| on a |junos| device, see the |juniper| |juniper chef| documentation at http://www.juniper.net/techpubs/en_US/release-independent/junos-chef/information-products/pathway-pages/index.html.
 
-The netdev Lightweight Resources
+The netdev Custom Resources
 -----------------------------------------------------
 The |cookbook netdev| cookbook is used to install and configure network interfaces and Layer 2 switching.
 
-The |cookbook netdev| cookbook contains the following lightweight resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
+The |cookbook netdev| cookbook contains the following custom resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
 
-.. note:: These lightweight resources are part of the |cookbook netdev| cookbook (https://github.com/opscode-cookbooks/netdev).
+.. note:: These custom resources are part of the |cookbook netdev| cookbook (https://github.com/opscode-cookbooks/netdev).
 
 netdev_interface
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -26,7 +26,7 @@ Actions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_interface_actions.rst
 
-Attributes
+Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_interface_attributes.rst
 
@@ -42,7 +42,7 @@ Actions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_l2_interface_actions.rst
 
-Attributes
+Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_l2_interface_attributes.rst
 
@@ -64,7 +64,7 @@ Actions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_lag_actions.rst
 
-Attributes
+Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_lag_attributes.rst
 
@@ -80,7 +80,7 @@ Actions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_vlan_actions.rst
 
-Attributes
+Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_vlan_attributes.rst
 

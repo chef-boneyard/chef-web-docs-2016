@@ -6,7 +6,9 @@ High Availability: AWS
 
 .. include:: ../../includes_install/includes_install_server_ha_aws.rst
 
-.. image:: ../../images/chef_server_ha_aws.png
+.. image:: ../../images/chef_server_ha_aws.svg
+   :width: 600px
+   :align: center
 
 .. note:: .. include:: ../../includes_chef/includes_chef_subscriptions.rst
 

@@ -2,5 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This network is bridged to the Internet by a router providing DHCP. Nodes connect to it via ``eth1``.
-
+The ``172.16.100.0/24`` network is bridged to the Internet by a router providing DHCP. Nodes connect to it via ``eth1``.
