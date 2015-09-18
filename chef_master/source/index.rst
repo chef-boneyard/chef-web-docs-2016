@@ -280,7 +280,6 @@ Cookbooks
    knife_using
    knife_xargs
    libraries
-   list_resources
    lwrp
    lwrp_custom
    lwrp_custom_provider
