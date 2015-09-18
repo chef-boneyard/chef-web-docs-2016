@@ -420,7 +420,7 @@ View Validation Client Details
 
 
 
-List of |reporting_title| Tasks
+|reporting_title| Tasks
 =====================================================
 This section is an alphabetical list of tasks available when using |reporting|, a premium feature of the |chef server|.
 
