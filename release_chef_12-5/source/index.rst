@@ -14,17 +14,6 @@ Getting Started
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
 
-.. include:: ../../includes_chef/includes_chef_index_learnchef.rst
- 
-
-The Community
-=====================================================
-.. include:: ../../includes_community/includes_community.rst
-
-.. include:: ../../includes_community/includes_community_read.rst
-
-See `this page <https://docs.chef.io/community.html>`__ for more about the awesome |chef| community!
-
 
 The Workstation
 =====================================================
@@ -196,7 +185,6 @@ Cookbooks
    resource_rpm_package
    resource_ruby
    resource_ruby_block
-   resource_scm
    resource_script
    resource_service
    resource_smartos_package
