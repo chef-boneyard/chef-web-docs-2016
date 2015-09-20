@@ -1,5 +1,3 @@
-.. THIS PAGE DOCUMENTS chef-client version 11.10
-
 =====================================================
 About the Recipe DSL
 =====================================================
@@ -40,73 +38,231 @@ Accessor Methods
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
 
-Recipe DSL Methods
+|dsl recipe| Methods
 =====================================================
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method.rst
 
-.. note:: Read all about the `Recipe DSL <http://docs.chef.io/chef/dsl_recipe.html>`_ in a single topic. The topics in the tables below provide links to individual pages for each method.
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
-
-   * - Methods
-     - Description
-   * - :doc:`attribute? </dsl_recipe_method_attribute>`
-     - Use in a recipe to check for the presence of an attribute.
-   * - :doc:`cookbook_name </dsl_recipe_method_cookbook_name>`
-     - Use in a recipe to get the name of the cookbook in which a recipe is located.
-   * - :doc:`data_bag </dsl_recipe_method_data_bag>`
-     - Use in a recipe to list the contents of a data bag.
-   * - :doc:`data_bag_item </dsl_recipe_method_data_bag_item>`
-     - Use in a recipe to get the contents of a data bag item.
-   * - :doc:`platform? </dsl_recipe_method_platform>`
-     - Use in a recipe to check for the platform.
-   * - :doc:`platform_family? </dsl_recipe_method_platform_family>`
-     - Use in a recipe to check for the platform family.
-   * - :doc:`recipe_name </dsl_recipe_method_recipe_name>`
-     - Use in a recipe to get the name of a recipe.
-   * - :doc:`resources </dsl_recipe_method_resources>`
-     - Use in a recipe to examine the resource collection.
-   * - :doc:`search </dsl_recipe_method_search>`
-     - Use in a recipe to include search results.
-   * - :doc:`tag, tagged?, untag </dsl_recipe_method_tag>`
-     - Use in a recipe to use and apply tags.
-   * - :doc:`value_for_platform </dsl_recipe_method_value_for_platform>`
-     - Use in a recipe to check for a value for a platform.
-   * - :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>`
-     - Use in a recipe to check for a value for a platform family.
-
-Windows Registry
+attribute?
 -----------------------------------------------------
-The following methods can be used to interact with |windows| registry keys.
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_attribute.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+cookbook_name
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_cookbook_name.rst
 
-   * - Methods
-     - Description
-   * - :doc:`registry_data_exists? </dsl_recipe_method_registry_data_exists>`
-     - Find out if a registry key contains data.
-   * - :doc:`registry_get_subkeys </dsl_recipe_method_registry_get_subkeys>`
-     - Get a list of sub-keys for a registry setting.
-   * - :doc:`registry_get_values </dsl_recipe_method_registry_get_values>`
-     - Get values (name, type, and data) for a given registry key.
-   * - :doc:`registry_has_subkeys? </dsl_recipe_method_registry_has_subkeys>`
-     - Find out if a registry key has one (or more) sub-keys.
-   * - :doc:`registry_key_exists? </dsl_recipe_method_registry_key_exists>`
-     - Find out if a registry key exists.
-   * - :doc:`registry_value_exists? </dsl_recipe_method_registry_value_exists>`
-     - Find out if a registry key has values set (name, type, and data).
+data_bag
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_data_bag.rst
+
+**Examples**
+
+The following example shows how the ``data_bag`` method can be used in a recipe.
+
+**Get a data bag, and then iterate through each data bag item**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_data_bag.rst
+
+data_bag_item
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_data_bag_item.rst
+
+**Examples**
+
+The following examples show how the ``data_bag_item`` method can be used in a recipe.
+
+**Get a data bag, and then iterate through each data bag item**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_data_bag.rst
+
+**Use the contents of a data bag in a recipe**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_data_bag_use_data_bag_methods.rst
+
+platform?
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform.rst
+
+Parameters
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_parameters.rst
+
+For example:
+
+.. code-block:: ruby
+
+   platform?('debian')
+
+or:
+
+.. code-block:: ruby
+
+   platform?('rhel', 'debian')
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how the ``platform?`` method can be used in a recipe.
+
+**Use an if statement with the platform recipe DSL method**
+
+.. include:: ../../step_resource/step_resource_ruby_block_if_statement_use_with_platform.rst
+
+platform_family?
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family.rst
+
+Parameters
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_parameters.rst
+
+For example:
+
+.. code-block:: ruby
+
+   platform_family?('gentoo')
+
+or:
+
+.. code-block:: ruby
+
+   platform_family?('slackware', 'suse', 'arch')
+
+.. note:: ``platform_family?`` will default to ``platform?`` when ``platform_family?`` is not explicitly defined.
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how the ``platform_family?`` method can be used in a recipe.
+
+**Use a specific binary for a specific platform**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
+reboot_pending?
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_reboot_pending.rst
+
+recipe_name
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_recipe_name.rst
+
+resources
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_resources.rst
+
+search
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_search.rst
+
+Query Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_query_syntax.rst
+
+Keys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_key.rst
+
+**Nested Fields**
+
+.. include:: ../../includes_search/includes_search_key_nested.rst
+
+Patterns
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_pattern.rst
+
+**Exact Match**
+
+.. include:: ../../includes_search/includes_search_pattern_exact.rst
+
+**Wildcard Match**
+
+.. include:: ../../includes_search/includes_search_pattern_wildcard.rst
+
+**Range Match**
+
+.. include:: ../../includes_search/includes_search_pattern_range.rst
+
+**Fuzzy Match**
+
+.. include:: ../../includes_search/includes_search_pattern_fuzzy.rst
+
+Operators
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_boolean_operators.rst
+
+Special Characters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_search/includes_search_special_characters.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how the ``search`` method can be used in a recipe.
+
+**Use the search recipe DSL method to find users**
+
+.. include:: ../../step_resource/step_resource_execute_use_search_dsl_method.rst
+
+tag, tagged?, untag
+-----------------------------------------------------
+.. include:: ../../includes_chef/includes_chef_tags.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
+
+value_for_platform
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform.rst
+
+Operators
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_version_constraints_operators.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_examples.rst
+
+value_for_platform_family
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_family.rst
+
+
+Windows Platform
+=====================================================
+The following methods and helpers may be used on the |windows| platform:
 
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
 
-Windows Platform
+registry_data_exists?
 -----------------------------------------------------
-A recipe can define specific behaviors for specific |windows| platform versions by using :doc:`a series of helper methods </dsl_recipe_helper_windows_platform>`. 
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst
 
+registry_get_subkeys
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst
 
+registry_get_values
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst
 
+registry_has_subkeys?
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst
 
+registry_key_exists?
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst
 
+registry_value_exists?
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
+
+Helpers
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform.rst
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform_helpers.rst
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_helper_windows_platform.rst
