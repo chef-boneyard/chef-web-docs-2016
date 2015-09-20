@@ -7,5 +7,5 @@
 * `Chef-managed cookbooks <http://github.com/chef-cookbooks>`_
 * `Community cookbooks <http://supermarket.chef.io>`_
 * `Documentation <https://github.com/chef/chef-docs>`_
-* `Legacy Chef-managed cookbooks <http://github.com/opscode-cookbooks>`_
+* `Legacy Chef-managed cookbooks <http://github.com/chef-cookbooks>`_
 * `Share your Chef product ideas <https://feedback.chef.io>`_

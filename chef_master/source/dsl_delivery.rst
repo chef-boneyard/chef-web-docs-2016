@@ -4,7 +4,7 @@ About the |dsl delivery|
 
 .. include:: ../../includes_dsl_delivery/includes_dsl_delivery.rst
 
-.. warning:: This resource is only available from the ``delivery-truck`` cookbook: https://github.com/opscode-cookbooks/delivery-truck.
+.. warning:: This resource is only available from the ``delivery-truck`` cookbook: https://github.com/chef-cookbooks/delivery-truck.
 
 Helpers
 -----------------------------------------------------

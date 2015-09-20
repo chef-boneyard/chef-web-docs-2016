@@ -298,7 +298,7 @@ A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much lik
 
 .. include:: ../../includes_lwrp/includes_lwrp_chef_maintained_index_list.rst
 
-See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository for the full list.
+See the `chef-cookbooks <https://github.com/chef-cookbooks>`_ repository for the full list.
 
 The Recipe DSL
 -----------------------------------------------------

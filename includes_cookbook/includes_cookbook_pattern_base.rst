@@ -20,4 +20,4 @@ Some common charactistics of a |cookbook type_base| cookbook:
 * Is never forked from a |github| repository
 * Typically does not have a dependency on another cookbook
 
-See https://github.com/opscode-cookbooks for a good starting point for cookbooks that can be leveraged as |cookbook type_base| cookbooks. Some standouts include chef-splunk, nginx, apt, and homebrew.
+See https://github.com/chef-cookbooks for a good starting point for cookbooks that can be leveraged as |cookbook type_base| cookbooks. Some standouts include chef-splunk, windows, apt, and homebrew.

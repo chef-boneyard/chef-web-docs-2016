@@ -61,7 +61,7 @@ Community Cookbooks
 
    * - Components
      - Description
-   * - `Cookbooks Maintained by Chef <https://github.com/opscode-cookbooks>`_
+   * - `Cookbooks Maintained by Chef <https://github.com/chef-cookbooks>`_
      - |company_name| maintains a collection of cookbooks that are widely used by the community.
    * - `Cookbooks Maintained by the Community <https://supermarket.chef.io/cookbooks>`_
      - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that are some of the most popular and are used by nearly everyone.

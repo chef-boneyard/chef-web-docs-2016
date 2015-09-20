@@ -5,7 +5,7 @@ The following example shows how the |resource ruby_block| resource can be used t
 .. code-block:: ruby
 
    # the following code sample comes from the ``ec2`` recipe
-   # in the following cookbook: https://github.com/opscode-cookbooks/dynect
+   # in the following cookbook: https://github.com/chef-cookbooks/dynect
 
    ruby_block 'edit etc hosts' do
      block do

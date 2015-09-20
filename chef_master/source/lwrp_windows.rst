@@ -12,4 +12,4 @@ The |cookbook windows| cookbook contains the following resources: ``windows_auto
 
 .. warning:: The |resource reboot| resource was added to the |chef client| 12-0 as a core resource. In general, it is recommended to use the |resource reboot| resource instead of the ``windows_reboot`` resource included in the |cookbook windows| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer resource.
 
-.. note:: Please see the documentation for the resources contained within the |cookbook windows| cookbook on |github|: https://github.com/opscode-cookbooks/windows.
+.. note:: Please see the documentation for the resources contained within the |cookbook windows| cookbook on |github|: https://github.com/chef-cookbooks/windows.
