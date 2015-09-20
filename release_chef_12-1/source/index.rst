@@ -10,32 +10,19 @@ Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>`
 
-**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </server_components>` | :doc:`Nodes </nodes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Attributes </attributes>` | :doc:`Resources and Providers </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </server_components>` | :doc:`Nodes </nodes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Attributes </attributes>` | :doc:`Resources </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
-
-.. include:: ../../includes_chef/includes_chef_index_learnchef.rst
- 
-
-The Community
-=====================================================
-.. include:: ../../includes_community/includes_community.rst
-
-.. include:: ../../includes_community/includes_community_read.rst
-
-See `this page <https://docs.chef.io/community.html>`__ for more about the awesome |chef| community!
 
 
 The Workstation
 =====================================================
 
-**The Basics:** :doc:`About the Workstation </workstation>` | :doc:`The chef-repo </chef_repo>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
+**The Basics:** :doc:`About the Workstation </workstation>` | :doc:`The chef-repo </chef_repo>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </debug>`
 
 **Install:** :doc:`Install the chef-client on a Workstation </install_dk>` | :doc:`Bootstrap a Node </install_bootstrap>` | :doc:`Create and Sync the chef-repo </chef_repo>`
 
 **Knife:** :doc:`About Knife </knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`deps </knife_deps>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`edit </knife_edit>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`serve </knife_serve>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`ssl check </knife_ssl_check>` | :doc:`ssl fetch </knife_ssl_fetch>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` | :doc:`user </knife_user>` | :doc:`xargs </knife_xargs>`
-
-**Knife Plugins:** :doc:`About Plugins </plugin_knife>` | :doc:`Custom Knife Plugins </plugin_knife_custom>` | :doc:`Authenticated Requests </plugin_knife_authenticated_requests>`
 
 **Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
@@ -78,7 +65,6 @@ Cookbooks
    chef_client
    chef_repo
    chef_search
-   chef_shell
    chef_solo
    config_rb_client
    config_rb_knife
@@ -93,11 +79,9 @@ Cookbooks
    ctl_chef_shell
    ctl_chef_solo
    custom_resources
-   data_bags
    debug
    definitions
    dsl_recipe
-   environments
    files
    handlers
    install_bootstrap
@@ -137,9 +121,6 @@ Cookbooks
    knife_xargs
    libraries
    nodes
-   plugin_knife
-   plugin_knife_custom
-   plugin_knife_authenticated_requests
    recipes
    release_notes
    resource
@@ -193,7 +174,6 @@ Cookbooks
    resource_rpm_package
    resource_ruby
    resource_ruby_block
-   resource_scm
    resource_script
    resource_service
    resource_smartos_package
@@ -204,7 +184,6 @@ Cookbooks
    resource_windows_package
    resource_windows_service
    resource_yum
-   roles
    ruby
    server_components
    templates
