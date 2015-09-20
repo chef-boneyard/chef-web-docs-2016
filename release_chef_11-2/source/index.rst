@@ -60,8 +60,6 @@ Cookbooks
    :hidden:
 
    api_omnitruck
-   auth_authentication
-   auth_authorization
    chef_client
    chef_cookbooks
    chef_overview
