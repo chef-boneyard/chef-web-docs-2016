@@ -10,7 +10,7 @@ Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>`
 
-**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </chef_server>` | :doc:`Nodes </nodes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Attributes </attributes>` | :doc:`Resources and Providers </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </server_components>` | :doc:`Nodes </nodes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Attributes </attributes>` | :doc:`Resources and Providers </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
 
@@ -72,14 +72,12 @@ Cookbooks
 .. toctree::
    :hidden:
 
-   api_chef_server
    api_omnitruck
    attributes
    chef_overview
    chef_client
    chef_repo
    chef_search
-   chef_server
    chef_shell
    chef_solo
    config_rb_client
@@ -208,5 +206,6 @@ Cookbooks
    resource_yum
    roles
    ruby
+   server_components
    templates
    workstation
