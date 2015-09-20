@@ -15,8 +15,8 @@ This value can be set from a recipe. For example, from the |cookbook php| cookbo
 
 .. code-block:: ruby
 
-   #  the following code sample comes from the ``package`` recipe in the ``php`` cookbook: https://github.com/opscode-cookbooks/php
    
+   #  the following code sample comes from the ``package`` recipe in the ``php`` cookbook: https://github.com/chef-cookbooks/php
    if platform?('windows')
    
      include_recipe 'iis::mod_cgi'

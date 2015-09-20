@@ -316,14 +316,14 @@ The following settings are new:
 
        .. code-block:: ruby
 
-          source_url "https://github.com/opscode-cookbooks/chef-client/issues"
+          source_url "https://github.com/chef-cookbooks/chef-client/issues"
 
    * - ``source_url``
      - |url cookbook_source| For example:
 
        .. code-block:: ruby
 
-          source_url "https://github.com/opscode-cookbooks/chef-client"
+          source_url "https://github.com/chef-cookbooks/chef-client"
 
 .. warning:: The ``name`` attribute is now a required setting in the |metadata rb| file.
 

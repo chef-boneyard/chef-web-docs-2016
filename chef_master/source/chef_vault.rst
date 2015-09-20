@@ -2,7 +2,7 @@
 |chef vault|
 =====================================================
 
-.. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See https://github.com/opscode-cookbooks/chef-vault for more information about |chef vault|.
+.. warning:: This topic is about a |chef| community-authored tool that is packaged as part of the |chef dk|. See https://github.com/chef-cookbooks/chef-vault for more information about |chef vault|.
 
 |chef vault| is a |rubygems| package that is included in the |chef dk|. |chef vault| allows the encryption of a data bag item by using the public keys of a list of nodes, allowing only those nodes to decrypt the encrypted values. |chef vault| adds the ``knife vault`` subcommand. For more information about this subcommands, its arguments, and other uses of |chef vault|, see https://github.com/Nordstrom/chef-vault.
 

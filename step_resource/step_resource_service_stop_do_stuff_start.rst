@@ -12,7 +12,7 @@ The following example shows how to use the |resource execute|, |resource service
 
    # the following code sample comes from the ``server_ec2``
    # recipe in the following cookbook:
-   # https://github.com/opscode-cookbooks/mysql
+   # https://github.com/chef-cookbooks/mysql
 
    if (node.attribute?('ec2') && ! FileTest.directory?(node['mysql']['ec2_path']))
    

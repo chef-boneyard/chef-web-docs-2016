@@ -8,7 +8,7 @@ The ``server.rb`` recipe in the |cookbook chef_splunk| cookbook installs a |splu
 
 .. code-block:: ruby
 
-   # https://github.com/opscode-cookbooks/chef-splunk
+   # https://github.com/chef-cookbooks/chef-splunk
 
    node.default['splunk']['is_server'] = true
    include_recipe 'chef-splunk::user'
