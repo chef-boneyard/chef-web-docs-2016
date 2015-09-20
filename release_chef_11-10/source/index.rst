@@ -8,23 +8,21 @@ View the :doc:`release notes </release_notes>` for |chef client| 11.10.
 
 Getting Started
 =====================================================
-**From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
+**From the beginning:** :doc:`Overview (long) </chef_overview>`
 
-**Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs (Custom Resources) </lwrp_custom>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
 
-**Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
+**Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
 
 
 
 The Workstation
 =====================================================
-**The Basics:** :doc:`About the Workstation </chef_overview_workstation>` | :doc:`The chef-repo </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
+**The Basics:** :doc:`About the Workstation </workstation>` | :doc:`The chef-repo </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
 
 **Install:** :doc:`Install the chef-client on a Workstation </install_workstation>` | :doc:`Bootstrap a Node </install_bootstrap>` | :doc:`Create and Sync the chef-repo </essentials_repository_create>`
 
 **Knife:** :doc:`About Knife </knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`deps </knife_deps>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`edit </knife_edit>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`index rebuild </knife_index_rebuild>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` | :doc:`user </knife_user>` | :doc:`xargs </knife_xargs>`
-
-**Knife Plugins:** :doc:`About Plugins </plugin_knife>` | :doc:`Custom Knife Plugins </plugin_knife_custom>` | :doc:`Authenticated Requests </plugin_knife_authenticated_requests>`
 
 **Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
@@ -42,18 +40,9 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 * A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
 * Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.chef.io/essentials_node_object.html#attributes>`_.
 * All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
-* The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
-* The :doc:`Chef Server API </api_chef_server>` can be used to access objects on the |chef server|
 
-|chef server oec|
------------------------------------------------------
-|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes additional functionality like |reporting| and built-in support for high availability deployment scenarios. For more information about |chef server oec|, see http://docs.chef.io/enterprise/.
-
-|chef server osc|
------------------------------------------------------
-|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|. For more information about |chef server oec|, see http://docs.chef.io/open_source/.
 
 
 The Nodes
@@ -73,7 +62,7 @@ Cookbooks
 =====================================================
 **The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` |  :doc:`Handlers </handlers>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
 
-**LWRPs:** :doc:`About Custom LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
+**Custom Resources:** :doc:`About Custom Resources </custom_resources>`
 
 **Other Cookbook Components:** :doc:`About Definitions </essentials_cookbook_definitions>` | :doc:`About Files </essentials_cookbook_files>` | :doc:`About Libraries </essentials_cookbook_libraries>` | :doc:`About Cookbook Metadata </essentials_cookbook_metadata>` | :doc:`About Templates </essentials_cookbook_templates>` | :doc:`About Versions </essentials_cookbook_versions>`
 
@@ -96,9 +85,7 @@ Cookbooks
    chef_overview_cookbooks
    chef_overview_nodes
    chef_overview_server
-   chef_overview_workstation
    chef_private_keys
-   chef_quick_overview
    chef_shell
    chef_solo
    config_rb_client
@@ -110,6 +97,7 @@ Cookbooks
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
+   custom_resources
    dsl_recipe
    dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
@@ -142,25 +130,20 @@ Cookbooks
    essentials_cookbook_templates
    essentials_cookbook_versions
    essentials_cookbooks
-   essentials_data_bags
-   essentials_environments
    essentials_node_object
    essentials_node_object_deep_merge
    essentials_node_object_run_lists
    essentials_nodes
    essentials_nodes_chef_run
    essentials_nodes_why_run
-   essentials_policy
    essentials_repository
    essentials_repository_create
-   essentials_roles
    essentials_search
    handlers
    install_bootstrap
    install_omnibus
    install_windows
    install_workstation
-   just_enough_ruby_for_chef
    knife
    knife_common_options
    knife_bootstrap
@@ -191,15 +174,6 @@ Cookbooks
    knife_user
    knife_using
    knife_xargs
-   lwrp
-   lwrp_custom
-   lwrp_custom_provider
-   lwrp_custom_provider_ruby
-   lwrp_custom_resource
-   lwrp_custom_resource_library
-   plugin_knife
-   plugin_knife_authenticated_requests
-   plugin_knife_custom
    release_notes
    resource
    resource_apt_package
@@ -255,4 +229,5 @@ Cookbooks
    resource_user
    resource_windows_package
    resource_yum
-
+   ruby
+   workstation
