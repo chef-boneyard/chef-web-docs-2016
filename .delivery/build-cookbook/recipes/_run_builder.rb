@@ -1,7 +1,8 @@
 Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 
-ENV['AWS_CONFIG_FILE'] = File.join(node['delivery']['workspace']['root'], 'chef_aws_config')
-ENV['AWS_CREDENTIAL_FILE'] = File.join(node['delivery']['workspace']['root'], 'chef_aws_config')
+chef_aws_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-aws')
+ENV['AWS_ACCESS_KEY_ID'] = chef_aws_creds['access_key_id']
+ENV['AWS_SECRET_ACCESS_KEY'] = chef_aws_creds['secret_access_key']
 
 require 'chef/provisioning/aws_driver'
 ssh = encrypted_data_bag_item_for_environment('cia-creds', 'aws-ssh')
