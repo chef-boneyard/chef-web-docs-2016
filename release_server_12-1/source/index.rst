@@ -104,6 +104,7 @@ This section contains links to topics about configuration files, command-line to
    api_chef_server
    auth
    chef_overview
+   chef_search
    config_rb_chef_server
    config_rb_server
    config_rb_server_optional_settings
