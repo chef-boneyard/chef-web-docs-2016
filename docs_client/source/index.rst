@@ -14,7 +14,7 @@ If you are new to the |chef client|, familiarize yourself with :doc:`all of the 
 
 Cookbooks are the fundamental unit of configuration and policy distribution. Cookbooks are authored using a programming language called |ruby|. Being an expert in |ruby| is not a requirement, but knowing some basic |ruby| will help you a lot. If you're new to |ruby|, :doc:`familiarize yourself with the basics </ruby>`.
 
-If you want to try out |chef server osc|, use the hosted |chef server|. After you have access to a |chef server|, then :doc:`install the chef-client on a workstation </install_workstation>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
+If you want to try out |chef server osc|, use the hosted |chef server|. After you have access to a |chef server|, then :doc:`install the chef-client on a workstation </install_dk>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
 
 A good way to learn how to use |chef server osc| is the |learnchef| website. It contains a `series of hands-on tutorials <https://learn.chef.io/>`_ that can walk you through the process of setting up a hosted server, a workstation, using the |chef repo|, and then converging your first node.
 
@@ -23,12 +23,9 @@ The Workstation
 =====================================================
 The workstation is the location from which most users will do most of their work. This work includes:
 
-* Developing `cookbooks <http://docs.chef.io/client/cookbooks.html>`_ and :doc:`recipes </recipes>` (and authoring them using :doc:`using Ruby </ruby>`), including :doc:`debugging recipes </chef_shell>`
+* Developing `cookbooks <http://docs.chef.io/client/cookbooks.html>`_ and :doc:`recipes </recipes>` (and authoring them using :doc:`using Ruby </ruby>`), including :doc:`debugging recipes </debug>`
 * Synchronizing the :doc:`chef-repo </chef_repo>` with version source control like |git| or |svn|
 * Using |knife| to upload items from the |chef repo| to the |chef server|
-* Configuring :doc:`organizational policy </policy>`
-* :doc:`Defining roles </roles>` and :doc:`environments </environments>`
-* Ensuring that critical data is stored in :doc:`data bags </data_bags>`
 * Interacting with nodes, such as performing a :doc:`bootstrap operation </install_bootstrap>` or running the :doc:`chef-client </ctl_chef_client>` remotely
 
 Set up a Workstation
@@ -38,7 +35,7 @@ A workstation must be configured with a |chef client|, must have access to a |ch
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/chef_repo.html">Create and Sync the chef-repo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/install_workstation.html">Set up a Workstation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/install_dk.html">Set up a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/install_bootstrap.html">Bootstrap a Node</a> </br>
 
 |knife_title|
@@ -80,14 +77,6 @@ The following |knife| subcommands are built-in:
 
 |knife| settings are stored in the :doc:`knife.rb </config_rb_knife>` file. There is a default |knife rb| file and there are :doc:`optional settings </config_rb_knife_optional_settings>` that can be added to the |knife rb| file.
 
-|knife_title| Cloud Plugins
------------------------------------------------------
-Plugins allow |knife| to interact with all of the major cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
-
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_chef_maintained_index_list.rst
-
-A number of |knife| plugins are `built and maintained by the community <http://docs.chef.io/client/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.chef.io/client/plugin_knife_custom.html>`_ can be created.
-
 Settings and Tools
 -----------------------------------------------------
 The following settings files are used to configure behavior for |knife| and how it interacts with nodes and the |chef server|:
@@ -116,7 +105,7 @@ The Nodes
 
 About the |chef client_title|
 -----------------------------------------------------
-The |chef client| does the actual configuration on :doc:`the nodes </nodes>`. The |chef client| receives its instructions from cookbooks (:doc:`recipes </recipes>`, mostly). The process of configuring a node is called :doc:`the chef-client run </chef_client>`. At the beginning of each run, the |chef client| :doc:`validates to the server </chef_client>`, :doc:`collects important data about that node </ohai>`, and then configures the node. At the end of each run, the |chef client| :doc:`reports the successes and failures that may have occurred </handlers>`.
+The |chef client| does the actual configuration on :doc:`the nodes </nodes>`. The |chef client| receives its instructions from cookbooks (:doc:`recipes </recipes>`, mostly). The process of configuring a node is called :doc:`the chef-client run </chef_client>`. At the beginning of each run, the |chef client| :doc:`validates to the server </chef_client>`, collects important data about that node, and then configures the node. At the end of each run, the |chef client| :doc:`reports the successes and failures that may have occurred </handlers>`.
 
 Be sure to :doc:`test and debug your recipes </chef_shell>` before running them in production! Run the |chef client| in :doc:`why-run mode </chef_client>` to simulate what should happen during the |chef client| run, but without configuring anything.
 
@@ -128,7 +117,6 @@ The |chef client| is typically installed using a :doc:`bootstrap operation </che
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/verify_packages.html">Verify Signed Packages</a> </br>
 
 
 Settings and Tools
@@ -140,12 +128,6 @@ The following settings files are used to configure behavior for the |chef client
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/config_rb_client.html">client.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/config_rb_solo.html">solo.rb</a> </br>
 
-|ohai| collects important data about every node:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/ohai.html">About Ohai</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/ohai_custom.html">Build Custom Ohai Plugins</a> </br>
 
 The following command-line tools can be run on any node:
 
@@ -153,7 +135,6 @@ The following command-line tools can be run on any node:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/ctl_chef_client.html">chef-client</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/ctl_chef_solo.html">chef-solo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/ctl_ohai.html">ohai</a> </br>
 
 
 Cookbooks
@@ -164,7 +145,7 @@ A cookbook is the fundamental unit of configuration and policy distribution. A c
 
 Cookbook Essentials
 -----------------------------------------------------
-A cookbook is made up of the following components: attribute files, definitions, files, libraries, metadata, recipes, resources and providers, templates, and versions.
+A cookbook is made up of the following components: attribute files, definitions, files, libraries, metadata, recipes, resources, templates, and versions.
 
 .. raw:: html
 
@@ -175,9 +156,9 @@ A cookbook is made up of the following components: attribute files, definitions,
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/libraries.html">Libraries</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/cookbook_repo.html">Metadata</a> (and <a href="http://docs.chef.io/client/config_rb_metadata.html">/cookbook directory settings</a>)</br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/recipes.html">Recipes</a> (and the <a href="http://docs.chef.io/client/dsl_recipe.html">Recipe DSL</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/resources.html">Resources and Providers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/resources.html">Resources</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/templates.html">Templates</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/cookbook_versions.html">Versions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/cookbook_versions.html">Cookbook Versions</a> </br>
 
 Resources
 -----------------------------------------------------
@@ -239,20 +220,9 @@ The following resources are built-in and can be used in any recipe:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/resource_windows_package.html">windows_package</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/resource_yum.html">yum_package</a> </br>
 
-LWRPs 
+Custom Resources 
 -----------------------------------------------------
-A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much like a platform resource, including sharing all of the common functionality available to platform resources. A |lwrp| is created by defining a lightweight resource and a lightweight provider:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/lwrp_custom.html">About custom LWRPs</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/lwrp_custom_resource.html">Create a lightweight resource</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
-
-.. include:: ../../includes_lwrp/includes_lwrp_chef_maintained_index_list.rst
-
-See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository for the full list.
+A :doc:`custom resource </custom_resources>` is an extension of the |chef client| that behaves just like a built-in resource, including sharing all of the common functionality.
 
 The |dsl recipe|
 -----------------------------------------------------
@@ -291,22 +261,17 @@ The following methods may be used on the |windows| platform:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/client/dsl_recipe.html#registry-value-exists">registry_value_exists?</a> </br>
 
 
-.. Hide the TOC from this file.
+.. Hide the TOC from this file.  
 
 .. toctree::
    :hidden:
 
-   api_chef_server
    api_omnitruck
    attributes
-   auth_authentication
-   auth_authorization
-   chef_client
    chef_overview
+   chef_client
    chef_repo
    chef_search
-   chef_server
-   chef_shell
    chef_solo
    config_rb_client
    config_rb_knife
@@ -320,20 +285,19 @@ The following methods may be used on the |windows| platform:
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
-   ctl_ohai
-   data_bags
+   custom_resources
+   debug
    definitions
    dsl_recipe
-   environments
    files
    handlers
-   install
    install_bootstrap
+   install_dk
    install_windows
-   install_workstation
+   knife
+   knife_common_options
    knife_bootstrap
    knife_client
-   knife_common_options
    knife_configure
    knife_cookbook
    knife_cookbook_site
@@ -351,6 +315,7 @@ The following methods may be used on the |windows| platform:
    knife_recipe_list
    knife_role
    knife_search
+   knife_serve
    knife_show
    knife_ssh
    knife_ssl_check
@@ -362,18 +327,7 @@ The following methods may be used on the |windows| platform:
    knife_using
    knife_xargs
    libraries
-   lwrp
-   lwrp_custom
-   lwrp_custom_provider
-   lwrp_custom_provider_ruby
-   lwrp_custom_resource
-   lwrp_custom_resource_library
    nodes
-   ohai
-   ohai_custom
-   plugin_knife_authenticated_requests
-   plugin_knife_custom
-   policy
    recipes
    release_notes
    resource
@@ -391,6 +345,8 @@ The following methods may be used on the |windows| platform:
    resource_deploy
    resource_directory
    resource_dpkg_package
+   resource_dsc_resource
+   resource_dsc_script
    resource_easy_install_package
    resource_env
    resource_erlang_call
@@ -426,7 +382,6 @@ The following methods may be used on the |windows| platform:
    resource_rpm_package
    resource_ruby
    resource_ruby_block
-   resource_scm
    resource_script
    resource_service
    resource_smartos_package
@@ -437,9 +392,7 @@ The following methods may be used on the |windows| platform:
    resource_windows_package
    resource_windows_service
    resource_yum
-   resources
-   roles
    ruby
+   server_components
    templates
-   verify_packages
    workstation
