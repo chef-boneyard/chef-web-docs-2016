@@ -118,7 +118,6 @@ This section contains links to topics about configuration files, command-line to
    install_server_pre
    manage
    release_notes
-   runbook
    server_backup_restore
    server_components
    server_data
