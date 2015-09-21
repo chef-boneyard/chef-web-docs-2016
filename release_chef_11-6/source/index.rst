@@ -33,7 +33,7 @@ The Workstation
 
 The Nodes 
 =====================================================
-**The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | :doc:`The chef-client Run </nodes>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>`
+**The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | :doc:`The chef-client Run </nodes>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </debug>`
 
 **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
@@ -67,7 +67,6 @@ Cookbooks
    chef_overview
    chef_repo
    chef_search
-   chef_shell
    chef_solo
    config_rb_client
    config_rb_knife
@@ -82,6 +81,7 @@ Cookbooks
    ctl_chef_shell
    ctl_chef_solo
    custom_resources
+   debug
    definitions
    dsl_recipe
    files
