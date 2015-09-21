@@ -5,19 +5,15 @@ A |resource script_csh| resource block executes scripts using |csh|:
 
 .. code-block:: ruby
 
-   csh 'extract_module' do
-     cwd ::File.dirname(src_filepath)
+   csh 'hello world' do
      code <<-EOH
-       mkdir -p #{extract_path}
-       tar xzf #{src_filename} -C #{extract_path}
-       mv #{extract_path}/*/* #{extract_path}/
+       echo "Hello world!"
+       echo "Current directory: " $cwd
        EOH
-     not_if { ::File.exists?(extract_path) }
    end
 
 where 
 
-* ``cwd`` specifies the directory from which the command is run
 * ``code`` specifies the command to run
 
 The full syntax for all of the properties that are available to the |resource script_csh| resource is:
@@ -46,6 +42,5 @@ where
 
 * ``csh`` is the resource
 * ``name`` is the name of the resource block
-* ``cwd`` is the location from which the command is run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
 * ``code``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are properties of this resource, with the |ruby| type shown. |see attributes|
