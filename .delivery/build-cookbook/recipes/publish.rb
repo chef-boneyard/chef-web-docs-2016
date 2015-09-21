@@ -15,6 +15,7 @@ Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 
 chef_aws_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-aws')
 chef_cia_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-cia')
+ENV['AWS_CONFIG_FILE'] = File.join(node['delivery']['workspace']['root'], 'aws_config')
 ENV['AWS_ACCESS_KEY_ID'] = chef_cia_creds['access_key_id']
 ENV['AWS_SECRET_ACCESS_KEY'] = chef_cia_creds['secret_access_key']
 
