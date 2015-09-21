@@ -23,6 +23,8 @@ This configuration file has the following settings:
      - The log level used for requests to the |chef server| from the web application. Default value: ``info``.
    * - ``logging.log_level``
      - The log level for |ruby on rails| services. Default value: ``info``.
+   * - ``max_login_failures``
+     - The the maximim number of failed login attempts allowed before the user must use the password reset link to reset their password (has no effect when using external authentication/LDAP). Default value: ``7``.
    * - ``nginx_addon_prefix``
      - The prefix used by |chef manage|. Default value: ``30``.
    * - ``org_creation_enabled``
