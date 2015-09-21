@@ -102,6 +102,7 @@ This section contains links to topics about configuration files, command-line to
    :hidden:
 
    api_chef_server
+   auth
    chef_overview
    config_rb_chef_server
    config_rb_server
