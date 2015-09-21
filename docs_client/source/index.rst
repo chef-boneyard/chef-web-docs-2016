@@ -107,7 +107,7 @@ About the |chef client_title|
 -----------------------------------------------------
 The |chef client| does the actual configuration on :doc:`the nodes </nodes>`. The |chef client| receives its instructions from cookbooks (:doc:`recipes </recipes>`, mostly). The process of configuring a node is called :doc:`the chef-client run </chef_client>`. At the beginning of each run, the |chef client| :doc:`validates to the server </chef_client>`, collects important data about that node, and then configures the node. At the end of each run, the |chef client| :doc:`reports the successes and failures that may have occurred </handlers>`.
 
-Be sure to :doc:`test and debug your recipes </chef_shell>` before running them in production! Run the |chef client| in :doc:`why-run mode </chef_client>` to simulate what should happen during the |chef client| run, but without configuring anything.
+Be sure to :doc:`test and debug your recipes </debug>` before running them in production! Run the |chef client| in :doc:`why-run mode </chef_client>` to simulate what should happen during the |chef client| run, but without configuring anything.
 
 Install the |chef client_title|
 -----------------------------------------------------
@@ -392,6 +392,7 @@ The following methods may be used on the |windows| platform:
    resource_windows_package
    resource_windows_service
    resource_yum
+   resources
    ruby
    server_components
    templates
