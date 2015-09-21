@@ -13,11 +13,7 @@ include_recipe 'delivery-truck::publish'
 
 Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 
-chef_aws_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-aws')
-chef_cia_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-cia')
 ENV['AWS_CONFIG_FILE'] = File.join(node['delivery']['workspace']['root'], 'aws_config')
-ENV['AWS_ACCESS_KEY_ID'] = chef_cia_creds['access_key_id']
-ENV['AWS_SECRET_ACCESS_KEY'] = chef_cia_creds['secret_access_key']
 
 require 'chef/provisioning/aws_driver'
 with_driver 'aws'
@@ -25,6 +21,8 @@ with_driver 'aws'
 software_version = Time.now.strftime('%F_%H%M')
 build_name = "#{node['delivery']['change']['project']}-#{software_version}"
 artifact_bucket = "#{node['delivery']['change']['project'].gsub(/_/, '-')}-artifacts"
+chef_aws_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-aws')
+chef_cia_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-cia')
 ssh = encrypted_data_bag_item_for_environment('cia-creds', 'aws-ssh')
 ssh_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh')
 ssh_private_key_path =  File.join(node['delivery']['workspace']['cache'], '.ssh', node['delivery']['change']['project'])
@@ -63,9 +61,7 @@ include_recipe 'build-cookbook::_run_builder'
 execute "download the checksum" do
   command "aws s3 cp s3://#{artifact_bucket}/#{build_name}.tar.gz.checksum #{node['delivery']['workspace']['cache']}/"
   cwd node['delivery']['workspace']['repo']
-  environment 'AWS_CONFIG_FILE'=> File.join(node['delivery']['workspace']['root'], 'aws_config'),
-    'AWS_ACCESS_KEY_ID' => chef_cia_creds['access_key_id'],
-    'AWS_SECRET_ACCESS_KEY' => chef_cia_creds['secret_access_key']
+  environment 'AWS_CONFIG_FILE'=> File.join(node['delivery']['workspace']['root'], 'aws_config')
 end
 
 checksum = ''
