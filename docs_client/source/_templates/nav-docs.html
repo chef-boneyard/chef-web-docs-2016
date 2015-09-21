@@ -1,0 +1,739 @@
+{% extends "!nav-docs.html" %}
+{% set active_product = "Chef Client" %}
+{% set active_version = "(current)" %}
+{% set navItems = [
+  {
+    "title": "Getting Started",
+    "iconClass": "fa-home",
+    "subItems": [
+      {
+        "title": "Start Here",
+        "hasSubItems": false,
+        "url": "/client/index.html"
+      },
+      {
+        "title": "Overview",
+        "hasSubItems": false,
+        "url": "/client/chef_overview.html"
+      },
+      {
+        "title": "Tutorials",
+        "hasSubItems": false,
+        "url": "https://learn.chef.io/tutorials/"
+      },
+      {
+        "title": "Release Notes",
+        "hasSubItems": false,
+        "url": "/client/release_notes.html"
+      }
+    ]
+  },
+  {
+    "title": "Theory &amp; Concepts",
+    "iconClass": "fa-cube",
+    "subItems": [
+      {
+        "title": "Workstations",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Workstations",
+            "url": "/client/workstation.html"
+          },
+          {
+            "title": "chef-repo",
+            "url": "/client/chef_repo.html"
+          },
+          {
+            "title": "Knife",
+            "url": "/client/knife.html"
+          }
+        ]
+      },
+      {
+        "title": "Nodes",
+        "hasSubItems": false,
+        "url": "/client/nodes.html"
+      },
+      {
+        "title": "Chef Client",
+        "hasSubItems": false,
+        "url": "/client/chef_client.html"
+      },
+      {
+        "title": "Chef Server Components",
+        "hasSubItems": false,
+        "url": "/client/server_components.html"
+      },
+      {
+        "title": "Chef Search",
+        "hasSubItems": false,
+        "url": "/client/chef_search.html"
+      },
+    ]
+  },
+  {
+    "title": "Setup &amp; Config",
+    "iconClass": "fa-gears",
+    "subItems": [
+      {
+        "title": "Workstation",
+        "hasSubItems": false,
+        "url": "/client/install_dk.html"
+      },
+      {
+        "title": "Chef Client",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Bootstrap",
+            "url": "/client/install_bootstrap.html"
+          },
+          {
+            "title": "Microsoft Windows",
+            "url": "/client/install_windows.html"
+          },
+        ]
+      },
+    ]
+  },
+  {
+    "title": "Cookbooks",
+    "iconClass": "fa-book",
+    "subItems": [
+      {
+        "title": "About Cookbooks",
+        "hasSubItems": false,
+        "url": "/client/cookbooks.html"
+      },
+      {
+        "title": "Cookbook Components",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Attributes",
+            "url": "/client/attributes.html"
+          },
+          {
+            "title": "Definitions",
+            "url": "/client/definitions.html"
+          },
+          {
+            "title": "Files",
+            "url": "/client/files.html"
+          },
+          {
+            "title": "Libraries",
+            "url": "/client/libraries.html"
+          },
+          {
+            "title": "Recipes",
+            "url": "/client/recipes.html"
+          },
+          {
+            "title": "Resources",
+            "url": "/client/resource.html"
+          },
+          {
+            "title": "Templates",
+            "url": "/client/templates.html"
+          }
+        ]
+      },
+      {
+        "title": "Cookbook Repo",
+        "hasSubItems": false,
+        "url": "/client/cookbook_repo.html"
+      },
+      {
+        "title": "Cookbook Versions",
+        "hasSubItems": false,
+        "url": "/client/cookbook_versions.html"
+      },
+      {
+        "title": "Ruby",
+        "hasSubItems": false,
+        "url": "/client/ruby.html"
+      },
+      {
+        "title": "Debug Recipes",
+        "hasSubItems": false,
+        "url": "/client/debug.html"
+      }
+    ]
+  },
+
+  {
+    "title": "Extend Chef",
+    "iconClass": "fa-clone",
+    "subItems": [
+      {
+        "title": "Custom Resources",
+        "hasSubItems": false,
+        "url": "/client/custom_resources.html"
+      },
+      {
+        "title": "Recipe DSL",
+        "hasSubItems": false,
+        "url": "/client/dsl_recipe.html"
+      },
+      {
+        "title": "Handlers",
+        "hasSubItems": false,
+        "url": "/client/handlers.html"
+      },
+    ]
+  },
+  {
+    "title": "Reference",
+    "iconClass": "fa-th",
+    "subItems": [
+      {
+        "title": "Chef Resources",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "apt_package",
+            "url": "/client/resource_apt_package.html"
+          },
+          {
+            "title": "bash",
+            "url": "/client/resource_bash.html"
+          },
+          {
+            "title": "batch",
+            "url": "/client/resource_batch.html"
+          },
+          {
+            "title": "bff_package",
+            "url": "/client/resource_bff_package.html"
+          },
+          {
+            "title": "breakpoint",
+            "url": "/client/resource_breakpoint.html"
+          },
+          {
+            "title": "chef_gem",
+            "url": "/client/resource_chef_gem.html"
+          },
+          {
+            "title": "chef_handler",
+            "url": "/client/resource_chef_handler.html"
+          },
+          {
+            "title": "cookbook_file",
+            "url": "/client/resource_cookbook_file.html"
+          },
+          {
+            "title": "cron",
+            "url": "/client/resource_cron.html"
+          },
+          {
+            "title": "csh",
+            "url": "/client/resource_csh.html"
+          },
+          {
+            "title": "deploy",
+            "url": "/client/resource_deploy.html"
+          },
+          {
+            "title": "directory",
+            "url": "/client/resource_directory.html"
+          },
+          {
+            "title": "dpkg_package",
+            "url": "/client/resource_dpkg_package.html"
+          },
+          {
+            "title": "dsc_resource",
+            "url": "/client/resource_dsc_resource.html"
+          },
+          {
+            "title": "dsc_script",
+            "url": "/client/resource_dsc_script.html"
+          },
+          {
+            "title": "easy_install_package",
+            "url": "/client/resource_easy_install_package.html"
+          },
+          {
+            "title": "env",
+            "url": "/client/resource_env.html"
+          },
+          {
+            "title": "erl_call",
+            "url": "/client/resource_erlang_call.html"
+          },
+          {
+            "title": "execute",
+            "url": "/client/resource_execute.html"
+          },
+          {
+            "title": "file",
+            "url": "/client/resource_file.html"
+          },
+          {
+            "title": "freebsd_package",
+            "url": "/client/resource_freebsd_package.html"
+          },
+          {
+            "title": "gem_package",
+            "url": "/client/resource_gem_package.html"
+          },
+          {
+            "title": "git",
+            "url": "/client/resource_git.html"
+          },
+          {
+            "title": "group",
+            "url": "/client/resource_group.html"
+          },
+          {
+            "title": "homebrew_package",
+            "url": "/client/resource_homebrew_package.html"
+          },
+          {
+            "title": "http_request",
+            "url": "/client/resource_http_request.html"
+          },
+          {
+            "title": "ifconfig",
+            "url": "/client/resource_ifconfig.html"
+          },
+          {
+            "title": "ips_package",
+            "url": "/client/resource_ips_package.html"
+          },
+          {
+            "title": "link",
+            "url": "/client/resource_link.html"
+          },
+          {
+            "title": "log",
+            "url": "/client/resource_log.html"
+          },
+          {
+            "title": "macports_package",
+            "url": "/client/resource_macports_package.html"
+          },
+          {
+            "title": "mdadm",
+            "url": "/client/resource_mdadm.html"
+          },
+          {
+            "title": "mount",
+            "url": "/client/resource_mount.html"
+          },
+          {
+            "title": "ohai",
+            "url": "/client/resource_ohai.html"
+          },
+          {
+            "title": "openbsd_package",
+            "url": "/client/resource_openbsd_package.html"
+          },
+          {
+            "title": "package",
+            "url": "/client/resource_package.html"
+          },
+          {
+            "title": "pacman_package",
+            "url": "/client/resource_pacman_package.html"
+          },
+          {
+            "title": "paludis_package",
+            "url": "/client/resource_paludis_package.html"
+          },
+          {
+            "title": "perl",
+            "url": "/client/resource_perl.html"
+          },
+          {
+            "title": "portage_package",
+            "url": "/client/resource_portage_package.html"
+          },
+          {
+            "title": "powershell_script",
+            "url": "/client/resource_powershell_script.html"
+          },
+          {
+            "title": "python",
+            "url": "/client/resource_python.html"
+          },
+          {
+            "title": "reboot",
+            "url": "/client/resource_reboot.html"
+          },
+          {
+            "title": "registry_key",
+            "url": "/client/resource_registry_key.html"
+          },
+          {
+            "title": "remote_directory",
+            "url": "/client/resource_remote_directory.html"
+          },
+          {
+            "title": "remote_file",
+            "url": "/client/resource_remote_file.html"
+          },
+          {
+            "title": "route",
+            "url": "/client/resource_route.html"
+          },
+          {
+            "title": "rpm_package",
+            "url": "/client/resource_rpm_package.html"
+          },
+          {
+            "title": "ruby",
+            "url": "/client/resource_ruby.html"
+          },
+          {
+            "title": "ruby_block",
+            "url": "/client/resource_ruby_block.html"
+          },
+          {
+            "title": "script",
+            "url": "/client/resource_script.html"
+          },
+          {
+            "title": "service",
+            "url": "/client/resource_service.html"
+          },
+          {
+            "title": "smartos_package",
+            "url": "/client/resource_smartos_package.html"
+          },
+          {
+            "title": "solaris_package",
+            "url": "/client/resource_solaris_package.html"
+          },
+          {
+            "title": "subversion",
+            "url": "/client/resource_subversion.html"
+          },
+          {
+            "title": "template",
+            "url": "/client/resource_template.html"
+          },
+          {
+            "title": "user",
+            "url": "/client/resource_user.html"
+          },
+          {
+            "title": "windows_package",
+            "url": "/client/resource_windows_package.html"
+          },
+          {
+            "title": "windows_service",
+            "url": "/client/resource_windows_service.html"
+          },
+          {
+            "title": "yum_package",
+            "url": "/client/resource_yum.html"
+          },
+        ]
+      },
+      {
+        "title": "Knife Commands",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "bootstrap",
+            "url": "/client/knife_bootstrap.html"
+          },
+          {
+            "title": "client",
+            "url": "/client/knife_client.html"
+          },
+          {
+            "title": "configure",
+            "url": "/client/knife_configure.html"
+          },
+          {
+            "title": "cookbook",
+            "url": "/client/knife_cookbook.html"
+          },
+          {
+            "title": "cookbook site",
+            "url": "/client/knife_cookbook_site.html"
+          },
+          {
+            "title": "data bag",
+            "url": "/client/knife_data_bag.html"
+          },
+          {
+            "title": "delete",
+            "url": "/client/knife_delete.html"
+          },
+          {
+            "title": "deps",
+            "url": "/client/knife_deps.html"
+          },
+          {
+            "title": "diff",
+            "url": "/client/knife_diff.html"
+          },
+          {
+            "title": "download",
+            "url": "/client/knife_download.html"
+          },
+          {
+            "title": "edit",
+            "url": "/client/knife_edit.html"
+          },
+          {
+            "title": "environment",
+            "url": "/client/knife_environment.html"
+          },
+          {
+            "title": "exec",
+            "url": "/client/knife_exec.html"
+          },
+          {
+            "title": "list",
+            "url": "/client/knife_list.html"
+          },
+          {
+            "title": "node",
+            "url": "/client/knife_node.html"
+          },
+          {
+            "title": "raw",
+            "url": "/client/knife_raw.html"
+          },
+          {
+            "title": "recipe_list",
+            "url": "/client/knife_recipe_list.html"
+          },
+          {
+            "title": "role",
+            "url": "/client/knife_role.html"
+          },
+          {
+            "title": "search",
+            "url": "/client/knife_search.html"
+          },
+          {
+            "title": "serve",
+            "url": "/client/knife_serve.html"
+          },
+          {
+            "title": "show",
+            "url": "/client/knife_show.html"
+          },
+          {
+            "title": "ssh",
+            "url": "/client/knife_ssh.html"
+          },
+          {
+            "title": "ssl check",
+            "url": "/client/knife_ssl_check.html"
+          },
+          {
+            "title": "ssl fetch",
+            "url": "/client/knife_ssl_fetch.html"
+          },
+          {
+            "title": "status",
+            "url": "/client/knife_status.html"
+          },
+          {
+            "title": "tag",
+            "url": "/client/knife_tag.html"
+          },
+          {
+            "title": "upload",
+            "url": "/client/knife_upload.html"
+          },
+          {
+            "title": "user",
+            "url": "/client/knife_user.html"
+          },
+          {
+            "title": "xargs",
+            "url": "/client/knife_xargs.html"
+          },
+        ]
+      },
+      {
+        "title": "CLIs",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "chef-apply",
+            "url": "/client/ctl_chef_apply.html"
+          },
+          {
+            "title": "chef-client",
+            "url": "/client/ctl_chef_client.html"
+          },
+          {
+            "title": "chef-shell",
+            "url": "/client/ctl_chef_shell.html"
+          },
+        ]
+      },
+      {
+        "title": "Config Files",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "client.rb",
+            "url": "/client/config_rb_client.html"
+          },
+          {
+            "title": "knife.rb",
+            "url": "/client/config_rb_knife.html"
+          },
+          {
+            "title": "metadata.rb",
+            "url": "/client/config_rb_metadata.html"
+          },
+        ]
+      },
+      {
+        "title": "Recipe DSL Methods",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "attribute?",
+            "url": "/client/dsl_recipe.html#attribute"
+          },
+          {
+            "title": "control",
+            "url": "/client/dsl_recipe.html#control"
+          },
+          {
+            "title": "control_group",
+            "url": "/client/dsl_recipe.html#control-group"
+          },
+          {
+            "title": "cookbook_name",
+            "url": "/client/dsl_recipe.html#cookbook-name"
+          },
+          {
+            "title": "data_bag",
+            "url": "/client/dsl_recipe.html#data-bag"
+          },
+          {
+            "title": "data_bag_item",
+            "url": "/client/dsl_recipe.html#data-bag-item"
+          },
+          {
+            "title": "platform?",
+            "url": "/client/dsl_recipe.html#platform"
+          },
+          {
+            "title": "platform_family?",
+            "url": "/client/dsl_recipe.html#platform-family"
+          },
+          {
+            "title": "reboot_pending?",
+            "url": "/client/dsl_recipe.html#reboot-pending"
+          },
+          {
+            "title": "recipe_name",
+            "url": "/client/dsl_recipe.html#recipe-name"
+          },
+          {
+            "title": "registry_data_exists?",
+            "url": "/client/dsl_recipe.html#registry-data-exists"
+          },
+          {
+            "title": "registry_get_subkeys",
+            "url": "/client/dsl_recipe.html#registry-get-subkeys"
+          },
+          {
+            "title": "registry_get_values",
+            "url": "/client/dsl_recipe.html#registry-get-values"
+          },
+          {
+            "title": "registry_has_subkeys?",
+            "url": "/client/dsl_recipe.html#registry-has-subkeys"
+          },
+          {
+            "title": "registry_key_exists?",
+            "url": "/client/dsl_recipe.html#registry-key-exists"
+          },
+          {
+            "title": "registry_value_exists?",
+            "url": "/client/dsl_recipe.html#registry-value-exists"
+          },
+          {
+            "title": "resources",
+            "url": "/client/dsl_recipe.html#resources"
+          },
+          {
+            "title": "search",
+            "url": "/client/dsl_recipe.html#search"
+          },
+          {
+            "title": "shell_out",
+            "url": "/client/dsl_recipe.html#shell-out"
+          },
+          {
+            "title": "shell_out!",
+            "url": "/client/dsl_recipe.html#id6"
+          },
+          {
+            "title": "shell_out_with_systems_locale",
+            "url": "/client/dsl_recipe.html#shell-out-with-systems-locale"
+          },
+          {
+            "title": "tag",
+            "url": "/client/dsl_recipe.html#tag-tagged-untag"
+          },
+          {
+            "title": "tagged?",
+            "url": "/client/dsl_recipe.html#tag-tagged-untag"
+          },
+          {
+            "title": "untag",
+            "url": "/client/dsl_recipe.html#tag-tagged-untag"
+          },
+          {
+            "title": "value_for_platform",
+            "url": "/client/dsl_recipe.html#value-for-platform"
+          },
+          {
+            "title": "value_for_platform_family",
+            "url": "/client/dsl_recipe.html#value-for-platform-family"
+          },
+          {
+            "title": "Windows Platform Helpers",
+            "url": "/client/dsl_recipe.html#helpers"
+          },
+        ]
+      },
+      {
+        "title": "APIs",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Omnitruck API",
+            "url": "/client/api_omnitruck.html"
+          },
+        ]
+      },
+      {
+        "title": "Chef Solo",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Chef Solo",
+            "url": "/client/chef_solo.html"
+          },
+          {
+            "title": "chef-solo",
+            "url": "/client/ctl_chef_solo.html"
+          },
+          {
+            "title": "solo.rb",
+            "url": "/client/config_rb_solo.html"
+          },
+        ]
+      },
+    ]
+  }
+] -%}

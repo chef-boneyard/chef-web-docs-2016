@@ -133,21 +133,160 @@ The following tools have been developed by members of the |chef| community. Thes
 .. toctree::
    :hidden:
 
+   attributes
    berkshelf
+   chef_client
    chef_overview
+   chef_repo
+   chef_search
    chef_vault
    chefspec
+   config_rb_client
+   config_rb_knife_optional_settings
+   config_rb_knife
+   config_rb_metadata
    config_rb_policyfile
    config_yml_kitchen
+   cookbook_repo
+   cookbook_versions
+   cookbooks
    ctl_chef
+   ctl_chef_client
    ctl_kitchen
+   custom_resources
+   definitions
+   dsl_recipe
+   files
    foodcritic
    getting_started
+   handlers
    install_dk
    install_dk_windows
    kitchen
+   knife_bootstrap
+   knife_client
+   knife_common_options
+   knife_configure
+   knife_cookbook_site
+   knife_cookbook
+   knife_data_bag
+   knife_delete
+   knife_deps
+   knife_diff
+   knife_download
+   knife_edit
+   knife_environment
+   knife_exec
+   knife_list
+   knife_node
+   knife_raw
+   knife_recipe_list
+   knife_role
+   knife_search
+   knife_serve
+   knife_show
+   knife_ssh
+   knife_ssl_check
+   knife_ssl_fetch
+   knife_status
+   knife_tag
+   knife_upload
+   knife_user
+   knife_using
+   knife_xargs
+   knife
+   libraries
+   nodes
+   plugin_community
    plugin_kitchen_vagrant
    policy
+   recipes
+   release_notes
+   resource_apt_package
+   resource_bash
+   resource_batch
+   resource_bff_package
+   resource_breakpoint
+   resource_chef_acl
+   resource_chef_client
+   resource_chef_container
+   resource_chef_data_bag_item
+   resource_chef_data_bag
+   resource_chef_environment
+   resource_chef_gem
+   resource_chef_group
+   resource_chef_handler
+   resource_chef_mirror
+   resource_chef_node
+   resource_chef_organization
+   resource_chef_role
+   resource_chef_user
+   resource_common
+   resource_cookbook_file
+   resource_cron
+   resource_csh
+   resource_deploy
+   resource_directory
+   resource_dpkg_package
+   resource_dsc_resource
+   resource_dsc_script
+   resource_easy_install_package
+   resource_env
+   resource_erlang_call
+   resource_execute
+   resource_file
+   resource_freebsd_package
+   resource_gem_package
+   resource_git
+   resource_group
+   resource_homebrew_package
+   resource_http_request
+   resource_ifconfig
+   resource_ips_package
+   resource_link
+   resource_load_balancer
+   resource_log
+   resource_machine_batch
+   resource_machine_execute
+   resource_machine_file
+   resource_machine_image
+   resource_machine
+   resource_macports_package
+   resource_mdadm
+   resource_mount
+   resource_ohai
+   resource_openbsd_package
+   resource_package
+   resource_pacman_package
+   resource_paludis_package
+   resource_perl
+   resource_portage_package
+   resource_powershell_script
+   resource_private_key
+   resource_public_key
+   resource_python
+   resource_reboot
+   resource_registry_key
+   resource_remote_directory
+   resource_remote_file
+   resource_route
+   resource_rpm_package
+   resource_ruby_block
+   resource_ruby
+   resource_script
+   resource_service
+   resource_smartos_package
+   resource_solaris_package
+   resource_subversion
+   resource_template
+   resource_user
+   resource_windows_package
+   resource_windows_service
+   resource_yum
+   resource
    rubocop
    ruby
    serverspec
+   server_components
+   templates
+   workstation
