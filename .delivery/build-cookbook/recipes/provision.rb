@@ -25,7 +25,9 @@ chef_slack_notify 'Notify Slack' do
   sensitive true
 end
 
-ENV['AWS_CONFIG_FILE'] = File.join(node['delivery']['workspace']['root'], 'aws_config')
+chef_cia_creds = encrypted_data_bag_item_for_environment('cia-creds', 'chef-cia')
+ENV['AWS_ACCESS_KEY_ID'] = chef_cia_creds['access_key_id']
+ENV['AWS_SECRET_ACCESS_KEY'] = chef_cia_creds['secret_access_key']
 
 require 'chef/provisioning/aws_driver'
 with_driver 'aws'
