@@ -12,7 +12,7 @@ Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>`
 
-**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`Workstations </workstation>` | :doc:`The Server </server_components>` | :doc:`Nodes </nodes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Attributes </attributes>` | :doc:`Resources and Providers </resource>` | :doc:`Custom Resources </custom_resources>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
 
@@ -20,9 +20,9 @@ Getting Started
 
 The Workstation
 =====================================================
-**The Basics:** :doc:`About the Workstation </workstation>` | :doc:`The chef-repo </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
+**The Basics:** :doc:`About the Workstation </workstation>` | :doc:`The chef-repo </chef_repo>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </debug>`
 
-**Install:** :doc:`Install the chef-client on a Workstation </install_workstation>` | :doc:`Bootstrap a Node </install_bootstrap>` | :doc:`Create and Sync the chef-repo </essentials_repository_create>`
+**Install:** :doc:`Install the chef-client on a Workstation </install_workstation>` | :doc:`Bootstrap a Node </install_bootstrap>` | :doc:`Create and Sync the chef-repo </chef_repo>`
 
 **Knife:** :doc:`About Knife </knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`deps </knife_deps>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`edit </knife_edit>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`index rebuild </knife_index_rebuild>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`knife_serve </knife_serve>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`ssl check </knife_ssl_check>` | :doc:`ssl fetch </knife_ssl_fetch>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` | :doc:`user </knife_user>` | :doc:`xargs </knife_xargs>`
 
@@ -33,7 +33,7 @@ The Workstation
 
 The Nodes
 =====================================================
-**The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The chef-client Run </essentials_nodes_chef_run>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>`
+**The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | :doc:`The chef-client Run </nodes>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </debug>`
 
 **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
@@ -46,11 +46,11 @@ The Nodes
 
 Cookbooks
 =====================================================
-**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` |  :doc:`Handlers </handlers>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
+**The Basics:** :doc:`About Cookbooks </cookbooks>` | :doc:`About Recipes </recipes>` | :doc:`About Attribute Files </attributes>` |  :doc:`Handlers </handlers>` | `Popular Cookbooks <https://github.com/chef-cookbooks>`_
 
 **Custom Resources:** :doc:`About Custom Resources </custom_resources>`
 
-**Other Cookbook Components:** :doc:`About Definitions </essentials_cookbook_definitions>` | :doc:`About Files </essentials_cookbook_files>` | :doc:`About Libraries </essentials_cookbook_libraries>` | :doc:`About Cookbook Metadata </essentials_cookbook_metadata>` | :doc:`About Templates </essentials_cookbook_templates>` | :doc:`About Versions </essentials_cookbook_versions>`
+**Other Cookbook Components:** :doc:`About Definitions </definitions>` | :doc:`About Files </files>` | :doc:`About Libraries </libraries>` | :doc:`About Cookbook Metadata </cookbook_repo>` | :doc:`About Templates </templates>` | :doc:`About Versions </cookbook_versions>`
 
 **The Recipe DSL:** :doc:`About the Recipe DSL </dsl_recipe>`
 
@@ -63,48 +63,29 @@ Cookbooks
    :hidden:
 
    api_omnitruck
+   attributes
    chef_client
-   chef_cookbooks
    chef_overview
-   chef_overview_attributes
-   chef_overview_cookbooks
-   chef_overview_nodes
-   chef_overview_server
-   chef_private_keys
-   chef_shell
+   chef_repo
+   chef_search
    chef_solo
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
    config_rb_metadata
    config_rb_solo
+   cookbook_repo
+   cookbook_versions
+   cookbooks
    ctl_chef_apply
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
    custom_resources
+   debug
+   definitions
    dsl_recipe
-   essentials_chef_client
-   essentials_cookbook_attribute_files
-   essentials_cookbook_definitions
-   essentials_cookbook_directory
-   essentials_cookbook_files
-   essentials_cookbook_libraries
-   essentials_cookbook_metadata
-   essentials_cookbook_recipes
-   essentials_cookbook_resources
-   essentials_cookbook_templates
-   essentials_cookbook_versions
-   essentials_cookbooks
-   essentials_node_object
-   essentials_node_object_deep_merge
-   essentials_node_object_run_lists
-   essentials_nodes
-   essentials_nodes_chef_run
-   essentials_nodes_why_run
-   essentials_repository
-   essentials_repository_create
-   essentials_search
+   files
    handlers
    install_bootstrap
    install_omnibus
@@ -143,6 +124,9 @@ Cookbooks
    knife_user
    knife_using
    knife_xargs
+   libraries
+   nodes
+   recipes
    release_notes
    resource
    resource_apt_package
@@ -200,5 +184,7 @@ Cookbooks
    resource_windows_package
    resource_yum
    ruby
+   server_components
+   templates
    workstation
 
