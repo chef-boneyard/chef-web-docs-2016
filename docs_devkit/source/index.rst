@@ -154,7 +154,6 @@ The following tools have been developed by members of the |chef| community. Thes
    ctl_chef_client
    ctl_kitchen
    custom_resources
-   debug
    definitions
    dsl_recipe
    files
