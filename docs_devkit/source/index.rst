@@ -144,6 +144,7 @@ The following tools have been developed by members of the |chef| community. Thes
    config_rb_client
    config_rb_knife_optional_settings
    config_rb_knife
+   config_rb_metadata
    config_rb_policyfile
    config_yml_kitchen
    cookbook_repo
@@ -197,6 +198,7 @@ The following tools have been developed by members of the |chef| community. Thes
    knife
    libraries
    nodes
+   plugin_community
    plugin_kitchen_vagrant
    policy
    recipes
