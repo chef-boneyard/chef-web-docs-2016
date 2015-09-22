@@ -63,6 +63,9 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_permissions.rst
 
+**Test an attribute value**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_control_use_attributes.rst
 
 control_group
 =====================================================
