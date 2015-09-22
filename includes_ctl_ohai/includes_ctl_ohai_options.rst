@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This command has the following syntax::
+This command has the following syntax:
 
 .. code-block:: bash
 

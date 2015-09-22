@@ -69,7 +69,6 @@ The following APIs can be used to access data on the |chef server|:
    :hidden:
 
    api_chef_server
-   api_omnitruck
    config_rb_chef_server
    config_rb_chef_server_optional_settings
    ctl_chef_server

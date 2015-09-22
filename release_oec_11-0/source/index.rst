@@ -120,10 +120,8 @@ The following APIs can be used to access data on the |chef server|:
    :hidden:
 
    api_chef_server
-   api_cookbooks_site
-   api_omnitruck
-   auth_authentication
-   auth_authorization
+   auth
+   chef_search
    config_rb_chef_server_enterprise
    config_rb_chef_server_enterprise_optional_settings
    ctl_private_chef
