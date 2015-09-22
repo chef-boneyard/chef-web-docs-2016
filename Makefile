@@ -13,7 +13,7 @@ release: devkit_1-0 analytics_1-1 delivery_1-0
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # master
-# slides decks
+# decks
 # 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18 
 # 12-0 12-1 12-2 12-3 12-4 12-5
 # ohai-6 ohai-7 ohai-8
@@ -23,7 +23,7 @@ release: devkit_1-0 analytics_1-1 delivery_1-0
 # osc_11-0 osc_11-1
 # 
 # RETIRED: located in chef-docs-misc, no longer built or maintained
-# enterprise open_source
+# enterprise open_source slides
 # 10 private_chef
 # all analytics delivery client devkit server
 
@@ -46,10 +46,6 @@ master:
 	cp -r misc/sitemap.xml build/
 	cp -r misc/google46c9c5ad0fd168a0.html build/
 	$(BUILD_COMMAND_AND_ARGS) chef_master/source $(BUILDDIR)
-
-slides:
-	mkdir -p $(BUILDDIR)/slides/
-	$(BUILD_COMMAND_AND_ARGS) slide_master/source $(BUILDDIR)/slides/
 
 decks:
 	mkdir -p $(BUILDDIR)/decks/
