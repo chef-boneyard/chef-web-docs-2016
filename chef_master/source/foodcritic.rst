@@ -1,5 +1,5 @@
 =====================================================
-|foodcritic|
+About |foodcritic|
 =====================================================
 
 .. include:: ../../includes_foodcritic/includes_foodcritic.rst
