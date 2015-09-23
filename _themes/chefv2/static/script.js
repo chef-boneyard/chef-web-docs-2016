@@ -33,6 +33,7 @@ $(document).ready(function() {
   }
 
   checkWindowSize();
+  window.setTimeout(checkWindowSize, 1000);
 
   $(window).resize(function () {
     checkWindowSize();
@@ -96,8 +97,12 @@ $(document).ready(function() {
 
     if (currentUrl == linkUrl) {
       $(".nav-docs-link.is-active").removeClass("is-active");
+      $(".has-sub-items.is-open").removeClass("is-open");
       $this.addClass("is-active");
       $this.parents(".has-sub-items").addClass("is-open");
+
+      navDocsItemsHeight = $(".nav-docs-items").outerHeight();
+      $(".document").css("min-height", navDocsItemsHeight);
     }
   });
 });
