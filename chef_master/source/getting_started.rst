@@ -423,7 +423,7 @@ Open the ``default.rb`` recipe file and replace the contents of that file with t
 
 The |resource package| resource installs the |ntp| package. The |resource template| resource gets the template file from the cookbook, and then uses it to create a ``ntp.conf`` file in the ``/etc/ntp.conf`` directory on the node, after which it notifies the |resource service| resource to restart the ``ntp`` or ``ntpd`` service. The |resource service| resource ensures that the ``ntp`` or ``ntpd`` service is started and enabled.
 
-Install |ntp| on |centos|
+Install NTP on |centos|
 -----------------------------------------------------
 Now let's install |ntp| in |centos|. From the |chef repo|, run:
 
@@ -484,7 +484,7 @@ As it installs, the |chef client| will report back something similar to the foll
           Finished converging <default-centos-71> (0m30.97s).
    -----> Kitchen is finished. (0m31.28s)
 
-Install |ntp| on |ubuntu|
+Install NTP on |ubuntu|
 -----------------------------------------------------
 And finally, install |ntp| in |ubuntu|. From the |chef repo|, run:
 
