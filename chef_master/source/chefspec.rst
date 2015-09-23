@@ -22,11 +22,11 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_rspec/includes_rspec_syntax.rst
 
-``context``
+context
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_rspec/includes_rspec_syntax_context.rst
 
-``let``
+let
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_rspec/includes_rspec_syntax_let.rst
 
