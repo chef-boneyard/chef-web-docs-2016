@@ -85,4 +85,19 @@ $(document).ready(function() {
     }
   });
 
+  // Add Active State to Docs Nav for Sub-pages
+  var currentUrl = location.pathname;
+  var $docsNavLinks = $(".nav-docs-link");
+  var linkUrl;
+
+  $docsNavLinks.each(function() {
+    var $this = $(this);
+    linkUrl = $this.attr("href");
+
+    if (currentUrl == linkUrl) {
+      $(".nav-docs-link.is-active").removeClass("is-active");
+      $this.addClass("is-active");
+      $this.parents(".has-sub-items").addClass("is-open");
+    }
+  });
 });
