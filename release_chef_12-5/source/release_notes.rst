@@ -17,6 +17,7 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **Warning added to the ``verify`` property examples** The behavior of the property expects ``file``, but should have expected ``path``. For versions of the |chef client| prior to 12.5, use ``file``; starting with |chef client| 12.5, use ``path``. This change is documented as a warning across all versions in any topic in which the ``version`` attribute is documented.
 * **depth property added to deploy resource** The ``depth`` property allows the depth of a |git| repository to be truncated to the specified number of versions.
 * **The knife ssl check subcommand supports SNI*** Support for Server Name Indication (SNI) is added to the |subcommand knife ssl_check| subcommand.
+* **Specify a policy revision** A policy revision is based on the name of a policy group and the name of a policy and may be specified in the |client rb| file or via a |json| file and the command line.
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
@@ -94,6 +95,37 @@ The following property is new for the |resource deploy| resource:
      - **Ruby Type:** Integer
 
        |depth git_truncated|
+
+Specify Policy Revision
+-----------------------------------------------------
+Use the following command to specify a policy revision:
+
+.. code-block:: bash
+
+   $ chef client -j JSON
+
+where the |json| file is similar to:
+
+.. code-block:: javascript
+
+   {
+     "policy_name": "appserver",
+     "policy_group": "staging"
+   }
+
+Or use the following settings to specify a policy revision in the |client rb| file:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``policy_group``
+     - |name policy_name|
+   * - ``policy_name``
+     - |name policy_group|
+
 
 
 Changelog

@@ -8,28 +8,24 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master 12-5 
+release: master 12-5 decks
 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
-# slides decks
-# analytics
-# delivery
-# client
-# devkit
+# devkit_1-0 analytics_1-1 delivery_1-0
+# 
 # 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18 
 # 12-0 12-1 12-2 12-3 12-4
 # ohai-6 ohai-7 ohai-8
 # push_1-0 push_2-0
-# server server_12-0 server_12-1 server_12-2
+# server_12-0 server_12-1 server_12-2
 # oec_11-0 oec_11-1 oec_11-2
 # osc_11-0 osc_11-1
-#
 # 
 # RETIRED: located in chef-docs-misc, no longer built or maintained
-# enterprise open_source
+# enterprise open_source slides
 # 10 private_chef
-# all
+# all analytics delivery client devkit server
 
 #
 # Parallel Building:
@@ -51,25 +47,13 @@ master:
 	cp -r misc/google46c9c5ad0fd168a0.html build/
 	$(BUILD_COMMAND_AND_ARGS) chef_master/source $(BUILDDIR)
 
-slides:
-	mkdir -p $(BUILDDIR)/slides/
-	$(BUILD_COMMAND_AND_ARGS) slide_master/source $(BUILDDIR)/slides/
-
 decks:
 	mkdir -p $(BUILDDIR)/decks/
 	$(BUILD_COMMAND_AND_ARGS) slide_decks/source $(BUILDDIR)/decks/
 
-all:
-	mkdir -p $(BUILDDIR)/chef/
-	$(BUILD_COMMAND_AND_ARGS) docs_all/source $(BUILDDIR)/chef/
-
-server:
-	mkdir -p $(BUILDDIR)/server/
-	$(BUILD_COMMAND_AND_ARGS) docs_server/source $(BUILDDIR)/server/
-
-delivery:
+delivery_1-0:
 	mkdir -p $(BUILDDIR)/delivery/
-	$(BUILD_COMMAND_AND_ARGS) docs_delivery/source $(BUILDDIR)/delivery/
+	$(BUILD_COMMAND_AND_ARGS) release_delivery_1-0/source $(BUILDDIR)/release/delivery_1-0/
 
 11-0:
 	mkdir -p $(BUILDDIR)/release/11-0/
@@ -155,25 +139,13 @@ osc_11-1:
 	mkdir -p $(BUILDDIR)/release/osc_11-1/
 	$(BUILD_COMMAND_AND_ARGS) release_osc_11-1/source $(BUILDDIR)/release/osc_11-1/
 
-analytics:
+analytics_1-1:
 	mkdir -p $(BUILDDIR)/analytics/
-	$(BUILD_COMMAND_AND_ARGS) release_analytics_1-0/source $(BUILDDIR)/analytics/
+	$(BUILD_COMMAND_AND_ARGS) release_analytics_1-1/source $(BUILDDIR)/release/analytics_1-1/
 
-client:
-	mkdir -p $(BUILDDIR)/client/
-	$(BUILD_COMMAND_AND_ARGS) docs_client/source $(BUILDDIR)/client/
-
-devkit:
+devkit_1-0:
 	mkdir -p $(BUILDDIR)/devkit/
-	$(BUILD_COMMAND_AND_ARGS) release_devkit_1-0/source $(BUILDDIR)/devkit/
-
-enterprise:
-	mkdir -p $(BUILDDIR)/enterprise/
-	$(BUILD_COMMAND_AND_ARGS) docs_oec/source $(BUILDDIR)/enterprise/
-
-open_source:
-	mkdir -p $(BUILDDIR)/open_source/
-	$(BUILD_COMMAND_AND_ARGS) docs_osc/source $(BUILDDIR)/open_source/
+	$(BUILD_COMMAND_AND_ARGS) release_devkit_1-0/source $(BUILDDIR)/release/devkit_1-0/
 
 ohai-8:
 	mkdir -p $(BUILDDIR)/release/ohai-8/
@@ -211,7 +183,7 @@ server_12-0:
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
 
-
+#
 # OLD BUILDS DO NOT BUILD
 # 
 # 10:
@@ -221,4 +193,3 @@ upload:	release
 # private_chef:
 # 	mkdir -p $(BUILDDIR)/release/private_chef/
 # 	$(BUILD_COMMAND_AND_ARGS) release_private_chef/source $(BUILDDIR)/release/private_chef/
-# 

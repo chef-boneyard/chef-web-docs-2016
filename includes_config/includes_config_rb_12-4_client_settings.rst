@@ -129,10 +129,6 @@ This configuration file has the following settings:
      - |whitelist attribute_override|
    * - ``pid_file``
      - |path pid_file| Default value: ``/tmp/name-of-executable.pid``.
-   * - ``policy_group``
-     - |name policy_name| ``policy_name`` must also be specified.
-   * - ``policy_name``
-     - |name policy_group| ``policy_group`` must also be specified.
    * - ``rest_timeout``
      - |timeout rest| Default value: ``300``.
    * - ``role_path``
