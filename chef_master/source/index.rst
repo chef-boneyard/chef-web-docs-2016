@@ -1,5 +1,5 @@
 =====================================================
-All about |chef| ...
+All about |chef| ... 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -38,7 +38,7 @@ The Workstation
 
 **Install:** :doc:`Install the chef-client on a Workstation </install_dk>` | :doc:`Bootstrap a Node </install_bootstrap>` | :doc:`Create and Sync the chef-repo </chef_repo>`
 
-**Knife:** :doc:`About Knife </knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`deps </knife_deps>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`edit </knife_edit>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`serve </knife_serve>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`ssl check </knife_ssl_check>` | :doc:`ssl fetch </knife_ssl_fetch>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` | :doc:`user </knife_user>` | :doc:`xargs </knife_xargs>` --- **Single Page:** `Knife Reference <http://docs.chef.io/chef/knife.html>`_ | `Knife Quick Reference <http://docs.chef.io/_images/qr_knife_web.png>`_ (image)
+**Knife:** :doc:`About Knife </knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`deps </knife_deps>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`edit </knife_edit>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`serve </knife_serve>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`ssl check </knife_ssl_check>` | :doc:`ssl fetch </knife_ssl_fetch>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` | :doc:`user </knife_user>` | :doc:`xargs </knife_xargs>` --- **Single Page:** `Knife Reference <http://docs.chef.io/chef/knife.html>`_
 
 **Plugins:** :doc:`About Plugins </plugin_knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Custom Plugins </plugin_knife_custom>` | :doc:`Authenticated Requests </plugin_knife_authenticated_requests>` --- **Commands:** `azure <https://github.com/chef/knife-azure>`__ | `bluebox <https://github.com/chef/knife-bluebox>`__ | `ec2 <https://github.com/chef/knife-ec2>`__ | `eucalyptus <https://github.com/chef/knife-eucalyptus>`__ | `google <https://github.com/chef/knife-google>`__ | `hp <https://github.com/chef/knife-hp>`__ | `linode <https://github.com/chef/knife-linode>`__ | `openstack <https://github.com/chef/knife-openstack>`__ | `rackspace <https://github.com/chef/knife-rackspace>`__ | `terremark <https://github.com/chef/knife-terremark>`__ | `windows <https://github.com/chef/knife-windows>`__
 
@@ -162,7 +162,6 @@ Cookbooks
    chef_solo
    chef_system_requirements
    chef_vault
-   chef_why
    chefspec
    community
    community_contributions
@@ -171,7 +170,6 @@ Cookbooks
    community_plugin_knife
    community_plugin_ohai
    community_plugin_report_handler
-   config
    config_rb
    config_rb_analytics
    config_rb_chef_sync
@@ -224,12 +222,9 @@ Cookbooks
    feedback
    files
    foodcritic
-   getting_started
-   getting_started_with_chef
    glossary
    handlers
    hwrp
-   images
    install
    install_analytics
    install_bootstrap
@@ -318,6 +313,7 @@ Cookbooks
    policy
    provisioning
    push_jobs
+   quick_start
    recipes
    reporting
    release_notes
@@ -439,6 +435,7 @@ Cookbooks
    server_tuning
    server_users
    server_webui_tasks
+   simple_walkthrough
    style_guide
    supermarket
    supported_platforms

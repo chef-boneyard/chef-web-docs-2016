@@ -38,7 +38,7 @@ Drivers
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst
 
-``kitchen-vagrant``
+kitchen-vagrant
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_driver_vagrant.rst
 

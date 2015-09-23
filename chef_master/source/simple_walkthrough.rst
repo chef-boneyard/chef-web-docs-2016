@@ -1,71 +1,11 @@
 =====================================================
-Getting Started
+Simple Walkthrough
 =====================================================
 
-Welcome to |chef|!
-
-.. include:: ../../includes_chef/includes_chef.rst
-
-.. note:: Use `Quick Start <http://docs.chef.io/devkit/getting_started.html#quick-start>`__ for just the command lines needed to get started. Hack your way through!
-
-   Use `Workstation Setup <http://docs.chef.io/devkit/getting_started.html#workstation-setup>`__ for a more verbose walkthrough that creates a file on the local machine. Continue to `Kitchen Setup <http://docs.chef.io/devkit/getting_started.html#kitchen-title-setup>`__ and set up multiple virtual environments using |kitchen|, and then create that file in those instances. |kitchen| is ultiately used for testing |chef|, but for now it's just showing how |chef| manages multiple platforms in the same way.
-
-Quick Start
-=====================================================
-For the quickest way to get started using |chef|:
-
-#. Download the |chef dk|: http://downloads.chef.io/chef-dk/.
-#. Set your system |ruby| to this path:
-
-   .. code-block:: bash
-
-      $ /opt/chefdk/embedded/bin/ruby
-
-#. Generate a cookbook: 
-
-   .. code-block:: bash
-
-      $ chef generate app cookbook_name
-
-#. Update the ``default.rb`` recipe in the generated cookbook to contain:
-
-   .. code-block:: ruby
-
-      file "#{ENV['HOME']}/test.txt" do
-        content 'This file created by Chef!'
-      end
-
-#. Run the |chef client| using the ``default.rb`` recipe:
-
-   .. code-block:: bash
-
-      $ chef-client --local-mode --override-runlist chef-repo
-
-This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file created by Chef!``.
-
-* Delete the file, run the |chef client| again, and |chef| will put the file back.
-* Change the string int he file, run the |chef client| again, and |chef| will make the string in the file the same as the string in the recipe.
-* Change the string in the recile, run the |chef client| again, and |chef| will update that string to be the same as the one in the recipe.
-
-There's a lot more that |chef| can do, obviously, but that was super easy! Keep reading this topic for more information about setting up your workstation, configuring |kitchen| to run virtual environments from your workstation, and setting up a more detailed cookbook. Or go to https://docs.chef.io and dive in.
-
-
-.. 
-.. About Resources
-.. =====================================================
-.. .. include:: ../../includes_resources_common/includes_resources_common.rst
-.. 
-.. The |chef client| includes many built-in resources that handle just about any situation. Three of these resources are an essential part of any |chef| workflow: |resource package|, |resource template|, and |resource service|. Use the |resource package| resource to install a package, the |resource template| resource to generate a file on the node that applies configuration settings for that package, and then use the |resource service| resource to start (or restart) the service associated with that package. This is a combination of resources that you will use often with |chef|.
-.. 
-.. The next step is to install |chef|, configure your workstation, and then configure |kitchen| to run virtual instances locally on that workstation. After that is finished, we'll revisit the |resource package|, |resource template|, and |resource service| resources and use them with |kitchen| to converge |ntp| into a virtual instance that is spun up and managed by |kitchen|.
-.. 
-
-Workstation Setup
-=====================================================
 The |chef dk| is a package that contains everything you need to start using |chef|, along with a collection of tools and libaries that can help improve the code you are using to run your business.
 
 Install the |chef dk_title|
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_install/includes_install_chef_dk.rst
 
 .. 
@@ -77,14 +17,13 @@ Install the |chef dk_title|
 .. 
 
 Set the System |ruby|
------------------------------------------------------
+=====================================================
 .. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby.rst
 
 .. note:: You may need to restart your shell for this change to be visible.
 
 Your First Cookbook
------------------------------------------------------
-
+=====================================================
 We have already used the |chef ctl| ``verify`` subcommand to verify the installation of the |chef dk|. Now let's use the |chef ctl| ``generate`` subcommand to create the |chef repo|, which is the main folder in which your |chef| code will be stored. Run the following command:
 
 .. code-block:: bash
@@ -108,7 +47,7 @@ where ``name`` is a name that you have chosen for the both the |chef repo| and t
 
 
 Update Default Recipe
------------------------------------------------------
+=====================================================
 Open the ``default.rb`` recipe in the cookbook you just created. Add the following resource to that recipe:
 
 .. code-block:: ruby
@@ -120,7 +59,7 @@ Open the ``default.rb`` recipe in the cookbook you just created. Add the followi
 This recipe creates a file called ``test.txt`` at the path defined by the ``HOME`` environment variable. (To view that path, run ``echo "$HOME"`` in the command shell.)
 
 Run the |chef client_title|
------------------------------------------------------
+=====================================================
 Next, we'll run the |chef client|. This is done via the command line and the command must be run from within the |chef repo|. 
 
 * Use the ``--local-mode`` flag to run the |chef client| locally on your machine exactly the same as if the |chef client| were able to communicate with a |chef server|. Local mode does not require a connection to a |chef server|, public or private keys, or configuring of nodes. Many people use local mode for simple, local testing of recipes and cookbooks, often as a pre-cursor to running unit and integration tests against the same recipes and cookbooks.
@@ -384,12 +323,12 @@ and an empty ``default.rb`` file under ``/attributes``. Let's edit this file and
 
    default[:ntp][:service] =
      case platform_family
-       when "rhel", "fedora"
-         "ntpd"
-       when "debian"
-         "ntp"
+       when 'rhel', 'fedora'
+         'ntpd'
+       when 'debian'
+         'ntp'
        else
-         "ntpd"
+         'ntpd'
      end
 
 This attribute uses conditions to tell the |chef client| the correct name of the init script that will be used to start |ntp|, by platform. The attribute that is being set by this code block is ``node[:ntp][:service]`` and the |chef client| can use this attribute to identify the correct init script for |ntp| on any node and for any platform. If |debian|, use ``ntp`` and for everything else use ``ntpd``.
@@ -406,24 +345,24 @@ Open the ``default.rb`` recipe file and replace the contents of that file with t
 
 .. code-block:: ruby
 
-   package "ntp" do
+   package 'ntp' do
      action :install
    end
    
-   template "/etc/ntp.conf" do
-     source "ntp.conf.erb"
-     variables( :ntp_server => "time.nist.gov" )
-     notifies :restart, "service[ntp_service]"
+   template '/etc/ntp.conf' do
+     source 'ntp.conf.erb'
+     variables( :ntp_server => 'time.nist.gov' )
+     notifies :restart, 'service[ntp_service]'
    end
    
-   service "ntp_service" do
+   service 'ntp_service' do
      service_name node[:ntp][:service]
      action [:enable, :start]
    end
 
 The |resource package| resource installs the |ntp| package. The |resource template| resource gets the template file from the cookbook, and then uses it to create a ``ntp.conf`` file in the ``/etc/ntp.conf`` directory on the node, after which it notifies the |resource service| resource to restart the ``ntp`` or ``ntpd`` service. The |resource service| resource ensures that the ``ntp`` or ``ntpd`` service is started and enabled.
 
-Install |ntp| on |centos|
+Install NTP on |centos|
 -----------------------------------------------------
 Now let's install |ntp| in |centos|. From the |chef repo|, run:
 
@@ -484,7 +423,7 @@ As it installs, the |chef client| will report back something similar to the foll
           Finished converging <default-centos-71> (0m30.97s).
    -----> Kitchen is finished. (0m31.28s)
 
-Install |ntp| on |ubuntu|
+Install NTP on |ubuntu|
 -----------------------------------------------------
 And finally, install |ntp| in |ubuntu|. From the |chef repo|, run:
 
@@ -550,8 +489,8 @@ As it installs, the |chef client| will report back something similar to the foll
 
    .. code-block:: ruby
 
-      execute "apt-get-update" do
-        command "apt-get update"
+      execute 'apt-get-update' do
+        command 'apt-get update'
         ignore_failure true
       end
 

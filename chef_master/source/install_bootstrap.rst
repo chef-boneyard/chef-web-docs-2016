@@ -7,7 +7,7 @@ A node is any physical, virtual, or cloud machine that is configured to be maint
 * Use the |subcommand knife bootstrap| subcommand to `bootstrap a node using the omnibus installer <http://docs.chef.io/chef_client.html#about-bootstrap-operations>`_
 * Use an unattended install to bootstrap a node from itself, without using |ssh| or |windows remote management|
 
-``knife bootstrap``
+knife bootstrap
 =====================================================
 .. include:: ../../includes_install/includes_install_chef_client.rst
 
@@ -19,7 +19,7 @@ Validatorless Bootstrap
 =====================================================
 .. include:: ../../includes_knife/includes_knife_bootstrap_no_validator.rst
 
-``knife bootstrap`` Options
+knife bootstrap Options
 -----------------------------------------------------
 Use the following options with a validatorless bootstrap to specify items that are stored in |chef vault|:
 
@@ -82,7 +82,7 @@ It is definitely an encrypted databag, see?
    iv:             ONoVR7OjPZiAzaqOZ30bjg==
    version:        1
    
-Use ``--bootstrap-vault-file``
+Use --bootstrap-vault-file
 -----------------------------------------------------
 
 Use the ``sea:power`` recreation step above first, to follow the difference in the vault permissions.
@@ -126,7 +126,7 @@ The client ``ubuntu-12.04`` was added to the ``chef-vault`` during the bootstrap
    search_query:
    some:         content for them
 
-Use ``--bootstrap-vault-item``
+Use --bootstrap-vault-item
 -----------------------------------------------------
 
 Use the ``sea:power`` re-creation step above first, to follow the difference in the vault permissions.
@@ -193,7 +193,7 @@ The client itself can decrypt and read the encrypted databag contents as well.
 
 Success! The client is authorized to view the content of the ``sea:power`` databag item
 
-Use ``--bootstrap-vault-json``
+Use --bootstrap-vault-json
 -----------------------------------------------------
 Use the ``sea:power`` re-creation step above first, to follow the difference in the vault permissions.
 
