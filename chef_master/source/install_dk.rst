@@ -2,8 +2,6 @@
 Install the |chef dk_title|
 =====================================================
 
-
-
 The |omnibus installer| is used to set up the |chef dk| on a workstation, including the |chef client| itself, an embedded version of |ruby|, |rubygems|, |open ssl|, key-value stores, parsers, libraries, command line utilities, and community tools such as |kitchen|, |berkshelf|, and |chef spec|. The |omnibus installer| puts everything into a unique directory (``opt/chefdk/``) so that these components will not interfere with other applications that may be running on the target machine. Once installed, the |chef client| requires a few more configuration steps before it can be run as a workstation.
 
 .. note:: The |omnibus installer| requires that an installation be done as a root user.
