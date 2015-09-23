@@ -128,19 +128,6 @@ Custom Resources
 
     .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_recipe.rst
 
- .. revealjs:: Test
-    :noheading:
-
-    .. image:: ../../images/custom_resources_06.svg
-
- .. revealjs:: Add to Run-List, Run Kitchen
-
-    Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
-
- .. revealjs:: Add to Run-List, Run Chef
-
-    Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
-
  .. revealjs:: More Info About Resources
 
     For more information, see:
@@ -160,3 +147,17 @@ Custom Resources
 .. 
 
 
+.. 
+..  .. revealjs:: Test
+..     :noheading:
+.. 
+..     .. image:: ../../images/custom_resources_06.svg
+.. 
+..  .. revealjs:: Add to Run-List, Run Kitchen
+.. 
+..     Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
+.. 
+..  .. revealjs:: Add to Run-List, Run Chef
+.. 
+..     Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
+.. 
