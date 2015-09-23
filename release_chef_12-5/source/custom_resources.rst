@@ -94,14 +94,12 @@ Final Cookbook Directory
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_final_cookbook_directory.rst
 
-
-
 Recipe
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_recipe.rst
 
-
-Test
------------------------------------------------------
-TBD...
-
+.. 
+.. Test
+.. -----------------------------------------------------
+.. TBD...
+.. 
