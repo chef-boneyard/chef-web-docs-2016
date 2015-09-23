@@ -39,5 +39,5 @@ Once built, the custom resource may be used in a recipe just like the any of the
 
    exampleco_site 'httpd' do
      homepage '<h1>Welcome to the Example Co. website!</h1>'
-     action: create
+     action :create
    end

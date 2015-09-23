@@ -7,3 +7,4 @@ long_description 'Installs/Configures docs-builder'
 version '0.1.0'
 
 depends 'aws'
+depends 'fancy_execute'
