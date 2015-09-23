@@ -13,4 +13,3 @@ This scenario covers the following:
 #. For the action, defining the steps to configure the system using resources that are built into |chef|
 #. Creating two templates that support the custom resource
 #. Adding the resource to a recipe
-#. Testing the resource using |kitchen|

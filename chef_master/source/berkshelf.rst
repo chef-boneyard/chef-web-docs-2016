@@ -1,5 +1,5 @@
 =====================================================
-|berkshelf|
+About |berkshelf|
 =====================================================
 
 .. include:: ../../includes_berkshelf/includes_berkshelf.rst
