@@ -224,7 +224,6 @@ Cookbooks
    feedback
    files
    foodcritic
-   getting_started
    glossary
    handlers
    hwrp
@@ -317,6 +316,7 @@ Cookbooks
    policy
    provisioning
    push_jobs
+   quick_start
    recipes
    reporting
    release_notes
@@ -438,6 +438,7 @@ Cookbooks
    server_tuning
    server_users
    server_webui_tasks
+   simple_walkthrough
    style_guide
    supermarket
    supported_platforms
