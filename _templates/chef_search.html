@@ -1,4 +1,4 @@
-{% extends "basic/search.html" %}
+{% extends "layout.html" %}
 
 {# This is the script for the Google search box. #}
 
@@ -18,6 +18,12 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
+
+  setTimeout( function(){ 
+    $(".gsc-input").attr("placeholder", "Search");
+    $("input.gsc-search-button").attr("src", "");
+  }
+ , 1000 );
 </script>
 
 
@@ -35,7 +41,7 @@
 </p>
 
 <!-- Place this tag where you want both of the search box and the search results to render -->
-<gcse:search defaultToRefinement="Chef Documentation" webSearchResultSetSize="20"></gcse:search>
+<gcse:searchresults-only defaultToRefinement="Chef Documentation" webSearchResultSetSize="20"></gcse:searchresults-only>
 
 &nbsp;<br>
 &nbsp;<br>
