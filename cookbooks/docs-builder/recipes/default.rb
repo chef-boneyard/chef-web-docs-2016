@@ -76,14 +76,8 @@ end
 
 build_targets = <<END
 master
-12-5
-slides
 decks
-server_12-2
-analytics
-delivery
-client
-devkit
+delivery_1-0
 11-0
 11-2
 11-4
@@ -99,21 +93,22 @@ devkit
 12-2
 12-3
 12-4
-ohai-6
-ohai-7
-ohai-8
-push_1-0
-push_2-0
-server
-server_12-0
-server_12-1
-enterprise
+12-5
 oec_11-0
 oec_11-1
 oec_11-2
-open_source
 osc_11-0
 osc_11-1
+analytics_1-1
+devkit_1-0
+ohai-8
+ohai-7
+ohai-6
+push_1-0
+push_2-0
+server_12-2
+server_12-1
+server_12-0
 END
 
 file '/srv/chef-web-docs/targets.txt' do
