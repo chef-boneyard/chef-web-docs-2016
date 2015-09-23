@@ -5,7 +5,7 @@ $(document).ready(function() {
   const $navElements = [$navDocs, $navLinks];
   const navBreakpoint = 730; // navBreakpoint should be the same as breakpoint in _nav.scss file
   const navHeight = $(".nav-main").outerHeight();
-  var navDocsHeight, navLinksHeight, windowWidth;
+  var navDocsHeight, navDocsItems, navLinksHeight, windowWidth;
   var largeScreen;
 
   var removeOpenClass = function(elements) {
@@ -16,14 +16,17 @@ $(document).ready(function() {
 
   var checkWindowSize = function() {
     windowWidth = $(window).width();
-    removeOpenClass($navElements);
+
+    navDocsItemsHeight = $(".nav-docs-items").outerHeight();
+    $(".document").css("min-height", navDocsItemsHeight);
 
     if (windowWidth > navBreakpoint) {
       largeScreen = true;
       $navLinks.css("top", "");
+      removeOpenClass($navElements);
     } else {
       largeScreen = false;
-      navDocsHeight = $navDocs.outerHeight();
+      navDocsHeight = $('.nav-docs').outerHeight();
       navLinksHeight = $navLinks.outerHeight();
       $navLinks.css("top", navHeight + navDocsHeight + "px");
     }
@@ -49,6 +52,13 @@ $(document).ready(function() {
   // Docs Nav 
   $(".has-sub-items-content").click(function() {
     $(this).parent(".has-sub-items").toggleClass("is-open");
+
+    navDocsItemsHeight = $(".nav-docs-items").outerHeight();
+    $(".document").css("min-height", navDocsItemsHeight);
+
+    navDocsHeight = $('.nav-docs').outerHeight();
+    navLinksHeight = $navLinks.outerHeight();
+    $navLinks.css("top", navHeight + navDocsHeight + "px");
   });
 
   $(".sub-items a").click(function(){
