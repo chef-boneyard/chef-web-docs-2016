@@ -44,7 +44,7 @@ aws_s3_bucket bucket_name do
     :suffix => "index.html"
   },
   :error_document => {
-    :key => "not_found.html"
+    :key => "/page_not_found.html"
   }
 end
 

@@ -34,10 +34,10 @@ Partial Templates
 =====================================================
 .. include:: ../../includes_template/includes_template_partials.rst
 
-``variables`` Attribute
+variables Attribute
 -----------------------------------------------------
 .. include:: ../../includes_template/includes_template_partials_variables_attribute.rst
 
-``render`` Method
+render Method
 -----------------------------------------------------
 .. include:: ../../includes_template/includes_template_partials_render_method.rst

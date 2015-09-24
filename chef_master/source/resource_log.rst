@@ -28,7 +28,7 @@ Properties
 .. .. include:: ../../includes_resources/includes_resource_log_providers.rst
 .. 
 
-``Chef::Log`` Entries
+Chef::Log Entries
 =====================================================
 .. include:: ../../includes_ruby/includes_ruby_style_basics_chef_log.rst
 
