@@ -8,7 +8,6 @@ Docs for |ohai| 6
 
 View the :doc:`release notes </release_notes>` for |ohai| 6.
 
-.. warning:: `Ohai 7 <http://docs.chef.io/release/ohai-7/>`_ is planned to be fully integrated into the |chef client| starting with the 11.12.0 release (~April 2014).
 
 Automatic Attributes
 =====================================================
