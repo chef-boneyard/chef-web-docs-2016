@@ -20,7 +20,7 @@ Quotes, Windows
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_common_windows_quotes.rst
 
-``Import-Module chef``
+Import-Module chef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_common_windows_quotes_module.rst
 

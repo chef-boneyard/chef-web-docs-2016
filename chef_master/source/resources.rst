@@ -584,7 +584,7 @@ Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_custom_syntax.rst
 
-``report`` Interface
+report Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_custom_interface_report.rst
 
@@ -592,19 +592,19 @@ Optional Interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The following interfaces may be used in a handler in the same way as the ``report`` interface to override the default handler behavior in the |chef client|. That said, the following interfaces are not typically used in a handler and, for the most part, are completely unnecessary for a handler to work properly and/or as desired.
 
-**``data``**
+**data**
 
 .. include:: ../../includes_handler/includes_handler_custom_interface_data.rst
 
-**``run_report_safely``**
+**run_report_safely**
 
 .. include:: ../../includes_handler/includes_handler_custom_interface_run_report_safely.rst
 
-**``run_report_unsafe``**
+**run_report_unsafe**
 
 .. include:: ../../includes_handler/includes_handler_custom_interface_run_report_unsafe.rst
 
-``run_status`` Object
+run_status Object
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_custom_object_run_status.rst
 
@@ -1695,7 +1695,7 @@ Properties
 .. .. include:: ../../includes_resources/includes_resource_log_providers.rst
 .. 
 
-``Chef::Log`` Entries
+Chef::Log Entries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_style_basics_chef_log.rst
 
@@ -2892,7 +2892,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_configure_file_with_variable_map.rst
 
-**Use the ``not_if`` condition**
+**Use the not_if condition**
 
 .. include:: ../../step_resource/step_resource_template_add_file_not_if_attribute_has_value.rst
 
@@ -2902,7 +2902,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_add_file_not_if_string.rst
 
-**Use the ``only_if`` condition**
+**Use the only_if condition**
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_attribute_has_value.rst
 
@@ -2910,7 +2910,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
-**Use a whitespace array (``%w``)**
+**Use a whitespace array (%w)**
 
 .. include:: ../../step_resource/step_resource_template_use_whitespace_array.rst
 

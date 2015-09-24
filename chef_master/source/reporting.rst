@@ -78,7 +78,7 @@ Examples
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_show_by_run_id.rst
 
-``state_attrs`` Method
+state_attrs Method
 =====================================================
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_state_attrs.rst
 

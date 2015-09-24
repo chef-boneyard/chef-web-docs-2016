@@ -42,7 +42,7 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_custom_syntax.rst
 
-``report`` Interface
+report Interface
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_custom_interface_report.rst
 
@@ -50,19 +50,19 @@ Optional Interfaces
 -----------------------------------------------------
 The following interfaces may be used in a handler in the same way as the ``report`` interface to override the default handler behavior in the |chef client|. That said, the following interfaces are not typically used in a handler and, for the most part, are completely unnecessary for a handler to work properly and/or as desired.
 
-``data``
+data
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_custom_interface_data.rst
 
-``run_report_safely``
+run_report_safely
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_custom_interface_run_report_safely.rst
 
-``run_report_unsafe``
+run_report_unsafe
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_custom_interface_run_report_unsafe.rst
 
-``run_status`` Object
+run_status Object
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_custom_object_run_status.rst
 
