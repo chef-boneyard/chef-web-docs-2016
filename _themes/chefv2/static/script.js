@@ -87,7 +87,7 @@ $(document).ready(function() {
   });
 
   // Add Active State to Docs Nav for Sub-pages
-  var currentUrl = location.pathname;
+  var currentUrl = location.pathname + location.hash;
   var $docsNavLinks = $(".nav-docs-link");
   var linkUrl;
 

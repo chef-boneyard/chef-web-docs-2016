@@ -1,4 +1,4 @@
-.. THIS PAGE IS LOCATED AT THE /analytics/ PATH.
+.. THIS PAGE IS LOCATED AT THE /release/analytics_1-1/ PATH.
 
 =====================================================
 All about |chef analytics_title| ... 
@@ -16,7 +16,7 @@ The :doc:`Chef analytics platform </analytics>` provides real-time visibility in
 
 Use this visibility to verify compliance against internal controls.
 
-If you are new to |chef|, familiarize yourself with the other core components: `the server, workstations, and nodes <http://docs.chef.io/chef_overview.html>`_. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.chef.io/client/>`_. For more information about the server, see `documentation for the Chef server <http://docs.chef.io/server/>`_
+If you are new to |chef|, familiarize yourself with the other core components: `the server, workstations, and nodes <http://docs.chef.io/chef_overview.html>`_. For more information about workstations, cookbooks, and nodes, see the documentation for the chef-client. For more information about the server, see documentation for the Chef server.
 
 Install, Upgrade
 =====================================================
@@ -24,8 +24,8 @@ The |chef server| can be installed on new hardware. Existing |chef server oec| a
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/install_analytics.html#standalone-version-1-1">Install Analytics 1.1 as Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/upgrade_analytics.html">Upgrade from Analytics 1.0.4</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/install_analytics.html#standalone-version-1-1">Install Analytics 1.1 as Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/upgrade_analytics.html">Upgrade from Analytics 1.0.4</a> </br>
 
 Features
 =====================================================
@@ -33,13 +33,13 @@ The following features are part of the |chef analytics| platform:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/actions.html">Actions</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_rules.html">Rules</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/dsl_recipe.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/chef_client.html">chef-client, audit-mode</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/reporting.html">Reporting</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_splunk.html">Splunk App for Chef Server</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_webui_tasks.html">Web User Interface</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/actions.html">Actions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/analytics_rules.html">Rules</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/dsl_recipe.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/chef_client.html">chef-client, audit-mode</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/reporting.html">Reporting</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/analytics_splunk.html">Splunk App for Chef Server</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/analytics_webui_tasks.html">Web User Interface</a> </br>
 
 Manage |chef analytics_title|
 =====================================================
@@ -47,7 +47,7 @@ Manage |chef analytics_title|
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/analytics_monitor.html">Monitor</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/analytics_monitor.html">Monitor</a> </br>
 
 Reference
 =====================================================
@@ -55,10 +55,10 @@ This section contains links to topics about configuration files, command-line to
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/api_analytics.html">Analytics API</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/plugin_knife_analytics.html">knife-analytics (Knife plugin)</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/config_rb_analytics.html">opscode-analytics.rb</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/analytics/ctl_analytics.html">opscode-analytics-ctl</a> </br> 
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/api_analytics.html">Analytics API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/plugin_knife_analytics.html">knife-analytics (Knife plugin)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/config_rb_analytics.html">opscode-analytics.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/analytics_1-1/ctl_analytics.html">opscode-analytics-ctl</a> </br> 
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/api_chef_server.html#authenticate-user">authenticate_user endpoint in Chef Server API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#rabbitmq">RabbitMQ settings in chef-server.rb</a> </br>   
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/config_rb_server_optional_settings.html#oc-id">OAuth 2.0 authentication to the Chef server</a> </br>    

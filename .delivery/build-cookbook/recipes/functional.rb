@@ -23,11 +23,12 @@ else
   fqdn = "#{site_name}-#{node['delivery']['change']['stage']}.#{domain_name}"
 end
 
-execute 'run linkchecker' do
-  command "linkchecker -t 6 --recursion-level 3 --no-warnings --ignore-url 'package.url' --ignore-url 'glyphicons' https://#{fqdn}/"
-  cwd node['delivery_builder']['repo']
-  user node['delivery_builder']['build_user']
-end
+# disabling as per cwebber because it is causing more harm than good
+# execute 'run linkchecker' do
+#   command "linkchecker -t 6 --recursion-level 3 --no-warnings --ignore-url 'package.url' --ignore-url 'glyphicons' https://#{fqdn}/"
+#   cwd node['delivery_builder']['repo']
+#   user node['delivery_builder']['build_user']
+# end
 
 case node['delivery']['change']['stage']
 when 'acceptance'
