@@ -86,7 +86,7 @@ Partial Templates
 -----------------------------------------------------
 .. include:: ../../includes_template/includes_template_partials.rst
 
-``render`` Method
+render Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_template/includes_template_partials_render_method.rst
 
@@ -115,7 +115,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_configure_file_with_variable_map.rst
 
-**Use the ``not_if`` condition**
+**Use the not_if condition**
 
 .. include:: ../../step_resource/step_resource_template_add_file_not_if_attribute_has_value.rst
 
@@ -125,7 +125,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_add_file_not_if_string.rst
 
-**Use the ``only_if`` condition**
+**Use the only_if condition**
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_attribute_has_value.rst
 
@@ -133,7 +133,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
-**Use a whitespace array (``%w``)**
+**Use a whitespace array (%w)**
 
 .. include:: ../../step_resource/step_resource_template_use_whitespace_array.rst
 

@@ -391,7 +391,6 @@ Cookbooks
    resource_rpm_package
    resource_ruby
    resource_ruby_block
-   resource_scm
    resource_script
    resource_service
    resource_smartos_package
