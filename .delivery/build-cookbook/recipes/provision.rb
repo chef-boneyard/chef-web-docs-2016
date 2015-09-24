@@ -137,16 +137,14 @@ fastly_response 'embargo' do
   notifies :activate_latest, "fastly_service[#{fqdn}]", :delayed
 end
 
-unless node['delivery']['change']['stage'] == 'delivered'
-  route53_record fqdn do
-    name "#{fqdn}."
-    value 'g.global-ssl.fastly.net'
-    aws_access_key_id aws_creds['access_key_id']
-    aws_secret_access_key aws_creds['secret_access_key']
-    type 'CNAME'
-    zone_id aws_creds['route53'][domain_name]
-    sensitive true
-  end
+route53_record fqdn do
+  name "#{fqdn}."
+  value 'g.global-ssl.fastly.net'
+  aws_access_key_id aws_creds['access_key_id']
+  aws_secret_access_key aws_creds['secret_access_key']
+  type 'CNAME'
+  zone_id aws_creds['route53'][domain_name]
+  sensitive true
 end
 
 Chef_Delivery::ClientHelper.leave_client_mode_as_delivery
