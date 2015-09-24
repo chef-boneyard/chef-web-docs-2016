@@ -6,13 +6,13 @@ The |chef server_title|
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-.. note:: |chef server| 12 is the new |chef server|! The documentation for `Open Source Chef <http://docs.chef.io/open_source/>`_ and `Enterprise Chef <http://docs.chef.io/enterprise/>`_ is still available.
+.. note:: |chef server| 12 is the new |chef server|! The documentation for Open Source Chef and Enterprise Chef is still available from the version list.
 
 View the :doc:`release notes </release_notes>` for the current version of the |chef server|.
 
 Getting Started
 =====================================================
-If you are new to |chef|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes </chef_overview>`. For more information about workstations, cookbooks, and nodes, see the `documentation for the chef-client <http://docs.chef.io/client/>`_.
+If you are new to |chef|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes </chef_overview>`. For more information about workstations, cookbooks, and nodes, see the documentation for the chef-client.
 
 The `Chef supermarket <https://supermarket.chef.io>`_ is the location in which community cookbooks are authored and maintained. Cookbooks that are part of the |supermarket| may be used by any |chef| user.
 
@@ -43,7 +43,6 @@ The |chef server| can be managed in the following ways:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/server_12-0/runbook.html">Runbook</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/server_12-0/server_backup_restore.html">Backup / Restore</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/server_12-0/server_data.html">Data</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/server_12-0/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>

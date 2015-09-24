@@ -10,6 +10,17 @@ The |chef server oec| is a centralized location where all of the objects needed 
 
 View the :doc:`release notes </release_notes>` for |chef server oec| 11.2.
 
+Server Essentials
+=====================================================
+The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
+
+* A `node object <http://docs.chef.io/nodes.html>`_ exists for each node that is being managed by the |chef client|
+* Each node object consists of a `run-list <http://docs.chef.io/nodes.html>`_ and a `collection of attributes <http://docs.chef.io/attributes.html>`_
+* Cookbooks are the fundamental unit of configuration and policy distribution and include: `attribute files <http://docs.chef.io/attributes.html>`_, `definitions <http://docs.chef.io/definitions.html>`_, `files, <http://docs.chef.io/files.html>`_, `libraries <http://docs.chef.io/libraries.html>`_, `metadata <http://docs.chef.io/cookbook_repo.html>`_, `recipes <http://docs.chef.io/recipes.html>`_, `resources <http://docs.chef.io/resources.html>`_, `templates <http://docs.chef.io/templates.html>`_, and `versions <http://docs.chef.io/cookbook_versions.html>`_
+* All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is `searchable <http://docs.chef.io/chef_search.html>`_ from both recipes (using the `search method <http://docs.chef.io/dsl_recipe.html#search>`_ in the |dsl recipe|) and the workstation (using the `knife search <http://docs.chef.io/knife_search.html>`_ subcommand). The |chef client| does the actual configuration on `the nodes <http://docs.chef.io/nodes.html>`_. The |chef client| receives its instructions from cookbooks (`recipes <http://docs.chef.io/recipes.html>`_, mostly). The process of configuring a node is called `the chef-client run <http://docs.chef.io/nodes.html>`_. At the beginning of each run, the |chef client| `validates to the server <http://docs.chef.io/chef_client.html>`_, `collects important data about that node <http://docs.chef.io/ohai.html>`_, and then configures the node. At the end of each run, the |chef client| `reports the successes and failures that may have occurred <http://docs.chef.io/handlers.html>`_
+* The |chef server| can apply `global policy settings <http://docs.chef.io/policy.html>`_ to all nodes across the organization, including for `data bags <http://docs.chef.io/data_bags.html>`_, `environments <http://docs.chef.io/environments.html>`_, and `roles <http://docs.chef.io/roles.html>`_
+* The `authentication <http://docs.chef.io/auth.html#authentication>`_ process ensures that requests can only be made to the |chef server| by authorized users
+* Users, once `authorized <http://docs.chef.io/auth.html#authorization>`_ can only perform certain actions
 
 Server Components
 =====================================================
@@ -28,7 +39,7 @@ The following sections discuss these deployment configuration options in greater
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/oec_11-2/server_deploy_fe.html">Scaled Front End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/oec_11-2/server_deploy_febe.html">Scaled Front and Back Ends</a> </br>
 
-.. note:: For more information about signing up for hosted |chef server oec|, see https://getchef.chef.io/signup.
+.. note:: For more information about signing up for hosted |chef server oec|, see https://manage.chef.io/signup.
 
 Install |chef server oec|
 -----------------------------------------------------
