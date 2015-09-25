@@ -137,6 +137,50 @@ fastly_response 'embargo' do
   notifies :activate_latest, "fastly_service[#{fqdn}]", :delayed
 end
 
+# Handle latest rev redirects
+rewrites = JSON.parse(File.read(File.join(node['delivery']['workspace']['repo'], 'config', 'latest_product_mapping.json')))
+
+rewrites.each_key do |rewrite|
+
+  request_cond = fastly_condition "#{rewrite.key}_request" do
+    api_key fastly_creds['api_key']
+    service fastly_service.name
+    type 'request'
+    statement "req.url ~ \"^/#{rewrite.key}/\""
+    sensitive true
+    notifies :activate_latest, "fastly_service[#{fqdn}]", :delayed
+  end
+
+  response_cond = fastly_condition "#{rewrite.key}_response" do
+    api_key fastly_creds['api_key']
+    service fastly_service.name
+    type 'response'
+    statement "req.url ~ \"^/#{rewrite.key}/\" && resp.status == 302"
+    sensitive true
+    notifies :activate_latest, "fastly_service[#{fqdn}]", :delayed
+  end
+
+  fastly_response "#{rewrite.key}_302" do
+    api_key fastly_creds['api_key']
+    service fastly_service.name
+    request_condition request_cond.name
+    status 302
+    sensitive true
+    notifies :activate_latest, "fastly_service[#{fqdn}]", :delayed
+  end
+
+  fastly_header rewrite.key do
+    api_key fastly_creds['api_key']
+    service fastly_service.name
+    type 'response'
+    response_condition response_cond.name
+    header_action 'set'
+    dst 'http.location'
+    src "\"https://#{fqdn}\" regsub(req.url,\"^/#{rewrite.key}/(.*)\", \"#{rewrite[rewrite.key]}/\\1\")"
+  end
+
+end
+
 route53_record fqdn do
   name "#{fqdn}."
   value 'g.global-ssl.fastly.net'
