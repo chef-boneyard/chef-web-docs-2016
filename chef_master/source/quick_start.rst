@@ -22,7 +22,7 @@ For the quickest way to get started using |chef|:
    .. code-block:: ruby
 
       file "#{ENV['HOME']}/test.txt" do
-        content 'This file created by Chef!'
+        content 'This file was created by Chef!'
       end
 
 #. Run the |chef client| using the ``default.rb`` recipe:
@@ -31,7 +31,7 @@ For the quickest way to get started using |chef|:
 
       $ chef-client --local-mode --override-runlist chef-repo
 
-This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file created by Chef!``.
+This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file was created by Chef!``.
 
 * Delete the file, run the |chef client| again, and |chef| will put the file back.
 * Change the string in the file, run the |chef client| again, and |chef| will make the string in the file the same as the string in the recipe.
