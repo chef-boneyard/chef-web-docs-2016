@@ -18,7 +18,7 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **depth property added to deploy resource** The ``depth`` property allows the depth of a |git| repository to be truncated to the specified number of versions.
 * **The knife ssl check subcommand supports SNI*** Support for Server Name Indication (SNI) is added to the |subcommand knife ssl_check| subcommand.
 * **Specify a policy revision** A policy revision is based on the name of a policy group and the name of a policy and may be specified in the |client rb| file or via a |json| file and the command line.
-* **New Recipe DSL methods** Use the ``load_current_value`` method to load property values from a node, and then use the ``converge_if_changed`` method to compare the loaded values to the desired values.
+* **New Custom Resource DSL** A new DSL exists to support defining property behaviors within custom resources. Use the ``load_current_value`` method to load property values from a node, and then use the ``converge_if_changed`` method to compare the loaded values to the desired values and to tell the |chef client| how to handle any differences, if they exist.
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
@@ -82,24 +82,22 @@ where
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
 
-New |dsl recipe| Methods
------------------------------------------------------
-The following |dsl recipe| methods are new:
 
-* ``converge_if_changed``
-* ``load_current_value``
+|dsl custom_resource|
+-----------------------------------------------------
+.. include:: ../../includes_dsl_custom_resource/includes_dsl_custom_resource.rst
 
 converge_if_changed
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed.rst
+.. include:: ../../includes_dsl_custom_resource/includes_dsl_custom_resource_method_converge_if_changed.rst
 
-**Compare Multiple Properties**
+**Multiple Properties**
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed_multiple.rst
+.. include:: ../../includes_dsl_custom_resource/includes_dsl_custom_resource_method_converge_if_changed_multiple.rst
 
 load_current_value
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed.rst
+.. include:: ../../includes_dsl_custom_resource/includes_dsl_custom_resource_method_converge_if_changed.rst
 
 
 |resource deploy| Property
