@@ -12,7 +12,6 @@ Getting Started
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/chef_overview.html">An Overview of Chef</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/install_dk.html">Install the Chef DK</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/getting_started.html">Getting Started with the Chef DK and Kitchen</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/ruby.html">Using Ruby</a> </br>
 
 .. note:: See this blog post by Irving Popovetsky about running the Chef DK on Windows: https://www.chef.io/blog/2014/11/04/the-chefdk-on-windows-survival-guide/.
@@ -157,7 +156,6 @@ The following tools have been developed by members of the |chef| community. Thes
    dsl_recipe
    files
    foodcritic
-   getting_started
    handlers
    install_dk
    install_dk_windows
