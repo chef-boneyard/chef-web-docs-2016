@@ -133,6 +133,10 @@ converge_if_changed
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed.rst
 
+Compare Multiple Properties
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed_multiple.rst
+
 cookbook_name
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_cookbook_name.rst
@@ -168,6 +172,10 @@ The following examples show how the ``data_bag_item`` method can be used in a re
 **Use the contents of a data bag in a recipe**
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_data_bag_use_data_bag_methods.rst
+
+load_current_value
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed.rst
 
 platform?
 -----------------------------------------------------

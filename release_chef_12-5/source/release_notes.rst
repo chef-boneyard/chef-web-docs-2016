@@ -18,7 +18,7 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **depth property added to deploy resource** The ``depth`` property allows the depth of a |git| repository to be truncated to the specified number of versions.
 * **The knife ssl check subcommand supports SNI*** Support for Server Name Indication (SNI) is added to the |subcommand knife ssl_check| subcommand.
 * **Specify a policy revision** A policy revision is based on the name of a policy group and the name of a policy and may be specified in the |client rb| file or via a |json| file and the command line.
-* **New Recipe DSL method to support custom resources** Use the ``converge_if_changed`` method to xxxxx.
+* **New Recipe DSL methods** Use the ``load_current_value`` method to load property values from a node, and then use the ``converge_if_changed`` method to compare the loaded values to the desired values.
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
@@ -82,9 +82,25 @@ where
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
 
-converge_if_changed
+New |dsl recipe| Methods
 -----------------------------------------------------
+The following |dsl recipe| methods are new:
+
+* ``converge_if_changed``
+* ``load_current_value``
+
+converge_if_changed
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed.rst
+
+**Compare Multiple Properties**
+
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed_multiple.rst
+
+load_current_value
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_converge_if_changed.rst
+
 
 |resource deploy| Property
 -----------------------------------------------------
