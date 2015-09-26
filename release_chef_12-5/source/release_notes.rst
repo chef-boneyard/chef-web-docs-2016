@@ -19,6 +19,7 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **The knife ssl check subcommand supports SNI*** Support for Server Name Indication (SNI) is added to the |subcommand knife ssl_check| subcommand.
 * **Specify a policy revision** A policy revision is based on the name of a policy group and the name of a policy and may be specified in the |client rb| file or via a |json| file and the command line.
 * **New Custom Resource DSL** A new DSL exists to support defining property behaviors within custom resources. Use the ``load_current_value`` method to load property values from a node, and then use the ``converge_if_changed`` method to compare the loaded values to the desired values and to tell the |chef client| how to handle any differences, if they exist.
+* **New Handler DSL** A new DSL exists to make it easier to use events that occur during the |chef client| run from recipes. The ``on`` method is easily associated with events. The action the |chef client| takes as a result of that event (when it occurs) is up to you.
 
 .. https://github.com/chef/chef/pull/3776#issuecomment-135525399
 
@@ -52,27 +53,19 @@ Common Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_definition/includes_definition_example_as_resource_with_common_properties.rst
 
-Event Dispatch
+
+|dsl handler|
 -----------------------------------------------------
+.. include:: ../../includes_dsl_handler/includes_dsl_handler.rst
 
-.. see: https://github.com/chef/chef/pull/3242
+on Method
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_method_on.rst
 
-Handlers now support an event handler that passes a user-defined block against an event that occurs during the |chef client| run.
+Example: Send Email
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_example_email.rst
 
-Syntax:
-
-.. code-block:: ruby
-
-   Chef.event_handler do
-     on :event_type do |exception|
-       # ... hipchat_notify exception.message
-     end
-   end
-
-where
-
-* ``:event_type`` is a valid exception event type: ``run_failed``, ``registration_failed``, ``node_load_failed``, ``run_list_expand_failed``, ``cookbook_resolution_failed``, ``cookbook_sync_failed``, ``library_file_load_failed``, ``lwrp_file_load_failed``, ``attribute_file_load_failed``, ``definition_file_load_failed``, ``recipe_file_load_failed``, ``recipe_not_found``, ``converge_failed``, or ``resource_failed``, ``provider_requirement_failed``, ``audit_phase_failed``
-* ``# ...`` is arbitrary |ruby| code that tells the |chef client| how to process the message, should the event occur
 
 ``ps_credential`` Helper
 -----------------------------------------------------
