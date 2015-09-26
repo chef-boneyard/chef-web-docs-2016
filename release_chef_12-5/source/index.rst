@@ -81,6 +81,7 @@ Cookbooks
    custom_resources
    debug
    definitions
+   dsl_custom_resource
    dsl_recipe
    files
    handlers
