@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``load_current_value`` method to load the specified property value from the node and then use that value when the resource is converged. For example, the value of a property like:
+Use the ``load_current_value`` method inside an ``action`` block in a custom resource to load the specified property value from the node, and then use that value when the resource is converged. For example, the value of a property like:
 
 .. code-block:: ruby
 
@@ -12,13 +12,17 @@ may replace the value of the ``page_not_found`` property with the default value.
 
 .. code-block:: ruby
 
-   load_current_value do
-     if File.exist?('/var/www/html/index.html')
-       homepage IO.read('/var/www/html/index.html')
+   action :some_action do
+   
+     load_current_value do
+       if File.exist?('/var/www/html/index.html')
+         homepage IO.read('/var/www/html/index.html')
+       end
+       if File.exist?('/var/www/html/404.html')
+         page_not_found IO.read('/var/www/html/404.html')
+       end
      end
-     if File.exist?('/var/www/html/404.html')
-       page_not_found IO.read('/var/www/html/404.html')
-     end
+   
    end
 
 This tells the recipe what the current values for ``homepage`` and ``page_not_found`` and ensures those values are are not changed when the |chef client| configures the node.
