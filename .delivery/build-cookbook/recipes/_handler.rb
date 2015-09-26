@@ -5,9 +5,9 @@ Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 slack_creds = encrypted_data_bag_item_for_environment('cia-creds','slack')
 
 if ['union', 'rehearsal', 'delivered'].include?(node['delivery']['change']['stage'])
-  slack_channels = slack_creds['channels'].push('#operations')
+  slack_channels = slack_creds['channels'].push('#operations').push('#chef-docs')
 else
-  slack_channels = slack_creds['channels']
+  slack_channels = slack_creds['channels'].push('#chef-docs')
 end
 
 chef_handler "BuildCookbook::SlackHandler" do
