@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``converge_if_changed`` method to compare the desired property values against the current property values (as loaded by the ``load_current_value`` method). Use this method to ensure that updates only occur when property values on the system are not the desired property values and to othwerwise prevent a resource from being converged.
+Use the ``converge_if_changed`` method to compare the desired property values against the current property values (as loaded by the ``load_current_value`` method). Use the ``converge_if_changed`` method to ensure that updates only occur when property values on the system are not the desired property values and to othwerwise prevent a resource from being converged.
 
 To use the ``converge_if_changed`` method, wrap it around the part of a recipe or custom resource that should only be converged when the current state is not the desired state:
 

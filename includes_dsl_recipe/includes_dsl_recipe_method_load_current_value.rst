@@ -1,0 +1,26 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+
+Use the ``load_current_value`` method to load the specified property value from the node and then use that value when the resource is converged. For example, the value of a property like:
+
+.. code-block:: ruby
+
+   page_not_found '<h1>This page is not found!</h1>'
+
+may replace the value of the ``page_not_found`` property with the default value. Use the ``load_current_value`` method to guard against this behavior. For example:
+
+.. code-block:: ruby
+
+   load_current_value do
+     if File.exist?('/var/www/html/index.html')
+       homepage IO.read('/var/www/html/index.html')
+     end
+     if File.exist?('/var/www/html/404.html')
+       page_not_found IO.read('/var/www/html/404.html')
+     end
+   end
+
+This tells the recipe what the current values for ``homepage`` and ``page_not_found`` and ensures those values are are not changed when the |chef client| configures the node.
+
+The ``load_current_value`` method may also be used to compare a property value to the desired property, and then apply the desired value as specified by the ``converge_if_changed`` method.
