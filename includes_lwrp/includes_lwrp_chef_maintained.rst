@@ -22,10 +22,6 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - |cookbook name chef_handler|
    * - `cron <https://github.com/chef-cookbooks/cron>`_
      - Use to install cron and start the crond service.
-   * - `daemontools <https://github.com/chef-cookbooks/daemontools>`_
-     - The |cookbook daemontools| cookbook is used to install and configure |daemontools| so that it can be used to manage |unix| services.
-   * - `djbdns <https://github.com/chef-cookbooks/djbdns>`_
-     - The |cookbook djbdns| cookbook is used to install |djbdns| and use it to configure DNS services.
    * - `dmg <https://github.com/chef-cookbooks/dmg>`_
      - The |cookbook dmg| cookbook is used to create a |dmg| package for use with |mac os x|.
    * - `dynect <https://github.com/chef-cookbooks/dynect>`_
@@ -53,9 +49,7 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
    * - `postfix <https://github.com/chef-cookbooks/postfix>`_
      - Use to install and configure postfix for client or outbound relayhost.
    * - `powershell <https://github.com/chef-cookbooks/powershell>`_
-     - Use to run |windows powershell|. See the `powershell_script resource <http://docs.chef.io/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|. 
-   * - `rabbit mq <https://github.com/chef-cookbooks/rabbitmq>`_
-     - The |cookbook rabbitmq| cookbook is used to install and configure |rabbitmq|.
+     - Use to run |windows powershell|. See the `powershell_script resource <http://docs.chef.io/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|.
    * - `squid <https://github.com/chef-cookbooks/squid>`_
      - Use to configure squid as a caching proxy.
    * - `sudo <https://github.com/chef-cookbooks/sudo>`_
