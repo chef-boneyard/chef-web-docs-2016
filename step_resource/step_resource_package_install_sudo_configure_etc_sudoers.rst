@@ -4,7 +4,7 @@ The following example shows how to install |sudo cmd| and then configure the ``/
 
 .. code-block:: ruby
 
-   #  the following code sample comes from the ``default`` recipe in the ``sudo`` cookbook: https://github.com/opscode-cookbooks/sudo
+   #  the following code sample comes from the ``default`` recipe in the ``sudo`` cookbook: https://github.com/chef-cookbooks/sudo
 
    package 'sudo' do
      action :install

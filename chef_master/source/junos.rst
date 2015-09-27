@@ -16,7 +16,7 @@ The |cookbook netdev| cookbook is used to install and configure network interfac
 
 The |cookbook netdev| cookbook contains the following custom resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
 
-.. note:: These custom resources are part of the |cookbook netdev| cookbook (https://github.com/opscode-cookbooks/netdev).
+.. note:: These custom resources are part of the |cookbook netdev| cookbook (https://github.com/chef-cookbooks/netdev).
 
 netdev_interface
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

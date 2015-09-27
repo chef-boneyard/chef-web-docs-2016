@@ -33,7 +33,7 @@ Sometimes it is necessary to ensure that an operating system's package cache is 
      e.run_action(:run)
    end
 
-where ``e.run_action(:run)`` tells the |chef client| to run the ``apt-get update`` command during the compile phase. This example can be found in the ``default.rb`` recipe of the `apt cookbook <https://github.com/opscode-cookbooks/apt>`_ that is maintained by |company_name|.
+where ``e.run_action(:run)`` tells the |chef client| to run the ``apt-get update`` command during the compile phase. This example can be found in the ``default.rb`` recipe of the `apt cookbook <https://github.com/chef-cookbooks/apt>`_ that is maintained by |company_name|.
 
 **Use the chef_gem resource for Ruby gems**
 

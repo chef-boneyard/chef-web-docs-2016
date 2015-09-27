@@ -3,7 +3,7 @@
 
 If a custom resource was created in the ``/libraries`` directory of a cookbook that also uses a core resource from the |chef client| within the custom resource, the base class that is associated with that custom resource must be updated. In previous versions of the |chef client|, the ``Chef::Provider`` class was all that was necessary because the |dsl recipe| was included in the ``Chef::Provider`` base class. 
 
-For example, the ``lvm_logical_volume`` custom resource from the `lvm cookbook <https://github.com/opscode-cookbooks/lvm/blob/master/libraries/provider_lvm_logical_volume.rb>`_ uses the |resource directory| and |resource mount| resources:
+For example, the ``lvm_logical_volume`` custom resource from the `lvm cookbook <https://github.com/chef-cookbooks/lvm/blob/master/libraries/provider_lvm_logical_volume.rb>`_ uses the |resource directory| and |resource mount| resources:
 
 .. code-block:: ruby
 

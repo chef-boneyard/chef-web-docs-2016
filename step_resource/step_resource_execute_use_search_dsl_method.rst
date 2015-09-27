@@ -4,7 +4,7 @@ The following example shows how to use the ``search`` method in the |dsl recipe|
 
 .. code-block:: ruby
 
-   #  the following code sample comes from the openvpn cookbook: https://github.com/opscode-cookbooks/openvpn
+   #  the following code sample comes from the openvpn cookbook: https://github.com/chef-cookbooks/openvpn
 
    search("users", "*:*") do |u|
      execute "generate-openvpn-#{u['id']}" do

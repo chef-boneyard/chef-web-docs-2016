@@ -40,4 +40,4 @@ The following example shows a series of fatal ``Chef::Log`` entries:
      raise
    end
 
-The full recipe is the ``upgrade.rb`` recipe of the `chef-splunk cookbook <https://github.com/opscode-cookbooks/chef-splunk/>`_ that is maintained by |company_name|.
+The full recipe is the ``upgrade.rb`` recipe of the `chef-splunk cookbook <https://github.com/chef-cookbooks/chef-splunk/>`_ that is maintained by |company_name|.

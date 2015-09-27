@@ -14,7 +14,7 @@ Resources
 =====================================================
 .. include:: ../../includes_resources/includes_resource_delivery_truck_deploy.rst
 
-.. warning:: This resource is only available from the ``delivery-truck`` cookbook: https://github.com/opscode-cookbooks/delivery-truck.
+.. warning:: This resource is only available from the ``delivery-truck`` cookbook: https://github.com/chef-cookbooks/delivery-truck.
 
 Syntax
 -----------------------------------------------------
@@ -44,7 +44,7 @@ Recipe DSL Helpers
 =====================================================
 .. include:: ../../includes_dsl_delivery/includes_dsl_delivery.rst
 
-.. warning:: This resource is only available from the ``delivery-truck`` cookbook: https://github.com/opscode-cookbooks/delivery-truck.
+.. warning:: This resource is only available from the ``delivery-truck`` cookbook: https://github.com/chef-cookbooks/delivery-truck.
 
 Helpers
 -----------------------------------------------------

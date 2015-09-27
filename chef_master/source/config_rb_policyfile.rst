@@ -31,6 +31,6 @@ For example:
    default_source :community
    cookbook "policyfile_demo", path: "cookbooks/policyfile_demo"
    cookbook "jenkins", "~> 2.1"
-   cookbook "mysql", github: "opscode-cookbooks/mysql", branch: "master"
+   cookbook "mysql", github: "chef-cookbooks/mysql", branch: "master"
 
 For more information about policy and the configuration file used to manage and maintain policy---policyfile.rb---please see this topic on Github: https://github.com/chef/chef-dk/blob/master/POLICYFILE_README.md.
