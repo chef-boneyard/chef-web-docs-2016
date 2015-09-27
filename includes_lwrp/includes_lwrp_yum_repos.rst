@@ -9,23 +9,23 @@ The following cookbooks should be used in conjunction with the |cookbook yum| co
 
    * - Cookbook
      - Description
-   * - `yum-amazon <https://github.com/opscode-cookbooks/yum-amazon>`_
+   * - `yum-amazon <https://github.com/chef-cookbooks/yum-amazon>`_
      - Optional for |amazon linux| repositories. Use the |cookbook yum_amazon| cookbook to manage the following repositories: ``amzn-main``, ``amzn-main-debuginfo``, ``amzn-nosrc``, ``amzn-updates``, ``amzn-updates-debuginfo``, ``amzn-preview``, and ``amzn-preview-debuginfo``.
-   * - `yum-centos <https://github.com/opscode-cookbooks/yum-centos>`_
+   * - `yum-centos <https://github.com/chef-cookbooks/yum-centos>`_
      - Optional for |centos| repositories. Use the |cookbook yum_centos| cookbook to manage the following repositories: ``base``, ``updates``, ``extras``, ``centosplus``, and ``contrib``.
-   * - `yum-elrepo <https://github.com/opscode-cookbooks/yum-elrepo>`_
+   * - `yum-elrepo <https://github.com/chef-cookbooks/yum-elrepo>`_
      - Required for |elrepo| repositories. Use the |cookbook yum_elrepo| cookbook to manage the following repositories: ``elrepo``.
-   * - `yum-epel <https://github.com/opscode-cookbooks/yum-epel>`_
+   * - `yum-epel <https://github.com/chef-cookbooks/yum-epel>`_
      - Required for |fedora| |fedora epel| repositories. Use the |cookbook yum_epel| cookbook to manage the following repositories: ``epel``, ``epel-debuginfo``, ``epel-source``, ``epel-testing``, ``epel-testing-debuginfo``, and ``epel-testing-source``.
-   * - `yum-erlang_solutions <https://github.com/opscode-cookbooks/yum-erlang_solutions>`_
+   * - `yum-erlang_solutions <https://github.com/chef-cookbooks/yum-erlang_solutions>`_
      - Required for |erlang solutions| repositories. Use the |cookbook yum_erlang| cookbook to manage the following repositories: ``erlang_solutions``.
-   * - `yum-fedora <https://github.com/opscode-cookbooks/yum-fedora>`_
+   * - `yum-fedora <https://github.com/chef-cookbooks/yum-fedora>`_
      - Optional for |fedora| repositories. Use the |cookbook yum_fedora| cookbook to manage the following repositories: ``fedora``, ``fedora-debuginfo``, ``fedora-source``, ``updates``, ``updates-debuginfo``, ``updates-source``, ``updates-testing``, ``updates-testing-debuginfo``, and ``updates-testing-source``.
-   * - `yum-ius <https://github.com/opscode-cookbooks/yum-ius>`_
+   * - `yum-ius <https://github.com/chef-cookbooks/yum-ius>`_
      - Required for |redhat ius| repositories. Use the |cookbook yum_ius| cookbook to manage the following repositories:  ``ius``, ``ius-debuginfo``, ``ius-source``, ``ius-archive``, ``ius-archive-debuginfo``, ``ius-archive-source``, ``ius-testing``, ``ius-testing-debuginfo``, ``ius-testing-source``, ``ius-dev``, ``ius-dev-debuginfo``, ``ius-dev-source``.
-   * - `yum-percona <https://github.com/opscode-cookbooks/yum-percona>`_
+   * - `yum-percona <https://github.com/chef-cookbooks/yum-percona>`_
      - Required for |percona| repositories. Use the |cookbook yum_percona| cookbook to manage the following repositories: ``percona``.
-   * - `yum-pgdg <https://github.com/opscode-cookbooks/yum-pgdg>`_
+   * - `yum-pgdg <https://github.com/chef-cookbooks/yum-pgdg>`_
      - Required for |postgresql| repositories. Use the |cookbook yum_pgdg| cookbook to manage the following repositories: ``base``, ``updates``, ``extras``, ``centosplus``, and ``contrib``.
-   * - `yum-repoforge <https://github.com/opscode-cookbooks/yum-repoforge>`_
+   * - `yum-repoforge <https://github.com/chef-cookbooks/yum-repoforge>`_
      - Required for |repoforge| repositories. Use the |cookbook yum_repoforge| cookbook to manage the following repositories: ``rpmforge``, ``rpmforge-extras``, and ``rpmforge-testing``.

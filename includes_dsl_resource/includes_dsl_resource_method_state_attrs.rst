@@ -12,7 +12,7 @@ The syntax for the ``state_attrs`` method is as follows:
                :property, 
                :property
 
-where ``:property`` is a comma-delimited list of properties. For example, the ``ebs_volume`` resource (available from the `aws <https://github.com/opscode-cookbooks/aws>`_ cookbook) uses the ``state_attrs`` method to tell the |reporting| server to track the following properties:
+where ``:property`` is a comma-delimited list of properties. For example, the ``ebs_volume`` resource (available from the `aws <https://github.com/chef-cookbooks/aws>`_ cookbook) uses the ``state_attrs`` method to tell the |reporting| server to track the following properties:
 
 .. code-block:: ruby
 

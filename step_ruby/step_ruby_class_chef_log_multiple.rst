@@ -16,4 +16,4 @@ The following example shows using multiple ``Chef::Log`` entry types:
 
    ...
 
-The full recipe is in the ``ebs_volume.rb`` recipe of the `database cookbook <https://github.com/opscode-cookbooks/database/>`_ that is maintained by |company_name|.
+The full recipe is in the ``ebs_volume.rb`` recipe of the `database cookbook <https://github.com/chef-cookbooks/database/>`_ that is maintained by |company_name|.

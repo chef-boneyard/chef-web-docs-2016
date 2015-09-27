@@ -10,7 +10,7 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
 
    # the following code sample is similar to the ``upload_progress_module``
    # recipe in the ``nginx`` cookbook:
-   # https://github.com/opscode-cookbooks/nginx
+   # https://github.com/chef-cookbooks/nginx
 
    src_filename = "foo123-nginx-module-v#{
      node['nginx']['foo123']['version']

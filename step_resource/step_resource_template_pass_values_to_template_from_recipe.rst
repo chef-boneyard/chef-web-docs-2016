@@ -26,4 +26,4 @@ The recipe then uses the ``variables`` attribute to find the values for ``splunk
      notifies :restart, 'service[splunk]'
    end
 
-This example can be found in the ``client.rb`` recipe and the ``outputs.conf.erb`` template files that are located in the `chef-splunk cookbook <https://github.com/opscode-cookbooks/chef-splunk/>`_  that is maintained by |company_name|.
+This example can be found in the ``client.rb`` recipe and the ``outputs.conf.erb`` template files that are located in the `chef-splunk cookbook <https://github.com/chef-cookbooks/chef-splunk/>`_  that is maintained by |company_name|.

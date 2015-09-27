@@ -8,9 +8,9 @@ The |chef client| has specific components that are designed to support unique as
 
 * The |chef client| is `installed on a machine <https://downloads.chef.io/chef-client/windows/#/>`_ running |windows| by using a |microsoft installer package|
 * Six resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource dsc_script|, |resource env|, |resource powershell_script|, |resource registry_key|, and |resource package_windows|
-* A resource named |resource dsc_resource| is in development---available for preview via the https://github.com/opscode-cookbooks/dsc cookbook---that adds the ability to use Powershell DSC resources in Chef!
+* Use the |resource dsc_resource| to use Powershell DSC resources in |chef|!
 * Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
-* Four cookbooks provide application-specific support. For `PowerShell 4.0 <https://github.com/opscode-cookbooks/powershell>`_. For `IIS 7.0/7.5/8.0 <https://github.com/opscode-cookbooks/iis>`_. For `SQL Server <https://github.com/opscode-cookbooks/database>`_. And for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/opscode-cookbooks/windows>`_ 
+* Four cookbooks provide application-specific support. For `PowerShell 4.0 <https://github.com/chef-cookbooks/powershell>`_. For `IIS 7.0/7.5/8.0 <https://github.com/chef-cookbooks/iis>`_. For `SQL Server <https://github.com/chef-cookbooks/database>`_. And for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/chef-cookbooks/windows>`_ 
 * Support for both :i386 and :x86_64 architectures
 * Six helpers are present in the |dsl recipe| to help verify the registry during a |chef client| run---``registry_data_exists?``, ``registry_get_subkeys``, ``registry_get_values``, ``registry_has_subkeys?``, ``registry_key_exists?``, and ``registry_value_exists?``---these helpers ensure the |resource powershell_script| resource is idempotent
 * Two community provisioners for |kitchen|: `kitchen-dsc <https://github.com/smurawski/kitchen-dsc>`_ and `kitchen-pester <https://github.com/smurawski/kitchen-pester>`_
@@ -811,11 +811,11 @@ Some of the most popular |company_name|-maintained cookbooks that contain lightw
 
    * - Cookbook
      - Description
-   * - `iis <https://github.com/opscode-cookbooks/iis>`_
+   * - `iis <https://github.com/chef-cookbooks/iis>`_
      - The |cookbook iis| cookbook is used to install and configure |microsoft iis|.
-   * - `webpi <https://github.com/opscode-cookbooks/webpi>`_
+   * - `webpi <https://github.com/chef-cookbooks/webpi>`_
      - The |cookbook webpi| cookbook is used to run the |microsoft webpi|.
-   * - `windows <https://github.com/opscode-cookbooks/windows>`_
+   * - `windows <https://github.com/chef-cookbooks/windows>`_
      - The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
 
 |dsl recipe| Methods

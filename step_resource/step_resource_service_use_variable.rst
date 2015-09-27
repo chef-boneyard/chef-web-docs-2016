@@ -5,7 +5,7 @@ The following example shows how to install the |crond app| application using two
 .. code-block:: ruby
 
    # the following code sample comes from the ``cron`` cookbook:
-   # https://github.com/opscode-cookbooks/cron
+   # https://github.com/chef-cookbooks/cron
 
    cron_package = case node['platform']
      when 'redhat', 'centos', 'scientific', 'fedora', 'amazon'
