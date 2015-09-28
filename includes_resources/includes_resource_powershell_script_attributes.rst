@@ -95,7 +95,3 @@ This resource has the following properties:
      - **Ruby Types:** Integer, Float
 
        Inherited from |resource execute| resource. |timeout command| Default value: ``3600``.
-   * - ``user``
-     - **Ruby Types:** String, Integer
-
-       Inherited from |resource execute| resource. |user command|
