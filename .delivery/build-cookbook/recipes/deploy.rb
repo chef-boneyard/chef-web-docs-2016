@@ -36,6 +36,7 @@ end
 execute "upload the site" do
   command "aws s3 sync . s3://#{bucket_name} --acl public-read --delete"
   cwd File.join(node['delivery_builder']['repo'], 'build')
+  retries 3
 end
 
 ruby_block 'build redirects' do
@@ -55,6 +56,7 @@ ruby_block 'build redirects' do
       puts "#{r} -> #{redirects[r]}"
     end
   end
+  retries 3
 end
 
 
