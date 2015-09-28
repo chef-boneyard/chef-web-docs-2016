@@ -21,7 +21,7 @@ Key Rotation
 -----------------------------------------------------
 The ``knife user`` and ``knife client`` subcommands support key rotation. Use the ``create``, ``delete``, ``edit``, ``list``, and ``show`` subcommands to manage keys for users and clients, such as creating multiple expiring keys for a single user and also for basic key management. See http://docs.chef.io/knife_user.html and http://docs.chef.io/knife_client.html for more information about these subcommands.
 
-``X-Ops-Server-API-Info``
+X-Ops-Server-API-Info
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_info.rst
 

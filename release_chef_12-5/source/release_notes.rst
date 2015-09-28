@@ -63,11 +63,11 @@ Example: Send Email
 .. include:: ../../includes_dsl_handler/includes_dsl_handler_example_email.rst
 
 
-``ps_credential`` Helper
+ps_credential Helper
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_dsc_script_helper_ps_credential.rst
 
-``-json-attributes``, Environments
+--json-attributes, Environments
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
 

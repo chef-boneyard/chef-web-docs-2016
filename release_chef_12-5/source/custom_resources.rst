@@ -15,7 +15,7 @@ Example
 .. include:: ../../includes_custom_resources/includes_custom_resources_syntax_example.rst
 
 
-Scenario: ``website`` Resource
+Scenario: website Resource
 =====================================================
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website.rst
 

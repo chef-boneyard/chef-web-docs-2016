@@ -21,8 +21,8 @@ The following items are new for |chef client| 11.12 and/or are changes from prev
 * **Generate the public/private key pair on a node** The ``local_key_generation`` setting has been added to the |client rb| file. When ``true``, key pairs will be generated on the node and the public key will be sent to the |chef server|.
 * **knife cookbook test and .chefignore files** The ``knife cookbook test`` command will respect the settings in a |chefignore| file.
 * **knife bootstrap -V -V** The |subcommand knife bootstrap| command can set the initial |chef client| run to be logged at the debug level.
-* **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute with the |resource template| and |resource file| resources to ensure that sensitive data is not logged by the |chef client|.
-* **cron resource accepts symbols for weekday attribute** Symbols---``:sunday``, ``:monday``, ``:tuesday``, ``:wednesday``, ``:thursday``, ``:friday``, ``:saturday``---may be used with the ``weekday`` attribute and the |resource cron| resource.
+* **Sensitive property added to common resource properties** Use the ``sensitive`` property with the |resource template| and |resource file| resources to ensure that sensitive data is not logged by the |chef client|.
+* **cron resource accepts symbols for weekday property** Symbols---``:sunday``, ``:monday``, ``:tuesday``, ``:wednesday``, ``:thursday``, ``:friday``, ``:saturday``---may be used with the ``weekday`` property and the |resource cron| resource.
 
 |ohai| 7
 -----------------------------------------------------
@@ -32,7 +32,7 @@ The following items are new for |chef client| 11.12 and/or are changes from prev
 
 .. note:: See the `Ohai 7 documentation <http://docs.chef.io/release/ohai-7/>`_ and `release notes <http://docs.chef.io/release/ohai-7/release_notes.html>`_ for all of the details.
 
-``collect_data`` Method
+collect_data Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai.rst
 
@@ -59,7 +59,7 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
 
-``guard_interpreter``
+guard_interpreter
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter.rst
 
@@ -75,9 +75,9 @@ Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources_common/includes_resources_common_guard_interpreter_example_default.rst
 
-|resource powershell_script| Attributes
+|resource powershell_script| Property
 -----------------------------------------------------
-The following attributes have been added to the |resource powershell_script| resource:
+The following property has been added to the |resource powershell_script| resource:
 
 .. list-table::
    :widths: 150 450
@@ -90,12 +90,12 @@ The following attributes have been added to the |resource powershell_script| res
 
 .. include:: ../../step_resource/step_resource_powershell_convert_boolean_return.rst
 
-``reboot_pending?`` Method
+reboot_pending? Method
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_reboot_pending.rst
 
 
-``knife ssl check``
+knife ssl check
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_ssl_check.rst
 
@@ -126,7 +126,7 @@ Examples
 
 .. include:: ../../step_knife/step_knife_ssl_check_verify_external_server.rst
 
-``knife ssl fetch``
+knife ssl fetch
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_ssl_fetch.rst
 
@@ -218,9 +218,9 @@ New options have been added to the |chef client|:
    |runlist_items|
 
 
-``sensitive`` Attribute
+sensitive Property
 -----------------------------------------------------
-A new common resource attribute has been added:
+A new common resource property has been added:
 
 .. list-table::
    :widths: 200 300

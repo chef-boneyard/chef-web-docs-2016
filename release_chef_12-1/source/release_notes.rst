@@ -35,7 +35,7 @@ The Audit Run
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef_client/includes_chef_client_audit_mode_run.rst
 
-``control``
+control
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_controls.rst
 
@@ -90,7 +90,7 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_permissions.rst
 
-``control_group``
+control_group
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
 
@@ -115,7 +115,7 @@ Validatorless Bootstrap
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_bootstrap_no_validator.rst
 
-``knife bootstrap`` Options
+knife bootstrap Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Use the following options to specify items that are stored in |chef vault|:
 
@@ -132,7 +132,7 @@ New Resource Attributes
 -----------------------------------------------------
 The following attributes are new for |chef client| 12.1.
 
-``verify``
+verify
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The ``verify`` attribute may be used with the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources.
 
@@ -148,7 +148,7 @@ The ``verify`` attribute may be used with the |resource cookbook_file|, |resourc
        .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
 
 
-``imports``
+imports
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attribute is new for the |resource dsc_script| resource:
 
@@ -184,7 +184,7 @@ The following attribute is new for the |resource dsc_script| resource:
           imports "cRDPEnabled", "PSHOrg_cRDPEnabled"
 
 
-``compile_time``
+compile_time
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attribute is new for the |resource chef_gem| resource:
 
@@ -203,7 +203,7 @@ The following attribute is new for the |resource chef_gem| resource:
             compile_time false if respond_to?(:compile_time)
           end
 
-``run_as_``
+run_as_
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following attributes are new for the |resource service_windows| resource:
 

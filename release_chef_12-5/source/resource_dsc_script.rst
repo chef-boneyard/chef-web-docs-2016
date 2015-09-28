@@ -31,7 +31,7 @@ Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_dsc_script_attributes.rst
 
-``ps_credential`` Helper
+ps_credential Helper
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_dsc_script_helper_ps_credential.rst
 

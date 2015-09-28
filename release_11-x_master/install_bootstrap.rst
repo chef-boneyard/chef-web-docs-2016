@@ -7,7 +7,7 @@ A node is any physical, virtual, or cloud machine that is configured to be maint
 * Use the |subcommand knife bootstrap| subcommand to `bootstrap a node using the omnibus installer <http://docs.chef.io/essentials_nodes_bootstrap.html>`_
 * Use an unattended install to bootstrap a node from itself, without using |ssh| or |windows remote management|
 
-``knife bootstrap``
+knife bootstrap
 =====================================================
 .. include:: ../../includes_install/includes_install_chef_client.rst
 

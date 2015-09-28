@@ -64,7 +64,7 @@ The |knife rb| file should look similar to the following:
     
    chef_server_url "http://url_for_open_source_chef_server"
 
-Update ``knife.rb``
+Update knife.rb
 =====================================================
 On the workstation from which the migration is being done, add the ``versioned_cookbook`` setting to the |knife rb| file, and then set it to true. This setting ensures that all cookbooks and cookbook versions are downloaded when using the ``knife download`` subcommand. The |knife rb| file should look similar to:
 
@@ -80,7 +80,7 @@ On the workstation from which the migration is being done, add the ``versioned_c
    
 
 
-Run ``knife download``
+Run knife download
 =====================================================
 To download the data (including run-lists and node attributes) that is being used with the open source |chef server|, it must be exported from the open source |chef server| so that it can be uploaded to the hosted |chef server oec| server. Use the ``knife download`` subcommand to perform this task.
 
@@ -92,7 +92,7 @@ To download the entire |chef repo| from the |chef server|, browse to the top lev
 
 This command will create subdirectories for clients, cookbooks, data bags, environments, roles, nodes, and users. These can be deleted and modified before uploading to the server.
 
-Update ``chef_server_url``
+Update chef_server_url
 =====================================================
 On the workstation from which the migration is being done, update the value for ``chef_server_url`` to point to the hosted |chef server oec| URL:
 
@@ -116,7 +116,7 @@ On the workstation from which the migration is being done, update the value for 
    chef_server_url "https://api.opscode.com"
 
 
-Run ``knife upload``
+Run knife upload
 =====================================================
 To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the hosted |chef server oec| server. Use the ``knife upload`` subcommand to perform this task.
 
