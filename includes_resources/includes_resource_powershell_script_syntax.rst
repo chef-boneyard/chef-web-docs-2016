@@ -35,7 +35,6 @@ The full syntax for all of the properties that are available to the |resource po
      returns                    Integer, Array
      subscribes                 # see description
      timeout                    Integer, Float
-     user                       String, Integer
      action                     Symbol # defaults to :run if not specified
    end
 
@@ -45,4 +44,4 @@ where
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run and ``cwd`` is the location from which the command is run
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``architecture``, ``code``, ``command``, ``convert_boolean_return``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``guard_interpreter``, ``interpreter``, ``provider``, ``returns``, ``timeout``, and ``user`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``architecture``, ``code``, ``command``, ``convert_boolean_return``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``guard_interpreter``, ``interpreter``, ``provider``, ``returns``, and ``timeout`` are properties of this resource, with the |ruby| type shown. |see attributes|
