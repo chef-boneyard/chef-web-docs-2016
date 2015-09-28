@@ -9,9 +9,9 @@ aws_creds = encrypted_data_bag_item_for_environment('cia-creds','chef-secure')
 fastly_creds = encrypted_data_bag_item_for_environment('cia-creds','fastly')
 
 if ['union', 'rehearsal', 'delivered'].include?(node['delivery']['change']['stage'])
-  slack_channels = slack_creds['channels'].push('#operations')
+  slack_channels = slack_creds['channels'].push('#operations').push('#chef-docs')
 else
-  slack_channels = slack_creds['channels']
+  slack_channels = slack_creds['channels'].push('#chef-docs')
 end
 
 site_name = 'docs'
