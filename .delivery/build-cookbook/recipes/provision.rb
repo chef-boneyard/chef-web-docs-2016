@@ -4,26 +4,11 @@ include_recipe 'delivery-truck::provision'
 
 Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 
-slack_creds = encrypted_data_bag_item_for_environment('cia-creds','slack')
 aws_creds = encrypted_data_bag_item_for_environment('cia-creds','chef-secure')
 fastly_creds = encrypted_data_bag_item_for_environment('cia-creds','fastly')
 
-if ['union', 'rehearsal', 'delivered'].include?(node['delivery']['change']['stage'])
-  slack_channels = slack_creds['channels'].push('#operations').push('#chef-docs')
-else
-  slack_channels = slack_creds['channels'].push('#chef-docs')
-end
-
 site_name = 'docs'
 domain_name = 'chef.io'
-
-chef_slack_notify 'Notify Slack' do
-  channels slack_channels
-  webhook_url slack_creds['webhook_url']
-  username slack_creds['username']
-  message "*[#{node['delivery']['change']['project']}] (#{node['delivery']['change']['stage']}:#{node['delivery']['change']['phase']})* Provisioning Begun"
-  sensitive true
-end
 
 ENV['AWS_CONFIG_FILE'] = File.join(node['delivery']['workspace']['root'], 'aws_config')
 
