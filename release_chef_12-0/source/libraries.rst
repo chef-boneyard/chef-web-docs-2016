@@ -36,7 +36,7 @@ Loop Over a Record
 -----------------------------------------------------
 .. include:: ../../includes_libraries/includes_libraries_example_loop_over_records.rst
 
-``Chef::Provider``
+Chef::Provider
 =====================================================
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
 

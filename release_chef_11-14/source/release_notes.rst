@@ -15,7 +15,7 @@ The following items are new for |chef client| 11.14 and/or are changes from prev
 * **New client.rb settings** The following settings have been added to the |client rb| file: ``automatic_attribute_whitelist``, ``cookbook_sync_threads``, ``default_attribute_whitelist``, ``ftp_proxy``, ``ftp_proxy_pass``, ``ftp_proxy_user``, ``normal_attribute_whitelist``, ``override_attribute_whitelist``, and ``yum_lock_timeout``.
 * **New --run-lock-timeout Setting** New command line setting for |chef client| and |chef solo|.
 * **Automatic proxy configuration** Use ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` in the |client rb| file to have the |chef client| automatically configure the ``ENV`` environment variable with proxy settings.
-* **Sensitive attribute added to common resource attributes** Use the ``sensitive`` attribute with **any** resource to ensure that sensitive data is not logged by the |chef client|.
+* **Sensitive property added to common resource properties** Use the ``sensitive`` property with **any** resource to ensure that sensitive data is not logged by the |chef client|.
 * **chef-zero port ranges** The ``chef_zero.port`` setting (in the |client rb| file) and the ``--chef-zero-port`` option from the command line for the |chef client| now supports using a range of ports. For example ``chef_zero.port ="10,20,30"`` or ``--chef-zero-port 10000-20000``.
 
 |subcommand knife serve|
@@ -100,9 +100,9 @@ Automatic Proxy Config
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_client_automatic_proxy.rst
 
-sensitive Attribute
+sensitive Property
 -----------------------------------------------------
-The following attribute may now be used with the |resource execute| resource (prior releases only supported using this attribute with the |resource template| and |resource file| resources):
+The following property may now be used with the |resource execute| resource (prior releases only supported using this property with the |resource template| and |resource file| resources):
 
 .. list-table::
    :widths: 60 420

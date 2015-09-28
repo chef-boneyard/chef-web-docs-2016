@@ -12,7 +12,7 @@ The following items are new for |chef server oec| 11.2 and/or are changes from p
 * **oc-id service** The identify service enables |supermarket| authentication for the |chef server|.
 * **dark_launch defaults to true** The ``dark_launch`` setting defaults to ``true``, which means that it no longer needs to be manually configured.
 
-``gather-logs`` subcommand
+gather-logs subcommand
 -----------------------------------------------------
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_gather_logs.rst
 

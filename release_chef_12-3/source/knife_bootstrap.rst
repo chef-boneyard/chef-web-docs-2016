@@ -28,7 +28,7 @@ Validatorless Bootstrap
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_bootstrap_no_validator.rst
 
-``knife bootstrap`` Options
+knife bootstrap Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Use the following options with a validatorless bootstrap to specify items that are stored in |chef vault|:
 

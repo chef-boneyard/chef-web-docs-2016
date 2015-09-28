@@ -184,7 +184,7 @@ The |resource cookbook_file| resource was updated to be fully-based on the |reso
    * - ``source``
      - |source cookbook_file| Can be used to distribute specific files to specific platforms. Default value: the ``name`` of the resource block.
 
-Updated Behavior for ``mode`` Attribute
+Updated Behavior for mode Attribute
 -----------------------------------------------------
 The default behavior for the ``mode`` attribute has been updated. For the |resource directory| resource: 
 

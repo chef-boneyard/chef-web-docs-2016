@@ -368,7 +368,7 @@ If you prefer one type of output over the other, you can force the |chef client|
 
 .. note:: In previous versions, bootstrapping templates would generally configure the log level to ``info`` in the |client rb| file. You may wish to change this to ``auto`` or remove the setting from your config file entirely.
 
-``add_formatter`` setting
+add_formatter setting
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The ``add_formatter`` setting can be added to the client.rb file to specify a 3rd-party formatter:
@@ -377,7 +377,9 @@ The ``add_formatter`` setting can be added to the client.rb file to specify a 3r
 
    add_formatter :name_of_3rd_party_formatter
 
-For example::
+For example:
+
+.. code-block:: ruby
 
    add_formatter :nyan
 
@@ -417,7 +419,7 @@ Partial Support in Templates
 -----------------------------------------------------
 .. include:: ../../includes_template/includes_template_partials.rst
 
-``render`` Method
+render Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_template/includes_template_partials_render_method.rst
  

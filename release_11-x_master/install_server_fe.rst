@@ -208,8 +208,6 @@ Add |private chef rb|
 -----------------------------------------------------
 Copy the |private chef rb| file to |path chef server enterprise chef server rb| on the bootstrap server.
 
-Install the |chef server_title|
------------------------------------------------------
 
 Configure 
 -----------------------------------------------------

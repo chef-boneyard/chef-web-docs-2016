@@ -26,7 +26,7 @@ When using the |resource remote_file| resource, the location of a source file ma
 
    source "\\\\path\\to\\img\\sketch.png"
 
-``Import-Module chef``
+Import-Module chef
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_common_windows_quotes_module.rst
 
@@ -76,7 +76,7 @@ Examples:
 
 
 
-``knife client key``
+knife client key
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client.rst
 
@@ -133,7 +133,7 @@ Syntax
 .. include:: ../../includes_knife/includes_knife_client_key_show_syntax.rst
 
 
-``knife user key``
+knife user key
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user.rst
 

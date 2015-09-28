@@ -63,7 +63,7 @@ The command line tool for the |chef server| has been renamed from |private chef 
 
 In addition, the ``install`` subcommand is added, plus two new subcommand groupings---``org-*`` and ``user-*``---have been added for managing organizations and users. See below for more information about these new subcommands.
 
-``install`` Command
+install Command
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install.rst
 
@@ -83,11 +83,11 @@ In addition, the ``install`` subcommand is added, plus two new subcommand groupi
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_install_features_manual.rst
 
-``gather-logs`` Command
+gather-logs Command
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_gather_logs.rst
 
-``user-*`` Commands
+user-* Commands
 -----------------------------------------------------
 The following subcommands can be used to manage users:
 
@@ -177,7 +177,7 @@ user-show
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst
 
-``org-*`` Commands
+org-* Commands
 -----------------------------------------------------
 The following subcommands can be used to manage organizations:
 

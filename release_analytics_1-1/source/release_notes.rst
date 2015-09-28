@@ -113,7 +113,7 @@ The Audit Run
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef_client/includes_chef_client_audit_mode_run.rst
 
-``control``
+control
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_controls.rst
 
@@ -168,7 +168,7 @@ Examples
 
 .. include:: ../../step_dsl_recipe/step_dsl_recipe_control_matcher_file_permissions.rst
 
-``control_group``
+control_group
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_control_group.rst
 

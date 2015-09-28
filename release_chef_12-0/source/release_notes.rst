@@ -257,7 +257,7 @@ Example
 .. include:: ../../step_resource/step_resource_service_windows_manual_start.rst
 
 
-``knife bootstrap`` Settings
+knife bootstrap Settings
 -----------------------------------------------------
 The following options are new:
 
@@ -277,7 +277,7 @@ The following options are new:
    .. note:: The ``--distro`` and ``--template-file`` options are deprecated.
 
 
-``knife status`` Settings
+knife status Settings
 -----------------------------------------------------
 The following options are new:
 
@@ -288,7 +288,7 @@ The following options are new:
    |medium|
 
 
-``fsck_device`` Property
+fsck_device Property
 -----------------------------------------------------
 The following property is new for the |resource mount| resource:
 
@@ -335,19 +335,19 @@ http_request Actions
 -----------------------------------------------------
 The following methods have been added to the |dsl recipe|: ``shell_out``, ``shell_out!``, and ``shell_out_with_systems_locale``.
 
-``shell_out``
+shell_out
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out.rst
 
-``shell_out!``
+shell_out!
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out_bang.rst
 
-``shell_out_with_systems_locale``
+shell_out_with_systems_locale
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_shell_out_with_systems_locale.rst
 
-``value_for_platform``
+value_for_platform
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The ``value_for_platform`` helper may use version constraints, such as ``>=`` and ``~>`` to help resolve situations where version numbers look like ``7.0.<buildnumber>``. For example:
 
@@ -481,11 +481,11 @@ Attribute Behavior Changes
 -----------------------------------------------------
 Please `see RFC-23 for important changes to attributes <https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_ in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. In addition, ``node.default!`` is now ``node.force_default`` and ``node.override!`` is now ``node.force_override``.
 
-``node.force_default``
+node.force_default
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_type_force_default_changes.rst
 
-``node.force_override``
+node.force_override
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_type_force_override_changes.rst
 
