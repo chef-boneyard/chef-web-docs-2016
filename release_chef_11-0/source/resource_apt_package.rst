@@ -4,8 +4,6 @@
 apt_package
 =====================================================
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_apt.rst
 
 .. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst

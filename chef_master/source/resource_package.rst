@@ -2,8 +2,6 @@
 package
 =====================================================
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package.rst
 
 This resource is the base resource for several other resources used for package management on specific platforms. While it is possible to use each of these specific resources, it is recommended to use the |resource package| resource as often as possible. For more information about specific resources for specific platforms, see the following topics:

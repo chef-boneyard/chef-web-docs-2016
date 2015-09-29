@@ -4,8 +4,6 @@
 script
 =====================================================
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_script.rst
 
 This resource is the base resource for several other resources used for scripting on specific platforms. For more information about specific resources for specific platforms, see the following topics:

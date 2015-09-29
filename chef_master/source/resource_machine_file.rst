@@ -2,9 +2,6 @@
 machine_file
 =====================================================
 
-
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_machine_file.rst
 
 .. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst

@@ -4,8 +4,6 @@
 remote_file
 =====================================================
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_remote_file.rst
 
 .. note:: .. include:: ../../includes_notes/includes_notes_remote_file_resource_fetch_from_files_directory.rst
