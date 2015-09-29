@@ -105,4 +105,9 @@ $(document).ready(function() {
       $(".document").css("min-height", navDocsItemsHeight);
     }
   });
+
+  // Auto focus Search Bar on Large Screens
+  if (largeScreen) {
+    $("#docs-search").focus();
+  }
 });
