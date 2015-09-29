@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following table describes the events that occur during the |chef client| run. Each of these events may be referenced using the ``on`` method in the |dsl handler|.
+The following table describes the events that may occur during a |chef client| run. Each of these events may be referenced in an ``on`` method block by declaring it as the event type.
 
 .. list-table::
    :widths: 100 420
@@ -35,7 +35,7 @@ The following table describes the events that occur during the |chef client| run
    * - ``:run_list_expand_failed``
      - The |chef client| failed to expand the run-list.
    * - ``:node_load_completed``
-     - The |chef client| successfully loaded node data from the |chef server|. Default and override attributes for roles are computed, but not yet applied. Normal attributes have been added.
+     - The |chef client| successfully loaded node data from the |chef server|. Default and override attributes for roles have been computed, but are not yet applied.
    * - ``:policyfile_loaded``
      - The policy file was loaded.
    * - ``:cookbook_resolution_start``
@@ -65,7 +65,7 @@ The following table describes the events that occur during the |chef client| run
    * - ``:library_file_loaded``
      - The |chef client| has loaded the named library file.
    * - ``:library_file_load_failed``
-     - The |chef client| is unable to load the named library file.
+     - The |chef client| was unable to load the named library file.
    * - ``:library_load_complete``
      - The |chef client| has finished loading library files.
    * - ``:lwrp_load_start``
@@ -73,7 +73,7 @@ The following table describes the events that occur during the |chef client| run
    * - ``:lwrp_file_loaded``
      - The |chef client| has loaded the named custom resource.
    * - ``:lwrp_file_load_failed``
-     - The |chef client| is unable to load the named custom resource.
+     - The |chef client| was unable to load the named custom resource.
    * - ``:lwrp_load_complete``
      - The |chef client| has finished loading custom resources.
    * - ``:attribute_load_start``
@@ -81,7 +81,7 @@ The following table describes the events that occur during the |chef client| run
    * - ``:attribute_file_loaded``
      - The |chef client| has loaded the named attribute file.
    * - ``:attribute_file_load_failed``
-     - The |chef client| is unable to load the named attribute file.
+     - The |chef client| was unable to load the named attribute file.
    * - ``:attribute_load_complete``
      - The |chef client| has finished loading attribute files.
    * - ``:definition_load_start``
@@ -89,7 +89,7 @@ The following table describes the events that occur during the |chef client| run
    * - ``:definition_file_loaded``
      - The |chef client| has loaded the named definition.
    * - ``:definition_file_load_failed``
-     - The |chef client| is unable to load the named definition.
+     - The |chef client| was unable to load the named definition.
    * - ``:definition_load_complete``
      - The |chef client| has finished loading definitions.
    * - ``:recipe_load_start``
@@ -97,23 +97,23 @@ The following table describes the events that occur during the |chef client| run
    * - ``:recipe_file_loaded``
      - The |chef client| has loaded the named recipe.
    * - ``:recipe_file_load_failed``
-     - The |chef client| is unable to load the named recipe.
+     - The |chef client| was unable to load the named recipe.
    * - ``:recipe_not_found``
-     - The |chef client| is unable to find the named recipe.
+     - The |chef client| was unable to find the named recipe.
    * - ``:recipe_load_complete``
      - The |chef client| has finished loading recipes.
    * - ``:converge_start``
-     - The converge phase of the |chef client| run is started.
+     - The |chef client| run converge phase has started.
    * - ``:converge_complete``
-     - The converge phase of the |chef client| run has finished successfully.
+     - The |chef client| run converge phase has finished successfully.
    * - ``:converge_failed``
-     - The converge phase of the |chef client| run has failed.
+     - The |chef client| run converge phase has failed.
    * - ``:audit_phase_start``
-     - The audit phase of the |chef client| run is started.
+     - The |chef client| run audit phase has started.
    * - ``:audit_phase_complete``
-     - The audit phase of the |chef client| run has finished successfully.
+     - The |chef client| run audit phase has finished successfully.
    * - ``:audit_phase_failed``
-     - The audit phase of the |chef client| run has failed.
+     - The |chef client| run audit phase has failed.
    * - ``:control_group_started``
      - The named control group is being processed.
    * - ``:control_example_success``
@@ -127,13 +127,13 @@ The following table describes the events that occur during the |chef client| run
    * - ``:resource_current_state_loaded``
      - A resource's current state was loaded.
    * - ``:resource_current_state_load_bypassed``
-     - A resource's current state was not loaded because the resource does not support why-run mode.
+     - A resource's current state was not loaded because the resource does not support |whyrun| mode.
    * - ``:resource_bypassed``
-     - A resource action was skipped because the resource does not support why-run mode.
+     - A resource action was skipped because the resource does not support |whyrun| mode.
    * - ``:resource_update_applied``
      - A change has been made to a resource. This event occurs for each change made to a resource.
    * - ``:resource_failed_retriable``
-     - A resource action failed, but will be retried.
+     - A resource action failed and will be retried.
    * - ``:resource_failed``
      - A resource action failed and will not be retried.
    * - ``:resource_updated``
@@ -157,7 +157,7 @@ The following table describes the events that occur during the |chef client| run
    * - ``:provider_requirement_failed``
      - An assertion declared by a provider has failed.
    * - ``:whyrun_assumption``
-     - An assertion declared by a provider has failed, but execution is allowed to continue because the |chef client| is running in why-run mode.
+     - An assertion declared by a provider has failed, but execution is allowed to continue because the |chef client| is running in |whyrun| mode.
    * - ``:deprecation``
      - The item is deprecated.
    * - ``:msg``
