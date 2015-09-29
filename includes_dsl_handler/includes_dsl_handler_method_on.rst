@@ -16,7 +16,7 @@ where
 
 * ``Chef.event_handler`` declares a block of code to be processed when the named event occurs during a |chef client| run
 * ``on`` defines the block of code that will tell the |chef client| how to handle the event
-* ``:event_type`` is a valid exception event type, such as ``:run_start``, ``:run_failed``, ``:converge_failed``, ``:resource_failed``, or ``:recipe_not_found``.
+* ``:event_type`` is a valid exception event type, such as ``:run_start``, ``:run_failed``, ``:converge_failed``, ``:resource_failed``, or ``:recipe_not_found``
 * Arbitrary |ruby| code tells the |chef client| how to process the event should it occur
 
 For example:
