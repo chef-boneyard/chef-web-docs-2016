@@ -7,7 +7,7 @@ Use the ``on`` method to associate an event type with the action to take should 
 .. code-block:: ruby
 
    Chef.event_handler do
-     on :event_type do |exception|
+     on :event_type do
        # some Ruby
      end
    end
