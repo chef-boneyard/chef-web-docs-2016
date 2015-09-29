@@ -16,7 +16,6 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **depth property added to deploy resource** The ``depth`` property allows the depth of a |git| repository to be truncated to the specified number of versions.
 * **The knife ssl check subcommand supports SNI*** Support for Server Name Indication (SNI) is added to the |subcommand knife ssl_check| subcommand.
 * **Chef Policy group and name can now be part of the node object** |chef| policy is a beta feature of the |chef client| that will eventually replace roles, environments or manually specifying the run_list. Policy group and name can now be stored as part of the node object rather than in the |client rb| file. A recent version of the |chef server|, such as 12.2.0 or higher, is needed to fully utilize this feature.
-* **New Custom Resource DSL** A new DSL exists to support defining property behaviors within custom resources. Use the ``load_current_value`` method to load property values from a node, and then use the ``converge_if_changed`` method to compare the loaded values to the desired values and to tell the |chef client| how to handle any differences, if they exist.
 * **New Handler DSL** A new DSL exists to make it easier to use events that occur during the |chef client| run from recipes. The ``on`` method is easily associated with events. The action the |chef client| takes as a result of that event (when it occurs) is up to you.
 
 
