@@ -1,4 +1,3 @@
-var largeScreen;
 $(document).ready(function() { 
   // Nav Interactions
   const $navLinks = $(".nav-links.links-main");
@@ -7,6 +6,7 @@ $(document).ready(function() {
   const navBreakpoint = 730; // navBreakpoint should be the same as breakpoint in _nav.scss file
   const navHeight = $(".nav-main").outerHeight();
   var navDocsHeight, navDocsItems, navLinksHeight, windowWidth;
+  var largeScreen;
 
   var removeOpenClass = function(elements) {
     $.each(elements, function(index, value) {
