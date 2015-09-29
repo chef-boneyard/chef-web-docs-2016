@@ -6,8 +6,6 @@ chef_data_bag
 
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_chef_databag.rst
 
 Syntax

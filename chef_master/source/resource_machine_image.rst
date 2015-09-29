@@ -2,9 +2,6 @@
 machine_image
 =====================================================
 
-
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_machine_image.rst
 
 .. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst

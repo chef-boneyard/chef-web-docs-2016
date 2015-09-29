@@ -4,8 +4,6 @@
 subversion
 =====================================================
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_scm_subversion.rst
 
 .. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_use_with_resource_deploy.rst

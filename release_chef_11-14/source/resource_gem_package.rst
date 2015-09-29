@@ -4,8 +4,6 @@
 gem_package
 =====================================================
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. warning:: ../../includes_notes/includes_notes_chef_gem_vs_gem_package.rst
 
 .. include:: ../../includes_resources/includes_resource_package_gem.rst

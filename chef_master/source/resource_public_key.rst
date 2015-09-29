@@ -4,8 +4,6 @@ public_key
 
 .. warning:: .. include:: ../../includes_notes/includes_notes_provisioning.rst
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_public_key.rst
 
 Syntax

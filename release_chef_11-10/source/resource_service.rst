@@ -5,8 +5,6 @@
 service
 =====================================================
 
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_service.rst
 
 Syntax
