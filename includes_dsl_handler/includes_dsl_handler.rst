@@ -2,8 +2,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the |dsl handler| to attach actions to events that occur during a |chef client| run:
+Use the |dsl handler| to attach a callback to an event. If the event occurs during the |chef client| run, the associated callback is executed. For example:
 
-* Send email if a |chef client| run fails
-* Send a notification to a chat application if an audit run fails
-* Aggregate statistics about resources updated during a |chef client| runs to |statsd| 
+* Sending email if a |chef client| run fails
+* Sending a notification to chat application if an audit run fails
+* Aggregating statistics about resources updated during a |chef client| runs to |statsd| 
