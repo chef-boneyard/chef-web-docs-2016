@@ -2,37 +2,44 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``converge_by`` method is a wrapper that is used to tell the |chef client| what do if a resource is run in |whyrun| mode. The syntax for the ``converge_by`` method is:
+The ``converge_by`` method is a wrapper that is used to support |whyrun| mode and must wrap all pure ruby calls which update system state.  All core Chef resources internally use converge_by and support |whyrun| correctly, so they may be used without placing them in a |whyrun| block.  In order for the LWRP provider you are writing to be idempotent, converge_by blocks must be placed within an idempotency check.
 
 .. code-block:: ruby
 
-   converge_by('message')
+   converge_by("message")
 
 where:
 
 * ``converge_by()`` is added to an ``action`` block as a wrapper
-* ``'message'`` is the message that the |chef client| returns when it is run in |whyrun| mode
+* ``'message'`` is the message that the |chef client| returns when the resource runs
 
 Some examples:
 
 .. code-block:: ruby
 
-   converge_by('Create directory #{ @new_resource.path }')
+   unless Dir.exist?(new_resource.path)
+     converge_by("Create directory #{ new_resource.path }") do
+       FileUtils.mkdir new_resource.path
+     end
+   end
 
 .. code-block:: ruby
 
-   converge_by('Create user #{ @new_resource }')
+   if should_create_user?
+     converge_by("Create user #{ new_resource.user }") do
+       shell_out!("adduser #{ new_resource.user }")
+     end
+   end
+
 
 .. code-block:: ruby
 
-   converge_by('attach volume with aws_id=#{vol[:aws_id]} id=#{instance_id} device=#{new_resource.device} and update') do
-
-.. code-block:: ruby
-
-   description = 'create dir #{app_root} and change owner to #{new_resource.owner}'
-   converge_by(description) do
-     FileUtils.mkdir app_root, :mode => new_resource.app_home_mode
-     FileUtils.chown new_resource.owner, new_resource.owner, app_root
+   if should_update_stuff?
+     description = 'create dir #{app_root} and change owner to #{new_resource.owner}'
+     converge_by(description) do
+       FileUtils.mkdir app_root, :mode => new_resource.app_home_mode
+       FileUtils.chown new_resource.owner, new_resource.owner, app_root
+     end
    end
 
 where the last example shows using a variable (``description``) as the ``'message'`` in the ``converge_by`` block.

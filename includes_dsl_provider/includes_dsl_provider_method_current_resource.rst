@@ -2,23 +2,25 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``current_resource`` method is used to represent a resource as it exists on the node at the beginning of the |chef client| run. In other words: what the resource is currently. The |chef client| compares the resource as it exists on the node to the resource that is created during the |chef client| run to determine what steps need to be taken to bring the resource into the desired state. This method is often used as an instance variable (``@current_resource``).
+The ``current_resource`` method is used to represent a resource as it exists on the node at the beginning of the |chef client| run. In other words: what the resource is currently. Your provider should compares the resource as it exists on the node to the new_resource that is created during the |chef client| run to determine what steps need to be taken to bring the resource into the desired state.
 
 For example:
 
 .. code-block:: ruby
 
    action :add do
-     unless @current_resource.exists
-       cmd = "#{appcmd} add app /site.name:\'#{@new_resource.app_name}\'"
-       cmd << " /path:\'#{@new_resource.path}\'"
-       cmd << " /applicationPool:\'#{@new_resource.application_pool}\'" if @new_resource.application_pool
-       cmd << " /physicalPath:\'#{@new_resource.physical_path}\'" if @new_resource.physical_path
-       Chef::Log.debug(cmd)
-       shell_out!(cmd)
-       Chef::Log.info('App created')
+     unless current_resource.exists
+       cmd = "#{appcmd} add app /site.name:\'#{new_resource.app_name}\'"
+       cmd << " /path:\'#{new_resource.path}\'"
+       cmd << " /applicationPool:\'#{new_resource.application_pool}\'" if new_resource.application_pool
+       cmd << " /physicalPath:\'#{new_resource.physical_path}\'" if new_resource.physical_path
+       converge_by("creating App") do
+         Chef::Log.debug(cmd)
+         shell_out!(cmd)
+         Chef::Log.debug('App created')
+       end
      else
-       Chef::Log.debug('#{@new_resource} app already exists - nothing to do')
+       Chef::Log.debug('#{new_resource} app already exists - nothing to do')
      end
    end
 
