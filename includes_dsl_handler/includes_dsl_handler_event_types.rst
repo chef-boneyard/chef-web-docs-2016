@@ -14,10 +14,6 @@ The following table describes the events that may occur during a |chef client| r
      - The start of the |chef client| run.
    * - ``:run_started``
      - The |chef client| run has started.
-   * - ``:run_completed``
-     - The |chef client| run has completed.
-   * - ``:run_failed``
-     - The |chef client| run has failed.
    * - ``:ohai_completed``
      - The |ohai| run has completed.
    * - ``:skipping_registration``
@@ -158,7 +154,7 @@ The following table describes the events that may occur during a |chef client| r
      - An assertion declared by a provider has failed.
    * - ``:whyrun_assumption``
      - An assertion declared by a provider has failed, but execution is allowed to continue because the |chef client| is running in |whyrun| mode.
-   * - ``:deprecation``
-     - The item is deprecated.
-   * - ``:msg``
-     - The event message is uncategorized.
+   * - ``:run_completed``
+     - The |chef client| run has completed.
+   * - ``:run_failed``
+     - The |chef client| run has failed.
