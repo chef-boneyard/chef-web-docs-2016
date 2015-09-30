@@ -10,149 +10,29 @@ Event Handlers
 
     .. note:: Read more about the |dsl handler| at http://docs.chef.io/dsl_handler.html.
 
- .. revealjs:: Scenario: Create a Resource that Manages a Website
+ .. revealjs:: Event Types
 
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website.rst
+    .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_event_types.rst
 
- .. revealjs:: Create a Cookbook
+ .. revealjs:: Scenario: Send Email when the chef-client run fails 
 
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_cookbook.rst
+    .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email.rst
 
- .. revealjs:: Objectives
-    :noheading:
+ .. revealjs:: Tell the chef-client how to send email
 
-    .. image:: ../../images/custom_resources_01.svg
+    .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_library.rst
 
- .. revealjs:: Objectives
+ .. revealjs:: Add the event handler to a recipe
 
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_objectives.rst
+    .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_handler.rst
 
- .. revealjs:: What is needed?
+ .. revealjs:: Test the event handler
 
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_objectives_requirements.rst
+    .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_test.rst
 
- .. revealjs:: Define Properties
-    :noheading:
-
-    .. image:: ../../images/custom_resources_02.svg
-
- .. revealjs:: Define Properties
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_properties.rst
-
- .. revealjs:: Define Properties (continued)
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_properties_add.rst
-
- .. revealjs:: Define Actions
-    :noheading:
-
-    .. image:: ../../images/custom_resources_03.svg
-
- .. revealjs:: Define Actions
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_actions.rst
-
- .. revealjs:: Define Resource
-    :noheading:
-
-    .. image:: ../../images/custom_resources_04.svg
-
- .. revealjs:: Define the Resource
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources.rst
-
- .. revealjs:: package
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_package.rst
-
- .. revealjs:: template, httpd.service
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_service.rst
-
- .. revealjs:: template, httpd.conf
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_conf.rst
-
- .. revealjs:: directory
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_directory.rst
-
- .. revealjs:: service
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_service.rst
-
- .. revealjs:: Create Templates
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates.rst
-
- .. revealjs:: httpd.conf.erb
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_conf.rst
-
- .. revealjs:: Template Variables
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_templates_httpd_conf_erb_variables.rst
-
- .. revealjs:: httpd.service.erb
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_resources_template_httpd_service.rst
-
- .. revealjs:: Final Resource (Part One)
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_final_resource_part1.rst
-
- .. revealjs:: Final Resource (Part Two)
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_final_resource_part2.rst
-
- .. revealjs:: Final Resource (Part Three)
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_final_resource_part3.rst
-
- .. revealjs:: Final Cookbook Directory
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_final_cookbook_directory.rst
-
- .. revealjs:: Recipe
-    :noheading:
-
-    .. image:: ../../images/custom_resources_05.svg
-
- .. revealjs:: Add the Resource to a Recipe
-
-    .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_recipe.rst
-
- .. revealjs:: More Info About Resources
+ .. revealjs:: More Info About Event Handlers
 
     For more information, see:
 
     * |url slides_docs_chef_io|
-    * https://docs.chef.io/custom_resources.html
-
-
-
-
-.. 
-.. Notes for future sections:
-.. 
-.. 1) custom resource names (that don't join cookbook_recipe) by using provides
-.. 2) proper location of the defaut.rb recipe (not in this cookbook!)
-.. 3) Actual test scenarios for Kitchen and otherwise
-.. 
-
-
-.. 
-..  .. revealjs:: Test
-..     :noheading:
-.. 
-..     .. image:: ../../images/custom_resources_06.svg
-.. 
-..  .. revealjs:: Add to Run-List, Run Kitchen
-.. 
-..     Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
-.. 
-..  .. revealjs:: Add to Run-List, Run Chef
-.. 
-..     Now run the recipe in this cookbook on a node that has |redhat enterprise linux| 7 or |centos| 7. |apache| |httpd| should be installed, configured, and started.
-.. 
+    * https://docs.chef.io/dsl_handler.html
