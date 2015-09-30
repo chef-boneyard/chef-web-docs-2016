@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the |dsl handler| to quickly attach actions to events that occur during a |chef client| run, such as:
+Use the |dsl handler| to attach actions to events that occur during a |chef client| run, such as:
 
 * Sending email if a |chef client| run fails
 * Sending a notification to a chat application when an audit run fails
