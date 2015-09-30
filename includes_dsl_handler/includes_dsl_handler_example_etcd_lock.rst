@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following example shows how to use a distributed |etcd| lock to prevent concurrent |chef client| runs on nodes:
+The following example shows how to prevent concurrent |chef client| runs from both holding a lock on |etcd|:
 
 .. code-block:: ruby
 
