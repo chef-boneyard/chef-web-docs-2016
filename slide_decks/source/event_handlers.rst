@@ -8,25 +8,25 @@ Event Handlers
 
     .. include:: ../../includes_dsl_handler/includes_dsl_handler.rst
 
-    .. note:: Read more about the |dsl handler| at http://docs.chef.io/dsl_handler.html.
+    .. note:: Read more about event handlers at http://docs.chef.io/dsl_handler.html.
 
  .. revealjs:: Event Types
 
     .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_event_types.rst
 
- .. revealjs:: Scenario: Send Email when the chef-client run fails 
+ .. revealjs:: Scenario: Send Email if the chef-client Run Fails 
 
     .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email.rst
 
- .. revealjs:: Tell the chef-client how to send email
+ .. revealjs:: Send Email
 
     .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_library.rst
 
- .. revealjs:: Add the event handler to a recipe
+ .. revealjs:: Add the Event Handler to a Recipe
 
     .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_handler.rst
 
- .. revealjs:: Test the event handler
+ .. revealjs:: Test the Event Handler
 
     .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_test.rst
 
