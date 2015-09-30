@@ -34,7 +34,7 @@ Run from |client rb|
 .. include:: ../../includes_handler/includes_handler_type_start_run_from_client_rb.rst
 
 
-About the |dsl handler|
+Event Handlers
 =====================================================
 .. include:: ../../includes_dsl_handler/includes_dsl_handler.rst
 
