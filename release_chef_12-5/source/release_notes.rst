@@ -83,6 +83,8 @@ Example: Send Email
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email.rst
 
+.. note:: See https://docs.chef.io/dsl_handler.html for more information about using event handlers in recipes. Read the scenario for sending email if the |chef client| run fails as an HTML presentation at https://docs.chef.io/decks/event_handlers.html.
+
 **Define How Email is Sent**
 
 .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_library.rst
