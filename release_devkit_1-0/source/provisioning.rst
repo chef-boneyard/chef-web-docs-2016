@@ -226,7 +226,7 @@ Examples
 
 AWS Driver Resources
 =====================================================
-See the topic :doc:`Provision AWS </containers>` for more information about the resources that are available for provisioning |amazon aws|.
+See the topic :doc:`Provision AWS </provisioning_aws>` for more information about the resources that are available for provisioning |amazon aws|.
 
 
 |fog| Driver Resources
