@@ -17,11 +17,11 @@ Before getting started, you will need a functioning workstation. Install the `Ch
 
 #. Select the **Chef Server 12** offering that is appropriate for your size. 
 
-.. note:: The |chef server| is available on the |azure marketplace| in 25, 50, 100, and 250 licensed images, as well as a "Bring Your Own License" image.
+   .. note:: The |chef server| is available on the |azure marketplace| in 25, 50, 100, and 250 licensed images, as well as a "Bring Your Own License" image.
 
 #. Click **Create** and follow the steps to launch the |chef server|, providing a host name, user name, password or |ssh| key, and any additional information required. You will also select your deployment model here.
 
-.. note:: If you are using the "Resource Manager" deployment model, you will need to create a **DNS Name** label for the instance. Create a **DNS Name** label by selecting the **Public IP Address** setting of the virtual machine, and then add it under **Settings**, then  **Configuration**, and then **DNS Name**. Click **Save** in the top pane to apply the changes. Use the full |fqdn| when running the ``chef-setup`` command.
+   .. note:: If you are using the "Resource Manager" deployment model, you will need to create a **DNS Name** label for the instance. Create a **DNS Name** label by selecting the **Public IP Address** setting of the virtual machine, and then add it under **Settings**, then  **Configuration**, and then **DNS Name**. Click **Save** in the top pane to apply the changes. Use the full |fqdn| when running the ``chef-setup`` command.
 
 #. Once the virtual machine is launched, you will need to create an account to use with the |chef manage|. To do this, open an |ssh| connection to the host using the user name and password (or |ssh| key) provided when you launch the virtual machine.
 
