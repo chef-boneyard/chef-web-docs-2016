@@ -198,6 +198,7 @@ The following tools have been developed by members of the |chef| community. Thes
    plugin_kitchen_vagrant
    policy
    provisioning
+   provisioning_aws
    recipes
    release_notes
    resource_apt_package
