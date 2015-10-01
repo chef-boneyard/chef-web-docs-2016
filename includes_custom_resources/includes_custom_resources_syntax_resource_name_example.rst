@@ -2,11 +2,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-For example, the ``site.rb`` file in the ``exampleco`` cookbook could be assigned a custom resource name like this:
+For example, the ``httpd.rb`` file in the ``website`` cookbook could be assigned a custom resource name like this:
 
 .. code-block:: ruby
 
-   resource_name :build_exampleco
+   resource_name :httpd
 
    property :homepage, String, default: '<h1>Hello world!</h1>'
 
@@ -32,7 +32,7 @@ and is then usable in a recipe like this:
 
 .. code-block:: ruby
 
-   build_exampleco 'httpd' do
+   httpd 'build website' do
      homepage '<h1>Welcome to the Example Co. website!</h1>'
      action :create
    end

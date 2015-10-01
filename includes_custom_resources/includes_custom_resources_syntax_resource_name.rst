@@ -11,6 +11,4 @@ Use the ``resource_name`` method at the top of a custom resource to declare a cu
 
    resource_name :name
 
-   property :name, RubyType, default: 'value'
-
-   ...
+where ``:name`` declares the resource name as it may be used in a recipe.
