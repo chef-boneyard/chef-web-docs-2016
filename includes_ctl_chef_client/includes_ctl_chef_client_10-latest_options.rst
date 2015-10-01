@@ -52,7 +52,7 @@ This command has the following options:
 ``-l LEVEL``, ``--log-level LEVEL``
    |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. Default value: ``warn`` (when a terminal is available) or ``info`` (when a terminal is not available).
 
-``-L LOGLOCATION``, ``--logfile c``
+``-L LOGLOCATION``, ``--logfile LOGLOCATION``
    |log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``.
 
 ``--[no-]color``

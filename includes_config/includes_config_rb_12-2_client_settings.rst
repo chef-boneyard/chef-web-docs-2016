@@ -101,6 +101,8 @@ This configuration file has the following settings:
      - |interval| Default value: ``1800``.
    * - ``json_attribs``
      - |json attributes|
+   * - ``listen``
+     - |chef_zero_no_listen| Set to ``false`` to disable port binding and HTTP requests on localhost.
    * - ``local_key_generation``
      - |generate local_keys| Default value: ``true``.
    * - ``local_mode``
@@ -111,6 +113,8 @@ This configuration file has the following settings:
      - |log_level| Possible levels: ``:auto`` (default), ``:debug``, ``:info``, ``:warn``, ``:error``, or ``:fatal``. Default value: ``:warn`` (when a terminal is available) or ``:info`` (when a terminal is not available).
    * - ``log_location``
      - |log_location| Possible values: ``/path/to/log_location``, ``STDOUT`` or ``STDERR``. The application log will specify the source as ``Chef``. Default value: ``STDOUT``.
+   * - ``minimal_ohai``
+     - |minimal_ohai|
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``no_proxy``

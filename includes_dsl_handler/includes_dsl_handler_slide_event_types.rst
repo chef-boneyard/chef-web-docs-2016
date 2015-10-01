@@ -11,14 +11,14 @@ The following table shows some of the events that may occur during a |chef clien
    * - Event
      - Description
    * - ``:audit_phase_failed``
-     - The |chef client| run audit phase has failed.
+     - |event_type audit_phase_failed|
    * - ``:converge_failed``
-     - The |chef client| run converge phase has failed.
+     - |event_type converge_failed|
    * - ``:recipe_not_found``
-     - The |chef client| was unable to find the named recipe.
+     - |event_type recipe_not_found|
    * - ``:resource_failed``
-     - A resource action has failed and will not be retried.
+     - |event_type resource_failed|
    * - ``:run_failed``
-     - The |chef client| run has failed.
+     - |event_type run_failed|
 
 The full list of events is available at https://docs.chef.io/dsl_handlers.html#event-types.
