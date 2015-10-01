@@ -12,7 +12,7 @@ The following items are new for |chef client| 12.5 and/or are changes from previ
 * **"resource attributes" are now known as "resource properties"** In previous releases of |chef|, resource properties are referred to as attributes, but this is confusing for users because nodes also have attributes. Starting with |chef client| 12.5 release---and retroactively updated for all previous releases of the documentation---"resource attributes" are now referred to as "resource properties" and the word "attribute" now refers specifically to "node attributes".
 * **ps_credential helper to embed usernames and passwords** Use the ``ps_credential`` helper on |windows| to create a ``PSCredential`` object---security credentials, such as a user name or password---that can be used in the |resource dsc_script| resource.
 * **New Handler DSL** A new DSL exists to make it easier to use events that occur during the |chef client| run from recipes. The ``on`` method is easily associated with events. The action the |chef client| takes as a result of that event (when it occurs) is up to you.
-* **The -j / --json-attributes option may be used to specify environments** The |json| file used by the ``--json-attributes`` option for the |chef client| may now contain the name of the environment to which the node is associated.
+* **The -j / --json-attributes supports policy revisions and environments** The |json| file used by the ``--json-attributes`` option for the |chef client| may now contain the policy name and policy group associated with a policy revision or may contain the name of the environment to which the node is associated.
 * **verify property now uses path, not file** The ``verify`` property, used by file-based resources such as |resource remote_file| and |resource file|, runs user-defined correctness checks against the proposed new file before making the change. For versions of the |chef client| prior to 12.5, the name of the temporary file was stored as ``file``; starting with |chef client| 12.5, use ``path``. This change is documented as a warning across all versions in any topic in which the ``version`` attribute is documented.
 * **depth property added to deploy resource** The ``depth`` property allows the depth of a |git| repository to be truncated to the specified number of versions.
 * **The knife ssl check subcommand supports SNI*** Support for Server Name Indication (SNI) is added to the |subcommand knife ssl_check| subcommand.
@@ -96,11 +96,6 @@ Example: Send Email
 .. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_test.rst
 
 
---json-attributes, Environments
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
-
-
 |resource deploy| Property
 -----------------------------------------------------
 The following property is new for the |resource deploy| resource:
@@ -119,22 +114,11 @@ The following property is new for the |resource deploy| resource:
 
 Specify Policy Revision
 -----------------------------------------------------
-Use the following command to specify a policy revision:
+.. include:: ../../includes_policy/includes_policy_revision_specify.rst
 
-.. code-block:: bash
-
-   $ chef client -j JSON
-
-where the |json| file is similar to:
-
-.. code-block:: javascript
-
-   {
-     "policy_name": "appserver",
-     "policy_group": "staging"
-   }
-
-Or use the following settings to specify a policy revision in the |client rb| file:
+New Configuration Settings
+-----------------------------------------------------
+The following settings are new for the |client rb| file and enable the use of policy files:
 
 .. list-table::
    :widths: 200 300
@@ -142,11 +126,29 @@ Or use the following settings to specify a policy revision in the |client rb| fi
 
    * - Setting
      - Description
+   * - ``named_run_list``
+     - |run_list policy|
    * - ``policy_group``
-     - |name policy_name|
+     - |name policy_name| (See "Specify Policy Revision" in this readme for more information.)
    * - ``policy_name``
-     - |name policy_group|
+     - |name policy_group| (See "Specify Policy Revision" in this readme for more information.)
 
+
+|chef client| Options
+-----------------------------------------------------
+The following options are new or updated for the |chef client| executable and enable the use of policy files:
+
+``-n NAME``, ``--named-run-list NAME``
+   |run_list policy|
+
+``-j PATH``, ``--json-attributes PATH``
+   This option now supports using a |json| file to associate a policy revision.
+
+   .. include:: ../../includes_policy/includes_policy_ctl_run_list.rst
+
+   This option also supports using a |json| file to associate an environment:
+
+   .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_environment.rst
 
 
 Changelog

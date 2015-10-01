@@ -101,8 +101,6 @@ This configuration file has the following settings:
      - |interval| Default value: ``1800``.
    * - ``json_attribs``
      - |json attributes|
-   * - ``listen``
-     - |chef_zero_no_listen| Set to ``false`` to disable port binding and HTTP requests on localhost.
    * - ``local_key_generation``
      - |generate local_keys| Default value: ``true``.
    * - ``local_mode``
@@ -112,9 +110,7 @@ This configuration file has the following settings:
    * - ``log_level``
      - |log_level| Possible levels: ``:auto`` (default), ``:debug``, ``:info``, ``:warn``, ``:error``, or ``:fatal``. Default value: ``:warn`` (when a terminal is available) or ``:info`` (when a terminal is not available).
    * - ``log_location``
-     - |log_location| Possible values: ``/path/to/log_location``, ``STDOUT``, ``STDERR``, ``Chef::Log::WinEvt.new`` (|windows event logger|), or ``Chef::Log::Syslog.new('chef-client', ::Syslog::LOG_DAEMON)`` (writes to the syslog daemon facility with the originator set as ``chef-client``). The application log will specify the source as ``Chef``. Default value: ``STDOUT``.
-   * - ``minimal_ohai``
-     - |minimal_ohai|
+     - |log_location| Possible values: ``/path/to/log_location``, ``STDOUT`` or ``STDERR``. The application log will specify the source as ``Chef``. Default value: ``STDOUT``.
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``true``.
    * - ``no_proxy``
@@ -129,12 +125,8 @@ This configuration file has the following settings:
      - |whitelist attribute_override|
    * - ``pid_file``
      - |path pid_file| Default value: ``/tmp/name-of-executable.pid``.
-   * - ``policy_group``
-     - |name policy_name| ``policy_name`` must also be specified.
-   * - ``policy_name``
-     - |name policy_group| ``policy_group`` must also be specified.
    * - ``rest_timeout``
-     - |timeout rest| Default value: ``300``.
+     - |timeout rest|
    * - ``role_path``
      - |path roles_chef| Default value: ``/var/chef/roles``.
    * - ``run_lock_timeout``

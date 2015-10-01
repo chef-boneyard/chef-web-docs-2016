@@ -75,6 +75,10 @@ This command has the following options:
 
    .. include:: ../../includes_node/includes_node_ctl_attribute.rst
 
+   **Specify a policy**
+
+   .. include:: ../../includes_policy/includes_policy_ctl_run_list.rst
+
 ``-k KEY_FILE``, ``--client_key KEY_FILE``
    |client_key| Default value: ``/etc/chef/client.pem``.
 
@@ -84,7 +88,7 @@ This command has the following options:
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level| Possible levels: ``:auto`` (default), ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. Default value: ``warn`` (when a terminal is available) or ``info`` (when a terminal is not available).
 
-``-L LOGLOCATION``, ``--logfile c``
+``-L LOGLOCATION``, ``--logfile LOGLOCATION``
    |log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``.
 
 ``--lockfile LOCATION``
@@ -98,6 +102,9 @@ This command has the following options:
 
 ``--[no-]listen``
    |chef_zero_no_listen|
+
+``-n NAME``, ``--named-run-list NAME``
+   |run_list policy|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |name node|
@@ -121,7 +128,7 @@ This command has the following options:
    |path recipe_file|
 
 ``--recipe-url=RECIPE_URL``
-   Use to specify the location of a recipe when it exists at a URL. Use this option only when the |chef client| is run with the ``--local-mode`` option.
+   The location of a recipe when it exists at a URL. Use this option only when the |chef client| is run with the ``--local-mode`` option.
 
 ``--run-lock-timeout SECONDS``
    |run_lock_timeout| Default value: not set (indefinite). Set to ``0`` to cause a second |chef client| to exit immediately.

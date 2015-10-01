@@ -95,7 +95,7 @@ The following table describes the events that may occur during a |chef client| r
    * - ``:recipe_file_load_failed``
      - The |chef client| was unable to load the named recipe.
    * - ``:recipe_not_found``
-     - The |chef client| was unable to find the named recipe.
+     - |event_type recipe_not_found|
    * - ``:recipe_load_complete``
      - The |chef client| is finished loading recipes.
    * - ``:converge_start``
@@ -103,13 +103,13 @@ The following table describes the events that may occur during a |chef client| r
    * - ``:converge_complete``
      - The |chef client| run converge phase is complete.
    * - ``:converge_failed``
-     - The |chef client| run converge phase has failed.
+     - |event_type converge_failed|
    * - ``:audit_phase_start``
      - The |chef client| run audit phase has started.
    * - ``:audit_phase_complete``
      - The |chef client| run audit phase is finished.
    * - ``:audit_phase_failed``
-     - The |chef client| run audit phase has failed.
+     - |event_type audit_phase_failed|
    * - ``:control_group_started``
      - The named control group is being processed.
    * - ``:control_example_success``
@@ -131,7 +131,7 @@ The following table describes the events that may occur during a |chef client| r
    * - ``:resource_failed_retriable``
      - A resource action has failed and will be retried.
    * - ``:resource_failed``
-     - A resource action has failed and will not be retried.
+     - |event_type resource_failed|
    * - ``:resource_updated``
      - A resource requires modification.
    * - ``:resource_up_to_date``
@@ -157,4 +157,4 @@ The following table describes the events that may occur during a |chef client| r
    * - ``:run_completed``
      - The |chef client| run has completed.
    * - ``:run_failed``
-     - The |chef client| run has failed.
+     - |event_type run_failed|
