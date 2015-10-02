@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``cron_d`` lightweight provider (found in the `cron <https://github.com/chef-cookbooks/cron>`_ cookbook) is used to tell the |chef client| what to do whenever the ``cron_d`` lightweight resource is used in a recipe:
+The ``cron_d`` custom provider (found in the `cron <https://github.com/chef-cookbooks/cron>`_ cookbook) is used to tell the |chef client| what to do whenever the ``cron_d`` custom resource is used in a recipe:
 
 .. code-block:: ruby
 
@@ -43,7 +43,7 @@ where:
 * the ``:delete`` action block calls the |resource file| resource (and it's ``:delete`` action) to delete a file in the ``/etc/cron.d`` folder
 * the ``:create`` action block creates a new entry in the ``/etc/cron.d`` folder. 
 
-For example, if a recipe used the ``cron_d`` lightweight resource similar to the following:
+For example, if a recipe used the ``cron_d`` custom resource similar to the following:
 
 .. code-block:: ruby
 
@@ -54,4 +54,4 @@ For example, if a recipe used the ``cron_d`` lightweight resource similar to the
      user 'appuser'
    end
 
-this tells the |chef client| to use the ``cron_d`` lightweight provider and the credentials for a user named ``appuser`` to create a |crontab| entry named "daily-usage-report". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the lightweight resource.
+this tells the |chef client| to use the ``cron_d`` custom provider and the credentials for a user named ``appuser`` to create a |crontab| entry named "daily-usage-report". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the custom resource.

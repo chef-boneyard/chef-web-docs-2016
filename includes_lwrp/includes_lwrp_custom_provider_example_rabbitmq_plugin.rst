@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``rabbitmq_plugin`` lightweight provider (found in the `rabbitmq <https://github.com/chef-cookbooks/rabbitmq>`_ cookbook) is used to tell the |chef client| how to handle two actions (``:disable`` and ``:enable``) that are used to manage |rabbitmq| plugins. Using this lightweight resource in a recipe is simple:
+The ``rabbitmq_plugin`` custom provider (found in the `rabbitmq <https://github.com/chef-cookbooks/rabbitmq>`_ cookbook) is used to tell the |chef client| how to handle two actions (``:disable`` and ``:enable``) that are used to manage |rabbitmq| plugins. Using this custom resource in a recipe is simple:
 
 .. code-block:: ruby
 
@@ -10,7 +10,7 @@ The ``rabbitmq_plugin`` lightweight provider (found in the `rabbitmq <https://gi
      action :enable
    end
 
-The lightweight provider then does most of the work:
+The custom provider then does most of the work:
 
 .. code-block:: ruby
 

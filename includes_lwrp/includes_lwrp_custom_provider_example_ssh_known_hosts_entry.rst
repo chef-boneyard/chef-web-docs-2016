@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``ssh_known_hosts_entry`` lightweight provider (found in the `ssh_known_hosts <https://github.com/chef-cookbooks/ssh_known_hosts>`_ cookbook) is used to add hosts and keys to the ``/etc/ssh_known_hosts`` file.
+The ``ssh_known_hosts_entry`` custom provider (found in the `ssh_known_hosts <https://github.com/chef-cookbooks/ssh_known_hosts>`_ cookbook) is used to add hosts and keys to the ``/etc/ssh_known_hosts`` file.
 
 .. code-block:: ruby
 

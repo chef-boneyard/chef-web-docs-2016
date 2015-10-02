@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following example uses the |resource file| resource to show the difference between it and what it would look like if it were a lightweight resource.
+The following example uses the |resource file| resource to show the difference between it and what it would look like if it were a custom resource.
 
 .. code-block:: ruby
 
@@ -72,7 +72,7 @@ The following example uses the |resource file| resource to show the difference b
      end
    end
 
-The preceding code is simple, traditional |ruby|. A number of getter/setter methods are created and inputs are validated against criteria, like regular expressions, strings, true/false, and so on. The lightweight resource looks like this:
+The preceding code is simple, traditional |ruby|. A number of getter/setter methods are created and inputs are validated against criteria, like regular expressions, strings, true/false, and so on. The custom resource looks like this:
 
 .. code-block:: ruby
 
@@ -85,4 +85,4 @@ The preceding code is simple, traditional |ruby|. A number of getter/setter meth
    attribute :path,     :kind_of => String
    attribute :checksum, :regex => /^[a-zA-Z0-9]{64}$/
 
-What this shows are the similarities and differences between resources and lightweight resources. The lightweight resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex platform resources.
+What this shows are the similarities and differences between resources and custom resources. The custom resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex platform resources.

@@ -60,18 +60,6 @@ whyrun_supported?
 
 .. note:: When a lightweight provider contains only platform resources, the ``converge_by`` method is not required because it is already built into all of the platform `resources <http://docs.chef.io/resource.html>`_.
 
-Condition Statements
-=====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst
-
-Log Entries
-=====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst
-
-rescue
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_logs_rescue.rst
-
 Examples
 =====================================================
 The following examples show various lightweight providers that use platform resources.

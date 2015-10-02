@@ -2,7 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``converge_by`` method is a wrapper that is used to tell the |chef client| what do if a resource is run in |whyrun| mode. The syntax for the ``converge_by`` method is:
+The ``converge_by`` method is a wrapper that is used to support |whyrun| mode and must wrap any |ruby| calls that updates system state.  All core |chef| resources internally use ``converge_by`` and support |whyrun| mode by default. To ensure that a custom provider is idempotent, ``converge_by`` blocks must be checked for idempotency.
+
+The syntax of a ``converge_by`` block is:
 
 .. code-block:: ruby
 
@@ -11,33 +13,39 @@ The ``converge_by`` method is a wrapper that is used to tell the |chef client| w
 where:
 
 * ``converge_by()`` is added to an ``action`` block as a wrapper
-* ``'message'`` is the message that the |chef client| returns when it is run in |whyrun| mode
+* ``'message'`` is the message returned by the |chef client| when the resource runs
 
 Some examples:
 
 .. code-block:: ruby
 
-   converge_by('Create directory #{ @new_resource.path }')
+   unless Dir.exist?(new_resource.path)
+     converge_by("Create directory #{ new_resource.path }") do
+       FileUtils.mkdir new_resource.path
+     end
+   end
 
 .. code-block:: ruby
 
-   converge_by('Create user #{ @new_resource }')
+   if should_create_user?
+     converge_by("Create user #{ new_resource.user }") do
+       shell_out!("adduser #{ new_resource.user }")
+     end
+   end
 
 .. code-block:: ruby
 
-   converge_by('attach volume with aws_id=#{vol[:aws_id]} id=#{instance_id} device=#{new_resource.device} and update') do
-
-.. code-block:: ruby
-
-   description = 'create dir #{app_root} and change owner to #{new_resource.owner}'
-   converge_by(description) do
-     FileUtils.mkdir app_root, :mode => new_resource.app_home_mode
-     FileUtils.chown new_resource.owner, new_resource.owner, app_root
+   if should_update_stuff?
+     description = 'create dir #{app_root} and change owner to #{new_resource.owner}'
+     converge_by(description) do
+       FileUtils.mkdir app_root, :mode => new_resource.app_home_mode
+       FileUtils.chown new_resource.owner, new_resource.owner, app_root
+     end
    end
 
 where the last example shows using a variable (``description``) as the ``'message'`` in the ``converge_by`` block.
 
-An example of the ``converge_by`` method being used in the `directory <https://github.com/chef/chef/blob/master/lib/chef/provider/directory.rb>`_ provider, which is a platform resource:
+An example of the ``converge_by`` method exists in the provider for `directory <https://github.com/chef/chef/blob/master/lib/chef/provider/directory.rb>`_ resource, which is a core |chef| resource:
 
 .. code-block:: ruby
 
@@ -62,4 +70,4 @@ An example of the ``converge_by`` method being used in the `directory <https://g
      update_new_file_state
    end
 
-.. note:: |whyrun| mode is already enabled for platform resources. When platform resources are used as part of the ``action`` block in a lightweight provider, only the ``whyrun_supported?`` is required to allow the |chef client| to run in |whyrun| mode.
+.. note:: |whyrun| mode is already enabled for platform resources. When platform resources are used as part of the ``action`` block in a custom provider, only the ``whyrun_supported?`` is required to allow the |chef client| to run in |whyrun| mode.

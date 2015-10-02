@@ -171,18 +171,6 @@ whyrun_supported?
 
 .. note:: When a lightweight provider contains only platform resources, the ``converge_by`` method is not required because it is already built into all of the platform `resources <http://docs.chef.io/resource.html>`_.
 
-Condition Statements
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst
-
-Log Entries
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst
-
-rescue
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_logs_rescue.rst
-
 Examples
 -----------------------------------------------------
 The following examples show various lightweight providers that use platform resources.
@@ -240,10 +228,6 @@ new_resource
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_new_resource.rst
 
-require
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst
-
 updated_by_last_action
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_ruby.rst
@@ -255,30 +239,6 @@ whyrun_supported?
 .. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst
 
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst
-
-Condition Statements
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst
-
-Log Entries
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst
-
-rescue
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_logs_rescue.rst
-
-Libraries
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_library.rst
-
-Examples
------------------------------------------------------
-The following examples show various lightweight providers that rely on custom |ruby| code.
-
-rbenv_global
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_example_rbenv_global.rst
 
 
 Library Resources
