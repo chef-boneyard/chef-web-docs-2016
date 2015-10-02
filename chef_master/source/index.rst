@@ -435,6 +435,7 @@ Cookbooks
    server_users
    server_webui_tasks
    simple_walkthrough
+   slides
    style_guide
    supermarket
    supported_platforms
