@@ -2,25 +2,28 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``load_current_resource`` method is used to find a resource on a node based on a collection of attributes. These attributes are defined in a lightweight resource and are loaded by the |chef client| when processing a recipe during a |chef client| run. This method will ask the |chef client| to look on the node to see if a resource exists with specific matching attributes.
+The ``load_current_resource`` method is used to construct the curent state of the resource on the node.  This is in contrast to the ``new_resource`` which is the desired state of the resource on the node.  Some of the identity properties between the new_resource and the current_resource will be identical and in construction those properties should be copied.  The other properties will reflect the existing running state of the node and should be loaded from the node's state (reading the file modes, checking for existence, etc).
+
 
 For example:
 
 .. code-block:: ruby
-
    def load_current_resource
-     @current_resource = Chef::Resource::TransmissionTorrentFile.new(@new_resource.name)
-     Chef::Log.debug('#{@new_resource} torrent hash = #{torrent_hash}')
-     @transmission = Opscode::Transmission::Client.new('foo:#{@new_resource.att1}@#{@new_resource.att2}:#{@new_resource.att3}/path')
-     @torrent = nil
-     begin
-       @torrent = @transmission.get_torrent(torrent_hash)
-       Chef::Log.info("Found existing #{@new_resource} in swarm with name of '#{@torrent.name}' and status of '#{@torrent.status_message}'")
-       @current_resource.torrent(@new_resource.torrent)
-     rescue
-       Chef::Log.debug('Cannot find #{@new_resource} in the swarm')
-     end
-     @current_resource
+     # create a current_resource with the same name as the new_resource
+     @current_resource = Chef::Resource::MyResource.new(new_resource.name)
+     # Some other current_resource properties may match the new_resource (e.g. For a package resource
+     # the 'package_name' in the current_resource will be the same one the user requested in the
+     # new_resource, file paths will be the same in both resources, etc)
+     current_resource.path(new_resource.path)
+     # Most other current_resource properites will be found by inspecting the system (e.g. Wwhat is
+     # the current version of the installed package?  What are the existing file modes?)
+     current_resource.mode(File.stat(new_resource.path).mode)
+     # load_current_resource should return the current_resource by convention
+     current_resource
    end
 
-In the previous example, if a resource exists with matching attributes, the |chef client| does nothing and if a resource does not exist with matching attributes, the |chef client| will enforce the state declared in ``new_resource``.
+The ``load_current_resource`` method should return the current_resource it has constructed by convention, but the method is also responsible for building the instance variable directly.
+
+The custom provider should use the current_resource in order to compare to the new_resource to check for idempotency.
+
+Declaring a ``load_current_resource`` is optional.  Its use may be omitted, but reporting information will be incorrect, and some frameworks like minitest-chef-handler will not work, and the ``Chef::Resource#current_value`` API will not function correctly against the resource.

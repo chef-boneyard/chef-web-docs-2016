@@ -11,42 +11,49 @@ This section shows some of the common structural elements that appear in a light
 The basic syntax for a lightweight provider that is built using custom |ruby| code is as follows:
 
 .. code-block:: ruby
+   # To get notifications off of the LWRP correct, use_inline_resources
+   # should always be declared in the provider.
+   use_inline_resources
 
-   require /path/to/file
-
-   include Include::Class::Here
-
+   # Correctly written LWRPs will support why-run, so this should be set
+   # to true.
    def whyrun_supported?
      true
    end
 
    action :action_name do
-     converge_by('message') do
-       condition test
-         # some Ruby code
+     # Pure ruby that modifies the system, needs to be wrapped in a
+     # converge_by block, which is then wrapped in an idempotency test.
+     # This pattern ensures that:
+     #  1.  update the resource and fire notifications correctly
+     #  2.  not execute in why-run mode
+     if stuff_needs_updating?
+       converge_by("touch /tmp/foo") do
+         FileUtils.touch("/tmp/foo")
        end
-       Chef::Log.log_type 'log_message'
      end
-     new_resource.updated_by_last_action(true)
+     # Other resources can be used directly and will be idempotent, will
+     # cause this resource to be updated (and fire notifications) if the
+     # sub resource is updated, and correctly support why-run.
+     file "/tmp/foo" do
+       owner "root"
+       group "root"
+     end
    end
 
    ...
 
-   def test?()
-     # some Ruby code
+   def stuff_needs_updating?()
+     # ruby tests to see if your resource needs updating
+     # (e.g. is the checksum of /tmp/foo wrong?)
+     true
    end
 
 where:
 
-* ``require`` is a standard |ruby| method that allows a lightweight provider to require modules that are not located in the current cookbook, such as a file located in the ``chef/mixin`` directory
-* ``include`` is a standard |ruby| method that allows a lightweight provider to include a class, such as ``Chef::Mixin::ShellOut`` or ``Windows::Helper``
 * ``whyrun_supported?`` indicates whether a lightweight provider can be run in |whyrun| mode
 * ``action`` is the code block that tells the |chef client| what to do when the ``:action_name`` is used in a recipe
-* ``converge_by()`` is used to provide a ``'message'`` to be returned when a resource is run in |whyrun| mode
-* ``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)
-* ``test`` is used to test for idempotence; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block elsewhere in the lightweight provider (shown as ``def test()``), or defined using any other pattern that is available in |ruby|
-* ``Chef::Log.log_type`` is used to tell the |chef client| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
-* ``updated_by_last_action`` is used to notify that a node was updated successfully
+* ``converge_by()`` is used to provide a ``'message'`` to be logged when the resource is updated and to correctly disable the codeblock when run in |whyrun| mode
 
 Also, commonly used methods (but not shown in the previous example) are ``current_resource``, ``load_current_resource``, and ``new_resource``.
 
@@ -55,32 +62,39 @@ For example:
 .. code-block:: ruby
 
    require 'chef/mixin/shell_out'
-   require 'chef/mixin/language'
    include Chef::Mixin::ShellOut
 
-   action :install do
-     unless @pmgroup.exists
-       run_command_with_systems_locale(
-         :command => 'pacman --sync --noconfirm --noprogressbar#{expand_options(@new_resource.options)} #{name}'
-       )
-       new_resource.updated_by_last_action(true)
+   use_inline_resources
+
+   def whyrun_supported?
+     true
+   end
+
+   action :fix do
+     if modes_differ?
+       converge_by("fix #{new_resource.path} mode to #{new_resource.mode}, was #{current_resource.mode}") do
+         # Contrived example to show using shell_out!, FileUtils.chown would be better practice.
+         Chef::Log.debug "updating #{new_resource.path} to #{new_resource.mode} via shell_out!"
+         shell_out!("chown #{new_resource.mode} #{new_resource.path}")
+
+       end
      end
    end
 
-   action :remove do
-     if @pmgroup.exists
-       run_command_with_systems_locale(
-         :command => 'pacman --remove --noconfirm --noprogressbar#{expand_options(@new_resource.options)} #{name}'
-       )
-       new_resource.updated_by_last_action(true)
-     end
+   def modes_differ?
+     current_resource.mode != new_resource.mode
    end
 
    def load_current_resource
-     @pmgroup = Chef::Resource::PacmanGroup.new(@new_resource.name)
-     @pmgroup.package_name(@new_resource.package_name)
-     Chef::Log.debug('Checking pacman for #{@new_resource.package_name}')
-     p = shell_out('pacman -Qg #{@new_resource.package_name}')
-     exists = p.stdout.include?(@new_resource.package_name)
-     @pmgroup.exists(exists)
+     # create a current_resource with the same name as the new_resource
+     @current_resource = Chef::Resource::MyResource.new(new_resource.name)
+     # Some other current_resource properties may match the new_resource (e.g. For a package resource
+     # the 'package_name' in the current_resource will be the same one the user requested in the
+     # new_resource, file paths will be the same in both resources, etc)
+     current_resource.path(new_resource.path)
+     # Most other current_resource properites will be found by inspecting the system (e.g. Wwhat is
+     # the current version of the installed package?  What are the existing file modes?)
+     current_resource.mode(File.stat(new_resource.path).mode)
+     # load_current_resource should return the current_resource by convention
+     current_resource
    end

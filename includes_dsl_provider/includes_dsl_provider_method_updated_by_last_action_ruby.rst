@@ -2,23 +2,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``updated_by_last_action`` method is used to notify a lightweight resource that a node was updated successfully. For example, the ``bluepill_service`` lightweight resource in the |cookbook bluepill| cookbook uses this method: 
-
-.. code-block:: ruby
-
-   action :load do
-     unless @current_resource.running
-       shell_out!(load_command)
-       new_resource.updated_by_last_action(true)
-     end
-   end
-   
-   ...
-   
-   def load_command
-     "#{node['bluepill']['bin']} load #{node['bluepill']['conf_dir']}/#{new_resource.service_name}.pill"
-   end
-   
-   ...
-
+The direct use of the ``updated_by_last_action`` method is deprecated.  All modern and correct LWRPs
+should declare use_inline_resources and use either only core Chef resources or converge_by blocks around
+their actions which modify the system state.  Providers which still manually set updated_by_last_action
+must be fixed.
 
