@@ -1,9 +1,3 @@
-=====================================================
-Library Resources
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.chef.io/custom_resources.html BY DESIGN
 
-.. include:: ../../includes_libraries/includes_libraries_custom_resource.rst
-
-.. include:: ../../includes_libraries/includes_libraries_custom_resource_core.rst
-
-.. include:: ../../includes_libraries/includes_libraries_custom_resource_example.rst
+.. include:: ../../chef_master/source/custom_resources.rst
