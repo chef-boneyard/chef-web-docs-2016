@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The syntax for a lightweight resource is as follows:
+The syntax for a custom resource is as follows:
 
 .. code-block:: ruby
 
@@ -20,16 +20,16 @@ The syntax for a lightweight resource is as follows:
 
 where 
 
-* ``require`` lists any external entities that may be required by the lightweight resources, such as a library; a lightweight resource is |ruby| and anything that can be done in |ruby| can be done in a lightweight resource
-* ``:action_name1``, ``:action_name2``, and ``:action_name...`` represents a comma-delimited list of ``actions`` that are available to this lightweight resource; there must be at least one action
+* ``require`` lists any external entities that may be required by the custom resources, such as a library; a custom resource is |ruby| and anything that can be done in |ruby| can be done in a custom resource
+* ``:action_name1``, ``:action_name2``, and ``:action_name...`` represents a comma-delimited list of ``actions`` that are available to this custom resource; there must be at least one action
 * ``action_name1`` is set to be the ``default_action``
-* ``:attribute_name`` is the name of the property; a lightweight resource may define as many properties as necessary
+* ``:attribute_name`` is the name of the property; a custom resource may define as many properties as necessary
 * ``:kind_of => 'value'`` specifies the |ruby| class (or an array of |ruby| classes) that are used to define this attribute's value
 * ``:name_attribute`` is associated with one ``attribute`` to indicate which property's value will be defined by the name of the resource as it is defined in the recipe (i.e. the string that appears in front of the ``do`` block in the recipe and after the resource: ``resource_name "name_attribute" do``)
 * ``:validation_parameter`` represents a comma-delimited list of validation parameters for each property
-* ``attr_accessor`` allows the lightweight resource to use the ``Module`` |ruby| class to check for one (or more) named properties, such as ``:exists`` or ``:running``
+* ``attr_accessor`` allows the custom resource to use the ``Module`` |ruby| class to check for one (or more) named properties, such as ``:exists`` or ``:running``
 
-For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| cookbook) can be used to manage files located in ``/etc/cron.d``:
+For example, the ``cron_d`` custom resource (found in the |cookbook cron| cookbook) can be used to manage files located in ``/etc/cron.d``:
 
 .. code-block:: ruby
 
