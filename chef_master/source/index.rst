@@ -166,10 +166,6 @@ Cookbooks
    community
    community_contributions
    community_guidelines
-   community_plugin_chef
-   community_plugin_knife
-   community_plugin_ohai
-   community_plugin_report_handler
    config_rb
    config_rb_analytics
    config_rb_chef_sync
