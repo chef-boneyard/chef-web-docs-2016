@@ -46,7 +46,7 @@ converge_if_changed
 
 load_current_value
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_custom_resource/includes_dsl_custom_resource_method_converge_if_changed.rst
+.. include:: ../../includes_dsl_custom_resource/includes_dsl_custom_resource_method_load_current_value.rst
 
 
 Definition vs. Resource
