@@ -21,4 +21,4 @@ The following links present information that is found elsewhere in the |chef| do
 * `Serverspec <http://docs.chef.io/decks/serverspec.html>`__
 * `Technical Overview <http://docs.chef.io/decks/technical_overview.html>`__
 * `Testing Overview <http://docs.chef.io/decks/testing.html>`__
-* `Visual Overview  <http://docs.chef.io/decks/visual_overview.html>`__
+
