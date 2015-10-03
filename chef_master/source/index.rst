@@ -6,31 +6,9 @@ All about |chef| ...
 
 Getting Started
 =====================================================
-**From the beginning:** :doc:`An Overview of Chef </chef_overview>` | :doc:`About Workstations </workstation>` | :doc:`About the Chef Server </chef_server>` | :doc:`About Nodes </nodes>` | :doc:`About Cookbooks </cookbooks>` | :doc:`About Attributes </attributes>` | :doc:`About Resources and Providers </resources>` | :doc:`About LWRPs (Custom Resources) </lwrp_custom>` | :doc:`About Knife </knife>` | :doc:`About Chef for Windows </windows>` | :doc:`About Containers </containers>`
+**From the beginning:** :doc:`An Overview of Chef </chef_overview>` | :doc:`About Workstations </workstation>` | :doc:`About the Chef Server </chef_server>` | :doc:`About Nodes </nodes>` | :doc:`About Cookbooks </cookbooks>` | :doc:`About Attributes </attributes>` | :doc:`About Resources and Providers </resources>` | :doc:`Custom Resources </custom_resources>` | :doc:`About Knife </knife>` | :doc:`About Chef for Windows </windows>` | :doc:`About Containers </containers>`
 
-**Using Ruby:** :doc:`Just Enough Ruby for Chef </ruby>`
-
-.. include:: ../../includes_chef/includes_chef_index_learnchef.rst
-
-**Docs for Current Versions:** `chef-client 12.4 <http://docs.chef.io/client/>`__ | `Chef Server 12.1 <http://docs.chef.io/server/>`_ | `Chef DK <http://docs.chef.io/devkit/>`__ | `Ohai 8 <http://docs.chef.io/release/ohai-8/>`_ | :doc:`Release notes for chef-client 12.4 </release_notes>` | `Release notes for Chef server 12.2 <http://docs.chef.io/release/server_12-2/release_notes.html>`_ | :doc:`Previous Releases </releases>`
-
-.. 
-.. **Key concepts:** :doc:`Attributes </attributes>` | :doc:`Cookbooks </cookbooks>` | :doc:`Nodes </nodes>` | :doc:`Recipes </recipes>` | :doc:`Recipe DSL </dsl_recipe>` | :doc:`Roles </roles>` | :doc:`Ruby </ruby>` | :doc:`Run-list </run_list>`
-.. 
-.. **Most popular resources:** :doc:`bash </resource_bash>` | :doc:`cookbook_file </resource_cookbook_file>` | :doc:`directory </resource_directory>` | :doc:`execute </resource_execute>` | :doc:`file </resource_file>` | :doc:`git </resource_git>` | :doc:`package </resource_package>` | :doc:`remote_file </resource_remote_file>` | :doc:`ruby_block </resource_ruby_block>` | :doc:`service </resource_service>` | :doc:`template </resource_template>` | :doc:`user </resource_user>` | :doc:`yum_package </resource_yum>`
-.. 
-.. **Most important tools:** :doc:`client.rb </config_rb_client>` | :doc:`config.rb </config_rb>` | :doc:`Debug Recipes </debug>` | :doc:`Kitchen </kitchen>` | :doc:`kitchen.yml </config_yml_kitchen>` | :doc:`Ohai </ohai>`
-.. 
-.. **Most common knife commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`cookbook </knife_cookbook>` | :doc:`data bag </knife_data_bag>` | :doc:`node </knife_node>` | :doc:`search </knife_search>`
-.. 
-
-The Community
-=====================================================
-.. include:: ../../includes_community/includes_community.rst
-
-.. include:: ../../includes_community/includes_community_read.rst
-
-See :doc:`this page </community>` for more about the awesome |chef| community!
+**Using Ruby:** :doc:`Chef Style Guide </ruby>`
 
 The Workstation
 =====================================================
@@ -38,9 +16,7 @@ The Workstation
 
 **Install:** :doc:`Install the chef-client on a Workstation </install_dk>` | :doc:`Bootstrap a Node </install_bootstrap>` | :doc:`Create and Sync the chef-repo </chef_repo>`
 
-**Knife:** :doc:`About Knife </knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`deps </knife_deps>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`edit </knife_edit>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`serve </knife_serve>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`ssl check </knife_ssl_check>` | :doc:`ssl fetch </knife_ssl_fetch>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` | :doc:`user </knife_user>` | :doc:`xargs </knife_xargs>` --- **Single Page:** `Knife Reference <http://docs.chef.io/chef/knife.html>`_
-
-**Plugins:** :doc:`About Plugins </plugin_knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Custom Plugins </plugin_knife_custom>` | :doc:`Authenticated Requests </plugin_knife_authenticated_requests>` --- **Commands:** `azure <https://github.com/chef/knife-azure>`__ | `bluebox <https://github.com/chef/knife-bluebox>`__ | `ec2 <https://github.com/chef/knife-ec2>`__ | `eucalyptus <https://github.com/chef/knife-eucalyptus>`__ | `google <https://github.com/chef/knife-google>`__ | `hp <https://github.com/chef/knife-hp>`__ | `linode <https://github.com/chef/knife-linode>`__ | `openstack <https://github.com/chef/knife-openstack>`__ | `rackspace <https://github.com/chef/knife-rackspace>`__ | `terremark <https://github.com/chef/knife-terremark>`__ | `windows <https://github.com/chef/knife-windows>`__
+**Knife:** :doc:`About Knife </knife>` | :doc:`Common Options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`deps </knife_deps>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`edit </knife_edit>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`serve </knife_serve>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`ssl check </knife_ssl_check>` | :doc:`ssl fetch </knife_ssl_fetch>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` | :doc:`user </knife_user>` | :doc:`xargs </knife_xargs>`
 
 **Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
@@ -62,8 +38,6 @@ The |chef server_title|
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-.. note:: |chef server| 12 is the new |chef server|! The documentation for `Open Source Chef <http://docs.chef.io/open_source/>`_ and `Enterprise Chef <http://docs.chef.io/enterprise/>`_ is still available.
-
 **Install Scenarios:** :doc:`Installs </install_server>` | :doc:`Upgrades </upgrade_server>`
 
 **Features:** :doc:`Chef Manage </manage>` | :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>` | :doc:`Chef Analytics </analytics>` | :doc:`Replication </server_replication>` | :doc:`High Availability </server_high_availability>`
@@ -74,7 +48,7 @@ The |chef server_title|
 
 **Settings and Tools:** :doc:`chef-server.rb </config_rb_server>` | :doc:`chef-server-ctl </ctl_chef_server>` | :doc:`manage.rb </config_rb_manage>` | :doc:`chef-sync.rb </config_rb_chef_sync>` | :doc:`chef-sync-ctl </ctl_chef_sync>` | :doc:`opscode-expander-ctl </ctl_opscode_expander>` | :doc:`opscode-reporting-ctl </ctl_reporting>`
 
-**APIs:** :doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Push Jobs API </api_push_jobs>`
+**APIs:** :doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>` 
 
 Server Essentials
 -----------------------------------------------------
@@ -88,15 +62,6 @@ The server acts as a repository for all of the data that may be needed by the |c
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions
 * The |chef server| provides :doc:`powerful search </chef_search>` functionality
 
-|chef analytics_title|
-=====================================================
-:doc:`Chef Analytics </analytics>` is an analytics platform that provides visibility into what is happening on the server. It runs on separate hardware from the |chef server| and consists of several components:
-
-**Components:** :doc:`Chef Analytics Webui </actions>` | :doc:`Rules </analytics_rules>` | `Controls <http://docs.chef.io/analytics/dsl_recipe.html>`_ | `chef-client audit-mode <http://docs.chef.io/analytics/chef_client.html>`_
-
-**Install Chef Analytics:** :doc:`Install </install_analytics>` | :doc:`Upgrade </upgrade_analytics>`
-
-**Settings and Tools:** :doc:`Web user interface </analytics_webui_tasks>` | :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>` | :doc:`Analytics API </api_analytics>` | :doc:`knife-analytics (plugin) </plugin_knife_analytics>`
 
 The Nodes
 =====================================================
@@ -115,7 +80,7 @@ Cookbooks
 =====================================================
 **The Basics:** :doc:`About Cookbooks </cookbooks>` | :doc:`About Recipes </recipes>` | :doc:`About Attribute Files </attributes>` |  :doc:`Handlers </handlers>` | `Popular Cookbooks <https://github.com/chef-cookbooks>`_
 
-**Custom Resources:** :doc:`About Custom Resources </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
+**Custom Resources:** :doc:`About Custom Resources </custom_resources>`
 
 **Other Cookbook Components:** :doc:`About Definitions </definitions>` | :doc:`About Files </files>` | :doc:`About Libraries </libraries>` | :doc:`About Cookbook Metadata </cookbook_repo>` | :doc:`About Templates </templates>` | :doc:`About Versions </cookbook_versions>`
 
@@ -222,7 +187,6 @@ Cookbooks
    foodcritic
    glossary
    handlers
-   hwrp
    install
    install_analytics
    install_bootstrap
@@ -238,7 +202,6 @@ Cookbooks
    install_server_tiered
    install_windows
    junos
-   just_enough_ruby_for_chef
    kitchen
    knife
    knife_common_options
@@ -273,13 +236,6 @@ Cookbooks
    knife_using
    knife_xargs
    libraries
-   lwrp
-   lwrp_custom
-   lwrp_custom_provider
-   lwrp_custom_provider_ruby
-   lwrp_custom_resource
-   lwrp_custom_resource_library
-   lwrp_windows
    manage
    nodes
    ohai
