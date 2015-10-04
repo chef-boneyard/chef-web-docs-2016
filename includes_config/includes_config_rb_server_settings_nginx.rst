@@ -30,7 +30,19 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['gzip_proxied']``
      - |gzip proxied| Default value: ``any``.
    * - ``nginx['gzip_types']``
-     - |gzip types| Default value: ``[ 'text/plain', 'text/css', 'application/x-javascript', 'text/xml', 'application/xml', 'application/xml+rss', 'text/javascript', 'application/json' ]``.
+     - |gzip types| Default value:
+
+       .. code-block:: ruby
+
+          [ 'text/plain',
+            'text/css',
+            'application/x-javascript',
+            'text/xml', 'application/xml',
+            'application/xml+rss',
+            'text/javascript',
+            'application/json'
+            ]
+
    * - ``nginx['ha']``
      - |use ha| |ha true| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
@@ -50,11 +62,11 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['ssl_certificate_key']``
      - |ssl_certificate key| Default value: ``nil``.
    * - ``nginx['ssl_ciphers']``
-     - |ssl_ciphers| To favor AES256 with ECDHE forward security, drop the ``RC4-SHA:RC4-MD5:RC4:RSA`` prefix. See https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_Ciphersuite for more information. For example:
+     - |ssl_ciphers| To favor AES256 with ECDHE forward security, drop the ``RC4-SHA:RC4-MD5:RC4:RSA`` prefix. See `this link <https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_Ciphersuite>`__ for more information. For example:
 
        .. code-block:: ruby
 
-          nginx['ssl_ciphers'] = HIGH: ... [more parameters] ... :!PSK
+          nginx['ssl_ciphers'] = HIGH: ... :!PSK
    * - ``nginx['ssl_company_name']``
      - |nginx ssl_company_name| Default value: ``YouCorp``.
    * - ``nginx['ssl_country_name']``
@@ -68,7 +80,13 @@ This configuration file has the following settings for ``nginx``:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS: ``nginx['ssl_protocols'] = 'TLSv1 TLSv1.1 TLSv1.2'``. Default value: ``SSLv3 TLSv1``.
+     - |version protocols_ssl| For the highest possible security, disable |ssl| 3.0 and allow only TLS:
+
+       .. code-block:: ruby
+
+          nginx['ssl_protocols'] = 'TLSv1 TLSv1.1 TLSv1.2'
+
+       Default value: ``TLSv1 TLSv1.1 TLSv1.2``.
    * - ``nginx['ssl_state_name']``
      - |nginx ssl_state_name| Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``
