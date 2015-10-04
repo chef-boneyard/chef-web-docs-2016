@@ -10,7 +10,7 @@ deploy
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_deploy_syntax.rst
+.. include:: ../../includes_resources/includes_resource_12-4_deploy_syntax.rst
 
 Deploy Strategies
 =====================================================
