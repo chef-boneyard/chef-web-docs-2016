@@ -10,17 +10,29 @@ This configuration file has the following settings for ``ldap``:
    * - Setting
      - Description
    * - ``ldap['base_dn']``
-     - |ldap base_dn| For |windows ad|, this is typically ``cn=users`` and then the domain. For example: ``'OU=Employees,OU=Domain users,DC=example,DC=com'``. Default value: ``nil``.
-   * - ``ldap['bind_dn']``
-     - |ldap bind_dn| The user the |chef server| will use to perform |ldap| searches. This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. The |chef server| must do an |ldap| search before any user can log in. Many |windows ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` and ``bind_password`` settings blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to ``'CN=user_who_can_search,OU=Employees,OU=Domainusers,DC=example,DC=com'``. Default value: ``nil``.
-   * - ``ldap['bind_password']``
-     - |ldap bind_password| The password for the user specified by ``ldap['bind_dn']``. Leave this value and ``ldap['bind_dn']`` unset if anonymous bind is sufficient. Default value: ``nil``.
-   * - ``ldap['group_dn']``
-     - |ldap group_dn| When set to the distinguished name of a group, only members of that group can log in. This feature filters based on the ``memberOf`` attribute and only works with |ldap| servers that provide such an attribute. In |open ldap|, the ``memberOf`` overlay provides this attribute. For example, if the value of the ``memberOf`` attribute is ``cn=abcxyz,ou=users,dc=company,dc=com``, then use:
+     - |ldap base_dn| For |windows ad|, this is typically ``cn=users`` and then the domain. For example:
 
        .. code-block:: ruby
 
-          ldap['group_dn'] = 'cn=abcxyz,ou=users,dc=company,dc=com'
+          'OU=Employees,OU=Domain users,DC=example,DC=com'
+
+       Default value: ``nil``.
+   * - ``ldap['bind_dn']``
+     - |ldap bind_dn| The user the |chef server| will use to perform |ldap| searches. This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. The |chef server| must do an |ldap| search before any user can log in. Many |windows ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` and ``bind_password`` settings blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to:
+
+       .. code-block:: ruby
+
+          'CN=user,OU=Employees,OU=Domainuser,DC=example,DC=com'
+
+       Default value: ``nil``.
+   * - ``ldap['bind_password']``
+     - |ldap bind_password| The password for the user specified by ``ldap['bind_dn']``. Leave this value and ``ldap['bind_dn']`` unset if anonymous bind is sufficient. Default value: ``nil``.
+   * - ``ldap['group_dn']``
+     - |ldap group_dn| When set to the distinguished name of a group, only members of that group can log in. This feature filters based on the ``memberOf`` attribute and only works with |ldap| servers that provide such an attribute. In |open ldap|, the ``memberOf`` overlay provides this attribute. For example, if the value of the ``memberOf`` attribute is ``CN=abcxyz,OU=users,DC=company,DC=com``, then use:
+
+       .. code-block:: ruby
+
+          ldap['group_dn'] = 'CN=user,OU=Employees,DC=example,DC=com'
    * - ``ldap['host']``
      - |ldap host| The hostname of the |ldap| or |windows ad| server. Be sure the |chef server| is able to resolve any host names. Default value: ``ldap-server-host``.
    * - ``ldap['login_attribute']``

@@ -36,7 +36,12 @@ This configuration file has the following settings for ``rabbitmq``:
    * - ``rabbitmq['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``'/var/log/opscode/rabbitmq'``.
    * - ``rabbitmq['log_rotation']``
-     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+     - |log_rotation| Default value:
+
+       .. code-block:: ruby
+
+          { 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }
+
    * - ``rabbitmq['node_ip_address']``
      - |ip_address rabbitmq| Default value: ``'127.0.0.1'``.
 

@@ -18,13 +18,23 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['checkpoint_warning']``
      - |checkpoint_warning| Default value: ``30s``.
    * - ``postgresql['data_dir']``
-     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}/data``.
+     - |directory generic_data| |default_value_recommended| Default value:
+
+       .. code-block:: ruby
+
+          /var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}/data
+
    * - ``postgresql['db_superuser']``
      - Required when ``postgresql['external']`` is set to ``true``. |postgresql external_db_superuser| Default value: ``'superuser_userid'``.
    * - ``postgresql['db_superuser_password']``
      - Required when ``postgresql['external']`` is set to ``true``. |postgresql external_db_password| Default value: ``'the password'``.
    * - ``postgresql['dir']``
-     - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}``.
+     - |directory generic| |default_value_recommended| Default value:
+
+       .. code-block:: ruby
+
+          /var/opt/opscode/postgresql/#{node['private_chef']['postgresql']['version']}
+
    * - ``postgresql['effective_cache_size']``
      - |effective_cache_size postgresql| Default value: 50% of available RAM.
    * - ``postgresql['enable']``
@@ -44,11 +54,21 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['listen_address']``
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
-     - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/postgresql/#{node['private_chef']['postgresql']['version']}``.
+     - |directory logs| |default_value_recommended| Default value:
+
+       .. code-block:: ruby
+
+          /var/log/opscode/postgresql/#{node['private_chef']['postgresql']['version']}
+
    * - ``postgresql['log_min_duration_statement']``
      - |log_rotation min_duration| Possible values: ``-1`` (disabled, do not log any statements), ``0`` (log every statement), or an integer greater than zero. When the integer is greater than zero, this value is the amount of time (in milliseconds) that a query statement must have run before it is logged. Default value: ``-1``.
    * - ``postgresql['log_rotation']``
-     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+     - |log_rotation| Default value:
+
+       .. code-block:: ruby
+
+          { 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }
+
    * - ``postgresql['max_connections']``
      - |max_connections| Default value: ``350``.
    * - ``postgresql['md5_auth_cidr_addresses']``
@@ -56,7 +76,12 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['port']``
      - Optional when ``postgresql['external']`` is set to ``true``. |port service| |postgresql external_port| Default value: ``5432``.
    * - ``postgresql['shared_buffers']``
-     - |shared_buffers postgresql| Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``.
+     - |shared_buffers postgresql| Default value:
+
+       .. code-block:: ruby
+
+          #{(node['memory']['total'].to_i / 4) / (1024)}MB
+
    * - ``postgresql['shell']``
      - Default value: ``/bin/sh``.
    * - ``postgresql['shmall']``
@@ -74,7 +99,12 @@ This configuration file has the following settings for ``postgresql``:
    * - ``postgresql['trust_auth_cidr_addresses']``
      - |trust_auth_cidr_addresses| See ``md5_auth_cidr_addresses``. Default value: ``'127.0.0.1/32', '::1/128'``.
    * - ``postgresql['user_path']``
-     - Default value: ``/opt/opscode/embedded/bin:/opt/opscode/bin:$PATH``.
+     - Default value:
+
+       .. code-block:: ruby
+
+          /opt/opscode/embedded/bin:/opt/opscode/bin:$PATH
+
    * - ``postgresql['username']``
      - |name user postgresql| Default value: ``opscode-pgsql``.
    * - ``postgresql['version']``
