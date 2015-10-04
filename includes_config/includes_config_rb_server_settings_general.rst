@@ -14,7 +14,12 @@ This configuration file has the following general settings:
    * - ``addons['path']``
      - Default value: ``nil``.
    * - ``addons['packages']``
-     - Default value: ``%w{opscode-reporting opscode-manage opscode-analytics opscode-push-jobs-server}``.
+     - Default value:
+
+       .. code-block:: ruby
+
+          %w{opscode-reporting opscode-manage opscode-analytics opscode-push-jobs-server}
+
    * - ``api_version``
      - |version chef_server| Default value: ``'12.0.0'``.
    * - ``default_orgname``

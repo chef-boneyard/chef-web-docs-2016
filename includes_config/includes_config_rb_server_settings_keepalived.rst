@@ -20,7 +20,12 @@ This configuration file has the following settings for ``keepalived``:
    * - ``keepalived['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``keepalived['service_posthooks']``
-     - |directory keepalive_post_hooks| Default value: ``'{ 'rabbitmq' => '/opt/opscode/bin/wait-for-rabbit' }'``.
+     - |directory keepalive_post_hooks| Default value:
+
+       .. code-block:: ruby
+
+          '{ 'rabbitmq' => '/opt/opscode/bin/wait-for-rabbit' }'
+
    * - ``keepalived['smtp_connect_timeout']``
      - |timeout smtp_connect| Default value: ``'30'``.
    * - ``keepalived['smtp_server']``

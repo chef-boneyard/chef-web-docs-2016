@@ -14,9 +14,19 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['commit_interval']``
      - |solr_commit_interval| This value should be tuned carefully. |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``opscode_solr4['data_dir']``
-     - |directory generic_data| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-solr4/data``.
+     - |directory generic_data| |default_value_recommended| Default value:
+
+       .. code-block:: ruby
+
+          /var/opt/opscode/opscode-solr4/data
+
    * - ``opscode_solr4['dir']``
-     - |directory generic| |default_value_recommended| Default value: ``/var/opt/opscode/opscode-solr4``.
+     - |directory generic| |default_value_recommended| Default value:
+
+       .. code-block:: ruby
+
+          /var/opt/opscode/opscode-solr4
+
    * - ``opscode_solr4['enable']``
      - |enable service| Default value: ``true``.
    * - ``opscode_solr4['ha']``
@@ -28,9 +38,19 @@ This configuration file has the following settings for ``opscode-solr4``:
    * - ``opscode_solr4['java_opts']``
      - |solr_java_opts| (``-XX:NewSize`` is configured using the ``new_size`` setting.) Default value: ``' '`` (empty).
    * - ``opscode_solr4['log_directory']``
-     - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/opscode-solr4``.
+     - |directory logs| |default_value_recommended| Default value:
+
+       .. code-block:: ruby
+
+          /var/log/opscode/opscode-solr4
+
    * - ``opscode_solr4['log_rotation']``
-     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+     - |log_rotation| Default value:
+
+       .. code-block:: ruby
+
+          { 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }
+
    * - ``opscode_solr4['max_commit_docs']``
      - |solr_max_commit_docs| This value should be tuned carefully.  |solr_update_frequency_caveat| Default value: ``1000`` (every 1000 documents).
    * - ``opscode_solr4['max_field_length']``

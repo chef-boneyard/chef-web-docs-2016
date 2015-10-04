@@ -36,7 +36,12 @@ This configuration file has the following settings for ``redis_lb``:
    * - ``redis_lb['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``'/var/log/opscode/redis_lb'``.
    * - ``redis_lb['log_rotation']``
-     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+     - |log_rotation| Default value:
+
+       .. code-block:: ruby
+
+          { 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }
+
    * - ``redis_lb['loglevel']``
      - |log_level|. Possible values: ``debug``, ``notice``, ``verbose``, and ``warning``. Default value: ``'notice'``.
    * - ``redis_lb['maxmemory']``
@@ -46,7 +51,13 @@ This configuration file has the following settings for ``redis_lb``:
    * - ``redis_lb['port']``
      - |port service| Default value: ``'16379'``.
    * - ``redis_lb['save_frequency']``
-     - |save_frequency_redis| Default value: ``{ '900' => '1', '300' => '10', '60' => '1000' }``, which will save the database every 15 minutes if at least one key changes, every 5 minutes if at least 10 keys change, and every 60 seconds if 10000 keys change.
+     - |save_frequency_redis| Default value:
+
+       .. code-block:: ruby
+
+          { '900' => '1', '300' => '10', '60' => '1000' }
+
+       Which saves the database every 15 minutes if at least one key changes, every 5 minutes if at least 10 keys change, and every 60 seconds if 10000 keys change.
    * - ``redis_lb['timeout']``
      - |timeout redis| Default value: ``'300'``.
    * - ``redis_lb['vip']``

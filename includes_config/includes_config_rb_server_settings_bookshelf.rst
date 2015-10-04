@@ -26,7 +26,12 @@ This configuration file has the following settings for ``bookshelf``:
    * - ``bookshelf['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``/var/log/opscode/bookshelf``.
    * - ``bookshelf['log_rotation']``
-     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+     - |log_rotation| Default value:
+
+       .. code-block:: ruby
+
+          { 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }
+
    * - ``bookshelf['port']``
      - |port service| Default value: ``4321``.
    * - ``bookshelf['secret_access_key']``

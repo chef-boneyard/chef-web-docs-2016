@@ -22,9 +22,19 @@ This configuration file has the following settings for ``drbd``:
    * - ``drbd['flexible_meta_disk']``
      - |drbd flexible_meta_disk| Default value: ``'internal'``.
    * - ``drbd['primary']``
-     - |drbd primary| Default value: ``{'fqdn'=>'ubuntu.localdomain', 'ip'=>'192.168.4.131', 'port'=>'7788'}``.
+     - |drbd primary| Default value:
+
+       .. code-block:: ruby
+
+          {'fqdn'=>'ubuntu.localdomain', 'ip'=>'192.168.4.131', 'port'=>'7788'}
+
    * - ``drbd['secondary']``
-     - |drbd secondary| Default value: ``{'fqdn'=>'ubuntu.localdomain', 'ip'=>'192.168.4.131', 'port'=>'7788'}``.
+     - |drbd secondary| Default value:
+
+       .. code-block:: ruby
+
+          {'fqdn'=>'ubuntu.localdomain', 'ip'=>'192.168.4.131', 'port'=>'7788'}
+
    * - ``drbd['shared_secret']``
      - |drbd shared_secret| This attribute is randomly generated during the installation of the ``bootstrap`` server and does not need to be set explicitly. Default value: ``'promisespromises'``.
    * - ``drbd['sync_rate']``

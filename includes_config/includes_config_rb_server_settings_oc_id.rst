@@ -21,7 +21,7 @@ This configuration file has the following settings for ``oc-id``:
 		      'redirect_uri' => 'https://analytics.rhel.aws'
 		    },
 		    'supermarket' => {
-		      'redirect_uri' => 'https://default-ubuntu-1204.vagrantup.com/auth/chef_oauth2/callback'
+		      'redirect_uri' => 'https://vagrantup.com/auth'
 		    }
 		  }
    * - ``oc_id['db_pool_size']``
@@ -35,7 +35,12 @@ This configuration file has the following settings for ``oc-id``:
    * - ``oc_id['log_directory']``
      - |directory logs| |default_value_recommended| Default value: ``'/var/opt/opscode/oc_id'``.
    * - ``oc_id['log_rotation']``
-     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+     - |log_rotation| Default value:
+
+       .. code-block:: ruby
+
+          { 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }
+
    * - ``oc_id['num_to_keep']``
      - |num_to_keep| Default value: ``10``.
    * - ``oc_id['port']``
