@@ -9,7 +9,7 @@ For example, the ``site.rb`` file in the ``exampleco`` cookbook could be similar
    property :homepage, String, default: '<h1>Hello world!</h1>'
 
    load_current_value do
-     if File.exist?('/var/www/html/index.html')
+     if ::File.exist?('/var/www/html/index.html')
        homepage IO.read('/var/www/html/index.html')
      end
    end
