@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following |ohai| plugins are available from the open source community:
+The following |ohai| plugins are available from the |chef| community:
 
 .. list-table::
    :widths: 60 420
