@@ -31,6 +31,49 @@ Run from |client rb|
 .. include:: ../../includes_handler/includes_handler_type_start_run_from_client_rb.rst
 
 
+Event Handlers
+=====================================================
+.. include:: ../../includes_dsl_handler/includes_dsl_handler.rst
+
+on Method
+-----------------------------------------------------
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_method_on.rst
+
+Event Types
+-----------------------------------------------------
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_event_types.rst
+
+Examples
+-----------------------------------------------------
+The following examples show ways to use the |dsl handler|.
+
+Send Email
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email.rst
+
+.. note:: Read this scenario as an HTML presentation at https://docs.chef.io/decks/event_handlers.html.
+
+**Define How Email is Sent**
+
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_library.rst
+
+**Add the Handler**
+
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_handler.rst
+
+**Test the Handler**
+
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_test.rst
+
+|etcd| Locks
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_example_etcd_lock.rst
+
+|hipchat| Notifications
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_example_hipchat.rst
+
+
 Handlers and Cookbooks
 =====================================================
 The following cookbooks can be used to load handlers during the |chef client| run.
@@ -114,9 +157,3 @@ error_report Handler
 Community Handlers
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_community_handlers.rst
-
-
-
-
-
-

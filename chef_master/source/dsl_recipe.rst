@@ -325,6 +325,48 @@ value_for_platform_family
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_family.rst
 
+Event Handlers
+=====================================================
+.. note:: Event handlers are not specifically part of the |dsl recipe|. An event handler is declared using the ``Chef.event_hander`` method, which declares the event handler within recipes in a similar manner to other |dsl recipe| methods.
+
+.. include:: ../../includes_dsl_handler/includes_dsl_handler.rst
+
+on Method
+-----------------------------------------------------
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_method_on.rst
+
+Event Types
+-----------------------------------------------------
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_event_types.rst
+
+Examples
+-----------------------------------------------------
+The following examples show ways to use the |dsl handler|.
+
+Send Email
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email.rst
+
+**Define How Email is Sent**
+
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_library.rst
+
+**Add the Handler**
+
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_handler.rst
+
+**Test the Handler**
+
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_slide_send_email_test.rst
+
+|etcd| Locks
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_example_etcd_lock.rst
+
+|hipchat| Notifications
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_handler/includes_dsl_handler_example_hipchat.rst
+
 
 Windows Platform
 =====================================================
