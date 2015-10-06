@@ -99,3 +99,12 @@ Data Tracking
 User Interface
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_ui.rst
+
+Reference Topics
+=====================================================
+See the following links for information about installing, monitoring, using command-line tools, and configuration file settings:
+
+* :doc:`Install Chef Analytics </install_analytics>`
+* :doc:`Monitor Chef Analytics </analytics_monitor>`
+* :doc:`opscode-analytics-ctl </ctl_analytics>`
+* :doc:`opscode-analytics.rb </config_rb_analytics>`
