@@ -75,6 +75,13 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           no_proxy 'localhost, 10.*, *.example.com, *.dev.example.com'
+   * - ``ssl_verify_mode``
+     - |ssl_verify_mode|
+       
+       * |ssl_verify_mode_verify_none|
+       * |ssl_verify_mode_verify_peer| This is the recommended setting.
+       
+       Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified. Default value: ``:verify_peer``.
    * - ``syntax_check_cache_path``
      - |syntax_check_cache_path|
    * - ``validation_client_name``
@@ -97,4 +104,3 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           versioned_cookbooks true
-
