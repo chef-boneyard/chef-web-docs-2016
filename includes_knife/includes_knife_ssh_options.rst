@@ -24,7 +24,7 @@ This subcommand has the following options:
    |identity-file|
 
 ``-m``, ``--manual-list``
-   |manual_list| If there is more than one item in the list, put quotes around the entire list. For example: ``--manual-list "server01 server 02 server 03"``
+   |manual_list| If there is more than one item in the list, put quotes around the entire list. For example: ``--manual-list "server01 server 02 server 03 server 04"``
 
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
