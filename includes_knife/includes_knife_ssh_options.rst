@@ -15,7 +15,7 @@ This subcommand has the following options:
    |concurrency|
 
 ``-e``, ``--exit-on-error``
-   Use to exist immediately upon error.
+   Use to exit immediately upon error.
 
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh_gateway|
