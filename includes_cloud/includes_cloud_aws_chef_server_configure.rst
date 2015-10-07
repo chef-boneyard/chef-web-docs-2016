@@ -26,7 +26,7 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
 
       $ sudo chef-server-ctl marketplace-setup
 
-#. The ``marketplace-setup`` command should output the username and URL that are needed to login to the |chef manage|. Follow the supplied link and login.
+#. The ``marketplace-setup`` command should output the username and URL required to login to the |chef manage|. Follow the supplied link and login.
 
    .. note:: .. include:: ../../includes_notes/includes_notes_chef_aws_ssl.rst
 
