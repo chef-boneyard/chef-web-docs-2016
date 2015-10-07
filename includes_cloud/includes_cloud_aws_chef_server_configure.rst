@@ -26,11 +26,11 @@ After the |chef dk| is installed and the |amazon ami| for |chef server| has been
 
       $ sudo chef-server-ctl marketplace-setup
 
-#. The ``marketplace-setup`` command should output the username and URL that needed to login to the |chef manage|. Follow the supplied link and login.
+#. The ``marketplace-setup`` command should output the username and URL that are needed to login to the |chef manage|. Follow the supplied link and login.
 
    .. note:: .. include:: ../../includes_notes/includes_notes_chef_aws_ssl.rst
 
-#. The ``marketplace-setup`` command should supply a link to starter kit, which is a zip file that contains various configuration files for the workstation, including the user key required for authentication to the |chef server| and the validation key used to bootstrap nodes with the |chef server|. Follow the link that is provided and download the starter kit.
+#. The ``marketplace-setup`` command should supply a link to the starter kit, which is a zip file that contains various configuration files for the workstation, including the user key required for authentication to the |chef server| and the validation key used to bootstrap nodes with the |chef server|. Follow the link that is provided and download the starter kit.
 
 #. .. include:: ../../step_install/step_install_aws_chef_server_extract_starter_kit.rst
 #. .. include:: ../../step_install/step_install_aws_chef_server_knife_ssl_fetch.rst
