@@ -25,7 +25,7 @@ with a request body similar to:
 
 The response is similar to:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "id": "aaaaaaaaaaaa25fd67fa8715fd547d3d"

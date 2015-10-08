@@ -29,7 +29,7 @@ with a request body similar to:
 
 The response is similar to:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "id": "aaaaaaaaaaaa25fd67fa8715fd547d3d"
@@ -62,7 +62,7 @@ The response is similar to:
 
 The response will return something similar to:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "id": "aaaaaaaaaaaa25fd67fa8715fd547d3d", 

@@ -24,7 +24,7 @@ The ``GET`` method is used to get a list of tools that match a search query. Use
 
 or:
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /tools-search?q=SEARCH_QUERY&start=START&items=ITEMS
 
@@ -32,7 +32,7 @@ or:
 
 The response will return a list of tools that match the search query. Each returned data set will include the name of the tool, a type, description, owner, source URL and URI. In addition, the total number of tools that match the query on |api cookbooks site| is shown, as well (if ``start`` is specified) the point at which the list of returned tools began:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
     {
       "start": 0,

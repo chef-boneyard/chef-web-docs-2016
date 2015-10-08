@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response is similar to:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "aaaaaaaaaaaa25fd67fa8715fd547d3d",

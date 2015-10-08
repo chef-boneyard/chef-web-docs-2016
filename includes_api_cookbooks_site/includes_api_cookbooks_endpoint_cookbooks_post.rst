@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response is similar to:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "apt",
@@ -39,7 +39,8 @@ The response is similar to:
      - |response code 200 ok| The cookbook was posted to the |api cookbooks site|.
    * - ``400``
      - |response code 400 unsuccessful| The cookbook was not posted to the |api cookbooks site|. For example:
-       ::
+
+       .. code-block:: javascript
 
           {
              "error_messages":

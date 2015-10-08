@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response is similar to:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "apt",
@@ -39,7 +39,8 @@ The response is similar to:
      - |response code 200 ok| The cookbook was deleted.
    * - ``400``
      - |response code 400 unsuccessful| The requested cookbook does not exist. For example:
-       ::
+
+       .. code-block:: javascript
 
           {
              "error_messages":
@@ -48,6 +49,7 @@ The response is similar to:
           }
    * - ``403``
      - |response code 403 unauthorized| The user is not authorized to delete the cookbook. For example:
-       ::
+
+       .. code-block:: javascript
 
           {}

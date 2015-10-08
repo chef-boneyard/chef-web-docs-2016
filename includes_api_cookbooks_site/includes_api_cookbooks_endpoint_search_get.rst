@@ -24,7 +24,7 @@ The ``GET`` method is used to get a list of cookbooks that match a search query.
 
 or:
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /search?q=SEARCH_QUERY&start=START&items=ITEMS
 
@@ -32,7 +32,7 @@ or:
 
 The response will return a list of cookbooks by name and description and will return a list of cookbooks that match the search query. Each returned data set will include the name of the cookbook, a description, the URI, and the name of the individual who maintains the cookbook. In addition, the total number of cookbooks on |api cookbooks site| is shown, as well (if ``start`` is specified) the point at which the list of returned cookbooks began:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "total": 2,
