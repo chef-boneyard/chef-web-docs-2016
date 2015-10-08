@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response will return details for a cookbook, including name of the cookbook, the category to which it belongs, the name of the individual who maintains the cookbook, the URI for the latest version and previous versions, its description, and so on it also includes metrics about the cookbooks namely number of downloads and followers:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "yum",
@@ -46,7 +46,7 @@ The response will return details for a cookbook, including name of the cookbook,
 
 If a cookbook is deprecated, that status is noted by the ``deprecated`` field (being ``true``):
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "apache",
@@ -66,7 +66,8 @@ If a cookbook is deprecated, that status is noted by the ``deprecated`` field (b
      - |response code 200 ok| The requested cookbook exists.
    * - ``400``
      - |response code 400 unsuccessful| The requested cookbook does not exist. For example:
-       ::
+
+       .. code-block:: javascript
 
           {
              "error_messages":

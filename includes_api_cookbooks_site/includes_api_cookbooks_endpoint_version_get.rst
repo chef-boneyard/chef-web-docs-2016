@@ -21,7 +21,7 @@ or:
 
 The response will return details for a cookbook version, including the license under which the cookbook is distributed, the most recent update, version, URI, date of cookbook creation, path to the cookbook's |tar gz| file, its dependencies and platforms it supports and so on:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
   {
     "license": "Apache 2.0",
@@ -47,7 +47,8 @@ The response will return details for a cookbook version, including the license u
      - |response code 200 ok| The requested cookbook exists.
    * - ``400``
      - |response code 400 unsuccessful| The requested cookbook does not exist. For example:
-       ::
+
+       .. code-block:: javascript
 
           {
              "error_messages":

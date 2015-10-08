@@ -26,11 +26,7 @@ The ``GET`` method is used to get a listing of the available cookbooks. Use the 
 
 or:
 
-.. code-block:: ruby
-
-or:
-
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /cookbooks?user=smith
 
@@ -38,7 +34,7 @@ or:
 
 The response will return the name of the cookbook, a description, URI, the name of the individual who maintains the cookbook. In addition, the total number of cookbooks on |api cookbooks site| is shown, as well (if ``start`` is specified) the point at which the list of returned cookbooks began:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
       "total": 5234,

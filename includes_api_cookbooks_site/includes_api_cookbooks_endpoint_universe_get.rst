@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response will return an embedded hash, with the name of each cookbook as a top-level key. Each cookbook will list each version, along with its location information and dependencies:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "ffmpeg": {

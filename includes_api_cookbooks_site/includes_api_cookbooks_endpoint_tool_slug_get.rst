@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response will return details for a tool, including the name of the tool, a type, description, owner, source URL and install instructions as markdown:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
     {
       "name": "Berkshelf",
@@ -37,7 +37,8 @@ The response will return details for a tool, including the name of the tool, a t
      - |response code 200 ok| The requested tool exists.
    * - ``400``
      - |response code 400 unsuccessful| The requested tool does not exist. For example:
-       ::
+
+       .. code-block:: javascript
 
           {
              "error_messages":

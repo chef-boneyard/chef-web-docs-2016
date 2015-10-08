@@ -24,7 +24,7 @@ The ``GET`` method is used to get a listing of the available tools. Use the ``st
 
 or:
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /tools?order=recently_added
 
@@ -32,7 +32,7 @@ or:
 
 The response will return the name of the tool, a type, description, owner, source URL and URI. In addition, the total number of tools on |api cookbooks site| is shown, as well (if ``start`` is specified) the point at which the list of returned tools began:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
     {
       "start": 0,
