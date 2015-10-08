@@ -18,7 +18,7 @@ To set up the |chef splunk|, do the following:
 #. Click the plus symbol (**+**) and select |splunk|.
 #. Name the configuration. For example: ``splunk-notifier``.
 #. Configure the hostname, port, username, and password for the |splunk| server.
-#. The port must be ``8089``.
+#. The port must be ``8089`` by default, modify to match your Splunk install.
 #. Add the following rules to enable data to be sent to the |splunk| server:
 
    .. code-block:: ruby
