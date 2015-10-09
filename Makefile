@@ -8,8 +8,14 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
 # was the first option after S3OPTIONS
 # --delete-removed
 
-release: master 12-5 decks
 
+# 
+# SAVED FOR HISTORY PURPOSES
+# This is the old mapping of the makefile for what should be built, not built
+# Add after `release:` the builds to build; everything else underneath commented out
+# 
+# release: master 12-5 decks
+# 
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # devkit_1-0 analytics_1-1 delivery_1-0
@@ -26,6 +32,7 @@ release: master 12-5 decks
 # enterprise open_source slides
 # 10 private_chef
 # all analytics delivery client devkit server
+# 
 
 #
 # Parallel Building:
@@ -116,6 +123,10 @@ delivery_1-0:
 	$(BUILD_COMMAND_AND_ARGS) release_chef_12-4/source $(BUILDDIR)/release/12-4/
 
 12-5:
+	mkdir -p $(BUILDDIR)/release/12-6/
+	$(BUILD_COMMAND_AND_ARGS) release_chef_12-6/source $(BUILDDIR)/release/12-6/
+
+12-6:
 	mkdir -p $(BUILDDIR)/release/12-5/
 	$(BUILD_COMMAND_AND_ARGS) release_chef_12-5/source $(BUILDDIR)/release/12-5/
 
