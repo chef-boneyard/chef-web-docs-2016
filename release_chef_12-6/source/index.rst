@@ -157,6 +157,7 @@ Cookbooks
    resource_ips_package
    resource_link
    resource_log
+   resource_ksh
    resource_macports_package
    resource_mdadm
    resource_mount
