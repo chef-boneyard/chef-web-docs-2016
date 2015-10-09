@@ -54,6 +54,10 @@ Enable Features
 
 .. include:: ../../includes_install/includes_install_reporting_ha.rst
 
+**Install Push Jobs**
+
+.. include:: ../../includes_install/includes_install_push_jobs_server_ha.rst
+
 Reference
 =====================================================
 The following sections show an example |chef server rb| file and a list of the ports that are required by the |chef server|.
