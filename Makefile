@@ -123,12 +123,12 @@ delivery_1-0:
 	$(BUILD_COMMAND_AND_ARGS) release_chef_12-4/source $(BUILDDIR)/release/12-4/
 
 12-5:
-	mkdir -p $(BUILDDIR)/release/12-6/
-	$(BUILD_COMMAND_AND_ARGS) release_chef_12-6/source $(BUILDDIR)/release/12-6/
-
-12-6:
 	mkdir -p $(BUILDDIR)/release/12-5/
 	$(BUILD_COMMAND_AND_ARGS) release_chef_12-5/source $(BUILDDIR)/release/12-5/
+
+12-6:
+	mkdir -p $(BUILDDIR)/release/12-6/
+	$(BUILD_COMMAND_AND_ARGS) release_chef_12-6/source $(BUILDDIR)/release/12-6/
 
 oec_11-0:
 	mkdir -p $(BUILDDIR)/release/oec_11-0/
