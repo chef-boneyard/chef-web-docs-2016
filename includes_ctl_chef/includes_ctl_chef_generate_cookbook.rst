@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand chef generate_cookbook| subcommand is used to generate a cookbook.
+The ``chef generate cookbook`` subcommand is used to generate a cookbook.
