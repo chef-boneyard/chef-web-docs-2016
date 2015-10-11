@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |lwrp chef handler| resource block enables handlers during a |chef client| run. Two handlers---``JsonFile`` and ``ErrorReport``---are built into |chef|:
+A |resource chef_handler| resource block enables handlers during a |chef client| run. Two handlers---``JsonFile`` and ``ErrorReport``---are built into |chef|:
 
 .. code-block:: ruby
 
@@ -23,7 +23,7 @@ and:
 
 show how to enable those handlers in a recipe.
 
-The full syntax for all of the properties that are available to the |lwrp chef handler| resource is:
+The full syntax for all of the properties that are available to the |resource chef_handler| resource is:
 
 .. code-block:: ruby
 

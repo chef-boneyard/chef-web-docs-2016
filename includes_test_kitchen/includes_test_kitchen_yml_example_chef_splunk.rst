@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following |kitchen yml| file is part of the |cookbook chef_splunk| cookbook and is used to help ensure the installation of the |splunk| client and server is done correctly.
+The following |kitchen yml| file is part of the ``chef-splunk`` cookbook and is used to help ensure the installation of the |splunk| client and server is done correctly.
 
 .. code-block:: yaml
 

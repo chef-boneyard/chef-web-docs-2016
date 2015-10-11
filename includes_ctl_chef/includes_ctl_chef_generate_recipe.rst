@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand chef generate_recipe| subcommand is used to generate a recipe in the ``/recipes`` directory.
+The ``chef generate recipe`` subcommand is used to generate a recipe in the ``/recipes`` directory.

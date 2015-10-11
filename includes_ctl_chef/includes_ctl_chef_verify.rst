@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand chef verify| subcommand is used to verify that components in the |chef dk| are installed correctly.
+The ``chef verify`` subcommand is used to verify that components in the |chef dk| are installed correctly.

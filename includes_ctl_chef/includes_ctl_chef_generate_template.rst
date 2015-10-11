@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand chef generate_template| subcommand is used to generate a template in the ``/templates`` directory.
+The ``chef generate template`` subcommand is used to generate a template in the ``/templates`` directory.

@@ -5,7 +5,7 @@
 
 .. note:: This command is experimental and is built around the idea that there should be a middle ground between the "one cookbook per repo" and the "all cookbooks in one repo" approaches.
 
-The |subcommand chef generate_app| subcommand is used to generate a cookbook structure that:
+The ``chef generate app`` subcommand is used to generate a cookbook structure that:
 
 * Supports multiple cookbooks (as many as needed to support an "application")
 * Supports a top-level instance of |kitchen| that can be used to test each cookbook in the appication

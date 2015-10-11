@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand chef env| subcommand is used to configure the environment for the |chef dk|.
+The ``chef env`` subcommand is used to configure the environment for the |chef dk|.

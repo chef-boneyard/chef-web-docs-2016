@@ -29,7 +29,7 @@ Once this information has been identified, launch the |azure portal|, start the 
 
 #. Use the **From Local** button next to the validation key text box to locate a local copy of the validation key. 
 
-#. Optional. `Use a run-list <http://docs.opscode.com/essentials_node_object_run_lists.html>`_ to specify what should be run when the virtual machine is provisioned, such as using the run-list to provision a virtual machine with |microsoft iis|. Use the |cookbook iis| cookbook and the default recipe to build a run-list. For example:
+#. Optional. `Use a run-list <http://docs.chef.io/run_lists.html>`_ to specify what should be run when the virtual machine is provisioned, such as using the run-list to provision a virtual machine with |microsoft iis|. Use the ``iis`` cookbook and the default recipe to build a run-list. For example:
    
    .. code-block:: ruby
    
@@ -61,7 +61,7 @@ Once this information has been identified, launch the |azure portal|, start the 
 
    When the virtual machine has reached the status **starting**, click the virtual machine name to go to a page that contains more detail. Click **dashboard** to see more detailed status, and scroll down to the area that says **extensions**.
 
-   Once the VM has gone far enough in the “running(provisioning)” state, some entries should appear under status, like this:
+   Once the virtual machine has gone far enough in the ``running(provisioning)`` state, some entries should appear under status, like this:
 
    .. image:: ../../images/azure_portal_1.png
 

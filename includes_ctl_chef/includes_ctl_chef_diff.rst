@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand chef diff| subcommand is used to display an itemized comparison of two revisions of a ``Policyfile.lock.json`` file.
+The ``chef diff`` subcommand is used to display an itemized comparison of two revisions of a ``Policyfile.lock.json`` file.

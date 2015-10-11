@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-An example of using the ``:callbacks`` validation parameter from the |cookbook gunicorn| cookbook (formatted for better readability):
+An example of using the ``:callbacks`` validation parameter from the ``gunicorn`` cookbook (formatted for better readability):
 
 .. code-block:: ruby
 

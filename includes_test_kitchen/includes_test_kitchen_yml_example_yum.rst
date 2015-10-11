@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following |kitchen yml| file is part of the |cookbook yum| cookbook. It is named ``.kitchen.cloud.yml`` and is used for cloud-specific providers. In this cookbook, for |digital ocean|- and |amazon aws|-based providers.
+The following |kitchen yml| file is part of the ``yum`` cookbook. It is named ``.kitchen.cloud.yml`` and is used for cloud-specific providers. In this cookbook, for |digital ocean|- and |amazon aws|-based providers.
 
 .. code-block:: yaml
 

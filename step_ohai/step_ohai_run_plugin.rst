@@ -37,7 +37,3 @@ The command will return something similar to:
        "installed": true
      }
    }
-
-
-
-

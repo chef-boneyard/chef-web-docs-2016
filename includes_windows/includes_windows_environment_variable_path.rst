@@ -11,7 +11,7 @@ This is typically done during the installation of the |chef client| automaticall
 
 .. image:: ../../images/includes_windows_environment_variable_path.png
 
-This value can be set from a recipe. For example, from the |cookbook php| cookbook:
+This value can be set from a recipe. For example, from the ``php`` cookbook:
 
 .. code-block:: ruby
 

@@ -58,19 +58,19 @@ The following examples show actual |kitchen yml| files used in |company_name|-ma
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_audit_mode.rst
 
-|cookbook mysql| Cookbook
+mysql Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_mysql.rst
 
-|cookbook chef_client| Cookbook
+chef-client Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_client.rst
 
-|cookbook chef_splunk| Cookbook
+chef-splunk Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_splunk.rst
 
-|cookbook yum| Cookbook
+yum Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_yum.rst
 

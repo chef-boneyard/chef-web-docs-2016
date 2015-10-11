@@ -12,11 +12,11 @@ For more information about |juniper chef|, including information about installin
 
 The netdev Custom Resources
 -----------------------------------------------------
-The |cookbook netdev| cookbook is used to install and configure network interfaces and Layer 2 switching.
+The ``netdev`` cookbook is used to install and configure network interfaces and Layer 2 switching.
 
-The |cookbook netdev| cookbook contains the following custom resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
+The ``netdev`` cookbook contains the following custom resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
 
-.. note:: These custom resources are part of the |cookbook netdev| cookbook (https://github.com/chef-cookbooks/netdev).
+.. note:: These custom resources are part of the ``netdev`` cookbook (https://github.com/chef-cookbooks/netdev).
 
 netdev_interface
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

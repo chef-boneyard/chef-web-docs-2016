@@ -117,31 +117,3 @@ Some examples of combining validation parameters:
 .. code-block:: ruby
 
    attribute :enabled, :equal_to => [true, false, 'true', 'false'], :default => true
-
-From the ``nrpecheck`` lightweight resource in the |cookbook nagios| cookbook:
-
-.. code-block:: ruby
-
-   attribute :command_name, :kind_of => String, :name_attribute => true
-   attribute :warning_condition, :kind_of => String, :default => nil
-   attribute :critical_condition, :kind_of => String, :default => nil
-   attribute :command, :kind_of => String
-   attribute :parameters, :kind_of => String, :default => nil
-
-From the ``policy`` lightweight resource in the |cookbook rabbitmq| cookbook:
-
-.. code-block:: ruby
-
-   attribute :policy, :kind_of => String, :name_attribute => true
-   attribute :pattern, :kind_of => String
-   attribute :params, :kind_of => Hash
-   attribute :priority, :kind_of => Integer
-
-From the ``module`` lightweight resource in the |cookbook iis| cookbook:
-
-.. code-block:: ruby
-
-   attribute :module_name, :kind_of => String, :name_attribute => true
-   attribute :type, :kind_of => String, :default => nil
-   attribute :precondition, :kind_of => String, :default => nil
-   attribute :application, :kind_of => String, :default => nil

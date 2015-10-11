@@ -35,11 +35,11 @@ Handlers and Cookbooks
 =====================================================
 The following cookbooks can be used to load handlers during the |chef client| run.
 
-|cookbook chef_handler|
+chef_handler
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_cookbook_chef_handler.rst
 
-|cookbook chef_client|
+chef-client
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_cookbook_chef_client.rst
 

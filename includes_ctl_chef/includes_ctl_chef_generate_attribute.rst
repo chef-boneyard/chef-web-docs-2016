@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |subcommand chef generate_attribute| subcommand is used to generate an attribute file in the ``/attributes`` directory.
+The ``chef generate attribute`` subcommand is used to generate an attribute file in the ``/attributes`` directory.
