@@ -29,7 +29,7 @@ where
 * ``:validation_parameter`` represents a comma-delimited list of validation parameters for each property
 * ``attr_accessor`` allows the custom resource to use the ``Module`` |ruby| class to check for one (or more) named properties, such as ``:exists`` or ``:running``
 
-For example, the ``cron_d`` custom resource (found in the |cookbook cron| cookbook) can be used to manage files located in ``/etc/cron.d``:
+For example, the ``cron_d`` custom resource (found in the ``cron`` cookbook) can be used to manage files located in ``/etc/cron.d``:
 
 .. code-block:: ruby
 

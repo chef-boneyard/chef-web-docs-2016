@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The `json_file <https://github.com/chef/chef/blob/master/lib/chef/handler/json_file.rb>`_ handler is available from the ``chef_handler`` cookbook and can be used with exceptions and reports. It serializes run status data to a |json| file. This handler may be enabled in one of the following ways.
+The `json_file <https://github.com/chef/chef/blob/master/lib/chef/handler/json_file.rb>`_ handler is available from the |cookbook chef_handler| cookbook and can be used with exceptions and reports. It serializes run status data to a |json| file. This handler may be enabled in one of the following ways.
 
 By adding the following lines of |ruby| code to either the |client rb| file or the |solo rb| file, depending on how the |chef client| is being run:
 
@@ -12,7 +12,7 @@ By adding the following lines of |ruby| code to either the |client rb| file or t
    report_handlers << Chef::Handler::JsonFile.new(:path => '/var/chef/reports')
    exception_handlers << Chef::Handler::JsonFile.new(:path => '/var/chef/reports')
 
-By using the `chef_handler <https://docs.chef.io/resource_chef_handler.html>`_ resource in a recipe, similar to the following:
+By using the |resource chef_handler| resource in a recipe, similar to the following:
 
 .. code-block:: ruby
 

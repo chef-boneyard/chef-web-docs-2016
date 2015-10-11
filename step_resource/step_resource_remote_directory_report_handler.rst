@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to use the |resource remote_directory| resource and the |lwrp chef handler| resource to reboot a handler named ``WindowsRebootHandler``:
+The following example shows how to use the |resource remote_directory| resource and the |resource chef_handler| resource to reboot a handler named ``WindowsRebootHandler``:
 
 .. code-block:: ruby
 

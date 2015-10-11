@@ -99,7 +99,7 @@ A |ruby| file for each non-default environment must exist in the ``environments/
    default_attributes 'node' => { 'attribute' => [ 'value', 'value', 'etc.' ] }
    override_attributes 'node' => { 'attribute' => [ 'value', 'value', 'etc.' ] }
 
-where both default and override attributes are optional and either a cookbook or cookbook versions (one or more) are specified. For example, an environment named ``dev`` that uses the |cookbook couchdb| cookbook (version 11.0.0 or higher) that listens on ports 80 and 443:
+where both default and override attributes are optional and either a cookbook or cookbook versions (one or more) are specified. For example, an environment named ``dev`` that uses the ``couchdb`` cookbook (version 11.0.0 or higher) that listens on ports 80 and 443:
 
 .. code-block:: ruby
 
@@ -129,7 +129,7 @@ Attributes are optional and can be set at the default and override levels. These
 
    default_attributes 'apache2' => { 'listen_ports' => [ '80', '443' ] }
 
-will have all nodes in the environment (``node[:apache2][:listen_ports]``) set to '80' and '443' unless they were overridden by an attribute with higher precedence. For example:
+will have all nodes in the environment (``node[:apache2][:listen_ports]``) set to ``'80'`` and ``'443'`` unless they were overridden by an attribute with higher precedence. For example:
 
 .. code-block:: ruby
 

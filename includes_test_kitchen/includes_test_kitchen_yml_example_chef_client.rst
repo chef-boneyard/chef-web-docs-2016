@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following |kitchen yml| file is part of the |cookbook chef_client| cookbook and ensures the |chef client| is configured correctly.
+The following |kitchen yml| file is part of the ``chef-client`` cookbook and ensures the |chef client| is configured correctly.
 
 .. code-block:: yaml
 
