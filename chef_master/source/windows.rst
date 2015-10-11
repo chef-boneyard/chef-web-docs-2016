@@ -156,7 +156,7 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -164,7 +164,7 @@ Syntax
 
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
 
@@ -183,7 +183,7 @@ knife azure
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
 
-.. note:: Review the list of `common options <http://chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -344,7 +344,7 @@ knife windows
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
-.. note:: Review the list of `common options <http://chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -492,12 +492,6 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_batch_attributes.rst
 
-.. 
-.. Providers
-.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. .. include:: ../../includes_resources/includes_resource_batch_providers.rst
-.. 
-
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
@@ -626,11 +620,6 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_env_attributes.rst
 
-.. 
-.. Providers
-.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. .. include:: ../../includes_resources/includes_resource_env_providers.rst
-.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -656,11 +645,6 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
-.. 
-.. Providers
-.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. .. include:: ../../includes_resources/includes_resource_powershell_script_providers.rst
-.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -701,12 +685,6 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
-
-.. 
-.. Providers
-.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. .. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
-.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -760,14 +738,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_windows_package_install.rst
 
-.. 
-.. almost!
-.. 
-.. **Download a package from a URL**
-.. 
-.. .. include:: ../../step_resource/step_resource_windows_package_url.rst
-.. 
-
 
 windows_service
 -----------------------------------------------------
@@ -784,12 +754,6 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
-
-.. 
-.. Providers
-.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. .. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
-.. 
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -812,11 +776,11 @@ Some of the most popular |company_name|-maintained cookbooks that contain lightw
    * - Cookbook
      - Description
    * - `iis <https://github.com/chef-cookbooks/iis>`_
-     - The |cookbook iis| cookbook is used to install and configure |microsoft iis|.
+     - The ``iis`` cookbook is used to install and configure |microsoft iis|.
    * - `webpi <https://github.com/chef-cookbooks/webpi>`_
-     - The |cookbook webpi| cookbook is used to run the |microsoft webpi|.
+     - The ``webpi`` cookbook is used to run the |microsoft webpi|.
    * - `windows <https://github.com/chef-cookbooks/windows>`_
-     - The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
+     - The ``windows`` cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
 
 |dsl recipe| Methods
 =====================================================
