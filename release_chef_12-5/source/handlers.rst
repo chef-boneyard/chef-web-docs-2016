@@ -2,7 +2,3 @@
 .. THIS PAGE DOCUMENTS chef-client version 12.5
 
 .. include:: ../../chef_master/source/handlers.rst
-
-
-
-
