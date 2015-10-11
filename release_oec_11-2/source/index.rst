@@ -136,7 +136,6 @@ The following APIs can be used to access data on the |chef server|:
    install_server_standalone
    install_server_users
    migrate_to_enterprise
-   oec_overview
    orgmapper
    release_notes
    server_backup_restore
