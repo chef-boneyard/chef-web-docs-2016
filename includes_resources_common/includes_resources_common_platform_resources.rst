@@ -122,4 +122,4 @@ The following resources are platform resources (i.e. "are available from the |ch
    * - `yum_package <http://docs.chef.io/resource_yum.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
 
-In addition, the `chef_handler <http://docs.chef.io/resource_chef_handler.html>`_ resource is configured and run using the |cookbook chef_handler| cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (and as a "lightweight resource"), the |lwrp chef handler| resource should otherwise be considered a "platform resource".
+In addition, the `chef_handler <http://docs.chef.io/resource_chef_handler.html>`_ resource is configured and run using the |cookbook chef_handler| cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (and as a "lightweight resource"), the |resource chef_handler| resource should otherwise be considered a "platform resource".

@@ -11,5 +11,5 @@ Both types of handlers can be used to gather data about a |chef client| run and 
 
 Exception and report handlers are made available to the |chef client| run in one of the following ways:
 
-* By adding the ``chef_handler`` resource to a recipe, and then adding that recipe to the run-list for a node. (The ``chef_handler`` resource is available from the |cookbook chef_handler| cookbook.)
+* By adding the |resource chef_handler| resource to a recipe, and then adding that recipe to the run-list for a node. (The |resource chef_handler| resource is available from the |cookbook chef_handler| cookbook.)
 * By adding the handler to one of the following settings in the node's client.rb file: ``exception_handlers`` and/or ``report_handlers``

@@ -154,4 +154,4 @@ Resources
    * - `yum_package <http://docs.chef.io/release/11-6/resource_yum.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
 
-In addition, the `chef_handler <http://docs.chef.io/release/11-6/resource_chef_handler.html>`_ resource is configured and run using the |cookbook chef_handler| cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (as a custom resource), the |lwrp chef handler| resource should otherwise be considered a "platform resource".
+In addition, the `chef_handler <http://docs.chef.io/release/11-6/resource_chef_handler.html>`_ resource is configured and run using the |cookbook chef_handler| cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (as a custom resource), the |resource chef_handler| resource should otherwise be considered a "platform resource".
