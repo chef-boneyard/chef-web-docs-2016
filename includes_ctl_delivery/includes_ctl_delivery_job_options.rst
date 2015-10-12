@@ -5,44 +5,44 @@
 
 This subcommand has the following options:
 
-``-C``, ``--change=<change>``
+``-C``, ``--change=CHANGE``
    |delivery branch|
 
-``-e``, ``--ent=<ent>``
+``-e``, ``--ent=ENTERPRISE``
    |delivery enterprise|
 
-``-f``, ``--for=<pipeline>``
+``-f``, ``--for=PIPELINE``
    |delivery pipeline|
 
-``-g``, ``--git-url=<url>``
-   |git url|
+``-g``, ``--git-url=URL``
+   |git url| This URL is used as the remote target for the local |git| checkout.
 
-``-i``, ``--change-id=<id>``
+``-i``, ``--change-id=ID``
    |id delivery_change|
 
-``-j``, ``--job-root=<path>``
+``-j``, ``--job-root=PATH``
    |path delivery_job_root|
 
 ``-n``, ``--no-spinner``
    |delivery no_spinner|
 
-``-o``, ``--org=<org>``
+``-o``, ``--org=ORGANIZATION``
    |delivery organization|
 
-``-p``, ``--project=<project>``
+``-p``, ``--project=PROJECT``
    |name delivery_project|
 
-``-P``, ``--patchset=<number>``
+``-P``, ``--patchset=NUMBER``
    |delivery patchset| Default value: ``latest``.
 
-``<phase>````
+``<phase>``
    |delivery phase|
 
-``-s``, ``--server=<server>``
+``-s``, ``--server=SERVER``
    |delivery server|
 
-``-S``, ``--shasum=<gitsha>``
+``-S``, ``--shasum=GIT_SHA``
    |git sha|
 
-``-u``, ``--user=<user>``
+``-u``, ``--user=USER``
    |delivery user|

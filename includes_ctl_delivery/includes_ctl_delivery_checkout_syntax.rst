@@ -11,4 +11,4 @@ This subcommand has the following syntax:
 
 where:
 
-* ``CHANGE`` is the name of a branch in |git| in which the change is located
+* ``CHANGE`` is the name of a feature branch

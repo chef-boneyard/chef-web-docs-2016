@@ -30,6 +30,10 @@ Examples
 
 .. include:: ../../step_ctl_delivery/step_ctl_delivery_api_github_username_dotcom.rst
 
+**Get the pipeline status**
+
+.. include:: ../../step_ctl_delivery/step_ctl_delivery_api_get_pipeline_status.rst
+
 delivery checkout
 =====================================================
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery_checkout.rst
@@ -112,22 +116,6 @@ Examples
 **Verify a job**
 
 .. include:: ../../step_ctl_delivery/step_ctl_delivery_job_verify_unit.rst
-
-delivery pipeline
-=====================================================
-.. include:: ../../includes_ctl_delivery/includes_ctl_delivery_pipeline.rst
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_ctl_delivery/includes_ctl_delivery_pipeline_syntax.rst
-
-Options
------------------------------------------------------
-.. include:: ../../includes_ctl_delivery/includes_ctl_delivery_pipeline_options.rst
-
-Examples
------------------------------------------------------
-None.
 
 delivery review
 =====================================================

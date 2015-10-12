@@ -5,11 +5,11 @@
 
 This subcommand has the following options:
 
-``-e``, ``--ent=<ent>``
+``-e``, ``--ent=ENTERPRISE``
    |delivery enterprise|
 
-``-s``, ``--server=<server>``
+``-s``, ``--server=SERVER``
    |delivery server|
 
-``-u``, ``--user=<user>``
+``-u``, ``--user=USER``
    |delivery user|

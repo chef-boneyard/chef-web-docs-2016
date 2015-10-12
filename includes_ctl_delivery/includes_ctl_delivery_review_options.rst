@@ -5,7 +5,10 @@
 
 This subcommand has the following options:
 
-``-f``, ``--for=<pipeline>``
+``--edit``
+   Use to edit the changes.
+
+``-f``, ``--for=PIPELINE``
    |delivery pipeline|
 
 ``--no-open``

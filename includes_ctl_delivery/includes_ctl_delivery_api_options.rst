@@ -5,17 +5,20 @@
 
 This subcommand has the following options:
 
-``-c``, ``--config-path=<dir>``
+``--api-port PORT``
+   The HTTP port on which the |api delivery| is listening.
+
+``-c``, ``--config-path=PATH``
    |path directory_delivery|
 
-``-data``
+``--data``
    |delivery data_api|
 
-``-e``, ``--ent=<ent>``
+``-e``, ``--ent=ENTERPRISE``
    |delivery enterprise|
 
-``-s``, ``--server=<server>``
-   |delivery server|
+``-s``, ``--server=SERVER``
+   |delivery server| This must be the FQDN for the |chef delivery| server. For example: ``delivery.example.com``.
 
-``-u``, ``--user=<user>``
-   |delivery user|
+``-u``, ``--user=USER``
+   |delivery user| This user must exist in the specified enterprise (``--ent``).
