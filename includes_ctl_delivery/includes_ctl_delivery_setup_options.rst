@@ -5,20 +5,20 @@
 
 This subcommand has the following options:
 
-``-c``, ``--config-path=<dir>``
+``-c``, ``--config-path=DIRECTORY``
    |path directory_delivery|
 
-``-e``, ``--ent=<ent>``
+``-e``, ``--ent=ENTERPRISE``
    |delivery enterprise|
 
-``-f``, ``--for=<pipeline>``
+``-f``, ``--for=PIPELINE``
    |delivery pipeline|
 
-``-o``, ``--org=<org>``
+``-o``, ``--org=ORGANIZATION``
    |delivery organization|
 
-``-s``, ``--server=<server>``
+``-s``, ``--server=SERVER``
    |delivery server|
 
-``-u``, ``--user=<user>``
+``-u``, ``--user=USER``
    |delivery user|

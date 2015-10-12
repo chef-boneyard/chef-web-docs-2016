@@ -5,11 +5,11 @@
 
 This subcommand has the following options:
 
-``-f``, ``--for=<pipeline>``
+``-f``, ``--for=PIPELINE``
    |delivery pipeline|
 
 ``-l``, ``--local``
    |delivery diff|
 
-``-P``, ``--patchset=<number>``
+``-P``, ``--patchset=NUMBER``
    |delivery patchset| Default value: ``latest``.

@@ -5,20 +5,20 @@
 
 This subcommand has the following options:
 
-``-e``, ``--ent=<ent>``
+``-e``, ``--ent=ENTERPRISE``
    |delivery enterprise|
 
-``-o``, ``--org=<org>``
+``-o``, ``--org=ORGANIZATION``
    |delivery organization|
 
-``-p``, ``--project=<project>``
+``-p``, ``--project=PROJECT``
    |name delivery_project|
 
-``-s``, ``--server=<server>``
+``-s``, ``--server=SERVER``
    |delivery server|
 
-``<type>````
+``<type>``
    |delivery project_type| Default value: ``cookbook``.
 
-``-u``, ``--user=<user>``
+``-u``, ``--user=USER``
    |delivery user|

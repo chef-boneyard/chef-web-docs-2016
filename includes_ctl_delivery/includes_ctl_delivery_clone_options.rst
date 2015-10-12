@@ -5,17 +5,17 @@
 
 This subcommand has the following options:
 
-``-e``, ``--ent=<ent>``
+``-e``, ``--ent=ENTERPRISE``
    |delivery enterprise|
 
-``-g``, ``--git-url=<url>``
-   |git url|
+``-g``, ``--git-url=URL``
+   |git url| This URL is used as the remote target for the local |git| checkout.
 
-``-o``, ``--org=<org>``
+``-o``, ``--org=ORGANIZATION``
    |delivery organization|
 
-``-s``, ``--server=<server>``
+``-s``, ``--server=SERVER``
    |delivery server|
 
-``-u``, ``--user=<user>``
+``-u``, ``--user=USER``
    |delivery user|

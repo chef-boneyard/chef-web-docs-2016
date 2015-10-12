@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``diff`` subcommand to compare a file to one located in the ``HEAD`` branch.
+Use the ``diff`` subcommand to perform a ``git diff`` between the change and the pipeline.
