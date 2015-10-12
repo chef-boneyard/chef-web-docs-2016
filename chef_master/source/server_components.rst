@@ -45,11 +45,11 @@ The following diagram shows the various components that are part of a |chef serv
 
 Capacity Planning
 =====================================================
-This section provides guidance for capacity planning and how to choose the right configuration--standalone, high availability, or tiered--for the |chef server|. This section provides guidance, not hard/fast rules becuase some requests to the |api chef server| are more computationally expensive than others. In general, it's better to start small and then scale the |chef server| as needed. Premature optimization can hinder more than help because it may introduce unnecessary complexity.
+This section provides guidance for capacity planning and how to choose the right configuration--standalone, high availability, or tiered--for the |chef server|. This section provides guidance and not hard/fast rules. This is because some requests to the |api chef server| are more computationally expensive than others. In general, it's better to start small and then scale the |chef server| as needed. Premature optimization can hinder more than help because it may introduce unnecessary complexity.
 
 Scaling the Chef Server
 -----------------------------------------------------
-The |chef server| itself is highly scalable. A single virtual machine running the |chef server| can handle requests for many thousands of nodes. As the scale increases beyond 333 CCRs/min (approximately 10k nodes), it's a straightforward process to expand into a tiered front-end, back-end architecture with horizontally scaled front-ends to relieve pressure on system bottlenecks.
+The |chef server| itself is highly scalable. A single virtual machine running the |chef server| can handle requests for many thousands of nodes. As the scale increases, it's a straightforward process to expand into a tiered front-end, back-end architecture with horizontally scaled front-ends to relieve pressure on system bottlenecks.
 
 That said, it's best to isolate failure domains with their own |chef server|, rather than trying to run every node in an infrastructure from a single central, monolithic |chef server| instance/cluster.
 
@@ -59,8 +59,10 @@ CCRs/min
 -----------------------------------------------------
 The key unit of measure for scaling the |chef server| is the number of |chef client| runs per minute: CCRs/min. For example, 500 nodes set to check in every 30 minutes is equivalent to 16.66 CCRs/min.
 
-While synthetic benchmarks should be taken with a grain of salt, as they don't typically represent real-world performance, internal synthetic benchmarks at |company_name| have seen a standalone |chef server| installed on a ``c3.2xlarge`` |amazon aws| instance handle more than 1,000 CCRs/min (30k nodes).
+Typically, the |chef server| does not require a high availability or tiered topology until the 
+number of CCRs/min is higher than 333/min (approximately 10k nodes).
 
+While synthetic benchmarks should be taken with a grain of salt, as they don't typically represent real-world performance, internal synthetic benchmarks at |company_name| have seen a standalone |chef server| installed on a ``c3.2xlarge`` |amazon aws| instance handle more than 1,000 CCRs/min (30k nodes).
 
 Assumptions
 -----------------------------------------------------
@@ -73,10 +75,9 @@ Several factors may influence server scalability. All server sizing recommendati
 * The default maximum allowable size for a node object is 1MB, although it is rare for nodes to exceed 150KB. Though compressed, this data is replicated twice, once in |apache solr|, and once in |postgresql|. In practice, allowing a conservative 2MB of storage on the disk partition per node should be sufficient
 * Disk space estimates assume that the |reporting| add-on is not installed
 
-
 Host Specifications
 -----------------------------------------------------
-THe following sections describe the host specifications for various sizes of CCRs/min and help show when to consider moving from a standalone topology to a high availability or tiered topology.
+The following sections describe the host specifications for various sizes of CCRs/min and help show when to consider moving from a standalone topology to a high availability or tiered topology.
 
 **UP TO 33 CCRs/Min (approx. 1,000 nodes):**
 
