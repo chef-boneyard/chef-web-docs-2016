@@ -59,7 +59,7 @@ CCRs/min
 -----------------------------------------------------
 The key unit of measure for scaling the |chef server| is the number of |chef client| runs per minute: CCRs/min. For example, 500 nodes set to check in every 30 minutes is equivalent to 16.66 CCRs/min.
 
-While synthetic benchmarks should be taken with a grain of salt, as they don't typically represent real-world performance, internal synthetic benchmarks at |company_name| have seen a standalone |chef server| installed on a ``c3.2xlarge`` |amazon| instance handle more than 1,000 CCRs/min (30k nodes).
+While synthetic benchmarks should be taken with a grain of salt, as they don't typically represent real-world performance, internal synthetic benchmarks at |company_name| have seen a standalone |chef server| installed on a ``c3.2xlarge`` |amazon aws| instance handle more than 1,000 CCRs/min (30k nodes).
 
 
 Assumptions
