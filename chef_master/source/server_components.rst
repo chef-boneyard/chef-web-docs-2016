@@ -1,5 +1,5 @@
 =====================================================
-|chef server_title| Components
+About the |chef server_title|
 =====================================================
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
@@ -43,12 +43,77 @@ The following diagram shows the various components that are part of a |chef serv
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
 
+Capacity Planning
+=====================================================
+This section provides guidance for capacity planning and how to choose the right configuration--standalone, high availability, or tiered--for the |chef server|. This section provides guidance, not hard/fast rules becuase some requests to the |api chef server| are more computationally expensive than others. In general, it's better to start small and then scale the |chef server| as needed. Premature optimization can hinder more than help because it may introduce unnecessary complexity.
+
+Scaling the Chef Server
+-----------------------------------------------------
+The |chef server| itself is highly scalable. A single virtual machine running the |chef server| can handle requests for many thousands of nodes. As the scale increases beyond 333 CCRs/min (approximately 10k nodes), it's a straightforward process to expand into a tiered front-end, back-end architecture with horizontally scaled front-ends to relieve pressure on system bottlenecks.
+
+That said, it's best to isolate failure domains with their own |chef server|, rather than trying to run every node in an infrastructure from a single central, monolithic |chef server| instance/cluster.
+
+For instance, if there are West coast and East coast data centers, it is best to have one |chef server| instance in each datacenter. Deploys to each |chef server| can be synchronized upstream by CI software. The primary limiting bottleneck for |chef server| installations is almost always input/output operations per second (IOPS) performance for the database filesystem.
+
+CCRs/min
+-----------------------------------------------------
+The key unit of measure for scaling the |chef server| is the number of |chef client| runs per minute: CCRs/min. For example, 500 nodes set to check in every 30 minutes is equivalent to 16.66 CCRs/min.
+
+While synthetic benchmarks should be taken with a grain of salt, as they don't typically represent real-world performance, internal synthetic benchmarks at |company_name| have seen a standalone |chef server| installed on a ``c3.2xlarge`` |amazon| instance handle more than 1,000 CCRs/min (30k nodes).
+
+
+Assumptions
+-----------------------------------------------------
+Several factors may influence server scalability. All server sizing recommendations are based on these assumptions:
+
+* |chef client| runs are daemonized, and are not initiated by a |cron| job. Using |cron| to schedule runs can create "thundering herd" problems
+* |chef client| runs are set to a default 30-minute interval with a 5-minute splay
+* Search and ``partial_search`` are utilized, but not heavily
+* The number of cookbooks per organization, across all versions, on the |chef server| is under 500. (Multiple organizations with fewer than 500 cookbooks each, that still add up to a total of more than 500 cookbooks server-wide, is fine.)
+* The default maximum allowable size for a node object is 1MB, although it is rare for nodes to exceed 150KB. Though compressed, this data is replicated twice, once in |apache solr|, and once in |postgresql|. In practice, allowing a conservative 2MB of storage on the disk partition per node should be sufficient
+* Disk space estimates assume that the |reporting| add-on is not installed
+
+
+Host Specifications
+-----------------------------------------------------
+THe following sections describe the host specifications for various sizes of CCRs/min and help show when to consider moving from a standalone topology to a high availability or tiered topology.
+
+**UP TO 33 CCRs/Min (approx. 1,000 nodes):**
+
+* |company_name| recommends a single virtual machine instance
+* Start with 2 CPU cores and 8GB of RAM, which is equivalent to an |amazon ec2| ``m3.large`` instance
+* Allocate 2MB of disk space on the data partition per managed node
+
+**UP TO 167 CCRs/Min (approx. 5,000 nodes):**
+
+* |company_name| recommends a single virtual machine instance
+* Start with 4 CPU cores and 16GB of RAM, which is equivalent to an |amazon ec2| ``m3.xlarge`` instance
+
+**UP TO 333 CCRs/Min (Approx. 10,000 nodes):**
+
+* |company_name| recommends a single virtual machine instance
+* Start with 8 CPU cores and 32GB of RAM, which is equivalent to an |amazon ec2| ``m3.2xlarge`` instance
+
+**UP TO 667 CCRs/Min (Approx. 20,000 nodes):**
+
+* |company_name| recommends two hosts, one front-end and one back-end
+* The disk requirement for the front-end server is negligible
+* Start with 8 CPU cores and 32GB of RAM for each host, which is equivalent to an |amazon ec2| ``m3.2xlarge`` instance
+
+**Scaling beyond 20,000 nodes on a single cluster:**
+
+* Additional capacity can be gained by placing the front-end node behind an HTTP load balancer, and then scaling front-end nodes horizontally
+* |company_name| recommends that |company_name| professional services be engaged to help with capacity and architectural planning at this size
+
+
+
+
 External Cookbooks
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_external_cookbooks_aws.rst
 
-|amazon aws| Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+AWS Settings
+-----------------------------------------------------
 .. include:: ../../includes_server_ha/includes_server_ha_external_cookbooks_aws_settings.rst
 
 
@@ -61,7 +126,7 @@ External |postgresql|
 .. DO NOT CHANGE THE FOLLOWING TITLE BECAUSE IT IS LINKED FROM THE ERROR MESSAGES IN THE CODE FOR THESE SETTINGS.
 
 |postgresql| Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql_settings.rst
 
 .. note:: See https://docs.chef.io/error_messages#external-postgresql for information about error messages may be present when configuring the |chef server| to use a remote |postgresql| server.
