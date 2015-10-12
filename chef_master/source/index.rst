@@ -2,7 +2,7 @@
 All about |chef| ... 
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_index.rst
+.. include:: ../../includes_chef/includes_chef_indexx.rst
 
 Getting Started
 =====================================================
