@@ -156,7 +156,19 @@ Options
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
+.. include:: ../../includes_delivery/includes_delivery_github_user_names.rst
+
+**Link a Github enterprise user name**
+
+.. include:: ../../step_ctl_delivery/step_ctl_delivery_api_github_username_enterprise.rst
+
+**Link a Github.com user name**
+
+.. include:: ../../step_ctl_delivery/step_ctl_delivery_api_github_username_dotcom.rst
+
+**Get the pipeline status**
+
+.. include:: ../../step_ctl_delivery/step_ctl_delivery_api_get_pipeline_status.rst
 
 delivery checkout
 -----------------------------------------------------
@@ -236,23 +248,10 @@ Options
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
 
-delivery pipeline
------------------------------------------------------
-.. include:: ../../includes_ctl_delivery/includes_ctl_delivery_pipeline.rst
+**Verify a job**
 
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_delivery/includes_ctl_delivery_pipeline_syntax.rst
-
-Options
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_ctl_delivery/includes_ctl_delivery_pipeline_options.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
+.. include:: ../../step_ctl_delivery/step_ctl_delivery_job_verify_unit.rst
 
 delivery review
 -----------------------------------------------------
