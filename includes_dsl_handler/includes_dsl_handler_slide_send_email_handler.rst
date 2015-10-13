@@ -8,7 +8,9 @@ Invoke the library helper in a recipe:
 
    Chef.event_handler do
      on :run_failed do
-       HandlerSendEmail::Helper.new.send_email_on_run_failure(Chef.run_context.node.name)
+       HandlerSendEmail::Helper.new.send_email_on_run_failure(
+         Chef.run_context.node.name
+       )
      end
    end
 
