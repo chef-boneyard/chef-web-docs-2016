@@ -140,7 +140,33 @@ PUT
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst
 
+/user/USER/keys/
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users.rst
 
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_post.rst
+
+/user/USER/keys/KEY
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user.rst
+
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_get.rst
+
+PUT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_put.rst
 
 
 
@@ -638,34 +664,6 @@ GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst
 
-
-/user/USER/keys/
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users.rst
-
-GET
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_get.rst
-
-POST
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_post.rst
-
-/user/USER/keys/KEY
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user.rst
-
-DELETE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_delete.rst
-
-GET
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_get.rst
-
-PUT
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user_put.rst
 
 
 
