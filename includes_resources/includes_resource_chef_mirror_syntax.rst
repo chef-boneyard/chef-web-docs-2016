@@ -5,8 +5,8 @@ The syntax for using the |resource chef_mirror| resource in a recipe is as follo
 
 .. code-block:: ruby
 
-   chef_mirror "name" do
-     attribute "value" # see properties section below
+   chef_mirror 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

@@ -5,8 +5,8 @@ The syntax for using the |resource machine_file| resource in a recipe is as foll
 
 .. code-block:: ruby
 
-   machine_file "name" do
-     attribute "value" # see properties section below
+   machine_file 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

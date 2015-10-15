@@ -5,8 +5,8 @@ The syntax for using the |resource public_key| resource in a recipe is as follow
 
 .. code-block:: ruby
 
-   public_key "name" do
-     attribute "value" # see properties section below
+   public_key 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

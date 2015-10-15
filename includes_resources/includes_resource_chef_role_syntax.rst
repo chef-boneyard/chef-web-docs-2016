@@ -5,8 +5,8 @@ The syntax for using the |resource chef_role| resource in a recipe is as follows
 
 .. code-block:: ruby
 
-   chef_role "name" do
-     attribute "value" # see properties section below
+   chef_role 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

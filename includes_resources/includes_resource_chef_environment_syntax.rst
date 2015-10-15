@@ -5,8 +5,8 @@ The syntax for using the |resource chef_environment| resource in a recipe is as 
 
 .. code-block:: ruby
 
-   chef_environment "name" do
-     attribute "value" # see properties section below
+   chef_environment 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

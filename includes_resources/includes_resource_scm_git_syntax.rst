@@ -6,9 +6,9 @@ A |resource scm_git| resource block manages source control resources that exist 
 
 .. code-block:: ruby
 
-   git '#{Chef::Config[:file_cache_path]}/app_name' do
-     repository 'node[:app_name][:git_repository]'
-     revision 'node[:app_name][:git_revision]'
+   git "#{Chef::Config[:file_cache_path]}/app_name" do
+     repository node[:app_name][:git_repository]
+     revision node[:app_name][:git_revision]
      action :sync
    end
 

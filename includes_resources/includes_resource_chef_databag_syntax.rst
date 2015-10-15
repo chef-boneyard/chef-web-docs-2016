@@ -5,8 +5,8 @@ The syntax for using the |resource chef_data_bag| resource in a recipe is as fol
 
 .. code-block:: ruby
 
-   chef_data_bag "name" do
-     attribute "value" # see properties section below
+   chef_data_bag 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

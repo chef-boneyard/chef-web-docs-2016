@@ -5,8 +5,8 @@ The syntax for using the |resource load_balancer| resource in a recipe is as fol
 
 .. code-block:: ruby
 
-   load_balancer "name" do
-     attribute "value" # see properties section below
+   load_balancer 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end
