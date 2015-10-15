@@ -56,7 +56,7 @@ Use the following sections to verify the hostnames that is used by the |chef ser
 
 .. include:: ../../includes_install/includes_install_common_hostname_is_fqdn.rst
 
-**To very the FQDN is all lowercase**
+**To verify the FQDN is all lowercase**
 
 .. include:: ../../includes_install/includes_install_common_hostname_is_lowercase.rst
 
