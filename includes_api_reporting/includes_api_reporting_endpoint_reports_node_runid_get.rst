@@ -42,7 +42,7 @@ The response is similar to:
          "type" : string,
          "name" : string,
          "result" : string,
-         "initial_state" : json-onject,
+         "initial_state" : json-object,
          "final_state" : json-object,
        }
      ],
