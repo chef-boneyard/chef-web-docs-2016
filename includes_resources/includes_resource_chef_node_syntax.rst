@@ -5,8 +5,8 @@ The syntax for using the |resource chef_node| resource in a recipe is as follows
 
 .. code-block:: ruby
 
-   chef_node "name" do
-     attribute "value" # see properties section below
+   chef_node 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

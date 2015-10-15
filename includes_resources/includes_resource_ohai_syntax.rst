@@ -6,7 +6,7 @@ A |resource ohai| resource block reloads the |ohai| configuration on a node:
 
 .. code-block:: ruby
 
-   ohai "reload" do
+   ohai 'reload' do
      action :reload
    end
 

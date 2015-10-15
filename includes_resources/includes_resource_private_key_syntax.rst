@@ -5,8 +5,8 @@ The syntax for using the |resource private_key| resource in a recipe is as follo
 
 .. code-block:: ruby
 
-   private_key "name" do
-     attribute "value" # see properties section below
+   private_key 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

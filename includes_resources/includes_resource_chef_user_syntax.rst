@@ -5,7 +5,7 @@ The syntax for using the |resource chef_user| resource in a recipe is as follows
 
 .. code-block:: ruby
 
-   chef_user "value" # see properties section below
+   chef_user 'value' # see properties section below
      ...
      action :action # see actions section below
    end

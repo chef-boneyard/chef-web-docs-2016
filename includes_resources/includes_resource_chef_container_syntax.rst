@@ -5,8 +5,8 @@ The syntax for using the |resource chef_container| resource in a recipe is as fo
 
 .. code-block:: ruby
 
-   chef_container "name" do
-     attribute "value" # see properties section below
+   chef_container 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end

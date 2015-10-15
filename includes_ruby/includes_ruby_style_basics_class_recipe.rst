@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the |ruby| ``File`` class in a recipe. Because |chef| has the |resource file| resource, use ``::File`` to use the |ruby| ``File`` class. For example:
+Use the |ruby| ``File`` class in a recipe. Because |chef| has the |resource file| resource, use ``File`` to use the |ruby| ``File`` class. For example:
 
 .. code-block:: ruby
 

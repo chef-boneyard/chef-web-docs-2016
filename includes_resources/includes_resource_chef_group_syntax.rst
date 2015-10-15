@@ -5,8 +5,8 @@ The syntax for using the |resource chef_group| resource in a recipe is as follow
 
 .. code-block:: ruby
 
-   chef_group "name" do
-     attribute "value" # see properties section below
+   chef_group 'name' do
+     attribute 'value' # see properties section below
      ...
      action :action # see actions section below
    end
