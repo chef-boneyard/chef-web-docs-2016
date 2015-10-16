@@ -36,6 +36,8 @@ The following open source handlers are available from the |chef| community:
      - A handler that logs an entry to the |systemd| journal with the |chef client| run status, exception details, configurable priority, and custom details.
    * - `Simple Email <https://rubygems.org/gems/chef-handler-mail>`_
      - A handler that collects exception and report handler data and then uses |pony| to send email reports that are based on |erubis| templates.
+   * - `Slack <https://github.com/rackspace-cookbooks/chef-slack_handler>`_
+     - A handler to send Chef run notifications to a |slack| channel. 
    * - `SNS <http://onddo.github.io/chef-handler-sns/>`_
      - A handler that notifies exception and report handler data and sends it to a |sns| topic.
    * - `Splunk Storm <http://ampledata.org/splunk_storm_chef_handler.html>`_
