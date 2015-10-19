@@ -9,6 +9,8 @@ The following rules are checked by |foodcritic|:
 
    * - Rule
      - Description
+   * - FC001
+     - "Use strings in preference to symbols to access node attributes"
    * - FC002
      - "Avoid string interpolation where not required"
    * - FC003
@@ -100,4 +102,4 @@ The following rules are checked by |foodcritic|:
    * - FC051
      - "Template partials loop indefinitely"
 
-.. note:: Some |foodcritic| rules have been deprecated: FC001, FC021, FC020, FC035, and FC036. FC018 deals with issues that may exist in older versions of the |chef client| that pre-date this documentation.
+.. note:: Some |foodcritic| rules have been deprecated: FC021, FC020, FC035, and FC036. FC018 deals with issues that may exist in older versions of the |chef client| that pre-date this documentation.
