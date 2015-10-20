@@ -38,6 +38,8 @@ The following open source handlers are available from the |chef| community:
      - A handler that collects exception and report handler data and then uses |pony| to send email reports that are based on |erubis| templates.
    * - `SNS <http://onddo.github.io/chef-handler-sns/>`_
      - A handler that notifies exception and report handler data and sends it to a |sns| topic.
+   * - `Slack <https://github.com/rackspace-cookbooks/chef-slack_handler>`_
+     - A handler to send |chef client| run notifications to a |slack| channel.
    * - `Splunk Storm <http://ampledata.org/splunk_storm_chef_handler.html>`_
      - A handler that supports exceptions and reports for |splunk storm|.
    * - `Syslog <https://github.com/jblaine/syslog_handler>`_
