@@ -400,4 +400,4 @@ This configuration file has the following settings:
    * - ``whitelist``
      - The path to the attribute file that contains the whitelist used by |push jobs|.
 
-       .. warning:: This setting is available only when using |push jobs|, a tool that runs jobs against nodes in a |chef server oec| organization.
+       .. warning:: This setting is available only when using |push jobs|, a tool that runs jobs against nodes in a |chef server| organization.
