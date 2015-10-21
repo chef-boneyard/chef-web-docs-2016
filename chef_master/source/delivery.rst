@@ -2,8 +2,6 @@
 About |chef delivery_title|
 =====================================================
 
-.. note:: |chef delivery| is currently limited to a group of early access customers. Please `register to receive updates <https://www.chef.io/delivery/>`_ as availability expands.
-
 .. include:: ../../includes_delivery/includes_delivery.rst
 
 .. image:: ../../images/delivery.png
