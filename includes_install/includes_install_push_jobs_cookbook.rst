@@ -3,7 +3,7 @@
 
 The |cookbook push jobs| cookbook at https://github.com/chef-cookbooks/push-jobs is used by the |chef client| to configure |push jobs| as a client on a target node. This cookbook is also used to define the whitelist, which is a list of commands that |push jobs| may execute when it runs. A command that is not in the whitelist will not be executed by |push jobs|. The |cookbook push jobs| cookbook should be managed like any other cookbook, i.e. "downloaded from |github|, managed using version source control, and uploaded to the |chef server|". To manage nodes using |push jobs|, add the |cookbook push jobs| cookbook to the run-list for each node that will be managed using |push jobs|.
 
-The whitelist is defined using the ``node['opscode_push_jobs']['whitelist']`` attribute located in the default attributes file:
+The whitelist is defined using the ``node['push_jobs']['whitelist']`` attribute located in the default attributes file:
 
 .. code-block:: ruby
 
