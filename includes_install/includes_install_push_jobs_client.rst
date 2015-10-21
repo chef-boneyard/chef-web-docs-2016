@@ -3,7 +3,6 @@
 
 To set up the |push jobs| client:
 
-#. Download the package from http://downloads.chef.io/push-jobs-client/.
 #. Add the |cookbook push jobs| cookbook to the run-list for each of the nodes on which |push jobs| is to be configured.
 #. Add the following default attributes on all nodes that are managed by |push jobs|:
 
