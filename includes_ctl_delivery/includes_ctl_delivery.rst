@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
 
-|chef delivery_cli| is the command-line tool for |chef delivery| that sits in-between a local |git| repository and the |chef delivery| server.
+|chef delivery_cli| is the command-line interface for |chef delivery|. It sits in-between a local |git| repository and the |chef delivery| server.
