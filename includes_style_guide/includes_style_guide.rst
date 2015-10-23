@@ -480,7 +480,7 @@ Grammar
 
 Tautologies
 -----------------------------------------------------
-A tautology, when used as a description for a component, setting, method, etc. is less than ideal. If a string is a tautology, some effort should be made to make it not so. An example of a tautology is something like "Create a new user" (by its very nature, a user created **is** a new user) or (for a setting named ``cidr_block``) "The CIDR block for the VPC."
+A tautology, when used as a description for a component, setting, method, etc. should be avoided. If a string is a tautology, some effort should be made to make it not so. An example of a tautology is something like "Create a new user" (by its very nature, a user created **is** a new user) or (for a setting named ``cidr_block``) "The CIDR block for the VPC."
 
 Doc Repositories
 =====================================================
