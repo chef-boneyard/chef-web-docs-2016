@@ -14,7 +14,7 @@ A |resource cron| resource block manage |cron| entries. For example, to get a we
      user 'getchef'
      mailto 'sysadmin@example.com'
      home '/srv/supermarket/shared/system'
-     command %w{
+     command %W{
        cd /srv/supermarket/current &&
        env RUBYLIB="/srv/supermarket/current/lib"
        RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
