@@ -15,3 +15,4 @@ to return something similar to:
    /Users/user/.chefdk/gem/ruby/2.1.0/gems/knife-config-1.1.0/README.md
    /Users/user/.chefdk/gem/ruby/2.1.0/gems/knife-config-1.1.0/lib/chef/knife/config.rb
    /Users/user/.chefdk/gem/ruby/2.1.0/gems/knife-config-1.1.0/lib/knife-config.rb
+
