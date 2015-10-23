@@ -17,3 +17,4 @@ will return something similar to:
    
      * template[/Users/grantmc/chef-repo/cookbooks/chef-repo/attributes/FOO.rb] action create
        - create new file /Users/grantmc/chef-repo/cookbooks/chef-repo/attributes/FOO.rb
+
