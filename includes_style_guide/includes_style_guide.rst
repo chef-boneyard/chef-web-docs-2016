@@ -474,6 +474,14 @@ What an image looks like after it's built:
 
 Images should be 96 dpi and no larger than 600 pixels wide. Ideally, no larger than 550 pixels wide. (This helps ensure that the image can be printed and/or built into other output formats more easily; in some cases, separate 300 dpi files should be maintained for images that require inclusion in formats designed for printing and/or presentations.)
 
+Grammar
+=====================================================
+|company_name| does not follow a specific grammar convention. Be clear and consistent as often as possible. Follow the established patterns in the docs.
+
+Tautologies
+-----------------------------------------------------
+A tautology, when used as a description for a component, setting, method, etc. is less than ideal. If a string is a tautology, some effort should be made to make it not so. An example of a tautology is something like "Create a new user" (by its very nature, a user created **is** a new user) or (for a setting named ``cidr_block``) "The CIDR block for the VPC."
+
 Doc Repositories
 =====================================================
 There are two document repositories for |chef docs|, one that contains the docs and another that contains image files for quick references.
