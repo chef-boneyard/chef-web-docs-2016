@@ -36,18 +36,15 @@ What is needed?
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_objectives_requirements.rst
 
-
 Define Properties
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_properties.rst
 
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_properties_add.rst
 
-
 Define Actions
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_actions.rst
-
 
 Define Resource
 -----------------------------------------------------
@@ -101,8 +98,14 @@ Recipe
 -----------------------------------------------------
 .. include:: ../../includes_custom_resources/includes_custom_resources_slide_website_recipe.rst
 
-.. 
-.. Test
-.. -----------------------------------------------------
-.. TBD...
-.. 
+Advanced Options
+=====================================================
+The following sections describe advanced options that may be used (or may be required) when building custom resources.
+
+default_action
+-----------------------------------------------------
+.. include:: ../../includes_custom_resources/includes_custom_resources_syntax_default_action.rst
+
+Override Properties
+-----------------------------------------------------
+.. include:: ../../includes_custom_resources/includes_custom_resources_syntax_override_properties.rst
