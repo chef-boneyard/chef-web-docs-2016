@@ -15,8 +15,16 @@ To remove the system installation entry:
 
    $ sudo pkgutil --forget com.getchef.pkg.chefdk
 
-To remove the symlinks under ``/usr/bin``:
+To remove symlinks:
 
-.. code-block:: bash
+* For |chef client| version 12.x, under ``/usr/local/bin``:
 
-   $ sudo find /usr/bin -lname '/opt/chefdk/*' -delete
+  .. code-block:: bash
+
+     $ sudo find /usr/local/bin -lname '/opt/chefdk/*' -delete
+
+* For |chef client| version 11.x, under ``/usr/bin``:
+
+  .. code-block:: bash
+
+     $ sudo find /usr/bin -lname '/opt/chefdk/*' -delete
