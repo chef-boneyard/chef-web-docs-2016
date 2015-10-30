@@ -102,6 +102,7 @@ Cookbooks
    analytics_webui_tasks
    api_analytics
    api_chef_server
+   api_compliance
    api_cookbooks_site
    api_omnitruck
    api_push_jobs
@@ -162,6 +163,7 @@ Cookbooks
    ctl_chef_solo
    ctl_chef_sync
    ctl_delivery
+   ctl_inspec
    ctl_kitchen
    ctl_manage
    ctl_ohai
@@ -177,6 +179,7 @@ Cookbooks
    dsl_custom_resource
    dsl_delivery
    dsl_handler
+   dsl_inspec
    dsl_recipe
    environment_variables
    environments
@@ -241,6 +244,7 @@ Cookbooks
    install
    install_analytics
    install_bootstrap
+   install_compliance
    install_dk
    install_omnibus
    install_push_jobs

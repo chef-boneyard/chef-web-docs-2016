@@ -32,3 +32,6 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_raw_delete_data_bag.rst
 
+**Delete a role**
+
+.. include:: ../../step_knife/step_knife_raw_delete_role.rst
