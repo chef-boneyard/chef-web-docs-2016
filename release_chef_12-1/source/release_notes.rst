@@ -120,13 +120,13 @@ knife bootstrap Options
 Use the following options to specify items that are stored in |chef vault|:
 
 ``--bootstrap-vault-file VAULT_FILE``
-   |bootstrap valut_file|
+   |bootstrap vault_file|
 
 ``--bootstrap-vault-item VAULT_ITEM``
-   |bootstrap valut_item|
+   |bootstrap vault_item|
 
 ``--bootstrap-vault-json VAULT_JSON``
-   |bootstrap valut_json|
+   |bootstrap vault_json|
 
 New Resource Attributes
 -----------------------------------------------------

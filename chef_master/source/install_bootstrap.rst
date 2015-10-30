@@ -24,17 +24,22 @@ knife bootstrap Options
 Use the following options with a validatorless bootstrap to specify items that are stored in |chef vault|:
 
 ``--bootstrap-vault-file VAULT_FILE``
-   |bootstrap valut_file|
+   |bootstrap vault_file|
 
 ``--bootstrap-vault-item VAULT_ITEM``
-   |bootstrap valut_item|
+   |bootstrap vault_item|
 
 ``--bootstrap-vault-json VAULT_JSON``
-   |bootstrap valut_json|
+   |bootstrap vault_json|
 
 Examples
 =====================================================
-The ``--bootstrap-vault-*`` options add the client identify of the bootstrapping node to the permissions list o the specified vault item. This enables the newly-bootstrapped |chef client| to be able to read items from the vault. Only a single client is authorized at a time for acces to the vault. (The ``-S`` search query option with the ``knife vault create`` command does the same.)
+The ``--bootstrap-vault-*`` options add the client identity of the bootstrapping node to the permissions list of the specified vault item. This enables the newly-bootstrapped |chef client| to be able to read items from the vault. Only a single client is authorized at a time for access to the vault. (The ``-S`` search query option with the ``knife vault create`` command does the same.)
+
+.. note:: The vault specification passed to the options above, either
+	  directly, or through a file or passing a JSON string, will always look like its
+	  underlying databag:item form. These options are not meant to pass
+	  free-form JSON.
 
 Recreate a data bag item
 -----------------------------------------------------

@@ -26,13 +26,13 @@ This subcommand has the following options:
    |bootstrap proxy|
 
 ``--bootstrap-vault-file VAULT_FILE``
-   |bootstrap valut_file|
+   |bootstrap vault_file|
 
 ``--bootstrap-vault-item VAULT_ITEM``
-   |bootstrap valut_item|
+   |bootstrap vault_item|
 
 ``--bootstrap-vault-json VAULT_JSON``
-   |bootstrap valut_json|
+   |bootstrap vault_json|
 
 ``--bootstrap-version VERSION``
    |bootstrap version|

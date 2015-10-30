@@ -45,11 +45,11 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:bootstrap_template]``
      - |path bootstrap_template|
    * - ``knife[:bootstrap_vault_file]``
-     - |bootstrap valut_file|
+     - |bootstrap vault_file|
    * - ``knife[:bootstrap_vault_item]``
-     - |bootstrap valut_item|
+     - |bootstrap vault_item|
    * - ``knife[:bootstrap_vault_json]``
-     - |bootstrap valut_item|
+     - |bootstrap vault_item|
    * - ``knife[:bootstrap_version]``
      - |bootstrap version|
    * - ``knife[:bootstrap_wget_options]``
