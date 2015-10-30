@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|inspec| is a run-time framework and rule language used to specify compliance, securuty, and policy requirements. It includes a collection of resources---`some are part of the open source testing framework for infrastructure <URL FOR INSPEC OPEN SOURCE>`_, whereas others are available with |chef compliance|---that help you write auditing rules quickly and easily. The syntax used by both open source and |chef compliance| auditing is the same. The open source |inspec resource| framework is compatible with |chef compliance|.
+|inspec| is a run-time framework and rule language used to specify compliance, security, and policy requirements. It includes a collection of resources---`some are part of the open source testing framework for infrastructure <URL FOR INSPEC OPEN SOURCE>`_, whereas others are available with |chef compliance|---that help you write auditing rules quickly and easily. The syntax used by both open source and |chef compliance| auditing is the same. The open source |inspec resource| framework is compatible with |chef compliance|.
