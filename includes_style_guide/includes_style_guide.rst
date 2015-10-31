@@ -90,6 +90,8 @@ Section headers create structure in a document. When section headers are part of
 
 .. note:: As a general rule, try to limit the number of header levels to no more than 2 within a topic. There can be exceptions, of course, and especially if the document is very large, but remember that HTML TOC structures usually have width limitations (on the display side) and the more structure within a TOC, the harder it can be for users to figure out what's in it.
 
+.. warning:: Unless the topics are about installing things or about API endpoints, the headers should never wrap. Keep them to a single line.
+
 H1
 -----------------------------------------------------
 If a topic requires a sub-header, this is the first one to use. Use the equals symbol (=) below the header name. What it looks like as reST:: 
