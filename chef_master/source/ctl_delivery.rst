@@ -1,5 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/ctl_delivery.html BY DESIGN
-
 =====================================================
 Delivery CLI
 =====================================================
