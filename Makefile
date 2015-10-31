@@ -58,13 +58,13 @@ decks:
 	mkdir -p $(BUILDDIR)/decks/
 	$(BUILD_COMMAND_AND_ARGS) slide_decks/source $(BUILDDIR)/decks/
 
-compliance_1-0:
-	mkdir -p $(BUILDDIR)/release/compliance_1-0/
-	$(BUILD_COMMAND_AND_ARGS) release_compliance_1-0/source $(BUILDDIR)/release/compliance_1-0/
-
 delivery_1-0:
 	mkdir -p $(BUILDDIR)/release/delivery_1-0/
 	$(BUILD_COMMAND_AND_ARGS) release_delivery_1-0/source $(BUILDDIR)/release/delivery_1-0/
+
+compliance_1-0:
+	mkdir -p $(BUILDDIR)/release/compliance_1-0/
+	$(BUILD_COMMAND_AND_ARGS) release_compliance_1-0/source $(BUILDDIR)/release/compliance_1-0/
 
 11-0:
 	mkdir -p $(BUILDDIR)/release/11-0/
