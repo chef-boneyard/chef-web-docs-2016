@@ -205,7 +205,7 @@ The following sections detail setting up |chef delivery| for |amazon aws| provis
 
 .. warning:: Ignore the **Specify a delivery-cli artifact** option because it will be removed.
 
-|amazon aws|
+AWS
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 For |amazon aws|:
 
