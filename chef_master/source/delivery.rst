@@ -182,7 +182,7 @@ Configure a Pipeline
 =====================================================
 Each project contains a configuration file in its source repository, located at ``.delivery/config.json``, that specifies the build cookbook to use for the project. The build cookbook contains recipes that control what happens in the pipeline phases.
 
-The ``config.json`` file allows customization of the behavior of |chef delivery| and :doc:`the build cookbook </build_cookbooks>`.
+The ``config.json`` file allows customization of the behavior of |chef delivery| and the build cookbook.
 
 When |chef delivery| executes a phase, it selects a build node to run the job. On the build node, the project’s source is fetched and synchronized to the revision matching the head of the feature branch for the change. The build node reads the project’s ``config.json`` file and uses this information to fetch the appropriate build cookbook. Build cookbooks can be embedded in project source repositories, fetched from a |git| server, |chef server|, or a |supermarket| instance. Finally, the build node runs a local |chef zero| run to execute the appropriate phase.
 
