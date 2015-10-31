@@ -58,8 +58,12 @@ decks:
 	mkdir -p $(BUILDDIR)/decks/
 	$(BUILD_COMMAND_AND_ARGS) slide_decks/source $(BUILDDIR)/decks/
 
+compliance_1-0:
+	mkdir -p $(BUILDDIR)/release/compliance_1-0/
+	$(BUILD_COMMAND_AND_ARGS) release_compliance_1-0/source $(BUILDDIR)/release/compliance_1-0/
+
 delivery_1-0:
-	mkdir -p $(BUILDDIR)/delivery/
+	mkdir -p $(BUILDDIR)/release/delivery_1-0/
 	$(BUILD_COMMAND_AND_ARGS) release_delivery_1-0/source $(BUILDDIR)/release/delivery_1-0/
 
 11-0:
@@ -151,11 +155,11 @@ osc_11-1:
 	$(BUILD_COMMAND_AND_ARGS) release_osc_11-1/source $(BUILDDIR)/release/osc_11-1/
 
 analytics_1-1:
-	mkdir -p $(BUILDDIR)/analytics/
+	mkdir -p $(BUILDDIR)/release/analytics_1-1/
 	$(BUILD_COMMAND_AND_ARGS) release_analytics_1-1/source $(BUILDDIR)/release/analytics_1-1/
 
 devkit_1-0:
-	mkdir -p $(BUILDDIR)/devkit/
+	mkdir -p $(BUILDDIR)/release/devkit_1-0/
 	$(BUILD_COMMAND_AND_ARGS) release_devkit_1-0/source $(BUILDDIR)/release/devkit_1-0/
 
 ohai-8:
