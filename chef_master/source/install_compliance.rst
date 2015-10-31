@@ -1,12 +1,12 @@
 =====================================================
-Install the |chef compliance|
+Install |chef compliance|
 =====================================================
 
 To install |chef compliance| in a standalone configuration, first review the prerequisites and then follow the steps below.
 
 Prerequisites
 =====================================================
-The |chef compliance| has the :doc:`following prerequisites </install_server_pre>`:
+The |chef compliance| has the following prerequisites:
 
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a FQDN or an IP address
