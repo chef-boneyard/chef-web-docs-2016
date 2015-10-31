@@ -462,4 +462,3 @@ Cookbooks
    verify_packages
    windows
    workstation
-
