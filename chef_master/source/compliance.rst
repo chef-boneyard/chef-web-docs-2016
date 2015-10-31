@@ -1,0 +1,51 @@
+=====================================================
+Chef Compliance
+=====================================================
+
+.. include:: ../../includes_compliance/includes_compliance.rst
+
+The Chef Compliance Server
+=====================================================
+.. include:: ../../includes_compliance/includes_compliance_server.rst
+
+.. image:: ../../images/compliance_components.svg
+   :width: 600px
+   :align: center
+
+Compliance Profiles
+-----------------------------------------------------
+.. include:: ../../includes_compliance/includes_compliance_profiles.rst
+
+Audit Resources
+=====================================================
+.. include:: ../../includes_inspec/includes_inspec.rst
+
+.. include:: ../../includes_inspec/includes_inspec_resources_list.rst
+
+Examples
+-----------------------------------------------------
+The following examples show how to use the |dsl compliance| to build tests.
+
+**Disallow insecure protocols**
+
+This code uses the ``package`` and ``inetd_conf`` resources to ensure that insecure services and protocols, such as ``telnet``, are not used.
+
+.. include:: ../../step_inspec/step_inspec_inetd_conf_disallow_protocols.rst
+
+**Only accept requests on secure ports**
+
+This code uses the ``port`` resource to ensure that the web server is only listening on well-secured ports.
+
+.. include:: ../../step_inspec/step_inspec_port_listen_on_secure_ports.rst
+
+**Use approved strong ciphers**
+
+This code uses the ``sshd_config`` resource to ensure that only enterprise-compliant ciphers are used for |ssh| servers.
+
+.. include:: ../../step_inspec/step_inspec_sshd_conf_use_strong_ciphers.rst
+
+**Test a kitchen.yml file driver**
+
+This code uses the ``yaml`` resource to ensure that the |kitchen| driver is |vagrant|.
+
+.. include:: ../../step_inspec/step_inspec_yaml_kitchen_driver.rst
