@@ -4,8 +4,6 @@ InSpec Reference
 
 .. include:: ../../includes_inspec/includes_inspec.rst
 
-.. include:: ../../includes_inspec/includes_inspec_resources_list.rst
-
 See below for more information about each |inspec resource|, its related matchers, and examples of how to use it in a recipe.
 
 
