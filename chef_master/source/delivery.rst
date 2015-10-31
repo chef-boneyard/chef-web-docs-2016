@@ -228,7 +228,7 @@ This file sets the cookbook version, the name of the cookbook and its location. 
 
 Because build cookbooks read the configuration file, use the configuration file to customize the build cookbook to suit the needs of a particular project. In this way, you can share some "standard" version of a build cookbook with others and then use extra data in the config file to tailor the cookbook as needed. 
 
-Learn more about :doc:`configuring the pipeline using build cookbooks Cookbooks </build_cookbooks>`.
+See the "Build Cookbooks" topic for more information.
 
 Getting Started
 =====================================================
