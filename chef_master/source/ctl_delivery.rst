@@ -1,10 +1,13 @@
+.. THIS PAGE IS IDENTICAL TO docs.chef.io/ctl_delivery.html BY DESIGN
+
 =====================================================
-|chef delivery_cli| (executable)
+Delivery CLI
 =====================================================
 
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery.rst
 
 .. warning:: This command-line tool is only available from: https://github.com/chef/delivery-cli.
+
 
 delivery api
 =====================================================
@@ -30,9 +33,6 @@ Examples
 
 .. include:: ../../step_ctl_delivery/step_ctl_delivery_api_github_username_dotcom.rst
 
-**Get the pipeline status**
-
-.. include:: ../../step_ctl_delivery/step_ctl_delivery_api_get_pipeline_status.rst
 
 delivery checkout
 =====================================================
@@ -50,6 +50,7 @@ Examples
 -----------------------------------------------------
 None.
 
+
 delivery clone
 =====================================================
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery_clone.rst
@@ -65,6 +66,7 @@ Options
 Examples
 -----------------------------------------------------
 None.
+
 
 delivery diff
 =====================================================
@@ -82,6 +84,7 @@ Examples
 -----------------------------------------------------
 None.
 
+
 delivery init
 =====================================================
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery_init.rst
@@ -97,6 +100,7 @@ Options
 Examples
 -----------------------------------------------------
 None.
+
 
 delivery job
 =====================================================
@@ -117,6 +121,7 @@ Examples
 
 .. include:: ../../step_ctl_delivery/step_ctl_delivery_job_verify_unit.rst
 
+
 delivery review
 =====================================================
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery_review.rst
@@ -133,6 +138,7 @@ Examples
 -----------------------------------------------------
 None.
 
+
 delivery setup
 =====================================================
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery_setup.rst
@@ -148,6 +154,7 @@ Options
 Examples
 -----------------------------------------------------
 None.
+
 
 delivery token
 =====================================================
