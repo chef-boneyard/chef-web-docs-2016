@@ -196,7 +196,7 @@ On the provisioning node:
       $ git clone https://github.com/opscode-cookbooks/delivery-cluster.git ~/delivery-cluster
 
 
-Common Configurations
+Provisioning Settings
 -----------------------------------------------------
 The following sections detail setting up |chef delivery| for |amazon aws| provisioning or SSH provisioning; however, some ``rake setup:generate_env`` configuration options are common to both.
 
