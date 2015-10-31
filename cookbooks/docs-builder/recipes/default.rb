@@ -102,6 +102,7 @@ osc_11-0
 osc_11-1
 analytics_1-1
 devkit_1-0
+compliance_1-0
 ohai-8
 ohai-7
 ohai-6
