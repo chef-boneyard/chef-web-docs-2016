@@ -216,7 +216,9 @@ For |amazon aws|:
      - This name becomes the default name for the |chef delivery| cluster environment, enterprise, and organization. The naming convention prohibits the use of capital letters, but should otherwise be alphanumeric.
    * - **Key Name***
      - This is the name of your |amazon aws| ``.pem`` credential file. Enter only the name, without the extension. This file is typically located in the ``~.ssh`` directory, and is associated with the **Key name pair** value in |amazon aws| console: https://console.aws.amazon.com/iam/home.
-   * - **Image ID**, **Subnet ID**, and **Security Group ID**
+   * - **Image ID**,
+       **Subnet ID**,
+       **Security Group ID**
      - This is the information that |amazon aws| needs to provision the nodes. It is wise to verify that the given defaults are actually the ones that you want by opening your |amazon aws| console and verifying.
    * - **Use existing chef-server**
      - Accept the default: ``no``. If you want ``delivery-cluster`` to configure a |chef server| for you (you will be asked for the IP address of the server). Enter ``yes`` if you have a configured |chef server| that you want to use and do not need ``delivery-cluster`` to configure one for you. If you do specify ``yes``, please note that the version of the |chef server| must be 12.2, it cannot have a high availability configuration. In addition, a special entry must be made to the environments configuration file (``environments/NAME_OF_ENV.json``) simillar to:
@@ -250,7 +252,9 @@ For SSH:
      - The path to your ``.ssh`` key file; for example, ``/home/USERNAME/.ssh/USERNAME.pem``. Note, you must set up the public/private SSH key-pair yourself before attempting to install |chef delivery|.
    * - **SSH Username**
      - Enter the default SSH username for the system on which you are installing ``delivery-cluster``. For example, for an |ubuntu| machine, the default SSH username is ``ubuntu``. You may need to look up what the default is for your system.
-   * - **Chef Server Host**, **Delivery Server Host**, **Build Nodes Host**
+   * - **Chef Server Host**,
+       **Delivery Server Host**,
+       **Build Nodes Host**
      - For SSH, you enter the IP addresses of the nodes that you have already provisioned. This is true also if you choose to enable a |supermarket| server.
    * - **Use existing chef-server**
      - Accept the default, "no", if you want ``delivery-cluster`` to configure a Chef server for you (you will be asked for the IP address of the server). Enter "yes" if you have a configured |chef server| that you want to use and do not need ``delivery-cluster`` to configure one for you. If you do specify ``yes``, please note that the version of the |chef server| must be 12.2, it cannot have a high availability configuration. In addition, a special entry must be made to the environments configuration file (``environments/NAME_OF_ENV.json``) simillar to:
