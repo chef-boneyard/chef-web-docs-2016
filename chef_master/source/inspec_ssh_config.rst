@@ -1,5 +1,5 @@
 =====================================================
-ssh_conf
+ssh_config
 =====================================================
 
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_ssh_config.rst

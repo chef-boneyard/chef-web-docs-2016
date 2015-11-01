@@ -944,7 +944,7 @@ Examples
 .. include:: ../../step_inspec/step_inspec_limits_conf_settings.rst
 
 
-login_def
+login_defs
 =====================================================
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_login_defs.rst
 
@@ -1436,7 +1436,7 @@ pid
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_port_matcher_pid.rst
 
-process
+processes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_port_matcher_process.rst
 
@@ -1676,7 +1676,7 @@ Examples
 .. include:: ../../step_inspec/step_inspec_service_clamav.rst
 
 
-ssh_conf
+ssh_config
 =====================================================
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_ssh_config.rst
 

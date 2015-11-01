@@ -1,5 +1,5 @@
 =====================================================
-login_def
+login_defs
 =====================================================
 
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_login_defs.rst
