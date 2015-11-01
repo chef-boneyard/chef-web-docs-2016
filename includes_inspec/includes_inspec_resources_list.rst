@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The open source |inspec| collection includes:
+The open source |inspec resource| collection includes:
 
 * :doc:`apache_conf </inspec_apache_conf>`
 * :doc:`apt </inspec_apt>`
@@ -16,7 +16,6 @@ The open source |inspec| collection includes:
 * :doc:`directory </inspec_directory>`
 * :doc:`file </inspec_file>`
 * :doc:`etc_group </inspec_etc_group>`
-* :doc:`etc_passwd </inspec_etc_passwd>`
 * :doc:`gem </inspec_gem>`
 * :doc:`group </inspec_group>`
 * :doc:`group_policy </inspec_group_policy>`
@@ -39,6 +38,7 @@ The open source |inspec| collection includes:
 * :doc:`package </inspec_package>`
 * :doc:`parse_config </inspec_parse_config>`
 * :doc:`parse_config_file </inspec_parse_config_file>`
+* :doc:`passwd </inspec_etc_passwd>`
 * :doc:`pip </inspec_pip>`
 * :doc:`port </inspec_port>`
 * :doc:`processes </inspec_process>`
