@@ -196,13 +196,13 @@ On the provisioning node:
       $ git clone https://github.com/opscode-cookbooks/delivery-cluster.git ~/delivery-cluster
 
 
-Provisioning Settings
+Cluster Settings
 -----------------------------------------------------
 The following sections detail setting up |chef delivery| for |amazon aws| provisioning or SSH provisioning; however, some ``rake setup:generate_env`` configuration options are common to both.
 
 .. warning:: Ignore the **Specify a delivery-cli artifact** option because it will be removed.
 
-AWS
+AWS Cluster
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 For |amazon aws|:
 
@@ -234,7 +234,7 @@ For |amazon aws|:
    * - **Enable Supermarket**
      - Enter "yes" if you intend to run cookbooks through your |chef delivery| pipeline.
 
-SSH
+SSH Cluster
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 For SSH:
 
