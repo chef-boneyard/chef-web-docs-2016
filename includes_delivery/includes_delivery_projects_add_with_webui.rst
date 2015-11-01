@@ -6,8 +6,6 @@ To add a project using the |chef delivery| web UI:
 #. Log into the |chef delivery| web UI as user with **Admin** role.
 #. Click the plus sign (**+**) next to **Add a New Project**.
 
-   A text area opens.
-
 #. Enter a project name and select a **Source Code Provider**, either **Chef Delivery** (the default) or **GitHub**: 
 
 #. If you choose **Chef Delivery**, simply click **Save and Close** to finish adding the project.
@@ -22,4 +20,4 @@ To add a project using the |chef delivery| web UI:
 
    **Verify SSL**  When selected, have |github| perform SSL certificate verification when it connects to |chef delivery| to run its web hooks.
 
-   Then click **Save and Close**.
+#. Click **Save and Close**.
