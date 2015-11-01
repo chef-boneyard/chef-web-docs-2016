@@ -1,5 +1,5 @@
 =====================================================
-InSpec DSL
+|dsl compliance|
 =====================================================
 
 .. include:: ../../includes_dsl_compliance/includes_dsl_compliance.rst
