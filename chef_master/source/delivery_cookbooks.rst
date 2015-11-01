@@ -11,7 +11,7 @@ Build Cookbook Structure
 The following table lists the per-phase files in a build cookbook.
 
 .. list-table::
-   :widths: 100 400
+   :widths: 200 400
    :header-rows: 1
 
    * - Recipe and Phases
