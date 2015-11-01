@@ -19,7 +19,7 @@ Compliance profiles exist for many scenarios, such as those created by the Cente
      end
    end
 
-Compliance profiles are built and maintained from the |chef compliance| server webui. The results of running these profiles against any number of nodes in your infrastructure is available as a report summary.
+Compliance profiles are built and maintained from the |chef compliance| server web UI. The results of running a profile against any number of nodes in your infrastructure is available as a report summary.
 
 .. image:: ../../images/compliance_report.png
    :width: 600px

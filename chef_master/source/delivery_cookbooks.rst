@@ -91,6 +91,6 @@ Use delivery-truck
 -------------------------------------------------------------------
 .. include:: ../../includes_delivery/includes_delivery_projects_add_with_delivery_truck.rst
 
-Use the Webui
+Use the Web UI
 -----------------------------------------------------
 .. include:: ../../includes_delivery/includes_delivery_projects_add_with_webui.rst

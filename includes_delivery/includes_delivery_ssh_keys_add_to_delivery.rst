@@ -73,7 +73,7 @@ Too add SSH keys to |chef delivery|, do the following:
 
 #. Copy the SSH key and add it to |chef delivery|.
 
-   Log into the |chef delivery| web user interface as an administrator.
+   Log into the |chef delivery| web UI as an administrator.
 
    Select **Users** from the drop-down menu on the upper right.
 

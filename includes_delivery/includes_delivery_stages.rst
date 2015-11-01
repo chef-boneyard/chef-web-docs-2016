@@ -14,7 +14,7 @@ All |chef delivery| pipelines include these stages:
      - Unit, Lint, Syntax
      - When a new change is submitted, the **Verify** stage kicks off a number of recipes for basic change testing on the |chef delivery| build nodes.
 
-       A change exits the **Verify** stage and advances to the next stage of the pipeline when a user with **Reviewer** or **Admin** permissions approves it. The approval can be done by using the **Approve** button in the webui, the |chef delivery_cli| CLI ``delivery job`` command, or by entering ``@delivery approve`` in the comment section within |github|, if integrated with |chef delivery|. When approved, the change is merged to the base pipeline, usually "master".
+       A change exits the **Verify** stage and advances to the next stage of the pipeline when a user with **Reviewer** or **Admin** permissions approves it. The approval can be done by using the **Approve** button in the web UI, the |chef delivery_cli| CLI ``delivery job`` command, or by entering ``@delivery approve`` in the comment section within |github|, if integrated with |chef delivery|. When approved, the change is merged to the base pipeline, usually "master".
 
    * - **Build**
      - Unit, Lint, Syntax, Quality, Security, Publish
@@ -23,7 +23,7 @@ All |chef delivery| pipelines include these stages:
      - Provision, Deploy, Smoke, Functional
      - In the **Acceptance** stage, the result of your build stage (artifact, cookbook, etc.) is deployed and tested in an isolated environment.
 
-       A change exits the **Acceptance** stage and advances to the next stage of the pipeline when a user with **Shipper** or **Admin** permissions approves it. The approval can be done by using the **Deliver** button in the webui, the |chef delivery_cli| CLI ``delivery job`` command, or by entering ``@delivery deliver`` in the comment section within |github|, if integrated with |chef delivery|.
+       A change exits the **Acceptance** stage and advances to the next stage of the pipeline when a user with **Shipper** or **Admin** permissions approves it. The approval can be done by using the **Deliver** button in the web UI, the |chef delivery_cli| CLI ``delivery job`` command, or by entering ``@delivery deliver`` in the comment section within |github|, if integrated with |chef delivery|.
 
    * - **Union**
      - Provision, Deploy, Smoke, Functional     
