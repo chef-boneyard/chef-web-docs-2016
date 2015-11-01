@@ -3,7 +3,7 @@
 
 To add LDAP details for a user:
 
-#. Log into the |chef delivery| web user interface as an administrator.
+#. Log into the |chef delivery| web UI as an administrator.
 #. Select **Users** from the drop-down menu on the upper right.
 
    The **Users** list page opens. You can use the search filter in the upper right corner to make sure that the user is not already added.

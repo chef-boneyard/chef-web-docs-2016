@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To add a project using the |chef delivery| web user interface:
+To add a project using the |chef delivery| web UI:
 
 #. Log into the |chef delivery| web UI as user with **Admin** role.
 #. Click the plus sign (**+**) next to **Add a New Project**.
