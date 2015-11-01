@@ -1,5 +1,5 @@
 =====================================================
-process
+processes
 =====================================================
 
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_process.rst
