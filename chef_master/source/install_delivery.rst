@@ -196,7 +196,7 @@ On the provisioning node:
       $ git clone https://github.com/opscode-cookbooks/delivery-cluster.git ~/delivery-cluster
 
 
-Common Configurations
+Provisioning Settings
 -----------------------------------------------------
 The following sections detail setting up |chef delivery| for |amazon aws| provisioning or SSH provisioning; however, some ``rake setup:generate_env`` configuration options are common to both.
 
@@ -207,7 +207,7 @@ AWS
 For |amazon aws|:
 
 .. list-table::
-   :widths: 100 420
+   :widths: 200 400
    :header-rows: 1
 
    * - Option
@@ -239,7 +239,7 @@ SSH
 For SSH:
 
 .. list-table::
-   :widths: 100 420
+   :widths: 200 400
    :header-rows: 1
 
    * - Option
@@ -250,7 +250,7 @@ For SSH:
      - The path to your ``.ssh`` key file; for example, ``/home/USERNAME/.ssh/USERNAME.pem``. Note, you must set up the public/private SSH key-pair yourself before attempting to install |chef delivery|.
    * - **SSH Username**
      - Enter the default SSH username for the system on which you are installing ``delivery-cluster``. For example, for an |ubuntu| machine, the default SSH username is ``ubuntu``. You may need to look up what the default is for your system.
-   * - **Chef Server Host**, **Delivery Server Host**, **Build Nodes Host**
+   * - **Chef Server Host**, **Delivery Server Host**, and **Build Nodes Host**
      - For SSH, you enter the IP addresses of the nodes that you have already provisioned. This is true also if you choose to enable a |supermarket| server.
    * - **Use existing chef-server**
      - Accept the default, "no", if you want ``delivery-cluster`` to configure a Chef server for you (you will be asked for the IP address of the server). Enter "yes" if you have a configured |chef server| that you want to use and do not need ``delivery-cluster`` to configure one for you. If you do specify ``yes``, please note that the version of the |chef server| must be 12.2, it cannot have a high availability configuration. In addition, a special entry must be made to the environments configuration file (``environments/NAME_OF_ENV.json``) simillar to:

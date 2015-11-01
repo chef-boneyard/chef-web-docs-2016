@@ -132,6 +132,7 @@ Cookbooks
    community
    community_contributions
    community_guidelines
+   compliance
    config_rb
    config_rb_analytics
    config_rb_chef_sync

@@ -22,7 +22,7 @@ where
 
 * ``'sshd-8'`` is the name of the rule
 * ``impact``, ``title``, and ``desc`` define metadata that fully describes the importance of the rule, its purpose, with a succinct and complete description; these three methods display their data in the |chef compliance| web user interface
-* ``impact`` is an integer that measures the importance of the compliance results and must be a value between ``0.0`` and ``1.0``.
+* ``impact`` is an integer that measures the importance of the compliance results and must be a value between ``0.0`` and ``1.0``
 * ``describe`` is a block that contains at least one test. A ``rule`` block must contain at least one ``describe`` block, but may contain as many as required
 * ``sshd_conf`` is an |inspec resource|. For the full list of |inspec resource|, see https://docs.chef.io/inspec_reference.html.
 * ``its('Port')`` is the matcher; ``{ should eq('22') }`` is the test. A ``describe`` block must contain at least one matcher, but may contain as many as required
