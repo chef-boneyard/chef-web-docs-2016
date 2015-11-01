@@ -20,6 +20,8 @@ Audit Resources
 =====================================================
 .. include:: ../../includes_inspec/includes_inspec.rst
 
+.. note:: See every |inspec resource| in a single topic: https://docs.chef.io/inspec_reference.html.
+
 .. include:: ../../includes_inspec/includes_inspec_resources_list.rst
 
 Examples

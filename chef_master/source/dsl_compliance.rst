@@ -16,6 +16,8 @@ Syntax
 
 InSpec Audit Resources
 =====================================================
+.. note:: See every |inspec resource| in a single topic: https://docs.chef.io/inspec_reference.html.
+
 .. include:: ../../includes_inspec/includes_inspec_resources_list.rst
 
 Examples
