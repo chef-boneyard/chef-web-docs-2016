@@ -1676,7 +1676,7 @@ Examples
 .. include:: ../../step_inspec/step_inspec_service_clamav.rst
 
 
-ssh_conf
+ssh_config
 =====================================================
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_ssh_config.rst
 
