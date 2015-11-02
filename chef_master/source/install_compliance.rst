@@ -72,3 +72,29 @@ To install |chef compliance|:
    .. code-block:: bash
 
       $ chef-compliance-ctl reconfigure
+
+
+
+|amazon aws marketplace|
+=====================================================
+You can install |chef compliance| in |amazon aws|.
+
+Launch the AMI
+-----------------------------------------------------
+.. include:: ../../includes_cloud/includes_cloud_aws_compliance_launch_ami.rst
+
+Configure the |chef server_title|
+-----------------------------------------------------
+.. include:: ../../includes_cloud/includes_cloud_aws_compliance_configure.rst
+
+Ports
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_aws.rst
+
+Hostname
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cloud/includes_cloud_aws_compliance_update_hostname.rst
+
+Edit AMI Instance Size
+-----------------------------------------------------
+.. include:: ../../includes_cloud/includes_cloud_aws_compliance_change_instance.rst
