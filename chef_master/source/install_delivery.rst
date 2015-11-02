@@ -229,7 +229,7 @@ For |amazon aws|:
             "host": "chef-server.example.com"       
           },
 
-   * - **License Fil**
+   * - **License File**
      - The path to your |chef delivery| license file; the default path is your home directory.
    * - **Enable Supermarket**
      - Enter "yes" if you intend to run cookbooks through your |chef delivery| pipeline.
