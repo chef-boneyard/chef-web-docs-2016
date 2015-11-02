@@ -13,6 +13,8 @@ An Overview of |chef delivery|
 * Release source code or build artifacts to a repository such as |github|
 * Push build artifacts to production servers in real time
 
+.. note:: If you are new to |chef delivery|, you can see it in action in the self-paced tutorial `Automating your Workflow with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery| cluster and a sample application to experiment with.
+
 Pipelines
 =====================================================
 A pipeline is series of automated and manual quality gates that take software changes from development to delivery. The goal of a pipeline is to move changes from your workstation into production quickly and safely.
@@ -232,4 +234,4 @@ See the "Build Cookbooks" topic for more information.
 
 Getting Started
 =====================================================
-If you are new to |chef delivery|, you can see it in action in the self-paced tutorial `Automating your Workflow with |chef delivery|  <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery| cluster and a sample application to experiment with.
+If you are new to |chef delivery|, you can see it in action in the self-paced tutorial `Automating your Workflow with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery| cluster and a sample application to experiment with.
