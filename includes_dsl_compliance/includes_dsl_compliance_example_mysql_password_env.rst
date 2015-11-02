@@ -6,7 +6,7 @@ The following test shows how to audit machines running |mysql| to ensure that pa
 
 .. code-block:: ruby
 
-   rule 'mysql-3' do
+   control 'mysql-3' do
      impact 1.0
      title 'Do not store your MySQL password in your ENV'
      desc '

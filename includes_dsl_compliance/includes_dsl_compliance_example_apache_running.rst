@@ -6,7 +6,7 @@ The following test shows how to audit machines to ensure that |apache| is enable
 
 .. code-block:: ruby
 
-   rule 'apache-1' do
+   control 'apache-1' do
      impact 0.3
      title 'Apache2 should be configured and running'
      describe service(apache.service) do

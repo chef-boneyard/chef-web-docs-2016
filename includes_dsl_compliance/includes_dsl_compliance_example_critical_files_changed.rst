@@ -6,7 +6,7 @@ The following test shows how to audit machines for periodic file checking to all
 
 .. code-block:: ruby
 
-   rule 'cis-network-8.3.2' do
+   control 'cis-network-8.3.2' do
      impact 0.7
      title '8.3.2 Implement Periodic Execution of File Integrity'
      describe cron do
