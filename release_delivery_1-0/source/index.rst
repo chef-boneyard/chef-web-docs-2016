@@ -16,7 +16,7 @@ Read more about |chef delivery|:
 
 * :doc:`About Chef Delivery </delivery_overview>`
 * `Tutorial: Automating your Workflow with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__
-* :doc:`Install Chef Delivery </install_delivery_cluster>`
+* :doc:`Install Chef Delivery </install_delivery>`
 * :doc:`Manage Users and Roles </delivery_users_and_roles>`
 * :doc:`About Build Cookbooks </build_cookbooks>`
 * :doc:`About the delivery CLI </ctl_delivery>`
@@ -30,7 +30,7 @@ Read more about |chef delivery|:
 
    build_cookbooks
    ctl_delivery
-   install_delivery_cluster
+   install_delivery
    delivery_overview
    delivery_users_and_roles
    dsl_delivery
