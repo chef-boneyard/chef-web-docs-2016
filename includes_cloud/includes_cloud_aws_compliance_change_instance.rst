@@ -28,13 +28,7 @@ To edit the |amazon ami| instance size, do the following:
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
-#. Update the ``fqdn`` to use the public DNS name. For example:
-
-   .. code-block:: bash
-
-      $ sudo sed -ie "s/api_fqdn.*/api_fqdn 'ec2-52-6-31-230.compute-1.amazonaws.com'/" /etc/opscode/chef-compliance.rb
-
-   Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with the public DNS name.
+#. Update the ``fqdn`` to use the public DNS name.
 
 #. Reconfigure the |chef compliance| server:
 
@@ -42,6 +36,6 @@ To edit the |amazon ami| instance size, do the following:
 
       $ sudo chef-compliance-ctl reconfigure
 
-#. Verify that you can login to |chef compliance| server by navigating to ``https://<YOUR NEW PUBLIC DNS>/login``.
+#. Verify that you can login to |chef compliance| server by navigating to ``https://fqdn``.
 
 #. Update the public DNS entry: Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with your new public DNS name and ``your_org`` with your organization name.
