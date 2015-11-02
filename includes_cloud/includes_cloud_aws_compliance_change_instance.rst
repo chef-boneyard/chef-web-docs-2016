@@ -28,7 +28,7 @@ To edit the |amazon ami| instance size, do the following:
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
-#. Update the ``api_fqdn`` to use the public DNS name. For example:
+#. Update the ``fqdn`` to use the public DNS name. For example:
 
    .. code-block:: bash
 
