@@ -156,11 +156,11 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_file_does_not_exist.rst
 
-**Test if a file is a directory**
+**Test if a path is a directory**
 
 .. include:: ../../step_inspec/step_inspec_file_is_directory.rst
 
-**Test if a file is a file and not a directory**
+**Test if a path is a file and not a directory**
 
 .. include:: ../../step_inspec/step_inspec_file_is_file.rst
 

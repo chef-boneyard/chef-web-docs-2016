@@ -12,5 +12,5 @@ A ``postgres_conf`` |inspec resource| block declares one (or more) settings in t
 where
 
 * ``'setting'`` specifies a setting in the ``postgresql.conf`` file
-* ``('path')`` is the non-default path to the ``postgresql.conf`` file
+* ``('path')`` is the non-default path to the ``postgresql.conf`` file (optional)
 * ``should eq 'value'`` is the value that is expected

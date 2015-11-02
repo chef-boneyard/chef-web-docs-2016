@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   describe etc_group.where(name: 'my_user') do
+   describe etc_group do
      its('users') { should include 'my_user' }
    end

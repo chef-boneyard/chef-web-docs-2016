@@ -8,13 +8,9 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_syntax.rst
 
-Matchers
+Matchers for ``passwd``
 -----------------------------------------------------
 |inspec resource matcher|
-
-count
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_count.rst
 
 gids
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -24,25 +20,29 @@ passwords
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_passwords.rst
 
-uid
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_uid.rst
-
 uids
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_uids.rst
-
-username
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_username.rst
 
 usernames
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_usernames.rst
 
-users
+Matchers for ``passwd.uid(userid)``
+-----------------------------------------------------
+|inspec resource matcher|
+
+count
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_users.rst
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_count.rst
+
+uid
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_uid.rst
+
+username
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_username.rst
 
 Examples
 -----------------------------------------------------
@@ -52,6 +52,6 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_etc_passwd_uids.rst
 
-**Test for multiple root users**
+**Select one user and test for multiple occurrences**
 
-.. include:: ../../step_inspec/step_inspec_etc_passwd_many_root_users.rst
+.. include:: ../../step_inspec/step_inspec_etc_passwd_multiple_users.rst

@@ -5,4 +5,4 @@ The ``users`` matcher tests all groups for the named user:
 
 .. code-block:: ruby
 
-     its('users') { should include 'my_user' }
+   its('users') { should include 'my_user' }

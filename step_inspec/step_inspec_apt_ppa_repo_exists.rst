@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To test if Nginx is updated to the latest stable package:
+.. To test if a PPA repository exists and is enabled:
 
 .. code-block:: ruby
 

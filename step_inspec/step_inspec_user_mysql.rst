@@ -10,7 +10,7 @@
      its('uid') { should eq 0 }
      its('groups') { should eq ['root'] }
    end
-   
+
    describe user('mysql') do
     it { should_not exist }
    end

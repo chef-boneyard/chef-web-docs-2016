@@ -14,14 +14,14 @@ The following options may be used with any of the |inspec cli| subcommands:
 ``--host``
    The remote host to be tested.
 
-``--key``
+``--key-files``
    The login key or certificate file required for remote scanning.
 
 ``--password``
    The login password for remote scanning.
 
 ``--path``
-   The login path used to connect to the target.
+   The login path used to connect to |windows remote management| targets.
 
 ``--port``
    The port over which remote scanning will occur.

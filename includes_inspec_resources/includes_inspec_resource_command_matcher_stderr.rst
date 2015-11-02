@@ -5,4 +5,4 @@ The ``stderr`` matcher tests results of the command as returned in standard erro
 
 .. code-block:: ruby
 
-   its('stderr') { should eq 'error\n' }
+   its('stderr') { should eq 'error' }

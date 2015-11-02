@@ -28,12 +28,6 @@ Examples
 -----------------------------------------------------
 The following examples show how to use the |dsl compliance| to build tests.
 
-**Disallow insecure protocols**
-
-This code uses the ``package`` and ``inetd_conf`` resources to ensure that insecure services and protocols, such as ``telnet``, are not used.
-
-.. include:: ../../step_inspec/step_inspec_inetd_conf_disallow_protocols.rst
-
 **Only accept requests on secure ports**
 
 This code uses the ``port`` resource to ensure that the web server is only listening on well-secured ports.

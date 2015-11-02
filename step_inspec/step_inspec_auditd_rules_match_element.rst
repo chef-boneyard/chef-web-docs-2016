@@ -6,8 +6,8 @@
 
    describe audit_daemon_rules do
      its("LIST_RULES") {
-       should contain_match(/^exit,always arch=.*
-       key=time-change
+       should contain_match(/^exit,always arch=.*\
+       key=time-change\
        syscall=adjtimex,settimeofday/)
      }
    end

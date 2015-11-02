@@ -5,7 +5,7 @@ A ``os`` |inspec resource| block declares the platform to be tested:
 
 .. code-block:: ruby
 
-   describe os do
+   describe os['family'] do
      it { should eq 'platform' }
    end
 

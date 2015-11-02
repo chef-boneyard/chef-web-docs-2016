@@ -8,7 +8,7 @@
      it { should be_installed }
      its('version') { should eq '0.98.7' }
    end
-   
+
    describe service('clamd') do
      it { should_not be_enabled }
      it { should_not be_installed }

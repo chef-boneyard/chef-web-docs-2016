@@ -5,7 +5,7 @@ A ``host`` |inspec resource| block declares a host name, and then (depending on 
 
 .. code-block:: ruby
 
-   describe host('example.com', port: 80, proto: 'udp') do
+   describe host('example.com', port: 80, proto: 'tcp') do
      it { should be_reachable }
    end
 
@@ -14,5 +14,5 @@ where
 * ``host()`` must specify a host name and may specify a port number and/or a protocol
 * ``'example.com'`` is the host name
 * ``port:`` is the port number
-* ``proto: 'name'`` is the Internet protocol: |icmp| (``proto: 'icmp'``), |tcp| (``proto: 'tcp'``), or |udp| (``proto: 'udp'``)
+* ``proto: 'name'`` is the Internet protocol: |tcp| (``proto: 'tcp'``), |udp| (``proto: 'udp'`` or  |icmp| (``proto: 'icmp'``))
 * ``be_reachable`` is a valid matcher for this |inspec resource|

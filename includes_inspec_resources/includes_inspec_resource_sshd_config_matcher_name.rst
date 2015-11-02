@@ -11,4 +11,4 @@ or:
 
 .. code-block:: ruby
 
-   it's('name') {should include('bar') }
+   its('name') {should include('bar') }

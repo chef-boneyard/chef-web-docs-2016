@@ -5,4 +5,4 @@ The ``gids`` matcher tests if the named group identifier is present or if it con
 
 .. code-block:: ruby
 
-     its('gids') { should_not contain_duplicates }
+   its('gids') { should_not contain_duplicates }

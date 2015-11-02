@@ -18,7 +18,6 @@ The open source |inspec resource| collection includes:
 * :doc:`etc_group </inspec_etc_group>`
 * :doc:`gem </inspec_gem>`
 * :doc:`group </inspec_group>`
-* :doc:`group_policy </inspec_group_policy>`
 * :doc:`host </inspec_host>`
 * :doc:`inetd_conf </inspec_inetd_conf>`
 * :doc:`interface </inspec_interface>`

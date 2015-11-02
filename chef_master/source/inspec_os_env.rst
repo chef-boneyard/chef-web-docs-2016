@@ -12,17 +12,13 @@ Matchers
 -----------------------------------------------------
 |inspec resource matcher|
 
-exit_status
+content
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_exit_status.rst
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_content.rst
 
 split
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_split.rst
-
-stderr
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_stderr.rst
 
 Examples
 -----------------------------------------------------

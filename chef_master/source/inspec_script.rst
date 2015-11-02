@@ -12,14 +12,22 @@ Matchers
 -----------------------------------------------------
 |inspec resource matcher|
 
-script_name
+exit_status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_script_name.rst
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_exit_status.rst
+
+stderr
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_stderr.rst
+
+stdout
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_stdout.rst
 
 Examples
 -----------------------------------------------------
 |inspec examples|
 
-**Test that user Grantmc belongs to the Active Directory object**
+**Get all groups of Administrator user**
 
-.. include:: ../../step_inspec/step_inspec_script_user_belongs_to_ad_object.rst
+.. include:: ../../step_inspec/step_inspec_script_user_get_all_groups.rst

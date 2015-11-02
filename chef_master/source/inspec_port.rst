@@ -16,10 +16,6 @@ be_listening
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_port_matcher_be_listening.rst
 
-be_listening.with()
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_port_matcher_be_listening_with.rst
-
 pid
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_port_matcher_pid.rst

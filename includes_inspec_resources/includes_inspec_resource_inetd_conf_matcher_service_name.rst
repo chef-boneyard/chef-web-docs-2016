@@ -1,23 +1,23 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This |inspec resource| matches any service that is listed in the ``inetd.conf`` file:
+This |inspec resource| matches any service that is listed in the ``inetd.conf`` file. You may want to ensure that specific services do not listen via ``inetd.conf``:
 
 .. code-block:: ruby
 
-     its('shell') { should eq nil }
+   its('shell') { should eq nil }
 
 or:
 
 .. code-block:: ruby
 
-     its('netstat') { should eq nil }
+   its('netstat') { should eq nil }
 
 or:
 
 .. code-block:: ruby
 
-     its('systat') { should eq nil }
+   its('systat') { should eq nil }
 
 For example:
 

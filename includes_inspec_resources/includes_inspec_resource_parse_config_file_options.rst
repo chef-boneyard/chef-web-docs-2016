@@ -9,6 +9,6 @@ This |inspec resource| supports the following options for parsing configuration 
        assignment_re: /^\s*([^:]*?)\s*:\s*(.*?)\s*$/,
        multiple_values: true
      }
-   describe parse_config(options) do
+   describe parse_config_file('path/to/file',  options) do
      its('setting') { should eq 1 }
    end

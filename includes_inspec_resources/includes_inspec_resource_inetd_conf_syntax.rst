@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-An ``inetd_conf`` |inspec resource| block declares the list of services that should be disabled in the ``inetd.conf`` file:
+An ``inetd_conf`` |inspec resource| block declares the list of services that are enabled in the ``inetd.conf`` file:
 
 .. code-block:: ruby
 

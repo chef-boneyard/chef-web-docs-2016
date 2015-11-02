@@ -4,8 +4,6 @@
 
 .. code-block:: ruby
 
-   return unless command('sshd').exist?
-   
    describe sshd_config do
      its('AcceptEnv') { should include('GORDON_SERVER') }
    end

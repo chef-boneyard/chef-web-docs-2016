@@ -30,15 +30,11 @@ stdout
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test for PostgreSQL database running a RC, development, or beta release**
 
 .. include:: ../../step_inspec/step_inspec_command_postgresql_rc.rst
-
-**Test for multiple instances of Nginx**
-
-.. include:: ../../step_inspec/step_inspec_command_multiple_nginx_instances.rst
 
 **Test standard output (stdout)**
 
@@ -59,7 +55,3 @@ The following examples show how to use this InSpec resource.
 **Test for a command that should not exist**
 
 .. include:: ../../step_inspec/step_inspec_command_should_not_exist.rst
-
-**Test for one peer and one indent**
-
-.. include:: ../../step_inspec/step_inspec_command_one_peer_one_indent.rst

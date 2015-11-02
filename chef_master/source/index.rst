@@ -208,7 +208,6 @@ Cookbooks
    inspec_etc_passwd
    inspec_file
    inspec_gem
-   inspec_group_policy
    inspec_group
    inspec_host
    inspec_inetd_conf
