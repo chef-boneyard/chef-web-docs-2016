@@ -30,7 +30,7 @@ where
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test group identifiers (GIDs) for duplicates**
 

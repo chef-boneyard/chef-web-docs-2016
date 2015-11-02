@@ -9,8 +9,12 @@ A ``registry_key`` |inspec resource| block declares the item in the |windows| re
      its('name') { should eq 'value' }
    end
 
+   describe registry_key('path\to\key') do
+     its('name') { should eq 'value' }
+   end
+
 where
 
-* ``'registry_item'`` is a key in the |windows| registry
+* ``'registry_item'`` is a key in the |windows| registry (optional)
 * ``'path\to\key'`` is the path in the |windows| registry
 * ``('name')`` and ``'value'`` represent the name of the key and the value assigned to that key

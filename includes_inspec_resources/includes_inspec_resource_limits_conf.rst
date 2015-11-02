@@ -12,6 +12,6 @@ Entries in the ``limits.conf`` file are similar to:
 
    grantmc     soft   nofile   4096
    grantmc     hard   nofile   63536
-   
+
    ^^^^^^^^^   ^^^^   ^^^^^^   ^^^^^
    domain      type    item    value

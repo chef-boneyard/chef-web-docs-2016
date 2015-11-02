@@ -5,4 +5,4 @@ The ``selinux_label`` matcher tests if the |selinux| label for a file matches th
 
 .. code-block:: ruby
 
-   its('product_version') { should eq 'system_u:system_r:httpd_t:s0' }
+   its('selinux_label') { should eq 'system_u:system_r:httpd_t:s0' }

@@ -5,5 +5,5 @@
 .. code-block:: ruby
 
    describe audit_policy do
-     its('User Account Management') { should_not eq 'No Auditing' }
+     its('User Account Management') { should eq 'Success' }
    end

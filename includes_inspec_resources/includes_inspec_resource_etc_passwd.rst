@@ -4,7 +4,7 @@
 Use the ``passwd`` |inspec resource| to test the contents of ``/etc/passwd``, which contains the following information for users that may log into the system and/or as users that own running processes. The format for ``/etc/passwd`` includes:
 
 * A username
-* The password for that user
+* The password for that user (on newer systems passwords should be stored in ``/etc/shadow`` )
 * The user identifier (UID) assigned to that user
 * The group identifier (GID) assigned to that user
 * Additional information about that user

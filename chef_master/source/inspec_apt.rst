@@ -22,15 +22,11 @@ exist
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource in a test.
+|inspec examples|
 
-**Test if Ubuntu is updated to the latest stable Juju package**
+**Test if apt repository exists and is enabled**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_ubuntu_stable_juju.rst
-
-**Test if Nginx is updated to the latest stable package**
-
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_ubuntu_stable_nginx.rst
+.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_exists.rst
 
 **Verify that a repository exists and is enabled**
 

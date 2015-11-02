@@ -10,4 +10,4 @@ A ``port`` |inspec resource| block declares a port, and then depending on what n
      its('process') {should eq 'syslog'}
    end
 
-where the ``syslog`` process is tested to see if it's listening on port 514.
+where the ``process`` returns the process listening on port 514.

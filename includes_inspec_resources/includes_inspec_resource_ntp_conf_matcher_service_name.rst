@@ -5,13 +5,13 @@ This |inspec resource| matches any service that is listed in the ``ntp.conf`` fi
 
 .. code-block:: ruby
 
-     its('server') { should_not eq nil }
+   its('server') { should_not eq nil }
 
 or:
 
 .. code-block:: ruby
 
-     its('restrict') { should include '-4 default kod notrap nomodify nopeer noquery'}
+   its('restrict') { should include '-4 default kod notrap nomodify nopeer noquery'}
 
 For example:
 

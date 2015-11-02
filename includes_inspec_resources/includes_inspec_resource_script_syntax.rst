@@ -5,6 +5,17 @@ A ``script`` |inspec resource| block declares a script to be tested, and then a 
 
 .. code-block:: ruby
 
-   describe script do
-     its('script_name') { should include 'command' }
+   script = <<-EOH
+     # you powershell script
+   EOH
+
+   describe script(script) do
+     its('matcher') { should eq 'output' }
    end
+
+
+where
+
+* ``'script'`` must specify a Powershell script to be run
+* ``'matcher'`` is one of ``exit_status``, ``stderr``, or ``stdout``
+* ``'output'`` tests the output of the command run on the system versus the output value stated in the test

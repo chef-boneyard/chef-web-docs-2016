@@ -12,4 +12,4 @@ A ``os_env`` |inspec resource| block declares an environment variable, and then 
 where
 
 * ``('VARIABLE')`` must specify an environment variable, such as ``PATH``
-* ``matcher`` is a valid matcher for this InSpec resource
+* ``matcher`` is a valid matcher for this |inspec resource|

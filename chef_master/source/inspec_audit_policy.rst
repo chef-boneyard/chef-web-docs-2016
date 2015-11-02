@@ -14,9 +14,9 @@ Matchers
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
-**Test that a parameter is set to "No Auditing"**
+**Test that a parameter is not set to "No Auditing"**
 
 .. include:: ../../step_inspec/step_inspec_audit_policy_no_auditing.rst
 

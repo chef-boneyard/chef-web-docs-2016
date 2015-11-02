@@ -21,7 +21,7 @@ Matchers
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource in a test.
+|inspec examples|
 
 **Test for blocking .htaccess files on CentOS**
 
@@ -54,15 +54,11 @@ exist
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource in a test.
+|inspec examples|
 
-**Test if Ubuntu is updated to the latest stable Juju package**
+**Test if apt repository exists and is enabled**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_ubuntu_stable_juju.rst
-
-**Test if Nginx is updated to the latest stable package**
-
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_ubuntu_stable_nginx.rst
+.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_exists.rst
 
 **Verify that a repository exists and is enabled**
 
@@ -87,9 +83,9 @@ Matchers
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
-**Test that a parameter is set to "No Auditing"**
+**Test that a parameter is not set to "No Auditing"**
 
 .. include:: ../../step_inspec/step_inspec_audit_policy_no_auditing.rst
 
@@ -112,7 +108,7 @@ Matchers
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test the auditd.conf file**
 
@@ -127,21 +123,9 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_auditd_rules_syntax.rst
 
-Options
------------------------------------------------------
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_auditd_rules_options.rst
-
-assignment_re
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_common_options_assign_regex.rst
-
-multiple_values
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_common_options_multiple_values.rst
-
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test if a rule contains a matching element that is identified by a regular expression**
 
@@ -182,7 +166,7 @@ params
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test if eth0 is a secondary interface for bond0**
 
@@ -262,7 +246,7 @@ stdout
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test for PostgreSQL database running a RC, development, or beta release**
 
@@ -315,7 +299,7 @@ name
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test a CSV file**
 
@@ -379,7 +363,7 @@ where
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test group identifiers (GIDs) for duplicates**
 
@@ -1167,17 +1151,13 @@ Matchers
 -----------------------------------------------------
 |inspec resource matcher|
 
-exit_status
+content
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_exit_status.rst
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_content.rst
 
 split
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_split.rst
-
-stderr
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_os_env_matcher_stderr.rst
 
 Examples
 -----------------------------------------------------
@@ -1331,13 +1311,9 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_syntax.rst
 
-Matchers
+Matchers for ``passwd``
 -----------------------------------------------------
 |inspec resource matcher|
-
-count
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_count.rst
 
 gids
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1347,25 +1323,29 @@ passwords
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_passwords.rst
 
-uid
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_uid.rst
-
 uids
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_uids.rst
-
-username
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_username.rst
 
 usernames
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_usernames.rst
 
-users
+Matchers for ``passwd.uid(userid)``
+-----------------------------------------------------
+|inspec resource matcher|
+
+count
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_users.rst
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_count.rst
+
+uid
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_uid.rst
+
+username
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_etc_passwd_matcher_username.rst
 
 Examples
 -----------------------------------------------------
@@ -1427,10 +1407,6 @@ Matchers
 be_listening
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_port_matcher_be_listening.rst
-
-be_listening.with()
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_port_matcher_be_listening_with.rst
 
 pid
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1597,9 +1573,17 @@ Matchers
 -----------------------------------------------------
 |inspec resource matcher|
 
-script_name
+exit_status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_script_name.rst
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_exit_status.rst
+
+stderr
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_stderr.rst
+
+stdout
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_stdout.rst
 
 Examples
 -----------------------------------------------------

@@ -12,9 +12,17 @@ Matchers
 -----------------------------------------------------
 |inspec resource matcher|
 
-script_name
+exit_status
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_script_name.rst
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_exit_status.rst
+
+stderr
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_stderr.rst
+
+stdout
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_inspec_resources/includes_inspec_resource_script_matcher_stdout.rst
 
 Examples
 -----------------------------------------------------

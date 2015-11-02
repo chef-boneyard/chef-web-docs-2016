@@ -1,8 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``exit_status`` matcher tests the exit status of the platform environment:
+The ``stderr`` matcher tests results of the command as returned in standard error (stderr):
 
 .. code-block:: ruby
 
-   its('exit_status') { should eq 0 }
+  its('stderr') { should eq 'error' }

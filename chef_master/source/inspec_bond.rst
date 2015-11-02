@@ -34,7 +34,7 @@ params
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test if eth0 is a secondary interface for bond0**
 

@@ -14,7 +14,7 @@ Matchers
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource in a test.
+|inspec examples|
 
 **Test for blocking .htaccess files on CentOS**
 

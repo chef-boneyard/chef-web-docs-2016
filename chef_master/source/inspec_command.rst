@@ -30,7 +30,7 @@ stdout
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test for PostgreSQL database running a RC, development, or beta release**
 

@@ -18,7 +18,7 @@ name
 
 Examples
 -----------------------------------------------------
-The following examples show how to use this InSpec resource.
+|inspec examples|
 
 **Test a CSV file**
 
