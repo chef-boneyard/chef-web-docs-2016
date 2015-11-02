@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |resource directory| resource block declares a directory and the permissions needed on that directory. For example:
+An audit control states what is to be tested (and why), and then declares an |inspec resource| and the item to be tested. For example:
 
 .. code-block:: ruby
 
