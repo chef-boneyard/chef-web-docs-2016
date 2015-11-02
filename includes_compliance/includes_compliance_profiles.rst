@@ -4,11 +4,11 @@
 
 Compliance profiles exist for many scenarios, such as those created by the Center for Internet Security (CIS), a non-profit organization that is focused on enhancing the cyber security readiness and response of public and private sector entities.
 
-|chef compliance| maintains profiles as a collection of individual rules that comprise a complete audit. For example, CIS benchmark 8.1.1.1 recommends testing for the maximum size of the audit log. The following example shows a rule that can test for this benchmark:
+|chef compliance| maintains profiles as a collection of individual controls that comprise a complete audit. For example, CIS benchmark 8.1.1.1 recommends testing for the maximum size of the audit log. The following example shows a control that can test for this benchmark:
 
 .. code-block:: ruby
 
-   rule 'cis-network-8.1.1.1' do
+   control 'cis-network-8.1.1.1' do
      impact 0.2
      title '8.1.1.1 Configure Audit Log Storage Size'
 	 desc '

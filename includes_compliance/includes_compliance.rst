@@ -6,4 +6,4 @@
 
 * The |chef compliance| server
 * Prebuilt compliance profiles to help you get started quickly
-* A language for writing audit rules, which includes audit resources that you can invoke
+* A language for writing audit controls, which includes audit resources that you can invoke
