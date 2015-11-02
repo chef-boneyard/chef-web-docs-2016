@@ -10,7 +10,11 @@ To edit the |amazon ami| instance size, do the following:
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
-#. .. include:: ../../step_install/step_install_chef_server_stop.rst
+#. Stop the |chef compliance| server:
+
+.. code-block:: bash 
+
+   $ sudo chef-compliance-ctl stop
 
 #. Navigate to the |amazon aws| instance in the |amazon aws console|.
 #. From the **Actions** dropdown, select **Instance State**, and then **Stop**.
@@ -24,11 +28,11 @@ To edit the |amazon ami| instance size, do the following:
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
-#. Update the API FQDN in ``/etc/opscode/chef-server.rb`` using the public DNS name.  For example:
+#. Update the ``fqdn`` to use the public DNS name. For example:
 
    .. code-block:: bash
 
-      $ sudo sed -ie "s/api_fqdn.*/api_fqdn 'ec2-52-6-31-230.compute-1.amazonaws.com'/" /etc/opscode/chef-server.rb
+      $ sudo sed -ie "s/api_fqdn.*/api_fqdn 'ec2-52-6-31-230.compute-1.amazonaws.com'/" /etc/opscode/chef-compliance.rb
 
    Replace ``ec2-52-6-31-230.compute-1.amazonaws.com`` with the public DNS name.
 

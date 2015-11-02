@@ -89,7 +89,20 @@ Configure the |chef server_title|
 
 Ports
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_aws.rst
+For a |chef compliance| configuration that is launched from the |amazon aws marketplace|, the following ports are configured automatically using the one-click installation:
+
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Port
+     - Description
+   * - 443
+     - HTTPS
+   * - 22
+     - SSH
+
+If the |chef compliance| instance is launched in a way that does not use the one-click installation, these ports may need to be configured manually.
 
 Hostname
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
