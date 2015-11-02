@@ -74,7 +74,6 @@ This code uses the ``yaml`` resource to ensure that the |kitchen| driver is |vag
    inspec_etc_passwd
    inspec_file
    inspec_gem
-   inspec_group_policy
    inspec_group
    inspec_host
    inspec_inetd_conf
