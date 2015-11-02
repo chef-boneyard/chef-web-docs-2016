@@ -1172,10 +1172,6 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_package_clamav_installed.rst
 
-**Disallow insecure protocols**
-
-.. include:: ../../step_inspec/step_inspec_inetd_conf_disallow_protocols.rst
-
 
 parse_config
 =====================================================
