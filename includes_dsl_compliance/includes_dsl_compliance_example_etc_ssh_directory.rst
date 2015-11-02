@@ -6,7 +6,7 @@ The following test shows how to audit machines to ensure that ``/etc/ssh`` is a 
 
 .. code-block:: ruby
 
-   rule 'basic-1' do
+   control 'basic-1' do
      impact 1.0
      title '/etc/ssh should be a directory'
      desc '

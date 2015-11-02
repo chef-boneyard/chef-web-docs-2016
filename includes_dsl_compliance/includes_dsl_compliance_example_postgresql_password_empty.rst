@@ -6,7 +6,7 @@ The following test shows how to audit machines running |postgresql| to ensure th
 
 .. code-block:: ruby
 
-   rule 'postgres-7' do
+   control 'postgres-7' do
      impact 1.0
      title 'Don't allow empty passwords'
      desc '

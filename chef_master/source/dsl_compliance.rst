@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_dsl_compliance/includes_dsl_compliance.rst
 
-The following sections describe the syntax and show some simple examples of using the |inspec resource| framework to define tests.
+The following sections describe the syntax and show some simple examples of using the |inspec resource| framework to define controls.
 
 Syntax
 =====================================================
@@ -22,7 +22,7 @@ InSpec Audit Resources
 
 Examples
 =====================================================
-The following examples show simple compliance tests built using a single ``rule`` block.
+The following examples show simple compliance tests built using a single ``control`` block.
 
 Test the System Event Log
 -----------------------------------------------------

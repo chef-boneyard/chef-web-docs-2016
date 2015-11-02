@@ -6,7 +6,7 @@ The following test shows how to audit machines running |windows| 2008 (and newer
 
 .. code-block:: ruby
 
-   rule 'windows-audit-102' do
+   control 'windows-audit-102' do
      impact 0.1
      title 'Configure System Event Log (Setup)'
      desc 'only appies for Windows 2008 and newer'

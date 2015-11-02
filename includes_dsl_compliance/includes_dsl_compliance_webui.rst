@@ -2,11 +2,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``rule`` syntax is visible in the |chef compliance| web user interface. For example, the following rule:
+The ``control`` syntax is visible in the |chef compliance| web user interface. For example, the following control:
 
 .. code-block:: ruby
 
-   rule 'basic-1' do
+   control 'basic-1' do
      impact 1.0
      title '/etc/ssh should be a directory'
      desc "
