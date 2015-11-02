@@ -4,7 +4,7 @@
 
 The |chef compliance| server is a centralized location from which all aspects of the state or your infrastructure's compliance can be managed.
 
-* Create and manage profiles of rules; use them to test any node in your infrastructure
+* Create and manage profiles of rules; use them to test any node in your infrastructure, including all of the common |unix| and |linux| platforms and most versions of |windows|
 * Continuously test any node against the goals of your organization's security management lifecycle
 * Reports show the results of compliance runs and help to ensure the nodes in your infrastructure meet your security requirements
 * View compliance statistics for any node
