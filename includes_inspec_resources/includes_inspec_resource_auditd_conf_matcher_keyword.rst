@@ -5,4 +5,4 @@ This |inspec resource| matches any keyword that is listed in the ``auditd.conf``
 
 .. code-block:: ruby
 
-     its('log_format') { should eq 'raw' }
+   its('log_format') { should eq 'raw' }

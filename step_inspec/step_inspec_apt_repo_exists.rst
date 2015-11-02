@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   describe apt('ppa:nginx/stable') do
+   describe apt('http://ppa.launchpad.net/juju/stable/ubuntu') do
      it { should exist }
      it { should be_enabled }
    end

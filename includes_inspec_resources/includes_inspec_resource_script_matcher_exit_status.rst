@@ -5,4 +5,4 @@ The ``exit_status`` matcher tests the exit status for the command:
 
 .. code-block:: ruby
 
-  its('exit_status') { should eq 123 }
+   its('exit_status') { should eq 123 }

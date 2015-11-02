@@ -4,9 +4,7 @@
 
 .. code-block:: ruby
 
-   sql = postgres_session('my_user', 'password')
-
-   describe sql.query('SELECT count (*)
+   describe postgres_session('my_user', 'password').query('SELECT count (*)
                  FROM pg_language
                  WHERE lanpltrusted = 'f'
                  AND lanname!='internal'

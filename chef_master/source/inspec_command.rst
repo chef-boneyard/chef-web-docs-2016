@@ -36,10 +36,6 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_command_postgresql_rc.rst
 
-**Test for multiple instances of Nginx**
-
-.. include:: ../../step_inspec/step_inspec_command_multiple_nginx_instances.rst
-
 **Test standard output (stdout)**
 
 .. include:: ../../step_inspec/step_inspec_command_stdout.rst
@@ -59,7 +55,3 @@ Examples
 **Test for a command that should not exist**
 
 .. include:: ../../step_inspec/step_inspec_command_should_not_exist.rst
-
-**Test for one peer and one indent**
-
-.. include:: ../../step_inspec/step_inspec_command_one_peer_one_indent.rst

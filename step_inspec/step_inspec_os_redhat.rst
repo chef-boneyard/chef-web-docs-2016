@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   describe os do
+   describe os['family'] do
      it { should eq 'redhat' }
    end

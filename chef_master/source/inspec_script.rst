@@ -28,6 +28,6 @@ Examples
 -----------------------------------------------------
 |inspec examples|
 
-**Test that user Grantmc belongs to the Active Directory object**
+**Get all groups of Administrator user**
 
-.. include:: ../../step_inspec/step_inspec_script_user_belongs_to_ad_object.rst
+.. include:: ../../step_inspec/step_inspec_script_user_get_all_groups.rst

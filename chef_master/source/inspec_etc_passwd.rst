@@ -52,6 +52,6 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_etc_passwd_uids.rst
 
-**Test for multiple root users**
+**Select one user and test for multiple occurrences**
 
-.. include:: ../../step_inspec/step_inspec_etc_passwd_many_root_users.rst
+.. include:: ../../step_inspec/step_inspec_etc_passwd_multiple_users.rst

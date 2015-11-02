@@ -5,5 +5,5 @@
 .. code-block:: ruby
 
    describe processes('mysqld') do
-     its('list.length') { should eq '1' }
+     its('list.length') { should eq 1 }
    end

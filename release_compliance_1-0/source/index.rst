@@ -24,13 +24,7 @@ Audit Resources
 
 Examples
 -----------------------------------------------------
-The following examples show how to use the LINK_TO_INSPEC_DSL to build tests.
-
-**Disallow insecure protocols**
-
-This code uses the ``package`` and ``inetd_conf`` resources to ensure that insecure services and protocols, such as ``telnet``, are not used.
-
-.. include:: ../../step_inspec/step_inspec_inetd_conf_disallow_protocols.rst
+The following examples show how to use the |inspec resource| collection to build tests.
 
 **Only accept requests on secure ports**
 

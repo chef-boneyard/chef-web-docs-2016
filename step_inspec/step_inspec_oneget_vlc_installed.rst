@@ -4,6 +4,6 @@
 
 .. code-block:: ruby
 
-   describe package('VLC') do
+   describe oneget('VLC') do
      it { should be_installed }
    end

@@ -5,13 +5,13 @@ This |inspec resource| matches any service that is listed in the |apache| config
 
 .. code-block:: ruby
 
-     its('PidFile') { should_not eq '/var/run/httpd.pid' }
+   its('PidFile') { should_not eq '/var/run/httpd.pid' }
 
 or:
 
 .. code-block:: ruby
 
-     its('Timeout') { should eq 300 }
+   its('Timeout') { should eq 300 }
 
 For example:
 

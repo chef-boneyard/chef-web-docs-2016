@@ -26,12 +26,12 @@ Examples
 
 **Test if apt repository exists and is enabled**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_exists.rst
+.. include:: ../../step_inspec/step_inspec_apt_repo_exists.rst
 
-**Verify that a repository exists and is enabled**
+**Verify that a PPA repository exists and is enabled**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_exists.rst
+.. include:: ../../step_inspec/step_inspec_apt_ppa_repo_exists.rst
 
 **Verify that a repository is not present**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_not_present.rst
+.. include:: ../../step_inspec/step_inspec_apt_repo_not_present.rst

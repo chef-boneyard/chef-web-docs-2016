@@ -5,4 +5,4 @@ The ``be_reachable`` matcher tests if the host name is available:
 
 .. code-block:: ruby
 
-     it { should be_reachable }
+   it { should be_reachable }

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A ``ssh_config`` |inspec resource| block declares the client |openssh| configuration data to be tested:
+A ``ssh_config`` |inspec resource| block declares the client |open ssh| configuration data to be tested:
 
 .. code-block:: ruby
 

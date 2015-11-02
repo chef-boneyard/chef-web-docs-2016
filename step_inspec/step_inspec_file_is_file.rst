@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To test if a file is a file and not a directory:
+.. To test if a path is a file and not a directory:
 
 .. code-block:: bash
 

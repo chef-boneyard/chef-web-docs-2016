@@ -5,7 +5,7 @@
 .. code-block:: ruby
 
    output = command('useradd -D').stdout
-   
+
    describe parse_config(output) do
-     its('INACTIVE.to_i') { should be >= 35 }
+     its('INACTIVE') { should eq '35' }
    end

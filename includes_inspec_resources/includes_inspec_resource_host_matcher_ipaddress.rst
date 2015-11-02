@@ -5,4 +5,4 @@ The ``ipaddress`` matcher tests if a host name is resolvable to a specific IP ad
 
 .. code-block:: ruby
 
-     its('ipaddress') { should include '93.184.216.34' }
+   its('ipaddress') { should include '93.184.216.34' }

@@ -5,4 +5,4 @@ The ``stdout`` matcher tests results of the command as returned in standard outp
 
 .. code-block:: ruby
 
-  its('stdout') { should eq '/^1$/' }
+   its('stdout') { should eq '/^1$/' }

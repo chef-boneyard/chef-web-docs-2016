@@ -4,8 +4,10 @@
 
 .. code-block:: ruby
 
-   return unless command('ssh').exist?
-   
+   only_if do
+     command('sshd').exist? or command('ssh').exists?
+   end
+
    describe ssh_config do
      its('SendEnv') { should include('GORDON_CLIENT') }
    end

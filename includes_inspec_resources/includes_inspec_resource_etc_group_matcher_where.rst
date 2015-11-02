@@ -5,7 +5,7 @@ The ``where`` matcher allows the test to be focused to one (or more) specific it
 
 .. code-block:: ruby
 
-     etc_group.where(item: 'value', item: 'value')
+   etc_group.where(item: 'value', item: 'value')
 
 where ``item`` may be one (or more) of:
 

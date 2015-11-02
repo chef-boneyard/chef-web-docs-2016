@@ -8,7 +8,7 @@ The |nginx| user is typically ``www-data``, but on |centos| it's ``nginx``. The 
 
    web_user = 'www-data'
    web_user = 'nginx' if os[:family] == 'centos'
-   
+
    describe user(web_user) do
      it { should exist }
    end

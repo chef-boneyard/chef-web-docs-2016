@@ -4,8 +4,8 @@
 
 .. code-block:: ruby
 
-   describe command('sudo -i psql -V') do
-     its('stdout') { should_not eq '/RC/' }
+   describe command('psql -V') do
+     its('stdout') { should eq '/RC/' }
      its('stdout') { should_not eq '/DEVEL/' }
      its('stdout') { should_not eq '/BETA/' }
    end

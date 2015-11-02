@@ -5,5 +5,5 @@
 .. code-block:: ruby
 
    describe etc_group do
-     its('groups') { should include 'my_user' }
+     its('groups') { should include 'my_group' }
    end

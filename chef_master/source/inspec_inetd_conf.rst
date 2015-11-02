@@ -23,7 +23,3 @@ Examples
 **Test if telnet is installed**
 
 .. include:: ../../step_inspec/step_inspec_inetd_conf_telnet_installed.rst
-
-**Test that insecure protocols are disallowed**
-
-.. include:: ../../step_inspec/step_inspec_inetd_conf_disallow_protocols.rst

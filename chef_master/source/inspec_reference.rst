@@ -58,15 +58,15 @@ Examples
 
 **Test if apt repository exists and is enabled**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_exists.rst
+.. include:: ../../step_inspec/step_inspec_apt_repo_exists.rst
 
-**Verify that a repository exists and is enabled**
+**Verify that a PPA repository exists and is enabled**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_exists.rst
+.. include:: ../../step_inspec/step_inspec_apt_ppa_repo_exists.rst
 
 **Verify that a repository is not present**
 
-.. include:: ../../step_inspec/step_inspec_apache_conf_apt_repo_not_present.rst
+.. include:: ../../step_inspec/step_inspec_apt_repo_not_present.rst
 
 
 audit_policy
@@ -252,10 +252,6 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_command_postgresql_rc.rst
 
-**Test for multiple instances of Nginx**
-
-.. include:: ../../step_inspec/step_inspec_command_multiple_nginx_instances.rst
-
 **Test standard output (stdout)**
 
 .. include:: ../../step_inspec/step_inspec_command_stdout.rst
@@ -275,10 +271,6 @@ Examples
 **Test for a command that should not exist**
 
 .. include:: ../../step_inspec/step_inspec_command_should_not_exist.rst
-
-**Test for one peer and one indent**
-
-.. include:: ../../step_inspec/step_inspec_command_one_peer_one_indent.rst
 
 
 csv
@@ -538,11 +530,11 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_file_does_not_exist.rst
 
-**Test if a file is a directory**
+**Test if a path is a directory**
 
 .. include:: ../../step_inspec/step_inspec_file_is_directory.rst
 
-**Test if a file is a file and not a directory**
+**Test if a path is a file and not a directory**
 
 .. include:: ../../step_inspec/step_inspec_file_is_file.rst
 
@@ -661,31 +653,6 @@ Examples
 .. include:: ../../step_inspec/step_inspec_group_gid_for_root_group.rst
 
 
-group_policy
-=====================================================
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_group_policy.rst
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_group_policy_syntax.rst
-
-Matchers
------------------------------------------------------
-|inspec resource matcher|
-
-setting
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_inspec_resources/includes_inspec_resource_group_policy_matcher_setting.rst
-
-Examples
------------------------------------------------------
-|inspec examples|
-
-**Test if users are logged off after the logon time expires**
-
-.. include:: ../../step_inspec/step_inspec_group_policy_users_logged_off.rst
-
-
 host
 =====================================================
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_host.rst
@@ -747,9 +714,6 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_inetd_conf_telnet_installed.rst
 
-**Test that insecure protocols are disallowed**
-
-.. include:: ../../step_inspec/step_inspec_inetd_conf_disallow_protocols.rst
 
 
 interface
@@ -956,7 +920,7 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_login_defs_encryption_method.rst
 
-**Test umask setting**
+**Test umask and password expiration**
 
 .. include:: ../../step_inspec/step_inspec_login_defs_umask.rst
 
@@ -1355,9 +1319,9 @@ Examples
 
 .. include:: ../../step_inspec/step_inspec_etc_passwd_uids.rst
 
-**Test for multiple root users**
+**Select one user and test for multiple occurrences**
 
-.. include:: ../../step_inspec/step_inspec_etc_passwd_many_root_users.rst
+.. include:: ../../step_inspec/step_inspec_etc_passwd_multiple_users.rst
 
 
 pip
@@ -1589,9 +1553,9 @@ Examples
 -----------------------------------------------------
 |inspec examples|
 
-**Test that user Grantmc belongs to the Active Directory object**
+**Get all groups of Administrator user**
 
-.. include:: ../../step_inspec/step_inspec_script_user_belongs_to_ad_object.rst
+.. include:: ../../step_inspec/step_inspec_script_user_get_all_groups.rst
 
 
 security_policy

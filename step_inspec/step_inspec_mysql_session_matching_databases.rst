@@ -5,7 +5,7 @@
 .. code-block:: ruby
 
    sql = mysql_session('my_user','password')
-
-   sql.describe('show databases like \'test\';') do
+   
+   describe sql.query('show databases like \'test\';') do
      its(:stdout) { should_not match(/test/) }
    end

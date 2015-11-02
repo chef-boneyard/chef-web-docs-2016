@@ -5,4 +5,4 @@ The ``be_resolvable`` matcher tests for host name resolution, i.e. "resolvable t
 
 .. code-block:: ruby
 
-     it { should be_resolvable }
+   it { should be_resolvable }
