@@ -4,7 +4,33 @@ Delivery CLI
 
 .. include:: ../../includes_ctl_delivery/includes_ctl_delivery.rst
 
-.. warning:: This command-line tool is only available from: https://github.com/chef/delivery-cli.
+Install Delivery CLI
+=====================================================
+.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install.rst
+
+By platform
+-----------------------------------------------------
+Use one of the sections below to install the |chef delivery_cli| CLI on |mac os x|, |ubuntu|, |redhat enterprise linux|/|suse els|, or |windows|:
+
+|mac os x|
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_mac.rst
+
+|ubuntu|
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_ubuntu.rst
+
+RHEL, SUSE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_rhel.rst
+
+|windows|
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_windows.rst
+
+Configure Delivery CLI
+-----------------------------------------------------
+.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_configure.rst
 
 
 delivery api
