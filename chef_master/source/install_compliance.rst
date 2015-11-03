@@ -73,6 +73,17 @@ To install the |chef compliance| server:
 
       $ chef-compliance-ctl reconfigure
 
+#. Run the following command to create an administrator:
+
+   .. code-block:: bash
+
+      $ chef-compliance-ctl user-create username password
+
+   For example:
+
+   .. code-block:: bash
+
+      $ chef-compliance-ctl user-create admin pA$$word
 
 
 |amazon aws marketplace|
