@@ -51,7 +51,7 @@ master:
 	mkdir -p $(BUILDDIR)
 	cp -r misc/robots.txt build/
 	cp -r misc/sitemap.xml build/
-	cp -r misc/google46c9c5ad0fd168a0.html build/
+	cp -r misc/google69a8711569b2fcce.html build/
 	$(BUILD_COMMAND_AND_ARGS) chef_master/source $(BUILDDIR)
 
 decks:
