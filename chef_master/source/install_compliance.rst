@@ -51,7 +51,7 @@ The standalone installation of |chef compliance| server creates a working instal
 
 To install the |chef compliance| server:
 
-#. Download the package from http://downloads.chef.io/chef-compliance/.
+#. Download the package from http://downloads.chef.io/compliance/.
 #. Upload the package to the machine that will run the |chef compliance| server, and then record its location on the file system. The rest of these steps assume this location is in the ``/tmp`` directory
 #. Install the |chef compliance| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
 
