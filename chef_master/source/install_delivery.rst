@@ -182,12 +182,6 @@ On the provisioning node:
       
       $ chef gem install knife-push
 
-#. Install `RAKE - Ruby Make <http://rake.rubyforge.org/>`_:
-
-   .. code-block:: bash
-      
-      $ sudo apt-get rake
-
 #. Transfer your |chef delivery| license key to ``~/delivery.license``.
 #. Clone the |git| repo for the |chef delivery| cluster:
 
