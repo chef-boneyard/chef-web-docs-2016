@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Too add SSH keys to |chef delivery|, do the following:
+To add SSH keys to |chef delivery|, do the following:
 
 #. Check for an SSH key:
 

@@ -1,7 +1,7 @@
 .. THIS PAGE IS LOCATED AT THE /release/analytics_1-1/ PATH.
 
 =====================================================
-All about |chef analytics_title| ... 
+About |chef analytics_title|
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst

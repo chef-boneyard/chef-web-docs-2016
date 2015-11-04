@@ -1,5 +1,5 @@
 =====================================================
-All about the |chef dk_title| ...  
+About the |chef dk_title| 
 =====================================================
 
 .. include:: ../../includes_chef_dk/includes_chef_dk.rst

@@ -1,5 +1,5 @@
 =====================================================
-All about |push jobs_title| 2.0 ... 
+About |push jobs_title| 2.0
 =====================================================
 
 .. warning:: This topic is a placeholder topic for an upcoming release of Push Jobs.

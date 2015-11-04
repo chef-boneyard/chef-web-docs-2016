@@ -1,5 +1,5 @@
 =====================================================
-All about |chef delivery| ...
+About |chef delivery|
 =====================================================
 
 |chef delivery| provides code deployment workflow automation that reinforces DevOps best practices. |chef delivery| can manage changes to both infrastructure and application code, giving your operations and development teams a common platform for developing, testing and deploying cookbooks, applications and more. 
