@@ -1,10 +1,10 @@
 .. This is an included how-to. 
 
-To verify a job with a stage name of ``verify unit``, run the following command:
+To run your unit tests on your local machine the same way they'd be run on |chef delivery|, run the following command:
 
 .. code-block:: bash
 
-   $ delivery job verify unit
+   $ delivery job verify unit --local
 
 which will return output similar to:
 
