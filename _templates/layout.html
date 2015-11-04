@@ -54,11 +54,15 @@
   ga('send', 'pageview');
 
   var trackOutboundLink = function(url) {
-    ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
-      function () {
-        document.location = url;
-      }
-    });
+    if (ga.q) {
+     document.location = url;
+    } else {
+      ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+        function () {
+          document.location = url;
+        }
+      });
+    }
   };
 </script>
 <!-- End of Async Google Analytics Code -->
