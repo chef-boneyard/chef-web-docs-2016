@@ -2,15 +2,15 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following test shows how to audit machines running |windows| 2008 (and newer) to audit the log file size maximum for the system event log:
+The following test shows how to audit machines running |windows| 2012 R2 that pwassword complexity is enabled:
 
 .. code-block:: ruby
 
-   control 'windows-audit-102' do
-     impact 0.1
-     title 'Configure System Event Log (Setup)'
-     desc 'only appies for Windows 2008 and newer'
-     describe group_policy('Windows Components\\Event Log Service\\Setup') do
-       its('Specify the maximum log file size (KB)') { should eq nil }
+   control 'windows-account-102' do
+     impact 1.0
+     title 'Windows Password Complexity is Enabled'
+     desc 'Password must meet complexity requirement'
+     describe security_policy do
+       its('PasswordComplexity') { should eq 1 }
      end
    end
