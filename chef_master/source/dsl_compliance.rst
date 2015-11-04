@@ -2,6 +2,8 @@
 |dsl compliance|
 =====================================================
 
+.. include:: ../../includes_inspec/includes_inspec.rst
+
 .. include:: ../../includes_dsl_compliance/includes_dsl_compliance.rst
 
 The following sections describe the syntax and show some simple examples of using the |inspec resource| framework to define controls.
@@ -44,10 +46,10 @@ Is |apache| running?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_compliance/includes_dsl_compliance_example_apache_running.rst
 
-Have critical files changed?
+Are insecure packages installed?
 -----------------------------------------------------
-.. include:: ../../includes_dsl_compliance/includes_dsl_compliance_example_critical_files_changed.rst
+.. include:: ../../includes_dsl_compliance/includes_dsl_compliance_example_insecure_packages.rst
 
-Is strong encryption required?
+Test Windows Registry Keys
 -----------------------------------------------------
-.. include:: ../../includes_dsl_compliance/includes_dsl_compliance_example_require_strong_encryption.rst
+.. include:: ../../includes_dsl_compliance/includes_dsl_compliance_example_windows_registry_keys.rst
