@@ -1,7 +1,7 @@
 .. The topics in this release are cloned from 11.16 because there are no differences between the releases, in terms of pure documentation, outside of the release_notes.html file.
 
 =====================================================
-Docs for |chef client| 11.18
+About |chef client| 11.18
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst

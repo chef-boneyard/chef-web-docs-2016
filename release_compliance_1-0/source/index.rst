@@ -1,5 +1,5 @@
 =====================================================
-All about Chef Compliance ...
+About Chef Compliance
 =====================================================
 
 .. include:: ../../includes_compliance/includes_compliance.rst

@@ -1,5 +1,5 @@
 =====================================================
-All about |push jobs_title| 1.0 ... 
+About |push jobs_title| 1.0
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
