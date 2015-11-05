@@ -23,6 +23,10 @@ This resource has the following properties:
      - **Ruby Types:** String, Integer
 
        |id group|
+   * - ``group``
+     - **Ruby Types:** String, Integer
+
+       The ``group`` property is an alias of the ``gid`` property.
    * - ``home``
      - **Ruby Type:** String
 
