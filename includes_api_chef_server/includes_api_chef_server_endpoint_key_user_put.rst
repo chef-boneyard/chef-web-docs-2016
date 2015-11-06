@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /organizations/NAME/users/USER/keys/KEY
+   PUT /users/USER/keys/KEY
 
 with a request body similar to:
 
