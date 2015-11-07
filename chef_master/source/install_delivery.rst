@@ -578,6 +578,10 @@ Configure Delivery CLI
 -----------------------------------------------------
 .. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_configure.rst
 
+Authenticate
+-----------------------------------------------------
+.. include:: ../../includes_delivery/includes_delivery_setup_workstation_authenticate.rst
+
 Integrate with GitHub
 -----------------------------------------------------
 .. include:: ../../includes_delivery/includes_delivery_users_onboard_github.rst
