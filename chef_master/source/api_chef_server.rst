@@ -639,7 +639,7 @@ GET
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_org_name_updated_since_get.rst
 
 
-/user/USER/keys/
+/users/USER/keys/
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users.rst
 
@@ -651,7 +651,7 @@ POST
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_keys_users_post.rst
 
-/user/USER/keys/KEY
+/users/USER/keys/KEY
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_key_user.rst
 
