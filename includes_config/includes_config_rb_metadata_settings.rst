@@ -204,7 +204,11 @@ This configuration file has the following settings:
           recipe 'cats::eat', 'When they are not sleeping.'
 
    * - ``recommends``
-     - |metadata rb recommends| For example:
+     - For information only; not used outside this file. |metadata rb recommends|
+
+       .. note:: When running automated tests using |foodcritic|, this setting will trigger FC053.
+
+       For example:
 
        .. code-block:: ruby
 
@@ -237,7 +241,11 @@ This configuration file has the following settings:
           source_url 'https://github.com/chef-cookbooks/chef-client'
 
    * - ``suggests``
-     - For information only; not used outside this file. |metadata rb suggests| For example:
+     - For information only; not used outside this file. |metadata rb suggests|
+
+       .. note:: When running automated tests using |foodcritic|, this setting will trigger FC052.
+
+       ForFor example:
 
        .. code-block:: ruby
 
