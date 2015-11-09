@@ -27,8 +27,6 @@ metadata.rb
 
 .. include:: ../../includes_config/includes_config_rb_metadata.rst
 
-.. 
-.. Settings
-.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. .. include:: ../../includes_config/includes_config_rb_metadata_settings.rst
-.. 
+Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_config/includes_config_rb_metadata_settings.rst
