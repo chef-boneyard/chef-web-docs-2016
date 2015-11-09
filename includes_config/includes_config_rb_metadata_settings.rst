@@ -27,6 +27,9 @@ This configuration file has the following settings:
             :recipes => \[ 'cats::eat' \],
             :default => 'kitty kitty'
 
+   * - ``chef_version``
+     - An array of |chef| versions that are supported by this cookbook.
+
    * - ``conflicts``
      - For information only; not used outside this file. |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named ``dogs``:
 
@@ -160,6 +163,12 @@ This configuration file has the following settings:
        .. code-block:: ruby
 
           name 'cats'
+
+   * - ``ohai_version``
+     - An array of |ohai| versions that are supported by this cookbook.
+
+   * - ``privacy``
+     - Use to specify if a cookbook is private.
 
    * - ``provides``
      - |metadata rb provides| For example, for recipes:
