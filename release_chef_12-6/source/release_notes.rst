@@ -9,8 +9,8 @@ What's New
 The following items are new for |chef client| 12.6 and/or are changes from previous versions. The short version:
 
 * **New ksh resource** The |resource script_ksh| resource is added and is based on the |resource script| resource.
+* **New metadata.rb settings** The |metadata rb| file has settings for ``chef_version`` and ``ohai_version`` that allow ranges to be specified that declare the supported versions of the |chef client| and |ohai|.
 * **xxxxx** xxxxx
-
 
 
 
@@ -31,6 +31,29 @@ Properties
 .. include:: ../../includes_resources/includes_resource_script_ksh_attributes.rst
 
 
+New metadata.rb Settings
+-----------------------------------------------------
+The following settings are new for |metadata rb|:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``attribute``
+   * - ``chef_version``
+     - |metadata rb chef_version|
+
+       .. include:: ../../includes_config/includes_config_rb_metadata_settings_example_chef_version.rst
+   * - ``ohai_version``
+     - |metadata rb chef_version|
+
+       .. include:: ../../includes_config/includes_config_rb_metadata_settings_example_ohai_version.rst
+
+.. note:: These settings are not visible in |supermarket|.
+
+
 
 xxxxx
 -----------------------------------------------------
@@ -39,6 +62,8 @@ xxxxx
 xxxxx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
+
+
 
 
 Changelog

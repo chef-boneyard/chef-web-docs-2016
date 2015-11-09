@@ -28,7 +28,11 @@ This configuration file has the following settings:
             :default => 'kitty kitty'
 
    * - ``chef_version``
-     - An array of |chef| versions that are supported by this cookbook.
+     - |metadata rb chef_version|
+
+       .. include:: ../../includes_config/includes_config_rb_metadata_settings_example_chef_version.rst
+
+       .. note:: This setting is not visible in |supermarket|.
 
    * - ``conflicts``
      - For information only; not used outside this file. |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named ``dogs``:
@@ -165,7 +169,11 @@ This configuration file has the following settings:
           name 'cats'
 
    * - ``ohai_version``
-     - An array of |ohai| versions that are supported by this cookbook.
+     - |metadata rb chef_version|
+
+       .. include:: ../../includes_config/includes_config_rb_metadata_settings_example_ohai_version.rst
+
+       .. note:: This setting is not visible in |supermarket|.
 
    * - ``privacy``
      - Use to specify if a cookbook is private.
