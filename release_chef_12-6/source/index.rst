@@ -133,6 +133,7 @@ Cookbooks
    resource_breakpoint
    resource_chef_gem
    resource_chef_handler
+   resource_chocolatey_package
    resource_common
    resource_cookbook_file
    resource_cron
