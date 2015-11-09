@@ -41,11 +41,11 @@ The following settings are new for |metadata rb|:
 
    * - Setting
      - Description
-   * - ``attribute``
    * - ``chef_version``
      - |metadata rb chef_version|
 
        .. include:: ../../includes_config/includes_config_rb_metadata_settings_example_chef_version.rst
+
    * - ``ohai_version``
      - |metadata rb chef_version|
 
