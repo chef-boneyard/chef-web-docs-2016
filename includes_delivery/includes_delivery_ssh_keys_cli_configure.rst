@@ -4,7 +4,7 @@
 
 For all operating systems:
 
-From your workstation `working` directory (where you will create projects--Chef recommends one working directory for each Organization), configure the ``delivery`` command line interface (CLI) to contact the |chef delivery| server at ``SERVER``, with your ``ENTERPRISE`` and ``ORGANIZATION``. This command creates the ``.delivery/cli.toml`` file with the specified settings.
+From your workstation working directory (where you will create projects--|company_name| recommends one working directory for each organization), configure the ``delivery`` command line interface (CLI) to contact the |chef delivery| server at ``SERVER``, with your ``ENTERPRISE`` and ``ORGANIZATION``. This command creates the ``.delivery/cli.toml`` file with the specified settings.
 
    .. code-block:: bash
 
