@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Your workstation is expected to be a separate machine, or instance, from your provisioning node. However, if you are using your workstation as your provisioning node, then these configurations will already be present, except for the delivery CLI. You will need to install and configure that in the directory in which you will create projects, and make and submit changes. We recommend creating a "working" directory for each Organization that you intend to create, and, for each such directory, you will need to install and configure the delivery CLI, and install the delivery-cluster.
+.. note:: Workstations typically are separate machines, or instances, from the |chef delivery| provisioning node. However, if you are using your workstation as your provisioning node, then the configurations in this section are already present, except for the delivery CLI. You must install and configure that in the directory in which you will create projects. We recommend creating a `working` directory for each Organization that you intend to create, and, for each such directory, install and configure the delivery CLI.
 
 Setting up a workstation requires the following:
 
