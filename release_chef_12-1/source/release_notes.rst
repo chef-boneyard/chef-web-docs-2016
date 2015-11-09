@@ -223,9 +223,6 @@ The following attributes are new for the |resource service_windows| resource:
 
 openbsd_package
 -----------------------------------------------------
-
-.. include:: ../../includes_resources_common/includes_resources_common_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_openbsd.rst
 
 .. note:: ../../includes_notes/includes_notes_resource_based_on_package.rst
