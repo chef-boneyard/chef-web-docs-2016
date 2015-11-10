@@ -12,6 +12,8 @@ The Chef Compliance Server
    :width: 600px
    :align: center
 
+.. note:: To install the |chef compliance| server in a standalone configuration, `read this topic <http://docs.chef.io/install_compliance.html>`_.
+
 Compliance Profiles
 -----------------------------------------------------
 .. include:: ../../includes_compliance/includes_compliance_profiles.rst
