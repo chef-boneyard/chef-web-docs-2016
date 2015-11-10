@@ -40,13 +40,13 @@ This resource has the following properties:
 
        .. code-block:: ruby
 
-          ``headers({ "Cookie" => "user=grantmc; pass=p@ssw0rd!" })``
+          headers({ "Cookie" => "user=grantmc; pass=p@ssw0rd!" })
 
        or:
 
        .. code-block:: ruby
 
-          ``headers({ "Referer" => "#{header}" })``
+          headers({ "Referer" => "#{header}" })
 
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
