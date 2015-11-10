@@ -48,6 +48,12 @@ This resource has the following properties:
 
           headers({ "Referer" => "#{header}" })
 
+       or:
+
+       .. code-block:: ruby
+
+          headers( "Authorization"=>"Basic #{ Base64.encode64("#{username}:#{password}").strip }" )
+
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
 

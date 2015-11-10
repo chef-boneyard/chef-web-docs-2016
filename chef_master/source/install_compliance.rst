@@ -122,3 +122,7 @@ Hostname
 Edit AMI Instance Size
 -----------------------------------------------------
 .. include:: ../../includes_cloud/includes_cloud_aws_compliance_change_instance.rst
+
+Configure SSL
+=====================================================
+.. include:: ../../includes_compliance/includes_compliance_server_security_ssl_protocol.rst
