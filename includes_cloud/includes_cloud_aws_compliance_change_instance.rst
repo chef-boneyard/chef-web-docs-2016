@@ -12,9 +12,9 @@ To edit the |amazon ami| instance size, do the following:
 
 #. Stop the |chef compliance| server:
 
-.. code-block:: bash 
+   .. code-block:: bash 
 
-   $ sudo chef-compliance-ctl stop
+      $ sudo chef-compliance-ctl stop
 
 #. Navigate to the |amazon aws| instance in the |amazon aws console|.
 #. From the **Actions** dropdown, select **Instance State**, and then **Stop**.
