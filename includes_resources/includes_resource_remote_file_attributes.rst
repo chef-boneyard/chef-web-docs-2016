@@ -33,10 +33,21 @@ This resource has the following properties:
      - **Ruby Types:** Integer, String
 
        |windows group_identifier|
-   * - ``headers``
+   * - ``headers()``
      - **Ruby Type:** Hash
 
-       |headers custom| Default value: ``{}``.
+       |headers custom| Default value: ``{}``. For example:
+
+       .. code-block:: ruby
+
+          ``headers({ "Cookie" => "user=grantmc; pass=p@ssw0rd!" })``
+
+       or:
+
+       .. code-block:: ruby
+
+          ``headers({ "Referer" => "#{header}" })``
+
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
 
