@@ -19,7 +19,18 @@ Compliance profiles exist for many scenarios, such as those created by the Cente
      end
    end
 
-Compliance profiles are built and maintained from the |chef compliance| server web UI. The results of running a profile against any number of nodes in your infrastructure is available as a report summary.
+Compliance profiles are built and maintained from the |chef compliance| server web UI. |chef compliance| ships with the following profiles:
+
+* Basic Apache 2
+* Basic Linux
+* Basic MySQL
+* Basic PostgreSQL
+* Basic SSH
+* Windows Base Security
+* CIS Ubuntu 14.04 LTS Server Benchmark Level 1
+* CIS Ubuntu 14.04 LTS Server Benchmark Level 2
+
+The results of running a profile against any number of nodes in your infrastructure is available as a report summary.
 
 .. image:: ../../images/compliance_report.png
    :width: 600px
