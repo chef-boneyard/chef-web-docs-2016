@@ -15,7 +15,11 @@ For the quickest way to get started using |chef|:
 
    .. code-block:: bash
 
-      $ chef generate app cookbook_name
+      $ chef generate app first_cookbook
+
+   where ``first_cookbook`` is an arbitrary cookbook name.
+
+#. Change into the ``first_cookbook`` directory.
 
 #. Update the ``default.rb`` recipe in the generated cookbook to contain:
 
@@ -29,7 +33,7 @@ For the quickest way to get started using |chef|:
 
    .. code-block:: bash
 
-      $ chef-client --local-mode --override-runlist chef-repo
+      $ chef-client --local-mode --override-runlist first_cookbook
 
 This will create a file named ``test.txt`` at the home path on your machine. Open that file and it will say ``This file was created by Chef!``.
 
@@ -37,4 +41,6 @@ This will create a file named ``test.txt`` at the home path on your machine. Ope
 * Change the string in the file, run the |chef client| again, and |chef| will make the string in the file the same as the string in the recipe.
 * Change the string in the recipe, run the |chef client| again, and |chef| will update that string to be the same as the one in the recipe.
 
-There's a lot more that |chef| can do, obviously, but that was super easy! Keep reading the documentation for more information about setting up a workstation, configuring |kitchen| to run virtual environments from a workstation, and setting up a more detailed cookbook.
+There's a lot more that |chef| can do, obviously, but that was super easy! See the tutorials at https://learn.chef.io/tutorials/ for more detailed setup scenarios. You can also try `running Chef in the AWS Marketplace <https://docs.chef.io/aws_marketplace.html>`_. Keep reading https://docs.chef.io for more information about setting up a workstation, configuring |kitchen| to run virtual environments from a workstation, and setting up a more detailed cookbook.
+
+
