@@ -64,6 +64,7 @@ Installation scenarios:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/oec_11-2/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/oec_11-2/upgrade_server_ha.html">High Availability Upgrade</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/oec_11-2/install_manage.html">Management Console</a> </br>
 
 Options: 
 
@@ -125,6 +126,7 @@ The following APIs can be used to access data on the |chef server|:
    config_rb_chef_server_enterprise
    config_rb_chef_server_enterprise_optional_settings
    ctl_private_chef
+   install_manage
    install_server
    install_server_be
    install_server_fe
