@@ -41,6 +41,8 @@ This will create a file named ``test.txt`` at the home path on your machine. Ope
 * Change the string in the file, run the |chef client| again, and |chef| will make the string in the file the same as the string in the recipe.
 * Change the string in the recipe, run the |chef client| again, and |chef| will update that string to be the same as the one in the recipe.
 
-There's a lot more that |chef| can do, obviously, but that was super easy! See the tutorials at https://learn.chef.io/tutorials/ for more detailed setup scenarios. You can also try `running Chef in the AWS Marketplace <https://docs.chef.io/aws_marketplace.html>`_. Keep reading https://docs.chef.io for more information about setting up a workstation, configuring |kitchen| to run virtual environments from a workstation, and setting up a more detailed cookbook.
+There's a lot more that |chef| can do, obviously, but that was super easy!
 
-
+* See https://learn.chef.io/tutorials/ for more detailed setup scenarios.
+* Try `running Chef in the AWS Marketplace <https://docs.chef.io/aws_marketplace.html>`_.
+* Keep reading https://docs.chef.io for more information about setting up a workstation, configuring |kitchen| to run virtual environments, setting up a more detailed cookbook, resources, and more.
