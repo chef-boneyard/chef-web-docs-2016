@@ -98,9 +98,6 @@ This subcommand has the following options:
 ``--sudo``
    |sudo bootstrap|
 
-``--sudo-preserve-home``
-   Use to preserve the non-root user's ``HOME`` environment.
-
 ``-t TEMPLATE``, ``--bootstrap-template TEMPLATE``
    |template bootstrap| Default value: ``chef-full``, which installs the |chef client| using the |omnibus installer| on all supported platforms.
 

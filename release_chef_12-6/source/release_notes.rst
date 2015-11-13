@@ -83,13 +83,12 @@ The following settings are new for |metadata rb|:
 
 
 
-xxxxx
+knife bootstrap option
 -----------------------------------------------------
-xxxxx
+The following option is new for ``knife bootstrap``:
 
-xxxxx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
+``--sudo-preserve-home``
+   Use to preserve the non-root user's ``HOME`` environment.
 
 
 
