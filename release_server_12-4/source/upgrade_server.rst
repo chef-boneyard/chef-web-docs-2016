@@ -14,8 +14,8 @@ From |chef server_title| 12
 =====================================================
 There are two upgrade scenarios for upgrades from earlier versions of |chef server| 12 to a newer version of |chef server| 12:
 
-* `Standalone <http://docs.chef.io/upgrade_server.html#standalone>`__
-* `High availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
+* `Standalone <http://docs.chef.io/release/server_12-4/upgrade_server.html#standalone>`__
+* `High availability <http://docs.chef.io/release/server_12-4/upgrade_server.html#high-availability>`__
 
 Standalone
 -----------------------------------------------------
