@@ -4,7 +4,7 @@ Installing |chef delivery|, SSH
 
 This topic guides you through setting up |chef delivery| with the ``delivery-cluster`` cookbook and Chef Provisioning, and validating the installation, once |chef delivery| is set up. With the ``delivery-cluster`` cookbook, you install the |chef delivery| cluster on your own infrastructure using |chef provisioning| and your license key. We currently support two install methods with ``delivery-cluster``:
 
-* Install using SSH. This method is used in all environments other than |amazon aws| and assumes that you have created machines and have SSH access with passwordless |sudo cmd| on the boxes
+* Install using SSH. This method is used in all environments other than |amazon aws| and assumes that you have created machines and have SSH access with passwordless |sudo cmd| on the boxes.
 * Install using |amazon aws|. This method of provisioning takes care of creating most of the resources you need for |chef delivery|, and setting them up.
 
 An important consideration in picking your install method/location is network access. If you will be integrating with any APIs make sure you can access them from the environment in which |chef delivery| is installed. Often times we set up a cluster only to find an internal API is not available. Consider things like |jenkins|, or your own internal deployment tool, etc.
