@@ -4,7 +4,7 @@
 
 The change submission process is the familiar |git| process: 
 
-#. You must be onboarded to |chef delivery|, a task likely to be done by your sysadmin. Once your |github| username is linked to your |chef delivery| username and you have properly :ref:`Setup a Workstation <setup_workstation>`.
+#. You must be onboarded to |chef delivery|, a task likely to be done by your sysadmin. Once your |github| username is linked to your |chef delivery| username and you have properly set up a workstation.
 #. Clone the github repo to which you want to submit changes. Be sure you have the right permissions.
 #. Workflow for making changes:
 

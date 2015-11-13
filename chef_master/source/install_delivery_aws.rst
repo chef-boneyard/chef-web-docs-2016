@@ -1,5 +1,3 @@
-.. _install_delivery_aws:
-
 =====================================================
 Installing |chef delivery|, AWS
 =====================================================
@@ -7,7 +5,7 @@ Installing |chef delivery|, AWS
 This topic guides you through setting up |chef delivery| with the ``delivery-cluster`` cookbook and Chef Provisioning, and validating the installation, once |chef delivery| is set up. With the ``delivery-cluster`` cookbook, you install the |chef delivery| cluster on your own infrastructure using |chef provisioning| and your license key. We currently support two install methods with ``delivery-cluster``:
 
 * Install using |amazon aws|. This method of provisioning takes care of creating most of the resources you need for |chef delivery|, and setting them up
-* Install using SSH. This method is used in all environments other than |amazon aws| and assumes that you have created machines and have SSH access with passwordless |sudo cmd| on the boxes. For details on using SSH provisioning, see :ref:`install_delivery_ssh`.
+* Install using SSH. This method is used in all environments other than |amazon aws| and assumes that you have created machines and have SSH access with passwordless |sudo cmd| on the boxes.
 
 An important consideration in picking your install method/location is network access. If you will be integrating with any APIs make sure you can access them from the environment in which |chef delivery| is installed. Often times we set up a cluster only to find an internal API is not available. Consider things like |jenkins|, or your own internal deployment tool, etc.
 
@@ -454,8 +452,6 @@ Add LDAP Users
 Integrating |chef delivery| with your LDAP system allows you to automatically add more user details and authenticate users against your existing identity management system. However, even once your LDAP system has been integrated to |chef delivery|, you must manually add users. If you are going to add a user in your integrated LDAP system to |chef delivery|, you must have their LDAP name.
 
 .. include:: ../../includes_delivery/includes_delivery_users_ldap_user_add.rst
-
-.. _integrate_oauth:
 
 Set up OAuth for Github
 -----------------------------------------------------
