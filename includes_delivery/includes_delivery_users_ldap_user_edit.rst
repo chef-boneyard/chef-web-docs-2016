@@ -1,6 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+.. note:: In order to add or edit users, you must have root shell access and the **Admin** role assigned in |chef delivery|.
+
 To edit LDAP details for a user:
 
 #. Log into the |chef delivery| web UI as an administrator.

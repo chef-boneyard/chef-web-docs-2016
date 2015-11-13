@@ -1,9 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-After the |chef delivery| cluster has been created, team members need to install the |chef delivery| CLI on their workstations.
-
-.. note:: If you reuse the provisioning node in the previous section of this installation guide as a workstation for using |chef delivery|, you can skip steps 1 through 4 below.
+.. _setup_workstation:
 
 Setting up a workstation requires the following:
 
@@ -13,12 +11,12 @@ Setting up a workstation requires the following:
    * RHEL based (yum): ``yum groupinstall "Development Tools"``
    * OS X: ``xcode-select --install``
 
-#. Install |git|: http://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
+#. Install |git|: http://git-scm.com/book/en/v2/Getting-Started-Installing-Git. Also, make sure that your SSH public key is added to your user profile in |chef delivery|.
 #. Install the |chef dk|: https://downloads.chef.io/chef-dk/. Be sure to follow all instructions; for example, to run delivery commands you must set the following:  
    
    ``echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile``
 
 #. Install ``knife push``: ``chef gem install knife-push``.
-#. Install and configure the |chef delivery| CLI, described in the following sections.
+#. Install and configure the |chef delivery| CLI, described in |chef delivery| installation.
 
 
