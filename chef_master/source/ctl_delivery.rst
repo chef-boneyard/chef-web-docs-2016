@@ -6,7 +6,7 @@ Delivery CLI
 
 Install Delivery CLI
 =====================================================
-.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install.rst
+.. include:: ../../includes_delivery/includes_delivery_cli_install.rst
 
 By platform
 -----------------------------------------------------
@@ -14,23 +14,23 @@ Use one of the sections below to install the |chef delivery_cli| CLI on |mac os 
 
 |mac os x|
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_mac.rst
+.. include:: ../../includes_delivery/includes_delivery_cli_install_mac.rst
 
 |ubuntu|
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_ubuntu.rst
+.. include:: ../../includes_delivery/includes_delivery_cli_install_ubuntu.rst
 
 RHEL, SUSE
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_rhel.rst
+.. include:: ../../includes_delivery/includes_delivery_cli_install_rhel.rst
 
 |windows|
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_install_windows.rst
+.. include:: ../../includes_delivery/includes_delivery_cli_install_windows.rst
 
 Configure Delivery CLI
 -----------------------------------------------------
-.. include:: ../../includes_delivery/includes_delivery_ssh_keys_cli_configure.rst
+.. include:: ../../includes_delivery/includes_delivery_cli_configure.rst
 
 
 delivery api

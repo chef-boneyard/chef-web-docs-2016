@@ -2,9 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-For an integrated |github| user of |chef delivery|:
+For a |github enterprise| or GitHub.com integrated user of |chef delivery|:
 
-#. The standard |github| process should be followed: clone the desired repo, make and test changes locally, submit the change (create a pull request).
+#. The standard |github| process should be followed: clone the desired repo, make and test changes locally, submit the change (create a pull request) which initiates the |chef delivery| review process.
 
    The |github| web UI will display a **Delivery Status** box showing what part of the pipeline the pull request is at. When the pull request has passed the **Verify** stage, |github| will message you in the |github| web UI that approval must be manually entered for the pipeline to proceed.
 

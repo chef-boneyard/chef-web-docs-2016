@@ -247,7 +247,8 @@ Cookbooks
    install_analytics
    install_bootstrap
    install_compliance
-   install_delivery
+   install_delivery_aws
+   install_delivery_ssh
    install_dk
    install_omnibus
    install_push_jobs

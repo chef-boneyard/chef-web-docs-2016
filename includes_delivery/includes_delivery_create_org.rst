@@ -2,7 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|company_name| suggests creating a sandbox organization in which a test project can be run for verification and testing purposes. To create an organization, do the following:
+|company_name| suggests creating a sandbox organization in which a test project can be run for verification and testing purposes. Additionally, it is recommended that each organization created corresponds to a working directory within which projects for that organization are managed. 
+
+To create an organization, do the following:
 
 #. Log into the |chef delivery| web UI as an **Admin**; use this command (run in your ``delivery-cluster`` directory) to find the credentials:
 

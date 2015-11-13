@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-.. note:: These instructions assume that you will use |chef delivery| as your source code source of truth and that |chef delivery| is not integrated with |github|.
+.. note:: These instructions assume that you will use |chef delivery| as your source code source of truth and that |chef delivery| is not integrated with |github enterprise| or GitHub.com.
 
 This topic describes the recommended setup for a |chef| cookbook project using |chef delivery|.
 
