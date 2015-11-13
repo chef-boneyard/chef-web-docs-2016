@@ -9,6 +9,12 @@ To determine if |apparmor| is installed, run the following command:
 
    $ sudo apparmor_status
 
+To install |apparmor|, run the following command:
+
+.. code-block:: bash
+
+   $ sudo apt-get install apparmor-utils —yes
+
 If a response other than ``"0 processes are in enforce mode"`` or ``"0 profiles are in enforce mode."`` is returned, |apparmor| must be set to ``Complaining`` mode or disabled.
 
 To set |apparmor| to ``Complaining`` mode, run:
