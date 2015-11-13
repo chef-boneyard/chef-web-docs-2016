@@ -415,10 +415,6 @@ Configure Delivery CLI
 -----------------------------------------------------
 .. include:: ../../includes_delivery/includes_delivery_cli_configure.rst
 
-Configure Delivery CLI
------------------------------------------------------
-.. include:: ../../includes_delivery/includes_delivery_cli_configure.rst
-
 Authenticate
 -----------------------------------------------------
 .. include:: ../../includes_delivery/includes_delivery_setup_workstation_authenticate.rst
