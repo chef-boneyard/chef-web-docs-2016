@@ -2,6 +2,8 @@
 Custom Resources 
 =====================================================
 
+.. warning:: This feature is new in |chef| 12.5. See the versioned documentation for how custom resources work with previous versions of |chef|.
+
 .. include:: ../../includes_custom_resources/includes_custom_resources.rst
 
 Syntax
