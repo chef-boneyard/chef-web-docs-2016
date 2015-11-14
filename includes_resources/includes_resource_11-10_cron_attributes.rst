@@ -110,6 +110,6 @@ This resource has the following properties:
 
        |name user cron| Default value: ``root``.
    * - ``weekday``
-     - **Ruby Types:** String
+     - **Ruby Type:** String
 
        |weekday cron| Default value: ``*``.
