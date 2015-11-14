@@ -2,7 +2,7 @@
 Custom Resources 
 =====================================================
 
-.. warning:: This feature is new in |chef| 12.5. See the versioned documentation for how custom resources work with previous versions of |chef|.
+.. warning:: This approach to building custom resources was introduced in |chef client|, version 12.5. If you are using an older version of the |chef client|, please use the version picker (in the top left of the navigation) to select your version, and then choose the same topic from the navigation tree ("Extend Chef > Custom Resources").
 
 .. include:: ../../includes_custom_resources/includes_custom_resources.rst
 
