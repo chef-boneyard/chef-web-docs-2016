@@ -114,6 +114,6 @@ This resource has the following properties:
 
        This attribute is not applicable on the |ibm aix| platform. |name user cron| Default value: ``root``.
    * - ``weekday``
-     - **Ruby Types:** String
+     - **Ruby Type:** String
 
        |weekday cron| Default value: ``*``.
