@@ -6,8 +6,8 @@ The following example shows how to create a system user. In this instance, the h
 
    user_home = "/home/#{node['cookbook_name']['user']}"
 
-   user node['matching_node']['user'] do
-     gid node['matching_node']['group']
+   user node['cookbook_name']['user'] do
+     gid node['cookbook_name']['group']
      shell '/bin/bash'
      home user_home
      system true
