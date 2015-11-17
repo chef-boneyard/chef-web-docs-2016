@@ -10,7 +10,10 @@
 =====================================================
 The following diagram shows the relationships between the various elements of |chef analytics|, including how information is routed from various nodes to the |chef analytics| server (through the |chef server|) nodes, where reports about |chef client| run outcomes may be viewed, where rules are processed, and where |chef analytics| data may be viewed.
 
-.. image:: ../../images/chef_analytics.png
+.. image:: ../../images/chef_analytics.svg
+   :width: 600px
+   :align: center
+
 
 .. list-table::
    :widths: 60 420
