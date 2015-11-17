@@ -293,9 +293,3 @@ rule show
 **Options**
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_rule_show_options.rst
-
-
-Changelog
-=====================================================
-https://github.com/chef/chef-analytics/blob/master/CHANGELOG.md
-
