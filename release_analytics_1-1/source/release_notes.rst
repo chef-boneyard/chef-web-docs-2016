@@ -1,5 +1,5 @@
 =====================================================
-Release Notes: |chef analytics_title| 1.1.5
+Release Notes: |chef analytics_title| 1.1
 =====================================================
 
 .. include:: ../../includes_analytics/includes_analytics.rst
