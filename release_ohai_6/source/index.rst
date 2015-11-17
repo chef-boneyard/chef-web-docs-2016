@@ -30,7 +30,7 @@ Attribute Precedence
 Custom |ohai| 6 Plugins
 =====================================================
 
-.. warning:: Custom plugins change significantly in |ohai| 7 (see the `release notes <http://docs.chef.io/release/ohai-7/release_notes.html>`_). While |company_name| has worked to ensure backwards compatibility for all |ohai| plugins, all plugins that were built for |ohai| 6 should be updated, tested, and then verified for |ohai| 7.
+.. warning:: Custom plugins change significantly in |ohai| 7 (see the `release notes <https://docs.chef.io/release/ohai-7/release_notes.html>`_). While |company_name| has worked to ensure backwards compatibility for all |ohai| plugins, all plugins that were built for |ohai| 6 should be updated, tested, and then verified for |ohai| 7.
 
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
 
