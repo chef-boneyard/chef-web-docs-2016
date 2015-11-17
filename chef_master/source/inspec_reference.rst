@@ -1504,6 +1504,8 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_inspec_resources/includes_inspec_resource_registry_key_syntax.rst
 
+Registry Key Path Separators
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_windows/includes_windows_registry_key_backslashes.rst
 
 Matchers

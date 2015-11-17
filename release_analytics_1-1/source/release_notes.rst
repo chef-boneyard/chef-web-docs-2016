@@ -1,5 +1,5 @@
 =====================================================
-Release Notes: |chef analytics_title| 1.1.5
+Release Notes: |chef analytics_title| 1.1
 =====================================================
 
 .. include:: ../../includes_analytics/includes_analytics.rst
@@ -293,9 +293,3 @@ rule show
 **Options**
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_analytics_rule_show_options.rst
-
-
-Changelog
-=====================================================
-https://github.com/chef/chef-analytics/blob/master/CHANGELOG.md
-

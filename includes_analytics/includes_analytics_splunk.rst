@@ -5,8 +5,12 @@
 Use the |chef splunk| to gather insights about nodes that are under management by |chef|. The |chef splunk| requires |chef analytics| version 1.1.4 (or later).
 
 .. image:: ../../images/splunk_app_nodes_activity.png
+   :width: 600px
+   :align: center
 
 .. image:: ../../images/splunk_app_server_activity.png
+   :width: 600px
+   :align: center
 
 .. note:: |splunk| enterprise is required to use the |chef splunk|. |splunk| light does not support the installation of packaged |splunk| applications.
 

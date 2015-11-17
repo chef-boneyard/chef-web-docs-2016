@@ -10,9 +10,9 @@ Getting Started
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/chef_overview.html">An Overview of Chef</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/install_dk.html">Install the Chef DK</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/ruby.html">Using Ruby</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/chef_overview.html">An Overview of Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/install_dk.html">Install the Chef DK</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/ruby.html">Using Ruby</a> </br>
 
 .. note:: See this blog post by Irving Popovetsky about running the Chef DK on Windows: https://www.chef.io/blog/2014/11/04/the-chefdk-on-windows-survival-guide/.
 
@@ -33,9 +33,9 @@ The following tools are available only in the |chef dk|:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/ctl_chef.html">chef (executable)</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/policy.html">Policy</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/config_rb_policyfile.html">Policyfile.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/ctl_chef.html">chef (executable)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/policy.html">Policy</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/config_rb_policyfile.html">Policyfile.rb</a> </br>
 
 |chef provisioning_title|
 -----------------------------------------------------
@@ -43,11 +43,11 @@ The following resources are part of |chef provisioning| and are now available in
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/resource_machine.html">machine</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/resource_machine_batch.html">machine_batch</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/resource_machine_execute.html">machine_execute</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/resource_machine_file.html">machine_file</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/resource_machine_image.html">machine_image</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine.html">machine</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine_batch.html">machine_batch</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine_execute.html">machine_execute</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine_file.html">machine_file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine_image.html">machine_image</a> </br>
    
 The following resources are available in the |chef dk| and may be used as part of |chef provisioning|:
 
@@ -114,15 +114,15 @@ The following tools have been developed by members of the |chef| community. Thes
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/berkshelf.html">Berkshelf</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/chef_vault.html">chef-vault</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/chefspec.html">ChefSpec</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/foodcritic.html">Foodcritic</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/kitchen.html">Kitchen</a> </br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/ctl_kitchen.html">kitchen (the command-line executable for Kitchen)</a> </br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/config_yml_kitchen.html">kitchen.yml (the configuration file for Kitchen)</a> </br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/plugin_kitchen_vagrant.html">kitchen-vagrant (the default driver plugin for Kitchen)</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.chef.io/release/devkit_1-0/rubocop.html">RuboCop</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/berkshelf.html">Berkshelf</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/chef_vault.html">chef-vault</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/chefspec.html">ChefSpec</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/foodcritic.html">Foodcritic</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/kitchen.html">Kitchen</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/ctl_kitchen.html">kitchen (the command-line executable for Kitchen)</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/config_yml_kitchen.html">kitchen.yml (the configuration file for Kitchen)</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/plugin_kitchen_vagrant.html">kitchen-vagrant (the default driver plugin for Kitchen)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/rubocop.html">RuboCop</a> </br>
 
 
 

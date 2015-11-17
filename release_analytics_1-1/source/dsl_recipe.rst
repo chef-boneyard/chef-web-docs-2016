@@ -1,3 +1,5 @@
+.. THIS PAGE IS LOCATED AT THE /release/analytics_1-1/ PATH.
+
 =====================================================
 About the Recipe DSL
 =====================================================
