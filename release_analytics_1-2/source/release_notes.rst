@@ -12,4 +12,4 @@ The following items are new for |chef analytics| 1.2 and/or are changes from pre
 
 Nodes View
 -----------------------------------------------------
-.. include:: ../../includes_analytics/includes_analytics_nodes.rst
+.. include:: ../../includes_analytics/includes_analytics_nodes_view.rst

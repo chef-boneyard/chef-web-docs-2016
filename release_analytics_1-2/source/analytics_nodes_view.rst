@@ -4,4 +4,4 @@
 |chef analytics_title| Nodes View
 =====================================================
 
-.. include:: ../../includes_analytics/includes_analytics_nodes.rst
+.. include:: ../../includes_analytics/includes_analytics_nodes_view.rst

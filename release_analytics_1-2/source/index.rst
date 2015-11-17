@@ -35,7 +35,7 @@ The following features are part of the |chef analytics| platform:
 
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/analytics_1-2/actions.html">Actions</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/analytics_1-2/analytics_rules.html">Rules</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/analytics_1-2/analytics_nodes.html">Nodes View</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/analytics_1-2/analytics_nodes_view.html">Nodes View</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/analytics_1-2/dsl_recipe.html">Control Groups and Controls (Recipe DSL Methods)</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/analytics_1-2/chef_client.html">chef-client, audit-mode</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/analytics_1-2/reporting.html">Reporting</a> </br>
@@ -72,7 +72,7 @@ This section contains links to topics about configuration files, command-line to
    actions
    analytics
    analytics_monitor
-   analytics_nodes
+   analytics_nodes_view
    analytics_rules
    analytics_splunk
    analytics_webui_tasks
