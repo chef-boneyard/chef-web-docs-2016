@@ -126,7 +126,7 @@ rabbitmq
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
 
-.. include:: ../../includes_config/includes_config_rb_server_settings_rabbitmq.rst
+.. include:: ../../includes_config/includes_config_rb_12-2_server_settings_rabbitmq.rst
 
 redis_lb
 -----------------------------------------------------
