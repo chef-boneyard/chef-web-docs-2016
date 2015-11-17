@@ -16,8 +16,6 @@ Attribute Types
 =====================================================
 .. include:: ../../includes_node/includes_node_attribute_type.rst
 
-.. include:: ../../includes_node/includes_node_attribute_persistence.rst
-
 Attribute Sources
 ===================================================== 
 Attributes are provided to the |chef client| from the following locations:
