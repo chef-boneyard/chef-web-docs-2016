@@ -9,6 +9,10 @@ A ``registry_key`` |inspec resource| block declares the item in the |windows| re
      its('name') { should eq 'value' }
    end
 
+or:
+
+.. code-block:: ruby
+
    describe registry_key('path\to\key') do
      its('name') { should eq 'value' }
    end
