@@ -62,3 +62,47 @@ This configuration file has the following settings for ``rabbitmq``:
      - |ip_address virtual| Default value: ``'127.0.0.1'``.
 
        |analytics rabbitmq_settings| When the |chef analytics| server is configured as a standalone server, change this value to the backend VIP address for the |chef server|.
+   * - ``rabbitmq['ssl_versions']``
+     - SSL versions for |rabbitmq mgmt|. See also |url rabbitmqssl|  Default value: ``['tlsv1.2', 'tlsv1.1']``.
+   * - ``rabbitmq['management_user']``
+     - |rabbitmq mgmt| user. Default value: ``'rabbitmgmt'``.
+   * - ``rabbitmq['management_password']``
+     - |rabbitmq mgmt| password. Default value: ``'chefrocks'``.
+   * - ``rabbitmq['management_port']``
+     - |rabbitmq mgmt| port. Default value: ``15672``.
+   * - ``rabbitmq['management_enabled']``
+     - Is the |rabbitmq mgmt| enabled? Default value: ``true``.
+   * - ``rabbitmq['analytics_max_length']``
+     - Maximum number of messages that can be queued before Rabbit automatically drops messages from the front of the queue to make room for new messages. Default value: ``10000``.
+   * - ``rabbitmq['queue_length_monitor_enabled']``
+     - Enable the |qmon|. Default value: ``true``.
+   * - ``rabbitmq['queue_length_monitor_vhost']``
+     - RabbitMQ vhost that the |qmon| will observe. Default value: ``'/analytics'``.
+   * - ``rabbitmq['queue_length_monitor_queue']``
+     - RabbitMQ queue that the |qmon| will observe. Default value: ``'alaska'``.
+   * - ``rabbitmq['queue_length_monitor_millis']``
+     - How often to check RabbitMQ queue length, in milliseconds. Default value: ``30000``.
+   * - ``rabbitmq['queue_length_monitor_timeout_millis']``
+     - If the Chef Server is overloaded, calls to the |qmon| (not RabbitMQ) may timeout with this value. Default value: ``5000``.
+   * - ``rabbitmq['drop_on_full_capacity']``
+     - If the queue is at capacity, don't send messages to Rabbit until it's no longer at capacity. Default value: ``true``.
+   * - ``rabbitmq['prevent_erchef_startup_on_full_capacity']``
+     - If the monitored queue is full, Chef Server will not start. Default value: ``false``.
+   * - ``rabbitmq['rabbit_mgmt_timeout']``
+     - |rabbitmq http pool| timeout. Default value: ``30000``.
+   * - ``rabbitmq['rabbit_mgmt_http_init_count']``
+     - |rabbitmq http pool| initial worker count. Default value: ``25``.
+   * - ``rabbitmq['rabbit_mgmt_http_max_count']``
+     - |rabbitmq http pool| maximum worker count.  Default value: ``100``.
+   * - ``rabbitmq['rabbit_mgmt_http_cull_interval']``
+     - |rabbitmq http pool| maximum cull interval, in seconds. Default value: ``60``.
+   * - ``rabbitmq['rabbit_mgmt_http_max_age']``
+     - |rabbitmq http pool| maximum connection worker age, in seconds. Default value: ``70``.
+   * - ``rabbitmq['rabbit_mgmt_http_max_connection_duration']``
+     - |rabbitmq http pool| maximum connection duration, in seconds. Default value: ``70``.
+   * - ``rabbitmq['rabbit_mgmt_ibrowse_options']``
+     - |rabbitmq http pool| ibrowse options. Must be comma separated pairs of ``{key, value}``. Default value: ``'{connect_timeout, 10000}'``.
+   * - ``rabbitmq['queue_at_capacity_affects_overall_status']``
+     - If set to ``true``, the overall status returned by the _status HTTP endpoint will be set to fail if the monitored queue is at capacity. Default value: ``false``.
+
+
