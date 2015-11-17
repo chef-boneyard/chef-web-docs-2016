@@ -4,7 +4,7 @@ In 64-bit versions of |windows|, ``HKEY_LOCAL_MACHINE\SOFTWARE\Example`` is a re
 
 .. code-block:: ruby
 
-   registry_key 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Example' do
+   registry_key "HKEY_LOCAL_MACHINE\\SOFTWARE\\Example" do
      architecture :i386
      recursive true
      action :create
@@ -14,7 +14,7 @@ or:
 
 .. code-block:: ruby
 
-   registry_key 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Example' do
+   registry_key "HKEY_LOCAL_MACHINE\\SOFTWARE\\Example" do
      architecture :x86_64
      recursive true
      action :delete_key
@@ -29,7 +29,7 @@ or:
        puts 'Found 32-bit key'
      end
      only_if {
-       registry_key_exists?('HKEY_LOCAL_MACHINE\SOFTWARE\\Example',
+       registry_key_exists?("HKEY_LOCAL_MACHINE\SOFTWARE\\Example",
        :i386)
      }
    end
@@ -43,7 +43,7 @@ or:
        puts 'Found 64-bit key'
      end
      only_if {
-       registry_key_exists?('HKEY_LOCAL_MACHINE\\SOFTWARE\\Example',
+       registry_key_exists?("HKEY_LOCAL_MACHINE\\SOFTWARE\\Example",
        :x86_64)
      }
    end

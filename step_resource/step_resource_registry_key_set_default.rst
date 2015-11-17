@@ -2,11 +2,25 @@
 
 .. To set the "(Default)" name of a registry key:
 
+Use a double-quoted string:
+
 .. code-block:: ruby
 
    registry_key 'Set (Default) value' do
      action :create
-     key 'HKLM\\Software\\Test\\Key\\Path'
+     key "HKLM\\Software\\Test\\Key\\Path"
+     values [
+       {:name => '', :type => :string, :data => 'test'},
+     ]
+   end
+
+or a single-quoted string:
+
+.. code-block:: ruby
+
+   registry_key 'Set (Default) value' do
+     action :create
+     key 'HKLM\Software\Test\Key\Path'
      values [
        {:name => '', :type => :string, :data => 'test'},
      ]
