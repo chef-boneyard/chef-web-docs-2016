@@ -39,6 +39,8 @@ aws_key_pair node['delivery']['change']['project']  do
 end
 
 execute 'build the site' do
+  retries 2
+  retry_delay 5
   command 'kitchen test --destroy always'
   environment(
     'PATH' => '/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games',
