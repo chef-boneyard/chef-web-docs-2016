@@ -8,8 +8,17 @@ What's New
 =====================================================
 The following items are new for |chef analytics| 1.2 and/or are changes from previous versions. The short version:
 
-* **Nodes view** The new Nodes view allows you to filter nodes by status: all nodes, nodes that failed to converge, nodes that are missing, and nodes that converged successfully.
+* **Nodes view** The new **Nodes** view allows you to filter nodes by status: all nodes, nodes that failed to converge, nodes that are missing, and nodes that converged successfully.
+* **RabbitMQ queue tuning** New settings for managing |rabbitmq| queues allow the size of the queue used by |chef analytics| to be configured, including settings for the queue length monitor and for tuning the |rabbitmq mgmt|.
 
 Nodes View
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_nodes_view.rst
+
+|rabbitmq| Queues
+-----------------------------------------------------
+If the |rabbitmq| queue that is used by |chef analytics| stops consuming messages, the |chef server| data partition will fill up and may affect the overall performance of the |chef server| application itself.
+
+The settings for the |rabbitmq| queue are tunable, including for queue length monitoring, queue capacity, maximum number of messages that can be in the queue before messages are dropped, the point at which messages are droped, for settings used by the |rabbitmq mgmt|, and so on.
+
+.. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq_analytics_queue.rst
