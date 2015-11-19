@@ -3,7 +3,7 @@
 
 To search nodes:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. In the search box in the upper right, enter the search query and click the search icon.
 

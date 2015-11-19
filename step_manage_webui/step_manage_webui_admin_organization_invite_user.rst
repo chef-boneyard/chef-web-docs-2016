@@ -3,8 +3,8 @@
 
 To invite a user to an organization:
 
-#. Open |webui|.
-#. Click |webui admin|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
 #. Click |webui admin_orgs|.
 #. Click |webui admin_orgs_invite_user|.
 #. In the |webui db_invite_user| dialog box, enter the |chef server oec| user name for the user to be invited, and then click the |webui button_invite| button:

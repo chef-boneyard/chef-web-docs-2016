@@ -3,7 +3,7 @@
 
 To remove a role or recipe from a run-list:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. Select a node.
 #. Click |webui nodes_edit_run_list|.

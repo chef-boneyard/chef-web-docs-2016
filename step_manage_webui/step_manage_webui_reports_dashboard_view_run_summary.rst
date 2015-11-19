@@ -3,7 +3,7 @@
 
 To view the |chef client| runs summary:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui reports|.
 #. Click |webui reports_dashboard|.
 #. The |chef client| runs summaries are shown under the |webui reports_name_summary| header:

@@ -3,7 +3,7 @@
 
 To add a client key:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
 #. Click |webui policy_client_create|.

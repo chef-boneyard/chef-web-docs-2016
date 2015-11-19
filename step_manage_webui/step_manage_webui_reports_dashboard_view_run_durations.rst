@@ -3,7 +3,7 @@
 
 To view |chef client| runs with errors:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui reports|.
 #. Click |webui reports_dashboard|.
 #. The |chef client| runs with errors are shown under the |webui reports_name_durations| header:

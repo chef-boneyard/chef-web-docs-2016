@@ -3,7 +3,7 @@
 
 To reset a user's validation key:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. From the drop-down list next to your username, select |webui button_view_account|.
 #. Under |webui admin_users|, click |webui admin_users_reset_key|.
 #. In the |webui db_reset_key| dialog box, confirm that the key should be regenerated and click the |webui button_regenerate_key| button:

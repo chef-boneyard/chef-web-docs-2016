@@ -3,7 +3,7 @@
 
 To reset a |chef validator| key:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
 #. Select a |chef validator| key.

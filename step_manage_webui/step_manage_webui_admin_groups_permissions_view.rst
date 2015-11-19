@@ -3,9 +3,9 @@
 
 To view group permissions:
 
-#. Open |webui|.
-#. Click |webui admin|.
-#. Click |webui admin_groups|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
+#. Click **Groups**.
 #. Select a group.
-#. Click the |webui tab_group_permissions| tab.
-#. Set the appropriate permissions: |webui permission delete|, |webui permission grant|, |webui permission read|, and/or |webui permission update|.
+#. Click the **Group Permissions** tab.
+#. Set the appropriate permissions: **Delete**, **Grant**, **Read**, and/or **Update**.

@@ -3,7 +3,7 @@
 
 To edit a data bag item:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_data_bags|.
 #. Select a data bag.

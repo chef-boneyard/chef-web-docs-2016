@@ -3,8 +3,8 @@
 
 To get the starter kit:
 
-#. Open |webui|.
-#. Click |webui admin|.
-#. Click |webui admin_orgs|.
-#. Click |webui admin_orgs_starter_kit|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
+#. Click **Organizations**.
+#. Click **Starter Kit**.
 #. Follow the steps on the starter kit page.

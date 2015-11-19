@@ -3,9 +3,8 @@
 
 To view group details:
 
-#. Open |webui|.
-#. Click |webui admin|.
-#. Click |webui admin_groups|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
+#. Click **Groups**.
 #. Select a group.
-#. Click the |webui tab_details| tab.
-
+#. Click the **Details** tab.

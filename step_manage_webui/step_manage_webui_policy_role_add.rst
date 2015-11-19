@@ -3,7 +3,7 @@
 
 To add a role:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_roles|.
 #. Click |webui policy_roles_create|.

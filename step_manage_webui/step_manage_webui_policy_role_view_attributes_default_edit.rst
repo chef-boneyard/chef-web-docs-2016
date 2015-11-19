@@ -3,7 +3,7 @@
 
 To edit default attributes for a role:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_roles|.
 #. Select a role.

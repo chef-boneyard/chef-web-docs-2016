@@ -3,7 +3,7 @@
 
 To reset the validation key for a node:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. Select a node.
 #. Click |webui nodes_edit_run_list|.

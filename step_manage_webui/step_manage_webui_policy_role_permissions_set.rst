@@ -3,7 +3,7 @@
 
 To set permissions list for a role object:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_roles|.
 #. Select a role.

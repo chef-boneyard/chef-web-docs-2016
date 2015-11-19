@@ -3,4 +3,4 @@
 
 To switch organizations:
 
-#. In the top navigation, next to |webui button_organization|, select an organization from the drop-down list.
+#. In the top navigation, next to **Organization**, select an organization from the drop-down list.

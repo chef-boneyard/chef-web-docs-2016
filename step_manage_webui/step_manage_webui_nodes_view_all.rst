@@ -3,7 +3,7 @@
 
 To view all of the nodes:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 
    where:

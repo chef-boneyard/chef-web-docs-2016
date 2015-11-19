@@ -3,7 +3,7 @@
 
 To add tags to a node (or a group of nodes):
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. Select a node (or a group of nodes).
 #. Click |webui nodes_manage_tags|.
