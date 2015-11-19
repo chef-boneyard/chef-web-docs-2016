@@ -3,8 +3,8 @@
 
 To reset the validation key:
 
-#. Open |webui|.
-#. Click |webui admin|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
 #. Click |webui admin_orgs|.
 #. Click |webui admin_orgs_reset_validation_key|.
 #. In the |webui db_reset_key| dialog box, confirm that the key should be regenerated and click the |webui button_regenerate_key| button:

@@ -3,6 +3,6 @@
 
 To view the reports dashboard:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui reports|.
 #. Click |webui reports_dashboard|.

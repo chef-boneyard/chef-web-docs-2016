@@ -3,7 +3,7 @@
 
 To set permissions list for a client key:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_client|.
 #. Select a client key.

@@ -3,8 +3,8 @@
 
 Removing a member of the |webui group admins| group from an organization requires the user to be removed from the |webui group admins| group before they can be removed from the organization:
 
-#. Open |webui|.
-#. Click |webui admin|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
 #. Click |webui admin_groups|.
 #. Select the |webui group admins| group.
 #. Select a user to be removed from the |webui group admins| group:

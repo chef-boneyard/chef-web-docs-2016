@@ -3,12 +3,12 @@
 
 To add a group:
 
-#. Open |webui|.
-#. Click |webui admin|.
-#. Click |webui admin_groups|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
+#. Click **Groups**.
 #. Select a group.
-#. Click the |webui admin_groups_create|.
+#. Click the **Create**.
 
    .. image:: ../../images/step_manage_webui_admin_groups_add.png
 
-#. Enter the name of the group and then click |webui button_create_group|.
+#. Enter the name of the group and then click **Create Group**.

@@ -3,7 +3,7 @@
 
 To add a role or recipe to a run-list:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. Select a node.
 #. Click |webui nodes_edit_run_list|.

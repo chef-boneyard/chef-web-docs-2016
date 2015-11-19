@@ -3,7 +3,7 @@
 
 To view the attributes for a node:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. Select a node.
 #. Click the |webui tab_attributes| tab.

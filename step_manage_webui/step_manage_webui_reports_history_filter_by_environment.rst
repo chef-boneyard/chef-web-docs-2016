@@ -3,7 +3,7 @@
 
 To filter report histories by environment:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui reports|.
 #. Click |webui reports_run_history|.
 #. From the |webui button_filter_by_environment| drop-down, select ``All Environments``, ``_default``, or any custom environment:

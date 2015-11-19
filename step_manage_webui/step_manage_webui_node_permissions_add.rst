@@ -3,7 +3,7 @@
 
 To update the permissions list for a node object:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. Select a node.
 #. Click the |webui tab_permissions| tab.

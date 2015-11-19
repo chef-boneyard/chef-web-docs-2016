@@ -3,7 +3,7 @@
 
 To edit the details of an environment:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_environments|.
 #. Select an environment.

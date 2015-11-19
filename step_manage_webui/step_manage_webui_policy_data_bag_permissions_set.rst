@@ -3,7 +3,7 @@
 
 To set permissions list for a data bag object:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_data_bags|.
 #. Select a data bag.

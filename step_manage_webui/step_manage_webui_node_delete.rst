@@ -3,7 +3,7 @@
 
 To delete a node:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui nodes|.
 #. Select a node.
 #. Click |webui nodes_delete|.

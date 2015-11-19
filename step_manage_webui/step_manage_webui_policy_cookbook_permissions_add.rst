@@ -3,7 +3,7 @@
 
 To update the permissions list for a cookbook object:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_cookbooks|.
 #. Select a cookbook.

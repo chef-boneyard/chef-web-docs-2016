@@ -3,7 +3,7 @@
 
 To view permissions for an environment object:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_environments|.
 #. Select an enviromnent.

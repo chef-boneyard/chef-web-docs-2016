@@ -3,7 +3,7 @@
 
 To add a data bag:
 
-#. Open |webui|.
+#. Open **Chef Manage**.
 #. Click |webui policy|.
 #. Click |webui policy_data_bags|.
 #. Click |webui policy_data_bags_create|.

@@ -3,11 +3,11 @@
 
 To delete a group:
 
-#. Open |webui|.
-#. Click |webui admin|.
-#. Click |webui admin_groups|.
+#. Open **Chef Manage**.
+#. Click **Administration**.
+#. Click **Groups**.
 #. Select a group.
-#. Click |webui button_delete_group|.
+#. Click **Delete**.
 
    .. image:: ../../images/step_manage_webui_admin_groups_delete.png
 
