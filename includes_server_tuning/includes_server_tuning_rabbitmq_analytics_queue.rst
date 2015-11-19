@@ -1,53 +1,5 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following settings may be used for tuning |rabbitmq| queues used by |chef analytics| and the |chef server|:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Setting
-     - Description
-   * - ``rabbitmq['analytics_max_length']``
-     - |rabbitmq analytics_max_length| Default value: ``10000``.
-   * - ``rabbitmq['drop_on_full_capacity']``
-     - |rabbitmq drop_on_full| Default value: ``true``.
-   * - ``rabbitmq['management_enabled']``
-     - |rabbitmq management_enabled| Default value: ``true``.
-   * - ``rabbitmq['management_password']``
-     - |rabbitmq management_password| Default value: ``'chefrocks'``.
-   * - ``rabbitmq['management_port']``
-     - |rabbitmq management_port| Default value: ``15672``.
-   * - ``rabbitmq['management_user']``
-     - |rabbitmq management_user| Default value: ``'rabbitmgmt'``.
-   * - ``rabbitmq['prevent_erchef_startup_on_full_capacity']``
-     - |rabbitmq prevent_startup| Default value: ``false``.
-   * - ``rabbitmq['queue_at_capacity_affects_overall_status']``
-     - |rabbitmq capacity_affects_status| Default value: ``false``.
-   * - ``rabbitmq['queue_length_monitor_enabled']``
-     - |rabbitmq qmon_enabled| Default value: ``true``.
-   * - ``rabbitmq['queue_length_monitor_millis']``
-     - |rabbitmq qmon_milliseconds| Default value: ``30000``.
-   * - ``rabbitmq['queue_length_monitor_timeout_millis']``
-     - |rabbitmq qmon_timeout_milliseconds| Default value: ``5000``.
-   * - ``rabbitmq['queue_length_monitor_queue']``
-     - |rabbitmq qmon_queue| Default value: ``'alaska'``.
-   * - ``rabbitmq['queue_length_monitor_vhost']``
-     - |rabbitmq qmon_vhost| Default value: ``'/analytics'``.
-   * - ``rabbitmq['rabbit_mgmt_http_cull_interval']``
-     - |rabbit_mgmt_http_cull_interval| Default value: ``60``.
-   * - ``rabbitmq['rabbit_mgmt_http_init_count']``
-     - |rabbit_mgmt_http_init_count| Default value: ``25``.
-   * - ``rabbitmq['rabbit_mgmt_http_max_age']``
-     - |rabbit_mgmt_http_max_age| Default value: ``70``.
-   * - ``rabbitmq['rabbit_mgmt_http_max_connection_duration']``
-     - |rabbit_mgmt_http_max_connection_duration| Default value: ``70``.
-   * - ``rabbitmq['rabbit_mgmt_http_max_count']``
-     - |rabbit_mgmt_http_max_count| Default value: ``100``.
-   * - ``rabbitmq['rabbit_mgmt_ibrowse_options']``
-     - |rabbit_mgmt_ibrowse_options| Default value: ``'{connect_timeout, 10000}'``.
-   * - ``rabbitmq['rabbit_mgmt_timeout']``
-     - |rabbit_mgmt_timeout| Default value: ``30000``.
-   * - ``rabbitmq['ssl_versions']``
-     - |rabbitmq ssl_versions| (See also |url rabbitmqssl|.) Default value: ``['tlsv1.2', 'tlsv1.1']``.
+If the |rabbitmq| queue that is used by |chef analytics| stops consuming messages, the |chef server| data partition will fill up and may affect the overall performance of the |chef server| application itself. The settings for the |rabbitmq| queue are tunable, including for queue length monitoring, queue capacity, maximum number of messages that can be in the queue before messages are dropped, the point at which messages are dropped, for settings used by the |rabbitmq mgmt|, and so on.

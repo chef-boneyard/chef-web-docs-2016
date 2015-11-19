@@ -1,3 +1,5 @@
+.. THIS PAGE DOCUMENTS Chef server version 12.3
+
 =====================================================
 Server Tuning
 =====================================================
@@ -57,3 +59,9 @@ postgresql
 rabbitmq
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq.rst
+
+Analytics Queues
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq_analytics_queue.rst
+
+.. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq_analytics_queue_settings.rst
