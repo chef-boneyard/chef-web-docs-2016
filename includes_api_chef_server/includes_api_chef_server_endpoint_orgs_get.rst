@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/NAME/organizations
+   GET /organizations
 
 **Response**
 
@@ -18,9 +18,8 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "org_name1"=>"https://url/for/org_name1"
-     "org_name2"=>"https://url/for/org_name2"
-	 ...
+     "org_name1"=>"https://your_chef_server/organizations/org_name1",
+     "org_name2"=>"https://your_chef_server/organizations/org_name2"
    }
 
 **Response Codes**
@@ -33,6 +32,7 @@ The response is similar to:
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``401``
+     - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
-
