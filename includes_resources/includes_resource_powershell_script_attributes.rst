@@ -59,6 +59,8 @@ This resource has the following properties:
      - **Ruby Type:** String
 
        |interpreter|
+
+       Changing the interpreter property is not supported.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
