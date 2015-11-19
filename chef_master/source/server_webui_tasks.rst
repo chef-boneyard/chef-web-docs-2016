@@ -361,10 +361,6 @@ View Group Details
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_groups_view_details.rst
 
-View Group Members
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_view_members.rst
-
 View Group Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_groups_permissions_view.rst

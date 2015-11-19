@@ -32,7 +32,7 @@ This resource has the following properties:
    * - ``interpreter``
      - **Ruby Type:** String
 
-       |interpreter|
+       |interpreter| Changing the default value of this property is not supported.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
