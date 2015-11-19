@@ -19,6 +19,6 @@ Nodes View
 -----------------------------------------------------
 If the |rabbitmq| queue that is used by |chef analytics| stops consuming messages, the |chef server| data partition will fill up and may affect the overall performance of the |chef server| application itself.
 
-The settings for the |rabbitmq| queue are tunable, including for queue length monitoring, queue capacity, maximum number of messages that can be in the queue before messages are dropped, the point at which messages are droped, for settings used by the |rabbitmq mgmt|, and so on.
+The settings for the |rabbitmq| queue are tunable, including for queue length monitoring, queue capacity, maximum number of messages that can be in the queue before messages are dropped, the point at which messages are dropped, for settings used by the |rabbitmq mgmt|, and so on.
 
 .. include:: ../../includes_server_tuning/includes_server_tuning_rabbitmq_analytics_queue.rst
