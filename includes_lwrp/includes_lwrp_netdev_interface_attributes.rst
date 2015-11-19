@@ -20,4 +20,4 @@ This custom resource has the following properties:
    * - ``name``
      - |name interface|
    * - ``speed``
-     - |speed interface| Default value: ``auto`` which specifies the default speed configuration for the interface.
+     - |speed interface| Default value: ``auto``. Setting the speed attribute to the default value of ``auto`` causes the device to use the existing configuration for the speed statement and does not explicitly configure anything for the interface speed.
