@@ -466,18 +466,6 @@ View Run List
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_run_list.rst
 
-View Runs by Node
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_node.rst
-
-View Runs by Org
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_org.rst
-
-View Runs by Run ID
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_run_id.rst
-
 View Runs Summary
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_summary.rst
