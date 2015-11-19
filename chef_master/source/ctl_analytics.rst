@@ -52,6 +52,10 @@ once
 -----------------------------------------------------
 .. include:: ../../includes_ctl_analytics/includes_ctl_analytics_once.rst
 
+purge-node
+-----------------------------------------------------
+.. include:: ../../includes_ctl_analytics/includes_ctl_analytics_purge_nodes.rst
+
 restart
 -----------------------------------------------------
 .. include:: ../../includes_ctl_analytics/includes_ctl_analytics_restart.rst
