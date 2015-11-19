@@ -22,9 +22,15 @@ The following drivers are available for |chef provisioning|:
      - A |chef provisioning| driver for |linux lxc|.
    * - `Microsoft Azure <https://github.com/chef/chef-provisioning-azure>`__
      - A |chef provisioning| driver for |azure|.
+   * - `OpenNebula <https://github.com/blackberry/chef-provisioning-opennebula>`__
+     - A |chef provisioning| driver for |opennebula|.
    * - `SSH <https://github.com/chef/chef-provisioning-ssh>`__
      - A |chef provisioning| driver for |ssh|.
    * - `Vagrant <https://github.com/chef/chef-provisioning-vagrant>`__
      - A |chef provisioning| driver for |vagrant|.
    * - `vSphere <https://github.com/CenturyLinkCloud/chef-provisioning-vsphere>`__
      - A |chef provisioning| driver for |vmware vsphere|.
+
+
+
+
