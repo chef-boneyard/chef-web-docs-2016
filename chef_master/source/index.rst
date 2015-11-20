@@ -164,6 +164,7 @@ Cookbooks
    ctl_chef_solo
    ctl_chef_sync
    ctl_delivery
+   ctl_delivery_server
    ctl_inspec
    ctl_kitchen
    ctl_manage
