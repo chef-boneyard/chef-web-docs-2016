@@ -3,7 +3,7 @@
 
 You may integrate |chef delivery| and |github| Enterprise or GitHub.com. If you do this, you will be able to use |github| as a **Source Code Provider** when creating a project. Additionally, when adding users to |chef delivery|, to integrate them to a |github| project, you must first have the |chef delivery| |github| integration complete.
 
-.. note:: This procedure is for |chef delivery| deployments that will use |github enterprise| or GitHub.com as the source control manager. |chef delivery| also comes with default Git capabilities that do not require the GitHub OAuth application. For information on onboarding users for the default Git, see :ref:`delivery_default_git`.  
+.. note:: This procedure is for |chef delivery| deployments that will use |github enterprise| or GitHub.com as the source control manager. |chef delivery| also comes with default Git capabilities that do not require the GitHub OAuth application. For information on onboarding users for the default Git, see :ref:`delivery_default_git`.
 
 This guide assumes you have successfully set up the following:
 
@@ -53,7 +53,7 @@ To add the |github| OAuth app to |chef delivery|, log in to the |chef delivery| 
 
 Request Github Token
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Log in to the |chef delivery| server and run the following command:
+Log in to the |chef delivery| server and run the following command.  Follow the URL given to finish authorizing |chef delivery| to |github|:
 
 **For Github Enterprise**
 
@@ -70,10 +70,10 @@ Log in to the |chef delivery| server and run the following command:
 Create a Project
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Before you begin you will need an existing |github| repo with at least one commit and also you have to grant
-admin rights to the ``chef-delivery`` account.
+admin rights to the |chef delivery| account connected to |github|.
 
 #. Open your organization page in the |chef delivery| web UI and create a new project as normal.
-#. Next, select the **Github** option from the bar and enter the **Github Repo Owner**, **Github Repo Name**, and the branch you wish to use as your primary pipeline.
+#. Next, select the **Github** option from the bar and enter the **Github Organization/Owner**, **Github Repo Name**, and the branch you wish to use as your primary pipeline.
 #. Click **Save & Close**.
 
 There is currently no process for migrating an existing |chef delivery| project to one that is backed by |github|.
@@ -145,4 +145,3 @@ Next, push the code to |github|.
 (The |chef delivery_cli| CLI can perform all of this for projects that use local repositories; one day, it'll do it for remote repositories as well.)
 
 Finally, create a pull request from this change in the |github| web UI.
-
