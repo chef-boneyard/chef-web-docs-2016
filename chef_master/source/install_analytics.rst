@@ -41,7 +41,7 @@ Install the Server
 =====================================================
 |chef analytics| is installed on dedicated hardware with its own configuration topology that is independent from the machines in the |chef server| configuration and compatible with the existing |chef server| machine topology (standalone, tiered, or high availability). |chef analytics| may only be installed as a standalone configuration.
 
-Standalone (version 1.1)
+Standalone
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_analytics_standalone_11.rst
 
