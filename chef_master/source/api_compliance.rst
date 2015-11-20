@@ -411,7 +411,7 @@ For example:
 
 /envs
 =====================================================
-The ``/envs`` endpoint has the following methods: ``DELETE``, ``GET``(for both all environments or for a single, named environment), and ``POST``.
+The ``/envs`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all environments or for a single, named environment), and ``POST``.
 
 DELETE
 -----------------------------------------------------
