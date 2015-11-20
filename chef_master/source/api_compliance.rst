@@ -552,7 +552,7 @@ The request will return one the following response code:
 
 /jobs
 =====================================================
-The ``/jobs`` endpoint has the following methods: ``DELETE``, ``GET``(for both all jobs or for a single, named job), and ``POST``.
+The ``/jobs`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all jobs or for a single, named job), and ``POST``.
 
 DELETE
 -----------------------------------------------------
@@ -1375,7 +1375,7 @@ The response will return a |json| object similar to:
 
 /orgs
 =====================================================
-The ``/orgs`` endpoint has the following methods: ``DELETE``, ``GET``(for both all organizations or for a single, named organizatin). ``PATCH``, and ``POST``.
+The ``/orgs`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all organizations or for a single, named organizatin). ``PATCH``, and ``POST``.
 
 DELETE
 -----------------------------------------------------
@@ -2072,7 +2072,7 @@ The request will return one the following response code:
 
 /teams
 =====================================================
-The ``/teams`` endpoint has the following methods: ``DELETE``, ``GET``(for both all teams or for a single, named team). ``PATCH``, and ``POST``.
+The ``/teams`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all teams or for a single, named team). ``PATCH``, and ``POST``.
 
 DELETE
 -----------------------------------------------------
