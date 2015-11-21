@@ -9,7 +9,7 @@ For example, the ``not_if`` guard statement in the following example **does not 
 .. code-block:: ruby
 
    bash 'javatooling' do
-     environment {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
+     environment 'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'
      code 'java-based-daemon-ctl.sh -start'
      not_if 'java-based-daemon-ctl.sh -test-started'
    end
@@ -19,12 +19,12 @@ and requires adding the ``environment`` property to the ``not_if`` guard stateme
 .. code-block:: ruby
 
    bash 'javatooling' do
-     environment {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
+     environment 'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'
      code 'java-based-daemon-ctl.sh -start'
-     not_if 'java-based-daemon-ctl.sh -test-started', :environment => {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
+     not_if 'java-based-daemon-ctl.sh -test-started', :environment => 'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'
    end
 
-To inherit properties, add the ``guard_attribute`` property to the resource block and set it to the appropriate value:
+To inherit properties, add the ``guard_interpreter`` property to the resource block and set it to the appropriate value:
 
 * ``:bash`` for |resource script_bash|
 * ``:batch`` for |resource batch|
@@ -40,7 +40,7 @@ For example, using the same example as from above, but this time adding the ``gu
 
    bash 'javatooling' do
      guard_interpreter :bash
-     environment {'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'}
+     environment 'JAVA_HOME' => '/usr/lib/java/jdk1.7/home'
      code 'java-based-daemon-ctl.sh -start'
      not_if 'java-based-daemon-ctl.sh -test-started'
    end
