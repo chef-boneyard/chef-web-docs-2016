@@ -3,10 +3,10 @@
 
 To view cookbook details:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_cookbooks|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Cookbooks**.
 #. Select a cookbook.
-#. Click the |webui tab_details| tab:
+#. Click the **Details** tab:
 
    .. image:: ../../images/step_manage_webui_policy_cookbook_view_details.png

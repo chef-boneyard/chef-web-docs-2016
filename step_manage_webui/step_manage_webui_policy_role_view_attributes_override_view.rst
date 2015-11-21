@@ -3,8 +3,8 @@
 
 To view override attributes for a role:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_roles|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Roles**.
 #. Select a role.
-#. Click the |webui tab_attributes| tab.
+#. Click the **Attributes** tab.

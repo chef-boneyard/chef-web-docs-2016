@@ -3,6 +3,6 @@
 
 To view all cookbooks uploaded to the |chef server| organization:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_cookbooks|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Cookbooks**.

@@ -3,8 +3,8 @@
 
 To view data bag items for a data bag:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_data_bags|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Data Bags**.
 #. Select a data bag.
-#. Select the |webui tab_items| tab.
+#. Select the **Items** tab.

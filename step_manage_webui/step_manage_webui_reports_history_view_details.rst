@@ -3,12 +3,12 @@
 
 To view |chef client| details:
 
-#. Open **Chef Manage**.
-#. Click |webui reports|.
-#. Click |webui reports_run_history|.
+#. Open the |chef manage|.
+#. Click **Reports**.
+#. Click **Run History**.
 #. Select the range of |chef client| runs to show, the correct environment, and correct status.
 #. Select a |chef client| run.
-#. Select the |webui tab_details| tab:
+#. Select the **Details** tab:
 
    .. image:: ../../images/step_manage_webui_reports_history_view_details.png
 
@@ -33,4 +33,4 @@ To view |chef client| details:
       * - ``Diff``
         - The difference between the current state and the previous state. This setting is available for files managed by the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources.
       * - ``Parameters``
-        - Opens the |webui db_run_details| dialog box, which lists all of the parameters on the node that were changed during the |chef client| run.
+        - Opens the **Run Details** dialog box, which lists all of the parameters on the node that were changed during the |chef client| run.

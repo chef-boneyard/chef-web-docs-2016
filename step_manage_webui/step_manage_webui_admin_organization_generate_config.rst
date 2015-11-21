@@ -3,7 +3,7 @@
 
 To generate a new |knife| configuration file:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
 #. Click **Organizations**.
 #. Click **Generate Knife Config**.

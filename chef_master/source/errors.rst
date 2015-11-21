@@ -31,9 +31,9 @@ If you're receiving an error like the following it most likely means you'll need
 
 #. If there's no |organization pem| file, regenerate it. 
    
-   Recreate this file by going to the |webui| web user interface and selecting |webui admin_orgs| in the upper right side of the screen.
+   Recreate this file by going to the |chef manage| web user interface and selecting **Organizations** in the upper right side of the screen.
    
-   You can then select |webui admin_orgs_reset_validation_key| next to the organization for which the key is to be reset.
+   You can then select **Reset Validation Key** next to the organization for which the key is to be reset.
 
 Failed to authenticate to https://api.opscode.com
 -----------------------------------------------------
@@ -156,9 +156,9 @@ The URL will help identify the type of permission issue. If the URL is an index 
 
 To fix the global permissions:
 
-#. Log in to the |webui| and click on the failing object type (most likely |webui nodes|).
+#. Log in to the |chef manage| and click on the failing object type (most likely **Nodes**).
 
-#. Click on the |webui tab_permissions| sub-tab. Which permission it needs, depends on which request that failed::
+#. Click on the **Permissions** sub-tab. Which permission it needs, depends on which request that failed::
 
       GET - Under the group section, make sure it has the LIST permission checked
       POST - Under the group section, make sure it has the CREATE permission checked
@@ -167,11 +167,11 @@ To fix the global permissions:
 
 To fix object permissions:
 
-#. Log in to the |webui| and click on the failing object type (most likely |webui nodes|).
+#. Log in to the |chef manage| and click on the failing object type (most likely **Nodes**).
 
 #. Click on the object in the list that is causing the error.
 
-#. Click on the |webui tab_permissions| sub-tab. Which permission it needs, depends on the type of request that failed::
+#. Click on the **Permissions** sub-tab. Which permission it needs, depends on the type of request that failed::
 
       GET - Make sure it has the READ permission checked
       PUT - Make sure it has the UPDATE permission checked

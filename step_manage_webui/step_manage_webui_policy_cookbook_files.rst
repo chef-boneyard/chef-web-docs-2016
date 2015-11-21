@@ -3,8 +3,8 @@
 
 To view cookbook files:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_cookbooks|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Cookbooks**.
 #. Select a cookbook.
-#. Click the |webui tab_content| tab.
+#. Click the **Content** tab.

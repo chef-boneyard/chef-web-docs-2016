@@ -3,9 +3,9 @@
 
 To view permissions for a role object:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_roles|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Roles**.
 #. Select a role.
-#. Click the |webui tab_permissions| tab.
-#. Set the appropriate permissions: |webui permission delete|, |webui permission grant|, |webui permission read|, and/or |webui permission update|.
+#. Click the **Permissions** tab.
+#. Set the appropriate permissions: **Delete**, **Grant**, **Read**, and/or **Update**.

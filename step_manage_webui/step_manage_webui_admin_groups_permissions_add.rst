@@ -3,7 +3,7 @@
 
 To update the permissions list for a group:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
 #. Click **Groups**.
 #. Select a group.

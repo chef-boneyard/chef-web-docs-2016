@@ -3,13 +3,13 @@
 
 To edit node attributes:
 
-#. Open **Chef Manage**.
-#. Click |webui nodes|.
+#. Open the |chef manage|.
+#. Click **Nodes**.
 #. Select a node.
-#. Click the |webui tab_attributes| tab.
-#. Click |webui button_edit_attribute|.
-#. In the |webui db_edit_node_attributes| dialog box, make your changes:
+#. Click the **Attributes** tab.
+#. Click **Edit**.
+#. In the **Edit Node Attributes** dialog box, make your changes:
 
    .. image:: ../../images/step_manage_webui_node_attributes_edit.png
 
-#. Click |webui button_save_attributes|.
+#. Click **Save Attributes**.

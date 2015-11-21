@@ -3,8 +3,8 @@
 
 To view client key details:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_client|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Clients**.
 #. Select a client key.
-#. Click the |webui tab_details| tab.
+#. Click the **Details** tab.

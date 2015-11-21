@@ -3,10 +3,10 @@
 
 To delete a client key:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_client|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Clients**.
 #. Select a client key.
-#. Click |webui policy_client_delete|.
+#. Click **Delete**.
 
    .. image:: ../../images/step_manage_webui_policy_client_delete.png

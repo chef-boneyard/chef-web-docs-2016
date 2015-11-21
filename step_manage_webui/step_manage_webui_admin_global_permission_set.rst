@@ -3,7 +3,7 @@
 
 To set global permissions for |chef server| objects:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
 #. Click **Global Permissions**.
 #. Select the |chef server| object type: ``cookbooks``, ``data bags``, ``environments``, ``groups``, ``nodes``, or ``roles``.

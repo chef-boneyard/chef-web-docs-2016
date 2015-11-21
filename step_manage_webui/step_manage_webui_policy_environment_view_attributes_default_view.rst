@@ -3,8 +3,8 @@
 
 To view default attributes for an environment:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_environments|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Environments**.
 #. Select an environment.
-#. Click the |webui tab_attributes| tab.
+#. Click the **Attributes** tab.

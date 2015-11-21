@@ -3,6 +3,6 @@
 
 To view all roles uploaded to the |chef server| organization:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_roles|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Roles**.

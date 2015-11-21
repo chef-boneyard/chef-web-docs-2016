@@ -3,8 +3,8 @@
 
 To view all of the nodes:
 
-#. Open **Chef Manage**.
-#. Click |webui nodes|.
+#. Open the |chef manage|.
+#. Click **Nodes**.
 
    where:
 
@@ -29,4 +29,4 @@ To view all of the nodes:
       * - ``Environment``
         - |node_environment|
       * - ``Actions``
-        - The |webui| web user interface tasks available for this node.
+        - The **Chef Manage** web user interface tasks available for this node.

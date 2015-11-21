@@ -1,11 +1,11 @@
 .. This is an included how-to. 
 
 
-The actions in |webui_analytics| may be exported as a |json| document or a CSV file.
+The actions in |chef analytics| may be exported as a |json| document or a CSV file.
 
 To export an action list:
 
-#. Open |webui_analytics|.
+#. Open |chef analytics|.
 #. Click the **Export** drop-down.
 #. Choose **JSON** or **CSV**.
 

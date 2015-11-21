@@ -3,11 +3,11 @@
 
 To change a user's password:
 
-#. Open **Chef Manage**.
-#. From the drop-down list next to your username, select |webui button_view_account|.
-#. Under |webui admin_users|, click |webui admin_users_change_password|.
-#. In the |webui db_change_password|, enter the old password and then the new password.
+#. Open the |chef manage|.
+#. From the drop-down list next to your username, select **My Profile**.
+#. Under **Users**, click **Change Password**.
+#. In the **Change Password**, enter the old password and then the new password.
 
    .. image:: ../../images/step_manage_webui_admin_users_change_password.png
 
-#. When finished, click |webui button_change_password|.
+#. When finished, click **Change Password**.

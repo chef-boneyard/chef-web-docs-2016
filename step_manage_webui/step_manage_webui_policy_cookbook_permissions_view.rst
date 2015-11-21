@@ -3,9 +3,9 @@
 
 To view permissions for a cookbook object:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_cookbooks|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Cookbooks**.
 #. Select a cookbook.
-#. Click the |webui tab_permissions| tab.
-#. Set the appropriate permissions: |webui permission delete|, |webui permission grant|, |webui permission read|, and/or |webui permission update|.
+#. Click the **Permissions** tab.
+#. Set the appropriate permissions: **Delete**, **Grant**, **Read**, and/or **Update**.

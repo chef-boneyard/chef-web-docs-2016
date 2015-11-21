@@ -3,12 +3,12 @@
 
 To download a file that is located in a cookbook:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_cookbooks|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Cookbooks**.
 #. Select the file type: **Attributes**, **Definitions**, **Files**, **Recipes**, **Templates**, or **Root Files**.
 #. Select a file.
-#. Click |webui button_download_file|:
+#. Click **Download File**:
 
    .. image:: ../../images/step_manage_webui_policy_cookbook_download.png
 

@@ -3,11 +3,11 @@
 
 To view a cookbook file:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_cookbooks|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Cookbooks**.
 #. Select a cookbook.
-#. Click the |webui tab_content| tab.
+#. Click the **Content** tab.
 #. Select the file type: **Attributes**, **Definitions**, **Files**, **Recipes**, **Templates**, or **Root Files**.
 #. Select a file:
 
