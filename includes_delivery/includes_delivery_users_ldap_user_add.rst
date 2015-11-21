@@ -19,9 +19,9 @@ To add or edit a user to |chef delivery|:
    If you select **Internal**, options for **Name and Email**, first name, last name, email address, and **Security Information**, a login name and password, appear.
    
    If you select **LDAP**, the **Name and Email** options go away and a **Security Information** option for the user's LDAP username and SSH public key appears.
-#. Enter the appropriate information for the type of user you are adding. Leave the **SSH Public Key**  area blank, the user must log in and enter this information.
+#. Enter the appropriate information for the type of user you are adding. Leave the **SSH Public Key** area blank, the user must log in and enter this information.
 
-   Select user **Roles Within the Enterprise**. For details, see :ref: `roles_permissions`.
+   Select user **Roles Within the Enterprise**. For details, see :ref:`roles_permissions`.
 
    Click **Save and Close**, or **Cancel** to discard the operation.
    
