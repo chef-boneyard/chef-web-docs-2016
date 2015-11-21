@@ -3,9 +3,9 @@
 
 To edit a run-list:
 
-#. Open **Chef Manage**.
-#. Click |webui nodes|.
+#. Open the |chef manage|.
+#. Click **Nodes**.
 #. Select a node.
-#. Click |webui nodes_edit_run_list|.
-#. In the |webui db_edit_node_run_list| dialog box, make your changes.
-#. Click |webui button_save_run_list|.
+#. Click **Edit Run List**.
+#. In the **Edit Node Run List** dialog box, make your changes.
+#. Click **Save Run List**.

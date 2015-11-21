@@ -3,6 +3,6 @@
 
 To report histories:
 
-#. Open **Chef Manage**.
-#. Click |webui reports|.
-#. Click |webui reports_run_history|.
+#. Open the |chef manage|.
+#. Click **Reports**.
+#. Click **Run History**.

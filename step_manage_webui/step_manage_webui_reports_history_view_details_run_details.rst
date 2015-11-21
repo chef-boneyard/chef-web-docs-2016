@@ -3,13 +3,13 @@
 
 To view |chef client| run-specific details:
 
-#. Open **Chef Manage**.
-#. Click |webui reports|.
-#. Click |webui reports_run_history|.
+#. Open the |chef manage|.
+#. Click **Reports**.
+#. Click **Run History**.
 #. Select the range of |chef client| runs to show, the correct environment, and correct status.
 #. Select a |chef client| run.
-#. Select the |webui tab_details| tab.
-#. For a specific step, from the **Parameters** column, click the view icon to open the |webui db_run_details| dialog box:
+#. Select the **Details** tab.
+#. For a specific step, from the **Parameters** column, click the view icon to open the **Run Details** dialog box:
 
    .. image:: ../../images/step_manage_webui_reports_history_view_details_run_details.png
 

@@ -3,7 +3,7 @@
 
 To view group details:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
 #. Click **Groups**.
 #. Select a group.

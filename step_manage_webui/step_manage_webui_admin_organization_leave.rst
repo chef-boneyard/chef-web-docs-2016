@@ -3,10 +3,10 @@
 
 To leave an organization:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
-#. Click |webui admin_orgs|.
-#. Click |webui admin_orgs_leave_organization|.
-#. In the |webui db_leave_org| dialog box, confirm that you want to leave the organization, and then click the |webui button_leave_organization| button:
+#. Click **Organizations**.
+#. Click **Leave Organization**.
+#. In the **Leave Organization** dialog box, confirm that you want to leave the organization, and then click the **Leave Organization** button:
 
    .. image:: ../../images/step_manage_webui_admin_organization_leave.png

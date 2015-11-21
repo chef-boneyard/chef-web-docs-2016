@@ -3,11 +3,11 @@
 
 To view |chef client| run-list details:
 
-#. Open **Chef Manage**.
-#. Click |webui reports|.
-#. Click |webui reports_run_history|.
+#. Open the |chef manage|.
+#. Click **Reports**.
+#. Click **Run History**.
 #. Select the range of |chef client| runs to show, the correct environment, and correct status.
 #. Select a |chef client| run.
-#. Select the |webui tab_run_list| tab:
+#. Select the **Run List** tab:
 
    .. image:: ../../images/step_manage_webui_reports_history_view_run_list.png

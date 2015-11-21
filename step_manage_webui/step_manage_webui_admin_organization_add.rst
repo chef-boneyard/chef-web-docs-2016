@@ -3,7 +3,7 @@
 
 To add an organization:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
 #. Click **Organizations**.
 #. Click **Create**.

@@ -3,8 +3,8 @@
 
 To view role details:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_roles|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Roles**.
 #. Select a role.
-#. Click the |webui tab_details| tab.
+#. Click the **Details** tab.

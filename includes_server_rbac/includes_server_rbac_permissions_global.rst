@@ -10,9 +10,9 @@ The |chef server| includes the following global permissions:
 
    * - Permission
      - Description
-   * - |webui permission create|
+   * - **Create**
      - |permission create| This permission is required for any user who uses the ``knife [object] create`` argument to interact with objects on the |chef server|.
-   * - |webui permission list|
+   * - **List**
      - |permission list| This permission is required for any user who uses the ``knife [object] list`` argument to interact with objects on the |chef server|.
 
 These permissions set the default permissions for the following |chef server| object types: clients, cookbooks, data bags, environments, groups, nodes, roles, and sandboxes.

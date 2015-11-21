@@ -3,10 +3,10 @@
 
 To delete a data bag:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_data_bags|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Data Bags**.
 #. Select a data bag.
-#. Click |webui policy_data_bags_delete|.
+#. Click **Delete**.
 
    .. image:: ../../images/step_manage_webui_policy_data_bag_delete.png

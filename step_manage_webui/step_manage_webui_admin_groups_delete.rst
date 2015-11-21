@@ -3,7 +3,7 @@
 
 To delete a group:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
 #. Click **Groups**.
 #. Select a group.
@@ -11,5 +11,5 @@ To delete a group:
 
    .. image:: ../../images/step_manage_webui_admin_groups_delete.png
 
-.. note:: The |webui group admins|, |webui group billing| (hosted |chef server oec| only), |webui group clients|, and |webui group users| are required groups for |chef server oec| and cannot be deleted.
+.. note:: The |webui group admins|, |webui group billing| (hosted |chef server| only), |webui group clients|, and |webui group users| are required groups for the |chef server| and cannot be deleted.
 

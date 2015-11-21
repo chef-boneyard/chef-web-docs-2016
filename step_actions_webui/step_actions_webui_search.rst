@@ -5,7 +5,7 @@ Actions can be searched by name. Use filters for entity name, entity type, actio
 
 To search actions:
 
-#. Open |webui_analytics|.
+#. Open |chef analytics|.
 #. Choose a filter. (Most filter fields will auto-complete with a list of possible values.)
 
    Use ``Action Type`` to filter for the type of action, such as create, update, or delete.
@@ -21,4 +21,3 @@ To search actions:
    .. image:: ../../images/step_actions_webui_search_filters.png
 
 #. Choose a date range. There are three options: after the specified date, before the specified date, or within a specified date range.
-

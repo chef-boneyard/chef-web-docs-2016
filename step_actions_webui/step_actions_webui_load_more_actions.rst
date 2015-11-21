@@ -4,7 +4,7 @@ The actions view is paginated. Scroll to the bottom of the list. Click the **Loa
 
 To load more actions:
 
-#. Open |webui_analytics|.
+#. Open |chef analytics|.
 #. Scroll down and click **Load more actions**.
 
    .. image:: ../../images/step_actions_webui_load_more_actions.png

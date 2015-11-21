@@ -3,12 +3,12 @@
 
 To set the environment for a node:
 
-#. Open **Chef Manage**.
-#. Click |webui nodes|.
+#. Open the |chef manage|.
+#. Click **Nodes**.
 #. Select a node.
-#. Click the |webui tab_details| tab.
+#. Click the **Details** tab.
 #. In the top right, from the **Environment** drop-down, select the environment:
 
    .. image:: ../../images/step_manage_webui_node_details_set_environment.png
 
-#. Click |webui button_save_environment|.
+#. Click **Save**.

@@ -3,7 +3,7 @@
 
 To get the starter kit:
 
-#. Open **Chef Manage**.
+#. Open the |chef manage|.
 #. Click **Administration**.
 #. Click **Organizations**.
 #. Click **Starter Kit**.

@@ -133,6 +133,7 @@ Cookbooks
    community_contributions
    community_guidelines
    compliance
+   config_json_delivery
    config_rb
    config_rb_analytics
    config_rb_chef_sync

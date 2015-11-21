@@ -3,10 +3,10 @@
 
 To delete an environment:
 
-#. Open **Chef Manage**.
-#. Click |webui policy|.
-#. Click |webui policy_environments|.
+#. Open the |chef manage|.
+#. Click **Policy**.
+#. Click **Environments**.
 #. Select an environment.
-#. Click |webui policy_environments_delete|.
+#. Click **Delete**.
 
    .. image:: ../../images/step_manage_webui_policy_environment_delete.png

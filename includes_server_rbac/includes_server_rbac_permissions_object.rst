@@ -10,11 +10,11 @@ The |chef server| includes the following object permissions:
 
    * - Permission
      - Description
-   * - |webui permission delete|
+   * - **Delete**
      - |permission delete| This permission is required for any user who uses the ``knife [object] delete [object_name]`` argument to interact with objects on the |chef server|.
-   * - |webui permission grant|
-     - |permission grant| This permission is required for any user who configures permissions using the |webui admin| tab in the |webui| user interface.
-   * - |webui permission read|
+   * - **Grant**
+     - |permission grant| This permission is required for any user who configures permissions using the **Administration** tab in the |chef manage|.
+   * - **Read**
      - |permission read| This permission is required for any user who uses the ``knife [object] show [object_name]`` argument to interact with objects on the |chef server|.
-   * - |webui permission update|
+   * - **Update**
      - |permission update| This permission is required for any user who uses the ``knife [object] edit [object_name]`` argument to interact with objects on the |chef server| and for any |chef client| to save node data to the |chef server| at the conclusion of a |chef client| run.

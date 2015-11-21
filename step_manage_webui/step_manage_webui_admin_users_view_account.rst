@@ -3,5 +3,5 @@
 
 To view user account settings:
 
-#. Open **Chef Manage**.
-#. From the drop-down list next to your username, select |webui button_view_account|.
+#. Open the |chef manage|.
+#. From the drop-down list next to your username, select **My Profile**.

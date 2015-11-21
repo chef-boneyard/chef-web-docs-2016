@@ -3,10 +3,10 @@
 
 To view |chef client| runs still running:
 
-#. Open **Chef Manage**.
-#. Click |webui reports|.
-#. Click |webui reports_dashboard|.
-#. The |chef client| runs that are still running are shown under the |webui reports_name_counts| header:
+#. Open the |chef manage|.
+#. Click **Reports**.
+#. Click **Dashboard**.
+#. The |chef client| runs that are still running are shown under the **Run Counts** header:
 
    .. image:: ../../images/step_manage_webui_reports_dashboard_view_run_counts.png
 
