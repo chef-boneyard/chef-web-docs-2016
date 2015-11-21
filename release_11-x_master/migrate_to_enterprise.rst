@@ -21,12 +21,12 @@ An organization is the top-level entity in |chef server oec|. Hosted |chef serve
 
 To add an organization:
 
-#. Open |webui|.
-#. Click |webui admin|.
-#. Click |webui admin_orgs|.
-#. Click |webui admin_orgs_create|.
-#. In the |webui db_create_org| dialog box, enter the full and short names for the organization:
-#. Click |webui button_create_organization|.
+#. Open the |chef manage|.
+#. Click **Administration**.
+#. Click **Organizations**.
+#. Click **Create**.
+#. In the **Create an Organization** dialog box, enter the full and short names for the organization.
+#. Click **Create Organization**.
 
 Update client.rb
 =====================================================
