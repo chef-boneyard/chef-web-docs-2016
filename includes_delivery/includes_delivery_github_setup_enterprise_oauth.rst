@@ -53,7 +53,7 @@ To add the |github| OAuth app to |chef delivery|, log in to the |chef delivery| 
 
 Request Github Token
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Log in to the |chef delivery| server and run the following command:
+Log in to the |chef delivery| server and run the following command. Follow the URL given to finish authorizing |chef delivery| to |github|.
 
 **For Github Enterprise**
 
@@ -69,11 +69,10 @@ Log in to the |chef delivery| server and run the following command:
 
 Create a Project
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Before you begin you will need an existing |github| repo with at least one commit and also you have to grant
-admin rights to the ``chef-delivery`` account.
+Before you begin you will need an existing |github| repo with at least one commit and also you have to grant admin rights to the |chef delivery| account connected to |github|.
 
-#. Open your organization page in the |chef delivery| web UI and create a new project as normal.
-#. Next, select the **Github** option from the bar and enter the **Github Repo Owner**, **Github Repo Name**, and the branch you wish to use as your primary pipeline.
+#. Open your organization page in the |chef delivery| web UI and click the Add icon (plus sign) for **Add a New Project**. A text area opens.
+#. Select the **Github** option for **Source Code Provider** and enter the **Github Organization Name**, **Github Project Name** (your project name should match your GitHub repo name), and the branch you wish to use as your primary pipeline.
 #. Click **Save & Close**.
 
 There is currently no process for migrating an existing |chef delivery| project to one that is backed by |github|.
