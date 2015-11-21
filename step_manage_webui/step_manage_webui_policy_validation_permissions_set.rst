@@ -7,5 +7,5 @@ To set permissions list for a |chef validator| key:
 #. Click **Policy**.
 #. Click **Clients**.
 #. Select a |chef validator| key.
-#. Click the |webui tab_permissions| tab.
+#. Click the **Permissions** tab.
 #. For each group listed under **Name**, select or de-select the **Delete**, **Grant**, **Read**, and/or **Update** permissions.
