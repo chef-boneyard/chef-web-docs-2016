@@ -24,7 +24,7 @@ The following items are new for |chef server| 12:
 * **private-chef.rb is now called chef-server.rb** The name of the configuration file used by the |chef server| has been changed. A symlink from |private chef rb| to |chef server rb| is created during upgrades from older versions of the |chef server|.
 * **New setting for the default organization name** Use the ``default_orgname`` setting to ensure compatibility with |chef server osc| version 11.
 * **New settings for oc_chef_authz** The |service authz| service handles authorization requests to the |chef server|.
-* **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created.
+* **Organization policy changes** Users must be removed from the |webui group admins| security group before they can be removed from an organization. The |chef client| is not granted **Create**, **Delete**, or **Update** permissions to data bags when organizations are created.
 * **Administrators cannot be removed from organizations** The |chef server| requires that a member of an organization's |webui group admins| group cannot be removed from the organization without first being removed from the |webui group admins| group.
 * **New settings for managing LDAP encryption** New settings that manage LDAP encryption have been added, existing settings have been deprecated.
 * **New commands for managing keys** The following commands are new: ``add-client-key``, ``add-user-key``, ``delete-client-key``, ``delete-user-key``, ``list-client-keys``, and ``list-user-keys``. (These are preview commands, new as-of the |chef server| 12.0.3 release.)
@@ -345,7 +345,7 @@ oc_chef_authz
 
 Data Bag Policy Changes
 -----------------------------------------------------
-In previous versions of the |chef server|, the default permissions allowed data bags to be updated by the |chef client| during a |chef client| run. Starting with |chef server| version 12, the |chef client| is not granted |webui permission create|, |webui permission delete|, or |webui permission update| permissions to data bags when organizations are created. Use the |chef manage| or the ``knife-acl`` plugin (https://github.com/chef/knife-acl) to manage permissions to data bags as required. For example:
+In previous versions of the |chef server|, the default permissions allowed data bags to be updated by the |chef client| during a |chef client| run. Starting with |chef server| version 12, the |chef client| is not granted **Create**, **Delete**, or **Update** permissions to data bags when organizations are created. Use the |chef manage| or the ``knife-acl`` plugin (https://github.com/chef/knife-acl) to manage permissions to data bags as required. For example:
 
 .. code-block:: bash
 
@@ -359,7 +359,7 @@ For cookbooks that create or delete data bags:
    
    $ knife acl add containers data delete group clients
 
-For existing organizations that want to remove the |webui permission create|, |webui permission delete|, or |webui permission update| permissions from existing nodes:
+For existing organizations that want to remove the **Create**, **Delete**, or **Update** permissions from existing nodes:
 
 .. code-block:: bash
 
