@@ -76,9 +76,7 @@ Policy
 =====================================================
 .. include:: ../../includes_chef/includes_chef_policy.rst
 
-The |chef manage| provides ways for users to manage `data bags <http://docs.chef.io/server_manage_data_bags.html>`_, `environments <http://docs.chef.io/server_manage_environments.html>`_, `roles <http://docs.chef.io/server_manage_roles.html>`_, `cookbooks <http://docs.chef.io/server_manage_cookbooks.html>`_, and `clients <http://docs.chef.io/server_manage_clients.html>`_,
-
-`managing tags <http://docs.chef.io/server_manage_nodes.html#manage-tags>`_.
+The |chef manage| provides ways for users to manage `data bags <http://docs.chef.io/server_manage_data_bags.html>`_, `environments <http://docs.chef.io/server_manage_environments.html>`_, `roles <http://docs.chef.io/server_manage_roles.html>`_, `cookbooks <http://docs.chef.io/server_manage_cookbooks.html>`_, `clients <http://docs.chef.io/server_manage_clients.html>`_, and `managing tags <http://docs.chef.io/server_manage_nodes.html#manage-tags>`_.
 
 .. image:: ../../images/step_manage_webui_policy.png
 
