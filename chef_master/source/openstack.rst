@@ -293,13 +293,3 @@ For More Information ...
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_more_info.rst
 
-.. toctree::
-   :hidden:
-
-   openstack_architecture
-   openstack_cookbooks
-   openstack_deploy
-   openstack_develop
-   openstack_example
-   openstack_install
-   openstack_repository
