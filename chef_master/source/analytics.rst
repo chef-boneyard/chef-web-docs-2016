@@ -34,9 +34,22 @@ The following diagram shows the relationships between the various elements of |c
 
 The following sections discuss these elements (and their various components) in more detail.
 
+.. _analytics_integrations:
+
 Integrations
 =====================================================
-|chef analytics| can integrate with |slack| and |splunk|.
+|chef analytics| can integrate with |hipchat|, |slack| and |splunk| as
+well as send notifications via email and trigger webhooks.
+
+Email
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_email_notifications.rst
+
+|hipchat|
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_hipchat.rst
+
+.. _slack_integration:
 
 |slack|
 -----------------------------------------------------
@@ -45,6 +58,12 @@ Integrations
 |chef splunk|
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_splunk.rst
+
+Webhooks
+-----------------------------------------------------
+For an example of creating a notification that integrates with a remote
+service via webhooks, see :ref:`slack_integration`.
+
 
 Controls
 =====================================================
