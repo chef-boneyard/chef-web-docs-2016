@@ -1,4 +1,4 @@
-.. This is an included how-to. 
+.. This is an included how-to.
 
 .. To create a random user:
 
