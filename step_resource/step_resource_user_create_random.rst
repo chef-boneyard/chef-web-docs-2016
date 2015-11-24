@@ -1,12 +1,12 @@
-.. This is an included how-to. 
+.. This is an included how-to.
 
-.. To create a random user:
+.. To create a user named "random":
 
 .. code-block:: ruby
 
    user 'random' do
      supports :manage_home => true
-     comment 'Random User'
+     comment 'User Random'
      uid '1234'
      gid '1234'
      home '/home/random'

@@ -3001,7 +3001,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
-**Create a random user**
+**Create a user named "random"**
 
 .. include:: ../../step_resource/step_resource_user_create_random.rst
 
@@ -3012,9 +3012,6 @@ Examples
 **Create a system user with a variable**
 
 .. include:: ../../step_resource/step_resource_user_create_system_user_with_variable.rst
-
-
-
 
 
 windows_package

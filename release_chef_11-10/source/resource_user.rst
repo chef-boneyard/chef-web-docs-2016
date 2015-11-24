@@ -38,7 +38,7 @@ Examples
 =====================================================
 |generic resource statement|
 
-**Create a random user**
+**Create a user named "random"**
 
 .. include:: ../../step_resource/step_resource_user_create_random.rst
 
