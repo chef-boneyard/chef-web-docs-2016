@@ -2,14 +2,11 @@
 Glossary
 =====================================================
 
-
-
-
 **analytics rules**
    Event tracking during the |chef client| run that generates data made visible from |chef analytics|.
 
 **Berkshelf**
-   Manage a Cookbook or an Application's Cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
+   Manage a cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
 
 **Chef analytics**
    A feature of |chef| that provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred
@@ -21,10 +18,10 @@ Glossary
    A command-line tool that that runs |chef|. Also, the name of |chef| as it is installed on a node.
 
 **chef-repo**
-   *Deprecated*: The repository structure in which cookbooks are authored, tested, and maintained. A link to the example chef-repo is `here <https://github.com/chef/chef-repo>`_.
+   The repository structure in which cookbooks are authored, tested, and maintained. A link to the example chef-repo is `here <https://github.com/chef/chef-repo>`_.
 
 **Chef-DK**
-   A collection of tools to help development of Chef and Chef resources. It uses the omnibus installer to give you everything you need to get going in one package you can acquire it `here <https://downloads.chef.io/chef-dk/>`_.
+   A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can acquire it `here <https://downloads.chef.io/chef-dk/>`_.
 
 **Chef server**
    The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions.
@@ -38,7 +35,7 @@ Glossary
 **cookbook**
    A cookbook is the fundamental unit of configuration and policy distribution.
 
-**data_bag**
+**data bag**
    A data_bag is a global variable that is stored as |json| data and is accessible from a |chef server|.
 
 **definition**
@@ -63,7 +60,7 @@ Glossary
    A library allows arbitrary |ruby| code to be included in a cookbook, either as a way of extending the classes that are built-in to the |chef client| or by implementing entirely new functionality,
 
 **Management Console**
-   The web-based management console to manage RBAC, edit and delete nodes, and reset private keys. Keep up to date with what’s happening during chef client runs across an entire organization or on specific nodes.
+   The web-based management console to manage Role Based Access Control (RBAC), edit and delete nodes, and reset private keys. Keep up to date with what’s happening during chef client runs across an entire organization or on specific nodes.
 
 **node**
    A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|.
@@ -72,7 +69,7 @@ Glossary
    A history of the attributes, run-lists, and roles that were used to configure a node that is under management by |chef|.
 
 **ohai**
-   Ohai is a tool that is used to detect attributes on a node, and then provide these attributes to the |chef client| at the start of every |chef client| run.
+   Ohai is a tool that is used to detect attributes on a node, and then provide these attributes to the |chef client| at the start of every run.
 
 **organization**
    An organization is a single instance of a |chef server|, including all of the nodes that are managed by that |chef server| and each of the workstations that will run |knife| and access the |chef server| using the |api chef server|.
