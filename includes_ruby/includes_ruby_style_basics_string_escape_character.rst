@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the backslash character (``\``) as an escape character when quotes must appear within strings. For example:
+Use the backslash character (``\``) as an escape character when quotes must appear within strings. However, you do not need to escape single quotes inside double quotes. For example:
 
 .. code-block:: ruby
 
