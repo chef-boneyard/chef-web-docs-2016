@@ -25,7 +25,7 @@ Glossary
    A command-line tool that that runs |chef|. Also, the name of |chef| as it is installed on a node.
 
 **Chef-DK**
-   A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can acquire it `Chef Development Kit <https://downloads.chef.io/chef-dk/>`_.
+   A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can download it at `Chef Development Kit <https://downloads.chef.io/chef-dk/>`_.
 
 **chef-repo**
    The repository structure in which cookbooks are authored, tested, and maintained. Here's a link to the `example chef-repo <https://github.com/chef/chef-repo>`_.
@@ -79,7 +79,7 @@ Glossary
    A history of the attributes, run-lists, and roles that were used to configure a node that is under management by |chef|.
 
 **ohai**
-   Ohai is a tool that is used to detect attributes on a node, and then provide the attributes to the |chef client| at the start of every run.
+   Ohai is a tool that is used to detect the system configuration on a node, and then provide the attributes to the |chef client| at the start of every run.
 
 **organization**
    An organization is a single instance of a |chef server|, including all of the nodes that are managed by that |chef server| and each of the workstations that will run |knife| and access the |chef server| using the |api chef server|.
