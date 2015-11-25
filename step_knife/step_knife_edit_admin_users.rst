@@ -4,6 +4,6 @@ A user who belongs to the |webui group admins| group must be removed from the gr
 
 .. code-block:: bash
 
-   $ knife edit /group/admin.json
+   $ EDITOR=vi knife edit /groups/admins.json
 
 make the required changes, and then save the file.
