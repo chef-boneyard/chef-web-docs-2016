@@ -7,12 +7,12 @@ A resource declaration does not require the action to be specified because the |
 
    package 'monit'
 
-will install the ``monit`` package because the ``:install`` action is the default action for that resource.
+will install the ``monit`` package because the ``:install`` action is the default action for the |resource package| resource.
 
-However, if readability of code is desired, such as ensuring a reader understands what the default action might be for a custom resource in a community cookbook, specifying the resource action is recommended:
+However, if readability of code is desired, such as ensuring that a reader understands what the default action is for a custom resource or stating the action for a resource whose default may not be immediately obvious to the reader, specifying the default action is recommended:
 
 .. code-block:: ruby
 
-   package 'monit' do
-     action :install
+   ohai ‘apache_modules' do
+     action :reload
    end
