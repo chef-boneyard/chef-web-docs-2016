@@ -151,7 +151,7 @@ File Modes
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_patterns_file_modes.rst
 
-Always Specify Action
+Specify Resource Action?
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_style_patterns_always_specify_action.rst
 
