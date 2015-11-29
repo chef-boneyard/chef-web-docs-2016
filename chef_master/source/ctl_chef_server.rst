@@ -229,6 +229,8 @@ org-user-remove
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
 
+.. warning:: .. include:: ../../step_knife/step_knife_edit_admin_users.rst
+
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst
