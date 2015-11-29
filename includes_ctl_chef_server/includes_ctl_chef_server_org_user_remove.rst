@@ -5,4 +5,3 @@
 
 The ``org-user-remove`` subcommand is used to remove a user from an organization.
 
-.. warning:: .. include:: ../../step_knife/step_knife_edit_admin_users.rst
