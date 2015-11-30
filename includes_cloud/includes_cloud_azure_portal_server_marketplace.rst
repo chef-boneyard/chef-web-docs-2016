@@ -17,31 +17,33 @@ Before getting started, you will need a functioning workstation. Install the `Ch
 
 #. Select the **Chef Server 12** offering that is appropriate for your size. 
 
-   .. note:: The |chef server| is available on the |azure marketplace| in 25, 50, 100, and 250 licensed images, as well as a "Bring Your Own License" image.
+   .. note:: The |chef server| is available on the |azure marketplace| in 25, 50, 100, 150, 200 and 250 licensed images, as well as a "Bring Your Own License" image.
 
 #. Click **Create** and follow the steps to launch the |chef server|, providing a host name, user name, password or |ssh| key, and any additional information required. You will also select your deployment model here.
 
-   .. note:: If you are using the "Resource Manager" deployment model, you will need to create a **DNS Name** label for the instance. Create a **DNS Name** label by selecting the **Public IP Address** setting of the virtual machine, and then add it under **Settings**, then  **Configuration**, and then **DNS Name**. Click **Save** in the top pane to apply the changes. Use the full |fqdn| when running the ``chef-setup`` command.
+   .. note:: If you are using the "Resource Manager" deployment model, you will need to create a **DNS Name** label for the instance. Create a **DNS Name** label by selecting the **Public IP Address** setting of the virtual machine, and then add it under **Settings**, then  **Configuration**, and then **DNS Name**. Click **Save** in the top pane to apply the changes. Use the full |fqdn| when running the ``chef-marketplace-ctl hostname`` command.
 
 #. Once the virtual machine is launched, you will need to create an account to use with the |chef manage|. To do this, open an |ssh| connection to the host using the user name and password (or |ssh| key) provided when you launch the virtual machine.
 
-#. Once logged in, run the following command:
+#. Once logged in, run the following commands:
+
+   .. code-block:: bash
+   
+      $ sudo chef-marketplace-ctl hostname <fqdn>
+
+   where ``fqdn`` is the fully qualified domain name of the machine.
 
    .. code-block:: bash
 
-      $ sudo chef-setup -u <username> -p <password> -d <fqdn>
-	
-   where ``<username>`` and ``<password>`` equal the user name and password you wish to use with the |chef manage| and ``<fqdn>`` is the external DNS name of the virtual machine. The password must be at least 6 characters. 
+      $ sudo chef-server-ctl marketplace-setup
+
+   the setup command will prompt you for the appropriate information needed to set up your chef server (e.g. username, password, organzation, etc.). You will also be prompted to accept the license agreement.
 
 #. Accept the **License Agreement**.
 
-#. The ``chef-setup`` command should return success. Navigate in a web browser to the appropriate URL of the |chef server|. Typically this is in the form of ``https://<vm-name>.cloudapp.net``, where ``<vm-name>`` is the name of the |azure| virtual machine.
+#. The ``chef-server-ctl marketplace setup`` command should return success. Navigate in a web browser to the appropriate URL of the |chef server| outputted by the setup command.
 
-#. Sign in to the |chef manage| with with user name and password created in the previous step. 
-
-#. The |chef manage| will then **Create** a new organization. Click **Create Organization** and complete the form. 
-
-#. After the organization is created, download the **Starter Kit**. 
+#. The marketplace-setup command should supply a link to the starter kit, which is a zip file that contains various configuration files for the workstation, including the user key required for authentication to the |chef server| and the validation key used to bootstrap nodes with the |chef server|. Follow the link that is provided and download the starter kit.
 
 #. Extract the starter kit zip file downloaded. Open a command prompt and change into the ``chef-repo`` directory extracted from the starter kit.
 
