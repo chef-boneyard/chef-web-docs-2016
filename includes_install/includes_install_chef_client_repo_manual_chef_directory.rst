@@ -15,9 +15,7 @@ To create the |chef repo hidden| directory:
 
    .. code-block:: bash
 
-      sudo mkdir -p ~/chef-repo/.chef
-
-   .. note:: ``sudo`` is not always required, but it often is.
+      mkdir -p ~/chef-repo/.chef
 
 #. After the |chef repo hidden| directory has been created, the following folder structure will be present on the local machine::
 
