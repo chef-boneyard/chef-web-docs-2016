@@ -9,6 +9,6 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl int name_of_service
+   $ chef-server-ctl int SERVICE_NAME
 
-where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand.
+where ``SERVICE_NAME`` represents the name of any service that is listed after running the ``service-list`` subcommand.

@@ -13,9 +13,9 @@ and will return the status for all services. Status can be returned for individu
 
 .. code-block:: bash
 
-   $ chef-server-ctl status name_of_service
+   $ chef-server-ctl status SERVICE_NAME
 
-where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. 
+where ``SERVICE_NAME`` represents the name of any service that is listed after running the ``service-list`` subcommand. 
 
 When service status is requested, the output should be similar to:
 
