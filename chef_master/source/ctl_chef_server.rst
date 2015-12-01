@@ -4,25 +4,66 @@
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server.rst
 
+
+Backup / Restore
+=====================================================
+Use the following commands to manage backups of |chef server| data, and then to restore those backups.
+
+backup
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup_options.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup_syntax.rst
+
+restore
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_restore.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_restore_options.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_restore_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl restore /path/to/tar/archive.tar.gz
+
+
 backup-recover
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup_recover.rst
+
 
 cleanse
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse.rst
 
+
 gather-logs
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_gather_logs.rst
+
 
 ha-status
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_ha_status.rst
 
+
 help
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_help.rst
+
 
 install
 =====================================================
@@ -125,9 +166,11 @@ list-user-keys
 
 .. include:: ../../step_ctl_chef_server/step_ctl_chef_server_list_user_keys.rst
 
+
 master-recover
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_master_recover.rst
+
 
 org-create
 =====================================================
@@ -159,6 +202,7 @@ org-create
 
    $ chef-server-ctl org-create dev Development --association_user grantmc
 
+
 org-delete
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
@@ -177,6 +221,7 @@ org-delete
 
    $ chef-server-ctl org-delete pedant-testing-org
 
+
 org-list
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
@@ -188,6 +233,7 @@ org-list
 **Options**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list_options.rst
+
 
 org-show
 =====================================================
@@ -250,13 +296,27 @@ password
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_password.rst
 
+psql
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_psql.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_psql_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_psql_options.rst
+
 reconfigure
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_reconfigure.rst
 
+
 reindex
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_reindex.rst
+
 
 show-config
 =====================================================
@@ -274,9 +334,11 @@ show-config
 ..
 ..
 
+
 uninstall
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_uninstall.rst
+
 
 upgrade
 =====================================================
@@ -291,6 +353,7 @@ upgrade
 .. note:: Options for the ``upgrade`` subcommand may only be used when upgrading from |chef server osc| 11 to |chef server| 12.
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_options.rst
+
 
 user-create
 =====================================================
@@ -337,6 +400,7 @@ user-delete
 
    $ chef-server-ctl user-delete jane_doe
 
+
 user-edit
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst
@@ -368,6 +432,7 @@ user-list
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list_options.rst
 
+
 user-show
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show.rst
@@ -379,6 +444,7 @@ user-show
 **Options**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show_options.rst
+
 
 Service Subcommands
 =====================================================
