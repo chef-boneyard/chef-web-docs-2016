@@ -12,6 +12,7 @@ The following items are new for |chef server| 12.2:
 * **Solr to Solr4 settings** Built-in transition for |apache solr| memory and |jvm| settings from |chef server oec| to |chef server| version 12.
 * **Configurable Postgresql** Postgresql can be configured for an external database.
 * **New endpoints for the Chef server API** Endpoints have been added to the |api chef server|: ``DELETE /policy_groups``.
+* **New subcommmands for chef-server-ctl** Use the ``backup`` and ``restore`` subcommmands to back up and restore |chef server| data. Use the ``psql`` subcommmand to log into a |postgresql| database that is associated with a service running in the |chef server| configuration.
 
 .. 
 .. when Chef server 12.2 is released, uncomment the "Solr => Solr 4 Changes" section in chef_master/upgrade_server_notes.rst
@@ -28,6 +29,54 @@ External |postgresql|
 Settings
 -----------------------------------------------------
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql_settings.rst
+
+
+Backup / Restore
+=====================================================
+Use the following commands to manage backups of |chef server| data, and then to restore those backups.
+
+backup
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup_options.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_backup_syntax.rst
+
+restore
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_restore.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_restore_options.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_restore_syntax.rst
+
+**Examples**
+
+.. code-block:: bash
+
+   $ chef-server-ctl restore /path/to/tar/archive.tar.gz
+
+
+psql
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_psql.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_psql_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_psql_options.rst
 
 |api chef server| Endpoints
 =====================================================
