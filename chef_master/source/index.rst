@@ -327,6 +327,7 @@ Cookbooks
    plugin_knife_vcloud
    plugin_knife_windows
    policy
+   proxies
    provisioning
    push_jobs
    quick_start
