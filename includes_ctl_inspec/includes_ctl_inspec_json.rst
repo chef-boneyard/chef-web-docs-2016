@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``inspec json`` to read all tests at the specified path, and then generate a |json| profile to standard output (stdout) or printed to the command shell.
+Use ``inspec json`` to read all tests at the specified path, and then generate a |json| summary to standard output (stdout) or printed to the command shell.

@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``inspec check`` to run all tests at the specified path.
+Use ``inspec check`` to verify all tests at the specified path.
