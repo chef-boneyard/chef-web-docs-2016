@@ -9,9 +9,9 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl stop name_of_service
+   $ chef-server-ctl stop SERVICE_NAME
 
-where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. When a service is successfully stopped the output should be similar to:
+where ``SERVICE_NAME`` represents the name of any service that is listed after running the ``service-list`` subcommand. When a service is successfully stopped the output should be similar to:
 
 .. code-block:: bash
 
