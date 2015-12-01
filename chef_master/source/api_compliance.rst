@@ -11,6 +11,7 @@ About API Requests
 Some notes about API requests:
 
 * Examples in this document use ``-u API_KEY`` to represent the retrieved API key. A retrieved API key is similar to: ``VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==``. Replace the ``API_KEY`` with the API key that is assigned to your organization.
+* To generate a new ``API_KEY``, see the /oauth/token endpoint documentation.
 * When running commands as an administrator and if the ``API_KEY`` is not used, some requests to the |api compliance| will return ``403`` (forbidden) if the user making the requests does not have appropriate permissions.
 * When |json| is part of a request to the |api compliance|, the quote marks in the |json| string **MUST** be escaped using a backslash (``\``) character. For example:
 
@@ -87,7 +88,7 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -X POST https://hostname/api/oauth/token -u ADMIN_KEY -d "grant_type=client_credentials"
+   $ curl -X POST https://hostname/api/oauth/token -u USERNAME:PASSWORD -d "grant_type=client_credentials"
 
 **Response**
 
