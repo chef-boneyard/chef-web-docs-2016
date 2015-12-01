@@ -11,7 +11,7 @@ For the quickest way to get started using |chef|:
 
       $ /opt/chefdk/embedded/bin/ruby
 
-#. Generate a cookbook: 
+#. Generate a cookbook:
 
    .. code-block:: bash
 
