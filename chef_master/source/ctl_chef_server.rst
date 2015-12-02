@@ -49,6 +49,14 @@ cleanse
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse.rst
 
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse_options.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse_syntax.rst
+
 
 gather-logs
 =====================================================
