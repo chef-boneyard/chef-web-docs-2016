@@ -26,6 +26,8 @@ External |postgresql|
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql.rst
 
+.. note:: The following ``chef-server-ctl`` subcommands for managing services are disabled when an external |postgresql| database is configured for the |chef server|: ``hup``, ``int``, ``kill``, ``once``, ``restart``, ``start``, ``stop``, ``tail``, and ``term``.
+
 Settings
 -----------------------------------------------------
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql_settings.rst
