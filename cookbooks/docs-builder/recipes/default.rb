@@ -48,7 +48,7 @@ directory '/srv'
 
 aws_ebs_volume "build_space" do
   action :attach
-  volume_id 'vol-c2f12d36'
+  volume_id 'vol-7c6dac8b'
   device '/dev/sdi'
   aws_access_key node['docs-builder']['build_aws_access_key']
   aws_secret_access_key node['docs-builder']['build_aws_secret_access_key']
