@@ -211,26 +211,36 @@ server_12-0:
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
 
-always-run:
+make-raml-dir:
+	mkdir -p raml
 
 raml/chef-server:
 	cd raml; git clone git@github.com:chef/chef-server
 
-chef-server-raml: raml/chef-server always-run
+chef-server-raml: raml/chef-server
 	cd raml/chef-server; git checkout jk/moar-raml; git pull
 	cd raml/chef-server/src/oc_erchef/raml-docs; make
 
 raml/delivery:
 	cd raml; git clone git@github.com:chef/delivery
 
-delivery-raml: raml/delivery always-run
+delivery-raml: raml/delivery
 	cd raml/delivery; git pull
 	cd raml/delivery/doc/api; make
+
+raml/chef-analytics:
+	cd raml; git clone git@github.com:chef/chef-analytics
+
+chef-analytics-raml: raml/chef-analytics
+	cd raml/chef-analytics; git pull
+	cd raml/chef-analytics/src/analytics_docs; make; grunt raml2html
 
 # Creates:
 # - raml/chef-server/src/oc_erchef/raml-docs/index.html
 # - raml/delivery/doc/api/index.html
-raml: chef-server-raml delivery-raml
+# - raml/chef-analytics/src/analytics_docs/build/index.html
+
+raml: make-raml-dir chef-server-raml delivery-raml chef-analytics-raml
 
 #
 # OLD BUILDS DO NOT BUILD
