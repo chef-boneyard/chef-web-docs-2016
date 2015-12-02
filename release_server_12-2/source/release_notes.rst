@@ -13,6 +13,7 @@ The following items are new for |chef server| 12.2:
 * **Configurable Postgresql** Postgresql can be configured for an external database.
 * **New endpoints for the Chef server API** Endpoints have been added to the |api chef server|: ``DELETE /policy_groups``.
 * **New subcommmands for chef-server-ctl** Use the ``backup`` and ``restore`` subcommmands to back up and restore |chef server| data. Use the ``psql`` subcommmand to log into a |postgresql| database that is associated with a service running in the |chef server| configuration.
+* **New options for chef-server-ctl reindex** The ``reindex`` subcommand has new options: ``--all-orgs`` (reindex all organizations), ``--disable-api`` (disable the |api chef server| during reindexing), ``--with-timing`` (print timing information), and ``--wait`` (wait for reindex queue to clear before exiting).
 
 Solr => Solr 4 Changes
 =====================================================
@@ -75,6 +76,10 @@ psql
 **Options**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_psql_options.rst
+
+reindex Options
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_reindex_options.rst
 
 |api chef server| Endpoints
 =====================================================
