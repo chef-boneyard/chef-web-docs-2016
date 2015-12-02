@@ -3,10 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This subcommand has the following syntax:
+This subcommand has the following options:
 
-.. code-block:: bash
-
-   $ chef-server-ctl install name_of_premium_feature (options)
-
-where ``name_of_premium_feature`` represents the command line value associated with the premium feature.
+``--with-external``
+   Use to specify that |chef server| data on an external |postgresql| database should be removed.

@@ -49,6 +49,14 @@ cleanse
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse.rst
 
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse_options.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_cleanse_syntax.rst
+
 
 gather-logs
 =====================================================
@@ -449,6 +457,8 @@ user-show
 Service Subcommands
 =====================================================
 The |chef server| has a built in process supervisor, which ensures that all of the required services are in the appropriate state at any given time. The supervisor starts two processes per service.
+
+.. warning:: The following commands are disabled when an external |postgresql| database is configured for the |chef server|: ``hup``, ``int``, ``kill``, ``once``, ``restart``, ``start``, ``stop``, ``tail``, and ``term``.
 
 hup
 -----------------------------------------------------

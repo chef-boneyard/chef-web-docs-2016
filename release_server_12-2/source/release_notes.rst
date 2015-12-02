@@ -14,10 +14,6 @@ The following items are new for |chef server| 12.2:
 * **New endpoints for the Chef server API** Endpoints have been added to the |api chef server|: ``DELETE /policy_groups``.
 * **New subcommmands for chef-server-ctl** Use the ``backup`` and ``restore`` subcommmands to back up and restore |chef server| data. Use the ``psql`` subcommmand to log into a |postgresql| database that is associated with a service running in the |chef server| configuration.
 
-.. 
-.. when Chef server 12.2 is released, uncomment the "Solr => Solr 4 Changes" section in chef_master/upgrade_server_notes.rst
-.. 
-
 Solr => Solr 4 Changes
 =====================================================
 .. include:: ../../includes_upgrade/includes_upgrade_12-2_solr_to_solr4.rst
@@ -25,6 +21,8 @@ Solr => Solr 4 Changes
 External |postgresql|
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql.rst
+
+.. note:: The following ``chef-server-ctl`` subcommands for managing services are disabled when an external |postgresql| database is configured for the |chef server|: ``hup``, ``int``, ``kill``, ``once``, ``restart``, ``start``, ``stop``, ``tail``, and ``term``.
 
 Settings
 -----------------------------------------------------
