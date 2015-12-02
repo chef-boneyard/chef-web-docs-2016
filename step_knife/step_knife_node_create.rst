@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To add a node, enter:
+To add a node named ``node1``, enter:
 
 .. code-block:: bash
 

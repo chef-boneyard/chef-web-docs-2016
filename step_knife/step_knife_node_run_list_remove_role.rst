@@ -5,4 +5,4 @@ To remove a role from a run-list, enter:
 
 .. code-block:: bash
 
-   $ knife node run_list remove node 'role[ROLE_NAME]'
+   $ knife node run_list remove NODE_NAME 'role[ROLE_NAME]'

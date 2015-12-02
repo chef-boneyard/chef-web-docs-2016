@@ -5,4 +5,4 @@ To show basic information about a node, truncated and nicely formatted:
 
 .. code-block:: bash
 
-   knife node show <node_name>
+   knife node show NODE_NAME
