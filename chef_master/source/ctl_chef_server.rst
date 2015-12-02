@@ -325,6 +325,9 @@ reindex
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_reindex.rst
 
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_reindex_options.rst
 
 show-config
 =====================================================
