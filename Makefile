@@ -211,16 +211,26 @@ server_12-0:
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
 
-RAML_DIR=chef-server/src/oc_erchef/raml-docs
+always-run:
 
-chef-server:
-	git clone git@github.com:chef/chef-server.git
+raml/chef-server:
+	cd raml; git clone git@github.com:chef/chef-server
 
-update-chef-server:
-	cd chef-server; git checkout jk/moar-raml; git pull
+chef-server-raml: raml/chef-server always-run
+	cd raml/chef-server; git checkout jk/moar-raml; git pull
+	cd raml/chef-server/src/oc_erchef/raml-docs; make
 
-raml: chef-server update-chef-server
-	cd $(RAML_DIR); make
+raml/delivery:
+	cd raml; git clone git@github.com:chef/delivery
+
+delivery-raml: raml/delivery always-run
+	cd raml/delivery; git pull
+	cd raml/delivery/doc/api; make
+
+# Creates:
+# - raml/chef-server/src/oc_erchef/raml-docs/index.html
+# - raml/delivery/doc/api/index.html
+raml: chef-server-raml delivery-raml
 
 #
 # OLD BUILDS DO NOT BUILD
