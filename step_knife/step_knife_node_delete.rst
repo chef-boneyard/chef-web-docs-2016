@@ -1,8 +1,8 @@
 .. This is an included how-to. 
 
 
-.. To delete a node called "dev", enter:
+To delete a node named ``node1``, enter:
 
 .. code-block:: bash
 
-   $ knife node delete node_name
+   $ knife node delete node1
