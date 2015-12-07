@@ -4,6 +4,23 @@ Monitor
 
 .. include:: ../../includes_server_monitor/includes_server_monitor.rst
 
+Top Priority Monitoring Focus
+=====================================================
+
+The following items are the top priority for monitoring.
+If you monitor no other aspect of your Chef Server systems,
+these are the two items to track. In our experience,
+running out of disk space is the number one cause of
+Chef Server failure.
+
+Disks
+-----------------------------------------------------
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
+
+HA Specific
+-----------------------------------------------------
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_ha.rst
+
 Application Checks
 =====================================================
 .. include:: ../../includes_server_monitor/includes_server_monitor_application.rst
@@ -74,6 +91,3 @@ Nodes, Workstations
 =====================================================
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_client.rst
 
-Disks
-=====================================================
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
