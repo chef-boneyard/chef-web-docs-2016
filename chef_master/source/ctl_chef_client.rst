@@ -71,6 +71,10 @@ Elevate Commands
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root_use_attributes.rst
 
+Configuring a Proxy Server
+=====================================================
+See the :doc:`proxies </proxies>` documentation for information on how to configure chef-client to use a proxy server.
+
 Examples
 =====================================================
 

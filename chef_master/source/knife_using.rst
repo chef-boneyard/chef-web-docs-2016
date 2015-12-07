@@ -45,3 +45,7 @@ Authenticated API Requests
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
+
+Configuring a Proxy Server
+=====================================================
+See the :doc:`proxies </proxies>` documentation for information on how to configure Knife to use a proxy server.
