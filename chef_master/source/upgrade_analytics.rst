@@ -14,30 +14,30 @@ This section describes the prereqs for the upgrade
 
 Standalone
 =====================================================
-This section describes the upgrade process for a standalone configuraiton:
+This section describes the upgrade process for a standalone configuration:
 
-#. Stop the machine:
+#. Stop the services:
 
    .. code-block:: bash
-      
+
       $ opscode-analytics-ctl stop
 
 #. Run |debian dpkg| or |rpm|. For |debian dpkg|:
 
    .. code-block:: bash
-      
+
       $ dpkg -i /path/to/opscode-analytics-<version>.deb
-   
+
    For |rpm|:
 
    .. code-block:: bash
-      
+
       $ rpm -Uvh /path/to/opscode-analytics-<version>.rpm
 
 #. Run the pre-flight check:
 
    .. code-block:: bash
-      
+
       $ opscode-analytics-ctl preflight-check
 
 #. Copy in the `/etc/opscode-analytics` directory from the Chef Server
@@ -48,15 +48,14 @@ This section describes the upgrade process for a standalone configuraiton:
 
       $ opscode-analytics-ctl stop
 
-#. Reconfigure the server:
+#. Reconfigure the services:
 
    .. code-block:: bash
 
       $ opscode-analytics-ctl reconfigure
 
-#. Restart the machine:
+#. Start the services:
 
    .. code-block:: bash
-      
-      $ opscode-analytics-ctl start
 
+      $ opscode-analytics-ctl start
