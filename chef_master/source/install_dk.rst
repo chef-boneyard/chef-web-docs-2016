@@ -36,7 +36,7 @@ The following items are prerequisites for installing the |chef client| on a work
 * A computer running |unix|, |linux|, |mac os x| or |windows|
 * |apple xcode| is installed on machines running |mac os x|; this application can be downloaded from |apple| for free
 * A |github| account; the |chef repo| must be downloaded and/or cloned from |github|
-* Access to a |chef server|: a hosted |chef server| account or an on-premises |chef server|
+* Access to a |chef server|: a hosted |chef server| account or an on-premises |chef server|. If you have a proxy, information on configuring |chef client| to work with it is :doc:`here </proxies>`
 * Access to a machine (physical or virtual) that can be used as the first node; the |fqdn| or IP address for a machine is required by the |subcommand knife bootstrap| command during a bootstrap operation
 
 Get Package, Run Installer
@@ -61,13 +61,13 @@ PowerShell
 
 Install |git|
 -----------------------------------------------------
-An open source distributed version control system called |git| must be installed before the |chef repo| can be cloned to the workstation from |github|. 
+An open source distributed version control system called |git| must be installed before the |chef repo| can be cloned to the workstation from |github|.
 
 To install |git|:
 
 #. Go to the following URL: https://help.github.com/articles/set-up-git.
-   
-#. Follow the directions, install |git| (http://git-scm.com/downloads), and then complete the remaining configuration steps on that page. 
+
+#. Follow the directions, install |git| (http://git-scm.com/downloads), and then complete the remaining configuration steps on that page.
 
 .. note:: It is not necessary to create or fork a repository in order to clone the |chef repo| from |github|.
 
