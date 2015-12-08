@@ -283,6 +283,7 @@ The following resources are built-in to the |chef client|:
 * mount
 * ohai
 * openbsd_package (based on the package resource)
+* osx_profile
 * package
 * pacman_package (based on the package resource)
 * paludis_package (based on the package resource)
@@ -1545,7 +1546,7 @@ Properties
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_http_request_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1920,6 +1921,53 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_openbsd_package_install.rst
+
+
+osx_profile
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_osx_profile.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_osx_profile_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_osx_profile_actions.rst
+
+Properties
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_osx_profile_attributes.rst
+
+..
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_osx_profile_providers.rst
+..
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**One liner to install profile from cookbook file**
+
+.. include:: ../../step_resource/step_resource_osx_profile_install_file_oneline.rst
+
+**Install profile from cookbook file**
+
+.. include:: ../../step_resource/step_resource_osx_profile_install_file.rst
+
+**Install profile from a hash**
+
+.. include:: ../../step_resource/step_resource_osx_profile_install_hash.rst
+
+**Remove profile using identifier in resource name**
+
+.. include:: ../../step_resource/step_resource_osx_profile_remove_by_name.rst
+
+**Remove profile by identifier and user friendly resource name**
+
+.. include:: ../../step_resource/step_resource_osx_profile_remove_by_identifier.rst
 
 
 
