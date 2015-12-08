@@ -1,5 +1,5 @@
 =====================================================
-About the |chef dk_title| 
+About the |chef dk_title|
 =====================================================
 
 .. include:: ../../includes_chef_dk/includes_chef_dk.rst
@@ -48,7 +48,7 @@ The following resources are part of |chef provisioning| and are now available in
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine_execute.html">machine_execute</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine_file.html">machine_file</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://docs.chef.io/release/devkit_1-0/resource_machine_image.html">machine_image</a> </br>
-   
+
 The following resources are available in the |chef dk| and may be used as part of |chef provisioning|:
 
 .. raw:: html
@@ -250,6 +250,7 @@ The following tools have been developed by members of the |chef| community. Thes
    policy
    provisioning
    provisioning_aws
+   proxies
    recipes
    release_notes
    resource_apt_package
