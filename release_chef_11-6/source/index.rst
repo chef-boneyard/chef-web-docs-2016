@@ -1,12 +1,12 @@
 =====================================================
-About |chef client| 11.6  
+About |chef client| 11.6
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 View the :doc:`release notes </release_notes>` for |chef client| 11.6.
 
-Getting Started 
+Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>`
 
@@ -31,7 +31,7 @@ The Workstation
 
 
 
-The Nodes 
+The Nodes
 =====================================================
 **The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | :doc:`The chef-client Run </nodes>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </debug>`
 
@@ -122,6 +122,7 @@ Cookbooks
    knife_xargs
    libraries
    nodes
+   proxies
    recipes
    release_notes
    resource

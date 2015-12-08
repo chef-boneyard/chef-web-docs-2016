@@ -1,12 +1,12 @@
 =====================================================
-About |chef client| 11.4  
+About |chef client| 11.4
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 View the :doc:`release notes </release_notes>` for |chef client| 11.4.
 
-Getting Started  
+Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>`
 
@@ -57,7 +57,7 @@ Cookbooks
 
 **Resources and Providers:** :doc:`About Resources and Providers </resource>` | :doc:`Common Functionality </resource_common>` --- **Resources:** :doc:`apt_package </resource_apt_package>` | :doc:`bash </resource_bash>` | :doc:`breakpoint </resource_breakpoint>` | :doc:`chef_gem </resource_chef_gem>` | :doc:`chef_handler </resource_chef_handler>` | :doc:`cookbook_file </resource_cookbook_file>` | :doc:`cron </resource_cron>` | :doc:`deploy </resource_deploy>` | :doc:`directory </resource_directory>` | :doc:`dpkg_package </resource_dpkg_package>` | :doc:`easy_install_package </resource_easy_install_package>` | :doc:`env </resource_env>` | :doc:`erl_call </resource_erlang_call>` | :doc:`execute </resource_execute>` | :doc:`file </resource_file>` | :doc:`gem_package </resource_gem_package>` | :doc:`git </resource_git>` | :doc:`group </resource_group>` | :doc:`http_request </resource_http_request>` | :doc:`ifconfig </resource_ifconfig>` | :doc:`link </resource_link>` | :doc:`log </resource_log>` | :doc:`mdadm </resource_mdadm>` | :doc:`mount </resource_mount>` | :doc:`ohai </resource_ohai>` | :doc:`package </resource_package>` | :doc:`registry_key </resource_registry_key>` | :doc:`remote_directory </resource_remote_directory>` | :doc:`remote_file </resource_remote_file>` | :doc:`route </resource_route>` | :doc:`rpm_package </resource_rpm_package>` | :doc:`ruby_block </resource_ruby_block>` | :doc:`script </resource_script>` | :doc:`service </resource_service>` | :doc:`subversion </resource_subversion>` | :doc:`template </resource_template>` | :doc:`user </resource_user>` | :doc:`yum_package </resource_yum>`
 
-.. Hide the TOC from this file. 
+.. Hide the TOC from this file.
 
 .. toctree::
    :hidden:
@@ -120,6 +120,7 @@ Cookbooks
    knife_using
    libraries
    nodes
+   proxies
    recipes
    release_notes
    resource
@@ -177,4 +178,3 @@ Cookbooks
    server_components
    templates
    workstation
-
