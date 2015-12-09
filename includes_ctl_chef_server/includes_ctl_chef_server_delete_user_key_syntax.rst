@@ -7,6 +7,6 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ chef-server-ctl delete-client-key USER_NAME KEY_NAME
+   $ chef-server-ctl delete-user-key USER_NAME KEY_NAME
 
 .. warning:: The parameters for this subcommand must be in the order specified above.
