@@ -13,6 +13,6 @@ However, if readability of code is desired, such as ensuring that a reader under
 
 .. code-block:: ruby
 
-   ohai ‘apache_modules' do
+   ohai 'apache_modules' do
      action :reload
    end
