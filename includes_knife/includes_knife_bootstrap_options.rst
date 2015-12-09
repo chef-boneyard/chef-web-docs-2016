@@ -53,7 +53,7 @@ This subcommand has the following options:
 
    |hint_file| |hint_name| |hint_multiple|
 
-``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
+``-i IDENTITY_FILE``, ``--ssh-identity-file IDENTITY_FILE``
    |identity-file|
 
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``

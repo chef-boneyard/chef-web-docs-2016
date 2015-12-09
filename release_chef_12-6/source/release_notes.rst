@@ -10,9 +10,9 @@ The following items are new for |chef client| 12.6 and/or are changes from previ
 
 * **New ksh resource** The |resource script_ksh| resource is added and is based on the |resource script| resource.
 * **New metadata.rb settings** The |metadata rb| file has settings for ``chef_version`` and ``ohai_version`` that allow ranges to be specified that declare the supported versions of the |chef client| and |ohai|.
-* **New openbsd_package resource** Use the |resource package_openbsd| resource to install packages on the |open bsd| platform.
-* **xxxxx** xxxxx
-
+* **dsc_resource supports reboots** The |resource dsc_resource| resource supports immediate and queued reboots. This uses the |resource reboot| resource and its ``:reboot_now`` or ``:request_reboot`` actions.
+* **New and changed knife bootstrap options** The ``--identify-file`` option for the |knife bootstrap| subcommand is renamed to ``--ssh-identity-file``; the ``--sudo-preserve-home`` is new.
+* **New installer types for the windows_package resource** The |resource package_windows| resource now supports the following installer types: ``:custom``, ``:inno`` (|inno setup|), ``:installshield`` (|installshield|), ``:msi`` (|microsoft installer package|), ``:nsis`` (|nsis|), ``:wise`` (|wise|). Prior versions of |chef| supported only ``:msi``.
 
 ksh
 -----------------------------------------------------
@@ -29,34 +29,6 @@ Actions
 Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_ksh_attributes.rst
-
-
-chocolatey_package
------------------------------------------------------
-
-.. include:: ../../includes_resources/includes_resource_package_chocolatey.rst
-
-.. note:: ../../includes_notes/includes_notes_resource_based_on_package.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_chocolatey_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_chocolatey_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_chocolatey_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**Install a package**
-
-.. include:: ../../step_resource/step_resource_chocolatey_package_install.rst
-
 
 
 New metadata.rb Settings
@@ -82,15 +54,14 @@ The following settings are new for |metadata rb|:
 .. note:: These settings are not visible in |supermarket|.
 
 
-
-knife bootstrap option
+knife bootstrap Options
 -----------------------------------------------------
 The following option is new for ``knife bootstrap``:
 
 ``--sudo-preserve-home``
    Use to preserve the non-root user's ``HOME`` environment.
 
-
+The ``--identify-file`` option is now ``--ssh-identify-file``.
 
 
 Changelog

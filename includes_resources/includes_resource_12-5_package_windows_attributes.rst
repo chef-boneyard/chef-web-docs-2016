@@ -20,8 +20,7 @@ This resource has the following properties:
    * - ``installer_type``
      - **Ruby Type:** Symbol
 
-       |type package| Possible values: ``:custom``, ``:inno`` (|inno setup|), ``:installshield`` (|installshield|), ``:msi`` (|microsoft installer package|), ``:nsis`` (|nsis|), ``:wise`` (|wise|).
-
+       |type package| Possible values: ``:msi``.
    * - ``notifies``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
