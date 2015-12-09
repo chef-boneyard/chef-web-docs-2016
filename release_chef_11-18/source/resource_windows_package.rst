@@ -6,6 +6,8 @@ windows_package
 
 .. include:: ../../includes_resources/includes_resource_package_windows.rst
 
+.. note:: This resource does not support downloading packages from the network. Please use the |resource remote_file| resource for this purpose. Then, install packages locally using the source property to point at the package location on disk.
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_windows_syntax.rst
