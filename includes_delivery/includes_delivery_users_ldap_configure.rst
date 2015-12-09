@@ -10,16 +10,16 @@ To configure LDAP for |chef delivery|:
 
       "delivery": {
         "ldap": {
-             "ldap_attr_login": "sAMAccountName"
+             "ldap_attr_login": "sAMAccountName",
              "ldap_attr_mail": "mail",
-             "ldap_attr_full_name": "fullName"
+             "ldap_attr_full_name": "fullName",
              "ldap_base_dn": "OU=Employees,OU=Domain users,DC=opscodecorp,DC=com",
              "ldap_bind_dn": "ldapbind",
              "ldap_bind_dn_password": "secret123",
              "ldap_encryption": "start_tls",
              "ldap_hosts": "[ldap.tld]",
              "ldap_port": 3269,
-             "ldap_timeout": 5000,
+             "ldap_timeout": 5000
         }
       }
 
