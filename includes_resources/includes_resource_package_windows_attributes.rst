@@ -58,6 +58,9 @@ This resource has the following properties:
      - **Ruby Type:** String
 
        Optional. |source resource package| The location of the package may be at a URL. |resource_block_default| |see syntax|
+
+       .. include:: ../../includes_resources/includes_resource_package_windows_attributes_source_displayname.rst
+
    * - ``subscribes``
      - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
