@@ -17,7 +17,7 @@ To configure LDAP for |chef delivery|:
              "ldap_bind_dn": "ldapbind",
              "ldap_bind_dn_password": "secret123",
              "ldap_encryption": "start_tls",
-             "ldap_hosts": "[ldap.tld]",
+             "ldap_hosts": ["ldap.tld"],
              "ldap_port": 3269,
              "ldap_timeout": 5000
         }
