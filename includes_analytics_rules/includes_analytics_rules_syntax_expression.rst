@@ -8,9 +8,12 @@ An expression defines a specific test in a rule and uses fields within the expre
 
    total_resource_count > 1 and
    updated_resource_count > 0
- 
+
 .. code-block:: ruby
 
    array:contains(run_list, 'role[opscode-reporting]')
 
 where both ``total_resource_count``, ``updated_resource_count``, and ``run_list`` are the fields specific to a message type.
+
+See :ref:`analytics_rules_message_fields` for a list of the available
+fields for each message type.
