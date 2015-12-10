@@ -22,32 +22,6 @@ Expressions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression.rst
 
-The following sections describe the fields that may be used for each of the specific message types.
-
-actions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_action.rst
-
-run_control
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control.rst
-
-run_control_group
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control_group.rst
-
-run_converge
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_converge.rst
-
-run_resource
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_resource.rst
-
-run_start
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_start.rst
-
 then
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_then.rst
@@ -84,6 +58,38 @@ Nested Fields, Arrays
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_nested.rst
 
+.. _analytics_rules_message_fields:
+
+Message Fields
+=====================================================
+
+The following sections describe the fields that may be used for each of
+the specific message types.
+
+actions
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_action.rst
+
+run_control
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control.rst
+
+run_control_group
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_control_group.rst
+
+run_converge
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_converge.rst
+
+run_resource
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_resource.rst
+
+run_start
+-----------------------------------------------------
+.. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_expression_type_run_start.rst
+
 Functions
 =====================================================
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions.rst
@@ -112,6 +118,8 @@ mustache_template()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst
 
+.. _analytics_rules_functions_notify:
+
 notify()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_notify.rst
@@ -131,6 +139,12 @@ Always Run a Rule
 Raise Audit
 -----------------------------------------------------
 .. include:: ../../step_analytics_rules/step_analytics_rules_raise_audit.rst
+
+.. _analytics_rules_send_a_notification:
+
+Send a Notification
+-----------------------------------------------------
+.. include:: ../../step_analytics_rules/step_analytics_rules_send_a_notification.rst
 
 Regular Expressions
 -----------------------------------------------------

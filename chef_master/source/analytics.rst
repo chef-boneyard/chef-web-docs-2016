@@ -36,7 +36,11 @@ The following sections discuss these elements (and their various components) in 
 
 Integrations
 =====================================================
-|chef analytics| can integrate with |slack| and |splunk|.
+|chef analytics| can integrate with |hipchat|, |slack| and |splunk| as well as send notifications via email and trigger webhooks.
+
+|hipchat|
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_hipchat.rst
 
 |slack|
 -----------------------------------------------------
@@ -45,6 +49,14 @@ Integrations
 |chef splunk|
 -----------------------------------------------------
 .. include:: ../../includes_analytics/includes_analytics_splunk.rst
+
+Email
+-----------------------------------------------------
+.. include:: ../../includes_analytics/includes_analytics_email_notifications.rst
+
+Webhooks
+-----------------------------------------------------
+For an example of creating a notification that integrates with a remote service via webhooks, see the |slack| integration.
 
 Controls
 =====================================================

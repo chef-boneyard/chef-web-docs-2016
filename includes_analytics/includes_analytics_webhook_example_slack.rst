@@ -20,7 +20,7 @@ A webhook for |chef analytics| enables real-time event streams to be sent to arb
 
    Click **Save**.
 
-#. Create a rule that uses this integration and test it. For example, configuring |chef analytics| to send a notification to |slack| when a |chef client_audit| run fails. Fist, create a simple rule to test the |slack| integration. Configure a message to be sent to |slack| for any action event that comes into |chef analytics|:
+#. Create a rule that uses this integration and test it. For example, configuring |chef analytics| to send a notification to |slack| when a |chef client_audit| run fails. First, create a simple rule to test the |slack| integration. Configure a message to be sent to |slack| for any action event that comes into |chef analytics|:
 
    .. code-block:: ruby
 
@@ -29,15 +29,15 @@ A webhook for |chef analytics| enables real-time event streams to be sent to arb
         when
           true
         then
-          notify('slack', "{
-            'text': 'test from the blog post'
-          }")
+          notify('slack', '{
+            "text": "test from the blog post"
+          }')
         end
       end
 
    |slack| expects a |json| document to be sent to the incoming webook integration from |chef analytics|. |chef analytics| supports multi-line notifications to be written. Use the ``'text'`` property in the rule to send the data as a |json| document.
 
-# Next, create a rule that is more specific to the |chef analytics| data, such as assigning an emoji and a name for the notification:
+#. Finally, create a rule that is more specific to the |chef analytics| data, such as assigning an emoji and a name for the notification:
 
    .. code-block:: ruby
 
@@ -46,14 +46,14 @@ A webhook for |chef analytics| enables real-time event streams to be sent to arb
         when
           status != 'success'
         then
-          notify('slack', "{
-            'username': 'Audit Alarm',
-            'icon_emoji': ':rotating_light:',
-            'text': "{{message.name}} (cookbook {{message.cookbook_name}})\n
-            had '{{message.number_failed}}' failed audit test(s)\n
-            on node '{{message.run.node_name}}'\n
-            in organization '{{message.organization_name}}'"
-          }")
+          notify('slack', '{
+            "username": "Audit Alarm",
+            "icon_emoji": ":rotating_light:",
+            "text": "{{message.name}} (cookbook {{message.cookbook_name}})\n
+              had \'{{message.number_failed}}\' failed audit test(s)\n
+              on node \'{{message.run.node_name}}\'\n
+              in organization \'{{message.organization_name}}\'"
+          }')
         end
       end
 
