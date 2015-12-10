@@ -29,6 +29,6 @@ The full syntax for all of the properties that are available to the |resource pa
 where 
 
 * ``dpkg_package`` tells the |chef client| to manage a package
-* ``'name'`` is the name of the package; this may be an array of packages
+* ``'name'`` is the name of the package
 * ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
 * ``options``, ``package_name``, ``provider``, ``source``, ``timeout``, and ``version`` are properties of this resource, with the |ruby| type shown. |see attributes|

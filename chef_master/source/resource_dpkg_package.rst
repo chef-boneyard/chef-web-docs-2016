@@ -8,7 +8,7 @@ dpkg_package
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_package_dpkg_syntax.rst
+.. include:: ../../includes_resources/includes_resource_12-5_package_dpkg_syntax.rst
 
 Actions
 =====================================================

@@ -12,7 +12,7 @@ The following items are new for |chef client| 12.6 and/or are changes from previ
 * **New metadata.rb settings** The |metadata rb| file has settings for ``chef_version`` and ``ohai_version`` that allow ranges to be specified that declare the supported versions of the |chef client| and |ohai|.
 * **dsc_resource supports reboots** The |resource dsc_resource| resource supports immediate and queued reboots. This uses the |resource reboot| resource and its ``:reboot_now`` or ``:request_reboot`` actions.
 * **New and changed knife bootstrap options** The ``--identify-file`` option for the |subcommand knife bootstrap| subcommand is renamed to ``--ssh-identity-file``; the ``--sudo-preserve-home`` is new.
-* **New installer types for the windows_package resource** The |resource package_windows| resource now supports the following installer types: ``:custom``, ``:inno`` (|inno setup|), ``:installshield`` (|installshield|), ``:msi`` (|microsoft installer package|), ``:nsis`` (|nsis|), ``:wise`` (|wise|). Prior versions of |chef| supported only ``:msi``.
+* **New installer types for the windows_package resource** The |resource package_windows| resource now supports the following installer types: ``:custom``, |inno setup| (``:inno``), |installshield| (``:installshield``), |microsoft installer package| (``:msi``), |nsis| (``:nsis``), |wise| (``:wise``). Prior versions of |chef| supported only ``:msi``.
 
 ksh
 -----------------------------------------------------
