@@ -8,7 +8,7 @@ The syntax for this function:
 
 .. code-block:: ruby
 
-   mustache_template('message_type = {{message.json_attribute}})
+   mustache_template('message_type = {{message.json_attribute}}')
 
 where:
 
@@ -26,3 +26,5 @@ For example:
      then
        set(#foo, mustache_template('Organization = {{message.organization_name}}.'))
    end
+
+For more information on the |mustache| template format, see https://mustache.github.io.
