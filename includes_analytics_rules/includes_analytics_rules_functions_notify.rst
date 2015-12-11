@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``notify()`` to configure notifications for a rule. Notifications may be sent with the following notification types: email, webhook, |hipchat|, and |splunk|. See :ref:`analytics_integrations` for more information on the available notification types.
+Use ``notify()`` to configure notifications for a rule. Notifications may be sent with the following notification types: email, webhook, |hipchat|, and |splunk|.
 
 The syntax for this function:
 
@@ -15,7 +15,7 @@ where:
 * ``notificationName`` is the name of the notification to trigger.
 * ``stringTemplate`` is an optional |mustache| template that defines the notification. The template must evaluate to a valid JSON string.
 
-Field names in the |mustache| template must be prefixed by ``message.``, e.g. ``{{message.reported_at}}``. See :ref:`analytics_rules_message_fields` for a list of the available field names for each message type. For more information on the |mustache| template format, see https://mustache.github.io.
+Field names in the |mustache| template must be prefixed by ``message.``, e.g. ``{{message.reported_at}}`` using `a valid field name for the message type <https://docs.chef.io/analytics_rules.html#message-types>`_. For more information on the |mustache| template format, see https://mustache.github.io.
 
 For example:
 
@@ -35,5 +35,3 @@ For example:
          }')
      end
    end
-
-See :ref:`analytics_rules_send_a_notification` for more information.

@@ -58,8 +58,6 @@ Nested Fields, Arrays
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_syntax_nested.rst
 
-.. _analytics_rules_message_fields:
-
 Message Fields
 =====================================================
 
@@ -117,8 +115,6 @@ log()
 mustache_template()
 -----------------------------------------------------
 .. include:: ../../includes_analytics_rules/includes_analytics_rules_functions_mustache.rst
-
-.. _analytics_rules_functions_notify:
 
 notify()
 -----------------------------------------------------
