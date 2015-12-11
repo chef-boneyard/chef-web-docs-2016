@@ -24,7 +24,7 @@ For example, accessing integer values in a nested field:
      end
    end
 
-And accessing integer values in aan array:
+And accessing integer values in an array:
 
 .. code-block:: ruby
 

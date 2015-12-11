@@ -2,7 +2,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-
 |chef analytics| includes a powerful rules processing system that allows notifications to be generated based on observed events in the data stream, such as:
 
 * Cookbook uploads

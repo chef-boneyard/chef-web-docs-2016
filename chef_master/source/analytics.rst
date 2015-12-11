@@ -56,7 +56,7 @@ Email
 
 Webhooks
 -----------------------------------------------------
-For an example of creating a notification that integrates with a remote service via webhooks, see the |slack| integration.
+For an example of creating a notification that integrates with a remote service via webhooks, see the |slack| integration section (above).
 
 Controls
 =====================================================
