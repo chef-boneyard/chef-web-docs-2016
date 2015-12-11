@@ -14,7 +14,7 @@ This resource has the following properties:
 
        |allow_downgrade|
    * - ``arch``
-     - **Ruby Types:** String, Array
+     - **Ruby Types:** String
 
        |architecture package|
    * - ``flush_cache``

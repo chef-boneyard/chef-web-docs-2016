@@ -461,6 +461,7 @@ Cookbooks
    upgrade_analytics
    upgrade_client
    upgrade_client_notes
+   upgrade_compliance
    upgrade_server
    upgrade_server_notes
    upgrade_server_open_source_notes

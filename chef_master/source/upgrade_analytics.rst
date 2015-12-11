@@ -14,9 +14,9 @@ This section describes the prereqs for the upgrade
 
 Standalone
 =====================================================
-This section describes the upgrade process for a standalone configuraiton:
+This section describes the upgrade process for a standalone configuration:
 
-#. Stop the machine:
+#. Stop the services:
 
    .. code-block:: bash
       
@@ -48,13 +48,13 @@ This section describes the upgrade process for a standalone configuraiton:
 
       $ opscode-analytics-ctl stop
 
-#. Reconfigure the server:
+#. Reconfigure the services:
 
    .. code-block:: bash
 
       $ opscode-analytics-ctl reconfigure
 
-#. Restart the machine:
+#. Start the services:
 
    .. code-block:: bash
       
