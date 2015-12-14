@@ -69,8 +69,6 @@ This section describes the upgrade process:
 
       curl -k https://localhost/api/version
 
-#. Tail all |chef compliance| logs if something is not working right:
-
-   .. code-block:: bash
-
-      chef-compliance-ctl tail
+Logging
+=====================================================
+.. include:: ../../includes_compliance/includes_compliance_logging.rst
