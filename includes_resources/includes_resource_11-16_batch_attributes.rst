@@ -42,7 +42,7 @@ This resource has the following properties:
 
        |ignore_failure| Default value: ``false``.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -66,7 +66,7 @@ This resource has the following properties:
 
        |return_value cmd| Default value: ``0``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

@@ -16,7 +16,7 @@ This resource has the following properties:
 
        |ignore_failure| Default value: ``false``.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -34,7 +34,7 @@ This resource has the following properties:
    * - ``search``
      - Use to specify a search string that is used to deploy a cookbook. This value is used as part of the ``deploy.rb`` file in |chef delivery|.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

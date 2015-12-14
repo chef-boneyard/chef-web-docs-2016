@@ -18,7 +18,7 @@ This resource has the following properties:
 
        |type package| Possible values: ``:msi``.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -50,7 +50,7 @@ This resource has the following properties:
 
        Optional. |source resource package| |resource_block_default| |see syntax|
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

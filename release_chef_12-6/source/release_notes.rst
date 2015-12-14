@@ -13,6 +13,9 @@ The following items are new for |chef client| 12.6 and/or are changes from previ
 * **dsc_resource supports reboots** The |resource dsc_resource| resource supports immediate and queued reboots. This uses the |resource reboot| resource and its ``:reboot_now`` or ``:request_reboot`` actions.
 * **New and changed knife bootstrap options** The ``--identify-file`` option for the |subcommand knife bootstrap| subcommand is renamed to ``--ssh-identity-file``; the ``--sudo-preserve-home`` is new.
 * **New installer types for the windows_package resource** The |resource package_windows| resource now supports the following installer types: ``:custom``, |inno setup| (``:inno``), |installshield| (``:installshield``), |microsoft installer package| (``:msi``), |nsis| (``:nsis``), |wise| (``:wise``). Prior versions of |chef| supported only ``:msi``.
+* **dsc_resource resource may be run in non-disabled refresh mode** The latest version of |windows management_framework| 5 has relaxed the limitation that prevented the |chef client| from running in non-disabled refresh mode. Requires |windows powershell| 5.0.10586.0 or higher.
+* **dsc_script and dsc_resource resources may be in the same run-list** The latest version of |windows management_framework| 5 has relaxed the limitation that prevented the |chef client| from running in non-disabled refresh mode, which allows the Local Configuration Manager to be set to ``Push``. Requires |windows powershell| 5.0.10586.0 or higher.
+
 
 ksh
 -----------------------------------------------------
@@ -30,6 +33,9 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_script_ksh_attributes.rst
 
+Changes for PowerShell 5.0.10586.0
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_dsc_resource_requirements.rst
 
 New metadata.rb Settings
 -----------------------------------------------------

@@ -22,7 +22,7 @@ This resource has the following properties:
    * - ``name``
      - The name of the |chef client|.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -64,7 +64,7 @@ This resource has the following properties:
    * - ``source_key_path``
      - The path to the public key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

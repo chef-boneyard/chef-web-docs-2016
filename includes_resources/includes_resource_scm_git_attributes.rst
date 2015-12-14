@@ -48,7 +48,7 @@ This resource has the following properties:
 
        |ignore_failure| Default value: ``false``.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -90,7 +90,7 @@ This resource has the following properties:
 
        |ssh_wrapper resource|
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

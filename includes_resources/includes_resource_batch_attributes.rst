@@ -50,7 +50,7 @@ This resource has the following properties:
 
        |interpreter| Changing the default value of this property is not supported.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -74,7 +74,7 @@ This resource has the following properties:
 
        |return_value cmd| Default value: ``0``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

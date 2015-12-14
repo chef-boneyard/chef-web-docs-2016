@@ -24,7 +24,7 @@ This resource has the following properties:
    * - ``no_diff``
      - Use to upload only new files.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -44,7 +44,7 @@ This resource has the following properties:
 
        |retry_delay| Default value: ``2``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

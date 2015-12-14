@@ -52,7 +52,7 @@ This resource has the following properties:
 
        |non_unique_user|
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -88,7 +88,7 @@ This resource has the following properties:
 
        |supports user| Default value: ``:manage_home => false, :non_unique => false``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

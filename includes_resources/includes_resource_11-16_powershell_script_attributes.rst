@@ -40,7 +40,7 @@ This resource has the following properties:
 
        |interpreter| Changing the default value of this property is not supported.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -60,7 +60,7 @@ This resource has the following properties:
 
        |retry_delay| Default value: ``2``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

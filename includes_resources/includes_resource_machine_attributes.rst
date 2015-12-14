@@ -116,7 +116,7 @@ This resource has the following properties:
 
        The name of the machine.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -203,7 +203,7 @@ This resource has the following properties:
 
        The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 
