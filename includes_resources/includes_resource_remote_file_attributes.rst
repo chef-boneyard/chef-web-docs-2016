@@ -77,7 +77,7 @@ This resource has the following properties:
        
        |windows|: |mode windows security|
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -116,7 +116,7 @@ This resource has the following properties:
        .. include:: ../../includes_file/includes_file_remote_source_location.rst
 
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

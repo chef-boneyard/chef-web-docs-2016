@@ -52,7 +52,7 @@ This resource has the following properties:
        
        |windows|: |mode windows security|
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -90,7 +90,7 @@ This resource has the following properties:
 
        |source cookbook_file| Can be used to distribute specific files to specific platforms. |see file_specificity| |see syntax|
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

@@ -23,7 +23,7 @@ This resource has the following properties:
        |type package| Possible values: ``:custom`` (such as installing a non-.msi file that embeds an .msi-based installer), ``:inno`` (|inno setup|), ``:installshield`` (|installshield|), ``:msi`` (|microsoft installer package|), ``:nsis`` (|nsis|), ``:wise`` (|wise|).
 
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -62,7 +62,7 @@ This resource has the following properties:
        .. include:: ../../includes_resources/includes_resource_package_windows_attributes_source_displayname.rst
 
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

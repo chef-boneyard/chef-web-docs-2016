@@ -59,7 +59,7 @@ This resource has the following properties:
        .. include:: ../../step_resource/step_resource_dsc_script_import_resources_single.rst
 
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -75,7 +75,7 @@ This resource has the following properties:
 
        |retry_delay| Default value: ``2``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

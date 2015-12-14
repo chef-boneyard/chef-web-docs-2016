@@ -20,7 +20,7 @@ This resource has the following properties:
 
        .. note:: Starting with |chef client| version 12, this value is a symbol (``:msi``) and not a string.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -52,7 +52,7 @@ This resource has the following properties:
 
        Optional. |source resource package| |resource_block_default| |see syntax|
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

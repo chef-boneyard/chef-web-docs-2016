@@ -18,7 +18,7 @@ This resource has the following properties:
 
        |ignore_failure| Default value: ``false``.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -50,7 +50,7 @@ This resource has the following properties:
 
        Optional. The URL at which the gem package is located.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

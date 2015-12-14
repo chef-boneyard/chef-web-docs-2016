@@ -64,7 +64,7 @@ This resource has the following properties:
        
        |windows|: |mode windows security|
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -106,7 +106,7 @@ This resource has the following properties:
 
        |source template| |source template_cookbook| |source template_local| This property may also be used to distribute specific files to specific platforms. |see file_specificity| |resource_block_default| |see syntax|
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

@@ -26,7 +26,7 @@ This resource has the following properties:
    * - ``name``
      - The name of the machine image.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -65,7 +65,7 @@ This resource has the following properties:
        
        .. include:: ../../includes_node/includes_node_run_list_format.rst
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

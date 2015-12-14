@@ -20,7 +20,7 @@ This resource has the following properties:
 
        |ignore_failure| Default value: ``false``.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -54,7 +54,7 @@ This resource has the following properties:
    * - ``source_key_path``
      - The path to the private key. Use in conjunction with ``source_key``` and ``source_key_pass_phrase``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

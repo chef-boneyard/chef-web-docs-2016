@@ -32,7 +32,7 @@ This resource has the following attributes:
    * - ``max_simultaneous``
      - 
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -48,7 +48,7 @@ This resource has the following attributes:
 
        |retry_delay| Default value: ``2``.
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 

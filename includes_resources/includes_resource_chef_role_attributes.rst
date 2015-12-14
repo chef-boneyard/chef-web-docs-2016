@@ -26,7 +26,7 @@ This resource has the following properties:
    * - ``name``
      - The name of the role.
    * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |notifies|
 
@@ -63,7 +63,7 @@ This resource has the following properties:
    * - ``run_list``
      - |run-list| Default value: ``[]``. For example: ``["recipe[default]","recipe[apache2]"]``
    * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
        |subscribes|
 
