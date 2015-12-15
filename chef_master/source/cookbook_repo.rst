@@ -29,4 +29,4 @@ metadata.rb
 
 Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_config/includes_config_rb_12-5_metadata_settings.rst
+.. include:: ../../includes_config/includes_config_rb_metadata_settings.rst
