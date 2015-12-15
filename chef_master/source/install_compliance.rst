@@ -58,3 +58,7 @@ Migrate to a new AMI version
 Configure SSL
 =====================================================
 .. include:: ../../includes_compliance/includes_compliance_server_security_ssl_protocol.rst
+
+Logging
+=====================================================
+.. include:: ../../includes_compliance/includes_compliance_logging.rst
