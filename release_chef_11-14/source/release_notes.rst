@@ -98,7 +98,7 @@ The following option has been added to |chef client| and |chef solo|:
    
 Automatic Proxy Config
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_client_automatic_proxy.rst
+.. include:: ../../includes_proxy/includes_proxy_env.rst
 
 sensitive Property
 -----------------------------------------------------
