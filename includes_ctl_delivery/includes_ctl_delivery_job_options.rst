@@ -5,6 +5,9 @@
 
 This subcommand has the following options:
 
+``-b``, ``--branch``
+   The name of a branch to be merged.
+
 ``-C``, ``--change=CHANGE``
    |delivery branch|
 

@@ -8,6 +8,9 @@ This subcommand has the following options:
 ``-e``, ``--ent=ENTERPRISE``
    |delivery enterprise|
 
+``--no-open``
+   |delivery pipeline no_open|
+
 ``-o``, ``--org=ORGANIZATION``
    |delivery organization|
 
