@@ -378,6 +378,7 @@ Cookbooks
    resource_http_request
    resource_ifconfig
    resource_ips_package
+   resource_ksh
    resource_link
    resource_load_balancer
    resource_log

@@ -86,6 +86,9 @@ PATH System Variable
 -----------------------------------------------------
 .. include:: ../../includes_windows/includes_windows_environment_variable_path.rst
 
+Proxy Settings
+=====================================================
+.. include:: ../../includes_proxy/includes_proxy_windows.rst
 
 |microsoft| |azure portal|
 =====================================================
@@ -709,10 +712,7 @@ remote_file
 
 windows_package
 -----------------------------------------------------
-
 .. include:: ../../includes_resources/includes_resource_package_windows.rst
-
-.. note:: .. include:: ../../includes_notes/includes_notes_resource_based_on_package.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -737,6 +737,26 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_windows_package_install.rst
+
+**Specify a URL for the source attribute**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url.rst
+
+**Specify path and checksum**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_url_checksum.rst
+
+**Modify remote_file resource attributes**
+
+.. include:: ../../step_resource/step_resource_package_windows_source_remote_file_attributes.rst
+
+**Download a nsis (Nullsoft) package resource**
+
+.. include:: ../../step_resource/step_resource_package_windows_download_nsis_package.rst
+
+**Download a custom package**
+
+.. include:: ../../step_resource/step_resource_package_windows_download_custom_package.rst
 
 
 windows_service

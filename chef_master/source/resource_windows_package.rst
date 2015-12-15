@@ -14,7 +14,7 @@ Actions
 
 Properties
 =====================================================
-.. include:: ../../includes_resources/includes_resource_12-5_package_windows_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
 
 Providers
 =====================================================
@@ -44,10 +44,10 @@ Examples
 
 .. include:: ../../step_resource/step_resource_package_windows_source_remote_file_attributes.rst
 
-.. 
-.. almost!
-.. 
-.. **Download a package from a URL**
-.. 
-.. .. include:: ../../step_resource/step_resource_windows_package_url.rst
-.. 
+**Download a nsis (Nullsoft) package resource**
+
+.. include:: ../../step_resource/step_resource_package_windows_download_nsis_package.rst
+
+**Download a custom package**
+
+.. include:: ../../step_resource/step_resource_package_windows_download_custom_package.rst
