@@ -15,12 +15,6 @@ Upgrade
 =====================================================
 This section describes the upgrade process:
 
-#. Verify the currently installed version:
-
-   .. code-block:: bash
-
-      curl -k https://localhost/api/version
-
 #. Stop the services:
 
    .. code-block:: bash
@@ -63,14 +57,7 @@ This section describes the upgrade process:
 
       chef-compliance-ctl status
 
-#. Verify the installed version now:
 
-   .. code-block:: bash
-
-      curl -k https://localhost/api/version
-
-#. Tail all |chef compliance| logs if something is not working right:
-
-   .. code-block:: bash
-
-      chef-compliance-ctl tail
+Logging
+=====================================================
+.. include:: ../../includes_compliance/includes_compliance_logging.rst
