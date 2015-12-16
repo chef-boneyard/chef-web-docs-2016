@@ -1,12 +1,8 @@
-.. _manage_users:
-
 =====================================================
 Manage Users and Roles
 =====================================================
 
 This topic describes the roles and permissions that may be assigned to users of |chef delivery|, how to integrate an LDAP system with |chef delivery|, how to add and edit users, and how to add user SSH keys.
-
-.. _roles_permissions:
 
 Roles and Permissions
 =====================================================
@@ -14,23 +10,27 @@ Roles and Permissions
 
 Integrate LDAP
 =====================================================
-.. include:: ../../includes_delivery/includes_delivery_users_ldap.rst
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_ldap.rst
 
 LDAP Attributes
 -----------------------------------------------------
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_attributes.rst
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_ldap_attributes.rst
 
 Configure LDAP
 -----------------------------------------------------
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_configure.rst
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_ldap_configure.rst
 
-.. _add_users_default:
-
-Add or Edit Users
+Manage Users
 -----------------------------------------------------
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_user.rst
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_ldap_users.rst
 
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_user_add.rst
+Add 
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_ldap_users_add.rst
+
+Edit 
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_ldap_users_edit.rst
 
 Onboard Users
 =====================================================
@@ -47,8 +47,6 @@ Add Users
 Submit Changes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_delivery/includes_delivery_users_onboard_github_submit_change.rst
-
-.. _delivery_default_git:
 
 Delivery with Internal Git
 -----------------------------------------------------
