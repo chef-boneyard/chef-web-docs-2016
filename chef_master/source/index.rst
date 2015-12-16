@@ -263,6 +263,9 @@ Cookbooks
    install_server_pre
    install_server_tiered
    install_windows
+   integration_delivery_bitbucket
+   integration_delivery_github
+   integration_delivery_ldap
    junos
    kitchen
    knife
