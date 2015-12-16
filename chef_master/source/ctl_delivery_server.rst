@@ -1,5 +1,3 @@
-.. warning:: This topic is under development and will be changing until this warning is removed.
-
 =====================================================
 delivery-ctl (executable)
 =====================================================
