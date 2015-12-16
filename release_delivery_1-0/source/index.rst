@@ -18,11 +18,11 @@ Read more about |chef delivery|:
 * `Tutorial: Automating your Workflow with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__
 * :doc:`Install Chef Delivery using AWS </install_delivery_aws>`
 * :doc:`Install Chef Delivery using SSH </install_delivery_ssh>`
+* Integrate |chef delivery| with :doc:`Github </integrate_delivery_github>`, :doc:`Bitbucket </integrate_delivery_bitbucket>`, and :doc:`LDAP </integrate_delivery_ldap>`
 * :doc:`Manage Users and Roles </delivery_users_and_roles>`
 * :doc:`About Build Cookbooks </build_cookbooks>`
 * :doc:`About the delivery CLI </ctl_delivery>`
 * :doc:`About the Chef Delivery DSL </dsl_delivery>`
-
 
 .. Hide the TOC from this file.
 
@@ -31,10 +31,11 @@ Read more about |chef delivery|:
 
    build_cookbooks
    ctl_delivery
-   install_delivery_aws
-   install_delivery_ssh
    delivery_overview
    delivery_users_and_roles
    dsl_delivery
-
-
+   install_delivery_aws
+   install_delivery_ssh
+   integrate_delivery_bitbucket
+   integrate_delivery_github
+   integrate_delivery_ldap
