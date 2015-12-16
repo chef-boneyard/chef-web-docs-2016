@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-To add the |github| OAuth app to |chef delivery|, log in to the |chef delivery| server and run the following command:
+To add the |github| |oauth| app to |chef delivery|, log in to the |chef delivery| server and run the following command:
 
 **For Github Enterprise**
 
