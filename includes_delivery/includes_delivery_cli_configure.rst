@@ -6,6 +6,6 @@ Before you use the |chef delivery| CLI from a workstation, you need to provide i
  
 The placement of the ``.delivery`` directory in your file hierarchy is significant. Like Git, |chef delivery| CLI commands search the current directory and parent directories to locate server settings. Because server settings are unique to an organization, we recommend that you create a directory for each organization you belong to and run the ``delivery setup`` command from that directory.
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      $ delivery setup --server=DELIVERY_SERVER_IP_ADDR --ent=ENTERPRISE --org=ORGANIZATION --user=USERNAME
+   $ delivery setup --server=DELIVERY_SERVER_IP_ADDR --ent=ENTERPRISE --org=ORGANIZATION --user=USERNAME

@@ -40,5 +40,3 @@ On the provisioning node:
    .. code-block:: bash
       
       $ git clone https://github.com/opscode-cookbooks/delivery-cluster.git ~/delivery-cluster
-
-

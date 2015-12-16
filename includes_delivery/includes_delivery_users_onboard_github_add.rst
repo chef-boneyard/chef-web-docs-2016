@@ -4,7 +4,7 @@
 To onboard a user for an integrated |github enterprise| or GitHub.com project:
 
 #. Have the user that you want to add clone the repo for the project you want them to join. Ensure that they have write permissions to the repo if you want to allow them to submit pull requests.
-#. Follow the instructions in :ref:`add_users_default`.
+#. Add or edit any users who are managed by the LDAP integration.
 #. From a local checkout of a |chef delivery| project, run the appropriate |chef delivery| command that associates a |github| user with a |chef delivery| user.
 
    .. note:: The |chef delivery_cli| commands are for a user to link their own account to |github|, or others if the user has the **Admin** role; ``api`` is an argument to the |chef delivery_cli| CLI command. The ``delivery-ctl`` command can only be run by an administrator from the |chef delivery| server and can affect any user.
