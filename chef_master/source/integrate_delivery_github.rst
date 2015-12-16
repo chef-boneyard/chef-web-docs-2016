@@ -1,10 +1,10 @@
 =====================================================
-Integrate Delivery with Github
+Integrate Delivery with |github|
 =====================================================
 
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_github.rst
 
-Create Github OAuth App
+Create |github| OAuth App
 =====================================================
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_github_create_oauth_app.rst
 
@@ -12,7 +12,7 @@ Add App to Delivery
 =====================================================
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_github_add_to_delivery.rst
 
-Request Github Token
+Request |github| Token
 =====================================================
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_github_request_token.rst
 

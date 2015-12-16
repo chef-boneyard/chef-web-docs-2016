@@ -1,5 +1,5 @@
 =====================================================
-Integrate Delivery with Bitbucket
+Integrate Delivery with |bitbucket|
 =====================================================
 
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket.rst
@@ -24,7 +24,7 @@ Import Project
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_import_project.rst
 
-Workflow w/Bitbucket
+Workflow w/|bitbucket|
 =====================================================
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow.rst
 
