@@ -36,19 +36,19 @@ Onboard Users
 =====================================================
 .. include:: ../../includes_delivery/includes_delivery_users_onboard.rst
 
-Delivery with GitHub OAuth
+Delivery with |github|
 -----------------------------------------------------
-.. include:: ../../includes_delivery/includes_delivery_users_onboard_github.rst
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_github_onboard.rst
 
 Add Users
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_users_onboard_github_add.rst
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_github_add_linked_users.rst
 
 Submit Changes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_users_onboard_github_submit_change.rst
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_github_onboard_submit_change.rst
 
-Delivery with Internal Git
+Delivery with Internal |git|
 -----------------------------------------------------
 .. include:: ../../includes_delivery/includes_delivery_users_onboard_no_github.rst
 
