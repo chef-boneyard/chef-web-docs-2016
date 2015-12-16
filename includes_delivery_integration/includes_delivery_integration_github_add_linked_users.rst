@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 To onboard a user for an integrated |github enterprise| or GitHub.com project:
 
 #. Have the user that you want to add clone the repo for the project you want them to join. Ensure that they have write permissions to the repo if you want to allow them to submit pull requests.
@@ -41,4 +42,3 @@ Note the following constraints:
 
 * You may not link two |github| accounts to a single |chef delivery| user.
 * Two users may not share a |github| account
-

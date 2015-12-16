@@ -25,4 +25,4 @@ You should get output similar to this:
                             Connection to 10.194.11.99 closed.
 
 
-Your workstation is now set up for use with Chef Delivery.
+Your workstation is now set up for use with |chef delivery|.

@@ -342,13 +342,11 @@ Configure Delivery
 =====================================================
 In |chef delivery| there are multiple levels of organization: enterprises, organizations, and projects. The provisioning step created the initial enterprise you specified in your environment file as the first ``name`` option. Enterprises are designed to provide units of multi-tenancy with separate sets of organizations and users. Next, set up |chef delivery| by adding users and organizations.
 
-.. note:: |chef delivery| by default hosts a git server that you interact with through the delivery CLI commands. Additionally, you can integrate GitHub Enterprise or GitHub.com. How to onboard a user for these different deployments is described in detail in :ref:`manage_users`. 
+.. note:: |chef delivery| by default hosts a git server that you interact with through the delivery CLI commands. Additionally, you can integrate GitHub Enterprise or GitHub.com.
 
 Add Users
 ------------------------------------------------------
-The default ``admin`` account should not be used after |chef delivery| is installed. Instead, use the following procedure to create a new user for yourself, then log out as ``admin`` and log back in as the user you created. 
-
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_user_add.rst
+The default ``admin`` account should not be used after |chef delivery| is installed. Instead, use the following procedure to create a new user for yourself, then log out as ``admin`` and log back in as the user you created.
 
 Create Organizations
 -----------------------------------------------------
@@ -398,29 +396,3 @@ The surest way to validate your |chef delivery| installation is by creating a co
 .. include:: ../../includes_delivery/includes_delivery_build_cookbook_create.rst
 
 .. include:: ../../includes_delivery/includes_delivery_projects_add_with_delivery_truck.rst
-
-Optional Installations
-=====================================================
-The following are optional installations that you can make to enhance your |chef delivery| system.
-
-Integrate LDAP
------------------------------------------------------
-You can configure |chef delivery| to access your own LDAP database.
-
-LDAP Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_attributes.rst
-
-Configure LDAP
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_configure.rst
-
-Add LDAP Users
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-Integrating |chef delivery| with your LDAP system allows you to automatically add more user details and authenticate users against your existing identity management system. However, even once your LDAP system has been integrated to |chef delivery|, you must manually add users. If you are going to add a user in your integrated LDAP system to |chef delivery|, you must have their LDAP name.
-
-.. include:: ../../includes_delivery/includes_delivery_users_ldap_user_add.rst
-
-Set up OAuth for Github
------------------------------------------------------
-.. include:: ../../includes_delivery/includes_delivery_github_setup_enterprise_oauth.rst

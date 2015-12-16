@@ -4,7 +4,7 @@
 
 To onboard a user that is not using |github enterprise| or GitHub.com, but only the default Git that comes with |chef delivery|:
 
-#. Follow the instructions in :ref:`add_users_default`.
+#. Add or edit any users who are managed by the LDAP integration.
 #. Have the user log into the |chef delivery| web UI and add their SSH public key to their profile.
 
 The associated user can now create a feature branch and submit changes to |chef delivery| for review. 
