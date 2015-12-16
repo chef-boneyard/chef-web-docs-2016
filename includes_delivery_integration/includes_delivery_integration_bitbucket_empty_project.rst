@@ -4,6 +4,6 @@
 
 Use the following steps to add an empty project from the |chef delivery| webui:
 
-#. Open the page for the organization, and then click **Add a new Project**.
+#. Open the page for the organization in the |chef delivery| webui, and then click **Add a new Project**.
 #. Select the **Bitbucket** option from the **Source Code Provider** bar, and then and enter the |bitbucket| project key, repository, and target branch.
 #. Click **Save & Close**.

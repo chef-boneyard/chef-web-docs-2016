@@ -32,10 +32,6 @@ Delivery CLI
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_cli.rst
 
-Clone a Project
------------------------------------------------------
-.. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_clone.rst
-
 Create a Change
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_push_changes.rst
@@ -47,3 +43,8 @@ Code Review
 Approve a Change
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_approve.rst
+
+Delete a Change
+-----------------------------------------------------
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_delete.rst
+
