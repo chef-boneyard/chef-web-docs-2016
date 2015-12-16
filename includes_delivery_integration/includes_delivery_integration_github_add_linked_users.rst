@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-To onboard a user for an integrated |github enterprise| or GitHub.com project:
+To onboard a user for an integrated |github enterprise| project or one that is hosted at https://github.com/:
 
 #. Have the user that you want to add clone the repo for the project you want them to join. Ensure that they have write permissions to the repo if you want to allow them to submit pull requests.
 #. Add or edit any users who are managed by the LDAP integration.

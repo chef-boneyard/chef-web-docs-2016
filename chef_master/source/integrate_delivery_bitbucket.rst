@@ -1,5 +1,5 @@
 =====================================================
-Integrate Delivery with Bitbucket
+Integrate Delivery with |bitbucket|
 =====================================================
 
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket.rst
@@ -24,17 +24,13 @@ Import Project
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_import_project.rst
 
-Workflow w/Bitbucket
+Workflow w/|bitbucket|
 =====================================================
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow.rst
 
 Delivery CLI
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_cli.rst
-
-Clone a Project
------------------------------------------------------
-.. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_clone.rst
 
 Create a Change
 -----------------------------------------------------
@@ -47,3 +43,8 @@ Code Review
 Approve a Change
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_approve.rst
+
+Delete a Change
+-----------------------------------------------------
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_workflow_delete.rst
+

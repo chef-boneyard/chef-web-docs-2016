@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-To onboard a user that is not using |github enterprise| or GitHub.com, but only the default Git that comes with |chef delivery|:
+To onboard a user that is not using |github enterprise| or a project hosted at https://github.com/, but only the default |git| that comes with |chef delivery|:
 
 #. Add or edit any users who are managed by the LDAP integration.
 #. Have the user log into the |chef delivery| web UI and add their SSH public key to their profile.

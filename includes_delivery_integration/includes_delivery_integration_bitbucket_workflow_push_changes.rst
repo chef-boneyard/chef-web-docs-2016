@@ -4,7 +4,7 @@
 
 Use the following steps to create a change in |chef delivery|:
 
-#. Create and check out a topic branch for the change, based on the current state of your project's pipeline (usually from ``master``). For example, ``git checkout -b great-feature``.
+#. Create and check out a topic branch for the change, based on the current state of your project's pipeline (usually from ``master``). For example: ``git checkout -b great-feature``.
 #. Make and commit changes to the project as normal.
-#. Submit the change to |chef delivery| with the command ``delivery review``. This command will output a URL to view the details and progress of the change through the |chef delivery| webui.
+#. Submit the change to |chef delivery| with the command ``delivery review``. This command will open a URL at which details and progress of the change may be viewed from the |chef delivery| webui.
 #. The Verify phase will begin automatically and a corresponding pull request will be opened in |bitbucket|.

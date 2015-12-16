@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-For a |github enterprise| or GitHub.com integrated user of |chef delivery|:
+For an integrated |github enterprise| project or a project that is hosted at https://github.com/, users of |chef delivery| should submit changes as follows:
 
 #. The standard |github| process should be followed: clone the desired repo, make and test changes locally, submit the change (create a pull request) which initiates the |chef delivery| review process.
 

@@ -2,15 +2,10 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This set is required only once. Log into the |chef delivery| server via |ssh| and run the following command:
+In the |chef delivery| webui, open the SCM setup page (https://server/e/:enterprise/#/scm-setup) and fill out the provided fields:
 
-.. code-block:: bash
+* **Bitbucket URL** - The URL for your |bitbucket| instance.
+* **Bitbucket Username** - The username of the service account that |chef delivery| will use to interact with |bitbucket|.
+* **Bitbucket Password** - The password for the service account.
 
-   $ sudo delivery-ctl setup-bitbucket $BITBUCKET_URL $BITBUCKET_USER $BITBUCKET_PASSWORD $ENTERPRISE
-
-where
-
-* ``$BITBUCKET_URL`` is the URL for the |bitbucket| instance
-* ``$BITBUCKET_USER`` is the name of the user account that |chef delivery| will use to interact with |bitbucket|
-* ``$BITBUCKET_PASSWORD`` is the password for the service account; this value should be quoted if it contains special characters
-* ``$ENTERPRISE`` is the name of the |chef delivery| enterprise to which |bitbucket| will be connected
+Then submit the form to complete this step.
