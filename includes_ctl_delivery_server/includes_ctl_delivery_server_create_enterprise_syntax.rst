@@ -9,4 +9,4 @@ This subcommand has the following syntax:
 
    $ delivery-ctl create-enterprise ENT_NAME --ssh-pub-key-file=FILE_NAME
 
-.. note:: The ``ENT_NAME`` name must be alphanumeric.
+.. note:: The ``ENT_NAME`` value must be alphanumeric.
