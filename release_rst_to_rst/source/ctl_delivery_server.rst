@@ -28,8 +28,21 @@ create-user
 
 .. code-block:: bash
 
-   $ delivery-ctl create-user ENT_NAME john_smith
+   $ delivery-ctl create-user john_smith
 
+create-users
+=====================================================
+.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_create_users.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_create_users_syntax.rst
+
+**Example**
+
+.. code-block:: bash
+
+   $ delivery-ctl create-users delivery_eng.tsv
 
 delete-enterprise
 =====================================================
@@ -43,7 +56,7 @@ delete-enterprise
 
 .. code-block:: bash
 
-   $ delivery-ctl delete-enterprise pedant-testing-org
+   $ delviery-ctl delete-enterprise pedant-testing-org
 
 delete-project
 =====================================================
@@ -65,7 +78,15 @@ delete-user
 
 .. code-block:: bash
 
-   $ delivery-ctl delete-user ENT_NAME john_smith
+   $ delivery-ctl delete-user john_smith
+
+doctor
+=====================================================
+.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_doctor.rst
+
+**Syntax**
+
+.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_doctor_syntax.rst
 
 help
 =====================================================

@@ -3,6 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``update-project-hooks`` subcommand is used to update git hooks for all projects.
-
-
+The ``update-project-hooks`` subcommand is used to update |git| hooks for all projects.
