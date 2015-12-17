@@ -21,7 +21,8 @@ Read more about |chef delivery|:
 * Integrate |chef delivery| with :doc:`Github </integrate_delivery_github>`, :doc:`Bitbucket </integrate_delivery_bitbucket>`, and :doc:`LDAP </integrate_delivery_ldap>`
 * :doc:`Manage Users and Roles </delivery_users_and_roles>`
 * :doc:`About Build Cookbooks </build_cookbooks>`
-* :doc:`About the delivery CLI </ctl_delivery>`
+* :doc:`About the Delivery CLI </ctl_delivery>`
+* :doc:`About delivery-ctl </ctl_delivery_server>`
 * :doc:`About the Chef Delivery DSL </dsl_delivery>`
 
 .. Hide the TOC from this file.
@@ -31,6 +32,7 @@ Read more about |chef delivery|:
 
    build_cookbooks
    ctl_delivery
+   ctl_delivery_server
    delivery_overview
    delivery_users_and_roles
    dsl_delivery

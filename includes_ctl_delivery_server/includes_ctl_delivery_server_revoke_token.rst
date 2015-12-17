@@ -3,6 +3,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``revoke-token`` subcommand is used to revoke's a user's token.
+The ``revoke-token`` subcommand is used to revoke a user's token.
 
 

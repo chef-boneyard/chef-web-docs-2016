@@ -7,4 +7,4 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ delivery-ctl create-user USER_NAME FIRST_NAME [MIDDLE_NAME] LAST_NAME EMAIL PASSWORD SSH_PUBLIC_KEY
+   $ delivery-ctl create-user ENT_NAME USER_NAME FIRST_NAME [MIDDLE_NAME] LAST_NAME EMAIL PASSWORD SSH_PUBLIC_KEY
