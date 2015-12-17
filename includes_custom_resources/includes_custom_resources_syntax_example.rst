@@ -27,7 +27,7 @@ For example, the ``site.rb`` file in the ``exampleco`` cookbook could be similar
    end
 
    action :delete do
-     package 'httpd'
+     package 'httpd' do
        action :delete
      end
    end
