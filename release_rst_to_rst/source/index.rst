@@ -10,4 +10,5 @@ This file exists to make sure the other files build. For now.
 .. toctree::
    :hidden:
 
+   ctl_delivery_server
    inspec_reference
