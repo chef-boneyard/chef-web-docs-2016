@@ -18,7 +18,7 @@ Read more about |chef delivery|:
 * `Tutorial: Automating your Workflow with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__
 * :doc:`Install Chef Delivery using AWS </install_delivery_aws>`
 * :doc:`Install Chef Delivery using SSH </install_delivery_ssh>`
-* Integrate |chef delivery| with :doc:`Github </integrate_delivery_github>`, :doc:`Bitbucket </integrate_delivery_bitbucket>`, and :doc:`LDAP </integrate_delivery_ldap>`
+* Integrate |chef delivery| with :doc:`Github </integrate_delivery_github>` and :doc:`LDAP </integrate_delivery_ldap>`
 * :doc:`Manage Users and Roles </delivery_users_and_roles>`
 * :doc:`About Build Cookbooks </build_cookbooks>`
 * :doc:`About the Delivery CLI </ctl_delivery>`
