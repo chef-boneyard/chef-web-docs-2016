@@ -47,3 +47,7 @@ This code uses the ``sshd_config`` resource to ensure that only enterprise-compl
 This code uses the ``yaml`` resource to ensure that the |kitchen| driver is |vagrant|.
 
 .. include:: ../../step_inspec/step_inspec_yaml_kitchen_driver.rst
+
+More information
+-----------------------------------------------------
+.. include:: ../../includes_compliance/includes_compliance_links.rst
