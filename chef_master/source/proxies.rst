@@ -28,10 +28,6 @@ FTP
 -----------------------------------------------------
 .. include:: ../../includes_proxy/includes_proxy_settings_ftp.rst
 
-No Proxy
------------------------------------------------------
-.. include:: ../../includes_proxy/includes_proxy_settings_no_proxy.rst
-
 ENV Environment Variable
 =====================================================
 .. include:: ../../includes_proxy/includes_proxy_env.rst
