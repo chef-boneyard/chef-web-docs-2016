@@ -99,19 +99,20 @@ The following documentation sets are available:
      - `http://docs.chef.io/release/ohai-6/ <http://docs.chef.io/release/ohai-6/>`__
      - `Release Notes <http://docs.chef.io/release/ohai-6/release_notes.html>`__
 
-
-The following documentation sets are available, but are no longer maintained:
-
-.. list-table::
-   :widths: 100 200 200
-   :header-rows: 1
-
-   * - Application
-     - Home Page
-     - Release Notes
-   * - |chef client_title| 10.latest
-     - `http://docs.chef.io/release/10/ <http://docs.chef.io/release/10/>`__
-     - `Release Notes <http://docs.chef.io/release/10/release_notes.html>`__
-   * - |chef private| Server
-     - `http://docs.chef.io/release/private_chef/ <http://docs.chef.io/release/private_chef/>`__
-     - 
+.. 
+.. The following documentation sets are available, but are no longer maintained:
+.. 
+.. .. list-table::
+..    :widths: 100 200 200
+..    :header-rows: 1
+.. 
+..    * - Application
+..      - Home Page
+..      - Release Notes
+..    * - |chef client_title| 10.latest
+..      - `http://docs.chef.io/release/10/ <http://docs.chef.io/release/10/>`__
+..      - `Release Notes <http://docs.chef.io/release/10/release_notes.html>`__
+..    * - |chef private| Server
+..      - `http://docs.chef.io/release/private_chef/ <http://docs.chef.io/release/private_chef/>`__
+..      - 
+.. 
