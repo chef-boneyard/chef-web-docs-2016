@@ -19,6 +19,7 @@ Chef Open Source Slide Decks
    cookbooks
    ctl_chef
    custom_resources
+   docs
    event_handlers
    foodcritic
    git
