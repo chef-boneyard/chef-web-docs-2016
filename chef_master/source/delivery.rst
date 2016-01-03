@@ -4,30 +4,30 @@ An Overview of |chef delivery|
 
 |chef delivery| manages changes to both infrastructure and application code, giving your operations and development teams a common platform for developing, testing, and deploying cookbooks, applications, and more. 
 
-|chef delivery| accelerates the adoption of continuous delivery and encourages DevOps collaboration. It provides a proven, reproducible workflow for managing changes as they flow through the pipeline from a local workstation, through automated tests, and out into production. 
+|chef delivery_2nd| accelerates the adoption of continuous delivery and encourages DevOps collaboration. It provides a proven, reproducible workflow for managing changes as they flow through the pipeline from a local workstation, through automated tests, and out into production. 
 
-|chef delivery| handles many types of software systems. Use it to:
+|chef delivery_2nd| handles many types of software systems. Use it to:
 
 * Upload new and updated cookbooks to the |chef server| that manages your infrastructure and applications
 * Publish new and updated cookbooks to a |supermarket| installation
 * Release source code or build artifacts to a repository such as |github|
 * Push build artifacts to production servers in real time
 
-.. note:: If you are new to |chef delivery|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery| cluster and a sample application to experiment with.
+.. note:: If you are new to |chef delivery_2nd|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery_2nd| cluster and a sample application to experiment with.
 
 Pipelines
 =====================================================
 A pipeline is series of automated and manual quality gates that take software changes from development to delivery. The goal of a pipeline is to move changes from your workstation into production quickly and safely.
 
-Pipelines in |chef delivery| have six stages: Verify, Build, Acceptance, Union, Rehearsal, and Delivered. Changes progress from one stage to another by passing a suite of automated tests. For the Verify and Acceptance stages, explicit approval by a designated person is required (in addition to the tests).
+Pipelines in |chef delivery_2nd| have six stages: Verify, Build, Acceptance, Union, Rehearsal, and Delivered. Changes progress from one stage to another by passing a suite of automated tests. For the Verify and Acceptance stages, explicit approval by a designated person is required (in addition to the tests).
 
-Here are the stages of a |chef delivery| pipeline.
+Here are the stages of a |chef delivery_2nd| pipeline.
 
 .. image:: ../../images/delivery_partial_workflow.svg
    :width: 600px
    :align: center
 
-The tests within each stage are organized into phases. The stages and the phases are fixed for all pipelines in |chef delivery|. However, what happens within any given phase is completely up to you---if you can describe the activity in a |chef| recipe, then you can make it happen in a phase. To learn more about how to tell |chef delivery| how to test, build, and deploy your code, see the topic about "Build Cookbooks".
+The tests within each stage are organized into phases. The stages and the phases are fixed for all pipelines in |chef delivery_2nd|. However, what happens within any given phase is completely up to you---if you can describe the activity in a |chef| recipe, then you can make it happen in a phase. To learn more about how to tell |chef delivery_2nd| how to test, build, and deploy your code, see the topic about "Build Cookbooks".
 
 The following illustration shows the phases of each pipeline stage.
 
@@ -37,9 +37,9 @@ The following illustration shows the phases of each pipeline stage.
 
 Projects
 =====================================================
-|chef delivery| relies on |git| and uses its lightweight feature branches as the mechanism for handling changes before they merge, as well as its ability to perform merges automatically. Each pipeline has a designated target branch into which it will merge approved changes. |chef delivery| uses a "gated master" model that manages merges to the target branch. (In preparation for using |chef delivery|, it is helpful if team members understand how to use feature branches.)
+|chef delivery_2nd| relies on |git| and uses its lightweight feature branches as the mechanism for handling changes before they merge, as well as its ability to perform merges automatically. Each pipeline has a designated target branch into which it will merge approved changes. |chef delivery_2nd| uses a "gated master" model that manages merges to the target branch. (In preparation for using |chef delivery_2nd|, it is helpful if team members understand how to use feature branches.)
 
-|chef delivery| uses projects to organize work across multiple teams. You can create as many projects as you need. A common approach is to have one project for each major component of your system. Each project has its own |git| repository. (|chef delivery| includes a |git| server for hosting project repositories. It is also possible to integrate with |github| and |github enterprise| for the |git|-related aspects of the workflow.)
+|chef delivery_2nd| uses projects to organize work across multiple teams. You can create as many projects as you need. A common approach is to have one project for each major component of your system. Each project has its own |git| repository. (|chef delivery_2nd| includes a |git| server for hosting project repositories. It is also possible to integrate with |github| and |github enterprise| for the |git|-related aspects of the workflow.)
 
 Organizations allow you to group related projects and provide scope for authorization rules.
 
@@ -47,19 +47,19 @@ Each project has one or more pipelines. The typical setup is for each project to
 
 Changes and Project Pipelines
 =====================================================
-Let’s walk through what happens as a change makes its way through |chef delivery|. We'll assume you have created a project in |chef delivery| and want to make a change. 
+Let’s walk through what happens as a change makes its way through |chef delivery_2nd|. We'll assume you have created a project in |chef delivery_2nd| and want to make a change. 
 
-You start with a local checkout of the project’s |git| repository. You create a feature branch, make a change in that branch and test it locally. When you’re ready, submit the change using the ``delivery review`` command (part of the |chef delivery| command line tool). This command submits the change to |chef delivery| and kicks off the pipeline. The command is the equivalent to ``git push``, although it also creates a change in |chef delivery| that is similar to a pull request in |github| and other |git|-based version control systems.
+You start with a local checkout of the project’s |git| repository. You create a feature branch, make a change in that branch and test it locally. When you’re ready, submit the change using the ``delivery review`` command (part of the |chef delivery_2nd| command line tool). This command submits the change to |chef delivery_2nd| and kicks off the pipeline. The command is the equivalent to ``git push``, although it also creates a change in |chef delivery_2nd| that is similar to a pull request in |github| and other |git|-based version control systems.
 
 Verification
 -----------------------------------------------------
-When |chef delivery| receives the change, it triggers the Verify stage. The purpose of Verify is to run checks so that the system can decide if it’s worth the time of a human to review the change.
+When |chef delivery_2nd| receives the change, it triggers the Verify stage. The purpose of Verify is to run checks so that the system can decide if it’s worth the time of a human to review the change.
 
-When the Verify phases have completed successfully, the change is ready for code review. |chef delivery| provides integrated code review through its web UI. There is also an integration with |github| and another, currently in the works, for |bitbucket server| (by |atlassian|) for teams with existing code review workflows.
+When the Verify phases have completed successfully, the change is ready for code review. |chef delivery_2nd| provides integrated code review through its web UI. There is also an integration with |github| and another, currently in the works, for |bitbucket server| (by |atlassian|) for teams with existing code review workflows.
 
 In code review, team members can comment on the diffs. If more changes are required, they can be made either as additional commits on top of the originally submitted feature branch, or the commit(s) can be reworked using ``git commit --amend`` and ``git rebase``. 
 
-To submit the updates on a feature branch for review, simply run ``delivery review`` again. There’s no need to worry about force pushing if you’ve squashed commits. |chef delivery| patchset handling will work with your workflow. When you resubmit a change with updates from code review, |chef delivery| triggers a fresh run of the Verify stage using the updated feature branch. This can be repeated as necessary. When Verify has passed and the team is happy with the change, it can be approved. Changes are approved by clicking the Approve button in the web UI.
+To submit the updates on a feature branch for review, simply run ``delivery review`` again. There’s no need to worry about force pushing if you’ve squashed commits. |chef delivery_2nd| patchset handling will work with your workflow. When you resubmit a change with updates from code review, |chef delivery_2nd| triggers a fresh run of the Verify stage using the updated feature branch. This can be repeated as necessary. When Verify has passed and the team is happy with the change, it can be approved. Changes are approved by clicking the Approve button in the web UI.
 
 Approval
 -----------------------------------------------------
@@ -73,7 +73,7 @@ Acceptance
 -----------------------------------------------------
 The Acceptance stage is where your team decides whether the change should ship all the way out to its final destination. 
 
-During the Acceptance stage, infrastructure is provisioned (if needed), and the artifacts published at the end of the Build stage are deployed. The deployment is verified with automated smoke tests, and then the health of the resulting system is verified by running a functional test suite. At this point, the pipeline pauses and waits for explicit approval from someone who has the "shipper" role. The Acceptance stage is where you can run ad-hoc tests, and perform manual user acceptance testing. For the internal use of |chef delivery| at |company_name|, we have our product owners review changes in Acceptance and decide whether or not to click the Deliver button.
+During the Acceptance stage, infrastructure is provisioned (if needed), and the artifacts published at the end of the Build stage are deployed. The deployment is verified with automated smoke tests, and then the health of the resulting system is verified by running a functional test suite. At this point, the pipeline pauses and waits for explicit approval from someone who has the "shipper" role. The Acceptance stage is where you can run ad-hoc tests, and perform manual user acceptance testing. For the internal use of |chef delivery_2nd| at |company_name|, we have our product owners review changes in Acceptance and decide whether or not to click the Deliver button.
 
 When you click the Deliver button, the change begins its final journey into production. This journey consists of three stages: Union, Rehearsal, and Delivered. These three stages are special for two reasons.
 
@@ -84,7 +84,7 @@ How stages of the pipeline are associated with actual infrastructure environment
 
 Pipeline Stages
 =====================================================
-In this section, we go into more detail about the pipeline. As we've said, the |chef delivery| pipeline is made up of six stages: Verify, Build, Acceptance, Union, Rehearsal, and Delivered.
+In this section, we go into more detail about the pipeline. As we've said, the |chef delivery_2nd| pipeline is made up of six stages: Verify, Build, Acceptance, Union, Rehearsal, and Delivered.
 
 Each stage consists of phases that perform a particular task, such as running some type of test.
 
@@ -111,7 +111,7 @@ The Verify stage runs automatically when someone submits a new change or updates
 
 Build Stage
 -----------------------------------------------------
-When a change is approved, |chef delivery| merges the change into the pipeline’s target branch and triggers the Build stage. The Build stage repeats the lint, syntax, and unit phases from the Verify stage. This is because the target branch may have moved ahead since the Verify stage ran on this change (this occurs if there are multiple open changes on a project and another change is approved before yours).
+When a change is approved, |chef delivery_2nd| merges the change into the pipeline’s target branch and triggers the Build stage. The Build stage repeats the lint, syntax, and unit phases from the Verify stage. This is because the target branch may have moved ahead since the Verify stage ran on this change (this occurs if there are multiple open changes on a project and another change is approved before yours).
 
 In addition to the Verify checks, the Build stage provides three additional phases:
 
@@ -132,11 +132,11 @@ Union Stage
 -----------------------------------------------------
 Union is the first of the three shared pipeline stages. The purpose of the Union stage is to assess the impact of the change in the context of a complete (or as close as possible) installation of the set of projects that comprise the system as a whole. Union is where you are able to test for interactions between interdependent projects. The phases in Union and the remaining stages in the pipeline are the same: provision, deploy, smoke, and functional.
 
-When an artifact is in Union, |chef delivery| ensures that any projects that depend on it can only pass their own Acceptance stages by proving their compatibility with that artifact. |chef delivery| does this by pinning the versions of the dependencies to the version of the artifact in Union. In this way, |chef delivery| forces projects to consume updates to their dependencies as early as possible and prevents them from shipping before proving that they are compatible with the latest version.
+When an artifact is in Union, |chef delivery_2nd| ensures that any projects that depend on it can only pass their own Acceptance stages by proving their compatibility with that artifact. |chef delivery_2nd| does this by pinning the versions of the dependencies to the version of the artifact in Union. In this way, |chef delivery_2nd| forces projects to consume updates to their dependencies as early as possible and prevents them from shipping before proving that they are compatible with the latest version.
 
-If a problem is discovered in Union (it will happen, that is what Union is for), the cooperating teams need to have a conversation about the right fix. Sometimes the fix may require a change on a different project than the one that initiated the break. To fix the break, you submit a new change through the pipeline. |chef delivery| is fundamentally a roll-forward system.
+If a problem is discovered in Union (it will happen, that is what Union is for), the cooperating teams need to have a conversation about the right fix. Sometimes the fix may require a change on a different project than the one that initiated the break. To fix the break, you submit a new change through the pipeline. |chef delivery_2nd| is fundamentally a roll-forward system.
 
-|chef delivery| ensures that only one change is active in each of the Union, Rehearsal, and Delivered stages at any one time. This orchestration increases safety by encouraging small batch change. In complex systems, identifying root causes of issues in the context of a single change is much easier than trying to analyze larger batches of changes across many different projects. In the future, |chef delivery|’s dependency management features will be enhanced to include all concurrent deploys in Union, Rehearsal, and Delivered, as long as they map to completely unrelated dependency sets.
+|chef delivery_2nd| ensures that only one change is active in each of the Union, Rehearsal, and Delivered stages at any one time. This orchestration increases safety by encouraging small batch change. In complex systems, identifying root causes of issues in the context of a single change is much easier than trying to analyze larger batches of changes across many different projects. In the future, |chef delivery_2nd|’s dependency management features will be enhanced to include all concurrent deploys in Union, Rehearsal, and Delivered, as long as they map to completely unrelated dependency sets.
 
 Rehearsal Stage
 -----------------------------------------------------
@@ -151,7 +151,7 @@ Delivered is the final stage of the pipeline. What "delivered" means for your sy
 
 Components
 =====================================================
-The following diagram shows the servers that are involved in a |chef delivery| installation.
+The following diagram shows the servers that are involved in a |chef delivery_2nd| installation.
 
 .. image:: ../../images/delivery_architecture.svg
    :width: 600px
@@ -162,9 +162,9 @@ The build cookbook, hosted on the |chef server|, determines what happens during 
 
 Environments 
 =====================================================
-As changes flow through the |chef delivery| pipeline, they are tested in a series of runtime environments that are increasingly similar to the final runtime target environment.
+As changes flow through the |chef delivery_2nd| pipeline, they are tested in a series of runtime environments that are increasingly similar to the final runtime target environment.
 
-|chef delivery| allows you to define the infrastructure that participates in each stage.  How you map infrastructure environments to pipeline phases is controlled by the build cookbook. In other words, whether a given phase job distributes work to other infrastructure is up to you. There are many ways to map infrastructure environments to pipeline phases, but here are some possible approaches. 
+|chef delivery_2nd| allows you to define the infrastructure that participates in each stage.  How you map infrastructure environments to pipeline phases is controlled by the build cookbook. In other words, whether a given phase job distributes work to other infrastructure is up to you. There are many ways to map infrastructure environments to pipeline phases, but here are some possible approaches. 
 
 Because they test source code, the Verify and Build stages ordinarily run exclusively on the build nodes and don’t involve other infrastructure. The necessary runtime environments are created and destroyed during the execution of the stage. For example, they can be established using virtual machines created by testing frameworks such as |kitchen|.
 
@@ -176,7 +176,7 @@ For the shared pipeline (Union, Rehearsal, and Delivered), it makes sense to hav
 
 You can set up the infrastructure environments either manually or by using automated, on-the-fly provisioning upon first use. The manual approach is simple, but it has the disadvantage of not having an initial run-list for the nodes in the environment. Automated provisioning requires adding code to the build cookbook, but it is more replicable than the manual approach. Automated provisioning also bootstraps the initial run-list for each node in the environment. The ``delivery-truck`` cookbook makes it easy to customize your pipeline’s build cookbook for the environments you want to use for each stage of the pipeline.
 
-.. note:: Currently, |chef delivery| manages cookbook version and application attribute version pins using environment objects of the |chef server|. The names of the environments in the |chef server| correspond to the stages of a pipeline. (This doesn’t mean, however, that the nodes that participate in a given stage need to remain fixed over time.)
+.. note:: Currently, |chef delivery_2nd| manages cookbook version and application attribute version pins using environment objects of the |chef server|. The names of the environments in the |chef server| correspond to the stages of a pipeline. (This doesn’t mean, however, that the nodes that participate in a given stage need to remain fixed over time.)
 
 It is also possible to share infrastructure among pipeline stages. For example, you can provision infrastructure needed for performing acceptance tests while relying on enterprise services provided by another pipeline stage or even a production environment. Another possibility is to reserve a portion of infrastructure from production to run acceptance testing. 
 
@@ -184,11 +184,11 @@ Configure a Pipeline
 =====================================================
 Each project contains a configuration file in its source repository, located at ``.delivery/config.json``, that specifies the build cookbook to use for the project. The build cookbook contains recipes that control what happens in the pipeline phases.
 
-The ``config.json`` file allows customization of the behavior of |chef delivery| and the build cookbook.
+The ``config.json`` file allows customization of the behavior of |chef delivery_2nd| and the build cookbook.
 
-When |chef delivery| executes a phase, it selects a build node to run the job. On the build node, the project’s source is fetched and synchronized to the revision matching the head of the feature branch for the change. The build node reads the project’s ``config.json`` file and uses this information to fetch the appropriate build cookbook. Build cookbooks can be embedded in project source repositories, fetched from a |git| server, |chef server|, or a |supermarket| instance. Finally, the build node runs a local |chef zero| run to execute the appropriate phase.
+When |chef delivery_2nd| executes a phase, it selects a build node to run the job. On the build node, the project’s source is fetched and synchronized to the revision matching the head of the feature branch for the change. The build node reads the project’s ``config.json`` file and uses this information to fetch the appropriate build cookbook. Build cookbooks can be embedded in project source repositories, fetched from a |git| server, |chef server|, or a |supermarket| instance. Finally, the build node runs a local |chef zero| run to execute the appropriate phase.
 
-If you are using |chef delivery| to manage changes in |chef| cookbooks, you can wrap, or use directly, ``delivery-truck``, a build cookbook for building and testing cookbooks. The ``delivery-truck`` and ``delivery-sugar`` cookbooks contain helpers that can be used for non-cookbook workflows as well.  You can wrap or modify the ``delivery-truck`` cookbook to suit your own needs.
+If you are using |chef delivery_2nd| to manage changes in |chef| cookbooks, you can wrap, or use directly, ``delivery-truck``, a build cookbook for building and testing cookbooks. The ``delivery-truck`` and ``delivery-sugar`` cookbooks contain helpers that can be used for non-cookbook workflows as well.  You can wrap or modify the ``delivery-truck`` cookbook to suit your own needs.
 
 Here is an example of a build cookbook recipe that runs |junit| tests with |maven|. For example:
 
@@ -234,4 +234,4 @@ See the "Build Cookbooks" topic for more information.
 
 Getting Started
 =====================================================
-If you are new to |chef delivery|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery| cluster and a sample application to experiment with.
+If you are new to |chef delivery_2nd|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery_2nd| cluster and a sample application to experiment with.
