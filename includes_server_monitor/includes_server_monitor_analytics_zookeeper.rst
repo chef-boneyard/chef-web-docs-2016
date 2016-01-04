@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|zookeeper| is a centralized service that is used to maintain configuration information for |chef analytics|. |zookeeper| does not automatically remove snapshots and log files, which means that snapshots and log file removal must be done periodically as part of the maintanence of |chef analytics|.
+|zookeeper| is a centralized service that is used to maintain configuration information for |chef analytics|. |zookeeper| does not automatically remove snapshots and log files, which means that snapshots and log file removal must be done periodically as part of the maintenance of |chef analytics|.
 
 If snapshots and log files are not cleaned up periodically, eventually the disk on the |chef analytics| server will fill up. To prevent this situation, clean up the snapshots and log files before they are full. If the disk does fill up, do the following:
 
