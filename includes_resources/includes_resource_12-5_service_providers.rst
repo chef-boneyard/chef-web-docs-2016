@@ -25,6 +25,9 @@ This resource has the following providers:
    * - ``Chef::Provider::Service::Init::Debian``
      - ``service``
      - The provider that is used with the |debian| and |ubuntu| platforms.
+   * - ``Chef::Provider::Service::Upstart``
+     - ``service``
+     - The provider that is used when |upstart| is available on the platform.
    * - ``Chef::Provider::Service::Init::Freebsd``
      - ``service``
      - The provider that is used with the |freebsd| platform.
@@ -40,12 +43,6 @@ This resource has the following providers:
    * - ``Chef::Provider::Service::Solaris``
      - ``service``
      - The provider that is used with the |solaris| platform.
-   * - ``Chef::Provider::Service::Systemd``
-     - ``systemd``
-     - The provider that is used when |systemd| is available on the platform.
-   * - ``Chef::Provider::Service::Upstart``
-     - ``service``
-     - The provider that is used when |upstart| is available on the platform.
    * - ``Chef::Provider::Service::Windows``
      - ``service``
      - The provider that is used with the |windows| platform.
