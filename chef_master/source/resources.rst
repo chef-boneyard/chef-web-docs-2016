@@ -283,6 +283,7 @@ The following resources are built-in to the |chef client|:
 * mount
 * ohai
 * openbsd_package (based on the package resource)
+* osx_profile
 * package
 * pacman_package (based on the package resource)
 * paludis_package (based on the package resource)
@@ -337,11 +338,11 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
-**Install a package using package manager** 
+**Install a package using package manager**
 
 .. include:: ../../step_resource/step_resource_apt_package_install_package.rst
 
-**Install a package using local file** 
+**Install a package using local file**
 
 .. include:: ../../step_resource/step_resource_apt_package_install_package_using_local_file.rst
 
@@ -421,11 +422,11 @@ Guards
 
 .. include:: ../../includes_resources_common/includes_resources_common_guards_arguments.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_batch_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -486,11 +487,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -670,11 +671,11 @@ Properties
 .. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
 
 .. warning:: .. include:: ../../includes_notes/includes_notes_selinux_file_based_resources.rst
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
-.. 
+..
 
 File Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -721,11 +722,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cron_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_cron_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -892,11 +893,11 @@ Recursive Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_directory_recursive.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_directory_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1045,7 +1046,7 @@ Examples
 
 **Use custom configuration data**
 
-Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file. 
+Configuration data in |windows powershell_dsc_short| scripts may be customized from a recipe. For example, scripts are typically customized to set the behavior for |windows powershell| credential data types. Configuration data may be specified in one of three ways: by using the ``configuration_data`` or ``configuration_data_script`` attributes or by specifying the path to a valid |windows powershell| data file.
 
 .. include:: ../../step_resource/step_resource_dsc_script_configuration_data.rst
 
@@ -1106,11 +1107,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_env_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_env_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1139,11 +1140,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_erlang_call_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_erlang_call_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1172,11 +1173,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_execute_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_execute_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1264,11 +1265,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_file_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_file_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1427,11 +1428,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_git_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_scm_git_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1541,11 +1542,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_http_request_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_http_request_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1579,11 +1580,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ifconfig_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_ifconfig_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1642,11 +1643,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_link_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_link_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1689,11 +1690,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_log_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_log_providers.rst
-.. 
+..
 
 Chef::Log Entries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1769,11 +1770,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_mdadm_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_mdadm_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1865,11 +1866,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ohai_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_ohai_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1920,6 +1921,53 @@ Examples
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_openbsd_package_install.rst
+
+
+osx_profile
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_osx_profile.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_osx_profile_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_osx_profile_actions.rst
+
+Properties
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_osx_profile_attributes.rst
+
+..
+.. Providers
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_resources/includes_resource_osx_profile_providers.rst
+..
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**One liner to install profile from cookbook file**
+
+.. include:: ../../step_resource/step_resource_osx_profile_install_file_oneline.rst
+
+**Install profile from cookbook file**
+
+.. include:: ../../step_resource/step_resource_osx_profile_install_file.rst
+
+**Install profile from a hash**
+
+.. include:: ../../step_resource/step_resource_osx_profile_install_hash.rst
+
+**Remove profile using identifier in resource name**
+
+.. include:: ../../step_resource/step_resource_osx_profile_remove_by_name.rst
+
+**Remove profile by identifier and user friendly resource name**
+
+.. include:: ../../step_resource/step_resource_osx_profile_remove_by_identifier.rst
 
 
 
@@ -2193,11 +2241,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_powershell_script_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2268,11 +2316,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_reboot_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_service_reboot_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2316,11 +2364,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2370,11 +2418,11 @@ Recursive Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_remote_directory_recursive.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_remote_directory_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2407,11 +2455,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_remote_file_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2457,11 +2505,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_route_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_route_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2546,11 +2594,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ruby_block_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_ruby_block_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2785,11 +2833,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_subversion_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_scm_subversion_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2818,11 +2866,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_template_providers.rst
-.. 
+..
 
 Using Templates
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3062,11 +3110,11 @@ Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_windows_attributes.rst
 
-.. 
+..
 .. Providers
 .. +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. .. include:: ../../includes_resources/includes_resource_service_windows_providers.rst
-.. 
+..
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

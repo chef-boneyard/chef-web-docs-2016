@@ -75,6 +75,8 @@ The following resources are platform resources (i.e. "are available from the |ch
      - .. include:: ../../includes_resources/includes_resource_mount.rst
    * - `ohai <http://docs.chef.io/resource_ohai.html>`_
      - .. include:: ../../includes_resources/includes_resource_ohai.rst
+   * - `osx_profile <http://docs.chef.io/resource_osx_profile.html>`_
+     - .. include:: ../../includes_resources/includes_resource_osx_profile.rst
    * - `package <http://docs.chef.io/resource_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package.rst
    * - `pacman_package <http://docs.chef.io/resource_pacman_package.html>`_
