@@ -14,7 +14,7 @@ This resource has the following properties:
 
        The amount of time (in seconds) to delay a reboot request.
 
-       .. note:: This setting must be entered in seconds.
+       .. note:: This setting must be entered in seconds. Starting with |chef client| 12.5, this property is updated to correctly allow the entering of time in minutes.
 
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
