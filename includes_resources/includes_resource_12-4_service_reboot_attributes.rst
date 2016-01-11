@@ -12,7 +12,9 @@ This resource has the following properties:
    * - ``delay_mins``
      - **Ruby Type:** Fixnum
 
-       The amount of time (in minutes) to delay a reboot request.
+       The amount of time (in seconds) to delay a reboot request.
+
+       .. note:: This setting must be entered in seconds.
 
    * - ``ignore_failure``
      - **Ruby Types:** TrueClass, FalseClass
