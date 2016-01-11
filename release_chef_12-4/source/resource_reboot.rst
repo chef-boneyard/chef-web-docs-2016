@@ -36,10 +36,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_12-4_service_reboot_immediately.rst
 
-**Reboot a node at the end of a chef-client run**
-
-.. include:: ../../step_resource/step_resource_service_reboot_request.rst
-
 **Cancel a reboot**
 
 .. include:: ../../step_resource/step_resource_service_reboot_cancel.rst
