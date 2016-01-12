@@ -111,4 +111,4 @@ rst_link_suffix = '.rst'
 rst_line_width = '78'
 
 # The number of spaces in standard indentation.
-rst_indent = '4'
+rst_indent = '3'
