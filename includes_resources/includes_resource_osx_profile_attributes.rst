@@ -25,14 +25,11 @@ This resource has the following properties:
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
        .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``path``
-     - **Ruby Type:** String
 
-       Use to specify the path to the profile.
    * - ``profile``
      - **Ruby Types:** String, Hash
 
-       Use to specify one (or more) profiles.
+       Use to specify a profile. This may be the name of a profile contained in a cookbook or a |ruby hash| that contains the contents of the profile.
    * - ``profile_name``
      - **Ruby Type:** String
 
