@@ -15,7 +15,7 @@ The full syntax for all of the properties that are available to the |resource os
 .. code-block:: ruby
 
    osx_profile 'name' do
-     path                       String
+     path                       # set automatically
      profile                    String, Hash
      profile_name               String # defaults to 'name' if not specified
      identifier                 String
@@ -27,4 +27,4 @@ where
 * ``osx_profile`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``path``, ``profile``, ``profile_name``, and ``identifier`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``profile``, ``profile_name``, and ``identifier`` are properties of this resource, with the |ruby| type shown. |see attributes|
