@@ -1,3 +1,7 @@
 .. THIS PAGE DOCUMENTS Enterprise Chef server version 11.2
 
-.. include:: ../../release_11-x_master/install_server_febe.rst
+=====================================================
+Scaled Front End and Back End
+=====================================================
+
+This scenario has all of the same requirements as the :doc:`scaled front end </install_server_fe>` and :doc:`scaled back end </install_server_be>` scenarios.

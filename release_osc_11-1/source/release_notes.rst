@@ -4,8 +4,7 @@
 Release Notes: |chef server osc| 11.1
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_11_index_osc.rst
-
+|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. Each organization is comprised of one (or more) workstations, a single server, and every node that will be configured and maintained by the |chef client|. Cookbooks (and recipes) are used to tell the |chef client| how each node in your organization should be configured. The |chef client| (which is installed on every node) does the actual configuration.
 
 What's New
 =====================================================
@@ -16,7 +15,6 @@ The following items are new for |chef server osc| 11.1 and/or are changes from p
 * **Gecode Depsolver** The |chef server osc| server switches back to using the Gecode depsolver. This resolves cookbook dependency issues that were seen by some users due to the less-robust nature of the |erlang|-based dependency solver that was added in |chef server osc| 11.0.
 * **RabbitMQ default port changes** The default port used by |rabbitmq| is changed from 5672 to 8672. This resolves a conflict with the default port on the |redhat| 6 platform.
 * **chef-server-ctl upgrade** A new subcommand is available for upgrading the |chef server osc| server in standalone topologies.
-
 
 Support for IPv6
 -----------------------------------------------------
@@ -115,7 +113,11 @@ In addition, these settings may be necessary when configuring the storing of coo
 
 New ``upgrade`` Subcommand
 -----------------------------------------------------
-.. include:: ../../includes_upgrade/includes_upgrade_11-0-4_server_osc.rst
+.. warning:: This section applies only to upgrading standalone configurations of the |chef server osc| server.
+
+The upgrade process for a standalone configuration |chef server osc| server has been simplified (starting with upgrades from version 11.0.4 to the current version). This process allows an in-place upgrade of the server components and applies all of the necessary SQL changes and updates without having to reinstall any components and without having to re-import data.
+
+.. warning:: Back up the server data before running the ``upgrade`` command. Even though it's not a requirement (because it's an in-place upgrade) and even though there is no step for "restoring data" as part of the upgrade process, in the event something unexpected does happen, it's important to be able to restore this data to the server.
 
 
 chef-server-ctl upgrade
@@ -129,7 +131,31 @@ The ``chef-server-ctl`` command has a new subcommand: ``upgrade``:
 
 Upgrade Process
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_upgrade/includes_upgrade_11-1-4_server_osc_steps.rst
+.. warning:: This section applies only to upgrading standalone configurations of the |chef server osc| server.
+
+The new upgrade process is simpler. Update the package on the system, and then run the ``upgrade`` subcommand:
+
+#. After all of the services have shut down, update the package (using the appropriate package manager for the system on which the server is running):
+   
+   .. code-block:: bash
+   
+      $ dpkg -i package.deb
+
+#. Upgrade the server itself:
+   
+   .. code-block:: bash
+   
+      $ chef-server-ctl upgrade
+   
+   .. note:: The following error may be present in the logs for |postgresql| during the upgrade process: ``ERROR: duplicate key value violates unique constraint "checksums_pkey"``. This error does not represent an issue with the upgrade process and can be safely ignored.
+
+#. Check the status of everything:
+   
+   .. code-block:: bash
+   
+      $ chef-server-ctl status
+
+
 
 What's Fixed
 =====================================================

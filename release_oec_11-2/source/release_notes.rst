@@ -2,7 +2,7 @@
 Release Notes: |chef server oec| 11.2
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_11_index_oec.rst
+|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. Each organization is comprised of one (or more) workstations, a single server, and every node that will be configured and maintained by the |chef client|. Cookbooks (and recipes) are used to tell the |chef client| how each node in your organization should be configured. The |chef client| (which is installed on every node) does the actual configuration.
 
 What's New
 =====================================================
