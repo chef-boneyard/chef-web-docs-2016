@@ -2,7 +2,7 @@
 About |chef server osc| 11.0
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_11_index_osc.rst
+|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. Each organization is comprised of one (or more) workstations, a single server, and every node that will be configured and maintained by the |chef client|. Cookbooks (and recipes) are used to tell the |chef client| how each node in your organization should be configured. The |chef client| (which is installed on every node) does the actual configuration.
 
 The |chef server osc| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 

@@ -1,5 +1,0 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
-
-
-|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. The |chef client| relies on abstract definitions (known as cookbooks and recipes) that are written in |ruby| and are managed like source code. Each definition describes how a specific part of your infrastructure should be built and managed. The |chef client| then applies those definitions to servers and applications, as specified, resulting in a fully automated infrastructure. When a new node is brought online, the only thing the |chef client| needs to know is which cookbooks and recipes to apply.
