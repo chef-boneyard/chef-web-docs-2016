@@ -94,7 +94,7 @@ bookshelf
 
 couchdb
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_couchdb.rst
+The |service couchdb| service is used to store key/value data.
 
 keepalived
 -----------------------------------------------------
@@ -106,11 +106,23 @@ nginx
 
 opscode-account
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_account.rst
+The |service account| service is a |ruby|-based service that handles the following types of |api chef server| requests:
+
+* ACLs
+* Association requests
+* Containers
+* Groups
+* Organizations
+* Clients
+* Users
+
+.. note:: This service is deprecated in |chef server| 12.
 
 opscode-certificate
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_certificate.rst
+The |service certificate| service is used to provide the certificates that are returned when the |chef client| is set up and configured on nodes and workstations.
+
+.. note:: This service is deprecated in |chef server| 12.
 
 opscode-erchef
 -----------------------------------------------------
@@ -126,11 +138,11 @@ opscode-expander-reindexer
 
 opscode-solr
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_solr.rst
+The |service solr| service is used to create the search indexes.
 
 opscode-webui
 -----------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_11_webui.rst
+The |service webui| service is used to mange the web user interface for the |chef server|.
 
 postgresql
 -----------------------------------------------------

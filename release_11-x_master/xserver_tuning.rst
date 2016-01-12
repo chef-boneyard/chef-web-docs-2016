@@ -61,7 +61,24 @@ opscode-expander
 
 opscode-solr
 -----------------------------------------------------
-.. include:: ../../includes_server_tuning/includes_server_tuning_11_solr.rst
+The following settings are often modified from the default as part of the tuning effort for the |service solr| service:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``opscode_solr['heap_size']``
+     - |heap_size solr| 
+       
+       If |apache solr| is running out of memory, the ``/var/log/opscode/opscode-solr/current`` log file will contain ``SEVERE: java.lang.OutOfMemoryError: Java heap space``.
+       
+       The default value should work for many organizations with fewer than 25 nodes. Suggested value: ``256`` per every 25 nodes. For example, an organization with 300 nodes, this value should be set to ``3072``.
+   * - ``opscode_solr['max_field_length']``
+     - |solr_max_field_length| Default value: ``100000`` (increased from the |apache solr| default value of ``10000``).
+
+
 
 Update Frequency
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

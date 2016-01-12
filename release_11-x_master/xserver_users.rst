@@ -2,7 +2,14 @@
 Users
 =====================================================
 
-.. include:: ../../includes_server_users/includes_server_users_11.rst
+The following tasks are available for user management in |chef server oec|:
+
+* Creating users
+* Editing a user's profile
+* Changing a password
+* Recovering a password
+* Regenerating a private key
+* Viewing a user's profile
 
 Change Password
 =====================================================
