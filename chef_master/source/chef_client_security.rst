@@ -61,9 +61,7 @@ Run the |subcommand knife ssl_check| command to verify the state of the |ssl| ce
 
 knife ssl fetch
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Run the |subcommand knife ssl_fetch| to download the self-signed certificate from the |chef server| to the |path trusted_certs| directory on a workstation. For example:
-
-.. include:: ../../step_knife/step_knife_ssl_fetch_verify_certificate.rst
+Run the |subcommand knife ssl_fetch| to download the self-signed certificate from the |chef server| to the |path trusted_certs| directory on a workstation.
 
 **Verify Checksums**
 
