@@ -6,38 +6,34 @@ Custom resources are designed to use core resources that are built into |chef|. 
 
 .. code-block:: ruby
 
-   class Chef
-     class Resource::NodeExecute < ChefCompat::Resource
-       resource_name :node_execute
+   resource_name :node_execute
    
-       property :command, kind_of: String, name_property: true
-       property :version, kind_of: String
+   property :command, kind_of: String, name_property: true
+   property :version, kind_of: String
    
-       # Useful properties from the `execute` resource
-       property :cwd, kind_of: String
-       property :environment, kind_of: Hash, default: {}
-       property :user, kind_of: [String, Integer]
-       property :sensitive, kind_of: [TrueClass, FalseClass], default: false
+   # Useful properties from the `execute` resource
+   property :cwd, kind_of: String
+   property :environment, kind_of: Hash, default: {}
+   property :user, kind_of: [String, Integer]
+   property :sensitive, kind_of: [TrueClass, FalseClass], default: false
    
-       prefix = '/opt/languages/node'
+   prefix = '/opt/languages/node'
    
-       load_current_value do
-         current_value_does_not_exist! if node.run_state['nodejs'].nil?
-         version node.run_state['nodejs'][:version]
-       end
+   load_current_value do
+     current_value_does_not_exist! if node.run_state['nodejs'].nil?
+     version node.run_state['nodejs'][:version]
+   end
    
-       action :run do
-         execute 'execute-node' do
-           cwd cwd
-           environment environment
-           user user
-           sensitive sensitive
-           # gsub replaces 10+ spaces at the beginning of the line with nothing
-           command <<-CODE.gsub(/^ {10}/, '')
-             #{prefix}/#{version}/#{command}
-           CODE
-         end
-       end
+   action :run do
+     execute 'execute-node' do
+       cwd cwd
+       environment environment
+       user user
+       sensitive sensitive
+       # gsub replaces 10+ spaces at the beginning of the line with nothing
+       command <<-CODE.gsub(/^ {10}/, '')
+         #{prefix}/#{version}/#{command}
+       CODE
      end
    end
 
@@ -53,38 +49,34 @@ To prevent this behavior, use ``new_resource.`` to tell the |chef client| to pro
 
 .. code-block:: ruby
 
-   class Chef
-     class Resource::NodeExecute < ChefCompat::Resource
-       resource_name :node_execute
+   resource_name :node_execute
    
-       property :command, kind_of: String, name_property: true
-       property :version, kind_of: String
+   property :command, kind_of: String, name_property: true
+   property :version, kind_of: String
    
-       # Useful properties from the `execute` resource
-       property :cwd, kind_of: String
-       property :environment, kind_of: Hash, default: {}
-       property :user, kind_of: [String, Integer]
-       property :sensitive, kind_of: [TrueClass, FalseClass], default: false
-  
-       prefix = '/opt/languages/node'
+   # Useful properties from the `execute` resource
+   property :cwd, kind_of: String
+   property :environment, kind_of: Hash, default: {}
+   property :user, kind_of: [String, Integer]
+   property :sensitive, kind_of: [TrueClass, FalseClass], default: false
    
-       load_current_value do
-         current_value_does_not_exist! if node.run_state['nodejs'].nil?
-         version node.run_state['nodejs'][:version]
-       end
+   prefix = '/opt/languages/node'
    
-       action :run do
-         execute 'execute-node' do
-           cwd new_resource.cwd
-           environment new_resource.environment
-           user new_resource.user
-           sensitive new_resource.sensitive
-           # gsub replaces 10+ spaces at the beginning of the line with nothing
-           command <<-CODE.gsub(/^ {10}/, '')
-             #{prefix}/#{new_resource.version}/#{new_resouce.command}
-           CODE
-         end
-       end
+   load_current_value do
+     current_value_does_not_exist! if node.run_state['nodejs'].nil?
+     version node.run_state['nodejs'][:version]
+   end
+   
+   action :run do
+     execute 'execute-node' do
+       cwd new_resource.cwd
+       environment new_resource.environment
+       user new_resource.user
+       sensitive new_resource.sensitive
+       # gsub replaces 10+ spaces at the beginning of the line with nothing
+       command <<-CODE.gsub(/^ {10}/, '')
+         #{prefix}/#{new_resource.version}/#{new_resource.command}
+       CODE
      end
    end
 
