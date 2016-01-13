@@ -1,9 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The environment variables ``http_proxy`` and ``https_proxy`` are honored by test-kitchen for proxies.
+The environment variables ``http_proxy`` and ``https_proxy`` are honored by |kitchen| for proxies.
 
-Additionally, the Chef config file will be read to look for proxy configuration. If ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` is set in the |client rb| file, the |chef client| will configure the ``ENV`` variable based on these (and related) settings. For example:
+Additionally, the |client rb| file will be read to look for proxy configuration. If ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` is set in the |client rb| file, the |chef client| will configure the ``ENV`` variable based on these (and related) settings. For example:
 
 .. code-block:: ruby
 
@@ -17,7 +17,7 @@ will be set to:
 
    ENV['http_proxy'] = 'http://myself:Password1@proxy.example.org:8080'
 
-test-kitchen also supports ``http_proxy`` and ```https_proxy`` in the ``.kitchen.yml`` file:
+|kitchen| also supports ``http_proxy`` and ```https_proxy`` in the ``.kitchen.yml`` file:
 
 .. code-block:: yaml
 
