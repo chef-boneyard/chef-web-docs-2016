@@ -1,9 +1,7 @@
-.. The contents of this file are included in multiple topics.
+j.. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The environment variables ``http_proxy`` and ``https_proxy`` are honored by |kitchen| for proxies.
-
-Additionally, the |client rb| file will be read to look for proxy configuration. If ``http_proxy``, ``https_proxy``, ``ftp_proxy``, or ``no_proxy`` is set in the |client rb| file, the |chef client| will configure the ``ENV`` variable based on these (and related) settings. For example:
+The environment variables ``http_proxy``, ``https_proxy``, and ``ftp_proxy`` are honored by |kitchen| for proxies. The |client rb| file is read to look for proxy configuration settings. If ``http_proxy``, ``https_proxy``, and ``ftp_proxy`` are specified in the |client rb| file, the |chef client| will configure the ``ENV`` variable based on these (and related) settings. For example:
 
 .. code-block:: ruby
 
