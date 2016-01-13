@@ -1,3 +1,7 @@
 .. THIS PAGE DOCUMENTS chef-client version 11.18
 
-.. include:: ../../release_11-x_master/install_omnibus.rst
+=====================================================
+About the Omnibus Installer
+=====================================================
+
+.. include:: ../../includes_install/includes_install_chef_client_omnibus_installer.rst
