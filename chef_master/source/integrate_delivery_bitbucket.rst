@@ -7,6 +7,18 @@ Integrate Delivery with |bitbucket|
 .. 
 .. .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket.rst
 .. 
+.. Trust SSL Certificate
+.. =====================================================
+.. .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_ssl_trust.rst
+.. 
+.. |debian|
+.. -----------------------------------------------------
+.. .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_ssl_trust_debian.rst
+.. 
+.. RHEL, Centos
+.. -----------------------------------------------------
+.. .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_ssl_trust_rhel_centos.rst
+.. 
 .. Set up Integration
 .. =====================================================
 .. .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_setup.rst
