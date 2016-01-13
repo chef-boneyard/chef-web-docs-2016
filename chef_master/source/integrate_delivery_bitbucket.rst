@@ -11,7 +11,7 @@ Integrate Delivery with |bitbucket|
 .. =====================================================
 .. .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_ssl_trust.rst
 .. 
-.. |debian|
+.. Debian
 .. -----------------------------------------------------
 .. .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_ssl_trust_debian.rst
 .. 
