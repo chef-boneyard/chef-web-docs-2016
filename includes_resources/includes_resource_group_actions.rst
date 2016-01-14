@@ -3,19 +3,17 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. |resource action create group|
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create group|
-   * - ``:manage``
-     - |resource action manage group|
-   * - ``:modify``
-     - |resource action modify group|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:remove``
-     - |resource action remove group|
+``:manage``
+   |resource action manage group|
+
+``:modify``
+   |resource action modify group|
+
+``:nothing``
+   |resource action nothing|
+
+``:remove``
+   |resource action remove group|

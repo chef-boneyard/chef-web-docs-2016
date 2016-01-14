@@ -2,62 +2,66 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``code``
+   **Ruby Type:** String
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |code erlang_call| Default value: ``q()``.
+   
+``cookie``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``code``
-     - **Ruby Type:** String
+   |cookie resource erlang_call|
+   
+``distributed``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |code erlang_call| Default value: ``q()``.
-   * - ``cookie``
-     - **Ruby Type:** String
+   |distributed_erlang_node| Default value: ``false``.
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |cookie resource erlang_call|
-   * - ``distributed``
-     - **Ruby Types:** TrueClass, FalseClass
+   |ignore_failure| Default value: ``false``.
+   
+``name_type``
+   **Ruby Type:** String
 
-       |distributed_erlang_node| Default value: ``false``.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |name sname_or_name| Default value: ``sname``.
+   
+``node_name``
+   **Ruby Type:** String
 
-       |ignore_failure| Default value: ``false``.
-   * - ``name_type``
-     - **Ruby Type:** String
+   |node_hostname| Default value: ``chef@localhost``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |name sname_or_name| Default value: ``sname``.
-   * - ``node_name``
-     - **Ruby Type:** String
+   |notifies|
 
-       |node_hostname| Default value: ``chef@localhost``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   Optional. |provider resource_parameter|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
-
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
+   |subscribes timers|

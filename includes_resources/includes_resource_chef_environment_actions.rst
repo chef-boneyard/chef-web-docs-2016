@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. Use to create an environment.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. Use to create an environment.
-   * - ``:delete``
-     - Use to delete an environment.
-   * - ``:nothing``
-     - |resource action nothing|
+``:delete``
+   Use to delete an environment.
+
+``:nothing``
+   |resource action nothing|

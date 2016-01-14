@@ -3,17 +3,14 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. Use to create a |chef client|.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. Use to create a |chef client|.
-   * - ``:delete``
-     - Use to delete a |chef client|.
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:regenerate_keys``
-     - Use to regenerate the RSA public key for a |chef client|.
+``:delete``
+   Use to delete a |chef client|.
+
+``:nothing``
+   |resource action nothing|
+
+``:regenerate_keys``
+   Use to regenerate the RSA public key for a |chef client|.

@@ -3,23 +3,23 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:delete``
+   |resource action delete http_request|
 
-   * - Action
-     - Description
-   * - ``:delete``
-     - |resource action delete http_request|
-   * - ``:get``
-     - Default. |resource action get http_request|
-   * - ``:head``
-     - |resource action head http_request|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:options``
-     - |resource action options http_request|
-   * - ``:post``
-     - |resource action post http_request|
-   * - ``:put``
-     - |resource action put http_request|
+``:get``
+   Default. |resource action get http_request|
+
+``:head``
+   |resource action head http_request|
+
+``:nothing``
+   |resource action nothing|
+
+``:options``
+   |resource action options http_request|
+
+``:post``
+   |resource action post http_request|
+
+``:put``
+   |resource action put http_request|

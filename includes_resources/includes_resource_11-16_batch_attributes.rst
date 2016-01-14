@@ -3,83 +3,92 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``architecture``
+   **Ruby Type:** Symbol
 
-   * - Property
-     - Description
-   * - ``architecture``
-     - **Ruby Type:** Symbol
+   |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
 
-       |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
-   * - ``code``
-     - **Ruby Type:** String
+``code``
+   **Ruby Type:** String
 
-       |code quoted_string|
-   * - ``command``
-     - **Ruby Types:** String, Array
+   |code quoted_string|
 
-       |name command|
-   * - ``creates``
-     - **Ruby Type:** String
+``command``
+   **Ruby Types:** String, Array
 
-       |creates file_exists|
-   * - ``cwd``
-     - **Ruby Type:** String
+   |name command|
 
-       |cwd run_command|
-   * - ``flags``
-     - **Ruby Type:** String
+``creates``
+   **Ruby Type:** String
 
-       |flags|
-   * - ``group``
-     - **Ruby Types:** String, Integer
+   |creates file_exists|
 
-       |group command|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``cwd``
+   **Ruby Type:** String
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |cwd run_command|
 
-       |notifies|
+``flags``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |flags|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``group``
+   **Ruby Types:** String, Integer
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |group command|
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** Integer, Array
+   |ignore_failure| Default value: ``false``.
 
-       |return_value cmd| Default value: ``0``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |subscribes|
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** Integer, Float
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |timeout command| Default value: ``3600``.
-   * - ``user``
-     - **Ruby Types:** String, Integer
+``provider``
+   **Ruby Type:** Chef Class
 
-       |user name_or_id|
+   Optional. |provider resource_parameter|
+
+``retries``
+   **Ruby Type:** Integer
+
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``returns``
+   **Ruby Types:** Integer, Array
+
+   |return_value cmd| Default value: ``0``.
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Types:** Integer, Float
+
+   |timeout command| Default value: ``3600``.
+
+``user``
+   **Ruby Types:** String, Integer
+
+   |user name_or_id|
 
 .. note:: .. include:: ../../includes_notes/includes_notes_batch_resource_link_to_cmdexe_technet.rst

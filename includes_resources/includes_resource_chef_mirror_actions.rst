@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:download``
+   ...
 
-   * - Action
-     - Description
-   * - ``:download``
-     - 
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:upload``
-     - 
+``:nothing``
+   |resource action nothing|
+
+``:upload``
+   ...

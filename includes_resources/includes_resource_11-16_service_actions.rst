@@ -3,25 +3,23 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:disable``
+   |resource action disable service|
 
-   * - Action
-     - Description
-   * - ``:disable``
-     - |resource action disable service|
-   * - ``:enable``
-     - |resource action export service|
-   * - ``:nothing``
-     - Default. |resource action nothing service|
-   * - ``:reload``
-     - |resource action reload service|
-   * - ``:restart``
-     - |resource action restart service|
-   * - ``:start``
-     - |resource action start service|
-   * - ``:stop``
-     - |resource action stop service|
+``:enable``
+   |resource action export service|
 
+``:nothing``
+   Default. |resource action nothing service|
 
+``:reload``
+   |resource action reload service|
+
+``:restart``
+   |resource action restart service|
+
+``:start``
+   |resource action start service|
+
+``:stop``
+   |resource action stop service|

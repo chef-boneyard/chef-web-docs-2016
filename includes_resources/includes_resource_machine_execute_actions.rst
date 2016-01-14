@@ -3,13 +3,8 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:nothing``
+   |resource action nothing|
 
-   * - Action
-     - Description
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:run``
-     - Default. Use to run a machine.
+``:run``
+   Default. Use to run a machine.

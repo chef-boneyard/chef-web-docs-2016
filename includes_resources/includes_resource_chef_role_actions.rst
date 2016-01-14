@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. Use to create a role.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. Use to create a role.
-   * - ``:delete``
-     - Use to delete a role.
-   * - ``:nothing``
-     - |resource action nothing|
+``:delete``
+   Use to delete a role.
+
+``:nothing``
+   |resource action nothing|

@@ -3,63 +3,67 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |ignore_failure| Default value: ``false``.
 
-       |ignore_failure| Default value: ``false``.
-   * - ``installer_type``
-     - **Ruby Type:** Symbol
+``installer_type``
+   **Ruby Type:** Symbol
 
-       |type package_11-16_string| Possible values: ``:msi``.
+   |type package_11-16_string| Possible values: ``:msi``.
 
-       .. note:: Starting with |chef client| version 12, this value is a symbol (``:msi``) and not a string.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. note:: Starting with |chef client| version 12, this value is a symbol (``:msi``) and not a string.
 
-       |notifies|
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |command options|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+``options``
+   **Ruby Type:** String
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |command options|
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** String, Integer, Array
+``provider``
+   **Ruby Type:** Chef Class
 
-       |returns| This code signals a successful ``:install`` action. Default value: ``0``.
-   * - ``source``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter| |see providers|
 
-       Optional. |source resource package| |resource_block_default| |see syntax|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``retries``
+   **Ruby Type:** Integer
 
-       |subscribes|
+   |retries| Default value: ``0``.
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
+   |retry_delay| Default value: ``2``.
 
-       |timeout| Default value: ``600`` (seconds).
+``returns``
+   **Ruby Types:** String, Integer, Array
+
+   |returns| This code signals a successful ``:install`` action. Default value: ``0``.
+
+``source``
+   **Ruby Type:** String
+
+   Optional. |source resource package| |resource_block_default| |see syntax|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Types:** String, Integer
+
+   |timeout| Default value: ``600`` (seconds).

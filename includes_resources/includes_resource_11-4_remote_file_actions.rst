@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. |resource action create remote_file|
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create remote_file|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing remote_file|
-   * - ``:nothing``
-     - |resource action nothing|
+``:create_if_missing``
+   |resource action create_if_missing remote_file|
+
+``:nothing``
+   |resource action nothing|

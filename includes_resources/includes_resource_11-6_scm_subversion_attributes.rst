@@ -4,77 +4,85 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``destination``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``destination``
-     - **Ruby Type:** String
+   |destination resource scm| |resource_block_default| |see syntax|
 
-       |destination resource scm| |resource_block_default| |see syntax|
-   * - ``group``
-     - **Ruby Types:** String, Integer
+``group``
+   **Ruby Types:** String, Integer
 
-       |group deploy|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |group deploy|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |notifies|
+   |ignore_failure| Default value: ``false``.
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |notifies|
 
-       Optional. |provider resource_parameter|
-   * - ``repository``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |uri repository_svn|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``provider``
+   **Ruby Type:** Chef Class
 
-       |retry_delay| Default value: ``2``.
-   * - ``revision``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter|
 
-       |revision| Default value: ``HEAD``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``repository``
+   **Ruby Type:** String
 
-       |subscribes|
+   |uri repository_svn|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``retries``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
-   * - ``svn_arguments``
-     - **Ruby Type:** String
+   |retries| Default value: ``0``.
 
-       |svn_arguments resource|
-   * - ``svn_info_args``
-     - **Ruby Type:** String
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |svn_info_args resource|
-   * - ``svn_password``
-     - **Ruby Type:** String
+   |retry_delay| Default value: ``2``.
 
-       |svn_password resource|
-   * - ``svn_username``
-     - **Ruby Type:** String
+``revision``
+   **Ruby Type:** String
 
-       |svn_username resource|
-   * - ``user``
-     - **Ruby Types:** String, Integer
+   |revision| Default value: ``HEAD``.
 
-       |user checked_out_code|
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``svn_arguments``
+   **Ruby Type:** String
+
+   |svn_arguments resource|
+
+``svn_info_args``
+   **Ruby Type:** String
+
+   |svn_info_args resource|
+
+``svn_password``
+   **Ruby Type:** String
+
+   |svn_password resource|
+
+``svn_username``
+   **Ruby Type:** String
+
+   |svn_username resource|
+
+``user``
+   **Ruby Types:** String, Integer
+
+   |user checked_out_code|

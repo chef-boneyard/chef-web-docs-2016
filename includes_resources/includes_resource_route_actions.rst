@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:add``
+   Default. |resource action add route|
 
-   * - Action
-     - Description
-   * - ``:add``
-     - Default. |resource action add route|
-   * - ``:delete``
-     - |resource action delete route|
-   * - ``:nothing``
-     - |resource action nothing|
+``:delete``
+   |resource action delete route|
+
+``:nothing``
+   |resource action nothing|

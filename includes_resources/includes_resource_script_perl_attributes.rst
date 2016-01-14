@@ -2,97 +2,107 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``code``
+   **Ruby Type:** String
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |code quoted_string|
+   
+``creates``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``code``
-     - **Ruby Type:** String
+   |creates file_exists|
+   
+``cwd``
+   **Ruby Type:** String
 
-       |code quoted_string|
-   * - ``creates``
-     - **Ruby Type:** String
+   |cwd|
+   
+``environment``
+   **Ruby Type:** Hash
 
-       |creates file_exists|
-   * - ``cwd``
-     - **Ruby Type:** String
+   |environment variables|
+   
+``flags``
+   **Ruby Type:** String
 
-       |cwd|
-   * - ``environment``
-     - **Ruby Type:** Hash
+   |flags|
+   
+``group``
+   **Ruby Types:** String, Integer
 
-       |environment variables|
-   * - ``flags``
-     - **Ruby Type:** String
+   |group command|
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |flags|
-   * - ``group``
-     - **Ruby Types:** String, Integer
+   |ignore_failure| Default value: ``false``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |group command|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |notifies|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``path``
+   **Ruby Type:** Array
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |path resource execute| The default value uses the system path.
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``path``
-     - **Ruby Type:** Array
+   .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
 
-       |path resource execute| The default value uses the system path.
+      For example:
 
-       .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
+      .. code-block:: ruby
 
-          For example:
+         perl 'mycommand' do
+           environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
+         end
 
-          .. code-block:: ruby
 
-             perl 'mycommand' do
-               environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
-             end
+``provider``
+   **Ruby Type:** Chef Class
 
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   Optional. |provider resource_parameter| |see providers|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``returns``
+   **Ruby Types:** Integer, Array
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** Integer, Array
+   |return_value cmd| Default value: ``0``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |return_value cmd| Default value: ``0``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |subscribes|
 
-       |subscribes|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |subscribes timers|
+   
+``timeout``
+   **Ruby Types:** Integer, Float
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** Integer, Float
+   |timeout command| Default value: ``3600``.
+   
+``user``
+   **Ruby Types:** String, Integer
 
-       |timeout command| Default value: ``3600``.
-   * - ``user``
-     - **Ruby Types:** String, Integer
+   |user command|
+   
+``umask``
+   **Ruby Types:** String, Integer
 
-       |user command|
-   * - ``umask``
-     - **Ruby Types:** String, Integer
-
-       |umask|
+   |umask|

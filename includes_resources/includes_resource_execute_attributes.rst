@@ -2,99 +2,108 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``command``
+   **Ruby Types:** String, Array
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |name command| |resource_block_default| |see syntax|
 
-   * - Property
-     - Description
-   * - ``command``
-     - **Ruby Types:** String, Array
+   .. note:: .. include:: ../../includes_notes/includes_notes_execute_resource_multiple_commands.rst
+   
+``creates``
+   **Ruby Type:** String
 
-       |name command| |resource_block_default| |see syntax|
+   |creates file_exists|
+   
+``cwd``
+   **Ruby Type:** String
 
-       .. note:: .. include:: ../../includes_notes/includes_notes_execute_resource_multiple_commands.rst
-   * - ``creates``
-     - **Ruby Type:** String
+   |cwd run_command|
+   
+``environment``
+   **Ruby Type:** Hash
 
-       |creates file_exists|
-   * - ``cwd``
-     - **Ruby Type:** String
+   |environment variables|
+   
+``group``
+   **Ruby Types:** String, Integer
 
-       |cwd run_command|
-   * - ``environment``
-     - **Ruby Type:** Hash
+   |group command|
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |environment variables|
-   * - ``group``
-     - **Ruby Types:** String, Integer
+   |ignore_failure| Default value: ``false``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |group command|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |notifies|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``path``
+   **Ruby Type:** Array
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |path resource execute| The default value uses the system path.
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``path``
-     - **Ruby Type:** Array
+   .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
 
-       |path resource execute| The default value uses the system path.
+      For example:
 
-       .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
+      .. code-block:: ruby
 
-          For example:
+         execute 'mycommand' do
+           environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
+         end
 
-          .. code-block:: ruby
+``provider``
+   **Ruby Type:** Chef Class
 
-             execute 'mycommand' do
-               environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
-             end
+   Optional. |provider resource_parameter|
+   
+``retries``
+   **Ruby Type:** Integer
 
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``returns``
+   **Ruby Types:** Integer, Array
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |return_value cmd| Default value: ``0``.
+   
+``sensitive``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** Integer, Array
+   |sensitive| Default value: ``false``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |return_value cmd| Default value: ``0``.
-   * - ``sensitive``
-     - **Ruby Types:** TrueClass, FalseClass
+   |subscribes|
 
-       |sensitive| Default value: ``false``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``timeout``
+   **Ruby Types:** Integer, Float
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |timeout command| Default value: ``3600``.
+   
+``user``
+   **Ruby Types:** String, Integer
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** Integer, Float
+   |user command|
+   
+``umask``
+   **Ruby Types:** String, Integer
 
-       |timeout command| Default value: ``3600``.
-   * - ``user``
-     - **Ruby Types:** String, Integer
-
-       |user command|
-   * - ``umask``
-     - **Ruby Types:** String, Integer
-
-       |umask|
+   |umask|

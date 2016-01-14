@@ -3,17 +3,14 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:install``
+   Default. |resource action install package|
 
-   * - Action
-     - Description
-   * - ``:install``
-     - Default. |resource action install package|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:remove``
-     - |resource action remove package|
-   * - ``:upgrade``
-     - |resource action upgrade package|
+``:nothing``
+   |resource action nothing|
+
+``:remove``
+   |resource action remove package|
+
+``:upgrade``
+   |resource action upgrade package|

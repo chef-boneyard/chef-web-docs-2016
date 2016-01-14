@@ -2,70 +2,76 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``append``
+   **Ruby Types:** TrueClass, FalseClass
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |append_group| Default value: ``false``.
+   
+``excluded_members``
+   **Ruby Type:** Array
 
-   * - Property
-     - Description
-   * - ``append``
-     - **Ruby Types:** TrueClass, FalseClass
+   |excluded_members|
+   
+``gid``
+   **Ruby Types:** String, Integer
 
-       |append_group| Default value: ``false``.
-   * - ``excluded_members``
-     - **Ruby Type:** Array
+   |id group|
+   
+``group_name``
+   **Ruby Type:** String
 
-       |excluded_members|
-   * - ``gid``
-     - **Ruby Types:** String, Integer
+   |name group| |resource_block_default| |see syntax|
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |id group|
-   * - ``group_name``
-     - **Ruby Type:** String
+   |ignore_failure| Default value: ``false``.
+   
+``members``
+   **Ruby Type:** Array
 
-       |name group| |resource_block_default| |see syntax|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |members_group| When more than one group member is identified, the list of members should be an array: ``members ['user1', 'user2']``.
+   
+``non_unique``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |ignore_failure| Default value: ``false``.
-   * - ``members``
-     - **Ruby Type:** Array
+   |non_unique_members| Default value: ``false``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |members_group| When more than one group member is identified, the list of members should be an array: ``members ['user1', 'user2']``.
-   * - ``non_unique``
-     - **Ruby Types:** TrueClass, FalseClass
+   |notifies|
 
-       |non_unique_members| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   Optional. |provider resource_parameter| |see providers|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``system``
+   **Ruby Types:** TrueClass, FalseClass
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
-   * - ``system``
-     - **Ruby Types:** TrueClass, FalseClass
-
-       |system group|
+   |system group|

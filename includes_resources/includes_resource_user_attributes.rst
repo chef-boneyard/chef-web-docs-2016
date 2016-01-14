@@ -3,107 +3,121 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``comment``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``comment``
-     - **Ruby Type:** String
+   |comment user|
 
-       |comment user|
-   * - ``force``
-     - **Ruby Types:** TrueClass, FalseClass
+``force``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |force_remove_user|
+   |force_remove_user|
 
-       .. warning:: .. include:: ../../includes_notes/includes_notes_user_resource_force_property.rst
-   * - ``gid``
-     - **Ruby Types:** String, Integer
+   .. warning:: .. include:: ../../includes_notes/includes_notes_user_resource_force_property.rst
 
-       |id group|
-   * - ``group``
-     - **Ruby Types:** String, Integer
+``gid``
+   **Ruby Types:** String, Integer
 
-       The ``group`` property is an alias of the ``gid`` property.
-   * - ``home``
-     - **Ruby Type:** String
+   |id group|
 
-       |home_directory|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``group``
+   **Ruby Types:** String, Integer
 
-       |ignore_failure| Default value: ``false``.
-   * - ``iterations``
-     - **Ruby Type:** Integer
+   The ``group`` property is an alias of the ``gid`` property.
 
-       |mac os x| platform only, 10.8 (or higher). |iterations|
-   * - ``manage_home``
-     - **Ruby Types:** TrueClass, FalseClass
+``home``
+   **Ruby Type:** String
 
-       |user homedir|
+   |home_directory|
 
-       |user homedir_create|
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |user homedir_modify|
-   * - ``non_unique``
-     - **Ruby Types:** TrueClass, FalseClass
+   |ignore_failure| Default value: ``false``.
 
-       |non_unique_user|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``iterations``
+   **Ruby Type:** Integer
 
-       |notifies|
+   |mac os x| platform only, 10.8 (or higher). |iterations|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+``manage_home``
+   **Ruby Types:** TrueClass, FalseClass
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``password``
-     - **Ruby Type:** String
+   |user homedir|
 
-       |password shadow_hash|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |user homedir_create|
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |user homedir_modify|
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``non_unique``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |retry_delay| Default value: ``2``.
-   * - ``salt``
-     - **Ruby Type:** String
+   |non_unique_user|
 
-       |mac os x| platform only, 10.7 or higher. |salt| |mac os x| version 10.7 uses SALTED-SHA512 and version 10.8 (and higher) uses SALTED-SHA512-PBKDF2 to calculate password shadow hashes. 
-   * - ``shell``
-     - **Ruby Type:** String
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |shell|
-   * - ``supports``
-     - **Ruby Type:** Hash
+   |notifies|
 
-       |supports user| Default value: ``:manage_home => false, :non_unique => false``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |subscribes|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``password``
+   **Ruby Type:** String
 
-       |subscribes timers|
-   * - ``system``
-     - **Ruby Types:** TrueClass, FalseClass
+   |password shadow_hash|
 
-       |system user|
-   * - ``uid``
-     - **Ruby Types:** String, Integer
+``provider``
+   **Ruby Type:** Chef Class
 
-       |user uid|
-   * - ``username``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter| |see providers|
 
-       |name user| |resource_block_default| |see syntax|
+``retries``
+   **Ruby Type:** Integer
+
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``salt``
+   **Ruby Type:** String
+
+   |mac os x| platform only, 10.7 or higher. |salt| |mac os x| version 10.7 uses SALTED-SHA512 and version 10.8 (and higher) uses SALTED-SHA512-PBKDF2 to calculate password shadow hashes. 
+
+``shell``
+   **Ruby Type:** String
+
+   |shell|
+
+``supports``
+   **Ruby Type:** Hash
+
+   |supports user| Default value: ``:manage_home => false, :non_unique => false``.
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``system``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |system user|
+
+``uid``
+   **Ruby Types:** String, Integer
+
+   |user uid|
+
+``username``
+   **Ruby Type:** String
+
+   |name user| |resource_block_default| |see syntax|

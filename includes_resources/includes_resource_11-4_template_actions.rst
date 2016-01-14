@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. |resource action create template|
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create template|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing template|
-   * - ``:nothing``
-     - |resource action nothing|
+``:create_if_missing``
+   |resource action create_if_missing template|
+
+``:nothing``
+   |resource action nothing|

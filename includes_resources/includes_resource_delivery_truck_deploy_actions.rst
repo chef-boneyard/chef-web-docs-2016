@@ -3,13 +3,8 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``:nothing``
+   |resource action nothing|
 
-   * - Action
-     - Description
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:run``
-     - Use to deploy a cookbook to the |chef server| or to |github|.
+``:run``
+   Use to deploy a cookbook to the |chef server| or to |github|.

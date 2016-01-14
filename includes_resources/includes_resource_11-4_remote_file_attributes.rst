@@ -3,83 +3,91 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``backup``
+   **Ruby Types:** FalseClass, Integer
 
-   * - Property
-     - Description
-   * - ``backup``
-     - **Ruby Types:** FalseClass, Integer
+   |backups_kept| Default value: ``5``.
 
-       |backups_kept| Default value: ``5``.
-   * - ``checksum``
-     - **Ruby Type:** String
+``checksum``
+   **Ruby Type:** String
 
-       Optional. |checksum remote_file|
-   * - ``group``
-     - **Ruby Types:** Integer, String
+   Optional. |checksum remote_file|
 
-       |windows group_identifier|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``group``
+   **Ruby Types:** Integer, String
 
-       |ignore_failure| Default value: ``false``.
-   * - ``inherits``
-     - **Ruby Types:** TrueClass, FalseClass
+   |windows group_identifier|
 
-       |windows| only. |inherits windows security| Default value: ``true``.
-   * - ``mode``
-     - **Ruby Types:** Integer, String
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |mode resource| |mode resource_file_11-4|
+   |ignore_failure| Default value: ``false``.
+
+``inherits``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |windows| only. |inherits windows security| Default value: ``true``.
+
+``mode``
+   **Ruby Types:** Integer, String
+
+   |mode resource| |mode resource_file_11-4|
        
-       The behavior is different depending on the platform.
+   The behavior is different depending on the platform.
        
-       |unix|- and |linux|-based systems: |mode *nix|
+   |unix|- and |linux|-based systems: |mode *nix|
        
-       |windows|: |mode windows security|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |windows|: |mode windows security|
 
-       |notifies|
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``owner``
-     - **Ruby Types:** Integer, String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |owner windows security|
-   * - ``path``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |path file| |path_fully_qualified| |resource_block_default|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``owner``
+   **Ruby Types:** Integer, String
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |owner windows security|
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``path``
+   **Ruby Type:** String
 
-       |retry_delay| Default value: ``2``.
-   * - ``rights``
-     - **Ruby Types:** Integer, String
+   |path file| |path_fully_qualified| |resource_block_default|
 
-       |windows| only. |rights windows security|
-   * - ``source``
-     - **Ruby Types:** String, Array
+``provider``
+   **Ruby Type:** Chef Class
 
-       Required. |source file_location|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   Optional. |provider resource_parameter|
 
-       |subscribes|
+``retries``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |retries| Default value: ``0``.
 
-       |subscribes timers|
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``rights``
+   **Ruby Types:** Integer, String
+
+   |windows| only. |rights windows security|
+
+``source``
+   **Ruby Types:** String, Array
+
+   Required. |source file_location|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|

@@ -2,86 +2,96 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |ignore_failure| Default value: ``false``.
+   
+``init_command``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |command service_init| Use ``init_command`` to prevent the need to specify overrides for the ``start_command``, ``stop_command``, and ``restart_command`` properties. When this property is not specified, the |chef client| will use the default init command for the service provider being used.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |ignore_failure| Default value: ``false``.
-   * - ``init_command``
-     - **Ruby Type:** String
+   |notifies|
 
-       |command service_init| Use ``init_command`` to prevent the need to specify overrides for the ``start_command``, ``stop_command``, and ``restart_command`` properties. When this property is not specified, the |chef client| will use the default init command for the service provider being used.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``pattern``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |pattern process_table| Default value: ``service_name``.
+   
+``priority``
+   **Ruby Types:** Integer, String, Hash
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``pattern``
-     - **Ruby Type:** String
+   |debian| platform only. |priority service| May be an integer or a |ruby hash|. An integer is used to define the start run levels; stop run levels are then 100-integer. A |ruby hash| is used to define values for specific run levels. For example, ``{ 2 => [:start, 20], 3 => [:stop, 55] }`` will set a priority of twenty for run level two and a priority of fifty-five for run level three.
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       |pattern process_table| Default value: ``service_name``.
-   * - ``priority``
-     - **Ruby Types:** Integer, String, Hash
+   Optional. |provider resource_parameter| |see providers|
+   
+``reload_command``
+   **Ruby Type:** String
 
-       |debian| platform only. |priority service| May be an integer or a |ruby hash|. An integer is used to define the start run levels; stop run levels are then 100-integer. A |ruby hash| is used to define values for specific run levels. For example, ``{ 2 => [:start, 20], 3 => [:stop, 55] }`` will set a priority of twenty for run level two and a priority of fifty-five for run level three.
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |command service_reload|
+   
+``restart_command``
+   **Ruby Type:** String
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``reload_command``
-     - **Ruby Type:** String
+   |command service_restart|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |command service_reload|
-   * - ``restart_command``
-     - **Ruby Type:** String
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |command service_restart|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``service_name``
+   **Ruby Type:** String
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |name service| |resource_block_default| |see syntax|
+   
+``start_command``
+   **Ruby Type:** String
 
-       |retry_delay| Default value: ``2``.
-   * - ``service_name``
-     - **Ruby Type:** String
+   |command service_start|
+   
+``status_command``
+   **Ruby Type:** String
 
-       |name service| |resource_block_default| |see syntax|
-   * - ``start_command``
-     - **Ruby Type:** String
+   |command service_status|
+   
+``stop_command``
+   **Ruby Type:** String
 
-       |command service_start|
-   * - ``status_command``
-     - **Ruby Type:** String
+   |command service_stop|
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |command service_status|
-   * - ``stop_command``
-     - **Ruby Type:** String
+   |subscribes|
 
-       |command service_stop|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``supports``
+   **Ruby Type:** Hash
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms (except for the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.)
+   
+``timeout``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
-   * - ``supports``
-     - **Ruby Type:** Hash
-
-       |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms (except for the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.)
-   * - ``timeout``
-     - **Ruby Type:** Integer
-
-       |windows| platform only. |timeout|
+   |windows| platform only. |timeout|

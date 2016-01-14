@@ -2,87 +2,94 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``code``
+   **Ruby Type:** String
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |code powershell| |dsc_script no_command|
+   
+``command``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``code``
-     - **Ruby Type:** String
+   |command powershell| |dsc_script no_code|
+   
+``configuration_data``
+   **Ruby Type:** String
 
-       |code powershell| |dsc_script no_command|
-   * - ``command``
-     - **Ruby Type:** String
+   |config powershell| The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. |dsc_script no_config_data_script|
+   
+``configuration_data_script``
+   **Ruby Type:** String
 
-       |command powershell| |dsc_script no_code|
-   * - ``configuration_data``
-     - **Ruby Type:** String
+   |path powershell_data_file| |dsc_script no_config_data|
+   
+``configuration_name``
+   **Ruby Type:** String
 
-       |config powershell| The configuration data must be `a valid Windows Powershell data file <http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx>`_. |dsc_script no_config_data_script|
-   * - ``configuration_data_script``
-     - **Ruby Type:** String
+   |name powershell_cmdlet| |dsc_script no_code|
+   
+``cwd``
+   **Ruby Type:** String
 
-       |path powershell_data_file| |dsc_script no_config_data|
-   * - ``configuration_name``
-     - **Ruby Type:** String
+   |cwd|
+   
+``environment``
+   **Ruby Type:** Hash
 
-       |name powershell_cmdlet| |dsc_script no_code|
-   * - ``cwd``
-     - **Ruby Type:** String
+   |environment variables|
+   
+``flags``
+   **Ruby Type:** Hash
 
-       |cwd|
-   * - ``environment``
-     - **Ruby Type:** Hash
+   |flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |environment variables|
-   * - ``flags``
-     - **Ruby Type:** Hash
+   |ignore_failure| Default value: ``false``.
+   
+``imports``
+   **Ruby Type:** Array
 
-       |flags powershell| |dsc_script no_code| For example: ``flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })``. Default value: ``nil``.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   .. warning:: This property **MUST** be used with the ``code`` attribute.
 
-       |ignore_failure| Default value: ``false``.
-   * - ``imports``
-     - **Ruby Type:** Array
+   Use to import |windows powershell_dsc_short| resources from a module.
 
-       .. warning:: This property **MUST** be used with the ``code`` attribute.
+   .. include:: ../../step_resource/step_resource_dsc_script_import_resources_all.rst
 
-       Use to import |windows powershell_dsc_short| resources from a module.
+   .. include:: ../../step_resource/step_resource_dsc_script_import_resources_specific.rst
 
-       .. include:: ../../step_resource/step_resource_dsc_script_import_resources_all.rst
+   .. include:: ../../step_resource/step_resource_dsc_script_import_resources_single.rst
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../step_resource/step_resource_dsc_script_import_resources_specific.rst
+   |notifies|
 
-       .. include:: ../../step_resource/step_resource_dsc_script_import_resources_single.rst
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |notifies|
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |subscribes timers|
+   
+``timeout``
+   **Ruby Types:** Integer
 
-       |subscribes|
-
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** Integer
-
-       |timeout command|
+   |timeout command|

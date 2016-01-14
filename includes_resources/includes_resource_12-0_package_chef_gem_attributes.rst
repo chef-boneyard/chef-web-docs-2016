@@ -3,61 +3,65 @@
 
 This resource has the following attributes:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Attribute
-     - Description
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |ignore_failure| Default value: ``false``.
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |notifies|
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |command options|
-   * - ``package_name``
-     - **Ruby Types:** String, Array
+``options``
+   **Ruby Type:** String
 
-       |name package| |resource_block_default| |see syntax|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |command options|
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+``package_name``
+   **Ruby Types:** String, Array
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |name package| |resource_block_default| |see syntax|
 
-       |retry_delay| Default value: ``2``.
-   * - ``source``
-     - **Ruby Type:** String
+``provider``
+   **Ruby Type:** Chef Class
 
-       Optional. |source resource package|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   Optional. |provider resource_parameter| |see providers|
 
-       |subscribes|
+``retries``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |retries| Default value: ``0``.
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |timeout|
-   * - ``version``
-     - **Ruby Types:** String, Array
+   |retry_delay| Default value: ``2``.
 
-       |version package|
+``source``
+   **Ruby Type:** String
+
+   Optional. |source resource package|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Types:** String, Integer
+
+   |timeout|
+
+``version``
+   **Ruby Types:** String, Array
+
+   |version package|

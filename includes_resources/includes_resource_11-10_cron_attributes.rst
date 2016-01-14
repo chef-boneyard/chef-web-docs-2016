@@ -3,113 +3,124 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``command``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``command``
-     - **Ruby Type:** String
+   |command_or_path|
 
-       |command_or_path|
+   Some examples:
 
-       Some examples:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      command if [ -x /usr/share/mdadm/checkarray ] && [ $(date +\%d) -le 7 ];
+      then /usr/share/mdadm/checkarray --cron --all --idle --quiet; fi
 
-          command if [ -x /usr/share/mdadm/checkarray ] && [ $(date +\%d) -le 7 ];
-          then /usr/share/mdadm/checkarray --cron --all --idle --quiet; fi
+   and:
 
-       and:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      command %Q{
+        cd /srv/opscode-community-site/current &&
+        env RUBYLIB="/srv/opscode-community-site/current/lib"
+        RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
+        bundle exec rake cookbooks_report
+      }
 
-          command %Q{
-            cd /srv/opscode-community-site/current &&
-            env RUBYLIB="/srv/opscode-community-site/current/lib"
-            RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
-            bundle exec rake cookbooks_report
-          }
+   and:
 
-       and:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      command "/srv/app/scripts/daily_report"
 
-          command "/srv/app/scripts/daily_report"
-   * - ``day``
-     - **Ruby Type:** String
+``day``
+   **Ruby Type:** String
 
-       |day cron| Default value: ``*``.
-   * - ``home``
-     - **Ruby Type:** String
+   |day cron| Default value: ``*``.
 
-       |environment set_home|
-   * - ``hour``
-     - **Ruby Type:** String
+``home``
+   **Ruby Type:** String
 
-       |hour cron| Default value: ``*``.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |environment set_home|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``mailto``
-     - **Ruby Type:** String
+``hour``
+   **Ruby Type:** String
 
-       |environment set_mailto|
-   * - ``minute``
-     - **Ruby Type:** String
+   |hour cron| Default value: ``*``.
 
-       |minute cron| Default value: ``*``.
-   * - ``month``
-     - **Ruby Type:** String
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |month cron| Default value: ``*``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |ignore_failure| Default value: ``false``.
 
-       |notifies|
+``mailto``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |environment set_mailto|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``path``
-     - **Ruby Type:** String
+``minute``
+   **Ruby Type:** String
 
-       |environment set_path|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |minute cron| Default value: ``*``.
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+``month``
+   **Ruby Type:** String
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |month cron| Default value: ``*``.
 
-       |retry_delay| Default value: ``2``.
-   * - ``shell``
-     - **Ruby Type:** String
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |environment set_shell|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |notifies|
 
-       |subscribes|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |subscribes timers|
-   * - ``time``
-     - **Ruby Type:** Symbol
+``path``
+   **Ruby Type:** String
 
-       |time cron|
-   * - ``user``
-     - **Ruby Type:** String
+   |environment set_path|
 
-       |name user cron| Default value: ``root``.
-   * - ``weekday``
-     - **Ruby Type:** String
+``provider``
+   **Ruby Type:** Chef Class
 
-       |weekday cron| Default value: ``*``.
+   Optional. |provider resource_parameter|
+
+``retries``
+   **Ruby Type:** Integer
+
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``shell``
+   **Ruby Type:** String
+
+   |environment set_shell|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``time``
+   **Ruby Type:** Symbol
+
+   |time cron|
+
+``user``
+   **Ruby Type:** String
+
+   |name user cron| Default value: ``root``.
+
+``weekday``
+   **Ruby Type:** String
+
+   |weekday cron| Default value: ``*``.

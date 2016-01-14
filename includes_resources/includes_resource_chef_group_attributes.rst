@@ -3,64 +3,71 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``chef_server``
+   |chef_server_url|
 
-   * - Property
-     - Description
-   * - ``chef_server``
-     - |chef_server_url|
-   * - ``clients``
-     - 
-   * - ``complete``
-     - Use to specify if this resource defines a |chef client| completely. When ``true``, any property not specified by this resource will be reset to default property values.
-   * - ``groups``
-     - 
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``clients``
+   ...
 
-       |ignore_failure| Default value: ``false``.
-   * - ``name``
-     - 
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``complete``
+   Use to specify if this resource defines a |chef client| completely. When ``true``, any property not specified by this resource will be reset to default property values.
 
-       |notifies|
+``groups``
+   ...
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``raw_json``
-     - The group as |json| data. For example:
+   |ignore_failure| Default value: ``false``.
+
+``name``
+   
+
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |notifies|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+
+``raw_json``
+   The group as |json| data. For example:
        
-       .. code-block:: javascript
+   .. code-block:: javascript
        
-          {
-	        :groupname => "chef"
-          }
-   * - ``remove_clients``
-     - 
-   * - ``remove_groups``
-     - 
-   * - ``remove_users``
-     - 
-   * - ``retries``
-     - **Ruby Type:** Integer
+      {
+	    :groupname => "chef"
+      }
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``remove_clients``
+   ...
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``remove_groups``
+   ...
 
-       |subscribes|
+``remove_users``
+   ...
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``retries``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
-   * - ``users``
-     - 
+   |retries| Default value: ``0``.
 
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``users``
+   ...

@@ -3,19 +3,17 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. |resource action create file|
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create file|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing file|
-   * - ``:delete``
-     - |resource action delete file|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:touch``
-     - |resource action touch file|
+``:create_if_missing``
+   |resource action create_if_missing file|
+
+``:delete``
+   |resource action delete file|
+
+``:nothing``
+   |resource action nothing|
+
+``:touch``
+   |resource action touch file|

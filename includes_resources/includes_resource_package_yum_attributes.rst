@@ -2,98 +2,105 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``allow_downgrade``
+   **Ruby Types:** TrueClass, FalseClass
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |allow_downgrade|
+   
+``arch``
+   **Ruby Types:** String
 
-   * - Property
-     - Description
-   * - ``allow_downgrade``
-     - **Ruby Types:** TrueClass, FalseClass
+   |architecture package|
+   
+``flush_cache``
+   **Ruby Type:** Array
 
-       |allow_downgrade|
-   * - ``arch``
-     - **Ruby Types:** String
+   |flush_cache| Default value: ``[ :before, :after ]``. The value may also be a |ruby hash|: ``( { :before => true/false, :after => true/false } )``.
 
-       |architecture package|
-   * - ``flush_cache``
-     - **Ruby Type:** Array
+   .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
 
-       |flush_cache| Default value: ``[ :before, :after ]``. The value may also be a |ruby hash|: ``( { :before => true/false, :after => true/false } )``.
+   As an array:
 
-       .. include:: ../../includes_resources_common/includes_resources_common_package_yum_cache.rst
+   .. code-block:: ruby
 
-       As an array:
+      yum_package 'some-package' do
+        #...
+        flush_cache [ :before ]
+        #...
+      end
 
-       .. code-block:: ruby
+   and as a |ruby hash|:
 
-          yum_package 'some-package' do
-            #...
-            flush_cache [ :before ]
-            #...
-          end
+   .. code-block:: ruby
 
-       and as a |ruby hash|:
+      yum_package 'some-package' do
+        #...
+        flush_cache( { :after => true } )
+        #...
+      end
 
-       .. code-block:: ruby
+   .. note:: |flush_cache yum_cache|
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-          yum_package 'some-package' do
-            #...
-            flush_cache( { :after => true } )
-            #...
-          end
+   |ignore_failure| Default value: ``false``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. note:: |flush_cache yum_cache|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |notifies|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``options``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |command options|
+   
+``package_name``
+   **Ruby Types:** String, Array
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+   |name package_yum| |resource_block_default| |see syntax|
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       |command options|
-   * - ``package_name``
-     - **Ruby Types:** String, Array
+   Optional. |provider resource_parameter| |see providers|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |name package_yum| |resource_block_default| |see syntax|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``source``
+   **Ruby Type:** String
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   Optional. |source resource package|
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retry_delay| Default value: ``2``.
-   * - ``source``
-     - **Ruby Type:** String
+   |subscribes|
 
-       Optional. |source resource package|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``timeout``
+   **Ruby Types:** String, Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |timeout|
+   
+``version``
+   **Ruby Types:** String, Array
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
-
-       |timeout|
-   * - ``version``
-     - **Ruby Types:** String, Array
-
-       |version package|
+   |version package|

@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. Use to create a data bag item.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. Use to create a data bag item.
-   * - ``:delete``
-     - Use to delete a data bag item.
-   * - ``:nothing``
-     - |resource action nothing|
+``:delete``
+   Use to delete a data bag item.
+
+``:nothing``
+   |resource action nothing|

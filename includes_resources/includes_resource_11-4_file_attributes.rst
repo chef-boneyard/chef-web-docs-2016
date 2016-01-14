@@ -3,83 +3,91 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``backup``
+   **Ruby Types:** FalseClass, Integer
 
-   * - Property
-     - Description
-   * - ``backup``
-     - **Ruby Types:** FalseClass, Integer
+   |backups_kept| Default value: ``5``.
 
-       |backups_kept| Default value: ``5``.
-   * - ``checksum``
-     - **Ruby Type:** String
+``checksum``
+   **Ruby Type:** String
 
-       |checksum file| Default value: no checksum required.
-   * - ``content``
-     - **Ruby Type:** String
+   |checksum file| Default value: no checksum required.
 
-       |content file| The default behavior will not modify content.
-   * - ``group``
-     - **Ruby Types:** Integer, String
+``content``
+   **Ruby Type:** String
 
-       |windows group_identifier|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |content file| The default behavior will not modify content.
 
-       |ignore_failure| Default value: ``false``.
-   * - ``inherits``
-     - **Ruby Types:** TrueClass, FalseClass
+``group``
+   **Ruby Types:** Integer, String
 
-       |windows| only. |inherits windows security| Default value: ``true``.
-   * - ``mode``
-     - **Ruby Types:** Integer, String
+   |windows group_identifier|
 
-       |mode resource| |mode resource_file_11-4|
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |ignore_failure| Default value: ``false``.
+
+``inherits``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |windows| only. |inherits windows security| Default value: ``true``.
+
+``mode``
+   **Ruby Types:** Integer, String
+
+   |mode resource| |mode resource_file_11-4|
        
-       The behavior is different depending on the platform.
+   The behavior is different depending on the platform.
        
-       |unix|- and |linux|-based systems: |mode *nix|
+   |unix|- and |linux|-based systems: |mode *nix|
        
-       |windows|: |mode windows security|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |windows|: |mode windows security|
 
-       |notifies|
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``owner``
-     - **Ruby Types:** Integer, String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |owner windows security|	
-   * - ``path``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |path full_path_to_file| For example: ``/files/file.txt``. |resource_block_default| |see syntax|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``owner``
+   **Ruby Types:** Integer, String
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |owner windows security|	
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``path``
+   **Ruby Type:** String
 
-       |retry_delay| Default value: ``2``.
-   * - ``rights``
-     - **Ruby Types:** Integer, String
+   |path full_path_to_file| For example: ``/files/file.txt``. |resource_block_default| |see syntax|
 
-       |windows| only. |rights windows security|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``provider``
+   **Ruby Type:** Chef Class
 
-       |subscribes|
+   Optional. |provider resource_parameter|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``retries``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``rights``
+   **Ruby Types:** Integer, String
+
+   |windows| only. |rights windows security|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|

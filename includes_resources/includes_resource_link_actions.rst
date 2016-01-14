@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. |resource action create link|
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create link|
-   * - ``:delete``
-     - |resource action delete link|
-   * - ``:nothing``
-     - |resource action nothing|
+``:delete``
+   |resource action delete link|
+
+``:nothing``
+   |resource action nothing|

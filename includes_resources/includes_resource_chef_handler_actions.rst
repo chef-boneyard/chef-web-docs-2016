@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``:disable``
+   |resource action disable chef_handler|
 
-   * - Action
-     - Description
-   * - ``:disable``
-     - |resource action disable chef_handler|
-   * - ``:enable``
-     - |resource action enable chef_handler|
-   * - ``:nothing``
-     - |resource action nothing|
+``:enable``
+   |resource action enable chef_handler|
+
+``:nothing``
+   |resource action nothing|

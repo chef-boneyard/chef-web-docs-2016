@@ -2,74 +2,81 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``easy_install_binary``
+   **Ruby Type:** String
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   The location of the |python easy_install| binary.
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``easy_install_binary``
-     - **Ruby Type:** String
+   |ignore_failure| Default value: ``false``.
+   
+``module_name``
+   **Ruby Type:** String
 
-       The location of the |python easy_install| binary.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   The name of the module.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |ignore_failure| Default value: ``false``.
-   * - ``module_name``
-     - **Ruby Type:** String
+   |notifies|
 
-       The name of the module.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``options``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |command options|
+   
+``package_name``
+   **Ruby Types:** String, Array
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+   |name package| |resource_block_default| |see syntax|
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       |command options|
-   * - ``package_name``
-     - **Ruby Types:** String, Array
+   Optional. |provider resource_parameter| |see providers|
+   
+``python_binary``
+   **Ruby Type:** String
 
-       |name package| |resource_block_default| |see syntax|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   The location of the |python| binary.
+   
+``retries``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``python_binary``
-     - **Ruby Type:** String
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       The location of the |python| binary.
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``source``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   Optional. |source resource package|
+   
+``timeout``
+   **Ruby Types:** String, Integer
 
-       |subscribes timers|
-   * - ``source``
-     - **Ruby Type:** String
+   |timeout|
+   
+``version``
+   **Ruby Types:** String, Array
 
-       Optional. |source resource package|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
-
-       |timeout|
-   * - ``version``
-     - **Ruby Types:** String, Array
-
-       |version package|
+   |version package|

@@ -3,73 +3,78 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``compile_time``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``compile_time``
-     - **Ruby Types:** TrueClass, FalseClass
+   |chef_gem compile_time| Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``. Use a ``respond_to?`` check to ensure backward compatibility. For example:
 
-       |chef_gem compile_time| Recommended value: ``false``. The |chef client| will emit a warning when this setting is ``true``. Use a ``respond_to?`` check to ensure backward compatibility. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      chef_gem 'aws-sdk' do
+        compile_time false if respond_to?(:compile_time)
+      end
 
-          chef_gem 'aws-sdk' do
-            compile_time false if respond_to?(:compile_time)
-          end
+   .. warning:: .. include:: ../../includes_notes/includes_notes_chef_gem_chef_sugar.rst
 
-       .. warning:: .. include:: ../../includes_notes/includes_notes_chef_gem_chef_sugar.rst
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |ignore_failure| Default value: ``false``.
 
-       |notifies|
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |command options|
-   * - ``package_name``
-     - **Ruby Types:** String, Array
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |name package| |resource_block_default| |see syntax|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``options``
+   **Ruby Type:** String
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |command options|
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``package_name``
+   **Ruby Types:** String, Array
 
-       |retry_delay| Default value: ``2``.
-   * - ``source``
-     - **Ruby Type:** String
+   |name package| |resource_block_default| |see syntax|
 
-       Optional. |source resource package|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``provider``
+   **Ruby Type:** Chef Class
 
-       |subscribes|
+   Optional. |provider resource_parameter| |see providers|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``retries``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
+   |retries| Default value: ``0``.
 
-       |timeout|
-   * - ``version``
-     - **Ruby Types:** String, Array
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |version package|
+   |retry_delay| Default value: ``2``.
+
+``source``
+   **Ruby Type:** String
+
+   Optional. |source resource package|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Types:** String, Integer
+
+   |timeout|
+
+``version``
+   **Ruby Types:** String, Array
+
+   |version package|

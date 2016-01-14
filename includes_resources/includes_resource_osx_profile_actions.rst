@@ -3,13 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:install``
+   Default. |resource action install osx_profile|
 
-   * - Action
-     - Description
-   * - ``:install``
-     - Default. |resource action install osx_profile|
-   * - ``:remove``
-     - |resource action remove osx_profile|
+``:nothing``
+   Default. |resource action nothing|
+
+``:remove``
+   |resource action remove osx_profile|

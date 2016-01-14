@@ -3,25 +3,26 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:configure_startup``
+   |resource action configure_startup|
 
-   * - Action
-     - Description
-   * - ``:configure_startup``
-     - |resource action configure_startup|
-   * - ``:disable``
-     - |resource action disable service| |windows service_type_disabled|
-   * - ``:enable``
-     - |resource action export service| |windows service_type_automatic|
-   * - ``:nothing``
-     - Default. |resource action nothing service|
-   * - ``:reload``
-     - |resource action reload service|
-   * - ``:restart``
-     - |resource action restart service|
-   * - ``:start``
-     - |resource action start service|
-   * - ``:stop``
-     - |resource action stop service|
+``:disable``
+   |resource action disable service| |windows service_type_disabled|
+
+``:enable``
+   |resource action export service| |windows service_type_automatic|
+
+``:nothing``
+   Default. |resource action nothing service|
+
+``:reload``
+   |resource action reload service|
+
+``:restart``
+   |resource action restart service|
+
+``:start``
+   |resource action start service|
+
+``:stop``
+   |resource action stop service|

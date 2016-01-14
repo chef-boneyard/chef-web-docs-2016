@@ -3,17 +3,14 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:deploy``
+   Default. |resource action deploy deploy|
 
-   * - Action
-     - Description
-   * - ``:deploy``
-     - Default. |resource action deploy deploy|
-   * - ``:force_deploy``
-     - |resource action force_deploy deploy|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:rollback``
-     - |resource action rollback deploy|
+``:force_deploy``
+   |resource action force_deploy deploy|
+
+``:nothing``
+   |resource action nothing|
+
+``:rollback``
+   |resource action rollback deploy|
