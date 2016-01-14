@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|company_name| maintains a collection of cookbooks that define some common scenarios and provides resources to support them. These cookbooks are located at https://github.com/chef-cookbooks and https://github.com/chef-cookbooks. To use these resources within recipes, first download the cookbook. Then add those resources to recipes.
+|company_name| maintains a collection of cookbooks that define some common scenarios and provides resources to support them. These cookbooks are located at https://github.com/chef-cookbooks. To use these resources within recipes, first download the cookbook. Then add those resources to recipes.
 
 Some of the most popular |company_name|-maintained cookbooks are listed below:
 
