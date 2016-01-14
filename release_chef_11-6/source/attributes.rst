@@ -30,9 +30,9 @@ Attributes are provided to the |chef client| from the following locations:
 * Environments
 * Roles
 
-If we go back to the `overview of Chef <http://docs.chef.io/chef_overview.html>`_, but then focus only on where attributes are located, it looks something like this:
+If we go back to the `overview of Chef <https://docs.chef.io/release/11-6/chef_overview.html>`_, but then focus only on where attributes are located, it looks something like this:
 
-.. image:: ../../images/overview_chef_attributes.png
+.. image:: ../../images/overview_chef_11x_attributes.png
 
 where
 
@@ -99,7 +99,7 @@ Environments
 
 Attribute Precedence
 =====================================================
-.. include:: ../../includes_node/includes_node_attribute_precedence.rst
+.. include:: ../../includes_node/includes_node_11x_attribute_precedence.rst
 
 Whitelist Attributes
 -----------------------------------------------------
@@ -107,7 +107,7 @@ Whitelist Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_precedence_examples.rst
+.. include:: ../../includes_node/includes_node_11x_attribute_precedence_examples.rst
 
 About Deep Merge
 =====================================================
