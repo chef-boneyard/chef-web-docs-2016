@@ -8,6 +8,18 @@ About Attributes
 
 .. include:: ../../includes_node/includes_node_attribute_how_does.rst
 
+Changes in Chef 12.0
+=====================================================
+Please `see RFC-23 for important changes to attributes <https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_ in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. In addition, ``node.default!`` is now ``node.force_default`` and ``node.override!`` is now ``node.force_override``.
+
+**node.force_default**
+
+.. include:: ../../includes_node/includes_node_attribute_type_force_default_changes.rst
+
+**node.force_override**
+
+.. include:: ../../includes_node/includes_node_attribute_type_force_override_changes.rst
+
 Attribute Persistence
 =====================================================
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst

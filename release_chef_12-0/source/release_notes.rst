@@ -10,7 +10,7 @@ What's New
 =====================================================
 The following items are new for |chef client| 12.0 and/or are changes from previous versions. The short version:
 
-* **Changing attributes** Attributes may be modified for named precedence levels, all precedence levels, and be fully assigned.
+* **Changing attributes** Attributes may be modified for named precedence levels, all precedence levels, and be fully assigned. These changes were `based on RFC-23 <https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_.
 * **Ruby 2.0 (or higher) for Windows; and Ruby 2.1 (or higher) for Unix/Linux** |ruby| versions 1.8.7, 1.9.1, 1.9.2, and 1.9.3 are no longer supported. See `this blog post <https://www.chef.io/blog/2014/11/25/ruby-1-9-3-eol-and-chef-12/>`_ for more info.
 * **The number of changes between Ruby 1.9 and 2.0 is small** Please review the `Ruby 2.0 release notes <https://github.com/ruby/ruby/blob/v2_0_0_0/NEWS>`_ or `Ruby 2.1 release notes <https://github.com/ruby/ruby/blob/v2_1_0/NEWS>`_ for the full list of changes.
 * **provides method for building custom resources** Use the ``provides`` method to associate a custom resource with a built-in |chef client| resource and to specify platforms on which the custom resource may be used.
@@ -42,7 +42,6 @@ The following items are new for |chef client| 12.0 and/or are changes from previ
 * **Events are sent to the Application event log on the Windows platform by default** Events are sent to the |windows| "Application" event log at the start and end of a |chef client| run, and also if a |chef client| run fails. Set the ``disable_event_logger`` configuration setting in the |client rb| file to ``true`` to disable event logging.
 * **The installer_type property for the windows_package resource uses a symbol instead of a string** Previous versions of the |chef client| (starting with version 11.8) used a string.
 * **The path property is deprecated for the execute resource** Use the ``environment`` property instead.
-* **Attribute behavior changes** Please `see RFC-23 for important changes to attributes <https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_ in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. In addition, ``node.default!`` is now ``node.force_default`` and ``node.override!`` is now ``node.force_override``.
 * **SSL certificate validation improvements** The default settings for |ssl| certificate validation now default in favor of validation. In addition, using the |subcommand knife ssl_fetch| command is now an important part of setting up your workstation.
 * **New property for git resource** The |resource scm_git| resource has a new property: ``environment``, which takes a |ruby hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``.
 
@@ -506,18 +505,6 @@ Chef::Provider, Custom Resources
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_11-16_method_updated_by_last_action_example.rst
 
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_example.rst
-
-Attribute Behavior Changes
------------------------------------------------------
-Please `see RFC-23 for important changes to attributes <https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md>`_ in |chef client| 12, including how to delete an attribute key for a specific precedence level, how to delete an attribute key for all precedence levels, and how to overwrite the nested value at a specific precedence level. In addition, ``node.default!`` is now ``node.force_default`` and ``node.override!`` is now ``node.force_override``.
-
-node.force_default
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_node/includes_node_attribute_type_force_default_changes.rst
-
-node.force_override
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_node/includes_node_attribute_type_force_override_changes.rst
 
 SSL Certificates
 -----------------------------------------------------
