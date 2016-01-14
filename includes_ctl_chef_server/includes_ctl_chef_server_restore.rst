@@ -8,3 +8,4 @@ The ``restore`` subcommand is used to restore |chef server| data from a backup t
 * Requires |rsync| to be installed on the |chef server| prior to running the command
 * Requires a ``chef-server-ctl reconfigure`` prior to running the command
 * Should not be run in a |chef server| configuration with an external |postgresql| database; `use knife ec backup <https://github.com/chef/knife-ec-backup>`__ instead
+* May restore backed up data to any version of the |chef server| that supports this command, starting with |chef server| 12.2 (which is the first version of the |chef server| in which the ``chef-server-ctl restore`` command is available)
