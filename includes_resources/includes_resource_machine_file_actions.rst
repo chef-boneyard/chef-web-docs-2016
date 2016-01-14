@@ -3,17 +3,14 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:delete``
+   Use to delete a file from a machine.
 
-   * - Action
-     - Description
-   * - ``:delete``
-     - Use to delete a file from a machine.
-   * - ``:download``
-     - Use to download a file from a machine.
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:upload``
-     - Default. Use to upload a file to a machine.
+``:download``
+   Use to download a file from a machine.
+
+``:nothing``
+   |resource action nothing|
+
+``:upload``
+   Default. Use to upload a file to a machine.

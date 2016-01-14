@@ -2,50 +2,51 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |ignore_failure| Default value: ``false``.
+   
+``name``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   Always the same value as the ``name`` of the resource block. |see syntax|
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |ignore_failure| Default value: ``false``.
-   * - ``name``
-     - **Ruby Type:** String
+   |notifies|
 
-       Always the same value as the ``name`` of the resource block. |see syntax|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``plugin``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   Optional. |name ohai_plugin| If this property is not specified, the |chef client| will reload all plugins.
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``plugin``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       Optional. |name ohai_plugin| If this property is not specified, the |chef client| will reload all plugins.
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
-
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
+   |subscribes timers|

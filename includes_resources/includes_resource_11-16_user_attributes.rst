@@ -3,95 +3,106 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``comment``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``comment``
-     - **Ruby Type:** String
+   |comment user|
 
-       |comment user|
-   * - ``force``
-     - **Ruby Types:** TrueClass, FalseClass
+``force``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |force_remove_user|
+   |force_remove_user|
 
-       .. warning:: .. include:: ../../includes_notes/includes_notes_user_resource_force_property.rst
-   * - ``gid``
-     - **Ruby Types:** String, Integer
+   .. warning:: .. include:: ../../includes_notes/includes_notes_user_resource_force_property.rst
 
-       |id group|
-   * - ``home``
-     - **Ruby Type:** String
+``gid``
+   **Ruby Types:** String, Integer
 
-       |home_directory|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |id group|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``manage_home``
-     - **Ruby Types:** TrueClass, FalseClass
+``home``
+   **Ruby Type:** String
 
-       |user homedir|
+   |home_directory|
 
-       |user homedir_create|
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |user homedir_modify|
-   * - ``non_unique``
-     - **Ruby Types:** TrueClass, FalseClass
+   |ignore_failure| Default value: ``false``.
 
-       |non_unique_user|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``manage_home``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |notifies|
+   |user homedir|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |user homedir_create|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``password``
-     - **Ruby Type:** String
+   |user homedir_modify|
 
-       |password shadow_hash|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``non_unique``
+   **Ruby Types:** TrueClass, FalseClass
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |non_unique_user|
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retry_delay| Default value: ``2``.
-   * - ``shell``
-     - **Ruby Type:** String
+   |notifies|
 
-       |shell|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |subscribes|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``password``
+   **Ruby Type:** String
 
-       |subscribes timers|
-   * - ``supports``
-     - **Ruby Type:** Hash
+   |password shadow_hash|
 
-       |supports user| Default value: ``:manage_home => false, :non_unique => false``.
-   * - ``system``
-     - **Ruby Types:** TrueClass, FalseClass
+``provider``
+   **Ruby Type:** Chef Class
 
-       |system user|
-   * - ``uid``
-     - **Ruby Types:** String, Integer
+   Optional. |provider resource_parameter| |see providers|
 
-       |user uid|
-   * - ``username``
-     - **Ruby Type:** String
+``retries``
+   **Ruby Type:** Integer
 
-       |name user| |resource_block_default| |see syntax|
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``shell``
+   **Ruby Type:** String
+
+   |shell|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``supports``
+   **Ruby Type:** Hash
+
+   |supports user| Default value: ``:manage_home => false, :non_unique => false``.
+
+``system``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |system user|
+
+``uid``
+   **Ruby Types:** String, Integer
+
+   |user uid|
+
+``username``
+   **Ruby Type:** String
+
+   |name user| |resource_block_default| |see syntax|

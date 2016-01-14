@@ -3,13 +3,8 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default.
-   * - ``:nothing``
-     - |resource action nothing|
+``:nothing``
+   |resource action nothing|

@@ -3,26 +3,26 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:disable``
+   |resource action disable service| |windows service_type_disabled| |ibm_aix_src not_supported|
 
-   * - Action
-     - Description
-   * - ``:disable``
-     - |resource action disable service| |windows service_type_disabled| |ibm_aix_src not_supported|
-   * - ``:enable``
-     - |resource action export service| |windows service_type_automatic| |ibm_aix_src not_supported|
-   * - ``:nothing``
-     - Default. |resource action nothing service|
-   * - ``:reload``
-     - |resource action reload service|
-   * - ``:restart``
-     - |resource action restart service|
-   * - ``:start``
-     - |resource action start service|
-   * - ``:stop``
-     - |resource action stop service|
+``:enable``
+   |resource action export service| |windows service_type_automatic| |ibm_aix_src not_supported|
+
+``:nothing``
+   Default. |resource action nothing service|
+
+``:reload``
+   |resource action reload service|
+
+``:restart``
+   |resource action restart service|
+
+``:start``
+   |resource action start service|
+
+``:stop``
+   |resource action stop service|
 
 .. note:: To mange a |windows| service with a ``Manual`` startup type, the |resource service_windows| resource must be used.
 

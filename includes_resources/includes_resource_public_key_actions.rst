@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. Use to create an RSA public key.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. Use to create an RSA public key.
-   * - ``:delete``
-     - Use to delete an RSA public key.
-   * - ``:nothing``
-     - |resource action nothing|
+``:delete``
+   Use to delete an RSA public key.
+
+``:nothing``
+   |resource action nothing|

@@ -3,23 +3,23 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. |resource action create user|
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create user|
-   * - ``:lock``
-     - |resource action lock user|
-   * - ``:manage``
-     - |resource action manage user|
-   * - ``:modify``
-     - |resource action modify user|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:remove``
-     - |resource action remove user|
-   * - ``:unlock``
-     - |resource action unlock user|
+``:lock``
+   |resource action lock user|
+
+``:manage``
+   |resource action manage user|
+
+``:modify``
+   |resource action modify user|
+
+``:nothing``
+   |resource action nothing|
+
+``:remove``
+   |resource action remove user|
+
+``:unlock``
+   |resource action unlock user|

@@ -1,16 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following providers:
+This resource has the following providers (``Long::Name``, ``shortname``):
 
-.. list-table::
-   :widths: 150 80 320
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Notes
-   * - ``Chef::Provider::Git``
-     - ``git``
-     - This provider works only with |git|.
-
+``Chef::Provider::Git``, ``git``
+   This provider works only with |git|.

@@ -2,74 +2,79 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``checksum``
+   **Ruby Type:** String
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+   |checksum remote_file| Use when a URL is specified by the ``source`` property.
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``checksum``
-     - **Ruby Type:** String
+   |ignore_failure| Default value: ``false``.
+   
+``installer_type``
+   **Ruby Type:** Symbol
 
-       |checksum remote_file| Use when a URL is specified by the ``source`` property.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |type package| Possible values: ``:custom`` (such as installing a non-.msi file that embeds an .msi-based installer), ``:inno`` (|inno setup|), ``:installshield`` (|installshield|), ``:msi`` (|microsoft installer package|), ``:nsis`` (|nsis|), ``:wise`` (|wise|).
 
-       |ignore_failure| Default value: ``false``.
-   * - ``installer_type``
-     - **Ruby Type:** Symbol
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |type package| Possible values: ``:custom`` (such as installing a non-.msi file that embeds an .msi-based installer), ``:inno`` (|inno setup|), ``:installshield`` (|installshield|), ``:msi`` (|microsoft installer package|), ``:nsis`` (|nsis|), ``:wise`` (|wise|).
+   |notifies|
 
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``options``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |command options|
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter| |see providers|
+   
+``remote_file_attributes``
+   **Ruby Type:** Hash
 
-       |command options|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |remote_file_attributes|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``remote_file_attributes``
-     - **Ruby Type:** Hash
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |remote_file_attributes|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``returns``
+   **Ruby Types:** String, Integer, Array
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |returns| This code signals a successful ``:install`` action. Default value: ``0``.
+   
+``source``
+   **Ruby Type:** String
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** String, Integer, Array
+   Optional. |source resource package| The location of the package may be at a URL. |resource_block_default| |see syntax|
 
-       |returns| This code signals a successful ``:install`` action. Default value: ``0``.
-   * - ``source``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources/includes_resource_package_windows_attributes_source_displayname.rst
 
-       Optional. |source resource package| The location of the package may be at a URL. |resource_block_default| |see syntax|
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources/includes_resource_package_windows_attributes_source_displayname.rst
+   |subscribes|
 
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``timeout``
+   **Ruby Types:** String, Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
-
-       |timeout| Default value: ``600`` (seconds).
+   |timeout| Default value: ``600`` (seconds).

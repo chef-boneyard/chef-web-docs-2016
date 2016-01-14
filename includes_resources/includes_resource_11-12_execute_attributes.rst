@@ -3,94 +3,103 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``command``
+   **Ruby Types:** String, Array
 
-   * - Property
-     - Description
-   * - ``command``
-     - **Ruby Types:** String, Array
+   |name command| |resource_block_default| |see syntax|
 
-       |name command| |resource_block_default| |see syntax|
+   .. note:: .. include:: ../../includes_notes/includes_notes_execute_resource_multiple_commands.rst
 
-       .. note:: .. include:: ../../includes_notes/includes_notes_execute_resource_multiple_commands.rst
-   * - ``creates``
-     - **Ruby Type:** String
+``creates``
+   **Ruby Type:** String
 
-       |creates file_exists|
-   * - ``cwd``
-     - **Ruby Type:** String
+   |creates file_exists|
 
-       |cwd run_command|
-   * - ``environment``
-     - **Ruby Type:** Hash
+``cwd``
+   **Ruby Type:** String
 
-       |environment variables|
-   * - ``group``
-     - **Ruby Types:** String, Integer
+   |cwd run_command|
 
-       |group command|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``environment``
+   **Ruby Type:** Hash
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |environment variables|
 
-       |notifies|
+``group``
+   **Ruby Types:** String, Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |group command|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``path``
-     - **Ruby Type:** Array
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |path resource execute| The default value uses the system path.
+   |ignore_failure| Default value: ``false``.
 
-       .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-          For example:
+   |notifies|
 
-          .. code-block:: ruby
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-             execute 'mycommand' do
-               environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
-             end
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``path``
+   **Ruby Type:** Array
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |path resource execute| The default value uses the system path.
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   .. warning:: .. include:: ../../includes_resources_common/includes_resources_common_resource_execute_attribute_path.rst
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** Integer, Array
+      For example:
 
-       |return_value cmd| Default value: ``0``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+      .. code-block:: ruby
 
-       |subscribes|
+         execute 'mycommand' do
+           environment 'PATH' => "/my/path/to/bin:#{ENV['PATH']}"
+         end
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** Integer, Float
+``provider``
+   **Ruby Type:** Chef Class
 
-       |timeout command| Default value: ``3600``.
-   * - ``user``
-     - **Ruby Types:** String, Integer
+   Optional. |provider resource_parameter|
 
-       |user command|
-   * - ``umask``
-     - **Ruby Types:** String, Integer
+``retries``
+   **Ruby Type:** Integer
 
-       |umask|
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``returns``
+   **Ruby Types:** Integer, Array
+
+   |return_value cmd| Default value: ``0``.
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Types:** Integer, Float
+
+   |timeout command| Default value: ``3600``.
+
+``user``
+   **Ruby Types:** String, Integer
+
+   |user command|
+
+``umask``
+   **Ruby Types:** String, Integer
+
+   |umask|

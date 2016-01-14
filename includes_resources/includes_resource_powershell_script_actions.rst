@@ -3,13 +3,8 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:nothing``
+   Inherited from |resource execute| resource. |resource action nothing execute|
 
-   * - Action
-     - Description
-   * - ``:nothing``
-     - Inherited from |resource execute| resource. |resource action nothing execute|
-   * - ``:run``
-     - Default. |resource action run powershell_script|
+``:run``
+   Default. |resource action run powershell_script|

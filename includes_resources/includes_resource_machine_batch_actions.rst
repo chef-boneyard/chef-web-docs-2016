@@ -3,25 +3,26 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:allocate``
+   ...
 
-   * - Action
-     - Description
-   * - ``:allocate``
-     - 
-   * - ``:converge``
-     - Default.
-   * - ``:converge_only``
-     - 
-   * - ``:destroy``
-     - 
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:ready``
-     - 
-   * - ``:setup``
-     - 
-   * - ``:stop``
-     - 
+``:converge``
+   Default.
+
+``:converge_only``
+   ...
+
+``:destroy``
+   ...
+
+``:nothing``
+   |resource action nothing|
+
+``:ready``
+   ...
+
+``:setup``
+   ...
+
+``:stop``
+   ...

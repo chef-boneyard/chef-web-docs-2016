@@ -3,16 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default.
-   * - ``:destroy``
-     - 
-   * - ``:nothing``
-     - |resource action nothing|
+``:destroy``
+   ...
 
+``:nothing``
+   |resource action nothing|

@@ -2,94 +2,106 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |ignore_failure| Default value: ``false``.
+   
+``init_command``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |command service_init| This is typically ``/etc/init.d/SERVICE_NAME``. The ``init_command`` property can be used to prevent the need to specify  overrides for the ``start_command``, ``stop_command``, and ``restart_command`` attributes. Default value: ``nil``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |ignore_failure| Default value: ``false``.
-   * - ``init_command``
-     - **Ruby Type:** String
+   |notifies|
 
-       |command service_init| This is typically ``/etc/init.d/SERVICE_NAME``. The ``init_command`` property can be used to prevent the need to specify  overrides for the ``start_command``, ``stop_command``, and ``restart_command`` attributes. Default value: ``nil``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``pattern``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |pattern process_table| Default value: ``service_name``.
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``pattern``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter|
+   
+``reload_command``
+   **Ruby Type:** String
 
-       |pattern process_table| Default value: ``service_name``.
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |command service_reload|
+   
+``restart_command``
+   **Ruby Type:** String
 
-       Optional. |provider resource_parameter|
-   * - ``reload_command``
-     - **Ruby Type:** String
+   |command service_restart|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |command service_reload|
-   * - ``restart_command``
-     - **Ruby Type:** String
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |command service_restart|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``run_as_password``
+   **Ruby Type:** String
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |password windows_service_run_as|
+   
+``run_as_user``
+   **Ruby Type:** String
 
-       |retry_delay| Default value: ``2``.
-   * - ``run_as_password``
-     - **Ruby Type:** String
+   |user windows_service_run_as|
+   
+``service_name``
+   **Ruby Type:** String
 
-       |password windows_service_run_as|
-   * - ``run_as_user``
-     - **Ruby Type:** String
+   |name service| |resource_block_default| |see syntax|
+   
+``start_command``
+   **Ruby Type:** String
 
-       |user windows_service_run_as|
-   * - ``service_name``
-     - **Ruby Type:** String
+   |command service_start|
+   
+``startup_type``
+   **Ruby Type:** Symbol
 
-       |name service| |resource_block_default| |see syntax|
-   * - ``start_command``
-     - **Ruby Type:** String
+   Use to specify the startup type for a |windows| service. Possible values: ``:automatic``, ``:disabled``, or ``:manual``. Default value: ``:automatic``.
+   
+``status_command``
+   **Ruby Type:** String
 
-       |command service_start|
-   * - ``startup_type``
-     - **Ruby Type:** Symbol
+   |command service_status|
+   
+``stop_command``
+   **Ruby Type:** String
 
-       Use to specify the startup type for a |windows| service. Possible values: ``:automatic``, ``:disabled``, or ``:manual``. Default value: ``:automatic``.
-   * - ``status_command``
-     - **Ruby Type:** String
+   |command service_stop|
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |command service_status|
-   * - ``stop_command``
-     - **Ruby Type:** String
+   |subscribes|
 
-       |command service_stop|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``supports``
+   **Ruby Type:** Hash
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms (except for the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.)
+   
+``timeout``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
-   * - ``supports``
-     - **Ruby Type:** Hash
-
-       |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms (except for the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.)
-   * - ``timeout``
-     - **Ruby Type:** Integer
-
-       |timeout|
+   |timeout|

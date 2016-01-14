@@ -3,17 +3,14 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:assemble``
+   |resource action assemble mdadm|
 
-   * - Action
-     - Description
-   * - ``:assemble``
-     - |resource action assemble mdadm|
-   * - ``:create``
-     - Default. |resource action create mdadm|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:stop``
-     - |resource action stop mdadm|
+``:create``
+   Default. |resource action create mdadm|
+
+``:nothing``
+   |resource action nothing|
+
+``:stop``
+   |resource action stop mdadm|

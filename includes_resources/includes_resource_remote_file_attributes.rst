@@ -2,142 +2,157 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``atomic_update``
+   **Ruby Types:** TrueClass, FalseClass
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |atomic_update| Default value: ``true``.
+   
+``backup``
+   **Ruby Types:** FalseClass, Integer
 
-   * - Property
-     - Description
-   * - ``atomic_update``
-     - **Ruby Types:** TrueClass, FalseClass
+   |backups_kept| Default value: ``5``.
+   
+``checksum``
+   **Ruby Type:** String
 
-       |atomic_update| Default value: ``true``.
-   * - ``backup``
-     - **Ruby Types:** FalseClass, Integer
+   Optional, see ``use_conditional_get``. |checksum remote_file|
+   
+``force_unlink``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |backups_kept| Default value: ``5``.
-   * - ``checksum``
-     - **Ruby Type:** String
+   |force_unlink| Default value: ``false``.
+   
+``ftp_active_mode``
+   **Ruby Types:** TrueClass, FalseClass
 
-       Optional, see ``use_conditional_get``. |checksum remote_file|
-   * - ``force_unlink``
-     - **Ruby Types:** TrueClass, FalseClass
+   |ftp_active_mode| Default value: ``false``.
+   
+``group``
+   **Ruby Types:** Integer, String
 
-       |force_unlink| Default value: ``false``.
-   * - ``ftp_active_mode``
-     - **Ruby Types:** TrueClass, FalseClass
+   |windows group_identifier|
+   
+``headers()``
+   **Ruby Type:** Hash
 
-       |ftp_active_mode| Default value: ``false``.
-   * - ``group``
-     - **Ruby Types:** Integer, String
+   |headers custom| Default value: ``{}``. For example:
 
-       |windows group_identifier|
-   * - ``headers()``
-     - **Ruby Type:** Hash
+   .. code-block:: ruby
 
-       |headers custom| Default value: ``{}``. For example:
+      headers({ "Cookie" => "user=grantmc; pass=p@ssw0rd!" })
 
-       .. code-block:: ruby
+   or:
 
-          headers({ "Cookie" => "user=grantmc; pass=p@ssw0rd!" })
+   .. code-block:: ruby
 
-       or:
+      headers({ "Referer" => "#{header}" })
 
-       .. code-block:: ruby
+   or:
 
-          headers({ "Referer" => "#{header}" })
+   .. code-block:: ruby
 
-       or:
+      headers( "Authorization"=>"Basic #{ Base64.encode64("#{username}:#{password}").strip }" )
 
-       .. code-block:: ruby
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-          headers( "Authorization"=>"Basic #{ Base64.encode64("#{username}:#{password}").strip }" )
+   |ignore_failure| Default value: ``false``.
+   
+``inherits``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |windows| only. |inherits windows security| Default value: ``true``.
+   
+``manage_symlink_source``
+   **Ruby Types:** TrueClass, FalseClass, NilClass
 
-       |ignore_failure| Default value: ``false``.
-   * - ``inherits``
-     - **Ruby Types:** TrueClass, FalseClass
+   |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
+   
+``mode``
+   **Ruby Types:** Integer, String
 
-       |windows| only. |inherits windows security| Default value: ``true``.
-   * - ``manage_symlink_source``
-     - **Ruby Types:** TrueClass, FalseClass, NilClass
-
-       |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
-   * - ``mode``
-     - **Ruby Types:** Integer, String
-
-       |mode resource| |mode resource_file|
+   |mode resource| |mode resource_file|
        
-       The behavior is different depending on the platform.
+   The behavior is different depending on the platform.
        
-       |unix|- and |linux|-based systems: |mode *nix|
+   |unix|- and |linux|-based systems: |mode *nix|
        
-       |windows|: |mode windows security|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |windows|: |mode windows security|
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |notifies|
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``owner``
-     - **Ruby Types:** Integer, String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``owner``
+   **Ruby Types:** Integer, String
 
-       |owner windows security|	
-   * - ``path``
-     - **Ruby Type:** String
+   |owner windows security|	
+   
+``path``
+   **Ruby Type:** String
 
-       |path full_path_to_file| |resource_block_default| |see syntax|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |path full_path_to_file| |resource_block_default| |see syntax|
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   Optional. |provider resource_parameter|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |retry_delay| Default value: ``2``.
-   * - ``rights``
-     - **Ruby Types:** Integer, String
+   |retry_delay| Default value: ``2``.
+   
+``rights``
+   **Ruby Types:** Integer, String
 
-       |windows| only. |rights windows security|
-   * - ``source``
-     - **Ruby Types:** String, Array
+   |windows| only. |rights windows security|
+   
+``source``
+   **Ruby Types:** String, Array
 
-       Required. |source file_location| |source file_location http_ftp_local_unc|
+   Required. |source file_location| |source file_location http_ftp_local_unc|
        
-       .. include:: ../../includes_file/includes_file_remote_source_location.rst
+   .. include:: ../../includes_file/includes_file_remote_source_location.rst
 
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |subscribes|
+   |subscribes|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes timers|
-   * - ``use_conditional_get``
-     - **Ruby Types:** TrueClass, FalseClass
+   |subscribes timers|
+   
+``use_conditional_get``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |use conditional_get| Default value: ``true``.
-   * - ``use_etag``
-     - **Ruby Types:** TrueClass, FalseClass
+   |use conditional_get| Default value: ``true``.
+   
+``use_etag``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |use etag| Default value: ``true``.
-   * - ``use_last_modified``
-     - **Ruby Types:** TrueClass, FalseClass
+   |use etag| Default value: ``true``.
+   
+``use_last_modified``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |use last_modified| Default value: ``true``.
-   * - ``verify``
-     - **Ruby Types:** String, Block
+   |use last_modified| Default value: ``true``.
+   
+``verify``
+   **Ruby Types:** String, Block
 
-       |verify_file|
+   |verify_file|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+   .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst

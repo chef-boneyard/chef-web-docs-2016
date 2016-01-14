@@ -3,21 +3,19 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   Default. |resource action create registry_key|
 
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create registry_key|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing registry_key|
-   * - ``:delete``
-     - |resource action delete registry_key|
-   * - ``:delete_key``
-     - |resource action delete key registry_key|
-   * - ``:nothing``
-     - |resource action nothing|
+``:create_if_missing``
+   |resource action create_if_missing registry_key|
+
+``:delete``
+   |resource action delete registry_key|
+
+``:delete_key``
+   |resource action delete key registry_key|
+
+``:nothing``
+   |resource action nothing|
 
 .. note:: .. include:: ../../includes_notes/includes_notes_registry_key_resource_recursive.rst

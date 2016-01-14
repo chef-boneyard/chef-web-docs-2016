@@ -3,13 +3,8 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 400
-   :header-rows: 1
+``:break``
+   Use to add a breakpoint to a recipe.
 
-   * - Action
-     - Description
-   * - ``:break``
-     - Use to add a breakpoint to a recipe.
-   * - ``:nothing``
-     - |resource action nothing|
+``:nothing``
+   |resource action nothing|

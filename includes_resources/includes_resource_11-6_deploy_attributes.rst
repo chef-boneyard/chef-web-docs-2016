@@ -3,183 +3,199 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``after_restart``
+   **Ruby Types:** Proc, String
 
-   * - Property
-     - Description
-   * - ``after_restart``
-     - **Ruby Types:** Proc, String
+   |after_restart| Default value: ``deploy/after_restart.rb``.
 
-       |after_restart| Default value: ``deploy/after_restart.rb``.
-   * - ``before_migrate``
-     - **Ruby Types:** Proc, String
+``before_migrate``
+   **Ruby Types:** Proc, String
 
-       |before_migrate| Default value: ``deploy/before_migrate.rb``.
-   * - ``before_restart``
-     - **Ruby Types:** Proc, String
+   |before_migrate| Default value: ``deploy/before_migrate.rb``.
 
-       |before_restart| Default value: ``deploy/before_restart.rb``.
-   * - ``before_symlink``
-     - **Ruby Types:** Proc, String
+``before_restart``
+   **Ruby Types:** Proc, String
 
-       |before_symlink| Default value: ``deploy/before_symlink.rb``.
-   * - ``branch``
-     - **Ruby Type:** String
+   |before_restart| Default value: ``deploy/before_restart.rb``.
 
-       The alias for the revision.
-   * - ``create_dirs_before_symlink``
-     - **Ruby Type:** Array
+``before_symlink``
+   **Ruby Types:** Proc, String
 
-       |create_dirs_before_symlink| Default value: ``%w{tmp public config}`` (or the same as ``["tmp", "public", "config"]``).
-   * - ``deploy_to``
-     - **Ruby Type:** String
+   |before_symlink| Default value: ``deploy/before_symlink.rb``.
 
-       |deploy_to| |resource_block_default| |see syntax|
-   * - ``environment``
-     - **Ruby Type:** Hash
+``branch``
+   **Ruby Type:** String
 
-       |environment variables|
-   * - ``group``
-     - **Ruby Type:** String
+   The alias for the revision.
 
-       |group deploy|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``create_dirs_before_symlink``
+   **Ruby Type:** Array
 
-       |ignore_failure| Default value: ``false``.
-   * - ``keep_releases``
-     - **Ruby Type:** Integer
+   |create_dirs_before_symlink| Default value: ``%w{tmp public config}`` (or the same as ``["tmp", "public", "config"]``).
 
-       |keep_releases| Default value: ``5``.
-   * - ``migrate``
-     - **Ruby Types:** TrueClass, FalseClass
+``deploy_to``
+   **Ruby Type:** String
 
-       |migrate command_run| Default value: ``false``.
-   * - ``migration_command``
-     - **Ruby Type:** String
+   |deploy_to| |resource_block_default| |see syntax|
 
-       |migration command_string|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``environment``
+   **Ruby Type:** Hash
 
-       |notifies|
+   |environment variables|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+``group``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |group deploy|
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``purge_before_symlink``
-     - **Ruby Type:** Array
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |purge_before_symlink| Default value: ``%w{log tmp/pids public/system}`` (or the same as ``["log", "tmp/pids", "public/system"]``.
-   * - ``repo``
-     - **Ruby Type:** String
+   |ignore_failure| Default value: ``false``.
 
-       |repository git_or_svn|
-   * - ``repository``
-     - **Ruby Type:** String
+``keep_releases``
+   **Ruby Type:** Integer
 
-       |uri repository|
-   * - ``repository_cache``
-     - **Ruby Type:** String
+   |keep_releases| Default value: ``5``.
 
-       |repository_cache| Default value: ``cached-copy``.
-   * - ``restart_command``
-     - **Ruby Types:** String, Proc
+``migrate``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |restart shell_command|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |migrate command_run| Default value: ``false``.
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``migration_command``
+   **Ruby Type:** String
 
-       |retry_delay| Default value: ``2``.
-   * - ``revision``
-     - **Ruby Type:** String
+   |migration command_string|
 
-       |revision| Default value: ``HEAD``.
-   * - ``rollback_on_error``
-     - **Ruby Types:** TrueClass, FalseClass
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |rollback_on_error| Default value: ``false``.
-   * - ``scm_provider``
-     - **Ruby Type:** Chef Class
+   |notifies|
 
-       |name scm_provider| Default value: ``Chef::Provider::Git``. Optional values: ``Chef::Provider::Subversion``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |subscribes|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``provider``
+   **Ruby Type:** Chef Class
 
-       |subscribes timers|
-   * - ``symlinks``
-     - **Ruby Type:** Hash
+   Optional. |provider resource_parameter| |see providers|
 
-       |symlinks| Default value: ``{"system" => "public/system", "pids" => "tmp/pids", "log" => "log"}``.
-   * - ``symlink_before_migrate``
-     - **Ruby Type:** Hash
+``purge_before_symlink``
+   **Ruby Type:** Array
 
-       |symlink_before_migrate| Default value: ``{"config/database.yml" => "config/database.yml"}``.
-   * - ``user``
-     - **Ruby Type:** String
+   |purge_before_symlink| Default value: ``%w{log tmp/pids public/system}`` (or the same as ``["log", "tmp/pids", "public/system"]``.
 
-       |user checked_out_code|
+``repo``
+   **Ruby Type:** String
+
+   |repository git_or_svn|
+
+``repository``
+   **Ruby Type:** String
+
+   |uri repository|
+
+``repository_cache``
+   **Ruby Type:** String
+
+   |repository_cache| Default value: ``cached-copy``.
+
+``restart_command``
+   **Ruby Types:** String, Proc
+
+   |restart shell_command|
+
+``retries``
+   **Ruby Type:** Integer
+
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``revision``
+   **Ruby Type:** String
+
+   |revision| Default value: ``HEAD``.
+
+``rollback_on_error``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |rollback_on_error| Default value: ``false``.
+
+``scm_provider``
+   **Ruby Type:** Chef Class
+
+   |name scm_provider| Default value: ``Chef::Provider::Git``. Optional values: ``Chef::Provider::Subversion``.
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``symlinks``
+   **Ruby Type:** Hash
+
+   |symlinks| Default value: ``{"system" => "public/system", "pids" => "tmp/pids", "log" => "log"}``.
+
+``symlink_before_migrate``
+   **Ruby Type:** Hash
+
+   |symlink_before_migrate| Default value: ``{"config/database.yml" => "config/database.yml"}``.
+
+``user``
+   **Ruby Type:** String
+
+   |user checked_out_code|
 
 The following properties are for use with |git| only:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``enable_submodules``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``enable_submodules``
-     - **Ruby Types:** TrueClass, FalseClass
+   |enable_submodules| Default value: ``false``.
 
-       |enable_submodules| Default value: ``false``.
-   * - ``git_ssh_wrapper``
-     - **Ruby Type:** String
+``git_ssh_wrapper``
+   **Ruby Type:** String
 
-       |git_ssh_wrapper|
-   * - ``remote``
-     - **Ruby Type:** String
+   |git_ssh_wrapper|
 
-       |remote resource| Default value: ``origin``.
-   * - ``shallow_clone``
-     - **Ruby Types:** TrueClass, FalseClass
+``remote``
+   **Ruby Type:** String
 
-       |shallow_clone| Default value: ``false``.
-   * - ``ssh_wrapper``
-     - **Ruby Type:** String
+   |remote resource| Default value: ``origin``.
 
-       |ssh_wrapper resource|
+``shallow_clone``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |shallow_clone| Default value: ``false``.
+
+``ssh_wrapper``
+   **Ruby Type:** String
+
+   |ssh_wrapper resource|
 
 The following properties are for use with |svn| only:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``svn_arguments``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``svn_arguments``
-     - **Ruby Type:** String
+   |svn_arguments resource|
 
-       |svn_arguments resource|
-   * - ``svn_password``
-     - **Ruby Type:** String
+``svn_password``
+   **Ruby Type:** String
 
-       |svn_password resource|
-   * - ``svn_username``
-     - **Ruby Type:** String
+   |svn_password resource|
 
-       |svn_username resource|
+``svn_username``
+   **Ruby Type:** String
+
+   |svn_username resource|

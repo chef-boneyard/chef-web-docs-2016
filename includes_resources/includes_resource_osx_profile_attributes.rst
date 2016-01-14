@@ -2,55 +2,56 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``identifier``
+   **Ruby Type:** String
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   Use to specify the identifier for the profile, such as ``com.company.screensaver``.
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``identifier``
-     - **Ruby Type:** String
+   |ignore_failure| Default value: ``false``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       Use to specify the identifier for the profile, such as ``com.company.screensaver``.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |notifies|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+``profile``
+   **Ruby Types:** String, Hash
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   Use to specify a profile. This may be the name of a profile contained in a cookbook or a |ruby hash| that contains the contents of the profile.
+   
+``profile_name``
+   **Ruby Type:** String
 
-   * - ``profile``
-     - **Ruby Types:** String, Hash
+   Use to specify the name of the profile, if different from the name of the resource block.
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       Use to specify a profile. This may be the name of a profile contained in a cookbook or a |ruby hash| that contains the contents of the profile.
-   * - ``profile_name``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       Use to specify the name of the profile, if different from the name of the resource block.
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
-
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
+   |subscribes timers|

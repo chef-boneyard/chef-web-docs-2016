@@ -2,57 +2,58 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |ignore_failure| Default value: ``false``.
+   
+``module_name``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |name powershell_module| If this property is not specified, it will be inferred.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |ignore_failure| Default value: ``false``.
-   * - ``module_name``
-     - **Ruby Type:** String
+   |notifies|
 
-       |name powershell_module| If this property is not specified, it will be inferred.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``property``
+   **Ruby Type:** Symbol
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |property dsc_resource| The format for this property must follow ``property :dsc_property_name, "property_value"`` for each |windows powershell_dsc_short| property added to the resource block.
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``property``
-     - **Ruby Type:** Symbol
+   The ``:dsc_property_name`` must be a symbol.
 
-       |property dsc_resource| The format for this property must follow ``property :dsc_property_name, "property_value"`` for each |windows powershell_dsc_short| property added to the resource block.
+   .. include:: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst
 
-       The ``:dsc_property_name`` must be a symbol.
+   
+``resource``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources/includes_resource_dsc_resource_ruby_types.rst
+   |name powershell_dsc_resource| This value is case-insensitive and must be a symbol that matches the name of the |windows powershell_dsc_short| resource.
 
-   * - ``resource``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources/includes_resource_dsc_resource_features.rst
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |name powershell_dsc_resource| This value is case-insensitive and must be a symbol that matches the name of the |windows powershell_dsc_short| resource.
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources/includes_resource_dsc_resource_features.rst
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
-
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
+   |subscribes timers|

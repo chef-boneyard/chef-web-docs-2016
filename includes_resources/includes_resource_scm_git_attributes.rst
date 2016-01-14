@@ -2,106 +2,120 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``additional_remotes``
+   **Ruby Type:** Hash
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |additional_remotes|
+   
+``checkout_branch``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``additional_remotes``
-     - **Ruby Type:** Hash
+   |checkout_branch git| See ``revision``. Default value: ``deploy``.
+   
+``depth``
+   **Ruby Type:** Integer
 
-       |additional_remotes|
-   * - ``checkout_branch``
-     - **Ruby Type:** String
+   |depth git_shallow_clone| The default behavior will do a full clone.
+   
+``destination``
+   **Ruby Type:** String
 
-       |checkout_branch git| See ``revision``. Default value: ``deploy``.
-   * - ``depth``
-     - **Ruby Type:** Integer
+   |destination resource scm| |resource_block_default| |see syntax|
+   
+``enable_checkout``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |depth git_shallow_clone| The default behavior will do a full clone.
-   * - ``destination``
-     - **Ruby Type:** String
+   |enable_git_checkout| Set to ``false`` when using the ``checkout_branch`` attribute to prevent the |resource scm_git| resource from attempting to check out master from master. Default value: ``true``.
+   
+``enable_submodules``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |destination resource scm| |resource_block_default| |see syntax|
-   * - ``enable_checkout``
-     - **Ruby Types:** TrueClass, FalseClass
+   |enable_submodules| Default value: ``false``.
+   
+``environment``
+   **Ruby Type:** Hash
 
-       |enable_git_checkout| Set to ``false`` when using the ``checkout_branch`` attribute to prevent the |resource scm_git| resource from attempting to check out master from master. Default value: ``true``.
-   * - ``enable_submodules``
-     - **Ruby Types:** TrueClass, FalseClass
+   |environment variables|
 
-       |enable_submodules| Default value: ``false``.
-   * - ``environment``
-     - **Ruby Type:** Hash
+   .. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_git_env_variables.rst
+   
+``group``
+   **Ruby Types:** String, Integer
 
-       |environment variables|
+   |group deploy|
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       .. note:: .. include:: ../../includes_notes/includes_notes_scm_resource_git_env_variables.rst
-   * - ``group``
-     - **Ruby Types:** String, Integer
+   |ignore_failure| Default value: ``false``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |group deploy|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |notifies|
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   Optional. |provider resource_parameter|
+   
+``reference``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |reference resource scm|
+   
+``remote``
+   **Ruby Type:** String
 
-       Optional. |provider resource_parameter|
-   * - ``reference``
-     - **Ruby Type:** String
+   |remote resource|
+   
+``repository``
+   **Ruby Type:** String
 
-       |reference resource scm|
-   * - ``remote``
-     - **Ruby Type:** String
+   |uri repository_git|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |remote resource|
-   * - ``repository``
-     - **Ruby Type:** String
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |uri repository_git|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``revision``
+   **Ruby Type:** String
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |revision| See ``checkout_branch``. Default value: ``HEAD``.
 
-       |retry_delay| Default value: ``2``.
-   * - ``revision``
-     - **Ruby Type:** String
+   .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
+   
+``ssh_wrapper``
+   **Ruby Type:** String
 
-       |revision| See ``checkout_branch``. Default value: ``HEAD``.
+   |ssh_wrapper resource|
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
-   * - ``ssh_wrapper``
-     - **Ruby Type:** String
+   |subscribes|
 
-       |ssh_wrapper resource|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``timeout``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |timeout scm| |timeout scm_value_git|
+   
+``user``
+   **Ruby Types:** String, Integer
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Type:** Integer
-
-       |timeout scm| |timeout scm_value_git|
-   * - ``user``
-     - **Ruby Types:** String, Integer
-
-       |user checked_out_code| Default value: the home directory of this user, as indicated by the ``HOME`` environment variable.
+   |user checked_out_code| Default value: the home directory of this user, as indicated by the ``HOME`` environment variable.

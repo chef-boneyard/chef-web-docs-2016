@@ -3,91 +3,102 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``additional_remotes``
+   **Ruby Type:** Hash
 
-   * - Property
-     - Description
-   * - ``additional_remotes``
-     - **Ruby Type:** Hash
+   |additional_remotes|
 
-       |additional_remotes|
-   * - ``depth``
-     - **Ruby Type:** Integer
+``depth``
+   **Ruby Type:** Integer
 
-       |depth git_shallow_clone| The default behavior will do a full clone.
-   * - ``destination``
-     - **Ruby Type:** String
+   |depth git_shallow_clone| The default behavior will do a full clone.
 
-       |destination resource scm| |resource_block_default| |see syntax|
-   * - ``enable_submodules``
-     - **Ruby Types:** TrueClass, FalseClass
+``destination``
+   **Ruby Type:** String
 
-       |enable_submodules| Default value: ``false``.
-   * - ``group``
-     - **Ruby Types:** String, Integer
+   |destination resource scm| |resource_block_default| |see syntax|
 
-       |group deploy|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``enable_submodules``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |enable_submodules| Default value: ``false``.
 
-       |notifies|
+``group``
+   **Ruby Types:** String, Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |group deploy|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       Optional. |provider resource_parameter|
-   * - ``reference``
-     - **Ruby Type:** String
+   |ignore_failure| Default value: ``false``.
 
-       |reference resource scm|
-   * - ``remote``
-     - **Ruby Type:** String
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |remote resource|
-   * - ``repository``
-     - **Ruby Type:** String
+   |notifies|
 
-       |uri repository_git|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |retry_delay| Default value: ``2``.
-   * - ``revision``
-     - **Ruby Type:** String
+``provider``
+   **Ruby Type:** Chef Class
 
-       |revision| Default value: ``HEAD``.
+   Optional. |provider resource_parameter|
 
-       .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
-   * - ``ssh_wrapper``
-     - **Ruby Type:** String
+``reference``
+   **Ruby Type:** String
 
-       |ssh_wrapper resource|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |reference resource scm|
 
-       |subscribes|
+``remote``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |remote resource|
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Type:** Integer
+``repository``
+   **Ruby Type:** String
 
-       |timeout scm| |timeout scm_value_git|
-   * - ``user``
-     - **Ruby Types:** String, Integer
+   |uri repository_git|
 
-       |user checked_out_code|
+``retries``
+   **Ruby Type:** Integer
+
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``revision``
+   **Ruby Type:** String
+
+   |revision| Default value: ``HEAD``.
+
+   .. include:: ../../includes_resources/includes_resource_scm_git_attributes_revision.rst
+
+``ssh_wrapper``
+   **Ruby Type:** String
+
+   |ssh_wrapper resource|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Type:** Integer
+
+   |timeout scm| |timeout scm_value_git|
+
+``user``
+   **Ruby Types:** String, Integer
+
+   |user checked_out_code|

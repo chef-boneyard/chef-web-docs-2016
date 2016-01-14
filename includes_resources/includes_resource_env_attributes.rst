@@ -2,54 +2,56 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``delim``
+   **Ruby Type:** String
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |delim resource directory|
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``delim``
-     - **Ruby Type:** String
+   |ignore_failure| Default value: ``false``.
+   
+``key_name``
+   **Ruby Type:** String
 
-       |delim resource directory|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |name key_directory| |resource_block_default| |see syntax|
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |ignore_failure| Default value: ``false``.
-   * - ``key_name``
-     - **Ruby Type:** String
+   |notifies|
 
-       |name key_directory| |resource_block_default| |see syntax|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   Optional. |provider resource_parameter|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |subscribes|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``value``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
-   * - ``value``
-     - **Ruby Type:** String
-
-       |value resource directory|
+   |value resource directory|

@@ -3,91 +3,102 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``allow_downgrade``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``allow_downgrade``
-     - **Ruby Types:** TrueClass, FalseClass
+   |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
 
-       |resource yum_package| resource only. |allow_downgrade| Default value: ``false``.
-   * - ``arch``
-     - **Ruby Types:** String, Array
+``arch``
+   **Ruby Types:** String, Array
 
-       |resource yum_package| resource only. |architecture package|
-   * - ``default_release``
-     - **Ruby Type:** String
+   |resource yum_package| resource only. |architecture package|
 
-       |resource package_apt| resource only. |default_release apt| For example: ``stable``.
-   * - ``flush_cache``
-     - **Ruby Type:** Array
+``default_release``
+   **Ruby Type:** String
 
-       |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
+   |resource package_apt| resource only. |default_release apt| For example: ``stable``.
 
-       .. note:: |flush_cache yum_cache|
-   * - ``gem_binary``
-     - **Ruby Type:** String
+``flush_cache``
+   **Ruby Type:** Array
 
-       |gem_binary resource package|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. note:: |flush_cache yum_cache|
 
-       |notifies|
+``gem_binary``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |gem_binary resource package|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |command options|
-   * - ``package_name``
-     - **Ruby Types:** String, Array
+   |ignore_failure| Default value: ``false``.
 
-       |name package| |resource_block_default| |see syntax|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``response_file``
-     - **Ruby Type:** String
+   |notifies|
 
-       |resource package_apt| and |resource package_dpkg| resources only. |response_file|
-   * - ``response_file_variables``
-     - **Ruby Type:** Hash
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+``options``
+   **Ruby Type:** String
 
-       |retry_delay| Default value: ``2``.
-   * - ``source``
-     - **Ruby Type:** String
+   |command options|
 
-       Optional. |source resource package|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``package_name``
+   **Ruby Types:** String, Array
 
-       |subscribes|
+   |name package| |resource_block_default| |see syntax|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``provider``
+   **Ruby Type:** Chef Class
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
+   Optional. |provider resource_parameter| |see providers|
 
-       |timeout|
-   * - ``version``
-     - **Ruby Types:** String, Array
+``response_file``
+   **Ruby Type:** String
 
-       |version package|
+   |resource package_apt| and |resource package_dpkg| resources only. |response_file|
+
+``response_file_variables``
+   **Ruby Type:** Hash
+
+   |resource package_apt| and |resource package_dpkg| resources only. |response_file variables|
+
+``retries``
+   **Ruby Type:** Integer
+
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``source``
+   **Ruby Type:** String
+
+   Optional. |source resource package|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Types:** String, Integer
+
+   |timeout|
+
+``version``
+   **Ruby Types:** String, Array
+
+   |version package|

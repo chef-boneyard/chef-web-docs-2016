@@ -3,61 +3,65 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``append``
+   **Ruby Types:** TrueClass, FalseClass
 
-   * - Property
-     - Description
-   * - ``append``
-     - **Ruby Types:** TrueClass, FalseClass
+   |append_group| Default value: ``false``.
 
-       |append_group| Default value: ``false``.
-   * - ``gid``
-     - **Ruby Types:** String, Integer
+``gid``
+   **Ruby Types:** String, Integer
 
-       |id group|
-   * - ``group_name``
-     - **Ruby Type:** String
+   |id group|
 
-       |name group| |resource_block_default| |see syntax|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``group_name``
+   **Ruby Type:** String
 
-       |ignore_failure| Default value: ``false``.
-   * - ``members``
-     - **Ruby Type:** Array
+   |name group| |resource_block_default| |see syntax|
 
-       |members_group|
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |notifies|
+   |ignore_failure| Default value: ``false``.
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+``members``
+   **Ruby Type:** Array
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |members_group|
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |notifies|
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |subscribes|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``provider``
+   **Ruby Type:** Chef Class
 
-       |subscribes timers|
-   * - ``system``
-     - **Ruby Types:** TrueClass, FalseClass
+   Optional. |provider resource_parameter| |see providers|
 
-       |system group|
+``retries``
+   **Ruby Type:** Integer
+
+   |retries| Default value: ``0``.
+
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``system``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |system group|

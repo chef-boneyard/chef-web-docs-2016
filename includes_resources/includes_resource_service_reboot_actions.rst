@@ -3,17 +3,14 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:cancel``
+   |resource action cancel reboot|
 
-   * - Action
-     - Description
-   * - ``:cancel``
-     - |resource action cancel reboot|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:reboot_now``
-     - |resource action reboot now|
-   * - ``:request_reboot``
-     - |resource action request reboot|
+``:nothing``
+   |resource action nothing|
+
+``:reboot_now``
+   |resource action reboot now|
+
+``:request_reboot``
+   |resource action request reboot|

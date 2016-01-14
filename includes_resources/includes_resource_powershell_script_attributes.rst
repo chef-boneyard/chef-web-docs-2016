@@ -2,96 +2,108 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 This resource has the following properties:
+   
+``architecture``
+   **Ruby Type:** Symbol
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+   |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
+   
+``code``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``architecture``
-     - **Ruby Type:** Symbol
+   |code quoted_string|
+   
+``command``
+   **Ruby Types:** String, Array
 
-       |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
-   * - ``code``
-     - **Ruby Type:** String
+   |name command| |resource_block_default| |see syntax|
+   
+``convert_boolean_return``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |code quoted_string|
-   * - ``command``
-     - **Ruby Types:** String, Array
+   |convert_boolean_return| Default value: ``false``.
 
-       |name command| |resource_block_default| |see syntax|
-   * - ``convert_boolean_return``
-     - **Ruby Types:** TrueClass, FalseClass
+   .. include:: ../../includes_resources/includes_resource_powershell_script_attributes_guard_interpreter.rst
+   
+``creates``
+   **Ruby Type:** String
 
-       |convert_boolean_return| Default value: ``false``.
+   Inherited from |resource execute| resource. |creates file_exists|
+   
+``cwd``
+   **Ruby Type:** String
 
-       .. include:: ../../includes_resources/includes_resource_powershell_script_attributes_guard_interpreter.rst
-   * - ``creates``
-     - **Ruby Type:** String
+   Inherited from |resource execute| resource. |cwd run_command|
+   
+``environment``
+   **Ruby Type:** Hash
 
-       Inherited from |resource execute| resource. |creates file_exists|
-   * - ``cwd``
-     - **Ruby Type:** String
+   Inherited from |resource execute| resource. |environment variables|
+   
+``flags``
+   **Ruby Type:** String
 
-       Inherited from |resource execute| resource. |cwd run_command|
-   * - ``environment``
-     - **Ruby Type:** Hash
+   |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
+   
+``group``
+   **Ruby Types:** String, Integer
 
-       Inherited from |resource execute| resource. |environment variables|
-   * - ``flags``
-     - **Ruby Type:** String
+   Inherited from |resource execute| resource. |group command|
+   
+``guard_interpreter``
+   **Ruby Type:** Symbol
 
-       |flags powershell_script| Default value: ``-NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File``.
-   * - ``group``
-     - **Ruby Types:** String, Integer
+   Default value: ``:powershell_script``. When this property is set to ``:powershell_script``, the 64-bit version of the |windows powershell| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` properties. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       Inherited from |resource execute| resource. |group command|
-   * - ``guard_interpreter``
-     - **Ruby Type:** Symbol
+   |ignore_failure| Default value: ``false``.
+   
+``interpreter``
+   **Ruby Type:** String
 
-       Default value: ``:powershell_script``. When this property is set to ``:powershell_script``, the 64-bit version of the |windows powershell| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` properties. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |interpreter| Changing the default value of this property is not supported.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |ignore_failure| Default value: ``false``.
-   * - ``interpreter``
-     - **Ruby Type:** String
+   |notifies|
 
-       |interpreter| Changing the default value of this property is not supported.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |notifies|
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   Optional. |provider resource_parameter|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       Optional. |provider resource_parameter|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |retry_delay| Default value: ``2``.
+   
+``returns``
+   **Ruby Types:** Integer, Array
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   Inherited from |resource execute| resource. |return_value cmd| Default value: ``0``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** Integer, Array
+   |subscribes|
 
-       Inherited from |resource execute| resource. |return_value cmd| Default value: ``0``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |subscribes|
+   |subscribes timers|
+   
+``timeout``
+   **Ruby Types:** Integer, Float
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
-
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** Integer, Float
-
-       Inherited from |resource execute| resource. |timeout command| Default value: ``3600``.
+   Inherited from |resource execute| resource. |timeout command| Default value: ``3600``.

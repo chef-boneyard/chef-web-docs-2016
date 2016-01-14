@@ -3,19 +3,17 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:add``
+   Default. |resource action add ifconfig|
 
-   * - Action
-     - Description
-   * - ``:add``
-     - Default. |resource action add ifconfig|
-   * - ``:delete``
-     - |resource action delete ifconfig|
-   * - ``:disable``
-     - |resource action disable ifconfig|
-   * - ``:enable``
-     - |resource action enable ifconfig|
-   * - ``:nothing``
-     - |resource action nothing|
+``:delete``
+   |resource action delete ifconfig|
+
+``:disable``
+   |resource action disable ifconfig|
+
+``:enable``
+   |resource action enable ifconfig|
+
+``:nothing``
+   |resource action nothing|

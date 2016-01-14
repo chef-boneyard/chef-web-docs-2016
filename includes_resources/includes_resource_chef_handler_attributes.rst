@@ -3,64 +3,65 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``arguments``
+   **Ruby Type:** Array
 
-   * - Property
-     - Description
-   * - ``arguments``
-     - **Ruby Type:** Array
+   |arguments chef_handler| Default value: ``[]``. For example:
 
-       |arguments chef_handler| Default value: ``[]``. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      arguments :key1 => 'val1'
 
-          arguments :key1 => 'val1'
+   or:
 
-       or:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      arguments [:key1 => 'val1', :key2 => 'val2']
 
-          arguments [:key1 => 'val1', :key2 => 'val2']
+``class_name``
+   **Ruby Type:** String
 
-   * - ``class_name``
-     - **Ruby Type:** String
+   |name class_chef_handler|
 
-       |name class_chef_handler|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |ignore_failure| Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |ignore_failure| Default value: ``false``.
 
-       |notifies|
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``retries``
-     - **Ruby Type:** Integer
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |retry_delay| Default value: ``2``.
-   * - ``source``
-     - **Ruby Type:** String
+``retries``
+   **Ruby Type:** Integer
 
-       |path chef_handler|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |retries| Default value: ``0``.
 
-       |subscribes|
+``retry_delay``
+   **Ruby Type:** Integer
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |retry_delay| Default value: ``2``.
 
-       |subscribes timers|
-   * - ``supports``
-     - **Ruby Type:** Hash
+``source``
+   **Ruby Type:** String
 
-       |supports chef_handler| Possible values: ``:exception``, ``:report``, or ``:start``. Default value: ``{ :report => true, :exception => true }``.
+   |path chef_handler|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``supports``
+   **Ruby Type:** Hash
+
+   |supports chef_handler| Possible values: ``:exception``, ``:report``, or ``:start``. Default value: ``{ :report => true, :exception => true }``.

@@ -3,15 +3,11 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:create``
+   The same as ``:run``.
 
-   * - Action
-     - Description
-   * - ``:create``
-     - The same as ``:run``.
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:run``
-     - Default. |resource action run ruby_block|
+``:nothing``
+   |resource action nothing|
+
+``:run``
+   Default. |resource action run ruby_block|

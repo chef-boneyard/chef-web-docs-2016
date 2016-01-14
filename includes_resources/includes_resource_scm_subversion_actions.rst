@@ -3,19 +3,17 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:checkout``
+   |resource action checkout scm|
 
-   * - Action
-     - Description
-   * - ``:checkout``
-     - |resource action checkout scm|
-   * - ``:export``
-     - |resource action export scm|
-   * - ``:force_export``
-     - |resource action force_export scm|
-   * - ``:nothing``
-     - |resource action nothing|
-   * - ``:sync``
-     - Default. |resource action sync scm|
+``:export``
+   |resource action export scm|
+
+``:force_export``
+   |resource action force_export scm|
+
+``:nothing``
+   |resource action nothing|
+
+``:sync``
+   Default. |resource action sync scm|

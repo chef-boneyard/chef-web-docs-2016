@@ -3,69 +3,75 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``checksum``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``checksum``
-     - **Ruby Type:** String
+   |checksum remote_file| Use when a URL is specified by the ``source`` property.
 
-       |checksum remote_file| Use when a URL is specified by the ``source`` property.
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |ignore_failure| Default value: ``false``.
-   * - ``installer_type``
-     - **Ruby Type:** Symbol
+   |ignore_failure| Default value: ``false``.
 
-       |type package| Possible values: ``:msi``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``installer_type``
+   **Ruby Type:** Symbol
 
-       |notifies|
+   |type package| Possible values: ``:msi``.
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Type:** String
+   |notifies|
 
-       |command options|
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``remote_file_attributes``
-     - **Ruby Type:** Hash
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
 
-       |remote_file_attributes|
-   * - ``retries``
-     - **Ruby Type:** Integer
+``options``
+   **Ruby Type:** String
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   |command options|
 
-       |retry_delay| Default value: ``2``.
-   * - ``returns``
-     - **Ruby Types:** String, Integer, Array
+``provider``
+   **Ruby Type:** Chef Class
 
-       |returns| This code signals a successful ``:install`` action. Default value: ``0``.
-   * - ``source``
-     - **Ruby Type:** String
+   Optional. |provider resource_parameter| |see providers|
 
-       Optional. |source resource package| The location of the package may be at a URL. |resource_block_default| |see syntax|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+``remote_file_attributes``
+   **Ruby Type:** Hash
 
-       |subscribes|
+   |remote_file_attributes|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+``retries``
+   **Ruby Type:** Integer
 
-       |subscribes timers|
-   * - ``timeout``
-     - **Ruby Types:** String, Integer
+   |retries| Default value: ``0``.
 
-       |timeout| Default value: ``600`` (seconds).
+``retry_delay``
+   **Ruby Type:** Integer
+
+   |retry_delay| Default value: ``2``.
+
+``returns``
+   **Ruby Types:** String, Integer, Array
+
+   |returns| This code signals a successful ``:install`` action. Default value: ``0``.
+
+``source``
+   **Ruby Type:** String
+
+   Optional. |source resource package| The location of the package may be at a URL. |resource_block_default| |see syntax|
+
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
+
+   |subscribes|
+
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+
+   |subscribes timers|
+
+``timeout``
+   **Ruby Types:** String, Integer
+
+   |timeout| Default value: ``600`` (seconds).

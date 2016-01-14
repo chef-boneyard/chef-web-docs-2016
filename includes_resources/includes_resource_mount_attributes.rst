@@ -3,97 +3,110 @@
 
 This resource has the following properties:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``device``
+   **Ruby Type:** String
 
-   * - Property
-     - Description
-   * - ``device``
-     - **Ruby Type:** String
+   Required for ``:umount`` and ``:remount`` actions (for the purpose of checking the mount command output for presence). |device mount|
 
-       Required for ``:umount`` and ``:remount`` actions (for the purpose of checking the mount command output for presence). |device mount|
-   * - ``device_type``
-     - **Ruby Type:** Symbol
+``device_type``
+   **Ruby Type:** Symbol
 
-       |device_type| Default value: ``:device``.
-   * - ``domain``
-     - **Ruby Type:** String
+   |device_type| Default value: ``:device``.
 
-       |windows| only. Use to specify the domain in which the ``username`` and ``password`` are located.
-   * - ``dump``
-     - **Ruby Types:** Integer, FalseClass
+``domain``
+   **Ruby Type:** String
 
-       |dump_frequency| Default value: ``0``.
-   * - ``enabled``
-     - **Ruby Types:** TrueClass, FalseClass
+   |windows| only. Use to specify the domain in which the ``username`` and ``password`` are located.
+   
+``dump``
+   **Ruby Types:** Integer, FalseClass
 
-       Use to specify if a mounted file system is enabled. Default value: ``false``.
-   * - ``fsck_device``
-     - **Ruby Type:** String
+   |dump_frequency| Default value: ``0``.
+   
+``enabled``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |fsck_device| Default value: ``-``.
-   * - ``fstype``
-     - **Ruby Type:** String
+   Use to specify if a mounted file system is enabled. Default value: ``false``.
+   
+``fsck_device``
+   **Ruby Type:** String
 
-       Required. |fstype|
-   * - ``ignore_failure``
-     - **Ruby Types:** TrueClass, FalseClass
+   |fsck_device| Default value: ``-``.
+   
+``fstype``
+   **Ruby Type:** String
 
-       |ignore_failure| Default value: ``false``.
-   * - ``mount_point``
-     - **Ruby Type:** String
+   Required. |fstype|
+   
+``ignore_failure``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |mount_point| |resource_block_default| |see syntax|
-   * - ``mounted``
-     - **Ruby Types:** TrueClass, FalseClass
+   |ignore_failure| Default value: ``false``.
+   
+``mount_point``
+   **Ruby Type:** String
 
-       Use to specify if a file system is already mounted. Default value: ``false``.
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |mount_point| |resource_block_default| |see syntax|
+   
+``mounted``
+   **Ruby Types:** TrueClass, FalseClass
 
-       |notifies|
+   Use to specify if a file system is already mounted. Default value: ``false``.
+   
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   |notifies|
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
-   * - ``options``
-     - **Ruby Types:** Array, String
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
 
-       |options mount| Default value: ``defaults``.
-   * - ``pass``
-     - **Ruby Types:** Integer, FalseClass
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   
+``options``
+   **Ruby Types:** Array, String
 
-       |pass_number| Default value: ``2``.
-   * - ``password``
-     - **Ruby Type:** String
+   |options mount| Default value: ``defaults``.
+   
+``pass``
+   **Ruby Types:** Integer, FalseClass
 
-       |windows| only. Use to specify the password for ``username``.
-   * - ``provider``
-     - **Ruby Type:** Chef Class
+   |pass_number| Default value: ``2``.
+   
+``password``
+   **Ruby Type:** String
 
-       Optional. |provider resource_parameter| |see providers|
-   * - ``retries``
-     - **Ruby Type:** Integer
+   |windows| only. Use to specify the password for ``username``.
+   
+``provider``
+   **Ruby Type:** Chef Class
 
-       |retries| Default value: ``0``.
-   * - ``retry_delay``
-     - **Ruby Type:** Integer
+   Optional. |provider resource_parameter| |see providers|
+   
+``retries``
+   **Ruby Type:** Integer
 
-       |retry_delay| Default value: ``2``.
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]'
+   |retries| Default value: ``0``.
+   
+``retry_delay``
+   **Ruby Type:** Integer
 
-       |subscribes|
+   |retry_delay| Default value: ``2``.
+   
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-       .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   |subscribes|
 
-       |subscribes timers|
-   * - ``supports``
-     - **Ruby Type:** Array
+   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
 
-       |supports mount| Default value: ``{ :remount => false }``.
-   * - ``username``
-     - **Ruby Type:** String
+   |subscribes timers|
+   
+``supports``
+   **Ruby Type:** Array
 
-       |windows| only. Use to specify the user name.
+   |supports mount| Default value: ``{ :remount => false }``.
+   
+``username``
+   **Ruby Type:** String
+
+   |windows| only. Use to specify the user name.

@@ -3,17 +3,14 @@
 
 This resource has the following actions:
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+``:archive``
+   Use to archive a machine image.
 
-   * - Action
-     - Description
-   * - ``:archive``
-     - Use to archive a machine image.
-   * - ``:create``
-     - Default. Use to create a machine image.
-   * - ``:destroy``
-     - Use to destroy a machine image.
-   * - ``:nothing``
-     - |resource action nothing|
+``:create``
+   Default. Use to create a machine image.
+
+``:destroy``
+   Use to destroy a machine image.
+
+``:nothing``
+   |resource action nothing|
