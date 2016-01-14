@@ -6,4 +6,4 @@
 This subcommand has the following options:
 
 ``-y``, ``--yes``
-   Use to specify that the |chef server| may go offline during |tar gz|-based backups.
+   Use to specify if the |chef server| can go offline during |tar gz|-based backups.
