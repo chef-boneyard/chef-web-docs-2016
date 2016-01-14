@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This resource has the following providers (``Long::Name``, ``shortname``):
+This resource has the following providers:
 
 ``Chef::Provider::Reboot``, ``reboot``
    The provider that is used to reboot a node.
