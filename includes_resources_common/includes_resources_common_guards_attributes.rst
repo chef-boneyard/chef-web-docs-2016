@@ -3,13 +3,8 @@
 
 The following properties can be used to define a guard that is evaluated during the execution phase of the |chef client| run:
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
+``not_if``
+   Prevent a resource from executing when the condition returns ``true``.
 
-   * - Guard
-     - Description
-   * - ``not_if``
-     - Prevent a resource from executing when the condition returns ``true``.
-   * - ``only_if``
-     - Allow a resource to execute only if the condition returns ``true``.
+``only_if``
+   Allow a resource to execute only if the condition returns ``true``.

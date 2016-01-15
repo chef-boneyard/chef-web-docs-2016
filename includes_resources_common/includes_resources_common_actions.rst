@@ -3,11 +3,5 @@
 
 The following actions may be used with any resource:
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:nothing``
-     - |resource action nothing|
+``:nothing``
+   |resource action nothing|
