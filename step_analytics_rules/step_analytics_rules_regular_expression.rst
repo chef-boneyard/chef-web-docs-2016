@@ -35,6 +35,6 @@ The following rule shows using a regular expression:
      when
        get(#user_agent, false) != false
      then
-       alert:info("User agent {{#user_defined_values}} {{ #user_agent }} {{/user_defined_values}} <--")
+       alert:info("User agent {{user_defined_values.#user_agent}}")
      end
    end
