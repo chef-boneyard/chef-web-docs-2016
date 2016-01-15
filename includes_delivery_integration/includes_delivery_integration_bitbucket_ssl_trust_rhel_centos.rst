@@ -9,7 +9,7 @@ For |redhat enterprise linux| (6.x and higher) and |centos| (6.x and higher), do
 
    .. code-block:: bash
 
-      ``yum install ca-certificates``
+      yum install ca-certificates
 
     .. note:: For 6.x servers, run this command only once.
 
@@ -17,7 +17,7 @@ For |redhat enterprise linux| (6.x and higher) and |centos| (6.x and higher), do
 
    .. code-block:: bash
 
-      ``update-ca-trust force-enable``
+      update-ca-trust force-enable
 
     .. note:: For 6.x servers, run this command only once.
 
@@ -25,16 +25,16 @@ For |redhat enterprise linux| (6.x and higher) and |centos| (6.x and higher), do
 
    .. code-block:: bash
 
-      ``cd /etc/pki/ca-trust/source/anchors/``
+      cd /etc/pki/ca-trust/source/anchors/
 
 #. Run the following command:
 
    .. code-block:: bash
 
-      ``openssl s_client -showcerts -connect {your-bitbucekt-server}:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >{your-bitbucekt-server}.crt``
+      openssl s_client -showcerts -connect {your-bitbucekt-server}:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >{your-bitbucekt-server}.crt
 
 #. Run the following command:
 
    .. code-block:: bash
 
-      ``update-ca-trust extract``
+      update-ca-trust extract

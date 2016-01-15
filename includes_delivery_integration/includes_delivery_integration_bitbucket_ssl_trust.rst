@@ -4,4 +4,4 @@
 
 Run the following steps to set up self-signed certificates for |chef delivery_short|.
 
-.. note:: This is only required if the |bitbucket| uses a self-signed SSL certificate.
+.. note:: This is only required if the |bitbucket| uses a self-signed SSL certificate or an internal certificate authority.
