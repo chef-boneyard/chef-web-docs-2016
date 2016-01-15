@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The following example shows how to run ``bundle install`` from a |chef client| run as a specific user. This will put the |ruby gems| into the path of the user (``vagrant``) instead of the root user (under which the |chef client| runs):
+The following example shows how to run ``bundle install`` from a |chef client| run as a specific user. This will put the |gem| into the path of the user (``vagrant``) instead of the root user (under which the |chef client| runs):
 
 .. code-block:: ruby
 
