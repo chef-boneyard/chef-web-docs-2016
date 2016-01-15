@@ -14,8 +14,6 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_remote_file_actions.rst
 
-.. warning:: .. include:: ../../includes_notes/includes_notes_selinux_file_based_resources.rst
-
 Properties
 =====================================================
 .. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
