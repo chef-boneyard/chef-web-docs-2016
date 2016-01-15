@@ -21,4 +21,4 @@ First install the |chef client|, and then enable it to run as a service. For exa
 
 .. code-block:: bash
 
-   $ msiexec /qn /i C:\inst\chef-client-11.8.0-1.windows.msi ADDLOCAL="ChefClientFeature,ChefServiceFeature,ChefPSModuleFeature"
+   $ msiexec /qn /i C:\inst\chef-client-12.4.3-1.windows.msi ADDLOCAL="ChefClientFeature,ChefServiceFeature,ChefPSModuleFeature"
