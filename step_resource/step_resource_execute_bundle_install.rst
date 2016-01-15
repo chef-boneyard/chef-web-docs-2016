@@ -1,0 +1,16 @@
+.. This is an included how-to. 
+
+
+The following example shows how to run ``bundle install`` from a |chef client| run as a specific user. This will put the |ruby gems| into the path of the user (``vagrant``) instead of the root user (under which the |chef client| runs):
+
+.. code-block:: ruby
+
+   execute '/opt/chefdk/embedded/bin/bundle install' do
+     cwd node['chef_workstation']['bundler_path']
+     user node['chef_workstation']['user']
+     environment ({
+       'HOME' => "/home/#{node['chef_workstation']['user']}",
+       'USER' => node['chef_workstation']['user']
+     })
+     not_if 'bundle check'
+   end

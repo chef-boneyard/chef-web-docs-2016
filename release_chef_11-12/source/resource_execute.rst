@@ -113,3 +113,11 @@ Examples
 **Run a Knife command**
 
 .. include:: ../../step_resource/step_resource_execute_knife_user_create.rst
+
+**Run install command into virtual environment**
+
+.. include:: ../../step_resource/step_resource_execute_install_q.rst
+
+**Run a command as a named user**
+
+.. include:: ../../step_resource/step_resource_execute_bundle_install.rst
