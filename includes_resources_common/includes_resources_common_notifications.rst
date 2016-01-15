@@ -3,17 +3,12 @@
 
 The following notifications can be used with any resource. Notifications are used in the same way as properties and are processed during the execution phase of the |chef client| run:
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
+``notifies``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
-   * - Notification
-     - Description
-   * - ``notifies``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+   |notifies|
 
-       |notifies|
-   * - ``subscribes``
-     - **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
+``subscribes``
+   **Ruby Type:** Symbol, 'Chef::Resource[String]', Symbol
 
-       |subscribes|
+   |subscribes|

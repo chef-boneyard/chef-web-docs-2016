@@ -3,45 +3,39 @@
 
 The following arguments can be used with the ``not_if`` or ``only_if`` guard properties:
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
+``:user``
+   Specify the user that a command will run as. For example:
 
-   * - Argument
-     - Description
-   * - ``:user``
-     - Specify the user that a command will run as. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      not_if 'grep adam /etc/passwd', :user => 'adam'
 
-          not_if 'grep adam /etc/passwd', :user => 'adam'
+``:group``
+   Specify the group that a command will run as. For example:
 
-   * - ``:group``
-     - Specify the group that a command will run as. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      not_if 'grep adam /etc/passwd', :group => 'adam'
 
-          not_if 'grep adam /etc/passwd', :group => 'adam'
+``:environment``
+   Specify a |ruby hash| of environment variables to be set. For example:
 
-   * - ``:environment``
-     - Specify a |ruby hash| of environment variables to be set. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      not_if 'grep adam /etc/passwd', :environment => { 
+        'HOME' => '/home/adam' 
+      }
 
-          not_if 'grep adam /etc/passwd', :environment => { 
-            'HOME' => '/home/adam' 
-          }
+``:cwd``
+   Set the current working directory before running a command. For example:
 
-   * - ``:cwd``
-     - Set the current working directory before running a command. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      not_if 'grep adam passwd', :cwd => '/etc'
 
-          not_if 'grep adam passwd', :cwd => '/etc'
+``:timeout``
+   Set a timeout for a command. For example:
 
-   * - ``:timeout``
-     - Set a timeout for a command. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
-
-          not_if 'sleep 10000', :timeout => 10
+      not_if 'sleep 10000', :timeout => 10

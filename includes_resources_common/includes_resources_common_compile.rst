@@ -10,4 +10,3 @@ The |chef client| processes recipes in two phases:
 Typically, actions are processed during the execution phase of the |chef client| run. However, sometimes it is necessary to run an action during the compile phase. For example, a resource can be configured to install a package during the compile phase to ensure that application is available to other resources during the execution phase.
 
 .. note:: Use the |resource chef_gem| resource to install |gems| that are needed by the |chef client| during the execution phase.
-
