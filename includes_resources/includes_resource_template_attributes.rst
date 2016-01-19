@@ -37,7 +37,7 @@ This resource has the following properties:
    **Ruby Type:** Module
 
    |helpers| Default value: ``[]``.
-   
+
 ``ignore_failure``
    **Ruby Types:** TrueClass, FalseClass
 
