@@ -19,7 +19,7 @@ For example:
      source 'foobar.txt.erb'
      owner  'someuser'
      group  'somegroup'
-     mode   00644
+     mode   '0644'
      variables(
        :foo => 'bar'
      )
