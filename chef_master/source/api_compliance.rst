@@ -10,36 +10,28 @@ About API Requests
 =====================================================
 Some notes about API requests:
 
-* Examples in this document use ``-u API_KEY`` to represent the retrieved API key. A retrieved API key is similar to: ``VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==``. Replace the ``API_KEY`` with the API key that is assigned to your organization.
-* To generate a new ``API_KEY``, see the documentation for the ``/oauth/token`` endpoint.
+* Examples in this document use ``-u "$API_KEY:"`` to represent the retrieved API key. A retrieved API key is similar to: ``VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==``. Set the ``API_KEY`` variable based on the API key that is assigned to your organization. Find a complete bash example under `/oauth/token <#oauth-token>`_.
 * When running commands as an administrator and if the ``API_KEY`` is not used, some requests to the |api compliance| will return ``403`` (forbidden) if the user making the requests does not have appropriate permissions.
-* When |json| is part of a request to the |api compliance|, the quote marks in the |json| string **MUST** be escaped using a backslash (``\``) character. For example:
-
-  .. code-block:: javascript
-
-     {
-       "name": "Grant McLennan"
-     }
-
-  is represented like this in the command:
-
-  .. code-block:: bash
-
-     $ curl -X PATCH "https://hostname/api/users/grantmc" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
-
-  where the ``JSON_BLOCK`` for the previous example should look like ``{\"name\": \"Grant McLennan\"}``. All of the command examples shown in this document use ``-d "{ JSON BLOCK }"`` to represent the |json| data is placed in the command.
 * Any time a |json| block is part of a request to the |api compliance|, the content type ``application/json`` must also be specified. Use the ``-H`` option: ``-H "Content-Type: application/json"``.
 * The ``Authorization: Basic base64encodedpassword`` header must contain a username and password with permission to authenticate to the |chef compliance| server. Successful authentication will return a valid |api compliance| token.
 
-  |chef compliance| uses the API token to allow access to the |api compliance|. The API key must be incuded as part of `every HTTP Basic Authentication request <http://en.wikipedia.org/wiki/Basic_access_authentication>`__ to the |api compliance| with the API key included as part of the header:
+  |chef compliance| uses the API token to allow access to the |api compliance|. The API key must be included as part of `every HTTP Basic Authentication request <http://en.wikipedia.org/wiki/Basic_access_authentication>`__ to the |api compliance| with the API key included as part of the header:
 
   .. code-block:: javascript
 
      Authorization: Basic API_KEY
 
-  where the ``API_KEY`` is a valid Chef |api compliance| token similar to ``VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==``.
+  where the ``API_KEY`` is a valid |company_name| |api compliance| token similar to ``VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==``.
 
-  A password is not required. HTTP Basic Authentication uses a colon (``:``) to separate the username and password.
+  A password is not required. HTTP Basic Authentication uses a colon (``:``) to separate the username and password. For example, a ``curl`` API call with the above token can be used in ``bash`` like this:
+
+  .. code-block:: bash
+
+     API_HOST="example.com"
+     curl -X GET "https://$API_HOST/api/users" \
+     -u "VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==:"
+
+  **The colon (``:``) at the end of the key is easy to miss, but you must specify it when using ``curl``.**
 
 Response Codes
 =====================================================
@@ -70,57 +62,29 @@ The |api compliance| uses conventional HTTP response codes to highlight a reques
 
 In general, ``2xx`` codes indicate success, ``4xx`` indicate a request error (e.g. data is missing) and ``5xx`` indicate an error with the |api compliance|.
 
-/oauth/token
-=====================================================
-The ``/oauth/token`` endpoint has the following methods: ``POST``.
-
-POST
------------------------------------------------------
-Use this method to request an access token.
-
-**Request**
-
-.. code-block:: xml
-
-   POST https://hostname/api/oauth/token
-
-For example:
-
-.. code-block:: bash
-
-   $ curl -X POST https://hostname/api/oauth/token -u USERNAME:PASSWORD -d "grant_type=client_credentials"
-
-**Response**
-
-The response will return a |json| object similar to:
-
-.. code-block:: javascript
-
-   {
-     "access_token": "VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==",
-     "expires_in": 79781,
-     "token_type": "chef token"
-   }
-
 /version
 =====================================================
 The ``/version`` endpoint has the following method: ``GET``.
 
 GET
 -----------------------------------------------------
-Use this method to get the version of the |api compliance|.
+Use this method to get the version of the |api compliance| without authentication.
 
 **Request**
 
 .. code-block:: xml
 
-   https://hostname/api/version
+   GET /api/version
 
-For example:
+Example tested in ``bash``:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/version" -u API_KEY
+   # Define a variable for the hostname of the |chef compliance| server
+   API_HOST="example.com"
+   curl -X GET "https://$API_HOST/api/version"
+
+.. note:: If you don't have a trusted SSL certificate and would like to turn off curl's verification of the certificate, use the -k (or --insecure) option.
 
 **Response**
 
@@ -129,9 +93,73 @@ The response will return a |json| object similar to:
 .. code-block:: javascript
 
    {
-     "api": "chef",
+     "api": "chef-compliance",
      "version": "1.0.1"
    }
+
+/oauth/token
+=====================================================
+The ``/oauth/token`` endpoint has the following methods: ``POST``.
+
+POST
+-----------------------------------------------------
+Use this method to request an API token valid for 24 hours:
+
+**Request**
+
+.. code-block:: xml
+
+   POST /api/oauth/token
+
+Here's an example on how to get the API token into a variable that will be used later:
+
+.. code-block:: bash
+
+    API_HOST="example.com"
+    USERNAME="john"
+    # Get the json output in a variable
+    JSON=$(curl -s -S -X POST "https://$API_HOST/api/oauth/token" -u "$USERNAME" -d "grant_type=client_credentials")
+    # Extract the access token and store it in the API_KEY variable
+    API_KEY=$(echo $JSON | sed -e "s/.*access_token\":\"\([^\"]*\)\".*/\1/")
+    # List users by adding a colon (:) after the API token
+    curl -X GET "https://$API_HOST/api/users" -u "$API_KEY:"
+
+You can use ``-u "$USERNAME:$PASSWORD"`` if you don't want to be prompted for the password.
+
+**Response**
+
+The response for the ``/api/oauth/token`` call will return a |json| object similar to:
+
+.. code-block:: javascript
+
+   {
+     "access_token": "VS3x1XSg4Hk/wxw8IP+2XpmoKynR7urxglaGfLfFRXbxYljxNW5mksOSNj+BkO2DVoQehGosBnqCJA8WAz3Jyg==",
+     "expires_in": 86399,
+     "token_type": "chef token"
+   }
+
+/logout
+=====================================================
+
+POST
+-----------------------------------------------------
+Delete the API token for the current user.
+
+**Request**
+
+.. code-block:: xml
+
+  POST /api/logout
+
+For example:
+
+.. code-block:: bash
+
+  curl -X POST "https://$API_HOST/api/logout" -u "$API_KEY:"
+
+**Response**
+
+No Content
 
 /compliance
 =====================================================
@@ -145,13 +173,13 @@ Use to return the compliance profile for the all users.
 
 .. code-block:: xml
 
-   GET /user/compliance
+   GET /api/user/compliance
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/user/compliance" -u API_KEY
+   curl -X GET "https://$API_HOST/api/user/compliance" -u "$API_KEY:"
 
 **Response**
 
@@ -160,7 +188,7 @@ The response will return a |json| object similar to:
 .. code-block:: javascript
 
    {
-     "acme": {
+     "base": {
        "cis-ubuntu-level1": {
          "id": "cis-ubuntu-level1",
          "owner": "admin",
@@ -174,7 +202,7 @@ The response will return a |json| object similar to:
          "copyright_email": "grantmc@chef.io"
         }
      },
-     "chef": {
+     "john": {
        "linux": {
          "id": "linux",
          "owner": "chef",
@@ -199,13 +227,13 @@ Use to return profile details about the named user.
 
 .. code-block:: xml
 
-   GET /owners/OWNER/compliance/PROFILE
+   GET /api/owners/OWNER/compliance/PROFILE
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/chef/compliance/ssh" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/compliance/ssh" -u "$API_KEY:"
 
 **Response**
 
@@ -243,7 +271,53 @@ GET (owner)
 -----------------------------------------------------
 This method returns a list of all compliance profiles for the named owner.
 
-This method has the following parameters:
+**Request**
+
+.. code-block:: xml
+
+   GET /api/owners/OWNER/compliance
+
+For example:
+
+.. code-block:: bash
+
+   curl -X GET "https://$API_HOST/api/owners/john/compliance" -u "$API_KEY:"
+
+**Response**
+
+The response will return a |json| object similar to:
+
+.. code-block:: javascript
+
+   {
+     "linux": {
+       "id": "linux",
+       "owner": "chef",
+       "name": "chef/linux",
+       "title": "Basic Linux",
+       "version": "1.0.0",
+       "summary": "Verify that Linux nodes are configured securely",
+       "description": "# Basic Linux Compliance Profile\n\ncopyright",
+       "license": "Proprietary, All rights reserved",
+       "copyright": "Chef Software, Inc.",
+       "copyright_email": "grantmc@chef.io"
+       },
+     "mysql": {
+       "id": "mysql",
+       "owner": "chef",
+       "name": "chef/mysql",
+       "title": "Basic MySQL",
+       "version": "1.0.0",
+       "summary": "Verify that MySQL Server is configured securely",
+       "description": "# Basic MySQL Compliance Profile\n\ncopyright",
+       "license": "Proprietary, All rights reserved",
+       "copyright": "Chef Software, Inc.",
+       "copyright_email": "grantmc@chef.io"
+     },
+     ...
+   }
+
+It contains the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -268,74 +342,25 @@ This method has the following parameters:
    * - ``copyright``
      - String. The individual or organization that holds the copyright.
    * - ``copyright_email``
-     - String. The email for the ``copyright`` holder.
+     - String. The email for the ``copyright`` holder.}
 
-**Request**
-
-.. code-block:: xml
-
-   GET /owners/OWNER/compliance
-
-For example:
-
-.. code-block:: bash
-
-   $ curl "https://hostname/api/owners/chef/compliance" -u API_KEY
-
-**Response**
-
-The response will return a |json| object similar to:
-
-.. code-block:: javascript
-
-   {
-     "linux": {
-       "id": "linux",
-       "owner": "chef",
-       "name": "chef/linux",
-       "title": "Basic Linux",
-       "version": "1.0.0",
-       "summary": "Verify that Linux nodes are configured securely",
-       "description": "# Basic Linux Compliance Profile\n\ncopyright",
-       "license": "Proprietary, All rights reserved",
-       copyright": "Chef Software, Inc.",
-       "copyright_email": "grantmc@chef.io"
-       },
-     "mysql": {
-       "id": "mysql",
-       "owner": "chef",
-       "name": "chef/mysql",
-       "title": "Basic MySQL",
-       "version": "1.0.0",
-       "summary": "Verify that MySQL Server is configured securely",
-       "description": "# Basic MySQL Compliance Profile\n\ncopyright",
-       "license": "Proprietary, All rights reserved",
-       "copyright": "Chef Software, Inc.",
-       "copyright_email": "grantmc@chef.io"
-     },
-     ...
-   }
 
 GET (profile as tar.gz)
 -----------------------------------------------------
-Use to upload a profile using a |tar gz| file. A profile, once downloaded, may be edited locally, and then re-uploaded back to the |chef compliance| server using the ``POST`` method.
+Use to download a profile as |tar gz| file. A profile, once downloaded, may be edited locally, and then re-uploaded back to the |chef compliance| server using the ``POST`` method.
 
 **Request**
 
 .. code-block:: xml
 
-   GET /owners/OWNER/compliance/PROFILE/tar
+   GET /api/owners/OWNER/compliance/PROFILE/tar
 
 For example:
 
 .. code-block:: bash
 
-   server="https://hostname/api"
-   token=$(http post $server/oauth/token -a admin:flyingsheepwithwings | jq '.access_token' | tr -d '"')
-   http -a $token: "$server/owners/admin/compliance/ssh/tar" > profile.tar.gz
-   tar -zxvf profile.tar.gz
-
-.. note:: The previous example shows using ``httpie``---`a command-line HTTP client <https://github.com/jkbrzt/httpie>`__---to upload a profile using a |tar gz| file.
+   curl -X GET "https://$API_HOST/api/owners/john/compliance/ssh/tar" -u "$API_KEY:" > /tmp/profile.tar.gz
+   tar -zxvf /tmp/profile.tar.gz
 
 POST
 -----------------------------------------------------
@@ -345,43 +370,38 @@ Use to upload a compliance profile as a |tar gz| or |zip|. This process will ext
 
 .. code-block:: xml
 
-   POST /owners/OWNER/compliance/
+   POST /api/owners/OWNER/compliance
 
 For example:
 
 .. code-block:: bash
 
-   server="https://hostname/api"
-   token=$(http post $server/oauth/token -a admin:flyingsheepwithwings | jq '.access_token' | tr -d '"')
-   tar -cvzf newprofile.tar.gz newprofile
-   http -a $token: "$server/owners/admin/compliance" < newprofile.tar.gz
+   tar -cvzf /tmp/newprofile.tar.gz newprofile
+   curl -k -X POST "https://$API_HOST/api/owners/john/compliance?contentType=application/x-gtar" \
+   -u "$API_KEY:" --form "file=@/tmp/newprofile.tar.gz"
 
-.. note:: The previous example shows using ``httpie``---`a command-line HTTP client <https://github.com/jkbrzt/httpie>`__---to upload a profile using a |tar gz| file.
+   zip -r /tmp/newprofile.zip newprofile
+   curl -k -X POST "https://$API_HOST/api/owners/john/compliance?contentType=application/zip" \
+   -u "$API_KEY:" --form "file=@/tmp/newprofile.zip"
+
 
 POST (profile as tar.gz)
 -----------------------------------------------------
-Use to upload a profile using a |tar gz| file. A |tar gz| file may be created with a command similar to:
-
-.. code-block:: bash
-
-   $ tar -cvzf newprofile.tar.gz profile_directory
+Use to upload a profile using a |tar gz| file.
 
 **Request**
 
 .. code-block:: xml
 
-   POST /owners/OWNER/compliance/PROFILE/tar
+   POST /api/owners/OWNER/compliance/PROFILE/tar
 
 For example:
 
 .. code-block:: bash
 
-   server="https://hostname/api"
-   token=$(http post $server/oauth/token -a admin:flyingsheepwithwings | jq '.access_token' | tr -d '"')
-   tar -cvzf newprofile.tar.gz newprofile
-   http -a $token: "$server/owners/admin/compliance/newprofile/tar" < newprofile.tar.gz
-
-.. note:: The previous example shows using ``httpie``---`a command-line HTTP client <https://github.com/jkbrzt/httpie>`__---to upload a profile using a |tar gz| file.
+   tar -cvzf /tmp/newprofile.tar.gz newprofile
+   curl -X POST "https://$API_HOST/api/owners/john/compliance/newprofile/tar" \
+   -u "$API_KEY:" --data-binary "@/tmp/newprofile.tar.gz"
 
 POST (profile as Zip)
 -----------------------------------------------------
@@ -389,7 +409,7 @@ Use to upload a profile using a |zip| file. A |zip| file may be created with a c
 
 .. code-block:: bash
 
-   $ zip -r newprofile.zip profile_directory
+   $ zip -r /tmp/newprofile.zip profile_directory
 
 or it may be created from the context menus in the |windows| and/or |mac os x| graphical user interfaces.
 
@@ -397,22 +417,21 @@ or it may be created from the context menus in the |windows| and/or |mac os x| g
 
 .. code-block:: xml
 
-   POST /owners/OWNER/compliance/PROFILE/zip
+   POST /api/owners/OWNER/compliance/PROFILE/zip
 
 For example:
 
 .. code-block:: bash
 
-   server="https://hostname/api"
-   token=$(http post $server/oauth/token -a grant_type=client_credentials | jq '.access_token' | tr -d '"')
-   zip -r newprofile.zip newprofile
-   http -a $token: "$server/owners/admin/compliance/newprofile/zip" < newprofile.zip
+   zip -r /tmp/newprofile.zip newprofile
+   curl -X POST "https://$API_HOST/api/owners/john/compliance/newprofile/zip" \
+   -u "$API_KEY:" --data-binary "@/tmp/newprofile.zip"
 
-.. note:: The previous example shows using ``httpie``---`a command-line HTTP client <https://github.com/jkbrzt/httpie>`__---to upload a profile using a |tar gz| file.
+.. The example above seems to be a mix of API request + command line stuff. What does the actual request look like?
 
 /envs
 =====================================================
-The ``/envs`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all environments or for a single, named environment), and ``POST``.
+The ``/envs`` endpoint has the following methods: ``DELETE``, ``GET``(for both all environments or for a single, named environment), and ``POST``.
 
 DELETE
 -----------------------------------------------------
@@ -422,58 +441,17 @@ Use to delete the named environment.
 
 .. code-block:: xml
 
-   DELETE https://hostname/api/owners/USER/envs/ENV
+   DELETE /api/owners/USER/envs/ENV
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X DELETE "https://hostname/api/owners/acme/envs/production" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/owners/john/envs/production" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
-
-GET (all environments)
------------------------------------------------------
-Use to get a list of all environments.
-
-**Request**
-
-.. code-block:: xml
-
-   GET https://hostname/api/owners/USER/envs/ENV/
-
-For example:
-
-.. code-block:: bash
-
-   $ curl "https://hostname/api/owners/acme/envs/production" -u API_KEY
-
-**Response**
-
-The response will return a |json| object similar to:
-
-.. code-block:: javascript
-
-   {
-     "id": "production",
-     "owner": "acme",
-     "name": "",
-     "lastScan": "0001-01-01T00:00:00Z",
-     "complianceStatus": 0,
-     "patchlevelStatus": 0,
-     "unknownStatus": 0
-   }
+No Content
 
 GET (named environment)
 -----------------------------------------------------
@@ -483,13 +461,45 @@ Use to return details about the named environment.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV
+   GET /api/owners/USER/envs/ENV
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/envs/production" -u "$API_KEY:"
+
+**Response**
+
+The response will return a |json| object similar to:
+
+.. code-block:: javascript
+
+   {
+     "id": "production",
+     "owner": "john",
+     "name": "",
+     "lastScan": "0001-01-01T00:00:00Z",
+     "complianceStatus": 0,
+     "patchlevelStatus": 0,
+     "unknownStatus": 0
+   }
+
+GET (all environments)
+-----------------------------------------------------
+Use to get a list of all environments.
+
+**Request**
+
+.. code-block:: xml
+
+   GET /api/owners/USER/envs
+
+For example:
+
+.. code-block:: bash
+
+   curl -X GET "https://$API_HOST/api/owners/john/envs" -u "$API_KEY:"
 
 **Response**
 
@@ -500,7 +510,7 @@ The response will return a |json| object similar to:
    [
      {
        "id": "production",
-       "owner": "acme",
+       "owner": "john",
        "name": "",
        "lastScan": "0001-01-01T00:00:00Z",
        "complianceStatus": 0,
@@ -528,7 +538,7 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   POST https://hostname/api/owners/USER/envs/
+   POST /api/owners/USER/envs
 
 where ``/USER`` is the identifier for a user or an organization.
 
@@ -536,24 +546,16 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -v -X POST "https://hostname/api/owners/acme/envs" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -v -X POST "https://$API_HOST/api/owners/john/envs" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{"id":"my_new_env"}'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 /jobs
 =====================================================
-The ``/jobs`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all jobs or for a single, named job), and ``POST``.
+The ``/jobs`` endpoint has the following methods: ``DELETE``, ``GET``(for both all jobs or for a single, named job), and ``POST``.
 
 DELETE
 -----------------------------------------------------
@@ -563,61 +565,33 @@ Use to delete a job.
 
 .. code-block:: xml
 
-   DELETE  https://hostname/api/owners/USER/jobs/JOB_ID
+   DELETE /api/owners/USER/jobs/JOB_ID
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X DELETE "https://hostname/api/owners/acme/jobs/c8ba8e88-7e45-4253-9081-cbb17a5f0c76" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/owners/john/jobs/c8ba8e88-7e45-4253-9081-cbb17a5f0c76" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 GET (all jobs)
 -----------------------------------------------------
 Use to get a list of all jobs.
 
-This method has the following parameters:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``id``
-     - UUID. The identifier of the job run.
-   * - ``name``
-     - String. The name of the job.
-   * - ``nextRun``
-     - ISO date. The time of the next scheduled run, in UTC. For example: ``2015-07-21T20:50:00Z``.
-   * - ``schedule``
-     - Cron or ISO date. The schedule for the job run. For example: ``2015-07-21T20:50:00Z`` or ``{ "month": "*", "day": "21", "weekday": "*", "hour": "23", "minute": "11" }``.
-   * - ``status``
-     - String. The status of the job run: ``done``, ``scheduled``, or ``skipped``.
-
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/jobs
+   GET /api/owners/USER/jobs
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/jobs" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/jobs" -u "$API_KEY:"
 
 **Response**
 
@@ -651,11 +625,7 @@ The response will return a |json| object similar to:
      "schedule": "2015-07-21T20:25:00Z"
    }]
 
-GET (named job)
------------------------------------------------------
-Use to return details about the named job.
-
-This method has the following parameters:
+It contains the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -673,40 +643,22 @@ This method has the following parameters:
      - Cron or ISO date. The schedule for the job run. For example: ``2015-07-21T20:50:00Z`` or ``{ "month": "*", "day": "21", "weekday": "*", "hour": "23", "minute": "11" }``.
    * - ``status``
      - String. The status of the job run: ``done``, ``scheduled``, or ``skipped``.
-   * - ``tasks``
-     - An array of compliance scans or patch runs. Two types of tasks are available: ``scan`` and ``patchrun``. The |json| object for ``tasks`` is similar to:
 
-       .. code-block:: javascript
- 
-          "tasks": [{
-            "compliance": [{
-             "owner": "chef",
-              "profile": "linux"
-            }, {
-              "owner": "chef",
-              "profile": "ssh"
-            }],
-            "environments": [{
-              "id": "production",
-              "nodes": ["u12", "u14"]
-            }],
-            "patchlevel": [{
-              "profile": "default"
-            }],
-            "type": "scan"
-          }]
+GET (named job)
+-----------------------------------------------------
+Use to return details about the named job.
 
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/jobs/JOB_ID
+   GET /api/owners/USER/jobs/JOB_ID
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/jobs/c8ba8e88-7e45-4253-9081-cbb17a5f0c76" -u API_KEY 
+   curl -X GET "https://$API_HOST/api/owners/john/jobs/c8ba8e88-7e45-4253-9081-cbb17a5f0c76" -u "$API_KEY:"
 
 **Response**
 
@@ -746,6 +698,49 @@ The response will return a |json| object similar to:
      }]
    }
 
+It contains the following attributes:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+   * - ``id``
+     - UUID. The identifier of the job run.
+   * - ``name``
+     - String. The name of the job.
+   * - ``nextRun``
+     - ISO date. The time of the next scheduled run, in UTC. For example: ``2015-07-21T20:50:00Z``.
+   * - ``schedule``
+     - Cron or ISO date. The schedule for the job run. For example: ``2015-07-21T20:50:00Z`` or ``{ "month": "*", "day": "21", "weekday": "*", "hour": "23", "minute": "11" }``.
+   * - ``status``
+     - String. The status of the job run: ``done``, ``scheduled``, or ``skipped``.
+   * - ``tasks``
+     - An array of compliance scans or patch runs. Two types of tasks are available: ``scan`` and ``patchrun``. The |json| object for ``tasks`` is similar to:
+
+       .. code-block:: javascript
+
+          "tasks": [{
+            "compliance": [{
+             "owner": "chef",
+              "profile": "linux"
+            }, {
+              "owner": "chef",
+              "profile": "ssh"
+            }],
+            "environments": [{
+              "id": "production",
+              "nodes": ["u12", "u14"]
+            }],
+            "patchlevel": [{
+              "profile": "default"
+            }],
+            "type": "scan"
+          }]
+
+.. note the mention of "patch runs" above ^^^
+
 POST
 -----------------------------------------------------
 Use to create a job.
@@ -754,7 +749,7 @@ Use to create a job.
 
 .. code-block:: xml
 
-   POST https://hostname/api/owners/USER/jobs/
+   POST /api/owners/USER/jobs
 
 The request uses a |json| object similar to:
 
@@ -793,20 +788,12 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -v -X POST "https://hostname/api/owners/acme/jobs" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -v -X POST "https://$API_HOST/api/owners/john/jobs" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 /keys
 =====================================================
@@ -820,26 +807,17 @@ Use to delete the named key pair that is available to the named user.
 
 .. code-block:: xml
 
-   DELETE https://hostname/api/owners/USER/keys/KEY_NAME
+   DELETE /api/owners/USER/keys/KEY_NAME
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X DELETE "https://hostname/api/owners/admin/keys/vagrant" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/owners/john/keys/vagrant" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 GET
 -----------------------------------------------------
@@ -849,13 +827,13 @@ Use to get the list of key pairs available to the named user.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/keys
+   GET /api/owners/USER/keys
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/admin/keys" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/keys" -u "$API_KEY:"
 
 **Response**
 
@@ -867,7 +845,7 @@ The response will return a |json| object similar to:
      "owner": "admin",
      "id": "vagrant",
      "name": "vagrant",
-     "public": "ssh-rsa\ 
+     "public": "ssh-rsa\
                 AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YV\
                 r+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCg\
                 zUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8Hf\
@@ -885,24 +863,17 @@ Use to edit the details for the named key pair that is available to the named us
 
 .. code-block:: xml
 
-   PATCH https://hostname/api/owners/USER/keys/KEY_NAME
+   PATCH /api/owners/USER/keys/KEY_NAME
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X PATCH "https://hostname/api/owners/admin/keys/vagrant" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X PATCH "https://$API_HOST/api/owners/john/keys/vagrant" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 POST
 -----------------------------------------------------
@@ -929,7 +900,7 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   POST https://hostname/api/owners/USER/keys
+   POST /api/owners/USER/keys
 
 with a |json| object similar to:
 
@@ -949,7 +920,7 @@ with a |json| object similar to:
                 tjcnHU5zUYE25K+ffJED9qUWICcLZDc81TGWjHyAqD1\nBw7XpgUwFgeUJwUl\
                 zQurAv+/ySnxiwuaGJfhFM1CaQHzfXphgVml+fZUvnJUTvzf\nTK2Lg6EdbUE\
                 CZpigBKbKZHNYcelXtTt/nP3r3s=\n-----END RSA PRIVATE KEY-----",
-     "public": "ssh-rsa\ 
+     "public": "ssh-rsa\
                 AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YV\
                 r+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCg\
                 zUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8Hf\
@@ -963,24 +934,150 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -X POST "https://hostname/api/owners/admin/keys/" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X POST "https://$API_HOST/api/owners/john/keys" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 /nodes
 =====================================================
-The ``/nodes`` endpoint has the following methods: ``GET`` and ``POST``. The ``GET`` method may be used to return information about nodes, including by environment, by named node, node status, connectivity status, lists of installed packages, compliance state, and patch state.
+The ``/nodes`` endpoint has the following methods: ``POST``, ``PATCH`` and ``DELETE``. It is used for bulk operations, potentially across multiple environments.
+
+POST (bulk)
+-----------------------------------------------------
+Use to create one or multipe nodes.
+
+**Request**
+
+.. code-block:: xml
+
+   POST /api/owners/USER/nodes
+
+with a |json| object similar to:
+
+.. code-block:: javascript
+
+  [
+    {
+      "id": "lb1.example.com",
+      "hostname": "lb1.example.com",
+      "name": "Load Balancer 1",
+      "environment": "production",
+      "loginUser": "root",
+      "loginMethod": "ssh",
+      "loginKey": "john/nameofkey"
+    },
+    {
+      "id": "lb2.example.com",
+      "hostname": "lb2.example.com",
+      "name": "Load Balancer 2",
+      "environment": "production",
+      "loginUser": "root",
+      "loginMethod": "ssh",
+      "loginKey": "john/nameofkey"
+    }
+  ]
+
+For example:
+
+.. code-block:: bash
+
+   curl -X POST "https://$API_HOST/api/owners/john/nodes" -H "Content-Type: application/json" -u "$API_KEY:" \
+   -d '[{"id":"lb1.example.com","hostname":"lb1.example.com","name":"Load Balancer 1","environment":"production","loginUser":"root","loginMethod":"ssh","loginKey":"john/nameofkey"},{"id":"lb2.example.com","hostname":"lb2.example.com","name":"Load Balancer 2","environment":"production","loginUser":"root","loginMethod":"ssh","loginKey":"john/nameofkey"}]'
+
+**Response**
+
+No Content
+
+PATCH (bulk)
+-----------------------------------------------------
+Use to update one or multiple nodes in one request.
+
+**Request**
+
+.. code-block:: xml
+
+   PATCH /api/owners/USER/nodes
+
+with a |json| object similar to:
+
+.. code-block:: javascript
+
+  [
+    {
+      "id": "lb1.example.com",
+      "hostname": "lb1.example.com",
+      "name": "Load Balancer 1 - updated",
+      "environment": "production",
+      "loginUser": "root",
+      "loginMethod": "ssh",
+      "loginKey": "john/nameofkey"
+    },
+    {
+      "id": "lb2.example.com",
+      "hostname": "lb2.example.com",
+      "name": "Load Balancer 2 - updated",
+      "environment": "production",
+      "loginUser": "root",
+      "loginMethod": "ssh",
+      "loginKey": "john/nameofkey"
+    }
+  ]
+
+For example:
+
+.. code-block:: bash
+
+   curl -X POST "https://$API_HOST/api/owners/john/nodes" -H "Content-Type: application/json" -u "$API_KEY:" \
+   -d '[{"id":"lb1.example.com","hostname":"lb1.example.com","name":"Load Balancer 1 - updated","environment":"production","loginUser":"root","loginMethod":"ssh","loginKey":"john/nameofkey"},{"id":"lb2.example.com","hostname":"lb2.example.com","name":"Load Balancer 2 - updated","environment":"production","loginUser":"root","loginMethod":"ssh","loginKey":"john/nameofkey"}]'
+
+**Response**
+
+No Content
+
+DELETE (bulk)
+-----------------------------------------------------
+Delete one or multiple nodes specified in the payload of the request.
+
+**Request**
+
+.. code-block:: xml
+
+   DELETE /api/owners/USER/nodes
+
+with a |json| object similar to:
+
+.. code-block:: javascript
+
+  [
+    {
+      "id": "lb1.example.com",
+      "environment": "production"
+    },
+    {
+      "id": "lb.qa.example.com",
+      "environment": "qa"
+    }
+  ]
+
+For example:
+
+.. code-block:: bash
+
+   curl -X DELETE "https://$API_HOST/api/owners/john/envs/production/nodes/192.168.100.200" \
+   -u "$API_KEY:" -d '[{"id":"lb1.example.com","environment":"production"},{"id":"lb.qa.example.com","environment":"qa"}]'
+
+**Response**
+
+No Content
+
+/envs/ENV/nodes
+=====================================================
+The ``/envs/ENV/nodes`` endpoint has the following methods: ``GET``, ``POST`` and ``DELETE``. The ``GET`` method may be used to return information about nodes, including by environment, by named node, node status, connectivity status, lists of installed packages, compliance state, and patch state.
+
+.. ^^^ REFERENCE TO PATCH
 
 GET (nodes by environment)
 -----------------------------------------------------
@@ -990,13 +1087,13 @@ Use to get a list of all nodes for the named environment.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV/nodes
+   GET /api/owners/USER/envs/ENV/nodes
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs/production/nodes" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/envs/production/nodes" -u "$API_KEY:"
 
 **Response**
 
@@ -1008,7 +1105,7 @@ The response will return a |json| object similar to:
      {
        "id": "192.168.100.200",
        "environment": "production",
-       "owner": "acme",
+       "owner": "john",
        "name": "",
        "hostname": "192.168.100.200",
        "loginMethod": "ssh",
@@ -1021,9 +1118,9 @@ The response will return a |json| object similar to:
        "sudoPassword": "",
        "lastScan": "0001-01-01T00:00:00Z",
        "lastScanID": "",
-       "os_family": "",
-       "os_release": "",
-       "os_arch": "",
+       "arch": "",
+       "family": "",
+       "release": "",
        "complianceStatus": 0,
        "patchlevelStatus": 0,
        "unknownStatus": 0
@@ -1038,13 +1135,13 @@ Use to return details about the named node.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV/nodes/NODE
+   GET /api/owners/USER/envs/ENV/nodes/NODE
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs/production/nodes/192.168.100.200" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/envs/production/nodes/192.168.100.200" -u "$API_KEY:"
 
 **Response**
 
@@ -1055,7 +1152,7 @@ The response will return a |json| object similar to:
    {
      "id": "192.168.100.200",
      "environment": "production",
-     "owner": "acme",
+     "owner": "john",
      "name": "",
      "hostname": "192.168.100.200",
      "loginMethod": "ssh",
@@ -1068,9 +1165,9 @@ The response will return a |json| object similar to:
      "sudoPassword": "",
      "lastScan": "0001-01-01T00:00:00Z",
      "lastScanID": "",
-     "os_family": "",
-     "os_release": "",
-     "os_arch": "",
+     "arch": "",
+     "family": "",
+     "release": "",
      "complianceStatus": 0,
      "patchlevelStatus": 0,
      "unknownStatus": 0
@@ -1084,7 +1181,7 @@ Use to create a node.
 
 .. code-block:: xml
 
-   POST https://hostname/api/owners/USER/envs/ENV/nodes
+   POST /api/owners/USER/envs/ENV/nodes
 
 with a |json| object similar to:
 
@@ -1093,7 +1190,7 @@ with a |json| object similar to:
    {
      "loginUser": "root",
      "loginMethod": "ssh",
-     "loginKey": "acme/nameofkey",
+     "loginKey": "john/nameofkey",
      "hostname": "192.168.100.200",
      "loginPort": 22,
      "id": "192.168.100.200"
@@ -1103,69 +1200,65 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -X POST "https://hostname/api/owners/acme/envs/nodes" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X POST "https://$API_HOST/api/owners/john/envs/production/nodes" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-The request will return one the following response code:
+No Content
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
-
-GET (status)
+DELETE
 -----------------------------------------------------
-Use to show the status for the named node.
+Delete a node from an environment.
 
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV/nodes/NODE
+   DELETE /api/owners/USER/envs/ENV/nodes/NODE
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs/production/nodes" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/owners/john/envs/production/nodes/192.168.100.200" -u "$API_KEY:"
 
 **Response**
 
-The response will return a |json| object similar to:
+No Content
+
+PATCH
+-----------------------------------------------------
+Use to update a node.
+
+**Request**
+
+.. code-block:: xml
+
+   PATCH /api/owners/USER/envs/ENV/nodes/NODE
+
+with a |json| object similar to:
 
 .. code-block:: javascript
 
-   [
-     {
-       "complianceStatus": 0, 
-       "disableSudo": false, 
-       "environment": "production", 
-       "hostname": "192.168.100.200", 
-       "id": "192.168.100.200", 
-       "lastScan": "2015-06-26T15:17:30.945183863Z", 
-       "lastScanID": "1170660a-7e50-4c3a-6da7-eaa510e2f0a9", 
-       "loginKey": "admin/vagrant", 
-       "loginMethod": "ssh", 
-       "loginPassword": "", 
-       "loginPort": 22, 
-       "loginUser": "root", 
-       "name": "", 
-       "os_arch": "x86_64", 
-       "os_family": "ubuntu", 
-       "os_release": "14.04", 
-       "owner": "admin", 
-       "patchlevelStatus": 0.045643155, 
-       "sudoOptions": "", 
-       "sudoPassword": "", 
-       "unknownStatus": 0
-     }
-   ]
+  {
+    "hostname": "lb1.example.com",
+    "name": "Load Balancer 1 - new",
+    "loginUser": "root",
+    "loginMethod": "ssh",
+    "loginKey": "john/nameofkey"
+  }
 
+For example:
+
+.. code-block:: bash
+
+   curl -X PATCH "https://$API_HOST/api/owners/john/envs/ENV/nodes/lb1.example.com" -H "Content-Type: application/json" -u "$API_KEY:" \
+   -d '{"hostname":"lb1.example.com","name":"Load Balancer 1 - new","environment":"production","loginUser":"root","loginMethod":"ssh","loginKey":"john/nameofkey"}'
+
+**Response**
+
+No Content
 
 GET (connectivity)
 -----------------------------------------------------
@@ -1175,17 +1268,17 @@ Use to show the connectivity state for the named node.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV/nodes/NODE/connectivity
+   GET /api/owners/USER/envs/ENV/nodes/NODE/connectivity
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs/production/nodes/192.168.100.200/connectivity" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/envs/production/nodes/192.168.100.200/connectivity" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
+The request will return one of the following response code:
 
 .. list-table::
    :widths: 200 300
@@ -1196,7 +1289,7 @@ The request will return one the following response code:
    * - ``200``
      - Success.
    * - ``402``
-     - Request Failed -- Node is not reachable. A failed response returnes one of the following messages:
+     - Request Failed -- Node is not reachable. A failed response returns one of the following messages:
 
        Connection timeout:
 
@@ -1262,13 +1355,13 @@ Use to show the compliance state for the named node.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV/nodes/NODE/compliance
+   GET /api/owners/USER/envs/ENV/nodes/NODE/compliance
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs/production/nodes/192.168.100.200/compliance" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/envs/production/nodes/192.168.100.200/compliance" -u "$API_KEY:"
 
 **Response**
 
@@ -1278,23 +1371,23 @@ The response will return a |json| object similar to:
 
    [
      {
-       "failures": 1, 
-       "impact": 1, 
-       "log": "Linux kernel parameter \"net.ipv4.tcp_syncookies\" value should eq 1", 
-       "profileID": "linux", 
-       "profileOwner": "chef", 
-       "rule": "chef/linux/sysctl-ipv4-9.2", 
+       "failures": 1,
+       "impact": 1,
+       "log": "Linux kernel parameter \"net.ipv4.tcp_syncookies\" value should eq 1",
+       "profileID": "linux",
+       "profileOwner": "chef",
+       "rule": "chef/linux/sysctl-ipv4-9.2",
        "skipped": false
-     }, 
+     },
      {
-       "failures": 1, 
-       "impact": 0.5, 
-       "log": "Path \"/tmp\" should be mounted", 
-       "profileID": "linux", 
-       "profileOwner": "chef", 
-       "rule": "chef/linux/fs-1", 
+       "failures": 1,
+       "impact": 0.5,
+       "log": "Path \"/tmp\" should be mounted",
+       "profileID": "linux",
+       "profileOwner": "chef",
+       "rule": "chef/linux/fs-1",
        "skipped": false
-     }, 
+     },
      ...
    ]
 
@@ -1302,17 +1395,19 @@ GET (patch)
 -----------------------------------------------------
 Use to show the patch state for the named node.
 
+.. ATTN: remove this, right?
+
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV/nodes/NODE/patches
+   GET /api/owners/USER/envs/ENV/nodes/NODE/patches
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs/production/nodes/192.168.100.200/patches" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/envs/production/nodes/192.168.100.200/patches" -u "$API_KEY:"
 
 **Response**
 
@@ -1322,12 +1417,12 @@ The response will return a |json| object similar to:
 
    [
      {
-       "arch": "amd64", 
-       "criticality": 0, 
-       "installedVersion": "2.7.3-0ubuntu3.6", 
-       "name": "python2.7-minimal", 
-       "repo": "Ubuntu:12.04/precise-updates", 
-       "type": "deb", 
+       "arch": "amd64",
+       "criticality": 0,
+       "installedVersion": "2.7.3-0ubuntu3.6",
+       "name": "python2.7-minimal",
+       "repo": "Ubuntu:12.04/precise-updates",
+       "type": "deb",
        "version": "2.7.3-0ubuntu3.8"
      },
      ...
@@ -1342,13 +1437,13 @@ Use to show the list of installed packages for the named node.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/envs/ENV/nodes/NODE/packages
+   GET /api/owners/USER/envs/ENV/nodes/NODE/packages
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/envs/production/nodes/192.168.100.200/packages" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/envs/production/nodes/192.168.100.200/packages" -u "$API_KEY:"
 
 **Response**
 
@@ -1358,25 +1453,25 @@ The response will return a |json| object similar to:
 
    [
      {
-       "arch": "add", 
-       "name": "adduser", 
-       "repo": "", 
-       "type": "deb", 
+       "arch": "add",
+       "name": "adduser",
+       "repo": "",
+       "type": "deb",
        "version": "3.113ubuntu2"
-     }, 
+     },
      {
-       "arch": "commandline", 
-       "name": "apt", 
-       "repo": "", 
-       "type": "deb", 
+       "arch": "commandline",
+       "name": "apt",
+       "repo": "",
+       "type": "deb",
        "version": "0.8.16~exp12ubuntu10.24"
-     }, 
+     },
      ...
    ]
 
 /orgs
 =====================================================
-The ``/orgs`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all organizations or for a single, named organizatin). ``PATCH``, and ``POST``.
+The ``/orgs`` endpoint has the following methods: ``DELETE``, ``GET``(for both all organizations or for a single, named organizatin). ``PATCH``, and ``POST``.
 
 DELETE
 -----------------------------------------------------
@@ -1388,26 +1483,17 @@ Use to delete the named organization. The user of this endpoint must have admini
 
 .. code-block:: xml
 
-   DELETE https://hostname/api/orgs/ORG
+   DELETE /api/orgs/ORG
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X DELETE "https://hostname/api/orgs/acme" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/orgs/acme" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 GET (all organizations)
 -----------------------------------------------------
@@ -1417,13 +1503,13 @@ Use to get a list of all organizations.
 
 .. code-block:: xml
 
-   GET https://hostname/api/orgs
+   GET /api/orgs
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/orgs" -u API_KEY
+   curl -X GET "https://$API_HOST/api/orgs" -u "$API_KEY:"
 
 **Response**
 
@@ -1446,13 +1532,13 @@ Use to return details about the named organization.
 
 .. code-block:: xml
 
-   GET https://hostname/api/orgs/ORG
+   GET /api/orgs/ORG
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/orgs/acme" -u API_KEY
+   curl -X GET "https://$API_HOST/api/orgs/acme" -u "$API_KEY:"
 
 **Response**
 
@@ -1484,26 +1570,18 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   PATCH https://hostname/api/orgs/
+   PATCH /api/orgs
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X PATCH "https://hostname/api/orgs/acme" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X PATCH "https://$API_HOST/api/orgs/acme" -H "Content-Type: application/json" \
+   -u "$API_KEY:" -d '{"id":"acme","name":"Acme Industries #2"}'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 POST
 -----------------------------------------------------
@@ -1526,30 +1604,22 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   POST https://hostname/api/orgs/
+   POST /api/orgs
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X POST "https://hostname/api/orgs" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X POST "https://$API_HOST/api/orgs" -H "Content-Type: application/json" \
+   -u "$API_KEY:" -d '{"id":"acme","name":"Acme Industries"}'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 /scans
 =====================================================
-The ``/scans`` endpoint a single method: ``GET`` that may be used to get details for all scans or for a single, named scan.
+The ``/scans`` endpoint has a single method: ``GET`` that may be used to get details for all scans or for a single, named scan.
 
 GET (all scan reports)
 -----------------------------------------------------
@@ -1561,13 +1631,13 @@ Use to get a list of all scan reports.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/scans
+   GET /api/owners/USER/scans
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/scans" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/scans" -u "$API_KEY:"
 
 **Response**
 
@@ -1578,7 +1648,7 @@ The response will return a |json| object similar to:
    [
      {
        "id": "a74566b9-b527-437f-480f-e56c5b8a1791",
-       "owner": "acme",
+       "owner": "john",
        "start": "2015-05-22T01:10:37.133367688Z",
        "end": "2015-05-22T01:10:42.491573741Z",
        "nodeCount": 1,
@@ -1586,7 +1656,8 @@ The response will return a |json| object similar to:
        "patchlevelProfiles": 1,
        "complianceStatus": 0,
        "patchlevelStatus": 0,
-       "unknownStatus": 0
+       "unknownStatus": 0,
+       "failedCount": 0
      }
    ]
 
@@ -1594,46 +1665,17 @@ GET (named scan report)
 -----------------------------------------------------
 Use to return details about the named scan report.
 
-This method has the following parameters:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``critical``
-     - Float. The number of failed rules.
-   * - ``end``
-     - ISO date. The time at which a scan report ended.
-   * - ``id``
-     - String. The scan report identifier.
-   * - ``major``
-     - Float. The number of rules that contain major errors.
-   * - ``minor``
-     - Float. The number of rules that contain minor errors.
-   * - ``nodeCount``
-     - Integer. The number of nodes that were tested.
-   * - ``owner``
-     - String. The owner of the scan.
-   * - ``skipped``
-     - Float. The number of nodes with skipped rules.
-   * - ``start``
-     - ISO date. The time at which a scan report started.
-   * - ``success``
-     - Float. The number of successful rules.
-
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/scans/SCAN_ID
+   GET /api/owners/USER/scans/SCAN_ID
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/scans/SCAN_ID" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/scans/SCAN_ID" -u "$API_KEY:"
 
 where ``SCAN_ID`` is similar to ``90def607-1688-40f5-5a4c-161c51fd8aac``.
 
@@ -1654,6 +1696,7 @@ The response will return a |json| object similar to:
      "complianceStatus": 0,
      "patchlevelStatus": 0,
      "unknownStatus": 0,
+     "failedCount": 0,
      "complianceSummary": {
        "success": 0,
        "minor": 0,
@@ -1672,6 +1715,37 @@ The response will return a |json| object similar to:
      }
    }
 
+It contains the following attributes:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+   * - ``critical``
+     - Float. The number of failed rules.
+   * - ``end``
+     - ISO date. The time at which a scan report ended.
+   * - ``id``
+     - String. The scan report identifier.
+   * - ``major``
+     - Float. The number of rules that contain major errors.
+   * - ``minor``
+     - Float. The number of rules that contain minor errors.
+   * - ``nodeCount``
+     - Integer. The number of nodes that were tested.
+   * - ``failedCount``
+     - Integer. The number of nodes that were failed to be tested.
+   * - ``owner``
+     - String. The owner of the scan.
+   * - ``skipped``
+     - Float. The number of nodes with skipped rules.
+   * - ``start``
+     - ISO date. The time at which a scan report started.
+   * - ``success``
+     - Float. The number of successful rules.
+
 POST
 -----------------------------------------------------
 Use to create a new scan.
@@ -1688,12 +1762,19 @@ This method has the following parameters:
      - An array of selected profiles.
    * - ``environments``
      - An array of environments and selected nodes.
+..
+.. ATTN: Christoph or Dominick
+.. remove this parameter or keep it in the parameter table?
+..
+..    * - ``patchlevel``
+..      - An array of items in the patch level scan profile.
+..
 
 **Request**
 
 .. code-block:: xml
 
-   POST https://hostname/api/owners/USER/scans
+   POST /api/owners/USER/scans
 
 with a |json| object similar to:
 
@@ -1720,7 +1801,8 @@ For example:
 
 .. code-block:: bash
 
-   $ curl -X POST "https://hostname/api/owners/acme/scans" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X POST "https://$API_HOST/api/owners/john/scans" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
@@ -1740,30 +1822,17 @@ GET (named scan)
 -----------------------------------------------------
 Use to get the executed compliance rules for the named scan.
 
-This method has the following parameters:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``complianceStatus``
-     - Integer. The Common Vulnerability Scoring System (CVSS) range, `a measurement of the level of concern for a vulnerability <https://en.wikipedia.org/wiki/CVSS>`__, as compared to other vulnerabilities. Scores range from ``0.0`` to ``10.0``. High scores are in the 7.0-10.0 range, medium scores are in the 4.0-6.9 range, and low scores are from 0.0-3.9 range.
-   * - ``log``
-     - String. The rule description.
-
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/scans/SCAN_ID/rules
+   GET /api/owners/USER/scans/SCAN_ID/rules
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/scans/SCAN_ID/rules" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/scans/SCAN_ID/rules" -u "$API_KEY:"
 
 where ``SCAN_ID`` is similar to ``90def607-1688-40f5-5a4c-161c51fd8aac``.
 
@@ -1790,9 +1859,22 @@ The response will return a |json| object similar to:
      }
    }
 
+It contains the following attributes:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+   * - ``complianceStatus``
+     - Integer. The Common Vulnerability Scoring System (CVSS) range, `a measurement of the level of concern for a vulnerability <https://en.wikipedia.org/wiki/CVSS>`__, as compared to other vulnerabilities. Scores range from ``0.0`` to ``10.0``. High scores are in the 7.0-10.0 range, medium scores are in the 4.0-6.9 range, and low scores are from 0.0-3.9 range.
+   * - ``log``
+     - String. The rule description.
+
 /scans/SCAN_ID/nodes
 =====================================================
-The ``/scans/SCAN_ID/nodes`` endpoint a single method: ``GET``.
+The ``/scans/SCAN_ID/nodes`` endpoint has a single method: ``GET``.
 
 GET (all nodes)
 -----------------------------------------------------
@@ -1802,13 +1884,13 @@ Use to get all scans for all nodes.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/scans/SCAN_ID/nodes
+   GET /api/owners/USER/scans/SCAN_ID/nodes
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/scans/SCAN_ID/nodes" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/scans/SCAN_ID/nodes" -u "$API_KEY:"
 
 where ``SCAN_ID`` is similar to ``90def607-1688-40f5-5a4c-161c51fd8aac``.
 
@@ -1825,9 +1907,11 @@ The response will return a |json| object similar to:
        "complianceStatus": 0,
        "patchlevelStatus": -1,
        "unknownStatus": 0,
-       "os_family": "",
-       "os_release": "",
-       "os_arch": "",
+       "arch": "",
+       "family": "",
+       "release": "",
+       "connectSuccess": false,
+       "connectMessage": "Failed to verify connectivity to sshPassword://root@192.168.56.239:0 using login password : exit status 1",
        "complianceSummary": {
          "success": 0,
          "minor": 0,
@@ -1850,44 +1934,25 @@ The response will return a |json| object similar to:
 
 /scans/SCAN_ID/envs/ENV
 =====================================================
-The ``/scans/SCAN_ID/envs/ENV`` endpoint a single method: ``GET`` that may be used to get compliance, patch, or package details by node.
+The ``/scans/SCAN_ID/envs/ENV`` endpoint has a single method: ``GET`` that may be used to get compliance, patch, or package details by node.
+
+.. remove reference to patch? ^^^
 
 GET (compliance by node)
 -----------------------------------------------------
 Use to get the compliance results for the named node and the named environment.
 
-This method has the following parameters:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``failures``
-     - Integer. The amount of failures per rule. Use ``-1`` to skip and ``0`` for no failures.
-   * - ``impact``
-     - Float. The impact of the compliance results. Must be a value between ``0`` and ``1``.
-   * - ``log``
-     - String. The error log.
-   * - ``profileID``
-     - String. The compliance rules identifier.
-   * - ``profileOwner``
-     - String. The owner of the compliance rules.
-   * - ``rule``
-     - String. The rule identifier.
-
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/scans/SCAN_ID/envs/ENV/nodes/NODE/compliance
+   GET /api/owners/USER/scans/SCAN_ID/envs/ENV/nodes/NODE/compliance
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/scans/SCAN_ID/envs/production/nodes/192.168.100.200/compliance" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/scans/SCAN_ID/envs/production/nodes/192.168.100.200/compliance" -u "$API_KEY:"
 
 where ``SCAN_ID`` is similar to ``90def607-1688-40f5-5a4c-161c51fd8aac``.
 
@@ -1910,11 +1975,70 @@ The response will return a |json| object similar to:
      ...
    ]
 
+It contains the following attributes:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+   * - ``failures``
+     - Integer. The amount of failures per rule. Use ``-1`` to skip and ``0`` for no failures.
+   * - ``impact``
+     - Float. The impact of the compliance results. Must be a value between ``0`` and ``1``.
+   * - ``log``
+     - String. The error log.
+   * - ``profileID``
+     - String. The compliance rules identifier.
+   * - ``profileOwner``
+     - String. The owner of the compliance rules.
+   * - ``rule``
+     - String. The rule identifier.
+
+..
+.. ATTN: Christoph or Dominick
+.. remove the GET (patches by node) section below?
+..
+
 GET (patches by node)
 -----------------------------------------------------
 Use to get the available patches for the named node and the named environment.
 
-This method has the following parameters:
+**Request**
+
+.. code-block:: xml
+
+   GET /api/owners/USER/scans/SCAN_ID/envs/ENV/nodes/NODE/patches
+
+For example:
+
+.. code-block:: bash
+
+   curl -X GET "https://$API_HOST/api/owners/john/scans/SCAN_ID/envs/production/nodes/192.168.100.200/patches" -u "$API_KEY:"
+
+where ``SCAN_ID`` is similar to ``90def607-1688-40f5-5a4c-161c51fd8aac``.
+
+**Response**
+
+The response will return a |json| object similar to:
+
+.. code-block:: javascript
+
+   [
+     {
+       "arch": "amd64",
+       "criticality": 0,
+       "installedVersion": "2.7.3-0ubuntu3.6",
+       "name": "python2.7-minimal",
+       "repo": "Ubuntu:12.04/precise-updates",
+       "type": "deb",
+       "version": "2.7.3-0ubuntu3.8"
+     }
+     ...
+   ]
+
+It contains the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -1923,7 +2047,7 @@ This method has the following parameters:
    * - Parameter
      - Description
    * - ``arch``
-     - String. The CPU architecture. 
+     - String. The CPU architecture.
    * - ``criticality``
      - Integer. The Common Vulnerability Scoring System (CVSS) range, `a measurement of the level of concern for a vulnerability <https://en.wikipedia.org/wiki/CVSS>`__, as compared to other vulnerabilities. Scores range from ``0.0`` to ``10.0``. High scores are in the 7.0-10.0 range, medium scores are in the 4.0-6.9 range, and low scores are from 0.0-3.9 range.
    * - ``name``
@@ -1933,39 +2057,6 @@ This method has the following parameters:
    * - ``version``
      - String. The package version.
 
-**Request**
-
-.. code-block:: xml
-
-   GET https://hostname/api/owners/USER/scans/SCAN_ID/envs/ENV/nodes/NODE/patches
-
-For example:
-
-.. code-block:: bash
-
-   $ curl "https://hostname/api/owners/acme/scans/SCAN_ID/envs/production/nodes/192.168.100.200/patches" -u API_KEY
-
-where ``SCAN_ID`` is similar to ``90def607-1688-40f5-5a4c-161c51fd8aac``.
-
-**Response**
-
-The response will return a |json| object similar to:
-
-.. code-block:: javascript
-
-   [
-     {
-       "arch": "amd64", 
-       "criticality": 0, 
-       "installedVersion": "2.7.3-0ubuntu3.6", 
-       "name": "python2.7-minimal", 
-       "repo": "Ubuntu:12.04/precise-updates", 
-       "type": "deb", 
-       "version": "2.7.3-0ubuntu3.8"
-     }
-     ...
-   ]
-
 GET (packages by node)
 -----------------------------------------------------
 Use to get the installed packages for the named node and the named environment.
@@ -1974,13 +2065,13 @@ Use to get the installed packages for the named node and the named environment.
 
 .. code-block:: xml
 
-   GET https://hostname/api/owners/USER/scans/SCAN_ID/envs/ENV/nodes/NODE/packages
+   GET /api/owners/USER/scans/SCAN_ID/envs/ENV/nodes/NODE/packages
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/owners/acme/scans/SCAN_ID/envs/production/nodes/192.168.100.200/packages" -u API_KEY
+   curl -X GET "https://$API_HOST/api/owners/john/scans/SCAN_ID/envs/production/nodes/192.168.100.200/packages" -u "$API_KEY:"
 
 where ``SCAN_ID`` is similar to ``90def607-1688-40f5-5a4c-161c51fd8aac``.
 
@@ -1992,19 +2083,19 @@ The response will return a |json| object similar to:
 
    [
      {
-       "arch": "add", 
-       "name": "adduser", 
-       "repo": "", 
-       "type": "deb", 
+       "arch": "add",
+       "name": "adduser",
+       "repo": "",
+       "type": "deb",
        "version": "3.113ubuntu2"
-     }, 
+     },
      {
-       "arch": "commandline", 
-       "name": "apt", 
-       "repo": "", 
-       "type": "deb", 
+       "arch": "commandline",
+       "name": "apt",
+       "repo": "",
+       "type": "deb",
        "version": "0.8.16~exp12ubuntu10.24"
-     }, 
+     },
      ...
    ]
 
@@ -2014,21 +2105,24 @@ The ``/server/config`` endpoint has the following methods: ``GET`` and ``PATCH``
 
 .. note:: Some parameters of the |chef compliance| server are exposed and are configurable from the |api compliance|.
 
+.. CHRISTOPH: do we know which paramaters? Many or a small set of specific parameters?
+
 GET
 -----------------------------------------------------
-Use to return the global configuration for the |chef compliance| server. The configuration may be edited via the |api compliance| or by using the configuration file for |chef compliance|. Only parameters that may be safely tuned are exposed. All timeout configuration settings are defined in seconds, i.e. ``1800`` is ``30 minutes``.
+Use to return the global configuration for the |chef compliance| server. The configuration may be edited via the |api compliance| or by using the COMPLIANCE_CONFIG_FILE. Only parameters that may be safely tuned are exposed. All timeout configuration settings are defined in seconds, i.e. ``1800`` is ``30 minutes``. << CHRISTOPH: can you point me to the list of tunable settings for the Compliance Server?
 
 **Request**
 
 .. code-block:: xml
 
-   GET https://hostname/api/server/config
+   GET /api/server/config
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X GET "https://hostname/api/server/config" -H "Content-Type: application/json" -u API_KEY
+   curl -X GET "https://$API_HOST/api/server/config" \
+   -H "Content-Type: application/json" -u "$API_KEY:"
 
 **Response**
 
@@ -2037,10 +2131,14 @@ The response will return a |json| object similar to:
 .. code-block:: javascript
 
    {
-     "detectTimeout":25,
-     "scanTimeout":1800,
-     "updateTimeout":1800
-   }
+    "port": null,
+    "host": null,
+    "colors": null,
+    "detectTimeout": 30,
+    "scanTimeout": 1800,
+    "updateTimeout": 1800,
+    "home": null
+    }
 
 PATCH
 -----------------------------------------------------
@@ -2050,30 +2148,52 @@ Use to edit the global configuration for the |chef compliance| server.
 
 .. code-block:: xml
 
-   PATCH https://hostname/api/server/config
+   PATCH /api/server/config
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X PATCH "https://hostname/api/server/config" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X PATCH "https://$API_HOST/api/server/config" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-The request will return one the following response code:
+No Content
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+/summary
+=====================================================
 
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+GET
+-----------------------------------------------------
+Get a quick summary(number of nodes and environments) of the account.
+
+**Request**
+
+.. code-block:: xml
+
+   GET /api/owners/OWNER/summary
+
+For example:
+
+.. code-block:: bash
+
+   curl -X GET "https://$API_HOST/api/owners/john/summary" -u "$API_KEY:"
+
+**Response**
+
+The response will return a |json| object similar to:
+
+.. code-block:: javascript
+
+   {
+     "nodeCount": 2,
+     "envCount": 2
+   }
 
 /teams
 =====================================================
-The ``/teams`` endpoint has the following methods: ``DELETE``, ``GET`` (for both all teams or for a single, named team). ``PATCH``, and ``POST``.
+The ``/teams`` endpoint has the following methods: ``DELETE``, ``GET``(for both all teams or for a single, named team). ``PATCH``, and ``POST``.
 
 DELETE
 -----------------------------------------------------
@@ -2085,26 +2205,17 @@ Use to delete a team from the named organization.
 
 .. code-block:: xml
 
-   DELETE https://hostname/api/orgs/ORG/teams/TEAM
+   DELETE /api/orgs/ORG/teams/TEAM
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X DELETE "https://hostname/api/orgs/acme/teams/audit" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/orgs/acme/teams/audit" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 GET (all teams)
 -----------------------------------------------------
@@ -2114,13 +2225,13 @@ Use to get a list of all teams. Each organization has a ``owners`` team, by defa
 
 .. code-block:: xml
 
-   GET https://hostname/api/orgs/ORG/teams
+   GET /api/orgs/ORG/teams
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/orgs/acme/teams" -u API_KEY
+   curl -X GET "https://$API_HOST/api/orgs/acme/teams" -u "$API_KEY:"
 
 **Response**
 
@@ -2144,13 +2255,13 @@ Use to return details about the named team.
 
 .. code-block:: xml
 
-   GET https://hostname/api/orgs/ORG/teams/TEAM
+   GET /api/orgs/ORG/teams/TEAM
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/orgs/acme/teams/owners" -u API_KEY
+   curl -X GET "https://$API_HOST/api/orgs/acme/teams/owners" -u "$API_KEY:"
 
 **Response**
 
@@ -2194,26 +2305,18 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   PATCH https://hostname/api/orgs/ORG/teams/TEAM
+   PATCH /api/orgs/ORG/teams/TEAM
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X PATCH "https://hostname/api/orgs/acme/teams/audit" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X PATCH "https://$API_HOST/api/orgs/acme/teams/audit" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 POST
 -----------------------------------------------------
@@ -2238,26 +2341,19 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   POST https://hostname/api/orgs/ORG/teams
+   POST /api/orgs/ORG/teams
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X POST "https://hostname/api/orgs/acme/teams" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X POST "https://$API_HOST/api/orgs/acme/teams" \
+   -H "Content-Type: application/json" -u "$API_KEY:" \
+   -d '{"id":"manageteam","name":"Manage Only Team","permissions":{"manage":"true"}}'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 /teams/TEAM/members
 =====================================================
@@ -2271,26 +2367,17 @@ Use to delete a team member.
 
 .. code-block:: xml
 
-   DELETE https://hostname/api/orgs/ORG/teams/TEAM/members/MEMBER
+   DELETE /api/orgs/ORG/teams/TEAM/members/MEMBER
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X DELETE "https://hostname/api/orgs/acme/teams/audit/members/bob" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/orgs/acme/teams/audit/members/bob" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 GET
 -----------------------------------------------------
@@ -2300,13 +2387,13 @@ Use to get a list of team memberships.
 
 .. code-block:: xml
 
-   GET https://hostname/api/orgs/ORG/teams/TEAM/members
+   GET /api/orgs/ORG/teams/TEAM/members
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/orgs/acme/teams/owners" -u API_KEY
+   curl -X GET "https://$API_HOST/api/orgs/acme/teams/owners/members" -u "$API_KEY:"
 
 **Response**
 
@@ -2337,26 +2424,18 @@ Use to edit team membership details for the named team member.
 
 .. code-block:: xml
 
-   PATCH https://hostname/api/orgs/ORG/teams/TEAM/members/MEMBER
+   PATCH /api/orgs/ORG/teams/TEAM/members/MEMBER
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X PATCH "https://hostname/api/orgs/acme/teams/audit" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X PATCH "https://$API_HOST/api/orgs/acme/teams/audit" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 POST
 -----------------------------------------------------
@@ -2371,36 +2450,28 @@ This method has the following parameters:
    * - Parameter
      - Description
    * - ``users``
-     - Required. An array of user identifiers.
+     - Required. An array of user identifiers. Full JSON example: '{["bob","mary"]}'
 
 **Request**
 
 .. code-block:: xml
 
-   POST https://hostname/api/orgs/ORG/teams/TEAM/members
+   POST /api/orgs/ORG/teams/TEAM/members
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X POST "https://hostname/api/orgs/acme/teams/owners/members" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X POST "https://$API_HOST/api/orgs/acme/teams/owners/members" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{["bob"]}'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 /users
 =====================================================
-The ``/users`` endpoint a single method: ``GET`` that may be used to get details for all users or for a single, named user.
+The ``/users`` endpoint has a single method: ``GET`` that may be used to get details for all users or for a single, named user.
 
 GET (all users)
 -----------------------------------------------------
@@ -2410,13 +2481,13 @@ Use to get a list of all users.
 
 .. code-block:: xml
 
-   GET https://hostname/api/users
+   GET /api/users
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/users" -u API_KEY
+   curl -X GET "https://$API_HOST/api/users" -u "$API_KEY:"
 
 **Response**
 
@@ -2426,7 +2497,7 @@ The response will return a |json| object similar to:
 
    [
      {
-       "id": "admin",
+       "id": "john",
        "name": "Core Admin"
      }
    ]
@@ -2440,13 +2511,13 @@ Use to return details about the named user.
 
 .. code-block:: xml
 
-   GET https://hostname/api/users/USER
+   GET /api/users/USER
 
 For example:
 
 .. code-block:: bash
 
-   $ curl "https://hostname/api/users/admin" -u API_KEY
+   curl -X GET "https://$API_HOST/api/users/john" -u "$API_KEY:"
 
 **Response**
 
@@ -2455,7 +2526,7 @@ The response will return a |json| object similar to:
 .. code-block:: javascript
 
    {
-     "id": "admin",
+     "id": "john",
      "name": "Core Admin",
      "preferences": null,
      "permissions": {
@@ -2486,26 +2557,18 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   POST https://hostname/api/users/
+   POST /api/users
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X POST "https://hostname/api/users" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X POST "https://$API_HOST/api/users" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 PATCH
 -----------------------------------------------------
@@ -2528,27 +2591,19 @@ This method has the following parameters:
 
 .. code-block:: xml
 
-   PATCH https://hostname/api/users/USER
+   PATCH /api/users/USER
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X PATCH "https://hostname/api/users/bob" -H "Content-Type: application/json" -u API_KEY -d "{ JSON_BLOCK }"
+   curl -X PATCH "https://$API_HOST/api/users/bob" \
+   -H "Content-Type: application/json" -u "$API_KEY:" -d '{ JSON_BLOCK }'
 
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
 
 DELETE
 -----------------------------------------------------
@@ -2558,23 +2613,14 @@ Use to delete an existing user.
 
 .. code-block:: xml
 
-   DELETE https://hostname/api/users/USER
+   DELETE /api/users/USER
 
 For example:
 
 .. code-block:: bash
 
-   $ curl -X DELETE "https://hostname/api/users/bob" -u API_KEY
+   curl -X DELETE "https://$API_HOST/api/users/bob" -u "$API_KEY:"
 
 **Response**
 
-The request will return one the following response code:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Response Code
-     - Description
-   * - ``204``
-     - No Content
+No Content
