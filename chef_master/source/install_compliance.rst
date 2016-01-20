@@ -62,3 +62,10 @@ Configure SSL
 Logging
 =====================================================
 .. include:: ../../includes_compliance/includes_compliance_logging.rst
+
+Troubleshooting
+=====================================================
+
+Setup Chef Compliance button does not work
+-----------------------------------------------------
+.. include:: ../../includes_error_messages/includes_error_messages_compliance_setup.rst
