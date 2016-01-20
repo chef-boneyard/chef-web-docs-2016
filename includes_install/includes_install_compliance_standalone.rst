@@ -30,20 +30,6 @@ To install the |chef compliance| server:
 
       $ chef-compliance-ctl reconfigure
 
-#. Run the following command to create an administrator:
+#. Access the |chef compliance| setup wizard.  Build the url by prepending ``https://`` and appending ``/#/setup`` to the IP address or public hostname of the server. For example, ``https://<fqdn>/#/setup``
 
-   .. code-block:: bash
-
-      $ chef-compliance-ctl user-create username 'password'
-
-   For example:
-
-   .. code-block:: bash
-
-      $ chef-compliance-ctl user-create admin 'pA$$word'
-
-#. Restart the services after a user has been created:
-
-   .. code-block:: bash
-
-      $ chef-compliance-ctl restart
+#. Run through the setup wizard and then login to |chef compliance| web ui ``https://<fqdn>``
