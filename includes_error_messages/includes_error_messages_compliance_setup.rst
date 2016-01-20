@@ -4,7 +4,7 @@
 
 **Reason**
 
-For security purposes the |chef compliance| setup wizard has an hour timeout.
+For security purposes the |chef compliance| setup wizard has a one hour timeout.
 
 **Resolution**
 

@@ -30,6 +30,6 @@ To install the |chef compliance| server:
 
       $ chef-compliance-ctl reconfigure
 
-#. Access the |chef compliance| setup wizard.  Build the url by prepending ``https://`` and appending ``/#/setup`` to the IP address or public hostname of the server. For example, ``https://<fqdn>/#/setup``
+#. Access the |chef compliance| setup wizard.  Build the URL by prepending ``https://`` and appending ``/#/setup`` to the IP address or public hostname that was automatically assigned when the |amazon ami| was launched.  For example, ``https://<fqdn>/#/setup``.
 
-#. Run through the setup wizard and then login to |chef compliance| web ui ``https://<fqdn>``
+#. Run through the setup wizard, and then log in to |chef compliance| webui ``https://<fqdn>``.

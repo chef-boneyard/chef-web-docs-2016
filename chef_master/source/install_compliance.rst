@@ -65,7 +65,8 @@ Logging
 
 Troubleshooting
 =====================================================
+The following section describes troubleshooting tips for |chef compliance| installations.
 
-Setup Chef Compliance button does not work
+Setup Button Does Not Work
 -----------------------------------------------------
 .. include:: ../../includes_error_messages/includes_error_messages_compliance_setup.rst
