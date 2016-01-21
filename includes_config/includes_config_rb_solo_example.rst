@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 A sample |solo rb| file that contains all possible settings (listed alphabetically):
 
 .. code-block:: ruby

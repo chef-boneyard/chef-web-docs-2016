@@ -219,7 +219,3 @@ The following example shows how the settings look when added to the configuratio
    chef_server_webui['web_ui_client_name'] = chef-webui
    chef_server_webui['worker_processes'] = 2
    chef_server_webui['worker_timeout'] = 3600
-
-
-
-
