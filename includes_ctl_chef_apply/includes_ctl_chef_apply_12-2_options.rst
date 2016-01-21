@@ -3,9 +3,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This command has the following syntax::
+This command has the following syntax:
 
-   chef-apply name_of_recipe.rb
+.. code-block:: bash
+
+   $ chef-apply name_of_recipe.rb
 
 This tool has the following options:
 
