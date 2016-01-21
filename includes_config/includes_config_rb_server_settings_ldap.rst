@@ -62,13 +62,10 @@ This configuration file has the following settings for ``ldap``:
 ..
 .. commented out from previous release, saving just in case
 ..
-..
-``ldap['login_attribute']``
+.. ``ldap['login_attribute']``
 ..   |ldap login_attribute| For |windows ad|, this is typically ``sAMAccountName``. For |open ldap|, this is typically ``uid``. Default value: ``sAMAccountName``.
-..
-``ldap['ssl_enabled']``
+.. ``ldap['ssl_enabled']``
 ..   |ldap ssl_enabled| Be sure |ssl| is enabled on the |ldap| server and that the ``ldap['port']`` setting is updated with the correct value (often ``636``). Default value: ``false``.
-..
-``ldap['system_adjective']``
+.. ``ldap['system_adjective']``
 ..   |ldap system_adjective| If a value like "corporate" is used, then the |chef server oec| user interface will display strings like "the corporate login server", "corporate login", or "corporate password." Default value: ``AD/LDAP``.
 ..
