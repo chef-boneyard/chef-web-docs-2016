@@ -7,8 +7,8 @@ On |linux|, the following error sometimes occurs when the permissions used to ru
 .. code-block:: bash
 
    $ chef-client
-   [Tue, 29 Nov 2011 19:46:17 -0800] INFO: *** Chef 10.X.X ***
-   [Tue, 29 Nov 2011 19:46:18 -0800] WARN: Failed to read the private key /etc/chef/client.pem: #<Errno::EACCES: Permission denied - /etc/chef/client.pem>
+   [Tue, 29 Nov 2015 19:46:17 -0800] INFO: *** Chef 12.X.X ***
+   [Tue, 29 Nov 2015 19:46:18 -0800] WARN: Failed to read the private key /etc/chef/client.pem: #<Errno::EACCES: Permission denied - /etc/chef/client.pem>
 
 This can be resolved by running the command as root. There are a few ways this can be done:
 

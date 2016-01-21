@@ -5,7 +5,9 @@
 
 This command has the following syntax::
 
-   chef-client OPTION VALUE OPTION VALUE ...
+.. code-block:: bash
+
+   $ chef-client OPTION VALUE OPTION VALUE ...
 
 This command has the following options:
 
@@ -98,4 +100,3 @@ This command has the following options:
 
 ``-z``, ``--local-mode``
    |local_mode|
-

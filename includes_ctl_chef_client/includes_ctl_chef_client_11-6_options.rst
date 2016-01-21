@@ -3,9 +3,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This command has the following syntax::
+This command has the following syntax:
 
-   chef-client OPTION VALUE OPTION VALUE ...
+.. code-block:: bash
+
+   $ chef-client OPTION VALUE OPTION VALUE ...
 
 This command has the following options:
 
@@ -101,8 +103,3 @@ This command has the following options:
 
 ``-W``, ``--why-run``
    |whyrun_mode|
-
-
-
-
-
