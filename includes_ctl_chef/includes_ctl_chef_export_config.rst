@@ -5,17 +5,14 @@
 
 The |client rb| file on that machine requires the following settings:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``deployment_group``
+   This setting should be set to ``'$POLICY_NAME-local'``.
 
-   * - Setting
-     - Description
-   * - ``deployment_group``
-     - ``'$POLICY_NAME-local'``
-   * - ``policy_document_native_api``
-     - ``false``
-   * - ``use_policyfile``
-     - ``true``
-   * - ``versioned_cookbooks``
-     - ``true``
+``policy_document_native_api``
+   This setting should be set to ``false``.
+
+``use_policyfile``
+   This setting should be set to ``true``.
+
+``versioned_cookbooks``
+   This setting should be set to ``true``.
