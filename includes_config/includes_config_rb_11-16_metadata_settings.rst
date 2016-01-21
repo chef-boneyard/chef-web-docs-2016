@@ -1,238 +1,249 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 This configuration file has the following settings:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``attribute``
+   |metadata attributes| For example:
 
-   * - Setting
-     - Description
-   * - ``attribute``
-     - |metadata attributes| For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      attribute 'pets/cat/name',
+       :display_name => 'Cat Name',
+       :description => 'The name of your cat',
+       :choice => \[
+         'kitty kitty',
+         'peanut',
+         'einstein',
+         'honey' \],
+       :type => 'string',
+       :required => 'recommended',
+       :recipes => \[ 'cats::eat' \],
+       :default => 'kitty kitty'
 
-          attribute 'pets/cat/name',
-           :display_name => 'Cat Name',
-           :description => 'The name of your cat',
-           :choice => \[
-             'kitty kitty',
-             'peanut',
-             'einstein',
-             'honey' \],
-           :type => 'string',
-           :required => 'recommended',
-           :recipes => \[ 'cats::eat' \],
-           :default => 'kitty kitty'
 
-   * - ``conflicts``
-     - For information only; not used outside this file. |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named ``dogs``:
+``conflicts``
+   For information only; not used outside this file. |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named ``dogs``:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          conflicts 'dogs'
+      conflicts 'dogs'
 
-       Or if the cookbook conflicted with a cookbook named ``dogs`` and greater than version 1.0:
+   or if the cookbook conflicted with a cookbook named ``dogs`` and greater than version 1.0:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          conflicts 'dogs', '> 1.0'
-   * - ``depends``
-     - |metadata rb depends| For example, to set a dependency a cookbook named ``cats``:
+      conflicts 'dogs', '> 1.0'
 
-       .. code-block:: ruby
+``depends``
+   |metadata rb depends| For example, to set a dependency a cookbook named ``cats``:
 
-          depends 'cats'
+   .. code-block:: ruby
 
-       Or, to set a dependency on the same cookbook, but only when the version is less than 1.0:
+      depends 'cats'
 
-       .. code-block:: ruby
+   or, to set a dependency on the same cookbook, but only when the version is less than 1.0:
 
-          depends 'cats', '< 1.0'
-   * - ``description``
-     - |description cookbook| For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      depends 'cats', '< 1.0'
 
-          description 'A fancy cookbook that manages a herd of cats!'
-   * - ``grouping``
-     - |grouping| For example:
+``description``
+   |description cookbook| For example:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          grouping 'pets/cat',
-           :title => 'Cat Options',
-           :description => 'Describe your cat using the options below'
-   * - ``license``
-     - |license metadata_rb| For example:
+      description 'A fancy cookbook that manages a herd of cats!'
 
-       .. code-block:: ruby
+``grouping``
+   |grouping| For example:
 
-          license 'Apache v2.0'
+   .. code-block:: ruby
 
-       or:
+      grouping 'pets/cat',
+       :title => 'Cat Options',
+       :description => 'Describe your cat using the options below'
 
-       .. code-block:: ruby
+``license``
+   |license metadata_rb| For example:
 
-          license 'GPL v3'
+   .. code-block:: ruby
 
-       or:
+      license 'Apache v2.0'
 
-       .. code-block:: ruby
+   or:
 
-          license 'MIT'
+   .. code-block:: ruby
 
-       or:
+      license 'GPL v3'
 
-       .. code-block:: ruby
+   or:
 
-          license 'Proprietary - All Rights Reserved'
-   * - ``long_description``
-     - |long description| For example, to embed the long description within the field itself:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      license 'MIT'
 
-          long_description <<-EOH
-          = DESCRIPTION:
+   or:
 
-          Complete Debian/Ubuntu style Apache2 configuration.
+   .. code-block:: ruby
 
-          = REQUIREMENTS:
+      license 'Proprietary - All Rights Reserved'
 
-          Debian or Ubuntu preferred.
+``long_description``
+   |long description| For example, to embed the long description within the field itself:
 
-          Red Hat/CentOS and Fedora can be used but will be converted to
-          a Debian/Ubuntu style Apache as it's far easier to manage
-          with Chef.
+   .. code-block:: ruby
 
-          = ATTRIBUTES:
+      long_description <<-EOH
+      = DESCRIPTION:
 
-          The file attributes/apache.rb contains the following attribute
-          types:
+      Complete Debian/Ubuntu style Apache2 configuration.
 
-          * platform specific locations and settings.
-          * general settings
-          * pre-fork attributes
-          * worker attributes
+      = REQUIREMENTS:
 
-          General settings and pre-fork/worker attributes are tunable.
-          EOH
+      Debian or Ubuntu preferred.
 
-       Or to read the contents from a specified file:
+      Red Hat/CentOS and Fedora can be used but will be converted to
+      a Debian/Ubuntu style Apache as it's far easier to manage
+      with Chef.
 
-       .. code-block:: ruby
+      = ATTRIBUTES:
 
-          long_description IO.read(File.join
-            (File.dirname(__FILE__), 'README.rdoc')
-          )
-   * - ``maintainer``
-     - |maintainer| For example:
+      The file attributes/apache.rb contains the following attribute
+      types:
 
-       .. code-block:: ruby
+      * platform specific locations and settings.
+      * general settings
+      * pre-fork attributes
+      * worker attributes
 
-          maintainer 'Adam Jacob'
-   * - ``maintainer_email``
-     - |maintainer email| For example:
+      General settings and pre-fork/worker attributes are tunable.
+      EOH
 
-       .. code-block:: ruby
+   Or to read the contents from a specified file:
 
-          maintainer_email 'adam@example.com'
-   * - ``name``
-     - |name cookbook| This field is inferred unless specified. For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      long_description IO.read(File.join
+        (File.dirname(__FILE__), 'README.rdoc')
+      )
 
-          name 'cats'
-   * - ``provides``
-     - |metadata rb provides| For example, for recipes:
+``maintainer``
+   |maintainer| For example:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          provides 'cats::sleep'
-          provides 'cats::eat'
+      maintainer 'Adam Jacob'
 
-       For definitions:
+``maintainer_email``
+   |maintainer email| For example:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          provides 'here(:kitty, :time_to_eat)'
+      maintainer_email 'adam@example.com'
 
-       And for resources:
+``name``
+   |name cookbook| This field is inferred unless specified. For example:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          provides 'service[snuggle]'
-   * - ``recipe``
-     - |description recipe| For example:
+      name 'cats'
 
-       .. code-block:: ruby
+``provides``
+   |metadata rb provides| For example, for recipes:
 
-          recipe 'cats::sleep', 'For a crazy 20 hours a day.'
+   .. code-block:: ruby
 
-       Or:
+      provides 'cats::sleep'
+      provides 'cats::eat'
 
-       .. code-block:: ruby
+   For definitions:
 
-          recipe 'cats::eat', 'When they are not sleeping.'
-   * - ``recommends``
-     - |metadata rb recommends| For example:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      provides 'here(:kitty, :time_to_eat)'
 
-          recommends 'dogs'
+   And for resources:
 
-       Or, to recommend a cookbook named ``dogs`` and for version 1.0 (or higher):
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      provides 'service[snuggle]'
 
-          recommends 'dogs', '> 1.0'
-   * - ``replaces``
-     - For information only; not used outside this file. |metadata rb replaces| For example, to replace a cookbook named ``dogs`` with this cookbook:
+``recipe``
+   |description recipe| For example:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          replaces 'dogs'
+      recipe 'cats::sleep', 'For a crazy 20 hours a day.'
 
-       Or to replace a cookbook named dogs, but only for versions prior to 4.0:
+   Or:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          replaces 'dogs', '< 4.0'
-   * - ``suggests``
-     - For information only; not used outside this file. |metadata rb suggests| For example:
+      recipe 'cats::eat', 'When they are not sleeping.'
 
-       .. code-block:: ruby
+``recommends``
+   |metadata rb recommends| For example:
 
-          suggests 'cats'
+   .. code-block:: ruby
 
-       Or, to suggest a cookbook named 'cats', but only for versions 1.0 and higher:
+      recommends 'dogs'
 
-       .. code-block:: ruby
+   Or, to recommend a cookbook named ``dogs`` and for version 1.0 (or higher):
 
-          suggests 'cats', '> 1.0'
-   * - ``supports``
-     - |metadata rb supports| For example, to support every version of |ubuntu|:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      recommends 'dogs', '> 1.0'
 
-          supports 'ubuntu'
+``replaces``
+   For information only; not used outside this file. |metadata rb replaces| For example, to replace a cookbook named ``dogs`` with this cookbook:
 
-       Or, to support versions of |ubuntu| greater than or equal to 8.04:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      replaces 'dogs'
 
-          supports 'ubuntu', '>= 8.04'
+   or to replace a cookbook named dogs, but only for versions prior to 4.0:
 
-       Or, to support only |ubuntu| 9.10:
+   .. code-block:: ruby
 
-       .. code-block:: ruby
+      replaces 'dogs', '< 4.0'
 
-          supports 'ubuntu', '= 9.10'
-   * - ``version``
-     - |version cookbook| For example:
+``suggests``
+   For information only; not used outside this file. |metadata rb suggests| For example:
 
-       .. code-block:: ruby
+   .. code-block:: ruby
 
-          version '1.9.0'
+      suggests 'cats'
+
+   or, to suggest a cookbook named 'cats', but only for versions 1.0 and higher:
+
+   .. code-block:: ruby
+
+      suggests 'cats', '> 1.0'
+
+``supports``
+   |metadata rb supports| For example, to support every version of |ubuntu|:
+
+   .. code-block:: ruby
+
+      supports 'ubuntu'
+
+   or, to support versions of |ubuntu| greater than or equal to 8.04:
+
+   .. code-block:: ruby
+
+      supports 'ubuntu', '>= 8.04'
+
+   or, to support only |ubuntu| 9.10:
+
+   .. code-block:: ruby
+
+      supports 'ubuntu', '= 9.10'
+
+``version``
+   |version cookbook| For example:
+
+   .. code-block:: ruby
+
+      version '1.9.0'

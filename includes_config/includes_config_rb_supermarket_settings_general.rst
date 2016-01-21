@@ -1,40 +1,47 @@
 .. The contents of this file are included in multiple topics.
 .. THIS FILE SHOULD NOT BE MODIFIED VIA A PULL REQUEST.
 
+
 This configuration file has the following general settings:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``enterprise['name']``
+   Default value: ``'supermarket'``.
 
-   * - Setting
-     - Description
-   * - ``enterprise['name']``
-     - Default value: ``'supermarket'``.
-   * - ``supermarket['app_directory']``
-     - Default value: ``"#{node['supermarket']['install_directory']}/embedded/service/supermarket"``.
-   * - ``supermarket['chef_server_url']``
-     - |url chef_server|
-   * - ``supermarket['config_directory']``
-     - Default value: ``'/etc/supermarket'``.
-   * - ``supermarket['features']``
-     - Use to enable announcments, CLA features, a service that reports on cookbook quality, |github| integration, enable joining of corporate CLAs, and tools. Default value: ``'tools'``.
-   * - ``supermarket['fqdn']``
-     - Default value: ``node['fqdn']``.
-   * - ``supermarket['group']``
-     - Default value: ``'supermarket'``.
-   * - ``supermarket['install_directory']``
-     - Default value: ``'/opt/supermarket'``.
-   * - ``supermarket['install_path']``
-     - The directory in which |supermarket| is installed. Default value: ``node['supermarket']['install_directory']``.
-   * - ``supermarket['log_directory']``
-     - Default value: ``'/var/log/supermarket'``.
-   * - ``supermarket['sysvinit_id']``
-     - Use to specify 1-4 characters that define a unique identifier for the file located in ``/etc/inittab``. Default value: ``SUP``.
-   * - ``supermarket['user']``
-     - Default value: ``'supermarket'``.
-   * - ``supermarket['var_directory']``
-     - Default value: ``'/var/opt/supermarket'``.
+``supermarket['app_directory']``
+   Default value: ``"#{node['supermarket']['install_directory']}/embedded/service/supermarket"``.
+
+``supermarket['chef_server_url']``
+   |url chef_server|
+
+``supermarket['config_directory']``
+   Default value: ``'/etc/supermarket'``.
+
+``supermarket['features']``
+   Use to enable announcments, CLA features, a service that reports on cookbook quality, |github| integration, enable joining of corporate CLAs, and tools. Default value: ``'tools'``.
+
+``supermarket['fqdn']``
+   Default value: ``node['fqdn']``.
+
+``supermarket['group']``
+   Default value: ``'supermarket'``.
+
+``supermarket['install_directory']``
+   Default value: ``'/opt/supermarket'``.
+
+``supermarket['install_path']``
+   The directory in which |supermarket| is installed. Default value: ``node['supermarket']['install_directory']``.
+
+``supermarket['log_directory']``
+   Default value: ``'/var/log/supermarket'``.
+
+``supermarket['sysvinit_id']``
+   Use to specify 1-4 characters that define a unique identifier for the file located in ``/etc/inittab``. Default value: ``SUP``.
+
+``supermarket['user']``
+   Default value: ``'supermarket'``.
+
+``supermarket['var_directory']``
+   Default value: ``'/var/opt/supermarket'``.
 
 .. there are these as well:
 .. 
