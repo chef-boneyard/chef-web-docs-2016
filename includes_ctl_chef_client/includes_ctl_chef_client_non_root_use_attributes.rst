@@ -6,7 +6,7 @@ Another example of running the |chef client| as a non-root user involves using r
 
 A command can be elevated similar to the following:
 
-.. code-block:: bash
+.. code-block:: ruby
 
    service 'apache2' do
      start_command 'sudo /etc/init.d/apache2 start'
