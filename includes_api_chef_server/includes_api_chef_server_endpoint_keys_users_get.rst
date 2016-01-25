@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /organizations/NAME/users/USER/keys/
+   GET /users/USER/keys/
 
 **Response**
 
