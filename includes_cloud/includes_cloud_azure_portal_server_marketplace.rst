@@ -17,7 +17,7 @@ Before getting started, you will need a functioning workstation. Install the `Ch
 
 #. Select the **Chef Server 12** offering that is appropriate for your size. 
 
-   .. note:: The |chef server| is available on the |azure marketplace| in 25, 50, 100, 150, 200 and 250 licensed images, as well as a "Bring Your Own License" image.
+   .. note:: The |chef server| is available on the |azure marketplace| in 25, 50, 100, 150, 200, and 250 licensed images, as well as a "Bring Your Own License" image.
 
 #. Click **Create** and follow the steps to launch the |chef server|, providing a host name, user name, password or |ssh| key, and any additional information required. You will also select your deployment model here.
 
