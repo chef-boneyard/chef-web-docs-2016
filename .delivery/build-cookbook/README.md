@@ -1,4 +1,4 @@
 # build-cookbook
 
-TODO: Enter the cookbook description here.
+This is a build cookbook for setting up https://docs.chef.io.
 
