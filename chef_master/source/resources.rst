@@ -276,6 +276,7 @@ The following resources are built-in to the |chef client|:
 * http_request
 * ifconfig
 * ips_package (based on the package resource)
+* launchd
 * link
 * log
 * macports_package (based on the package resource)
@@ -1633,6 +1634,45 @@ Examples
 .. include:: ../../step_resource/step_resource_ips_package_install.rst
 
 
+launchd
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_launchd.rst
+
+.. include:: ../../includes_resources/includes_resource_launchd_about.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_launchd_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_launchd_actions.rst
+
+Properties
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_launchd_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Create a launchd**
+
+.. include:: ../../step_resource/step_resource_launchd_create.rst
+
+**Create and Enable launchd**
+
+.. include:: ../../step_resource/step_resource_launchd_enable.rst
+
+**Delete a launchd**
+
+.. include:: ../../step_resource/step_resource_launchd_delete.rst
+
+**Disabled a launchd**
+
+.. include:: ../../step_resource/step_resource_launchd_disable.rst
+
+
 link
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_link.rst
@@ -1640,7 +1680,7 @@ link
 .. include:: ../../includes_resources/includes_resource_link_about.rst
 
 Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_link_syntax.rst
 
 Actions

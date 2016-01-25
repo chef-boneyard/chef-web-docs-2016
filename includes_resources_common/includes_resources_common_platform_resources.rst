@@ -63,6 +63,8 @@ The following resources are platform resources (i.e. "are available from the |ch
      - .. include:: ../../includes_resources/includes_resource_package_ips.rst
    * - `ksh <http://docs.chef.io/resource_ksh.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_ksh.rst
+   * - `launchd <http://docs.chef.io/resource_launchd.html>`_
+     - .. include:: ../../includes_resources/includes_resource_launchd.rst
    * - `link <http://docs.chef.io/resource_link.html>`_
      - .. include:: ../../includes_resources/includes_resource_link.rst
    * - `log <http://docs.chef.io/resource_log.html>`_
