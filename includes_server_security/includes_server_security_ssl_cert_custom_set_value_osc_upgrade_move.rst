@@ -5,4 +5,4 @@ To copy the certificates, move the certificate files located in ``/var/opt/chef-
 
    .. code-block:: bash
 
-      $ chef-server-ct restart nginx
+      $ chef-server-ctl restart nginx
