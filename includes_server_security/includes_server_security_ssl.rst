@@ -10,5 +10,17 @@ The locations of the certificate and private key files are
 * ``/var/opt/opscode/nginx/ca/FQDN.crt``
 * ``/var/opt/opscode/nginx/ca/FQDN.key``
 
-As the |fqdn| will have already been configured previously, simply replace the contents of these two files with the certifying authority's files.
+Because the |fqdn| has already been configured, do the following:
 
+#. Replace the contents of ``/var/opt/opscode/nginx/ca/FQDN.crt`` and ``/var/opt/opscode/nginx/ca/FQDN.key`` with the certifying authority's files.
+#. Reconfigure the |chef server|:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl reconfigure
+
+#. Restart the |nginx| service to load the new key and certificate:
+
+   .. code-block:: bash
+
+      $ chef-server-ctl restart nginx
