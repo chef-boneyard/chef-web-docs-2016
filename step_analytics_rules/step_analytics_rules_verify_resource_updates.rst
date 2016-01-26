@@ -3,7 +3,7 @@
 
 The following rule verifies if resources have been updated on a ``run_converge``:
 
-.. code-block:: java
+.. code-block:: ruby
 
    rules "Match a run converge"
      rule on run_converge

@@ -3,7 +3,7 @@
 
 The following rule sets, and then uses a user-defined value:
 
-.. code-block:: java
+.. code-block:: ruby
 
    rules "user-agent matching"
      rule on action
