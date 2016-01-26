@@ -4,6 +4,17 @@
 
 Over time, and with enough data, disks will fill up or exceed the per-disk quotas that may have been set for them and they will not be able to write data. A disk that is not able to write data will not be able to support certain components of the |chef server|, such as |postgresql|, |rabbitmq|, service log files, and deleted file handles. Monitoring disk usage is the best way to ensure that disks don't fill up or exceed their quota.
 
+Commands that can be used to monitor global disk usage on a Chef Server with a typical installation
+
+.. code-block:: bash
+
+   $ du -sh /var/opt/opscode 
+   $ du -sh /var/log/opscode 
+
+To stay healthy, neither one of these areas should ever become more than 80% used.
+If disk space begins to grow at a rapid pace, the best option in that case is to shut down and work with Chef
+to identify the cause.
+
 The following components should be monitored for signs that disks may be rapidly filling up:
 
 * **PostgreSQL** |postgresql| is the data store for the |chef server|.
