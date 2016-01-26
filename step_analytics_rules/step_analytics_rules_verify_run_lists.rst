@@ -3,7 +3,7 @@
 
 The following rule verfies if a specific role appears in a run-list:
 
-.. code-block:: java
+.. code-block:: ruby
 
    rules "Check a converge run_list"
      rule on run_converge

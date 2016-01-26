@@ -3,7 +3,7 @@
 
 The following rule shows using a regular expression:
 
-.. code-block:: java
+.. code-block:: ruby
 
    rules "user-agent matching"
      rule on action

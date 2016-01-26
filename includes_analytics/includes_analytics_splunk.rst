@@ -12,7 +12,7 @@ Use the |chef splunk| to gather insights about nodes that are under management b
    :width: 600px
    :align: center
 
-.. note:: |splunk| enterprise is required to use the |chef splunk|. |splunk| light does not support the installation of packaged |splunk| applications.
+.. note:: |splunk enterprise| is required to use the |chef splunk|. |splunk| light does not support the installation of packaged |splunk| applications.
 
 To set up the |chef splunk|, do the following:
 
@@ -23,7 +23,7 @@ To set up the |chef splunk|, do the following:
 #. Name the configuration. For example: ``splunk-notifier``.
 #. Configure the hostname, port, username, and password for the |splunk| server.
 #. The default port is ``8089``; modify to match your |splunk| install.
-#. Add the following rules to enable data to be sent to the |splunk| server:
+#. You can choose what data to send to the |splunk| server by type. Valid types are ``action``, ``run_converge``, ``run_resource``, ``run_control``, and ``run_control_group``. Add the following rules to enable data to be sent to the |splunk| server:
 
    .. code-block:: ruby
 
@@ -32,21 +32,21 @@ To set up the |chef splunk|, do the following:
         when
           true
         then
-          notify('my-splunk-notifier')
+          notify('splunk-notifier')
         end
 
         rule on run_converge
         when
           true
         then
-          notify('my-splunk-notifier')
+          notify('splunk-notifier')
         end
 
         rule on run_resource
         when
           true
         then
-          notify('my-splunk-notifier')
+          notify('splunk-notifier')
         end
       end
 

@@ -3,7 +3,7 @@
 
 The following rule checks the day of the week on which an action runs:
 
-.. code-block:: java
+.. code-block:: ruby
 
    rules "Check deploy day of week"
      rule "my rule" on action
