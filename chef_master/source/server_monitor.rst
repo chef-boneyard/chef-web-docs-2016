@@ -4,6 +4,19 @@ Monitor
 
 .. include:: ../../includes_server_monitor/includes_server_monitor.rst
 
+Monitoring Priorities
+=====================================================
+The following sections describe the priorities for monitoring of the |chef server|. In particular, running out of disk space is the primary cause of failure.
+
+Disks
+-----------------------------------------------------
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
+
+High Availability
+-----------------------------------------------------
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_ha.rst
+
+
 Application Checks
 =====================================================
 .. include:: ../../includes_server_monitor/includes_server_monitor_application.rst
@@ -78,6 +91,3 @@ Nodes, Workstations
 =====================================================
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_client.rst
 
-Disks
-=====================================================
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
