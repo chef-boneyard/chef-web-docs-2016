@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use ``X-Ops-Server-API-Info`` to specify the version of the |api chef server|. For example: ``X-Ops-Server-API-Info: 1``. ``X-Ops-Server-API-Info: 0`` is supported for use with the version 12 |chef server|, but will be deprecated as part of the next major release.
+Use ``X-Ops-Server-API-Info`` to identify the version of the |api chef server|.

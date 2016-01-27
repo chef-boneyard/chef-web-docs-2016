@@ -10,7 +10,7 @@ What's New
 The following items are new for |chef server| 12.1:
 
 * **chef-server-ctl key commands use the chef-client Chef::Key object** The key rotation commands (``chef-server-ctl key``) for ``create``, ``delete``, ``edit``, ``list``, and ``show`` keys for users and clients. These were a preview in the |chef server| 12.0.3 release, and are now fully integrated.
-* **New version header for Chef Server API** The |api chef server| uses the ``X-Ops-Server-API-Info`` header to specify the API version as part of a request to the |api chef server|.
+* **New version headers for Chef Server API** The |api chef server| uses the ``X-Ops-Server-API-Version`` header to specify the version of the API that is used as part of a request to the |api chef server|.
 * **New endpoints for policy and policy files** The |api chef server| adds the following endpoints: ``/policies``, ``/policy_groups``, and ``/POLICY_GROUP/policies/POLICY_NAME``.
 * **New endpoints for client key management** The |api chef server| adds the following endpoints: ``/client/CLIENT/keys`` and ``/client/CLIENT/keys/KEY``.
 * **New endpoints for user key management** The |api chef server| adds the following endpoints: ``/user/USER/keys`` and ``/user/USER/keys/KEY``.
@@ -21,9 +21,9 @@ Key Rotation
 -----------------------------------------------------
 The ``knife user`` and ``knife client`` subcommands support key rotation. Use the ``create``, ``delete``, ``edit``, ``list``, and ``show`` subcommands to manage keys for users and clients, such as creating multiple expiring keys for a single user and also for basic key management. See http://docs.chef.io/knife_user.html and http://docs.chef.io/knife_client.html for more information about these subcommands.
 
-X-Ops-Server-API-Info
+X-Ops-Server-API-Version
 -----------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_info.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_version.rst
 
 /client/CLIENT/keys/
 -----------------------------------------------------
@@ -135,4 +135,4 @@ The following configuration settings are new for the |chef server|:
 
 What's Fixed
 =====================================================
-For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/chef/chef-server/blob/master/CHANGELOG.md
+For the list of issues that were addressed for this release, please see the changelog on |github|: https://github.com/chef/opscode-omnibus/blob/master/CHANGELOG.md
