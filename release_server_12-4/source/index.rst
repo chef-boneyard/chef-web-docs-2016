@@ -1,7 +1,7 @@
 .. THIS PAGE DOCUMENTS Chef server version 12.2
 
 =====================================================
-About |chef server_title| 12.4
+About |chef server_title| 12.4 
 =====================================================
 
 .. warning:: This page is about an upcoming release of the |chef server|.
