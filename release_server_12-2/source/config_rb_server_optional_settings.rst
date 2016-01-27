@@ -70,7 +70,7 @@ ldap
 
 nginx
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_server_settings_nginx.rst
+.. include:: ../../includes_config/includes_config_rb_12-2_server_settings_nginx.rst
 
 oc_bifrost
 -----------------------------------------------------
