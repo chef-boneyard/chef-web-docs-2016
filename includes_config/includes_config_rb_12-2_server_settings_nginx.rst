@@ -22,9 +22,6 @@ This configuration file has the following settings for ``nginx``:
 ``nginx['enable_non_ssl']``
    |enable non_ssl| Default value: ``false``.
 
-``nginx['enable_stub_status']``
-   |nginx stub_status| See ``nginx['stub_status']['allow_list']``, ``nginx['stub_status']['listen_host']``, ``nginx['stub_status']['listen_port']``, and ``nginx['stub_status']['location']``. Default value: ``true``.
-
 ``nginx['gzip']``
    |enable gzip| Default value: ``on``.
 
@@ -114,18 +111,6 @@ This configuration file has the following settings for ``nginx``:
 
 ``nginx['ssl_state_name']``
    |nginx ssl_state_name| Default value: ``WA``.
-
-``nginx['stub_status']['allow_list']``
-   |nginx stub_status allow_list| Default value: ``["127.0.0.1"]``.
-
-``nginx['stub_status']['listen_host']``
-   |nginx stub_status listen_host| Default value: ``"127.0.0.1"``.
-
-``nginx['stub_status']['listen_port']``
-   |nginx stub_status listen_port| Default value: ``"9999"``.
-
-``nginx['stub_status']['location']``
-   |nginx stub_status location| Default value: ``"/nginx_status"``.
 
 ``nginx['tcp_nodelay']``
    |use nagle| Default value: ``on``.
