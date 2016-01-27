@@ -38,14 +38,16 @@ The following authentication headers are required:
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst
    * - ``X-Ops-Content-Hash``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst
-   * - ``X-Ops-Server-API-Info``
-     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_info.rst
+   * - ``X-Ops-Server-API-Version``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_version.rst
    * - ``X-Ops-Sign``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst
    * - ``X-Ops-Timestamp``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst
    * - ``X-Ops-UserId``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst
+
+.. note:: .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_server_api_info.rst
 
 
 Example
@@ -654,6 +656,16 @@ POST
 _status
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst
+
+
+/universe
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_universe.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_universe_get.rst
+
 
 /updated_since
 -----------------------------------------------------
