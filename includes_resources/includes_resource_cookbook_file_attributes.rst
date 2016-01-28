@@ -114,6 +114,6 @@ This resource has the following properties:
 
    |verify_file|
 
-   .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+   .. include:: ../../includes_resources/includes_resource_cookbook_file_attributes_verify.rst
 
 .. note:: .. include:: ../../includes_notes/includes_notes_resource_properties_use_owner_and_right.rst
