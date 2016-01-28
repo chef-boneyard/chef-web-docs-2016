@@ -333,7 +333,7 @@ To verify provisioning (from inside the ``delivery-cluster`` directory), do the 
 
       $ rake info:list_core_services
 
-#. Navigate to your CHEF_SERVER_URL, and then login with ``delivery:delivery``.
+#. Navigate to your CHEF_SERVER_URL, and then login with ``delivery:delivery``. Use ``rake info:delivery_creds`` to get the password.
 #. Click on **Nodes**. You’ll see your |chef delivery| server, your build nodes, and nodes for any other optional features that you installed.
 #. Get the credentials and URL with the following command:
 
@@ -346,13 +346,13 @@ To verify provisioning (from inside the ``delivery-cluster`` directory), do the 
 
    .. code-block:: bash
 
-      $ knife node status
+      $ knife node list
 
    All build nodes should report available.
 
 Configure Delivery
 =====================================================
-In |chef delivery| there are multiple levels of organization: enterprises, organizations, and projects. The provisioning step created the initial enterprise you specified in your environment file as the first ``name`` option. Enterprises are designed to provide units of multi-tenancy with separate sets of organizations and users. Next, set up |chef delivery| by adding users and organizations.
+In |chef delivery| there are multiple levels of organization: enterprises, organizations, and projects, where enterprise contain one (or more) organizations and organizations contain one (or more) projects. The provisioning step created the initial enterprise you specified in your environment file as the first ``name`` option. Enterprises are designed to provide units of multi-tenancy with separate sets of organizations and users. Next, set up |chef delivery| by adding users and organizations.
 
 .. note:: |chef delivery| by default hosts a git server that you interact with through the delivery CLI commands. Additionally, you can integrate GitHub Enterprise or GitHub.com.
 

@@ -1,7 +1,7 @@
 .. THIS PAGE DOCUMENTS Chef server version 12.2
 
 =====================================================
-About |chef server_title| 12.4 
+About |chef server_title| 12.4
 =====================================================
 
 .. warning:: This page is about an upcoming release of the |chef server|.
@@ -107,7 +107,6 @@ This section contains links to topics about configuration files, command-line to
    auth
    chef_overview
    chef_search
-   config_rb_chef_server
    config_rb_server
    config_rb_server_optional_settings
    config_rb_manage

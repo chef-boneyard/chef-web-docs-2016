@@ -119,5 +119,5 @@ This resource has the following properties:
 
    |verify_file|
 
-   .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify.rst
+   .. include:: ../../includes_resources/includes_resource_file_attributes_attribute_verify.rst
 
