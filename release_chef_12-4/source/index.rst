@@ -101,6 +101,7 @@ This section contains links to topics about configuration files, command-line to
 .. toctree::
    :hidden:
 
+   api_omnitruck
    auth
    chef_overview
    chef_search
