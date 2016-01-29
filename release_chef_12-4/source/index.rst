@@ -101,7 +101,6 @@ This section contains links to topics about configuration files, command-line to
 .. toctree::
    :hidden:
 
-   api_chef_server
    auth
    chef_overview
    chef_search
