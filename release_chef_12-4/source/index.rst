@@ -102,6 +102,7 @@ This section contains links to topics about configuration files, command-line to
    :hidden:
 
    api_omnitruck
+   attributes
    auth
    chef_overview
    chef_search
