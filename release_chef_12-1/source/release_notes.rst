@@ -147,7 +147,7 @@ The ``verify`` attribute may be used with the |resource cookbook_file|, |resourc
 
        The following examples show how the ``verify`` attribute is used with the |resource template| resource. The same approach (but with different resource names) is true for the |resource cookbook_file|, |resource file|, and |resource remote_file| resources:
 
-       .. include:: ../../includes_resources_common/includes_resources_common_attribute_verify_template.rst
+       .. include:: ../../includes_resources/includes_resource_template_attributes_verify.rst
 
 
 imports
