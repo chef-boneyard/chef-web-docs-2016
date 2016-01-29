@@ -346,7 +346,7 @@ To verify provisioning (from inside the ``delivery-cluster`` directory), do the 
 
    .. code-block:: bash
 
-      $ knife node list
+      $ knife node status
 
    All build nodes should report available.
 
