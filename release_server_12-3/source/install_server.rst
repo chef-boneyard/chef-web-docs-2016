@@ -1,7 +1,5 @@
 .. THIS PAGE DOCUMENTS Chef server version 12.3
 
-.. THIS PAGE DOCUMENTS Chef server version 12.4
-
 =====================================================
 Install the |chef server_title|
 =====================================================
