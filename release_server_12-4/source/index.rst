@@ -4,8 +4,6 @@
 About |chef server_title| 12.4
 =====================================================
 
-.. warning:: This page is about an upcoming release of the |chef server|.
-
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 .. note:: |chef server| 12 is the new |chef server|! The documentation for Open Source Chef and Enterprise Chef is still available from the version list.
