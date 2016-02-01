@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The following example shows how to use the |subcommand knife bootstrap| sub-command to create a client configuration file (/etc/chef/client.rb) that uses |chef hosted| as the |chef server|. The configuration file will look something like:

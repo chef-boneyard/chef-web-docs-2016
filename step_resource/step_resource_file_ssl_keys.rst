@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following example shows how the |chef server| sets up and configures |ssl| certificates for |nginx|. The cipher suite used by |nginx| `is configurable <https://docs.chef.io/config_rb_server.html#ssl-protocols>`_ using the ``ssl_protocols`` and ``ssl_ciphers`` settings.
 

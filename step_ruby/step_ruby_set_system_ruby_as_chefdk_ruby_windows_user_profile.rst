@@ -1,4 +1,5 @@
-.. This is an included how-to.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 For new |windows| machines, commands cannot be appended to ``$PROFILE`` if the folder does not exist or if there is a new user profile, an error similar to the following may be returned:
 

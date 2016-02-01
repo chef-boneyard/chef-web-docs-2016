@@ -1,4 +1,5 @@
-.. This is an included how-to.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 For many users of |chef|, the |chef dk| version of |ruby| that is included in the |chef dk| should be configured as the default version of |ruby|.
 

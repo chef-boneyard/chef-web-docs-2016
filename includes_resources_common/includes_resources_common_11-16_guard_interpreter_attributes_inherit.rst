@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``guard_interpreter`` property is set to ``:default`` by default. When the ``guard_interpreter`` property is set to ``:default``, the ``not_if`` or ``only_if`` properties will guard statements that **do not inherit** properties that are defined by the |resource script|-based resource in which the ``not_if`` or ``only_if`` guard statement is defined.

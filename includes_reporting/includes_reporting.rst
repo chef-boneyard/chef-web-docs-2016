@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Use |reporting| to keep track of what happens during the execution of |chef client| runs across all of the machines that are under management by |chef|. Reports can be generated for the entire organization and they can be generated for specific nodes.
 

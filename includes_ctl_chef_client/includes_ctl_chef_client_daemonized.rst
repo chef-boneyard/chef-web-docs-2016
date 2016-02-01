@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef-client.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |chef client| can be run as a daemon. Use the |cookbook chef_client| cookbook to configure the |chef client| as a daemon. Add the ``default`` recipe to a node's run-list, and then use attributes in that cookbook to configure the behavior of the |chef client|. For more information about these configuration options, see the `chef-client cookbook repository on github <https://github.com/chef-cookbooks/chef-client/>`_.

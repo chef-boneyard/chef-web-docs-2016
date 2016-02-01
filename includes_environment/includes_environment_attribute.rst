@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 An attribute can be defined in an environment and then used to override the default settings on a node. When an environment is applied during a |chef client| run, these attributes are compared to the attributes that are already present on the node. When the environment attributes take precedence over the default attributes, the |chef client| will apply those new settings and values during the |chef client| run on the node.
 

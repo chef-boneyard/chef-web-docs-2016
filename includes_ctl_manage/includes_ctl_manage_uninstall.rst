@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef-server-ctl.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``uninstall`` subcommand is used to manage the hooks between |runit| and ``sysvinit`` or ``upstart``. This subcommand does not `uninstall the Chef management console <http://docs.chef.io/uninstall.html#chef-manage-title>`__.

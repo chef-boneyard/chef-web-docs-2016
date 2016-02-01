@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 When restoring |chef server| data, the previously backed-up files will be required, along with the |chef server| running only the |service postgresql| service. Perform all activities as root unless otherwise directed.
 

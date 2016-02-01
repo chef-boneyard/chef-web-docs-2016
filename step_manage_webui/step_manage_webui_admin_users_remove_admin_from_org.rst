@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Removing a member of the |webui group admins| group from an organization requires the user to be removed from the |webui group admins| group before they can be removed from the organization:

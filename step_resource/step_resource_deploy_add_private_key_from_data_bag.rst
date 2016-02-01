@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 If you only want certain people to have access to this key, consider adding it to an encrypted data bag. Other options include adding it to the |chef repo|, using ``deploy_to`` property and the |resource deploy| resource, and so on.
 

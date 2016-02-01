@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef (the executable).
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``chef install`` subcommand is used to evaluate a policy file and find a compatible set of cookbooks, build a run-list, cache it locally, and then emit a |policylock| file that describes the locked policy set. The |policylock| file may be used to install the locked policy set to other machines and may be pushed to a policy group on the |chef server| to apply that policy to a group of nodes that are under management by |chef|.

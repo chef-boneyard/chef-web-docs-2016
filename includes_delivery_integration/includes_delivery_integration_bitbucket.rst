@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 |bitbucket| integration with |chef delivery| allows |bitbucket| to be used as the canonical |git| repository for projects while at the same time benefiting from |chef delivery| workflow and pipeline automation. When |bitbucket| integration is enabled for a project in |bitbucket|, you will be able to:

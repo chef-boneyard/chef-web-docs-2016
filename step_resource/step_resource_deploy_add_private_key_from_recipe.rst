@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 If there isn't much concern about people being able to view a private key, add it to ``cookbook/COOKBOOK_NAME/files/default/id_deploy`` and add it to the |ssh| file locally on the node using the |resource cookbook_file| resource.
 

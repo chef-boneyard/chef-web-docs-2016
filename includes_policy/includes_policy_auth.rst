@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Each policy group and individual policy are separate objects for the purposes of authentication. This enables each policy and policy group to have restricted access, such as for specific nodes that handle sensitive data or for specific production groups that require sign-off as part of organizational requirements.

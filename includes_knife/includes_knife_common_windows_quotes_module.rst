@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |chef client| version 12.4 release adds an optional feature to the |microsoft installer package| for |chef|. This feature enables the ability to pass quoted strings from the |windows powershell| command line without the need for triple single quotes (``''' '''``). This feature installs a |windows powershell| module (typically in ``C:\opscode\chef\modules``) that is also appended to the ``PSModulePath`` environment variable. This feature is not enabled by default. To activate this feature, run the following command from within |windows powershell|:

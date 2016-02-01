@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Use ``set()`` to set a user-defined value in the |json| object. A user-defined value always begins with ``#``. Prepend values saved by the ``set()`` function with ``user_defined_values`` to access them later from a ``notify()`` or ``alert()`` function.  Values that are not user-defined may not be modified.

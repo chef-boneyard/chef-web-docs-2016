@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 The hostname for the |chef server| may be specified using a |fqdn| or an IP address. This hostname must be resolvable. For example, a |chef server| running in a production environment with a resolvable |fqdn| hostname can be added the |dns| system. But when deploying |chef server| into a testing environment, adding the hostname to the ``/etc/hosts`` file is enough to ensure that hostname is resolvable.
 

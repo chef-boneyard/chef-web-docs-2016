@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The |mdadm| command can be used to create |raid| arrays. For example, a |raid| 0 array named ``/dev/md0`` with 10 devices would have a command similar to the following:
 

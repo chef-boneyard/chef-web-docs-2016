@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 In a tiered configuration, the |chef analytics| deployment is on different servers from the |chef server|, with a single backend and multiple load-balanced frontends. In a tiered configuration, an existing |chef server| deployment should already running. 
 

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``load_current_resource`` method is used to construct the curent state of the resource on the node. This is in contrast to the ``new_resource`` method which represents the desired state of the resource on the node. Both methods are constructed the same way. Properties should be loaded from the node's state.

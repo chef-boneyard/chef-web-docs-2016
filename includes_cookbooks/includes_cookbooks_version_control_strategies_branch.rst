@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Using a branch tracking strategy requires that a branch for each environment exists in the source control and that each cookbook's versioning policy is tracked at the branch level. This approach is relatively simple and lightweight: for development environments that track the latest cookbooks, just bump the version before a cookbook is uploaded for testing. For any cookbooks that require higher levels of version control, |knife| allows cookbooks to be uploaded to specific environments and for cookbooks to be frozen (which prevents others from being able to make changes to that cookbook).
 

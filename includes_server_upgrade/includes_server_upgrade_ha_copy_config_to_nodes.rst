@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 .. warning:: The entire contents of ``/etc/opscode`` must be copied from the backend master to all of the other members of the cluster. There may be new configuration state generated as a result of bootstrapping the first member of the cluster which must agree on all cluster members.
 

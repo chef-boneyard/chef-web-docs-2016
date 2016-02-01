@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The process of migrating from an existing |chef server| installation to the |amazon ami| differs depending on which software version being used currently and the location in which it is deployed. In all on-premises scenarios, data is first migrated to the latest |chef server| schema, after which it is migrated to the |amazon ami|.
 

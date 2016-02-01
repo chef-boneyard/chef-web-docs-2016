@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |chefignore| file is used to tell |knife| which cookbook files in the |chef repo| should be ignored when uploading data to the |chef server|. The type of data that should be ignored includes swap files, version control data, build output data, and so on. The |chefignore| file uses the ``File.fnmatch`` |ruby| syntax to define the ignore patterns using ``*``, ``**``, and ``?`` wildcards.

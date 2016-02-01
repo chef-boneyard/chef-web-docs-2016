@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 The environment that is used when testing |vagrant| with upstream cookbooks and the reference |chef repo| is shown below. It defines the network and database settings that are used with |openstack|. The networks will be used in the libraries provided by the ``osops-utils`` cookbook. The following example shows a FlatDHCP with two physical networks.
 

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 |vagrant| uses a **Vagrantfile** for managing its configuration. Within the |openstack chef_repo| there is a Vagrantfile that configures the |virtualbox| virtual machine for our purposes. A few parts of that file are listed here:
 

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 On |centos| and |redhat enterprise linux|  systems, the |apache qpid| daemon is installed by default. The |chef server| uses |rabbitmq| for messaging. Because both |apache qpid| and |rabbitmq| share the same protocol, |apache qpid| must be disabled.
 

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following cookbooks should be used in conjunction with the |cookbook yum| cookbook when managing specific repositories. In some cases, such as when using |yum| with |amazon linux|, |centos|, and/or |fedora|, the cookbooks contain additional repository-specific attributes that may be helpful, but are not required. In other cases, such when using |yum| with |elrepo|, |fedora epel|, |erlang solutions|, |redhat ius|, |percona|, |postgresql|, and/or |repoforge|, the cookbooks contain additional repository-specific attributes that are typically required.
 

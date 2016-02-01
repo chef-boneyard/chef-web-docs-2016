@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 When |knife| is executed from a |windows| system, it is no longer necessary to make additional configuration of the |windows remote management| listener on the target node to enable successful authentication from the workstation. It is sufficient to have a |windows remote management| listener on the remote node configured to use the default configuration for ``winrm quickconfig``. This is because |subcommand knife windows| supports the |windows| negotiate protocol, including |ntlm| authentication, which matches the authentication requirements for the default configuration of the |windows remote management| listener.

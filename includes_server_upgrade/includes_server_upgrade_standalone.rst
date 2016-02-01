@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The installation process for a |standalone| upgrade of |chef server oec| does not reconfigure |chef server oec| or restart any of the services. This prevents inadvertent fail overs from occurring on |ha| installations.
 

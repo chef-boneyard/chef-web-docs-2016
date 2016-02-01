@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Attributes are typically defined in cookbooks, recipes, roles, and environments. These attributes are rolled-up to the node level during a |chef client| run. A recipe can store attribute values using a multi-level |ruby hash| or array.
 

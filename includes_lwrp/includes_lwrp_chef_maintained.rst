@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 |company_name| maintains a collection of cookbooks that define some common scenarios and provides resources to support them. These cookbooks are located at https://github.com/chef-cookbooks. To use these resources within recipes, first download the cookbook. Then add those resources to recipes.

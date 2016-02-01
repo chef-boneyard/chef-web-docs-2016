@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 To reload a service based on a template, use the |resource template| and |resource service| resources together in the same recipe, similar to the following:
 

@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following example shows how to use a case statement to check the platform, and for certain platforms send a notification immediately after installing the ``package_b`` package that will generate a module list:
 
