@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 |chef delivery| uses projects to organize work across multiple teams. You can create as many projects as you need. A common approach is to have one project for each major component of the system. Each project has its own |git| repository. 
 

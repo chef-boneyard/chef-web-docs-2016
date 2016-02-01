@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics and describes a note or a warning.
-.. This file is very likely included in many spots across doc sets and versioned docs sets. It should be edited carefully, keeping in mind that it must be a neutral, matter-of-fact statement.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 In versions of the |chef client| prior to version 12.0, this subcommand ONLY works when run against the open source |chef server|; it does not run against |chef server oec| (including hosted |chef server oec|), or |chef private|.
 

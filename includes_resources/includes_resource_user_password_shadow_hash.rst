@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 There are a number of encryption options and tools that can be used to create a password shadow hash. In general, using a strong encryption method like SHA-512 and the ``passwd`` command in the |open ssl| toolkit is a good approach, however the encryption options and tools that are available may be different from one distribution to another. The following examples show how the command line can be used to create a password shadow hash. When using the ``passwd`` command in the |open ssl| tool:
 

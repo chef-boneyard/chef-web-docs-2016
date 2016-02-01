@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 One or more data bags and data bag items can be created manually under the ``data_bags`` directory in the |chef repo|. Any method can be used to create the data bag folders and data bag item |json| files. For example:
 

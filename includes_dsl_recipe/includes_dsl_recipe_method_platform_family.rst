@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Use the ``platform_family?`` method to ensure that certain actions are run for specific platform family. The ``platform_family?`` method will return true if one of the listed parameters matches the ``node['platform_family']`` attribute that is detected by |ohai| during every |chef client| run. 
 

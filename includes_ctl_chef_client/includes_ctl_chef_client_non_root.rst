@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef-client.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 In large, distributed organizations the ability to modify the configuration of systems is sometimes segmented across teams, often with varying levels of access to those systems. For example, core application services may be deployed to systems by a central server provisioning team, and then developers on different teams build tooling to support specific applications. In this situation, a developer only requires limited access to machines and only needs to perform the operations that are necessary to deploy tooling for a specific application.

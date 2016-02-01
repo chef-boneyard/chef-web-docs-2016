@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 The |chef client| can be installed using an unattended bootstrap. This allows the |chef client| to be installed from itself, without using |ssh|. For example, machines are often created using environments like |amazon aws autoscaling|, |amazon aws cloudformation|, |rackspace autoscale|, and |pxe|. In this scenario, using tooling for attended, single-machine installs like ``knife bootstrap`` or ``knife CLOUD_PLUGIN create`` is not practical because the machines are created automatically and someone cannot always be on-hand to initiate the bootstrap process.
 

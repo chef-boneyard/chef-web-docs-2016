@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 A role is defined using |json| or the |ruby| DSL. |chef solo| will look for roles in ``/var/chef/roles``, but this location can be modified by changing the setting for ``role_path`` in |solo rb|. For example, the following setting in |solo rb|:

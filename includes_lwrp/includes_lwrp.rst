@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 A |lwrp| is a part of a cookbook that is used to extend the |chef client| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any platform resource. In other words: a |lwrp| is a custom resource. A custom resource has two principal components:

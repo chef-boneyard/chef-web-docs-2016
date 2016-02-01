@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The |service webui| service's ``current.log`` file contains a history of all requests that were made to the |chef server| web user interface. Errors that may be found in this log are typically the cause of failed HTTP requests that were made to another service. The following is an example log entry for a successful request:
 

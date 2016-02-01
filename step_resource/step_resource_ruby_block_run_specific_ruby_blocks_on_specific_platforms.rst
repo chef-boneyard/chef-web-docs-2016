@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 .. THIS EXAMPLE IS DEPRECATED UNTIL THE Chef::ShellOut SECTION IS UPDATED FOR CORRECT Mixlib::ShellOut BEHAVIOR INCLUDING, BUT NOT LIMITED TO THE Chef::Application.fatal BIT BEING REMOVED ENTIRELY IN FAVOR OF SHELLOUT'S OWN ERROR HANDLING. WHEN UPDATED, ADD BACK INTO dsl_recipe_method_platform, resource_ruby_block, and dsl_recipe.
 

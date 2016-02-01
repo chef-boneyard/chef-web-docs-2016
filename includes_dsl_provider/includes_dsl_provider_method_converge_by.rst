@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``converge_by`` method is a wrapper that is used to support |whyrun| mode and must wrap any |ruby| calls that updates system state.  All core |chef| resources internally use ``converge_by`` and support |whyrun| mode by default. To ensure that a custom provider is idempotent, ``converge_by`` blocks must be checked for idempotency.

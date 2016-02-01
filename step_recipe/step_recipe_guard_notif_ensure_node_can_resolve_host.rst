@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The following example shows how to use a custom block of |ruby| code to ensure that a node can resolve the host. If the node can resolve the host, the |chef client| will do nothing. If the node cannot resolve the host, the |chef client| will configure the host:

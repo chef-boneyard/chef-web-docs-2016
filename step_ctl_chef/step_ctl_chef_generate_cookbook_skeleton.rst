@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 If a custom skeleton cookbook is located on a |mac os x| desktop (and in this example, the ``chef_generator`` cookbook is simply a copy of the same cookbook that ships in the |chef dk|), the following command will use the skeleton cookbook at the custom location to generate a cookbook into the repository from which the ``chef`` command is run:

@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Use the ``cloud-api`` option to bootstrap a machine in |azure|. The bootstrap operation will enable the guest agent to install, configure, and run the |chef client| on a node, after which the |chef client| is configured to run as a daemon/service. (This is a similar process to using the |azure portal|.)

@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef-server-ctl.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``reconfigure`` subcommand is used when changes are made to the |manage rb| file to reconfigure the server. When changes are made to the |manage rb| file, they will not be applied to the |chef manage| configuration until after this command is run.

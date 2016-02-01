@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 If |svn| is being used as the version source control application, it is important not to upload certain files that |svn| uses to maintain the version history of each file. This is because the |chef client| will never use it while configuring nodes, plus the amount of data in an upload that includes top-level |svn| data could be significant.

@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 To create a |chef client| that can access the |api chef server| as an administrator---sometimes referred to as an "API chef-client"---with the name "exampleorg" and save its private key to a file, enter:

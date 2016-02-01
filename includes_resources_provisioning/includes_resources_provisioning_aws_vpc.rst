@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The ``aws_vpc`` resource is a driver-specific resource used by |chef provisioning|. Use the ``aws_vpc`` resource to `launch resources into a defined virtual network <http://aws.amazon.com/documentation/vpc/>`__ with |amazon vpc| (the networking layer of |amazon ec2|).
 

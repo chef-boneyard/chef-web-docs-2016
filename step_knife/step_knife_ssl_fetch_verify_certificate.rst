@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |ssl| certificate that is downloaded to the |path trusted_certs| directory should be verified to ensure that it is, in fact, the same certificate as the one located on the |chef server|. This can be done by comparing the |sha256| checksums.

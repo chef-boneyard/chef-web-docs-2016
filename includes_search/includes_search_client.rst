@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Sometimes when a role isn't fully defined (or implemented), it may be necessary for a machine to connect to a database, search engine, or some other service within an environment by using the settings located on another machine, such as a host name, IP address, or private IP address. The following example shows a simplified settings file:
 

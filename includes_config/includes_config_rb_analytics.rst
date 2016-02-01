@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |analytics rb| file contains all of the non-default configuration settings used by the |chef analytics| add-on for the |chef server|.  (The default settings are built-in to the |chef analytics| configuration and should only be added to the |analytics rb| file to apply non-default values.)

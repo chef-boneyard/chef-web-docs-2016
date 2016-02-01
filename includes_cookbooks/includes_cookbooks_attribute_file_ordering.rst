@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 .. note:: This approach, as of |chef| 11-0, is no longer the recommended way to define attribute dependencies. Starting with |chef| 11-0, attribute dependencies should be defined using a cookbook's |metadata rb| file.
 

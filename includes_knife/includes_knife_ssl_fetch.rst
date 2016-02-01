@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Use the |subcommand knife ssl_fetch| subcommand to copy |ssl| certificates from an HTTPS server to the ``trusted_certs_dir`` directory that is used by |knife| and the |chef client| to store trusted |ssl| certificates. When these certificates match the hostname of the remote server, running ``knife ssl fetch`` is the only step required to verify a remote server that is accessed by either |knife| or the |chef client|.

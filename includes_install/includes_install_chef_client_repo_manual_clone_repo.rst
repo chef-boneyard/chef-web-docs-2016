@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 .. THIS FILE SHOULD BE DEPRECATED IN FAVOR OF THE CHEF GENERATE APP COMMAND. THE CHEF-REPO REPOSITORY ON GITHUB IS DEPRECATED. THIS FILE PRESERVES THE HISTORY, ONLY.
 

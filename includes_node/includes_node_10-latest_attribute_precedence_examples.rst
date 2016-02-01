@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 .. warning:: In all 10.x.x versions of the chef-client, the ``node.default.my_attribute('value')`` pattern can be used to define attributes. Starting with the 11.0.0 version of the chef-client, this pattern is no longer supported and is replaced with the ``node.default.my_attribute = 'value'`` pattern.

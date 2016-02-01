@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Use the |resource chef_handler| resource to enable handlers during a |chef client| run. The resource allows arguments to be passed to the |chef client|, which then applies the conditions defined by the custom handler to the node attribute data collected during the |chef client| run, and then processes the handler based on that data.
 

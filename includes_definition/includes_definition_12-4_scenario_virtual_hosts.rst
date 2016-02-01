@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Two applications need to be deployed and run on a single node under the same domain and sub-domain. A |ruby on rails| application will reside as the main application at ``example.com`` and a |wordpress| application will reside at ``blog.example.com``. The domain is running |apache 2| as the web server. The domain is expected to grow, but for now only two ``run_list`` resources are created, with the appropriate roles added to them. At some point in the future, when a new sub-domain is required, a new ``run_list`` resource would also be created.
 

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 A |resource dsc_resource| resource block allows |windows powershell_dsc_short| resourcs to be used in a |chef| recipe. For example, the |windows powershell_dsc_short| ``Archive`` resource:

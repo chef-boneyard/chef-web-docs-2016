@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following example shows how to query the |api chef server| for a listing of organizations and users. The ``/organizations`` and ``/users`` endpoints may only be accessed by the ``pivotal`` user, which is a user account that is created by |chef| during the installation of the |chef server|.
 

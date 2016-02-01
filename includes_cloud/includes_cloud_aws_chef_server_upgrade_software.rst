@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The |chef server| |amazon ami| can perform in-place upgrades of all of the pre-bundled software. This makes it easy to stay up-to-date with the latest version of the |chef server|, the |chef manage|, |reporting| and other |amazon aws marketplace| add-ons, while not requiring data to be migrated to the latest published |amazon ami|.
 

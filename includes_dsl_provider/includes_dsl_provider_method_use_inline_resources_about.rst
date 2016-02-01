@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 A lightweight resource is created by the ``action`` block of a lightweight provider. When the resource collection is compiled, a lightweight resource is inserted into the top-level resource collection after the point at which the lightweight provider is associated. For example, if a resource collection looks like::
 

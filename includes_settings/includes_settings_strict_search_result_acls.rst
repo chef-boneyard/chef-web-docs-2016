@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics and describes a property/attribute of a resource, a configuration setting, or an option in a command-line tool.
-.. This file is very likely included in many spots across doc sets and versioned docs sets. It should be edited carefully, keeping in mind that it must be a neutral, matter-of-fact statement that does not include default values, version- or application-specific context (which should be on the page about that version or application, instead).
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Use to specify that search results only return objects to which an actor (user, client, etc.) has read access, as determined by ACL settings. This affects all searches. When ``true``, the performance of the |chef manage| may increase because it enables the |chef manage| to skip redundant ACL checks. To ensure the |chef manage| is configured properly, after this setting has been applied with a ``chef-server-ctl reconfigure`` run ``chef-manage-ctl reconfigure`` to ensure the |chef manage| also picks up the setting. Default value: ``false``.
 

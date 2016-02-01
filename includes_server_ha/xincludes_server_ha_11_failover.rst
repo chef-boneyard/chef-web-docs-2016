@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 When the primary server in the cluster fails, the |vrrp| heartbeat will stop. At this point the backup server will begin transitioning to the primary state, which involves:
 

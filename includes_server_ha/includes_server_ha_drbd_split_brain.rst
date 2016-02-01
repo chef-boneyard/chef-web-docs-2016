@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 A ``split-brain`` event is a concept of clustered computing systems in which the cluster loses its heartbeat communication channel and becomes two unconnected pieces. Recovery from a ``split-brain`` event can be a complex issue and different clustering software packages use different methods.
 

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Data can be passed to a definition from more than one recipe. Use a definition to create a compile-time macro that can be referenced by resources during the converge phase. For example, when both ``/etc/aliases`` and |path etc sudoers| require updates from multiple recipes during a single |chef client| run.
 

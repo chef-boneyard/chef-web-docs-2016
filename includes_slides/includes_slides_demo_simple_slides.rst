@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple slide decks.
-.. This file should not be changed in a way that hinders its ability to appear in multiple slide decks.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Slides should begin with simple, concise statements followed by a short list. Slides uses a very small subset of the |python sphinx| directive set: 

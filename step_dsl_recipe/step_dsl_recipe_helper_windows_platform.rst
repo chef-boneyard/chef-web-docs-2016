@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The following example installs |windows powershell| 2.0 on systems that do not already have it installed. |windows| platform helper methods are used to define specific behaviors for specific platform versions:

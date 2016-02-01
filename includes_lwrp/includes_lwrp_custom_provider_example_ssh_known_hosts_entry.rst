@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``ssh_known_hosts_entry`` custom provider (found in the `ssh_known_hosts <https://github.com/chef-cookbooks/ssh_known_hosts>`_ cookbook) is used to add hosts and keys to the ``/etc/ssh_known_hosts`` file.

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 |chef solo| does not interact with the |chef server|. Consequently, node-specific attributes must be located in a |json| file on the target system, a remote location (such as |amazon s3|), or a web server on the local network.

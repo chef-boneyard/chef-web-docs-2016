@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef-server-ctl.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``password`` subcommand is used to change a user's password. When |windows ad| or |ldap| is enabled, this command enables (or disables) the system recovery password for that user. For example:

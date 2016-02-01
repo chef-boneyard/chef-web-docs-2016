@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |chef validator| is allowed to do the following at the start of a |chef client| run. After the |chef client| is registered with |chef server|, that |chef client| is added to the ``clients`` group:

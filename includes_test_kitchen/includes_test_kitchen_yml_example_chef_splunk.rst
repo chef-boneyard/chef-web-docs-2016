@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following |kitchen yml| file is part of the ``chef-splunk`` cookbook and is used to help ensure the installation of the |splunk| client and server is done correctly.
 

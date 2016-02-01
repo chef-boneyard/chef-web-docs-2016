@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 A |resource execute| resource block typically executes a single command that is unique to the environment in which a recipe will run. Some |resource execute| resource commands are run by themselves, but often they are run in combination with other |chef| resources. For example, a single command that is run by itself:

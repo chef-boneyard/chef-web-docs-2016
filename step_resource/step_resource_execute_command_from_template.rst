@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The following example shows how to set up IPv4 packet forwarding using the |resource execute| resource to run a command named ``forward_ipv4`` that uses a template defined by the |resource template| resource:

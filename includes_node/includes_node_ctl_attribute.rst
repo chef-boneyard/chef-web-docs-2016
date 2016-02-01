@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 .. This file documents specifc behavior related to the -j option in the chef-client, chef-solo, and chef-shell executables.
 
 Any other attribute type that is contained in this |json| file will be treated as a ``normal`` attribute. For example, attempting to update ``override`` attributes using the ``-j`` option:

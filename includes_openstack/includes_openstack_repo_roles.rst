@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 There are quite a few roles in the repository. The intention is that they may be deployed stand-alone if necessary (and all include the ``os-base`` role) or you may combine services on a single node. Roles **do not** contain attributes and are strictly for run lists.
 

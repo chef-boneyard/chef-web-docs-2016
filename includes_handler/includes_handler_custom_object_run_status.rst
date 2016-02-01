@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``run_status`` object is initialized by the |chef client| before the ``report`` interface is run for any handler. The ``run_status`` object keeps track of the status of the |chef client| run and will contain some (or all) of the following properties:

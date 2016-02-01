@@ -1,4 +1,5 @@
-.. This is an included how-to.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Actions can be searched by name. Use filters for entity name, entity type, action type, remote request identifier, and tag. Most filter fields auto-complete from a list of possible values. Use wildcard searches and data ranges to fine-tune search results.

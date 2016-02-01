@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following example shows how |bash| can be used to install a plug-in for |rbenv| named ``ruby-build``, which is located in |git| version source control. First, the application is synchronized, and then |bash| changes its working directory to the location in which ``ruby-build`` is located, and then runs a command.
 

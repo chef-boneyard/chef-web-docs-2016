@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 |azure| is a cloud hosting platform from |microsoft| that provides virtual machines. The |azure portal_production| (|url azure_production|) can boostrap |windows|-based virtual machines that are already provisioned with the |chef client| running as a background service. Once provisioned, these virtual machines are ready to be managed by |chef|.
 

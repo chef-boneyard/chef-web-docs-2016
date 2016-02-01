@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 |drbd| configuration allows for custom handlers when a ``split-brain`` event happens. The basic handler sends a notification email to a configurable email address so the issue can be investigated.
 

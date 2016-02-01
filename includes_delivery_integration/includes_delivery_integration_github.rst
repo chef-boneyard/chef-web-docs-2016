@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 You may integrate |chef delivery| and |github enterprise| or a project that is hosted at https://github.com/. If you do this, you will be able to use |github| as a **Source Code Provider** when creating a project. Additionally, when adding users to |chef delivery|, to integrate them to a |github| project, you must first have the |chef delivery| |github| integration complete.
 
