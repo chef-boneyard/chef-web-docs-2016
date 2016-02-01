@@ -11,7 +11,7 @@ The ``variables`` property of the |resource template| resource can be used to re
        'partial_name_1.txt.erb' => 'message',
        'partial_name_2.txt.erb' => 'message',
        'partial_name_3.txt.erb' => 'message'
-     },
+     }
    end
 
 where each of the partial template files can then be combined using normal |ruby| template patterns within a template file, such as:
