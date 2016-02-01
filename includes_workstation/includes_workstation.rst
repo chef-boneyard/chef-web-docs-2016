@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 .. This file is included in Chef Delivery docs
 
 A workstation is a computer that is configured to run various |chef| command-line tools that synchronize with a |chef repo|, author cookbooks, interact with the |chef server|, interact with nodes, or applications like |chef delivery|.

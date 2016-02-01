@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 A guard property can be used to evaluate the state of a node during the execution phase of the |chef client| run. Based on the results of this evaluation, a guard property is then used to tell the |chef client| if it should continue executing a resource. A guard property accepts either a string value or a |ruby| block value:

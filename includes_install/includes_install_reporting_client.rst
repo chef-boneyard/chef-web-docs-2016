@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 |reporting| is automatically enabled in the |chef client| (version 11.6.0 or later). In order to check if reporting data is being sent, you can check the output of the |chef client| ``INFO`` logging level for the log message confirming the data has been sent. At the end of the |chef client| run:
 

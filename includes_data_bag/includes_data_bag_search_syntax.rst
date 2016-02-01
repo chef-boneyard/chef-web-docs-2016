@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 In some situations, it may not be possible to know exactly which data bags (or data bag items) should be used. Or in other situations, loading all of the data in a data bag might be the desired result. Use the search index to find data that is stored in one or more data bags in the environment and use the various search patterns to fine-tune the search queries. Any data that is returned as the result of a search query can then be loaded by a recipe. Use the following syntax when searching for data in a data bag:
 

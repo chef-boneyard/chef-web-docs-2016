@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 A recipe can access encrypted data bag items as long as the recipe is running on a node that has access to the shared-key that is required to decrypt the data. A secret can be specified by using the ``Chef::EncryptedDataBagItem.load`` method. For example:
 

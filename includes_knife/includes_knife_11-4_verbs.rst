@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 |knife| includes a set of subcommands that are built around common verbs: ``create``, ``delete``, ``download``, ``list``, ``show``, and ``upload``. These subcommands allow |knife| to issue commands that interact with any object stored in the |chef repo| or stored on the |chef server|. Some important principles behind this group of subcommands includes:

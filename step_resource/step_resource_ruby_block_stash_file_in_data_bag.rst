@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following example shows how to use the |resource ruby_block| resource to stash a |bittorrent| file in a data bag so that it can be distributed to nodes in the organization.
 

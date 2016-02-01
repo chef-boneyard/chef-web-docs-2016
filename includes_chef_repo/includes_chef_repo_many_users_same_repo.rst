@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 It is possible for multiple users to access the |chef server| using the same |knife rb| file. (A user can even access multiple organizations if, for example, each instance of the |chef repo| contained the same copy of the |knife rb| file.) This can be done by adding the |knife rb| file to the |chef repo|, and then using environment variables to handle the user-specific credential details and/or sensitive values. For example:

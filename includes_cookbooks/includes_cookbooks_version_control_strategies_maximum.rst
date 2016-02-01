@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Using a maximum version control strategy is required when everything needs to be tracked in source control. This approach is very similar to a branch tracking strategy while the cookbook is in development and being tested, but is more complicated and time-consuming (and requires file-level editing for environment data) in order to get the cookbook deployed to a production environment.
 

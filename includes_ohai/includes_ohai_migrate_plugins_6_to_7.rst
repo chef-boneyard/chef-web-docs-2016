@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 |ohai| 7 is backwards compatible with existing |ohai| 6 plugins; however, none of the new (or future) functionality will be made available to |ohai| 6 plugins. It is recommended that all |ohai| 6 plugins be updated for new DSL behavior in |ohai| 7 as soon as possible. When migrating |ohai| 6 plugins to |ohai| 7, consider the following:
 

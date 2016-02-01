@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The |service erchef| service's ``erchef.log`` file contains a history of API requests that have been processed by |erchef|. These logs can be rotated quickly, therefore it is generally best to sort them by date, and then find the most recently updated log file:
 

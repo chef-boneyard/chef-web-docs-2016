@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The Hosted Chef Management Console allows users with grant permissions to view and modify permissions on Roles, Nodes, Cookbooks, Databags, Clients, and Groups. For each type of object listed, there are two levels of permission settings: the global level and object level.
 

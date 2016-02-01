@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |subcommand knife analytics| subcommand requires the |ssl| certificate for |chef analytics| to be present on the workstation from which commands will be run. Fetch the |ssl| certificate from |chef analytics| by using the |subcommand knife ssl_fetch| command:

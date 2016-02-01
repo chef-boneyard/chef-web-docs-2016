@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for chef-client.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 Another example of running the |chef client| as a non-root user involves using resources to pass |sudo cmd| commands as as an attribute on the resource. For example, the |resource service| resource uses a series of ``_command`` attributes (like ``start_command``, ``stop_command``, and so on), the |resource package|-based resources use the ``options`` attribute, and the |resource script|-based resources use the ``code`` attribute.
 

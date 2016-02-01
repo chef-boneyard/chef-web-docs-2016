@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 On the header of the **Management Console**, there is an **Environment** drop down box where you can select either "none" or a specific environment.
 

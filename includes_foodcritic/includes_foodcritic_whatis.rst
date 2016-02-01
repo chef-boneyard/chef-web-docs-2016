@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 |foodcritic| is a static linting tool that analyzes all of the |ruby| code that is authored in a cookbook against a number of rules, and then returns a list of violations. Because |foodcritic| is a static linting tool, using it is fast. The code in a cookbook is read, broken down, and then compared to |foodcritic| rules. The code is **not** run (a |chef client| run does not occur). |foodcritic| does not validate the intention of a recipe, rather it evaluates the structure of the code, and helps enforce specific behavior, detect portability of recipes, identify potential run-time failures, and spot common anti-patterns.

@@ -1,4 +1,5 @@
-.. This is an included how-to.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The actions view always shows the most recent actions, including a one-line summary of what happend. For example: "Client dg created node - db a day ago." Each action in the view may be expanded to show action details, including the name and request identifier of the |chef client| and the name of the |chef server| instances involved in the action.

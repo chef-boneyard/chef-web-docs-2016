@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The functionality of other |knife| plugins can be accessed from a plugin by using the ``require`` method to ensure the necessary files are available, and then within the code for the plugin, to create a new object of the class of the plugin to be used.

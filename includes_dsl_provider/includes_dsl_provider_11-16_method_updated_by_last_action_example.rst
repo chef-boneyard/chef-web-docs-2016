@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 If a custom resource was created in the ``/libraries`` directory of a cookbook that also uses a core resource from the |chef client| within the custom resource, the base class that is associated with that custom resource must be updated. In previous versions of the |chef client|, the ``Chef::Provider`` class was all that was necessary because the |dsl recipe| was included in the ``Chef::Provider`` base class. 
 

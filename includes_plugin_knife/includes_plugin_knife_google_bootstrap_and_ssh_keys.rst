@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Before a bootstrap operation can be run on a node, |ssh| keys must be set up correctly. In |google compute engine| |ssh| keys are stored in project metadata that is copied over to new servers and placed in a user's ``~/.ssh/authorized_keys`` file.

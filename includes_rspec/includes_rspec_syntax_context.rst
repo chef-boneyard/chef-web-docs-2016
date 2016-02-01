@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 |rspec|-based tests may contain ``context`` blocks. Use ``context`` blocks within ``describe`` blocks to define "tests within tests". Each ``context`` block is tested individually. All ``context`` blocks within a ``describe`` block must be true for the test to pass. For example:

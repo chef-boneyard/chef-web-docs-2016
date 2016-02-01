@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The following example shows how the ``only_if`` method can be used to tell the |chef client| to do something, but only when certain conditions are met. In this case, only if a file already exists:
 

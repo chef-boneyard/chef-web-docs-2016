@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 .. warning:: Starting with the 11.0 version of the |chef client|, node attributes must specify attribute precedence. For example, instead of ``node[:my_attribute] = 'value'`` use ``node.normal[:my_attribute] = 'value'``, where ``normal`` is the attribute precedence level. (Even with this change, please take a moment to consider using default-level attributes instead. In general, normal-level attributes are only required when a value needs to persist across |chef client| runs (such as auto-generated passwords) or when a node is a "special snowflake".)

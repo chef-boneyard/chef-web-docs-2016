@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The |chef server| supports using |windows ad| or |ldap| for any user that has an email address in the |ldap| directory. This allows those users to log in to the |chef server| by using their corporate credentials instead of having a separate username and password.
 

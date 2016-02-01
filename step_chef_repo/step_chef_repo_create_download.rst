@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Instead of cloning the |chef repo| from |github|, a |tar gz| file can be downloaded from |github| directly (http://github.com/chef/chef-repo/tarball/master) or through the command shell using |gnu wget| (or a similar application).

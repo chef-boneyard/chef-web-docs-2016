@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 To configure replication of |chef server| data, first install |chef replication|, then configure the primary |chef server|, then configure the replica |chef server|, and then start the synchronization process. 
 

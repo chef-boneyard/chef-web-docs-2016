@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for test-kitchen.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Use the ``converge`` subcommand to converge one (or more) instances. Instances are based on the list of platforms in the |kitchen yml| file. This process will install the |chef client| on an instance using the |omnibus installer|, upload cookbook files and minimal configuration to the instance, and then start a |chef client| run using the run-list and attributes specified in the |kitchen yml| file.

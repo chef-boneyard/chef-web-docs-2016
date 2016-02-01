@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 
 Use ``node.run_state`` to stash transient data during a |chef client| run. This data may be passed between resources, and then evaluated during the execution phase. ``run_state`` is an empty |ruby hash| that is always discarded at the end of the |chef client| run.

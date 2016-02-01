@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 If two ``control_group`` blocks have the same name, the |chef client| will raise an exception. For example, the following ``control_group`` blocks exist in different cookbooks:

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
 From the |openstack chef_repo|, launch the ``ubuntu1204`` virtual machine with |vagrant|. This will take several minutes as it does the ``chef-client`` run for the ``allinone-compute``.
 

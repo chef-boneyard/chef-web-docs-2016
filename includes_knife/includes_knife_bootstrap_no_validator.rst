@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The |organization pem| is typically added to the |chef repo hidden| directory on the workstation. When a node is bootstrapped from that workstation, the |organization pem| is used to authenticate the newly-created node to the |chef server| during the initial |chef client| run. Starting with |chef client| version 12.1, it is possible to bootstrap a node using the |user pem| file instead of the |organization pem| file. This is known as a "validatorless bootstrap".

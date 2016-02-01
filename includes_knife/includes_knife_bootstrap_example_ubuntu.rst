@@ -1,6 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file describes a command or a sub-command for Knife.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The following example shows how to modify the default script for |ubuntu| 14.04. First, copy the bootstrap template from the default location. If the |chef client| is installed from a |rubygems|, the full path can be found in the |gem| contents. For example:

@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 After the instance has been provisioned and initial configuration has completed (usually five to seven minutes) run through the setup wizard to create your user and register for a |company_name| support account. To complete the configuration, do the following:
 

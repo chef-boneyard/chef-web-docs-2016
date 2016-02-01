@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 |kitchen| uses a driver plugin architecture to enable |kitchen| to simulate testing on cloud providers, such as |amazon ec2|, |openstack|, and |rackspace|, and also on non-cloud platforms, such as |windows|. Each driver is responsible for managing a virtual instance of that platform so that it may be used by |kitchen| during cookbook testing.

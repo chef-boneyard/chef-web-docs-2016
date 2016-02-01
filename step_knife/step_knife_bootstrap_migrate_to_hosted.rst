@@ -1,4 +1,5 @@
-.. This is an included how-to.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 .. This topic is NOT included in the knife-bootstrap topic
 
 To register nodes with |chef hosted|, run the following bootstrap command on every node:

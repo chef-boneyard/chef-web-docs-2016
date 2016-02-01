@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 An integration test is an executable test that fails when the assumptions defined by the test are proven to be false. Each test is written in |ruby| and must be located in the ``/tests`` directory within the cookbook to be tested. 

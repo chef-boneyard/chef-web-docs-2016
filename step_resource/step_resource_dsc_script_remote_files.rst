@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 The |resource dsc_script| resource can be used with other resources. The following example shows how to download a file using the |resource remote_file| resource, and then uncompress it using the |windows powershell_dsc_short| ``Archive`` resource:
 

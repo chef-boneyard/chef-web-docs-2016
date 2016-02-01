@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 The ``aws_ebs_volume`` custom provider (found in the `aws <https://github.com/chef-cookbooks/aws>`_ cookbook) defines how the |chef client| would handle a recipe that uses the ``ebs_volume`` custom resource and the ``:detach`` action. The following ``action`` block tells the |chef client| what to do with the ``:detach`` action:

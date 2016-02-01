@@ -1,5 +1,5 @@
-.. The contents of this file are included in multiple topics.
-.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+.. The contents of this file may be included in multiple topics (using the includes directive).
+.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
 Each individual ``rule`` must be associated with a specific message type. As a rule is triggered during the |chef client| run, a message is sent to the |chef analytics| server. A rule may be configured to send notifications about a message to recipients that are located outside of the |chef analytics| server.
