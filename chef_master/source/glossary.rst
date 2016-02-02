@@ -2,11 +2,18 @@
 Glossary
 =====================================================
 
+
+**Acceptance**
+   A |chef delivery| stage. The Acceptance stage is where your team decides whether the submitted change should ship all the way out to its final destination.
+
 **analytics rules**
    Event tracking during the |chef client| run that generates data made visible from |chef analytics|.
 
 **Berkshelf**
-   Manage a cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
+ Manage cookbook dependencies, learn more at `berkshelf.com <http://berkshelf.com/>`_.
+
+**Build**
+   A |chef delivery| stage. The purpose of the Build stage is to assemble one or more potentially releasable artifacts and make them available to the remaining stages of the pipeline.      Manage a cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
 
 **Chef analytics**
    A feature of |chef| that provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred
@@ -17,17 +24,17 @@ Glossary
 **chef-client**
    A command-line tool that that runs |chef|. Also, the name of |chef| as it is installed on a node.
 
+**Chef-DK**
+   A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can download it at `Chef Development Kit <https://downloads.chef.io/chef-dk/>`_.
+
 **chef-repo**
    The repository structure in which cookbooks are authored, tested, and maintained. A link to the example chef-repo is `here <https://github.com/chef/chef-repo>`_.
-
-**Chef-DK**
-   A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can acquire it `here <https://downloads.chef.io/chef-dk/>`_.
 
 **Chef server**
    The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions.
 
 **Chefspec**
-   ChefSpec is a unit testing framework for testing Chef cookbooks.
+   ChefSpec is a unit-testing framework for testing Chef cookbooks.
 
 **chef-zero**
    A very lightweight |chef server| that runs in-memory on the local machine during the |chef client| run. Also known as local mode.
@@ -41,8 +48,11 @@ Glossary
 **definition**
    A definition is code that is reused across recipes, similar to a compile-time macro, and is defined in a cookbook.
 
+**Delivered**
+   A |chef delivery| stage. Delivered is the final stage of the pipeline, what it means for your system is up to you. It could mean deploying the change so that it is live and receiving production traffic, or it might mean publishing a set of artifacts so they are accessible for your customers.
+
 **Delivery**
-   Chef Delivery manages changes to both infrastructure and application code, giving your operations and development teams a common platform for developing, building, testing, and deploying cookbooks, applications, and more. `More information <https://docs.chef.io/release/delivery_1-0/delivery_overview.html/>`_.
+   |chef delivery| manages changes to both infrastructure and application code, giving your operations and development teams a common platform for developing, building, testing, and deploying cookbooks, applications, and more. For more information see the `Delivery Overview <https://docs.chef.io/release/delivery_1-0/delivery_overview.html/>`_.
 
 **environment**
    An environment is a way to map an organization's real-life workflow to what can be configured and managed when using |chef server|.
@@ -57,10 +67,10 @@ Glossary
    A command-line tool that provides an interface between a local |chef repo| and the |chef server|. Use it to manage nodes, cookbooks, recipes, roles, data bags, environments, bootstrapping nodes, searching the |chef server|, and more.
 
 **library**
-   A library allows arbitrary |ruby| code to be included in a cookbook, either as a way of extending the classes that are built-in to the |chef client| or by implementing entirely new functionality,
+   A library allows arbitrary |ruby| code to be included in a cookbook, either as a way of extending the classes that are built-in to the |chef client| or by implementing entirely new functionality.
 
 **Management Console**
-   The web-based management console to manage Role Based Access Control (RBAC), edit and delete nodes, and reset private keys. Keep up to date with what’s happening during chef client runs across an entire organization or on specific nodes.
+   The Chef web-based management console you can use to manage Role Based Access Control (RBAC), edit and delete nodes, and reset private keys. Keep up to date with what’s happening during chef client runs across an entire organization or on specific nodes.
 
 **node**
    A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|.
@@ -75,13 +85,13 @@ Glossary
    An organization is a single instance of a |chef server|, including all of the nodes that are managed by that |chef server| and each of the workstations that will run |knife| and access the |chef server| using the |api chef server|.
 
 **pipeline**
-   A pipeline is series of automated and manual quality gates that take software changes from development to delivery. Pipelines in Chef Delivery have six stages: Verify, Build, Acceptance, Union, Rehearsal, and Delivered.
+   A pipeline is series of automated and manual quality gates that take software changes from development to delivery. Pipelines in |chef delivery| have six stages: Verify, Build, Acceptance, Union, Rehearsal, and Delivered.
 
 **policy**
    Policy settings can be used to map business and operational requirements, such as process and workflow, to settings and objects stored on the |chef server|. See roles, environments, and data bags.
 
 **Push Jobs**
-   Execute commands across hundreds or even thousands of nodes in your Chef-managed infrastructure.
+   Allows you to execute commands across hundreds or even thousands of nodes in your Chef-managed infrastructure.
 
 **recipe**
    A recipe is a collection of resources that tells the |chef client| how to configure a node.
@@ -105,4 +115,7 @@ Glossary
    See kitchen.
 
 **Union**
-   Union is the first of the three shared pipeline stages. The purpose of the Union stage is to assess the impact of the change in the context of a complete (or as close as possible) installation of the set of projects that comprise the system as a whole.
+  A |chef delivery| stage. Union is the first of the three shared pipeline stages. The purpose of the Union stage is to assess the impact of the change in the context of a complete (or as close as possible) installation of the set of projects that comprise the system as a whole.
+
+**Verify**
+  A |chef delivery| stage. The purpose of Verify is to run checks so that the system can decide if it’s worth the time of a human to review the submitted change.
