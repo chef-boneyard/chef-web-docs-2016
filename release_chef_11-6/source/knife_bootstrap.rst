@@ -8,7 +8,7 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: .. include:: ../../includes_knife/includes_notes_knife_bootstrap_on_windows.rst
+.. note:: .. include:: ../../includes_notes/includes_notes_knife_bootstrap_on_windows.rst
 
 Syntax
 =====================================================
