@@ -23,8 +23,6 @@ This resource has the following properties:
 
    .. include:: ../../includes_resources/includes_resource_service_reboot_attributes_notifies_syntax.rst
 
-   .. include:: ../../includes_resources/includes_resource_service_reboot_attributes_timers.rst
-
 ``reason``
    **Ruby Type:** String
 
