@@ -16,6 +16,11 @@ Options
 
 Examples
 =====================================================
+
+**Run chef-solo using solo.rb settings**
+
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_solo_rb.rst
+
 **Use a URL**
 
 .. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_url.rst

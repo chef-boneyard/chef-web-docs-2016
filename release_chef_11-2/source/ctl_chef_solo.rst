@@ -16,6 +16,7 @@ Options
 
 Examples
 =====================================================
+
 **Use a URL**
 
 .. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_url.rst

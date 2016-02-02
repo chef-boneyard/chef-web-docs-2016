@@ -8,8 +8,6 @@ chef-solo
 
 .. include:: ../../includes_chef_solo/includes_chef_solo_11-4.rst
 
-.. note:: |chef solo| is configured using the :doc:`chef-solo (executable) </ctl_chef_solo>`.
-
 Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_chef_solo/includes_chef_solo_cookbooks.rst
@@ -29,4 +27,3 @@ Roles
 Environments
 -----------------------------------------------------
 .. include:: ../../includes_chef_solo/includes_chef_solo_11-4_environments.rst
-
