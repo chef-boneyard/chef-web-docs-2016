@@ -21,9 +21,7 @@ Examples
 
 **Run chef-solo using solo.rb settings**
 
-.. code-block:: bash
-
-   $ chef-solo -c ~/chef/solo.rb
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_solo_rb.rst
 
 **Use a URL**
 
@@ -36,4 +34,3 @@ Examples
 **Use a URL for cookbook and JSON data**
 
 .. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_url_for_cookbook_and_json.rst
-

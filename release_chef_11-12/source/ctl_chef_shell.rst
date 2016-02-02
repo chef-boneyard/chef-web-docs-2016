@@ -8,7 +8,7 @@
 
 .. include:: ../../includes_ctl_chef_shell/includes_ctl_chef_shell.rst
 
-.. note:: |chef shell| is the new name for |shef| as of |chef client| 11. |chef shell| is backwards compatible and aside from the name change, has the same set of functionality as with previous releases.
+.. note:: .. include:: ../../includes_notes/includes_notes_chef_shell_was_shef.rst
 
 Modes
 =====================================================
