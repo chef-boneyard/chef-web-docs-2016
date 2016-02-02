@@ -12,7 +12,7 @@ The |chef client| has specific components that are designed to support unique as
 * Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
 * Four cookbooks provide application-specific support. For `PowerShell 4.0 <https://github.com/chef-cookbooks/powershell>`_. For `IIS 7.0/7.5/8.0 <https://github.com/chef-cookbooks/iis>`_. For `SQL Server <https://github.com/chef-cookbooks/database>`_. And for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/chef-cookbooks/windows>`_ 
 * Support for both :i386 and :x86_64 architectures
-* Six helpers are present in the |dsl recipe| to help verify the registry during a |chef client| run---``registry_data_exists?``, ``registry_get_subkeys``, ``registry_get_values``, ``registry_has_subkeys?``, ``registry_key_exists?``, and ``registry_value_exists?``---these helpers ensure the |resource powershell_script| resource is idempotent
+* .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_windows_helpers.rst
 * Two community provisioners for |kitchen|: `kitchen-dsc <https://github.com/smurawski/kitchen-dsc>`_ and `kitchen-pester <https://github.com/smurawski/kitchen-pester>`_
 
 The most popular core resources in the |chef client|---:doc:`cookbook_file </resource_cookbook_file>`, :doc:`directory </resource_directory>`, :doc:`env </resource_env>`, :doc:`execute </resource_execute>`, :doc:`file </resource_file>`, :doc:`group </resource_group>`, :doc:`http_request </resource_http_request>`, :doc:`link </resource_link>`, :doc:`mount </resource_mount>`, :doc:`package </resource_package>`, :doc:`remote_directory </resource_remote_directory>`, :doc:`remote_file </resource_remote_file>`, :doc:`ruby_block </resource_ruby_block>`, :doc:`service </resource_service>`, :doc:`template </resource_template>`, and :doc:`user </resource_user>`---work the same way in |windows| as they do on any |unix|- or |linux|-based platform.
@@ -22,7 +22,6 @@ The file-based resources---|resource cookbook_file|, |resource file|, |resource 
 .. note:: The |windows| platform does not support running as an alternate user unless full credentials (a username and password or equivalent) are specified.
 
 The following sections are pulled in from the larger |url docs| site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
-
 
 Install the |chef client_title| on Windows
 =====================================================
@@ -681,6 +680,36 @@ Path Separators
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_windows/includes_windows_registry_key_backslashes.rst
 
+Recipe DSL Methods
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_windows_methods.rst
+
+.. include:: ../../includes_notes/includes_notes_dsl_recipe_order_for_windows_methods.rst
+
+registry_data_exists?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst
+
+registry_get_subkeys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst
+
+registry_get_values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst
+
+registry_has_subkeys?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst
+
+registry_key_exists?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst
+
+registry_value_exists?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_actions.rst
@@ -804,7 +833,9 @@ Some of the most popular |company_name|-maintained cookbooks that contain lightw
 
 |dsl recipe| Methods
 =====================================================
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_windows_methods.rst
+
+.. note:: .. include:: ../../includes_notes/includes_notes_dsl_recipe_order_for_windows_methods.rst
 
 registry_data_exists?
 -----------------------------------------------------

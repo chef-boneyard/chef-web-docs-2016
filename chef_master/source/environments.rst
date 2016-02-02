@@ -54,17 +54,7 @@ Manage Environments
 
 Find Environment from Recipe
 -----------------------------------------------------
-Use the following syntax to find the current environment from a recipe:
-
-.. code-block:: ruby
-
-   node.environment()
-
-or:
-
-.. code-block:: ruby
-
-   node.chef_environment
+.. include:: ../../includes_environment/includes_environment_find_from_recipe.rst
 
 Save in a Data Bag
 -----------------------------------------------------
@@ -89,6 +79,3 @@ Move Nodes
 Search Environments
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_environment.rst
-
-
-

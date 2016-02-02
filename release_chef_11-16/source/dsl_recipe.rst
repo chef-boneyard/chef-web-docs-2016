@@ -233,9 +233,9 @@ value_for_platform_family
 
 Windows Platform
 =====================================================
-The following methods and helpers may be used on the |windows| platform:
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_windows_methods.rst
 
-.. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
+.. note:: .. include:: ../../includes_notes/includes_notes_dsl_recipe_order_for_windows_methods.rst
 
 registry_data_exists?
 -----------------------------------------------------

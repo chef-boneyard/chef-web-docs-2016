@@ -4,7 +4,9 @@ package
 
 .. include:: ../../includes_resources/includes_resource_package.rst
 
-This resource is the base resource for several other resources used for package management on specific platforms. While it is possible to use each of these specific resources, it is recommended to use the |resource package| resource as often as possible. For more information about specific resources for specific platforms, see the following topics:
+.. include:: ../../includes_resources/includes_resource_package_base_resource.rst
+
+For more information about specific resources for specific platforms, see the following topics:
 
 * :doc:`apt_package </resource_apt_package>`
 * :doc:`bff_package </resource_bff_package>`

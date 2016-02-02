@@ -14,28 +14,33 @@ Registry Key Path Separators
 
 Recipe DSL Methods
 -----------------------------------------------------
-The following methods can be used to interact with |windows| registry keys.
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_windows_methods.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+.. include:: ../../includes_notes/includes_notes_dsl_recipe_order_for_windows_methods.rst
 
-   * - Methods
-     - Description
-   * - `registry_data_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-data-exists>`__
-     - Find out if a registry key contains data.
-   * - `registry_get_subkeys <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-subkeys>`__
-     - Get a list of sub-keys for a registry setting.
-   * - `registry_get_values <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-get-values>`__
-     - Get values (name, type, and data) for a given registry key.
-   * - `registry_has_subkeys? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-has-subkeys>`__
-     - Find out if a registry key has one (or more) sub-keys.
-   * - `registry_key_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-key-exists>`__
-     - Find out if a registry key exists.
-   * - `registry_value_exists? <http://docs.chef.io/release/12-0/dsl_recipe.html#registry-value-exists>`__
-     - Find out if a registry key has values set (name, type, and data).
+registry_data_exists?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst
 
-.. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
+registry_get_subkeys
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst
+
+registry_get_values
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst
+
+registry_has_subkeys?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst
+
+registry_key_exists?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst
+
+registry_value_exists?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
 
 Actions
 =====================================================
