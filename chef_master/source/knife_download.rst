@@ -43,4 +43,3 @@ The following examples show how to use this |knife| subcommand:
 **Download cookbooks and roles**
 
 .. include:: ../../step_knife/step_knife_download_directory_cookbooks_and_role.rst
-

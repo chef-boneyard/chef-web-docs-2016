@@ -31,7 +31,3 @@ The following examples show how to use this |knife| subcommand:
 **View security groups data**
 
 .. include:: ../../step_knife/step_knife_xargs_view_json.rst
-
-
-
-

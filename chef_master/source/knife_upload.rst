@@ -47,5 +47,3 @@ The following examples show how to use this |knife| subcommand:
 **Use output of knife deps to pass command to knife upload**
 
 .. include:: ../../step_knife/step_knife_upload_pass_to_knife_deps.rst
-
-

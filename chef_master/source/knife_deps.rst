@@ -55,9 +55,3 @@ The following examples show how to use this |knife| subcommand:
 **Pass knife deps output to knife xargs**
 
 .. include:: ../../step_knife/step_knife_deps_pass_output_to_knife_xargs.rst
-
-
-
-
-
-

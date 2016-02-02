@@ -4,6 +4,10 @@
 
 .. include:: ../../includes_chef_vault/includes_chef_vault.rst
 
+Options for knife bootstrap
+=====================================================
+.. include:: ../../includes_chef_vault/includes_chef_vault_knife_bootstrap_options.rst
+
 For more information ...
 =====================================================
 For more information about |chef vault|:

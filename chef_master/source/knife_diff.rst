@@ -31,6 +31,3 @@ The following examples show how to use this |knife| subcommand:
 **Compare, then return results**
 
 .. include:: ../../step_knife/step_knife_diff_compare_then_return_results.rst
-
-
-

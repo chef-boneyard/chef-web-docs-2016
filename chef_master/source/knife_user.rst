@@ -66,7 +66,6 @@ Examples
 -----------------------------------------------------
 None.
 
-
 key create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_key_create.rst
@@ -201,4 +200,3 @@ The following examples show how to use this |knife| subcommand:
 **Show user data as JSON**
 
 .. include:: ../../step_knife/step_knife_user_show_json.rst
-

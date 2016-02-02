@@ -8,7 +8,7 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.opscode.com/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+.. note:: .. include:: ../../includes_knife/includes_notes_knife_bootstrap_on_windows.rst
 
 Syntax
 =====================================================
@@ -73,4 +73,3 @@ The following examples show how to use this |knife| subcommand:
 **Specify a custom installation command sequence**
 
 .. include:: ../../step_knife/step_knife_bootstrap_custom_install_command_sequence.rst
-
