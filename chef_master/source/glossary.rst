@@ -10,10 +10,10 @@ Glossary
    Event tracking during the |chef client| run that generates data made visible from |chef analytics|.
 
 **Berkshelf**
- Manage cookbook dependencies, learn more at `berkshelf.com <http://berkshelf.com/>`_.
+   Manage cookbook dependencies, learn more at `berkshelf.com <http://berkshelf.com/>`_.
 
 **Build**
-   A |chef delivery| stage. The purpose of the Build stage is to assemble one or more potentially releasable artifacts and make them available to the remaining stages of the pipeline.      Manage a cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
+   A |chef delivery| stage. The purpose of the Build stage is to assemble one or more potentially releasable artifacts and make them available to the remaining stages of the pipeline. Manage a cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
 
 **Chef analytics**
    A feature of |chef| that provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred
