@@ -684,7 +684,7 @@ Recipe DSL Methods
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_windows_methods.rst
 
-.. include:: ../../includes_notes/includes_notes_dsl_recipe_order_for_windows_methods.rst
+.. note:: .. include:: ../../includes_notes/includes_notes_dsl_recipe_order_for_windows_methods.rst
 
 registry_data_exists?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
