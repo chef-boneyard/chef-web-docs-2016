@@ -1,5 +1,5 @@
 =====================================================
-Chef Compliance
+Chef Compliance 
 =====================================================
 
 .. include:: ../../includes_compliance/includes_compliance.rst
