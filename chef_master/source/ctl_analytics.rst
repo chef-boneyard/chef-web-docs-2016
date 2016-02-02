@@ -18,6 +18,10 @@ preflight-check
 =====================================================
 .. include:: ../../includes_ctl_analytics/includes_ctl_analytics_preflight_check.rst
 
+purge-node
+=====================================================
+.. include:: ../../includes_ctl_analytics/includes_ctl_analytics_purge_nodes.rst
+
 reconfigure
 =====================================================
 .. include:: ../../includes_ctl_analytics/includes_ctl_analytics_reconfigure.rst
@@ -32,9 +36,7 @@ uninstall
 
 Service Subcommands
 =====================================================
-|chef analytics| has a built in process supervisor, which ensures that all of the
-required services are in the appropriate state at any given time. The supervisor
-starts two processes per service.
+.. include:: ../../includes_ctl_common/includes_ctl_common_service_subcommands.rst
 
 hup
 -----------------------------------------------------
@@ -51,10 +53,6 @@ kill
 once
 -----------------------------------------------------
 .. include:: ../../includes_ctl_analytics/includes_ctl_analytics_once.rst
-
-purge-node
------------------------------------------------------
-.. include:: ../../includes_ctl_analytics/includes_ctl_analytics_purge_nodes.rst
 
 restart
 -----------------------------------------------------
