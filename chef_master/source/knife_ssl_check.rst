@@ -31,5 +31,3 @@ The following examples show how to use this |knife| subcommand:
 **Verify an external server's SSL certificate**
 
 .. include:: ../../step_knife/step_knife_ssl_check_verify_external_server.rst
-
-

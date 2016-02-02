@@ -8,9 +8,9 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: Starting with |chef client| 12.0, use the `knife ssl_fetch <http://docs.chef.io/knife_ssl_fetch.html>`_ command to pull down the SSL certificates from the on-premises |chef server| and add them to the ``/trusted_certs_dir`` on the workstation. This certificates is used during a |knife| bootstrap operation.
+.. note:: .. include:: ../../includes_knife/includes_notes_knife_bootstrap_use_knife_ssl_fetch.rst
 
-.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+.. note:: .. include:: ../../includes_knife/includes_notes_knife_bootstrap_on_windows.rst
 
 Syntax
 =====================================================
@@ -30,16 +30,7 @@ Validatorless Bootstrap
 
 ``knife bootstrap`` Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following options with a validatorless bootstrap to specify items that are stored in |chef vault|:
-
-``--bootstrap-vault-file VAULT_FILE``
-   |bootstrap valut_file|
-
-``--bootstrap-vault-item VAULT_ITEM``
-   |bootstrap valut_item|
-
-``--bootstrap-vault-json VAULT_JSON``
-   |bootstrap valut_json|
+.. include:: ../../includes_chef_vault/includes_chef_vault_knife_bootstrap_options.rst
 
 Custom Templates
 =====================================================

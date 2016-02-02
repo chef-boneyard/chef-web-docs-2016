@@ -35,4 +35,3 @@ The following examples show how to use this |knife| subcommand:
 **View status for all nodes**
 
 .. include:: ../../step_knife/step_knife_status_view_for_all_nodes.rst
-
