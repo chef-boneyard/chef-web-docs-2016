@@ -6,7 +6,7 @@ knife supermarket
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_supermarket.rst
 
-.. warning:: Please consider managing community cookbooks using the version of |berkshelf| that ships with the |chef dk|. For more information about the |chef dk|, see http://docs.chef.io/devkit/.
+.. warning:: .. include:: ../../includes_notes/includes_notes_knife_cookbook_site_use_devkit_berkshelf.rst
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
