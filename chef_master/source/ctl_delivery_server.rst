@@ -158,8 +158,7 @@ update-project-hooks
 
 Service Subcommands
 =====================================================
-The |chef delivery| server has a built in process supervisor, which ensures that all of the required services are in the appropriate state at any given time. The supervisor starts two processes per service.
-
+.. include:: ../../includes_ctl_common/includes_ctl_common_service_subcommands.rst
 
 graceful-kill
 -----------------------------------------------------
