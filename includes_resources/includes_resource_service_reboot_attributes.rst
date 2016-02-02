@@ -18,9 +18,9 @@ This resource has the following properties:
 
    |notifies|
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_notifies.rst
+   .. include:: ../../includes_resources/includes_resource_service_reboot_attributes_notifies_syntax.rst
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notifications_timers.rst
+   .. include:: ../../includes_resources/includes_resource_service_reboot_attributes_timers.rst
    
 ``reason``
    **Ruby Type:** String
@@ -42,6 +42,6 @@ This resource has the following properties:
 
    |subscribes|
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notifications_syntax_subscribes.rst
+   .. include:: ../../includes_resources/includes_resource_service_reboot_attributes_subscribes_syntax.rst
 
    |subscribes timers|
