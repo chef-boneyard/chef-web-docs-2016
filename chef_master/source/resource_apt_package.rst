@@ -32,7 +32,7 @@ Providers
 
 Examples
 =====================================================
-|generic resource statement|
+.. include:: ../../includes_resources_common/includes_resources_common_examples_intro.rst
 
 **Install a package using package manager** 
 
