@@ -6,7 +6,11 @@
 
 .. include:: ../../includes_chefspec/includes_chefspec_whatis.rst
 
+.. 
+.. The following topic needs to be better before it can be uncommented, along with an H1 (=====) header added.
+..
 .. .. include:: ../../includes_chefspec/includes_chefspec_compare_to_resource.rst
+..
 
 Run |chef spec|
 =====================================================
