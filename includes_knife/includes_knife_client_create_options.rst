@@ -20,3 +20,4 @@ This argument has the following options:
 
 ``--validator``
    |create chef_validator| Default value: ``true``.
+

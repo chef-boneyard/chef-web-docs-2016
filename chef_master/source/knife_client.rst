@@ -1,5 +1,5 @@
 =====================================================
-knife client
+knife client 
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_client.rst
