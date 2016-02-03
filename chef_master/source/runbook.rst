@@ -77,6 +77,10 @@ eper tools
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_redis.rst
 
+|apache solr|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_monitor/includes_server_monitor_application_solr.rst
+
 System Checks
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_system.rst
