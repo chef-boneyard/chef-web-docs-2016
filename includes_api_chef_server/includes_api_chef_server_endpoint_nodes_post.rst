@@ -35,7 +35,7 @@ The response is similar to:
 
 .. code-block:: javascript
 
-   { "uri": "http://localhost:4000/nodes/latte" }
+   { "uri": "https://localhost/nodes/latte" }
 
 **Response Codes**
 

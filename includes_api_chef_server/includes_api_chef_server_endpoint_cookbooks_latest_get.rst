@@ -18,8 +18,8 @@ For example, if cookbooks ``foo`` and ``bar`` both exist on the |chef server| an
 .. code-block:: javascript
 
   {
-    "foo": "http://localhost:4000/cookbooks/foo/0.2.0",
-    "bar": "http://localhost:4000/cookbooks/bar/0.2.0"
+    "foo": "https://localhost/cookbooks/foo/0.2.0",
+    "bar": "https://localhost/cookbooks/bar/0.2.0"
   }
 
 **Response Codes**

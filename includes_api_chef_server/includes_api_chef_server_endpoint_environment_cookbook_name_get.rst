@@ -30,11 +30,11 @@ The response is similar to:
 
    {
      "apache2" => {
-       "url" => "http://localhost:4000/cookbooks/apache2",
+       "url" => "https://localhost/cookbooks/apache2",
        "versions" => [
-         {"url" => "http://localhost:4000/cookbooks/apache2/5.1.0",
+         {"url" => "https://localhost/cookbooks/apache2/5.1.0",
           "version" => "5.1.0"},
-         {"url" => "http://localhost:4000/cookbooks/apache2/4.2.0",
+         {"url" => "https://localhost/cookbooks/apache2/4.2.0",
           "version" => "4.2.0"}
        ]
      }
