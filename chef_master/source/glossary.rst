@@ -13,7 +13,7 @@ Glossary
    Manage cookbook dependencies, learn more at `berkshelf.com <http://berkshelf.com/>`_.
 
 **Build**
-   A |chef delivery| stage. The purpose of the Build stage is to assemble one or more potentially releasable artifacts and make them available to the remaining stages of the pipeline.   
+   A |chef delivery| stage. The purpose of the Build stage is to assemble one or more potentially releasable artifacts and make them available to the remaining stages of the pipeline. Manage a cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
 
 **Chef analytics**
    A feature of |chef| that provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred
@@ -28,7 +28,7 @@ Glossary
    A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can download it at `Chef Development Kit <https://downloads.chef.io/chef-dk/>`_.
 
 **chef-repo**
-   The repository structure in which cookbooks are authored, tested, and maintained. Here's a link to the `example chef-repo <https://github.com/chef/chef-repo>`_.
+   The repository structure in which cookbooks are authored, tested, and maintained. A link to the example chef-repo is `here <https://github.com/chef/chef-repo>`_.
 
 **Chef server**
    The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions.
@@ -67,7 +67,7 @@ Glossary
    A command-line tool that provides an interface between a local |chef repo| and the |chef server|. Use it to manage nodes, cookbooks, recipes, roles, data bags, environments, bootstrapping nodes, searching the |chef server|, and more.
 
 **library**
-   A library allows arbitrary |ruby| code to be included in a cookbook, either as a way of extending the classes that are built-in to the |chef client| or by implementing entirely new functionality,
+   A library allows arbitrary |ruby| code to be included in a cookbook, either as a way of extending the classes that are built-in to the |chef client| or by implementing entirely new functionality.
 
 **Management Console**
    The Chef web-based management console you can use to manage Role Based Access Control (RBAC), edit and delete nodes, and reset private keys. Keep up to date with what’s happening during chef client runs across an entire organization or on specific nodes.
@@ -79,7 +79,7 @@ Glossary
    A history of the attributes, run-lists, and roles that were used to configure a node that is under management by |chef|.
 
 **ohai**
-   Ohai is a tool that is used to detect the system configuration on a node, and then provide the attributes to the |chef client| at the start of every run.
+   Ohai is a tool that is used to detect attributes on a node, and then provide these attributes to the |chef client| at the start of every run.
 
 **organization**
    An organization is a single instance of a |chef server|, including all of the nodes that are managed by that |chef server| and each of the workstations that will run |knife| and access the |chef server| using the |api chef server|.
@@ -97,9 +97,9 @@ Glossary
    A recipe is a collection of resources that tells the |chef client| how to configure a node.
 
 **Rehearsal**
-   A |chef delivery| stage. If all phases of Union succeed, then the Rehearsal stage is triggered. Rehearsal increases confidence in the artifacts and the deployment by repeating the process that occurred in Union in a different environment.
+   If all phases of Union succeed, then the Rehearsal stage is triggered. Rehearsal increases confidence in the artifacts and the deployment by repeating the process that occurred in Union in a different environment.
 
-**reporting**
+**Reporting**
    Capture and visualize what happens during the execution of chef-client runs across all of your Chef-managed infrastructure.
 
 **resource**
@@ -108,7 +108,7 @@ Glossary
 **role**
    A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function.
 
-**run list**
+**run_list**
    A run_list defines all of the configuration settings that are necessary for a node that is under management by |chef| to be put into the desired state and the order in which these configuration settings are applied.
 
 **test-kitchen**
@@ -119,4 +119,3 @@ Glossary
 
 **Verify**
   A |chef delivery| stage. The purpose of Verify is to run checks so that the system can decide if it’s worth the time of a human to review the submitted change.
-

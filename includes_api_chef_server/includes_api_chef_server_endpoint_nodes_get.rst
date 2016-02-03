@@ -18,7 +18,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "latte": "http://localhost:4000/nodes/latte"
+     "latte": "https://localhost/nodes/latte"
    }
 
 **Response Codes**

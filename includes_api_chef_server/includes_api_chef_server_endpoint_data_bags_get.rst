@@ -18,11 +18,11 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "users": "http://localhost:4000/data/users",
-     "applications": "http://localhost:4000/data/applications"
+     "users": "https://localhost/data/users",
+     "applications": "https://localhost/data/applications"
    }
 
-shown as a list of key-value pairs, where (in the example above) ``users`` and ``applications`` are the names of data bags and "http://localhost:4000/data/foo" is the path to the data bag.
+shown as a list of key-value pairs, where (in the example above) ``users`` and ``applications`` are the names of data bags and "https://localhost/data/foo" is the path to the data bag.
 
 **Response Codes**
 
