@@ -17,7 +17,8 @@ with a request body similar to:
 
    {
      "name": "name_of_API_client",
-     "admin": false
+     "admin": false,
+     "create_key" : true
    }
 
 where ``name_of_API_client`` is the name of the |chef api client| to be created and ``admin`` indicates whether the |chef api client| will be run as an admin |chef api client|.
