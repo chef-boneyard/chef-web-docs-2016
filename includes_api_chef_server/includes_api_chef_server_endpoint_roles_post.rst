@@ -34,7 +34,7 @@ The response is similar to:
 
 .. code-block:: javascript
 
-   { "uri": "http://localhost:4000/roles/webserver" }
+   { "uri": "https://localhost/roles/webserver" }
 
 **Response Codes**
 

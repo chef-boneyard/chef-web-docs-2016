@@ -20,10 +20,10 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "node": "http://localhost:4000/search/node",
-     "role": "http://localhost:4000/search/role",
-     "client": "http://localhost:4000/search/client",
-     "users": "http://localhost:4000/search/users"
+     "node": "https://localhost/search/node",
+     "role": "https://localhost/search/role",
+     "client": "https://localhost/search/client",
+     "users": "https://localhost/search/users"
    }
 
 **Response Codes**

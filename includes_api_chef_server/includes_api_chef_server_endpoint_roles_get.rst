@@ -18,7 +18,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-     "webserver": "http://localhost:4000/roles/webserver"
+     "webserver": "https://localhost/roles/webserver"
    }
 
 **Response Codes**

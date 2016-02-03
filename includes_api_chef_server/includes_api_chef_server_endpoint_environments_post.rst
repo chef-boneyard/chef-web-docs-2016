@@ -30,7 +30,7 @@ The response is similar to:
 
 .. code-block:: javascript
 
-   { "uri": "http://localhost:4000/environments/dev" }
+   { "uri": "https://localhost/environments/dev" }
 
 **Response Codes**
 

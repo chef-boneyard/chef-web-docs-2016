@@ -18,7 +18,7 @@ The response is similar to:
 .. code-block:: javascript
 
    {
-      "adam": "http://localhost:4000/data/users/adam"
+      "adam": "https://localhost/data/users/adam"
    }
 
 **Response Codes**
