@@ -182,25 +182,22 @@ To verify that a workstation can connect to the |chef server|:
       registered_node
 
 
-
-
-
 Uninstall
 =====================================================
-The |chef dk| can be uninstalled using the steps below that are appropriate for the platform on which the |chef dk| is installed.
+.. include:: ../../includes_uninstall/includes_uninstall_chef_dk.rst
 
 |debian|
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_chef_dk_uninstall_ubuntu.rst
+.. include:: ../../includes_uninstall/includes_uninstall_chef_dk_ubuntu.rst
 
 |mac os x|
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_chef_dk_uninstall_mac.rst
+.. include:: ../../includes_uninstall/includes_uninstall_chef_dk_mac.rst
 
 |redhat enterprise linux|
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_chef_dk_uninstall_redhat.rst
+.. include:: ../../includes_uninstall/includes_uninstall_chef_dk_redhat.rst
 
 |windows|
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_install_chef_dk_uninstall_windows.rst
+.. include:: ../../includes_uninstall/includes_uninstall_chef_dk_windows.rst

@@ -2,7 +2,7 @@
 Manage Roles
 =====================================================
 
-.. note:: This topic is about using the |chef manage| add-on to manage roles in |chef server oec|.
+.. note:: This topic is about using the |chef manage| to manage roles.
 
 .. include:: ../../includes_role/includes_role.rst
 

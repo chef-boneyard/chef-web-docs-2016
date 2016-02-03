@@ -85,29 +85,7 @@ Example
 
 **Create a notification**
 
-To create a notification, run the following command:
-
-.. code-block:: bash
-
-   $ knife notification create FILE_NAME.json
-
-where the ``FILE_NAME.json`` is similar to:
-
-.. code-block:: javascript
-
-   {
-     "name": "chef-splunk-example",
-     "notification_type": "Splunk",
-     "modified_by": "admin",
-     "delivery_options": {
-       "hostname": "splunk.chef.inc.com",
-       "port": 8089,
-       "username": "username",
-       "password": "password",
-       "index": "chef-analytics",
-       "sourcetype": "chef-analytics-data"
-     }
-   }
+.. include:: ../../step_plugin_knife/step_plugin_knife_analytics_notification_create.rst
 
 notification list
 =====================================================
@@ -150,32 +128,7 @@ Example
 
 **Create a rule**
 
-To create a rule, run the following command:
-
-.. code-block:: bash
-
-   $ knife rule create FILE_NAME.json
-
-where the ``FILE_NAME.json`` is similar to:
-
-.. code-block:: javascript
-
-   {
-     "name": "Rule name.",
-     "modified_by": "user_name",
-     "with": {
-       "priority": 0
-     },
-     "active":true,
-     "rule":"rules 'Rule group 1'\n
-       rule on action\n  
-       when\n    
-         true\n  
-       then\n    
-         noop()\n  
-       end\n
-     end"
-   }
+.. include:: ../../step_plugin_knife/step_plugin_knife_analytics_rule_create.rst
 
 **Create a Slack incoming webhooks notification**
 

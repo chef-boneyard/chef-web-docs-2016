@@ -2,7 +2,7 @@
 Manage Reports
 =====================================================
 
-.. note:: This topic is about using the |chef manage| add-on to manage reports in |chef server oec|.
+.. note:: This topic is about using the |chef manage| to manage reports.
 
 .. include:: ../../includes_reporting/includes_reporting.rst
 

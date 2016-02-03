@@ -63,7 +63,7 @@
    * - ``nodes_path``
      - The relative path to the directory in which node data is located. This data must be defined as |json|.
    * - ``require_chef_omnibus``
-     - Use to install the latest version of the |chef client| in a node. Set to ``true`` to install the latest version, ``false`` to not install |chef client| (assumes the box already has it installed), or a version specifier like ``11.8.0`` to install a particular version. When set to ``true`` or a version number, the ``chef_omnibus_url`` may be used to specify the URL of the ``install.sh`` that installs the specified version of |chef client|. Default value: ``false``.
+     - Use to install the latest version of the |chef client| in a node. Set to ``true`` to install the latest version, ``false`` to not install |chef client| (assumes the box already has it installed), or a version specifier like ``11.8.0`` to install a particular version. When set to ``true`` or a version number, the ``chef_omnibus_url`` may be used to specify the URL of the ``install.sh`` that installs the specified version of |chef client|. Default value: ``true``.
    * - ``roles_path``
      - The relative path to the directory in which role data is located. This data must be defined as |json|.
    * - ``ruby_bindir``

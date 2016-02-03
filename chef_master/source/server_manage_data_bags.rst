@@ -2,7 +2,7 @@
 Manage Data Bags
 =====================================================
 
-.. note:: This topic is about using the |chef manage| add-on to manage data bags in |chef server oec|.
+.. note:: This topic is about using the |chef manage| to manage data bags.
 
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 

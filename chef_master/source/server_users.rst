@@ -127,7 +127,7 @@ user-show
 
 |chef manage_title|
 =====================================================
-This topic is an alphabetical list of the various user-specific tasks that can be performed when using |chef manage|.
+This section is an alphabetical list of the various user-specific tasks that can be performed when using |chef manage|.
 
 Change Password
 -----------------------------------------------------

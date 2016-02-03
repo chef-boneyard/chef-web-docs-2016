@@ -31,6 +31,3 @@ Primary File System
 Verify Resize
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_storage/includes_server_storage_drbd_verify.rst
-
-
-
