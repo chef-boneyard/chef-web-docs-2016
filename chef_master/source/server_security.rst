@@ -55,8 +55,6 @@ add-client-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_client_key_syntax.rst
@@ -68,8 +66,6 @@ add-client-key
 add-user-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_add_user_key.rst
-
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
 
 **Syntax**
 
@@ -83,8 +79,6 @@ delete-client-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_client_key_syntax.rst
@@ -96,8 +90,6 @@ delete-client-key
 delete-user-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_delete_user_key.rst
-
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
 
 **Syntax**
 
@@ -111,8 +103,6 @@ list-client-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys.rst
 
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
-
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_client_keys_syntax.rst
@@ -124,8 +114,6 @@ list-client-key
 list-user-key
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_list_user_keys.rst
-
-.. warning:: This subcommand is a preview command available in the |chef server| 12.0.3 release.
 
 **Syntax**
 

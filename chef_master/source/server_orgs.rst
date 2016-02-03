@@ -82,7 +82,7 @@ users
 
 Manage Organizations
 =====================================================
-The following commands are built-in to the |chef server ctl| command line tool:
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org.rst
 
 org-create
 -----------------------------------------------------

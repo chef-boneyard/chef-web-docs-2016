@@ -2,8 +2,4 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ chef-server-ctl org-user-remove ORG_NAME USER_NAME (options)
+Use the ``org-create``, ``org-delete``, ``org-list``, ``org-show``, ``org-user-add`` and ``org-user-remove`` commands to manage organizations.

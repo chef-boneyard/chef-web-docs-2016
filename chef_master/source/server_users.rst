@@ -8,6 +8,8 @@ Users
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server.rst
 
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user.rst
+
 org-create
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
