@@ -32,4 +32,3 @@ Chef Open Source Slide Decks
    serverspec
    technical_overview
    testing
-   visual_overview
