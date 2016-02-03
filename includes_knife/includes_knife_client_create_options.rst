@@ -5,10 +5,18 @@
 This argument has the following options:
 
 ``-a``, ``--admin``
-   |admin client| This option only works when used with the open source |chef server| and will have no effect when used with |chef server oec|.
+   |admin client|  |knife open_source_only|
 
 ``-f FILE``, ``--file FILE``
    |file private_key|
 
+``-k``, ``--prevent-keygen``
+   |key prevent_keygen|
+
+   .. note:: .. include:: ../../includes_notes/includes_notes_knife_prevent_keygen.rst
+
+``-p FILE``, ``--public-key FILE``
+   |file public_key| This option may not be passed in the same command with ``--prevent-keygen``. |key generated_if_not_passed|
+
 ``--validator``
-   Use to create the client as the |chef validator|. Default value: ``true``.
+   |create chef_validator| Default value: ``true``.

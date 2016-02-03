@@ -10,13 +10,8 @@ This argument has the following options:
 ``-f FILE_NAME``, ``--file FILE_NAME``
    |file private_key|
 
-``-k``, ``--prevent-keygen``
-   |key prevent_keygen|
-
-   .. note:: .. include:: ../../includes_notes/includes_notes_knife_prevent_keygen.rst
-
 ``-p PASSWORD``, ``--password PASSWORD``
-   |password user| |knife open_source_only|
+   |password user|
 
 ``--user-key FILE_NAME``
-   |file public_key| |key generated_if_not_passed|
+   |file public_key|

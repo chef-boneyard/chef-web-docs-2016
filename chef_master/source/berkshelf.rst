@@ -11,7 +11,4 @@ For more information ...
 For more information about |berkshelf|:
 
 * `Berkshelf Documentation <http://berkshelf.com>`_
-
-
-
-
+* `How Can I Combine Berks and Local Cookbooks? <https://coderwall.com/p/j72egw/organise-your-site-cookbooks-with-berkshelf-and-this-trick>`_
