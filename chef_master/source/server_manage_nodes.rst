@@ -2,7 +2,7 @@
 Manage Nodes
 =====================================================
 
-.. note:: This topic is about using the |chef manage| add-on to manage nodes in |chef server oec|.
+.. note:: This topic is about using the |chef manage| to manage nodes.
 
 .. include:: ../../includes_node/includes_node.rst
 

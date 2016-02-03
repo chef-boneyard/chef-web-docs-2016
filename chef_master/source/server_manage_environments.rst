@@ -2,7 +2,7 @@
 Manage Environments
 =====================================================
 
-.. note:: This topic is about using the |chef manage| add-on to manage environments in |chef server oec|.
+.. note:: This topic is about using the |chef manage| to manage environments.
 
 .. include:: ../../includes_environment/includes_environment.rst
 

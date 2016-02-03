@@ -2,7 +2,7 @@
 Manage Cookbooks
 =====================================================
 
-.. note:: This topic is about using the |chef manage| add-on to manage cookbooks in |chef server oec|.
+.. note:: This topic is about using the |chef manage| to manage cookbooks.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
@@ -42,7 +42,7 @@ A cookbook can contain the following types of files:
    * - Templates
      - .. include:: ../../includes_template/includes_template.rst
 
-All of the file types that are part of any cookbook uploaded to the |chef server| are visible from the |chef manage| add-on.
+All of the file types that are part of any cookbook uploaded to the |chef server| are visible from the |chef manage|.
 
 Download File
 -----------------------------------------------------
