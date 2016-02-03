@@ -179,9 +179,12 @@ master-recover
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_master_recover.rst
 
+Organization Management
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org.rst
 
 org-create
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_create.rst
 
 **Syntax**
@@ -212,7 +215,7 @@ org-create
 
 
 org-delete
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_delete.rst
 
 **Syntax**
@@ -231,7 +234,7 @@ org-delete
 
 
 org-list
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_list.rst
 
 **Syntax**
@@ -244,7 +247,7 @@ org-list
 
 
 org-show
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_show.rst
 
 **Syntax**
@@ -253,7 +256,7 @@ org-show
 
 
 org-user-add
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_add.rst
 
 **Syntax**
@@ -280,7 +283,7 @@ org-user-add
 
 
 org-user-remove
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove.rst
 
 .. warning:: .. include:: ../../step_knife/step_knife_edit_admin_users.rst
@@ -288,6 +291,10 @@ org-user-remove
 **Syntax**
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org_user_remove_options.rst
 
 **Examples**
 
@@ -298,6 +305,10 @@ org-user-remove
 .. code-block:: bash
 
    $ chef-server-ctl org-user-remove prod testmaster
+
+.. code-block:: bash
+
+   $ chef-server-ctl org-user-remove grantmc --force
 
 
 password
@@ -365,9 +376,12 @@ upgrade
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_upgrade_options.rst
 
+User Management
+=====================================================
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user.rst
 
 user-create
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_create.rst
 
 **Syntax**
@@ -394,7 +408,7 @@ user-create
 
 
 user-delete
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_delete.rst
 
 **Syntax**
@@ -413,7 +427,7 @@ user-delete
 
 
 user-edit
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_edit.rst
 
 **Syntax**
@@ -432,7 +446,7 @@ user-edit
 
 
 user-list
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_list.rst
 
 **Syntax**
@@ -445,7 +459,7 @@ user-list
 
 
 user-show
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_user_show.rst
 
 **Syntax**
