@@ -10,10 +10,10 @@ Glossary
    Event tracking during the |chef client| run that generates data made visible from |chef analytics|.
 
 **Berkshelf**
-   Manage cookbook dependencies, learn more at `berkshelf.com <http://berkshelf.com/>`_.
+   `Manage cookbook dependencies <http://berkshelf.com/>`__.
 
 **Build**
-   A |chef delivery| stage. The purpose of the Build stage is to assemble one or more potentially releasable artifacts and make them available to the remaining stages of the pipeline. Manage a cookbook dependencies, learn more `here <http://berkshelf.com/>`_.
+   A |chef delivery| stage. The purpose of the Build stage is to assemble one or more potentially releasable artifacts and make them available to the remaining stages of the pipeline. Using |berkshelf| can help to `manage cookbook dependencies <http://berkshelf.com/>`__.
 
 **Chef analytics**
    A feature of |chef| that provides real-time visibility into what is happening on the |chef server|, including what's changing, who made those changes, and when they occurred
@@ -25,10 +25,10 @@ Glossary
    A command-line tool that that runs |chef|. Also, the name of |chef| as it is installed on a node.
 
 **Chef-DK**
-   A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can download it at `Chef Development Kit <https://downloads.chef.io/chef-dk/>`_.
+   A collection of tools to help development of Chef and Chef resources. It uses the full stack installer to give you everything you need to get going in one package.  You can download it at `Chef Development Kit <https://downloads.chef.io/chef-dk/>`__.
 
 **chef-repo**
-   The repository structure in which cookbooks are authored, tested, and maintained. A link to the example chef-repo is `here <https://github.com/chef/chef-repo>`_.
+   The repository structure in which cookbooks are authored, tested, and maintained. View `an example of the <https://github.com/chef/chef-repo>`__ |chef repo|.
 
 **Chef server**
    The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions.
@@ -52,7 +52,7 @@ Glossary
    A |chef delivery| stage. Delivered is the final stage of the pipeline, what it means for your system is up to you. It could mean deploying the change so that it is live and receiving production traffic, or it might mean publishing a set of artifacts so they are accessible for your customers.
 
 **Delivery**
-   |chef delivery| manages changes to both infrastructure and application code, giving your operations and development teams a common platform for developing, building, testing, and deploying cookbooks, applications, and more. For more information see the `Delivery Overview <https://docs.chef.io/release/delivery_1-0/delivery_overview.html/>`_.
+   |chef delivery| manages changes to both infrastructure and application code, giving your operations and development teams a common platform for developing, building, testing, and deploying cookbooks, applications, and more. For more information see the `Delivery Overview <https://docs.chef.io/release/delivery_1-0/delivery_overview.html/>`__.
 
 **environment**
    An environment is a way to map an organization's real-life workflow to what can be configured and managed when using |chef server|.
