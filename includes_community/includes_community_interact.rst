@@ -11,5 +11,4 @@
 * `IRC #chef-hacking <https://botbot.me/freenode/chef-hacking>`_
 * `IRC #openstack-chef <https://botbot.me/freenode/openstack-chef>`_
 * `LinkedIn Group <https://www.linkedin.com/grp/home?gid=3751378>`_
-* `chef@lists.opscode.com <chef@lists.opscode.com>`_ (for general discussion between users, developers, and other interested parties)
-* `chef-dev@lists.opscode.com <chef-dev@lists.opscode.com>`_ (for discussion between developers)
+* `https://discourse.chef.io <https://discourse.chef.io>`_ (for discussion among users, developers, and other interested parties)
