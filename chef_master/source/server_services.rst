@@ -277,39 +277,6 @@ tail
 .. include:: ../../step_server_services/step_server_services_expander_tail.rst
 
 
-opscode-expander-reindexer
------------------------------------------------------
-.. include:: ../../includes_server_services/includes_server_services_reindexer.rst
-
-status
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_reindexer_status.rst
-
-start
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_reindexer_start.rst
-
-stop
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_reindexer_stop.rst
-
-restart
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_reindexer_restart.rst
-
-kill
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_reindexer_kill.rst
-
-run once
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_reindexer_run_once.rst
-
-tail
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_server_services/step_server_services_reindexer_tail.rst
-
-
 opscode-solr4
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_solr4.rst
