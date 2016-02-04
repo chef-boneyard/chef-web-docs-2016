@@ -11,7 +11,7 @@ For |redhat enterprise linux| (6.x and higher) and |centos| (6.x and higher), do
 
       yum install ca-certificates
 
-    .. note:: For 6.x servers, run this command only once.
+   .. note:: For 6.x servers, run this command only once.
 
 #. Run the following command:
 
@@ -19,7 +19,7 @@ For |redhat enterprise linux| (6.x and higher) and |centos| (6.x and higher), do
 
       update-ca-trust force-enable
 
-    .. note:: For 6.x servers, run this command only once.
+   .. note:: For 6.x servers, run this command only once.
 
 #. Run the following command:
 
