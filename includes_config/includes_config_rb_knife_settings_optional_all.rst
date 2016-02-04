@@ -55,13 +55,15 @@ The following list describes all of the optional settings that can be added to t
    |path bootstrap_template|
 
 ``knife[:bootstrap_vault_file]``
-   |bootstrap valut_file|
+   |bootstrap vault_file|
 
 ``knife[:bootstrap_vault_item]``
-   |bootstrap valut_item|
+   |bootstrap vault_item|
 
 ``knife[:bootstrap_vault_json]``
-   |bootstrap valut_item|
+   |bootstrap vault_json|
+
+   .. include:: ../../step_knife/step_knife_bootstrap_vault_json.rst
 
 ``knife[:bootstrap_version]``
    |bootstrap version|
