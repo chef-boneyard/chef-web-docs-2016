@@ -94,4 +94,4 @@ This resource has the following properties:
 ``timeout``
    **Ruby Type:** Integer
 
-   |windows| platform only. |timeout|
+   |windows| platform only. |timeout| Default value: ``60``.

@@ -104,4 +104,4 @@ This resource has the following properties:
 ``timeout``
    **Ruby Type:** Integer
 
-   |timeout|
+   |timeout| Default value: ``60``.
