@@ -2,7 +2,7 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-To convert a project that is hosted by |chef delivery| to one that is hosted by |bitbucket|:
+To convert a project that is integrated with |chef delivery| to one that is integrated with |bitbucket|:
 
 #. Ensure that a project repository exists in |bitbucket| with at least one commit.
 #. Ensure that the service account used by |chef delivery| has full access to this project repository.
