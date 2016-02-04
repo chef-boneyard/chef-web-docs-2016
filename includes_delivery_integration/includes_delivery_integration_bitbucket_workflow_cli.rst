@@ -18,7 +18,9 @@ Install the |chef delivery_cli| CLI:
 
       $ delivery clone $PROJECT
 
-   If the project is cloned from |bitbucket| (or if a pre-existing clone is used), add it using ``delivery remote``. The Delivery clone URL can be found on the project's page in the Delivery UI. To create the remote run the following:
+   If the project is cloned from |bitbucket| (or if a pre-existing clone is used), add it using ``delivery remote``. The URL for ``delivery clone`` can be found on the project's page in the |chef delivery| webui.
+
+#. Create a remote with the following:
 
    .. code-block:: bash
 
