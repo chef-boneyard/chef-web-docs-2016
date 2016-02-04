@@ -10,6 +10,7 @@ What's New
 The following items are new for |chef server| 12.4:
 
 * **/universe endpoint** Use the ``/universe`` endpoint to retrieve the known collection of cookbooks, and then use it with |berkshelf| and |supermarket|.
+* **opscode-expander-reindexer service** The ``opscode-expander-reindexer`` service is deprecated.
 
 /universe
 =====================================================
