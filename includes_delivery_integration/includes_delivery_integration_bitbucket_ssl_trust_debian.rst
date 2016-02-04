@@ -15,7 +15,7 @@ For the |debian| platform, do the following:
 
    .. code-block:: bash
 
-      openssl s_client -showcerts -connect {your-bitbucekt-server}:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >{your-bitbucekt-server}.crt
+      openssl s_client -showcerts -connect {BITBUCKET_SERVER}:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >{BITBUCKET_SERVER}.crt
 
 #. Run the following command:
 
