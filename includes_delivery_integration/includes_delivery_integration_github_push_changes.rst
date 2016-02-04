@@ -46,4 +46,4 @@ Next, push the code to |github|.
 
 (The |chef delivery_cli| CLI can perform all of this for projects that use local repositories; one day, it'll do it for remote repositories as well.)
 
-Finally, create a pull request from this change in the |github| web UI.
+Finally, create a pull request from this change in the |github| webui.
