@@ -7,9 +7,9 @@ Chef_Delivery::ClientHelper.enter_client_mode_as_delivery
 slack_creds = encrypted_data_bag_item_for_environment('cia-creds','slack')
 
 if ['union', 'rehearsal', 'delivered'].include?(node['delivery']['change']['stage'])
-  slack_channels = slack_creds['channels'].push('#operations').push('#chef-docs')
+  slack_channels = slack_creds['channels'].push('#operations').push('#chef-docs-bot')
 else
-  slack_channels = slack_creds['channels'].push('#chef-docs')
+  slack_channels = slack_creds['channels'].push('#chef-docs-bot')
 end
 
 site_name = 'docs'
