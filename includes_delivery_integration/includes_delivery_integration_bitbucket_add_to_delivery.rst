@@ -2,7 +2,7 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-In the |chef delivery| webui, open the SCM setup page (https://server/e/:enterprise/#/scm-setup) and fill out the provided fields:
+In the |chef delivery| webui, open the SCM setup page, and then complete the following fields:
 
 * **Bitbucket URL** - The URL for your |bitbucket| instance.
 * **Bitbucket Username** - The username of the service account that |chef delivery| will use to interact with |bitbucket|.

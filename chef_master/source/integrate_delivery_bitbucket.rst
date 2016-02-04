@@ -44,13 +44,13 @@ Import Project
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_import_project.rst
 
-Convert Project to Delivery
------------------------------------------------------
-.. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_convert_to_delivery.rst
-
 Convert Project to Bitbucket
 -----------------------------------------------------
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_convert_to_bitbucket.rst
+
+Convert Project to Delivery
+-----------------------------------------------------
+.. include:: ../../includes_delivery_integration/includes_delivery_integration_bitbucket_convert_to_delivery.rst
 
 Update Bitbucket Project
 -----------------------------------------------------
