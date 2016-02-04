@@ -1,4 +1,3 @@
-
 =====================================================
 Release Notes: |chef server_title| 12.4
 =====================================================
@@ -11,6 +10,7 @@ The following items are new for |chef server| 12.4:
 
 * **/universe endpoint** Use the ``/universe`` endpoint to retrieve the known collection of cookbooks, and then use it with |berkshelf| and |supermarket|.
 * **opscode-expander-reindexer service** The ``opscode-expander-reindexer`` service is deprecated.
+* **Global server administrator list** Use the ``grant-server-admin-permissions``, ``remove-server-admin-permissions``, and ``list-server-admins`` to manage the list of users who belong to the Server Admins group.
 
 /universe
 =====================================================
@@ -19,6 +19,23 @@ The following items are new for |chef server| 12.4:
 GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_universe_get.rst
+
+Server Admins
+=====================================================
+.. include:: ../../includes_server_rbac/includes_server_rbac_server_admins.rst
+
+**grant-server-admin-permissions**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_server_admin_grant_user.rst
+
+**remove-server-admin-permissions**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_server_admin_remove_user.rst
+
+**list-server-admins**
+
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_server_admin_list.rst
+
 
 What's Fixed
 =====================================================
