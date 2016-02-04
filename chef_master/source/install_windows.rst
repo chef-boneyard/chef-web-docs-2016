@@ -30,6 +30,10 @@ Run as a Service
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_chef_client_windows_as_service.rst
 
+Run as a Scheduled Task
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_ctl_chef_client_scheduled_task.rst
+
 Use an Existing Process
 =====================================================
 .. include:: ../../includes_windows/includes_windows_install_system_center.rst
