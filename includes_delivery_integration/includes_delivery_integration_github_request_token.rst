@@ -4,13 +4,13 @@
 
 Log in to the |chef delivery| server and run the following command. Follow the URL given to finish authorizing |chef delivery| to |github|.
 
-**For Github Enterprise**
+**For GitHub Enterprise**
 
 .. code-block:: bash
 
    delivery-ctl setup-github-enterprise-token $DELIVERY_ENTERPRISE
 
-**For Github.com**
+**For GitHub.com**
 
 .. code-block:: bash
 
