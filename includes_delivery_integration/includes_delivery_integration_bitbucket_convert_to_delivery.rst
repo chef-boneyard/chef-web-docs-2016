@@ -2,7 +2,7 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-To convert a project that is hosted by |bitbucket| to one that is hosted by |chef delivery|:
+To convert a project that is integrated with |bitbucket| to one that is integrated with |chef delivery|:
 
 #. Merge or close all open changes for the project.
 #. In the |chef delivery| webui, open the **Organizations** page.

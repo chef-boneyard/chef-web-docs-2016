@@ -4,6 +4,6 @@
 
 To remove integration with |bitbucket|:
 
-#. Update all projects that are hosted by |bitbucket| to be hosted by |chef delivery|.
+#. Update all projects that are integrated with |bitbucket| to be integrated with |chef delivery|.
 #. In the |chef delivery| webui, open the **SCM Setup** page.
 #. Click the **Remove Link** button.
