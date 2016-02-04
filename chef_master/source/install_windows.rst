@@ -32,7 +32,7 @@ Run as a Service
 
 Run as a Scheduled Task
 -----------------------------------------------------
-.. include:: ../../includes_install/includes_ctl_chef_client_scheduled_task.rst
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_scheduled_task.rst
 
 Use an Existing Process
 =====================================================
