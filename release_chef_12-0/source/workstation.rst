@@ -23,4 +23,4 @@ Some important components of workstations include:
    * - :doc:`knife.rb </config_rb_knife>`
      - The |knife rb| file is used to specify the repository-specific configuration details for |knife|.
    * - :doc:`metadata.rb </config_rb_metadata>`
-     - Metadata is stored in a file called |metadata rb| that lives at the top of each cookbook’s directory.
+     - .. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
