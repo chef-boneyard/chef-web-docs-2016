@@ -5,7 +5,7 @@
 knife bootstrap
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_bootstrap.rst
+.. include:: ../../includes_chef_client/includes_chef_client_bootstrap.rst
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
