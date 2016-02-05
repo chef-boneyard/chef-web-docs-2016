@@ -2,10 +2,7 @@
 Bootstrap a Node
 =====================================================
 
-A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|. There are two ways to install the |chef client| on a node so that it may be maintained by the |chef client|:
-
-* Use the |subcommand knife bootstrap| subcommand to `bootstrap a node using the omnibus installer <http://docs.chef.io/chef_client.html#about-bootstrap-operations>`_
-* Use an unattended install to bootstrap a node from itself, without using |ssh| or |windows remote management|
+.. include:: ../../includes_chef_client/includes_chef_client_bootstrap_node.rst
 
 knife bootstrap
 =====================================================
