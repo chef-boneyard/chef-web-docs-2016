@@ -4,13 +4,15 @@
 
 .. include:: ../../includes_config/includes_config_rb_server.rst
 
-.. note:: The |chef server rb| file does not exist by default. To modify the settings for the |chef server|, create a file named ``chef-server.rb`` in the ``/etc/opscode/`` directory.
+.. note:: .. include:: ../../includes_notes/includes_notes_config_rb_server_does_not_exist_by_default.rst
 
-.. note:: This file was named |private chef rb| in previous versions of |chef server oec|. After an upgrade to |chef server| 12 from |chef server oec|, the |private chef rb| file is symlinked to |chef server rb|. The |private chef rb| file is deprecated, starting with |chef server| 12.
+.. note:: .. include:: ../../includes_notes/includes_notes_config_rb_server_was_private_chef_rb.rst
 
 Settings
 =====================================================
 The following sections describe the various settings that are available in the |chef server rb| file.
+
+.. note:: .. include:: ../../includes_notes/includes_notes_config_rb_server_must_reconfigure.rst
 
 General
 -----------------------------------------------------
