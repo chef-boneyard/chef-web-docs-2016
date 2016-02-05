@@ -71,7 +71,6 @@ The following services are part of the |chef server|:
 * nginx
 * opscode-erchef
 * opscode-expander
-* opscode-expander-reindexer
 * opscode-solr4
 * postgresql
 * rabbitmq
