@@ -8,7 +8,7 @@ Services
 
 Service Subcommands
 =====================================================
-The following subcommands are built into the |chef server ctl| command line tool.
+.. include:: ../../includes_ctl_common/includes_ctl_common_service_subcommands.rst
 
 hup
 -----------------------------------------------------
