@@ -4,7 +4,7 @@
 About Custom Resources
 =====================================================
 
-.. note:: A "custom resource" is the new way to refer to any style of custom resources, including lightweight resources (LWRPs), heavyweight resources (HWRPs), definitions, or any other implementation of a custom resource. This change was made in the |chef client| 12.5 release, but applied retroactively. A new and improved approach for building custom resources was added in |chef client| 12.5 and the term "custom resource" now refers to any method of building a custom resource for releases of |chef| prior to 12.5, and then only the new method starting with 12.5.
+.. note:: .. include:: ../../includes_notes/includes_notes_custom_resource_not_hwrp_lwrp_or_etc.rst
 
 .. include:: ../../includes_lwrp/includes_lwrp.rst
 

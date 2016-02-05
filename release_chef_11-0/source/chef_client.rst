@@ -31,7 +31,6 @@ Authentication
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_chef_validator.rst
 
-
 SSL Certificates
 =====================================================
 .. include:: ../../includes_node/includes_node_certificate.rst
@@ -43,7 +42,6 @@ Signed Headers
 During a |chef client_title| Run
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst
-
 
 SSL Verification
 =====================================================
@@ -73,4 +71,3 @@ Bootstrap Operations
 .. include:: ../../includes_install/includes_install_chef_client.rst
 
 .. include:: ../../includes_chef_client/includes_chef_client_bootstrap.rst
-

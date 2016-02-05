@@ -38,7 +38,7 @@ chefignore Files
 
 Examples
 -----------------------------------------------------
-The following examples show how to add entries to the ``chefignore`` file.
+The following examples show how to add entries to the |chefignore| file.
 
 **Ignore editor swap files**
 

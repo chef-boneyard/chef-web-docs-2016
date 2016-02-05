@@ -17,8 +17,3 @@ Settings
 .. include:: ../../includes_config/includes_config_rb_ohai.rst
 
 .. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
-
-
-
-
-
