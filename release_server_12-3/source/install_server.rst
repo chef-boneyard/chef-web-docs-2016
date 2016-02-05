@@ -4,8 +4,6 @@
 Install the |chef server_title|
 =====================================================
 
-.. warning:: This page is about an upcoming release of the |chef server|.
-
 There are three configuration scenarios for the |chef server|:
 
 * `Standalone <http://docs.chef.io/release/server_12-3/install_server.html#standalone>`__ (everything on a single machine)

@@ -4,8 +4,6 @@
 Prerequisites
 =====================================================
 
-.. warning:: This page is about an upcoming release of the |chef server|.
-
 The following prerequisites apply to every installation of the |chef server|.
 
 Supported Platforms
