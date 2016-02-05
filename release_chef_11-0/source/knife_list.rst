@@ -25,12 +25,3 @@ Examples
 .. include:: ../../step_knife/step_knife_list_roles_and_environments.rst
 
 .. include:: ../../step_knife/step_knife_list_everything.rst
-
-
-
-
-
-
-
-
-

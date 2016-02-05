@@ -6,7 +6,7 @@ knife index rebuild
 
 .. include:: ../../includes_knife/includes_knife_index_rebuild.rst
 
-.. warning:: This subcommand ONLY works when run against the open source |chef server| version 10.x. This subcommand will NOT run against open source |chef server| 11, |chef server oec| (including hosted |chef server oec|), or |chef private|.
+.. warning:: .. include:: ../../includes_notes/includes_notes_knife_server_10x_only.rst
 
 Syntax
 =====================================================
