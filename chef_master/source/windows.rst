@@ -49,6 +49,18 @@ The |microsoft installer package| for |windows| is available at http://www.chef.
 
 After the |chef client| is installed, it is located at ``C:\chef``. The main configuration file for the |chef client| is located at ``C:\chef\client.rb``.
 
+Set the System |ruby|
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_set_system_ruby.rst
+
+Spaces and Directories
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_spaces_and_directories.rst
+
+Top-level Directory Names
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_top_level_directory_names.rst
+
 Use knife-windows
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst

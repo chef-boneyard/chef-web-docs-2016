@@ -59,6 +59,10 @@ PowerShell
 
 .. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby_windows_user_profile.rst
 
+|windows|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_windows/includes_windows_set_system_ruby.rst
+
 Install |git|
 -----------------------------------------------------
 An open source distributed version control system called |git| must be installed before the |chef repo| can be cloned to the workstation from |github|.
@@ -141,7 +145,6 @@ where ``configuration_file`` is the name of the configuration file for the speci
 
    echo 'export PATH="/opt/chefdk/embedded/bin:$PATH"' >> ~/.bash_profile && source ~/.bash_profile
 
-
 .. warning:: On |windows|, ``C:/opscode/chefdk/bin`` must be before ``C:/opscode/chefdk/embedded/bin`` in the ``PATH``.
 
 Get |ssl| Certificates
@@ -180,6 +183,19 @@ To verify that a workstation can connect to the |chef server|:
 
       workstation
       registered_node
+
+
+|chef dk_title| and Windows
+=====================================================
+The following sections describe issues that are known to users of the |chef dk| on the |windows| platform.
+
+Spaces and Directories
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_spaces_and_directories.rst
+
+Top-level Directory Names
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_top_level_directory_names.rst
 
 
 Uninstall
