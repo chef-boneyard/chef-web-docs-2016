@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_config/includes_config_rb_knife.rst
 
+.. include:: ../../includes_config/includes_config_rb_knife_about.rst
+
 .. note:: .. include:: ../../includes_notes/includes_notes_config_rb_knife_path_windows.rst
 
 Settings

@@ -208,6 +208,7 @@ The following tools have been developed by members of the |chef| community. Thes
    inspec_windows_feature
    inspec_yaml
    inspec_yum
+   install_bootstrap
    install_dk
    install_dk_windows
    kitchen

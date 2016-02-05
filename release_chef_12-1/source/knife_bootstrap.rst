@@ -1,11 +1,10 @@
-.. THIS PAGE IS IDENTICAL TO docs.chef.io/knife_bootstrap.html BY DESIGN
 .. THIS PAGE DOCUMENTS chef-client version 12.1
 
 =====================================================
 knife bootstrap
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_bootstrap.rst
+.. include:: ../../includes_chef_client/includes_chef_client_bootstrap_node.rst
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
