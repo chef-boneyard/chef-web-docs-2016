@@ -14,6 +14,8 @@ Settings
 =====================================================
 The following sections describe the various settings that are available in the |chef server rb| file.
 
+.. note:: .. include:: ../../includes_notes/includes_notes_config_rb_server_must_reconfigure.rst
+
 General
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_server_settings_general.rst
