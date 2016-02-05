@@ -98,6 +98,7 @@ Options
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 **Run a job**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_start_run_job.rst
@@ -124,6 +125,7 @@ Options
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 **View job status by job identifier**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_push_jobs_job_status_by_id.rst
