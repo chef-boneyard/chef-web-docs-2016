@@ -163,10 +163,11 @@ A run-list will tell the |chef client| what to do when bootstrapping that node f
 
 Bootstrap Operations
 -----------------------------------------------------
-
 .. include:: ../../includes_install/includes_install_chef_client.rst
 
-.. include:: ../../includes_chef_client/includes_chef_client_bootstrap.rst
+.. include:: ../../includes_chef_client/includes_chef_client_bootstrap_node.rst
+
+.. include:: ../../includes_chef_client/includes_chef_client_bootstrap_stages.rst
 
 The |chef client_title| Run
 -----------------------------------------------------
