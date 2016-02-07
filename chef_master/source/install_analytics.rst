@@ -17,7 +17,7 @@ The |chef analytics| server shares the :doc:`same prerequisites </install_server
 * The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <https://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage|
 * |reporting| is installed on the |chef server|. |reporting| version 1.2.3 is required to view the results of |chef client_audit|, i.e. ``run_start``, ``run_resource``, and ``run_converge`` messages; earlier versions of |reporting| may be used, but will not show these results
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
-* A resolvable hostname that is specified using a FQDN or an IP address
+* A resolvable hostname that is specified using a |fqdn| or an IP address
 * A connection to |ntp| to prevent clock drift
 * A local mail transfer agent that allows |chef analytics| to send email notifications; for versions of |chef analytics| prior to 1.1.3, ``to``, ``from``, ``host`` (the email server), ``password``, ``port``, and ``username`` must be specified.
 * Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks

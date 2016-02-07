@@ -15,7 +15,7 @@ Prerequisites
 The |chef server| has the :doc:`following prerequisites </install_server_pre>`:
 
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
-* A resolvable hostname that is specified using a FQDN or an IP address
+* A resolvable hostname that is specified using a |fqdn| or an IP address
 * A connection to |ntp| to prevent clock drift
 * A local mail transfer agent that allows the |chef server| to send email notifications
 * Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks
