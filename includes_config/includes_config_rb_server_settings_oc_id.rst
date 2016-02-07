@@ -8,18 +8,9 @@ This configuration file has the following settings for ``oc-id``:
    |user ocid_admins| For example, ``['user1', 'user2']``. Default value: ``[ ]``.
 
 ``oc_id['applications']``
-   |application ocid| Default value: ``{ }``. For example:
+   |application ocid| Default value: ``{ }``. 
 
-   .. code-block:: ruby
-
-      oc_id['applications'] = {
-        'analytics' => {
-          'redirect_uri' => 'https://analytics.rhel.aws'
-        },
-        'supermarket' => {
-          'redirect_uri' => 'https://vagrantup.com/auth'
-        }
-      }
+   .. include:: ../../step_config/step_config_ocid_application_hash.rst
 
 ``oc_id['db_pool_size']``
    |db_pool_size| Default value: ``'20'``.
