@@ -10,8 +10,8 @@ From |chef server_title| 12
 =====================================================
 There are two upgrade scenarios for upgrades from earlier versions of |chef server| 12 to a newer version of |chef server| 12:
 
-* `Standalone <http://docs.chef.io/upgrade_server.html#standalone>`__
-* `High availability <http://docs.chef.io/upgrade_server.html#high-availability>`__
+* `Standalone <https://docs.chef.io/upgrade_server.html#standalone>`__
+* `High availability <https://docs.chef.io/upgrade_server.html#high-availability>`__
 
 Standalone
 -----------------------------------------------------
@@ -29,10 +29,10 @@ From |chef server oec|
 =====================================================
 There are two upgrade scenarios for upgrades from |chef server oec| 11 to |chef server| 12: 
 
-* `Standalone <http://docs.chef.io/upgrade_server.html#id1>`__
-* `High availability <http://docs.chef.io/upgrade_server.html#id2>`__
+* `Standalone <https://docs.chef.io/upgrade_server.html#id1>`__
+* `High availability <https://docs.chef.io/upgrade_server.html#id2>`__
 
-Before upgrading, please `view the notes <http://docs.chef.io/upgrade_server_notes.html>`__ for more background on the upgrade process from |chef server oec| 11 to |chef server| 12.
+Before upgrading, please `view the notes <https://docs.chef.io/upgrade_server_notes.html>`__ for more background on the upgrade process from |chef server oec| 11 to |chef server| 12.
 
 
 Standalone
@@ -51,7 +51,7 @@ From |chef server osc|
 =====================================================
 This section describes the upgrade process from a standalone configuration of |chef server osc| 11.1.0 (or higher) to a standalone configuration of |chef server| 12. The upgrade process will require downtime equal to the amount of time it takes to stop the server, run |debian dpkg| or |rpm|, and then upgrade the server.
 
-Please `view the notes <http://docs.chef.io/upgrade_server_open_source_notes.html>`__ for more background on the upgrade process from |chef server osc| 11 to |chef server| 12.
+Please `view the notes <https://docs.chef.io/upgrade_server_open_source_notes.html>`__ for more background on the upgrade process from |chef server osc| 11 to |chef server| 12.
 
 To upgrade to |chef server| 12 from the |chef server osc| server, do the following:
 

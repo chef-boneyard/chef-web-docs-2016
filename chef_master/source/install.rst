@@ -4,7 +4,7 @@ Install |chef|!
 
 |chef| is installed and configured in three main phases: setting up the |chef server|, setting up a workstation, and then installing the |chef client| on each node that will be under management by |chef|:
 
-* :doc:`Install the Chef Server </install_server>`; the |chef server| may be :doc:`configured for high availability </server_high_availability>`, including `using Amazon Web Services <http://docs.chef.io/install_server_ha_aws.html>`_ machines and `on-premises using DRBD <http://docs.chef.io/install_server_ha_drbd.html>`_, and may be configured as `a single backend machine with multiple frontend machines <http://docs.chef.io/install_server_tiered.html>`_
+* :doc:`Install the Chef Server </install_server>`; the |chef server| may be :doc:`configured for high availability </server_high_availability>`, including `using Amazon Web Services <https://docs.chef.io/install_server_ha_aws.html>`_ machines and `on-premises using DRBD <https://docs.chef.io/install_server_ha_drbd.html>`_, and may be configured as `a single backend machine with multiple frontend machines <https://docs.chef.io/install_server_tiered.html>`_
 * Set up your workstation by :doc:`installing the Chef DK </install_dk>`
 * :doc:`Install the chef-client </install_bootstrap>`
 

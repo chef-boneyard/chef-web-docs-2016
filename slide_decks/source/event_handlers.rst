@@ -8,7 +8,7 @@ Event Handlers
 
     .. include:: ../../includes_dsl_handler/includes_dsl_handler.rst
 
-    .. note:: Read more about event handlers at http://docs.chef.io/dsl_handler.html.
+    .. note:: Read more about event handlers at https://docs.chef.io/dsl_handler.html.
 
  .. revealjs:: Event Types
 

@@ -170,7 +170,7 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
-.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <https://docs.chef.io/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -178,7 +178,7 @@ Syntax
 
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <https://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
 
@@ -197,7 +197,7 @@ knife azure
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
 
-.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <https://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -358,7 +358,7 @@ knife windows
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
-.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <https://docs.chef.io/knife_common_options.html>`__ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

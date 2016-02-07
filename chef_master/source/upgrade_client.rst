@@ -4,7 +4,7 @@
 
 The following sections describe the upgrade process for |chef client| 12.
 
-Please `view the notes <http://docs.chef.io/upgrade_client_notes.html>`__ for more background on the upgrade process.
+Please `view the notes <https://docs.chef.io/upgrade_client_notes.html>`__ for more background on the upgrade process.
 
 Upgrade via Command Line
 =====================================================

@@ -2,7 +2,7 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-The TYPE named NAME should be ACTION’d with ATTRIBUTES:
+The TYPE named NAME should be ACTION'd with ATTRIBUTES:
 
 .. code-block:: ruby
        

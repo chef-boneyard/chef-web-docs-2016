@@ -334,7 +334,7 @@ To verify provisioning (from inside the ``delivery-cluster`` directory), do the 
       $ rake info:list_core_services
 
 #. Navigate to your CHEF_SERVER_URL, and then login with ``delivery:delivery``. Use ``rake info:delivery_creds`` to get the password.
-#. Click on **Nodes**. You’ll see your |chef delivery| server, your build nodes, and nodes for any other optional features that you installed.
+#. Click on **Nodes**. You'll see your |chef delivery| server, your build nodes, and nodes for any other optional features that you installed.
 #. Get the credentials and URL with the following command:
 
    .. code-block:: bash

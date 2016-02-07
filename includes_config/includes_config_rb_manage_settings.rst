@@ -7,7 +7,7 @@ This configuration file has the following settings:
    The amount of time (in milliseconds) after which search requests made via the web client will timeout and cause an error. Default value: ``120000``.
 
 ``chef_documentation_url``
-   The URL at which documentation for |chef| is located. Default value: ``http://docs.chef.io``.
+   The URL at which documentation for |chef| is located. Default value: ``https://docs.chef.io``.
 
 ``disable_sign_up``
    Use to disable sign-up and only allow sign-in. Default value: ``false``.

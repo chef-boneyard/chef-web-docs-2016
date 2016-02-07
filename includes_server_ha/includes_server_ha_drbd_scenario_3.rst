@@ -14,7 +14,7 @@ The status of the secondary will look something like the following:
     0: cs:WFConnection ro:Secondary/Unknown ds:UpToDate/DUnknown C r-----
        ns:0 nr:3505480 dw:4938128 dr:0 al:0 bm:290 lo:0 pe:0 ua:0 ap:0 ep:1 wo:f oos:0
 
-The ``ds:UpToDate/Unknown`` is important; it indicates that the secondary has all the data that was on the primary and won’t lose anything if it is promoted.
+The ``ds:UpToDate/Unknown`` is important; it indicates that the secondary has all the data that was on the primary and won't lose anything if it is promoted.
 
 If it is verified that the primary host is going to be down for a while, the secondary can be promoted to primary:
 
@@ -39,7 +39,7 @@ Notice that ``ro`` is now ``ro:Primary/Unknown``. The |chef server| can now be r
 
 This will start up the configured services and the |chef server| will be master on this host.
 
-If the original primary can be brought back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host’s original primary |chef server| master status.
+If the original primary can be brought back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host's original primary |chef server| master status.
 
 The first thing it will do is attempt to promote itself to |drbd| primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the pair of servers in a good state, with the second back-end box as the |drbd| primary |chef server| master.
 

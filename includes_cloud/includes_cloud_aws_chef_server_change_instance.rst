@@ -24,7 +24,7 @@ To edit the |amazon ami| instance size, do the following:
 
       $ ssh -i /path/to/ssh_key.pem ec2-user@<instance IP address>
 
-#. Update the API FQDN in ``/etc/opscode/chef-server.rb`` using the public DNS name.  For example:
+#. Update the API |fqdn| in ``/etc/opscode/chef-server.rb`` using the public DNS name.  For example:
 
    .. code-block:: bash
 

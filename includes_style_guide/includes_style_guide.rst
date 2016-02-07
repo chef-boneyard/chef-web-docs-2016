@@ -498,7 +498,7 @@ The |chef docs| repo contains a lot of directories!
 
 Build Directories
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The most important directory is ``chef_master`` and it contains all of the topics that can be found at the root of http://docs.chef.io. For example:
+The most important directory is ``chef_master`` and it contains all of the topics that can be found at the root of https://docs.chef.io. For example:
 
 .. list-table::
    :widths: 250 250
@@ -507,11 +507,11 @@ The most important directory is ``chef_master`` and it contains all of the topic
    * - chef-docs
      - docs.chef.io
    * - resource_execute.rst
-     - http://docs.chef.io/resource_execute.html
+     - https://docs.chef.io/resource_execute.html
    * - kitchen.rst
-     - http://docs.chef.io/kitchen.html
+     - https://docs.chef.io/kitchen.html
    * - ruby.rst
-     - http://docs.chef.io/ruby.html
+     - https://docs.chef.io/ruby.html
 
 There is always a 1:1. The contents within each of these files show the path to the actual content that is pulled into the topic at build time. These paths are similar to::
 
@@ -521,7 +521,7 @@ See the section "Includes Directories" below for more information about the incl
 
 .. note:: The ``conf.py`` file should never be modified. This file just tells |python sphinx| what to do when it's asked to build |chef docs|.
 
-There are other build directories: ``docs_all``, ``docs_analytics``, ``docs_client``, ``docs_devkit``, ``docs_server``. These are used to build sub-sites like http://docs.chef.io/server, which is focused only on the content for |chef server| 12. For example. These pages are almost always cloned from the ``chef_master`` directory, like this::
+There are other build directories: ``docs_all``, ``docs_analytics``, ``docs_client``, ``docs_devkit``, ``docs_server``. These are used to build sub-sites like https://docs.chef.io/server, which is focused only on the content for |chef server| 12. For example. These pages are almost always cloned from the ``chef_master`` directory, like this::
 
    .. THIS PAGE IS IDENTICAL TO docs.chef.io/server_orgs.html BY DESIGN
    .. THIS PAGE IS LOCATED AT THE /server/ PATH.
@@ -754,7 +754,7 @@ You may mix-and-match inclusions and custom content as needed. For example::
    
        For more information, see:
    
-       * http://docs.chef.io/recipes.html
+       * https://docs.chef.io/recipes.html
 
 where the final slide contains information that only exists in this slide deck. As a general rule, custom slide contents should follow the styles defined in this style guide and should truly be custom. (Try to reuse slides as often as possible and use custom slides where necessary for flow, transition, genuinely unique information.)
 

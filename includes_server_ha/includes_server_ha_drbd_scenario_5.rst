@@ -3,7 +3,7 @@
 
 Sometimes |drbd| hedges its bets, and puts both nodes in a pair into secondary mode. When this happens, you can look at the contents of ``/proc/drbd`` on both hosts and see if either of them is showing out of sync. If they are both ``oos:0``, just pick one and promote it to primary using the ``drbdadm primary pc0`` command. If one or both of the hosts is out of sync, choose the one with the lower amount of ``oos`` and promote it to primary.
 
-If the chosen node won’t promote, run the following commands on the other host to reset its disk state:
+If the chosen node won't promote, run the following commands on the other host to reset its disk state:
 
 .. code-block:: bash
 

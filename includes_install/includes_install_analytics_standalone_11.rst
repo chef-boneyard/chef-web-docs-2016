@@ -3,7 +3,7 @@
 
 In a standalone configuration, the |chef analytics| deployment is on a different server from the |chef server|. This allows you to scale |chef analytics| independently from the |chef server|. To set up |chef analytics| in a standalone configuration, an existing |chef server| deployment should already running. |chef analytics| is installed in two steps: configuring the |chef server| for |chef analytics|, and then installing |chef analytics|.
 
-.. warning:: The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage| prior to installing |chef analytics|.
+.. warning:: The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <https://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage| prior to installing |chef analytics|.
 
 Install |chef analytics|:
 

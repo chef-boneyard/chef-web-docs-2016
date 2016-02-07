@@ -28,7 +28,7 @@ When |reporting| and |chef manage| are both added to the |chef server|, a user i
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_reporting.rst
 
-.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <https://docs.chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install the Plugin
 -----------------------------------------------------

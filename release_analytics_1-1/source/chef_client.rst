@@ -6,7 +6,7 @@
 
 .. include:: ../../includes_chef_client/includes_chef_client.rst
 
-.. warning:: This topic discusses the |chef client| only from the context of |chef analytics|. For more information about the |chef client|, see http://docs.chef.io/chef_client.html.
+.. warning:: This topic discusses the |chef client| only from the context of |chef analytics|. For more information about the |chef client|, see https://docs.chef.io/chef_client.html.
 
 |chef client_audit|
 =====================================================

@@ -6,4 +6,4 @@ Run:
 
 .. code-block:: bash
 
-   $ git commit –m “initial apache cookbook”
+   $ git commit –m "initial apache cookbook"

@@ -67,7 +67,7 @@ To establish failover between the two backend servers, do the following:
         0: cs:SyncSource ro:Primary/Secondary ds:UpToDate/Inconsistent C r]—-
         ns:3071368 nr:0 dw:0 dr:3075736 al:0 bm:187 lo:0 pe:13 ua:4 ap:0 ep:1
         wo:b oos:12685660
-        [==>……………..] sync’ed: 19.5% (12388/15372)M
+        [==>……………..] sync'ed: 19.5% (12388/15372)M
         finish: 0:11:00 speed: 19,188 (24,468) K/sec
 
    Synchronization is complete hen the ``ds:`` section reads ``UpToDate/UpToDate``.

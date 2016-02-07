@@ -12,14 +12,14 @@ Our community convenes in many physical and virtual spaces. These guidelines may
 
 As you are working with other members of the community, please keep in mind the following guidelines, which apply equally to founders, mentors, those who submit new features and pull requests, and to anyone who is seeking help and guidance.
 
-The following list isn’t exhaustive; it is intended to help all of us communicate well so that the community can work better together:
+The following list isn't exhaustive; it is intended to help all of us communicate well so that the community can work better together:
 
 * **Be welcoming, inclusive, friendly, and patient.**
 * **Be considerate.**
 * **Be respectful.**
 * **Be professional.**
 * **Be careful in the words that you choose.**
-* **When we disagree, let’s all work together to understand why.**
+* **When we disagree, let's all work together to understand why.**
 
 The previous list applies to all forms of communication: IRC, the mailing list, the issue tracker, and any other forum that is used by the community.
 
@@ -27,7 +27,7 @@ Please keep in mind that:
 
 * Your work will be used by other people, and you, in turn, will depend on the work of others.
 * Decisions that you make will often affect others in the community.
-* Disagreements happen, but should not be an excuse for poor behavior and bad manners. When disagreements do happen, let’s work together to solve them effectively and in a way that ensures that everyone understands what the disagreement was.
+* Disagreements happen, but should not be an excuse for poor behavior and bad manners. When disagreements do happen, let's work together to solve them effectively and in a way that ensures that everyone understands what the disagreement was.
 * People may not understand jokes, sarcasm, and oblique references in the same way that you do. So remember that and be kind to the other members of the community.
 * Sexist, racist, and other prejudicial or exclusionary comments are not welcome in the community.
 

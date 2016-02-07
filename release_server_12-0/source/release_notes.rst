@@ -31,7 +31,7 @@ The following items are new for |chef server| 12:
 
 Upgrade to |chef server| 12!
 -----------------------------------------------------
-Upgrades to |chef server| 12 are supported for both |chef server oec| and |chef server osc| users. See http://docs.chef.io/server/upgrade_server.html for more information about upgrades. If you are upgrading from |chef server osc|, please see http://docs.chef.io/server/upgrade_server_open_source_notes.html as well.
+Upgrades to |chef server| 12 are supported for both |chef server oec| and |chef server osc| users. See https://docs.chef.io/server/upgrade_server.html for more information about upgrades. If you are upgrading from |chef server osc|, please see https://docs.chef.io/server/upgrade_server_open_source_notes.html as well.
 
 HA using AWS
 -----------------------------------------------------
