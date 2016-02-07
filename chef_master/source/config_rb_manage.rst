@@ -15,7 +15,7 @@ Settings
    
    .. code-block:: ruby
    
-      chef_documentation_url 'http://docs.chef.io'
+      chef_documentation_url 'https://docs.chef.io'
 
 .. include:: ../../includes_config/includes_config_rb_manage_settings.rst
 

@@ -26,19 +26,19 @@ All resources share a set of common actions, properties, conditional executions,
 
    * - Common Item
      - Description
-   * - `Actions <http://docs.chef.io/release/11-8/resource_common.html#actions>`_
+   * - `Actions <https://docs.chef.io/release/11-8/resource_common.html#actions>`_
      - |resource short_actions|
-   * - `Properties <http://docs.chef.io/release/11-8/resource_common.html#attributes>`_
+   * - `Properties <https://docs.chef.io/release/11-8/resource_common.html#attributes>`_
      - |resource short_attributes|
-   * - `Guards <http://docs.chef.io/release/11-8/resource_common.html#conditionals>`_
+   * - `Guards <https://docs.chef.io/release/11-8/resource_common.html#conditionals>`_
      - |resource short_conditions|
-   * - `Notifications <http://docs.chef.io/release/11-8/resource_common.html#notifications>`_
+   * - `Notifications <https://docs.chef.io/release/11-8/resource_common.html#notifications>`_
      - |resource short_notifications|
-   * - `Relative Paths <http://docs.chef.io/release/11-8/resource_common.html#relative-paths>`_
+   * - `Relative Paths <https://docs.chef.io/release/11-8/resource_common.html#relative-paths>`_
      - |resource short_relative_paths|
-   * - `Windows File Security <http://docs.chef.io/release/11-8/resource_common.html#windows-file-security>`_
+   * - `Windows File Security <https://docs.chef.io/release/11-8/resource_common.html#windows-file-security>`_
      - |resource short_windows_file_security|
-   * - `Run a Resource during Resource Compilation <http://docs.chef.io/release/11-8/resource_common.html#run-from-resource-collection>`_
+   * - `Run a Resource during Resource Compilation <https://docs.chef.io/release/11-8/resource_common.html#run-from-resource-collection>`_
      - |resource short_run_during_compile|
 
 Resources
@@ -51,109 +51,109 @@ Resources
 
    * - Resource
      - Description
-   * - `apt_package <http://docs.chef.io/release/11-8/resource_apt_package.html>`_
+   * - `apt_package <https://docs.chef.io/release/11-8/resource_apt_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_apt.rst
-   * - `bash <http://docs.chef.io/release/11-8/resource_bash.html>`_
+   * - `bash <https://docs.chef.io/release/11-8/resource_bash.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_bash.rst
-   * - `batch <http://docs.chef.io/release/11-8/resource_batch.html>`_
+   * - `batch <https://docs.chef.io/release/11-8/resource_batch.html>`_
      - .. include:: ../../includes_resources/includes_resource_batch.rst
-   * - `breakpoint <http://docs.chef.io/release/11-8/resource_breakpoint.html>`_
+   * - `breakpoint <https://docs.chef.io/release/11-8/resource_breakpoint.html>`_
      - .. include:: ../../includes_resources/includes_resource_breakpoint.rst
-   * - `chef_gem <http://docs.chef.io/release/11-8/resource_chef_gem.html>`_
+   * - `chef_gem <https://docs.chef.io/release/11-8/resource_chef_gem.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_chef_gem.rst
-   * - `cookbook_file <http://docs.chef.io/release/11-8/resource_cookbook_file.html>`_
+   * - `cookbook_file <https://docs.chef.io/release/11-8/resource_cookbook_file.html>`_
      - .. include:: ../../includes_resources/includes_resource_cookbook_file.rst
-   * - `cron <http://docs.chef.io/release/11-8/resource_cron.html>`_
+   * - `cron <https://docs.chef.io/release/11-8/resource_cron.html>`_
      - .. include:: ../../includes_resources/includes_resource_cron.rst
-   * - `csh <http://docs.chef.io/release/11-8/resource_csh.html>`_
+   * - `csh <https://docs.chef.io/release/11-8/resource_csh.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_csh.rst
-   * - `deploy <http://docs.chef.io/release/11-8/resource_deploy.html>`_
+   * - `deploy <https://docs.chef.io/release/11-8/resource_deploy.html>`_
      - .. include:: ../../includes_resources/includes_resource_deploy.rst
-   * - `directory <http://docs.chef.io/release/11-8/resource_directory.html>`_
+   * - `directory <https://docs.chef.io/release/11-8/resource_directory.html>`_
      - .. include:: ../../includes_resources/includes_resource_directory.rst
-   * - `dpkg_package <http://docs.chef.io/release/11-8/resource_dpkg_package.html>`_
+   * - `dpkg_package <https://docs.chef.io/release/11-8/resource_dpkg_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
-   * - `easy_install_package <http://docs.chef.io/release/11-8/resource_easy_install_package.html>`_
+   * - `easy_install_package <https://docs.chef.io/release/11-8/resource_easy_install_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
-   * - `env <http://docs.chef.io/release/11-8/resource_env.html>`_
+   * - `env <https://docs.chef.io/release/11-8/resource_env.html>`_
      - .. include:: ../../includes_resources/includes_resource_env.rst
-   * - `erl_call <http://docs.chef.io/release/11-8/resource_erlang_call.html>`_
+   * - `erl_call <https://docs.chef.io/release/11-8/resource_erlang_call.html>`_
      - .. include:: ../../includes_resources/includes_resource_erlang_call.rst
-   * - `execute <http://docs.chef.io/release/11-8/resource_execute.html>`_
+   * - `execute <https://docs.chef.io/release/11-8/resource_execute.html>`_
      - .. include:: ../../includes_resources/includes_resource_execute.rst
-   * - `file <http://docs.chef.io/release/11-8/resource_file.html>`_
+   * - `file <https://docs.chef.io/release/11-8/resource_file.html>`_
      - .. include:: ../../includes_resources/includes_resource_file.rst
-   * - `freebsd_package <http://docs.chef.io/release/11-8/resource_freebsd_package.html>`_
+   * - `freebsd_package <https://docs.chef.io/release/11-8/resource_freebsd_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_freebsd.rst
-   * - `gem_package <http://docs.chef.io/release/11-8/resource_gem_package.html>`_
+   * - `gem_package <https://docs.chef.io/release/11-8/resource_gem_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_gem.rst
-   * - `git <http://docs.chef.io/release/11-8/resource_git.html>`_
+   * - `git <https://docs.chef.io/release/11-8/resource_git.html>`_
      - .. include:: ../../includes_resources/includes_resource_scm_git.rst
-   * - `group <http://docs.chef.io/release/11-8/resource_group.html>`_
+   * - `group <https://docs.chef.io/release/11-8/resource_group.html>`_
      - .. include:: ../../includes_resources/includes_resource_group.rst
-   * - `http_request <http://docs.chef.io/release/11-8/resource_http_request.html>`_
+   * - `http_request <https://docs.chef.io/release/11-8/resource_http_request.html>`_
      - .. include:: ../../includes_resources/includes_resource_http_request.rst
-   * - `ifconfig <http://docs.chef.io/release/11-8/resource_ifconfig.html>`_
+   * - `ifconfig <https://docs.chef.io/release/11-8/resource_ifconfig.html>`_
      - .. include:: ../../includes_resources/includes_resource_ifconfig.rst
-   * - `ips_package <http://docs.chef.io/release/11-8/resource_ips_package.html>`_
+   * - `ips_package <https://docs.chef.io/release/11-8/resource_ips_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_ips.rst
-   * - `link <http://docs.chef.io/release/11-8/resource_link.html>`_
+   * - `link <https://docs.chef.io/release/11-8/resource_link.html>`_
      - .. include:: ../../includes_resources/includes_resource_link.rst
-   * - `log <http://docs.chef.io/release/11-8/resource_log.html>`_
+   * - `log <https://docs.chef.io/release/11-8/resource_log.html>`_
      - .. include:: ../../includes_resources/includes_resource_log.rst
-   * - `macports_package <http://docs.chef.io/release/11-8/resource_macports_package.html>`_
+   * - `macports_package <https://docs.chef.io/release/11-8/resource_macports_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_macports.rst
-   * - `mdadm <http://docs.chef.io/release/11-8/resource_mdadm.html>`_
+   * - `mdadm <https://docs.chef.io/release/11-8/resource_mdadm.html>`_
      - .. include:: ../../includes_resources/includes_resource_mdadm.rst
-   * - `mount <http://docs.chef.io/release/11-8/resource_mount.html>`_
+   * - `mount <https://docs.chef.io/release/11-8/resource_mount.html>`_
      - .. include:: ../../includes_resources/includes_resource_mount.rst
-   * - `ohai <http://docs.chef.io/release/11-8/resource_ohai.html>`_
+   * - `ohai <https://docs.chef.io/release/11-8/resource_ohai.html>`_
      - .. include:: ../../includes_resources/includes_resource_ohai.rst
-   * - `package <http://docs.chef.io/release/11-8/resource_package.html>`_
+   * - `package <https://docs.chef.io/release/11-8/resource_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package.rst
-   * - `pacman_package <http://docs.chef.io/release/11-8/resource_pacman_package.html>`_
+   * - `pacman_package <https://docs.chef.io/release/11-8/resource_pacman_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_pacman.rst
-   * - `perl <http://docs.chef.io/release/11-8/resource_perl.html>`_
+   * - `perl <https://docs.chef.io/release/11-8/resource_perl.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_perl.rst
-   * - `portage_package <http://docs.chef.io/release/11-8/resource_portage_package.html>`_
+   * - `portage_package <https://docs.chef.io/release/11-8/resource_portage_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_portage.rst
-   * - `powershell_script <http://docs.chef.io/release/11-8/resource_powershell_script.html>`_
+   * - `powershell_script <https://docs.chef.io/release/11-8/resource_powershell_script.html>`_
      - .. include:: ../../includes_resources/includes_resource_powershell_script.rst
-   * - `python <http://docs.chef.io/release/11-8/resource_python.html>`_
+   * - `python <https://docs.chef.io/release/11-8/resource_python.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_python.rst
-   * - `registry_key <http://docs.chef.io/release/11-8/resource_registry_key.html>`_
+   * - `registry_key <https://docs.chef.io/release/11-8/resource_registry_key.html>`_
      - .. include:: ../../includes_resources/includes_resource_registry_key.rst
-   * - `remote_directory <http://docs.chef.io/release/11-8/resource_remote_directory.html>`_
+   * - `remote_directory <https://docs.chef.io/release/11-8/resource_remote_directory.html>`_
      - .. include:: ../../includes_resources/includes_resource_remote_directory.rst
-   * - `remote_file <http://docs.chef.io/release/11-8/resource_remote_file.html>`_
+   * - `remote_file <https://docs.chef.io/release/11-8/resource_remote_file.html>`_
      - .. include:: ../../includes_resources/includes_resource_remote_file.rst
-   * - `route <http://docs.chef.io/release/11-8/resource_route.html>`_
+   * - `route <https://docs.chef.io/release/11-8/resource_route.html>`_
      - .. include:: ../../includes_resources/includes_resource_route.rst
-   * - `rpm_package <http://docs.chef.io/release/11-8/resource_rpm_package.html>`_
+   * - `rpm_package <https://docs.chef.io/release/11-8/resource_rpm_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_rpm.rst
-   * - `ruby <http://docs.chef.io/release/11-8/resource_ruby.html>`_
+   * - `ruby <https://docs.chef.io/release/11-8/resource_ruby.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_ruby.rst
-   * - `ruby_block <http://docs.chef.io/release/11-8/resource_ruby_block.html>`_
+   * - `ruby_block <https://docs.chef.io/release/11-8/resource_ruby_block.html>`_
      - .. include:: ../../includes_resources/includes_resource_ruby_block.rst
-   * - `script <http://docs.chef.io/release/11-8/resource_script.html>`_
+   * - `script <https://docs.chef.io/release/11-8/resource_script.html>`_
      - .. include:: ../../includes_resources/includes_resource_script.rst
-   * - `service <http://docs.chef.io/release/11-8/resource_service.html>`_
+   * - `service <https://docs.chef.io/release/11-8/resource_service.html>`_
      - .. include:: ../../includes_resources/includes_resource_service.rst
-   * - `smart_o_s_package <http://docs.chef.io/release/11-8/resource_smartos_package.html>`_
+   * - `smart_o_s_package <https://docs.chef.io/release/11-8/resource_smartos_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_smartos.rst
-   * - `solaris_package <http://docs.chef.io/release/11-8/resource_solaris_package.html>`_
+   * - `solaris_package <https://docs.chef.io/release/11-8/resource_solaris_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_solaris.rst
-   * - `subversion <http://docs.chef.io/release/11-8/resource_subversion.html>`_
+   * - `subversion <https://docs.chef.io/release/11-8/resource_subversion.html>`_
      - .. include:: ../../includes_resources/includes_resource_scm_subversion.rst
-   * - `template <http://docs.chef.io/release/11-8/resource_template.html>`_
+   * - `template <https://docs.chef.io/release/11-8/resource_template.html>`_
      - .. include:: ../../includes_resources/includes_resource_template.rst
-   * - `user <http://docs.chef.io/release/11-8/resource_user.html>`_
+   * - `user <https://docs.chef.io/release/11-8/resource_user.html>`_
      - .. include:: ../../includes_resources/includes_resource_user.rst
-   * - `windows_package <http://docs.chef.io/release/11-8/resource_windows_package.html>`_
+   * - `windows_package <https://docs.chef.io/release/11-8/resource_windows_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_windows.rst
-   * - `yum_package <http://docs.chef.io/release/11-8/resource_yum.html>`_
+   * - `yum_package <https://docs.chef.io/release/11-8/resource_yum.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
 
-In addition, the `chef_handler <http://docs.chef.io/release/11-8/resource_chef_handler.html>`_ resource is configured and run using the |cookbook chef_handler| cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (as a custom resource), the |resource chef_handler| resource should otherwise be considered a "platform resource".
+In addition, the `chef_handler <https://docs.chef.io/release/11-8/resource_chef_handler.html>`_ resource is configured and run using the |cookbook chef_handler| cookbook, which is the location in which custom handlers are defined and maintained. Despite being defined in a cookbook (as a custom resource), the |resource chef_handler| resource should otherwise be considered a "platform resource".
 
 

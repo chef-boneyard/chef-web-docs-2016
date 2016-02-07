@@ -2,6 +2,6 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-* `About Supermarket <http://docs.chef.io/supermarket.html>`_
+* `About Supermarket <https://docs.chef.io/supermarket.html>`_
 * `Visit Supermarket <https://supermarket.chef.io>`_
 * `Cookbooks available on Supermarket <https://supermarket.chef.io/cookbooks-directory>`_

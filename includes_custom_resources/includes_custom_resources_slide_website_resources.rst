@@ -3,4 +3,4 @@
 .. This file is hooked into a slide deck
 
 
-Use the |resource package|, |resource template| (two times), |resource directory|, and |resource service| resources to define the ``website`` resource. Remember: `order matters <http://docs.chef.io/decks/recipe_order_matters.html>`_!
+Use the |resource package|, |resource template| (two times), |resource directory|, and |resource service| resources to define the ``website`` resource. Remember: `order matters <https://docs.chef.io/decks/recipe_order_matters.html>`_!

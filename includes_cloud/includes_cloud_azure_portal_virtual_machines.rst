@@ -15,7 +15,7 @@ Once this information has been identified, launch the |azure portal|, start the 
 
 #. Fill in the virtual machine configuration information, such as machine name, user name, and so on. When finished, click to the next page.
 
-   .. note:: It’s best to use a new computer name each time through this workflow. This will help to avoid conflicts with virtual machine names that may have been previously registered on the |chef server|.
+   .. note:: It's best to use a new computer name each time through this workflow. This will help to avoid conflicts with virtual machine names that may have been previously registered on the |chef server|.
 
 #. Make the desired changes, if any, to the cloud service name, storage account, endpoints, etc., and then click to the next page.
 
@@ -29,7 +29,7 @@ Once this information has been identified, launch the |azure portal|, start the 
 
 #. Use the **From Local** button next to the validation key text box to locate a local copy of the validation key. 
 
-#. Optional. `Use a run-list <http://docs.chef.io/run_lists.html>`_ to specify what should be run when the virtual machine is provisioned, such as using the run-list to provision a virtual machine with |microsoft iis|. Use the ``iis`` cookbook and the default recipe to build a run-list. For example:
+#. Optional. `Use a run-list <https://docs.chef.io/run_lists.html>`_ to specify what should be run when the virtual machine is provisioned, such as using the run-list to provision a virtual machine with |microsoft iis|. Use the ``iis`` cookbook and the default recipe to build a run-list. For example:
    
    .. code-block:: ruby
    

@@ -18,7 +18,7 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
      - The ``aws`` cookbook is used to manage resources that are running in |amazon aws|.
    * - `bluepill <https://github.com/chef-cookbooks/bluepill>`_
      - The ``bluepill`` cookbook is used to install |bluepill|, and then use it to manage services.
-   * - `chef_handler <http://docs.chef.io/resource_chef_handler.html>`_
+   * - `chef_handler <https://docs.chef.io/resource_chef_handler.html>`_
      - |cookbook name chef_handler|
    * - `cron <https://github.com/chef-cookbooks/cron>`_
      - Use to install cron and start the crond service.
@@ -49,7 +49,7 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
    * - `postfix <https://github.com/chef-cookbooks/postfix>`_
      - Use to install and configure postfix for client or outbound relayhost.
    * - `powershell <https://github.com/chef-cookbooks/powershell>`_
-     - Use to run |windows powershell|. See the `powershell_script resource <http://docs.chef.io/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|.
+     - Use to run |windows powershell|. See the `powershell_script resource <https://docs.chef.io/resource_powershell_script.html>`__ (built into the |chef client|) for more information about improved ways to run |windows powershell| when using |chef|.
    * - `squid <https://github.com/chef-cookbooks/squid>`_
      - Use to configure squid as a caching proxy.
    * - `sudo <https://github.com/chef-cookbooks/sudo>`_

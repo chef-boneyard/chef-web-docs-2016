@@ -42,7 +42,7 @@ Provisioning
 =====================================================
 |chef provisioning|, a collection of resources and drivers that is maintained by |company_name| includes a driver for |docker|.
 
-* Use the `machine and machine-based resources <http://docs.chef.io/devkit/#chef-provisioning-title>`__ to build and define recipes that manage |docker| images
+* Use the `machine and machine-based resources <https://docs.chef.io/devkit/#chef-provisioning-title>`__ to build and define recipes that manage |docker| images
 * Use the `docker driver <https://github.com/chef/chef-provisioning-docker>`__ to tell the |chef client| how to build and define the |docker| image itself
 
 

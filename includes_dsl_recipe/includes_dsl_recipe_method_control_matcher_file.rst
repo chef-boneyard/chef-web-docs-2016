@@ -144,7 +144,7 @@ Matchers are available for files and directories. Use this matcher to define aud
        .. code-block:: ruby
 
           it 'should be version 1.2' do
-            expect(file('C:\\Windows\\path\\to\\file')).to be_version(‘1.2’)
+            expect(file('C:\\Windows\\path\\to\\file')).to be_version('1.2')
           end
 
    * - ``be_writable``

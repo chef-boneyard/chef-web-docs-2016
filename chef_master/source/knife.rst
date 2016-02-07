@@ -13,7 +13,7 @@ About |knife_title|
    * - Topic
      - Description
    * - :doc:`knife_using`
-     - |knife| runs from a management workstation and sits in-between a |chef server| and an organization’s infrastructure.
+     - |knife| runs from a management workstation and sits in-between a |chef server| and an organization's infrastructure.
    * - :doc:`knife_common_options`
      - There are many options that are available for all |knife| sub-commands.
 

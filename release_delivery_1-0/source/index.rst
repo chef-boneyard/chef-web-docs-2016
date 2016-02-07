@@ -8,7 +8,7 @@ Getting Started
 =====================================================
 If you are new to |chef delivery|, get oriented :doc:`with the Chef Delivery overview </delivery_overview>`.
 
-Then, see |chef delivery| in action in a self-paced tutorial `Automating your Workflow with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. You’ll set up your own |chef delivery| cluster and a sample application to experiment with.
+Then, see |chef delivery| in action in a self-paced tutorial `Automating your Workflow with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. You'll set up your own |chef delivery| cluster and a sample application to experiment with.
 
 In the Documentation
 =====================================================

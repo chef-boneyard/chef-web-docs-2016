@@ -29,7 +29,7 @@ A failed request, on the other hand produces a large amount of output. The follo
    2013-08-06_16:06:51.32997  A Net::HTTPFatalError occurred in clients#index:
    2013-08-06_16:06:51.32997  
    2013-08-06_16:06:51.32997    502 "Bad Gateway"
-   2013-08-06_16:06:51.32997    /opt/opscode/embedded/lib/ruby/1.9.1/net/http.rb:2632:in ‘error!’
+   2013-08-06_16:06:51.32997    /opt/opscode/embedded/lib/ruby/1.9.1/net/http.rb:2632:in 'error!'
    2013-08-06_16:06:51.32998  
    2013-08-06_16:06:51.32998  -------------------------------
    2013-08-06_16:06:51.32998  Request:

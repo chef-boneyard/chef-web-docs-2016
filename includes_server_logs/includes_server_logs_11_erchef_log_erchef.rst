@@ -17,7 +17,7 @@ where important fields in this log include:
 
 * The HTTP method (``POST``)
 * The HTTP path (``/organizations/srwjedoqqoypgmvafmoi/environments``)
-* The message (``{created,<<”_default”>>}``)
+* The message (``{created,<<"_default">>}``)
 * The organization name (``org_name=srwjedoqqoypgmvafmoi``)
 * The timestamp (``2013-08-06T08:54:32Z``)
 * The name of the user and/or |chef client| which made the request (``pivotal``)

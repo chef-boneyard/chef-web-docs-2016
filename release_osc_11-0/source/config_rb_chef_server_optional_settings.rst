@@ -4,7 +4,7 @@
 |chef server rb| Optional Settings
 =====================================================
 
-.. warning:: This topic documents the settings for |chef server osc|. The current version of the |chef server| is version 12. All of the documentation at http://docs.chef.io and http://docs.chef.io/server/ is about the current version of the |chef server|. The documentation for |chef server osc| has been moved to http://docs.chef.io/open_source/ and is archived for specific versions: `Open Source Chef 11.0 <http://docs.chef.io/release/osc_11-0/>`__ and `Open Source Chef 11.1 <http://docs.chef.io/release/osc_11-1/>`__.
+.. warning:: This topic documents the settings for |chef server osc|. The current version of the |chef server| is version 12. All of the documentation at https://docs.chef.io is about the current version of the |chef server|. The documentation for |chef server osc| has been moved: `Open Source Chef 11.0 <https://docs.chef.io/release/osc_11-0/>`__ and `Open Source Chef 11.1 <https://docs.chef.io/release/osc_11-1/>`__.
 
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst
 

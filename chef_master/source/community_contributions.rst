@@ -4,7 +4,7 @@ Community Contributions
 
 We are glad you want to contribute to Chef! Here's how:
 
-#. Review the `Become a contributor <https://supermarket.chef.io/become-a-contributor>`_ page on |supermarket| and follow the steps described there for signing the contributor license agreement; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.chef.io/community_contributions.html#the-obvious-fix-rule>`_
+#. Review the `Become a contributor <https://supermarket.chef.io/become-a-contributor>`_ page on |supermarket| and follow the steps described there for signing the contributor license agreement; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <https://docs.chef.io/community_contributions.html#the-obvious-fix-rule>`_
 #. Create a |github| pull request
 #. Do a `code review <https://github.com/chef/chef/blob/master/CONTRIBUTING.md#cr>`_ with the |company_name| team and/or core committers on the pull request
 
@@ -73,7 +73,9 @@ How does the Obvious Fix Rule Work?
 -----------------------------------------------------
 Any committer may commit fixes without first signing a CLA for obvious typos, grammar mistakes, and formatting problems wherever they may be — in the web pages, API documentation, source code, etc.
 
-Whenever you invoke the "obvious fix" rule, please say so in your commit message. For example::
+Whenever you invoke the "obvious fix" rule, please say so in your commit message. For example:
+
+.. code-block:: bash
 
    ------------------------------------------------------------------------
    commit 370adb3f82d55d912b0cf9c1d1e99b132a8ed3b5 

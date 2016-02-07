@@ -38,7 +38,7 @@ Custom Plugins
 
 .. note:: See https://github.com/rackerlabs/ohai-plugins/tree/master/plugins for some great examples of custom |ohai| plugins.
 
-.. warning:: The syntax for custom plugins changes significantly between |ohai| 6 and newer versions of |ohai|. This page is about newer plugins and `this page is about Ohai 6 plugins <http://docs.chef.io/release/ohai-6/>`_). While |company_name| has worked to ensure backwards compatibility for all |ohai| 6 plugins, a plan should be put in place to update the syntax for all |ohai| 6 plugins so they are usable with the new pattern. Once updated, please test and verify those plugins before running them in a production environment.
+.. warning:: The syntax for custom plugins changes significantly between |ohai| 6 and newer versions of |ohai|. This page is about newer plugins and `this page is about Ohai 6 plugins <https://docs.chef.io/release/ohai-6/>`_). While |company_name| has worked to ensure backwards compatibility for all |ohai| 6 plugins, a plan should be put in place to update the syntax for all |ohai| 6 plugins so they are usable with the new pattern. Once updated, please test and verify those plugins before running them in a production environment.
 
 Syntax
 -----------------------------------------------------

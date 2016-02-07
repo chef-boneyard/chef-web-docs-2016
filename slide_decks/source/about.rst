@@ -143,5 +143,5 @@ About Slide Decks
 
     For more information, see:
 
-    * http://docs.chef.io/resources.html
-    * http://docs.chef.io/recipes.html
+    * https://docs.chef.io/resources.html
+    * https://docs.chef.io/recipes.html

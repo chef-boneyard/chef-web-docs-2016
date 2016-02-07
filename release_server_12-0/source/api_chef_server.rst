@@ -70,7 +70,7 @@ The |chef server| may contain multiple organizations.
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_orgs.rst
 
-.. warning:: This endpoint may only be accessed by the ``pivotal`` user, which is created as part of the installation process for the |chef server|. (See the “Query for Users and Orgs” example below for an example of how to access this endpoint with the ``pivotal`` user.)
+.. warning:: This endpoint may only be accessed by the ``pivotal`` user, which is created as part of the installation process for the |chef server|. (See the "Query for Users and Orgs" example below for an example of how to access this endpoint with the ``pivotal`` user.)
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -104,7 +104,7 @@ PUT
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_users.rst
 
-.. warning:: This endpoint may only be accessed by the ``pivotal`` user, which is created as part of the installation process for the |chef server|. (See the “Query for Users and Orgs” example below for an example of how to access this endpoint with the ``pivotal`` user.)
+.. warning:: This endpoint may only be accessed by the ``pivotal`` user, which is created as part of the installation process for the |chef server|. (See the "Query for Users and Orgs" example below for an example of how to access this endpoint with the ``pivotal`` user.)
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
