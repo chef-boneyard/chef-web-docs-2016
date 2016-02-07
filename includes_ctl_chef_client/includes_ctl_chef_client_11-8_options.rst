@@ -2,7 +2,7 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-This command has the following syntax::
+This command has the following syntax:
 
 .. code-block:: bash
 

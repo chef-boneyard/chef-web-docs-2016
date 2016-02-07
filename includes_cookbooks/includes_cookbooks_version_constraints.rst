@@ -1,7 +1,9 @@
 .. The contents of this file may be included in multiple topics (using the includes directive).
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-A version constraint is a string that combines the cookbook version syntax with an operator, in the following format::
+A version constraint is a string that combines the cookbook version syntax with an operator, in the following format:
+
+.. code-block:: ruby
 
    operator cookbook_version_syntax
 

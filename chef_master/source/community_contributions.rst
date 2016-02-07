@@ -73,7 +73,9 @@ How does the Obvious Fix Rule Work?
 -----------------------------------------------------
 Any committer may commit fixes without first signing a CLA for obvious typos, grammar mistakes, and formatting problems wherever they may be — in the web pages, API documentation, source code, etc.
 
-Whenever you invoke the "obvious fix" rule, please say so in your commit message. For example::
+Whenever you invoke the "obvious fix" rule, please say so in your commit message. For example:
+
+.. code-block:: bash
 
    ------------------------------------------------------------------------
    commit 370adb3f82d55d912b0cf9c1d1e99b132a8ed3b5 
