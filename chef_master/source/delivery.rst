@@ -14,7 +14,7 @@ An Overview of |chef delivery|
 * Push build artifacts to production servers in real time
 
 .. 
-.. .. note:: If you are new to |chef delivery_short|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery_short| cluster and a sample application to experiment with.
+.. .. note:: If you are new to |chef delivery_short|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you'll set up your own |chef delivery_short| cluster and a sample application to experiment with.
 .. 
 
 Pipelines
@@ -49,19 +49,19 @@ Each project has one or more pipelines. The typical setup is for each project to
 
 Changes and Project Pipelines
 =====================================================
-Let’s walk through what happens as a change makes its way through |chef delivery_short|. We'll assume you have created a project in |chef delivery_short| and want to make a change. 
+Let's walk through what happens as a change makes its way through |chef delivery_short|. We'll assume you have created a project in |chef delivery_short| and want to make a change. 
 
-You start with a local checkout of the project’s |git| repository. You create a feature branch, make a change in that branch and test it locally. When you’re ready, submit the change using the ``delivery review`` command (part of the |chef delivery_short| command line tool). This command submits the change to |chef delivery_short| and kicks off the pipeline. The command is the equivalent to ``git push``, although it also creates a change in |chef delivery_short| that is similar to a pull request in |github| and other |git|-based version control systems.
+You start with a local checkout of the project's |git| repository. You create a feature branch, make a change in that branch and test it locally. When you're ready, submit the change using the ``delivery review`` command (part of the |chef delivery_short| command line tool). This command submits the change to |chef delivery_short| and kicks off the pipeline. The command is the equivalent to ``git push``, although it also creates a change in |chef delivery_short| that is similar to a pull request in |github| and other |git|-based version control systems.
 
 Verification
 -----------------------------------------------------
-When |chef delivery_short| receives the change, it triggers the Verify stage. The purpose of Verify is to run checks so that the system can decide if it’s worth the time of a human to review the change.
+When |chef delivery_short| receives the change, it triggers the Verify stage. The purpose of Verify is to run checks so that the system can decide if it's worth the time of a human to review the change.
 
 When the Verify phases have completed successfully, the change is ready for code review. |chef delivery_short| provides integrated code review through its web UI. There is also an integration with |github| and another, currently in the works, for |bitbucket server| (by |atlassian|) for teams with existing code review workflows.
 
 In code review, team members can comment on the diffs. If more changes are required, they can be made either as additional commits on top of the originally submitted feature branch, or the commit(s) can be reworked using ``git commit --amend`` and ``git rebase``. 
 
-To submit the updates on a feature branch for review, simply run ``delivery review`` again. There’s no need to worry about force pushing if you’ve squashed commits. |chef delivery_short| patchset handling will work with your workflow. When you resubmit a change with updates from code review, |chef delivery_short| triggers a fresh run of the Verify stage using the updated feature branch. This can be repeated as necessary. When Verify has passed and the team is happy with the change, it can be approved. Changes are approved by clicking the Approve button in the web UI.
+To submit the updates on a feature branch for review, simply run ``delivery review`` again. There's no need to worry about force pushing if you've squashed commits. |chef delivery_short| patchset handling will work with your workflow. When you resubmit a change with updates from code review, |chef delivery_short| triggers a fresh run of the Verify stage using the updated feature branch. This can be repeated as necessary. When Verify has passed and the team is happy with the change, it can be approved. Changes are approved by clicking the Approve button in the web UI.
 
 Approval
 -----------------------------------------------------
@@ -105,7 +105,7 @@ To summarize:
 
 Verify Stage
 -----------------------------------------------------
-The Verify stage runs automatically when someone submits a new change or updates an existing change that hasn’t yet been approved.  It is made up of the following phases. (Remember that you can skip phases that do not apply to your project and you have complete control over what happens in a given phase job.)
+The Verify stage runs automatically when someone submits a new change or updates an existing change that hasn't yet been approved.  It is made up of the following phases. (Remember that you can skip phases that do not apply to your project and you have complete control over what happens in a given phase job.)
 
 * **Lint**. Run tools that analyze your source code to identify stylistic problems.
 * **Syntax**. Check that the code can be parsed and, if applicable, that it compiles.
@@ -113,7 +113,7 @@ The Verify stage runs automatically when someone submits a new change or updates
 
 Build Stage
 -----------------------------------------------------
-When a change is approved, |chef delivery_short| merges the change into the pipeline’s target branch and triggers the Build stage. The Build stage repeats the lint, syntax, and unit phases from the Verify stage. This is because the target branch may have moved ahead since the Verify stage ran on this change (this occurs if there are multiple open changes on a project and another change is approved before yours).
+When a change is approved, |chef delivery_short| merges the change into the pipeline's target branch and triggers the Build stage. The Build stage repeats the lint, syntax, and unit phases from the Verify stage. This is because the target branch may have moved ahead since the Verify stage ran on this change (this occurs if there are multiple open changes on a project and another change is approved before yours).
 
 In addition to the Verify checks, the Build stage provides three additional phases:
 
@@ -123,9 +123,9 @@ In addition to the Verify checks, the Build stage provides three additional phas
 
 Acceptance Stage
 -----------------------------------------------------
-Beginning with the Acceptance stage, the pipeline switches from analyzing the project’s source code to verifying the set of artifacts that were produced in the Build stage. The goal of the Acceptance stage is for the team to make a decision about whether the change should go all the way out to production or not. There are four phases in Acceptance:
+Beginning with the Acceptance stage, the pipeline switches from analyzing the project's source code to verifying the set of artifacts that were produced in the Build stage. The goal of the Acceptance stage is for the team to make a decision about whether the change should go all the way out to production or not. There are four phases in Acceptance:
 
-* **Provision**. Provision infrastructure needed to test the artifact(s). Examples include instantiating new infrastructure with |chef| provisioning (or another API-accessible mechanism) and manipulating |chef server| environments to designate the nodes used by the current stage. Of course, what executes in any phase is up to you and determined by the project’s build cookbook.
+* **Provision**. Provision infrastructure needed to test the artifact(s). Examples include instantiating new infrastructure with |chef| provisioning (or another API-accessible mechanism) and manipulating |chef server| environments to designate the nodes used by the current stage. Of course, what executes in any phase is up to you and determined by the project's build cookbook.
 * **Deploy**. Deploy the artifacts published in the Build stage to the portion of your infrastructure that has been set aside for acceptance testing.
 * **Smoke**. Smoke tests should be relatively short-running tests that verify that the code that should have been deployed has indeed been deployed and that the system passes minimal health checks.
 * **Functional**. The functional tests should give you confidence that the system is meeting its business requirements. 
@@ -138,13 +138,13 @@ When an artifact is in Union, |chef delivery_short| ensures that any projects th
 
 If a problem is discovered in Union (it will happen, that is what Union is for), the cooperating teams need to have a conversation about the right fix. Sometimes the fix may require a change on a different project than the one that initiated the break. To fix the break, you submit a new change through the pipeline. |chef delivery_short| is fundamentally a roll-forward system.
 
-|chef delivery_short| ensures that only one change is active in each of the Union, Rehearsal, and Delivered stages at any one time. This orchestration increases safety by encouraging small batch change. In complex systems, identifying root causes of issues in the context of a single change is much easier than trying to analyze larger batches of changes across many different projects. In the future, |chef delivery_short|’s dependency management features will be enhanced to include all concurrent deploys in Union, Rehearsal, and Delivered, as long as they map to completely unrelated dependency sets.
+|chef delivery_short| ensures that only one change is active in each of the Union, Rehearsal, and Delivered stages at any one time. This orchestration increases safety by encouraging small batch change. In complex systems, identifying root causes of issues in the context of a single change is much easier than trying to analyze larger batches of changes across many different projects. In the future, |chef delivery_short|'s dependency management features will be enhanced to include all concurrent deploys in Union, Rehearsal, and Delivered, as long as they map to completely unrelated dependency sets.
 
 Rehearsal Stage
 -----------------------------------------------------
 If all phases of Union succeed, then the Rehearsal stage is triggered. Rehearsal increases confidence in the artifacts and the deployment by repeating the process that occurred in Union in a different environment. 
 
-If a failure occurs in Union, Rehearsal serves a different and critical purpose. When you submit a new change and it fixes the break in Union, you will have proved that a sequence of two changes, one that breaks the system, and one that comes after and fixes it, results in a healthy system. You do not yet know what happens when you apply the cumulative change to an environment that never saw the failure. Sometimes a fix’s success depends upon state left behind as a result of a preceding failure. The Rehearsal stage is an opportunity to test the change in an environment that didn’t see the failure.
+If a failure occurs in Union, Rehearsal serves a different and critical purpose. When you submit a new change and it fixes the break in Union, you will have proved that a sequence of two changes, one that breaks the system, and one that comes after and fixes it, results in a healthy system. You do not yet know what happens when you apply the cumulative change to an environment that never saw the failure. Sometimes a fix's success depends upon state left behind as a result of a preceding failure. The Rehearsal stage is an opportunity to test the change in an environment that didn't see the failure.
 
 Delivered Stage
 -----------------------------------------------------
@@ -168,7 +168,7 @@ As changes flow through the |chef delivery_short| pipeline, they are tested in a
 
 |chef delivery_short| allows you to define the infrastructure that participates in each stage.  How you map infrastructure environments to pipeline phases is controlled by the build cookbook. In other words, whether a given phase job distributes work to other infrastructure is up to you. There are many ways to map infrastructure environments to pipeline phases, but here are some possible approaches. 
 
-Because they test source code, the Verify and Build stages ordinarily run exclusively on the build nodes and don’t involve other infrastructure. The necessary runtime environments are created and destroyed during the execution of the stage. For example, they can be established using virtual machines created by testing frameworks such as |kitchen|.
+Because they test source code, the Verify and Build stages ordinarily run exclusively on the build nodes and don't involve other infrastructure. The necessary runtime environments are created and destroyed during the execution of the stage. For example, they can be established using virtual machines created by testing frameworks such as |kitchen|.
 
 The stages that test artifacts---Acceptance, Union, Rehearsal and Delivered---almost always need access to additional infrastructure to perform their tests. 
 
@@ -176,9 +176,9 @@ For the Acceptance stage, a common approach is to provision one or more nodes th
 
 For the shared pipeline (Union, Rehearsal, and Delivered), it makes sense to have persistent infrastructure dedicated to each of the stages. Infrastructure environments mapped to Union and Rehearsal should ideally be identical in topology and should correspond as closely as possible to the live infrastructure of the Delivered stage.
 
-You can set up the infrastructure environments either manually or by using automated, on-the-fly provisioning upon first use. The manual approach is simple, but it has the disadvantage of not having an initial run-list for the nodes in the environment. Automated provisioning requires adding code to the build cookbook, but it is more replicable than the manual approach. Automated provisioning also bootstraps the initial run-list for each node in the environment. The ``delivery-truck`` cookbook makes it easy to customize your pipeline’s build cookbook for the environments you want to use for each stage of the pipeline.
+You can set up the infrastructure environments either manually or by using automated, on-the-fly provisioning upon first use. The manual approach is simple, but it has the disadvantage of not having an initial run-list for the nodes in the environment. Automated provisioning requires adding code to the build cookbook, but it is more replicable than the manual approach. Automated provisioning also bootstraps the initial run-list for each node in the environment. The ``delivery-truck`` cookbook makes it easy to customize your pipeline's build cookbook for the environments you want to use for each stage of the pipeline.
 
-.. note:: Currently, |chef delivery_short| manages cookbook version and application attribute version pins using environment objects of the |chef server|. The names of the environments in the |chef server| correspond to the stages of a pipeline. (This doesn’t mean, however, that the nodes that participate in a given stage need to remain fixed over time.)
+.. note:: Currently, |chef delivery_short| manages cookbook version and application attribute version pins using environment objects of the |chef server|. The names of the environments in the |chef server| correspond to the stages of a pipeline. (This doesn't mean, however, that the nodes that participate in a given stage need to remain fixed over time.)
 
 It is also possible to share infrastructure among pipeline stages. For example, you can provision infrastructure needed for performing acceptance tests while relying on enterprise services provided by another pipeline stage or even a production environment. Another possibility is to reserve a portion of infrastructure from production to run acceptance testing. 
 
@@ -188,7 +188,7 @@ Each project contains a configuration file in its source repository, located at 
 
 The ``config.json`` file allows customization of the behavior of |chef delivery_short| and the build cookbook.
 
-When |chef delivery_short| executes a phase, it selects a build node to run the job. On the build node, the project’s source is fetched and synchronized to the revision matching the head of the feature branch for the change. The build node reads the project’s ``config.json`` file and uses this information to fetch the appropriate build cookbook. Build cookbooks can be embedded in project source repositories, fetched from a |git| server, |chef server|, or a |supermarket| instance. Finally, the build node runs a local |chef zero| run to execute the appropriate phase.
+When |chef delivery_short| executes a phase, it selects a build node to run the job. On the build node, the project's source is fetched and synchronized to the revision matching the head of the feature branch for the change. The build node reads the project's ``config.json`` file and uses this information to fetch the appropriate build cookbook. Build cookbooks can be embedded in project source repositories, fetched from a |git| server, |chef server|, or a |supermarket| instance. Finally, the build node runs a local |chef zero| run to execute the appropriate phase.
 
 If you are using |chef delivery_short| to manage changes in |chef| cookbooks, you can wrap, or use directly, ``delivery-truck``, a build cookbook for building and testing cookbooks. The ``delivery-truck`` and ``delivery-sugar`` cookbooks contain helpers that can be used for non-cookbook workflows as well.  You can wrap or modify the ``delivery-truck`` cookbook to suit your own needs.
 
@@ -237,5 +237,5 @@ See the "Build Cookbooks" topic for more information.
 .. 
 .. Getting Started
 .. =====================================================
-.. If you are new to |chef delivery_short|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you’ll set up your own |chef delivery_short| cluster and a sample application to experiment with.
+.. If you are new to |chef delivery_short|, you can see it in action in the self-paced tutorial `Build a Continuous Delivery Pipeline with Chef Delivery <https://learn.chef.io/tutorials/#build-a-delivery-pipeline>`__. In the tutorial, you'll set up your own |chef delivery_short| cluster and a sample application to experiment with.
 .. 

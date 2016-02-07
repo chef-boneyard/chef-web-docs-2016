@@ -103,7 +103,7 @@ where important fields in this log include:
 
 * The HTTP method (``POST``)
 * The HTTP path (``/organizations/srwjedoqqoypgmvafmoi/environments``)
-* The message (``{created,<<”_default”>>}``)
+* The message (``{created,<<"_default">>}``)
 * The organization name (``org_name=srwjedoqqoypgmvafmoi``)
 * The timestamp (``2013-08-06T08:54:32Z``)
 * The name of the user and/or |chef client| which made the request (``pivotal``)
@@ -146,7 +146,7 @@ A failed request, on the other hand produces a large amount of output. The follo
    2013-08-06_16:06:51.32997  A Net::HTTPFatalError occurred in clients#index:
    2013-08-06_16:06:51.32997  
    2013-08-06_16:06:51.32997    502 "Bad Gateway"
-   2013-08-06_16:06:51.32997    /opt/opscode/embedded/lib/ruby/1.9.1/net/http.rb:2632:in ‘error!’
+   2013-08-06_16:06:51.32997    /opt/opscode/embedded/lib/ruby/1.9.1/net/http.rb:2632:in 'error!'
    2013-08-06_16:06:51.32998  
    2013-08-06_16:06:51.32998  -------------------------------
    2013-08-06_16:06:51.32998  Request:

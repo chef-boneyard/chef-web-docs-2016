@@ -70,7 +70,7 @@ Glossary
    A library allows arbitrary |ruby| code to be included in a cookbook, either as a way of extending the classes that are built-in to the |chef client| or by implementing entirely new functionality.
 
 **Management Console**
-   The Chef web-based management console you can use to manage Role Based Access Control (RBAC), edit and delete nodes, and reset private keys. Keep up to date with what’s happening during chef client runs across an entire organization or on specific nodes.
+   The Chef web-based management console you can use to manage Role Based Access Control (RBAC), edit and delete nodes, and reset private keys. Keep up to date with what's happening during chef client runs across an entire organization or on specific nodes.
 
 **node**
    A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|.
@@ -118,4 +118,4 @@ Glossary
   A |chef delivery| stage. Union is the first of the three shared pipeline stages. The purpose of the Union stage is to assess the impact of the change in the context of a complete (or as close as possible) installation of the set of projects that comprise the system as a whole.
 
 **Verify**
-  A |chef delivery| stage. The purpose of Verify is to run checks so that the system can decide if it’s worth the time of a human to review the submitted change.
+  A |chef delivery| stage. The purpose of Verify is to run checks so that the system can decide if it's worth the time of a human to review the submitted change.

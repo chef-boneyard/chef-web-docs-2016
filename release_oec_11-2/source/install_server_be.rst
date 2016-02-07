@@ -164,7 +164,7 @@ For the other back-end server, add the following:
     :role => "backend",
     :cluster_ipaddress => "CLUSTER_IPADDRESS"
 
-Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server’s interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry.
+Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server's interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry.
 
 Add an entry for the back-end virtual IP address that was assigned earlier:
 
@@ -407,7 +407,7 @@ Output similar to the following will be shown:
      0: cs:SyncSource ro:Primary/Secondary ds:UpToDate/Inconsistent C r]—-
      ns:3071368 nr:0 dw:0 dr:3075736 al:0 bm:187 lo:0 pe:13 ua:4 ap:0 ep:1
      wo:b oos:12685660
-     [==>……………..] sync’ed: 19.5% (12388/15372)M
+     [==>……………..] sync'ed: 19.5% (12388/15372)M
      finish: 0:11:00 speed: 19,188 (24,468) K/sec
 
 When the ``ds`` section of the output reads ``UpToDate/UpToDate``, the synchronization is complete.

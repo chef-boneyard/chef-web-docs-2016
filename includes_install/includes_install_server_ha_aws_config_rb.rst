@@ -32,7 +32,7 @@ Add the following settings to the |chef server rb| file:
         :role => "backend",
         :cluster_ipaddress => "CLUSTER_IPADDRESS"
 
-   Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server’s interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry.
+   Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server's interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry.
 
 #. Define the backend virtual IP address:
 

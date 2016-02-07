@@ -2,7 +2,7 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-|kitchen| utilizes bussers to manage test plugins. We’ll be using the ``serverspec`` plugin:
+|kitchen| utilizes bussers to manage test plugins. We'll be using the ``serverspec`` plugin:
 
 .. code-block:: python
 

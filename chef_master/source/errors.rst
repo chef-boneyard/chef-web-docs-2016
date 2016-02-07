@@ -196,19 +196,19 @@ Determine which API service is returning 504s using the |nginx| access logs. API
 
 .. code-block:: bash
 
-   $ grep ’HTTP/1.1" 504’ /var/log/opscode/nginx/access.log
+   $ grep 'HTTP/1.1" 504' /var/log/opscode/nginx/access.log
 
 The following will extract the URLs and sort them by ``uniq`` count:
 
 .. code-block:: bash
 
-   $ grep ’HTTP/1.1" 504’ nginx-access.log | cut -d’ ’ -f8 | sort | uniq -c | sort
+   $ grep 'HTTP/1.1" 504' nginx-access.log | cut -d' ' -f8 | sort | uniq -c | sort
 
 In a large installation, you may need to restrict this to a subset of the requests:
 
 .. code-block:: bash
 
-   $ tail -10000 nginx-access.log | grep ’HTTP/1.1" 504’ | cut -d’ ’ -f8 | sort | uniq -c | sort
+   $ tail -10000 nginx-access.log | grep 'HTTP/1.1" 504' | cut -d' ' -f8 | sort | uniq -c | sort
 
 You can also use the ``ntail`` utility.
 
