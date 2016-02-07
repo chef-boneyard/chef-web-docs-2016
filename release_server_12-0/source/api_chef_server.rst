@@ -173,11 +173,9 @@ POST
 
 /clients
 -----------------------------------------------------
-|api chef server clients|
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients.rst
 
 .. note:: .. include:: ../../includes_notes/includes_notes_api_chef_server_manage_clients_with_knife.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients.rst
 
 GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
