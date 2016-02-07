@@ -29,7 +29,7 @@ Once this information has been identified, launch the |azure portal|, start the 
 
 #. Use the **From Local** button next to the validation key text box to locate a local copy of the validation key. 
 
-#. Optional. `Use a run-list <http://docs.chef.io/run_lists.html>`_ to specify what should be run when the virtual machine is provisioned, such as using the run-list to provision a virtual machine with |microsoft iis|. Use the ``iis`` cookbook and the default recipe to build a run-list. For example:
+#. Optional. `Use a run-list <https://docs.chef.io/run_lists.html>`_ to specify what should be run when the virtual machine is provisioned, such as using the run-list to provision a virtual machine with |microsoft iis|. Use the ``iis`` cookbook and the default recipe to build a run-list. For example:
    
    .. code-block:: ruby
    

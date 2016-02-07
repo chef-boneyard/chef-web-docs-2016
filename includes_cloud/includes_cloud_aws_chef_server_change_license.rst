@@ -5,7 +5,7 @@ To increase or decrease the number of licenses you'll need to migrate to your da
 
 #. Launch a new |amazon ami| that is licensed for the maximum number of nodes you require.
 
-#. `Launch the AMI <http://docs.chef.io/aws_marketplace.html#launch-the-ami>`_
+#. `Launch the AMI <https://docs.chef.io/aws_marketplace.html#launch-the-ami>`_
 
 #. .. include:: ../../step_install/step_install_chef_server_backup.rst
 

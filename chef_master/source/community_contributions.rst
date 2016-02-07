@@ -4,7 +4,7 @@ Community Contributions
 
 We are glad you want to contribute to Chef! Here's how:
 
-#. Review the `Become a contributor <https://supermarket.chef.io/become-a-contributor>`_ page on |supermarket| and follow the steps described there for signing the contributor license agreement; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.chef.io/community_contributions.html#the-obvious-fix-rule>`_
+#. Review the `Become a contributor <https://supermarket.chef.io/become-a-contributor>`_ page on |supermarket| and follow the steps described there for signing the contributor license agreement; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <https://docs.chef.io/community_contributions.html#the-obvious-fix-rule>`_
 #. Create a |github| pull request
 #. Do a `code review <https://github.com/chef/chef/blob/master/CONTRIBUTING.md#cr>`_ with the |company_name| team and/or core committers on the pull request
 

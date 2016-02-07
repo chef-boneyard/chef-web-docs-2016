@@ -6,9 +6,9 @@ Install the |chef server_title|
 
 There are three configuration scenarios for the |chef server|:
 
-* `Standalone <http://docs.chef.io/release/server_12-4/install_server.html#standalone>`__ (everything on a single machine)
-* `High availability <http://docs.chef.io/release/server_12-4/install_server.html#high-availability>`__ (machines configured for front-end and back-end, allowing for failover on the back-end and load-balancing on the front-end, as required)
-* `Tiered <http://docs.chef.io/release/server_12-4/install_server.html#tiered-single-backend>`__ (machines configured for front-end and back-end, with a single back-end and load-balancing on the front-end, as required)
+* `Standalone <https://docs.chef.io/release/server_12-4/install_server.html#standalone>`__ (everything on a single machine)
+* `High availability <https://docs.chef.io/release/server_12-4/install_server.html#high-availability>`__ (machines configured for front-end and back-end, allowing for failover on the back-end and load-balancing on the front-end, as required)
+* `Tiered <https://docs.chef.io/release/server_12-4/install_server.html#tiered-single-backend>`__ (machines configured for front-end and back-end, with a single back-end and load-balancing on the front-end, as required)
 
 Prerequisites
 =====================================================
@@ -20,7 +20,7 @@ The |chef server| has the :doc:`following prerequisites </install_server_pre>`:
 * A local mail transfer agent that allows the |chef server| to send email notifications
 * Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks
 * Disabling the |apache qpid| daemon on |centos| and |redhat| systems
-* Optional. A local user account under which services will run, a local user account for |postgresql|, and a group account under which services will run. See http://docs.chef.io/release/server_12-4/install_server_pre.html#uids-and-gids for more information.
+* Optional. A local user account under which services will run, a local user account for |postgresql|, and a group account under which services will run. See https://docs.chef.io/release/server_12-4/install_server_pre.html#uids-and-gids for more information.
 
 Standalone
 =====================================================

@@ -9,7 +9,7 @@ In a tiered configuration, the |chef analytics| deployment is on different serve
 * Installing |chef analytics| on the backend
 * Installing |chef analytics| on the frontends
 
-.. warning:: The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage| prior to installing |chef analytics|.
+.. warning:: The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <https://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage| prior to installing |chef analytics|.
 
 Install |chef analytics| on the backend machine:
 

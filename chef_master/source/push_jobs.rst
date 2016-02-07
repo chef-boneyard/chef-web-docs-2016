@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst
 
-Install `Push Jobs <http://docs.chef.io/install_push_jobs.html>`_ using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
+Install `Push Jobs <https://docs.chef.io/install_push_jobs.html>`_ using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
 
 Requirements
 =====================================================
@@ -64,7 +64,7 @@ knife push jobs
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_push_jobs.rst
 
-.. note:: Review the list of `common options <http://docs.chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <https://docs.chef.io/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. Install this plugin
 .. -----------------------------------------------------

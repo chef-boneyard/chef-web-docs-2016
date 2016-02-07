@@ -191,7 +191,7 @@ Examples
 .. include:: ../../includes_server_services/includes_server_services_oc_id.rst
 
 These settings are configured in the 
-`chef-server.rb <http://docs.chef.io/config_rb_server_optional_settings.html#oc-id>`_ file.
+`chef-server.rb <https://docs.chef.io/config_rb_server_optional_settings.html#oc-id>`_ file.
 
 
 |subcommand knife analytics|

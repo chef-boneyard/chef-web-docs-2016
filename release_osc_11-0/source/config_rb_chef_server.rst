@@ -4,7 +4,7 @@
 |chef server rb|
 =====================================================
 
-.. warning:: This topic documents the settings for |chef server osc|. The current version of the |chef server| is version 12. All of the documentation at http://docs.chef.io and http://docs.chef.io/server/ is about the current version of the |chef server|. The documentation for |chef server osc| has been moved to http://docs.chef.io/open_source/ and is archived for specific versions: `Open Source Chef 11.0 <http://docs.chef.io/release/osc_11-0/>`__ and `Open Source Chef 11.1 <http://docs.chef.io/release/osc_11-1/>`__.
+.. warning:: This topic documents the settings for |chef server osc|. The current version of the |chef server| is version 12. All of the documentation at https://docs.chef.io and https://docs.chef.io/server/ is about the current version of the |chef server|. The documentation for |chef server osc| has been moved to https://docs.chef.io/open_source/ and is archived for specific versions: `Open Source Chef 11.0 <https://docs.chef.io/release/osc_11-0/>`__ and `Open Source Chef 11.1 <https://docs.chef.io/release/osc_11-1/>`__.
 
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst
 
@@ -19,7 +19,7 @@ The following shows a common starting point for settings in a |chef server rb|:
    # /etc/chef-server/chef-server.rb
    # This file is used to configure the chef server. 
    # After making any changes you need to run 'chef-server-ctl reconfigure' for the changes to be implemented
-   # For a full list of parameters, see: http://docs.chef.io/config_rb_chef_server.html
+   # For a full list of parameters, see: https://docs.chef.io/config_rb_chef_server.html
    # All examples shown are default values
    
    # lb['api_fqdn'] = node['fqdn']

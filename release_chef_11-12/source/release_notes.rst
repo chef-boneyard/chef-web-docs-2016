@@ -30,7 +30,7 @@ The following items are new for |chef client| 11.12 and/or are changes from prev
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
-.. note:: See the `Ohai 7 documentation <http://docs.chef.io/release/ohai-7/>`_ and `release notes <http://docs.chef.io/release/ohai-7/release_notes.html>`_ for all of the details.
+.. note:: See the `Ohai 7 documentation <https://docs.chef.io/release/ohai-7/>`_ and `release notes <https://docs.chef.io/release/ohai-7/release_notes.html>`_ for all of the details.
 
 collect_data Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

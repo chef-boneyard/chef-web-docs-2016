@@ -11,7 +11,7 @@ The |chef compliance| server has the following prerequisites:
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a |fqdn| or an IP address
 * A connection to |ntp| to prevent clock drift
-* Optional. A local user account under which services will run, a local user account for |postgresql|, and a group account under which services will run. See http://docs.chef.io/install_server_pre.html#uids-and-gids for more information
+* Optional. A local user account under which services will run, a local user account for |postgresql|, and a group account under which services will run. See https://docs.chef.io/install_server_pre.html#uids-and-gids for more information
 
 The following prerequisites apply to every installation of the |chef compliance| server.
 

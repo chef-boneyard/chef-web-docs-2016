@@ -14,7 +14,7 @@ The |chef analytics| server shares the :doc:`same prerequisites </install_server
 
 * |chef server| version 12.0.3 **or** |chef server oec| version 11.3 is required to use |chef analytics| 1.1
 * |chef client| version 12.1 is required for |chef client_audit| and using the ``control_group`` and ``control`` |dsl recipe| methods
-* The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <http://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage|
+* The |chef manage| must be installed on the |chef server| prior to installing |chef analytics|; follow `these steps <https://docs.chef.io/ctl_chef_server.html#install>`_ to install the |chef manage|
 * |reporting| is installed on the |chef server|. |reporting| version 1.2.3 is required to view the results of |chef client_audit|, i.e. ``run_start``, ``run_resource``, and ``run_converge`` messages; earlier versions of |reporting| may be used, but will not show these results
 * An x86_64 compatible system architecture; |redhat enterprise linux| and |centos| may require updates prior to installation
 * A resolvable hostname that is specified using a FQDN or an IP address
@@ -22,7 +22,7 @@ The |chef analytics| server shares the :doc:`same prerequisites </install_server
 * A local mail transfer agent that allows |chef analytics| to send email notifications; for versions of |chef analytics| prior to 1.1.3, ``to``, ``from``, ``host`` (the email server), ``password``, ``port``, and ``username`` must be specified.
 * Using |cron| and the ``/etc/cron.d`` directory for periodic maintenance tasks
 * Disabling the |apache qpid| daemon on |centos| and |redhat| systems
-* Optional. A local user account under which services will run, a local user account for |postgresql|, and a group account under which services will run. See http://docs.chef.io/install_server_pre.html#uids-and-gids for more information.
+* Optional. A local user account under which services will run, a local user account for |postgresql|, and a group account under which services will run. See https://docs.chef.io/install_server_pre.html#uids-and-gids for more information.
 * The |rabbitmq| queues on the |chef server| that are used by |chef analytics|---``/analytics``---are capped to prevent unintended disk overruns. For example:
 
   .. code-block:: bash
