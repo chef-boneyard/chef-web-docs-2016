@@ -6,7 +6,7 @@ knife environment
 
 .. include:: ../../includes_knife/includes_knife_environment.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_common_options_link.rst
 
 compare
 =====================================================
@@ -48,7 +48,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_create_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -113,7 +113,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_from_file_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
