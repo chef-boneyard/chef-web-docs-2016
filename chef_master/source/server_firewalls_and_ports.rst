@@ -6,7 +6,7 @@ Firewalls and Ports
 
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_listening.rst
 
-.. note:: An "external" port is external from the perspective of a workstation (such as |knife|), a machine (the |chef client|), or any other user that accesses the |chef server| via the |api chef server|.
+.. note:: .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_external_vs_internal.rst
 
 Standalone
 =====================================================
