@@ -12,12 +12,7 @@ File Specificity
 =====================================================
 .. include:: ../../includes_file/includes_file_cookbook_specificity.rst
 
-The pattern for file specificity depends on two things: the lookup path and the source attribute. The first pattern that matches is used:
-
-#. /host-$fqdn/$source
-#. /$platform-$platform_version/$source
-#. /$platform/$source
-#. /default/$source
+.. include:: ../../includes_file/includes_file_11-16_cookbook_specificity_pattern.rst
 
 .. include:: ../../includes_file/includes_file_cookbook_specificity_example.rst
 

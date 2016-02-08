@@ -4,23 +4,11 @@ Debug Recipes and |chef client_title| Runs
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-Elements of good approaches to building cookbooks and recipes that are reliable include:
-
-* A consistent syntax pattern when constructing recipes
-* Using the same patterns in Ruby
-* Using platform resources before creating custom ones
-* Using community-authored lightweight resources before creating custom ones
-
-Ideally, the best way to debug a recipe is to not have to debug it in the first place. That said, the following sections discuss various approaches to debugging recipes and failed |chef client| runs.
+.. include:: ../../includes_debug/includes_debug.rst
 
 Basic 
 =====================================================
-Some simple ways to quickly identify common issues that can trigger recipe and/or |chef client| run failures include:
-
-* Using an empty run-list
-* Using verbose logging with |knife|
-* Using logging with the |chef client|
-* Using the |resource log| resource in a recipe to define custom logging
+.. include:: ../../includes_debug/includes_debug_basic.rst
 
 Empty Run-lists
 -----------------------------------------------------
@@ -28,22 +16,11 @@ Empty Run-lists
 
 |knife_title|
 -----------------------------------------------------
-Use the verbose logging that is built into |knife|:
-
-``-V``, ``--verbose``
-  |verbose|
-
-.. note:: Plugins do not always support verbose logging.
+.. include:: ../../includes_debug/includes_debug_knife.rst
 
 |chef client_title|
 -----------------------------------------------------
-Use the verbose logging that is built into the |chef client|:
-
-``-l LEVEL``, ``--log_level LEVEL``
-   |log_level|
-
-``-L LOGLOCATION``, ``--logfile c``
-   |log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``.
+.. include:: ../../includes_debug/includes_debug_chef_client.rst
 
 log Resource
 -----------------------------------------------------
@@ -87,13 +64,7 @@ Examples
 
 Advanced
 =====================================================
-Some more complex ways to debug issues with a |chef client| run include:
-
-* Using the |cookbook chef_handler| cookbook
-* Using the |chef shell| and the |resource breakpoint| resource to add breakpoints to recipes, and to then step through the recipes using the breakpoints
-* Using the ``debug_value`` method from |chef shell| to indentify the location(s) from which attribute values are being set
-* Using the ``ignore_failure`` method in a recipe to force the |chef client| to move past an error to see what else is going on in the recipe, outside of a known failure
-* Using |chef solo| to run targeted |chef client| runs for specific scenarios
+.. include:: ../../includes_debug/includes_debug_advanced.rst
 
 chef_handler
 -----------------------------------------------------
@@ -107,7 +78,7 @@ Read more :doc:`about exception, report, and start handlers </handlers>`.
 -----------------------------------------------------
 .. include:: ../../includes_chef_shell/includes_chef_shell.rst
 
-.. note:: |chef shell| is configured using the :doc:`chef-shell (executable) </ctl_chef_shell>`.
+.. note:: .. include:: ../../includes_notes/includes_notes_chef_shell_was_shef.rst
 
 .. include:: ../../includes_chef_shell/includes_chef_shell_modes.rst
 
@@ -179,17 +150,7 @@ debug_value
 
 ignore_failure Method
 -----------------------------------------------------
-All resources share a set of common actions, attributes, and so on. Use the following attribute in a resource to help identify where an issue within a recipe may be located:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``ignore_failure``
-     - |ignore_failure| Default value: ``false``.
-
+.. include:: ../../includes_debug/includes_debug_ignore_failure.rst
 
 |chef solo|
 -----------------------------------------------------
@@ -206,27 +167,15 @@ Examples
 
 **Use a URL**
 
-.. code-block:: bash
-
-   $ chef-solo -c ~/solo.rb -j ~/node.json -r http://www.example.com/chef-solo.tar.gz
-
-where ``-r`` uses the |resource remote_file| resource to retrieve the |tar gz| archive into the ``file_cache_path``, and then extract it to ``cookbooks_path``.
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_url.rst
 
 **Use a directory**
 
-.. code-block:: bash
-
-   $ chef-solo -c ~/solo.rb -j ~/node.json
-
-where the ``-r URL`` option is not used. |chef solo| will look in the |solo rb| file to determine the directory in which cookbooks are located.
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_directory.rst
 
 **Use a URL for cookbook and JSON data**
 
-.. code-block:: bash
-
-   $ chef-solo -c ~/solo.rb -j http://www.example.com/node.json -r http://www.example.com/chef-solo.tar.gz
-
-where ``-r`` corresponds to ``recipe_url`` and ``-j`` corresponds to ``json_attribs``, both of which are configuration options in |solo rb|.
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_url_for_cookbook_and_json.rst
 
 **"Hello World"**
 
