@@ -10,7 +10,7 @@ knife cookbook site
 
 .. warning:: .. include:: ../../includes_notes/includes_notes_knife_cookbook_site_use_devkit_berkshelf.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_common_options_link.rst
 
 download
 =====================================================
@@ -24,7 +24,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_site_cookbook_download_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -46,7 +46,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_site_cookbook_install_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -108,7 +108,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_site_cookbook_share_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------

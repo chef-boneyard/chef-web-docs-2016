@@ -8,7 +8,7 @@ knife node
 
 .. include:: ../../includes_knife/includes_knife_node.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_common_options_link.rst
 
 
 bulk delete
@@ -128,7 +128,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_list_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -155,7 +155,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-10_node_run_list_add_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -194,7 +194,7 @@ Options
 -----------------------------------------------------
 |no_options|
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
