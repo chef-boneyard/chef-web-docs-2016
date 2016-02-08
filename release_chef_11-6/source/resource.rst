@@ -149,8 +149,6 @@ Resources
      - .. include:: ../../includes_resources/includes_resource_template.rst
    * - :doc:`user </resource_user>`
      - .. include:: ../../includes_resources/includes_resource_user.rst
-   * - :doc:`windows_package </resource_windows_package>`
-     - .. include:: ../../includes_resources/includes_resource_package_windows.rst
    * - :doc:`yum_package </resource_yum>`
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
 
