@@ -567,7 +567,7 @@ To verify if both instances have been converged, run the following command:
 .. =====================================================
 .. The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
 .. 
-.. The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <http://docs.opscode.com/resource.html#resources>`_. You can also `create your own resources <http://docs.opscode.com/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
+.. The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <https://docs.chef.io/resource.html#resources>`_. You can also `create your own resources <https://docs.chef.io/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
 .. 
 .. Execute Commands
 .. -----------------------------------------------------

@@ -32,7 +32,7 @@ For back-end servers in a tiered |chef server| installation, ensure that ports m
 
        .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
      - 
-   * - 5672
+   * - 5672, 15672
      - |service rabbitmq|
 
        .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst

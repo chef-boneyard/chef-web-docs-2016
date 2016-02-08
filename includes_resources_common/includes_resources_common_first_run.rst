@@ -8,7 +8,7 @@
 
 This page describes how to construct a first-run resource---a resource that only performs an action on the first |chef client| run---that does nothing on all subsequent |chef client| runs.
 
-.. note:: Some resources, by their nature, are not idempotent. For example, the |resource execute| and |resource script|-based resources are not idempotent because the commands that are executed by these resources are typically unique to the environment in which they are run. Most of the time, these resources can be made idempotent by `inspecting the state of the node using guards <http://docs.opscode.com/resource_common.html#guards>`_---``not_if`` and ``only_if``---and then defining the conditions necessary to ensure idempotence for that resource block.
+.. note:: Some resources, by their nature, are not idempotent. For example, the |resource execute| and |resource script|-based resources are not idempotent because the commands that are executed by these resources are typically unique to the environment in which they are run. Most of the time, these resources can be made idempotent by `inspecting the state of the node using guards <https://docs.chef.io/resource_common.html#guards>`_---``not_if`` and ``only_if``---and then defining the conditions necessary to ensure idempotence for that resource block.
 
 However, it may be difficult (or even impossible) to correctly inspect the state of the node. Or it may be that a command should not be run again, even if the state of the node is incorrect. 
 
