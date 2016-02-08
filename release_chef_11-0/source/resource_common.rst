@@ -6,6 +6,8 @@ Common Functionality
 
 All resources (and lightweight resources) share a set of common actions, properties, conditional executions, notifications, and relative path options.
 
+.. _resource_common_actions:
+
 Actions
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_actions.rst
