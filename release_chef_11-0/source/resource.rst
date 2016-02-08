@@ -26,7 +26,7 @@ All resources share a set of common actions, properties, conditional executions,
 
    * - Common Item
      - Description
-   * - `Actions <https://docs.chef.io/chef/release/11-0/resource_common.html#actions>`_
+   * - :ref:`resource_common_actions`
      - |resource short_actions|
    * - `Properties <https://docs.chef.io/chef/release/11-0/resource_common.html#properties>`_
      - |resource short_attributes|
