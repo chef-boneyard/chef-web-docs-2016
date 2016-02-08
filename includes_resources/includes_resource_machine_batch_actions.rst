@@ -4,25 +4,25 @@
 This resource has the following actions:
 
 ``:allocate``
-   ...
+   
 
 ``:converge``
    Default.
 
 ``:converge_only``
-   ...
+   
 
 ``:destroy``
-   ...
+   
 
 ``:nothing``
    |resource action nothing|
 
 ``:ready``
-   ...
+   
 
 ``:setup``
-   ...
+   
 
 ``:stop``
-   ...
+   

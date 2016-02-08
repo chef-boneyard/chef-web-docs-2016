@@ -4,10 +4,10 @@
 This resource has the following actions:
 
 ``:download``
-   ...
+   
 
 ``:nothing``
    |resource action nothing|
 
 ``:upload``
-   ...
+   
