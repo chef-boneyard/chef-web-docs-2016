@@ -57,7 +57,7 @@ For back-end servers, ensure that ports marked as external (marked as ``yes`` in
 
        .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
      - yes
-   * - 5672
+   * - 5672, 15672
      - |service rabbitmq|
 
        .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
