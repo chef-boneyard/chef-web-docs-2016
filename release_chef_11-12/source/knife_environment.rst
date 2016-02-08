@@ -8,7 +8,7 @@ knife environment
 
 .. include:: ../../includes_knife/includes_knife_environment.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_common_options_link.rst
 
 create
 =====================================================
