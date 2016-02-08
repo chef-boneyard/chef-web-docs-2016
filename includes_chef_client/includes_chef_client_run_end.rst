@@ -7,7 +7,7 @@ Sometimes it may be necessary to stop processing a recipe and/or stop processing
 * Use the ``return`` keyword to stop processing a recipe based on a condition, but continue processing the |chef client| run 
 * Use the ``raise`` keyword to stop a |chef client| run by triggering an unhandled exception
 * Use a ``rescue`` block in |ruby| code
-* Use an `exception handler <http://docs.opscode.com/handlers.html>`_
+* Use an `exception handler <https://docs.chef.io/handlers.html>`_
 * Use ``Chef::Application.fatal!`` to log a fatal message to the logger and ``STDERR``, and then stop the |chef client| run
 
 

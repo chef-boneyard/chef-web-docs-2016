@@ -38,7 +38,7 @@ All resources share a set of common actions, properties, conditional executions,
      - |resource short_relative_paths|
    * - `Windows File Security <https://docs.chef.io/release/12-1/resource_common.html#windows-file-security>`_
      - |resource short_windows_file_security|
-   * - `Run a Resource during Resource Compilation <http://docs.opscode.com/release/12-1/resource_common.html#run-from-resource-collection>`_
+   * - `Run a Resource during Resource Compilation <https://docs.chef.io/release/12-1/resource_common.html#run-from-resource-collection>`_
      - |resource short_run_during_compile|
 
 Resources
