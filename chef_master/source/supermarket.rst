@@ -143,7 +143,7 @@ To upload a cookbook to |supermarket|, do the following:
 
 Run in Production
 -----------------------------------------------------
-|supermarket| is still in development and is not officially supported by |chef| for high availability, backup and restore, and so on. Even though |chef| has important customers running |supermarket| in production, they are doing so at their own risk. In general, |chef| recommends that you start running |supermarket| with small virtual machines, and then increase the size of the virtual machine as necessary. Put the ``/var/opt/supermarket`` directory on a separate disk, and then use LVM so that may be expanded.
+In general, |chef| recommends that you start running |supermarket| with small virtual machines, and then increase the size of the virtual machine as necessary. Put the ``/var/opt/supermarket`` directory on a separate disk, and then use LVM so that may be expanded.
 
 
 Wrapper Cookbooks
