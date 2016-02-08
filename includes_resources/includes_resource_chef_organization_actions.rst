@@ -7,7 +7,7 @@ This resource has the following actions:
    Default.
 
 ``:delete``
-   ...
+   
 
 ``:nothing``
    |resource action nothing|
