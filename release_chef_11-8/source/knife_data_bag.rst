@@ -24,7 +24,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_create_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -70,7 +70,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_edit_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -96,7 +96,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_from_file_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -146,7 +146,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_11-16_data_bag_show_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------

@@ -22,7 +22,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -45,7 +45,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_create_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples 
 -----------------------------------------------------
@@ -68,7 +68,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_delete_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -91,7 +91,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_download_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -114,7 +114,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_list_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -137,7 +137,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -181,7 +181,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_show_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -216,7 +216,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_test_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
@@ -239,7 +239,7 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_upload_options.rst
 
-.. note:: See :doc:`knife.rb </config_rb_knife_optional_settings>` for more information about how to add certain |knife| options as settings in the |knife rb| file.
+.. note:: .. include:: ../../includes_knife/includes_knife_common_see_all_config_options.rst
 
 Examples
 -----------------------------------------------------
