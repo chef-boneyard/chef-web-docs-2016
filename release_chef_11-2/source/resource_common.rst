@@ -6,6 +6,8 @@ Common Functionality
 
 All resources (and lightweight resources) share a set of common actions, properties, conditional executions, notifications, and relative path options.
 
+.. _resource_common_actions:
+
 Actions
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_actions.rst
@@ -17,6 +19,8 @@ The following examples show how to use common actions in a recipe.
 **Use the :nothing action**
 
 .. include:: ../../step_resource/step_resource_service_use_nothing_action.rst
+
+.. _resource_common_properties:
 
 Properties
 =====================================================
@@ -41,6 +45,8 @@ The following examples show how to use common properties in a recipe.
 **Use the supports and providers common properties**
 
 .. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
+
+.. _resource_common_guards:
 
 Guards
 =====================================================
@@ -89,6 +95,8 @@ only_if Examples
 **Re-register ASP.Net if it's already installed**
 
 .. include:: ../../step_recipe/step_recipe_guard_onlyif_reregister_aspdotnet.rst
+
+.. _resource_common_notifications:
 
 Notifications
 =====================================================
@@ -170,6 +178,8 @@ The following examples show how to use the ``subscribes`` notification in a reci
 
 .. include:: ../../step_resource/step_resource_ruby_block_stash_file_in_data_bag.rst
 
+.. _resource_common_relative_paths:
+
 Relative Paths
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_relative_paths.rst
@@ -179,6 +189,8 @@ Examples
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
 
 
+.. _resource_common_run_in_compile_phase:
+
 Run in Compile Phase
 =====================================================
 .. include:: ../../includes_resources_common/includes_resources_common_compile.rst
@@ -187,6 +199,8 @@ run_action
 -----------------------------------------------------
 .. include:: ../../includes_resources_common/includes_resources_common_compile_begin.rst
 
+
+.. _resource_common_windows_file_security:
 
 Windows File Security
 =====================================================
