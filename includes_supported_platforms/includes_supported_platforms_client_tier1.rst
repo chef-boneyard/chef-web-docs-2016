@@ -21,7 +21,7 @@ The following table lists the Tier 1 supported platforms for the |chef client|:
      - ``9``, ``10``
    * - |mac os x|
      - ``x86_64``
-     - ``10.8``, ``10.9``, ``10.10``
+     - ``10.8``, ``10.9``, ``10.10``, ``10.11``
    * - |oracle linux|
      - ``i386``, ``x86_64``
      - ``5``, ``6``, ``7``
