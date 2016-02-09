@@ -66,11 +66,11 @@ This configuration file has the following settings:
       local_mode true
 
 ``node_name``
-   |name node| This is typically also the same name as the computer from which |knife| is run. For example:
+   |name node| This is the username you are using to connect to the Chef server. This is may also the same name as the computer from which |knife| is run. For example:
 
    .. code-block:: ruby
 
-      node_name 'node_name'
+      node_name 'some_user'
 
 ``no_proxy``
    |no_proxy| Default value: ``nil``. For example:
