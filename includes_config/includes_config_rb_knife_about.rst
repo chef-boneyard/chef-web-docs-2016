@@ -6,5 +6,5 @@ A |knife rb| file:
 
 * Is loaded every time this executable is run
 * Is not created by default
-* Is located by default at |path knife rb|; use the ``--config`` option from the command line to change this location
+* Is located by default at |path knife rb| (|unix| and |linux| platforms) or |path knife rb windows| (|windows| platform, starting with |chef dk| version 0.7.0); use the ``--config`` option from the command line to change this location
 * Will override the default configuration when a |knife rb| file exists at the default path or the path specified by the ``--config`` option
