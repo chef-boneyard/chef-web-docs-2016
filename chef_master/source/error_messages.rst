@@ -4,6 +4,8 @@ Error Messages
 
 The following sections describe how to troubleshoot some common errors and problems.
 
+.. _error_messages_external_postgresql:
+
 External |postgresql|
 =====================================================
 The following error messages may be present when configuring the |chef server| to use a remote |postgresql| server.
