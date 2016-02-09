@@ -16,7 +16,7 @@ Resources Syntax
 
 Common Functionality
 -----------------------------------------------------
-All resources share a set of common actions, properties, conditional executions, notifications, and relative path options.
+.. include:: ../../includes_resources_common/includes_resources_common_intro.rst
 
 .. list-table::
    :widths: 160 440
@@ -24,21 +24,21 @@ All resources share a set of common actions, properties, conditional executions,
 
    * - Common Item
      - Description
-   * - `Actions <https://docs.chef.io/resource_common.html#actions>`_
+   * - :ref:`resource_common_actions`
      - |resource short_actions|
-   * - `Properties <https://docs.chef.io/resource_common.html#attributes>`_
+   * - :ref:`resource_common_properties`
      - |resource short_attributes|
-   * - `Guards <https://docs.chef.io/resource_common.html#conditionals>`_
+   * - :ref:`resource_common_guards`
      - |resource short_conditions|
-   * - `Guard Interpreters <https://docs.chef.io/resource_common.html#guard-interpreters>`_
+   * - :ref:`resource_common_guard_interpreters`
      - Evaluate a string command using a |resource script|-based resource: |resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, or |resource script_ruby|.
-   * - `Notifications <https://docs.chef.io/resource_common.html#notifications>`_
+   * - :ref:`resource_common_notifications`
      - |resource short_notifications|
-   * - `Relative Paths <https://docs.chef.io/resource_common.html#relative-paths>`_
+   * - :ref:`resource_common_relative_paths`
      - |resource short_relative_paths|
-   * - `Windows File Security <https://docs.chef.io/resource_common.html#windows-file-security>`_
+   * - :ref:`resource_common_windows_file_security`
      - |resource short_windows_file_security|
-   * - `Run a Resource during Resource Compilation <https://docs.chef.io/resource_common.html#run-from-resource-collection>`_
+   * - :ref:`resource_common_run_in_compile_phase`
      - |resource short_run_during_compile|
 
 Resources
