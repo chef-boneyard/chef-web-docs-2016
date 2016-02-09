@@ -246,7 +246,17 @@ The following list describes all of the optional settings that can be added to t
    |skip-dependencies|
 
 ``knife[:node_name]``
-   
+   |name node_knife_rb| For example:
+
+   .. code-block:: ruby
+
+      node_name 'user_name'
+
+   or:
+
+   .. code-block:: ruby
+
+      node_name 'machine_name'
 
 ``knife[:null_separator]``
    

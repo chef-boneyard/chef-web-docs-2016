@@ -66,11 +66,17 @@ This configuration file has the following settings:
       local_mode true
 
 ``node_name``
-   |name node| This is typically also the same name as the computer from which |knife| is run. For example:
+   |name node_knife_rb| For example:
 
    .. code-block:: ruby
 
-      node_name 'node_name'
+      node_name 'user_name'
+
+   or:
+
+   .. code-block:: ruby
+
+      node_name 'machine_name'
 
 ``no_proxy``
    |no_proxy| Default value: ``nil``. For example:
