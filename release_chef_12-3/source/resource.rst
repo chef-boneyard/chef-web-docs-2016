@@ -18,7 +18,7 @@ Resources Syntax
 
 Common Functionality
 -----------------------------------------------------
-All resources share a set of common actions, properties, conditional executions, notifications, and relative path options.
+.. include:: ../../includes_resources_common/includes_resources_common_intro.rst
 
 .. list-table::
    :widths: 160 440

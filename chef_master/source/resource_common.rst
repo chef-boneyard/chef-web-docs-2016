@@ -2,7 +2,7 @@
 Common Functionality 
 =====================================================
 
-All resources (and lightweight resources) share a set of common actions, properties, conditional executions, notifications, and relative path options.
+.. include:: ../../includes_resources_common/includes_resources_common_intro.rst
 
 .. _resource_common_actions:
 
@@ -93,6 +93,8 @@ only_if Examples
 **Re-register ASP.Net if it's already installed**
 
 .. include:: ../../step_recipe/step_recipe_guard_onlyif_reregister_aspdotnet.rst
+
+.. _resource_common_guard_interpreters:
 
 Guard Interpreters
 =====================================================
