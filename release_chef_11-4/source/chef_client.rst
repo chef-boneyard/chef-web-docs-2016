@@ -17,8 +17,6 @@ Node Types
 
 .. include:: ../../includes_node/includes_node_components.rst
 
-.. _chef_client_run:
-
 The |chef client_title| Run
 =====================================================
 .. include:: ../../includes_chef_client/includes_chef_client_run.rst
