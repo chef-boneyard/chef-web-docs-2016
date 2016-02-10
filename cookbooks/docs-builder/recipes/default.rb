@@ -46,21 +46,13 @@ end
 
 directory '/srv'
 
-aws_ebs_volume "build_space" do
-  action :attach
-  volume_id 'vol-7c6dac8b'
-  device '/dev/sdi'
-  aws_access_key node['docs-builder']['build_aws_access_key']
-  aws_secret_access_key node['docs-builder']['build_aws_secret_access_key']
-  sensitive true
+execute 'mkfs' do
+  command 'mkfs.ext4 /dev/xvdi'
+  not_if 'blkid -o value -s TYPE /dev/xvdi'
 end
 
 mount '/srv' do
   device '/dev/xvdi'
-end
-
-unless node['docs-builder']['cached']
-  execute 'rm -rf /srv/chef-web-docs'
 end
 
 git '/srv/chef-web-docs' do

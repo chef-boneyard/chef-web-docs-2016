@@ -19,6 +19,12 @@ platforms:
     username: ubuntu
     flavor_id: c4.8xlarge
     image_id: ami-5189a661
+    block_device_mappings:
+    - ebs_device_name: '/dev/sdi'
+      ebs_volume_type: gp2
+      ebs_virtual_name: chef-web-docs
+      ebs_volume_size: 40
+      ebs_delete_on_termination: true
   run_list:
     - recipe[apt]
 
