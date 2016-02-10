@@ -1,6 +1,8 @@
 .. The contents of this file may be included in multiple topics (using the includes directive).
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. This topic is currently commented out and needs to be validated before it can be uncommented.
+
 The following parameters can be used with this method:
 
 .. list-table::
@@ -13,6 +15,8 @@ The following parameters can be used with this method:
      - |ibm aix|. All platform variants of |ibm aix| return ``aix``.
    * - ``arch``
      - |archlinux|
+   * - ``darwin``
+     - |darwin|. All platform variants of |darwin| return ``darwin``.
    * - ``debian``
      - |debian|, |mint|, |ubuntu|
    * - ``fedora``
@@ -29,6 +33,8 @@ The following parameters can be used with this method:
      - |netbsd|. All platform variants of |netbsd| return ``netbsd``.
    * - ``openbsd``
      - |open bsd|. All platform variants of |open bsd| return ``openbsd``.
+   * - ``rhel``
+     - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat enterprise linux|.
    * - ``slackware``
      - |slackware|
    * - ``solaris``
