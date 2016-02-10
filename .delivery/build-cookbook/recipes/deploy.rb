@@ -33,6 +33,13 @@ execute "untar the artifact" do
   cwd node['delivery']['workspace']['repo']
 end
 
+unless delivered_stage?
+  cookbook_file "#{File.join(node['delivery_builder']['repo'], 'build')}/robots.txt" do
+    source 'robots-disallow.txt'
+    action :create
+  end
+end
+
 execute "upload the site" do
   command "aws s3 sync . s3://#{bucket_name} --acl public-read --delete"
   cwd File.join(node['delivery_builder']['repo'], 'build')

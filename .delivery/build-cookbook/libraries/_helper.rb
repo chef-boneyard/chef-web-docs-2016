@@ -63,3 +63,11 @@ def next_stage(stage)
     nil
   end
 end
+
+def delivered_stage?
+  if node['delivery']['change']['stage'] == 'delivered'
+    true
+  else
+    false
+  end
+end
