@@ -114,9 +114,11 @@ platform_family?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family.rst
 
-Parameters
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_parameters.rst
+.. 
+.. Parameters
+.. +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family_parameters.rst
+.. 
 
 For example:
 
