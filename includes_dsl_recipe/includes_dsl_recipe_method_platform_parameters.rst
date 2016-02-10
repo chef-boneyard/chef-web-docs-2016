@@ -25,8 +25,6 @@ The following parameters can be used with this method:
      - |gentoo|
    * - ``hpux``
      - |hpux|. All platform variants of |hpux| return ``hpux``.
-   * - ``linux``
-     - |linux|. All platform variants of |linux| return ``linux``.
    * - ``mac_os_x``
      - |mac os x|
    * - ``netbsd``
