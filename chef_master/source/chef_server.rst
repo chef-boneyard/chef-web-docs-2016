@@ -64,4 +64,4 @@ External |postgresql|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_ha/includes_server_ha_external_postgresql_settings.rst
 
-.. note:: See :ref:`error_messages_external_postgresql` for information about error messages may be present when configuring the |chef server| to use a remote |postgresql| server.
+.. note:: See the list of `error messages that may be present <https://docs.chef.io/error_messages.html#external-postgresql>`_ when configuring the |chef server| to use a remote |postgresql| server.
