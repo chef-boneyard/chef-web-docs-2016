@@ -2,7 +2,7 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 
-Superuser accounts may not be managed by users who belong to the |webui group server_admins| group. For example, Alice attempts to delete the ``pivotol`` superuser account:
+Superuser accounts may not be managed by users who belong to the |webui group server_admins| group. For example, Alice attempts to delete the ``pivotal`` superuser account:
 
 .. code-block:: bash
 
