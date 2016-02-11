@@ -30,13 +30,13 @@ create-user
 
    $ delivery-ctl create-user john_smith
 
-create-users
+create-user
 =====================================================
-.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_create_users.rst
+.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_create_user.rst
 
 **Syntax**
 
-.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_create_users_syntax.rst
+.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_create_user_syntax.rst
 
 **Example**
 
@@ -80,13 +80,6 @@ delete-user
 
    $ delivery-ctl delete-user john_smith
 
-doctor
-=====================================================
-.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_doctor.rst
-
-**Syntax**
-
-.. include:: ../../includes_ctl_delivery_server/includes_ctl_delivery_server_doctor_syntax.rst
 
 help
 =====================================================
