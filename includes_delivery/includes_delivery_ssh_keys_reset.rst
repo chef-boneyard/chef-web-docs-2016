@@ -53,4 +53,4 @@ Follow these steps to resolve the issue:
       |   .*o*.         |
       |  ...            |
       +-----------------+
-  4. Now that you have a new public-private key pair, re-propagate the public key out to your Delivery cluster nodes using a method such as the one described at the beginning of the **SSH Provisioning** section.
+#. Now that you have a new public-private key pair, re-propagate the public key out to your Delivery cluster nodes using a method such as the one described at the beginning of the **SSH Provisioning** section.
