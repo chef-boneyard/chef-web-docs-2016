@@ -24,6 +24,8 @@ Server Admins
 =====================================================
 .. include:: ../../includes_server_rbac/includes_server_rbac_server_admins.rst
 
+Scenario
+-----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_server_admins_scenario.rst
 
 Superuser Accounts
