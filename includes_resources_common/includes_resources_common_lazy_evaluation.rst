@@ -38,7 +38,7 @@ The following example shows how to use lazy evaluation with template variables:
      source 'canvey_island.txt.erb'
      variables(
        lazy {
-         {:canvey_island => node.run_state['sea_power']}
+         { :canvey_island => node.run_state['sea_power'] }
        }
      )
    end
