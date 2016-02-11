@@ -548,6 +548,14 @@ execute
 
 .. include:: ../../step_resource/step_resource_execute_knife_user_create.rst
 
+**Run install command into virtual environment**
+
+.. include:: ../../step_resource/step_resource_execute_install_q.rst
+
+**Run a command as a named user**
+
+.. include:: ../../step_resource/step_resource_execute_bundle_install.rst
+
 
 
 file
@@ -654,6 +662,23 @@ group
 .. include:: ../../step_resource/step_resource_group_add_user_on_windows.rst
 
 
+homebrew_package
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_homebrew.rst
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_install.rst
+
+**Specify the Homebrew user with a UUID**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_uuid.rst
+
+**Specify the Homebrew user with a string**
+
+.. include:: ../../step_resource/step_resource_homebrew_package_homebrew_user_as_string.rst
+
+
 
 http_request
 =====================================================
@@ -702,6 +727,13 @@ ips_package
 **Install a package**
 
 .. include:: ../../step_resource/step_resource_ips_package_install.rst
+
+
+ksh
+=====================================================
+.. include:: ../../includes_resources/includes_resource_script_ksh.rst
+
+No examples.
 
 
 
@@ -1395,7 +1427,7 @@ user
 =====================================================
 .. include:: ../../includes_resources/includes_resource_user.rst
 
-**Create a random user**
+**Create a user named "random"**
 
 .. include:: ../../step_resource/step_resource_user_create_random.rst
 
@@ -1436,6 +1468,14 @@ windows_package
 **Modify remote_file resource attributes**
 
 .. include:: ../../step_resource/step_resource_package_windows_source_remote_file_attributes.rst
+
+**Download a nsis (Nullsoft) package resource**
+
+.. include:: ../../step_resource/step_resource_package_windows_download_nsis_package.rst
+
+**Download a custom package**
+
+.. include:: ../../step_resource/step_resource_package_windows_download_custom_package.rst
 
 
 
