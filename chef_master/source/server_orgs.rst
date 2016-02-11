@@ -80,6 +80,34 @@ users
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst
 
+
+Server Admins
+=====================================================
+.. include:: ../../includes_server_rbac/includes_server_rbac_server_admins.rst
+
+.. include:: ../../includes_server_rbac/includes_server_rbac_server_admins_scenario.rst
+
+Superuser Accounts
+-----------------------------------------------------
+.. include:: ../../includes_server_rbac/includes_server_rbac_server_admins_superusers.rst
+
+Manage server-admins Group
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_server_admin.rst
+
+Add Members
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_server_admin_grant_user.rst
+
+Remove Members
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_server_admin_remove_user.rst
+
+List Membership
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_server_admin_list.rst
+
+
 Manage Organizations
 =====================================================
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_org.rst
