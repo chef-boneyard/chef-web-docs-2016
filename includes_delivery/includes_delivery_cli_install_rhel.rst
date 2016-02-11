@@ -6,7 +6,7 @@ For |redhat enterprise linux| 6.5 and |suse els| 6.5, run the following commands
 
 .. code-block:: bash
 
-   $ curl https://packagecloud.io/install/repositories/chef/current/script.rpm.sh | sudo bash
+   $ curl https://packagecloud.io/install/repositories/chef/stable/script.rpm.sh | sudo bash
 
 and then:
 
