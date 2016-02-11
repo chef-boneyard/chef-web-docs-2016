@@ -6,7 +6,7 @@ For |ubuntu| 14.04, run the following commands:
 
 .. code-block:: bash
 
-   $ curl https://packagecloud.io/install/repositories/chef/current/script.deb.sh | sudo bash
+   $ curl https://packagecloud.io/install/repositories/chef/stable/script.deb.sh | sudo bash
 
 and then:
 
