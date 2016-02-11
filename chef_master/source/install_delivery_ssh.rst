@@ -275,7 +275,7 @@ On the provisioning node:
       Rendering Environment => environments/test.json
 
 
-#. Important! Export your new environment by executing the following: (example uses ``test`` as the environment name):
+#. Export your new environment by executing the following: (example uses ``test`` as the environment name):
 
    .. code-block:: bash
 
