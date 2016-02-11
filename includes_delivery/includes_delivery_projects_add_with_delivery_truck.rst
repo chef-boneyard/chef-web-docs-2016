@@ -31,7 +31,7 @@ The following example shows how to create a cookbook, with project and pipeline,
    .. code-block:: bash
 
       $ cd NEW-COOKBOOK-NAME
-   
+
    This uses the |chef dk| to generate a new cookbook, including a default recipe and default |chef spec| tests.
 
 #. Create an initial commit (use ``git status`` to verify the change) on the "master" branch:
@@ -45,12 +45,6 @@ The following example shows how to create a cookbook, with project and pipeline,
       $ git commit -m 'Initial Commit'
 
    Running ``chef generate`` initialized a |git| repository automatically for this cookbook. If you created the build cookbook manually, initialize the |git| repository with the ``git init`` command.
-
-#. Get an API token for |chef delivery|:
-
-   .. code-block:: bash
-
-      $ delivery token
 
 #. Initialize the cookbook for |chef delivery|:
 
