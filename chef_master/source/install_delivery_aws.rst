@@ -2,21 +2,21 @@
 Installing |chef delivery|, AWS
 =====================================================
 
-This topic guides you through setting up |chef delivery| for AWS provisioning with the ``delivery-cluster`` cookbook and Chef Provisioning, and validating the installation, once |chef delivery| is set up. With the ``delivery-cluster`` cookbook, you install the |chef delivery| cluster on your own infrastructure using |chef provisioning| and your license key. 
+This topic guides you through setting up |chef delivery| for AWS provisioning with the ``delivery-cluster`` cookbook and Chef Provisioning, and validating the installation, once |chef delivery| is set up. With the ``delivery-cluster`` cookbook, you install the |chef delivery| cluster on your own infrastructure using |chef provisioning| and your license key.
 
 Process Overview
 =====================================================
 The process for installing |chef delivery| using the ``delivery-cluster`` cookbook involves the following tasks:
 
 * Create and configure a dedicated provisioning node
-* Configure the ``delivery-cluster`` cookbook to use |amazon aws| provisioning 
+* Configure the ``delivery-cluster`` cookbook to use |amazon aws| provisioning
 * Run automation for ``delivery-cluster``, which sets up a full |chef delivery| cluster and gives you login credentials
 * Verify the |chef delivery| provisioning
 * Set up your workstation to develop projects in |chef delivery|
-* Configure |chef delivery| 
+* Configure |chef delivery|
 * Validate the installation by creating a cookbook and kicking off a pipeline
 
-Prerequisites 
+Prerequisites
 =====================================================
 |chef delivery| requires a license from |company_name| to install.
 
@@ -25,7 +25,7 @@ Supported Platforms
 |chef delivery| may be run on the following platforms. Do not mix platform versions within the |chef delivery| cluster.
 
   .. list-table::
-     :widths: 250 250      
+     :widths: 250 250
      :header-rows: 1
 
      * - OS
@@ -42,7 +42,7 @@ Infrastructure
 |chef delivery| has the following infrastructure requirements:
 
   .. list-table::
-     :widths: 150 100 100 100      
+     :widths: 150 100 100 100
      :header-rows: 1
 
      * - Function
@@ -54,8 +54,8 @@ Infrastructure
        - 1GB
        - 8GB
      * - Delivery Server
-       - 4 
-       - 8GB 
+       - 4
+       - 8GB
        - 80GB
      * - Chef Server (must be v12). See additional information in note, below.
        - 4
@@ -68,21 +68,13 @@ Infrastructure
      * - Build Nodes (at least 3, one for each Verify phase: Lint, Syntax, and Functional)
        - 2
        - 4GB
-       - 60GB  
+       - 60GB
      * - Infrastructure Nodes (at least 4, one for each environment stage: Acceptance, Union, Rehearsal, and Delivered)
        - 2 (for test purposes)
        - 4GB (for test purposes)
-       - 60GB (for test purposes) 
+       - 60GB (for test purposes)
 
-.. note:: If you want to use your existing |chef server| in the |chef delivery| cluster, the version of the |chef server| must be 12.2, it cannot have a high availability configuration. In addition, a special entry must be made to the environments configuration file (``environments/NAME_OF_ENV.json``) simillar to:
-
-   .. code-block:: javascript
-
-      "chef-server": {         
-        "organization": "test",
-        "existing": true,
-        "host": "chef-server.example.com"       
-      },
+.. note:: You cannot use your own |chef server| with this AWS provisioning process. You must use the new one that is created for you.
 
 
 Network and Ports
@@ -90,7 +82,7 @@ Network and Ports
 |chef delivery| has the following network and port requirements:
 
   .. list-table::
-     :widths: 100 250 100 100      
+     :widths: 100 250 100 100
      :header-rows: 1
 
      * - Ports
@@ -129,7 +121,7 @@ Network and Ports
 
 Install |chef delivery|
 =====================================================
-Begin installing |chef delivery| by creating a provisioning node to provision and maintain the cluster. 
+Begin installing |chef delivery| by creating a provisioning node to provision and maintain the cluster.
 
 Provisioning Node
 -----------------------------------------------------
@@ -142,34 +134,29 @@ On the provisioning node:
    For |debian|-based (apt):
 
    .. code-block:: bash
-      
+
       $ sudo apt-get install build-essential
 
    For |redhat enterprise linux|-based (yum):
 
    .. code-block:: bash
-      
+
       $ sudo yum groupinstall "Development Tools"
 
    For |mac os x|:
 
    .. code-block:: bash
-      
+
       $ sudo xcode-select --install
 
-#. Install |git| and configure your |github| username and email, for help see: `Installing Git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ and `First-Time Git Setup <https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup>`_. 
-#. Install the `Chef Development Kit <https://downloads.chef.io/chef-dk/>`_. Be sure to set the system |ruby|; for details, see `Add Ruby to $PATH <https://docs.chef.io/install_dk.html#add-ruby-to-path>`_. 
-#. Install knife push:
-
-   .. code-block:: bash
-      
-      $ chef gem install knife-push
+#. Install |git| and configure your |github| username and email, for help see: `Installing Git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ and `First-Time Git Setup <https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup>`_.
+#. Install the `Chef Development Kit <https://downloads.chef.io/chef-dk/>`_. Be sure to set the system |ruby|; for details, see `Add Ruby to $PATH <https://docs.chef.io/install_dk.html#add-ruby-to-path>`_.
 
 #. Transfer your |chef delivery| license key to ``~/delivery.license``.
 #. Clone the |git| repo for the |chef delivery| cluster:
 
    .. code-block:: bash
-      
+
       $ git clone https://github.com/opscode-cookbooks/delivery-cluster.git ~/delivery-cluster
 
 
@@ -194,10 +181,10 @@ The following section details settings for |chef delivery| with |amazon aws| pro
 
        .. code-block:: javascript
 
-          "chef-server": {         
+          "chef-server": {
             "organization": "test",
             "existing": true,
-            "host": "chef-server.example.com"       
+            "host": "chef-server.example.com"
           },
 
    * - **License File**
@@ -218,7 +205,7 @@ This section describes setting up a |chef delivery| cluster to use |amazon aws| 
 On the provisioning node:
 
 #. Configure your |amazon aws| key credentials in two files, ``~/.aws/config`` and ``~/.aws/credentials`` as shown, with the text editor of your choice:
-   
+
    For ``~/.aws/config``:
 
    .. code-block:: bash
@@ -249,23 +236,23 @@ On the provisioning node:
 
       $ rake setup:generate_env
 
-   This opens a wizard, the following code block shows the interactions. Variables you must enter are shown in ALL CAPs. Default values are shown in square brackets; pressing ENT sets the default value. This command creates a ``environments/ENV_NAME.json`` file with the specified settings that you can modify if need be. 
+   This opens a wizard, the following code block shows the interactions. Variables you must enter are shown in ALL CAPs. Default values are shown in square brackets; pressing ENT sets the default value. This command creates a ``environments/ENV_NAME.json`` file with the specified settings that you can modify if need be.
 
    .. code-block:: bash
-   
+
       $ rake setup:generate_env
 
       Gathering Cluster Information
 
       Provide the following information to generate your environment.
-      
+
       Global Attributes
       Environment Name [test]:
       Cluster ID [test]:
-      
+
       Available Drivers: [ aws | ssh | vagrant ]
       Driver Name [vagrant]: aws
-      
+
       Driver Information [aws]
       Key Name: MY-KEY-NAME
       SSH Username [ubuntu]:
@@ -274,30 +261,30 @@ On the provisioning node:
       Security Group ID [sg-cbacf8ae]:
       Use private ip for ssh? [yes]:
       Would you like to configure Proxy Settings? [no]:
-      
+
       Chef Server
       Organization Name [test]:
       Use existing chef-server? [no]:
       Flavor [c3.xlarge]:
-      
+
       Delivery Server
       Package Version [latest]:
       Enterprise Name [test]:
       License File [/Users/YOUR-NAME/delivery.license]:
       Flavor [c3.xlarge]:
-      
+
       Analytics Server
       Enable Analytics? [no]:
-      
+
       Supermarket Server
       Enable Supermarket? [no]: yes
       Flavor [c3.xlarge]:
-      
+
       Build Nodes
       Number of Build Nodes [1]: 3
       Flavor [c3.large]:
       Specify a delivery-cli artifact? [no]:
-      
+
       Rendering Environment => environments/test.json
 
 #. Export the environment by executing the following:
@@ -318,7 +305,7 @@ To run provisioning (from inside the ``delivery-cluster`` directory), run the fo
 
    $ rake setup:cluster
 
-.. note:: 
+.. note::
 
    * If the first converge fails on the build nodes, try running the above step again. The |chef delivery| cluster is complicated and sometimes there are timeouts.
    * Running provisioning creates the instances requrested on |amazon aws|. If there are any failures, check the |amazon aws| console for nodes without names. Nodes without names can be removed.

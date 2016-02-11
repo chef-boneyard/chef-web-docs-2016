@@ -32,12 +32,8 @@ Create a Project
 =====================================================
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_github_create_project.rst
 
-Link Users
-=====================================================
-.. include:: ../../includes_delivery_integration/includes_delivery_integration_github_link_users.rst
-
 Add Linked Users
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_delivery_integration/includes_delivery_integration_github_add_linked_users.rst
 
 Handle Untrusted PRs
