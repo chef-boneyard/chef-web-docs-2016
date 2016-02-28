@@ -2,7 +2,12 @@
 .. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
 This resource has the following properties:
-   
+
+``mdadm_defaults``
+   **Ruby Types:** TrueClass, FalseClass
+
+   |mdadm_defaults| Default value: ``false``.  
+
 ``bitmap``
    **Ruby Type:** String
 

@@ -17,6 +17,7 @@ The full syntax for all of the properties that are available to the |resource md
 .. code-block:: ruby
 
    mdadm 'name' do
+     mdadm_defaults             TrueClass, FalseClass
      bitmap                     String
      chunk                      Integer
      devices                    Array
@@ -35,4 +36,4 @@ where
 * ``mdadm`` is the resource
 * ``name`` is the name of the resource block
 * ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``bitmap``, ``chunk``, ``devices``, ``exists``, ``level``, ``metadata``, ``provider``,  and ``raid_device`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``mdadm_defaults``, ``bitmap``, ``chunk``, ``devices``, ``exists``, ``level``, ``metadata``, ``provider``,  and ``raid_device`` are properties of this resource, with the |ruby| type shown. |see attributes|
