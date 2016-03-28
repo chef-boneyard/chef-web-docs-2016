@@ -38,6 +38,8 @@ Some popular drivers:
      - A driver for |microsoft hyperv|.
    * - `kitchen-joyent <https://github.com/test-kitchen/kitchen-joyent>`__
      - A driver for |joyent|.
+   * - `kitchen-linode <https://github.com/ssplatt/kitchen-linode>`__
+     - A driver for |linode|.
    * - `kitchen-opennebula <https://github.com/test-kitchen/kitchen-opennebula>`__
      - A driver for |opennebula|.
    * - `kitchen-openstack <https://github.com/test-kitchen/kitchen-openstack>`__
