@@ -6,6 +6,8 @@ knife supermarket
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_supermarket.rst
 
+.. note:: .. include:: ../../includes_knife/includes_knife_common_chef_partner_cookbook_program.rst
+
 .. warning:: .. include:: ../../includes_notes/includes_notes_knife_cookbook_site_use_devkit_berkshelf.rst
 
 .. note:: .. include:: ../../includes_knife/includes_knife_common_see_common_options_link.rst
