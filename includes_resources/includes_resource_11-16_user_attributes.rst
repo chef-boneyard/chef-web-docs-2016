@@ -87,11 +87,6 @@ This resource has the following properties:
 
    |subscribes timers|
 
-``supports``
-   **Ruby Type:** Hash
-
-   |supports user| Default value: ``:manage_home => false, :non_unique => false``.
-
 ``system``
    **Ruby Types:** TrueClass, FalseClass
 
