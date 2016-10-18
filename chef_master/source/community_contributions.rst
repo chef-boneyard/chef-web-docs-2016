@@ -139,13 +139,13 @@ Issues and bug reports may be created for |company_name| products, including the
    * - |push jobs_title|
      - https://github.com/chef/chef-push
    * - |chef delivery|
-     - please contact `Chef Support <https://www.chef.io/support/>`_ 
+     - please contact `Chef Support <https://www.chef.io/support/>`_
 
 For additional support about |company_name| products, including documentation, learning, and opening tickets with the support team, see `Chef Support <https://www.chef.io/support/>`_ .
 
 .. warning:: If you require a response from |company_name| per the terms of a support level agreement (SLA), please contact `Chef Support <https://www.chef.io/support/>`_ directly.
 
-.. note:: Questions on how to use Chef should be sent as Support Tickets if you have an SLA, or asked on the `Chef Mailing List <https://discourse.chef.io/>`_, `Stack Overflow <http://stackoverflow.com/questions/tagged/chef>`_, or `IRC <http://irc.lc/freenode/chef>`_. Bug Trackers are not appropriate for general purpose questions that are not bugs.
+.. note:: Questions on how to use Chef should be sent as Support Tickets if you have an SLA, or asked on the `Chef Mailing List <https://discourse.chef.io/>`_ or `Chef Community Slack <http://community-slack.chef.io/>`_. Bug Trackers are not appropriate for general purpose questions that are not bugs.
 
 
 Use |git|
