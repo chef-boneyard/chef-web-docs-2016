@@ -4,35 +4,36 @@ S3OPTIONS = --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --
 BUILD_COMMAND = sphinx-build -a -W
 PARALLEL_BUILD:=
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND) $(PARALLEL_BUILD)
+CLONE_DIR = chef-server
 
 # was the first option after S3OPTIONS
 # --delete-removed
 
 
-# 
+#
 # SAVED FOR HISTORY PURPOSES
 # This is the old mapping of the makefile for what should be built, not built
 # Add after `release:` the builds to build; everything else underneath commented out
-# 
+#
 # release: master 12-5 decks
-# 
+#
 #
 # OTHER BUILDS -- REMOVED FOR THE MOMENT AND ONLY REBUILD AD HOC
 # devkit_1-0 analytics_1-1 delivery_1-0
-# 
-# 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18 
+#
+# 11-0 11-2 11-4 11-6 11-8 11-10 11-12 11-14 11-16 11-18
 # 12-0 12-1 12-2 12-3 12-4
 # ohai-6 ohai-7 ohai-8
 # push_1-0
 # server_12-0 server_12-1 server_12-2
 # oec_11-0 oec_11-1 oec_11-2
 # osc_11-0 osc_11-1
-# 
+#
 # RETIRED: located in chef-docs-misc, no longer built or maintained
 # enterprise open_source slides
 # 10 private_chef
 # all analytics delivery client devkit server
-# 
+#
 
 #
 # Parallel Building:
@@ -210,13 +211,44 @@ server_12-0:
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
 
+make-raml-dir:
+	mkdir -p raml
+
+raml/chef-server:
+	cd raml; git clone git@github.com:chef/chef-server
+
+chef-server-raml: raml/chef-server
+	cd raml/chef-server; git checkout jk/moar-raml; git pull
+	cd raml/chef-server/src/oc_erchef/raml-docs; make
+
+raml/delivery:
+	cd raml; git clone git@github.com:chef/delivery
+
+delivery-raml: raml/delivery
+	cd raml/delivery; git pull
+	cd raml/delivery/doc/api; make
+
+raml/chef-analytics:
+	cd raml; git clone git@github.com:chef/chef-analytics
+
+chef-analytics-raml: raml/chef-analytics
+	cd raml/chef-analytics; git pull
+	cd raml/chef-analytics/src/analytics_docs; make; grunt raml2html
+
+# Creates:
+# - raml/chef-server/src/oc_erchef/raml-docs/index.html
+# - raml/delivery/doc/api/index.html
+# - raml/chef-analytics/src/analytics_docs/build/index.html
+
+raml: make-raml-dir chef-server-raml delivery-raml chef-analytics-raml
+
 #
 # OLD BUILDS DO NOT BUILD
-# 
+#
 # 10:
 # 	mkdir -p $(BUILDDIR)/release/10/
 # 	$(BUILD_COMMAND_AND_ARGS) release_chef_10/source $(BUILDDIR)/release/10/
-# 
+#
 # private_chef:
 # 	mkdir -p $(BUILDDIR)/release/private_chef/
 # 	$(BUILD_COMMAND_AND_ARGS) release_private_chef/source $(BUILDDIR)/release/private_chef/
