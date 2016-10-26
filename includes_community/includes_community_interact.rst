@@ -7,8 +7,7 @@
 * `@chef-docs <https://twitter.com/chefdocs>`_
 * `@opscode_status <https://twitter.com/opscode_status>`_
 * `Facebook <https://www.facebook.com/getchefdotcom>`_
-* `IRC #chef <https://botbot.me/freenode/chef>`_
-* `IRC #chef-hacking <https://botbot.me/freenode/chef-hacking>`_
+* `Chef Community Slack <http://community-slack.chef.io/>`_
 * `IRC #openstack-chef <https://botbot.me/freenode/openstack-chef>`_
 * `LinkedIn Group <https://www.linkedin.com/grp/home?gid=3751378>`_
 * `https://discourse.chef.io <https://discourse.chef.io>`_ (for discussion among users, developers, and other interested parties)
