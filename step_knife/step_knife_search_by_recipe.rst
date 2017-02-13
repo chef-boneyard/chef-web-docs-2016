@@ -7,6 +7,12 @@ To search for recipes that are used by a node, use the ``recipes`` attribute to 
 
    $ knife search node 'recipes:recipe_name'
    
+or (note the escaping of the double colon):
+
+.. code-block:: bash
+
+   $ knife search node 'recipes:cookbook_name\:\:recipe_name'
+
 or:
 
 .. code-block:: bash
